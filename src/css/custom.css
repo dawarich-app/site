@@ -1,0 +1,66 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* Light theme styles */
+:root {
+  --ifm-color-primary: #3b82f6; /* Primary color adjusted for better visibility */
+  --ifm-color-primary-dark: #2563eb; /* Darker shade for active states */
+  --ifm-color-primary-darker: #1e40af; /* Darker shade for deeper elements */
+  --ifm-color-primary-darkest: #1e3a8a; /* Darkest shade */
+  --ifm-color-primary-light: #60a5fa; /* Lighter shade for hover states */
+  --ifm-color-primary-lighter: #93c5fd; /* Even lighter for subtle highlights */
+  --ifm-color-primary-lightest: #bfdbfe; /* Lightest for backgrounds and borders */
+  --ifm-code-font-size: 95%; /* Adjust code font size */
+  --docusaurus-highlighted-code-line-bg: rgba(31, 41, 55, 0.1); /* Matching background highlight for code */
+}
+
+/* Dark theme styles */
+[data-theme='dark'] {
+  --ifm-color-primary: #3b82f6; /* Primary color adjusted for better visibility */
+  --ifm-color-primary-dark: #2563eb; /* Darker shade for active states */
+  --ifm-color-primary-darker: #1e40af; /* Darker shade for deeper elements */
+  --ifm-color-primary-darkest: #1e3a8a; /* Darkest shade */
+  --ifm-color-primary-light: #60a5fa; /* Lighter shade for hover states */
+  --ifm-color-primary-lighter: #93c5fd; /* Even lighter for subtle highlights */
+  --ifm-color-primary-lightest: #bfdbfe; /* Lightest for backgrounds and borders */
+  --ifm-code-font-size: 95%; /* Adjust code font size */
+  --docusaurus-highlighted-code-line-bg: rgba(31, 41, 55, 0.3); /* Matching background highlight for code */
+  --ifm-background-color: #111827; /* Dark background color for the entire theme */
+  --ifm-color-background-alt: #1f2937; /* Slightly lighter background for sections */
+  --ifm-font-color-base: #f9fafb; /* Light text color for readability */
+  --ifm-font-color-secondary: #9ca3af; /* Secondary text color for less emphasis */
+  --ifm-color-link: #3b82f6; /* Link color to match primary */
+  --ifm-color-link-hover: #60a5fa; /* Lighter link color on hover */
+  --ifm-border-color: #374151; /* Border color for elements */
+  --ifm-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); /* Subtle shadow for depth */
+}
+
+/* Additional styling for better UX */
+body {
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+}
+
+header, footer {
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+}
+
+a {
+  color: var(--ifm-color-link);
+}
+
+a:hover {
+  color: var(--ifm-color-link-hover);
+}
+
+section {
+  background-color: var(--ifm-color-background-alt);
+  border: 1px solid var(--ifm-border-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--ifm-shadow);
+}
