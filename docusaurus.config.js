@@ -21,7 +21,9 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'dawarich-app', // Usually your GitHub org/user name.
-  projectName: 'dawarich', // Usually your repo name.
+  projectName: 'dawarich.app', // Usually your repo name.
+  deploymentBranch: 'main',
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
