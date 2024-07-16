@@ -17,7 +17,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Gain insights into your travel patterns with detailed statistics. Track the number of countries and cities visited, total distance traveled, and time spent in each location. Split your data by years and months for a clear overview of your journeys.
+        Gain insights into your travel patterns with detailed statistics. Track the number of countries and cities visited and total distance traveled. Split your data by years and months for a clear overview of your journeys.
       </>
     ),
   },
