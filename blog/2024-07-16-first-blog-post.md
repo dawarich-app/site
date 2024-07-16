@@ -9,4 +9,4 @@ authors:
 tags: [releases]
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet
+Okay, this is the very first blog post on Dawarich blog. If you want to add a tutorial or some docs, feel free to open a pull request to https://github.com/dawarich-app/site. Cheers! 🎉
