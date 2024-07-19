@@ -86,7 +86,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/dawarich-app/dawarich',
+            href: 'https://github.com/Freika/dawarich',
             label: 'GitHub',
             position: 'right',
           },
