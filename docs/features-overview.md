@@ -44,7 +44,7 @@ Click on a year to see stats for that year. Click on a `[Map]` link to see the p
 
 Imports page features a list of your imports. For each import, you can see the name, number of points imported, and the time of the import. Click on the import name to see the details of the import. On import's individual page you can also delete the import, which will ⚠️ *delete all points imported in that import* ⚠️.
 
-On the Imports page you can also create a new import. Refer to [Imports tutorial](./tutorials/import-existing-data) for more information.
+On the Imports page you can also create a new import. Refer to [Imports tutorial](/docs/tutorials/import-existing-data) for more information.
 
 ![Imports](./imports.jpeg)
 

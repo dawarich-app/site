@@ -1,3 +1,7 @@
+---
+slug: '/tutorials/platforms/synology'
+---
+
 *The author of the original tutorial on Github is [djhrum](https://github.com/djhrum)*
 
 # Synology

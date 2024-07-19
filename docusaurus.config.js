@@ -112,7 +112,7 @@ const config = {
               },
               {
                 label: 'FAQ',
-                to: 'docs/tutorials/FAQ',
+                to: 'docs/FAQ',
               }
             ],
           },

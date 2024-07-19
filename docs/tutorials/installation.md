@@ -18,4 +18,4 @@ Setting up your Dawarich in Docker is described in the [Intro](/docs/intro#setup
 
 ### Synology
 
-Setting up your Dawarich on Synology is described in the [Synology](/docs/synology) guide.
+Setting up your Dawarich on Synology is described in the [Synology](./platforms/synology) guide.

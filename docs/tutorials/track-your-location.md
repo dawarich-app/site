@@ -1,5 +1,4 @@
 ---
-slug: /docs/tutorials/track-your-location
 sidebar_position: 1
 ---
 
