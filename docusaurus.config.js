@@ -102,6 +102,18 @@ const config = {
                 label: 'Tutorial',
                 to: '/docs/intro',
               },
+              {
+                label: 'Importing existing data',
+                to: 'docs/tutorials/import-existing-data',
+              },
+              {
+                label: 'Exporting data',
+                to: 'https://dawarich.app/docs/tutorials/export-your-data',
+              },
+              {
+                label: 'FAQ',
+                to: 'docs/tutorials/FAQ',
+              }
             ],
           },
           {
