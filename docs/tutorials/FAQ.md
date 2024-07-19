@@ -22,7 +22,7 @@ sidebar_position: 99
 <details>
   <summary>Show me!</summary>
 
-  To make a user an admin, you can use the Rails console. First, enter the console as described in the [previous question](#how-to-enter-dawarich-console). Then, run the following command:
+  To make a user an admin, you can use the Rails console. First, enter the console as described in the ["How to enter Dawarich console?"](#how-to-enter-dawarich-console). Then, run the following command:
 
   ```ruby
   User.find_by(email: 'user@example.com').update(admin: true)
@@ -55,3 +55,14 @@ sidebar_position: 99
   If you find points such as this, it would be great if you could open an issue on the [GitHub repository](https://github.com/Freika/dawarich/issues) with your import file structure (you can alter your real coordinates, of course) so we can investigate the issue further.
 </details>
 
+## How to update user's password?
+
+<details>
+  <summary>Show me!</summary>
+
+  To update a user's password, you can use the Rails console. First, enter the console as described in the ["How to enter Dawarich console?"](#how-to-enter-dawarich-console). Then, run the following command:
+
+  ```ruby
+  User.find_by(email: 'user@example.com').update(password: 'new_password', password_confirmation: 'new_password')
+  ```
+</details>

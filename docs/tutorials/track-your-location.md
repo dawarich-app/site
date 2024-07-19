@@ -32,3 +32,59 @@ Dawarich provides an API for tracking your location. You can use the API to send
 7. Paste the following URL: `http://<your-dawarich-instance>/api/v1/owntracks/points?api_key=<your-api-key>`.
 8. Tap on "Back" button (top left corner).
 9. You're all set! OwnTracks will start sending your location data to Dawarich.
+
+## GPS Logger
+
+*Kudos to @werner-kapferer-lgs for this! [Source](https://github.com/Freika/dawarich/discussions/118#discussion-6923665)*
+
+The configuration of GPSLogger is pretty simple and straightforward, so I want to share it with you:
+
+- URL: `http://<your-dawarich-instance>/api/v1/owntracks/points?api_key=YOUR_API_KEY`
+- HTTP Body:
+```json
+{
+    "_type" : "location",
+    "t": "u",
+    "acc": "%ACC",
+    "alt": "%ALT",
+    "batt": "%BATT",
+    "bs": "%ISCHARGING",
+    "lat": "%LAT",
+    "lon": "%LON",
+    "tst": "%TIMESTAMP",
+    "vel": "%SPD_KPH"
+}
+```
+- HTTP Headers:
+```
+Content-Type: application/json
+```
+- HTTP Method: `POST`The configuration of GPSLogger is pretty simple and straightforward, so I want to share it with you:
+
+- URL: `http://<your-dawarich-instance>/api/v1/owntracks/points?api_key=YOUR_API_KEY`
+- HTTP Body:
+```json
+{
+    "_type" : "location",
+    "t": "u",
+    "acc": "%ACC",
+    "alt": "%ALT",
+    "batt": "%BATT",
+    "bs": "%ISCHARGING",
+    "lat": "%LAT",
+    "lon": "%LON",
+    "tst": "%TIMESTAMP",
+    "vel": "%SPD_KPH"
+}
+```
+- HTTP Headers:
+```
+Content-Type: application/json
+```
+- HTTP Method: `POST`
+
+## HomeAssistant
+
+There is a way to have your geolocation data from HomeAssistant in Dawarich. It might be useful for those who already have HomeAssistant and don't want to use another app for tracking.
+
+The guide can be found on Github: [HomeAssistant integration](https://github.com/Freika/dawarich/discussions/77#discussioncomment-9904099)
