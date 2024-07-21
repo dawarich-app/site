@@ -66,3 +66,57 @@ sidebar_position: 99
   User.find_by(email: 'user@example.com').update(password: 'new_password', password_confirmation: 'new_password')
   ```
 </details>
+
+## How to speed up the import process?
+
+<details>
+  <summary>Show me!</summary>
+
+  If you have a large import file, you might want to speed up the import process. You can do this by increasing the number of Sidekiq workers. To do this, you can update your `docker-compose.yml` file to include multiple instances of the `sidekiq` service, basically, having copies of an original one under different names. Here's an example of how you can do this:
+
+  ```yaml
+  services:
+    dawarich_app:
+      ...
+    dawarich_sidekiq:
+      ...
+    // highlight-start
+    dawarich_sidekiq_1:
+    image: freikin/dawarich:latest
+    container_name: dawarich_sidekiq
+    volumes:
+      - gem_cache:/usr/local/bundle/gems
+      - public:/var/app/public
+      ...
+    depends_on:
+      - dawarich_db
+      - dawarich_redis
+      - dawarich_app
+    dawarich_sidekiq_2:
+    image: freikin/dawarich:latest
+    container_name: dawarich_sidekiq
+    volumes:
+      - gem_cache:/usr/local/bundle/gems
+      - public:/var/app/public
+      ...
+    depends_on:
+      - dawarich_db
+      - dawarich_redis
+      - dawarich_app
+    dawarich_sidekiq_N:
+    image: freikin/dawarich:latest
+    container_name: dawarich_sidekiq
+    volumes:
+      - gem_cache:/usr/local/bundle/gems
+      - public:/var/app/public
+      ...
+    depends_on:
+      - dawarich_db
+      - dawarich_redis
+      - dawarich_app
+    // highlight-end
+  ```
+
+  Note, that additional Sidekiq containers are named `dawarich_sidekiq_2`, `dawarich_sidekiq_N`, etc. You can have as many as you need. You can scale them down when your import is completed. It's imortant to remember that the more workers you have, the more resources they will consume, and connecting to the database might become a bottleneck.
+
+  </details>
