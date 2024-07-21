@@ -6,9 +6,16 @@ sidebar_position: 3
 
 Dawarich supports importing data from various sources. You can import data from Google Takeout, OwnTracks, GPX routes, and Dawarich.
 
+:::note
+
+Importing process also starts reverse geocoding process for each point imported. This process can take a while, depending on the number of points imported. For mor info on reverse geocoding, refer to [Reverse geocoding tutorial](./reverse-geocoding).
+
+:::
+
 One important thing is that Google Takeout might have at least 3 (three) different formats of location history data: Semantic location history, `Records.json`, and data from a mobile device. Both Semantic location history and `Records.json` can usually be found in the Google Takeout archive created on the web version of Google Takeout. Data from a mobile device can be found in the Google Takeout archive created on a mobile device and usually the file we're interested in is called `location-history.json`.
 
 To import your data, visit Imports -> New Import page of your Dawarich instance. There you will have to select the source of your data, then select one or multiple files to upload, and finally click the "Import" button. The import process will start and you will be redirected to the Imports page. The import process will run in the background and you can ~~check the status of the import on the Imports page~~ No status indication is yet implemented.
+
 
 ![Imports](./new-import.jpeg)
 
