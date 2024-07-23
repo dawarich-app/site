@@ -11,7 +11,7 @@ function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
+      <div className="container flex">
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
@@ -21,6 +21,12 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/docs/intro">
             Dawarich Tutorial - 5min ⏱️
+          </Link>
+
+          <Link
+            className={clsx('button button--secondary button--lg', styles.button)}
+            to="https://demo.dawarich.app">
+            Live demo 🗺️
           </Link>
         </div>
       </div>
