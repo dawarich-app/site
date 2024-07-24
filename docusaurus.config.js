@@ -134,7 +134,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/dawarich-app/dawarich',
+                href: 'https://github.com/Freika/dawarich',
               },
             ],
           },
