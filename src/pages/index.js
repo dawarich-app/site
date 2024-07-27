@@ -29,6 +29,22 @@ function HomepageHeader() {
             Live demo 🗺️
           </Link>
         </div>
+        <hr></hr>
+        <div className={styles.github}>
+          support us on
+          <br></br>
+          <Link
+            className={clsx('button button--secondary button--lg', styles.button)}
+            to="https://ko-fi.com/freika">
+            Ko-Fi ☕️
+          </Link>
+          or
+          <Link
+            className={clsx('button button--secondary button--lg', styles.button)}
+            to="https://www.patreon.com/freika">
+              Patreon 🎉
+          </Link>
+        </div>
       </div>
     </header>
   );
