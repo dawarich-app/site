@@ -120,3 +120,33 @@ sidebar_position: 99
   Note, that additional Sidekiq containers are named `dawarich_sidekiq_2`, `dawarich_sidekiq_N`, etc. You can have as many as you need. You can scale them down when your import is completed. It's imortant to remember that the more workers you have, the more resources they will consume, and connecting to the database might become a bottleneck.
 
   </details>
+
+## Why my attempt to import Records.json fails?
+
+<details>
+  <summary>Show me!</summary>
+
+  The `Records.json` file you getting with you Google Takeout is usually a big one, and importing it might take a while. If you're getting an error that ends with `Killed`, it means that the process was killed by the system because it consumed too much memory. The solution would be to allocate more memory to the Docker container. You can do this by updating the `docker-compose.yml`:
+
+  ```yaml
+  services:
+    dawarich_app:
+      ...
+    dawarich_sidekiq:
+      ...
+    dawarich_db:
+      ...
+    dawarich_redis:
+      ...
+    // highlight-start
+    dawarich_app:
+      ...
+      resources:
+        limits:
+          cpus: '0.001'
+          memory: 5G
+      ...
+    // highlight-end
+  ```
+
+  </details>

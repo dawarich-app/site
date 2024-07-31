@@ -123,6 +123,10 @@ const config = {
                 label: 'Discord',
                 href: 'https://discord.gg/pHsBjpt5J8',
               },
+              {
+                label: 'X',
+                href: 'https://x.com/freymakesstuff',
+              },
             ],
           },
           {
