@@ -149,4 +149,6 @@ sidebar_position: 99
     // highlight-end
   ```
 
+  Also, you can try splitting your `Records.json` file into smaller parts and importing them one by one. This way, you can avoid the memory issue. Here you can find a [script](https://github.com/Freika/dawarich/issues/142#issuecomment-2268865499) that can help you with splitting the file.
+
   </details>
