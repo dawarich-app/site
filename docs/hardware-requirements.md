@@ -8,8 +8,16 @@ Dawarich is a web application that can be hosted on an AMD64 or ARM64 server und
 
 - 1GB RAM
 - 1 CPU core
-- 1GB disk space
+- At least 1GB disk space
 
-Currently, Dawarich writes an extensive amount of logs. This is the case specifically during the import process or reverse geocoding. To avoid running out of disk space, it is recommended to have at least 10GB of disk space available. For big imports, it is recommended to have at least 100GB of disk space available.
+You can limit the resources available to Dawarich by setting the `resources` parameter in the `docker-compose.yml` file. Here is an example of how to set the resources:
 
-You can get your space back by restarting `dawarich_app` and `dawarich_sidekiq` containers, it will remove old logs.
+```yaml
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'    # Limit CPU usage to 50% of one core
+          memory: '2G'    # Limit memory usage to 2GB
+```
+
+From time to time, new releases include resource-intensive data migrations. Make sure you provide enough resources to handle these migrations.

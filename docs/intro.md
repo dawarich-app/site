@@ -23,4 +23,4 @@ Let's discover **Dawarich in less than 5 minutes**.
 docker-compose up -d
 ```
 
-3. You're all set! Visit your Dawarich instance at `http://localhost:3000` or `http://<your-server-ip>:3000`.
+3. You're all set! Visit your Dawarich instance at `http://localhost:3000` or `http://<your-server-ip>:3000`. The default credentials are `user@domain.com` and `password`

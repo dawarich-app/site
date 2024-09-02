@@ -137,3 +137,7 @@ The container should run and finish automatically.
 
 - Check `url` in `spk/package/ui/config` file and `maintainer` and `distributor` in `spk/INFO` file.
 - Open **Package Center**, click on **Manual Install**, select `Dawarich.spk`, agree with the security notice, and install it.
+
+## Default credentials
+
+The default credentials are `user@domain.com` and `password`.
