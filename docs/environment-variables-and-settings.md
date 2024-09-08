@@ -25,5 +25,5 @@ As many other applications, Dawarich uses environment variables to configure its
 | `MIN_MINUTES_SPENT_IN_CITY` | | Minimum minutes spent in a city |
 | `REVERSE_GEOCODING_ENABLED` | | Reverse geocoding enabled |
 | `PHOTON_API_HOST` | `photon.komoot.io` | Photon API host. Useful if you're self-hosting your own Photon instance |
-| `RAILS_MAX_THREADS` | `5` | Maximum number of threads for Rails |
-| `BACKGROUND_PROCESSING_CONCURRENCY` | `10` | Background processing concurrency. Should not be higher than `RAILS_MAX_THREADS` |
+| `RAILS_MAX_THREADS` | `5` | Connection pool size for the Dawarich database |
+| `BACKGROUND_PROCESSING_CONCURRENCY` | `10` | Background processing concurrency. Should not be higher than `RAILS_MAX_THREADS`. More info on [Sidekiq docs](https://github.com/sidekiq/sidekiq/wiki/Advanced-Options#concurrency) |
