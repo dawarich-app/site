@@ -22,7 +22,6 @@ As many other applications, Dawarich uses environment variables to configure its
 | `TIME_ZONE`          | `Europe/London` | Time zone. Full list of supported timezones available on [Github](https://github.com/Freika/dawarich/issues/27#issuecomment-2094721396) |
 | `APPLICATION_PROTOCOL` | `http` | Application protocol. Change to `https` if you want your Dawarich instance to be served via SSL |
 | `DISTANCE_UNIT` | `km` | Distance unit. For miles, change to `mi`. All settings still should be provided in meters/kilometers |
-| `MIN_MINUTES_SPENT_IN_CITY` | | Minimum minutes spent in a city |
 | `REVERSE_GEOCODING_ENABLED` | | Reverse geocoding enabled |
 | `PHOTON_API_HOST` | `photon.komoot.io` | Photon API host. Useful if you're self-hosting your own Photon instance |
 | `RAILS_MAX_THREADS` | `5` | Connection pool size for the Dawarich database |
