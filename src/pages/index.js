@@ -3,6 +3,8 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import ThemedImage from '@theme/ThemedImage';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
@@ -29,10 +31,20 @@ function HomepageHeader() {
             Live demo 🗺️
           </Link>
         </div>
-        <hr></hr>
+
+        <ThemedImage
+          alt="Docusaurus themed image"
+          class='dawarich_sources'
+          sources={{
+            light: useBaseUrl('/img/dawarich-sources-light.svg'),
+            dark: useBaseUrl('/img/dawarich-sources-dark.svg'),
+          }}
+        />
+
         <div className={styles.github}>
-          support us on
-          <br></br>
+          <div class='support_us'>
+          Support us on
+          </div>
           <Link
             className={clsx('button button--secondary button--lg', styles.button)}
             to="https://ko-fi.com/freika">

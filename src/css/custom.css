@@ -64,3 +64,14 @@ section {
   border-radius: 0.5rem;
   box-shadow: var(--ifm-shadow);
 }
+
+.dawarich_sources {
+  width: 80%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.support_us {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
