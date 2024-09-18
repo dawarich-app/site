@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Track your location
 
-Dawarich allows you to track your location using [Overland](https://overland.p3k.app/) or [OwnTracks](https://owntracks.org/) mobile application.
+Dawarich allows you to track your location using [Overland](https://overland.p3k.app/), [OwnTracks](https://owntracks.org/) or [GPSLogger](https://gpslogger.app/) mobile application.
 
 ## API
 
