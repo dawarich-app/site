@@ -41,28 +41,7 @@ The configuration of GPSLogger is pretty simple and straightforward, so I want t
 
 - URL: `http://<your-dawarich-instance>/api/v1/owntracks/points?api_key=YOUR_API_KEY`
 - HTTP Body:
-```json
-{
-    "_type" : "location",
-    "t": "u",
-    "acc": "%ACC",
-    "alt": "%ALT",
-    "batt": "%BATT",
-    "bs": "%ISCHARGING",
-    "lat": "%LAT",
-    "lon": "%LON",
-    "tst": "%TIMESTAMP",
-    "vel": "%SPD_KPH"
-}
-```
-- HTTP Headers:
-```
-Content-Type: application/json
-```
-- HTTP Method: `POST`The configuration of GPSLogger is pretty simple and straightforward, so I want to share it with you:
 
-- URL: `http://<your-dawarich-instance>/api/v1/owntracks/points?api_key=YOUR_API_KEY`
-- HTTP Body:
 ```json
 {
     "_type" : "location",
@@ -77,14 +56,17 @@ Content-Type: application/json
     "vel": "%SPD_KPH"
 }
 ```
+
 - HTTP Headers:
+
 ```
 Content-Type: application/json
 ```
+
 - HTTP Method: `POST`
 
-## HomeAssistant
+## Home Assistant
 
-There is a way to have your geolocation data from HomeAssistant in Dawarich. It might be useful for those who already have HomeAssistant and don't want to use another app for tracking.
+There is a way to have your geolocation data from Home Assistant in Dawarich. It might be useful for those who already have Home Assistant and don't want to use another app for tracking.
 
-The guide can be found on Github: [HomeAssistant integration](https://github.com/Freika/dawarich/discussions/77#discussioncomment-9904099)
+The guide can be found on Github: [Home Assistant integration](https://github.com/Freika/dawarich/discussions/77#discussioncomment-9904099)

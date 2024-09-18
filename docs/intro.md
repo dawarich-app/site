@@ -14,6 +14,14 @@ Let's discover **Dawarich in less than 5 minutes**.
 - [Docker Compose](https://docs.docker.com/compose/install/) version 1.29 or above:
   - Docker Compose is a tool for defining and running multi-container Docker applications.
 
+:::tip
+
+If you don't have a server or server provider yet, we prefer to use Hetzner and DigitalOcean.
+
+You can use our [Hetzner](https://hetzner.cloud/?ref=DQC5djwEU64f) and [DigitalOcean](https://m.do.co/c/5dcbfa133a56) referral links. It will helps us to keep the project alive.
+
+:::
+
 ## Setup your Dawarich instance
 
 1. Copy contents of the [docker-compose.yml](https://github.com/Freika/dawarich/blob/master/docker-compose.yml) file to a file named `docker-compose.yml` on your server.
