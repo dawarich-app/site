@@ -34,7 +34,7 @@ dawarich_sidekiq:
       ...
 ```
 
-For a Synology install, refer to **[Synology Install Tutorial](How_to_install_Dawarich_on_Synology.md)**. In this page, it is explained how to set the APPLICATION_HOSTS environment variable.
+For a Synology install, refer to **[Synology Install Tutorial](./platforms/synology)**. In this page, it is explained how to set the APPLICATION_HOSTS environment variable.
 
 ## Virtual Host
 

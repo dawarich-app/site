@@ -6,7 +6,7 @@ authors:
   title: Author of Dawarich
   url: https://github.com/Freika
   image_url: https://github.com/Freika.png
-tags: [digest]
+tags: [montly-update]
 ---
 
 Hi and welcome to the September 2024 monthly update of Dawarich!

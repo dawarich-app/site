@@ -2,3 +2,8 @@ release:
   label: Release
   permalink: /release
   description: New releases announcements
+
+montly-update:
+  label: Monthly Update
+  permalink: /monthly-update
+  description: Monthly updates on the project
