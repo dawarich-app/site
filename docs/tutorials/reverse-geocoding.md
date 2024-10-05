@@ -44,8 +44,6 @@ To enable reverse geocoding, you need to set the `REVERSE_GEOCODING_ENABLED` env
 
 ## Setting up your own reverse geocoding service
 
-_This feature was added in Dawarich 0.9.10._
-
 If you want to use your own reverse geocoding service, you can do it by deploying your own instance of the [Photon](https://github.com/komoot/photon) service by Komoot on your server. You can run it in Docker, using a [guide](https://tonsnoei.nl/en/post/2023/03/20/set-up-your-own-geocoder-api/) from Ton Snoei. After you deploy your own instance of the Photon service, you need to set the `PHOTON_API_HOST` environment variable to the URL of your Photon service in the `docker-compose.yml` file. Here is an example of how to do it:
 
 <details>
