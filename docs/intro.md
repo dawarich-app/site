@@ -28,7 +28,7 @@ You can use our [Hetzner](https://hetzner.cloud/?ref=DQC5djwEU64f) and [DigitalO
 2. Run the following command to start your Dawarich instance:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 3. You're all set! Visit your Dawarich instance at `http://localhost:3000` or `http://<your-server-ip>:3000`. The default credentials are `user@domain.com` and `password`

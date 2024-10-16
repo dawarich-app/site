@@ -147,7 +147,7 @@ Second, create a Docker network for Dawarich to use as the backend network:
 docker network create dawarich
 ```
 
-Adjust the following part of your Dawarich docker-compose.yaml, so that the web app is exposed to your new network and the backend Dawarich network:
+Adjust the following part of your Dawarich docker-compose.yml, so that the web app is exposed to your new network and the backend Dawarich network:
 ```yaml
 networks:
   dawarich:
