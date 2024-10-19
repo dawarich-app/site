@@ -96,6 +96,27 @@ const config = {
         style: 'dark',
         links: [
           {
+            title: 'Community',
+            items: [
+              {
+                label: 'Discord',
+                href: 'https://discord.gg/pHsBjpt5J8',
+              },
+              {
+                label: 'X',
+                href: 'https://x.com/freymakesstuff',
+              },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/Freika/dawarich',
+              },
+              {
+                label: 'Mastodon',
+                href: 'https://mastodon.social/@dawarich'
+              },
+            ]
+          },
+          {
             title: 'Docs',
             items: [
               {
@@ -117,28 +138,16 @@ const config = {
             ],
           },
           {
-            title: 'Community',
-            items: [
-              {
-                label: 'Discord',
-                href: 'https://discord.gg/pHsBjpt5J8',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/freymakesstuff',
-              },
-            ],
-          },
-          {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                html: `
+                  <a href="https://trendshift.io/repositories/11108" target="_blank"><img src="https://trendshift.io/api/badge/repositories/11108" alt="Freika%2Fdawarich | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+                `
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/Freika/dawarich',
+                label: 'Blog',
+                to: '/blog',
               },
             ],
           },
