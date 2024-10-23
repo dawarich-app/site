@@ -7,3 +7,8 @@ montly-update:
   label: Monthly Update
   permalink: /monthly-update
   description: Monthly updates on the project
+
+guides:
+  label: Guides
+  permalink: /guides
+  description: Guides on how to use the project
