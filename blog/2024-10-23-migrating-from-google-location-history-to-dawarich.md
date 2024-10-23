@@ -11,7 +11,7 @@ tags: [guides]
 
 ## What's going on?
 
-As you probably already know, Google discontinuing the web version of its Location History / Timeline service by December 1st, 2024. Here are some dry facts:
+As you probably already know, Google [discontinuing](https://blog.google/products/maps/updates-to-location-history-and-new-controls-coming-soon-to-maps/) the web version of its Location History / Timeline service by December 1st, 2024. Here are some dry facts:
 
 - Starting December 1st, 2024, the web version of Timeline will no longer be working
 - Timeline data will now be stored on the user's device instead
