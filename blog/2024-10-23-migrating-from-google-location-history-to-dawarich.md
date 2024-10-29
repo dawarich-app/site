@@ -39,12 +39,12 @@ To import Google Semantic Location History files, you just need to navigate to t
 1. Upload your `Records.json` to your server, where you host Dawarich
 2. Copy the file to the `tmp` folder of Dawarich:
 ```
-docker cp Records.json dawarich_app:/var/app/public/imports/Records.json
+docker cp Records.json dawarich_app:/var/app/tmp/imports/Records.json
 ```
 3. `ssh` into Dawarich container: `docker exec -it dawarich_app sh
 4. Run the importing command:
 ```
-bundle exec rake import:big_file['public/imports/Records.json','user@example.com']
+bundle exec rake import:big_file['tmp/imports/Records.json','user@example.com']
 ```
 
 The process will take some time, depending on the size of your file, so let it work. Once the file is processed, all points from it will be queued for background import, which will also take some time. You can monitor the stats of the importing process on the Sidekiq page of your Dawarich instance: `https://your.host/sidekiq`.

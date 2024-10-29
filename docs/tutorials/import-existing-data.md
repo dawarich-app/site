@@ -32,7 +32,7 @@ This file contains your location history in a JSON format. This is usually a big
 1. Upload your Records.json file to your server
 2. Copy you Records.json to the `tmp` folder:
 ```
-docker cp Records.json dawarich_app:/var/app/public/imports/Records.json
+docker cp Records.json dawarich_app:/var/app/tmp/imports/Records.json
 ```
 3. Attach to the docker container:
 ```
@@ -40,7 +40,7 @@ docker exec -it dawarich_app sh
 ```
 4. Run the importing task:
 ```
-bundle exec rake import:big_file['public/imports/Records.json','user@example.com']
+bundle exec rake import:big_file['tmp/imports/Records.json','user@example.com']
 ```
 5. Wait patiently for process to finish
 
