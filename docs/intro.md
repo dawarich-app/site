@@ -25,10 +25,24 @@ You can use our [Hetzner](https://hetzner.cloud/?ref=DQC5djwEU64f) and [DigitalO
 ## Setup your Dawarich instance
 
 1. Copy contents of the [docker-compose.yml](https://github.com/Freika/dawarich/blob/master/docker-compose.yml) file to a file named `docker-compose.yml` on your server.
-2. Run the following command to start your Dawarich instance:
+2. Move to the directory where you saved the `docker-compose.yml` file: `cd /path/to/your/docker-compose.yml`
+3. Run the following command to start your Dawarich instance:
 
 ```bash
 docker compose up -d
 ```
 
-3. You're all set! Visit your Dawarich instance at `http://localhost:3000` or `http://<your-server-ip>:3000`. The default credentials are `user@domain.com` and `password`
+4. You're all set! Visit your Dawarich instance at `http://localhost:3000` or `http://<your-server-ip>:3000`. The default credentials are `user@domain.com` and `password`
+
+## Update your Dawarich instance
+
+1. Move to the directory where you saved the `docker-compose.yml` file: `cd /path/to/your/docker-compose.yml`
+2. Run the following commands to update your Dawarich instance:
+
+```bash
+docker compose down # Stop the running instance
+docker compose pull # Pull the latest image
+docker compose up -d # Start the updated instance
+```
+
+3. All done!
