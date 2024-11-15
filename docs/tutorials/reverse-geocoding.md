@@ -79,6 +79,8 @@ If you want to use your own reverse geocoding service, you can do it by deployin
   ```
 </details>
 
+Also, [@rtuszik](https://github.com/rtuszik/) was kind enough to build a new Docker image with the latest version of the Photon API. The source code with the usage instructions can be found on [GitHub](https://github.com/rtuszik/photon-docker).
+
 ## Reverse geocoding and importing process.
 
 When you import your location history data, the reverse geocoding process starts for each point imported. The Sidekiq queues will be filled with reverse geocoding jobs, and there will be a lot of them, depending on how many points you imported. Important thing to understand, is that although the queue will be filled with jobs, the importing process itself is not dependent on the reverse geocoding process. The reverse geocoding process is done in the background even when importing process is finished.
