@@ -119,7 +119,7 @@ sidebar_position: 99
 
   Note, that additional Sidekiq containers are named `dawarich_sidekiq_2`, `dawarich_sidekiq_N`, etc. You can have as many as you need. You can scale them down when your import is completed. It's imortant to remember that the more workers you have, the more resources they will consume, and connecting to the database might become a bottleneck.
 
-  </details>
+</details>
 
 ## Why my attempt to import Records.json fails?
 
@@ -151,4 +151,13 @@ sidebar_position: 99
 
   Also, you can try splitting your `Records.json` file into smaller parts and importing them one by one. This way, you can avoid the memory issue. Here you can find a [script](https://github.com/Freika/dawarich/issues/142#issuecomment-2268865499) that can help you with splitting the file.
 
-  </details>
+</details>
+
+## Why I have so many failed jobs in Sidekiq?
+
+<details>
+  <summary>Show me!</summary>
+
+  If your import process finished successfully, you have nothing to worry about. Failed jobs in Sidekiq are usually the a failed attempt of Reverse Geocoding. This happens when API limit is reached. By default, Dawarich uses [Nominatim](https://nominatim.openstreetmap.org/) which limits the number of requests per second. Your options are to wait for a while and try again, or to set up your own instance of reverse geocoding service. You can find more information on how to do this in the [Reverse Geocoding](https://dawarich.app/docs/tutorials/reverse-geocoding#setting-up-your-own-reverse-geocoding-service) section of the documentation.
+
+</details>
