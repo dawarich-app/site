@@ -158,6 +158,8 @@ sidebar_position: 99
 <details>
   <summary>Show me!</summary>
 
-  If your import process finished successfully, you have nothing to worry about. Failed jobs in Sidekiq are usually the a failed attempt of Reverse Geocoding. This happens when API limit is reached. By default, Dawarich uses [Nominatim](https://nominatim.openstreetmap.org/) which limits the number of requests per second. Your options are to wait for a while and try again, or to set up your own instance of reverse geocoding service. You can find more information on how to do this in the [Reverse Geocoding](https://dawarich.app/docs/tutorials/reverse-geocoding#setting-up-your-own-reverse-geocoding-service) section of the documentation.
+  If your import process finished successfully, you have nothing to worry about. Failed jobs in Sidekiq are usually the a failed attempt of Reverse Geocoding, so you can safely ignore them. This happens when API limit is reached.
+
+  By default, Dawarich uses [Nominatim](https://nominatim.openstreetmap.org/) which limits the number of requests per second. Your options are to wait for a while and try again, or to set up your own instance of reverse geocoding service. You can find more information on how to do this in the [Reverse Geocoding](https://dawarich.app/docs/tutorials/reverse-geocoding#setting-up-your-own-reverse-geocoding-service) section of the documentation.
 
 </details>
