@@ -17,7 +17,7 @@ First, let's update your `docker-compose.yml` file to include a new volume that 
     volumes:
       - gem_cache:/usr/local/bundle/gems
       - public:/var/app/public
-+     - watched:/var/app/tmp/watched
++     - watched:/var/app/tmp/imports/watched
 
   ...
 
@@ -27,7 +27,7 @@ First, let's update your `docker-compose.yml` file to include a new volume that 
       volumes:
         - gem_cache:/usr/local/bundle/gems
         - public:/var/app/public
-+       - watched:/var/app/tmp/watched
++       - watched:/var/app/tmp/imports/watched
 
   ...
 
