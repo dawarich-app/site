@@ -140,4 +140,4 @@ The container should run and finish automatically.
 
 ## Default credentials
 
-The default credentials are `user@domain.com` and `password`.
+The default credentials are `demo@dawarich.app` and `password`.

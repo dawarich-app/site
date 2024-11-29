@@ -32,7 +32,7 @@ You can use our [Hetzner](https://hetzner.cloud/?ref=DQC5djwEU64f) and [DigitalO
 docker compose up -d
 ```
 
-4. You're all set! Visit your Dawarich instance at `http://localhost:3000` or `http://<your-server-ip>:3000`. The default credentials are `user@domain.com` and `password`
+4. You're all set! Visit your Dawarich instance at `http://localhost:3000` or `http://<your-server-ip>:3000`. The default credentials are `demo@dawarich.app` and `password`
 
 ## Update your Dawarich instance
 
