@@ -11,7 +11,9 @@ tags: [montly-update]
 
 Hi and welcome to the November 2024 monthly update of Dawarich!
 
-November was a good month for Dawarich. I've added a lot of new features and fixed a some bugs. Let's dive into the details!
+November was a good month for Dawarich. I've added a lot of new features and fixed a some bugs, and, among other things, I've added a new Patreon tier. It's called "Hosted Dawarich" and basically offers my service of hosting and updating Dawarich for you. Take a look at the [Patreon page](https://www.patreon.com/posts/hosted-dawarich-116431525) for more details and feel free to ask me any questions.
+
+Let's dive into the details!
 
 ## Important features and changes
 
