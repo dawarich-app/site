@@ -29,20 +29,26 @@ We are going to store the CloudFlare tunnel token in an .env file.
 
 Create a tunnel.env file, and use the following format:
 
+```
 TUNNEL_TOKEN=CLOUDFLARE_TUNNEL_TOKEN
+```
 
 ![image](https://github.com/user-attachments/assets/d2ec3205-f2a5-45dc-b966-364f00f93efb)
 
 Now - we are ready to modify our docker-compose file. 
 
 Add this line at row 56:
+```
       RAILS_APPLICATION_CONFIG_HOSTS: ""
+```
 
 Replace localhost on line 62 with ""
 Replace localhost on line 63 with "subdomain.your.tld,''"
 
 Add this line to row 112:
+```
       RAILS_APPLICATION_CONFIG_HOSTS: ""
+```
 
 Replace localhost on line 118 with "subdomain.your.tld,''"
 Replace localhost on line 119 with "subdomain.your.tld,''"
@@ -50,6 +56,7 @@ Replace localhost on line 119 with "subdomain.your.tld,''"
 
 Add the following towards the end of the dockerfile, right above where the volumes are defined:
 
+```
   tunnel:
    image: cloudflare/cloudflared:latest
    command: tunnel --no-autoupdate run
@@ -60,7 +67,7 @@ Add the following towards the end of the dockerfile, right above where the volum
    container_name: tunnel
    depends_on:
     - dawarich_app
-
+```
 
 
 
