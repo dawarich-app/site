@@ -72,9 +72,9 @@ Add the following towards the end of the dockerfile, right above where the volum
 
 Finally - execute a 
 
-'''
+```
 docker compose up -d
-'''
+```
 
 Your instance should now be accessible via your public host name.
 
