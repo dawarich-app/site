@@ -24,6 +24,16 @@ You can use any subdomain you'd like. Make sure to configure the IP address and 
 
 ![image](https://github.com/user-attachments/assets/a960a1bd-986e-40ad-9fa9-165df5923560)
 
+Click on "additional application settings" -> and set a custom HTTP host header. 
+
+![image](https://github.com/user-attachments/assets/d3b914bf-922f-4e33-a960-70f77ce3fa38)
+
+Paste this into that box:
+
+```
+content_type text/css text/plain text/xml text/x-component text/javascript application/x-javascript application/javascript application/json application/manifest+json application/vnd.api+json application/xml application/xhtml+xml application/rss+xml application/atom+xml application/vnd.ms-fontobject application/x-font-ttf application/x-font-opentype application/x-font-truetype image/svg+xml image/x-icon image/vnd.microsoft.icon font/ttf font/eot font/otf font/opentype
+```
+Finally, click save hostname
 
 We are going to store the CloudFlare tunnel token in an .env file. 
 
