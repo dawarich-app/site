@@ -1,4 +1,4 @@
-With a couple of edits to the docker-compose.yml file, we can expose Dawarich to the internet utilizing CloudFlare and their Zero Trust Tunnel service. 
+With a couple of edits to the docker-compose.yml file, we can expose Dawarich to the internet utilizing CloudFlare and their Zero Trust Tunnel service. This will not require any firewall configuration nor ports being opened at the firewall level. 
 
 This guide will assume you already have a public domain, and are using CloudFlare DNS nameservers.
 
@@ -70,4 +70,15 @@ Add the following towards the end of the dockerfile, right above where the volum
 ```
 
 
+Finally - execute a 
 
+'''
+
+docker compose up -d
+
+
+'''
+
+Your instance should now be accessible via your public host name.
+
+You can connect applications on mobile devices to utilize the API while away from home for better tracking. Tested on Android using OwnTracks. 
