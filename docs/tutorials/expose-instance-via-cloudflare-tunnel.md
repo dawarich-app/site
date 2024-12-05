@@ -17,7 +17,7 @@ On the next page - we are provided with the token needed to run our connector. C
 
 ![image](https://github.com/user-attachments/assets/66ae10a7-8142-4183-9e14-dec65672c674)
 
-Paste this into a text editor to remove the install commands, and be left with just the tunnel token. 
+Paste this into a text editor to clean this up. We can remove the install commands, we don't need them. We just want the tunnel token. 
 
 Click on the Public Hostname tab, and click "add a public hostname"
 You can use any subdomain you'd like. Make sure to configure the IP address and port Dawarich is running on.
