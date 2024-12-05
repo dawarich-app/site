@@ -42,16 +42,16 @@ Add this line at row 56:
       RAILS_APPLICATION_CONFIG_HOSTS: ""
 ```
 
-Replace localhost on line 62 with ""
-Replace localhost on line 63 with "subdomain.your.tld,''"
+Replace localhost on line 62 with ``` "" ```
+Replace localhost on line 63 with ``` "subdomain.your.tld,''" ```
 
 Add this line to row 112:
 ```
       RAILS_APPLICATION_CONFIG_HOSTS: ""
 ```
 
-Replace localhost on line 118 with "subdomain.your.tld,''"
-Replace localhost on line 119 with "subdomain.your.tld,''"
+Replace localhost on line 118 with ``` "subdomain.your.tld,''" ```
+Replace localhost on line 119 with ``` "subdomain.your.tld,''" ```
 
 
 Add the following towards the end of the dockerfile, right above where the volumes are defined:
