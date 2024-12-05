@@ -11,7 +11,7 @@ Create your tunnel.
 
 Select cloudflared for the tunnel type on the next page. 
 
-Give your tunnel a name, and click save tunnel. 
+Give your tunnel a name, and click "save tunnel". 
 
 On the next page - we are provided with the token needed to run our connector. Click on the copy button to copy this to your clipboard. 
 
