@@ -2,7 +2,7 @@
 sidebar_position: 9
 ---
 
-## Telemetry
+# Telemetry
 
 _Last updated: 2024-12-05_
 
