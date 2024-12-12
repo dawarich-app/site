@@ -8,4 +8,4 @@ Dawarich allows you to export your data in a JSON format, structured the same wa
 
 To export your data, visit the Points page of your Dawarich instance. There you can search for points providing a time range, export them to a JSON file, and delete them. To export points, select the time range, click "Search", and then click the "Export" button. Export will be done in the background and you can find the result on the Exports page.
 
-![Exports](../exports.jpeg)
+![Exports](../features/images/exports.jpeg)

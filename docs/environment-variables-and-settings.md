@@ -30,5 +30,7 @@ As many other applications, Dawarich uses environment variables to configure its
 | `PROMETHEUS_EXPORTER_HOST` | `0.0.0.0` | Prometheus exporter host |
 | `PROMETHEUS_EXPORTER_PORT` | `9394` | Prometheus exporter port |
 | `DISABLE_TELEMETRY` | `false` | Disable [telemetry](/docs/tutorials/telemetry) |
+| `PHOTON_API_USE_HTTPS` | `true` | Use HTTPS for Photon API requests |
+| `PHOTON_API_HOST` | `photon.komoot.io` | Photon API host. Useful if you're self-hosting your [own Photon instance](https://dawarich.app/docs/tutorials/reverse-geocoding#setting-up-your-own-reverse-geocoding-service) |
 
 Important note on Prometheus exporter: even if you want to use it, make sure you have `PROMETHEUS_EXPORTER_ENABLED` set to `false` in `dawarich_sidekiq` container. Otherwise, you'll end up with two exporters and will have to deal with duplicate metrics. The `PROMETHEUS_EXPORTER_HOST` for `dawarich_sidekiq` should be set to `dawarich_app` or your name of the container.
