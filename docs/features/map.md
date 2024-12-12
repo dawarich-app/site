@@ -25,8 +25,8 @@ Map has a few optional layers:
 - **Heatmap** - shows the heatmap of your points.
 - **Fog of war** - shows the fog of war of your points.
 - **Scratch map** - highlights countries you've visited.
-- **Areas** - enables [areas drawing on the map](/features/areas) and shows existing areas you've created.
-- **Photos** - shows photos from your connected [Immich and/or Photoprism](/features/photos) instance.
+- **Areas** - enables [areas drawing on the map](/docs/features/areas) and shows existing areas you've created.
+- **Photos** - shows photos from your connected [Immich and/or Photoprism](/docs/features/photos) instance.
 
 Let's see how each of these layers looks like.
 
