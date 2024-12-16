@@ -69,4 +69,5 @@ Content-Type: application/json
 
 There is a way to have your geolocation data from Home Assistant in Dawarich. It might be useful for those who already have Home Assistant and don't want to use another app for tracking.
 
-The guide can be found on Github: [Home Assistant integration](https://github.com/Freika/dawarich/discussions/77#discussioncomment-9904099)
+For a customized integration, follow the guide available on GitHub: [Home Assistant integration](https://github.com/Freika/dawarich/discussions/77#discussioncomment-9904099).
+Alternatively, you can install the HACS integration: [dawarich-home-assistant](https://github.com/AlbinLind/dawarich-home-assistant).
