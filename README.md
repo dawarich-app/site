@@ -1,6 +1,6 @@
 # Website
 
-This is the source code for the website of the [Dawarich](https://dawarich.app) project.
+This is the source code for the website of the [Dawarich](https://dawarich.app) project
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
