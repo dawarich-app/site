@@ -22,13 +22,21 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Dawarich Tutorial - 5min ⏱️
+            5 min intro ⏱️
           </Link>
 
           <Link
             className={clsx('button button--secondary button--lg', styles.button)}
             to="https://demo.dawarich.app">
             Live demo 🗺️
+          </Link>
+        </div>
+        <br/>
+        <div className={styles.buttons}>
+        <Link
+            className={clsx('button button--secondary button--lg', styles.button)}
+            to="https://www.patreon.com/c/freika/membership">
+            Hosted tier on Patreon 🎉
           </Link>
         </div>
 
@@ -42,20 +50,22 @@ function HomepageHeader() {
         />
 
         <div className={styles.github}>
-          <div class='support_us'>
-          Support us on
+          <div className='support_us'>
+            Support us on
           </div>
-          <Link
-            className={clsx('button button--secondary button--lg', styles.button)}
-            to="https://ko-fi.com/freika">
-            Ko-Fi ☕️
-          </Link>
-          or
-          <Link
-            className={clsx('button button--secondary button--lg', styles.button)}
-            to="https://www.patreon.com/freika">
+          <div className={styles.supportButtons}>
+            <Link
+              className={clsx('button button--secondary button--lg', styles.button)}
+              to="https://ko-fi.com/freika">
+              Ko-Fi ☕️
+            </Link>
+            <div className={styles.orSeparator}>or</div>
+            <Link
+              className={clsx('button button--secondary button--lg', styles.button)}
+              to="https://www.patreon.com/freika">
               Patreon 🎉
-          </Link>
+            </Link>
+          </div>
         </div>
       </div>
     </header>

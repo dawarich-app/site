@@ -25,3 +25,21 @@
 .button {
   margin: 0 1rem;
 }
+
+.supportButtons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.orSeparator {
+  padding: 0.5rem;
+}
+
+@media screen and (max-width: 480px) {
+  .supportButtons {
+    flex-direction: column;
+  }
+}
