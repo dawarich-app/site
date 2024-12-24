@@ -47,7 +47,7 @@ To enable reverse geocoding, you need to set the `REVERSE_GEOCODING_ENABLED` env
 
 ## Using Photon API hosted by Freika
 
-If you support Dawarich development on [Patreon](https://www.patreon.com/c/freika/membership) (starting from `Buy me a Döner` tier), you can use the Photon API instance hosted by Freika without any limits. To do that, set the `PHOTON_API_KEY` environment variable to the key that you will receive on Patreon in private messages after signing up for `Buy me a Döner` tier.
+If you support Dawarich development on [Patreon](https://www.patreon.com/c/freika/membership) (starting from `Buy me a Döner` tier), you can use the Photon API instance hosted by Freika without any limits. To do that, set the `PHOTON_API_KEY` environment variable to the key that you will receive on Patreon in private messages after signing up for `Buy me a Döner` tier. The `PHOTON_API_HOST` environment variable should be set to `photon.dawarich.app`.
 
 :::info
 
