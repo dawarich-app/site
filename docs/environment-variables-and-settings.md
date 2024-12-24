@@ -32,5 +32,6 @@ As many other applications, Dawarich uses environment variables to configure its
 | `DISABLE_TELEMETRY` | `false` | Disable [telemetry](/docs/tutorials/telemetry) |
 | `PHOTON_API_USE_HTTPS` | `true` | Use HTTPS for Photon API requests |
 | `PHOTON_API_HOST` | `photon.komoot.io` | Photon API host. Useful if you're self-hosting your [own Photon instance](https://dawarich.app/docs/tutorials/reverse-geocoding#setting-up-your-own-reverse-geocoding-service) |
+| `PHOTON_API_KEY` | `123` | Photon API key. Useful if you're supporting Dawarich development on [Patreon](https://www.patreon.com/c/freika/membership) and want to use Photon API instance hosted by Freika without any limits |
 
 Important note on Prometheus exporter: even if you want to use it, make sure you have `PROMETHEUS_EXPORTER_ENABLED` set to `false` in `dawarich_sidekiq` container. Otherwise, you'll end up with two exporters and will have to deal with duplicate metrics. The `PROMETHEUS_EXPORTER_HOST` for `dawarich_sidekiq` should be set to `dawarich_app` or your name of the container.

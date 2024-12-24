@@ -6,6 +6,9 @@ sidebar_position: 6
 
 Reverse geocoding is the process of converting geographic coordinates into a human-readable address. By default, Dawarich provides reverse geocoding functionality using the [Nominatim](https://nominatim.org/) service. This service is free to use, but it asks users to limit the number of requests per second to 1 request per second. Dawarich will automatically limit the number of requests per second to 1 request per second, but if you have a lot of points in your location history data, the reverse geocoding process might take some time. To speed up the process, you can set up [your own reverse geocoding service](#setting-up-your-own-reverse-geocoding-service).
 
+If you don't want to be limited by the number of requests per second, you can support Dawarich development on [Patreon](https://www.patreon.com/c/freika/membership) and use the Photon API instance hosted by Freika without any limits, or you can set up [your own reverse geocoding service](#setting-up-your-own-reverse-geocoding-service).
+
+
 ## How to enable reverse geocoding
 
 To enable reverse geocoding, you need to set the `REVERSE_GEOCODING_ENABLED` environment variable to `true` in the `docker-compose.yml` file. Here is an example of how to do it:
@@ -41,6 +44,22 @@ To enable reverse geocoding, you need to set the `REVERSE_GEOCODING_ENABLED` env
       ...
   ```
 </details>
+
+## Using Photon API hosted by Freika
+
+If you support Dawarich development on [Patreon](https://www.patreon.com/c/freika/membership), you can use the Photon API instance hosted by Freika without any limits. To do that, set the `PHOTON_API_KEY` environment variable to the key that you will receive on Patreon in private messages after signing up for `Buy me a Döner` tier.
+
+:::info
+
+This service is based on [Photon](https://github.com/komoot/photon), an open-source project distributed under the Apache 2.0 license.
+
+The Service is provided "as is," without warranties of any kind, either express or implied, as specified under the Apache 2.0 license. We are not liable for any indirect, incidental, or consequential damages arising from your use of the Service.
+
+**No logs or analytics are collected, except the ones required for the service to work. No user data is collected, stored, or shared with any third parties.**
+
+The original authors retain all rights as specified in the license.
+
+:::
 
 ## Setting up your own reverse geocoding service
 
