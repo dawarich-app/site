@@ -8,6 +8,20 @@ Reverse geocoding is the process of converting geographic coordinates into a hum
 
 If you don't want to be limited by the number of requests per second, you can support Dawarich development on [Patreon](https://www.patreon.com/c/freika/membership) and use the Photon API instance hosted by Freika without any limits, or you can set up [your own reverse geocoding service](#setting-up-your-own-reverse-geocoding-service).
 
+:::warning
+
+Since https://photon.komoot.io/ is a free service with limited usage, in order to decrease the load on the service, I strongly encourage you to host your [own reverse geocoding service](#setting-up-your-own-reverse-geocoding-service), or use the Photon API [for Patreon supporters](#using-photon-api-for-patreon-supporters), to support Dawarich development.
+
+Support for more reverse geocoding services is coming soon.
+
+:::
+
+:::danger
+
+Please be aware that any external reverse geocoding service should be used at your own risk. There is no way to be sure that your data is not being used for other purposes than reverse geocoding. Hosting your own reverse geocoding service is the safest option.
+
+:::
+
 
 ## How to enable reverse geocoding
 
@@ -45,7 +59,7 @@ To enable reverse geocoding, you need to set the `REVERSE_GEOCODING_ENABLED` env
   ```
 </details>
 
-## Using Photon API hosted by Freika
+## Using Photon API for Patreon supporters
 
 If you support Dawarich development on [Patreon](https://www.patreon.com/c/freika/membership) (starting from `Buy me a Döner` tier), you can use the Photon API instance hosted by Freika without any limits. To do that, set the `PHOTON_API_KEY` environment variable to the key that you will receive on Patreon in private messages after signing up for `Buy me a Döner` tier. The `PHOTON_API_HOST` environment variable should be set to `photon.dawarich.app`.
 
