@@ -33,7 +33,7 @@ Please be aware that any external reverse geocoding service should be used at yo
 
 ## How to enable reverse geocoding
 
-To enable reverse geocoding, you need to set the `REVERSE_GEOCODING_ENABLED` environment variable to `true` in the `docker-compose.yml` file. Here is an example of how to do it:
+To enable reverse geocoding, you need to provide correct ENV variables for the reverse geocoding service you want to use. Here is an example of how to do it:
 
 
 <details>
@@ -51,7 +51,9 @@ To enable reverse geocoding, you need to set the `REVERSE_GEOCODING_ENABLED` env
         RAILS_ENV: development
         ...
         APPLICATION_PROTOCOL: http
-        REVERSE_GEOCODING_ENABLED: true # or false to disable reverse geocoding
+        PHOTON_API_HOST: photon.yourdomain.com
+        PHOTON_API_KEY: your_photon_api_key # If you're using Photon API instance for Patreon supporters
+        PHOTON_API_USE_HTTPS: true # or false if you want to use HTTP instead of HTTPS
       logging:
       ...
     dawarich_sidekiq:
@@ -61,13 +63,15 @@ To enable reverse geocoding, you need to set the `REVERSE_GEOCODING_ENABLED` env
         RAILS_ENV: development
         ...
         APPLICATION_PROTOCOL: http
-        REVERSE_GEOCODING_ENABLED: true # or false to disable reverse geocoding
+        PHOTON_API_HOST: photon.yourdomain.com
+        PHOTON_API_KEY: your_photon_api_key # If you're using Photon API instance for Patreon supporters
+        PHOTON_API_USE_HTTPS: true # or false if you want to use HTTP instead of HTTPS
       logging:
       ...
   ```
 </details>
 
-Also, don't forget to provide correct ENV variables for the reverse geocoding service you want to use.
+If you're using Geoapify, you need to provide the `GEOAPIFY_API_KEY` environment variable instead of `PHOTON_...` variables.
 
 ## Using Photon API for Patreon supporters
 
@@ -106,7 +110,6 @@ If you want to use your own reverse geocoding service, you can do it by deployin
         RAILS_ENV: development
         ...
         APPLICATION_PROTOCOL: http
-        REVERSE_GEOCODING_ENABLED: true
         PHOTON_API_HOST: photon.yourdomain.com # remove this line if you want to use the default Nominatim service
       logging:
       ...
@@ -117,7 +120,6 @@ If you want to use your own reverse geocoding service, you can do it by deployin
         RAILS_ENV: development
         ...
         APPLICATION_PROTOCOL: http
-        REVERSE_GEOCODING_ENABLED: true
         PHOTON_API_HOST: photon.yourdomain.com # remove this line if you want to use the default Nominatim service
       logging:
       ...

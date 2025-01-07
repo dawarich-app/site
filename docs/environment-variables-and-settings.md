@@ -21,14 +21,13 @@ As many other applications, Dawarich uses environment variables to configure its
 | `APPLICATION_PROTOCOL` | `http` | Application protocol. Change to `https` if you want your Dawarich instance to be served via SSL |
 | `TIME_ZONE`          | `Europe/London` | Time zone. Full list of supported timezones available on [Github](https://github.com/Freika/dawarich/issues/27#issuecomment-2094721396) |
 | `DISTANCE_UNIT` | `km` | Distance unit. For miles, change to `mi`. All settings still should be provided in meters/kilometers |
-| `REVERSE_GEOCODING_ENABLED` | `true`/`false` | Reverse geocoding enabled |
 | `RAILS_MAX_THREADS` | `5` | Connection pool size for the Dawarich database |
 | `BACKGROUND_PROCESSING_CONCURRENCY` | `10` | Background processing concurrency. Should not be higher than `RAILS_MAX_THREADS`. More info on [Sidekiq docs](https://github.com/sidekiq/sidekiq/wiki/Advanced-Options#concurrency) |
 | `PROMETHEUS_EXPORTER_ENABLED` | `false` | Prometheus exporter enabled |
 | `PROMETHEUS_EXPORTER_HOST` | `0.0.0.0` | Prometheus exporter host |
 | `PROMETHEUS_EXPORTER_PORT` | `9394` | Prometheus exporter port |
 | `DISABLE_TELEMETRY` | `false` | Disable [telemetry](/docs/tutorials/telemetry) |
-| `PHOTON_API_USE_HTTPS` | `true` | Use HTTPS for Photon API requests |
+| `PHOTON_API_USE_HTTPS` | `nil` | Use HTTPS for Photon API requests |
 | `PHOTON_API_HOST` | `nil` | Photon API host. Useful if you're self-hosting your [own Photon instance](https://dawarich.app/docs/tutorials/reverse-geocoding#setting-up-your-own-reverse-geocoding-service) |
 | `PHOTON_API_KEY` | `nil` | Photon API key. Useful if you're supporting Dawarich development on [Patreon](https://www.patreon.com/c/freika/membership) and want to use Photon API instance hosted by Freika without any limits |
 | `GEOAPIFY_API_KEY` | `nil` | Geoapify API key. Provide your own key if you want to use Geoapify reverse geocoding service |
