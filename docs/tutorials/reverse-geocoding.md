@@ -4,9 +4,17 @@ sidebar_position: 6
 
 # Reverse geocoding
 
-Reverse geocoding is the process of converting geographic coordinates into a human-readable address. By default, Dawarich provides reverse geocoding functionality using the [Nominatim](https://nominatim.org/) service. This service is free to use, but it asks users to limit the number of requests per second to 1 request per second. Dawarich will automatically limit the number of requests per second to 1 request per second, but if you have a lot of points in your location history data, the reverse geocoding process might take some time. To speed up the process, you can set up [your own reverse geocoding service](#setting-up-your-own-reverse-geocoding-service).
+Reverse geocoding is the process of converting geographic coordinates into a human-readable address. By default, reverse geocoding is disabled in Dawarich.
 
-If you don't want to be limited by the number of requests per second, you can support Dawarich development on [Patreon](https://www.patreon.com/c/freika/membership) and use the Photon API instance hosted by Freika without any limits, or you can set up [your own reverse geocoding service](#setting-up-your-own-reverse-geocoding-service).
+Currently, Dawarich supports 3 options for reverse geocoding services:
+
+- [Geoapify](https://www.geoapify.com/) (free, limited usage, see [Geoapify pricing](https://www.geoapify.com/pricing))
+- [Photon](https://photon.komoot.io/) (free, limited usage, [1 request per second](https://photon.komoot.io/))
+- [Self-hosted Photon](https://dawarich.app/docs/tutorials/reverse-geocoding#setting-up-your-own-reverse-geocoding-service) (free, unlimited usage)
+
+Please make sure you have read and understood the pricing and usage limits of each service before choosing one.
+
+If you don't want to be limited by the number of requests per second, and you don't want to host your own reverse geocoding service, you can support Dawarich development on [Patreon](https://www.patreon.com/c/freika/membership) and use the Photon API instance hosted by Freika without any limits.
 
 :::warning
 
@@ -58,6 +66,8 @@ To enable reverse geocoding, you need to set the `REVERSE_GEOCODING_ENABLED` env
       ...
   ```
 </details>
+
+Also, don't forget to provide correct ENV variables for the reverse geocoding service you want to use.
 
 ## Using Photon API for Patreon supporters
 
