@@ -17,7 +17,7 @@ You can limit the resources available to Dawarich by setting the `resources` par
       resources:
         limits:
           cpus: '0.50'    # Limit CPU usage to 50% of one core
-          memory: '2G'    # Limit memory usage to 2GB
+          memory: '4G'    # Limit memory usage to 4GB
 ```
 
 From time to time, new releases include resource-intensive data migrations. Make sure you provide enough resources to handle these migrations.

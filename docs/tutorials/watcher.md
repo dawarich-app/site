@@ -4,7 +4,7 @@ sidebar_position: 9
 
 # The Watcher release
 
-Dawarich can now watch a directory for new GPX and GeoJSON files and automatically import them. This feature is useful if you have a service that can put files to the directory automatically. The directory is being watched every _60 minutes_ for new files.
+Dawarich can now watch a directory for new GPX and GeoJSON files and automatically import them. This feature is useful if you have a service that can put files to the directory automatically. The directory is being watched every _60 minutes_ for new files. Updated files with the same name will be ignored.
 
 First, let's update your `docker-compose.yml` file to include a new volume that will expose the `/tmp/imports/watched/` directory to the host machine. Add the following lines to the `volumes` section of the `docker-compose.yml` file:
 

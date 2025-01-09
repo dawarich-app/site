@@ -24,7 +24,7 @@ You can use our [Hetzner](https://hetzner.cloud/?ref=DQC5djwEU64f) and [DigitalO
 
 ## Setup your Dawarich instance
 
-1. Copy contents of the [docker-compose.yml](https://github.com/Freika/dawarich/blob/master/docker-compose.yml) file to a file named `docker-compose.yml` on your server.
+1. Copy contents of the [docker-compose.yml](https://github.com/Freika/dawarich/blob/master/docker/docker-compose.yml) file to a file named `docker-compose.yml` on your server.
 2. Move to the directory where you saved the `docker-compose.yml` file: `cd /path/to/your/docker-compose.yml`
 3. Run the following command to start your Dawarich instance:
 
