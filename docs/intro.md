@@ -47,6 +47,19 @@ docker compose up -d # Start the updated instance
 
 3. All done!
 
+:::info
+
+After starting the application, you should have at least 4 running containers:
+
+- `dawarich_db` - PostgreSQL database
+- `dawarich_redis` - Redis database
+- `dawarich_sidekiq` - Sidekiq worker (for background jobs)
+- `dawarich_web` - Dawarich web application
+
+Make sure all of them are running.
+
+:::
+
 :::warning
 
 Although the `docker` directory contains `docker-compose.production.yml` file, it's not yet recommended to use. Use the `docker-compose.yml` file instead, with the `development` environment.
