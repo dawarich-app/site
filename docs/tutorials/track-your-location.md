@@ -53,7 +53,7 @@ The configuration of GPSLogger is pretty simple and straightforward, so I want t
     "lat": "%LAT",
     "lon": "%LON",
     "tst": "%TIMESTAMP",
-    "vel": "%SPD_KPH"
+    "vel": "%SPD"
 }
 ```
 
