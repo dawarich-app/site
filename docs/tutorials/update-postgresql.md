@@ -14,7 +14,7 @@ Later on, PostgreSQL 17 will be used by default. To prevent data loss, the defau
 
 :::
 
-First, we're going to create a backup, so our data is safe in case something goes wrong.
+First, we are going to dump the entire database to a file so that we can later pull this dump into the new version of Postgres, because it is not possible to simply upgrade the data in place.
 
 ```bash
 docker exec -t dawarich_db pg_dumpall -U USERNAME > backup.sql
