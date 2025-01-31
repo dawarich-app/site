@@ -134,7 +134,11 @@ const config = {
               {
                 label: 'FAQ',
                 to: 'docs/FAQ',
-              }
+              },
+              {
+                label: 'Contact',
+                to: 'contact',
+              },
             ],
           },
           {
