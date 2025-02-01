@@ -146,6 +146,10 @@ const config = {
                 `
               },
               {
+                label: 'Privacy Policy',
+                to: '/privacy-policy',
+              },
+              {
                 label: 'Blog',
                 to: '/blog',
               },
