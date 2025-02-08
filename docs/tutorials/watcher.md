@@ -15,7 +15,6 @@ First, let's update your `docker-compose.yml` file to include a new volume that 
     image: freikin/dawarich:latest
     container_name: dawarich_app
     volumes:
-      - gem_cache:/usr/local/bundle/gems
       - public:/var/app/public
 +     - watched:/var/app/tmp/imports/watched
 
@@ -25,7 +24,6 @@ First, let's update your `docker-compose.yml` file to include a new volume that 
       image: freikin/dawarich:latest
       container_name: dawarich_sidekiq
       volumes:
-        - gem_cache:/usr/local/bundle/gems
         - public:/var/app/public
 +       - watched:/var/app/tmp/imports/watched
 
@@ -33,7 +31,6 @@ First, let's update your `docker-compose.yml` file to include a new volume that 
 
 volumes:
   db_data:
-  gem_cache:
   shared_data:
   public:
 + watched:
