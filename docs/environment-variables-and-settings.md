@@ -16,6 +16,7 @@ As many other applications, Dawarich uses environment variables to configure its
 | `DATABASE_USERNAME`  | `postgres`    | Database username |
 | `DATABASE_PASSWORD`  | `password`    | Database password |
 | `DATABASE_NAME`      | `dawarich_development` | Database name |
+| `DATABASE_PORT`      | `5432` | Database port |
 | `MIN_MINUTES_SPENT_IN_CITY` | `60`   | Minimum minutes spent in a city |
 | `APPLICATION_HOSTS`  | `localhost,my.domain.com`   | Application hosts, provide multiple if you want your Dawarich instance to be available by multiple domains/ip addresses. Don't put protocols here, only host names. |
 | `APPLICATION_PROTOCOL` | `http` | Application protocol. Change to `https` if you want your Dawarich instance to be served via SSL |
