@@ -36,4 +36,6 @@ volumes:
 + watched:
 ```
 
-Now, you can put your GPX and GeoJSON files to the `/tmp/imports/watched/your_user@email.com/` directory and Dawarich will automatically import them. You will receive a notification in the app after the file is imported.
+Now, in the container, create a directory for your user (`/tmp/imports/watched/your_user@email.com/`) and put your GPX and GeoJSON files to the directory.
+
+Dawarich will automatically import the files and you will receive a notification in the app after the file is imported.
