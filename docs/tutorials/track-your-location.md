@@ -27,11 +27,10 @@ Dawarich provides an API for tracking your location. You can use the API to send
 2. Open the app and go to the settings ("i" icon in top left corner).
 3. Tap on the "Settings" button.
 4. Select "HTTP" mode.
-5. Set the "Host" field to `<your-dawarich-instance>`.
-6. Tap on the "URL" field.
-7. Paste the following URL: `http://<your-dawarich-instance>/api/v1/owntracks/points?api_key=<your-api-key>`.
-8. Tap on "Back" button (top left corner).
-9. You're all set! OwnTracks will start sending your location data to Dawarich.
+5. Tap on the "URL" field.
+6. Paste the following URL: `http://<your-dawarich-instance>/api/v1/owntracks/points?api_key=<your-api-key>`.
+7. Tap on "Back" button (top left corner).
+8. You're all set! OwnTracks will start sending your location data to Dawarich.
 
 ## GPS Logger
 

@@ -14,7 +14,7 @@ Dawarich is available on iOS. You can download it from the App Store.
 
 import ThemedImage from '@theme/ThemedImage';
 
-<a href="https://apps.apple.com/de/app/dawarich/id6739544999?itscg=30200&itsct=apps_box_badge&mttnsubad=6739544999">
+<!-- <a href="https://apps.apple.com/de/app/dawarich/id6739544999?itscg=30200&itsct=apps_box_badge&mttnsubad=6739544999">
   <ThemedImage
     alt="Download on the App Store"
     sources={{
@@ -22,6 +22,12 @@ import ThemedImage from '@theme/ThemedImage';
       dark: 'https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/white/en-us?releaseDate=1738540800'
     }}
   />
+</a> -->
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+<a href="https://apps.apple.com/de/app/dawarich/id6739544999?itscg=30200&itsct=apps_box_badge&mttnsubad=6739544999">
+  <img src={useBaseUrl("img/dawarich-release-announcement.png")} alt="Download on the App Store" style={{width: "75%"}} />
 </a>
 
 ## Usage
