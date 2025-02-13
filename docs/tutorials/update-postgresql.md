@@ -2,7 +2,7 @@
 sidebar_position: 10
 ---
 
-# Update PostgreSQL to the latest version
+# Updating to PostgreSQL 17 with Postgis
 
 As of January 2025, Dawarich uses kinda obsolete version of PostgreSQL, so to make sure we'll be able to improve and expand the project, we need to update it to the most recent version.
 
@@ -23,6 +23,10 @@ Be careful with this process. Make sure you're aware of the risks and have a loc
 5. Validate the data presence in the new database
 
 We'll also be able to roll back to the previous version if something goes wrong.
+
+:::info
+If you're looking for a compatible PostgreSQL image with PostGIS, you can find list of images for different architectures [here](/docs/tutorials/moving-to-postgis).
+:::
 
 ## 0. Preparing local backup
 
