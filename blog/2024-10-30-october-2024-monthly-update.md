@@ -1,11 +1,7 @@
 ---
 slug: october-2024-monthly-update
 title: October 2024 Monthly Update
-authors:
-  name: Evgenii Burmakin
-  title: Author of Dawarich
-  url: https://github.com/Freika
-  image_url: https://github.com/Freika.png
+authors: evgenii
 tags: [montly-update]
 ---
 
@@ -16,6 +12,8 @@ Hi and welcome to the October 2024 monthly update of Dawarich!
 The biggest news of October for me is that I'm looking for a job! If you have a position for a Ruby on Rails developer with 10+ years of experience in Germany, drop me a line on [LinkedIn](https://www.linkedin.com/in/frey/) or [email](mailto:hey+jobfromdawarich@frey.today) me.
 
 As for Dawarich, there is a pretty big list of changes and improvements in this release. Let's dive into them!
+
+<!-- truncate -->
 
 ## Important features and changes
 

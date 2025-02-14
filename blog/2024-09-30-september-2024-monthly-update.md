@@ -1,11 +1,7 @@
 ---
 slug: september-2024-monthly-update
 title: September 2024 Monthly Update
-authors:
-  name: Evgenii Burmakin
-  title: Author of Dawarich
-  url: https://github.com/Freika
-  image_url: https://github.com/Freika.png
+authors: evgenii
 tags: [montly-update]
 ---
 
@@ -16,6 +12,8 @@ This is the first monthly update of the project. It will be published in the end
 ## News
 
 Believe it or not, in the beginning of the month, there was less than 900 stars on the GitHub repository. But now, there are almost 2000 stars! The [post on the 0.12.0 release](https://www.reddit.com/r/selfhosted/comments/1f73ctc/dawarich_0120_selfhosted_google_location_history/) on Reddit was very popular and it helped to attract more attention to the project. Shortly after that post, someone posted a link to Dawarich repo on [HackerNews](https://news.ycombinator.com/item?id=41424373) and lots of people visited the project page from there. The project is growing and it's very exciting!
+
+<!-- truncate -->
 
 ## Important features and changes
 

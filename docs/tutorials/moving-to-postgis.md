@@ -12,16 +12,16 @@ Since there are at least 4 platforms that are supported by Dawarich, it might be
 
 | Architecture | Old image | New image |
 | ------------ | --------- | --------- |
-| amd64        | postgres:14.2-alpine | postgis/postgis:14-3.3-alpine |
-| arm64        | postgres:14.2-alpine | postgis/postgis:14-3.3-alpine |
-| linux/arm/v7 | postgres:14.2-alpine | postgis/postgis:14-3.3 |
-| linux/arm/v8 | postgres:14.2-alpine | postgis/postgis:14-3.3 |
+| amd64        | postgres:14.2-alpine | imresamu/postgis:14-3.5-alpine |
+| arm64        | postgres:14.2-alpine | imresamu/postgis:14-3.5-alpine |
+| linux/arm/v7 | postgres:14.2-alpine | imresamu/postgis:14-3.5-alpine |
+| linux/arm/v8 | postgres:14.2-alpine | imresamu/postgis:14-3.5-alpine |
 
 If you already switched to PostgreSQL17, here are some images that will work in your case:
 
 | Architecture | Old image | New image |
 | ------------ | --------- | --------- |
-| amd64        | postgres:17-alpine | imresamu/postgis:17-3.5-alpine3.20 |
-| arm64        | postgres:17-alpine | imresamu/postgis:17-3.5-alpine3.20 |
-| linux/arm/v7 | postgres:17-alpine | imresamu/postgis:17-3.5-alpine3.20 |
-| linux/arm/v8 | postgres:17-alpine | imresamu/postgis:17-3.5-alpine3.20 |
+| amd64        | postgres:17-alpine | imresamu/postgis:17-3.5-alpine |
+| arm64        | postgres:17-alpine | imresamu/postgis:17-3.5-alpine |
+| linux/arm/v7 | postgres:17-alpine | imresamu/postgis:17-3.5-alpine |
+| linux/arm/v8 | postgres:17-alpine | imresamu/postgis:17-3.5-alpine |

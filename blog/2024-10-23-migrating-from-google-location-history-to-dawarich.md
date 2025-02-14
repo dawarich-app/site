@@ -1,11 +1,7 @@
 ---
 slug: migrating-from-google-location-history-to-dawarich
 title: Migrating from Google Location History to Dawarich
-authors:
-  name: Evgenii Burmakin
-  title: Author of Dawarich
-  url: https://github.com/Freika
-  image_url: https://github.com/Freika.png
+authors: evgenii
 tags: [guides]
 ---
 
@@ -21,6 +17,8 @@ As you probably already know, Google [discontinuing](https://blog.google/product
 The transition offered by Google is far from perfect: some users already have reported they have lost years and years of their location history data.
 
 The least you can do is to export your data from Google. You can do it either using Google's [Takeout](https://takeout.google.com/) feature or by navigating to Timeline -> Backup in your Google Maps application. Either way, in the end, you will receive an archive with your location history, hopefully, for the whole time you have been tracking it.
+
+<!-- truncate -->
 
 ## What's next?
 

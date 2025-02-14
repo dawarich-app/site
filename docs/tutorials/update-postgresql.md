@@ -8,9 +8,11 @@ As of January 2025, Dawarich uses kinda obsolete version of PostgreSQL, so to ma
 
 This post will serve you as an instruction on how to do that.
 
-:::warning
+:::danger
 
 Be careful with this process. Make sure you're aware of the risks and have a local backup of the database.
+
+Also, make sure your Dawarich app is not running. All four containers (`dawarich_app`, `dawarich_sidekiq`, `dawarich_db`, `dawarich_redis`) should be stopped.
 
 :::
 
@@ -330,7 +332,7 @@ docker compose -f docker/docker-compose.yml up -d
 docker exec -it dawarich_db psql -U postgres -d dawarich_development -c "SELECT COUNT(*) FROM points;"
 ```
 
-5. Optional: remove the old database container:
+5. Optional: remove the failed database container:
 
 ```bash
 docker stop dawarich_db_failed
