@@ -19,7 +19,7 @@
         "prism-react-renderer": "^2.4.1",
         "react": "^18.0.0",
         "react-dom": "^18.0.0",
-        "react-leaflet": "^5.0.0",
+        "react-leaflet": "^4.2.1",
         "search-insights": "^2.17.3",
         "typescript": "^5.7.2"
       },
@@ -4060,13 +4060,13 @@
       "integrity": "sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw=="
     },
     "node_modules/@react-leaflet/core": {
-      "version": "3.0.0",
-      "resolved": "https://registry.npmjs.org/@react-leaflet/core/-/core-3.0.0.tgz",
-      "integrity": "sha512-3EWmekh4Nz+pGcr+xjf0KNyYfC3U2JjnkWsh0zcqaexYqmmB5ZhH37kz41JXGmKzpaMZCnPofBBm64i+YrEvGQ==",
+      "version": "2.1.0",
+      "resolved": "https://registry.npmjs.org/@react-leaflet/core/-/core-2.1.0.tgz",
+      "integrity": "sha512-Qk7Pfu8BSarKGqILj4x7bCSZ1pjuAPZ+qmRwH5S7mDS91VSbVVsJSrW4qA+GPrro8t69gFYVMWb1Zc4yFmPiVg==",
       "peerDependencies": {
         "leaflet": "^1.9.0",
-        "react": "^19.0.0",
-        "react-dom": "^19.0.0"
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
       }
     },
     "node_modules/@sideway/address": {
@@ -14049,16 +14049,16 @@
       }
     },
     "node_modules/react-leaflet": {
-      "version": "5.0.0",
-      "resolved": "https://registry.npmjs.org/react-leaflet/-/react-leaflet-5.0.0.tgz",
-      "integrity": "sha512-CWbTpr5vcHw5bt9i4zSlPEVQdTVcML390TjeDG0cK59z1ylexpqC6M1PJFjV8jD7CF+ACBFsLIDs6DRMoLEofw==",
+      "version": "4.2.1",
+      "resolved": "https://registry.npmjs.org/react-leaflet/-/react-leaflet-4.2.1.tgz",
+      "integrity": "sha512-p9chkvhcKrWn/H/1FFeVSqLdReGwn2qmiobOQGO3BifX+/vV/39qhY8dGqbdcPh1e6jxh/QHriLXr7a4eLFK4Q==",
       "dependencies": {
-        "@react-leaflet/core": "^3.0.0"
+        "@react-leaflet/core": "^2.1.0"
       },
       "peerDependencies": {
         "leaflet": "^1.9.0",
-        "react": "^19.0.0",
-        "react-dom": "^19.0.0"
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
       }
     },
     "node_modules/react-loadable": {

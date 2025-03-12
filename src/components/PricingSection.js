@@ -25,7 +25,7 @@ export default function PricingSection() {
               "Interactive maps and visualizations",
               "Comprehensive travel statistics",
               "Self-hosted privacy and data control",
-              "Mobile apps for iOS"
+              "Mobile app for iOS"
             ]}
             buttonText="Get Started"
             buttonLink="/docs/intro"
