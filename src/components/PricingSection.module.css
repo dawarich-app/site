@@ -1,0 +1,80 @@
+.section {
+  padding: 80px 0;
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.cardContainer {
+  max-width: 550px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Blue top accent line for the card container */
+.cardContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 4px 4px 0 0;
+  z-index: 1;
+}
+
+/* Dark mode support */
+[data-theme='dark'] .section {
+  background-color: #111827;
+}
+
+[data-theme='dark'] .title {
+  color: #f9fafb;
+}
+
+[data-theme='dark'] .subtitle {
+  color: #9ca3af;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+}

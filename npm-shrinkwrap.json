@@ -14,10 +14,12 @@
         "@mdx-js/react": "^3.1.0",
         "@types/prop-types": "^15.7.14",
         "clsx": "^2.1.1",
+        "leaflet": "^1.9.4",
         "postcss-selector-parser": "^7.0.0",
         "prism-react-renderer": "^2.4.1",
         "react": "^18.0.0",
         "react-dom": "^18.0.0",
+        "react-leaflet": "^5.0.0",
         "search-insights": "^2.17.3",
         "typescript": "^5.7.2"
       },
@@ -4056,6 +4058,16 @@
       "version": "1.0.0-next.28",
       "resolved": "https://registry.npmjs.org/@polka/url/-/url-1.0.0-next.28.tgz",
       "integrity": "sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw=="
+    },
+    "node_modules/@react-leaflet/core": {
+      "version": "3.0.0",
+      "resolved": "https://registry.npmjs.org/@react-leaflet/core/-/core-3.0.0.tgz",
+      "integrity": "sha512-3EWmekh4Nz+pGcr+xjf0KNyYfC3U2JjnkWsh0zcqaexYqmmB5ZhH37kz41JXGmKzpaMZCnPofBBm64i+YrEvGQ==",
+      "peerDependencies": {
+        "leaflet": "^1.9.0",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0"
+      }
     },
     "node_modules/@sideway/address": {
       "version": "4.1.5",
@@ -9296,6 +9308,11 @@
         "shell-quote": "^1.8.1"
       }
     },
+    "node_modules/leaflet": {
+      "version": "1.9.4",
+      "resolved": "https://registry.npmjs.org/leaflet/-/leaflet-1.9.4.tgz",
+      "integrity": "sha512-nxS1ynzJOmOlHp+iL3FyWqK89GtNL8U8rvlMOsQdTTssxZwCXh8N2NB3GDQOL+YR3XnWyZAxwQixURb+FA74PA=="
+    },
     "node_modules/leven": {
       "version": "3.1.0",
       "resolved": "https://registry.npmjs.org/leven/-/leven-3.1.0.tgz",
@@ -14029,6 +14046,19 @@
       },
       "peerDependencies": {
         "react": "^16.13.1 || ^17.0.0 || ^18.0.0"
+      }
+    },
+    "node_modules/react-leaflet": {
+      "version": "5.0.0",
+      "resolved": "https://registry.npmjs.org/react-leaflet/-/react-leaflet-5.0.0.tgz",
+      "integrity": "sha512-CWbTpr5vcHw5bt9i4zSlPEVQdTVcML390TjeDG0cK59z1ylexpqC6M1PJFjV8jD7CF+ACBFsLIDs6DRMoLEofw==",
+      "dependencies": {
+        "@react-leaflet/core": "^3.0.0"
+      },
+      "peerDependencies": {
+        "leaflet": "^1.9.0",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0"
       }
     },
     "node_modules/react-loadable": {

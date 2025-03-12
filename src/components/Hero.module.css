@@ -1,0 +1,139 @@
+.hero {
+  padding: 80px 0;
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #3b82f6;
+}
+
+.subtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4b5563;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background-color: #3b82f6;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  min-width: 160px;
+}
+
+.primaryButton:hover {
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4b5563;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+  min-width: 160px;
+}
+
+.secondaryButton:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+  text-decoration: none;
+}
+
+.arrow {
+  margin-left: 8px;
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+
+.primaryButton:hover .arrow {
+  transform: translateX(3px);
+}
+
+/* Dark mode support */
+[data-theme='dark'] .hero {
+  background-color: #111827;
+}
+
+[data-theme='dark'] .title {
+  color: #f9fafb;
+}
+
+[data-theme='dark'] .highlight {
+  color: #3b82f6;
+}
+
+[data-theme='dark'] .subtitle {
+  color: #9ca3af;
+}
+
+[data-theme='dark'] .secondaryButton {
+  color: #d1d5db;
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+[data-theme='dark'] .secondaryButton:hover {
+  background-color: #374151;
+  color: #f9fafb;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primaryButton, .secondaryButton {
+    width: 100%;
+    max-width: 240px;
+  }
+}

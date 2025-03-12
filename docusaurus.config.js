@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Dawarich',
-  tagline: 'Self-hosted alternative to Google Location History',
+  tagline: 'Visualize your location history',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -17,13 +17,6 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'dawarich-app', // Usually your GitHub org/user name.
-  projectName: 'dawarich.app', // Usually your repo name.
-  deploymentBranch: 'main',
-  trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -142,13 +135,16 @@ const config = {
             title: 'More',
             items: [
               {
-                html: `
-                  <a href="https://trendshift.io/repositories/11108" target="_blank"><img src="https://trendshift.io/api/badge/repositories/11108" alt="Freika%2Fdawarich | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-                `
-              },
-              {
                 label: 'Privacy Policy',
                 to: '/privacy-policy',
+              },
+              {
+                label: 'Terms and Conditions',
+                to: '/terms-and-conditions',
+              },
+              {
+                label: 'Refund Policy',
+                to: '/refund-policy',
               },
               {
                 label: 'Blog',
@@ -162,6 +158,10 @@ const config = {
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Dawarich, built with Docusaurus.`,
+        logo: {
+          src: 'https://trendshift.io/api/badge/repositories/11108',
+          href: 'https://trendshift.io/repositories/11108',
+        },
       },
       prism: {
         theme: prismThemes.github,

@@ -16,7 +16,7 @@ If you self-host Dawarich, no information is collected or transmitted by the Ser
 ### SaaS Version
 For users of the Dawarich SaaS service, we may collect and store the following data for functionality, security, and service improvements:
 - **User account information** (if registration is required)
-- **Location history data** (if enabled by the user)
+- **Location history data** (if uploaded by the user)
 - **Analytics and performance metrics** (anonymized)
 
 This data is used solely for providing the Dawarich service and is not shared with third parties except where necessary for operation (e.g., hosting providers, database storage).
@@ -38,10 +38,10 @@ Dawarich only collects location data if explicitly enabled by the user. For self
 - **SaaS Users:** Data is not shared with third parties except where required for service functionality (e.g., cloud hosting, backups, analytics in an anonymized format).
 - **Hosted Dawarich Users:** No data is shared with third parties, and access is restricted to the Service Provider for necessary maintenance only.
 
-## What are my opt-out rights?
+## Data retention and opt-out options
 
 - **Self-Hosted Users:** You can stop using Dawarich at any time by deleting your installation and associated data.
-- **SaaS Users:** You can delete your account and associated data by contacting us at [hi@dawarich.app](mailto:hi@dawarich.app).
+- **SaaS Users:** You can delete your account and associated data by contacting us at [hi@dawarich.app](mailto:hi@dawarich.app). By default, your data is being kept for a year after your subscription ends. You can also request to delete your data immediately.
 - **Hosted Dawarich Users:** You can cancel your Patreon subscription at any time. After cancellation, your instance and data may be deleted after a grace period.
 
 ## Children
@@ -56,7 +56,7 @@ The Service Provider takes data security seriously. For SaaS and hosted Dawarich
 
 This Privacy Policy may be updated periodically. Users are encouraged to review it regularly for any changes. Continued use of Dawarich constitutes acceptance of any modifications.
 
-This privacy policy is effective as of **2025-02-01**.
+This privacy policy is effective as of **12.03.2025**.
 
 ## Your Consent
 

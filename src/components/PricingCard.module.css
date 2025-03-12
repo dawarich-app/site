@@ -1,0 +1,131 @@
+.pricingCard {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  max-width: 450px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Blue accent line at the top */
+.pricingCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #3b82f6;
+  border-radius: 4px 4px 0 0;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.euroSign {
+  font-size: 30px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.price {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1;
+  color: #111827;
+}
+
+.period {
+  font-size: 20px;
+  color: #6b7280;
+  margin-left: 4px;
+}
+
+.description {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+  text-align: left;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.checkmark {
+  color: #3b82f6;
+  font-size: 18px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.ctaButton {
+  display: block;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 16px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  margin-bottom: 16px;
+}
+
+.ctaButton:hover {
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+}
+
+.trialText {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Dark mode support */
+[data-theme='dark'] .pricingCard {
+  background-color: #1f2937;
+}
+
+[data-theme='dark'] .title,
+[data-theme='dark'] .price,
+[data-theme='dark'] .euroSign {
+  color: #f9fafb;
+}
+
+[data-theme='dark'] .period,
+[data-theme='dark'] .description,
+[data-theme='dark'] .trialText {
+  color: #9ca3af;
+}
+
+[data-theme='dark'] .featureItem {
+  color: #f3f4f6;
+}

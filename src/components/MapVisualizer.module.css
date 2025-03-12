@@ -1,0 +1,196 @@
+.section {
+  padding: 80px 0;
+  background-color: #f9fafb;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Map column (left side) */
+.mapColumn {
+  position: relative;
+}
+
+.mapLabel {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.mapWrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: #f3f4f6;
+}
+
+.mapImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Content column (right side) */
+.contentColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.mappingBadge {
+  display: inline-block;
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 32px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Feature items */
+.featureItem {
+  display: flex;
+  gap: 16px;
+}
+
+.featureIcon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featureTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 8px;
+}
+
+.featureDescription {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* Dark mode */
+[data-theme='dark'] .section {
+  background-color: #111827;
+}
+
+[data-theme='dark'] .mapLabel {
+  color: #9ca3af;
+}
+
+[data-theme='dark'] .mapWrapper {
+  background-color: #1f2937;
+}
+
+[data-theme='dark'] .title {
+  color: #f9fafb;
+}
+
+[data-theme='dark'] .description,
+[data-theme='dark'] .featureDescription {
+  color: #9ca3af;
+}
+
+[data-theme='dark'] .featureTitle {
+  color: #f3f4f6;
+}
+
+[data-theme='dark'] .mappingBadge {
+  background-color: rgba(59, 130, 246, 0.2);
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .mapColumn {
+    order: 1;
+  }
+
+  .contentColumn {
+    order: 2;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .featureIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .featureTitle {
+    font-size: 16px;
+  }
+}
+
+.mutedNote {
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 40px;
+  padding: 0 20px;
+  font-style: italic;
+}
+
+/* Dark mode support */
+[data-theme='dark'] .mutedNote {
+  color: #9ca3af;
+}
