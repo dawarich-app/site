@@ -10,9 +10,9 @@ export default function PricingSection() {
 
         <h2 className={styles.title}>Start Tracking Your Journey</h2>
 
-        <p className={styles.subtitle}>
+        {/* <p className={styles.subtitle}>
           One straightforward annual subscription with everything you need.
-        </p>
+        </p> */}
 
         <div className={styles.cardContainer}>
           <PricingCard
