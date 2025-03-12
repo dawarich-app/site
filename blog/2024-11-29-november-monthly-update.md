@@ -95,7 +95,7 @@ Yeah, you can now enable the "Scratch Map" layer on the map. Have a look:
 
 - Maps are now not so rough on the edges.
 - Rate limit for the Photon API is now 1 request per second. If you host your own Photon API instance, reverse geocoding requests will not be limited.
-- Requests to the Photon API are now have User-Agent header set to "`Dawarich #{APP_VERSION} (https://dawarich.app)`"
+- Requests to the Photon API are now have User-Agent header set to "<code>Dawarich APP_VERSION (https://dawarich.app)</code>"
 - Default number of Puma workers is now 2 instead of 1. This should improve the performance of the application. If you have a lot of users, you might want to increase the number of workers. You can do this by setting the `WEB_CONCURRENCY` env var in your `docker-compose.yml` file. Example:
 
 ```diff
