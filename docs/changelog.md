@@ -394,7 +394,7 @@ You may now use Geoapify API for reverse geocoding. To obtain an API key, sign u
 
 The `dawarich_db` service now uses a custom `postgresql.conf` file.
 
-As @tabacha pointed out in #549, the default `shm_size` for the `dawarich_db` service is too small and it may lead to database performance issues. This release introduces a `shm_size` parameter to the `dawarich_db` service to increase the size of the shared memory for PostgreSQL. This should help database with peforming vacuum and other operations. Also, it introduces a custom `postgresql.conf` file to the `dawarich_db` service.
+As @tabacha pointed out in #549, the default `shm_size` for the `dawarich_db` service is too small and it may lead to database performance issues. This release introduces a `shm_size` parameter to the `dawarich_db` service to increase the size of the shared memory for PostgreSQL. This should help database with performing vacuum and other operations. Also, it introduces a custom `postgresql.conf` file to the `dawarich_db` service.
 
 To mount a custom `postgresql.conf` file, you need to create a `postgresql.conf` file in the `dawarich_db` service directory and add the following line to it:
 
@@ -426,7 +426,7 @@ An example of a custom `postgresql.conf` file is provided in the `postgresql.con
 - A button on a year stats card to update stats for the whole year. #466
 - A button on a month stats card to update stats for a specific month. #466
 - A confirmation alert on the Notifications page before deleting all notifications.
-- A `shm_size` parameter to the `dawarich_db` service to increase the size of the shared memory for PostgreSQL. This should help database with peforming vacuum and other operations.
+- A `shm_size` parameter to the `dawarich_db` service to increase the size of the shared memory for PostgreSQL. This should help database with performing vacuum and other operations.
 
 ```diff
   ...
