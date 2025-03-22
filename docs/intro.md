@@ -8,7 +8,7 @@ Let's discover **Dawarich in less than 5 minutes**.
 
 ### What you'll need
 
-- A server to host your website. 1GB RAM is recommended.
+- A server running on AMD64 or ARM64 architecture. 2GB of RAM and more is recommended.
 - [Docker](https://docs.docker.com/get-docker/) version 20.10 or above:
   - Docker is a platform for developing, shipping, and running applications. It uses containerization technology to create and deploy applications.
 - [Docker Compose](https://docs.docker.com/compose/install/) version 1.29 or above:
@@ -54,7 +54,7 @@ After starting the application, you should have at least 4 running containers:
 - `dawarich_db` - PostgreSQL database
 - `dawarich_redis` - Redis database
 - `dawarich_sidekiq` - Sidekiq worker (for background jobs)
-- `dawarich_web` - Dawarich web application
+- `dawarich_app` - Dawarich web application
 
 Make sure all of them are running.
 

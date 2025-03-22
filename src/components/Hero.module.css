@@ -89,6 +89,98 @@
   transform: translateX(3px);
 }
 
+/* Early Access Button */
+.earlyAccessButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background-color: #10b981; /* Green color to differentiate from other buttons */
+  text-decoration: none;
+  transition: background-color 0.2s;
+  border: none;
+  cursor: pointer;
+  min-width: 160px;
+}
+
+.earlyAccessButton:hover {
+  background-color: #059669;
+  color: white;
+  text-decoration: none;
+}
+
+/* Popup Styles */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.popup {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #111827;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.popup p {
+  margin-bottom: 20px;
+  color: #6b7280;
+}
+
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #6b7280;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.closeButton:hover {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.formContainer {
+  position: relative;
+  padding-top: 10px;
+  width: 100%;
+}
+
 /* Dark mode support */
 [data-theme='dark'] .hero {
   background-color: #111827;
@@ -117,6 +209,28 @@
   color: #f9fafb;
 }
 
+[data-theme='dark'] .popup {
+  background-color: #1f2937;
+}
+
+[data-theme='dark'] .popup h2 {
+  color: #f9fafb;
+}
+
+[data-theme='dark'] .popup p {
+  color: #d1d5db;
+}
+
+[data-theme='dark'] .closeButton {
+  background-color: #374151;
+  color: #e5e7eb;
+}
+
+[data-theme='dark'] .closeButton:hover {
+  background-color: #4b5563;
+  color: #f9fafb;
+}
+
 /* Responsive styling */
 @media (max-width: 768px) {
   .title {
@@ -129,11 +243,15 @@
 
   .buttons {
     flex-direction: column;
-    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
   }
 
-  .primaryButton, .secondaryButton {
+  .primaryButton,
+  .secondaryButton,
+  .earlyAccessButton {
     width: 100%;
-    max-width: 240px;
   }
 }
