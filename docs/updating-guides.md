@@ -55,7 +55,7 @@ points.drop(1).each(&:destroy) # This will remove all but the first point.
 
 After this, run the script from the previous step again. Repeat, if you see the same for different timestamp or user_id.
 
-### The "your user is not active" errors
+### The "your user is not active" errors / 401 errors
 
 In the [Console](/docs/FAQ/#how-to-enter-dawarich-console), run the following command:
 
