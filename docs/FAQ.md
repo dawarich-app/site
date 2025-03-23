@@ -12,7 +12,7 @@ sidebar_position: 99
   Dawarich built using [Ruby on Rails](https://rubyonrails.org/), so you can use the Rails console to interact with the application. To enter the console, run the following on your server:
 
   ```bash
-  docker exec -it CONTAINER_ID /bin/sh
+  docker exec -it dawarich_app /bin/sh
   bin/rails console
   ```
 </details>
