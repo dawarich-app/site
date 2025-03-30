@@ -128,7 +128,11 @@ const config = {
               {
                 label: 'FAQ',
                 to: 'docs/FAQ',
-              }
+              },
+              {
+                label: 'Contact',
+                to: '/contact',
+              },
             ],
           },
           {
@@ -147,12 +151,12 @@ const config = {
                 to: '/refund-policy',
               },
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Impressum',
+                to: '/impressum',
               },
               {
-                label: 'Contact',
-                to: '/contact',
+                label: 'Blog',
+                to: '/blog',
               },
             ],
           },
