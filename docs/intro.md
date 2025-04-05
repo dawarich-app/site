@@ -34,6 +34,8 @@ docker compose up -d
 
 4. You're all set! Visit your Dawarich instance at `http://localhost:3000` or `http://<your-server-ip>:3000`. The default credentials are `demo@dawarich.app` and `password`
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/j6xNtSNzrwQ?si=9VFoYMdFl2jSTGWr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Update your Dawarich instance
 
 1. Move to the directory where you saved the `docker-compose.yml` file: `cd /path/to/your/docker-compose.yml`

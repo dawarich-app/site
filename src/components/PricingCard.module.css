@@ -4,7 +4,6 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   padding: 40px;
   max-width: 450px;
-  margin: 0 auto;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -31,29 +30,63 @@
 }
 
 .priceContainer {
+  text-align: center;
+  margin: 2rem 0;
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mainPrice {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
-}
-
-.euroSign {
-  font-size: 30px;
-  font-weight: 700;
-  color: #111827;
-}
-
-.price {
-  font-size: 64px;
-  font-weight: 800;
+  font-size: 2.5rem;
   line-height: 1;
-  color: #111827;
+}
+
+.originalPrice {
+  color: #ff6b6b;
+  text-decoration: line-through;
+  opacity: 0.9;
+  font-weight: 500;
+  scale: 0.6;
+}
+
+.currentPrice {
+  color: #4c6ef5;
+  font-weight: 600;
 }
 
 .period {
-  font-size: 20px;
-  color: #6b7280;
-  margin-left: 4px;
+  color: #868e96;
+  font-size: 1.5rem;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--ifm-color-primary);
+}
+
+.euroSign {
+  font-size: 1.5rem;
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+.monthlyPrice {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.pricingNote {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  font-style: italic;
 }
 
 .description {
@@ -85,16 +118,18 @@
 }
 
 .ctaButton {
+  width: 100%;
   display: block;
+  text-align: center;
+  padding: 12px 24px;
+  margin-top: 24px;
   background-color: #3b82f6;
   color: white;
   font-weight: 600;
   font-size: 16px;
-  padding: 16px 24px;
   border-radius: 8px;
   text-decoration: none;
   transition: background-color 0.2s ease;
-  margin-bottom: 16px;
 }
 
 .ctaButton:hover {
@@ -128,4 +163,30 @@
 
 [data-theme='dark'] .featureItem {
   color: #f3f4f6;
+}
+
+.card {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  padding: 2rem;
+  width: 350px; /* Set a fixed width */
+  margin: 0; /* Remove any default margins */
+}
+
+/* If you have any margins in the card content, make sure they don't affect the outer spacing */
+.card > * {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.highlighted {
+  background-color: rgba(255, 255, 0, 0.2);
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin: -4px -8px;
+}
+
+[data-theme='dark'] .highlighted {
+  background-color: rgba(255, 255, 0, 0.1);
 }

@@ -3,49 +3,78 @@ import Link from '@docusaurus/Link';
 import styles from './PricingCard.module.css';
 
 export default function PricingCard({
+  className,
   title = "Annual Subscription",
-  price = "49",
+  price = "60",
+  originalPrice,
   period = "year",
   description = "Full access to all features. Self-hostable.",
-  features = [
-    "Unlimited location history tracking",
-    "Interactive maps and visualizations",
-    "Comprehensive travel statistics",
-    "Self-hosted privacy and data control",
-    "Mobile apps for iOS and Android",
-    "Free updates for the subscription period"
-  ],
+  features = [],
+  highlightedFeatures = [], // Only this determines which features are highlighted
   buttonText = "Get Started",
   buttonLink = "/pricing",
+  onButtonClick,
   trialText = "No credit card required to start your free 14-day trial"
 }) {
+  // Calculate monthly price if period is year
+  const monthlyPrice = period === 'year' ? (price / 12).toFixed(2) : null;
+
   return (
-    <div className={styles.pricingCard}>
+    <div className={`${styles.pricingCard} ${className || ''}`}>
       <h2 className={styles.title}>{title}</h2>
 
       <div className={styles.priceContainer}>
-        <span className={styles.euroSign}>€</span>
-        <span className={styles.price}>{price}</span>
-        <span className={styles.period}>/{period}</span>
+        <div className={styles.mainPrice}>
+          {originalPrice && (
+            <span className={styles.originalPrice}>€{originalPrice}</span>
+          )}
+          <span className={styles.currentPrice}>€{price}</span>
+          <span className={styles.period}>
+            /{originalPrice && price > 0 && (
+              <span>first </span>
+            )}year
+          </span>
+        </div>
+        {monthlyPrice && (
+          <>
+
+            <div className={styles.monthlyPrice}>
+              €{monthlyPrice}/month when billed annually
+            </div>
+          </>
+        )}
       </div>
 
       <p className={styles.description}>{description}</p>
 
       <ul className={styles.featuresList}>
         {features.map((feature, index) => (
-          <li key={index} className={styles.featureItem}>
+          <li
+            key={index}
+            className={`${styles.featureItem} ${highlightedFeatures.includes(feature) ? styles.highlighted : ''}`}
+          >
             <span className={styles.checkmark}>✓</span>
             {feature}
           </li>
         ))}
       </ul>
 
-      <Link
-        to={buttonLink}
-        className={styles.ctaButton}
-      >
-        {buttonText}
-      </Link>
+      {buttonLink && buttonLink !== null ? (
+        <Link
+          to={buttonLink}
+          className={styles.ctaButton}
+        >
+          {buttonText}
+        </Link>
+      ) : (
+        <button
+          type="button"
+          onClick={onButtonClick}
+          className={styles.ctaButton}
+        >
+          {buttonText}
+        </button>
+      )}
 
       {trialText && (
         <p className={styles.trialText}>{trialText}</p>

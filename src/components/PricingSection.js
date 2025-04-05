@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PricingCard from './PricingCard';
+import EarlyAccessForm from './EarlyAccessForm';
 import styles from './PricingSection.module.css';
 
 export default function PricingSection() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const openPopup = () => setIsPopupOpen(true);
+  const closePopup = () => setIsPopupOpen(false);
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -21,18 +27,48 @@ export default function PricingSection() {
             period="year"
             description="Full access to all features. Self-hostable."
             features={[
-              "Unlimited location history tracking",
               "Interactive maps and visualizations",
+              "Unlimited location history tracking",
               "Comprehensive travel statistics",
-              "Self-hosted privacy and data control",
-              "Mobile app for iOS"
+              "Official mobile app for iOS",
+              "Self-hosted privacy and data control"
             ]}
             buttonText="Get Started"
             buttonLink="/docs/intro"
             trialText="No credit card required because you self-host it :)"
           />
+          <PricingCard
+            className={styles.featuredCard}
+            title="Cloud Hosted"
+            price="60"
+            originalPrice="90"
+            period="year"
+            description="Let us handle the hosting for you. Early adopter pricing!"
+            features={[
+              "Interactive maps and visualizations",
+              "Unlimited location history tracking",
+              "Comprehensive travel statistics",
+              "Official mobile app for iOS",
+              "Automatic updates and maintenance",
+              "Automatic backups"
+            ]}
+            highlightedFeatures={[
+              "Automatic updates and maintenance",
+              "Automatic backups"
+            ]}
+            buttonText="Early Access"
+            buttonLink={null}
+            onButtonClick={openPopup}
+            trialText="Limited time offer for early adopters"
+          />
         </div>
       </div>
+
+      <div className={styles.note}>
+        We don't sell your data.
+      </div>
+
+      <EarlyAccessForm isOpen={isPopupOpen} onClose={closePopup} />
     </section>
   );
 }
