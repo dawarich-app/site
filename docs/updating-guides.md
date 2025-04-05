@@ -6,6 +6,8 @@ sidebar_position: 98
 
 Dawarich is a rapidly evolving project, and some changes may break compatibility with older versions. This page will serve as a record of the breaking changes and migration paths. Instructions for each version assume that you are updating from the previous version.
 
+After each update, please make sure there is no jobs running in the Sidekiq interface (/sidekiq). If there are, please wait for them to finish. Once all jobs are finished, you can proceed with the update.
+
 ## 0.25.0
 
 ### Visits and places
