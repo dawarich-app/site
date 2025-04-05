@@ -85,7 +85,7 @@ dawarich_db:
 
 If you're on an ARM system and already updated your postgres to 17, use `ghcr.io/baosystems/postgis:17-3.5` image instead of `postgis/postgis:14-3.5-alpine`. Depending on which postgres version you're using, you can select a fitting docker image to replace your old one here: https://github.com/ImreSamu/docker-postgis?tab=readme-ov-file#recommended-versions-for-new-users
 
-Also, have a look at the [moving to postgis](/docs/guides/moving-to-postgis) guide.
+Also, have a look at the [moving to postgis](/docs/tutorials/moving-to-postgis) guide.
 
 
 ## 0.22.1
