@@ -90,6 +90,14 @@ const config = {
         style: 'dark',
         links: [
           {
+            title: 'Dawarich',
+            items: [
+              {
+                html: '<p>Made in and hosted in 🇪🇺 Europe</p>',
+              },
+            ]
+          },
+          {
             title: 'Community',
             items: [
               {
