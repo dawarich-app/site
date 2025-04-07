@@ -76,6 +76,10 @@ section {
   margin-bottom: 1rem;
 }
 
-p a {
+article a {
   text-decoration: underline;
+}
+
+article a:hover {
+  text-decoration: none;
 }
