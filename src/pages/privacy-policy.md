@@ -4,9 +4,13 @@ title: Privacy Policy
 
 # Dawarich Privacy Policy
 
+We take your privacy seriously. We only collect the personal information that is necessary to provide you with our services, and we do not sell or rent your data to anyone else.
+
+This policy has been created to provide transparency to you about what personal information we collect and the purposes for doing so.
+
 ## Privacy Policy
 
-This privacy policy applies to the Dawarich application ("Application") and related services, including the iOS app,self-hosted, SaaS (Software as a Service), and hosted versions provided to Patreon subscribers of the "hosted dawarich" tier. Dawarich is developed by Evgenii Burmakin and Konstantin Priemchenko ("Service Provider"). This policy describes how data is handled within Dawarich and your privacy rights.
+This privacy policy applies to the Dawarich application ("Application") and related services, including the iOS app,self-hosted, SaaS (Software as a Service), and hosted versions provided to Patreon subscribers of the "hosted dawarich" tier. Dawarich is developed by ZeitFlow UG (haftungsbeschränkt) ("Service Provider"). This policy describes how data is handled within Dawarich and your privacy rights.
 
 ## What information does the Application obtain and how is it used?
 
@@ -15,11 +19,46 @@ If you self-host Dawarich, no information is collected or transmitted by the Ser
 
 ### SaaS Version
 For users of the Dawarich SaaS service, we may collect and store the following data for functionality, security, and service improvements:
-- **User account information** (if registration is required)
-- **Location history data** (if uploaded by the user)
+- **User account information**
+- **Location history data**
 - **Analytics and performance metrics** (anonymized)
 
-This data is used solely for providing the Dawarich service and is not shared with third parties except where necessary for operation (e.g., hosting providers, database storage).
+This data is used solely for providing the Dawarich service and is not shared with third parties except where necessary for operation (e.g., hosting providers, database storage, bug tracking).
+
+### What data is being processed and stored?
+
+#### User account information
+
+User data is being collected from the user when they sign up for the SaaS version of Dawarich and used to provide the service.
+
+- **Email address**
+- **Password**
+- **User ID**
+- **User status**
+- **User settings**
+
+#### Location history data
+
+Location data is being collected from the user when they explicitly upload their location history to the application. This data is used to provide the service: visualize user's location history and calculate statistics.
+
+- **Location data**
+- **Device information**
+- **Application usage data**
+- **Error logs**
+
+#### Analytics and performance metrics
+
+Analytics and performance metrics are being collected from the user when they use the SaaS version of Dawarich. This data is used to improve the service: analyze usage patterns, identify and fix bugs, and enhance the user experience.
+
+- **Usage data**
+- **Error logs**
+- **Performance metrics**
+- **Device information**
+- **Application usage data**
+
+### How data is being stored?
+
+All data is being stored on the Service Provider's infrastructure. This includes encrypted database storage and backups. All data is being transferred over HTTPS and stored in the EU. Logs and error traces can be sent to bug tracking services of Service Provider's choice (e.g. Sentry) for further analysis and fixing bugs. Logs are being stored for a maximum of 30 days.
 
 ### Hosted Dawarich for Patreon Subscribers
 For users subscribed to the "hosted dawarich" tier on Patreon, each instance of Dawarich is hosted individually by the Service Provider on a separate virtual server. The following principles apply:
@@ -65,3 +104,12 @@ By using Dawarich, whether self-hosted, SaaS, or hosted through Patreon, you con
 ## Contact Us
 
 If you have any questions regarding privacy while using Dawarich, please contact us at [hi@dawarich.app](mailto:hi@dawarich.app).
+
+## Last updated
+
+This document was last edited on:
+
+| When          | What          |
+| ------------- | ------------- |
+| 2025-03-12    | Updated data retention section for SaaS users, added disclaimer about data privacy |
+| 2025-02-01    | Initial version |

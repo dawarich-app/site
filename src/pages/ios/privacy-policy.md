@@ -6,7 +6,7 @@ title: iOS App Privacy Policy
 
 **Privacy Policy**
 
-This privacy policy applies to the Dawarich app (hereby referred to as "Application") for mobile devices that was created by Konstantin Priemchenko (hereby referred to as "Service Provider") as a Free service. This service is intended for use "AS IS".
+This privacy policy applies to the Dawarich app (hereby referred to as "Application") for mobile devices that was created by ZeitFlow UG (haftungsbeschränkt) (hereby referred to as "Service Provider") as a Free service. This service is intended for use "AS IS".
 
 **What information does the Application obtain and how is it used?**
 
@@ -47,3 +47,12 @@ By using the Application, you are consenting to the processing of your informati
 **Contact Us**
 
 If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at hi@dawarich.app.
+
+## Last updated
+
+This document was last edited on:
+
+| When          | What          |
+| ------------- | ------------- |
+| 2025-04-13    | Updated application developer information |
+| 2025-01-27    | Initial version |
