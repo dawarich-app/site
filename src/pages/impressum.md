@@ -6,7 +6,7 @@ title: Impressum
 
 **Verantwortlich für den Inhalt:**
 
-ZeitFlow UG (haftungsbeschränkt) i.G.
+ZeitFlow UG (haftungsbeschränkt)
 
 Kolonnenstraße 8
 
