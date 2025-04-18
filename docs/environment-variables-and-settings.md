@@ -37,5 +37,7 @@ As many other applications, Dawarich uses environment variables to configure its
 | `SMTP_USERNAME` | `nil` | Your SMTP username |
 | `SMTP_PASSWORD` | `nil` | Your SMTP password |
 | `SMTP_FROM` | `nil` | Email address to send emails from |
+| `SIDEKIQ_USERNAME` | `nil` | Sidekiq username |
+| `SIDEKIQ_PASSWORD` | `nil` | Sidekiq password |
 
 Important note on Prometheus exporter: even if you want to use it, make sure you have `PROMETHEUS_EXPORTER_ENABLED` set to `false` in `dawarich_sidekiq` container. Otherwise, you'll end up with two exporters and will have to deal with duplicate metrics. The `PROMETHEUS_EXPORTER_HOST` for `dawarich_sidekiq` should be set to `dawarich_app` or your name of the container.
