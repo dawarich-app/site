@@ -65,7 +65,7 @@ export default function PricingSection() {
       </div>
 
       <div className={styles.note}>
-        We don't sell your data.
+        <a href="/privacy-policy">We don't sell your data.</a>
       </div>
 
       <EarlyAccessForm isOpen={isPopupOpen} onClose={closePopup} />

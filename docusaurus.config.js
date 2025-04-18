@@ -93,7 +93,7 @@ const config = {
             title: 'Dawarich',
             items: [
               {
-                html: '<p>Made in and hosted in 🇪🇺 Europe</p>',
+                html: '<p>Made and hosted in 🇪🇺 Europe</p>',
               },
             ]
           },

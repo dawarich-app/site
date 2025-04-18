@@ -27,10 +27,15 @@ As many other applications, Dawarich uses environment variables to configure its
 | `PROMETHEUS_EXPORTER_ENABLED` | `false` | Prometheus exporter enabled |
 | `PROMETHEUS_EXPORTER_HOST` | `0.0.0.0` | Prometheus exporter host |
 | `PROMETHEUS_EXPORTER_PORT` | `9394` | Prometheus exporter port |
-| `DISABLE_TELEMETRY` | `false` | Disable [telemetry](/docs/tutorials/telemetry) |
 | `PHOTON_API_USE_HTTPS` | `nil` | Use HTTPS for Photon API requests |
 | `PHOTON_API_HOST` | `nil` | Photon API host. Useful if you're self-hosting your [own Photon instance](https://dawarich.app/docs/tutorials/reverse-geocoding#setting-up-your-own-reverse-geocoding-service) |
 | `PHOTON_API_KEY` | `nil` | Photon API key. Useful if you're supporting Dawarich development on [Patreon](https://www.patreon.com/c/freika/membership) and want to use Photon API instance hosted by Freika without any limits |
 | `GEOAPIFY_API_KEY` | `nil` | Geoapify API key. Provide your own key if you want to use Geoapify reverse geocoding service |
+| `SMTP_SERVER` | `nil` | Your SMTP server |
+| `SMTP_PORT` | `nil` | Your SMTP port |
+| `SMTP_DOMAIN` | `nil` | Your SMTP domain |
+| `SMTP_USERNAME` | `nil` | Your SMTP username |
+| `SMTP_PASSWORD` | `nil` | Your SMTP password |
+| `SMTP_FROM` | `nil` | Email address to send emails from |
 
 Important note on Prometheus exporter: even if you want to use it, make sure you have `PROMETHEUS_EXPORTER_ENABLED` set to `false` in `dawarich_sidekiq` container. Otherwise, you'll end up with two exporters and will have to deal with duplicate metrics. The `PROMETHEUS_EXPORTER_HOST` for `dawarich_sidekiq` should be set to `dawarich_app` or your name of the container.

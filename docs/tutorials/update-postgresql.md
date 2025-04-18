@@ -212,7 +212,6 @@ services:
       PROMETHEUS_EXPORTER_ENABLED: false
       PROMETHEUS_EXPORTER_HOST: 0.0.0.0
       PROMETHEUS_EXPORTER_PORT: 9394
-      ENABLE_TELEMETRY: false # More on telemetry: https://dawarich.app/docs/tutorials/telemetry
     logging:
       driver: "json-file"
       options:
@@ -263,7 +262,6 @@ services:
       PROMETHEUS_EXPORTER_ENABLED: false
       PROMETHEUS_EXPORTER_HOST: dawarich_app
       PROMETHEUS_EXPORTER_PORT: 9394
-      ENABLE_TELEMETRY: false # More on telemetry: https://dawarich.app/docs/tutorials/telemetry
     logging:
       driver: "json-file"
       options:
