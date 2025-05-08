@@ -8,6 +8,20 @@ Dawarich is a rapidly evolving project, and some changes may break compatibility
 
 After each update, please make sure there is no jobs running in the Sidekiq interface (/sidekiq). If there are, please wait for them to finish. Once all jobs are finished, you can proceed with the update.
 
+# 0.26.0
+
+Starting this version, Dawarich requires PostgreSQL 17 with PostGIS 3.5. If you haven't updated your database image yet, please consider doing so as suggested in the [docs on the website](https://dawarich.app/docs/tutorials/update-postgresql/). Simply replacing the image in the `docker-compose.yml` unfortunately doesn't work, as PostgreSQL 17 is not backwards compatible with 14 (which was used in previous versions).
+
+If you have encountered problems with moving to a PostGIS image while still on Postgres 14, I collected a selection of compatible docker images for different CPU architectures, which you can also find in the [docs](https://dawarich.app/docs/tutorials/moving-to-postgis/). New users will be automatically provisioned with PostgreSQL 17 with PostGIS 3.5 with default `docker-compose.yml` file.
+
+**You still may use PostgreSQL 14, but no support will be provided for it starting this version. It's strongly recommended to update to PostgreSQL 17.**
+
+## Changed
+
+- Dawarich now uses PostgreSQL 17 with PostGIS 3.5 by default.
+
+
+
 # 0.25.4
 
 ⚠️ This release includes a breaking change. ⚠️
