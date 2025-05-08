@@ -10,6 +10,14 @@ Dawarich allows you to track your location using [Overland](https://overland.p3k
 
 Dawarich provides an API for tracking your location. You can use the API to send your location data to Dawarich. Overland and OwnTracks are supposed to send their data to appropriate endpoints. You can find the API documentation at `/api-docs` endpoint of your Dawarich instance, and you can find the API key in the *Account* section.
 
+## Dawarich
+
+1. Install the Dawarich iOS app on your mobile device.
+2. Open the app and go to the settings.
+3. Set your API key.
+4. Tap on the "Save" button.
+5. You're all set! Dawarich will start tracking your location.
+
 ## Overland
 
 1. Install the Overland app on your mobile device.
