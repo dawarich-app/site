@@ -1,4 +1,8 @@
-# 📱 Automating Tracking with Shortcuts
+---
+sidebar_position: 1
+---
+
+# 📱 Tracking with Shortcuts
 
 Dawarich iOS app supports automation using the Shortcuts app by exposing the following actions:
 
@@ -20,7 +24,7 @@ These actions can be integrated into your own automations using Apple's Shortcut
 
 These actions can be used in **automations** or started **manually** from Shortcuts app. They can also be added to Home screen.
 
-<img src="/img/shortcuts-actions.png" width="250" /> <img src="/img/shortcuts-homescreen.png" width="250" /> 
+<img src="/img/shortcuts-actions.png" width="250" /> <img src="/img/shortcuts-homescreen.png" width="250" />
 ---
 
 ## 📍 Example 1: Start Tracking When Leaving Home!
@@ -38,7 +42,7 @@ This automation will automatically start tracking when you leave your home.
 9. Search for Dawarich's **Start Tracking** action and add it.
 10. Tap **Next**.
 
-<img src="/img/shortcuts-location.png" width="250" /> <img src="/img/shortcuts-leave.png" width="250" /> 
+<img src="/img/shortcuts-location.png" width="250" /> <img src="/img/shortcuts-leave.png" width="250" />
 
 ---
 
@@ -55,7 +59,7 @@ This automation uploads all tracked points at 00:00 every day.
 7. Search for and select the **Upload Points** action from your app.
 8. Tap **Next**.
 
-<img src="/img/shortcuts-time.png" width="250" /> <img src="/img/shortcuts-upload.png" width="250" /> 
+<img src="/img/shortcuts-time.png" width="250" /> <img src="/img/shortcuts-upload.png" width="250" />
 
 ---
 
