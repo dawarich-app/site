@@ -17,6 +17,26 @@ sidebar_position: 99
   ```
 </details>
 
+## How to create a new user?
+
+<details>
+  <summary>Show me!</summary>
+
+  Sign in as an admin and go to the Settings ->Users page. Click on the "Add new user" button and fill in the form.
+</details>
+
+## How to update a user's email?
+
+<details>
+  <summary>Show me!</summary>
+
+  To update a user's email, you can use the Rails console. First, enter the console as described in the ["How to enter Dawarich console?"](#how-to-enter-dawarich-console). Then, run the following command:
+
+  ```ruby
+  User.find_by(email: 'user@example.com').update(email: 'new_email@example.com')
+  ```
+</details>
+
 ## How to make a user an admin?
 
 <details>
