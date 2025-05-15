@@ -1,0 +1,217 @@
+.statsSection {
+  padding: 80px 0;
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+.containerSplit {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  text-align: left;
+  margin-bottom: 24px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #4b5563;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Feature items for the text content */
+.featureItem {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.featureIcon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featureTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 8px;
+}
+
+.featureDescription {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #4b5563;
+  margin: 0;
+}
+
+.chartContent {
+  position: relative;
+}
+
+.statsCard {
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.statsHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  align-items: flex-start;
+}
+
+.statsTitle {
+  margin-bottom: 8px;
+}
+
+.year {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #00d7c0;
+}
+
+.mapLink {
+  color: #00d7c0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.totalDistance {
+  margin: 0;
+  color: #94a3b8;
+}
+
+.statsSummary {
+  text-align: right;
+}
+
+.statsSummaryText {
+  font-size: 20px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.chartContainer {
+  width: 100%;
+  height: 260px;
+  margin-top: 16px;
+}
+
+/* Ensure chart elements have proper colors in both themes */
+.chartContainer text {
+  fill: #4b5563;
+}
+
+.chartContainer canvas {
+  background-color: transparent;
+}
+
+/* Dark mode styles */
+[data-theme='dark'] .statsSection {
+  background-color: #191e24;
+  color: #f9fafb;
+}
+
+[data-theme='dark'] .title {
+  color: #f9fafb;
+}
+
+[data-theme='dark'] .description {
+  color: #9ca3af;
+}
+
+[data-theme='dark'] .description strong {
+  color: #3b82f6;
+}
+
+[data-theme='dark'] .featureTitle {
+  color: #f3f4f6;
+}
+
+[data-theme='dark'] .featureDescription {
+  color: #9ca3af;
+}
+
+[data-theme='dark'] .statsCard {
+  background-color: #1e293b;
+}
+
+[data-theme='dark'] .chartContainer text {
+  fill: #9ca3af;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .containerSplit {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .textContent .title {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .statsHeader {
+    flex-direction: column;
+  }
+
+  .statsSummary {
+    text-align: left;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .year {
+    font-size: 24px;
+  }
+
+  .totalDistance {
+    font-size: 28px;
+  }
+
+  .statsSummaryText {
+    font-size: 16px;
+  }
+}

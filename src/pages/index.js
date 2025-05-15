@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import Hero from '@site/src/components/Hero';
 import Features from '@site/src/components/Features';
 import MapVisualizer from '@site/src/components/MapVisualizer';
+import StatsSection from '@site/src/components/StatsSection';
 import PricingSection from '@site/src/components/PricingSection';
 
 function HomepageHeader() {
@@ -25,8 +26,9 @@ export default function Home() {
       description="Visualize your location history, track your movements, and analyze your travel patterns with complete privacy and control.">
       <HomepageHeader />
       <main>
-        <FeaturesSection />
         <VisualizationSection />
+        <StatsSection />
+        <FeaturesSection />
         <PricingSection />
       </main>
     </Layout>

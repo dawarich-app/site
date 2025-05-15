@@ -1,5 +1,6 @@
 import React from 'react';
 import FeatureCard from './FeatureCard';
+import StatsSection from './StatsSection';
 import styles from './Features.module.css';
 
 // Import icons from a library like react-icons, or use custom SVGs
@@ -31,39 +32,41 @@ const RouteIcon = () => (
 
 export default function Features() {
   return (
-    <section className={styles.featuresSection}>
-      <div className={styles.container}>
-        <h2 className={styles.title}>Everything You Need</h2>
-        <p className={styles.subtitle}>
-          Dawarich offers a comprehensive suite of tools to help you track, visualize, and understand your movements.
-        </p>
+    <>
+      <section className={styles.featuresSection}>
+        <div className={styles.container}>
+          <h2 className={styles.title}>Everything You Need</h2>
+          <p className={styles.subtitle}>
+            Dawarich offers a comprehensive suite of tools to help you track, visualize, and understand your movements.
+          </p>
 
-        <div className={styles.grid}>
-          <FeatureCard
-            icon={<MapIcon />}
-            title="Visualize Your Location History"
-            description="See your movements over time with beautiful, interactive maps and timelines."
-          />
+          <div className={styles.grid}>
+            <FeatureCard
+              icon={<MapIcon />}
+              title="Visualize Your Location History"
+              description="See your movements over time with beautiful, interactive maps and timelines."
+            />
 
-          <FeatureCard
-            icon={<TrackIcon />}
-            title="Continuously Track Your Location"
-            description="Set up automatic tracking that works reliably in the background with minimal battery impact."
-          />
+            <FeatureCard
+              icon={<TrackIcon />}
+              title="Continuously Track Your Location"
+              description="Set up automatic tracking that works reliably in the background with minimal battery impact."
+            />
 
-          <FeatureCard
-            icon={<StatsIcon />}
-            title="Comprehensive Travel Statistics"
-            description="Gain insights into your travel patterns, distances, frequently visited places, and more."
-          />
+            <FeatureCard
+              icon={<StatsIcon />}
+              title="Comprehensive Travel Statistics"
+              description="Gain insights into your travel patterns, distances, frequently visited places, and more."
+            />
 
-          <FeatureCard
-            icon={<RouteIcon />}
-            title="Remember Your Journeys"
-            description="Get back in time and relive your journeys with detailed route visualizations and point-to-point analysis."
-          />
+            <FeatureCard
+              icon={<RouteIcon />}
+              title="Remember Your Journeys"
+              description="Get back in time and relive your journeys with detailed route visualizations and point-to-point analysis."
+            />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
