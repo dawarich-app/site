@@ -32,7 +32,7 @@ dawarich_sidekiq:
       ...
 ```
 
-For a Synology install, refer to **[Synology Install Tutorial](./platforms/synology)**. In this page, it is explained how to set the APPLICATION_HOSTS environment variable.
+For a Synology or manual install, refer to **[Synology Install Tutorial](./platforms/synology)** resp. **[Manual Install Tutorial](./platforms/manual)**. In this page, it is explained how to set the APPLICATION_HOSTS environment variable.
 
 ## Virtual Host
 
