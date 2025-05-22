@@ -28,7 +28,7 @@ export default function PricingSection() {
             description="Full access to all features. Self-hostable."
             features={[
               "Interactive maps and visualizations",
-              "Unlimited location history tracking",
+              "10 millions points included",
               "Comprehensive travel statistics",
               "Official mobile app for iOS",
               "Self-hosted privacy and data control"
@@ -46,7 +46,7 @@ export default function PricingSection() {
             description="Let us handle the hosting for you. Early adopter pricing!"
             features={[
               "Interactive maps and visualizations",
-              "Unlimited location history tracking",
+              "10 millions points included",
               "Comprehensive travel statistics",
               "Official mobile app for iOS",
               "Automatic updates and maintenance",

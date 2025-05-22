@@ -114,7 +114,8 @@ const config = {
               },
               {
                 label: 'Mastodon',
-                href: 'https://mastodon.social/@dawarich'
+                href: 'https://mastodon.social/@dawarich',
+                rel: 'me',
               },
             ]
           },
