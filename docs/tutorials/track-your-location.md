@@ -72,6 +72,31 @@ Content-Type: application/json
 
 - HTTP Method: `POST`
 
+## PhoneTrack
+
+[PhoneTrack](https://f-droid.org/packages/net.eneiluj.nextcloud.phonetrack/) supports logging to any backend using [Custom Log Jobs](https://gitlab.com/eneiluj/phonetrack-android/-/wikis/userdoc#custom-log-jobs), which can be used with Dawarich's OwnTracks API endpoint.
+
+Simply create a new Custom Log Job in PhoneTrack with the following details:
+
+- Target address: `https://<your-dawarich-instance>/api/v1/owntracks/points?api_key=<your-api-key>&_type=location&acc=%ACC&alt=%ALT&batt=%BATT&bs=0&cog=%DIR&lat=%LAT&lon=%LON&tst=%TIMESTAMP&vel=%SPD`
+- Use POST method: ✅ Yes
+- Send JSON payload instead of key/value pairs: ❌ No
+- HTTP login: _(blank)_
+- HTTP password: _(blank)_
+
+Note that we have to disable Send JSON payload because it also moves api_key into the JSON entity, which Dawarich does not accept. Fortunately, Dawarich happens to support accepting the data as querystring parameters.
+
+The data sent includes vel (velocity) in meters per second, defined in the [OwnTracks JSON format](https://owntracks.org/booklet/tech/json/) in kilometers per hour. This works so long as we don't include a topic thanks to Dawarich's special handling documented in https://github.com/Freika/dawarich/releases/tag/0.24.0
+
+It also includes _cog_ (Course over ground) as a float, defined in the OwnTracks JSON format as an integer, although this is not currently used by Dawarich.
+
+PhoneTrack offers two more datapoints that don't seem to have a direct mapping to the OwnTracks JSON format:
+
+    %SAT : the number of satellites used to get the position (integer)
+    %UA : user agent, something like PhoneTrack/v0.0.1
+
+You may include %SAT as part of an OwnTracks tag like `&tag=satellites/%SAT`, although this is not currently used by Dawarich.
+
 ## Home Assistant
 
 There is a way to have your geolocation data from Home Assistant in Dawarich. It might be useful for those who already have Home Assistant and don't want to use another app for tracking.
