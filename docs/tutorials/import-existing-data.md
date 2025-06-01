@@ -29,24 +29,9 @@ Google allows you to download your data from their services using [Google Takeou
 
 This file contains your location history in a JSON format. This is usually a big (hundreds of MBs, up to gigabytes) file with all your location history data. Due to the size of this file, its import must be done in manual steps.
 
-1. Upload your Records.json file to your server
-2. Copy you Records.json to the `tmp` folder:
-```
-docker cp Records.json dawarich_app:/var/app/tmp/imports/Records.json
-```
-3. Attach to the docker container:
-```
-docker exec -it dawarich_app sh
-```
-4. Run the importing task:
-```
-bundle exec rake import:big_file['tmp/imports/Records.json','user@example.com']
-```
-5. Wait patiently for process to finish
+Select `Google records` as the source of your data and select one or more JSON files to upload. The file is usually named `Records.json`.
 
-After the process is done, contents of your `Records.json` file is queued to be imported in backgroun. You can monitor progress in Sidekiq UI.
-
-All other formats are more convenient for importing your location history data.
+Hit "Create Import" and your data will be imported in the background.
 
 
 #### Semantic location history

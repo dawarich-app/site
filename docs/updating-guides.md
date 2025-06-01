@@ -8,7 +8,36 @@ Dawarich is a rapidly evolving project, and some changes may break compatibility
 
 After each update, please make sure there is no jobs running in the Sidekiq interface (/sidekiq). If there are, please wait for them to finish. Once all jobs are finished, you can proceed with the update.
 
-# 0.26.0
+## 0.27.0
+
+Starting 0.27.0, Dawarich is using SolidQueue and SolidCache to run background jobs and cache data. Before updating, make sure your Sidekiq queues (https://your_dawarich_app/sidekiq) are empty.
+
+Moving to SolidQueue and SolidCache will require creating new SQLite databases, which will be created automatically when you start the app. They will be stored in the `dawarich_db_data` volume.
+
+Background jobs interface is now available at `/jobs` page.
+
+Please, update your `docker-compose.yml` and add the following:
+
+```diff
+  dawarich_app:
+    image: freikin/dawarich:latest
+    container_name: dawarich_app
+    volumes:
+      - dawarich_public:/var/app/public
+      - dawarich_watched:/var/app/tmp/imports/watched
+      - dawarich_storage:/var/app/storage
++     - dawarich_db_data:/dawarich_db_data
+...
+    environment:
+      ...
+      DATABASE_NAME: dawarich_development
+      # SQLite database paths for secondary databases
++     QUEUE_DATABASE_PATH: /dawarich_db_data/dawarich_development_queue.sqlite3
++     CACHE_DATABASE_PATH: /dawarich_db_data/dawarich_development_cache.sqlite3
++     CABLE_DATABASE_PATH: /dawarich_db_data/dawarich_development_cable.sqlite3
+```
+
+## 0.26.0
 
 Starting this version, Dawarich requires PostgreSQL 17 with PostGIS 3.5. If you haven't updated your database image yet, please consider doing so as suggested in the [docs on the website](https://dawarich.app/docs/tutorials/update-postgresql/). Simply replacing the image in the `docker-compose.yml` unfortunately doesn't work, as PostgreSQL 17 is not backwards compatible with 14 (which was used in previous versions).
 
@@ -16,13 +45,13 @@ If you have encountered problems with moving to a PostGIS image while still on P
 
 **You still may use PostgreSQL 14, but no support will be provided for it starting this version. It's strongly recommended to update to PostgreSQL 17.**
 
-## Changed
+### Changed
 
 - Dawarich now uses PostgreSQL 17 with PostGIS 3.5 by default.
 
 
 
-# 0.25.4
+## 0.25.4
 
 ⚠️ This release includes a breaking change. ⚠️
 
