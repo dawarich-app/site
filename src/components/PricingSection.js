@@ -63,7 +63,7 @@ export default function PricingSection() {
               "Automatic updates and maintenance",
               "Automatic backups"
             ]}
-            buttonText="Early Access"
+            buttonText="Join the waitlist"
             buttonLink={null}
             onButtonClick={openPopup}
             trialText=""
