@@ -5,7 +5,7 @@ import styles from './PricingCard.module.css';
 export default function PricingCard({
   className,
   title = "Annual Subscription",
-  price = "60",
+  price = "90",
   originalPrice,
   period = "year",
   description = "Full access to all features. Self-hostable.",
@@ -14,13 +14,14 @@ export default function PricingCard({
   buttonText = "Get Started",
   buttonLink = "/pricing",
   onButtonClick,
-  trialText = "No credit card required to start your free 14-day trial"
+  trialText = "No credit card required to start your free 14-day trial",
+  disabled = false
 }) {
   // Calculate monthly price if period is year
   const monthlyPrice = period === 'year' ? (price / 12).toFixed(2) : null;
 
   return (
-    <div className={`${styles.pricingCard} ${className || ''}`}>
+    <div className={`${styles.pricingCard} ${className || ''} ${disabled ? styles.disabled : ''}`}>
       <h2 className={styles.title}>{title}</h2>
 
       <div className={styles.priceContainer}>
@@ -62,7 +63,8 @@ export default function PricingCard({
       {buttonLink && buttonLink !== null ? (
         <Link
           to={buttonLink}
-          className={styles.ctaButton}
+          className={`${styles.ctaButton} ${disabled ? styles.disabledButton : ''}`}
+          aria-disabled={disabled}
         >
           {buttonText}
         </Link>
@@ -70,7 +72,8 @@ export default function PricingCard({
         <button
           type="button"
           onClick={onButtonClick}
-          className={styles.ctaButton}
+          className={`${styles.ctaButton} ${disabled ? styles.disabledButton : ''}`}
+          disabled={disabled}
         >
           {buttonText}
         </button>

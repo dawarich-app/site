@@ -41,18 +41,20 @@
   display: flex;
   justify-content: center;
   align-items: stretch;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-top: 3rem;
-  gap: 0;
-  padding: 0;
+  gap: 20px;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .featuredCard {
-  transform: scale(1.05);
-  transform-origin: left center;
+  transform: scale(1.03);
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   z-index: 1;
-  margin: 0;
 }
 
 /* Blue top accent line for the card container */
@@ -81,6 +83,21 @@
 }
 
 /* Responsive styling */
+@media (max-width: 1200px) {
+  .cardContainer {
+    padding: 0 10px;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .cardContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
 @media (max-width: 768px) {
   .title {
     font-size: 32px;
@@ -109,4 +126,45 @@
   color: var(--ifm-color-emphasis-900);
   font-weight: 700;
   font-size: 0.9rem;
+}
+
+.selfHostContainer {
+  text-align: center;
+  margin: 3rem auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.selfHostButton {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #3b82f6;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.selfHostButton:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  color: #fff;
+}
+
+.selfHostButton:active {
+  transform: translateY(0);
+}
+
+/* Dark mode support */
+[data-theme='dark'] .selfHostButton {
+  background-color: #4f46e5;
+}
+
+[data-theme='dark'] .selfHostButton:hover {
+  background-color: #4338ca;
 }

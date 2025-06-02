@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from '@docusaurus/Link';
 import PricingCard from './PricingCard';
 import EarlyAccessForm from './EarlyAccessForm';
 import styles from './PricingSection.module.css';
@@ -21,27 +22,33 @@ export default function PricingSection() {
         </p> */}
 
         <div className={styles.cardContainer}>
-          <PricingCard
-            title="Self-hosted"
-            price="0"
+        <PricingCard
+            title="Early bird"
+            price="60"
+            originalPrice="90"
             period="year"
-            description="Full access to all features. Self-hostable."
+            description="Let us handle the hosting for you. Early adopter pricing!"
             features={[
               "Interactive maps and visualizations",
               "10 millions points included",
               "Comprehensive travel statistics",
               "Official mobile app for iOS",
-              "Self-hosted privacy and data control"
+              "Automatic updates and maintenance",
+              "Automatic backups"
             ]}
-            buttonText="Get Started"
-            buttonLink="/docs/intro"
-            trialText="No credit card required because you self-host it :)"
+            highlightedFeatures={[
+              "Automatic updates and maintenance",
+              "Automatic backups"
+            ]}
+            buttonText="Sold out"
+            buttonLink={null}
+            trialText="Limited time offer for early adopters"
+            disabled={true}
           />
           <PricingCard
             className={styles.featuredCard}
             title="Cloud Hosted"
-            price="60"
-            originalPrice="90"
+            price="90"
             period="year"
             description="Let us handle the hosting for you. Early adopter pricing!"
             features={[
@@ -59,9 +66,15 @@ export default function PricingSection() {
             buttonText="Early Access"
             buttonLink={null}
             onButtonClick={openPopup}
-            trialText="Limited time offer for early adopters"
+            trialText=""
           />
         </div>
+      </div>
+
+      <div className={styles.selfHostContainer}>
+        <Link to="/docs/intro" className={styles.selfHostButton}>
+          Or self-host it for free
+        </Link>
       </div>
 
       <div className={styles.note}>
