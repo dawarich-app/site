@@ -40,23 +40,10 @@ To enable reverse geocoding, you need to provide correct ENV variables for the r
   <summary>Show me!</summary>
 
   ```yml
-  version: '3'
   networks:
     dawarich:
   services:
     dawarich_app:
-      image: freikin/dawarich:latest
-      ...
-      environment:
-        RAILS_ENV: development
-        ...
-        APPLICATION_PROTOCOL: http
-        PHOTON_API_HOST: photon.yourdomain.com
-        PHOTON_API_KEY: your_photon_api_key # If you're using Photon API instance for Patreon supporters
-        PHOTON_API_USE_HTTPS: true # or false if you want to use HTTP instead of HTTPS
-      logging:
-      ...
-    dawarich_sidekiq:
       image: freikin/dawarich:latest
       ...
       environment:
@@ -104,16 +91,6 @@ If you want to use your own reverse geocoding service, you can do it by deployin
     dawarich:
   services:
     dawarich_app:
-      image: freikin/dawarich:latest
-      ...
-      environment:
-        RAILS_ENV: development
-        ...
-        APPLICATION_PROTOCOL: http
-        PHOTON_API_HOST: photon.yourdomain.com # remove this line if you want to use the default Nominatim service
-      logging:
-      ...
-    dawarich_sidekiq:
       image: freikin/dawarich:latest
       ...
       environment:

@@ -33,7 +33,7 @@ user = User.find_by(email: 'YOUR@EMAIL.TLD')
 BulkVisitsSuggestingJob.perform_later(start_at: start_at, end_at: end_at, user_ids: [user.id])
 ```
 
-This will perform a background job to suggest you visits. Should be finished in a few seconds to a few minutes depending on how big your provided timeframe is. Sidekiq must be running, it will perform a background job to suggest you visits. After the job is finished, you will be able to see the new visits in the drawer panel.
+This will perform a background job to suggest you visits. Should be finished in a few seconds to a few minutes depending on how big your provided timeframe is. After the job is finished, you will be able to see the new visits in the drawer panel.
 
 ## Area selection
 
