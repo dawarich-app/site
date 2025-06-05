@@ -52,9 +52,9 @@ Hit "Create Import" and your data will be imported in the background.
 
 ### OwnTracks and Dawarich
 
-OwnTracks is a mobile application and also a server application that allows you to visualize your location history. Dawarich can import data from OwnTracks in JSON format.
+OwnTracks is a mobile application and also a server application that allows you to visualize your location history. Dawarich can import data from OwnTracks in `.rec` format.
 
-Select `OwnTracks` as the source of your data and select the JSON file to upload. If you previously exported data from Dawarich, it has the same file structure as OwnTracks, so you can import it by selecting `OwnTracks` source as well.
+Select `OwnTracks` as the source of your data and select the `.rec` file to upload.
 
 Hit "Create Import" and your data will be imported in the background.
 
