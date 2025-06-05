@@ -94,12 +94,12 @@ volumes:
 ```
 
 
-In this release we're changing the way import files are being stored. Previously, they were being stored in the `raw_data` column of the `imports` table. Now, they are being attached to the import record. All new imports will be using the new storage, to migrate existing imports, you can use the `rake imports:migrate_to_new_storage` task. Run it in the container shell.
+In this release we're changing the way import files are being stored. Previously, they were being stored in the `raw_data` column of the `imports` table. Now, they are being attached to the import record. All new imports will be using the new storage, to migrate existing imports, you can use the `bundle exec rake imports:migrate_to_new_storage` task. Run it in the container shell.
 
 This is an optional task, that will not affect your points or other data.
 Big imports might take a while to migrate, so be patient.
 
-Also, you can now migrate existing exports to the new storage using the `rake exports:migrate_to_new_storage` task (in the container shell) or just delete them.
+Also, you can now migrate existing exports to the new storage using the `bundle exec rake exports:migrate_to_new_storage` task (in the container shell) or just delete them.
 
 If your hardware doesn't have enough memory to migrate the imports, you can delete your imports and re-import them.
 
