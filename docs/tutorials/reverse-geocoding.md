@@ -80,7 +80,13 @@ The original authors retain all rights as specified in the license.
 
 ## Setting up your own reverse geocoding service
 
-If you want to use your own reverse geocoding service, you can do it by deploying your own instance of the [Photon](https://github.com/komoot/photon) service by Komoot on your server. You can run it in Docker, using a [guide](https://tonsnoei.nl/en/post/2023/03/20/set-up-your-own-geocoder-api/) from Ton Snoei. After you deploy your own instance of the Photon service, you need to set the `PHOTON_API_HOST` environment variable to the URL of your Photon service in the `docker-compose.yml` file. Here is an example of how to do it:
+If you want to use your own reverse geocoding service, you can do it by deploying your own instance of the [Photon](https://github.com/komoot/photon) service by Komoot on your server.
+
+It is also possible to run your own Photon instance using Docker. If you want to create your own docker image, you can use this [guide](https://tonsnoei.nl/en/post/2023/03/20/set-up-your-own-geocoder-api/) by Ton Snoei to do so.
+
+Alternatively, you can use the [Docker image provided by @rtuszik](https://github.com/rtuszik/photon-docker) which comes batteries included to automatically update the Index used by Photon from time to time. Instructions for installing his image can be found in his GitHub repository. Be aware, that that are different from the instructions provided by Ton Snoei, so please read them carefully.
+
+After you deploy your own instance of the Photon service, you need to set the `PHOTON_API_HOST` environment variable to the URL of your Photon service in the `docker-compose.yml` file. Here is an example of how to do it:
 
 <details>
   <summary>Show me!</summary>
@@ -101,9 +107,8 @@ If you want to use your own reverse geocoding service, you can do it by deployin
       logging:
       ...
   ```
-</details>
 
-Also, [@rtuszik](https://github.com/rtuszik/) was kind enough to build a new Docker image with the latest version of the Photon API. The source code with the usage instructions can be found on [GitHub](https://github.com/rtuszik/photon-docker).
+</details>
 
 Before Dawarich 0.9.0 the reverse geocoding process was fetching only city and country value for each point. Starting 0.9.0, a lot more data is fetched for each point, including street, house number, postal code, and more. This change was made to provide more detailed information about each point.
 
