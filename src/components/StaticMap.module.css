@@ -4,6 +4,7 @@
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer; /* Show pointer cursor to indicate interactivity */
+  z-index: 0;
 }
 
 /* Custom marker styles */
