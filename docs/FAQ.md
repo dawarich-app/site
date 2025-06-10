@@ -87,6 +87,60 @@ sidebar_position: 99
   ```
 </details>
 
+## How to speed up the import process?
+
+<details>
+  <summary>Show me!</summary>
+
+  If you have a large import file, you might want to speed up the import process. You can do this by increasing the number of Sidekiq workers. To do this, you can update your `docker-compose.yml` file to include multiple instances of the `sidekiq` service, basically, having copies of an original one under different names. Here's an example of how you can do this:
+
+  ```yaml
+  services:
+    dawarich_app:
+      ...
+    dawarich_sidekiq:
+      ...
+    // highlight-start
+    dawarich_sidekiq_1:
+    image: freikin/dawarich:latest
+    container_name: dawarich_sidekiq
+    volumes:
+      - gem_cache:/usr/local/bundle/gems
+      - public:/var/app/public
+      ...
+    depends_on:
+      - dawarich_db
+      - dawarich_redis
+      - dawarich_app
+    dawarich_sidekiq_2:
+    image: freikin/dawarich:latest
+    container_name: dawarich_sidekiq
+    volumes:
+      - gem_cache:/usr/local/bundle/gems
+      - public:/var/app/public
+      ...
+    depends_on:
+      - dawarich_db
+      - dawarich_redis
+      - dawarich_app
+    dawarich_sidekiq_N:
+    image: freikin/dawarich:latest
+    container_name: dawarich_sidekiq
+    volumes:
+      - gem_cache:/usr/local/bundle/gems
+      - public:/var/app/public
+      ...
+    depends_on:
+      - dawarich_db
+      - dawarich_redis
+      - dawarich_app
+    // highlight-end
+  ```
+
+  Note, that additional Sidekiq containers are named `dawarich_sidekiq_2`, `dawarich_sidekiq_N`, etc. You can have as many as you need. You can scale them down when your import is completed. It's imortant to remember that the more workers you have, the more resources they will consume, and connecting to the database might become a bottleneck.
+
+</details>
+
 ## Why my attempt to import Records.json fails?
 
 <details>
@@ -98,7 +152,11 @@ sidebar_position: 99
   services:
     dawarich_app:
       ...
+    dawarich_sidekiq:
+      ...
     dawarich_db:
+      ...
+    dawarich_redis:
       ...
     // highlight-start
     dawarich_app:
@@ -115,12 +173,12 @@ sidebar_position: 99
 
 </details>
 
-## Why I have so many failed jobs in /jobs?
+## Why I have so many failed jobs in Sidekiq?
 
 <details>
   <summary>Show me!</summary>
 
-  If your import process finished successfully, you have nothing to worry about. Failed jobs in background processing are usually the a failed attempt of Reverse Geocoding, so you can safely ignore them. This happens when API limit is reached.
+  If your import process finished successfully, you have nothing to worry about. Failed jobs in Sidekiq are usually the a failed attempt of Reverse Geocoding, so you can safely ignore them. This happens when API limit is reached.
 
   By default, Dawarich uses [Nominatim](https://nominatim.openstreetmap.org/) which limits the number of requests per second. Your options are to wait for a while and try again, or to set up your own instance of reverse geocoding service. You can find more information on how to do this in the [Reverse Geocoding](https://dawarich.app/docs/tutorials/reverse-geocoding#setting-up-your-own-reverse-geocoding-service) section of the documentation.
 

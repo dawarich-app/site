@@ -12,7 +12,7 @@ This post will serve you as an instruction on how to do that.
 
 Be careful with this process. Make sure you're aware of the risks and have a local backup of the database.
 
-Also, make sure your Dawarich app is not running. Both containers (`dawarich_app` and `dawarich_db`) should be stopped.
+Also, make sure your Dawarich app is not running. All four containers (`dawarich_app`, `dawarich_sidekiq`, `dawarich_db`, `dawarich_redis`) should be stopped.
 
 :::
 
@@ -147,6 +147,21 @@ docker rename dawarich_db_pg_17 dawarich_db
 networks:
   dawarich:
 services:
+  dawarich_redis:
+    image: redis:7.0-alpine
+    container_name: dawarich_redis
+    command: redis-server
+    networks:
+      - dawarich
+    volumes:
+      - dawarich_shared:/data
+    restart: always
+    healthcheck:
+      test: [ "CMD", "redis-cli", "--raw", "incr", "ping" ]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+      timeout: 10s
   dawarich_db_pg_17:
     image: postgis/postgis:17-3.5-alpine
     shm_size: 1G
@@ -184,6 +199,7 @@ services:
     restart: on-failure
     environment:
       RAILS_ENV: development
+      REDIS_URL: redis://dawarich_redis:6379/0
       DATABASE_HOST: dawarich_db_pg_17
       DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: password
@@ -209,6 +225,62 @@ services:
       timeout: 10s
     depends_on:
       dawarich_db_pg_17:
+        condition: service_healthy
+        restart: true
+      dawarich_redis:
+        condition: service_healthy
+        restart: true
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'    # Limit CPU usage to 50% of one core
+          memory: '4G'    # Limit memory usage to 4GB
+  dawarich_sidekiq:
+    image: freikin/dawarich:latest
+    container_name: dawarich_sidekiq
+    volumes:
+      - dawarich_public:/var/app/public
+      - dawarich_watched:/var/app/tmp/imports/watched
+    networks:
+      - dawarich
+    stdin_open: true
+    tty: true
+    entrypoint: sidekiq-entrypoint.sh
+    command: ['sidekiq']
+    restart: on-failure
+    environment:
+      RAILS_ENV: development
+      REDIS_URL: redis://dawarich_redis:6379/0
+      DATABASE_HOST: dawarich_db_pg_17
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: password
+      DATABASE_NAME: dawarich_development
+      APPLICATION_HOSTS: localhost
+      BACKGROUND_PROCESSING_CONCURRENCY: 10
+      APPLICATION_PROTOCOL: http
+      DISTANCE_UNIT: km
+      PROMETHEUS_EXPORTER_ENABLED: false
+      PROMETHEUS_EXPORTER_HOST: dawarich_app
+      PROMETHEUS_EXPORTER_PORT: 9394
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "5"
+    healthcheck:
+      test: [ "CMD-SHELL", "bundle exec sidekiqmon processes | grep $${HOSTNAME}" ]
+      interval: 10s
+      retries: 30
+      start_period: 30s
+      timeout: 10s
+    depends_on:
+      dawarich_db_pg_17:
+        condition: service_healthy
+        restart: true
+      dawarich_redis:
+        condition: service_healthy
+        restart: true
+      dawarich_app:
         condition: service_healthy
         restart: true
     deploy:

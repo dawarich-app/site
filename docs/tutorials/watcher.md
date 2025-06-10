@@ -17,6 +17,16 @@ First, let's update your `docker-compose.yml` file to include a new volume that 
     volumes:
       - public:/var/app/public
 +     - watched:/var/app/tmp/imports/watched
+
+  ...
+
+  dawarich_sidekiq:
+      image: freikin/dawarich:latest
+      container_name: dawarich_sidekiq
+      volumes:
+        - public:/var/app/public
++       - watched:/var/app/tmp/imports/watched
+
   ...
 
 volumes:
