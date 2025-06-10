@@ -11,7 +11,7 @@ As many other applications, Dawarich uses environment variables to configure its
 | Environment Variable | Default Value | Description |
 | -------------------- | ------------- | ----------- |
 | `RAILS_ENV`          | `development` | Application environment. `development` value makes sure all errors will be shown explicitly, making easier remote debugging |
-| `REDIS_URL`          | `redis://dawarich_redis:6379/0` | Redis URL |
+| `REDIS_URL`          | `redis://dawarich_redis:6379` | Redis URL |
 | `DATABASE_HOST`      | `dawarich_db` | Database host |
 | `DATABASE_USERNAME`  | `postgres`    | Database username |
 | `DATABASE_PASSWORD`  | `password`    | Database password |
@@ -39,5 +39,8 @@ As many other applications, Dawarich uses environment variables to configure its
 | `SMTP_FROM` | `nil` | Email address to send emails from |
 | `SIDEKIQ_USERNAME` | `nil` | Sidekiq username |
 | `SIDEKIQ_PASSWORD` | `nil` | Sidekiq password |
+| `SELF_HOSTED` | `true` | Set to `true` if you're self-hosting Dawarich |
+| `STORE_GEODATA` | `false` | Set to `true` if you want to store geodata in the database. This will increase the size of the database and will require more disk space. |
+
 
 Important note on Prometheus exporter: even if you want to use it, make sure you have `PROMETHEUS_EXPORTER_ENABLED` set to `false` in `dawarich_sidekiq` container. Otherwise, you'll end up with two exporters and will have to deal with duplicate metrics. The `PROMETHEUS_EXPORTER_HOST` for `dawarich_sidekiq` should be set to `dawarich_app` or your name of the container.
