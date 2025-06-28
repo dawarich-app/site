@@ -23,7 +23,7 @@ As many other applications, Dawarich uses environment variables to configure its
 | `TIME_ZONE`          | `Europe/London` | Time zone. Full list of supported timezones available on [Github](https://github.com/Freika/dawarich/issues/27#issuecomment-2094721396) |
 | `DISTANCE_UNIT` | `km` | Distance unit. For miles, change to `mi`. All settings still should be provided in meters/kilometers |
 | `RAILS_MAX_THREADS` | `5` | Connection pool size for the Dawarich database |
-| `BACKGROUND_PROCESSING_CONCURRENCY` | `10` | Background processing concurrency. Should not be higher than `RAILS_MAX_THREADS`. More info on [Sidekiq docs](https://github.com/sidekiq/sidekiq/wiki/Advanced-Options#concurrency) |
+| `BACKGROUND_PROCESSING_CONCURRENCY` | `5` | Background processing concurrency. Should not be higher than `RAILS_MAX_THREADS`. More info on [Sidekiq docs](https://github.com/sidekiq/sidekiq/wiki/Advanced-Options#concurrency) |
 | `PROMETHEUS_EXPORTER_ENABLED` | `false` | Prometheus exporter enabled |
 | `PROMETHEUS_EXPORTER_HOST` | `0.0.0.0` | Prometheus exporter host |
 | `PROMETHEUS_EXPORTER_PORT` | `9394` | Prometheus exporter port |
