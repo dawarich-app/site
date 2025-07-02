@@ -9,6 +9,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+# 0.2?.? - 2025-??-??
+
+## Added
+
+- Manual installation guide by [errror](https://github.com/errror).
+
 # 0.25.0 - 2025-03-09
 
 This release is focused on improving the visits experience.
