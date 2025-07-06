@@ -8,7 +8,188 @@ Dawarich is a rapidly evolving project, and some changes may break compatibility
 
 After each update, please make sure there is no jobs running in the Sidekiq interface (/sidekiq). If there are, please wait for them to finish. Once all jobs are finished, you can proceed with the update.
 
+## 0.28.0
+
+:::warning
+
+If you're updating from a version before 0.28.0, first read sections about most recent breaking changes. What was introduced in 0.27.0 was later reverted with some changes in 0.28.0. Please pay attention and read release notes before updating.
+
+:::
+
+⚠️ This release includes a breaking change. ⚠️
+
+Well, we're moving back to Sidekiq and Redis for background jobs and caching. Unfortunately, SolidQueue and SolidCache brought more problems than they solved. Please update your `docker-compose.yml` to use Redis and Sidekiq.
+
+Before updating, you can remove `dawarich_development_queue` database from your postgres. All *.sqlite3 files in `dawarich_sqlite_data` volume can be removed as well.
+
+```diff
+networks:
+  dawarich:
+services:
++ dawarich_redis:
++   image: redis:7.4-alpine
++   container_name: dawarich_redis
++   command: redis-server
++   networks:
++     - dawarich
++   volumes:
++     - dawarich_shared:/data
++   restart: always
++   healthcheck:
++     test: [ "CMD", "redis-cli", "--raw", "incr", "ping" ]
++     interval: 10s
++     retries: 5
++     start_period: 30s
++     timeout: 10s
+...
+  dawarich_app:
+    image: freikin/dawarich:latest
+    container_name: dawarich_app
+    volumes:
+      - dawarich_public:/var/app/public
+      - dawarich_watched:/var/app/tmp/imports/watched
+      - dawarich_storage:/var/app/storage
+      - dawarich_db_data:/dawarich_db_data
+-     - dawarich_sqlite_data:/dawarich_sqlite_data
+    ...
+    restart: on-failure
+    environment:
+      RAILS_ENV: development
++     REDIS_URL: redis://dawarich_redis:6379
+      DATABASE_HOST: dawarich_db
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: password
+      DATABASE_NAME: dawarich_development
+-     # PostgreSQL database name for solid_queue
+-     QUEUE_DATABASE_NAME: dawarich_development_queue
+-     QUEUE_DATABASE_PASSWORD: password
+-     QUEUE_DATABASE_USERNAME: postgres
+-     QUEUE_DATABASE_HOST: dawarich_db
+-     QUEUE_DATABASE_PORT: 5432
+-     # SQLite database paths for cache and cable databases
+-     CACHE_DATABASE_PATH: /dawarich_sqlite_data/dawarich_development_cache.sqlite3
+-     CABLE_DATABASE_PATH: /dawarich_sqlite_data/dawarich_development_cable.sqlite3
+...
+    depends_on:
+      dawarich_db:
+        condition: service_healthy
+        restart: true
++     dawarich_redis:
++       condition: service_healthy
++       restart: true
+...
++ dawarich_sidekiq:
++   image: freikin/dawarich:latest
++   container_name: dawarich_sidekiq
++   volumes:
++     - dawarich_public:/var/app/public
++     - dawarich_watched:/var/app/tmp/imports/watched
++     - dawarich_storage:/var/app/storage
++   networks:
++     - dawarich
++   stdin_open: true
++   tty: true
++   entrypoint: sidekiq-entrypoint.sh
++   command: ['sidekiq']
++   restart: on-failure
++   environment:
++     RAILS_ENV: development
++     REDIS_URL: redis://dawarich_redis:6379
++     DATABASE_HOST: dawarich_db
++     DATABASE_USERNAME: postgres
++     DATABASE_PASSWORD: password
++     DATABASE_NAME: dawarich_development
++     APPLICATION_HOSTS: localhost
++     BACKGROUND_PROCESSING_CONCURRENCY: 10
++     APPLICATION_PROTOCOL: http
++     PROMETHEUS_EXPORTER_ENABLED: false
++     PROMETHEUS_EXPORTER_HOST: dawarich_app
++     PROMETHEUS_EXPORTER_PORT: 9394
++     SELF_HOSTED: "true"
++     STORE_GEODATA: "true"
++   logging:
++     driver: "json-file"
++     options:
++       max-size: "100m"
++       max-file: "5"
++   healthcheck:
++     test: [ "CMD-SHELL", "pgrep -f sidekiq" ]
++     interval: 10s
++     retries: 30
++     start_period: 30s
++     timeout: 10s
++   depends_on:
++     dawarich_db:
++       condition: service_healthy
++       restart: true
++     dawarich_redis:
++       condition: service_healthy
++       restart: true
++     dawarich_app:
++       condition: service_healthy
++       restart: true
+...
+volumes:
+  dawarich_db_data:
+- dawarich_sqlite_data:
+  dawarich_shared:
+  dawarich_public:
+  dawarich_watched:
+  dawarich_storage:
+```
+
+
+# 0.27.4 - 2025-06-06
+
+Update your `docker-compose.yml` to use SQLite database names for queue, cache and cable databases.
+
+```diff
+...
+  dawarich_app:
+    image: freikin/dawarich:latest
+    container_name: dawarich_app
+    volumes:
+      - dawarich_public:/var/app/public
+      - dawarich_watched:/var/app/tmp/imports/watched
+      - dawarich_storage:/var/app/storage
+      - dawarich_db_data:/dawarich_db_data
++     - dawarich_sqlite_data:/dawarich_sqlite_data
+    ...
+    restart: on-failure
+    environment:
+    ...
+      DATABASE_NAME: dawarich_development
++     # PostgreSQL database name for solid_queue
++     QUEUE_DATABASE_NAME: dawarich_development_queue
++     QUEUE_DATABASE_PASSWORD: password
++     QUEUE_DATABASE_USERNAME: postgres
++     QUEUE_DATABASE_PORT: 5432
++     QUEUE_DATABASE_HOST: dawarich_db
+      # SQLite database paths for cache and cable databases
+-     QUEUE_DATABASE_PATH: /dawarich_db_data/dawarich_development_queue.sqlite3
+-     CACHE_DATABASE_PATH: /dawarich_db_data/dawarich_development_cache.sqlite3
+-     CABLE_DATABASE_PATH: /dawarich_db_data/dawarich_development_cable.sqlite3
++     CACHE_DATABASE_PATH: /dawarich_sqlite_data/dawarich_development_cache.sqlite3
++     CABLE_DATABASE_PATH: /dawarich_sqlite_data/dawarich_development_cable.sqlite3
+
+volumes:
+  dawarich_db_data:
++ dawarich_sqlite_data:
+  dawarich_shared:
+  dawarich_public:
+  dawarich_watched:
+  dawarich_storage:
+...
+```
+
 ## 0.27.0
+
+:::warning
+
+If you're updating from a version before 0.27.0, first read sections about most recent breaking changes. What was introduced in 0.27.0 was later reverted with some changes in 0.28.0. Please pay attention and read release notes before updating.
+
+:::
+
 
 Starting 0.27.0, Dawarich is using SolidQueue and SolidCache to run background jobs and cache data. Before updating, make sure your Sidekiq queues (https://your_dawarich_app/sidekiq) are empty.
 
@@ -45,7 +226,7 @@ If you have encountered problems with moving to a PostGIS image while still on P
 
 **You still may use PostgreSQL 14, but no support will be provided for it starting this version. It's strongly recommended to update to PostgreSQL 17.**
 
-### Changed
+**Changed**
 
 - Dawarich now uses PostgreSQL 17 with PostGIS 3.5 by default.
 
@@ -107,13 +288,13 @@ If your hardware doesn't have enough memory to migrate the imports, you can dele
 
 ## 0.25.0
 
-### Visits and places
+**Visits and places**
 
 The release page: https://github.com/Freika/dawarich/releases/tag/0.25.0
 
 There is a known issue when data migrations are not being run automatically on some systems. If you're experiencing issues when opening map page, trips page or when trying to see visits, try executing the following command in the [Console](/docs/FAQ/#how-to-enter-dawarich-console):
 
-### Errors on the map page
+**Errors on the map page**
 
 If on the map page you see errors like this:
 
@@ -154,7 +335,7 @@ points.drop(1).each(&:destroy) # This will remove all but the first point.
 
 After this, run the script from the previous step again. Repeat, if you see the same for different timestamp or user_id.
 
-### The "your user is not active" errors / 401 errors
+**The "your user is not active" errors / 401 errors**
 
 In the [Console](/docs/FAQ/#how-to-enter-dawarich-console), run the following command:
 
@@ -336,7 +517,7 @@ The `GET /api/v1/photos` endpoint now returns following structure of the respons
 ]
 ```
 
-### Volumes in docker-compose.yml were renamed:
+Volumes in docker-compose.yml were renamed:
 
 ```diff
 volumes:
