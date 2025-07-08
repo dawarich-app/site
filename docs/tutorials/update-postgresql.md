@@ -12,7 +12,7 @@ This post will serve you as an instruction on how to do that.
 
 Be careful with this process. Make sure you're aware of the risks and have a local backup of the database.
 
-Also, make sure your Dawarich app is not running. All four containers (`dawarich_app`, `dawarich_sidekiq`, `dawarich_db`, `dawarich_redis`) should be stopped.
+Also, make sure your Dawarich app is not running. All four containers (`dawarich_app`, `dawarich_sidekiq`, `dawarich_db`, `dawarich_redis`) should be stopped after performing the local backup in step 0.
 
 :::
 
@@ -140,7 +140,7 @@ docker rename dawarich_db_pg_17 dawarich_db
 
 1. Remove the `dawarich_db` service from the `docker-compose.yml` file
 
-2. Everywhere in the `docker-compose.yml` file where you see `dawarich_db` replace it with `dawarich_db_pg_17`. The resulting `docker-compose.yml` file should look something like this (considering you have no custom changes):
+2. Everywhere in the `docker-compose.yml` file where you see `dawarich_db_pg_17` replace it with `dawarich_db`. The resulting `docker-compose.yml` file should look something like this (considering you have no custom changes):
 
 ```yaml
 
@@ -162,10 +162,10 @@ services:
       retries: 5
       start_period: 30s
       timeout: 10s
-  dawarich_db_pg_17:
+  dawarich_db:
     image: postgis/postgis:17-3.5-alpine
     shm_size: 1G
-    container_name: dawarich_db_pg_17
+    container_name: dawarich_db
     volumes:
       - dawarich_db_data_pg_17:/var/lib/postgresql/data
       - dawarich_shared:/var/shared
@@ -200,7 +200,7 @@ services:
     environment:
       RAILS_ENV: development
       REDIS_URL: redis://dawarich_redis:6379/0
-      DATABASE_HOST: dawarich_db_pg_17
+      DATABASE_HOST: dawarich_db
       DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: password
       DATABASE_NAME: dawarich_development
@@ -224,7 +224,7 @@ services:
       start_period: 30s
       timeout: 10s
     depends_on:
-      dawarich_db_pg_17:
+      dawarich_db:
         condition: service_healthy
         restart: true
       dawarich_redis:
@@ -251,7 +251,7 @@ services:
     environment:
       RAILS_ENV: development
       REDIS_URL: redis://dawarich_redis:6379/0
-      DATABASE_HOST: dawarich_db_pg_17
+      DATABASE_HOST: dawarich_db
       DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: password
       DATABASE_NAME: dawarich_development
@@ -274,7 +274,7 @@ services:
       start_period: 30s
       timeout: 10s
     depends_on:
-      dawarich_db_pg_17:
+      dawarich_db:
         condition: service_healthy
         restart: true
       dawarich_redis:
