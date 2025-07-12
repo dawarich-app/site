@@ -36,6 +36,6 @@ volumes:
 + watched:
 ```
 
-Now, in the container, create a directory for your user (`/tmp/imports/watched/your_user@email.com/`) and put your GPX, Owntracks' `.rec` and GeoJSON files to the directory.
+Now, in the container, create a directory for your user (`/var/app/tmp/imports/watched/your_user@email.com/`) and put your GPX, Owntracks' `.rec` and GeoJSON files to the directory.
 
 Dawarich will automatically import the files and you will receive a notification in the app after the file is imported.
