@@ -1,14 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Link from '@docusaurus/Link';
 import styles from './Hero.module.css';
-import EarlyAccessForm from './EarlyAccessForm';
 
 export default function Hero() {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-  const openPopup = () => setIsPopupOpen(true);
-  const closePopup = () => setIsPopupOpen(false);
-
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
@@ -30,16 +24,13 @@ export default function Hero() {
             to="/docs/features/tracking-location-history">
             Explore Features
           </Link>
-          <button
+          <Link
             className={styles.earlyAccessButton}
-            onClick={openPopup}>
-            Early Access
-          </button>
+            href="https://my.dawarich.app">
+            Sign up now!
+          </Link>
         </div>
       </div>
-
-      {/* Early Access Form Component */}
-      <EarlyAccessForm isOpen={isPopupOpen} onClose={closePopup} />
     </section>
   );
 }

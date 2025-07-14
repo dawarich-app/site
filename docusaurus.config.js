@@ -93,7 +93,7 @@ const config = {
             title: 'Dawarich',
             items: [
               {
-                html: '<p>Made and hosted in 🇪🇺 Europe</p>',
+                html: '<p>Made and hosted in 🇪🇺 Europe</p><p>&copy;ZeitFlow UG (haftungsbeschränkt)</p><p>Berlin, Germany</p>',
               },
             ]
           },

@@ -1,15 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Link from '@docusaurus/Link';
 import PricingCard from './PricingCard';
-import EarlyAccessForm from './EarlyAccessForm';
 import styles from './PricingSection.module.css';
 
 export default function PricingSection() {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-  const openPopup = () => setIsPopupOpen(true);
-  const closePopup = () => setIsPopupOpen(false);
-
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -63,9 +57,8 @@ export default function PricingSection() {
               "Automatic updates and maintenance",
               "Automatic backups"
             ]}
-            buttonText="Join the waitlist"
-            buttonLink={null}
-            onButtonClick={openPopup}
+            buttonText="Sign up now!"
+            buttonLink="https://my.dawarich.app"
             trialText=""
           />
         </div>
@@ -80,8 +73,6 @@ export default function PricingSection() {
       <div className={styles.note}>
         <a href="/privacy-policy">We don't sell your data.</a>
       </div>
-
-      <EarlyAccessForm isOpen={isPopupOpen} onClose={closePopup} />
     </section>
   );
 }
