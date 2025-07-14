@@ -18,6 +18,13 @@ const config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
+  scripts: [
+    {
+      src: "https://scripts.simpleanalyticscdn.com/latest.js",
+      async: true
+    }
+  ],
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -50,10 +57,6 @@ const config = {
         },
         theme: {
           customCss: './src/css/custom.css',
-        },
-        gtag: {
-          trackingID: 'G-DN5EZRVMFJ',
-          anonymizeIP: true,
         },
       }),
     ],
