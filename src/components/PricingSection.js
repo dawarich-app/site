@@ -16,32 +16,9 @@ export default function PricingSection() {
         </p> */}
 
         <div className={styles.cardContainer}>
-        <PricingCard
-            title="Early bird"
-            price="60"
-            originalPrice="90"
-            period="year"
-            description="Let us handle the hosting for you. Early adopter pricing!"
-            features={[
-              "Interactive maps and visualizations",
-              "10 millions points included",
-              "Comprehensive travel statistics",
-              "Official mobile app for iOS",
-              "Automatic updates and maintenance",
-              "Automatic backups"
-            ]}
-            highlightedFeatures={[
-              "Automatic updates and maintenance",
-              "Automatic backups"
-            ]}
-            buttonText="Sold out"
-            buttonLink={null}
-            trialText="Limited time offer for early adopters"
-            disabled={true}
-          />
           <PricingCard
             className={styles.featuredCard}
-            title="Cloud Hosted"
+            title="Dawarich Cloud"
             price="90"
             period="year"
             description="Let us handle the hosting for you. Early adopter pricing!"

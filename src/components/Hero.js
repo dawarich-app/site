@@ -15,19 +15,14 @@ export default function Hero() {
         </p>
         <div className={styles.buttons}>
           <Link
-            className={styles.primaryButton}
-            to="/docs/intro">
-            Get Started <span className={styles.arrow}>→</span>
+            className={styles.earlyAccessButton}
+            href="https://my.dawarich.app">
+            Sign up now!
           </Link>
           <Link
             className={styles.secondaryButton}
             to="/docs/features/tracking-location-history">
             Explore Features
-          </Link>
-          <Link
-            className={styles.earlyAccessButton}
-            href="https://my.dawarich.app">
-            Sign up now!
           </Link>
         </div>
       </div>
