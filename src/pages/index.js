@@ -29,8 +29,8 @@ export default function Home() {
       <main>
         <VisualizationSection />
         <StatsSection />
-        <FeaturesSection />
         <UseCases />
+        <FeaturesSection />
         <PricingSection />
       </main>
     </Layout>
