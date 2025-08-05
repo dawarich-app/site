@@ -1,0 +1,193 @@
+.useCasesSection {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  color: var(--ifm-font-color-secondary);
+  line-height: 1.6;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--ifm-color-primary);
+  border-radius: 50px;
+  background: transparent;
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.tab:hover {
+  background: rgba(var(--ifm-color-primary-rgb), 0.1);
+}
+
+.tab.active {
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+.tabIcon {
+  font-size: 1.2rem;
+}
+
+.tabContent {
+  background: var(--ifm-card-background-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.useCaseTitle {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-heading-color);
+}
+
+.useCaseDescription {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-font-color-base);
+}
+
+.useCaseDescription p {
+  margin-bottom: 1em;
+}
+
+.useCaseDescription a {
+  color: var(--ifm-link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.useCaseDescription a:hover {
+  color: var(--ifm-link-hover-color);
+  text-decoration: underline;
+}
+
+.useCaseDescription ul, 
+.useCaseDescription ol {
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+.useCaseDescription li {
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+}
+
+.useCaseDescription strong {
+  font-weight: 600;
+}
+
+.useCaseDescription em {
+  font-style: italic;
+}
+
+.featuresList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.checkIcon {
+  color: var(--ifm-color-primary);
+  font-weight: bold;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .useCasesSection {
+    padding: 3rem 0;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+  
+  .tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+    margin: 0 -1rem 2rem;
+    padding: 0 1rem 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .tab {
+    white-space: nowrap;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+  
+  .tabContent {
+    padding: 1.5rem;
+  }
+  
+  .useCaseTitle {
+    font-size: 1.5rem;
+  }
+  
+  .useCaseDescription {
+    font-size: 1rem;
+  }
+  
+  .featuresList {
+    grid-template-columns: 1fr;
+  }
+}

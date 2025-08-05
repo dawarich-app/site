@@ -2,6 +2,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Hero from '@site/src/components/Hero';
 import Features from '@site/src/components/Features';
+import UseCases from '@site/src/components/UseCases';
 import MapVisualizer from '@site/src/components/MapVisualizer';
 import StatsSection from '@site/src/components/StatsSection';
 import PricingSection from '@site/src/components/PricingSection';
@@ -29,6 +30,7 @@ export default function Home() {
         <VisualizationSection />
         <StatsSection />
         <FeaturesSection />
+        <UseCases />
         <PricingSection />
       </main>
     </Layout>

@@ -21,6 +21,7 @@
     "@types/prop-types": "^15.7.14",
     "chart.js": "^4.4.9",
     "clsx": "^2.1.1",
+    "dompurify": "^3.2.6",
     "leaflet": "^1.9.4",
     "postcss-selector-parser": "^7.0.0",
     "prism-react-renderer": "^2.4.1",

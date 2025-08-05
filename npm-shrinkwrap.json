@@ -15,6 +15,7 @@
         "@types/prop-types": "^15.7.14",
         "chart.js": "^4.4.9",
         "clsx": "^2.1.1",
+        "dompurify": "^3.2.6",
         "leaflet": "^1.9.4",
         "postcss-selector-parser": "^7.0.0",
         "prism-react-renderer": "^2.4.1",
@@ -4713,6 +4714,13 @@
         "@types/node": "*"
       }
     },
+    "node_modules/@types/trusted-types": {
+      "version": "2.0.7",
+      "resolved": "https://registry.npmjs.org/@types/trusted-types/-/trusted-types-2.0.7.tgz",
+      "integrity": "sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==",
+      "license": "MIT",
+      "optional": true
+    },
     "node_modules/@types/unist": {
       "version": "3.0.3",
       "resolved": "https://registry.npmjs.org/@types/unist/-/unist-3.0.3.tgz",
@@ -6913,6 +6921,15 @@
       },
       "funding": {
         "url": "https://github.com/fb55/domhandler?sponsor=1"
+      }
+    },
+    "node_modules/dompurify": {
+      "version": "3.2.6",
+      "resolved": "https://registry.npmjs.org/dompurify/-/dompurify-3.2.6.tgz",
+      "integrity": "sha512-/2GogDQlohXPZe6D6NOgQvXLPSYBqIWMnZ8zzOhn09REE4eyAzb+Hed3jhoM9OkuaJ8P6ZGTTVWQKAi8ieIzfQ==",
+      "license": "(MPL-2.0 OR Apache-2.0)",
+      "optionalDependencies": {
+        "@types/trusted-types": "^2.0.7"
       }
     },
     "node_modules/domutils": {
