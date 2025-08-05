@@ -1,6 +1,11 @@
-import React, { useState } from 'react';
-import DOMPurify from 'dompurify';
+import React, { useState, useEffect } from 'react';
 import styles from './UseCases.module.css';
+
+// Dynamic import for DOMPurify to avoid SSR issues
+let DOMPurify;
+if (typeof window !== 'undefined') {
+  DOMPurify = require('dompurify');
+}
 
 const useCases = [
   {
@@ -77,7 +82,11 @@ export default function UseCases() {
             <h3 className={styles.useCaseTitle}>{activeUseCase.title}</h3>
             <div
               className={styles.useCaseDescription}
-              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(activeUseCase.description) }}
+              dangerouslySetInnerHTML={{
+                __html: typeof window !== 'undefined'
+                  ? DOMPurify.sanitize(activeUseCase.description || '')
+                  : activeUseCase.description.replace(/<[^>]*>?/gm, '')
+              }}
             />
             <ul className={styles.featuresList}>
               {activeUseCase.features.map((feature, index) => (
