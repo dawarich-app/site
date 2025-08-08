@@ -23,8 +23,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title="Dawarich — Your Journey, Your Control"
-      description="Visualize your location history, track your movements, and analyze your travel patterns with complete privacy and control.">
+      title="Dawarich — Your Life, Remembered"
+      description="Track your daily life with Dawarich. Import your location history to create a comprehensive life journal.">
       <HomepageHeader />
       <main>
         <VisualizationSection />

@@ -152,7 +152,7 @@ export default function StatsSection() {
                 <p className={styles.totalDistance}>9,607km</p>
               </div>
               <div className={styles.statsSummary}>
-                <p className={styles.statsSummaryText}>5 countries, 349 cities</p>
+                <p className={styles.statsSummaryText}>5 countries, 49 cities</p>
               </div>
             </div>
             <div className={styles.chartContainer}>

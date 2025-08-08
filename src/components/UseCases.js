@@ -9,9 +9,9 @@ if (typeof window !== 'undefined') {
 
 const useCases = [
   {
-    id: 'life-logging',
-    title: 'Life Logging',
-    description: '<p>Track your daily life with Dawarich. Import your location history and photos to create a comprehensive life journal.</p>',
+    id: 'personal-memory',
+    title: 'Personal Memory',
+    description: '<p>Automatically track your daily life with Dawarich. Never forget where you went or what you did. Relive your memories with precise location data.</p>',
     icon: '🍃',
     features: [
       'Auto-record movement & visits',

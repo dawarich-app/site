@@ -68,14 +68,20 @@ export default function MapVisualizer() {
 
             <p className={styles.description}>
               Dawarich transforms your location data into beautiful, interactive visualizations
-              that help you understand your movement patterns over time.
+              that will allow you to remember each and every day of your life.
             </p>
 
             <div className={styles.features}>
               <FeatureItem
                 icon={<EyeIcon />}
-                title="Precise Route Tracking"
-                description="Automatically detect starts and stops, with precise route visualization between points."
+                title="Precise Location Tracking"
+                description="Automatically detect starts and stops, with precise location visualization."
+              />
+
+              <FeatureItem
+                icon={<LandmarkIcon />}
+                title="Scratch map"
+                description="Highlights countries you've visited."
               />
 
               <FeatureItem
@@ -83,19 +89,8 @@ export default function MapVisualizer() {
                 title="Customizable Map Styles"
                 description="Choose from various map styles to match your preferences."
               />
-
-              <FeatureItem
-                icon={<LandmarkIcon />}
-                title="Landmark Detection*"
-                description="Automatically identify and label important locations based on your visit patterns."
-              />
             </div>
           </div>
-        </div>
-
-        {/* Centered muted text below both columns */}
-        <div className={styles.mutedNote}>
-          * To be released soon!
         </div>
       </div>
     </section>

@@ -164,6 +164,7 @@ export default function StaticMap() {
           color: 'yellow', // Yellow color on hover
           weight: 6
         });
+        map.openPopup(popup);
       });
 
       routeLine.on('mouseout', function(e) {
@@ -171,11 +172,7 @@ export default function StaticMap() {
           color: '#3b82f6', // Return to blue when not hovering
           weight: 4
         });
-      });
-
-      // Add click handler to show popup
-      routeLine.on('click', function(e) {
-        map.openPopup(popup);
+        map.closePopup(popup);
       });
 
       // Add start marker with traffic light emoji 🚥

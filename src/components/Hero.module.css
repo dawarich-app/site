@@ -22,6 +22,13 @@
   color: #3b82f6;
 }
 
+/* Inline highlight-style background for dates */
+.dateHighlight {
+  background: #fde68a;
+  padding: 0 4px;
+  border-radius: 3px;
+}
+
 .subtitle {
   font-size: 18px;
   line-height: 1.6;
@@ -193,6 +200,10 @@
 
 [data-theme='dark'] .highlight {
   color: #3b82f6;
+}
+
+[data-theme='dark'] .dateHighlight {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, rgba(253, 230, 138, 0.35) 0);
 }
 
 [data-theme='dark'] .subtitle {

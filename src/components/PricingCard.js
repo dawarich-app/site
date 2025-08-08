@@ -40,7 +40,7 @@ export default function PricingCard({
           <>
 
             <div className={styles.monthlyPrice}>
-              €{monthlyPrice}/month when billed annually
+              €{monthlyPrice}/month, billed annually
             </div>
           </>
         )}

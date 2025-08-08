@@ -1,19 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import Link from '@docusaurus/Link';
 import styles from './Hero.module.css';
+import { randomDateFiveToThreeYearsAgo } from '../utils/date';
 
 export default function Hero() {
   const [showVideo, setShowVideo] = useState(false);
+  const formattedRandomPastDate = useMemo(() => {
+    const d = randomDateFiveToThreeYearsAgo();
+    const day = d.getDate();
+    const suffix = (n) => {
+      const j = n % 10, k = n % 100;
+      if (j === 1 && k !== 11) return 'st';
+      if (j === 2 && k !== 12) return 'nd';
+      if (j === 3 && k !== 13) return 'rd';
+      return 'th';
+    };
+    const month = d.toLocaleString('en-US', { month: 'long' });
+    const year = d.getFullYear();
+    return `${month} ${day}${suffix(day)}, ${year}`;
+  }, []);
 
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
         <h1 className={styles.title}>
-          Your Journey, <span className={styles.highlight}>Your Control</span>
+          Your Life, <span className={styles.highlight}>Mapped Automatically</span>
         </h1>
         <p className={styles.subtitle}>
-          Visualize your location history, track your movements, and analyze your travel patterns
-          with complete privacy and control.
+          Do you remember where you've been on <span className={styles.dateHighlight}>{formattedRandomPastDate}</span>? We do. Dawarich helps you remember the places you’ve been and the life you’ve lived — day by day, on a beautiful private timeline only you control.
         </p>
 
         {/* Video Player Section */}
