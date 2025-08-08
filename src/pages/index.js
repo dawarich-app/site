@@ -1,4 +1,5 @@
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Head from '@docusaurus/Head';
 import Layout from '@theme/Layout';
 import Hero from '@site/src/components/Hero';
 import Features from '@site/src/components/Features';
@@ -23,8 +24,23 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title="Dawarich — Your Life, Remembered"
-      description="Track your daily life with Dawarich. Import your location history to create a comprehensive life journal.">
+      title="Dawarich — Your Journey, Your Control"
+      description="Visualize your location history, track your movements, and analyze your travel patterns with complete privacy and control.">
+      <Head>
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://dawarich.app/" />
+        <meta property="og:title" content="Dawarich — Your Journey, Your Control | Dawarich" />
+        <meta property="og:description" content="Visualize your location history, track your movements, and analyze your travel patterns with complete privacy and control." />
+        <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+        {/* X (Twitter) */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://dawarich.app/" />
+        <meta name="twitter:title" content="Dawarich — Your Journey, Your Control | Dawarich" />
+        <meta name="twitter:description" content="Visualize your location history, track your movements, and analyze your travel patterns with complete privacy and control." />
+        <meta name="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+      </Head>
       <HomepageHeader />
       <main>
         <VisualizationSection />
