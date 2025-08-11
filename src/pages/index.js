@@ -32,14 +32,14 @@ export default function Home() {
         <meta property="og:url" content="https://dawarich.app/" />
         <meta property="og:title" content="Dawarich — Your Journey, Your Control | Dawarich" />
         <meta property="og:description" content="Visualize your location history, track your movements, and analyze your travel patterns with complete privacy and control." />
-        <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+        <meta property="og:image" content="https://dawarich.app/img/meta-image.jpg" />
 
         {/* X (Twitter) */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://dawarich.app/" />
         <meta name="twitter:title" content="Dawarich — Your Journey, Your Control | Dawarich" />
         <meta name="twitter:description" content="Visualize your location history, track your movements, and analyze your travel patterns with complete privacy and control." />
-        <meta name="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+        <meta name="twitter:image" content="https://dawarich.app/img/meta-image.jpg" />
       </Head>
       <HomepageHeader />
       <main>
