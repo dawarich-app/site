@@ -19,3 +19,7 @@ Setting up your Dawarich in Docker is described in the [Intro](/docs/intro#setup
 ### Synology
 
 Setting up your Dawarich on Synology is described in the [Synology](./platforms/synology) guide.
+
+### Manual install
+
+Setting up your Dawarich manually on a Debian 12 machine is described in the [Manual](./platforms/manual) guide.
