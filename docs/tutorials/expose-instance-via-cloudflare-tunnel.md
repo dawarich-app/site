@@ -30,45 +30,31 @@ You can use any subdomain you'd like. Make sure to configure the IP address and 
 
 ![Adding hostname](./images/adding-hostname.png)
 
-Click on "additional application settings" -> and set a custom HTTP host header. 
-
-![image](https://github.com/user-attachments/assets/d3b914bf-922f-4e33-a960-70f77ce3fa38)
-
-Paste this into that box:
-
-```
-content_type text/css text/plain text/xml text/x-component text/javascript application/x-javascript application/javascript application/json application/manifest+json application/vnd.api+json application/xml application/xhtml+xml application/rss+xml application/atom+xml application/vnd.ms-fontobject application/x-font-ttf application/x-font-opentype application/x-font-truetype image/svg+xml image/x-icon image/vnd.microsoft.icon font/ttf font/eot font/otf font/opentype
-```
-Finally, click save hostname
-
-We are going to store the CloudFlare tunnel token in an .env file.
-
-Create a tunnel.env file, and use the following format:
+## Storing the token
+### .env file?
+<details>
+      <summary>Expand to see more</summary>
+If you are using a custom .env file for your Dawarich configuration, add the variable to it like this:
 
 ```
 TUNNEL_TOKEN=CLOUDFLARE_TUNNEL_TOKEN
 ```
+</details>
+
+### directly in docker-compose.yml
+see [Adding the tunnel](./expose-instance-via-cloudflare-tunnel.md#adding-the-tunnel)
 
 ![Setting token](./images/setting-cloudflare-token.png)
 
 Now - we are ready to modify our docker-compose file.
-
-Add this line at row 56:
+We need to modify the dawarich_app and dawarich sidekiq.
+In both instances, add 
 ```
       RAILS_APPLICATION_CONFIG_HOSTS: ""
 ```
+into the environment part and set both APPLICATION_HOSTS and APPLICATION_HOST to "dawarich.YOURDOMAIN.TLD" (or whatever you went with in the tunnel section)
 
-Replace localhost on line 62 with ``` "" ```
-Replace localhost on line 63 with ``` "subdomain.your.tld,''" ```
-
-Add this line to row 112:
-```
-      RAILS_APPLICATION_CONFIG_HOSTS: ""
-```
-
-Replace localhost on line 118 with ``` "subdomain.your.tld,''" ```
-Replace localhost on line 119 with ``` "subdomain.your.tld,''" ```
-
+## Adding the tunnel
 
 Add the following towards the end of the dockerfile, right above where the volumes are defined:
 
@@ -78,13 +64,27 @@ Add the following towards the end of the dockerfile, right above where the volum
    command: tunnel --no-autoupdate run
    networks:
     - dawarich
-   env_file: tunnel.env
    restart: always
    container_name: tunnel
    depends_on:
     - dawarich_app
 ```
 
+If you are using a .env file, you need to add 
+```
+env_file: .env
+```
+into the tunnel section.
+
+Should you instead want to add the token directly into the compose file, add
+```
+environment:
+      TUNNEL_TOKEN=YOUR_TOKEN_HERE
+```
+into the tunnel section.
+
+
+## (Re-)Starting the stack
 
 Finally - execute a
 
