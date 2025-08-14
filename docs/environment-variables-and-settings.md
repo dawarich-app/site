@@ -30,6 +30,7 @@ As many other applications, Dawarich uses environment variables to configure its
 | `PHOTON_API_USE_HTTPS` | `nil` | Use HTTPS for Photon API requests |
 | `PHOTON_API_HOST` | `nil` | Photon API host. Useful if you're self-hosting your [own Photon instance](https://dawarich.app/docs/tutorials/reverse-geocoding#setting-up-your-own-reverse-geocoding-service) |
 | `PHOTON_API_KEY` | `nil` | Photon API key. Useful if you're supporting Dawarich development on [Patreon](https://www.patreon.com/c/freika/membership) and want to use Photon API instance hosted by Freika without any limits |
+| `PHOTON_API_USE_HTTPS` | `nil` | Use HTTPS for Photon API requests. Set to true if you're using your own Photon instance behind a reverse proxy with SSL |
 | `GEOAPIFY_API_KEY` | `nil` | Geoapify API key. Provide your own key if you want to use Geoapify reverse geocoding service |
 | `SMTP_SERVER` | `nil` | Your SMTP server |
 | `SMTP_PORT` | `nil` | Your SMTP port |
