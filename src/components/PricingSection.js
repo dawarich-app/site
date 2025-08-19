@@ -35,8 +35,8 @@ export default function PricingSection() {
               "Automatic backups"
             ]}
             buttonText="Sign up now!"
-            buttonLink="https://my.dawarich.app"
-            trialText=""
+            buttonLink="?utm_source=site&utm_medium=pricing&utm_campaign=pricing"
+            trialText="Try 7 days for free, no credit card required"
           />
         </div>
       </div>
@@ -45,10 +45,6 @@ export default function PricingSection() {
         <Link to="/docs/intro" className={styles.selfHostButton}>
           Or self-host it for free
         </Link>
-      </div>
-
-      <div className={styles.note}>
-        <a href="/privacy-policy">We don't sell your data.</a>
       </div>
     </section>
   );

@@ -56,7 +56,7 @@ export default function Hero() {
         <div className={styles.buttons}>
           <Link
             className={styles.earlyAccessButton}
-            href="https://my.dawarich.app">
+            href="https://my.dawarich.app?utm_source=site&utm_medium=hero&utm_campaign=hero">
             Sign up now!
           </Link>
           <Link
@@ -65,6 +65,11 @@ export default function Hero() {
             Explore Features
           </Link>
         </div>
+        <p style={{ marginTop: '1rem' }}>Try 7 days for free, no credit card required</p>
+      </div>
+
+      <div className={styles.note} style={{ marginTop: '1rem' }}>
+        <a href="/privacy-policy">We don't sell your data.</a>
       </div>
 
       {/* Video Modal */}

@@ -80,7 +80,7 @@ export default function PricingCard({
       )}
 
       {trialText && (
-        <p className={styles.trialText}>{trialText}</p>
+        <p className={styles.trialText} style={{ marginTop: '1rem' }}>{trialText}</p>
       )}
     </div>
   );
