@@ -21,7 +21,7 @@ export default function PricingSection() {
             title="Dawarich Cloud"
             price="90"
             period="year"
-            description="Let us handle the hosting for you. Early adopter pricing!"
+            description="Let us handle the hosting for you."
             features={[
               "Interactive maps and visualizations",
               "10 millions points included",
