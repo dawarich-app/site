@@ -98,6 +98,11 @@ const config = {
           {to: '/docs/intro', label: 'Self host', position: 'left'},
           {to: '/docs/dawarich-for-ios', label: 'Dawarich for iOS 📱 (new!)', position: 'left'},
           {
+            href: 'https://discourse.dawarich.app/',
+            label: 'Forum',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/Freika/dawarich',
             label: 'GitHub',
             position: 'right',
