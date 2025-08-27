@@ -180,3 +180,11 @@ sidebar_position: 99
 
   If your import process finished successfully, you have nothing to worry about. Failed jobs in Sidekiq are usually the a failed attempt of Reverse Geocoding, so you can safely ignore them. This happens when API limit is reached.
 </details>
+
+## Why I have some points "without data" on Stats page?
+
+<details>
+  <summary>Show me!</summary>
+
+  Some points are being recorded in places, that Photon have no info in its database. For example, it can be a river, a lake, or a forest. These points are not being processed by the reverse geocoding service, so Photon returns an empty (but still valid) response for them. Dawarich counts these points as "without data". It's perfectly normal to have some points without data, and you can safely ignore them. Usually, it's about 1-1,5% of your total points.
+</details>
