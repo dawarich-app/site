@@ -12,6 +12,9 @@ As many other applications, Dawarich uses environment variables to configure its
 | -------------------- | ------------- | ----------- |
 | `RAILS_ENV`          | `development` | Application environment. `development` value makes sure all errors will be shown explicitly, making easier remote debugging |
 | `REDIS_URL`          | `redis://dawarich_redis:6379` | Redis URL |
+| `RAILS_CACHE_DB`     | `0` | Redis cache database |
+| `RAILS_JOB_QUEUE_DB` | `1` | Redis job queue database |
+| `RAILS_WS_DB` | `2` | Redis WebSocket database |
 | `DATABASE_HOST`      | `dawarich_db` | Database host |
 | `DATABASE_USERNAME`  | `postgres`    | Database username |
 | `DATABASE_PASSWORD`  | `password`    | Database password |
