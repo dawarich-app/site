@@ -52,7 +52,7 @@ In both instances, add
 ```
       RAILS_APPLICATION_CONFIG_HOSTS: ""
 ```
-into the environment part and set both APPLICATION_HOSTS and APPLICATION_HOST to "dawarich.YOURDOMAIN.TLD" (or whatever you went with in the tunnel section)
+into the environment part and set `APPLICATION_HOSTS : "dawarich.YOURDOMAIN.TLD"` or `APPLICATION_HOSTS : dawarich.YOURDOMAIN.TLD` (or whatever you went with in the tunnel section; both ways should work, in my case I had to use the `"` around the url)
 
 ## Adding the tunnel
 
