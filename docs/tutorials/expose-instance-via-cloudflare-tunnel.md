@@ -8,7 +8,7 @@ With a couple of edits to the docker-compose.yml file, we can expose Dawarich to
 
 This guide will assume you already have a public domain, and are using CloudFlare DNS nameservers.
 
-Login to CloudFlare, and navigate to "Zero Trust" on the left hand menu. https://one.dash.cloudflare.com/
+Login to CloudFlare, and navigate to "Zero Trust" on the left hand menu. [Cloudflare One Dashboard](https://one.dash.cloudflare.com/)
 
 Click on Networks, and then the submenu "Tunnels".
 Create your tunnel.
@@ -29,9 +29,12 @@ Click on the Public Hostname tab, and click "add a public hostname"
 You can use any subdomain you'd like. Make sure to configure the IP address and port Dawarich is running on.
 
 ![Adding hostname](./images/adding-hostname.png)
+If you are adding the tunnel into the docker-compose file provided by dawarich, you can alternatively set the URL in the hostname to: `dawarich_app:3000`
 
 ## Storing the token
+
 ### .env file?
+
 <details>
       <summary>Expand to see more</summary>
 If you are using a custom .env file for your Dawarich configuration, add the variable to it like this:
@@ -39,20 +42,39 @@ If you are using a custom .env file for your Dawarich configuration, add the var
 ```
 TUNNEL_TOKEN=CLOUDFLARE_TUNNEL_TOKEN
 ```
+
 </details>
 
 ### directly in docker-compose.yml
+
 see [Adding the tunnel](./expose-instance-via-cloudflare-tunnel.md#adding-the-tunnel)
 
 ![Setting token](./images/setting-cloudflare-token.png)
 
 Now - we are ready to modify our docker-compose file.
 We need to modify the dawarich_app and dawarich sidekiq.
-In both instances, add 
+In both instances, add `RAILS_APPLICATION_CONFIG_HOSTS` to the environment of `dawarich_app`and `dawarich_sidekiq` so that the environment parts look like this:  
+
 ```
-      RAILS_APPLICATION_CONFIG_HOSTS: ""
+      RAILS_APPLICATION_CONFIG_HOSTS: "" #add this
+      RAILS_ENV: development
+      REDIS_URL: redis://dawarich_redis:6379
+      DATABASE_HOST: dawarich_db
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: password
+      DATABASE_NAME: dawarich_development
+      MIN_MINUTES_SPENT_IN_CITY: 60
+      APPLICATION_HOSTS: dawarich.YOURDOMAIN.TLD #set this to your domain
+      TIME_ZONE: Europe/London
+      APPLICATION_PROTOCOL: http
+      PROMETHEUS_EXPORTER_ENABLED: "false"
+      PROMETHEUS_EXPORTER_HOST: 0.0.0.0
+      PROMETHEUS_EXPORTER_PORT: 9394
+      SELF_HOSTED: "true"
+      STORE_GEODATA: "true"
 ```
-into the environment part and set `APPLICATION_HOSTS : "dawarich.YOURDOMAIN.TLD"` or `APPLICATION_HOSTS : dawarich.YOURDOMAIN.TLD` (or whatever you went with in the tunnel section; both ways should work, in my case I had to use the `"` around the url)
+
+For the `APPLICATION_HOSTS`, you can add `"` around the domain, if you plan to use multiple hostnames. Separate them with a comma.
 
 ## Adding the tunnel
 
@@ -70,19 +92,22 @@ Add the following towards the end of the dockerfile, right above where the volum
     - dawarich_app
 ```
 
-If you are using a .env file, you need to add 
+If you are using a .env file, you need to add
+
 ```
 env_file: .env
 ```
+
 into the tunnel section.
 
 Should you instead want to add the token directly into the compose file, add
+
 ```
 environment:
       TUNNEL_TOKEN=YOUR_TOKEN_HERE
 ```
-into the tunnel section.
 
+into the tunnel section.
 
 ## (Re-)Starting the stack
 
@@ -96,4 +121,5 @@ Your instance should now be accessible via your public host name.
 
 You can connect applications on mobile devices to utilize the API while away from home for better tracking. Tested on Android using OwnTracks.
 
-_The original guide is written by [@mattmichaels](https://github.com/mattmichaels) and can be found [here](https://github.com/dawarich-app/site/pull/4/files)._
+_The original guide is written by [@mattmichaels](https://github.com/mattmichaels) and can be found [here](https://github.com/dawarich-app/site/pull/4/files).
+It was later updated by [@WorldTeacher](https://github.com/WorldTeacher) in collaboration with [@Sevvlor](https://github.com/sevvlor). The respective changes can be viewed [here](https://github.com/dawarich-app/site/pull/16/files)._
