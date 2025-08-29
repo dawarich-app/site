@@ -36,7 +36,7 @@ If you are adding the tunnel into the docker-compose file provided by dawarich, 
 ### .env file?
 
 <details>
-      <summary>Expand to see more</summary>
+      <summary>Expand to see instructions</summary>
 If you are using a custom .env file for your Dawarich configuration, add the variable to it like this:
 
 ```
@@ -48,8 +48,6 @@ TUNNEL_TOKEN=CLOUDFLARE_TUNNEL_TOKEN
 ### directly in docker-compose.yml
 
 see [Adding the tunnel](./expose-instance-via-cloudflare-tunnel.md#adding-the-tunnel)
-
-![Setting token](./images/setting-cloudflare-token.png)
 
 Now - we are ready to modify our docker-compose file.
 We need to modify the dawarich_app and dawarich sidekiq.
@@ -95,7 +93,7 @@ Add the following towards the end of the dockerfile, right above where the volum
 If you are using a .env file, you need to add
 
 ```
-env_file: .env
+env_file: .env # or whatever you named the environment file
 ```
 
 into the tunnel section.
