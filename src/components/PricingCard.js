@@ -26,21 +26,16 @@ export default function PricingCard({
 
       <div className={styles.priceContainer}>
         <div className={styles.mainPrice}>
-          {originalPrice && (
-            <span className={styles.originalPrice}>€{originalPrice}</span>
-          )}
-          <span className={styles.currentPrice}>€{price}</span>
-          <span className={styles.period}>
-            /{originalPrice && price > 0 && (
-              <span>first </span>
-            )}year
-          </span>
+          <span className={styles.currentPrice}>€{monthlyPrice}</span>/month
         </div>
         {monthlyPrice && (
           <>
 
             <div className={styles.monthlyPrice}>
-              €{monthlyPrice}/month, billed annually
+              €{price}
+              <span className={styles.period}>
+                /year, billed annually
+              </span>
             </div>
           </>
         )}
