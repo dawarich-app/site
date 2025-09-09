@@ -16,7 +16,7 @@ docker exec -t dawarich_db pg_dumpall --clean --if-exists --username=postgres | 
 
 ```
 docker compose down -v      # CAUTION! Deletes all Dawarich data to start from scratch.
-# rm -rf DB_DATA_LOCATION   # CAUTION! Deletes all Dawarich data to start from scratch.
+# docker volume rm dawarich_db_data   # CAUTION! Deletes all Dawarich data to start from scratch. Set dawarich_db_data to the correct docker volume name.
 docker compose pull         # Update to latest version of Dawarich (if desired)
 docker compose create       # Create Docker containers for Dawarich apps without running them.
 docker start dawarich_db    # Start Postgres server
