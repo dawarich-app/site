@@ -42,9 +42,10 @@ git push origin main
 - `static/`: Static assets, images, and media files
 
 ### Key Components
-- `Hero.js`: Landing page hero with video modal
-- `Features.js`: Feature showcase grid
-- `StatsSection.js`: Analytics and statistics display
+- `Hero.js`: Landing page hero with smooth scroll to features
+- `Features.js`: Vertical tabs feature showcase with clickable image modals
+- `UseCases.js`: Use cases section 
+- `PrivacySection.js`: Data privacy and security information (SSL, LUKS, GDPR, EU hosting)
 - `PricingSection.js`: Service pricing information
 
 ### Configuration

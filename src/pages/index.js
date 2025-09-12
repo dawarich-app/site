@@ -4,7 +4,6 @@ import Layout from '@theme/Layout';
 import Hero from '@site/src/components/Hero';
 import Features from '@site/src/components/Features';
 import UseCases from '@site/src/components/UseCases';
-import StatsSection from '@site/src/components/StatsSection';
 import PricingSection from '@site/src/components/PricingSection';
 import PrivacySection from '@site/src/components/PrivacySection';
 
@@ -43,7 +42,6 @@ export default function Home() {
         <FeaturesSection />
         <PrivacySection />
         <PricingSection />
-        <StatsSection />
       </main>
     </Layout>
   );
