@@ -35,6 +35,16 @@ export default function Home() {
         <meta name="twitter:title" content="Dawarich — Your memories, mapped automatically" />
         <meta name="twitter:description" content="Never forget a place you've been to" />
         <meta name="twitter:image" content="https://dawarich.app/img/meta-image.jpg" />
+        {/* Paddle.js for retaining */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              Paddle.Initialize({
+                token: 'live_8593fad779b610288ad3ca40789'
+              });
+            `,
+          }}
+        />
       </Head>
       <HomepageHeader />
       <main>
