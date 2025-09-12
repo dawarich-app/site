@@ -5,17 +5,22 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
-import { initializePaddle } from '@paddle/paddle-js';
 
-// const paddle = await initializePaddle({
-//   token: 'live_8593fad779b610288ad3ca40789'
-// });
+// Paddle configuration - token will be available globally
+const paddleConfig = {
+  token: 'live_8593fad779b610288ad3ca40789'
+};
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Dawarich',
   tagline: 'Visualize your location history',
   favicon: 'img/favicon.ico',
+
+  // Make Paddle config available globally
+  customFields: {
+    paddleToken: paddleConfig.token,
+  },
 
 
 
@@ -28,6 +33,10 @@ const config = {
   scripts: [
     {
       src: "https://scripts.simpleanalyticscdn.com/latest.js",
+      async: true
+    },
+    {
+      src: "https://cdn.paddle.com/paddle/v2/paddle.js",
       async: true
     }
   ],
@@ -187,6 +196,10 @@ const config = {
               {
                 label: 'Blog',
                 to: '/blog',
+              },
+              {
+                label: 'Credits',
+                to: '/credits',
               },
             ],
           },

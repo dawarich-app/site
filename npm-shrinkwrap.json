@@ -12,6 +12,7 @@
         "@docusaurus/plugin-google-gtag": "^3.6.3",
         "@docusaurus/preset-classic": "^3.6.3",
         "@mdx-js/react": "^3.1.0",
+        "@paddle/paddle-js": "^1.4.2",
         "@types/prop-types": "^15.7.14",
         "chart.js": "^4.4.9",
         "clsx": "^2.1.1",
@@ -4025,6 +4026,12 @@
       "engines": {
         "node": ">= 8"
       }
+    },
+    "node_modules/@paddle/paddle-js": {
+      "version": "1.4.2",
+      "resolved": "https://registry.npmjs.org/@paddle/paddle-js/-/paddle-js-1.4.2.tgz",
+      "integrity": "sha512-pY9jYS+g3vk6ecc7GbCsVSuBEo1Yh+hxYE4i2XoY5/ZBAZLuCkQi/80hOmSBkFoaETohOpDmurILlQdgUHUcvw==",
+      "license": "Apache-2.0"
     },
     "node_modules/@pnpm/config.env-replace": {
       "version": "1.1.0",
