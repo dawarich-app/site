@@ -35,7 +35,7 @@ export default function PricingSection() {
               "Automatic backups"
             ]}
             buttonText="Try 7 Days for Free"
-            buttonLink="?utm_source=site&utm_medium=pricing&utm_campaign=try7days"
+            buttonLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=pricing&utm_campaign=try7days"
             trialText="No credit card required"
           />
         </div>

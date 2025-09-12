@@ -60,7 +60,7 @@ export default function Hero() {
         <div className={styles.buttons}>
           <Link
             className={styles.earlyAccessButton}
-            href="https://my.dawarich.app?utm_source=site&utm_medium=hero&utm_campaign=hero">
+            href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=hero&utm_campaign=hero">
             Try 7 Days for Free
           </Link>
           <button
