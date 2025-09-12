@@ -4,6 +4,10 @@ title: Privacy Policy
 
 # Dawarich Privacy Policy
 
+:::info TL;DR
+We don't sell your data. We don't train AI models on your data. We don't share your data with third parties except for error tracking and hosting. We only work with GDPR-compliant providers.
+:::
+
 We take your privacy seriously. We only collect the personal information that is necessary to provide you with our services, and we do not sell or rent your data to anyone else.
 
 This policy has been created to provide transparency to you about what personal information we collect and the purposes for doing so.
@@ -111,5 +115,6 @@ This document was last edited on:
 
 | When          | What          |
 | ------------- | ------------- |
+| 2025-09-12    | Added TL;DR section |
 | 2025-03-12    | Updated data retention section for SaaS users, added disclaimer about data privacy |
 | 2025-02-01    | Initial version |

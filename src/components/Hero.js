@@ -27,11 +27,15 @@ export default function Hero() {
           Your Life, <span className={styles.highlight}>Mapped Automatically</span>
         </h1>
         <p className={styles.subtitle}>
-          Do you remember where you've been on <span className={styles.dateHighlight}>{formattedRandomPastDate}</span>? We do. Dawarich helps you remember the places you’ve been and the life you’ve lived — day by day, on a beautiful private timeline only you control.
+          Do you remember where you've been on <span className={styles.dateHighlight}>{formattedRandomPastDate}</span>? With Dawarich, you will never face a situation where you can't recall your past. We help you remember the places you’ve been and the life you’ve lived — day by day, on a beautiful private timeline only you control.
         </p>
 
+        <a href="/img/the_map.png" target="_blank" rel="noopener noreferrer">
+          <img src="/img/the_map.png" width="1024" />
+        </a>
+
         {/* Video Player Section */}
-        <div className={styles.videoSection}>
+        {/* <div className={styles.videoSection}>
           <div className={styles.videoContainer} onClick={() => setShowVideo(true)}>
             <div className={styles.videoThumbnail}>
               <img
@@ -51,29 +55,26 @@ export default function Hero() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className={styles.buttons}>
           <Link
             className={styles.earlyAccessButton}
             href="https://my.dawarich.app?utm_source=site&utm_medium=hero&utm_campaign=hero">
-            Sign up now!
+            Try 7 Days for Free
           </Link>
-          <Link
+          <button
             className={styles.secondaryButton}
-            to="/docs/features/tracking-location-history">
+            onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}>
             Explore Features
-          </Link>
+          </button>
         </div>
-        <p style={{ marginTop: '1rem' }}>Try 7 days for free, no credit card required</p>
+        <p style={{ marginTop: '1rem' }}>No credit card required</p>
       </div>
 
-      <div className={styles.note} style={{ marginTop: '1rem' }}>
-        <a href="/privacy-policy">We don't sell your data.</a>
-      </div>
 
       {/* Video Modal */}
-      {showVideo && (
+      {/* {showVideo && (
         <div className={styles.videoModal} onClick={() => setShowVideo(false)}>
           <div className={styles.videoModalContent} onClick={(e) => e.stopPropagation()}>
             <button
@@ -92,7 +93,7 @@ export default function Hero() {
             </video>
           </div>
         </div>
-      )}
+      )} */}
     </section>
   );
 }

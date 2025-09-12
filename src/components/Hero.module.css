@@ -30,7 +30,7 @@
 }
 
 .subtitle {
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.6;
   color: #4b5563;
   max-width: 700px;
@@ -38,6 +38,7 @@
 }
 
 .buttons {
+  margin-top: 24px;
   display: flex;
   gap: 12px;
   justify-content: center;

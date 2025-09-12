@@ -5,6 +5,11 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+import { initializePaddle } from '@paddle/paddle-js';
+
+// const paddle = await initializePaddle({
+//   token: 'live_8593fad779b610288ad3ca40789'
+// });
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -88,23 +93,16 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Docs',
-          },
           {to: '/blog', label: 'Blog', position: 'left'},
-          {to: '/docs/intro', label: 'Self host', position: 'left'},
           {to: '/docs/dawarich-for-ios', label: 'Dawarich for iOS 📱 (new!)', position: 'left'},
           {
-            href: 'https://discourse.dawarich.app/',
-            label: 'Forum',
+            to: 'https://discourse.dawarich.app/',
+            label: 'Community',
             position: 'right',
           },
           {
-            href: 'https://github.com/Freika/dawarich',
-            label: 'GitHub',
+            to: 'https://my.dawarich.app',
+            label: 'Sign in',
             position: 'right',
           },
         ],

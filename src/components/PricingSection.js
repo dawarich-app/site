@@ -34,9 +34,9 @@ export default function PricingSection() {
               "Automatic updates and maintenance",
               "Automatic backups"
             ]}
-            buttonText="Sign up now!"
-            buttonLink="?utm_source=site&utm_medium=pricing&utm_campaign=pricing"
-            trialText="Try 7 days for free, no credit card required"
+            buttonText="Try 7 Days for Free"
+            buttonLink="?utm_source=site&utm_medium=pricing&utm_campaign=try7days"
+            trialText="No credit card required"
           />
         </div>
       </div>

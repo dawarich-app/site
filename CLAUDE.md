@@ -44,7 +44,6 @@ git push origin main
 ### Key Components
 - `Hero.js`: Landing page hero with video modal
 - `Features.js`: Feature showcase grid
-- `MapVisualizer.js`: Interactive map demonstrations
 - `StatsSection.js`: Analytics and statistics display
 - `PricingSection.js`: Service pricing information
 

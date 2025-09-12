@@ -1,0 +1,162 @@
+.privacySection {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  color: #111827;
+  margin: 0 0 16px;
+}
+
+.subtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  color: #4b5563;
+  max-width: 800px;
+  margin: 0 auto 48px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.privacyCard {
+  background: #f9fafb;
+  padding: 32px 24px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.privacyCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px 0 rgb(0 0 0 / 0.1);
+  border-color: #d1d5db;
+}
+
+.iconWrapper {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  background: #3b82f6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 12px;
+}
+
+.cardDescription {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6b7280;
+  margin: 0;
+}
+
+.policyLinkContainer {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.policyLink {
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #3b82f6;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.policyLink:hover {
+  color: #1d4ed8;
+  text-decoration-color: currentColor;
+}
+
+/* Dark mode support */
+[data-theme='dark'] .privacySection {
+  background-color: #1f2937;
+}
+
+[data-theme='dark'] .title {
+  color: #f9fafb;
+}
+
+[data-theme='dark'] .subtitle {
+  color: #9ca3af;
+}
+
+[data-theme='dark'] .privacyCard {
+  background: #111827;
+  border-color: #374151;
+}
+
+[data-theme='dark'] .privacyCard:hover {
+  border-color: #4b5563;
+}
+
+[data-theme='dark'] .cardTitle {
+  color: #f9fafb;
+}
+
+[data-theme='dark'] .cardDescription {
+  color: #9ca3af;
+}
+
+[data-theme='dark'] .policyLink {
+  color: #60a5fa;
+}
+
+[data-theme='dark'] .policyLink:hover {
+  color: #93c5fd;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .privacySection {
+    padding: 60px 0;
+  }
+
+  .privacyCard {
+    padding: 24px 20px;
+  }
+}
