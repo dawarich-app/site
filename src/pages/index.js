@@ -1,3 +1,5 @@
+import React, { useEffect } from "react";
+import { initializePaddle } from '@paddle/paddle-js';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Head from '@docusaurus/Head';
 import Layout from '@theme/Layout';
@@ -17,6 +19,13 @@ function FeaturesSection() {
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
+
+  useEffect(() => {
+    initializePaddle({
+      token: "live_8593fad779b610288ad3ca40789",
+    });
+  }, []);
+
   return (
     <Layout
       title="Dawarich — Your memories, mapped automatically"
@@ -35,16 +44,6 @@ export default function Home() {
         <meta name="twitter:title" content="Dawarich — Your memories, mapped automatically" />
         <meta name="twitter:description" content="Never forget a place you've been to" />
         <meta name="twitter:image" content="https://dawarich.app/img/meta-image.jpg" />
-        {/* Paddle.js for retaining */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              Paddle.Initialize({
-                token: 'live_8593fad779b610288ad3ca40789'
-              });
-            `,
-          }}
-        />
       </Head>
       <HomepageHeader />
       <main>

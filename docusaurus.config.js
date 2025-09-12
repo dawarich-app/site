@@ -6,23 +6,11 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
-// Paddle configuration - token will be available globally
-const paddleConfig = {
-  token: 'live_8593fad779b610288ad3ca40789'
-};
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Dawarich',
   tagline: 'Visualize your location history',
   favicon: 'img/favicon.ico',
-
-  // Make Paddle config available globally
-  customFields: {
-    paddleToken: paddleConfig.token,
-  },
-
-
 
   // Set the production url of your site here
   url: 'https://dawarich.app',
