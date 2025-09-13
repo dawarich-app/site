@@ -49,9 +49,10 @@ git push origin main
 - `PricingSection.js`: Service pricing information
 
 ### Configuration
-- `docusaurus.config.js`: Main site configuration, navbar, footer, analytics
+- `docusaurus.config.js`: Main site configuration, navbar, footer, analytics, Paddle integration
 - `sidebars.js`: Auto-generated documentation sidebar structure
 - Sidebar content is automatically generated from the `docs/` folder structure
+- Paddle CDN script loaded globally for payment processing
 
 ### Content Management
 - Documentation uses automatic sidebar generation from folder structure
@@ -68,9 +69,23 @@ git push origin main
 - Simple Analytics integration configured in `docusaurus.config.js`
 - Cookie consent handled by `react-cookie-consent`
 
+### Homepage Structure
+The homepage sections are ordered as follows:
+1. `Hero` - Hero section with smooth scroll to features
+2. `UseCases` - Use cases showcase
+3. `Features` - Vertical tabs with clickable image modals
+4. `PrivacySection` - Data privacy and security information
+5. `PricingSection` - Service pricing with Paddle integration
+
+### Paddle Integration
+- Paddle token configured in `docusaurus.config.js` and homepage
+- Payment processing for subscription services
+- Token: `live_8593fad779b610288ad3ca40789`
+
 ## Important Notes
-- The site uses yarn, not npm (use yarn commands)
+- The site uses npm (switched from yarn for deployment compatibility)
 - Node.js 18+ required
 - Auto-generated sidebars mean documentation structure follows filesystem
 - Component styling uses CSS modules for scoping
 - Video content served from `/static/` directory
+- Deployed to Cloudflare Pages using `npm run build`
