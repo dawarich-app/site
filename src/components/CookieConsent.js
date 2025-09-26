@@ -25,7 +25,7 @@ export default function CustomCookieConsent() {
       expires={150}
       debug={true}
     >
-      We use essential cookies required for login, security, and purchases. These cookies cannot be disabled. We do not use tracking or advertising cookies unless you choose to allow them.
+      We use essential cookies required for login, security, and purchases. These cookies cannot be disabled. We do not use advertising cookies, but we do use analytics cookies from PostHog to help us improve our website.
       <a
         href="/privacy-policy"
         style={{
