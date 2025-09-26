@@ -38,6 +38,29 @@ export default function PricingSection() {
             buttonLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=pricing&utm_campaign=try7days"
             trialText="No credit card required"
           />
+          <PricingCard
+            title="Business"
+            price={null}
+            description="Custom solutions for large teams and organizations."
+            features={[
+              "Everything in Dawarich Cloud",
+              "Custom data limits",
+              "Custom integrations",
+              "Custom deployment options",
+              "Priority support",
+              "SLA guarantees",
+              "Custom features"
+            ]}
+            highlightedFeatures={[
+              "Custom deployment options",
+              "Priority support",
+              "SLA guarantees",
+              "Custom features"
+            ]}
+            buttonText="Drop us a line"
+            buttonLink="mailto:hi@dawarich.app"
+            trialText="Let's discuss your requirements"
+          />
         </div>
       </div>
 

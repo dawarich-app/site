@@ -24,22 +24,32 @@ export default function PricingCard({
     <div className={`${styles.pricingCard} ${className || ''} ${disabled ? styles.disabled : ''}`}>
       <h2 className={styles.title}>{title}</h2>
 
-      <div className={styles.priceContainer}>
-        <div className={styles.mainPrice}>
-          <span className={styles.currentPrice}>€{monthlyPrice}</span>/month
-        </div>
-        {monthlyPrice && (
-          <>
+      {price !== null && (
+        <div className={styles.priceContainer}>
+          <div className={styles.mainPrice}>
+            <span className={styles.currentPrice}>€{monthlyPrice}</span>/month
+          </div>
+          {monthlyPrice && (
+            <>
 
-            <div className={styles.monthlyPrice}>
-              €{price}
-              <span className={styles.period}>
-                /year, billed annually
-              </span>
-            </div>
-          </>
-        )}
-      </div>
+              <div className={styles.monthlyPrice}>
+                €{price}
+                <span className={styles.period}>
+                  /year, billed annually
+                </span>
+              </div>
+            </>
+          )}
+        </div>
+      )}
+
+      {price === null && (
+        <div className={styles.priceContainer}>
+          <div className={styles.mainPrice}>
+            <span className={styles.currentPrice}>Custom</span>
+          </div>
+        </div>
+      )}
 
       <p className={styles.description}>{description}</p>
 
