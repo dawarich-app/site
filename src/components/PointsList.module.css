@@ -1,0 +1,326 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  background: var(--ifm-color-emphasis-100);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.count {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-600);
+  font-weight: 500;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.sortSelect {
+  padding: 0.375rem 0.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-color-emphasis-900);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.sortSelect:hover {
+  border-color: var(--ifm-color-primary);
+}
+
+.sortSelect:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px var(--ifm-color-primary-lightest);
+}
+
+.list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.dayGroup {
+  margin-bottom: 1rem;
+}
+
+.dayHeader {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--ifm-color-primary-lightest);
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid var(--ifm-color-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dayTitle {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary-dark);
+  text-transform: capitalize;
+}
+
+.dayCount {
+  font-size: 0.75rem;
+  color: var(--ifm-color-primary);
+  font-weight: 500;
+}
+
+.item {
+  padding: 0.75rem;
+  margin: 0 0.5rem 0.5rem;
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.item:hover {
+  background: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-primary);
+  transform: translateX(2px);
+}
+
+.item.selected {
+  background: var(--ifm-color-primary-lightest);
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px var(--ifm-color-primary-lightest);
+}
+
+.itemHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.colorDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.itemType {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-700);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.itemName {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-900);
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.itemAddress {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.itemActivity {
+  font-size: 0.75rem;
+  color: var(--ifm-color-primary);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.itemTime {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-left: auto;
+  font-weight: 500;
+}
+
+.itemDuration {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-600);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.itemCoords {
+  font-size: 0.6875rem;
+  color: var(--ifm-color-emphasis-500);
+  font-family: 'Courier New', monospace;
+}
+
+.emptyState {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.emptyIcon {
+  width: 48px;
+  height: 48px;
+  color: var(--ifm-color-emphasis-400);
+  margin-bottom: 1rem;
+}
+
+.emptyState p {
+  margin: 0.25rem 0;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.emptyHint {
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-500);
+}
+
+/* Scrollbar styling */
+.list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: var(--ifm-color-emphasis-300);
+  border-radius: 3px;
+}
+
+.list::-webkit-scrollbar-thumb:hover {
+  background: var(--ifm-color-emphasis-400);
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .container {
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .header {
+  background: var(--ifm-color-emphasis-200);
+  border-bottom-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .title {
+  color: var(--ifm-color-emphasis-100);
+}
+
+[data-theme='dark'] .dayHeader {
+  background: var(--ifm-color-primary-darkest);
+  border-bottom-color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .dayTitle {
+  color: var(--ifm-color-primary-lightest);
+}
+
+[data-theme='dark'] .dayCount {
+  color: var(--ifm-color-primary-light);
+}
+
+[data-theme='dark'] .count {
+  color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .sortSelect {
+  border-color: var(--ifm-color-emphasis-400);
+  background: var(--ifm-background-color);
+  color: var(--ifm-color-emphasis-100);
+}
+
+[data-theme='dark'] .item {
+  background: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .item:hover {
+  background: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .item.selected {
+  background: var(--ifm-color-primary-darkest);
+  border-color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .itemType {
+  color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .itemName {
+  color: var(--ifm-color-emphasis-100);
+}
+
+[data-theme='dark'] .itemAddress {
+  color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .itemTime,
+[data-theme='dark'] .itemDuration {
+  color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .itemCoords {
+  color: var(--ifm-color-emphasis-500);
+}
+
+/* Mobile responsive */
+@media (max-width: 1024px) {
+  .container {
+    height: 400px;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: 300px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .sortSelect {
+    width: 100%;
+  }
+}

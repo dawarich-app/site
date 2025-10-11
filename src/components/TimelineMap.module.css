@@ -1,0 +1,191 @@
+.mapContainer {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--ifm-color-emphasis-300);
+  border-top: 4px solid var(--ifm-color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingContainer p {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 1rem;
+}
+
+/* Fix for Leaflet popup z-index */
+:global(.leaflet-popup) {
+  z-index: 1001 !important;
+}
+
+/* Leaflet popup styling for light theme */
+:global(.leaflet-popup-content-wrapper) {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+}
+
+:global(.leaflet-popup-content) {
+  color: #333333 !important;
+}
+
+:global(.leaflet-popup-content strong) {
+  color: #000000 !important;
+}
+
+:global(.leaflet-popup-content em) {
+  color: #555555 !important;
+}
+
+/* Custom marker styles */
+:global(.custom-marker) {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Leaflet controls styling to match theme */
+:global(.leaflet-control-layers),
+:global(.leaflet-control-zoom) {
+  border-color: var(--ifm-color-emphasis-300) !important;
+}
+
+:global(.leaflet-control-layers-toggle),
+:global(.leaflet-control-zoom-in),
+:global(.leaflet-control-zoom-out) {
+  background-color: var(--ifm-background-color) !important;
+  color: var(--ifm-color-emphasis-900) !important;
+}
+
+:global(.leaflet-control-layers-toggle):hover,
+:global(.leaflet-control-zoom-in):hover,
+:global(.leaflet-control-zoom-out):hover {
+  background-color: var(--ifm-color-emphasis-100) !important;
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .map,
+[data-theme='dark'] .loadingContainer {
+  background: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] :global(.leaflet-control-layers),
+[data-theme='dark'] :global(.leaflet-control-zoom) {
+  background-color: var(--ifm-background-color) !important;
+  border-color: var(--ifm-color-emphasis-400) !important;
+}
+
+[data-theme='dark'] :global(.leaflet-control-layers-toggle),
+[data-theme='dark'] :global(.leaflet-control-zoom-in),
+[data-theme='dark'] :global(.leaflet-control-zoom-out) {
+  background-color: var(--ifm-background-color) !important;
+  color: var(--ifm-color-emphasis-100) !important;
+}
+
+[data-theme='dark'] :global(.leaflet-control-layers-toggle):hover,
+[data-theme='dark'] :global(.leaflet-control-zoom-in):hover,
+[data-theme='dark'] :global(.leaflet-control-zoom-out):hover {
+  background-color: var(--ifm-color-emphasis-200) !important;
+}
+
+[data-theme='dark'] :global(.leaflet-popup-content-wrapper),
+[data-theme='dark'] :global(.leaflet-popup-tip) {
+  background-color: #2d2d2d !important;
+  color: #e0e0e0 !important;
+}
+
+[data-theme='dark'] :global(.leaflet-popup-content) {
+  color: #e0e0e0 !important;
+}
+
+[data-theme='dark'] :global(.leaflet-popup-content strong) {
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] :global(.leaflet-popup-content em) {
+  color: #b0b0b0 !important;
+}
+
+[data-theme='dark'] :global(.leaflet-popup-close-button) {
+  color: #b0b0b0 !important;
+}
+
+[data-theme='dark'] :global(.leaflet-popup-close-button):hover {
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] :global(.leaflet-control-layers-list) {
+  background-color: var(--ifm-background-color) !important;
+  color: var(--ifm-color-emphasis-100) !important;
+}
+
+[data-theme='dark'] :global(.leaflet-control-layers-base label),
+[data-theme='dark'] :global(.leaflet-control-layers-overlays label) {
+  color: var(--ifm-color-emphasis-100) !important;
+}
+
+[data-theme='dark'] :global(.leaflet-control-attribution) {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  color: var(--ifm-color-emphasis-100) !important;
+}
+
+[data-theme='dark'] :global(.leaflet-control-attribution a) {
+  color: var(--ifm-color-primary-light) !important;
+}
+
+/* Dark mode border */
+[data-theme='dark'] .mapContainer {
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .mapContainer {
+    height: 500px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .loadingContainer {
+    height: 500px;
+  }
+
+  .map {
+    border-radius: 0;
+  }
+}

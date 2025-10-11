@@ -1,0 +1,229 @@
+.container {
+  min-height: calc(100vh - 60px);
+}
+
+.contentWrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.header p {
+  margin: 0;
+  font-size: 1.125rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.topSection {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: start;
+}
+
+.instructions {
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.instructions h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.instructionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.instructionItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.instructionItem strong {
+  color: var(--ifm-color-emphasis-900);
+  font-size: 0.95rem;
+}
+
+.instructionItem p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.9rem;
+  padding-left: 1rem;
+}
+
+.instructionItem a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.instructionItem a:hover {
+  text-decoration: underline;
+}
+
+
+.mapSection {
+  position: relative;
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.mapGrid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.mapColumn {
+  position: relative;
+}
+
+.listColumn {
+  /* Column for the points list */
+}
+
+.instructionsSection {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+}
+
+.instructionsSection h2 {
+  margin-top: 0;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.instructionsList {
+  line-height: 1.8;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.instructionsList li {
+  margin-bottom: 1rem;
+}
+
+.instructionsList ul {
+  margin-top: 0.5rem;
+}
+
+.instructionsList a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.instructionsList a:hover {
+  text-decoration: underline;
+}
+
+.privacyNote {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--ifm-color-success-lightest);
+  border: 1px solid var(--ifm-color-success-light);
+  border-radius: 8px;
+  color: var(--ifm-color-success-darkest);
+}
+
+.privacyIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.privacyNote strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .header h1 {
+  color: var(--ifm-color-emphasis-100);
+}
+
+[data-theme='dark'] .header p {
+  color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .instructions {
+  background: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .instructions h2 {
+  color: var(--ifm-color-emphasis-100);
+}
+
+[data-theme='dark'] .instructionItem strong {
+  color: var(--ifm-color-emphasis-100);
+}
+
+[data-theme='dark'] .instructionItem p {
+  color: var(--ifm-color-emphasis-400);
+}
+
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .contentWrapper {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.75rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .topSection {
+    grid-template-columns: 1fr;
+  }
+
+  .mapSection {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .mapGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet responsive - stack map and list vertically */
+@media (max-width: 1024px) {
+  .mapGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .listColumn {
+    order: 2;
+  }
+}
