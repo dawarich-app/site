@@ -69,7 +69,7 @@ export default function PrivacySection() {
             <div className={styles.iconWrapper}>
               <ServerIcon />
             </div>
-            <h3 className={styles.cardTitle}>European Hosting</h3>
+            <h3 className={styles.cardTitle}>Based in Europe</h3>
             <p className={styles.cardDescription}>
               All servers are located in Europe, providing additional privacy protection under strict European data laws.
             </p>

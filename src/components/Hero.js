@@ -27,7 +27,7 @@ export default function Hero() {
           Your Life, <span className={styles.highlight}>Mapped Automatically</span>
         </h1>
         <p className={styles.subtitle}>
-          Do you remember where you've been on <span className={styles.dateHighlight}>{formattedRandomPastDate}</span>? With Dawarich, you will never face a situation where you can't recall your past. We help you remember the places you’ve been and the life you’ve lived — day by day, on a beautiful private timeline only you control.
+          Do you remember where you've been on <span className={styles.dateHighlight}>{formattedRandomPastDate}</span>? With Dawarich, you don't have to worry about forgetting. We help you remember the places you’ve been and the life you’ve lived — day by day, on a beautiful private timeline only you control.
         </p>
 
         <a href="/img/the_map.png" target="_blank" rel="noopener noreferrer">
