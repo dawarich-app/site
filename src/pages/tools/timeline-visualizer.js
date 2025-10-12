@@ -64,7 +64,7 @@ export default function TimelineVisualizer() {
                 You can export your Google Timeline data using one of the following methods. If one of them doesn't work, try another.
               </p>
               <p>
-                Unfortunately, for some users it might not work at all.
+                Unfortunately, some users might not be able to export their location data due to how Google went with transition to new location storage policies.
               </p>
               <div className={styles.instructionsList}>
                 <div className={styles.instructionItem}>

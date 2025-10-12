@@ -104,22 +104,38 @@
 }
 
 [data-theme='dark'] :global(.leaflet-control-layers),
-[data-theme='dark'] :global(.leaflet-control-zoom) {
-  background-color: var(--ifm-background-color) !important;
-  border-color: var(--ifm-color-emphasis-400) !important;
+[data-theme='dark'] :global(.leaflet-control-zoom),
+[data-theme='dark'] :global(.leaflet-bar) {
+  background-color: #242526 !important;
+  border: 2px solid #444 !important;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.65) !important;
 }
 
 [data-theme='dark'] :global(.leaflet-control-layers-toggle),
 [data-theme='dark'] :global(.leaflet-control-zoom-in),
-[data-theme='dark'] :global(.leaflet-control-zoom-out) {
-  background-color: var(--ifm-background-color) !important;
-  color: var(--ifm-color-emphasis-100) !important;
+[data-theme='dark'] :global(.leaflet-control-zoom-out),
+[data-theme='dark'] :global(.leaflet-bar a) {
+  background-color: #242526 !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid #444 !important;
+}
+
+[data-theme='dark'] :global(.leaflet-bar a:first-child) {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+[data-theme='dark'] :global(.leaflet-bar a:last-child) {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom: none !important;
 }
 
 [data-theme='dark'] :global(.leaflet-control-layers-toggle):hover,
 [data-theme='dark'] :global(.leaflet-control-zoom-in):hover,
-[data-theme='dark'] :global(.leaflet-control-zoom-out):hover {
-  background-color: var(--ifm-color-emphasis-200) !important;
+[data-theme='dark'] :global(.leaflet-control-zoom-out):hover,
+[data-theme='dark'] :global(.leaflet-bar a):hover {
+  background-color: #3a3b3c !important;
 }
 
 [data-theme='dark'] :global(.leaflet-popup-content-wrapper),
@@ -149,13 +165,19 @@
 }
 
 [data-theme='dark'] :global(.leaflet-control-layers-list) {
-  background-color: var(--ifm-background-color) !important;
-  color: var(--ifm-color-emphasis-100) !important;
+  background-color: #242526 !important;
+  color: #ffffff !important;
 }
 
 [data-theme='dark'] :global(.leaflet-control-layers-base label),
-[data-theme='dark'] :global(.leaflet-control-layers-overlays label) {
-  color: var(--ifm-color-emphasis-100) !important;
+[data-theme='dark'] :global(.leaflet-control-layers-overlays label),
+[data-theme='dark'] :global(.leaflet-control-layers label),
+[data-theme='dark'] :global(.leaflet-control-layers-expanded) {
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] :global(.leaflet-control-layers-separator) {
+  border-top: 1px solid #444 !important;
 }
 
 [data-theme='dark'] :global(.leaflet-control-attribution) {

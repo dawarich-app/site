@@ -16,13 +16,14 @@
   margin: 0 0 0.5rem 0;
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--ifm-color-emphasis-900);
+  color: var(--ifm-heading-color);
 }
 
 .header p {
   margin: 0;
   font-size: 1.125rem;
-  color: var(--ifm-color-emphasis-700);
+  color: var(--ifm-font-color-base);
+  opacity: 0.8;
 }
 
 .topSection {
@@ -46,7 +47,12 @@
   margin: 0 0 1rem 0;
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--ifm-color-emphasis-900);
+  color: var(--ifm-font-color-base);
+}
+
+.instructions p {
+  color: var(--ifm-font-color-base);
+  margin-bottom: 0.5rem;
 }
 
 .instructionsList {
@@ -62,7 +68,7 @@
 }
 
 .instructionItem strong {
-  color: var(--ifm-color-emphasis-900);
+  color: var(--ifm-font-color-base);
   font-size: 0.95rem;
 }
 
@@ -96,10 +102,9 @@
   justify-content: center;
   gap: 1rem;
   padding: 1.25rem;
-  background: var(--ifm-color-success-contrast-background);
-  border: 1px solid var(--ifm-color-success-dark);
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
   border-radius: 8px;
-  color: var(--ifm-color-success-contrast-foreground);
   flex: 1;
   text-align: center;
 }
@@ -108,9 +113,10 @@
   width: 24px;
   height: 24px;
   flex-shrink: 0;
-  color: var(--ifm-color-success-dark);
+  color: currentColor;
   display: inline-block;
   vertical-align: middle;
+  opacity: 0.8;
 }
 
 .privacyNote > div {
@@ -125,14 +131,14 @@
   gap: 0.5rem;
   margin-bottom: 0.5rem;
   font-size: 1rem;
-  color: var(--ifm-color-success-darkest);
+  color: var(--ifm-font-color-base);
 }
 
 .privacyNote p {
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.5;
-  color: var(--ifm-color-success-darkest);
+  color: var(--ifm-font-color-base);
 }
 
 .ctaPanel {
@@ -257,14 +263,6 @@
 }
 
 /* Dark mode adjustments */
-[data-theme='dark'] .header h1 {
-  color: var(--ifm-color-emphasis-100);
-}
-
-[data-theme='dark'] .header p {
-  color: var(--ifm-color-emphasis-400);
-}
-
 [data-theme='dark'] .instructions {
   background: var(--ifm-color-emphasis-200);
   border-color: var(--ifm-color-emphasis-300);
@@ -284,19 +282,7 @@
 
 [data-theme='dark'] .privacyNote {
   background: rgba(16, 185, 129, 0.15);
-  border-color: var(--ifm-color-success);
-}
-
-[data-theme='dark'] .privacyIcon {
-  color: var(--ifm-color-success);
-}
-
-[data-theme='dark'] .privacyNote strong {
-  color: var(--ifm-color-emphasis-100);
-}
-
-[data-theme='dark'] .privacyNote p {
-  color: var(--ifm-color-emphasis-300);
+  border-color: rgba(16, 185, 129, 0.4);
 }
 
 [data-theme='dark'] .ctaPanel {
