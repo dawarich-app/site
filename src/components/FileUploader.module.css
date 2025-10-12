@@ -1,0 +1,166 @@
+.container {
+  margin-bottom: 1rem;
+}
+
+.dropzone {
+  border: 2px dashed var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: var(--ifm-background-color);
+}
+
+.dropzone:hover {
+  border-color: var(--ifm-color-primary);
+  background: var(--ifm-color-emphasis-100);
+}
+
+.dropzone.dragging {
+  border-color: var(--ifm-color-primary);
+  background: var(--ifm-color-primary-lightest);
+  transform: scale(1.02);
+}
+
+.dropzone.hasFiles {
+  border-color: var(--ifm-color-success);
+  background: var(--ifm-color-success-lightest);
+}
+
+.fileInput {
+  display: none;
+}
+
+.label {
+  display: block;
+  cursor: pointer;
+}
+
+.label p {
+  margin: 0.5rem 0;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.label strong {
+  color: var(--ifm-color-primary);
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1rem;
+  color: var(--ifm-color-primary);
+}
+
+.hint {
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.formats {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-500);
+  margin-top: 0.5rem;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1rem;
+  border: 3px solid var(--ifm-color-emphasis-300);
+  border-top: 3px solid var(--ifm-color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loadingText {
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 1rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  word-break: break-word;
+}
+
+.progressBarContainer {
+  width: 100%;
+  max-width: 400px;
+  height: 8px;
+  background: var(--ifm-color-emphasis-200);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0.5rem auto;
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-light) 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  margin-top: 0.5rem;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--ifm-color-danger-lightest);
+  border: 1px solid var(--ifm-color-danger-light);
+  border-radius: 4px;
+  color: var(--ifm-color-danger-dark);
+  font-size: 0.875rem;
+}
+
+.errorIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.clearButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--ifm-color-danger);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background 0.2s ease;
+}
+
+.clearButton:hover {
+  background: var(--ifm-color-danger-dark);
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .dropzone {
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .dropzone:hover {
+  background: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .dropzone.dragging {
+  background: var(--ifm-color-primary-darkest);
+}
+
+[data-theme='dark'] .dropzone.hasFiles {
+  background: var(--ifm-color-success-darkest);
+}
