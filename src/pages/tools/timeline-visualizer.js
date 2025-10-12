@@ -1,10 +1,16 @@
 import React, { useState, useCallback } from 'react';
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 import FileUploader from '@site/src/components/FileUploader';
 import TimelineMap from '@site/src/components/TimelineMap';
 import PointsList from '@site/src/components/PointsList';
 import { parseSemantic } from '@site/src/utils/semanticParser';
 import styles from './timeline-visualizer.module.css';
+
+const pageTitle = "Google Timeline Visualizer - View Your Location History on a Map";
+const pageDescription = "Free, privacy-first tool to visualize your Google Timeline location history on an interactive map. All data processing happens in your browser - no data is sent to any server.";
+const pageUrl = "https://dawarich.app/tools/timeline-visualizer";
+const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 export default function TimelineVisualizer() {
   const [uploadedFiles, setUploadedFiles] = useState([]);
@@ -47,9 +53,62 @@ export default function TimelineVisualizer() {
 
   return (
     <Layout
-      title="Timeline Visualizer"
-      description="Visualize your Google Timeline data on an interactive map"
+      title={pageTitle}
+      description={pageDescription}
     >
+      <Head>
+        {/* Primary Meta Tags */}
+        <meta name="title" content={pageTitle} />
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content="Google Timeline, location history, map visualization, privacy-first, location tracking, Google Takeout, timeline viewer, location data" />
+        <link rel="canonical" href={pageUrl} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:site_name" content="Dawarich" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={pageUrl} />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={imageUrl} />
+
+        {/* Additional Meta Tags */}
+        <meta name="author" content="Dawarich" />
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Google Timeline Visualizer",
+            "url": pageUrl,
+            "description": pageDescription,
+            "applicationCategory": "UtilityApplication",
+            "operatingSystem": "Any",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "featureList": [
+              "Visualize Google Timeline data",
+              "Interactive map with location markers",
+              "Privacy-first - all processing in browser",
+              "Support for multiple timeline formats",
+              "No data sent to servers"
+            ]
+          })}
+        </script>
+      </Head>
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           <div className={styles.header}>
