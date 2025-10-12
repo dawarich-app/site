@@ -104,7 +104,7 @@ export default function TimelineMap({ points, paths, onPointClick, selectedPoint
       animate: false,       // Disable animations for performance
     }).addTo(map);
 
-    // Create paths layer that always stays visible (not in layer control)
+    // Create paths layer
     const pathsLayer = L.layerGroup().addTo(map);
 
     markersLayerRef.current = markersLayer;
@@ -112,12 +112,13 @@ export default function TimelineMap({ points, paths, onPointClick, selectedPoint
 
     console.log('[TimelineMap] Marker clustering enabled for performance');
 
-    // Add layer control for markers only (paths always visible)
+    // Add layer control for both markers and paths
     const overlayLayers = {
       'Visits & Points': markersLayer,
+      'Activity Paths': pathsLayer,
     };
 
-    const layerControl = L.control.layers(null, overlayLayers, { position: 'topleft' }).addTo(map);
+    const layerControl = L.control.layers(null, overlayLayers, { position: 'topright' }).addTo(map);
     layerControlRef.current = layerControl;
 
     mapInstanceRef.current = map;

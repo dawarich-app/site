@@ -118,7 +118,7 @@ export default function StaticMap() {
         touchZoom: false,
         doubleClickZoom: false,
         scrollWheelZoom: false,
-        attributionControl: false,
+        attributionControl: false
       });
 
       // Add tile layer (OpenStreetMap)

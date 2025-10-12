@@ -83,8 +83,32 @@ export default function TimelineVisualizer() {
               </div>
             </div>
 
-            <FileUploader onFilesLoaded={handleFilesLoaded} onClear={handleClear} />
+            <div className={styles.uploaderWrapper}>
+              <FileUploader onFilesLoaded={handleFilesLoaded} onClear={handleClear} />
+
+              <div className={styles.privacyNote}>
+                <div>
+                  <strong>
+                    <svg className={styles.privacyIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                    Privacy First
+                  </strong>
+                  <p>All data processing happens entirely in your browser. Your location data never leaves your device and is not sent to any server.</p>
+                </div>
+              </div>
+            </div>
           </div>
+
+          {uploadedFiles.length > 0 && (
+            <div className={styles.ctaPanel}>
+              <div className={styles.ctaContent}>
+                <h3>Want to keep your memories visualized on the map and track your daily movements?</h3>
+                <p>Try Dawarich — a location tracking platform that gives you full control over your location data and provides key to your memories</p>
+                <a href="/" className={styles.ctaButton}>Try Dawarich!</a>
+              </div>
+            </div>
+          )}
         </div>
 
         <div className={styles.mapSection}>
