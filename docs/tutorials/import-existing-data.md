@@ -21,7 +21,33 @@ To import your data, visit Imports -> New Import page of your Dawarich instance.
 
 ## Sources of data
 
-### Google Takeout
+### Google Maps app export 
+
+The following steps describe how to export your timeline data after the [Timeline update](https://support.google.com/maps/answer/14169818).  
+If this update has not rolled out to you yet, see the *Google Takeout (legacy/outdated)* section below.
+
+#### Android
+
+1. Open the Settings app (the system settings app of your OS, not the settings within the Maps app)
+2. Look for the category `Location`
+3. Tap `Location services`
+4. Tap `Timeline`
+5. (if you have multiple) Select the Google account you want to export data from  
+Note: If you're redirected to the `Activity Controls` page of your Google account settings, the update hasn't rolled out to you yet.
+6. Tap `Export Timeline data`
+7. Select a location in your storage. This is where your `Timeline.json` will be saved to.
+
+#### iOS
+
+1. Open the Maps app
+2. Tap your profile picture in the top right
+3. Tap `Personal content`
+4. Tap `Export timeline data`
+
+### Google Takeout (legacy/outdated)
+
+**Important information:**  
+After [Google's change to how Timeline data is stored](https://support.google.com/maps/answer/14169818), the following method **will not work** for all users where this update has been rolled out to. When trying to use Takeout, you will only receive a txt file that tells you there is encrypted data present, but no way to decrypt it. See the *Google Maps app export* section if this applies to you.
 
 Google allows you to download your data from their services using [Google Takeout](https://takeout.google.com/settings/takeout?pli=1). Extract your Takeout archive, go to the Takeout directory, then to the Location History directory. There you will find the following files: `Records.json` and `Semantic location history` directory.
 
