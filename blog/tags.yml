@@ -12,3 +12,8 @@ guides:
   label: Guides
   permalink: /guides
   description: Guides on how to use the project
+
+use_cases:
+  label: Use Cases
+  permalink: /use-cases
+  description: How you can use Dawarich
