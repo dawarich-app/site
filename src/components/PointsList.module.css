@@ -23,12 +23,12 @@
   margin: 0;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--ifm-color-emphasis-900);
+  color: var(--ifm-font-color-base);
 }
 
 .count {
   font-size: 0.75rem;
-  color: var(--ifm-color-emphasis-600);
+  color: var(--ifm-font-color-secondary);
   font-weight: 500;
   display: block;
   margin-top: 0.25rem;
@@ -39,7 +39,7 @@
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 4px;
   background: var(--ifm-background-color);
-  color: var(--ifm-color-emphasis-900);
+  color: var(--ifm-font-color-base);
   font-size: 0.75rem;
   cursor: pointer;
   transition: border-color 0.2s ease;
@@ -133,7 +133,7 @@
 .itemType {
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--ifm-color-emphasis-700);
+  color: var(--ifm-font-color-base);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   flex-shrink: 0;
@@ -142,14 +142,14 @@
 .itemName {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--ifm-color-emphasis-900);
+  color: var(--ifm-font-color-base);
   margin-bottom: 0.25rem;
   line-height: 1.3;
 }
 
 .itemAddress {
   font-size: 0.75rem;
-  color: var(--ifm-color-emphasis-700);
+  color: var(--ifm-font-color-secondary);
   margin-bottom: 0.5rem;
   line-height: 1.4;
 }
@@ -163,21 +163,21 @@
 
 .itemTime {
   font-size: 0.75rem;
-  color: var(--ifm-color-emphasis-600);
+  color: var(--ifm-font-color-secondary);
   margin-left: auto;
   font-weight: 500;
 }
 
 .itemDuration {
   font-size: 0.75rem;
-  color: var(--ifm-color-emphasis-600);
+  color: var(--ifm-font-color-secondary);
   font-weight: 500;
   margin-bottom: 0.25rem;
 }
 
 .itemCoords {
   font-size: 0.6875rem;
-  color: var(--ifm-color-emphasis-500);
+  color: var(--ifm-color-secondary);
   font-family: 'Courier New', monospace;
 }
 
@@ -194,18 +194,18 @@
 .emptyIcon {
   width: 48px;
   height: 48px;
-  color: var(--ifm-color-emphasis-400);
+  color: var(--ifm-font-color-secondary);
   margin-bottom: 1rem;
 }
 
 .emptyState p {
   margin: 0.25rem 0;
-  color: var(--ifm-color-emphasis-600);
+  color: var(--ifm-font-color-base);
 }
 
 .emptyHint {
   font-size: 0.875rem;
-  color: var(--ifm-color-emphasis-500);
+  color: var(--ifm-font-color-secondary);
 }
 
 /* Scrollbar styling */
@@ -237,7 +237,7 @@
 }
 
 [data-theme='dark'] .title {
-  color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-font-color-base);
 }
 
 [data-theme='dark'] .dayHeader {
@@ -254,13 +254,13 @@
 }
 
 [data-theme='dark'] .count {
-  color: var(--ifm-color-emphasis-400);
+  color: var(--ifm-font-color-secondary);
 }
 
 [data-theme='dark'] .sortSelect {
   border-color: var(--ifm-color-emphasis-400);
   background: var(--ifm-background-color);
-  color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-font-color-base);
 }
 
 [data-theme='dark'] .item {
@@ -278,24 +278,24 @@
 }
 
 [data-theme='dark'] .itemType {
-  color: var(--ifm-color-emphasis-300);
+  color: var(--ifm-font-color-base);
 }
 
 [data-theme='dark'] .itemName {
-  color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-font-color-base);
 }
 
 [data-theme='dark'] .itemAddress {
-  color: var(--ifm-color-emphasis-300);
+  color: var(--ifm-font-color-secondary);
 }
 
 [data-theme='dark'] .itemTime,
 [data-theme='dark'] .itemDuration {
-  color: var(--ifm-color-emphasis-400);
+  color: var(--ifm-font-color-secondary);
 }
 
 [data-theme='dark'] .itemCoords {
-  color: var(--ifm-color-emphasis-500);
+  color: var(--ifm-color-secondary);
 }
 
 /* Mobile responsive */

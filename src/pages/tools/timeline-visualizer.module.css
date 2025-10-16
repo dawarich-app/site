@@ -269,15 +269,15 @@
 }
 
 [data-theme='dark'] .instructions h2 {
-  color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-font-color-base);
 }
 
 [data-theme='dark'] .instructionItem strong {
-  color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-font-color-base);
 }
 
 [data-theme='dark'] .instructionItem p {
-  color: var(--ifm-color-emphasis-400);
+  color: var(--ifm-font-color-secondary);
 }
 
 [data-theme='dark'] .privacyNote {
