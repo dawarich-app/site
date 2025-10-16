@@ -4,6 +4,8 @@ import styles from './FileUploader.module.css';
 export default function FileUploader({ onFilesLoaded, onClear }) {
   const [isDragging, setIsDragging] = useState(false);
   const [fileCount, setFileCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [loadingMessage, setLoadingMessage] = useState('');
 
   const handleFiles = useCallback(async (files) => {
     const fileArray = Array.from(files);
@@ -14,12 +16,21 @@ export default function FileUploader({ onFilesLoaded, onClear }) {
       return;
     }
 
+    setIsLoading(true);
+
     try {
       const parsedData = [];
 
-      for (const file of jsonFiles) {
+      for (let i = 0; i < jsonFiles.length; i++) {
+        const file = jsonFiles[i];
+        setLoadingMessage(`Reading file ${i + 1}/${jsonFiles.length}: ${file.name}`);
+        console.log(`[FileUploader] Reading ${file.name} (${(file.size / 1024 / 1024).toFixed(2)} MB)`);
+
         const text = await file.text();
+
+        setLoadingMessage(`Parsing file ${i + 1}/${jsonFiles.length}: ${file.name}`);
         const json = JSON.parse(text);
+
         parsedData.push({
           filename: file.name,
           data: json,
@@ -28,11 +39,23 @@ export default function FileUploader({ onFilesLoaded, onClear }) {
       }
 
       if (parsedData.length > 0) {
+        setLoadingMessage('Processing timeline data...');
         setFileCount(parsedData.length);
+
+        console.log(`[FileUploader] ✓ Loaded ${parsedData.length} files, passing to handler`);
         onFilesLoaded(parsedData);
+
+        // Small delay to show completion message
+        await new Promise(resolve => setTimeout(resolve, 500));
       }
+
+      setLoadingMessage('');
+      setIsLoading(false);
     } catch (e) {
+      console.error('[FileUploader] Error loading files:', e);
       alert(`Error loading files: ${e.message}`);
+      setIsLoading(false);
+      setLoadingMessage('');
     }
   }, [onFilesLoaded]);
 
@@ -95,7 +118,13 @@ export default function FileUploader({ onFilesLoaded, onClear }) {
         />
 
         <label htmlFor="fileInput" className={styles.label}>
-          {fileCount > 0 ? (
+          {isLoading ? (
+            <>
+              <div className={styles.spinner}></div>
+              <p><strong>{loadingMessage}</strong></p>
+              <p className={styles.hint}>Please wait...</p>
+            </>
+          ) : fileCount > 0 ? (
             <>
               <svg className={styles.icon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -110,7 +139,7 @@ export default function FileUploader({ onFilesLoaded, onClear }) {
               </svg>
               <p>Drop Google Timeline JSON files here</p>
               <p className={styles.hint}>or click to browse</p>
-              <p className={styles.formats}>Supports: Records, Semantic, Settings, TimelineEdits</p>
+              <p className={styles.formats}>Supports: Records, Semantic, Semantic Segments, Settings, TimelineEdits, Location History</p>
             </>
           )}
         </label>

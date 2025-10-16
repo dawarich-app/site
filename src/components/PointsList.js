@@ -4,9 +4,23 @@ import styles from './PointsList.module.css';
 export default function PointsList({ points, onPointSelect, selectedPointId }) {
   const [sortBy, setSortBy] = useState('time-desc'); // time-desc, time-asc
 
+  // Filter to only show meaningful visits/places, not raw GPS location records
+  const meaningfulPoints = useMemo(() => {
+    return points.filter(point => {
+      // Keep these types as they represent actual visits/places:
+      // - place_visit: Actual place visits from Semantic.json or Location History
+      // - activity_start/activity_end: Activity segment endpoints
+      // - place_aggregate: Aggregated place data from TimelineEdits
+      // - raw_signal: Raw signals from TimelineEdits
+
+      // Filter OUT location_record which are just raw GPS points
+      return point.type !== 'location_record';
+    });
+  }, [points]);
+
   // Group points by day
   const groupedByDay = useMemo(() => {
-    const pointsCopy = [...points];
+    const pointsCopy = [...meaningfulPoints];
 
     // Sort points first
     const sorted = pointsCopy.sort((a, b) => {
@@ -38,7 +52,7 @@ export default function PointsList({ points, onPointSelect, selectedPointId }) {
     });
 
     return groups;
-  }, [points, sortBy]);
+  }, [meaningfulPoints, sortBy]);
 
   const formatDayHeader = (dayKey) => {
     if (dayKey === 'unknown') return 'Unknown Date';
@@ -89,20 +103,32 @@ export default function PointsList({ points, onPointSelect, selectedPointId }) {
     onPointSelect(point);
   };
 
-  if (points.length === 0) {
+  if (meaningfulPoints.length === 0) {
     return (
       <div className={styles.container}>
         <div className={styles.header}>
-          <h3 className={styles.title}>Points List</h3>
-          <span className={styles.count}>0 points</span>
+          <h3 className={styles.title}>Visits & Places</h3>
+          <span className={styles.count}>0 visits</span>
         </div>
         <div className={styles.emptyState}>
           <svg className={styles.emptyIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
           </svg>
-          <p>No points to display</p>
-          <p className={styles.emptyHint}>Upload files to see points</p>
+          {points.length > 0 ? (
+            <>
+              <p>No place visits in this dataset</p>
+              <p className={styles.emptyHint}>
+                This file contains {points.length.toLocaleString()} raw GPS location points shown on the map,
+                but no identified place visits or activities.
+              </p>
+            </>
+          ) : (
+            <>
+              <p>No data to display</p>
+              <p className={styles.emptyHint}>Upload files to see visits</p>
+            </>
+          )}
         </div>
       </div>
     );
@@ -114,8 +140,8 @@ export default function PointsList({ points, onPointSelect, selectedPointId }) {
     <div className={styles.container}>
       <div className={styles.header}>
         <div>
-          <h3 className={styles.title}>Points List</h3>
-          <span className={styles.count}>{totalPoints} point{totalPoints !== 1 ? 's' : ''}</span>
+          <h3 className={styles.title}>Visits & Places</h3>
+          <span className={styles.count}>{totalPoints} visit{totalPoints !== 1 ? 's' : ''}</span>
         </div>
         <select
           value={sortBy}

@@ -4,7 +4,7 @@ import Head from '@docusaurus/Head';
 import FileUploader from '@site/src/components/FileUploader';
 import TimelineMap from '@site/src/components/TimelineMap';
 import PointsList from '@site/src/components/PointsList';
-import { parseSemantic } from '@site/src/utils/semanticParser';
+import { parseTimeline } from '@site/src/utils/timelineParser';
 import styles from './timeline-visualizer.module.css';
 
 const pageTitle = "Google Timeline Visualizer - View Your Location History on a Map";
@@ -17,27 +17,116 @@ export default function TimelineVisualizer() {
   const [selectedPoint, setSelectedPoint] = useState(null);
   const [points, setPoints] = useState([]);
   const [paths, setPaths] = useState([]);
+  const [selectedYear, setSelectedYear] = useState('all');
+  const [yearStats, setYearStats] = useState({});
 
-  const handleFilesLoaded = useCallback((files) => {
+  const handleFilesLoaded = useCallback(async (files) => {
+    console.log('='.repeat(60));
+    console.log('[Timeline Visualizer] Starting to process files');
+    console.log(`[Timeline Visualizer] Number of files: ${files.length}`);
+
     setUploadedFiles(files);
 
-    // Parse all files and merge data
+    // Parse all files and stream points in batches
+    const BATCH_SIZE = 5000;
     const allPoints = [];
     const allPaths = [];
 
-    files.forEach(file => {
-      try {
-        const parsed = parseSemantic(file.data);
-        allPoints.push(...parsed.points);
-        allPaths.push(...parsed.paths);
-      } catch (error) {
-        console.error(`Error parsing ${file.filename}:`, error);
-      }
-    });
+    for (let fileIndex = 0; fileIndex < files.length; fileIndex++) {
+      const file = files[fileIndex];
 
+      try {
+        console.log(`\n[Timeline Visualizer] Processing file ${fileIndex + 1}/${files.length}: ${file.filename}`);
+        console.log(`[Timeline Visualizer] File size: ${(file.size / 1024 / 1024).toFixed(2)} MB`);
+        console.log(`[Timeline Visualizer] File data type:`, Array.isArray(file.data) ? 'Array' : 'Object');
+
+        if (Array.isArray(file.data)) {
+          console.log(`[Timeline Visualizer] Array length: ${file.data.length}`);
+        } else {
+          console.log(`[Timeline Visualizer] Object keys:`, Object.keys(file.data).join(', '));
+        }
+
+        const startTime = Date.now();
+        const parsed = parseTimeline(file.data);
+        const endTime = Date.now();
+
+        console.log(`[Timeline Visualizer] ✓ Parsed in ${((endTime - startTime) / 1000).toFixed(2)}s`);
+        console.log(`[Timeline Visualizer]   Format: ${parsed.metadata?.format || 'unknown'}`);
+        console.log(`[Timeline Visualizer]   Points extracted: ${parsed.points.length}`);
+        console.log(`[Timeline Visualizer]   Paths extracted: ${parsed.paths.length}`);
+
+        // Add paths
+        if (parsed.paths.length > 0) {
+          for (let i = 0; i < parsed.paths.length; i++) {
+            allPaths.push(parsed.paths[i]);
+          }
+        }
+
+        // Stream points to map in batches to keep UI responsive
+        console.log(`[Timeline Visualizer] Streaming ${parsed.points.length} points in batches of ${BATCH_SIZE}...`);
+        let batchCount = 0;
+
+        for (let i = 0; i < parsed.points.length; i++) {
+          allPoints.push(parsed.points[i]);
+
+          // Every BATCH_SIZE points, update the UI
+          if (allPoints.length % BATCH_SIZE === 0) {
+            batchCount++;
+            console.log(`[Timeline Visualizer]   Batch ${batchCount}: ${allPoints.length} points loaded`);
+
+            // Update map with current points
+            setPoints([...allPoints]);
+
+            // Yield to browser to prevent freezing
+            await new Promise(resolve => setTimeout(resolve, 0));
+          }
+        }
+
+        // Update with any remaining points
+        if (allPoints.length % BATCH_SIZE !== 0) {
+          console.log(`[Timeline Visualizer]   Final: ${allPoints.length} points loaded`);
+          setPoints([...allPoints]);
+        }
+
+      } catch (error) {
+        console.error(`[Timeline Visualizer] ✗ Error parsing ${file.filename}:`, error);
+        console.error('[Timeline Visualizer] Error stack:', error.stack);
+      }
+    }
+
+    console.log('\n' + '='.repeat(60));
+    console.log(`[Timeline Visualizer] Processing complete!`);
+    console.log(`[Timeline Visualizer] Total points: ${allPoints.length}`);
+    console.log(`[Timeline Visualizer] Total paths: ${allPaths.length}`);
+
+    // Calculate year statistics
+    console.log('[Timeline Visualizer] Calculating year statistics...');
+    const yearCounts = {};
+
+    for (let i = 0; i < allPoints.length; i++) {
+      const point = allPoints[i];
+      if (point.timestamp) {
+        const year = new Date(point.timestamp).getFullYear();
+        if (!isNaN(year)) {
+          yearCounts[year] = (yearCounts[year] || 0) + 1;
+        }
+      }
+    }
+
+    console.log(`[Timeline Visualizer] Year statistics:`, yearCounts);
+
+    // Default to the earliest year (first chronologically) for better initial performance
+    const years = Object.keys(yearCounts).map(Number).sort((a, b) => a - b);
+    const defaultYear = years.length > 0 ? String(years[0]) : 'all';
+
+    console.log(`[Timeline Visualizer] Defaulting to year: ${defaultYear} (${yearCounts[defaultYear]?.toLocaleString() || 0} points)`);
+    console.log('='.repeat(60));
+
+    // Set final state
     setPoints(allPoints);
     setPaths(allPaths);
-    console.log(`Total: ${allPoints.length} points, ${allPaths.length} paths`);
+    setYearStats(yearCounts);
+    setSelectedYear(defaultYear);
   }, []);
 
   const handleClear = useCallback(() => {
@@ -50,6 +139,46 @@ export default function TimelineVisualizer() {
   const handlePointClick = useCallback((point) => {
     setSelectedPoint(point);
   }, []);
+
+  const handleYearChange = useCallback((event) => {
+    setSelectedYear(event.target.value);
+    setSelectedPoint(null);
+  }, []);
+
+  // Filter points by selected year
+  const filteredPoints = React.useMemo(() => {
+    if (selectedYear === 'all') {
+      return points;
+    }
+
+    const year = parseInt(selectedYear);
+    return points.filter(point => {
+      if (!point.timestamp) return false;
+      const pointYear = new Date(point.timestamp).getFullYear();
+      return pointYear === year;
+    });
+  }, [points, selectedYear]);
+
+  // Filter paths by selected year (based on startTimestamp or endTimestamp)
+  const filteredPaths = React.useMemo(() => {
+    if (selectedYear === 'all') {
+      return paths;
+    }
+
+    const year = parseInt(selectedYear);
+    return paths.filter(path => {
+      // Check if path's start or end timestamp falls in the selected year
+      if (path.startTimestamp) {
+        const pathYear = new Date(path.startTimestamp).getFullYear();
+        if (pathYear === year) return true;
+      }
+      if (path.endTimestamp) {
+        const pathYear = new Date(path.endTimestamp).getFullYear();
+        if (pathYear === year) return true;
+      }
+      return false;
+    });
+  }, [paths, selectedYear]);
 
   return (
     <Layout
@@ -113,7 +242,7 @@ export default function TimelineVisualizer() {
         <div className={styles.contentWrapper}>
           <div className={styles.header}>
             <h1>Timeline Visualizer</h1>
-            <p>Upload your Google Timeline JSON files to visualize your location history</p>
+            <p>Upload your Google Timeline JSON files to visualize your location history. Supports Records, Semantic, Semantic Segments, Settings, TimelineEdits, and Location History formats.</p>
           </div>
 
           <div className={styles.topSection}>
@@ -171,11 +300,41 @@ export default function TimelineVisualizer() {
         </div>
 
         <div className={styles.mapSection}>
+          {points.length > 0 && (
+            <div className={styles.filterSection}>
+              <label htmlFor="yearFilter" className={styles.filterLabel}>
+                Filter by Year:
+              </label>
+              <select
+                id="yearFilter"
+                value={selectedYear}
+                onChange={handleYearChange}
+                className={styles.yearSelect}
+              >
+                <option value="all">
+                  All Years ({points.length.toLocaleString()} points)
+                </option>
+                {Object.keys(yearStats)
+                  .sort((a, b) => b - a)
+                  .map(year => (
+                    <option key={year} value={year}>
+                      {year} ({yearStats[year].toLocaleString()} points)
+                    </option>
+                  ))}
+              </select>
+              {selectedYear !== 'all' && (
+                <span className={styles.filterInfo}>
+                  Showing {filteredPoints.length.toLocaleString()} of {points.length.toLocaleString()} points
+                </span>
+              )}
+            </div>
+          )}
+
           <div className={styles.mapGrid}>
             <div className={styles.mapColumn}>
               <TimelineMap
-                points={points}
-                paths={paths}
+                points={filteredPoints}
+                paths={filteredPaths}
                 onPointClick={handlePointClick}
                 selectedPointId={selectedPoint?.id}
               />
@@ -183,7 +342,7 @@ export default function TimelineVisualizer() {
 
             <div className={styles.listColumn}>
               <PointsList
-                points={points}
+                points={filteredPoints}
                 selectedPointId={selectedPoint?.id}
                 onPointSelect={handlePointClick}
               />

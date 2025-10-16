@@ -241,10 +241,23 @@ export default function TimelineMap({ points, paths, onPointClick, selectedPoint
       // Add all markers in one batch for better performance
       markersLayer.addLayers(newMarkers);
 
-      // Fit map to show all points (only on initial load, not incremental updates)
-      if (!isIncrementalUpdate && markersRef.current.length > 0 && !selectedPointId) {
-        const group = L.featureGroup(markersRef.current);
-        map.fitBounds(group.getBounds().pad(0.1));
+      // Fit map to show all points when:
+      // 1. Initial load (not incremental update)
+      // 2. Full reset (points array changed, like year filter change)
+      if (markersRef.current.length > 0 && !selectedPointId) {
+        if (!isIncrementalUpdate) {
+          console.log('[TimelineMap] Fitting bounds to show all points');
+          const group = L.featureGroup(markersRef.current);
+          const bounds = group.getBounds();
+
+          if (bounds.isValid()) {
+            map.fitBounds(bounds.pad(0.1), {
+              animate: true,
+              duration: 0.5,
+              maxZoom: 15  // Don't zoom in too close
+            });
+          }
+        }
       }
     }
 
@@ -332,8 +345,31 @@ export default function TimelineMap({ points, paths, onPointClick, selectedPoint
       content += `<strong>Duration:</strong> ${point.duration}<br>`;
     }
 
+    // Activity information
     if (point.activityType) {
-      content += `<strong>Activity:</strong> ${point.activityType.replace(/_/g, ' ')}<br>`;
+      content += `<strong>Activity:</strong> ${point.activityType.replace(/_/g, ' ')}`;
+      if (point.activityConfidence) {
+        content += ` (${point.activityConfidence}% confidence)`;
+      }
+      content += `<br>`;
+    }
+
+    // Additional metadata for Records format
+    if (point.accuracy) {
+      content += `<strong>Accuracy:</strong> ${point.accuracy}m<br>`;
+    }
+
+    if (point.altitude) {
+      content += `<strong>Altitude:</strong> ${point.altitude}m<br>`;
+    }
+
+    if (point.velocity !== null && point.velocity !== undefined) {
+      const kmh = (point.velocity * 3.6).toFixed(1);
+      content += `<strong>Speed:</strong> ${kmh} km/h<br>`;
+    }
+
+    if (point.source) {
+      content += `<strong>Source:</strong> ${point.source.toUpperCase()}<br>`;
     }
 
     content += `</div>`;
