@@ -1,6 +1,6 @@
 ---
-slug: carefully-preserve-your-memories
-title: Carefully Preserve Your Memories
+slug: building-a-privacy-first-google-timeline-visualizer
+title: Building a Privacy-First Google Timeline Visualizer
 authors: evgenii
 tags: [tools]
 ---
