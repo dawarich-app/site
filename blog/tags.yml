@@ -17,3 +17,8 @@ use_cases:
   label: Use Cases
   permalink: /use-cases
   description: How you can use Dawarich
+
+tools:
+  label: Tools
+  permalink: /tools
+  description: Tools provided by Dawarich
