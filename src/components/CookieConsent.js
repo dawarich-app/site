@@ -2,6 +2,25 @@ import React from 'react';
 import CookieConsent from 'react-cookie-consent';
 
 export default function CustomCookieConsent() {
+  const handleAccept = () => {
+    // Load Brevo tracking script after consent
+    const brevoScript = document.createElement('script');
+    brevoScript.src = 'https://cdn.brevo.com/js/sdk-loader.js';
+    brevoScript.async = true;
+    document.head.appendChild(brevoScript);
+
+    // Initialize Brevo after script loads
+    brevoScript.onload = () => {
+      window.Brevo = window.Brevo || [];
+      window.Brevo.push([
+        "init",
+        {
+          client_key: "pe4hklelof20ofjrbum6bcx8"
+        }
+      ]);
+    };
+  };
+
   return (
     <CookieConsent
       location="bottom"
@@ -24,6 +43,7 @@ export default function CustomCookieConsent() {
       }}
       expires={150}
       debug={true}
+      onAccept={handleAccept}
     >
       We use essential cookies required for login, security, and purchases. These cookies cannot be disabled. We do not use advertising cookies, but we do use analytics cookies from PostHog to help us improve our website.
       <a
