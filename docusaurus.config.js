@@ -26,6 +26,22 @@ const config = {
     {
       src: "https://cdn.paddle.com/paddle/v2/paddle.js",
       async: true
+    },
+    {
+      src: "https://cdn.brevo.com/js/sdk-loader.js",
+      async: true
+    },
+    {
+      innerHTML: `
+        // Version: 2.0
+        window.Brevo = window.Brevo || [];
+        Brevo.push([
+          "init",
+          {
+            client_key: "pe4hklelof20ofjrbum6bcx8"
+          }
+        ]);
+      `
     }
   ],
 
