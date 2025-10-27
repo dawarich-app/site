@@ -51,6 +51,23 @@ export default function Home() {
         <FeaturesSection />
         <PrivacySection />
         <PricingSection />
+        <section style={{ padding: '2rem 0', textAlign: 'center'}}>
+          <iframe
+            width="540"
+            height="500"
+            src="https://475728ae.sibforms.com/serve/MUIFAJLZJwZyy-W4PJAFc573ygtVeBn5fgINSOiVsmxzDKkjxeC96kVh_EVbvVN-hW4wCbGvIAPzrujZeSPpPbwUAXLZJfmGXHdmWG0208oNcTG4B20KmYDGdFhxs9Bos4UdurRT8dkzD_NjdRoMqg4A1_yAtpB5mHDbP_lT5mHAQIiamOmMomRSCEWWnFyk24LKJ6DqyhJze0By"
+            frameBorder="0"
+            scrolling="no"
+            allowFullScreen
+            style={{
+              display: 'block',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              maxWidth: '100%',
+              maxHeight: '100%'
+            }}
+          />
+        </section>
       </main>
     </Layout>
   );
