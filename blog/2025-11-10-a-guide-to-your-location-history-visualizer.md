@@ -13,6 +13,8 @@ Ever wonder where all that location data your phone collects actually goes? A lo
 
 Instead of a spreadsheet of numbers, you get a personal map showing every path you’ve taken and every place you’ve spent your time. I've found it's a fascinating way to truly *see* your journeys, from the daily grind to that unforgettable road trip.
 
+<!-- truncate -->
+
 ## What Exactly Is a Location History Visualizer?
 
 Have you ever tried to retrace the exact route of a past vacation or wondered which parts of your city you *really* hang out in the most? A **location history visualizer** is the tool that brings those answers to life. Think of it as a personal time machine for your movements, transforming abstract data points from your phone into something you can actually see and interact with.
