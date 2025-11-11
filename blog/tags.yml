@@ -22,3 +22,8 @@ tools:
   label: Tools
   permalink: /tools
   description: Tools provided by Dawarich
+
+guide:
+  label: Guide
+  permalink: /guide
+  description: Step-by-step guides to help you get started

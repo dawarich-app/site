@@ -3,7 +3,7 @@ slug: a-guide-to-your-location-history-visualizer
 title: A Guide to Your Location History Visualizer
 date: 2025-11-10
 authors: evgenii
-tags: []
+tags: [guide]
 ---
 
 

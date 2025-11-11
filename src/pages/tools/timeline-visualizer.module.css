@@ -184,7 +184,7 @@
 .mapSection {
   position: relative;
   max-width: 1400px;
-  margin: 2rem auto;
+  margin: 0 auto;
   padding: 0 2rem;
 }
 
@@ -192,7 +192,6 @@
   display: grid;
   grid-template-columns: 1fr 350px;
   gap: 1rem;
-  margin-top: 1rem;
 }
 
 .mapColumn {

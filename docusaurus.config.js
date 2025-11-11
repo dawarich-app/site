@@ -91,8 +91,9 @@ const config = {
         },
         items: [
           {to: '/blog', label: 'Blog', position: 'left'},
-          {to: '/docs/dawarich-for-ios', label: 'Dawarich for iOS 📱 (new!)', position: 'left'},
+          {to: '/docs/dawarich-for-ios', label: 'Dawarich for iOS 📱', position: 'left'},
           {to: '/tools/timeline-visualizer', label: 'Google Timeline Visualizer 🗺️', position: 'left'},
+          {to: '/tools/photo-geotagging', label: 'Photo Geotagging Tool 📸', position: 'left'},
           {
             to: 'https://discourse.dawarich.app/',
             label: 'Community',
