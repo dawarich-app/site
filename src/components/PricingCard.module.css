@@ -34,6 +34,63 @@
   margin-top: 0;
 }
 
+.toggleContainer {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.toggleButtonWrapper {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.toggleButton {
+  padding: 8px 20px;
+  border: 2px solid #e5e7eb;
+  background-color: #fff;
+  color: #6b7280;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggleButton:hover:not(:disabled):not(.active) {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.toggleButton.active {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.discountBadge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #3b82f6;
+  white-space: nowrap;
+  line-height: 1;
+  padding-top: 2px;
+}
+
+.toggleButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.equivalentPrice {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
 .priceContainer {
   text-align: center;
   margin: 2rem 0;
@@ -170,6 +227,31 @@
 
 [data-theme='dark'] .featureItem {
   color: #f3f4f6;
+}
+
+[data-theme='dark'] .toggleButton {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #9ca3af;
+}
+
+[data-theme='dark'] .toggleButton:hover:not(:disabled):not(.active) {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+[data-theme='dark'] .toggleButton.active {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+[data-theme='dark'] .equivalentPrice {
+  color: #9ca3af;
+}
+
+[data-theme='dark'] .discountBadge {
+  color: #60a5fa;
 }
 
 .card {

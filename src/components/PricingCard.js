@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from '@docusaurus/Link';
 import styles from './PricingCard.module.css';
 
@@ -17,28 +17,55 @@ export default function PricingCard({
   trialText = "No credit card required to start your free 14-day trial",
   disabled = false
 }) {
-  // Calculate monthly price if period is year
-  const monthlyPrice = period === 'year' ? (price / 12).toFixed(2) : null;
+  const [isAnnual, setIsAnnual] = useState(true);
+
+  // Only show toggle for non-Business plans
+  const isBusinessPlan = title === "Business" || title === "Business Plan";
+
+  // Calculate pricing based on toggle state
+  const annualPrice = 90;
+  const monthlyPrice = 14.99;
+  const monthlyEquivalent = (annualPrice / 12).toFixed(1);
+
+  const displayPrice = isBusinessPlan ? price : (isAnnual ? annualPrice : monthlyPrice);
+  const displayPeriod = isBusinessPlan ? period : (isAnnual ? 'year' : 'month');
 
   return (
     <div className={`${styles.pricingCard} ${className || ''} ${disabled ? styles.disabled : ''}`}>
       <h2 className={styles.title}>{title}</h2>
 
+      {/* Billing Period Toggle - only show for non-Business plans */}
+      {!isBusinessPlan && (
+        <div className={styles.toggleContainer}>
+          <button
+            className={`${styles.toggleButton} ${!isAnnual ? styles.active : ''}`}
+            onClick={() => setIsAnnual(false)}
+            disabled={disabled}
+          >
+            Monthly
+          </button>
+          <div className={styles.toggleButtonWrapper}>
+            <button
+              className={`${styles.toggleButton} ${isAnnual ? styles.active : ''}`}
+              onClick={() => setIsAnnual(true)}
+              disabled={disabled}
+            >
+              Annual
+            </button>
+            <sup className={styles.discountBadge}>50% off!</sup>
+          </div>
+        </div>
+      )}
+
       {price !== null && (
         <div className={styles.priceContainer}>
           <div className={styles.mainPrice}>
-            <span className={styles.currentPrice}>€{monthlyPrice}</span>/month
+            <span className={styles.currentPrice}>€{displayPrice}</span>/{displayPeriod}
           </div>
-          {monthlyPrice && (
-            <>
-
-              <div className={styles.monthlyPrice}>
-                €{price}
-                <span className={styles.period}>
-                  /year, billed annually
-                </span>
-              </div>
-            </>
+          {!isBusinessPlan && isAnnual && (
+            <div className={styles.equivalentPrice}>
+              (€{monthlyEquivalent}/month)
+            </div>
           )}
         </div>
       )}
