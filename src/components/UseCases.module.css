@@ -147,10 +147,6 @@
   margin-bottom: 0;
 }
 
-.useCaseDescription p {
-  margin-bottom: 1em;
-}
-
 .useCaseDescription a {
   color: hsl(217, 91%, 60%);
   text-decoration: none;
@@ -171,7 +167,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem; /* space-y-3 */
-  padding-top: 1rem; /* pt-4 */
   margin: 0;
   list-style: none;
 }

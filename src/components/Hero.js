@@ -27,7 +27,7 @@ export default function Hero() {
       <div className={styles.container}>
         <div className={styles.badge}>
           <MapPinIcon />
-          <span>Self-Hosted Location Tracking</span>
+          <span>Privacy-First Automated Location Tracking App</span>
         </div>
 
         <h1 className={styles.title}>

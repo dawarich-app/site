@@ -39,7 +39,7 @@
 .tabsContainer {
   display: flex;
   gap: 2rem; /* gap-8 */
-  min-height: 500px;
+  min-height: 300px;
 }
 
 .tabsList {
@@ -85,13 +85,13 @@
   box-shadow: var(--shadow); /* shadow-sm */
   border: 1px solid hsl(220, 13%, 91%); /* border */
   transition: all 0.3s ease;
+  height: 100%;
 }
 
 .contentWrapper {
   display: flex;
   align-items: center;
   gap: 2rem; /* gap-8 */
-  height: 100%;
 }
 
 .textContent {
