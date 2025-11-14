@@ -1,98 +1,118 @@
+/* Features section - py-24 px-4 md:px-6 bg-background */
 .featuresSection {
-  padding: 80px 0;
-  background-color: #f9fafb;
+  padding: 6rem 1rem; /* py-24 px-4 */
+  background: hsl(0, 0%, 100%); /* bg-background */
+}
+
+@media (min-width: 768px) {
+  .featuresSection {
+    padding-left: 1.5rem; /* md:px-6 */
+    padding-right: 1.5rem;
+  }
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1200px; /* container */
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0;
 }
 
+/* text-center mb-16 space-y-4 */
 .title {
-  font-size: 36px;
-  font-weight: 700;
   text-align: center;
-  color: #111827;
-  margin: 0 0 16px;
+  font-size: clamp(1.875rem, 4vw, 3rem); /* text-3xl md:text-5xl */
+  font-weight: 700; /* font-bold */
+  margin-bottom: 1rem;
+  color: hsl(220, 15%, 15%);
+  letter-spacing: -0.025em; /* tracking-tight */
 }
 
 .subtitle {
-  font-size: 18px;
-  line-height: 1.6;
   text-align: center;
-  color: #4b5563;
-  max-width: 800px;
-  margin: 0 auto 48px;
+  font-size: 1.125rem; /* text-lg */
+  color: hsl(220, 10%, 46%); /* text-muted-foreground */
+  max-width: 48rem; /* max-w-2xl */
+  margin: 0 auto 4rem; /* mx-auto mb-16 */
+  line-height: 1.75;
 }
 
 .tabsContainer {
   display: flex;
-  gap: 32px;
-  min-height: 400px;
+  gap: 2rem; /* gap-8 */
+  min-height: 500px;
 }
 
 .tabsList {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem; /* gap-2 */
   min-width: 250px;
 }
 
+/* Matching lovable card styling for tab buttons */
 .tabButton {
-  background: none;
-  border: 2px solid #e5e7eb;
-  border-radius: 8px;
-  padding: 16px 24px;
+  background: hsl(0, 0%, 100%);
+  border: 1px solid hsl(220, 13%, 91%); /* border border-border */
+  border-radius: 0.75rem; /* rounded-lg */
+  padding: 1rem 1.5rem;
   text-align: left;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
-  color: #6b7280;
+  color: hsl(220, 10%, 46%); /* text-muted-foreground */
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* transition-all duration-300 */
+  box-shadow: var(--shadow-sm);
 }
 
 .tabButton:hover {
-  border-color: #d1d5db;
-  color: #374151;
+  border-color: hsl(217, 91%, 60% / 0.5); /* hover:border-primary/50 */
+  box-shadow: var(--shadow-lg); /* hover:shadow-lg */
+  color: hsl(220, 15%, 15%);
 }
 
 .tabButton.active {
-  border-color: #3b82f6;
-  background-color: #eff6ff;
-  color: #1d4ed8;
+  border-color: hsl(217, 91%, 60%); /* border-primary */
+  background: hsl(217, 91%, 60% / 0.05); /* subtle primary background */
+  color: hsl(217, 91%, 50%);
+  font-weight: 600;
 }
 
 .tabContent {
   flex: 1;
-  padding: 24px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  padding: 1.5rem; /* p-6 */
+  background: hsl(0, 0%, 100%); /* bg-card */
+  border-radius: 0.75rem; /* rounded-lg */
+  box-shadow: var(--shadow); /* shadow-sm */
+  border: 1px solid hsl(220, 13%, 91%); /* border */
+  transition: all 0.3s ease;
 }
 
 .contentWrapper {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 2rem; /* gap-8 */
   height: 100%;
 }
 
 .textContent {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* space-y-4 */
 }
 
 .featureTitle {
-  font-size: 24px;
-  font-weight: 700;
-  color: #111827;
-  margin: 0 0 16px;
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 600; /* font-semibold */
+  color: hsl(220, 15%, 15%);
+  margin: 0;
+  letter-spacing: -0.025em;
 }
 
 .featureDescription {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.75; /* leading-relaxed */
+  color: hsl(220, 10%, 46%); /* text-muted-foreground */
   margin: 0;
 }
 
@@ -104,119 +124,147 @@
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 8px;
-  background-color: #f3f4f6;
+  border-radius: 0.75rem; /* rounded-lg */
+  background: hsl(220, 15%, 98%);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid hsl(220, 13%, 91%);
+  box-shadow: var(--shadow-md);
 }
 
 .featureImage:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 25px 0 rgb(0 0 0 / 0.2);
-  border-radius: 12px;
+  box-shadow: var(--shadow-xl);
+  border-color: hsl(217, 91%, 60% / 0.5);
 }
 
+/* Modal styling - matching lovable */
 .imageModal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
   cursor: pointer;
+  backdrop-filter: blur(4px);
+  animation: fade-in 0.2s ease-out;
 }
 
 .modalImage {
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
-  border-radius: 8px;
-  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-2xl);
+  animation: slide-up 0.3s ease-out;
 }
 
 .closeButton {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  background: rgba(255, 255, 255, 0.9);
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
   border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
+  border-radius: 9999px; /* rounded-full */
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
+  color: hsl(220, 15%, 15%);
+  box-shadow: var(--shadow-md);
 }
 
 .closeButton:hover {
   background: white;
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(90deg);
+  box-shadow: var(--shadow-lg);
 }
 
 /* Dark mode support */
 [data-theme='dark'] .featuresSection {
-  background-color: #111827;
+  background: hsl(220, 20%, 10%);
 }
 
 [data-theme='dark'] .title {
-  color: #f9fafb;
+  color: hsl(0, 0%, 98%);
 }
 
 [data-theme='dark'] .subtitle {
-  color: #9ca3af;
+  color: hsl(220, 10%, 60%);
 }
 
 [data-theme='dark'] .tabButton {
-  border-color: #374151;
-  color: #9ca3af;
+  background: hsl(220, 20%, 12%);
+  border-color: hsl(220, 20%, 20%);
+  color: hsl(220, 10%, 60%);
 }
 
 [data-theme='dark'] .tabButton:hover {
-  border-color: #4b5563;
-  color: #d1d5db;
+  border-color: hsl(217, 91%, 60% / 0.5);
+  color: hsl(0, 0%, 98%);
 }
 
 [data-theme='dark'] .tabButton.active {
-  border-color: #3b82f6;
-  background-color: #1e3a8a;
-  color: #93c5fd;
+  border-color: hsl(217, 91%, 60%);
+  background: hsl(217, 91%, 60% / 0.1);
+  color: hsl(217, 91%, 70%);
 }
 
 [data-theme='dark'] .tabContent {
-  background-color: #1f2937;
+  background: hsl(220, 20%, 12%);
+  border-color: hsl(220, 20%, 20%);
 }
 
 [data-theme='dark'] .featureTitle {
-  color: #f9fafb;
+  color: hsl(0, 0%, 98%);
 }
 
 [data-theme='dark'] .featureDescription {
-  color: #9ca3af;
+  color: hsl(220, 10%, 60%);
 }
 
-/* Responsive styles */
+[data-theme='dark'] .featureImage {
+  background: hsl(220, 20%, 18%);
+  border-color: hsl(220, 20%, 20%);
+}
+
+[data-theme='dark'] .closeButton {
+  background: rgba(31, 41, 55, 0.95);
+  color: hsl(0, 0%, 98%);
+}
+
+[data-theme='dark'] .closeButton:hover {
+  background: hsl(220, 20%, 12%);
+}
+
+/* Responsive styles - matching lovable breakpoints */
 @media (max-width: 992px) {
   .tabsContainer {
     flex-direction: column;
+    gap: 1.5rem;
   }
 
   .tabsList {
     flex-direction: row;
     min-width: auto;
     overflow-x: auto;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .tabButton {
     white-space: nowrap;
-    min-width: 120px;
+    min-width: 140px;
   }
 
   .contentWrapper {
@@ -226,39 +274,72 @@
 
   .imageContent {
     flex: none;
+    width: 100%;
+    max-width: 400px;
   }
 }
 
 @media (max-width: 640px) {
+  .featuresSection {
+    padding: 3rem 1rem;
+  }
+
   .title {
-    font-size: 28px;
+    font-size: 1.875rem;
   }
 
   .subtitle {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
-  .tabsContainer {
-    gap: 16px;
+  .tabButton {
+    min-width: 120px;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
   }
 
   .tabContent {
-    padding: 16px;
-  }
-
-  .contentWrapper {
-    gap: 16px;
+    padding: 1.5rem;
   }
 
   .featureTitle {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .imageContent {
-    flex: 0 0 250px;
+    max-width: 100%;
   }
 
   .featureImage {
-    height: 150px;
+    height: 180px;
+  }
+
+  .closeButton {
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.25rem;
+  }
+}
+
+/* Animations - matching lovable */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }

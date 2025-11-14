@@ -4,41 +4,117 @@
  * work well for content-centric websites.
  */
 
-/* Light theme styles */
+/* Light theme styles - matching lovable design system exactly */
 :root {
-  --ifm-color-primary: #3b82f6; /* Primary color adjusted for better visibility */
-  --ifm-color-primary-dark: #2563eb; /* Darker shade for active states */
-  --ifm-color-primary-darker: #1e40af; /* Darker shade for deeper elements */
-  --ifm-color-primary-darkest: #1e3a8a; /* Darkest shade */
-  --ifm-color-primary-light: #60a5fa; /* Lighter shade for hover states */
-  --ifm-color-primary-lighter: #93c5fd; /* Even lighter for subtle highlights */
-  --ifm-color-primary-lightest: #bfdbfe; /* Lightest for backgrounds and borders */
-  --ifm-code-font-size: 95%; /* Adjust code font size */
-  --docusaurus-highlighted-code-line-bg: rgba(31, 41, 55, 0.1); /* Matching background highlight for code */
+  /* Primary colors - exact match to lovable */
+  --ifm-color-primary: hsl(217, 91%, 60%);
+  --ifm-color-primary-dark: hsl(217, 91%, 50%);
+  --ifm-color-primary-darker: hsl(217, 91%, 45%);
+  --ifm-color-primary-darkest: hsl(217, 91%, 40%);
+  --ifm-color-primary-light: hsl(217, 91%, 70%);
+  --ifm-color-primary-lighter: hsl(217, 91%, 75%);
+  --ifm-color-primary-lightest: hsl(217, 91%, 85%);
+
+  /* Background colors - exact match */
+  --ifm-background-color: hsl(0, 0%, 100%);
+  --ifm-background-surface-color: hsl(0, 0%, 100%);
+  --ifm-color-background-alt: hsl(220, 15%, 96%);
+  --ifm-secondary-bg: hsl(220, 15%, 96%);
+
+  /* Text colors - exact match */
+  --ifm-font-color-base: hsl(220, 15%, 15%);
+  --ifm-font-color-secondary: hsl(220, 10%, 46%);
+  --ifm-heading-color: hsl(220, 15%, 15%);
+  --ifm-color-link: hsl(217, 91%, 60%);
+  --ifm-color-link-hover: hsl(217, 91%, 70%);
+
+  /* Muted colors */
+  --muted-foreground: hsl(220, 10%, 46%);
+
+  /* Border and input - exact match */
+  --ifm-color-emphasis-200: hsl(220, 13%, 91%);
+  --ifm-border-color: hsl(220, 13%, 91%);
+
+  /* Accent color - exact match */
+  --ifm-color-accent: hsl(142, 76%, 36%);
+  --ifm-color-accent-foreground: hsl(0, 0%, 100%);
+
+  /* Card - exact match */
+  --ifm-card-background-color: hsl(0, 0%, 100%);
+  --ifm-card-border-color: hsl(220, 13%, 91%);
+
+  /* Shadows - matching lovable's tailwind shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  /* Radius - matching lovable (0.75rem) */
+  --ifm-border-radius: 0.75rem;
+  --radius: 0.75rem;
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Container padding - matching lovable */
+  --container-padding: 2rem;
 }
 
-/* Dark theme styles */
+/* Dark theme styles - exact match to lovable */
 [data-theme='dark'] {
-  --ifm-color-primary: #3b82f6; /* Primary color adjusted for better visibility */
-  --ifm-color-primary-dark: #2563eb; /* Darker shade for active states */
-  --ifm-color-primary-darker: #1e40af; /* Darker shade for deeper elements */
-  --ifm-color-primary-darkest: #1e3a8a; /* Darkest shade */
-  --ifm-color-primary-light: #60a5fa; /* Lighter shade for hover states */
-  --ifm-color-primary-lighter: #93c5fd; /* Even lighter for subtle highlights */
-  --ifm-color-primary-lightest: #bfdbfe; /* Lightest for backgrounds and borders */
-  --ifm-code-font-size: 95%; /* Adjust code font size */
-  --docusaurus-highlighted-code-line-bg: rgba(31, 41, 55, 0.3); /* Matching background highlight for code */
-  --ifm-background-color: #111827; /* Dark background color for the entire theme */
-  --ifm-color-background-alt: #1f2937; /* Slightly lighter background for sections */
-  --ifm-font-color-base: #f9fafb; /* Light text color for readability */
-  --ifm-font-color-secondary: #9ca3af; /* Secondary text color for less emphasis */
-  --ifm-color-link: #3b82f6; /* Link color to match primary */
-  --ifm-color-link-hover: #60a5fa; /* Lighter link color on hover */
-  --ifm-border-color: #374151; /* Border color for elements */
-  --ifm-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); /* Subtle shadow for depth */
+  /* Primary colors */
+  --ifm-color-primary: hsl(217, 91%, 60%);
+  --ifm-color-primary-dark: hsl(217, 91%, 50%);
+  --ifm-color-primary-darker: hsl(217, 91%, 45%);
+  --ifm-color-primary-darkest: hsl(217, 91%, 40%);
+  --ifm-color-primary-light: hsl(217, 91%, 70%);
+  --ifm-color-primary-lighter: hsl(217, 91%, 75%);
+  --ifm-color-primary-lightest: hsl(217, 91%, 85%);
+
+  /* Background colors - exact match */
+  --ifm-background-color: hsl(220, 20%, 10%);
+  --ifm-color-background-alt: hsl(220, 20%, 12%);
+  --ifm-background-surface-color: hsl(220, 20%, 12%);
+  --ifm-secondary-bg: hsl(220, 20%, 18%);
+
+  /* Text colors - exact match */
+  --ifm-font-color-base: hsl(0, 0%, 98%);
+  --ifm-font-color-secondary: hsl(220, 10%, 60%);
+  --ifm-heading-color: hsl(0, 0%, 98%);
+  --ifm-color-link: hsl(217, 91%, 60%);
+  --ifm-color-link-hover: hsl(217, 91%, 70%);
+
+  /* Muted colors */
+  --muted-foreground: hsl(220, 10%, 60%);
+
+  /* Border and input - exact match */
+  --ifm-border-color: hsl(220, 20%, 20%);
+  --ifm-color-emphasis-200: hsl(220, 20%, 20%);
+
+  /* Accent color */
+  --ifm-color-accent: hsl(142, 76%, 36%);
+  --ifm-color-accent-foreground: hsl(0, 0%, 100%);
+
+  /* Card - exact match */
+  --ifm-card-background-color: hsl(220, 20%, 12%);
+  --ifm-card-border-color: hsl(220, 20%, 20%);
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px -1px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
 }
 
-/* Additional styling for better UX */
+/* Global resets */
+* {
+  border-color: var(--ifm-border-color);
+}
+
 body {
   background-color: var(--ifm-background-color);
   color: var(--ifm-font-color-base);
@@ -51,18 +127,20 @@ header, footer {
 
 a {
   color: var(--ifm-color-link);
+  transition: color 0.2s ease;
 }
 
 a:hover {
   color: var(--ifm-color-link-hover);
 }
 
+/* Remove default section styling from Docusaurus */
 section {
-  background-color: var(--ifm-color-background-alt);
-  border: 1px solid var(--ifm-border-color);
-  padding: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: var(--ifm-shadow);
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .dawarich_sources {

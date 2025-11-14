@@ -1,162 +1,172 @@
 .privacySection {
-  padding: 80px 0;
-  background-color: #ffffff;
+  padding: 6rem 1rem;
+  background: hsl(0, 0%, 100%);
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.5rem;
 }
 
 .title {
-  font-size: 36px;
+  font-size: clamp(1.875rem, 4vw, 3rem);
   font-weight: 700;
   text-align: center;
-  color: #111827;
-  margin: 0 0 16px;
+  color: hsl(220, 15%, 15%);
+  margin: 0 0 1rem;
+  letter-spacing: -0.025em;
 }
 
 .subtitle {
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.75;
   text-align: center;
-  color: #4b5563;
-  max-width: 800px;
-  margin: 0 auto 48px;
+  color: hsl(220, 10%, 46%);
+  max-width: 48rem;
+  margin: 0 auto 4rem;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 64rem;
+  margin: 0 auto;
 }
 
 .privacyCard {
-  background: #f9fafb;
-  padding: 32px 24px;
-  border-radius: 12px;
-  text-align: center;
-  transition: all 0.3s ease;
-  border: 1px solid #e5e7eb;
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid hsl(220, 13%, 91%);
+  background: hsl(0, 0%, 100%);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .privacyCard:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px 0 rgb(0 0 0 / 0.1);
-  border-color: #d1d5db;
+  box-shadow: 0 10px 15px -3px hsl(220 15% 15% / 0.1);
+  border-color: hsl(217, 91%, 60% / 0.5);
 }
 
 .iconWrapper {
   width: 48px;
   height: 48px;
-  margin: 0 auto 16px;
-  background: #3b82f6;
-  border-radius: 12px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, hsl(217, 91%, 60% / 0.1) 0%, hsl(217, 91%, 60% / 0.05) 100%);
+  border-radius: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: hsl(217, 91%, 60%);
+}
+
+.privacyCard > div:last-child {
+  flex: 1;
 }
 
 .cardTitle {
-  font-size: 20px;
+  font-size: 1.125rem;
   font-weight: 600;
-  color: #111827;
-  margin: 0 0 12px;
+  color: hsl(220, 15%, 15%);
+  margin: 0 0 0.5rem;
 }
 
 .cardDescription {
-  font-size: 14px;
-  line-height: 1.5;
-  color: #6b7280;
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: hsl(220, 10%, 46%);
   margin: 0;
 }
 
 .policyLinkContainer {
   text-align: center;
-  margin-top: 48px;
+  margin-top: 4rem;
 }
 
 .policyLink {
   display: inline-flex;
   align-items: center;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
-  color: #3b82f6;
-  text-decoration: underline;
-  text-decoration-color: transparent;
+  color: hsl(217, 91%, 60%);
+  text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .policyLink:hover {
-  color: #1d4ed8;
-  text-decoration-color: currentColor;
+  color: hsl(217, 91%, 50%);
+  transform: translateX(4px);
 }
 
 /* Dark mode support */
 [data-theme='dark'] .privacySection {
-  background-color: #1f2937;
+  background: hsl(220, 20%, 10%);
 }
 
 [data-theme='dark'] .title {
-  color: #f9fafb;
+  color: hsl(0, 0%, 98%);
 }
 
 [data-theme='dark'] .subtitle {
-  color: #9ca3af;
+  color: hsl(220, 10%, 60%);
 }
 
 [data-theme='dark'] .privacyCard {
-  background: #111827;
-  border-color: #374151;
+  background: hsl(220, 20%, 12%);
+  border-color: hsl(220, 20%, 20%);
 }
 
 [data-theme='dark'] .privacyCard:hover {
-  border-color: #4b5563;
+  border-color: hsl(217, 91%, 60% / 0.5);
+}
+
+[data-theme='dark'] .iconWrapper {
+  background: linear-gradient(135deg, hsl(217, 91%, 60% / 0.2) 0%, hsl(217, 91%, 60% / 0.1) 100%);
+  color: hsl(217, 91%, 70%);
 }
 
 [data-theme='dark'] .cardTitle {
-  color: #f9fafb;
+  color: hsl(0, 0%, 98%);
 }
 
 [data-theme='dark'] .cardDescription {
-  color: #9ca3af;
+  color: hsl(220, 10%, 60%);
 }
 
 [data-theme='dark'] .policyLink {
-  color: #60a5fa;
+  color: hsl(217, 91%, 70%);
 }
 
 [data-theme='dark'] .policyLink:hover {
-  color: #93c5fd;
+  color: hsl(217, 91%, 80%);
 }
 
 /* Responsive styles */
 @media (max-width: 992px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 
 @media (max-width: 640px) {
-  .grid {
-    grid-template-columns: 1fr;
+  .privacySection {
+    padding: 3rem 1rem;
   }
 
   .title {
-    font-size: 28px;
+    font-size: 1.875rem;
   }
 
   .subtitle {
-    font-size: 16px;
-  }
-
-  .privacySection {
-    padding: 60px 0;
+    font-size: 1rem;
+    margin-bottom: 3rem;
   }
 
   .privacyCard {
-    padding: 24px 20px;
+    padding: 1.25rem;
   }
 }
