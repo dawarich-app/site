@@ -90,10 +90,54 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
+          {
+            type: 'dropdown',
+            label: 'Features',
+            position: 'left',
+            items: [
+              {
+                to: '/interactive-map',
+                label: '🗺️ Interactive Map',
+              },
+              {
+                to: '/trips',
+                label: '✈️ Trips & Journaling',
+              },
+              {
+                to: '/statistics',
+                label: '📊 Statistics & Analytics',
+              },
+              {
+                to: '/location-tracking',
+                label: '📱 Location Tracking',
+              },
+              {
+                to: '/import-export',
+                label: '📦 Import & Export',
+              },
+              {
+                to: '/integrations',
+                label: '📸 Photo Integrations',
+              },
+            ],
+          },
+          {
+            type: 'dropdown',
+            label: 'Free tools',
+            position: 'left',
+            items: [
+              {
+                to: '/tools/timeline-visualizer',
+                label: '🗺️ Google Timeline Visualizer',
+              },
+              {
+                to: '/tools/photo-geotagging',
+                label: '📸 Photo Geotagging Tool',
+              },
+            ],
+          },
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/docs/dawarich-for-ios', label: 'Dawarich for iOS 📱', position: 'left'},
-          {to: '/tools/timeline-visualizer', label: 'Google Timeline Visualizer 🗺️', position: 'left'},
-          {to: '/tools/photo-geotagging', label: 'Photo Geotagging Tool 📸', position: 'left'},
           {
             to: 'https://discourse.dawarich.app/',
             label: 'Community',

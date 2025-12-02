@@ -61,7 +61,7 @@ export default function Hero() {
         <div className={styles.heroImageWrapper}>
           <div className={styles.heroImageContainer}>
             <img
-              src="/img/hero-map.jpg"
+              src="/img/the_map.png"
               alt="Dawarich map interface showing location tracking"
               className={styles.heroImage}
             />

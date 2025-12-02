@@ -1,0 +1,37 @@
+import React from 'react';
+import styles from './HowItWorks.module.css';
+
+export default function HowItWorks({ title, subtitle, steps }) {
+  return (
+    <section className={styles.howItWorks}>
+      <div className={styles.container}>
+        {title && <h2 className={styles.title}>{title}</h2>}
+        {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
+
+        <div className={styles.steps}>
+          {steps.map((step, index) => (
+            <div key={index} className={styles.step}>
+              <div className={styles.stepNumber}>{index + 1}</div>
+              <div className={styles.stepContent}>
+                <div className={styles.stepHeader}>
+                  {step.icon && <div className={styles.stepIcon}>{step.icon}</div>}
+                  <h3 className={styles.stepTitle}>{step.title}</h3>
+                </div>
+                {step.description && (
+                  <p className={styles.stepDescription}>{step.description}</p>
+                )}
+                {step.details && (
+                  <ul className={styles.stepDetails}>
+                    {step.details.map((detail, i) => (
+                      <li key={i}>{detail}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
