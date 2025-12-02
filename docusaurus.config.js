@@ -40,6 +40,10 @@ const config = {
     locales: ['en'],
   },
 
+  clientModules: [
+    require.resolve('./src/client-modules/utm-preservation.js'),
+  ],
+
   presets: [
     [
       'classic',
