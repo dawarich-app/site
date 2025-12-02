@@ -10,6 +10,8 @@ tags: [guide]
 
 At its core, a hidden GPS tracker is a tiny device that silently reports a vehicle's location, completely unknown to the driver. These gadgets are built to be stealthy, using satellite signals to figure out where they are and then, usually, a cell network to phone that information home to someone's computer or smartphone.
 
+<!-- truncate -->
+
 ## How Hidden GPS Trackers Actually Work
 
 ![A small, black hidden GPS tracker being held in a person's hand.](https://cdn.outrank.so/b525f62c-b7c3-42be-937a-09155d6a52aa/ce1a1792-f8e5-40b8-9a7a-5c63b7a152b1.jpg)
