@@ -137,8 +137,63 @@ const config = {
               {
                 to: '/tools/photo-geotagging',
                 label: '📸 Photo Geotagging Tool',
-              },
+              }
             ],
+          },
+          {
+            type: 'dropdown',
+            label: 'Converters',
+            position: 'left',
+            items: [
+              {
+                to: '/tools/gpx-to-geojson',
+                label: '🔄 GPX → GeoJSON',
+              },
+              {
+                to: '/tools/gpx-to-kml',
+                label: '🔄 GPX → KML',
+              },
+              {
+                to: '/tools/gpx-to-kmz',
+                label: '🔄 GPX → KMZ',
+              },
+              {
+                to: '/tools/geojson-to-gpx',
+                label: '🔄 GeoJSON → GPX',
+              },
+              {
+                to: '/tools/geojson-to-kml',
+                label: '🔄 GeoJSON → KML',
+              },
+              {
+                to: '/tools/geojson-to-kmz',
+                label: '🔄 GeoJSON → KMZ',
+              },
+              {
+                to: '/tools/kml-to-gpx',
+                label: '🔄 KML → GPX',
+              },
+              {
+                to: '/tools/kml-to-geojson',
+                label: '🔄 KML → GeoJSON',
+              },
+              {
+                to: '/tools/kml-to-kmz',
+                label: '🔄 KML → KMZ',
+              },
+              {
+                to: '/tools/kmz-to-gpx',
+                label: '🔄 KMZ → GPX',
+              },
+              {
+                to: '/tools/kmz-to-geojson',
+                label: '🔄 KMZ → GeoJSON',
+              },
+              {
+                to: '/tools/kmz-to-kml',
+                label: '🔄 KMZ → KML',
+              },
+            ]
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/docs/dawarich-for-ios', label: 'Dawarich for iOS 📱', position: 'left'},

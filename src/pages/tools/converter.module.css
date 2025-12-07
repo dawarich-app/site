@@ -1,0 +1,249 @@
+.container {
+  min-height: calc(100vh - 60px);
+  background: var(--ifm-background-color);
+}
+
+.contentWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--ifm-heading-color);
+}
+
+.header p {
+  margin: 0;
+  font-size: 1.125rem;
+  color: var(--ifm-font-color-base);
+  opacity: 0.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.converterSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoCard {
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.infoCard h2 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+}
+
+.infoCard p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ifm-font-color-base);
+  opacity: 0.9;
+}
+
+.infoCard ul {
+  margin: 0.5rem 0 0 0;
+  padding-left: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--ifm-font-color-base);
+  opacity: 0.9;
+}
+
+.infoCard li {
+  margin-bottom: 0.5rem;
+}
+
+.privacyCard {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.privacyCard svg {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  color: rgb(16, 185, 129);
+}
+
+.privacyCard strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--ifm-heading-color);
+}
+
+.privacyCard p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ifm-font-color-base);
+  opacity: 0.9;
+}
+
+.successMessage {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 8px;
+  color: rgb(16, 185, 129);
+  animation: slideDown 0.3s ease-out;
+}
+
+.successMessage svg {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.successMessage p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ifm-font-color-base);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ctaPanel {
+  background: linear-gradient(135deg, var(--ifm-color-primary-darker) 0%, var(--ifm-color-primary) 100%);
+  border-radius: 12px;
+  padding: 2.5rem;
+  color: white;
+  text-align: center;
+}
+
+.ctaContent h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.ctaContent p {
+  margin: 0 0 1.5rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.95;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 0.875rem 2.5rem;
+  background: white;
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  color: var(--ifm-color-primary-dark);
+  text-decoration: none;
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .infoCard {
+  background: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .privacyCard {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+[data-theme='dark'] .successMessage {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+[data-theme='dark'] .ctaPanel {
+  background: linear-gradient(135deg, var(--ifm-color-primary-darkest) 0%, var(--ifm-color-primary-dark) 100%);
+}
+
+/* Mobile responsive */
+@media (max-width: 968px) {
+  .mainContent {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentWrapper {
+    padding: 1.5rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.75rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .ctaPanel {
+    padding: 2rem 1.5rem;
+  }
+
+  .ctaContent h3 {
+    font-size: 1.25rem;
+  }
+
+  .ctaContent p {
+    font-size: 0.95rem;
+  }
+}
