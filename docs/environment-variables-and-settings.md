@@ -35,6 +35,9 @@ As many other applications, Dawarich uses environment variables to configure its
 | `PHOTON_API_KEY` | `nil` | Photon API key. Useful if you're supporting Dawarich development on [Patreon](https://www.patreon.com/c/freika/membership) and want to use Photon API instance hosted by Freika without any limits |
 | `PHOTON_API_USE_HTTPS` | `nil` | Use HTTPS for Photon API requests. Set to true if you're using your own Photon instance behind a reverse proxy with SSL |
 | `GEOAPIFY_API_KEY` | `nil` | Geoapify API key. Provide your own key if you want to use Geoapify reverse geocoding service |
+| `NOMINATIM_API_HOST` | `nil` | Nominatim API host. Useful if you're self-hosting your own Nominatim instance |
+| `NOMINATIM_API_KEY` | `nil` | Nominatim API key. Provide your own key if you want to use Nominatim reverse geocoding service |
+| `NOMINATIM_API_USE_HTTPS` | `nil` | Use HTTPS for Nominatim API requests. Set to true if you're using a Nominatim instance behind a reverse proxy with SSL |
 | `SMTP_SERVER` | `nil` | Your SMTP server |
 | `SMTP_PORT` | `nil` | Your SMTP port |
 | `SMTP_DOMAIN` | `nil` | Your SMTP domain |
