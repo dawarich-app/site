@@ -48,6 +48,13 @@ As many other applications, Dawarich uses environment variables to configure its
 | `SIDEKIQ_PASSWORD` | `nil` | Sidekiq password |
 | `SELF_HOSTED` | `true` | Set to `true` if you're self-hosting Dawarich |
 | `STORE_GEODATA` | `false` | Set to `true` if you want to store geodata in the database. This will increase the size of the database and will require more disk space. |
+| `OIDC_CLIENT_ID` | `nil` | Your OIDC Client ID |
+| `OIDC_CLIENT_SECRET` | `nil` | Your OIDC Client Secret |
+| `OIDC_ISSUER` | `nil` | Your OIDC Issuer URL |
+| `OIDC_REDIRECT_URI` | `nil` | Your OIDC redirect URL (https://your-dawarich-url.com/users/auth/openid_connect/callback) |
+| `OIDC_AUTO_REGISTER` | `false` | Set to `true` if you want to automatically register new users logging in over OIDC |
+| `OIDC_PROVIDER_NAME` | `OpenID Connect` | Your OIDC Provider Name |
+| `ALLOW_EMAIL_PASSWORD_REGISTRATION` | `true` | Set to `false` if you want to disable email/password registration |
 
 
 Important note on Prometheus exporter: even if you want to use it, make sure you have `PROMETHEUS_EXPORTER_ENABLED` set to `false` in `dawarich_sidekiq` container. Otherwise, you'll end up with two exporters and will have to deal with duplicate metrics. The `PROMETHEUS_EXPORTER_HOST` for `dawarich_sidekiq` should be set to `dawarich_app` or your name of the container.
