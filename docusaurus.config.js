@@ -125,6 +125,7 @@ const config = {
               },
             ],
           },
+          {href: '/#pricing', label: 'Pricing', position: 'left'},
           {
             type: 'dropdown',
             label: 'Free tools',
@@ -136,7 +137,7 @@ const config = {
               },
               {
                 to: '/tools/photo-geotagging',
-                label: '📸 Photo Geotagging Tool',
+                label: '📸 Photo Geodata Extraction',
               }
             ],
           },
@@ -195,7 +196,7 @@ const config = {
               },
             ]
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'Blog', position: 'right'},
           {to: '/docs/dawarich-for-ios', label: 'Dawarich for iOS 📱', position: 'left'},
           {
             to: 'https://discourse.dawarich.app/',

@@ -8,7 +8,7 @@ import { extractPhotoGeodata } from '@site/src/utils/exifParser';
 import { generateGPX } from '@site/src/utils/gpxGenerator';
 import styles from './timeline-visualizer.module.css';
 
-const pageTitle = "Photo Geotagging Tool - Extract GPS Data from Photos";
+const pageTitle = "Photo Geodata Extraction - Extract GPS Data from Photos";
 const pageDescription = "Free, privacy-first tool to extract GPS coordinates from your photos and export them as GPX files. All data processing happens in your browser - no data is sent to any server.";
 const pageUrl = "https://dawarich.app/tools/photo-geotagging";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
@@ -19,10 +19,6 @@ export default function PhotoGeotagging() {
   const [points, setPoints] = useState([]);
 
   const handlePhotosLoaded = useCallback(async (files) => {
-    console.log('='.repeat(60));
-    console.log('[Photo Geotagging] Starting to process photos');
-    console.log(`[Photo Geotagging] Number of photos: ${files.length}`);
-
     const photoPoints = [];
     const processedPhotos = [];
 
@@ -30,8 +26,6 @@ export default function PhotoGeotagging() {
       const file = files[i];
 
       try {
-        console.log(`[Photo Geotagging] Processing ${i + 1}/${files.length}: ${file.name}`);
-
         const geodata = await extractPhotoGeodata(file);
 
         if (geodata) {
@@ -54,8 +48,6 @@ export default function PhotoGeotagging() {
             ...point,
             file: file
           });
-
-          console.log(`[Photo Geotagging] ✓ GPS data extracted: ${geodata.latitude}, ${geodata.longitude}`);
         } else {
           console.log(`[Photo Geotagging] ✗ No GPS data found`);
         }
@@ -63,11 +55,6 @@ export default function PhotoGeotagging() {
         console.error(`[Photo Geotagging] ✗ Error processing ${file.name}:`, error);
       }
     }
-
-    console.log('='.repeat(60));
-    console.log(`[Photo Geotagging] Processing complete!`);
-    console.log(`[Photo Geotagging] Photos with GPS data: ${photoPoints.length}/${files.length}`);
-    console.log('='.repeat(60));
 
     setPoints(photoPoints);
     setUploadedPhotos(processedPhotos);
@@ -110,7 +97,7 @@ export default function PhotoGeotagging() {
         {/* Primary Meta Tags */}
         <meta name="title" content={pageTitle} />
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="photo geotagging, GPS, EXIF, geolocation, GPX export, photo location, privacy-first, image metadata" />
+        <meta name="keywords" content="photo geodata extraction, GPS, EXIF, geolocation, GPX export, photo location, privacy-first, image metadata" />
         <link rel="canonical" href={pageUrl} />
 
         {/* Open Graph / Facebook */}
@@ -139,7 +126,7 @@ export default function PhotoGeotagging() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "Photo Geotagging Tool",
+            "name": "Photo Geodata Extraction",
             "url": pageUrl,
             "description": pageDescription,
             "applicationCategory": "UtilityApplication",
@@ -162,7 +149,7 @@ export default function PhotoGeotagging() {
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           <div className={styles.header}>
-            <h1>Photo Geotagging Tool</h1>
+            <h1>Photo Geodata Extraction</h1>
             <p>Upload your photos to extract GPS coordinates from EXIF metadata, visualize them on a map, and export as GPX files.</p>
           </div>
 

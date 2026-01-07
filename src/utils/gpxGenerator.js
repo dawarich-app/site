@@ -14,13 +14,13 @@ export function generateGPX(points) {
   // Generate GPX header
   let gpx = `<?xml version="1.0" encoding="UTF-8"?>
 <gpx version="1.1"
-     creator="Dawarich Photo Geotagging Tool - https://dawarich.app"
+     creator="Dawarich Photo Geodata Extraction - https://dawarich.app"
      xmlns="http://www.topografix.com/GPX/1/1"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
     <name>Photo Locations</name>
-    <desc>GPS coordinates extracted from photos using Dawarich Photo Geotagging Tool</desc>
+    <desc>GPS coordinates extracted from photos using Dawarich Photo Geodata Extraction</desc>
     <author>
       <name>Dawarich</name>
       <link href="https://dawarich.app">

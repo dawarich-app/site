@@ -23,11 +23,17 @@ export default function PricingCard({
   const isBusinessPlan = title === "Business" || title === "Business Plan";
 
   // Calculate pricing based on toggle state
+  // New prices starting Feb 1, 2026
+  const newAnnualPrice = 120;
+  const newMonthlyPrice = 17.99;
+
+  // Current discounted prices
   const annualPrice = 90;
   const monthlyPrice = 14.99;
   const monthlyEquivalent = (annualPrice / 12).toFixed(1);
 
   const displayPrice = isBusinessPlan ? price : (isAnnual ? annualPrice : monthlyPrice);
+  const displayOriginalPrice = isBusinessPlan ? null : (isAnnual ? newAnnualPrice : newMonthlyPrice);
   const displayPeriod = isBusinessPlan ? period : (isAnnual ? 'year' : 'month');
 
   return (
@@ -52,14 +58,23 @@ export default function PricingCard({
             >
               Annual
             </button>
-            <sup className={styles.discountBadge}>50% off!</sup>
+            <sup className={styles.discountBadge}>Best deal!</sup>
           </div>
         </div>
       )}
 
       {price !== null && (
         <div className={styles.priceContainer}>
+          {!isBusinessPlan && (
+            <div className={styles.discountNotice}>
+              <div>Limited time discount!</div>
+              <div>Prices increase to €{displayOriginalPrice}/{displayPeriod} on Feb 1, 2026</div>
+            </div>
+          )}
           <div className={styles.mainPrice}>
+            {!isBusinessPlan && displayOriginalPrice && (
+              <span className={styles.originalPrice}>€{displayOriginalPrice}</span>
+            )}
             <span className={styles.currentPrice}>€{displayPrice}</span>/{displayPeriod}
           </div>
           {!isBusinessPlan && isAnnual && (

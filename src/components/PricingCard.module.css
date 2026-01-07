@@ -38,14 +38,15 @@
   display: flex;
   gap: 8px;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 20px;
 }
 
 .toggleButtonWrapper {
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 4px;
+  position: relative;
 }
 
 .toggleButton {
@@ -72,12 +73,14 @@
 }
 
 .discountBadge {
+  position: absolute;
+  top: 0;
+  right: -60px;
   font-size: 0.65rem;
   font-weight: 600;
   color: #3b82f6;
   white-space: nowrap;
   line-height: 1;
-  padding-top: 2px;
 }
 
 .toggleButton:disabled {
@@ -99,25 +102,38 @@
   gap: 0.75rem;
 }
 
+.discountNotice {
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  border: 1px solid #fbbf24;
+}
+
 .mainPrice {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
-  font-size: 2.5rem;
-  line-height: 1;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1.2;
 }
 
 .originalPrice {
   color: #ff6b6b;
   text-decoration: line-through;
-  opacity: 0.9;
+  opacity: 0.7;
   font-weight: 500;
-  scale: 0.6;
+  font-size: 1.5rem;
 }
 
 .currentPrice {
   color: #4c6ef5;
   font-weight: 600;
+  font-size: 2.5rem;
 }
 
 .period {
@@ -254,6 +270,12 @@
   color: #60a5fa;
 }
 
+[data-theme='dark'] .discountNotice {
+  background-color: #451a03;
+  color: #fef3c7;
+  border-color: #92400e;
+}
+
 .card {
   background: var(--ifm-background-surface-color);
   border: 1px solid var(--ifm-color-emphasis-200);
@@ -290,6 +312,28 @@
 @media (max-width: 768px) {
   .pricingCard {
     max-width: 100%;
+  }
+
+  .mainPrice {
+    font-size: 1.2rem;
+  }
+
+  .currentPrice {
+    font-size: 2rem;
+  }
+
+  .originalPrice {
+    font-size: 1.2rem;
+  }
+
+  .discountNotice {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+
+  .discountBadge {
+    right: -60px;
+    font-size: 0.6rem;
   }
 }
 
