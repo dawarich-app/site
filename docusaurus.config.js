@@ -136,6 +136,14 @@ const config = {
                 label: '🗺️ Google Timeline Visualizer',
               },
               {
+                to: '/tools/heatmap-generator',
+                label: '🔥 GPS Heatmap Generator',
+              },
+              {
+                to: '/tools/gpx-merger',
+                label: '🔗 GPX Track Merger',
+              },
+              {
                 to: '/tools/photo-geotagging',
                 label: '📸 Photo Geodata Extraction',
               }
@@ -146,6 +154,30 @@ const config = {
             label: 'Converters',
             position: 'left',
             items: [
+              {
+                to: '/tools/fit-to-gpx',
+                label: '🔄 FIT → GPX',
+              },
+              {
+                to: '/tools/fit-to-geojson',
+                label: '🔄 FIT → GeoJSON',
+              },
+              {
+                to: '/tools/fit-to-kml',
+                label: '🔄 FIT → KML',
+              },
+              {
+                to: '/tools/tcx-to-gpx',
+                label: '🔄 TCX → GPX',
+              },
+              {
+                to: '/tools/tcx-to-geojson',
+                label: '🔄 TCX → GeoJSON',
+              },
+              {
+                to: '/tools/tcx-to-kml',
+                label: '🔄 TCX → KML',
+              },
               {
                 to: '/tools/gpx-to-geojson',
                 label: '🔄 GPX → GeoJSON',

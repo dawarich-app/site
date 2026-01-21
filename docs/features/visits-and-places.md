@@ -25,8 +25,8 @@ You can click on the visit circle on the map to open a popup with the visit deta
 Currently, user can just wait for the background job to find new visits. In future, there will be a way to suggest new visits manually. Although, if you don't mind tinkering with the [console](/docs/FAQ/#how-to-enter-dawarich-console), you can run the following command:
 
 ```ruby
-start_at = DateTime.new(2025, 03, 12) # change as you need
-end_at = DateTime.new(2025, 03, 16) # change as you need
+start_at = DateTime.new(2025, 3, 12) # change as you need
+end_at = DateTime.new(2025, 3, 16) # change as you need
 
 user = User.find_by(email: 'YOUR@EMAIL.TLD')
 

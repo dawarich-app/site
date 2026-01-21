@@ -55,7 +55,9 @@ export default function FormatConverter({
     'GPX': '.gpx',
     'GeoJSON': '.geojson,.json',
     'KML': '.kml',
-    'KMZ': '.kmz'
+    'KMZ': '.kmz',
+    'FIT': '.fit',
+    'TCX': '.tcx',
   };
 
   return (
