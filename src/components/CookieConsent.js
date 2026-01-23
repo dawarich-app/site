@@ -3,6 +3,19 @@ import CookieConsent from 'react-cookie-consent';
 
 export default function CustomCookieConsent() {
   const handleAccept = () => {
+    // Load Google Tag Manager after consent
+    const gtagScript = document.createElement('script');
+    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17899851408';
+    gtagScript.async = true;
+    document.head.appendChild(gtagScript);
+
+    gtagScript.onload = () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17899851408');
+    };
+
     // Load Brevo tracking script after consent
     const brevoScript = document.createElement('script');
     brevoScript.src = 'https://cdn.brevo.com/js/sdk-loader.js';
@@ -45,7 +58,7 @@ export default function CustomCookieConsent() {
       debug={true}
       onAccept={handleAccept}
     >
-      We use essential cookies required for login, security, and purchases. These cookies cannot be disabled. We do not use advertising cookies, but we do use analytics cookies from PostHog to help us improve our website.
+      We use essential cookies required for login, security, and purchases. We also use Google Ads for conversion tracking and Brevo for email analytics, which only load after you accept.
       <a
         href="/privacy-policy"
         style={{
