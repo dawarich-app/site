@@ -26,7 +26,23 @@ const config = {
     {
       src: "https://cdn.paddle.com/paddle/v2/paddle.js",
       async: true
+    },
+    {
+      src: "https://www.googletagmanager.com/gtag/js?id=AW-17899851408",
+      async: true
     }
+  ],
+
+  headTags: [
+    {
+      tagName: 'script',
+      innerHTML: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17899851408');
+      `,
+    },
   ],
 
   onBrokenLinks: 'throw',
