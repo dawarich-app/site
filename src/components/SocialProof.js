@@ -32,7 +32,7 @@ const MapPinIcon = () => (
 );
 
 const metrics = [
-  { value: '9,000+', label: 'GitHub Stars', icon: <StarIcon /> },
+  { value: '7,900+', label: 'GitHub Stars', icon: <StarIcon /> },
   { value: '1M+', label: 'Docker Pulls', icon: <DownloadIcon /> },
   { value: '2,000+', label: 'Users', icon: <PeopleIcon /> },
   { value: '1B+', label: 'Points Tracked', icon: <MapPinIcon /> },
