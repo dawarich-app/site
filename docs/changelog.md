@@ -80,7 +80,7 @@ ruby_dawarich_map_tiles_usage 99
 
 Dawarich expects speed to be sent in meters per second. It's already known that OwnTracks and GPSLogger (in some configurations) are sending speed in kilometers per hour.
 
-In GPSLogger it's easily fixable: if you previously had `"vel": "%SPD_KMH"`, change it to `"vel": "%SPD"`, like it's described in the [docs](https://dawarich.app/docs/tutorials/track-your-location#gps-logger).
+In GPSLogger it's easily fixable: if you previously had `"vel": "%SPD_KMH"`, change it to `"vel": "%SPD"`, like it's described in the [docs](https://dawarich.app/docs/getting-started/track-your-location#gps-logger).
 
 In OwnTracks it's a bit more complicated. You can't change the speed unit in the settings, so Dawarich will expect speed in kilometers per hour and will convert it to meters per second. Nothing is needed to be done from your side.
 
@@ -173,7 +173,7 @@ This will select points tracked between January 1st and January 31st 2025. Then 
 
 ## ⚠️ IMPORTANT ⚠️
 
-This release includes a data migration to remove duplicated points from the database. It will not remove anything except for duplcates from the `points` table, but please make sure to create a [backup](https://dawarich.app/docs/tutorials/backup-and-restore) before updating to this version.
+This release includes a data migration to remove duplicated points from the database. It will not remove anything except for duplcates from the `points` table, but please make sure to create a [backup](https://dawarich.app/docs/self-hosting/maintenance/backup-and-restore) before updating to this version.
 
 ### Added
 
@@ -578,7 +578,7 @@ The `GET /api/v1/trips/:id/photos` endpoint now returns a different structure of
 - A link to the Photoprism photos on the trip page if there are any.
 - A `orientation` field in the Api::PhotoSerializer, hence the `GET /api/v1/photos` endpoint now includes the orientation of the photo. Valid values are `portrait` and `landscape`.
 - Examples for the `type`, `orientation` and `source` fields in the `GET /api/v1/photos` endpoint in the Swagger UI.
-- `DISABLE_TELEMETRY` env var to disable telemetry. More on telemetry: https://dawarich.app/docs/tutorials/telemetry
+- `DISABLE_TELEMETRY` env var to disable telemetry. More on telemetry: https://dawarich.app/docs/self-hosting/configuration/telemetry
 - `reverse_geocoded_at` column added to the `points` table.
 
 ### Changed
@@ -617,7 +617,7 @@ The data is being sent to a InfluxDB instance hosted by me and won't be shared w
 
 Basically this set of metrics allows me to see how many people are using Dawarich and what versions they are using. No other data is being sent, nor it gives me any knowledge about individual users or their data or activity.
 
-The telemetry is enabled by default, but it **can be disabled** by setting `DISABLE_TELEMETRY` env var to `true`. The dataset might change in the future, but any changes will be documented here in the changelog and in every release as well as on the [telemetry page](https://dawarich.app/docs/tutorials/telemetry) of the website docs.
+The telemetry is enabled by default, but it **can be disabled** by setting `DISABLE_TELEMETRY` env var to `true`. The dataset might change in the future, but any changes will be documented here in the changelog and in every release as well as on the [telemetry page](https://dawarich.app/docs/self-hosting/configuration/telemetry) of the website docs.
 
 ### Added
 

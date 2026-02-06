@@ -1,0 +1,45 @@
+# Dawarich Documentation Redirects
+# 301 redirects to preserve SEO after restructuring
+
+# Root level moves
+/docs/intro /docs/self-hosting/introduction 301
+/docs/hardware-requirements /docs/self-hosting/hardware-requirements 301
+/docs/environment-variables-and-settings /docs/self-hosting/environment-variables 301
+/docs/updating-guides /docs/self-hosting/updating 301
+
+# Tutorials → Getting Started (general usage)
+/docs/tutorials/track-your-location /docs/getting-started/track-your-location 301
+/docs/tutorials/import-existing-data /docs/getting-started/import-existing-data 301
+/docs/tutorials/export-your-data /docs/getting-started/export-your-data 301
+/docs/tutorials/ios-app/* /docs/getting-started/ios-app/:splat 301
+
+# Tutorials → Self-Hosting Installation
+/docs/tutorials/installation /docs/self-hosting/installation/docker 301
+/docs/tutorials/Platforms/Docker /docs/self-hosting/installation/docker-compose 301
+/docs/tutorials/Platforms/Synology /docs/self-hosting/installation/synology 301
+
+# Tutorials → Self-Hosting Configuration
+/docs/tutorials/reverse-geocoding /docs/self-hosting/configuration/reverse-geocoding 301
+/docs/tutorials/reverse-proxy /docs/self-hosting/configuration/reverse-proxy 301
+/docs/tutorials/oidc-authentication /docs/self-hosting/configuration/oidc-authentication 301
+/docs/tutorials/expose-instance-via-cloudflare-tunnel /docs/self-hosting/configuration/cloudflare-tunnel 301
+/docs/tutorials/telemetry /docs/self-hosting/configuration/telemetry 301
+
+# Tutorials → Self-Hosting Maintenance
+/docs/tutorials/backup-and-restore /docs/self-hosting/maintenance/backup-and-restore 301
+/docs/tutorials/update-postgresql /docs/self-hosting/maintenance/update-postgresql 301
+/docs/tutorials/moving-to-postgis /docs/self-hosting/maintenance/moving-to-postgis 301
+
+# Tutorials → Self-Hosting Monitoring
+/docs/tutorials/monitoring-with-prometheus /docs/self-hosting/monitoring/prometheus 301
+/docs/tutorials/watcher /docs/self-hosting/monitoring/watcher 301
+
+# Tutorials → Tools
+/docs/tutorials/phototagger-for-dawarich /docs/tools/phototagger 301
+
+# Comparisons rename
+/docs/Dawarich%20vs%20Others/* /docs/comparisons/:splat 301
+/docs/dawarich-vs-others/* /docs/comparisons/:splat 301
+
+# Catch-all for old tutorials path
+/docs/tutorials /docs/getting-started 301

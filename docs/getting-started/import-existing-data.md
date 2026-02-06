@@ -8,7 +8,7 @@ Dawarich supports importing data from various sources. You can import data from 
 
 :::note
 
-Importing process also starts reverse geocoding process for each point imported. This process can take a while, depending on the number of points imported. For mor info on reverse geocoding, refer to [Reverse geocoding tutorial](./reverse-geocoding).
+Importing process also starts reverse geocoding process for each point imported. This process can take a while, depending on the number of points imported. For more info on reverse geocoding, refer to the [Reverse geocoding guide](/docs/self-hosting/configuration/reverse-geocoding).
 
 :::
 

@@ -14,8 +14,8 @@ Another option is Synology.
 
 ### Docker
 
-Setting up your Dawarich in Docker is described in the [Intro](/docs/intro#setup-your-dawarich-instance).
+Setting up your Dawarich in Docker is described in the [Self-Hosting Introduction](/docs/self-hosting/introduction#setup-your-dawarich-instance).
 
 ### Synology
 
-Setting up your Dawarich on Synology is described in the [Synology](./platforms/synology) guide.
+Setting up your Dawarich on Synology is described in the [Synology](./synology) guide.

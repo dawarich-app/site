@@ -2,39 +2,155 @@
 sidebar_position: 8
 ---
 
-# Visits and places
+# Visits and Places
 
-The "Visits and places" feature is a a way to track your visits to places to build a comprehensive picture of your day, and, ultimately, your life.
+The "Visits and Places" feature tracks your visits to locations to build a comprehensive picture of your daily activities and travel history.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MhFvaoTJUOw?si=Mk0kixD8sIEQ4S-l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## How to enable the feature
+## How to Enable
 
-The feature is enabled by default, if a reverse geocoding service is configured.
+The feature is enabled by default when a [reverse geocoding service](/docs/self-hosting/configuration/reverse-geocoding) is configured.
 
-## How it works
+## How It Works
 
-Starting release 0.25.0, a background job will run every night, searching for places you have visited the previous day. When new visits are found, they will be added to the database as Suggested visits, and you will be able to see them in the drawer panel on the right side of the map.
+A background job runs every night, searching for places you visited the previous day. New visits are added as **Suggested Visits** and appear in the drawer panel on the map.
 
-In the drawer panel, you will be able to see the list of visits for the **selected time period**, and you will be able to confirm or decline each visit. Clicking on a visit card will move center of the map to the visit location. Suggested visits are indicated on the map with an orange circle in a dashed border. After confirmation, the visit will be colored in blue and will have an increased radius on the map.
+### Visit States
 
-You can click on the visit circle on the map to open a popup with the visit details. There you'll be able to rename the visit and select another place from the list of suggested places nearby the visit location.
+- **Suggested** - Automatically detected, awaiting your confirmation (orange circle, dashed border)
+- **Confirmed** - Verified by you (blue circle, solid border)
+- **Declined** - Rejected suggestions that won't appear again
 
-## How to suggest new visits
+### Managing Visits
 
-Currently, user can just wait for the background job to find new visits. In future, there will be a way to suggest new visits manually. Although, if you don't mind tinkering with the [console](/docs/FAQ/#how-to-enter-dawarich-console), you can run the following command:
+In the drawer panel:
+1. View visits for the selected time period
+2. Click a visit card to center the map on that location
+3. Confirm or decline each suggested visit
+4. Click visit circles on the map for detailed popups
+
+In the visit popup, you can:
+- Rename the visit
+- Select a different place from nearby suggestions
+- Edit start and end times
+- Delete the visit
+
+## Places
+
+Places are saved locations that can be associated with visits. When you confirm a visit, the location is saved as a place.
+
+### Managing Places
+
+- Places can be viewed and managed in the Places section
+- Each place shows:
+  - Name
+  - Coordinates
+  - Visit count
+  - Associated tags
+
+### Home Location
+
+Dawarich can automatically detect your home location based on where you spend the most time overnight. This helps with:
+- Filtering out home visits from statistics
+- Calculating time away from home
+- Trip detection
+
+## Tags and Privacy Zones
+
+Tags allow you to categorize places and create privacy zones.
+
+### Creating Tags
+
+1. Go to **Tags** in the navigation
+2. Click **New Tag**
+3. Configure:
+   - **Name** - Tag label (e.g., "Home", "Work", "Friend's House")
+   - **Icon** - Emoji or icon to represent the tag
+   - **Color** - Color for map display
+   - **Privacy Radius** (optional) - Creates a privacy zone
+
+### Privacy Zones
+
+Privacy zones hide or obscure location data within a specified radius. This is useful for:
+- Protecting your home address
+- Hiding sensitive locations
+- Maintaining privacy when sharing data
+
+To create a privacy zone:
+1. Create or edit a tag
+2. Set a **Privacy Radius** (in meters, up to 5000m)
+3. Apply the tag to relevant places
+
+When a privacy zone is active:
+- Points within the radius are hidden from exports
+- Shared statistics exclude the zone
+- The exact location isn't revealed in public views
+
+### Applying Tags to Places
+
+1. Open a place's detail view
+2. Select tags to apply
+3. Tags with privacy zones automatically protect that location
+
+## Manual Visit Creation
+
+You can create visits manually from the map:
+
+1. Use the [Search feature](/docs/features/search) to find a location
+2. View your visit history for that place
+3. Click on a time period to create a visit
+4. Adjust the details and save
+
+Or from the drawer panel:
+1. Select an area on the map
+2. View points in that area
+3. Create a visit from the displayed points
+
+## Bulk Visit Suggestion
+
+To suggest visits for a historical time period via the console:
 
 ```ruby
-start_at = DateTime.new(2025, 3, 12) # change as you need
-end_at = DateTime.new(2025, 3, 16) # change as you need
+start_at = DateTime.new(2025, 3, 12) # change as needed
+end_at = DateTime.new(2025, 3, 16) # change as needed
 
 user = User.find_by(email: 'YOUR@EMAIL.TLD')
 
-BulkVisitsSuggestingJob.perform_later(start_at: start_at, end_at: end_at, user_ids: [user.id])
+BulkVisitsSuggestingJob.perform_later(
+  start_at: start_at,
+  end_at: end_at,
+  user_ids: [user.id]
+)
 ```
 
-This will perform a background job to suggest you visits. Should be finished in a few seconds to a few minutes depending on how big your provided timeframe is. Sidekiq must be running, it will perform a background job to suggest you visits. After the job is finished, you will be able to see the new visits in the drawer panel.
+The job runs in the background via Sidekiq and typically completes within seconds to minutes depending on the time range.
 
-## Area selection
+## Area Selection
 
-Starting release 0.25.0, you can select an area on the map to define the area where the visits are searched for. After selecting the area, you will be able to see the list of visits for the selected area in the drawer panel. It will also show the list of points recorded in the selected area, split by day. Important: when you select an area, points and visits are being shown with no consideration for the time period selected in the time selector above the map. They will be shown for the whole time they are available in the database. It's useful when you want to see when you have visited specific area on the map.
+Select an area on the map to explore visits within a specific region:
+
+1. Enable the area selection tool
+2. Draw a rectangle or polygon on the map
+3. The drawer shows:
+   - All visits in that area (regardless of selected time period)
+   - Points recorded in the area, split by day
+
+This is useful for reviewing your complete history at a specific location.
+
+## Settings
+
+Configure visit detection in Settings:
+
+| Setting | Description |
+|---------|-------------|
+| Time Threshold Minutes | Minimum time at a location to be considered a visit |
+| Merge Threshold Minutes | Time gap to merge nearby visits into one |
+| Visits Suggestions Enabled | Toggle automatic visit detection |
+
+## Tips
+
+- **Review suggested visits regularly** - Confirming or declining helps improve future suggestions
+- **Use tags for organization** - Categorize places by type (restaurants, shops, friends, etc.)
+- **Set up privacy zones early** - Protect sensitive locations before sharing any data
+- **Check historical data** - Use bulk suggestion to find visits from before you enabled the feature

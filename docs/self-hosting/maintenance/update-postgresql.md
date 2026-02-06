@@ -27,12 +27,12 @@ Also, make sure your Dawarich app is not running. All four containers (`dawarich
 We'll also be able to roll back to the previous version if something goes wrong.
 
 :::info
-If you're looking for a compatible PostgreSQL image with PostGIS, you can find list of images for different architectures [here](/docs/tutorials/moving-to-postgis).
+If you're looking for a compatible PostgreSQL image with PostGIS, you can find list of images for different architectures [here](/docs/self-hosting/maintenance/moving-to-postgis).
 :::
 
 ## 0. Preparing local backup
 
-First, we need to create a local backup of the existing database. The instructions on that you can find on the [Backup and restore](/docs/tutorials/backup-and-restore) page.
+First, we need to create a local backup of the existing database. The instructions on that you can find on the [Backup and restore](/docs/self-hosting/maintenance/backup-and-restore) page.
 
 ## 1. Preparing the `docker-compose.yml` file
 

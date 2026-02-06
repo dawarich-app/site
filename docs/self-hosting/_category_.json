@@ -1,0 +1,9 @@
+{
+  "label": "Self-Hosting",
+  "position": 5,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Everything you need to deploy and maintain your own Dawarich instance."
+  }
+}

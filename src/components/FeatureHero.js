@@ -51,7 +51,7 @@ export default function FeatureHero({
           {showSecondary && (
             <Link
               className={styles.secondaryButton}
-              to="/docs/tutorials/installation">
+              to="/docs/self-hosting/installation/docker">
               Self-Host for Free
             </Link>
           )}

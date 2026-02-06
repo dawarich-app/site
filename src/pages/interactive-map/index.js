@@ -174,7 +174,7 @@ export default function MapPage() {
               </Link>
               <Link
                 className={styles.secondaryCta}
-                to="/docs/tutorials/installation">
+                to="/docs/self-hosting/installation/docker">
                 Self-Host for Free
               </Link>
             </div>

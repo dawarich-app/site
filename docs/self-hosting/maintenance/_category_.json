@@ -1,0 +1,8 @@
+{
+  "label": "Maintenance",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Backup, upgrade, and maintain your Dawarich instance."
+  }
+}

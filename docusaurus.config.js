@@ -283,16 +283,16 @@ const config = {
                 to: '/docs/intro',
               },
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Self-Hosting Guide',
+                to: '/docs/self-hosting/introduction',
               },
               {
                 label: 'Importing existing data',
-                to: 'docs/tutorials/import-existing-data',
+                to: '/docs/getting-started/import-existing-data',
               },
               {
                 label: 'Exporting data',
-                to: 'https://dawarich.app/docs/tutorials/export-your-data',
+                to: '/docs/getting-started/export-your-data',
               },
               {
                 label: 'FAQ',
