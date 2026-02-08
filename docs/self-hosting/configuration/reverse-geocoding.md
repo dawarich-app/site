@@ -10,7 +10,7 @@ Currently, Dawarich supports 4 options for reverse geocoding services:
 
 - [Geoapify](https://www.geoapify.com/) (free, limited usage, see [Geoapify pricing](https://www.geoapify.com/pricing))
 - [Photon](https://photon.komoot.io/) (free, limited usage, [1 request per second](https://photon.komoot.io/))
-- [Self-hosted Photon](https://dawarich.app/docs/tutorials/reverse-geocoding#setting-up-your-own-reverse-geocoding-service) (free, unlimited usage)
+- [Self-hosted Photon](#setting-up-your-own-reverse-geocoding-service) (free, unlimited usage)
 - [Nominatim](https://nominatim.org/) (free, limited usage, see [Nominatim usage policy](https://operations.osmfoundation.org/policies/nominatim/)) or [self-hosted](https://github.com/mediagis/nominatim-docker) Nominatim instance (free, unlimited usage)
 
 Please make sure you have read and understood the pricing and usage limits of each service before choosing one.

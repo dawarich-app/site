@@ -229,7 +229,21 @@ const config = {
             ]
           },
           {to: '/blog', label: 'Blog', position: 'right'},
-          {to: '/docs/dawarich-for-ios', label: 'Dawarich for iOS 📱', position: 'left'},
+          {
+            type: 'dropdown',
+            label: 'Mobile Apps 📱',
+            position: 'left',
+            items: [
+              {
+                to: '/docs/dawarich-for-ios',
+                label: '🍎 Dawarich for iOS',
+              },
+              {
+                to: '/docs/dawarich-for-android',
+                label: '🤖 Dawarich for Android',
+              },
+            ],
+          },
           {
             to: 'https://discourse.dawarich.app/',
             label: 'Community',
@@ -283,16 +297,16 @@ const config = {
                 to: '/docs/intro',
               },
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Self-Hosting Guide',
+                to: '/docs/self-hosting/introduction',
               },
               {
                 label: 'Importing existing data',
-                to: 'docs/tutorials/import-existing-data',
+                to: '/docs/getting-started/import-existing-data',
               },
               {
                 label: 'Exporting data',
-                to: 'https://dawarich.app/docs/tutorials/export-your-data',
+                to: '/docs/getting-started/export-your-data',
               },
               {
                 label: 'FAQ',

@@ -1,74 +1,60 @@
 ---
 sidebar_position: 1
+slug: /intro
 ---
 
-# Intro
+# Welcome to Dawarich
 
-Let's discover **Dawarich in less than 5 minutes**.
+Dawarich is a privacy-focused location history application that gives you complete control over your location data.
 
-### What you'll need
+## What is Dawarich?
 
-- A server running on AMD64 or ARM64 architecture. 2GB of RAM and more is recommended.
-- [Docker](https://docs.docker.com/get-docker/) version 20.10 or above:
-  - Docker is a platform for developing, shipping, and running applications. It uses containerization technology to create and deploy applications.
-- [Docker Compose](https://docs.docker.com/compose/install/) version 1.29 or above:
-  - Docker Compose is a tool for defining and running multi-container Docker applications.
+- Track your location history with precision
+- Visualize your travels on interactive maps
+- Generate insights and statistics about your movements
+- Import data from Google Timeline, OwnTracks, and more
+- Self-host for complete privacy, or use our cloud service
 
-:::tip
+## Getting Started
 
-If you don't have a server or server provider yet, we prefer to use Hetzner and DigitalOcean.
+**Using Dawarich Cloud?**
 
-You can use our [Hetzner](https://hetzner.cloud/?ref=DQC5djwEU64f) and [DigitalOcean](https://m.do.co/c/5dcbfa133a56) referral links. It will helps us to keep the project alive.
+- [Track Your Location](/docs/getting-started/track-your-location) - Set up location tracking with various apps
+- [Import Existing Data](/docs/getting-started/import-existing-data) - Bring your location history from other services
+- [Export Your Data](/docs/getting-started/export-your-data) - Export your data anytime
 
-:::
+**Self-Hosting Dawarich?**
 
-## Setup your Dawarich instance
+- [Self-Hosting Introduction](/docs/self-hosting/introduction) - Get started with your own Dawarich instance
+- [Installation Guide](/docs/self-hosting/installation/docker) - Step-by-step Docker installation
+- [Configuration](/docs/self-hosting/configuration/reverse-geocoding) - Configure your instance
 
-1. Copy contents of the [docker-compose.yml](https://github.com/Freika/dawarich/blob/master/docker/docker-compose.yml) file to a file named `docker-compose.yml` on your server.
-2. Move to the directory where you saved the `docker-compose.yml` file: `cd /path/to/your/docker-compose.yml`
-3. Run the following command to start your Dawarich instance:
+## Explore Features
 
-```bash
-docker compose up -d
-```
+- [Interactive Map](/docs/features/map) - Visualize your location history
+- [Statistics & Insights](/docs/features/insights) - Understand your travel patterns
+- [Trips](/docs/features/trips) - Create and manage trips
+- [All Features](/docs/category/features) - Explore everything Dawarich offers
 
-4. You're all set! Visit your Dawarich instance at `http://localhost:3000` or `http://<your-server-ip>:3000`. The default credentials are `demo@dawarich.app` and `password`
+## Mobile Apps
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/j6xNtSNzrwQ?si=9VFoYMdFl2jSTGWr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+### iOS
 
-## Update your Dawarich instance
+Dawarich has a native iOS app for seamless location tracking:
 
-1. Move to the directory where you saved the `docker-compose.yml` file: `cd /path/to/your/docker-compose.yml`
-2. Run the following commands to update your Dawarich instance:
+- [Dawarich for iOS](/docs/dawarich-for-ios) - Download from the App Store
+- [Shortcuts Automation](/docs/getting-started/ios-app/shortcuts-automation) - Automate tracking with iOS Shortcuts
 
-```bash
-docker compose down # Stop the running instance
-docker compose pull # Pull the latest image
-docker compose up -d # Start the updated instance
-```
+### Android
 
-3. All done!
+Dawarich has a native Android app for seamless location tracking:
 
-:::info
+- [Dawarich for Android](/docs/dawarich-for-android) - Download from Google Play
 
-After starting the application, you should have at least 4 running containers:
+You can also use third-party tracking apps:
 
-- `dawarich_db` - PostgreSQL database
-- `dawarich_redis` - Redis database
-- `dawarich_sidekiq` - Sidekiq worker (for background jobs)
-- `dawarich_app` - Dawarich web application
+- [OwnTracks](https://owntracks.org/) - Open-source location tracker
+- [Overland](https://overland.p3k.app/) - Lightweight GPS logger
+- [GPSLogger](https://gpslogger.app/) - Configurable GPS logging app
 
-Make sure all of them are running.
-
-:::
-
-:::info
-
-If  you're running Dawarich on an ARM64 server check out the [Moving to PostGIS](./tutorials/moving-to-postgis.md) guide to find suitable database images.
-:::
-
-:::warning
-
-Although the `docker` directory contains `docker-compose.production.yml` file, it's not yet recommended to use. Use the `docker-compose.yml` file instead, with the `development` environment.
-
-:::
+See [Track Your Location](/docs/getting-started/track-your-location) for setup instructions for each app.

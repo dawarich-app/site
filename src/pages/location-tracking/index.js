@@ -221,7 +221,7 @@ export default function TrackingPage() {
             <div className={styles.docsLink}>
               <p>
                 For complete setup instructions including Home Assistant integration, visit our{' '}
-                <Link to="/docs/tutorials/track-your-location">detailed tracking tutorial</Link>.
+                <Link to="/docs/getting-started/track-your-location">detailed tracking tutorial</Link>.
               </p>
             </div>
           </div>
@@ -269,7 +269,7 @@ export default function TrackingPage() {
               </Link>
               <Link
                 className={styles.secondaryCta}
-                to="/docs/tutorials/installation">
+                to="/docs/self-hosting/installation/docker">
                 Self-Host for Free
               </Link>
             </div>
