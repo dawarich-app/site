@@ -1,24 +1,24 @@
 import React from 'react';
 import styles from './HowItWorks.module.css';
 
-export default function HowItWorks({ title, subtitle, steps }) {
+export default function HowItWorks({ title, subtitle, steps, horizontal }) {
   return (
     <section className={styles.howItWorks}>
       <div className={styles.container}>
         {title && <h2 className={styles.title}>{title}</h2>}
         {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
 
-        <div className={styles.steps}>
+        <div className={`${styles.steps} ${horizontal ? styles.stepsHorizontal : ''}`}>
           {steps.map((step, index) => (
-            <div key={index} className={styles.step}>
-              <div className={styles.stepNumber}>{index + 1}</div>
+            <div key={index} className={`${styles.step} ${horizontal ? styles.stepHorizontal : ''}`}>
+              {!horizontal && <div className={styles.stepNumber}>{index + 1}</div>}
               <div className={styles.stepContent}>
-                <div className={styles.stepHeader}>
+                <div className={`${styles.stepHeader} ${horizontal ? styles.stepHeaderHorizontal : ''}`}>
                   {step.icon && <div className={styles.stepIcon}>{step.icon}</div>}
                   <h3 className={styles.stepTitle}>{step.title}</h3>
                 </div>
                 {step.description && (
-                  <p className={styles.stepDescription}>{step.description}</p>
+                  <p className={`${styles.stepDescription} ${horizontal ? styles.stepDescriptionHorizontal : ''}`}>{step.description}</p>
                 )}
                 {step.details && (
                   <ul className={styles.stepDetails}>

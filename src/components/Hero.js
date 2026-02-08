@@ -27,7 +27,7 @@ export default function Hero() {
       <div className={styles.container}>
         <div className={styles.badge}>
           <MapPinIcon />
-          <span>Privacy-First Automated Location Tracking App</span>
+          <span>Open-Source Location History Platform</span>
         </div>
 
         <h1 className={styles.title}>
@@ -35,9 +35,7 @@ export default function Hero() {
         </h1>
 
         <p className={styles.subtitle}>
-          Do you remember where you've been last year? With Dawarich, you don't have to worry about forgetting.
-          We help you remember the places you've been and the life you've lived — day by day, on a beautiful
-          private timeline only you control.
+          Dawarich automatically records where you go and turns your location history into beautiful maps, trips, and stats — all on your own terms, with no data shared with anyone.
         </p>
 
         <div className={styles.buttons}>

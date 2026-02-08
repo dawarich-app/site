@@ -19,7 +19,7 @@ export default function PricingSection() {
           <PricingCard
             className={styles.featuredCard}
             title="Dawarich Cloud"
-            price="90"
+            price="119.99"
             period="year"
             description="Let us handle the hosting for you."
             features={[

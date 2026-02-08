@@ -41,7 +41,7 @@ export default function PrivacySection() {
       <div className={styles.container}>
         <h2 className={styles.title}>Your Data, Your Privacy</h2>
         <p className={styles.subtitle}>
-          We take your privacy seriously. Your location data is protected with enterprise-grade security and stored according to the highest privacy standards.
+          Your location data is encrypted, stored in Europe, and never shared with third parties.
         </p>
 
         <div className={styles.grid}>

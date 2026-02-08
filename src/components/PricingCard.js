@@ -5,8 +5,7 @@ import styles from './PricingCard.module.css';
 export default function PricingCard({
   className,
   title = "Annual Subscription",
-  price = "90",
-  originalPrice,
+  price = "119.99",
   period = "year",
   description = "Full access to all features. Self-hostable.",
   features = [],
@@ -22,18 +21,12 @@ export default function PricingCard({
   // Only show toggle for non-Business plans
   const isBusinessPlan = title === "Business" || title === "Business Plan";
 
-  // Calculate pricing based on toggle state
-  // New prices starting Feb 1, 2026
-  const newAnnualPrice = 120;
-  const newMonthlyPrice = 17.99;
-
-  // Current discounted prices
-  const annualPrice = 90;
-  const monthlyPrice = 14.99;
-  const monthlyEquivalent = (annualPrice / 12).toFixed(1);
+  // Pricing
+  const annualPrice = 119.99;
+  const monthlyPrice = 17.99;
+  const monthlyEquivalent = (annualPrice / 12).toFixed(2);
 
   const displayPrice = isBusinessPlan ? price : (isAnnual ? annualPrice : monthlyPrice);
-  const displayOriginalPrice = isBusinessPlan ? null : (isAnnual ? newAnnualPrice : newMonthlyPrice);
   const displayPeriod = isBusinessPlan ? period : (isAnnual ? 'year' : 'month');
 
   return (
@@ -65,16 +58,7 @@ export default function PricingCard({
 
       {price !== null && (
         <div className={styles.priceContainer}>
-          {!isBusinessPlan && (
-            <div className={styles.discountNotice}>
-              <div>Limited time discount!</div>
-              <div>Prices increase to €{displayOriginalPrice}/{displayPeriod} on Feb 1, 2026</div>
-            </div>
-          )}
           <div className={styles.mainPrice}>
-            {!isBusinessPlan && displayOriginalPrice && (
-              <span className={styles.originalPrice}>€{displayOriginalPrice}</span>
-            )}
             <span className={styles.currentPrice}>€{displayPrice}</span>/{displayPeriod}
           </div>
           {!isBusinessPlan && isAnnual && (

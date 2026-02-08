@@ -49,6 +49,14 @@
   min-width: 250px;
 }
 
+.tabIcon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  color: inherit;
+}
+
 /* Matching lovable card styling for tab buttons */
 .tabButton {
   background: hsl(0, 0%, 100%);
@@ -62,6 +70,8 @@
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* transition-all duration-300 */
   box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
 }
 
 .tabButton:hover {
