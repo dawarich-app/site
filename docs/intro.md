@@ -36,9 +36,25 @@ Dawarich is a privacy-focused location history application that gives you comple
 - [Trips](/docs/features/trips) - Create and manage trips
 - [All Features](/docs/category/features) - Explore everything Dawarich offers
 
-## iOS App
+## Mobile Apps
+
+### iOS
 
 Dawarich has a native iOS app for seamless location tracking:
 
-- [Dawarich for iOS](/docs/dawarich-for-ios) - Learn about the iOS app
+- [Dawarich for iOS](/docs/dawarich-for-ios) - Download from the App Store
 - [Shortcuts Automation](/docs/getting-started/ios-app/shortcuts-automation) - Automate tracking with iOS Shortcuts
+
+### Android
+
+Dawarich has a native Android app for seamless location tracking:
+
+- [Dawarich for Android](/docs/dawarich-for-android) - Download from Google Play
+
+You can also use third-party tracking apps:
+
+- [OwnTracks](https://owntracks.org/) - Open-source location tracker
+- [Overland](https://overland.p3k.app/) - Lightweight GPS logger
+- [GPSLogger](https://gpslogger.app/) - Configurable GPS logging app
+
+See [Track Your Location](/docs/getting-started/track-your-location) for setup instructions for each app.

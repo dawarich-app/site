@@ -54,7 +54,7 @@ Dawarich supports importing from various sources:
 
 ### OwnTracks
 
-- **OwnTracks JSON** - Export from OwnTracks mobile app
+- **OwnTracks .rec** - Export from OwnTracks mobile app (.rec format only, JSON is not supported)
 - Includes location history with metadata
 
 ### Strava
@@ -62,14 +62,10 @@ Dawarich supports importing from various sources:
 - **Strava exports** - Activity data from Strava
 - Supports both GPX and original format exports
 
-### Photos
-
-- **Photos with EXIF** - Extract GPS coordinates from photo metadata
-- Supports JPEG, PNG, and other formats with GPS data
-
 ### Immich/Photoprism
 
-- Import photos with GPS data from connected photo services
+- Import geodata from photos stored in your connected Immich or PhotoPrism instance
+- Dawarich does not accept photo uploads directly — it fetches location data from these services
 - See [Photos](/docs/features/photos) for setup
 
 ## Import Processing

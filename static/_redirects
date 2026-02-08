@@ -37,9 +37,13 @@
 # Tutorials → Tools
 /docs/tutorials/phototagger-for-dawarich /docs/tools/phototagger 301
 
-# Comparisons rename
-/docs/Dawarich%20vs%20Others/* /docs/comparisons/:splat 301
-/docs/dawarich-vs-others/* /docs/comparisons/:splat 301
+# Comparisons rename (explicit because old filenames differ from new ones)
+/docs/Dawarich%20vs%20Others/dawarich-vs-google-timeline /docs/comparisons/vs-google-timeline 301
+/docs/Dawarich%20vs%20Others/dawarich-vs-owntracks /docs/comparisons/vs-owntracks 301
+/docs/Dawarich%20vs%20Others/dawarich-vs-strava /docs/comparisons/vs-strava 301
+/docs/dawarich-vs-others/dawarich-vs-google-timeline /docs/comparisons/vs-google-timeline 301
+/docs/dawarich-vs-others/dawarich-vs-owntracks /docs/comparisons/vs-owntracks 301
+/docs/dawarich-vs-others/dawarich-vs-strava /docs/comparisons/vs-strava 301
 
 # Catch-all for old tutorials path
 /docs/tutorials /docs/getting-started 301
