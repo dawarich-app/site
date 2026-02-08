@@ -164,7 +164,7 @@ Select multiple points at once:
 
 ## Map Settings
 
-Access map settings through the gear icon. Available settings include:
+Access map settings through the **Settings** button in the top right corner of the map. Available settings include:
 
 | Setting | Description |
 |---------|-------------|
