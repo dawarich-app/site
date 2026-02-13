@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import styles from './Features.module.css';
 
 const RouteIcon = () => (
@@ -132,7 +133,7 @@ export default function Features() {
         </div>
       </div>
 
-      {modalImage && (
+      {modalImage && typeof document !== 'undefined' && createPortal(
         <div className={styles.imageModal} onClick={closeModal}>
           <button className={styles.closeButton} onClick={closeModal}>
             &times;
@@ -143,7 +144,8 @@ export default function Features() {
             className={styles.modalImage}
             onClick={(e) => e.stopPropagation()}
           />
-        </div>
+        </div>,
+        document.body
       )}
     </section>
   );

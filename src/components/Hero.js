@@ -1,4 +1,5 @@
 import React, { useState, useRef, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 import Link from '@docusaurus/Link';
 import styles from './Hero.module.css';
 
@@ -105,7 +106,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {modalOpen && (
+      {modalOpen && typeof document !== 'undefined' && createPortal(
         <div className={styles.videoModal} onClick={closeModal}>
           <button className={styles.modalClose} onClick={closeModal} aria-label="Close video">
             &times;
@@ -121,7 +122,8 @@ export default function Hero() {
               <source src="/hero-video.mp4" type="video/mp4" />
             </video>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </section>
   );
