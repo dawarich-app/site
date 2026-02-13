@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import styles from './Features.module.css';
 
 const RouteIcon = () => (
@@ -45,68 +46,58 @@ const CrosshairIcon = () => (
 
 const features = [
   {
-    id: 'trips',
-    name: 'Trips',
-    icon: <RouteIcon />,
-    content: {
-      title: 'Trip Tracking',
-      description: 'Create trips from your recorded data. Set the dates, and Dawarich builds a detailed map with distance, duration, and route — automatically.',
-      image: 'img/features-trip-details.png'
-    }
+    id: 'map',
+    icon: <TabMapIcon />,
+    title: 'Interactive Map',
+    description: 'Explore your entire location history on a full interactive map. Zoom into a single street or zoom out to see years of travel at a glance.',
+    image: 'img/the_map.png',
+    className: 'heroCard',
   },
   {
-    id: 'map',
-    name: 'Map',
-    icon: <TabMapIcon />,
-    content: {
-      title: 'Interactive Map',
-      description: 'Explore your entire location history on a full interactive map. Zoom into a single street or zoom out to see years of travel at a glance.',
-      image: 'img/the_map.png'
-    }
+    id: 'trips',
+    icon: <RouteIcon />,
+    title: 'Trip Tracking',
+    description: 'Create trips from your recorded data. Set the dates, and Dawarich builds a detailed map with distance, duration, and route — automatically.',
+    image: 'img/features-trip-details.png',
+    className: 'standardCard',
   },
   {
     id: 'stats',
-    name: 'Stats',
     icon: <BarChartIcon />,
-    content: {
-      title: 'Travel Statistics',
-      description: 'See total distance, most-visited cities and countries, active days, and monthly patterns. Share your stats publicly with a single link.',
-      image: 'img/features-stats.png'
-    }
+    title: 'Travel Statistics',
+    description: 'See total distance, most-visited cities and countries, active days, and monthly patterns. Share your stats publicly with a single link.',
+    image: 'img/features-stats.png',
+    className: 'standardCard',
   },
   {
     id: 'scratch-map',
-    name: 'Scratch Map',
     icon: <GlobeIcon />,
-    content: {
-      title: 'Scratch Map',
-      description: 'Watch countries light up as you visit them. See where you\'ve been and where you still want to go — all at a glance.',
-      image: '/img/features-scratch-map.png'
-    }
+    title: 'Scratch Map',
+    description: 'Watch countries light up as you visit them. See where you\'ve been and where you still want to go — all at a glance.',
+    image: '/img/features-scratch-map.png',
+    className: 'standardCard',
   },
   {
-    id: 'tracking',
-    name: 'Tracking',
-    icon: <CrosshairIcon />,
-    content: {
-      title: 'Background Tracking',
-      description: 'The Dawarich iOS app tracks your location silently in the background. Android users can use OwnTracks, GPSLogger, or other supported apps.',
-      image: '/img/features-map-polylines.png'
-    }
-  }
+    id: 'insights',
+    icon: <BarChartIcon />,
+    title: 'Insights',
+    description: 'Get detailed insights into your travel patterns, daily activity, and location trends. Understand your habits at a glance.',
+    image: '/img/features-insights.png',
+    className: 'wideCard',
+  },
 ];
 
 export default function Features() {
-  const [activeTab, setActiveTab] = useState('trips');
   const [modalImage, setModalImage] = useState(null);
-  const activeFeature = features.find(feature => feature.id === activeTab);
 
   const openModal = (image, title) => {
     setModalImage({ src: image, alt: title });
+    document.body.style.overflow = 'hidden';
   };
 
   const closeModal = () => {
     setModalImage(null);
+    document.body.style.overflow = '';
   };
 
   return (
@@ -117,43 +108,35 @@ export default function Features() {
           Everything you need to record, visualize, and relive your location history.
         </p>
 
-        <div className={styles.tabsContainer}>
-          <div className={styles.tabsList}>
-            {features.map((feature) => (
-              <button
-                key={feature.id}
-                className={`${styles.tabButton} ${activeTab === feature.id ? styles.active : ''}`}
-                onClick={() => setActiveTab(feature.id)}
-              >
-                <span className={styles.tabIcon}>{feature.icon}</span>
-                {feature.name}
-              </button>
-            ))}
-          </div>
-
-          <div className={styles.tabContent}>
-            <div className={styles.contentWrapper}>
-              <div className={styles.textContent}>
-                <h3 className={styles.featureTitle}>{activeFeature.content.title}</h3>
-                <p className={styles.featureDescription}>{activeFeature.content.description}</p>
-              </div>
-              <div className={styles.imageContent}>
+        <div className={styles.bentoGrid}>
+          {features.map((feature) => (
+            <div
+              key={feature.id}
+              className={`${styles.card} ${styles[feature.className]}`}
+              onClick={() => openModal(feature.image, feature.title)}
+            >
+              <div className={styles.cardImageWrapper}>
                 <img
-                  src={activeFeature.content.image}
-                  alt={activeFeature.content.title}
-                  className={styles.featureImage}
-                  onClick={() => openModal(activeFeature.content.image, activeFeature.content.title)}
+                  src={feature.image}
+                  alt={feature.title}
+                  className={styles.cardImage}
+                  loading="lazy"
                 />
               </div>
+              <div className={styles.cardOverlay}>
+                <span className={styles.cardIcon}>{feature.icon}</span>
+                <h3 className={styles.cardTitle}>{feature.title}</h3>
+                <p className={styles.cardDescription}>{feature.description}</p>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
 
-      {modalImage && (
+      {modalImage && typeof document !== 'undefined' && createPortal(
         <div className={styles.imageModal} onClick={closeModal}>
           <button className={styles.closeButton} onClick={closeModal}>
-            ×
+            &times;
           </button>
           <img
             src={modalImage.src}
@@ -161,7 +144,8 @@ export default function Features() {
             className={styles.modalImage}
             onClick={(e) => e.stopPropagation()}
           />
-        </div>
+        </div>,
+        document.body
       )}
     </section>
   );

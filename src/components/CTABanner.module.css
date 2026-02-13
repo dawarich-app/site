@@ -1,0 +1,92 @@
+.banner {
+  width: 100%;
+  background: linear-gradient(135deg, hsl(220, 25%, 12%), hsl(220, 20%, 16%));
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+[data-theme='dark'] .banner {
+  background: linear-gradient(135deg, hsl(220, 25%, 16%), hsl(220, 20%, 20%));
+}
+
+.content {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.headline {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: hsl(0, 0%, 98%);
+  margin: 0 0 2rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(0, 0%, 100%);
+  color: hsl(220, 20%, 10%);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.primaryButton:hover {
+  color: hsl(220, 20%, 10%);
+  text-decoration: none;
+  box-shadow: 0 0 24px hsl(0, 0%, 100% / 0.3), 0 0 48px hsl(217, 91%, 60% / 0.15);
+  transform: translateY(-1px);
+}
+
+.ghostButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: hsl(0, 0%, 98%);
+  border: 1px solid hsl(0, 0%, 100% / 0.3);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.ghostButton:hover {
+  color: hsl(0, 0%, 98%);
+  text-decoration: none;
+  background: hsl(0, 0%, 100% / 0.1);
+  border-color: hsl(0, 0%, 100% / 0.5);
+  box-shadow: 0 0 16px hsl(0, 0%, 100% / 0.08);
+}
+
+@media (max-width: 480px) {
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primaryButton,
+  .ghostButton {
+    width: 100%;
+    max-width: 280px;
+  }
+}

@@ -49,40 +49,48 @@ export default function PrivacySection() {
             <div className={styles.iconWrapper}>
               <LockIcon />
             </div>
-            <h3 className={styles.cardTitle}>Encrypted in Transit</h3>
-            <p className={styles.cardDescription}>
-              All data transmission uses SSL/TLS encryption to protect your information from interception during transfer.
-            </p>
+            <div>
+              <h3 className={styles.cardTitle}>Encrypted in Transit</h3>
+              <p className={styles.cardDescription}>
+                All data transmission uses SSL/TLS encryption to protect your information from interception during transfer.
+              </p>
+            </div>
           </div>
 
           <div className={styles.privacyCard}>
             <div className={styles.iconWrapper}>
               <ShieldIcon />
             </div>
-            <h3 className={styles.cardTitle}>Encrypted at Rest</h3>
-            <p className={styles.cardDescription}>
-              Your data is stored with LUKS encryption, ensuring it remains secure even at the storage level.
-            </p>
+            <div>
+              <h3 className={styles.cardTitle}>Encrypted at Rest</h3>
+              <p className={styles.cardDescription}>
+                Your data is stored with LUKS encryption, ensuring it remains secure even at the storage level.
+              </p>
+            </div>
           </div>
 
           <div className={styles.privacyCard}>
             <div className={styles.iconWrapper}>
               <ServerIcon />
             </div>
-            <h3 className={styles.cardTitle}>Based in Europe</h3>
-            <p className={styles.cardDescription}>
-              All servers are located in Europe, providing additional privacy protection under strict European data laws.
-            </p>
+            <div>
+              <h3 className={styles.cardTitle}>Based in Europe</h3>
+              <p className={styles.cardDescription}>
+                All servers are located in Europe, providing additional privacy protection under strict European data laws.
+              </p>
+            </div>
           </div>
 
           <div className={styles.privacyCard}>
             <div className={styles.iconWrapper}>
               <GDPRIcon />
             </div>
-            <h3 className={styles.cardTitle}>GDPR Compliant</h3>
-            <p className={styles.cardDescription}>
-              Fully compliant with GDPR regulations, giving you complete control over your personal data and privacy rights.
-            </p>
+            <div>
+              <h3 className={styles.cardTitle}>GDPR Compliant</h3>
+              <p className={styles.cardDescription}>
+                Fully compliant with GDPR regulations, giving you complete control over your personal data and privacy rights.
+              </p>
+            </div>
           </div>
         </div>
 

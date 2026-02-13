@@ -1,0 +1,138 @@
+.section {
+  padding: 6rem 1rem;
+  background: hsl(220, 15%, 96%);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Left Column: CTA */
+.ctaColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  font-weight: 700;
+  color: hsl(220, 15%, 15%);
+  margin: 0 0 1rem;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.75;
+  color: hsl(220, 10%, 46%);
+  margin: 0 0 2rem;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(217, 91%, 60%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.primaryButton:hover {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  box-shadow: 0 0 20px hsl(217, 91%, 60% / 0.4);
+  transform: translateY(-1px);
+}
+
+/* Right Column: Newsletter */
+.newsletterColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletterTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: hsl(220, 15%, 15%);
+  margin: 0 0 0.5rem;
+}
+
+.newsletterSubtitle {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: hsl(220, 10%, 46%);
+  margin: 0 0 1.5rem;
+}
+
+.newsletterIframe {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  border: none;
+}
+
+/* Dark mode support */
+[data-theme='dark'] .section {
+  background: hsl(220, 20%, 12%);
+}
+
+[data-theme='dark'] .title {
+  color: hsl(0, 0%, 98%);
+}
+
+[data-theme='dark'] .subtitle {
+  color: hsl(220, 10%, 60%);
+}
+
+[data-theme='dark'] .newsletterTitle {
+  color: hsl(0, 0%, 98%);
+}
+
+[data-theme='dark'] .newsletterSubtitle {
+  color: hsl(220, 10%, 60%);
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .ctaColumn {
+    align-items: center;
+    text-align: center;
+  }
+
+  .newsletterColumn {
+    align-items: center;
+    text-align: center;
+  }
+
+  .newsletterIframe {
+    max-width: 100%;
+  }
+}

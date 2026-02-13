@@ -1,154 +1,174 @@
-/* Features section - py-24 px-4 md:px-6 bg-background */
+/* ============================================
+   Features Section — Asymmetric Bento Grid
+   ============================================ */
+
 .featuresSection {
-  padding: 6rem 1rem; /* py-24 px-4 */
-  background: hsl(0, 0%, 100%); /* bg-background */
+  padding: 8rem 1rem;
+  background: hsl(0, 0%, 100%);
 }
 
 @media (min-width: 768px) {
   .featuresSection {
-    padding-left: 1.5rem; /* md:px-6 */
+    padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 }
 
 .container {
-  max-width: 1200px; /* container */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0;
 }
 
-/* text-center mb-16 space-y-4 */
+/* ------- Header ------- */
+
 .title {
   text-align: center;
-  font-size: clamp(1.875rem, 4vw, 3rem); /* text-3xl md:text-5xl */
-  font-weight: 700; /* font-bold */
+  font-size: clamp(1.875rem, 4vw, 3rem);
+  font-weight: 700;
   margin-bottom: 1rem;
   color: hsl(220, 15%, 15%);
-  letter-spacing: -0.025em; /* tracking-tight */
+  letter-spacing: -0.025em;
 }
 
 .subtitle {
   text-align: center;
-  font-size: 1.125rem; /* text-lg */
-  color: hsl(220, 10%, 46%); /* text-muted-foreground */
-  max-width: 48rem; /* max-w-2xl */
-  margin: 0 auto 4rem; /* mx-auto mb-16 */
+  font-size: 1.125rem;
+  color: hsl(220, 10%, 46%);
+  max-width: 48rem;
+  margin: 0 auto 4rem;
   line-height: 1.75;
 }
 
-.tabsContainer {
-  display: flex;
-  gap: 2rem; /* gap-8 */
-  min-height: 300px;
+/* ------- Bento Grid ------- */
+
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
-.tabsList {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem; /* gap-2 */
-  min-width: 250px;
-}
+/* ------- Card (shared) ------- */
 
-.tabIcon {
-  display: inline-flex;
-  align-items: center;
-  margin-right: 0.5rem;
-  vertical-align: middle;
-  color: inherit;
-}
-
-/* Matching lovable card styling for tab buttons */
-.tabButton {
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid hsl(220, 13%, 91% / 0.6);
   background: hsl(0, 0%, 100%);
-  border: 1px solid hsl(220, 13%, 91%); /* border border-border */
-  border-radius: 0.75rem; /* rounded-lg */
-  padding: 1rem 1.5rem;
-  text-align: left;
-  font-size: 1rem;
-  font-weight: 500;
-  color: hsl(220, 10%, 46%); /* text-muted-foreground */
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* transition-all duration-300 */
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: var(--shadow-sm);
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 
-.tabButton:hover {
-  border-color: hsl(217, 91%, 60% / 0.5); /* hover:border-primary/50 */
-  box-shadow: var(--shadow-lg); /* hover:shadow-lg */
-  color: hsl(220, 15%, 15%);
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl), 0 0 0 1px hsl(217, 91%, 60% / 0.3), 0 0 24px hsl(217, 91%, 60% / 0.1);
+  border-color: hsl(217, 91%, 60% / 0.3);
 }
 
-.tabButton.active {
-  border-color: hsl(217, 91%, 60%); /* border-primary */
-  background: hsl(217, 91%, 60% / 0.05); /* subtle primary background */
-  color: hsl(217, 91%, 50%);
-  font-weight: 600;
+/* ------- Card image ------- */
+
+.cardImageWrapper {
+  flex: 1 1 0%;
+  min-height: 0;
+  overflow: hidden;
 }
 
-.tabContent {
-  flex: 1;
-  padding: 1.5rem; /* p-6 */
-  background: hsl(0, 0%, 100%); /* bg-card */
-  border-radius: 0.75rem; /* rounded-lg */
-  box-shadow: var(--shadow); /* shadow-sm */
-  border: 1px solid hsl(220, 13%, 91%); /* border */
-  transition: all 0.3s ease;
+.cardImage {
+  display: block;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contentWrapper {
-  display: flex;
-  align-items: center;
-  gap: 2rem; /* gap-8 */
+.card:hover .cardImage {
+  transform: scale(1.04);
 }
 
-.textContent {
-  flex: 1;
+/* ------- Card overlay ------- */
+
+.cardOverlay {
+  padding: 1.25rem 1.5rem;
+  background: hsl(0, 0%, 100%);
+  border-top: 1px solid hsl(220, 13%, 91% / 0.6);
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* space-y-4 */
+  gap: 0.25rem;
 }
 
-.featureTitle {
-  font-size: 1.5rem; /* text-2xl */
-  font-weight: 600; /* font-semibold */
+.cardIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(190, 90%, 50%));
+  color: #fff;
+  margin-bottom: 0.25rem;
+  flex-shrink: 0;
+  box-shadow: 0 0 12px hsl(217, 91%, 60% / 0.3);
+}
+
+.cardTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
   color: hsl(220, 15%, 15%);
   margin: 0;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.01em;
 }
 
-.featureDescription {
-  font-size: 1rem;
-  line-height: 1.75; /* leading-relaxed */
-  color: hsl(220, 10%, 46%); /* text-muted-foreground */
+.cardDescription {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: hsl(220, 10%, 46%);
   margin: 0;
 }
 
-.imageContent {
-  flex: 0 0 300px;
+/* ------- Grid placement variants ------- */
+
+/* Hero: Interactive Map — spans 2 cols, 2 rows */
+.heroCard {
+  grid-column: span 2;
+  grid-row: span 2;
+  min-height: 480px;
 }
 
-.featureImage {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 0.75rem; /* rounded-lg */
-  background: hsl(220, 15%, 98%);
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid hsl(220, 13%, 91%);
-  box-shadow: var(--shadow-md);
+.heroCard .cardImageWrapper {
+  /* Fill most of the tall hero card */
 }
 
-.featureImage:hover {
-  transform: scale(1.05);
-  box-shadow: var(--shadow-xl);
-  border-color: hsl(217, 91%, 60% / 0.5);
+.heroCard .cardOverlay {
+  padding: 1.5rem 1.75rem;
 }
 
-/* Modal styling - matching lovable */
+.heroCard .cardTitle {
+  font-size: 1.2rem;
+}
+
+.heroCard .cardDescription {
+  font-size: 0.925rem;
+}
+
+/* Standard single cards: Trip Tracking, Travel Statistics, Scratch Map */
+.standardCard {
+  min-height: 220px;
+}
+
+/* Wide card: Background Tracking — spans 2 cols */
+.wideCard {
+  grid-column: span 2;
+  min-height: 240px;
+}
+
+/* ------- Modal ------- */
+
 .imageModal {
   position: fixed;
   top: 0;
@@ -166,12 +186,12 @@
 }
 
 .modalImage {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 90vw;
+  max-height: 90vh;
   object-fit: contain;
   border-radius: 0.75rem;
   box-shadow: var(--shadow-2xl);
-  animation: slide-up 0.3s ease-out;
+  animation: modalZoomIn 0.3s ease-out;
 }
 
 .closeButton {
@@ -180,7 +200,7 @@
   right: 1.5rem;
   background: rgba(255, 255, 255, 0.95);
   border: none;
-  border-radius: 9999px; /* rounded-full */
+  border-radius: 9999px;
   width: 3rem;
   height: 3rem;
   font-size: 1.5rem;
@@ -200,7 +220,10 @@
   box-shadow: var(--shadow-lg);
 }
 
-/* Dark mode support */
+/* ============================================
+   Dark Mode
+   ============================================ */
+
 [data-theme='dark'] .featuresSection {
   background: hsl(220, 20%, 10%);
 }
@@ -213,39 +236,27 @@
   color: hsl(220, 10%, 60%);
 }
 
-[data-theme='dark'] .tabButton {
+[data-theme='dark'] .card {
   background: hsl(220, 20%, 12%);
-  border-color: hsl(220, 20%, 20%);
-  color: hsl(220, 10%, 60%);
+  border-color: hsl(220, 20%, 20% / 0.6);
 }
 
-[data-theme='dark'] .tabButton:hover {
-  border-color: hsl(217, 91%, 60% / 0.5);
+[data-theme='dark'] .card:hover {
+  box-shadow: var(--shadow-xl), 0 0 0 1px hsl(217, 91%, 60% / 0.3), 0 0 30px hsl(217, 91%, 60% / 0.12);
+  border-color: hsl(217, 91%, 60% / 0.3);
+}
+
+[data-theme='dark'] .cardOverlay {
+  background: hsl(220, 20%, 12%);
+  border-top-color: hsl(220, 20%, 20% / 0.6);
+}
+
+[data-theme='dark'] .cardTitle {
   color: hsl(0, 0%, 98%);
 }
 
-[data-theme='dark'] .tabButton.active {
-  border-color: hsl(217, 91%, 60%);
-  background: hsl(217, 91%, 60% / 0.1);
-  color: hsl(217, 91%, 70%);
-}
-
-[data-theme='dark'] .tabContent {
-  background: hsl(220, 20%, 12%);
-  border-color: hsl(220, 20%, 20%);
-}
-
-[data-theme='dark'] .featureTitle {
-  color: hsl(0, 0%, 98%);
-}
-
-[data-theme='dark'] .featureDescription {
+[data-theme='dark'] .cardDescription {
   color: hsl(220, 10%, 60%);
-}
-
-[data-theme='dark'] .featureImage {
-  background: hsl(220, 20%, 18%);
-  border-color: hsl(220, 20%, 20%);
 }
 
 [data-theme='dark'] .closeButton {
@@ -257,41 +268,44 @@
   background: hsl(220, 20%, 12%);
 }
 
-/* Responsive styles - matching lovable breakpoints */
+/* ============================================
+   Responsive
+   ============================================ */
+
+/* Tablet: 2-column grid */
 @media (max-width: 992px) {
-  .tabsContainer {
-    flex-direction: column;
-    gap: 1.5rem;
+  .featuresSection {
+    padding: 6rem 1rem;
   }
 
-  .tabsList {
-    flex-direction: row;
-    min-width: auto;
-    overflow-x: auto;
-    gap: 0.5rem;
-    padding-bottom: 0.5rem;
+  .bentoGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .tabButton {
-    white-space: nowrap;
-    min-width: 140px;
+  /* Hero card stays 2 cols but only 1 row on tablet */
+  .heroCard {
+    grid-column: span 2;
+    grid-row: span 1;
+    min-height: 320px;
   }
 
-  .contentWrapper {
-    flex-direction: column;
-    text-align: center;
+  /* Standard cards become 1 col each */
+  .standardCard {
+    grid-column: span 1;
+    min-height: 200px;
   }
 
-  .imageContent {
-    flex: none;
-    width: 100%;
-    max-width: 400px;
+  /* Wide card stays 2 cols */
+  .wideCard {
+    grid-column: span 2;
+    min-height: 200px;
   }
 }
 
+/* Mobile: single column */
 @media (max-width: 640px) {
   .featuresSection {
-    padding: 3rem 1rem;
+    padding: 4rem 1rem;
   }
 
   .title {
@@ -300,28 +314,24 @@
 
   .subtitle {
     font-size: 1rem;
+    margin-bottom: 2.5rem;
   }
 
-  .tabButton {
-    min-width: 120px;
-    padding: 0.75rem 1rem;
-    font-size: 0.875rem;
+  .bentoGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  .tabContent {
-    padding: 1.5rem;
+  .heroCard,
+  .standardCard,
+  .wideCard {
+    grid-column: span 1;
+    grid-row: span 1;
+    min-height: 200px;
   }
 
-  .featureTitle {
-    font-size: 1.25rem;
-  }
-
-  .imageContent {
-    max-width: 100%;
-  }
-
-  .featureImage {
-    height: 180px;
+  .cardOverlay {
+    padding: 1rem 1.25rem;
   }
 
   .closeButton {
@@ -333,7 +343,10 @@
   }
 }
 
-/* Animations - matching lovable */
+/* ============================================
+   Animations
+   ============================================ */
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -351,5 +364,16 @@
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes modalZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

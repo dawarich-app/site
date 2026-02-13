@@ -6,7 +6,7 @@ title: Credits
 
 ## Icons and Illustrations
 
-We use icons from [Lucide (https://lucide.dev/)](https://lucide.dev/).
+We use icons from [Lucide](https://lucide.dev/).
 
 Stats page feature illustrations from Unsplash:
 - <a href="https://unsplash.com/@polarmermaid?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Anne Nygård</a> on <a href="https://unsplash.com/photos/snow-covered-field-and-trees-during-daytime-VwzfdVT6_9s?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>

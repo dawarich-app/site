@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './SocialProof.module.css';
 
 const StarIcon = () => (
@@ -31,25 +31,142 @@ const MapPinIcon = () => (
   </svg>
 );
 
+function easeOutCubic(t) {
+  return 1 - Math.pow(1 - t, 3);
+}
+
+function formatNumber(num) {
+  if (num >= 1_000_000_000) {
+    const val = num / 1_000_000_000;
+    return val % 1 === 0 ? `${val}B` : `${val.toFixed(1)}B`;
+  }
+  if (num >= 1_000_000) {
+    const val = num / 1_000_000;
+    return val % 1 === 0 ? `${val}M` : `${val.toFixed(1)}M`;
+  }
+  return num.toLocaleString('en-US');
+}
+
 const metrics = [
-  { value: '7,900+', label: 'GitHub Stars', icon: <StarIcon /> },
-  { value: '1M+', label: 'Docker Pulls', icon: <DownloadIcon /> },
-  { value: '2,000+', label: 'Users', icon: <PeopleIcon /> },
-  { value: '1B+', label: 'Points Tracked', icon: <MapPinIcon /> },
+  { target: 7900, suffix: '+', label: 'GitHub Stars', icon: <StarIcon /> },
+  { target: 1_000_000, suffix: '+', label: 'Docker Pulls', icon: <DownloadIcon /> },
+  { target: 2000, suffix: '+', label: 'Users', icon: <PeopleIcon /> },
+  { target: 1_000_000_000, suffix: '+', label: 'Points Tracked', icon: <MapPinIcon /> },
 ];
 
-export default function SocialProof() {
+const integrations = [
+  'Google Takeout',
+  'OwnTracks',
+  'Immich',
+  'PhotoPrism',
+  'GPSLogger',
+];
+
+function useCountUp(target, duration, shouldStart) {
+  const [display, setDisplay] = useState('0');
+  const rafRef = useRef(null);
+
+  useEffect(() => {
+    if (!shouldStart) return;
+
+    const startTime = performance.now();
+
+    function animate(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easedProgress = easeOutCubic(progress);
+      const currentValue = Math.round(easedProgress * target);
+
+      setDisplay(formatNumber(currentValue));
+
+      if (progress < 1) {
+        rafRef.current = requestAnimationFrame(animate);
+      }
+    }
+
+    rafRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+      }
+    };
+  }, [target, duration, shouldStart]);
+
+  return display;
+}
+
+function AnimatedMetric({ target, suffix, label, icon }) {
+  const display = useCountUp(target, 2000, true);
+
   return (
-    <section className={styles.socialProof}>
+    <div className={styles.metric}>
+      <div className={styles.icon}>{icon}</div>
+      <div className={styles.value}>
+        {display}{suffix}
+      </div>
+      <div className={styles.label}>{label}</div>
+    </div>
+  );
+}
+
+export default function SocialProof() {
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const node = sectionRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(node);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(node);
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section ref={sectionRef} className={styles.socialProof}>
       <div className={styles.container}>
         <div className={styles.grid}>
           {metrics.map((metric, index) => (
-            <div key={index} className={styles.metric}>
-              <div className={styles.icon}>{metric.icon}</div>
-              <div className={styles.value}>{metric.value}</div>
-              <div className={styles.label}>{metric.label}</div>
-            </div>
+            isVisible ? (
+              <AnimatedMetric
+                key={index}
+                target={metric.target}
+                suffix={metric.suffix}
+                label={metric.label}
+                icon={metric.icon}
+              />
+            ) : (
+              <div key={index} className={styles.metric}>
+                <div className={styles.icon}>{metric.icon}</div>
+                <div className={styles.value}>0{metric.suffix}</div>
+                <div className={styles.label}>{metric.label}</div>
+              </div>
+            )
           ))}
+        </div>
+
+        <div className={styles.divider} />
+
+        <div className={styles.integrations}>
+          <span className={styles.integrationsLabel}>Works with</span>
+          <div className={styles.integrationsList}>
+            {integrations.map((name) => (
+              <span key={name} className={styles.integrationPill}>
+                {name}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

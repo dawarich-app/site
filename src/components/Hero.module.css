@@ -1,4 +1,4 @@
-/* Hero section - matching lovable exactly */
+/* Hero section */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -7,10 +7,10 @@
   justify-content: center;
   overflow: hidden;
   background: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(220, 15%, 96%));
-  padding: 5rem 1rem; /* py-20 px-4 */
+  padding: 5rem 1rem;
 }
 
-/* Grid pattern overlay - matching lovable */
+/* Grid pattern overlay */
 .hero::before {
   content: '';
   position: absolute;
@@ -18,8 +18,63 @@
   background-image: linear-gradient(hsl(220, 13%, 91%) 1px, transparent 1px),
     linear-gradient(90deg, hsl(220, 13%, 91%) 1px, transparent 1px);
   background-size: 50px 50px;
-  opacity: 0.05;
+  opacity: 0.08;
   pointer-events: none;
+}
+
+/* Mesh gradient blobs */
+.meshBlob1 {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, hsl(217, 91%, 60% / 0.08) 0%, transparent 70%);
+  animation: meshFloat1 18s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.meshBlob2 {
+  position: absolute;
+  bottom: 20%;
+  right: 10%;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, hsl(190, 90%, 50% / 0.06) 0%, transparent 70%);
+  animation: meshFloat2 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.meshBlob3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, hsl(217, 91%, 60% / 0.04) 0%, transparent 70%);
+  animation: meshFloat3 15s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes meshFloat1 {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(30px, -20px); }
+  66% { transform: translate(-20px, 15px); }
+}
+
+@keyframes meshFloat2 {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(-25px, 20px); }
+  66% { transform: translate(15px, -30px); }
+}
+
+@keyframes meshFloat3 {
+  0%, 100% { transform: translate(-50%, -50%); }
+  33% { transform: translate(calc(-50% + 20px), calc(-50% - 25px)); }
+  66% { transform: translate(calc(-50% - 15px), calc(-50% + 20px)); }
 }
 
 .container {
@@ -28,12 +83,31 @@
   padding: 0 1.5rem;
   position: relative;
   z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.textColumn {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 2rem;
-  animation: fade-in 0.6s ease-out;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Staggered entrance for each child */
+.textColumn > * {
+  animation: staggerFadeIn 0.6s ease-out both;
+}
+
+.imageColumn {
+  perspective: 1200px;
+  animation: slide-in-right 0.8s ease-out 0.3s both;
+  z-index: 1;
 }
 
 /* Badge */
@@ -45,6 +119,7 @@
   border-radius: 9999px;
   background: hsl(217, 91%, 60% / 0.1);
   border: 1px solid hsl(217, 91%, 60% / 0.2);
+  box-shadow: 0 0 16px hsl(217, 91%, 60% / 0.12);
 }
 
 .badge svg {
@@ -63,19 +138,20 @@
   color: hsl(220, 15%, 15%);
   margin: 0;
   line-height: 1.2;
-  max-width: 56rem;
   letter-spacing: -0.025em;
 }
 
 .highlight {
-  color: hsl(217, 91%, 60%);
+  background: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(190, 90%, 50%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .subtitle {
   font-size: clamp(1.125rem, 2vw, 1.25rem);
   line-height: 1.75;
   color: hsl(220, 10%, 46%);
-  max-width: 48rem;
   margin: 0;
 }
 
@@ -85,20 +161,22 @@
   margin: 0;
 }
 
-/* Hero image wrapper */
-.heroImageWrapper {
-  margin-top: 4rem;
-  max-width: 72rem;
-  width: 100%;
-  animation: slide-up 0.8s ease-out 0.2s both;
-}
-
 .heroImageContainer {
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: var(--shadow-2xl);
   border: 1px solid hsl(220, 13%, 91%);
+  transform: rotateY(8deg) rotateX(4deg) scale(1.5);
+  transition: transform 0.4s ease;
+}
+
+.imageFadeOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, hsl(220, 15%, 96%) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 2;
 }
 
 .heroImageContainer::after {
@@ -115,17 +193,123 @@
   display: block;
 }
 
+.heroVideo {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Play button overlay */
+.heroImageContainer {
+  cursor: pointer;
+}
+
+.playButton {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.playButton::before {
+  content: '';
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: hsl(217, 91%, 60% / 0.85);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 24px hsl(217, 91%, 60% / 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.heroImageContainer:hover .playButton {
+  opacity: 1;
+}
+
+.heroImageContainer:hover .playButton::before {
+  transform: scale(1.08);
+  box-shadow: 0 0 32px hsl(217, 91%, 60% / 0.5);
+}
+
+.playButton svg {
+  position: relative;
+  z-index: 1;
+  margin-left: 4px;
+}
+
+/* Video modal */
+.videoModal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(0, 0%, 0% / 0.85);
+  backdrop-filter: blur(8px);
+  animation: modalFadeIn 0.2s ease-out;
+}
+
+.modalContent {
+  width: 90vw;
+  max-width: 1200px;
+  max-height: 90vh;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 60px hsl(0, 0%, 0% / 0.5);
+  display: flex;
+  align-items: center;
+}
+
+.modalVideo {
+  width: 100%;
+  max-height: 90vh;
+  display: block;
+  object-fit: contain;
+}
+
+.modalClose {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.5rem;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  z-index: 10000;
+}
+
+.modalClose:hover {
+  opacity: 1;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* gap-4 */
+  gap: 1rem;
   width: 100%;
   margin: 0;
 }
 
 @media (min-width: 640px) {
   .buttons {
-    flex-direction: row; /* sm:flex-row */
+    flex-direction: row;
     width: auto;
   }
 }
@@ -135,15 +319,15 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.5rem; /* size-lg - px-6 py-3 */
+  padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   font-size: 1rem;
   font-weight: 500;
   color: white;
-  background-color: hsl(217, 91%, 60%); /* bg-primary */
+  background-color: hsl(217, 91%, 60%);
   text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* transition-all duration-300 */
-  box-shadow: var(--shadow-lg); /* shadow-lg */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-lg);
   border: none;
   cursor: pointer;
   min-width: 160px;
@@ -153,10 +337,10 @@
 
 .primaryButton:hover,
 .earlyAccessButton:hover {
-  background-color: hsl(217, 91%, 50%); /* hover:bg-primary-dark */
+  background-color: hsl(217, 91%, 50%);
   color: white;
   text-decoration: none;
-  box-shadow: var(--shadow-xl); /* hover:shadow-xl */
+  box-shadow: 0 0 28px hsl(217, 91%, 60% / 0.4), 0 0 56px hsl(217, 91%, 60% / 0.15), var(--shadow-xl);
 }
 
 .arrow {
@@ -173,13 +357,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.5rem; /* size-lg */
+  padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   font-size: 1rem;
   font-weight: 500;
   color: hsl(220, 15%, 15%);
   background-color: transparent;
-  border: 2px solid hsl(220, 13%, 91%); /* border-2 */
+  border: 2px solid hsl(220, 13%, 91%);
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
@@ -193,7 +377,7 @@
   text-decoration: none;
 }
 
-/* Dark mode support - matching lovable */
+/* Dark mode support */
 [data-theme='dark'] .hero {
   background: linear-gradient(to bottom, hsl(220, 20%, 10%), hsl(220, 20%, 12%));
 }
@@ -201,6 +385,18 @@
 [data-theme='dark'] .hero::before {
   background-image: linear-gradient(hsl(220, 20%, 20%) 1px, transparent 1px),
     linear-gradient(90deg, hsl(220, 20%, 20%) 1px, transparent 1px);
+}
+
+[data-theme='dark'] .meshBlob1 {
+  background: radial-gradient(circle, hsl(217, 91%, 60% / 0.06) 0%, transparent 70%);
+}
+
+[data-theme='dark'] .meshBlob2 {
+  background: radial-gradient(circle, hsl(190, 90%, 50% / 0.04) 0%, transparent 70%);
+}
+
+[data-theme='dark'] .meshBlob3 {
+  background: radial-gradient(circle, hsl(217, 91%, 60% / 0.03) 0%, transparent 70%);
 }
 
 [data-theme='dark'] .badge {
@@ -218,10 +414,6 @@
 
 [data-theme='dark'] .title {
   color: hsl(0, 0%, 98%);
-}
-
-[data-theme='dark'] .highlight {
-  color: hsl(217, 91%, 60%);
 }
 
 [data-theme='dark'] .subtitle {
@@ -251,15 +443,40 @@
   background: linear-gradient(to top, hsl(220, 20%, 10% / 0.2), transparent);
 }
 
-/* Responsive - matching lovable media queries */
+[data-theme='dark'] .imageFadeOverlay {
+  background: linear-gradient(to right, hsl(220, 20%, 12%) 0%, transparent 40%);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .hero {
     min-height: auto;
     padding: 3.5rem 1rem;
   }
 
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .textColumn {
+    align-items: center;
+    text-align: center;
+  }
+
+  .imageColumn {
+    perspective: none;
+  }
+
+  .heroImageContainer {
+    transform: none;
+  }
+
+  .imageFadeOverlay {
+    display: none;
+  }
+
   .title {
-    font-size: 2.25rem; /* text-4xl on mobile */
+    font-size: 2.25rem;
   }
 
   .subtitle {
@@ -275,13 +492,20 @@
   .earlyAccessButton {
     width: 100%;
   }
+
+  .meshBlob1,
+  .meshBlob2,
+  .meshBlob3 {
+    width: 300px;
+    height: 300px;
+  }
 }
 
-/* Animations - matching lovable */
-@keyframes fade-in {
+/* Animations */
+@keyframes staggerFadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
@@ -289,13 +513,13 @@
   }
 }
 
-@keyframes slide-up {
+@keyframes slide-in-right {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateX(40px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
