@@ -1,6 +1,8 @@
+/* Privacy section - dark background treatment for visual contrast */
 .privacySection {
-  padding: 6rem 1rem;
-  background: hsl(0, 0%, 100%);
+  padding: 8rem 1rem;
+  background: linear-gradient(to bottom, hsl(220, 25%, 12%), hsl(220, 20%, 14%));
+  color: hsl(0, 0%, 98%);
 }
 
 .container {
@@ -13,7 +15,7 @@
   font-size: clamp(1.875rem, 4vw, 3rem);
   font-weight: 700;
   text-align: center;
-  color: hsl(220, 15%, 15%);
+  color: hsl(0, 0%, 98%);
   margin: 0 0 1rem;
   letter-spacing: -0.025em;
 }
@@ -22,7 +24,7 @@
   font-size: clamp(1rem, 2vw, 1.25rem);
   line-height: 1.75;
   text-align: center;
-  color: hsl(220, 10%, 46%);
+  color: hsl(220, 15%, 65%);
   max-width: 48rem;
   margin: 0 auto 4rem;
 }
@@ -40,44 +42,40 @@
   gap: 1rem;
   padding: 1.5rem;
   border-radius: 1rem;
-  border: 1px solid hsl(220, 13%, 91%);
-  background: hsl(0, 0%, 100%);
+  border: 1px solid hsl(220, 20%, 22%);
+  background: hsl(220, 20%, 16%);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .privacyCard:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px hsl(220 15% 15% / 0.1);
-  border-color: hsl(217, 91%, 60% / 0.5);
+  box-shadow: 0 10px 30px hsl(220, 30%, 5% / 0.4);
+  border-color: hsl(217, 91%, 60% / 0.4);
 }
 
 .iconWrapper {
   width: 48px;
   height: 48px;
   flex-shrink: 0;
-  background: linear-gradient(135deg, hsl(217, 91%, 60% / 0.1) 0%, hsl(217, 91%, 60% / 0.05) 100%);
+  background: linear-gradient(135deg, hsl(217, 91%, 60% / 0.25) 0%, hsl(190, 90%, 50% / 0.15) 100%);
   border-radius: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: hsl(217, 91%, 60%);
-}
-
-.privacyCard > div:last-child {
-  flex: 1;
+  color: hsl(217, 91%, 70%);
 }
 
 .cardTitle {
   font-size: 1.125rem;
   font-weight: 600;
-  color: hsl(220, 15%, 15%);
+  color: hsl(0, 0%, 98%);
   margin: 0 0 0.5rem;
 }
 
 .cardDescription {
   font-size: 0.9375rem;
   line-height: 1.75;
-  color: hsl(220, 10%, 46%);
+  color: hsl(220, 15%, 60%);
   margin: 0;
 }
 
@@ -91,57 +89,36 @@
   align-items: center;
   font-size: 1rem;
   font-weight: 500;
-  color: hsl(217, 91%, 60%);
+  color: hsl(217, 91%, 70%);
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .policyLink:hover {
-  color: hsl(217, 91%, 50%);
+  color: hsl(217, 91%, 80%);
   transform: translateX(4px);
 }
 
-/* Dark mode support */
+/* Dark mode - slightly lighter treatment since page is already dark */
 [data-theme='dark'] .privacySection {
-  background: hsl(220, 20%, 10%);
-}
-
-[data-theme='dark'] .title {
-  color: hsl(0, 0%, 98%);
-}
-
-[data-theme='dark'] .subtitle {
-  color: hsl(220, 10%, 60%);
+  background: linear-gradient(to bottom, hsl(220, 25%, 8%), hsl(220, 20%, 10%));
 }
 
 [data-theme='dark'] .privacyCard {
   background: hsl(220, 20%, 12%);
-  border-color: hsl(220, 20%, 20%);
+  border-color: hsl(220, 20%, 18%);
 }
 
 [data-theme='dark'] .privacyCard:hover {
-  border-color: hsl(217, 91%, 60% / 0.5);
+  border-color: hsl(217, 91%, 60% / 0.4);
 }
 
-[data-theme='dark'] .iconWrapper {
-  background: linear-gradient(135deg, hsl(217, 91%, 60% / 0.2) 0%, hsl(217, 91%, 60% / 0.1) 100%);
-  color: hsl(217, 91%, 70%);
-}
-
-[data-theme='dark'] .cardTitle {
-  color: hsl(0, 0%, 98%);
+[data-theme='dark'] .subtitle {
+  color: hsl(220, 15%, 55%);
 }
 
 [data-theme='dark'] .cardDescription {
-  color: hsl(220, 10%, 60%);
-}
-
-[data-theme='dark'] .policyLink {
-  color: hsl(217, 91%, 70%);
-}
-
-[data-theme='dark'] .policyLink:hover {
-  color: hsl(217, 91%, 80%);
+  color: hsl(220, 15%, 55%);
 }
 
 /* Responsive styles */
@@ -154,7 +131,7 @@
 
 @media (max-width: 640px) {
   .privacySection {
-    padding: 3rem 1rem;
+    padding: 4rem 1rem;
   }
 
   .title {

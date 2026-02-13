@@ -11,56 +11,36 @@ export default function PricingSection() {
 
         <h2 className={styles.title}>Start Tracking Your Journey</h2>
 
-        {/* <p className={styles.subtitle}>
+        <p className={styles.subtitle}>
           One straightforward annual subscription with everything you need.
-        </p> */}
+        </p>
 
         <div className={styles.cardContainer}>
-          <PricingCard
-            className={styles.featuredCard}
-            title="Dawarich Cloud"
-            price="119.99"
-            period="year"
-            description="Let us handle the hosting for you."
-            features={[
-              "Interactive maps and visualizations",
-              "10 millions points included",
-              "Comprehensive travel statistics",
-              "Official mobile app for iOS",
-              "Automatic updates and maintenance",
-              "Automatic backups"
-            ]}
-            highlightedFeatures={[
-              "Automatic updates and maintenance",
-              "Automatic backups"
-            ]}
-            buttonText="Try 7 Days for Free"
-            buttonLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=pricing&utm_campaign=try7days"
-            trialText="No credit card required"
-          />
-          <PricingCard
-            title="Business"
-            price={null}
-            description="Custom solutions for large teams and organizations."
-            features={[
-              "Everything in Dawarich Cloud",
-              "Custom data limits",
-              "Custom integrations",
-              "Custom deployment options",
-              "Priority support",
-              "SLA guarantees",
-              "Custom features"
-            ]}
-            highlightedFeatures={[
-              "Custom deployment options",
-              "Priority support",
-              "SLA guarantees",
-              "Custom features"
-            ]}
-            buttonText="Drop us a line"
-            buttonLink="mailto:hi@dawarich.app"
-            trialText="Let's discuss your requirements"
-          />
+          <div className={styles.featuredCardWrapper}>
+            {/* <div className={styles.popularBadge}></div> */}
+            <PricingCard
+              className={styles.featuredCard}
+              title="Dawarich Cloud"
+              price="119.99"
+              period="year"
+              description="Let us handle the hosting for you."
+              features={[
+                "Interactive maps and visualizations",
+                "10 millions points included",
+                "Comprehensive travel statistics",
+                "Official mobile app for iOS and Android",
+                "Automatic updates and maintenance",
+                "Automatic backups"
+              ]}
+              highlightedFeatures={[
+                "Automatic updates and maintenance",
+                "Automatic backups"
+              ]}
+              buttonText="Try 7 Days for Free"
+              buttonLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=pricing&utm_campaign=try7days"
+              trialText="No credit card required"
+            />
+          </div>
         </div>
       </div>
 

@@ -2,11 +2,9 @@
   background-color: #fff;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  padding: 40px 30px;
-  width: 100%;
+  padding: 48px 36px;
+  width: 400px;
   flex: 1;
-  min-width: 250px;
-  max-width: 350px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -14,17 +12,6 @@
   flex-direction: column;
 }
 
-/* Blue accent line at the top */
-.pricingCard::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: #3b82f6;
-  border-radius: 4px 4px 0 0;
-}
 
 .title {
   font-size: 24px;
@@ -216,6 +203,7 @@
   background-color: #2563eb;
   color: white;
   text-decoration: none;
+  box-shadow: 0 0 20px hsl(217, 91%, 60% / 0.3);
 }
 
 .trialText {
@@ -302,16 +290,9 @@
   background-color: rgba(255, 255, 0, 0.1);
 }
 
-@media (max-width: 992px) {
-  .pricingCard {
-    max-width: 400px;
-    margin-bottom: 20px;
-  }
-}
-
 @media (max-width: 768px) {
   .pricingCard {
-    max-width: 100%;
+    width: 100%;
   }
 
   .mainPrice {

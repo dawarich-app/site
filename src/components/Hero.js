@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import Link from '@docusaurus/Link';
 import styles from './Hero.module.css';
 
@@ -17,55 +17,112 @@ const ArrowRightIcon = () => (
   </svg>
 );
 
+const PlayIcon = () => (
+  <svg width="48" height="48" viewBox="0 0 24 24" fill="white" stroke="none">
+    <polygon points="5 3 19 12 5 21 5 3"/>
+  </svg>
+);
+
 export default function Hero() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const modalVideoRef = useRef(null);
+
   const scrollToFeatures = () => {
     document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const openModal = useCallback(() => {
+    setModalOpen(true);
+    document.body.style.overflow = 'hidden';
+  }, []);
+
+  const closeModal = useCallback(() => {
+    setModalOpen(false);
+    document.body.style.overflow = '';
+    if (modalVideoRef.current) {
+      modalVideoRef.current.pause();
+    }
+  }, []);
+
   return (
     <section className={styles.hero}>
+      {/* Mesh gradient blobs */}
+      <div className={styles.meshBlob1} />
+      <div className={styles.meshBlob2} />
+      <div className={styles.meshBlob3} />
+
       <div className={styles.container}>
-        <div className={styles.badge}>
-          <MapPinIcon />
-          <span>Open-Source Location History Platform</span>
+        <div className={styles.textColumn}>
+          <div className={styles.badge} style={{ animationDelay: '0s' }}>
+            <MapPinIcon />
+            <span>Open-Source Location History Platform</span>
+          </div>
+
+          <h1 className={styles.title} style={{ animationDelay: '0.1s' }}>
+            Your Life, <span className={styles.highlight}>Mapped</span> Automatically
+          </h1>
+
+          <p className={styles.subtitle} style={{ animationDelay: '0.2s' }}>
+            Dawarich automatically records where you go and turns your location history into beautiful maps, trips, and stats — all on your own terms, with no data shared with anyone.
+          </p>
+
+          <div className={styles.buttons} style={{ animationDelay: '0.3s' }}>
+            <Link
+              className={styles.primaryButton}
+              href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=hero&utm_campaign=hero">
+              Try 7 Days for Free
+              <span className={styles.arrow}>
+                <ArrowRightIcon />
+              </span>
+            </Link>
+            <button
+              className={styles.secondaryButton}
+              onClick={scrollToFeatures}>
+              Explore Features
+            </button>
+          </div>
+
+          <p className={styles.noCredit} style={{ animationDelay: '0.4s' }}>No credit card required</p>
         </div>
 
-        <h1 className={styles.title}>
-          Your Life, <span className={styles.highlight}>Mapped</span> Automatically
-        </h1>
-
-        <p className={styles.subtitle}>
-          Dawarich automatically records where you go and turns your location history into beautiful maps, trips, and stats — all on your own terms, with no data shared with anyone.
-        </p>
-
-        <div className={styles.buttons}>
-          <Link
-            className={styles.primaryButton}
-            href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=hero&utm_campaign=hero">
-            Try 7 Days for Free
-            <span className={styles.arrow}>
-              <ArrowRightIcon />
-            </span>
-          </Link>
-          <button
-            className={styles.secondaryButton}
-            onClick={scrollToFeatures}>
-            Explore Features
-          </button>
-        </div>
-
-        <p className={styles.noCredit}>No credit card required</p>
-
-        <div className={styles.heroImageWrapper}>
-          <div className={styles.heroImageContainer}>
-            <img
-              src="/img/the_map.png"
-              alt="Dawarich map interface showing location tracking"
-              className={styles.heroImage}
-            />
+        <div className={styles.imageColumn}>
+          <div className={styles.heroImageContainer} onClick={openModal} role="button" tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && openModal()}>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className={styles.heroVideo}
+              poster="/img/the_map.png"
+            >
+              <source src="/hero-video.mp4" type="video/mp4" />
+            </video>
+            <div className={styles.imageFadeOverlay} />
+            <div className={styles.playButton}>
+              <PlayIcon />
+            </div>
           </div>
         </div>
       </div>
+
+      {modalOpen && (
+        <div className={styles.videoModal} onClick={closeModal}>
+          <button className={styles.modalClose} onClick={closeModal} aria-label="Close video">
+            &times;
+          </button>
+          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            <video
+              ref={modalVideoRef}
+              autoPlay
+              controls
+              playsInline
+              className={styles.modalVideo}
+            >
+              <source src="/hero-video.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

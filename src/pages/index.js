@@ -7,9 +7,11 @@ import Hero from '@site/src/components/Hero';
 import SocialProof from '@site/src/components/SocialProof';
 import HowItWorks from '@site/src/components/HowItWorks';
 import Features from '@site/src/components/Features';
-import UseCases from '@site/src/components/UseCases';
+import CTABanner from '@site/src/components/CTABanner';
 import PricingSection from '@site/src/components/PricingSection';
 import PrivacySection from '@site/src/components/PrivacySection';
+import FAQ from '@site/src/components/FAQ';
+import FinalCTA from '@site/src/components/FinalCTA';
 
 const MapPinSvg = () => (
   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -38,7 +40,7 @@ const howItWorksSteps = [
   {
     icon: <MapPinSvg />,
     title: 'Track',
-    description: 'Use the Dawarich iOS app, OwnTracks, GPSLogger, or any compatible tracker. Or import years of history from Google Timeline.',
+    description: <>Use Dawarich app for <a href="https://apps.apple.com/app/apple-store/id6739544999?pt=128010810&ct=landing-howit&mt=8" target="_blank" rel="noopener noreferrer">iOS</a> or <a href="https://play.google.com/store/apps/details?id=com.zeitflow.dawarich" target="_blank" rel="noopener noreferrer">Android</a>, OwnTracks, GPSLogger, or any compatible tracker. Or import years of history from Google Timeline.</>,
   },
   {
     icon: <MapSvg />,
@@ -48,7 +50,7 @@ const howItWorksSteps = [
   {
     icon: <LightbulbSvg />,
     title: 'Remember',
-    description: 'Get stats on distance, cities, and time. Geotag photos with Immich or PhotoPrism. Share your year in review.',
+    description: 'Get stats on distance, cities, and time. Relive your travels with photos, notes, and memories attached to each place. Get insights on your travel habits and patterns.',
   },
 ];
 
@@ -113,9 +115,11 @@ export default function Home() {
             horizontal
           />,
           <Features key="features" />,
+          <CTABanner key="cta" />,
           <PrivacySection key="privacy" />,
-          <UseCases key="usecases" />,
           <PricingSection key="pricing" />,
+          <FAQ key="faq" />,
+          <FinalCTA key="final-cta" />,
         ].map((section, i) => (
           <div
             key={section.key}
@@ -125,44 +129,6 @@ export default function Home() {
             {section}
           </div>
         ))}
-        <section style={{
-          padding: '4rem 1.5rem',
-          textAlign: 'center',
-          background: 'var(--ifm-color-background-alt)',
-        }}>
-          <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-            <h2 style={{
-              fontSize: 'clamp(1.5rem, 3vw, 2rem)',
-              fontWeight: 700,
-              marginBottom: '0.5rem',
-              color: 'var(--ifm-heading-color)',
-            }}>
-              Stay Updated
-            </h2>
-            <p style={{
-              color: 'var(--muted-foreground)',
-              marginBottom: '2rem',
-              fontSize: '1.05rem',
-            }}>
-              Get the latest news, features, and tips delivered to your inbox.
-            </p>
-            <iframe
-              width="540"
-              height="500"
-              src="https://475728ae.sibforms.com/serve/MUIFAJLZJwZyy-W4PJAFc573ygtVeBn5fgINSOiVsmxzDKkjxeC96kVh_EVbvVN-hW4wCbGvIAPzrujZeSPpPbwUAXLZJfmGXHdmWG0208oNcTG4B20KmYDGdFhxs9Bos4UdurRT8dkzD_NjdRoMqg4A1_yAtpB5mHDbP_lT5mHAQIiamOmMomRSCEWWnFyk24LKJ6DqyhJze0By"
-              frameBorder="0"
-              scrolling="no"
-              allowFullScreen
-              style={{
-                display: 'block',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-                maxWidth: '100%',
-                maxHeight: '100%'
-              }}
-            />
-          </div>
-        </section>
       </main>
     </Layout>
   );
