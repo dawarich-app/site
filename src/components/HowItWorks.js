@@ -1,30 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
 import styles from './HowItWorks.module.css';
 
 export default function HowItWorks({ title, subtitle, steps, horizontal }) {
-  const sectionRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section className={styles.howItWorks} ref={sectionRef}>
+    <section className={styles.howItWorks}>
       <div className={styles.container}>
         {title && <h2 className={styles.title}>{title}</h2>}
         {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
@@ -33,8 +11,7 @@ export default function HowItWorks({ title, subtitle, steps, horizontal }) {
           {steps.map((step, index) => (
             <div
               key={index}
-              className={`${styles.step} ${horizontal ? styles.stepHorizontal : ''} ${isVisible ? styles.stepVisible : ''}`}
-              style={{ transitionDelay: isVisible ? `${index * 150}ms` : '0ms' }}
+              className={`${styles.step} ${horizontal ? styles.stepHorizontal : ''}`}
             >
               {!horizontal && <div className={styles.stepNumber}>{index + 1}</div>}
               <div className={styles.stepContent}>

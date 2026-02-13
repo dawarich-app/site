@@ -57,14 +57,6 @@
   display: flex;
   gap: 2rem;
   align-items: flex-start;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-.stepVisible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .stepHorizontal {
