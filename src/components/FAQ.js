@@ -15,7 +15,7 @@ const faqData = [
   {
     question: 'What mobile apps are supported?',
     answer:
-      'Dawarich has an official iOS app for background location tracking. Android users can use OwnTracks, GPSLogger, or any app that supports the OwnTracks protocol.',
+      'Dawarich has official apps for both iOS and Android for background location tracking. You can also use OwnTracks, GPSLogger, Overland and some other 3rd party apps.',
   },
   {
     question: 'How is my location data protected?',
