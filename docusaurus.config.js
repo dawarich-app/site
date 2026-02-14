@@ -136,6 +136,30 @@ const config = {
                 label: '🗺️ Google Timeline Visualizer',
               },
               {
+                to: '/tools/google-timeline-converter',
+                label: '🔄 Google Timeline Converter',
+              },
+              {
+                to: '/tools/timeline-statistics',
+                label: '📊 Timeline Statistics Analyzer',
+              },
+              {
+                to: '/tools/timeline-mileage-calculator',
+                label: '🚗 Timeline Mileage Calculator',
+              },
+              {
+                to: '/tools/timeline-merger',
+                label: '🔗 Timeline Data Merger',
+              },
+              {
+                to: '/tools/gps-file-splitter',
+                label: '✂️ GPS File Splitter',
+              },
+              {
+                to: '/tools/timeline-format-detector',
+                label: '🔍 Timeline Format Detector',
+              },
+              {
                 to: '/tools/heatmap-generator',
                 label: '🔥 GPS Heatmap Generator',
               },
