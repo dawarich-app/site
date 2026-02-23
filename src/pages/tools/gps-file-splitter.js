@@ -5,6 +5,7 @@ import { parseTimeline, detectFormat } from '@site/src/utils/timelineParser';
 import { parseGPX, parseGeoJSON, parseKML } from '@site/src/utils/formatParsers';
 import { splitBySize, splitByCount, splitByDate, packageAsZip, normalizePointsForSplit } from '@site/src/utils/fileSplitter';
 import JSZip from 'jszip';
+import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import styles from './gps-file-splitter.module.css';
 
 const pageTitle = "GPS File Splitter - Split Large GPX, GeoJSON, KML & JSON Files";
@@ -481,13 +482,13 @@ export default function GPSFileSplitter() {
               </button>
             </div>
 
-            <div className={styles.ctaPanel}>
-              <div className={styles.ctaContent}>
-                <h3>Working with large location files?</h3>
-                <p>Dawarich handles imports of any size automatically. Import your Google Timeline, GPX, or GeoJSON data and visualize your entire location history.</p>
-                <a href="/?utm_source=tool&utm_medium=cta&utm_campaign=gps-file-splitter" className={styles.ctaButton}>Try Dawarich Free</a>
-              </div>
-            </div>
+            <PersonalizedCTA
+              toolName="gps-file-splitter"
+              headline={`Your file has <strong>${points.length.toLocaleString()}</strong> points. Dawarich handles imports of any size automatically — no splitting needed.`}
+              stats={[
+                { label: 'points', value: points.length.toLocaleString() },
+              ]}
+            />
           </div>
         )}
 

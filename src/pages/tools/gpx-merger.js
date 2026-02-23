@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import { parseGPXDetailed, mergeGPXFiles, calculateMergeStats } from '@site/src/utils/gpxMerger';
+import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import styles from './gpx-merger.module.css';
 
 const pageTitle = "Free GPX Merger - Combine Multiple GPS Track Files Online";
@@ -405,13 +406,17 @@ export default function GPXMerger() {
           </div>
         </div>
 
-        <div className={styles.ctaPanel}>
-          <div className={styles.ctaContent}>
-            <h3>Need to manage years of GPS data?</h3>
-            <p>Try Dawarich - a self-hosted location tracking platform that automatically organizes and visualizes all your GPS activities, trips, and location history in one place.</p>
-            <a href="/?utm_source=tool&utm_medium=cta&utm_campaign=gpx-merger" className={styles.ctaButton}>Explore Dawarich</a>
-          </div>
-        </div>
+        <PersonalizedCTA
+          toolName="gpx-merger"
+          headline={stats
+            ? `You combined <strong>${stats.files}</strong> files with <strong>${stats.trackPoints.toLocaleString()}</strong> points into one. Dawarich does this automatically with all your GPS sources.`
+            : 'Need to manage years of GPS data? Dawarich automatically organizes and visualizes all your GPS activities in one place.'}
+          stats={stats ? [
+            { label: 'files', value: stats.files.toString() },
+            { label: 'tracks', value: stats.tracks.toString() },
+            { label: 'points', value: stats.trackPoints.toLocaleString() },
+          ] : undefined}
+        />
       </div>
     </Layout>
   );

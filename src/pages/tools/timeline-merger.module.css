@@ -170,15 +170,6 @@
   text-decoration: underline;
 }
 
-/* CTA Panels */
-.ctaPanel {
-  background: linear-gradient(135deg, var(--ifm-color-primary-darker) 0%, var(--ifm-color-primary) 100%);
-  border-radius: 8px;
-  padding: 2rem;
-  color: white;
-  margin-top: 2rem;
-}
-
 .ctaContent h3 {
   margin: 0 0 1rem 0;
   font-size: 1.25rem;
@@ -911,10 +902,6 @@
 [data-theme='dark'] .privacyNote {
   background: rgba(16, 185, 129, 0.15);
   border-color: rgba(16, 185, 129, 0.4);
-}
-
-[data-theme='dark'] .ctaPanel {
-  background: linear-gradient(135deg, var(--ifm-color-primary-darkest) 0%, var(--ifm-color-primary-dark) 100%);
 }
 
 [data-theme='dark'] .infoCard {

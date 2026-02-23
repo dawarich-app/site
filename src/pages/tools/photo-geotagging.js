@@ -6,6 +6,7 @@ import PhotoMap from '@site/src/components/PhotoMap';
 import PhotoList from '@site/src/components/PhotoList';
 import { extractPhotoGeodata } from '@site/src/utils/exifParser';
 import { generateGPX } from '@site/src/utils/gpxGenerator';
+import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import styles from './timeline-visualizer.module.css';
 
 const pageTitle = "Photo Geodata Extraction - Extract GPS Data from Photos";
@@ -193,13 +194,17 @@ export default function PhotoGeotagging() {
           </div>
 
           {uploadedPhotos.length > 0 && (
-            <div className={styles.ctaPanel}>
-              <div className={styles.ctaContent}>
-                <h3>Want to keep tracking your location and build your own location history?</h3>
-                <p>Try Dawarich — a self-hosted location tracking platform that gives you full control over your data</p>
-                <a href="/" className={styles.ctaButton}>Try Dawarich!</a>
-              </div>
-            </div>
+            <PersonalizedCTA
+              toolName="photo-geotagging"
+              headline={points.length > 0
+                ? `You extracted GPS data from <strong>${points.length}</strong> photos. Dawarich maps all your location data — photos, tracks, and daily movements.`
+                : `You uploaded <strong>${uploadedPhotos.length}</strong> photos. Dawarich maps all your location data — photos, tracks, and daily movements.`}
+              stats={points.length > 0 ? [
+                { label: 'photos with GPS', value: points.length.toString() },
+              ] : [
+                { label: 'photos', value: uploadedPhotos.length.toString() },
+              ]}
+            />
           )}
         </div>
 

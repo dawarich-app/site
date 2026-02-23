@@ -4,6 +4,7 @@ import Head from '@docusaurus/Head';
 import FormatConverter from '@site/src/components/FormatConverter';
 import { parseGPX } from '@site/src/utils/formatParsers';
 import { toGeoJSON } from '@site/src/utils/formatConverters';
+import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import styles from './converter.module.css';
 
 const pageTitle = "Free GPX to GeoJSON Converter - Convert GPS Track Files Online";
@@ -144,13 +145,10 @@ export default function GPXToGeoJSON() {
             </div>
           </div>
 
-          <div className={styles.ctaPanel}>
-            <div className={styles.ctaContent}>
-              <h3>Need more powerful GPS data management?</h3>
-              <p>Try Dawarich — a self-hosted location tracking platform that gives you full control over your location data with advanced visualization and analysis tools.</p>
-              <a href="/?utm_source=converter&utm_medium=cta&utm_campaign=gpx-to-geojson" className={styles.ctaButton}>Explore Dawarich</a>
-            </div>
-          </div>
+          <PersonalizedCTA
+            toolName="gpx-to-geojson"
+            headline="Your file is converted. Dawarich handles all formats automatically — import from Google, Strava, Garmin, and more. No manual conversions needed."
+          />
         </div>
       </div>
     </Layout>

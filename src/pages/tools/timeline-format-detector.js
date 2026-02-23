@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import FileUploader from '@site/src/components/FileUploader';
 import { parseTimeline, detectFormat } from '@site/src/utils/timelineParser';
+import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import styles from './timeline-format-detector.module.css';
 
 const pageTitle = "Google Timeline Format Detector - Identify Your Location Export File Type";
@@ -452,13 +453,15 @@ export default function TimelineFormatDetector() {
 
           {results.length > 0 && (
             <>
-              <div className={styles.ctaPanel}>
-                <div className={styles.ctaContent}>
-                  <h3>Now that you know your format, explore what Dawarich can do with your location data.</h3>
-                  <p>Import your Google Timeline export, track ongoing location from your phone, and visualize years of movement history — all self-hosted or in the cloud.</p>
-                  <a href="/?utm_source=tool&utm_medium=cta&utm_campaign=timeline-format-detector" className={styles.ctaButton}>Try Dawarich!</a>
-                </div>
-              </div>
+              <PersonalizedCTA
+                toolName="timeline-format-detector"
+                headline={`You analyzed <strong>${results.length}</strong> file${results.length !== 1 ? 's' : ''} with <strong>${new Set(results.map(r => r.formatName)).size}</strong> detected format${new Set(results.map(r => r.formatName)).size !== 1 ? 's' : ''}. Dawarich handles all of them — import and visualize your location history instantly.`}
+                stats={[
+                  { label: 'files', value: results.length.toString() },
+                  { label: 'formats', value: new Set(results.map(r => r.formatName)).size.toString() },
+                  ...(totalPoints > 0 ? [{ label: 'points', value: totalPoints.toLocaleString() }] : []),
+                ]}
+              />
 
               <div className={styles.resultsSection}>
                 <h2>Detection Results</h2>

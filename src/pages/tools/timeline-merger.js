@@ -6,6 +6,7 @@ import { parseTimeline } from '@site/src/utils/timelineParser';
 import { mergeWithDedup } from '@site/src/utils/timelineDedup';
 import { timelineToConverterPoints } from '@site/src/utils/timelineToFormat';
 import { toGPX } from '@site/src/utils/formatConverters';
+import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import styles from './timeline-merger.module.css';
 
 const pageTitle = "Google Timeline Data Merger - Combine Location History Exports";
@@ -412,13 +413,17 @@ export default function TimelineMerger() {
           )}
 
           {hasFiles && (
-            <div className={styles.ctaPanel}>
-              <div className={styles.ctaContent}>
-                <h3>Want to keep your merged location data safe and always accessible?</h3>
-                <p>Dawarich stores your complete location history securely with automatic backups, full encryption, and an interactive map you can explore anytime.</p>
-                <a href="/?utm_source=tool&utm_medium=cta&utm_campaign=timeline-merger" className={styles.ctaButton}>Try Dawarich!</a>
-              </div>
-            </div>
+            <PersonalizedCTA
+              toolName="timeline-merger"
+              headline={mergeResult
+                ? `You combined <strong>${mergeResult.metadata.fileCount}</strong> files with <strong>${mergeResult.metadata.totalOutputPoints.toLocaleString()}</strong> points into one. Dawarich does this automatically with all your GPS sources.`
+                : 'Want to keep your merged location data safe and always accessible? Dawarich stores your complete location history securely.'}
+              stats={mergeResult ? [
+                { label: 'points', value: mergeResult.metadata.totalOutputPoints.toLocaleString() },
+                { label: 'files', value: mergeResult.metadata.fileCount.toString() },
+                { label: 'duplicates removed', value: mergeResult.metadata.duplicatesRemoved.toLocaleString() },
+              ] : undefined}
+            />
           )}
         </div>
 

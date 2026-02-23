@@ -394,39 +394,3 @@
   margin-bottom: 0.5rem;
 }
 
-.ctaPanel {
-  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
-  border-radius: 16px;
-  padding: 2.5rem;
-  text-align: center;
-  color: white;
-}
-
-.ctaContent h3 {
-  font-size: 1.5rem;
-  margin: 0 0 0.75rem 0;
-}
-
-.ctaContent p {
-  max-width: 600px;
-  margin: 0 auto 1.5rem;
-  opacity: 0.9;
-}
-
-.ctaButton {
-  display: inline-block;
-  padding: 0.875rem 2rem;
-  background: white;
-  color: var(--ifm-color-primary);
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.ctaButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  color: var(--ifm-color-primary);
-  text-decoration: none;
-}

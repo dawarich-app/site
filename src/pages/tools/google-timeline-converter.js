@@ -5,6 +5,7 @@ import FileUploader from '@site/src/components/FileUploader';
 import { parseTimeline, detectFormat } from '@site/src/utils/timelineParser';
 import { timelineToConverterPoints, timelineToCSV } from '@site/src/utils/timelineToFormat';
 import { toGPX, toGeoJSON, toKML, toKMZ } from '@site/src/utils/formatConverters';
+import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import styles from './google-timeline-converter.module.css';
 
 const pageTitle = "Google Timeline to GPX/KML/CSV Converter - Convert Location History Free";
@@ -529,13 +530,15 @@ export default function GoogleTimelineConverter() {
                 </>
               )}
 
-              <div className={styles.ctaPanel}>
-                <div className={styles.ctaContent}>
-                  <h3>Your data is more than a file</h3>
-                  <p>Import it into Dawarich to visualize and preserve your location history forever. See your travels on an interactive map, track daily movements, and never lose your data again.</p>
-                  <a href="/?utm_source=tool&utm_medium=cta&utm_campaign=google-timeline-converter" className={styles.ctaButton}>Try Dawarich!</a>
-                </div>
-              </div>
+              <PersonalizedCTA
+                toolName="google-timeline-converter"
+                headline={`Your <strong>${allPoints.length.toLocaleString()}</strong> points are now ready for download. Import them into Dawarich and never worry about format conversions again.`}
+                stats={[
+                  { label: 'points', value: allPoints.length.toLocaleString() },
+                  { label: 'paths', value: allPaths.length.toLocaleString() },
+                  { label: 'files', value: parsedResults.length.toString() },
+                ]}
+              />
             </div>
           )}
         </div>

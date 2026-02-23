@@ -3,10 +3,11 @@ import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import { parseFile, pointsToGeoJSON, calculateBounds, calculateStats, exportMapAsImage } from '@site/src/utils/heatmapUtils';
+import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import styles from './heatmap-generator.module.css';
 
 const pageTitle = "Free GPS Heatmap Generator - Create Activity Heatmaps Online";
-const pageDescription = "Create beautiful heatmaps from your GPS data. Upload GPX, FIT, TCX, GeoJSON, or KML files to visualize your running, cycling, and activity patterns. Free, privacy-first - works entirely in your browser.";
+const pageDescription = "Create beautiful heatmaps from your GPS data. Upload GPX, FIT, TCX, GeoJSON, KML, or Google Timeline JSON files to visualize your running, cycling, and activity patterns. Free, privacy-first - works entirely in your browser.";
 const pageUrl = "https://dawarich.app/tools/heatmap-generator";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
@@ -396,7 +397,7 @@ export default function HeatmapGenerator() {
       <Head>
         <meta name="title" content={pageTitle} />
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="GPS heatmap, heatmap generator, running heatmap, cycling heatmap, Strava heatmap alternative, GPX heatmap, activity heatmap, fitness heatmap, free heatmap" />
+        <meta name="keywords" content="GPS heatmap, heatmap generator, running heatmap, cycling heatmap, Strava heatmap alternative, GPX heatmap, activity heatmap, fitness heatmap, free heatmap, Google Timeline heatmap, Google location history heatmap, Records.json heatmap" />
         <link rel="canonical" href={pageUrl} />
 
         <meta property="og:type" content="website" />
@@ -450,7 +451,7 @@ export default function HeatmapGenerator() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                 </svg>
                 <p>Drag & drop files here</p>
-                <span className={styles.supportedFormats}>GPX, FIT, TCX, GeoJSON, KML, KMZ</span>
+                <span className={styles.supportedFormats}>GPX, FIT, TCX, GeoJSON, KML, KMZ, Google Timeline JSON</span>
                 <input
                   type="file"
                   className={styles.fileInput}
@@ -592,6 +593,7 @@ export default function HeatmapGenerator() {
                 <li><strong>FIT</strong> - Garmin activity files</li>
                 <li><strong>GeoJSON</strong> - Web mapping format</li>
                 <li><strong>KML/KMZ</strong> - Google Earth format</li>
+                <li><strong>Google Timeline JSON</strong> - Records.json and Semantic Location History files from Google Takeout</li>
               </ul>
             </div>
 
@@ -601,7 +603,7 @@ export default function HeatmapGenerator() {
                 <li><strong>Strava:</strong> Settings &gt; My Account &gt; Download your data</li>
                 <li><strong>Garmin:</strong> Copy .FIT files from device or use Garmin Connect export</li>
                 <li><strong>Apple Fitness:</strong> Use third-party apps to export workouts as GPX</li>
-                <li><strong>Google Maps:</strong> Use Google Takeout to export location history</li>
+                <li><strong>Google Maps:</strong> Use Google Takeout to export location history — Records.json and Semantic Location History files are directly supported</li>
               </ul>
             </div>
 
@@ -612,13 +614,17 @@ export default function HeatmapGenerator() {
           </div>
         </div>
 
-        <div className={styles.ctaPanel}>
-          <div className={styles.ctaContent}>
-            <h3>Want to visualize years of location history?</h3>
-            <p>Try Dawarich - a self-hosted platform that automatically tracks your location and creates beautiful visualizations of your movements over time. Import data from Google, Strava, Garmin, and more.</p>
-            <a href="/?utm_source=tool&utm_medium=cta&utm_campaign=heatmap-generator" className={styles.ctaButton}>Explore Dawarich</a>
-          </div>
-        </div>
+        <PersonalizedCTA
+          toolName="heatmap-generator"
+          headline={stats
+            ? `Your heatmap covers <strong>${stats.totalPoints.toLocaleString()}</strong> GPS points across <strong>${stats.totalDistance.toFixed(1)} km</strong>. This is a snapshot — Dawarich builds your heatmap continuously.`
+            : 'Want to visualize years of location history? Dawarich builds your heatmap continuously from all your GPS sources.'}
+          stats={stats ? [
+            { label: 'points', value: stats.totalPoints.toLocaleString() },
+            { label: 'distance', value: `${stats.totalDistance.toFixed(1)} km` },
+            ...(stats.timeRange ? [{ label: 'date range', value: `${stats.timeRange.start.toLocaleDateString()} – ${stats.timeRange.end.toLocaleDateString()}` }] : []),
+          ] : undefined}
+        />
       </div>
     </Layout>
   );

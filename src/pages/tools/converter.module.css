@@ -151,50 +151,6 @@
   }
 }
 
-.ctaPanel {
-  background: linear-gradient(135deg, var(--ifm-color-primary-darker) 0%, var(--ifm-color-primary) 100%);
-  border-radius: 12px;
-  padding: 2.5rem;
-  color: white;
-  text-align: center;
-}
-
-.ctaContent h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-.ctaContent p {
-  margin: 0 0 1.5rem 0;
-  font-size: 1rem;
-  line-height: 1.6;
-  opacity: 0.95;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.ctaButton {
-  display: inline-block;
-  padding: 0.875rem 2.5rem;
-  background: white;
-  color: var(--ifm-color-primary);
-  font-weight: 600;
-  font-size: 1.05rem;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.ctaButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  color: var(--ifm-color-primary-dark);
-  text-decoration: none;
-}
-
 /* Dark mode adjustments */
 [data-theme='dark'] .infoCard {
   background: var(--ifm-color-emphasis-200);
@@ -209,10 +165,6 @@
 [data-theme='dark'] .successMessage {
   background: rgba(16, 185, 129, 0.15);
   border-color: rgba(16, 185, 129, 0.4);
-}
-
-[data-theme='dark'] .ctaPanel {
-  background: linear-gradient(135deg, var(--ifm-color-primary-darkest) 0%, var(--ifm-color-primary-dark) 100%);
 }
 
 /* Mobile responsive */
@@ -235,15 +187,4 @@
     font-size: 1rem;
   }
 
-  .ctaPanel {
-    padding: 2rem 1.5rem;
-  }
-
-  .ctaContent h3 {
-    font-size: 1.25rem;
-  }
-
-  .ctaContent p {
-    font-size: 0.95rem;
-  }
 }

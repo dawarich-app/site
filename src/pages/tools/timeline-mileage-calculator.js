@@ -5,6 +5,7 @@ import FileUploader from '@site/src/components/FileUploader';
 import StatsCard from '@site/src/components/StatsCard';
 import { parseTimeline } from '@site/src/utils/timelineParser';
 import { generateMileageLog, mileageLogToCSV } from '@site/src/utils/timelineStats';
+import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import styles from './timeline-mileage-calculator.module.css';
 
 const pageTitle = "Google Timeline Mileage Calculator - Track Driving Distance Free";
@@ -390,13 +391,16 @@ export default function TimelineMileageCalculator() {
           )}
 
           {uploadedFiles.length > 0 && (
-            <div className={styles.ctaPanel}>
-              <div className={styles.ctaContent}>
-                <h3>Need ongoing mileage tracking without manual exports?</h3>
-                <p>Dawarich records your trips automatically, tracks driving mileage in real time, and gives you full control over your location data.</p>
-                <a href="/?utm_source=tool&utm_medium=cta&utm_campaign=timeline-mileage-calculator" className={styles.ctaButton}>Try Dawarich!</a>
-              </div>
-            </div>
+            <PersonalizedCTA
+              toolName="timeline-mileage-calculator"
+              headline={mileageLog && mileageLog.totalTrips > 0
+                ? `You logged <strong>${mileageLog.totalTrips.toLocaleString()}</strong> trips covering <strong>${mileageLog.totalDistance.toFixed(1)} ${mileageLog.unit}</strong>. Dawarich tracks this automatically — no more manual exports.`
+                : 'Need ongoing mileage tracking without manual exports? Dawarich records your trips automatically.'}
+              stats={mileageLog && mileageLog.totalTrips > 0 ? [
+                { label: 'trips', value: mileageLog.totalTrips.toLocaleString() },
+                { label: mileageLog.unit, value: mileageLog.totalDistance.toFixed(1) },
+              ] : undefined}
+            />
           )}
         </div>
 

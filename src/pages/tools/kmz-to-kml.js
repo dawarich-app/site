@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import FormatConverter from '@site/src/components/FormatConverter';
 import { parseKMZ } from '@site/src/utils/formatConverters';
+import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import styles from './converter.module.css';
 
 const pageTitle = "Free KMZ to KML Converter - Extract Google Earth Files Online";
@@ -111,13 +112,10 @@ export default function KMZToKML() {
               </div>
             </div>
           </div>
-          <div className={styles.ctaPanel}>
-            <div className={styles.ctaContent}>
-              <h3>Need more powerful GPS data management?</h3>
-              <p>Try Dawarich — a self-hosted location tracking platform with advanced visualization tools.</p>
-              <a href="/?utm_source=converter&utm_medium=cta&utm_campaign=kmz-to-kml" className={styles.ctaButton}>Explore Dawarich</a>
-            </div>
-          </div>
+          <PersonalizedCTA
+            toolName="kmz-to-kml"
+            headline="Your file is converted. Dawarich handles all formats automatically — import from Google, Strava, Garmin, and more. No manual conversions needed."
+          />
         </div>
       </div>
     </Layout>

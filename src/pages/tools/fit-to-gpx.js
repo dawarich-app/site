@@ -4,6 +4,7 @@ import Head from '@docusaurus/Head';
 import FormatConverter from '@site/src/components/FormatConverter';
 import { parseFIT, getFITMetadata } from '@site/src/utils/fitParser';
 import { toGPX } from '@site/src/utils/formatConverters';
+import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import styles from './converter.module.css';
 
 const pageTitle = "Free FIT to GPX Converter - Convert Garmin Activity Files Online";
@@ -202,13 +203,10 @@ export default function FITToGPX() {
             </div>
           </div>
 
-          <div className={styles.ctaPanel}>
-            <div className={styles.ctaContent}>
-              <h3>Track and visualize all your activities in one place</h3>
-              <p>Try Dawarich - a self-hosted location tracking platform that imports your Garmin, Strava, and other fitness data to create a complete picture of your movements over time.</p>
-              <a href="/?utm_source=converter&utm_medium=cta&utm_campaign=fit-to-gpx" className={styles.ctaButton}>Explore Dawarich</a>
-            </div>
-          </div>
+          <PersonalizedCTA
+            toolName="fit-to-gpx"
+            headline="Your file is converted. Dawarich handles all formats automatically — import from Google, Strava, Garmin, and more. No manual conversions needed."
+          />
         </div>
       </div>
     </Layout>

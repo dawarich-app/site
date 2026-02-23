@@ -4,6 +4,7 @@ import Head from '@docusaurus/Head';
 import FormatConverter from '@site/src/components/FormatConverter';
 import { parseTCX, getTCXMetadata } from '@site/src/utils/tcxParser';
 import { toKML } from '@site/src/utils/formatConverters';
+import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import styles from './converter.module.css';
 
 const pageTitle = "Free TCX to KML Converter - Convert Training Files to Google Earth Online";
@@ -156,13 +157,10 @@ export default function TCXToKML() {
             </div>
           </div>
 
-          <div className={styles.ctaPanel}>
-            <div className={styles.ctaContent}>
-              <h3>Need to visualize all your GPS data?</h3>
-              <p>Try Dawarich - a self-hosted platform that imports and visualizes your location history from multiple sources.</p>
-              <a href="/?utm_source=converter&utm_medium=cta&utm_campaign=tcx-to-kml" className={styles.ctaButton}>Explore Dawarich</a>
-            </div>
-          </div>
+          <PersonalizedCTA
+            toolName="tcx-to-kml"
+            headline="Your file is converted. Dawarich handles all formats automatically — import from Google, Strava, Garmin, and more. No manual conversions needed."
+          />
         </div>
       </div>
     </Layout>

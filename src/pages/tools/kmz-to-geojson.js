@@ -4,6 +4,7 @@ import Head from '@docusaurus/Head';
 import FormatConverter from '@site/src/components/FormatConverter';
 import { parseKML } from '@site/src/utils/formatParsers';
 import { parseKMZ, toGeoJSON } from '@site/src/utils/formatConverters';
+import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import styles from './converter.module.css';
 
 const pageTitle = "Free KMZ to GeoJSON Converter - Extract and Convert Google Earth Files";
@@ -114,13 +115,10 @@ export default function KMZToGeoJSON() {
               </div>
             </div>
           </div>
-          <div className={styles.ctaPanel}>
-            <div className={styles.ctaContent}>
-              <h3>Need more powerful GPS data management?</h3>
-              <p>Try Dawarich — a self-hosted location tracking platform with advanced visualization tools.</p>
-              <a href="/?utm_source=converter&utm_medium=cta&utm_campaign=kmz-to-geojson" className={styles.ctaButton}>Explore Dawarich</a>
-            </div>
-          </div>
+          <PersonalizedCTA
+            toolName="kmz-to-geojson"
+            headline="Your file is converted. Dawarich handles all formats automatically — import from Google, Strava, Garmin, and more. No manual conversions needed."
+          />
         </div>
       </div>
     </Layout>

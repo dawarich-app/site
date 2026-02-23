@@ -1,6 +1,7 @@
 import { parseGPX, parseGeoJSON, parseKML } from './formatParsers';
 import { parseFIT } from './fitParser';
 import { parseTCX } from './tcxParser';
+import { parseTimeline, detectFormat } from './timelineParser';
 import JSZip from 'jszip';
 
 /**
@@ -15,8 +16,15 @@ export async function parseFile(file) {
     case 'gpx':
       return parseGPX(await file.text());
     case 'geojson':
-    case 'json':
-      return parseGeoJSON(await file.text());
+    case 'json': {
+      const text = await file.text();
+      const data = JSON.parse(text);
+      const detected = detectFormat(data);
+      if (detected !== 'unknown') {
+        return normalizeTimelinePoints(parseTimeline(data));
+      }
+      return parseGeoJSON(text);
+    }
     case 'kml':
       return parseKML(await file.text());
     case 'kmz':
@@ -32,6 +40,40 @@ export async function parseFile(file) {
     default:
       throw new Error(`Unsupported file format: .${extension}`);
   }
+}
+
+/**
+ * Normalize parseTimeline() output into the flat {lat, lon, time} array
+ * the heatmap pipeline expects. Handles lng→lon mapping and extracts
+ * path coordinates as additional points.
+ */
+function normalizeTimelinePoints(parsed) {
+  const points = parsed.points.map(p => ({
+    type: p.type || 'trackpoint',
+    lat: p.lat,
+    lon: p.lon !== undefined ? p.lon : p.lng,
+    time: p.time || (p.timestamp ? new Date(p.timestamp).toISOString() : undefined),
+    elevation: p.elevation,
+  }));
+
+  if (parsed.paths) {
+    for (const path of parsed.paths) {
+      if (path.coordinates) {
+        for (const coord of path.coordinates) {
+          points.push({
+            type: 'trackpoint',
+            lat: coord[0],
+            lon: coord[1],
+            time: path.startTimestamp
+              ? new Date(path.startTimestamp).toISOString()
+              : undefined,
+          });
+        }
+      }
+    }
+  }
+
+  return points;
 }
 
 /**

@@ -5,6 +5,7 @@ import FileUploader from '@site/src/components/FileUploader';
 import TimelineMap from '@site/src/components/TimelineMap';
 import PointsList from '@site/src/components/PointsList';
 import { parseTimeline } from '@site/src/utils/timelineParser';
+import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import styles from './timeline-visualizer.module.css';
 
 const pageTitle = "Google Timeline Visualizer - View Your Location History on a Map";
@@ -400,13 +401,14 @@ export default function TimelineVisualizer() {
           </div>
 
           {uploadedFiles.length > 0 && (
-            <div className={styles.ctaPanel}>
-              <div className={styles.ctaContent}>
-                <h3>Want to keep your memories visualized on the map and track your daily movements?</h3>
-                <p>Try Dawarich — a location tracking platform that gives you full control over your location data and provides key to your memories</p>
-                <a href="/?utm_source=tool&utm_medium=cta&utm_campaign=timeline-visualizer" className={styles.ctaButton}>Try Dawarich!</a>
-              </div>
-            </div>
+            <PersonalizedCTA
+              toolName="timeline-visualizer"
+              headline={`You just mapped <strong>${points.length.toLocaleString()}</strong> points${Object.keys(yearStats).length > 0 ? ` spanning <strong>${Object.keys(yearStats).length}</strong> years` : ''}. Want to keep this map forever — and add to it automatically?`}
+              stats={[
+                { label: 'points', value: points.length.toLocaleString() },
+                ...(Object.keys(yearStats).length > 0 ? [{ label: 'years', value: Object.keys(yearStats).length.toString() }] : []),
+              ]}
+            />
           )}
 
           {uploadedFiles.length === 0 && (

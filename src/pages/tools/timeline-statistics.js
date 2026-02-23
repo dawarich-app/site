@@ -6,6 +6,7 @@ import StatsCard from '@site/src/components/StatsCard';
 import ShareableCard from '@site/src/components/ShareableCard';
 import { parseTimeline } from '@site/src/utils/timelineParser';
 import { calculateTravelStats } from '@site/src/utils/timelineStats';
+import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import styles from './timeline-statistics.module.css';
 
 const pageTitle = "Google Timeline Statistics Analyzer - Your Location History Insights";
@@ -360,15 +361,12 @@ export default function TimelineStatistics() {
           )}
         </div>
 
-        {uploadedFiles.length > 0 && (
+        {uploadedFiles.length > 0 && !stats && (
           <div className={styles.contentWrapper}>
-            <div className={styles.ctaPanel}>
-              <div className={styles.ctaContent}>
-                <h3>Like these insights? Dawarich generates them automatically from your ongoing location data.</h3>
-                <p>Import your Google Timeline export, track your phone's location, and get live travel statistics, maps, and yearly summaries — all self-hosted or in the cloud.</p>
-                <a href="/?utm_source=tool&utm_medium=cta&utm_campaign=timeline-statistics" className={styles.ctaButton}>Try Dawarich!</a>
-              </div>
-            </div>
+            <PersonalizedCTA
+              toolName="timeline-statistics"
+              headline="Like these insights? Dawarich generates them automatically from your ongoing location data."
+            />
           </div>
         )}
 
@@ -587,13 +585,17 @@ export default function TimelineStatistics() {
         {/* Post-upload CTA */}
         {stats && (
           <div className={styles.contentWrapper}>
-            <div className={styles.ctaPanel}>
-              <div className={styles.ctaContent}>
-                <h3>Turn your one-time analysis into a living dashboard</h3>
-                <p>Dawarich imports your full Google Timeline export, tracks your phone's location going forward, and gives you always-up-to-date statistics — distance, places, countries, heatmaps, and more. Self-hosted or cloud.</p>
-                <a href="/?utm_source=tool&utm_medium=post-cta&utm_campaign=timeline-statistics" className={styles.ctaButton}>Get Started with Dawarich</a>
-              </div>
-            </div>
+            <PersonalizedCTA
+              toolName="timeline-statistics"
+              headline={`You've traveled <strong>${Math.round(stats.totalDistanceKm).toLocaleString()} km</strong>${stats.countries.length > 0 ? ` across <strong>${stats.countries.length}</strong> countries` : ''} in <strong>${dateRangeYears}</strong> years. Turn this snapshot into a living dashboard.`}
+              stats={[
+                { label: 'points', value: formatNumber(stats.totalPoints) },
+                ...(stats.countries.length > 0 ? [{ label: 'countries', value: stats.countries.length.toString() }] : []),
+                ...(stats.cities.length > 0 ? [{ label: 'cities', value: stats.cities.length.toString() }] : []),
+                { label: 'distance', value: `${Math.round(stats.totalDistanceKm).toLocaleString()} km` },
+                { label: 'years', value: dateRangeYears },
+              ]}
+            />
           </div>
         )}
 
