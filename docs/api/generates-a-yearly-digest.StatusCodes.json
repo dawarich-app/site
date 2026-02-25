@@ -1,0 +1,1 @@
+{"responses":{"202":{"description":"digest generation queued","content":{"application/json":{"schema":{"type":"object","properties":{"message":{"type":"string","description":"Confirmation message"}}}}}},"401":{"description":"unauthorized"},"422":{"description":"invalid year"}}}

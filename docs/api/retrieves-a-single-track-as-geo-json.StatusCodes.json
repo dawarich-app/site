@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"track found","content":{"application/json":{"schema":{"type":"object","properties":{"type":{"type":"string","example":"FeatureCollection"},"features":{"type":"array","items":{"type":"object"}}}}}}},"401":{"description":"unauthorized"},"404":{"description":"track not found"}}}

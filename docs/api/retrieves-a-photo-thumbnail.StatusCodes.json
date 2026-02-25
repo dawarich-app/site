@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"photo found"},"404":{"description":"photo not found","content":{"image/jpeg":{"schema":{"type":"object","properties":{"error":{"type":"string","description":"Error message"}}}},"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string","description":"Error message"}}}}}}}}

@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"visits updated","content":{"application/json":{"schema":{"type":"object","properties":{"message":{"type":"string"},"updated_count":{"type":"integer"}}}}}},"401":{"description":"unauthorized"},"422":{"description":"invalid request"}}}

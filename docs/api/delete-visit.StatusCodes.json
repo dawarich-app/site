@@ -1,0 +1,1 @@
+{"responses":{"204":{"description":"visit deleted"},"401":{"description":"unauthorized"},"404":{"description":"visit not found"}}}

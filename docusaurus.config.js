@@ -51,10 +51,11 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          docItemComponent: "@theme/ApiItem",
+          async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
+            const items = await defaultSidebarItemsGenerator(args);
+            return items.filter(item => !(item.type === 'category' && item.label === 'api'));
+          },
         },
         blog: {
           showReadingTime: true,
@@ -69,6 +70,49 @@ const config = {
       }),
     ],
   ],
+
+  plugins: [
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: "api",
+        docsPluginId: "classic",
+        config: {
+          dawarich: {
+            specPath: "https://raw.githubusercontent.com/Freika/dawarich/master/swagger/v1/swagger.yaml",
+            outputDir: "docs/api",
+            version: "v1",
+            label: "v1",
+            baseUrl: "/docs/api",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag",
+            },
+            // To add API v2:
+            // 1. Move v1 into `versions` below
+            // 2. Update main specPath/outputDir to v2
+            // Example:
+            //   specPath: ".../swagger/v2/swagger.yaml",
+            //   outputDir: "docs/api",
+            //   version: "v2",
+            //   label: "v2",
+            //   baseUrl: "/docs/api",
+            //   versions: {
+            //     "v1": {
+            //       specPath: ".../swagger/v1/swagger.yaml",
+            //       outputDir: "docs/api-v1",
+            //       label: "v1",
+            //       baseUrl: "/docs/api-v1",
+            //     },
+            //   },
+            versions: {},
+          },
+        },
+      },
+    ],
+  ],
+
+  themes: ["docusaurus-theme-openapi-docs"],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -274,7 +318,7 @@ const config = {
             position: 'right',
           },
           {
-            to: 'https://my.dawarich.app',
+            to: 'https://my.dawarich.app?utm_source=site&utm_medium=navbar&utm_campaign=signin',
             label: 'Sign in',
             position: 'right',
           },
@@ -311,6 +355,10 @@ const config = {
                 href: 'https://mastodon.social/@dawarich',
                 rel: 'me',
               },
+              {
+                label: 'Reddit',
+                href: 'https://reddit.com/r/dawarich',
+              },
             ]
           },
           {
@@ -331,6 +379,10 @@ const config = {
               {
                 label: 'Exporting data',
                 to: '/docs/getting-started/export-your-data',
+              },
+              {
+                label: 'API Docs',
+                to: '/docs/api/dawarich-api',
               },
               {
                 label: 'FAQ',

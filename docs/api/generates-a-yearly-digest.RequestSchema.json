@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"year":{"type":"integer","description":"Year to generate digest for","example":2024}},"required":["year"]}}}}}

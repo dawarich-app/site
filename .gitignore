@@ -24,3 +24,4 @@ yarn-error.log*
 .yarn/
 
 .playwright-mcp/
+.playwright-cli/

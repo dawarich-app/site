@@ -1,0 +1,1 @@
+{"parameters":[{"name":"api_key","in":"query","required":true,"description":"API Key","schema":{"type":"string"}},{"name":"id","in":"path","required":true,"description":"Point ID","schema":{"type":"string"}}]}

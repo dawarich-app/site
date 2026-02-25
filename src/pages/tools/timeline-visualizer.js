@@ -5,7 +5,7 @@ import FileUploader from '@site/src/components/FileUploader';
 import TimelineMap from '@site/src/components/TimelineMap';
 import PointsList from '@site/src/components/PointsList';
 import { parseTimeline } from '@site/src/utils/timelineParser';
-import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import { SAMPLE_POINTS, SAMPLE_PATHS } from '@site/src/utils/sampleBerlinData';
 import styles from './timeline-visualizer.module.css';
 
 const pageTitle = "Google Timeline Visualizer - View Your Location History on a Map";
@@ -55,6 +55,9 @@ export default function TimelineVisualizer() {
   const [paths, setPaths] = useState([]);
   const [selectedYear, setSelectedYear] = useState('all');
   const [yearStats, setYearStats] = useState({});
+  const [ctaDismissed, setCtaDismissed] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [processingProgress, setProcessingProgress] = useState({ loaded: 0, file: '', fileIndex: 0, fileCount: 0 });
 
   const handleFilesLoaded = useCallback(async (files) => {
     console.log('='.repeat(60));
@@ -62,6 +65,8 @@ export default function TimelineVisualizer() {
     console.log(`[Timeline Visualizer] Number of files: ${files.length}`);
 
     setUploadedFiles(files);
+    setIsProcessing(true);
+    setProcessingProgress({ loaded: 0, file: '', fileIndex: 0, fileCount: files.length });
 
     // Parse all files and stream points in batches
     const BATCH_SIZE = 5000;
@@ -105,13 +110,14 @@ export default function TimelineVisualizer() {
         for (let i = 0; i < parsed.points.length; i++) {
           allPoints.push(parsed.points[i]);
 
-          // Every BATCH_SIZE points, update the UI
+          // Every BATCH_SIZE points, update the map and progress
           if (allPoints.length % BATCH_SIZE === 0) {
             batchCount++;
             console.log(`[Timeline Visualizer]   Batch ${batchCount}: ${allPoints.length} points loaded`);
 
             // Update map with current points
             setPoints([...allPoints]);
+            setProcessingProgress({ loaded: allPoints.length, file: file.filename, fileIndex: fileIndex + 1, fileCount: files.length });
 
             // Yield to browser to prevent freezing
             await new Promise(resolve => setTimeout(resolve, 0));
@@ -122,6 +128,7 @@ export default function TimelineVisualizer() {
         if (allPoints.length % BATCH_SIZE !== 0) {
           console.log(`[Timeline Visualizer]   Final: ${allPoints.length} points loaded`);
           setPoints([...allPoints]);
+          setProcessingProgress({ loaded: allPoints.length, file: file.filename, fileIndex: fileIndex + 1, fileCount: files.length });
         }
 
       } catch (error) {
@@ -163,6 +170,7 @@ export default function TimelineVisualizer() {
     setPaths(allPaths);
     setYearStats(yearCounts);
     setSelectedYear(defaultYear);
+    setIsProcessing(false);
   }, []);
 
   const handleClear = useCallback(() => {
@@ -180,6 +188,8 @@ export default function TimelineVisualizer() {
     setSelectedYear(event.target.value);
     setSelectedPoint(null);
   }, []);
+
+  const isShowingSample = uploadedFiles.length === 0;
 
   // Filter points by selected year
   const filteredPoints = React.useMemo(() => {
@@ -351,81 +361,79 @@ export default function TimelineVisualizer() {
         </script>
       </Head>
       <div className={styles.container}>
-        <div className={styles.contentWrapper}>
+        <div className={styles.heroSection}>
           <div className={styles.header}>
             <h1>Google Timeline Visualizer</h1>
             <p>Free, privacy-first tool to visualize your Google Timeline location history on an interactive map. Upload your exported JSON files — all processing happens in your browser.</p>
           </div>
 
-          <div className={styles.topSection}>
-            <div className={styles.instructions}>
-              <h2>How to Get Your Timeline Data</h2>
-              <p>
-                You can export your Google Timeline data using one of the following methods. If one of them doesn't work, try another.
-              </p>
-              <p>
-                Unfortunately, some users might not be able to export their location data due to how Google went with transition to new location storage policies.
-              </p>
-              <div className={styles.instructionsList}>
-                <div className={styles.instructionItem}>
-                  <strong>Google Takeout:</strong>
-                  <p>Visit <a href="https://takeout.google.com/" target="_blank" rel="noopener noreferrer">takeout.google.com</a> → Choose Location History (Timeline) → Export</p>
-                  <p>This way might not work for everyone because Google changed the way location data is being stored and exported. More details in our <a href="https://dawarich.app/blog/migrating-from-google-location-history-to-dawarich">blog</a>.</p>
-                </div>
-                <div className={styles.instructionItem}>
-                  <strong>On Android:</strong>
-                  <p>Open Google Maps → Settings → Location → Location Services → Timeline → Export Timeline</p>
-                </div>
-                <div className={styles.instructionItem}>
-                  <strong>On iOS:</strong>
-                  <p>Open Google Maps → Settings → Personal Content → Export Timeline data</p>
-                </div>
+          <div className={styles.uploadRow}>
+            <FileUploader onFilesLoaded={handleFilesLoaded} onClear={handleClear} />
+            <div className={styles.uploadMeta}>
+              <div className={styles.privacyBadge}>
+                <svg className={styles.privacyIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <span>All processing happens in your browser. Your data never leaves your device.</span>
               </div>
-            </div>
-
-            <div className={styles.uploaderWrapper}>
-              <FileUploader onFilesLoaded={handleFilesLoaded} onClear={handleClear} />
-
-              <div className={styles.privacyNote}>
-                <div>
-                  <strong>
-                    <svg className={styles.privacyIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                    Privacy First
-                  </strong>
-                  <p>All data processing happens entirely in your browser. Your location data never leaves your device and is not sent to any server.</p>
+              <details className={styles.instructionsCollapsible}>
+                <summary className={styles.instructionsSummary}>
+                  Don't have your data yet? Here's how to export it
+                </summary>
+                <div className={styles.instructionsContent}>
+                  <p>
+                    You can export your Google Timeline data using one of the following methods. If one of them doesn't work, try another.
+                  </p>
+                  <p>
+                    Unfortunately, some users might not be able to export their location data due to how Google went with transition to new location storage policies.
+                  </p>
+                  <div className={styles.instructionsList}>
+                    <div className={styles.instructionItem}>
+                      <strong>Google Takeout:</strong>
+                      <p>Visit <a href="https://takeout.google.com/" target="_blank" rel="noopener noreferrer">takeout.google.com</a> → Choose Location History (Timeline) → Export</p>
+                      <p>This way might not work for everyone because Google changed the way location data is being stored and exported. More details in our <a href="https://dawarich.app/blog/migrating-from-google-location-history-to-dawarich">blog</a>.</p>
+                    </div>
+                    <div className={styles.instructionItem}>
+                      <strong>On Android:</strong>
+                      <p>Open Google Maps → Settings → Location → Location Services → Timeline → Export Timeline</p>
+                    </div>
+                    <div className={styles.instructionItem}>
+                      <strong>On iOS:</strong>
+                      <p>Open Google Maps → Settings → Personal Content → Export Timeline data</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </details>
             </div>
           </div>
-
-          {uploadedFiles.length > 0 && (
-            <PersonalizedCTA
-              toolName="timeline-visualizer"
-              headline={`You just mapped <strong>${points.length.toLocaleString()}</strong> points${Object.keys(yearStats).length > 0 ? ` spanning <strong>${Object.keys(yearStats).length}</strong> years` : ''}. Want to keep this map forever — and add to it automatically?`}
-              stats={[
-                { label: 'points', value: points.length.toLocaleString() },
-                ...(Object.keys(yearStats).length > 0 ? [{ label: 'years', value: Object.keys(yearStats).length.toString() }] : []),
-              ]}
-            />
-          )}
-
-          {uploadedFiles.length === 0 && (
-            <div className={styles.preCtaPanel}>
-              <div className={styles.preCtaContent}>
-                <span className={styles.preCtaIcon}>
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </span>
-                <span>Looking for a long-term Google Timeline replacement? <a href="/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-visualizer">Dawarich</a> tracks your location history automatically, with full data ownership and privacy. <a href="/blog/migrating-from-google-location-history-to-dawarich">Learn how to migrate</a>.</span>
-              </div>
-            </div>
-          )}
         </div>
 
         <div className={styles.mapSection}>
+          {uploadedFiles.length > 0 && !ctaDismissed && points.length > 0 && (
+            <div className={styles.postVizCta}>
+              <button
+                className={styles.postVizCtaDismiss}
+                onClick={() => setCtaDismissed(true)}
+                aria-label="Dismiss"
+              >
+                &times;
+              </button>
+              <p className={styles.postVizCtaText}>
+                You just visualized <strong>{points.length.toLocaleString()}</strong> location points
+                {Object.keys(yearStats).length > 0 && (
+                  <> from <strong>{Math.min(...Object.keys(yearStats).map(Number))}</strong> to <strong>{Math.max(...Object.keys(yearStats).map(Number))}</strong></>
+                )}.
+                {' '}This view disappears when you close this tab. Keep your location history forever — and add to it automatically.
+              </p>
+              <a
+                href="https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=post-viz-cta&utm_campaign=timeline-visualizer"
+                className={styles.postVizCtaButton}
+              >
+                Start Free Trial — 7 Days, No Credit Card &rarr;
+              </a>
+            </div>
+          )}
+
           {points.length > 0 && (
             <div className={styles.filterSection}>
               <label htmlFor="yearFilter" className={styles.filterLabel}>
@@ -458,22 +466,44 @@ export default function TimelineVisualizer() {
 
           <div className={styles.mapGrid}>
             <div className={styles.mapColumn}>
-              <TimelineMap
-                points={filteredPoints}
-                paths={filteredPaths}
-                onPointClick={handlePointClick}
-                selectedPointId={selectedPoint?.id}
-              />
+              <div className={styles.mapWrapper}>
+                <TimelineMap
+                  points={isShowingSample ? SAMPLE_POINTS : filteredPoints}
+                  paths={isShowingSample ? SAMPLE_PATHS : filteredPaths}
+                  onPointClick={isShowingSample ? () => {} : handlePointClick}
+                  selectedPointId={selectedPoint?.id}
+                />
+                {isShowingSample && (
+                  <div className={styles.sampleOverlay}>
+                    Sample data — drop your files above to see your own history
+                  </div>
+                )}
+              </div>
             </div>
 
             <div className={styles.listColumn}>
               <PointsList
-                points={filteredPoints}
+                points={isShowingSample ? SAMPLE_POINTS : filteredPoints}
                 selectedPointId={selectedPoint?.id}
-                onPointSelect={handlePointClick}
+                onPointSelect={isShowingSample ? () => {} : handlePointClick}
+                isProcessing={isProcessing}
+                processingProgress={processingProgress}
               />
             </div>
           </div>
+
+          {uploadedFiles.length === 0 && (
+            <div className={styles.preCtaPanel}>
+              <div className={styles.preCtaContent}>
+                <span className={styles.preCtaIcon}>
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+                <span>Looking for a long-term Google Timeline replacement? <a href="https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-visualizer">Dawarich</a> tracks your location history automatically, with full data ownership and privacy. <a href="/blog/migrating-from-google-location-history-to-dawarich">Learn how to migrate</a>.</span>
+              </div>
+            </div>
+          )}
         </div>
 
         <div className={styles.infoSection}>
@@ -509,7 +539,7 @@ export default function TimelineVisualizer() {
             <div className={styles.infoCard}>
               <h2>What Happened to Google Maps Timeline?</h2>
               <p>In late 2024, Google discontinued the web version of Google Maps Timeline and moved all location data to on-device storage. Only the last 90 days were migrated — older data was deleted unless users manually backed it up. Many people <a href="https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/" target="_blank" rel="noopener noreferrer">lost years of location history</a> in the transition.</p>
-              <p>If you exported your data before or during the transition, this visualizer lets you view it. For a long-term replacement, <a href="/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-visualizer">Dawarich</a> offers self-hosted and cloud-based location tracking with full data ownership.</p>
+              <p>If you exported your data before or during the transition, this visualizer lets you view it. For a long-term replacement, <a href="https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-visualizer">Dawarich</a> offers self-hosted and cloud-based location tracking with full data ownership.</p>
             </div>
 
             <div className={styles.infoCard}>
@@ -552,7 +582,7 @@ export default function TimelineVisualizer() {
           <div className={styles.ctaContent}>
             <h3>Looking for a Google Timeline Replacement?</h3>
             <p>Dawarich is an open-source location tracking platform that gives you full control over your data. Import your Google Timeline export, track ongoing location from your phone, and visualize years of movement history — all self-hosted or in the cloud.</p>
-            <a href="/?utm_source=tool&utm_medium=bottom-cta&utm_campaign=timeline-visualizer" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
+            <a href="https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=bottom-cta&utm_campaign=timeline-visualizer" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
           </div>
         </div>
       </div>

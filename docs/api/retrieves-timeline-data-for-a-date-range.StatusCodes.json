@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"timeline data found","content":{"application/json":{"schema":{"type":"object","properties":{"days":{"type":"array","description":"Array of day objects with timeline data","items":{"type":"object"}}}}}}},"400":{"description":"bad request - missing parameters"},"401":{"description":"unauthorized"}}}

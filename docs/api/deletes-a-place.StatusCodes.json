@@ -1,0 +1,1 @@
+{"responses":{"204":{"description":"place deleted"},"401":{"description":"unauthorized"},"404":{"description":"place not found"}}}

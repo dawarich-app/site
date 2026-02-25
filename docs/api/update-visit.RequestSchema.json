@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"visit":{"type":"object","properties":{"name":{"type":"string"},"place_id":{"type":"integer"},"status":{"type":"string","enum":["suggested","confirmed","declined"]}}}}}}}}}

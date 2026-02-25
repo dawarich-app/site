@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"points deleted","content":{"application/json":{"schema":{"type":"object","properties":{"message":{"type":"string","description":"Confirmation message"},"count":{"type":"integer","description":"Number of points deleted"}}}}}},"401":{"description":"unauthorized"},"422":{"description":"no points selected"}}}

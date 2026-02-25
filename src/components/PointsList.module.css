@@ -181,6 +181,51 @@
   font-family: 'Courier New', monospace;
 }
 
+.progressState {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--ifm-color-emphasis-200);
+  border-top-color: var(--ifm-color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.progressText {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ifm-font-color-base);
+}
+
+.progressFile {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--ifm-font-color-secondary);
+}
+
+.progressHint {
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+  color: var(--ifm-font-color-secondary);
+  font-style: italic;
+}
+
 .emptyState {
   flex: 1;
   display: flex;

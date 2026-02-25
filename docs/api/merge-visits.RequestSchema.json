@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"visit_ids":{"type":"array","items":{"type":"integer"},"minItems":2,"description":"Array of visit IDs to merge (minimum 2)"}},"required":["visit_ids"]}}}}}

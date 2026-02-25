@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"point_ids":{"type":"array","items":{"type":"integer"},"description":"Array of point IDs to delete"}},"required":["point_ids"]}}}}}

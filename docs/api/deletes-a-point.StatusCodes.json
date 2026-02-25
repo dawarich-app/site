@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"point deleted","content":{"application/json":{"schema":{"type":"object","properties":{"message":{"type":"string","description":"Confirmation message"}}}}}},"401":{"description":"unauthorized"}}}
