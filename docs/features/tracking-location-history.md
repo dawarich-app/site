@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+title: Tracking Location History
+description: Set up location tracking with Overland, OwnTracks, or GPSLogger to record and visualize your movements.
 ---
 
 # Tracking location history

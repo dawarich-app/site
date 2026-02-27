@@ -1,5 +1,7 @@
 ---
 sidebar_position: 10
+title: Updating to PostgreSQL 17 with PostGIS
+description: Step-by-step guide to upgrade your Dawarich database from an older PostgreSQL version to PostgreSQL 17 with PostGIS.
 ---
 
 # Updating to PostgreSQL 17 with Postgis

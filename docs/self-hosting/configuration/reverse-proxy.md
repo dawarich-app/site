@@ -1,5 +1,7 @@
 ---
 sidebar_position: 7
+title: Setting Up Reverse Proxy
+description: Configure a reverse proxy with Nginx, Traefik, Caddy, or Apache for your self-hosted Dawarich instance.
 ---
 
 # Setting up reverse proxy

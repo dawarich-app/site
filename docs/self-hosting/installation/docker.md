@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+title: Installation
+description: Install Dawarich using Docker and Docker Compose on Linux, macOS, Windows, or Synology.
 ---
 
 # Installation

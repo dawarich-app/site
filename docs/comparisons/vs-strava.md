@@ -1,5 +1,7 @@
 ---
 sidebar_position: 5
+title: Dawarich vs Strava
+description: Compare Dawarich with Strava for location tracking, privacy, data ownership, and activity analysis features.
 ---
 
 # Dawarich vs Strava

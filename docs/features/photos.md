@@ -1,5 +1,7 @@
 ---
 sidebar_position: 10
+title: Photos
+description: Integrate Immich or Photoprism with Dawarich to display your photos on the map and in trips.
 ---
 
 # Photos

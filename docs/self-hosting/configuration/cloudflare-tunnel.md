@@ -1,5 +1,7 @@
 ---
 sidebar_position: 8
+title: Exposing via CloudFlare Tunnel
+description: Expose your self-hosted Dawarich instance to the internet using CloudFlare Zero Trust Tunnels without opening firewall ports.
 ---
 
 # Exposing your instance via CloudFlare Tunnel

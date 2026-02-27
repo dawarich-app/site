@@ -1,5 +1,7 @@
 ---
 sidebar_position: 10
+title: Moving to PostGIS
+description: Migrate your Dawarich database from standard PostgreSQL to PostGIS for spatial data support.
 ---
 
 # Moving to PostGIS

@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+title: Hardware Requirements
+description: Minimum hardware requirements for self-hosting Dawarich, including RAM, CPU, and disk space recommendations.
 ---
 
 # Hardware requirements

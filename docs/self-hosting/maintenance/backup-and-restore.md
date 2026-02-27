@@ -1,5 +1,7 @@
 ---
 sidebar_position: 5
+title: Backup & Restore
+description: Back up and restore your Dawarich PostgreSQL database using Docker commands.
 ---
 
 # Backup & Restore

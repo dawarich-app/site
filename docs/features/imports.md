@@ -1,5 +1,7 @@
 ---
 sidebar_position: 4
+title: Imports
+description: View and manage your location data imports, including file names, point counts, and processing status.
 ---
 
 # Imports

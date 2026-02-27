@@ -1,5 +1,7 @@
 ---
 sidebar_position: 16
+title: OIDC Authentication
+description: Configure OpenID Connect (OIDC) authentication with providers like Authentik, Authelia, or Keycloak for your Dawarich instance.
 ---
 
 # OIDC Authentication

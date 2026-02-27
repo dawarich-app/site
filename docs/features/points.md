@@ -1,5 +1,7 @@
 ---
 sidebar_position: 6
+title: Points
+description: Browse, search, export, and manage your recorded GPS location points in Dawarich.
 ---
 
 # Points

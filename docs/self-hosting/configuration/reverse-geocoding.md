@@ -1,5 +1,7 @@
 ---
 sidebar_position: 6
+title: Reverse Geocoding
+description: Configure reverse geocoding in Dawarich using Photon, Geoapify, Nominatim, or a self-hosted service to convert coordinates to addresses.
 ---
 
 # Reverse geocoding

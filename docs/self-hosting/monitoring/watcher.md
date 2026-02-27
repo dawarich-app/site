@@ -1,5 +1,7 @@
 ---
 sidebar_position: 9
+title: The Watcher
+description: Automatically import GPX, OwnTracks, and GeoJSON files by watching a directory for new files.
 ---
 
 # The Watcher release

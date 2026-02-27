@@ -1,5 +1,7 @@
 ---
 sidebar_position: 15
+title: Monitoring with Prometheus
+description: Export Dawarich metrics to Prometheus for monitoring your self-hosted instance.
 ---
 
 # Monitoring with Prometheus

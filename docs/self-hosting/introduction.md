@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+title: Self-Hosting Introduction
+description: Get started self-hosting Dawarich with Docker and Docker Compose, including prerequisites and setup instructions.
 ---
 
 # Self-Hosting Introduction

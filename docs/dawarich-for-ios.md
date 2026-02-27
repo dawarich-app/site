@@ -1,5 +1,7 @@
 ---
 sidebar_position: 97
+title: Dawarich for iOS
+description: Install and set up the Dawarich iOS app for location tracking on iPhone and iPad.
 ---
 
 # Dawarich for iOS

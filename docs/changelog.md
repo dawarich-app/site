@@ -1,5 +1,7 @@
 ---
 sidebar_position: 97
+title: Changelog
+description: A record of all notable changes, new features, bug fixes, and improvements in each Dawarich release.
 ---
 
 # Changelog

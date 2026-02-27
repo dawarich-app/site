@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+title: Stats
+description: View summary statistics of your location data including distance traveled, countries and cities visited, and points recorded.
 ---
 
 # Stats

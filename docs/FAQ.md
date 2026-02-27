@@ -1,5 +1,7 @@
 ---
 sidebar_position: 99
+title: FAQ
+description: Frequently asked questions about Dawarich, including setup, configuration, and troubleshooting.
 ---
 
 # FAQ

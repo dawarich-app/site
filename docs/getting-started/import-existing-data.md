@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+title: Import Existing Data
+description: Import location history from Google Takeout, OwnTracks, GPX files, and other sources into Dawarich.
 ---
 
 # Import existing data

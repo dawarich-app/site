@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+title: Dawarich vs Google Timeline
+description: Compare Dawarich with Google Timeline across privacy, features, data ownership, and self-hosting capabilities.
 ---
 
 # Dawarich vs Google Timeline

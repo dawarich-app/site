@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+title: Dawarich vs OwnTracks
+description: Compare Dawarich with OwnTracks across features, data visualization, import capabilities, and self-hosting options.
 ---
 
 # Dawarich vs OwnTracks

@@ -1,5 +1,7 @@
 ---
 sidebar_position: 4
+title: Exporting Your Data
+description: Export your location data from Dawarich in OwnTracks-compatible JSON format for backup or external use.
 ---
 
 # Exporting your data

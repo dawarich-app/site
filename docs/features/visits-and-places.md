@@ -1,5 +1,7 @@
 ---
 sidebar_position: 8
+title: Visits and Places
+description: Track your visits to locations and build a comprehensive picture of your daily activities and travel history.
 ---
 
 # Visits and Places

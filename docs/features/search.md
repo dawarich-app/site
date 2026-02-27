@@ -1,5 +1,7 @@
 ---
 sidebar_position: 14
+title: Place Search
+description: Search for places on the map and view your visit history for those locations.
 ---
 
 # Place Search

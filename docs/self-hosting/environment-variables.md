@@ -1,5 +1,7 @@
 ---
 sidebar_position: 98
+title: Environment Variables and Settings
+description: Reference for all Dawarich environment variables including database, Redis, geocoding, and application configuration.
 ---
 
 # Environment Variables and Settings

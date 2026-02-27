@@ -1,5 +1,7 @@
 ---
 sidebar_position: 11
+title: EXIF Geotag Media Script
+description: PowerShell script to add GPS coordinates and location metadata to photos and videos using Dawarich and Photon APIs.
 ---
 
 # EXIF Geotag Media Script PowerShell

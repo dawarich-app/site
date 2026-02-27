@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 slug: /intro
+title: Welcome to Dawarich
+description: Dawarich is a privacy-focused, self-hosted location history application that gives you full control over your location data.
 ---
 
 # Welcome to Dawarich

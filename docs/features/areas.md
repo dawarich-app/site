@@ -1,5 +1,7 @@
 ---
 sidebar_position: 7
+title: Areas
+description: Define geographic areas on the map to automatically track and log your visits in their boundaries.
 ---
 
 # Areas

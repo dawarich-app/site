@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+title: Tracking with Shortcuts
+description: Automate Dawarich iOS location tracking using Apple Shortcuts for time- and location-based triggers.
 ---
 
 # 📱 Tracking with Shortcuts

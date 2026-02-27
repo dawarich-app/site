@@ -1,5 +1,7 @@
 ---
 sidebar_position: 12
+title: Family Location Sharing
+description: Share your real-time location with trusted family members and friends on your self-hosted Dawarich instance.
 ---
 
 # Family Location Sharing

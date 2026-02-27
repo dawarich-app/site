@@ -1,5 +1,7 @@
 ---
 sidebar_position: 98
+title: Updating Guides
+description: Breaking changes and migration instructions for each Dawarich version update.
 ---
 
 # Updating guides

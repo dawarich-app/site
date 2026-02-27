@@ -1,5 +1,7 @@
 ---
 sidebar_position: 8
+title: Trips
+description: Create, organize, and visualize your trips with routes, dates, and notes in Dawarich.
 ---
 
 # Trips

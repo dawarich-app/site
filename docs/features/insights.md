@@ -1,5 +1,7 @@
 ---
 sidebar_position: 11
+title: Insights
+description: Analyze your location history with visualizations, statistics, and movement pattern dashboards.
 ---
 
 # Insights

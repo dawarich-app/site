@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+title: Map
+description: Explore your location history on interactive maps with points, routes, heatmaps, and multiple layer options.
 ---
 
 # Map

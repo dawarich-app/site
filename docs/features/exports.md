@@ -1,5 +1,7 @@
 ---
 sidebar_position: 5
+title: Exports
+description: Export your location data from Dawarich in JSON format for backup or use in other applications.
 ---
 
 # Exports

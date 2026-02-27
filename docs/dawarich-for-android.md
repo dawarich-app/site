@@ -1,5 +1,7 @@
 ---
 sidebar_position: 98
+title: Dawarich for Android
+description: Install and set up the Dawarich Android app for location tracking on Android devices.
 ---
 
 # Dawarich for Android

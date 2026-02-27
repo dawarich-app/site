@@ -1,5 +1,7 @@
 ---
 sidebar_position: 13
+title: Transportation Modes
+description: Automatically detect and classify your transportation modes based on speed and movement patterns.
 ---
 
 # Transportation Modes

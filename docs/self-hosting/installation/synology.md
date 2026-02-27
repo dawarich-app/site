@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+title: Synology
+description: Step-by-step guide to install and configure Dawarich on a Synology NAS using Container Manager.
 ---
 
 *The author of the original tutorial on Github is [djhrum](https://github.com/djhrum)*

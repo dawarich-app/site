@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+title: Track Your Location
+description: Set up location tracking using the Dawarich app, Overland, OwnTracks, or GPSLogger mobile applications.
 ---
 
 # Track your location
