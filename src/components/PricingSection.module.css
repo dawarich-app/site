@@ -43,10 +43,26 @@
   display: flex;
   justify-content: center;
   align-items: stretch;
+  gap: 2rem;
   margin-top: 3rem;
-  max-width: 80rem;
+  max-width: 56rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Equal-width columns */
+.cardContainer > * {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* Plain card wrapper (matches flex sizing with featured wrapper) */
+.cardWrapper {
+  display: flex;
+}
+
+.cardWrapper > * {
+  flex: 1;
 }
 
 /* Featured card wrapper with animated gradient border */
@@ -127,6 +143,8 @@
 
 @media (max-width: 992px) {
   .cardContainer {
+    flex-direction: column;
+    align-items: center;
     max-width: 28rem;
   }
 }

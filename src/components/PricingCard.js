@@ -5,45 +5,53 @@ import styles from './PricingCard.module.css';
 export default function PricingCard({
   className,
   title = "Annual Subscription",
-  price = "119.99",
-  period = "year",
-  description = "Full access to all features. Self-hostable.",
+  annualPrice = 120,
+  monthlyPrice = null,
+  description = "Full access to all features.",
   features = [],
-  highlightedFeatures = [], // Only this determines which features are highlighted
+  includesLabel = null,
   buttonText = "Get Started",
   buttonLink = "/pricing",
-  onButtonClick,
-  trialText = "No credit card required to start your free 14-day trial",
+  buttonVariant = "primary",
+  trialText = null,
+  badge = null,
   disabled = false
 }) {
   const [isAnnual, setIsAnnual] = useState(true);
+  const hasMonthly = monthlyPrice !== null;
 
-  // Only show toggle for non-Business plans
-  const isBusinessPlan = title === "Business" || title === "Business Plan";
-
-  // Pricing
-  const annualPrice = 119.99;
-  const monthlyPrice = 17.99;
+  const displayPrice = isAnnual || !hasMonthly ? annualPrice : monthlyPrice;
+  const displayPeriod = isAnnual || !hasMonthly ? 'year' : 'month';
   const monthlyEquivalent = (annualPrice / 12).toFixed(2);
-
-  const displayPrice = isBusinessPlan ? price : (isAnnual ? annualPrice : monthlyPrice);
-  const displayPeriod = isBusinessPlan ? period : (isAnnual ? 'year' : 'month');
 
   return (
     <div className={`${styles.pricingCard} ${className || ''} ${disabled ? styles.disabled : ''}`}>
+      {badge && <div className={styles.planBadge}>{badge}</div>}
       <h2 className={styles.title}>{title}</h2>
 
-      {/* Billing Period Toggle - only show for non-Business plans */}
-      {!isBusinessPlan && (
+      <div className={styles.priceContainer}>
+        <div className={styles.mainPrice}>
+          <span className={styles.currency}>&euro;</span>
+          <span className={styles.currentPrice}>{displayPrice}</span>
+          <span className={styles.period}>/{displayPeriod}</span>
+        </div>
+        {(isAnnual || !hasMonthly) && (
+          <div className={styles.equivalentPrice}>
+            &euro;{monthlyEquivalent}/month
+          </div>
+        )}
+      </div>
+
+      {hasMonthly && (
         <div className={styles.toggleContainer}>
-          <button
-            className={`${styles.toggleButton} ${!isAnnual ? styles.active : ''}`}
-            onClick={() => setIsAnnual(false)}
-            disabled={disabled}
-          >
-            Monthly
-          </button>
-          <div className={styles.toggleButtonWrapper}>
+          <div className={styles.toggleTrack}>
+            <button
+              className={`${styles.toggleButton} ${!isAnnual ? styles.active : ''}`}
+              onClick={() => setIsAnnual(false)}
+              disabled={disabled}
+            >
+              Monthly
+            </button>
             <button
               className={`${styles.toggleButton} ${isAnnual ? styles.active : ''}`}
               onClick={() => setIsAnnual(true)}
@@ -51,67 +59,48 @@ export default function PricingCard({
             >
               Annual
             </button>
-            <sup className={styles.discountBadge}>Best deal!</sup>
           </div>
-        </div>
-      )}
-
-      {price !== null && (
-        <div className={styles.priceContainer}>
-          <div className={styles.mainPrice}>
-            <span className={styles.currentPrice}>€{displayPrice}</span>/{displayPeriod}
-          </div>
-          {!isBusinessPlan && isAnnual && (
-            <div className={styles.equivalentPrice}>
-              (€{monthlyEquivalent}/month)
-            </div>
+          {isAnnual && monthlyPrice && (
+            <span className={styles.saveBadge}>
+              Save {Math.round((1 - annualPrice / (monthlyPrice * 12)) * 100)}%
+            </span>
           )}
-        </div>
-      )}
-
-      {price === null && (
-        <div className={styles.priceContainer}>
-          <div className={styles.mainPrice}>
-            <span className={styles.currentPrice}>Custom</span>
-          </div>
         </div>
       )}
 
       <p className={styles.description}>{description}</p>
 
+      <div className={styles.divider} />
+
+      {includesLabel && (
+        <div className={styles.includesLabel}>{includesLabel}</div>
+      )}
+
       <ul className={styles.featuresList}>
         {features.map((feature, index) => (
-          <li
-            key={index}
-            className={`${styles.featureItem} ${highlightedFeatures.includes(feature) ? styles.highlighted : ''}`}
-          >
-            <span className={styles.checkmark}>✓</span>
-            {feature}
+          <li key={index} className={styles.featureItem}>
+            <span className={styles.checkIcon}>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M11.5 3.5L5.5 10L2.5 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </span>
+            <span className={styles.featureText}>{feature}</span>
           </li>
         ))}
       </ul>
 
-      {buttonLink && buttonLink !== null ? (
+      {buttonLink && (
         <Link
           to={buttonLink}
-          className={`${styles.ctaButton} ${disabled ? styles.disabledButton : ''}`}
+          className={`${styles.ctaButton} ${styles[buttonVariant]} ${disabled ? styles.disabledButton : ''}`}
           aria-disabled={disabled}
         >
           {buttonText}
         </Link>
-      ) : (
-        <button
-          type="button"
-          onClick={onButtonClick}
-          className={`${styles.ctaButton} ${disabled ? styles.disabledButton : ''}`}
-          disabled={disabled}
-        >
-          {buttonText}
-        </button>
       )}
 
       {trialText && (
-        <p className={styles.trialText} style={{ marginTop: '1rem' }}>{trialText}</p>
+        <p className={styles.trialText}>{trialText}</p>
       )}
     </div>
   );

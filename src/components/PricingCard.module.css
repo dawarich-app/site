@@ -1,73 +1,84 @@
+/* ── Card shell ── */
 .pricingCard {
   background-color: #fff;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  padding: 48px 36px;
-  width: 400px;
-  flex: 1;
+  border: 1px solid #e5e7eb;
+  padding: 40px 32px 32px;
+  width: 100%;
   text-align: center;
   position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
+.pricingCard:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
 
+/* ── Badge ── */
+.planBadge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 2;
+  background: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(190, 90%, 50%));
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.375rem 0.875rem;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+/* ── Title ── */
 .title {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #111827;
-  margin-bottom: 20px;
-  margin-top: 0;
+  margin: 0 0 1.25rem;
 }
 
+/* ── Billing toggle (pill style) ── */
 .toggleContainer {
   display: flex;
-  gap: 8px;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
 }
 
-.toggleButtonWrapper {
+.toggleTrack {
   display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  position: relative;
+  background: #f3f4f6;
+  border-radius: 9999px;
+  padding: 3px;
+  gap: 2px;
 }
 
 .toggleButton {
-  padding: 8px 20px;
-  border: 2px solid #e5e7eb;
-  background-color: #fff;
+  padding: 6px 18px;
+  border: none;
+  background: transparent;
   color: #6b7280;
-  border-radius: 8px;
-  font-size: 14px;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .toggleButton:hover:not(:disabled):not(.active) {
-  border-color: #3b82f6;
-  color: #3b82f6;
+  color: #374151;
 }
 
 .toggleButton.active {
-  background-color: #3b82f6;
-  color: white;
-  border-color: #3b82f6;
-}
-
-.discountBadge {
-  position: absolute;
-  top: 0;
-  right: -60px;
-  font-size: 0.65rem;
-  font-weight: 600;
-  color: #3b82f6;
-  white-space: nowrap;
-  line-height: 1;
+  background: #fff;
+  color: #111827;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .toggleButton:disabled {
@@ -75,249 +86,255 @@
   opacity: 0.5;
 }
 
-.equivalentPrice {
-  color: #6b7280;
-  font-size: 0.9rem;
-  margin-top: 0.25rem;
+.saveBadge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #059669;
+  background: #ecfdf5;
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
 }
 
+/* ── Price ── */
 .priceContainer {
   text-align: center;
-  margin: 2rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.discountNotice {
-  background-color: #fef3c7;
-  color: #92400e;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  border: 1px solid #fbbf24;
+  margin: 1.5rem 0;
 }
 
 .mainPrice {
   display: flex;
   align-items: baseline;
   justify-content: center;
-  gap: 0.5rem;
-  font-size: 1.5rem;
-  line-height: 1.2;
+  line-height: 1;
 }
 
-.originalPrice {
-  color: #ff6b6b;
-  text-decoration: line-through;
-  opacity: 0.7;
-  font-weight: 500;
+.currency {
   font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  align-self: flex-start;
+  margin-top: 0.35rem;
 }
 
 .currentPrice {
-  color: #4c6ef5;
-  font-weight: 600;
-  font-size: 2.5rem;
+  font-size: 3.25rem;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.025em;
 }
 
 .period {
-  color: #868e96;
-  font-size: 1.5rem;
-}
-
-.price {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1;
-  color: var(--ifm-color-primary);
-}
-
-.euroSign {
-  font-size: 1.5rem;
-  align-self: flex-start;
-  margin-top: 0.5rem;
-}
-
-.monthlyPrice {
-  color: var(--ifm-color-emphasis-600);
-  font-size: 1.1rem;
-  margin-top: 0.5rem;
-}
-
-.pricingNote {
-  color: var(--ifm-color-emphasis-600);
-  font-size: 0.9rem;
-  margin-top: 0.25rem;
-  font-style: italic;
-}
-
-.description {
-  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 500;
   color: #6b7280;
-  margin-bottom: 30px;
+  margin-left: 0.125rem;
 }
 
+.equivalentPrice {
+  color: #9ca3af;
+  font-size: 0.85rem;
+  margin-top: 0.375rem;
+}
+
+/* ── Description ── */
+.description {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #6b7280;
+  margin: 0 0 1.5rem;
+}
+
+/* ── Divider ── */
+.divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 0 0 1.5rem;
+}
+
+/* ── "Includes" label ── */
+.includesLabel {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #3b82f6;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+/* ── Feature list ── */
 .featuresList {
   list-style: none;
   padding: 0;
-  margin: 0 0 30px;
+  margin: 0 0 2rem;
   text-align: left;
   flex-grow: 1;
 }
 
 .featureItem {
   display: flex;
-  align-items: center;
-  font-size: 16px;
-  color: #111827;
-  margin-bottom: 16px;
+  align-items: flex-start;
+  font-size: 0.9375rem;
+  color: #374151;
+  margin-bottom: 0.875rem;
+  line-height: 1.4;
 }
 
-.checkmark {
-  color: #3b82f6;
-  font-size: 18px;
-  margin-right: 12px;
+.checkIcon {
   flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #3b82f6;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+  margin-top: 1px;
 }
 
+.featureText {
+  flex: 1;
+}
+
+/* ── CTA buttons ── */
 .ctaButton {
   width: 100%;
   display: block;
   text-align: center;
-  padding: 12px 24px;
+  padding: 0.875rem 1.5rem;
   margin-top: auto;
-  background-color: #3b82f6;
-  color: white;
   font-weight: 600;
-  font-size: 16px;
-  border-radius: 8px;
+  font-size: 0.9375rem;
+  border-radius: 10px;
   text-decoration: none;
-  transition: background-color 0.2s ease;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.ctaButton:hover {
-  background-color: #2563eb;
+/* Primary: solid blue (Pro) */
+.primary {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.25);
+}
+
+.primary:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: white;
   text-decoration: none;
-  box-shadow: 0 0 20px hsl(217, 91%, 60% / 0.3);
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.35);
+  transform: translateY(-1px);
 }
 
+/* Secondary: outlined (Lite) */
+.secondary {
+  background: transparent;
+  color: #3b82f6;
+  border: 2px solid #3b82f6;
+}
+
+.secondary:hover {
+  background: #eff6ff;
+  color: #2563eb;
+  border-color: #2563eb;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* ── Trial text ── */
 .trialText {
-  font-size: 14px;
-  color: #6b7280;
-  margin: 0;
+  font-size: 0.8125rem;
+  color: #9ca3af;
+  margin: 0.75rem 0 0;
 }
 
-/* Dark mode support */
+/* ── Dark mode ── */
 [data-theme='dark'] .pricingCard {
   background-color: #1f2937;
+  border-color: #374151;
 }
 
-[data-theme='dark'] .title,
-[data-theme='dark'] .price,
-[data-theme='dark'] .euroSign {
+[data-theme='dark'] .pricingCard:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .title {
   color: #f9fafb;
 }
 
-[data-theme='dark'] .period,
+[data-theme='dark'] .currency,
+[data-theme='dark'] .currentPrice {
+  color: #f9fafb;
+}
+
+[data-theme='dark'] .period {
+  color: #9ca3af;
+}
+
 [data-theme='dark'] .description,
 [data-theme='dark'] .trialText {
   color: #9ca3af;
 }
 
+[data-theme='dark'] .equivalentPrice {
+  color: #6b7280;
+}
+
+[data-theme='dark'] .divider {
+  background: #374151;
+}
+
 [data-theme='dark'] .featureItem {
-  color: #f3f4f6;
+  color: #e5e7eb;
+}
+
+[data-theme='dark'] .checkIcon {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+}
+
+[data-theme='dark'] .includesLabel {
+  color: #60a5fa;
+}
+
+[data-theme='dark'] .toggleTrack {
+  background: #374151;
 }
 
 [data-theme='dark'] .toggleButton {
-  background-color: #374151;
-  border-color: #4b5563;
   color: #9ca3af;
 }
 
 [data-theme='dark'] .toggleButton:hover:not(:disabled):not(.active) {
-  border-color: #3b82f6;
-  color: #3b82f6;
+  color: #e5e7eb;
 }
 
 [data-theme='dark'] .toggleButton.active {
-  background-color: #3b82f6;
-  color: white;
-  border-color: #3b82f6;
+  background: #4b5563;
+  color: #f9fafb;
+  box-shadow: none;
 }
 
-[data-theme='dark'] .equivalentPrice {
-  color: #9ca3af;
+[data-theme='dark'] .saveBadge {
+  background: rgba(5, 150, 105, 0.15);
+  color: #34d399;
 }
 
-[data-theme='dark'] .discountBadge {
+[data-theme='dark'] .secondary {
   color: #60a5fa;
+  border-color: #60a5fa;
 }
 
-[data-theme='dark'] .discountNotice {
-  background-color: #451a03;
-  color: #fef3c7;
-  border-color: #92400e;
+[data-theme='dark'] .secondary:hover {
+  background: rgba(59, 130, 246, 0.1);
+  color: #93bbfd;
+  border-color: #93bbfd;
 }
 
-.card {
-  background: var(--ifm-background-surface-color);
-  border: 1px solid var(--ifm-color-emphasis-200);
-  border-radius: 8px;
-  padding: 2rem;
-  width: 350px; /* Set a fixed width */
-  margin: 0; /* Remove any default margins */
-}
-
-/* If you have any margins in the card content, make sure they don't affect the outer spacing */
-.card > * {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.highlighted {
-  background-color: rgba(255, 255, 0, 0.2);
-  border-radius: 4px;
-  padding: 4px 8px;
-  margin: -4px -8px;
-}
-
-[data-theme='dark'] .highlighted {
-  background-color: rgba(255, 255, 0, 0.1);
-}
-
-@media (max-width: 768px) {
-  .pricingCard {
-    width: 100%;
-  }
-
-  .mainPrice {
-    font-size: 1.2rem;
-  }
-
-  .currentPrice {
-    font-size: 2rem;
-  }
-
-  .originalPrice {
-    font-size: 1.2rem;
-  }
-
-  .discountNotice {
-    font-size: 0.75rem;
-    padding: 6px 10px;
-  }
-
-  .discountBadge {
-    right: -60px;
-    font-size: 0.6rem;
-  }
-}
-
+/* ── Disabled state ── */
 .disabled {
   opacity: 0.7;
   background-color: #f5f5f5;
@@ -325,25 +342,14 @@
   cursor: not-allowed;
 }
 
-.disabled::before {
-  background: #9ca3af;
-}
-
-.disabled .title,
-.disabled .currentPrice,
-.disabled .period,
-.disabled .checkmark {
-  color: #6b7280;
-}
-
 .disabledButton {
   background-color: #9ca3af !important;
+  background-image: none !important;
+  border-color: #9ca3af !important;
+  color: white !important;
   cursor: not-allowed;
   pointer-events: none;
-}
-
-.disabledButton:hover {
-  background-color: #9ca3af !important;
+  box-shadow: none !important;
 }
 
 [data-theme='dark'] .disabled {
@@ -351,17 +357,21 @@
   opacity: 0.7;
 }
 
-[data-theme='dark'] .disabled .title,
-[data-theme='dark'] .disabled .currentPrice,
-[data-theme='dark'] .disabled .period,
-[data-theme='dark'] .disabled .checkmark {
-  color: #9ca3af;
-}
-
 [data-theme='dark'] .disabledButton {
   background-color: #4b5563 !important;
 }
 
-[data-theme='dark'] .disabledButton:hover {
-  background-color: #4b5563 !important;
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .pricingCard {
+    padding: 32px 24px 24px;
+  }
+
+  .currentPrice {
+    font-size: 2.5rem;
+  }
+
+  .currency {
+    font-size: 1.25rem;
+  }
 }
