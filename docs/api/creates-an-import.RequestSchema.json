@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"multipart/form-data":{"schema":{"type":"file"}}},"required":true,"description":"The file to import (GPX, GeoJSON, KML, OwnTracks JSON, etc.)"}}

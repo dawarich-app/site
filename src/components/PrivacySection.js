@@ -1,105 +1,238 @@
-import React from 'react';
-import Link from '@docusaurus/Link';
-import styles from './PrivacySection.module.css';
+import Link from "@docusaurus/Link";
+import React from "react";
+import styles from "./PrivacySection.module.css";
+
+const NoAdsIcon = () => (
+	<svg
+		width="24"
+		height="24"
+		viewBox="0 0 24 24"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+	>
+		<circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
+		<line
+			x1="4.93"
+			y1="4.93"
+			x2="19.07"
+			y2="19.07"
+			stroke="currentColor"
+			strokeWidth="2"
+			strokeLinecap="round"
+		/>
+		<path
+			d="M12 8V12L15 15"
+			stroke="currentColor"
+			strokeWidth="2"
+			strokeLinecap="round"
+			strokeLinejoin="round"
+		/>
+	</svg>
+);
+
+const SelfHostIcon = () => (
+	<svg
+		width="24"
+		height="24"
+		viewBox="0 0 24 24"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+	>
+		<rect
+			x="2"
+			y="3"
+			width="20"
+			height="4"
+			rx="1"
+			stroke="currentColor"
+			strokeWidth="2"
+		/>
+		<rect
+			x="2"
+			y="9"
+			width="20"
+			height="4"
+			rx="1"
+			stroke="currentColor"
+			strokeWidth="2"
+		/>
+		<rect
+			x="2"
+			y="15"
+			width="20"
+			height="4"
+			rx="1"
+			stroke="currentColor"
+			strokeWidth="2"
+		/>
+		<line
+			x1="6"
+			y1="5"
+			x2="6.01"
+			y2="5"
+			stroke="currentColor"
+			strokeWidth="2"
+			strokeLinecap="round"
+		/>
+		<line
+			x1="6"
+			y1="11"
+			x2="6.01"
+			y2="11"
+			stroke="currentColor"
+			strokeWidth="2"
+			strokeLinecap="round"
+		/>
+		<line
+			x1="6"
+			y1="17"
+			x2="6.01"
+			y2="17"
+			stroke="currentColor"
+			strokeWidth="2"
+			strokeLinecap="round"
+		/>
+	</svg>
+);
+
+const OpenSourceIcon = () => (
+	<svg
+		width="24"
+		height="24"
+		viewBox="0 0 24 24"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+	>
+		<path
+			d="M16 18L22 12L16 6"
+			stroke="currentColor"
+			strokeWidth="2"
+			strokeLinecap="round"
+			strokeLinejoin="round"
+		/>
+		<path
+			d="M8 6L2 12L8 18"
+			stroke="currentColor"
+			strokeWidth="2"
+			strokeLinecap="round"
+			strokeLinejoin="round"
+		/>
+		<line
+			x1="14"
+			y1="4"
+			x2="10"
+			y2="20"
+			stroke="currentColor"
+			strokeWidth="2"
+			strokeLinecap="round"
+		/>
+	</svg>
+);
 
 const ShieldIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 22S4 18 4 12V6L12 2L20 6V12C20 18 12 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M9 12L11 14L15 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
-);
-
-const LockIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="3" y="11" width="18" height="10" rx="2" ry="2" stroke="currentColor" strokeWidth="2"/>
-    <circle cx="12" cy="16" r="1" stroke="currentColor" strokeWidth="2"/>
-    <path d="M7 11V7A5 5 0 0 1 17 7V11" stroke="currentColor" strokeWidth="2"/>
-  </svg>
-);
-
-const ServerIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="2" y="3" width="20" height="4" rx="1" stroke="currentColor" strokeWidth="2"/>
-    <rect x="2" y="9" width="20" height="4" rx="1" stroke="currentColor" strokeWidth="2"/>
-    <rect x="2" y="15" width="20" height="4" rx="1" stroke="currentColor" strokeWidth="2"/>
-    <line x1="6" y1="5" x2="6.01" y2="5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-    <line x1="6" y1="11" x2="6.01" y2="11" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-    <line x1="6" y1="17" x2="6.01" y2="17" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-  </svg>
-);
-
-const GDPRIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2"/>
-    <path d="M12 8V12L15 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
+	<svg
+		width="24"
+		height="24"
+		viewBox="0 0 24 24"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+	>
+		<path
+			d="M12 22S4 18 4 12V6L12 2L20 6V12C20 18 12 22 12 22Z"
+			stroke="currentColor"
+			strokeWidth="2"
+			strokeLinecap="round"
+			strokeLinejoin="round"
+		/>
+		<path
+			d="M9 12L11 14L15 10"
+			stroke="currentColor"
+			strokeWidth="2"
+			strokeLinecap="round"
+			strokeLinejoin="round"
+		/>
+	</svg>
 );
 
 export default function PrivacySection() {
-  return (
-    <section className={styles.privacySection}>
-      <div className={styles.container}>
-        <h2 className={styles.title}>Your Data, Your Privacy</h2>
-        <p className={styles.subtitle}>
-          Your location data is encrypted, stored in Europe, and never shared with third parties.
-        </p>
+	return (
+		<section className={styles.privacySection}>
+			<div className={styles.container}>
+				<h2 className={styles.title}>The Anti-Google Privacy Stack</h2>
+				<p className={styles.subtitle}>
+					Google uses your location to sell ads. We charge you money instead.
+					That's the entire business model.
+				</p>
 
-        <div className={styles.grid}>
-          <div className={styles.privacyCard}>
-            <div className={styles.iconWrapper}>
-              <LockIcon />
-            </div>
-            <div>
-              <h3 className={styles.cardTitle}>Encrypted in Transit</h3>
-              <p className={styles.cardDescription}>
-                All data transmission uses SSL/TLS encryption to protect your information from interception during transfer.
-              </p>
-            </div>
-          </div>
+				<div className={styles.grid}>
+					<div className={styles.privacyCard}>
+						<div className={styles.iconWrapper}>
+							<NoAdsIcon />
+						</div>
+						<div>
+							<h3 className={styles.cardTitle}>
+								No Ads. No Data Selling. Ever.
+							</h3>
+							<p className={styles.cardDescription}>
+								Your data funds Google's $300B ad business. At Dawarich, your
+								location data is the product you're buying — not the product
+								we're selling.
+							</p>
+						</div>
+					</div>
 
-          <div className={styles.privacyCard}>
-            <div className={styles.iconWrapper}>
-              <ShieldIcon />
-            </div>
-            <div>
-              <h3 className={styles.cardTitle}>Encrypted at Rest</h3>
-              <p className={styles.cardDescription}>
-                Your data is stored with LUKS encryption, ensuring it remains secure even at the storage level.
-              </p>
-            </div>
-          </div>
+					<div className={styles.privacyCard}>
+						<div className={styles.iconWrapper}>
+							<SelfHostIcon />
+						</div>
+						<div>
+							<h3 className={styles.cardTitle}>
+								Self-Host: Zero Trust Required
+							</h3>
+							<p className={styles.cardDescription}>
+								Don't trust anyone with your data? Run Dawarich on your own
+								server. Your data never touches our infrastructure. We literally
+								cannot see it.
+							</p>
+						</div>
+					</div>
 
-          <div className={styles.privacyCard}>
-            <div className={styles.iconWrapper}>
-              <ServerIcon />
-            </div>
-            <div>
-              <h3 className={styles.cardTitle}>Based in Europe</h3>
-              <p className={styles.cardDescription}>
-                All servers are located in Europe, providing additional privacy protection under strict European data laws.
-              </p>
-            </div>
-          </div>
+					<div className={styles.privacyCard}>
+						<div className={styles.iconWrapper}>
+							<ShieldIcon />
+						</div>
+						<div>
+							<h3 className={styles.cardTitle}>Encrypted and EU-Hosted</h3>
+							<p className={styles.cardDescription}>
+								All data encrypted in transit (SSL/TLS) and at rest (LUKS).
+								Stored in European data centers under strict GDPR regulations.
+								You have full control over your data.
+							</p>
+						</div>
+					</div>
 
-          <div className={styles.privacyCard}>
-            <div className={styles.iconWrapper}>
-              <GDPRIcon />
-            </div>
-            <div>
-              <h3 className={styles.cardTitle}>GDPR Compliant</h3>
-              <p className={styles.cardDescription}>
-                Fully compliant with GDPR regulations, giving you complete control over your personal data and privacy rights.
-              </p>
-            </div>
-          </div>
-        </div>
+					<div className={styles.privacyCard}>
+						<div className={styles.iconWrapper}>
+							<OpenSourceIcon />
+						</div>
+						<div>
+							<h3 className={styles.cardTitle}>
+								Open Source: Inspect Every Line
+							</h3>
+							<p className={styles.cardDescription}>
+								Don't trust us? Read the code. 8,300+ GitHub stars. Thousands of
+								developers have reviewed it. No hidden tracking. No surprises.
+							</p>
+						</div>
+					</div>
+				</div>
 
-        <div className={styles.policyLinkContainer}>
-          <Link to="/privacy-policy" className={styles.policyLink}>
-            Read our full Privacy Policy →
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
+				<div className={styles.policyLinkContainer}>
+					<Link to="/privacy-policy" className={styles.policyLink}>
+						Read our full Privacy Policy →
+					</Link>
+				</div>
+			</div>
+		</section>
+	);
 }

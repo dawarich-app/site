@@ -32,7 +32,7 @@ For Dawarich to run 4 docker containers are required:
 Some containers depend on others to be running first. Therefore this guide will follow this order: `dawarich_db` >> `dawarich_redis` >> `dawarich_app` >> `dawarich_sidekiq`.
 :::
 
-[Usually](https://dawarich.app/docs/intro/) all 4 containers are created and started together using [Docker Compose](https://docs.docker.com/compose/). Unraid [does not support Docker Compose natively](https://docs.unraid.net/unraid-os/using-unraid-to/run-docker-containers/overview/). Instead, it uses its own implementation of `DockerMan` for managing Docker containers via [Community Applications (CA)](https://docs.unraid.net/unraid-os/using-unraid-to/run-docker-containers/community-applications/) plugin.
+[Usually](https://dawarich.app//docs/self-hosting/introduction) all 4 containers are created and started together using [Docker Compose](https://docs.docker.com/compose/). Unraid [does not support Docker Compose natively](https://docs.unraid.net/unraid-os/using-unraid-to/run-docker-containers/overview/). Instead, it uses its own implementation of `DockerMan` for managing Docker containers via [Community Applications (CA)](https://docs.unraid.net/unraid-os/using-unraid-to/run-docker-containers/community-applications/) plugin.
 
 However, there is a [Docker Compose Manager](https://forums.unraid.net/topic/114415-plugin-docker-compose-manager/) plugin that can be used to [setup and run Dawarich using Docker Compose](https://github.com/Freika/dawarich/discussions/150). This method is not covered in this guide.
 

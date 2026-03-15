@@ -1,0 +1,150 @@
+.section {
+  padding: 6rem 1rem;
+  background: linear-gradient(to bottom, hsl(220, 15%, 97%), hsl(0, 0%, 100%));
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.title {
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
+  font-weight: 700;
+  text-align: center;
+  color: hsl(220, 15%, 15%);
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.025em;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.75;
+  text-align: center;
+  color: hsl(220, 10%, 46%);
+  max-width: 36rem;
+  margin: 0 auto 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid hsl(220, 13%, 91%);
+  background: hsl(0, 0%, 100%);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px hsl(220, 30%, 90% / 0.5);
+  border-color: hsl(217, 91%, 60% / 0.3);
+  text-decoration: none;
+  color: inherit;
+}
+
+.quoteIcon {
+  color: hsl(217, 91%, 60%);
+  margin-bottom: 0.75rem;
+}
+
+.quote {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: hsl(220, 15%, 25%);
+  margin: 0 0 1.25rem;
+  flex-grow: 1;
+  font-style: italic;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+  color: hsl(38, 92%, 50%);
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+}
+
+.authorName {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: hsl(220, 15%, 15%);
+}
+
+.source {
+  font-size: 0.8125rem;
+  color: hsl(217, 91%, 60%);
+}
+
+/* Dark mode */
+[data-theme='dark'] .section {
+  background: linear-gradient(to bottom, hsl(220, 20%, 11%), hsl(220, 20%, 10%));
+}
+
+[data-theme='dark'] .title {
+  color: hsl(0, 0%, 98%);
+}
+
+[data-theme='dark'] .subtitle {
+  color: hsl(220, 10%, 60%);
+}
+
+[data-theme='dark'] .card {
+  background: hsl(220, 20%, 14%);
+  border-color: hsl(220, 20%, 20%);
+}
+
+[data-theme='dark'] .card:hover {
+  border-color: hsl(217, 91%, 60% / 0.4);
+  box-shadow: 0 12px 32px hsl(220, 30%, 5% / 0.5);
+}
+
+[data-theme='dark'] .quote {
+  color: hsl(220, 10%, 75%);
+}
+
+[data-theme='dark'] .authorName {
+  color: hsl(0, 0%, 92%);
+}
+
+[data-theme='dark'] .source {
+  color: hsl(217, 91%, 70%);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 4rem 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

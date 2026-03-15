@@ -136,6 +136,23 @@
   margin-top: 0.375rem;
 }
 
+/* ── Per-day price ── */
+.perDay {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #059669;
+  background: #ecfdf5;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 0.75rem;
+}
+
+[data-theme='dark'] .perDay {
+  background: rgba(5, 150, 105, 0.15);
+  color: #34d399;
+}
+
 /* ── Description ── */
 .description {
   font-size: 0.9375rem;

@@ -1,0 +1,1 @@
+{"parameters":[{"name":"api_key","in":"query","required":true,"description":"API Key","schema":{"type":"string"}},{"name":"page","in":"query","required":false,"description":"Page number","schema":{"type":"integer"}},{"name":"per_page","in":"query","required":false,"description":"Items per page (default: 25)","schema":{"type":"integer"}}]}

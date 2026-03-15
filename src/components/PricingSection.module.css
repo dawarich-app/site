@@ -167,6 +167,54 @@
   }
 }
 
+/* ── Guarantee banner ── */
+.guarantee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+  padding: 1rem 1.5rem;
+  background: hsl(142, 76%, 36% / 0.08);
+  border: 1px solid hsl(142, 76%, 36% / 0.2);
+  border-radius: 0.75rem;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.guaranteeIcon {
+  flex-shrink: 0;
+  color: hsl(142, 76%, 36%);
+}
+
+.guaranteeText {
+  font-size: 0.9375rem;
+  color: hsl(220, 10%, 46%);
+  line-height: 1.5;
+}
+
+.guaranteeText strong {
+  color: hsl(220, 15%, 15%);
+}
+
+[data-theme='dark'] .guarantee {
+  background: hsl(142, 76%, 36% / 0.1);
+  border-color: hsl(142, 76%, 36% / 0.25);
+}
+
+[data-theme='dark'] .guaranteeText {
+  color: hsl(220, 10%, 60%);
+}
+
+[data-theme='dark'] .guaranteeText strong {
+  color: hsl(0, 0%, 98%);
+}
+
+[data-theme='dark'] .guaranteeIcon {
+  color: hsl(142, 76%, 50%);
+}
+
 .selfHostContainer {
   text-align: center;
   margin: 3rem auto 0;
