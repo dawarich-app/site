@@ -258,13 +258,8 @@ section {
 }
 
 /* Navbar Google Sign-In button */
-.navbar-google-form {
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-
 .navbar-google-btn {
+  text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
