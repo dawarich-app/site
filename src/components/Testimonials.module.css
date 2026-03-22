@@ -1,6 +1,6 @@
 .section {
   padding: 6rem 1rem;
-  background: linear-gradient(to bottom, hsl(220, 15%, 97%), hsl(0, 0%, 100%));
+  background: linear-gradient(to bottom, hsl(220, 15%, 97%), var(--dw-bg-elevated));
 }
 
 .container {
@@ -13,7 +13,7 @@
   font-size: clamp(1.875rem, 4vw, 2.5rem);
   font-weight: 700;
   text-align: center;
-  color: hsl(220, 15%, 15%);
+  color: var(--dw-text);
   margin: 0 0 0.75rem;
   letter-spacing: -0.025em;
 }
@@ -22,7 +22,7 @@
   font-size: clamp(1rem, 2vw, 1.125rem);
   line-height: 1.75;
   text-align: center;
-  color: hsl(220, 10%, 46%);
+  color: var(--dw-text-secondary);
   max-width: 36rem;
   margin: 0 auto 3rem;
 }
@@ -35,8 +35,8 @@
   margin-bottom: 3rem;
   padding: 2rem 1.5rem;
   border-radius: 1rem;
-  background: hsl(220, 15%, 95%);
-  border: 1px solid hsl(220, 13%, 91%);
+  background: var(--dw-bg-sunken);
+  border: 1px solid var(--dw-border);
 }
 
 .featuredLabel {
@@ -44,7 +44,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: hsl(220, 10%, 50%);
+  color: var(--dw-text-tertiary);
 }
 
 .featuredLogos {
@@ -57,7 +57,7 @@
 
 .featuredLogo {
   font-size: 1.25rem;
-  color: hsl(220, 15%, 30%);
+  color: var(--dw-text);
   text-decoration: none;
   transition: all 0.2s ease;
   opacity: 0.7;
@@ -66,7 +66,7 @@
 
 .featuredLogo:hover {
   opacity: 1;
-  color: hsl(217, 91%, 50%);
+  color: var(--dw-primary-hover);
   text-decoration: none;
 }
 
@@ -79,8 +79,8 @@
 .card {
   padding: 1.5rem;
   border-radius: 1rem;
-  border: 1px solid hsl(220, 13%, 91%);
-  background: hsl(0, 0%, 100%);
+  border: 1px solid var(--dw-border);
+  background: var(--dw-bg-elevated);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
@@ -90,22 +90,22 @@
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px hsl(220, 30%, 90% / 0.5);
-  border-color: hsl(217, 91%, 60% / 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+  border-color: var(--dw-border);
   text-decoration: none;
   color: inherit;
 }
 
 .quoteIcon {
-  color: hsl(217, 91%, 60%);
+  color: var(--dw-primary);
   margin-bottom: 0.75rem;
 }
 
 .quote {
   font-size: 0.9375rem;
   line-height: 1.7;
-  color: hsl(220, 15%, 25%);
+  color: var(--dw-text);
   margin: 0 0 1.25rem;
   flex-grow: 1;
   font-style: italic;
@@ -120,7 +120,7 @@
 .stars {
   display: flex;
   gap: 2px;
-  color: hsl(38, 92%, 50%);
+  color: #F59E0B;
 }
 
 .author {
@@ -131,64 +131,64 @@
 .authorName {
   font-size: 0.875rem;
   font-weight: 600;
-  color: hsl(220, 15%, 15%);
+  color: var(--dw-text);
 }
 
 .source {
   font-size: 0.8125rem;
-  color: hsl(217, 91%, 60%);
+  color: var(--dw-primary);
 }
 
 /* Dark mode */
 [data-theme='dark'] .section {
-  background: linear-gradient(to bottom, hsl(220, 20%, 11%), hsl(220, 20%, 10%));
+  background: linear-gradient(to bottom, hsl(220, 20%, 11%), var(--dw-bg));
 }
 
 [data-theme='dark'] .title {
-  color: hsl(0, 0%, 98%);
+  color: var(--dw-text);
 }
 
 [data-theme='dark'] .subtitle {
-  color: hsl(220, 10%, 60%);
+  color: var(--dw-text-secondary);
 }
 
 [data-theme='dark'] .featuredIn {
-  background: hsl(220, 20%, 13%);
-  border-color: hsl(220, 20%, 20%);
+  background: var(--dw-bg-elevated);
+  border-color: var(--dw-border);
 }
 
 [data-theme='dark'] .featuredLabel {
-  color: hsl(220, 10%, 55%);
+  color: var(--dw-text-tertiary);
 }
 
 [data-theme='dark'] .featuredLogo {
-  color: hsl(220, 10%, 70%);
+  color: var(--dw-text-secondary);
 }
 
 [data-theme='dark'] .featuredLogo:hover {
-  color: hsl(217, 91%, 70%);
+  color: #60A5FA;
 }
 
 [data-theme='dark'] .card {
-  background: hsl(220, 20%, 14%);
-  border-color: hsl(220, 20%, 20%);
+  background: var(--dw-bg-elevated);
+  border-color: var(--dw-border);
 }
 
 [data-theme='dark'] .card:hover {
-  border-color: hsl(217, 91%, 60% / 0.4);
-  box-shadow: 0 12px 32px hsl(220, 30%, 5% / 0.5);
+  border-color: var(--dw-border);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
 }
 
 [data-theme='dark'] .quote {
-  color: hsl(220, 10%, 75%);
+  color: var(--dw-text-secondary);
 }
 
 [data-theme='dark'] .authorName {
-  color: hsl(0, 0%, 92%);
+  color: var(--dw-text);
 }
 
 [data-theme='dark'] .source {
-  color: hsl(217, 91%, 70%);
+  color: #60A5FA;
 }
 
 /* Responsive */

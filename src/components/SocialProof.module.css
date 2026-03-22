@@ -1,6 +1,6 @@
 .socialProof {
   padding: 4rem 1rem;
-  background: linear-gradient(135deg, hsl(220, 25%, 10%), hsl(225, 20%, 14%));
+  background: linear-gradient(135deg, var(--dw-bg), var(--dw-bg-elevated));
   position: relative;
   overflow: hidden;
 }
@@ -14,12 +14,12 @@
   transform: translate(-50%, -50%);
   width: 600px;
   height: 300px;
-  background: radial-gradient(ellipse, hsl(217, 91%, 60% / 0.08) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
   pointer-events: none;
 }
 
 [data-theme='dark'] .socialProof {
-  background: linear-gradient(135deg, hsl(220, 25%, 8%), hsl(225, 20%, 11%));
+  background: linear-gradient(135deg, var(--dw-bg), var(--dw-bg));
 }
 
 .container {
@@ -53,13 +53,13 @@
 }
 
 .icon {
-  color: hsl(217, 91%, 65%);
+  color: var(--dw-primary);
   margin-bottom: 0.75rem;
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: hsl(217, 91%, 60% / 0.15);
-  box-shadow: 0 0 20px hsl(217, 91%, 60% / 0.2), inset 0 0 12px hsl(217, 91%, 60% / 0.1);
+  background: rgba(59, 130, 246, 0.15);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.12), inset 0 0 12px rgba(59, 130, 246, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,21 +69,21 @@
 .icon svg {
   width: 28px;
   height: 28px;
-  filter: drop-shadow(0 0 4px hsl(217, 91%, 60% / 0.5));
+  filter: none;
 }
 
 .metric:hover .icon {
   transform: scale(1.1);
-  box-shadow: 0 0 28px hsl(217, 91%, 60% / 0.35), inset 0 0 16px hsl(217, 91%, 60% / 0.15);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2), inset 0 0 16px rgba(59, 130, 246, 0.15);
 }
 
 .value {
   font-size: 2rem;
   font-weight: 700;
-  color: hsl(217, 91%, 70%);
+  color: #60A5FA;
   line-height: 1.2;
   font-variant-numeric: tabular-nums;
-  text-shadow: 0 0 20px hsl(217, 91%, 60% / 0.4);
+  text-shadow: none;
 }
 
 @media (max-width: 768px) {
@@ -97,19 +97,19 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: hsl(220, 15%, 65%);
+  color: var(--dw-text-secondary);
   margin-top: 0.25rem;
 }
 
 [data-theme='dark'] .label {
-  color: hsl(220, 15%, 55%);
+  color: var(--dw-text-tertiary);
 }
 
 /* Divider between metrics and integrations */
 
 .divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%, hsl(217, 91%, 60% / 0.3) 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.3) 50%, transparent 100%);
   margin: 2rem auto;
   max-width: 600px;
 }
@@ -128,7 +128,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: hsl(220, 15%, 55%);
+  color: var(--dw-text-tertiary);
 }
 
 .integrationsList {
@@ -144,21 +144,21 @@
   padding: 0.3rem 0.75rem;
   font-size: 0.8rem;
   font-weight: 500;
-  color: hsl(220, 15%, 65%);
-  background: hsl(220, 20%, 16%);
-  border: 1px solid hsl(220, 20%, 22%);
+  color: var(--dw-text-secondary);
+  background: var(--dw-bg-elevated);
+  border: 1px solid var(--dw-border);
   border-radius: 999px;
   transition: border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   white-space: nowrap;
 }
 
 .integrationPill:hover {
-  border-color: hsl(217, 91%, 60% / 0.6);
-  color: hsl(217, 91%, 70%);
-  box-shadow: 0 0 12px hsl(217, 91%, 60% / 0.2);
+  border-color: rgba(59, 130, 246, 0.6);
+  color: #60A5FA;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.2);
 }
 
 [data-theme='dark'] .integrationPill {
-  background: hsl(220, 20%, 12%);
-  border-color: hsl(220, 20%, 18%);
+  background: var(--dw-bg-elevated);
+  border-color: var(--dw-bg-hover);
 }

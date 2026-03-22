@@ -1,6 +1,6 @@
 .section {
   padding: 80px 0;
-  background-color: #f9fafb;
+  background-color: var(--dw-text);
 }
 
 .container {
@@ -23,7 +23,7 @@
 
 .mapLabel {
   font-size: 14px;
-  color: #6b7280;
+  color: var(--dw-text-secondary);
   margin-bottom: 16px;
 }
 
@@ -32,7 +32,7 @@
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  background-color: #f3f4f6;
+  background-color: var(--dw-bg-sunken);
 }
 
 .mapImage {
@@ -62,7 +62,7 @@
 .title {
   font-size: 36px;
   font-weight: 700;
-  color: #111827;
+  color: var(--dw-text);
   margin: 0 0 16px;
   line-height: 1.2;
 }
@@ -70,7 +70,7 @@
 .description {
   font-size: 16px;
   line-height: 1.6;
-  color: #4b5563;
+  color: var(--dw-bg-hover);
   margin-bottom: 32px;
 }
 
@@ -101,41 +101,41 @@
 .featureTitle {
   font-size: 18px;
   font-weight: 600;
-  color: #111827;
+  color: var(--dw-text);
   margin: 0 0 8px;
 }
 
 .featureDescription {
   font-size: 15px;
   line-height: 1.5;
-  color: #4b5563;
+  color: var(--dw-bg-hover);
   margin: 0;
 }
 
 /* Dark mode */
 [data-theme='dark'] .section {
-  background-color: #111827;
+  background-color: var(--dw-text);
 }
 
 [data-theme='dark'] .mapLabel {
-  color: #9ca3af;
+  color: var(--dw-text-tertiary);
 }
 
 [data-theme='dark'] .mapWrapper {
-  background-color: #1f2937;
+  background-color: var(--dw-bg-elevated);
 }
 
 [data-theme='dark'] .title {
-  color: #f9fafb;
+  color: var(--dw-text);
 }
 
 [data-theme='dark'] .description,
 [data-theme='dark'] .featureDescription {
-  color: #9ca3af;
+  color: var(--dw-text-tertiary);
 }
 
 [data-theme='dark'] .featureTitle {
-  color: #f3f4f6;
+  color: var(--dw-bg-sunken);
 }
 
 [data-theme='dark'] .mappingBadge {
@@ -183,7 +183,7 @@
 
 .mutedNote {
   text-align: center;
-  color: #6b7280;
+  color: var(--dw-text-secondary);
   font-size: 14px;
   margin-top: 40px;
   padding: 0 20px;
@@ -192,5 +192,5 @@
 
 /* Dark mode support */
 [data-theme='dark'] .mutedNote {
-  color: #9ca3af;
+  color: var(--dw-text-tertiary);
 }

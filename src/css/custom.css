@@ -2,112 +2,149 @@
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
+ *
+ * Aligned with Dawarich app tailwind.config.js (source of truth).
+ * Warm neutral palette — no blue-tinted grays.
  */
 
-/* Light theme styles - matching lovable design system exactly */
+/* Light theme — warm neutrals from Dawarich app */
 :root {
-  /* Primary colors - exact match to lovable */
-  --ifm-color-primary: hsl(217, 91%, 60%);
-  --ifm-color-primary-dark: hsl(217, 91%, 50%);
-  --ifm-color-primary-darker: hsl(217, 91%, 45%);
-  --ifm-color-primary-darkest: hsl(217, 91%, 40%);
-  --ifm-color-primary-light: hsl(217, 91%, 70%);
-  --ifm-color-primary-lighter: hsl(217, 91%, 75%);
-  --ifm-color-primary-lightest: hsl(217, 91%, 85%);
+  /* Primary colors — #3B82F6 base */
+  --ifm-color-primary: #3B82F6;
+  --ifm-color-primary-dark: #2563EB;
+  --ifm-color-primary-darker: #1D4ED8;
+  --ifm-color-primary-darkest: #1E40AF;
+  --ifm-color-primary-light: #60A5FA;
+  --ifm-color-primary-lighter: #60A5FA;
+  --ifm-color-primary-lightest: #DBEAFE;
 
-  /* Background colors - exact match */
-  --ifm-background-color: hsl(0, 0%, 100%);
-  --ifm-background-surface-color: hsl(0, 0%, 100%);
-  --ifm-color-background-alt: hsl(220, 15%, 96%);
-  --ifm-secondary-bg: hsl(220, 15%, 96%);
+  /* Background colors — warm off-white */
+  --ifm-background-color: #FAFAF9;
+  --ifm-background-surface-color: #FFFFFF;
+  --ifm-color-background-alt: #F5F5F3;
+  --ifm-secondary-bg: #F5F5F3;
 
-  /* Text colors - exact match */
-  --ifm-font-color-base: hsl(220, 15%, 15%);
-  --ifm-font-color-secondary: hsl(220, 10%, 46%);
-  --ifm-heading-color: hsl(220, 15%, 15%);
-  --ifm-color-link: hsl(217, 91%, 60%);
-  --ifm-color-link-hover: hsl(217, 91%, 70%);
+  /* Text colors — warm neutrals */
+  --ifm-font-color-base: #1A1A1A;
+  --ifm-font-color-secondary: #585858;
+  --ifm-heading-color: #1A1A1A;
+  --ifm-color-link: #3B82F6;
+  --ifm-color-link-hover: #2563EB;
 
   /* Muted colors */
-  --muted-foreground: hsl(220, 10%, 46%);
+  --muted-foreground: #585858;
 
-  /* Border and input - exact match */
-  --ifm-color-emphasis-200: hsl(220, 13%, 91%);
-  --ifm-border-color: hsl(220, 13%, 91%);
+  /* Border — warm neutral */
+  --ifm-color-emphasis-200: #E5E5E2;
+  --ifm-border-color: #E5E5E2;
 
-  /* Accent color - exact match */
-  --ifm-color-accent: hsl(142, 76%, 36%);
-  --ifm-color-accent-foreground: hsl(0, 0%, 100%);
+  /* Accent — teal from Dawarich secondary */
+  --ifm-color-accent: #0D9488;
+  --ifm-color-accent-foreground: #FFFFFF;
 
-  /* Card - exact match */
-  --ifm-card-background-color: hsl(0, 0%, 100%);
-  --ifm-card-border-color: hsl(220, 13%, 91%);
+  /* Card */
+  --ifm-card-background-color: #FFFFFF;
+  --ifm-card-border-color: #E5E5E2;
 
-  /* Shadows - matching lovable's tailwind shadows */
+  /* Shadows — subtle warm */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+  /* Lift shadow for card hover */
+  --shadow-lift: 0 8px 20px rgba(0, 0, 0, 0.05);
 
-  /* Radius - matching lovable (0.75rem) */
-  --ifm-border-radius: 0.75rem;
-  --radius: 0.75rem;
+  /* Radius — matches Dawarich --rounded-box / --rounded-btn */
+  --ifm-border-radius: 0.625rem;
+  --radius: 0.625rem;
+  --radius-btn: 0.375rem;
 
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
-  /* Container padding - matching lovable */
+  /* Container padding */
   --container-padding: 2rem;
+
+  /* Dawarich semantic tokens for component use */
+  --dw-bg: #FAFAF9;
+  --dw-bg-elevated: #FFFFFF;
+  --dw-bg-sunken: #F5F5F3;
+  --dw-bg-hover: #EFEFED;
+  --dw-text: #1A1A1A;
+  --dw-text-secondary: #585858;
+  --dw-text-tertiary: #999999;
+  --dw-border: #E5E5E2;
+  --dw-primary: #3B82F6;
+  --dw-primary-hover: #2563EB;
+  --dw-primary-light: rgba(59, 130, 246, 0.10);
+  --dw-accent: #0D9488;
 }
 
-/* Dark theme styles - exact match to lovable */
+/* Dark theme — warm charcoal from Dawarich app */
 [data-theme='dark'] {
-  /* Primary colors */
-  --ifm-color-primary: hsl(217, 91%, 60%);
-  --ifm-color-primary-dark: hsl(217, 91%, 50%);
-  --ifm-color-primary-darker: hsl(217, 91%, 45%);
-  --ifm-color-primary-darkest: hsl(217, 91%, 40%);
-  --ifm-color-primary-light: hsl(217, 91%, 70%);
-  --ifm-color-primary-lighter: hsl(217, 91%, 75%);
-  --ifm-color-primary-lightest: hsl(217, 91%, 85%);
+  /* Primary colors — #60A5FA base for dark */
+  --ifm-color-primary: #60A5FA;
+  --ifm-color-primary-dark: #3B82F6;
+  --ifm-color-primary-darker: #2563EB;
+  --ifm-color-primary-darkest: #1D4ED8;
+  --ifm-color-primary-light: #60A5FA;
+  --ifm-color-primary-lighter: #BFDBFE;
+  --ifm-color-primary-lightest: #DBEAFE;
 
-  /* Background colors - exact match */
-  --ifm-background-color: hsl(220, 20%, 10%);
-  --ifm-color-background-alt: hsl(220, 20%, 12%);
-  --ifm-background-surface-color: hsl(220, 20%, 12%);
-  --ifm-secondary-bg: hsl(220, 20%, 18%);
+  /* Background colors — warm charcoal, NOT blue-tinted */
+  --ifm-background-color: #141414;
+  --ifm-color-background-alt: #1C1C1C;
+  --ifm-background-surface-color: #1C1C1C;
+  --ifm-secondary-bg: #282828;
 
-  /* Text colors - exact match */
-  --ifm-font-color-base: hsl(0, 0%, 98%);
-  --ifm-font-color-secondary: hsl(220, 10%, 60%);
-  --ifm-heading-color: hsl(0, 0%, 98%);
-  --ifm-color-link: hsl(217, 91%, 60%);
-  --ifm-color-link-hover: hsl(217, 91%, 70%);
+  /* Text colors — warm */
+  --ifm-font-color-base: #EAEAEA;
+  --ifm-font-color-secondary: #9A9A9A;
+  --ifm-heading-color: #EAEAEA;
+  --ifm-color-link: #60A5FA;
+  --ifm-color-link-hover: #BFDBFE;
 
   /* Muted colors */
-  --muted-foreground: hsl(220, 10%, 60%);
+  --muted-foreground: #9A9A9A;
 
-  /* Border and input - exact match */
-  --ifm-border-color: hsl(220, 20%, 20%);
-  --ifm-color-emphasis-200: hsl(220, 20%, 20%);
+  /* Border — warm charcoal */
+  --ifm-border-color: #2A2A2A;
+  --ifm-color-emphasis-200: #2A2A2A;
 
-  /* Accent color */
-  --ifm-color-accent: hsl(142, 76%, 36%);
-  --ifm-color-accent-foreground: hsl(0, 0%, 100%);
+  /* Accent */
+  --ifm-color-accent: #2DD4BF;
+  --ifm-color-accent-foreground: #FFFFFF;
 
-  /* Card - exact match */
-  --ifm-card-background-color: hsl(220, 20%, 12%);
-  --ifm-card-border-color: hsl(220, 20%, 20%);
+  /* Card */
+  --ifm-card-background-color: #1C1C1C;
+  --ifm-card-border-color: #2A2A2A;
 
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px -1px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+
+  /* Shadows — stronger for dark backgrounds */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px -1px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.25);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.25);
+  --shadow-lift: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+  /* Dawarich semantic tokens — dark */
+  --dw-bg: #141414;
+  --dw-bg-elevated: #1C1C1C;
+  --dw-bg-sunken: #101010;
+  --dw-bg-hover: #282828;
+  --dw-text: #EAEAEA;
+  --dw-text-secondary: #9A9A9A;
+  --dw-text-tertiary: #636363;
+  --dw-border: #2A2A2A;
+  --dw-primary: #60A5FA;
+  --dw-primary-hover: #3B82F6;
+  --dw-primary-light: rgba(96, 165, 250, 0.15);
+  --dw-accent: #2DD4BF;
 }
 
 /* Global resets */
@@ -120,9 +157,31 @@ body {
   color: var(--ifm-font-color-base);
 }
 
-header, footer {
+header {
   background-color: var(--ifm-background-color);
   color: var(--ifm-font-color-base);
+}
+
+/* Footer — always dark, grounded feel */
+.footer {
+  background-color: #1A1A1A !important;
+  color: #EAEAEA;
+}
+
+.footer a {
+  color: #9A9A9A;
+}
+
+.footer a:hover {
+  color: #EAEAEA;
+}
+
+.footer__title {
+  color: #EAEAEA !important;
+}
+
+.footer__copyright {
+  color: #636363;
 }
 
 a {
@@ -154,9 +213,21 @@ section {
   margin-bottom: 1rem;
 }
 
+/* Glass navbar — semi-transparent with backdrop blur */
+.navbar {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(16px) saturate(1.5);
+  -webkit-backdrop-filter: blur(16px) saturate(1.5);
+  border-bottom: 1px solid var(--dw-border);
+}
+
+[data-theme='dark'] .navbar {
+  background: rgba(28, 28, 28, 0.75) !important;
+}
+
 /* Gradient text utility */
 .gradientText {
-  background: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(190, 90%, 50%));
+  background: linear-gradient(135deg, #3B82F6, #6366F1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -165,8 +236,8 @@ section {
 /* Scroll-triggered fade-in animations */
 .animateOnScroll {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transform: translateY(16px);
+  transition: opacity 0.35s ease-out, transform 0.35s ease-out;
 }
 
 .animateOnScroll.visible {
@@ -177,33 +248,25 @@ section {
 /* Staggered child animations for grids/lists */
 .staggerChildren > * {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
 
 .staggerChildren.visible > *:nth-child(1) { transition-delay: 0s; opacity: 1; transform: translateY(0); }
-.staggerChildren.visible > *:nth-child(2) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
-.staggerChildren.visible > *:nth-child(3) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
-.staggerChildren.visible > *:nth-child(4) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
-.staggerChildren.visible > *:nth-child(5) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
-.staggerChildren.visible > *:nth-child(6) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
+.staggerChildren.visible > *:nth-child(2) { transition-delay: 0.05s; opacity: 1; transform: translateY(0); }
+.staggerChildren.visible > *:nth-child(3) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+.staggerChildren.visible > *:nth-child(4) { transition-delay: 0.15s; opacity: 1; transform: translateY(0); }
+.staggerChildren.visible > *:nth-child(5) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+.staggerChildren.visible > *:nth-child(6) { transition-delay: 0.25s; opacity: 1; transform: translateY(0); }
 
-/* Consistent card hover glow */
+/* Card hover — lift effect (replacing blue glow) */
 .cardHoverGlow {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .cardHoverGlow:hover {
-  box-shadow: 0 0 0 1px hsl(217, 91%, 60% / 0.3), 0 0 20px hsl(217, 91%, 60% / 0.1), var(--shadow-lg);
-}
-
-/* Neon glow utility */
-.neonGlow {
-  box-shadow: 0 0 20px hsl(217, 91%, 60% / 0.25);
-}
-
-.neonGlowHover:hover {
-  box-shadow: 0 0 30px hsl(217, 91%, 60% / 0.35);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lift);
 }
 
 /* API sidebar method badges */
@@ -268,20 +331,20 @@ section {
   font-size: 0.8125rem;
   font-weight: 500;
   font-family: inherit;
-  color: hsl(220, 10%, 30%);
-  background: hsl(0, 0%, 100%);
-  border: 1px solid hsl(220, 13%, 87%);
+  color: #585858;
+  background: #FFFFFF;
+  border: 1px solid #E5E5E2;
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
-  box-shadow: 0 1px 2px hsl(220, 15%, 90% / 0.3);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   line-height: 1;
 }
 
 .navbar-google-btn:hover {
-  border-color: hsl(220, 13%, 78%);
-  box-shadow: 0 2px 6px hsl(220, 15%, 85% / 0.4);
-  background: hsl(0, 0%, 97%);
+  border-color: #D4D4D1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  background: #F5F5F3;
 }
 
 .navbar-google-btn svg {
@@ -289,16 +352,16 @@ section {
 }
 
 [data-theme='dark'] .navbar-google-btn {
-  background: hsl(220, 20%, 16%);
-  border-color: hsl(220, 20%, 24%);
-  color: hsl(0, 0%, 88%);
-  box-shadow: 0 1px 2px hsl(220, 20%, 5% / 0.3);
+  background: #1C1C1C;
+  border-color: #2A2A2A;
+  color: #EAEAEA;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 [data-theme='dark'] .navbar-google-btn:hover {
-  background: hsl(220, 20%, 19%);
-  border-color: hsl(220, 20%, 30%);
-  box-shadow: 0 2px 6px hsl(220, 20%, 5% / 0.4);
+  background: #282828;
+  border-color: #363636;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 article a {

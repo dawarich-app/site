@@ -220,7 +220,7 @@ export default function PrivacySection() {
 								Open Source: Inspect Every Line
 							</h3>
 							<p className={styles.cardDescription}>
-								Don't trust us? Read the code. 8,300+ GitHub stars. Thousands of
+								Don't trust us? Read the code. 8,400+ GitHub stars. Thousands of
 								developers have reviewed it. No hidden tracking. No surprises.
 							</p>
 						</div>

@@ -15,7 +15,7 @@ const faqData = [
 	{
 		question: "Will Dawarich disappear like other startups?",
 		answer:
-			"Dawarich is open source with 8,300+ GitHub stars. Even if the company shut down tomorrow, your self-hosted instance keeps running and your data exports to standard formats (GPX, GeoJSON). You are never locked in.",
+			"Dawarich is open source with 8,400+ GitHub stars. Even if the company shut down tomorrow, your self-hosted instance keeps running and your data exports to standard formats (GPX, GeoJSON). You are never locked in.",
 	},
 	{
 		question: "Is my data really private?",

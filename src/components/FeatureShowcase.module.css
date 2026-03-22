@@ -63,13 +63,13 @@
 }
 
 .showcaseItem:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
-  border-color: hsl(217, 91%, 60% / 0.3);
+  border-color: var(--dw-border);
 }
 
 [data-theme='dark'] .showcaseItem:hover {
-  border-color: hsl(217, 91%, 60% / 0.5);
+  border-color: var(--dw-border);
 }
 
 .icon {

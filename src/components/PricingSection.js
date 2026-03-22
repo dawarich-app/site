@@ -51,7 +51,8 @@ export default function PricingSection() {
 							description="Unlimited history, advanced visualizations, and full API access."
 							perDayText={"Just \u20AC0.33/day"}
 							includesLabel="Everything in Lite, plus:"
-							features={[
+							features={[]}
+							proOnlyFeatures={[
 								"Unlimited data history — forever",
 								"Heatmap & Fog of War layers",
 								"Globe view (3D)",

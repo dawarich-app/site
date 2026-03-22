@@ -1,8 +1,8 @@
 /* ── Card shell ── */
 .pricingCard {
-  background-color: #fff;
+  background-color: #FFFFFF;
   border-radius: 16px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--dw-border);
   padding: 40px 32px 32px;
   width: 100%;
   text-align: center;
@@ -23,7 +23,7 @@
   top: -10px;
   right: -10px;
   z-index: 2;
-  background: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(190, 90%, 50%));
+  background: linear-gradient(135deg, #3B82F6, #6366F1);
   color: white;
   font-size: 0.7rem;
   font-weight: 700;
@@ -38,7 +38,7 @@
 .title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #111827;
+  color: var(--dw-text);
   margin: 0 0 1.25rem;
 }
 
@@ -53,7 +53,7 @@
 
 .toggleTrack {
   display: inline-flex;
-  background: #f3f4f6;
+  background: var(--dw-bg-sunken);
   border-radius: 9999px;
   padding: 3px;
   gap: 2px;
@@ -63,7 +63,7 @@
   padding: 6px 18px;
   border: none;
   background: transparent;
-  color: #6b7280;
+  color: var(--dw-text-secondary);
   border-radius: 9999px;
   font-size: 0.8125rem;
   font-weight: 600;
@@ -72,12 +72,12 @@
 }
 
 .toggleButton:hover:not(:disabled):not(.active) {
-  color: #374151;
+  color: var(--dw-text);
 }
 
 .toggleButton.active {
-  background: #fff;
-  color: #111827;
+  background: #FFFFFF;
+  color: var(--dw-text);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -111,7 +111,7 @@
 .currency {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #111827;
+  color: var(--dw-text);
   align-self: flex-start;
   margin-top: 0.35rem;
 }
@@ -119,19 +119,19 @@
 .currentPrice {
   font-size: 3.25rem;
   font-weight: 700;
-  color: #111827;
+  color: var(--dw-text);
   letter-spacing: -0.025em;
 }
 
 .period {
   font-size: 1rem;
   font-weight: 500;
-  color: #6b7280;
+  color: var(--dw-text-secondary);
   margin-left: 0.125rem;
 }
 
 .equivalentPrice {
-  color: #9ca3af;
+  color: var(--dw-text-tertiary);
   font-size: 0.85rem;
   margin-top: 0.375rem;
 }
@@ -157,14 +157,14 @@
 .description {
   font-size: 0.9375rem;
   line-height: 1.6;
-  color: #6b7280;
+  color: var(--dw-text-secondary);
   margin: 0 0 1.5rem;
 }
 
 /* ── Divider ── */
 .divider {
   height: 1px;
-  background: #e5e7eb;
+  background: var(--dw-border);
   margin: 0 0 1.5rem;
 }
 
@@ -172,7 +172,7 @@
 .includesLabel {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: #3b82f6;
+  color: #3B82F6;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   margin-bottom: 1rem;
@@ -192,7 +192,7 @@
   display: flex;
   align-items: flex-start;
   font-size: 0.9375rem;
-  color: #374151;
+  color: var(--dw-text);
   margin-bottom: 0.875rem;
   line-height: 1.4;
 }
@@ -203,7 +203,7 @@
   height: 20px;
   border-radius: 50%;
   background: #eff6ff;
-  color: #3b82f6;
+  color: #3B82F6;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -213,6 +213,21 @@
 
 .featureText {
   flex: 1;
+}
+
+/* ── Pro-only features highlight ── */
+.proFeature {
+  font-weight: 500;
+}
+
+.proCheckIcon {
+  background: rgba(13, 148, 136, 0.12);
+  color: #0D9488;
+}
+
+[data-theme='dark'] .proCheckIcon {
+  background: rgba(45, 212, 191, 0.15);
+  color: #2DD4BF;
 }
 
 /* ── CTA buttons ── */
@@ -232,14 +247,14 @@
 
 /* Primary: solid blue (Pro) */
 .primary {
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  background: linear-gradient(135deg, #3B82F6, #2563EB);
   color: white;
   border: none;
   box-shadow: 0 2px 8px rgba(59, 130, 246, 0.25);
 }
 
 .primary:hover {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  background: linear-gradient(135deg, #2563EB, #1D4ED8);
   color: white;
   text-decoration: none;
   box-shadow: 0 4px 16px rgba(59, 130, 246, 0.35);
@@ -249,14 +264,14 @@
 /* Secondary: outlined (Lite) */
 .secondary {
   background: transparent;
-  color: #3b82f6;
-  border: 2px solid #3b82f6;
+  color: #3B82F6;
+  border: 2px solid #3B82F6;
 }
 
 .secondary:hover {
   background: #eff6ff;
-  color: #2563eb;
-  border-color: #2563eb;
+  color: #2563EB;
+  border-color: #2563EB;
   text-decoration: none;
   transform: translateY(-1px);
 }
@@ -264,14 +279,14 @@
 /* ── Trial text ── */
 .trialText {
   font-size: 0.8125rem;
-  color: #9ca3af;
+  color: var(--dw-text-tertiary);
   margin: 0.75rem 0 0;
 }
 
 /* ── Dark mode ── */
 [data-theme='dark'] .pricingCard {
-  background-color: #1f2937;
-  border-color: #374151;
+  background-color: #1C1C1C;
+  border-color: #2A2A2A;
 }
 
 [data-theme='dark'] .pricingCard:hover {
@@ -279,59 +294,62 @@
 }
 
 [data-theme='dark'] .title {
-  color: #f9fafb;
+  color: #EAEAEA;
 }
 
 [data-theme='dark'] .currency,
 [data-theme='dark'] .currentPrice {
-  color: #f9fafb;
+  color: #EAEAEA;
 }
 
 [data-theme='dark'] .period {
-  color: #9ca3af;
+  color: #9A9A9A;
 }
 
-[data-theme='dark'] .description,
+[data-theme='dark'] .description {
+  color: #9A9A9A;
+}
+
 [data-theme='dark'] .trialText {
-  color: #9ca3af;
+  color: #636363;
 }
 
 [data-theme='dark'] .equivalentPrice {
-  color: #6b7280;
+  color: #636363;
 }
 
 [data-theme='dark'] .divider {
-  background: #374151;
+  background: #2A2A2A;
 }
 
 [data-theme='dark'] .featureItem {
-  color: #e5e7eb;
+  color: #EAEAEA;
 }
 
 [data-theme='dark'] .checkIcon {
-  background: rgba(59, 130, 246, 0.15);
-  color: #60a5fa;
+  background: rgba(96, 165, 250, 0.15);
+  color: #60A5FA;
 }
 
 [data-theme='dark'] .includesLabel {
-  color: #60a5fa;
+  color: #60A5FA;
 }
 
 [data-theme='dark'] .toggleTrack {
-  background: #374151;
+  background: #282828;
 }
 
 [data-theme='dark'] .toggleButton {
-  color: #9ca3af;
+  color: #9A9A9A;
 }
 
 [data-theme='dark'] .toggleButton:hover:not(:disabled):not(.active) {
-  color: #e5e7eb;
+  color: #EAEAEA;
 }
 
 [data-theme='dark'] .toggleButton.active {
-  background: #4b5563;
-  color: #f9fafb;
+  background: #363636;
+  color: #EAEAEA;
   box-shadow: none;
 }
 
@@ -341,28 +359,28 @@
 }
 
 [data-theme='dark'] .secondary {
-  color: #60a5fa;
-  border-color: #60a5fa;
+  color: #60A5FA;
+  border-color: #60A5FA;
 }
 
 [data-theme='dark'] .secondary:hover {
-  background: rgba(59, 130, 246, 0.1);
-  color: #93bbfd;
-  border-color: #93bbfd;
+  background: rgba(96, 165, 250, 0.1);
+  color: #60A5FA;
+  border-color: #60A5FA;
 }
 
 /* ── Disabled state ── */
 .disabled {
   opacity: 0.7;
-  background-color: #f5f5f5;
+  background-color: #F5F5F3;
   box-shadow: none;
   cursor: not-allowed;
 }
 
 .disabledButton {
-  background-color: #9ca3af !important;
+  background-color: #999999 !important;
   background-image: none !important;
-  border-color: #9ca3af !important;
+  border-color: #999999 !important;
   color: white !important;
   cursor: not-allowed;
   pointer-events: none;
@@ -370,12 +388,12 @@
 }
 
 [data-theme='dark'] .disabled {
-  background-color: #374151;
+  background-color: #282828;
   opacity: 0.7;
 }
 
 [data-theme='dark'] .disabledButton {
-  background-color: #4b5563 !important;
+  background-color: #363636 !important;
 }
 
 /* ── Responsive ── */

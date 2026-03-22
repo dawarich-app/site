@@ -13,7 +13,7 @@
   font-size: clamp(1.875rem, 4vw, 2.5rem);
   font-weight: 700;
   text-align: center;
-  color: hsl(220, 15%, 15%);
+  color: var(--dw-text);
   margin: 0 0 0.75rem;
   letter-spacing: -0.025em;
 }
@@ -22,7 +22,7 @@
   font-size: clamp(1rem, 2vw, 1.125rem);
   line-height: 1.75;
   text-align: center;
-  color: hsl(220, 10%, 46%);
+  color: var(--dw-text-secondary);
   margin: 0 auto 3rem;
   max-width: 32rem;
 }
@@ -30,8 +30,8 @@
 .tableWrapper {
   overflow-x: auto;
   border-radius: 1rem;
-  border: 1px solid hsl(220, 13%, 91%);
-  box-shadow: 0 4px 16px hsl(220, 30%, 90% / 0.4);
+  border: 1px solid var(--dw-border);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 .table {
@@ -41,7 +41,7 @@
 }
 
 .table thead {
-  background: hsl(220, 15%, 96%);
+  background: var(--dw-bg-sunken);
 }
 
 .featureHeader,
@@ -56,33 +56,33 @@
 }
 
 .featureHeader {
-  color: hsl(220, 15%, 40%);
+  color: var(--dw-text-secondary);
   width: 30%;
 }
 
 .googleHeader {
-  color: hsl(220, 10%, 55%);
+  color: var(--dw-text-tertiary);
   width: 35%;
 }
 
 .dawarichHeader {
-  color: hsl(217, 91%, 55%);
+  color: var(--dw-primary);
   width: 35%;
 }
 
 .row {
-  border-top: 1px solid hsl(220, 13%, 93%);
+  border-top: 1px solid var(--dw-border);
   transition: background-color 0.15s ease;
 }
 
 .row:hover {
-  background: hsl(217, 91%, 60% / 0.03);
+  background: rgba(59, 130, 246, 0.03);
 }
 
 .featureCell {
   padding: 0.875rem 1.25rem;
   font-weight: 500;
-  color: hsl(220, 15%, 15%);
+  color: var(--dw-text);
 }
 
 .googleCell,
@@ -91,7 +91,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: hsl(220, 10%, 46%);
+  color: var(--dw-text-secondary);
 }
 
 /* Use table-cell display for proper table layout */
@@ -114,15 +114,15 @@
 }
 
 .iconGreen {
-  color: hsl(142, 76%, 36%);
+  color: var(--ifm-color-accent);
 }
 
 .iconRed {
-  color: hsl(0, 70%, 50%);
+  color: #EF4444;
 }
 
 .iconYellow {
-  color: hsl(38, 92%, 50%);
+  color: #F59E0B;
 }
 
 /* Dark mode */
@@ -131,49 +131,49 @@
 }
 
 [data-theme='dark'] .title {
-  color: hsl(0, 0%, 98%);
+  color: var(--dw-text);
 }
 
 [data-theme='dark'] .subtitle {
-  color: hsl(220, 10%, 60%);
+  color: var(--dw-text-secondary);
 }
 
 [data-theme='dark'] .tableWrapper {
-  border-color: hsl(220, 20%, 20%);
-  box-shadow: 0 4px 16px hsl(220, 30%, 5% / 0.4);
+  border-color: var(--dw-border);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 [data-theme='dark'] .table thead {
-  background: hsl(220, 20%, 14%);
+  background: var(--dw-bg-elevated);
 }
 
 [data-theme='dark'] .featureHeader {
-  color: hsl(220, 15%, 65%);
+  color: var(--dw-text-secondary);
 }
 
 [data-theme='dark'] .googleHeader {
-  color: hsl(220, 10%, 55%);
+  color: var(--dw-text-tertiary);
 }
 
 [data-theme='dark'] .dawarichHeader {
-  color: hsl(217, 91%, 70%);
+  color: #60A5FA;
 }
 
 [data-theme='dark'] .row {
-  border-top-color: hsl(220, 20%, 18%);
+  border-top-color: var(--dw-bg-hover);
 }
 
 [data-theme='dark'] .row:hover {
-  background: hsl(217, 91%, 60% / 0.05);
+  background: rgba(59, 130, 246, 0.05);
 }
 
 [data-theme='dark'] .featureCell {
-  color: hsl(0, 0%, 92%);
+  color: var(--dw-text);
 }
 
 [data-theme='dark'] .googleCell,
 [data-theme='dark'] .dawarichCell {
-  color: hsl(220, 10%, 60%);
+  color: var(--dw-text-secondary);
 }
 
 /* Responsive */

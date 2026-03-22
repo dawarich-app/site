@@ -1,6 +1,6 @@
 .banner {
   width: 100%;
-  background: linear-gradient(135deg, hsl(220, 25%, 12%), hsl(220, 20%, 16%));
+  background: linear-gradient(135deg, #1A1A1A, #282828);
   padding: 4rem 2rem;
   display: flex;
   justify-content: center;
@@ -8,7 +8,7 @@
 }
 
 [data-theme='dark'] .banner {
-  background: linear-gradient(135deg, hsl(220, 25%, 16%), hsl(220, 20%, 20%));
+  background: #0A0A0A;
 }
 
 .content {
@@ -20,7 +20,7 @@
 .headline {
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
-  color: hsl(0, 0%, 98%);
+  color: #EAEAEA;
   margin: 0 0 2rem;
 }
 
@@ -35,10 +35,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: hsl(0, 0%, 100%);
-  color: hsl(220, 20%, 10%);
+  background: #FFFFFF;
+  color: #1A1A1A;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.375rem;
   padding: 0.75rem 1.75rem;
   font-size: 1rem;
   font-weight: 600;
@@ -48,10 +48,19 @@
 }
 
 .primaryButton:hover {
-  color: hsl(220, 20%, 10%);
+  color: #1A1A1A;
   text-decoration: none;
-  box-shadow: 0 0 24px hsl(0, 0%, 100% / 0.3), 0 0 48px hsl(217, 91%, 60% / 0.15);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.2);
   transform: translateY(-1px);
+}
+
+[data-theme='dark'] .primaryButton {
+  background: #EAEAEA;
+  color: #141414;
+}
+
+[data-theme='dark'] .primaryButton:hover {
+  color: #141414;
 }
 
 .ghostButton {
@@ -59,9 +68,9 @@
   align-items: center;
   justify-content: center;
   background: transparent;
-  color: hsl(0, 0%, 98%);
-  border: 1px solid hsl(0, 0%, 100% / 0.3);
-  border-radius: 0.5rem;
+  color: #EAEAEA;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.375rem;
   padding: 0.75rem 1.75rem;
   font-size: 1rem;
   font-weight: 600;
@@ -71,11 +80,10 @@
 }
 
 .ghostButton:hover {
-  color: hsl(0, 0%, 98%);
+  color: #EAEAEA;
   text-decoration: none;
-  background: hsl(0, 0%, 100% / 0.1);
-  border-color: hsl(0, 0%, 100% / 0.5);
-  box-shadow: 0 0 16px hsl(0, 0%, 100% / 0.08);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 480px) {

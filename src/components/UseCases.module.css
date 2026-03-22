@@ -1,7 +1,7 @@
-/* UseCases section - matching lovable exactly (py-24 px-4 md:px-6 bg-gradient-to-b from-secondary to-background) */
+/* UseCases section - aligned with Dawarich tokens (py-24 px-4 md:px-6 bg-gradient-to-b from-secondary to-background) */
 .useCasesSection {
   padding: 6rem 1rem; /* py-24 px-4 */
-  background: linear-gradient(to bottom, hsl(220, 15%, 96%), hsl(0, 0%, 100%)); /* from-secondary to-background */
+  background: linear-gradient(to bottom, var(--dw-bg-sunken), var(--dw-bg-elevated)); /* from-secondary to-background */
 }
 
 @media (min-width: 768px) {
@@ -23,14 +23,14 @@
   font-size: clamp(1.875rem, 4vw, 3rem); /* text-3xl md:text-5xl */
   font-weight: 700; /* font-bold */
   margin-bottom: 1rem; /* space-y-4 */
-  color: hsl(220, 15%, 15%);
+  color: var(--dw-text);
   letter-spacing: -0.025em; /* tracking-tight */
 }
 
 .subtitle {
   text-align: center;
   font-size: 1.125rem; /* text-lg */
-  color: hsl(220, 10%, 46%); /* text-muted-foreground */
+  color: var(--dw-text-secondary); /* text-muted-foreground */
   max-width: 48rem; /* max-w-2xl */
   margin: 0 auto 4rem; /* mx-auto mb-16 */
   line-height: 1.75;
@@ -62,8 +62,8 @@
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 0.5rem;
-  background: hsl(0, 0%, 100%); /* Default bg */
-  color: hsl(220, 15%, 15%);
+  background: var(--dw-bg-elevated); /* Default bg */
+  color: var(--dw-text);
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -72,11 +72,11 @@
 }
 
 .tab:hover {
-  background: hsl(220, 15%, 98%);
+  background: var(--dw-bg-hover);
 }
 
 .tab.active {
-  background: hsl(217, 91%, 60%); /* bg-primary */
+  background: #3B82F6;
   color: white; /* text-primary-foreground */
   box-shadow: var(--shadow-md);
 }
@@ -99,10 +99,10 @@
 /* mt-8 Card */
 .tabContent {
   margin-top: 2rem; /* mt-8 */
-  background: hsl(0, 0%, 100%); /* bg-card */
+  background: var(--dw-bg-elevated); /* bg-card */
   border-radius: 0.75rem; /* rounded-lg */
   box-shadow: var(--shadow); /* shadow-sm from card */
-  border: 1px solid hsl(220, 13%, 91%); /* border-border */
+  border: 1px solid var(--dw-border); /* border-border */
   max-width: 56rem;
   margin-left: auto;
   margin-right: auto;
@@ -121,7 +121,7 @@
   font-size: 1.5rem; /* text-2xl */
   font-weight: 700; /* font-bold */
   margin-bottom: 0;
-  color: hsl(220, 15%, 15%);
+  color: var(--dw-text);
   display: flex;
   align-items: center;
   gap: 1rem; /* gap-4 */
@@ -133,7 +133,7 @@
   width: 3.5rem; /* w-14 */
   height: 3.5rem; /* h-14 */
   border-radius: 0.75rem; /* rounded-xl */
-  background: hsl(217, 91%, 60% / 0.1); /* bg-primary/10 */
+  background: rgba(59, 130, 246, 0.1); /* bg-primary/10 */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,18 +143,18 @@
 .useCaseDescription {
   font-size: 1.125rem; /* text-lg */
   line-height: 1.75; /* leading-relaxed */
-  color: hsl(220, 10%, 46%); /* text-muted-foreground */
+  color: var(--dw-text-secondary); /* text-muted-foreground */
   margin-bottom: 0;
 }
 
 .useCaseDescription a {
-  color: hsl(217, 91%, 60%);
+  color: var(--dw-primary);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .useCaseDescription a:hover {
-  color: hsl(217, 91%, 50%);
+  color: var(--dw-primary-hover);
   text-decoration: underline;
 }
 
@@ -179,7 +179,7 @@
   padding: 0;
   font-size: 1rem;
   line-height: 1.5;
-  color: hsl(220, 15%, 15%); /* text-foreground */
+  color: var(--dw-text); /* text-foreground */
 }
 
 /* w-5 h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0 */
@@ -190,7 +190,7 @@
   width: 1.25rem; /* w-5 */
   height: 1.25rem; /* h-5 */
   border-radius: 9999px; /* rounded-full */
-  background: hsl(142, 76%, 36%); /* bg-accent */
+  background: var(--ifm-color-accent); /* bg-accent */
   color: white; /* text-accent-foreground */
   font-weight: bold;
   font-size: 0.75rem;
@@ -199,44 +199,44 @@
 
 /* Dark mode support */
 [data-theme='dark'] .useCasesSection {
-  background: linear-gradient(to bottom, hsl(220, 20%, 18%), hsl(220, 20%, 10%));
+  background: linear-gradient(to bottom, var(--dw-bg-hover), var(--dw-bg));
 }
 
 [data-theme='dark'] .title {
-  color: hsl(0, 0%, 98%);
+  color: var(--dw-text);
 }
 
 [data-theme='dark'] .subtitle {
-  color: hsl(220, 10%, 60%);
+  color: var(--dw-text-secondary);
 }
 
 [data-theme='dark'] .tab {
-  background: hsl(220, 20%, 12%);
-  color: hsl(0, 0%, 98%);
+  background: var(--dw-bg-elevated);
+  color: var(--dw-text);
 }
 
 [data-theme='dark'] .tab:hover {
-  background: hsl(220, 20%, 15%);
+  background: var(--dw-bg-hover);
 }
 
 [data-theme='dark'] .tab.active {
-  background: hsl(217, 91%, 60%);
+  background: #3B82F6;
   color: white;
 }
 
 [data-theme='dark'] .tabContent {
-  background: hsl(220, 20%, 12%);
-  border-color: hsl(220, 20%, 20%);
+  background: var(--dw-bg-elevated);
+  border-color: var(--dw-border);
 }
 
 [data-theme='dark'] .useCaseTitle {
-  color: hsl(0, 0%, 98%);
+  color: var(--dw-text);
 }
 
 [data-theme='dark'] .useCaseDescription {
-  color: hsl(220, 10%, 60%);
+  color: var(--dw-text-secondary);
 }
 
 [data-theme='dark'] .featureItem {
-  color: hsl(0, 0%, 98%);
+  color: var(--dw-text);
 }

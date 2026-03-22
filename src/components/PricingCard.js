@@ -10,6 +10,7 @@ export default function PricingCard({
 	description = "Full access to all features.",
 	perDayText = null,
 	features = [],
+	proOnlyFeatures = [],
 	includesLabel = null,
 	buttonText = "Get Started",
 	buttonLink = "/pricing",
@@ -100,6 +101,24 @@ export default function PricingCard({
 							</svg>
 						</span>
 						<span className={styles.featureText}>{feature}</span>
+					</li>
+				))}
+				{proOnlyFeatures.map((feature, index) => (
+					<li key={`pro-${index}`} className={`${styles.featureItem} ${styles.proFeature}`}>
+						<span className={`${styles.checkIcon} ${styles.proCheckIcon}`}>
+							<svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+								<path
+									d="M11.5 3.5L5.5 10L2.5 7"
+									stroke="currentColor"
+									strokeWidth="2"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+								/>
+							</svg>
+						</span>
+						<span className={styles.featureText}>
+							{feature}
+						</span>
 					</li>
 				))}
 			</ul>

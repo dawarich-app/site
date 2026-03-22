@@ -4,7 +4,7 @@
 
 .featuresSection {
   padding: 8rem 1rem;
-  background: hsl(0, 0%, 100%);
+  background: var(--dw-bg-elevated);
 }
 
 @media (min-width: 768px) {
@@ -27,14 +27,14 @@
   font-size: clamp(1.875rem, 4vw, 3rem);
   font-weight: 700;
   margin-bottom: 1rem;
-  color: hsl(220, 15%, 15%);
+  color: var(--dw-text);
   letter-spacing: -0.025em;
 }
 
 .subtitle {
   text-align: center;
   font-size: 1.125rem;
-  color: hsl(220, 10%, 46%);
+  color: var(--dw-text-secondary);
   max-width: 48rem;
   margin: 0 auto 4rem;
   line-height: 1.75;
@@ -54,8 +54,8 @@
   position: relative;
   overflow: hidden;
   border-radius: 1rem;
-  border: 1px solid hsl(220, 13%, 91% / 0.6);
-  background: hsl(0, 0%, 100%);
+  border: 1px solid rgba(229, 229, 226, 0.6);
+  background: var(--dw-bg-elevated);
   cursor: pointer;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
               box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
@@ -66,9 +66,8 @@
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-xl), 0 0 0 1px hsl(217, 91%, 60% / 0.3), 0 0 24px hsl(217, 91%, 60% / 0.1);
-  border-color: hsl(217, 91%, 60% / 0.3);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lift);
 }
 
 /* ------- Card image ------- */
@@ -95,8 +94,8 @@
 
 .cardOverlay {
   padding: 1.25rem 1.5rem;
-  background: hsl(0, 0%, 100%);
-  border-top: 1px solid hsl(220, 13%, 91% / 0.6);
+  background: var(--dw-bg-elevated);
+  border-top: 1px solid rgba(229, 229, 226, 0.6);
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
@@ -109,17 +108,17 @@
   width: 2rem;
   height: 2rem;
   border-radius: 0.5rem;
-  background: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(190, 90%, 50%));
+  background: linear-gradient(135deg, var(--dw-primary), #6366F1);
   color: #fff;
   margin-bottom: 0.25rem;
   flex-shrink: 0;
-  box-shadow: 0 0 12px hsl(217, 91%, 60% / 0.3);
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
 }
 
 .cardTitle {
   font-size: 1.05rem;
   font-weight: 600;
-  color: hsl(220, 15%, 15%);
+  color: var(--dw-text);
   margin: 0;
   letter-spacing: -0.01em;
 }
@@ -127,7 +126,7 @@
 .cardDescription {
   font-size: 0.875rem;
   line-height: 1.55;
-  color: hsl(220, 10%, 46%);
+  color: var(--dw-text-secondary);
   margin: 0;
 }
 
@@ -182,7 +181,7 @@
   z-index: 1000;
   cursor: pointer;
   backdrop-filter: blur(4px);
-  animation: fade-in 0.2s ease-out;
+  animation: fade-in 0.15s ease-out;
 }
 
 .modalImage {
@@ -191,7 +190,7 @@
   object-fit: contain;
   border-radius: 0.75rem;
   box-shadow: var(--shadow-2xl);
-  animation: modalZoomIn 0.3s ease-out;
+  animation: modalZoomIn 0.2s ease-out;
 }
 
 .closeButton {
@@ -210,7 +209,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
-  color: hsl(220, 15%, 15%);
+  color: var(--dw-text);
   box-shadow: var(--shadow-md);
 }
 
@@ -225,47 +224,46 @@
    ============================================ */
 
 [data-theme='dark'] .featuresSection {
-  background: hsl(220, 20%, 10%);
+  background: var(--dw-bg);
 }
 
 [data-theme='dark'] .title {
-  color: hsl(0, 0%, 98%);
+  color: var(--dw-text);
 }
 
 [data-theme='dark'] .subtitle {
-  color: hsl(220, 10%, 60%);
+  color: var(--dw-text-secondary);
 }
 
 [data-theme='dark'] .card {
-  background: hsl(220, 20%, 12%);
-  border-color: hsl(220, 20%, 20% / 0.6);
+  background: var(--dw-bg-elevated);
+  border-color: rgba(42, 42, 42, 0.6);
 }
 
 [data-theme='dark'] .card:hover {
-  box-shadow: var(--shadow-xl), 0 0 0 1px hsl(217, 91%, 60% / 0.3), 0 0 30px hsl(217, 91%, 60% / 0.12);
-  border-color: hsl(217, 91%, 60% / 0.3);
+  box-shadow: var(--shadow-lift);
 }
 
 [data-theme='dark'] .cardOverlay {
-  background: hsl(220, 20%, 12%);
-  border-top-color: hsl(220, 20%, 20% / 0.6);
+  background: var(--dw-bg-elevated);
+  border-top-color: rgba(42, 42, 42, 0.6);
 }
 
 [data-theme='dark'] .cardTitle {
-  color: hsl(0, 0%, 98%);
+  color: var(--dw-text);
 }
 
 [data-theme='dark'] .cardDescription {
-  color: hsl(220, 10%, 60%);
+  color: var(--dw-text-secondary);
 }
 
 [data-theme='dark'] .closeButton {
-  background: rgba(31, 41, 55, 0.95);
-  color: hsl(0, 0%, 98%);
+  background: rgba(28, 28, 28, 0.95);
+  color: var(--dw-text);
 }
 
 [data-theme='dark'] .closeButton:hover {
-  background: hsl(220, 20%, 12%);
+  background: var(--dw-bg-elevated);
 }
 
 /* ============================================

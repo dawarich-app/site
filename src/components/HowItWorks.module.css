@@ -85,7 +85,7 @@
   background: var(--ifm-color-primary);
   opacity: 0.4;
   position: relative;
-  box-shadow: 0 0 8px hsl(217, 91%, 60% / 0.3);
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
 }
 
 .connectorLine::after {
@@ -98,7 +98,7 @@
   height: 6px;
   border-radius: 50%;
   background: var(--ifm-color-primary);
-  box-shadow: 0 0 10px hsl(217, 91%, 60% / 0.5);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
 }
 
 @media (max-width: 768px) {
@@ -129,12 +129,12 @@
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  box-shadow: 0 0 16px hsl(217, 91%, 60% / 0.4);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
   transition: box-shadow 0.3s ease;
 }
 
 .step:hover .stepNumber {
-  box-shadow: 0 0 24px hsl(217, 91%, 60% / 0.55);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
 }
 
 .stepContent {
@@ -157,27 +157,27 @@
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: hsl(217, 91%, 60% / 0.1);
+  background: rgba(59, 130, 246, 0.1);
   color: var(--ifm-color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 0 16px hsl(217, 91%, 60% / 0.15);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
   transition: box-shadow 0.3s ease;
 }
 
 .step:hover .stepIcon {
-  box-shadow: 0 0 24px hsl(217, 91%, 60% / 0.3);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
 }
 
 [data-theme='dark'] .stepIcon {
-  background: hsl(217, 91%, 60% / 0.15);
-  box-shadow: 0 0 20px hsl(217, 91%, 60% / 0.2);
+  background: rgba(59, 130, 246, 0.15);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.12);
 }
 
 [data-theme='dark'] .step:hover .stepIcon {
-  box-shadow: 0 0 28px hsl(217, 91%, 60% / 0.35);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
 }
 
 .stepTitle {

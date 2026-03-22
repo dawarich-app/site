@@ -27,14 +27,14 @@
 
 .popup h2 {
   margin-top: 0;
-  color: #111827;
+  color: var(--dw-text);
   font-size: 24px;
   font-weight: 700;
 }
 
 .popup p {
   margin-bottom: 20px;
-  color: #6b7280;
+  color: var(--dw-text-secondary);
 }
 
 .closeButton {
@@ -44,20 +44,20 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: #f3f4f6;
+  background: var(--dw-bg-sunken);
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  color: #6b7280;
+  color: var(--dw-text-secondary);
   cursor: pointer;
   transition: background-color 0.2s;
 }
 
 .closeButton:hover {
-  background-color: #e5e7eb;
-  color: #111827;
+  background-color: var(--dw-border);
+  color: var(--dw-text);
 }
 
 .formContainer {
@@ -68,11 +68,11 @@
 
 /* Dark mode support */
 [data-theme='dark'] .popup {
-  background-color: #1f2937;
+  background-color: var(--dw-bg-elevated);
 }
 
 [data-theme='dark'] .popup h2 {
-  color: #f9fafb;
+  color: var(--dw-text);
 }
 
 [data-theme='dark'] .popup p {
@@ -80,11 +80,11 @@
 }
 
 [data-theme='dark'] .closeButton {
-  background-color: #374151;
-  color: #e5e7eb;
+  background-color: var(--dw-text);
+  color: var(--dw-border);
 }
 
 [data-theme='dark'] .closeButton:hover {
-  background-color: #4b5563;
-  color: #f9fafb;
+  background-color: var(--dw-bg-hover);
+  color: var(--dw-text);
 }

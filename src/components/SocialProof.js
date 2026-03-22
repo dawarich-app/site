@@ -48,7 +48,7 @@ function formatNumber(num) {
 }
 
 const metrics = [
-  { target: 7900, suffix: '+', label: 'GitHub Stars', icon: <StarIcon /> },
+  { target: 8400, suffix: '+', label: 'GitHub Stars', icon: <StarIcon /> },
   { target: 1_000_000, suffix: '+', label: 'Docker Pulls', icon: <DownloadIcon /> },
   { target: 2000, suffix: '+', label: 'Users', icon: <PeopleIcon /> },
   { target: 1_000_000_000, suffix: '+', label: 'Points Tracked', icon: <MapPinIcon /> },
