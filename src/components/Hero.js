@@ -117,16 +117,13 @@ export default function Hero() {
 
 					<div className={styles.googleSignIn} style={{ animationDelay: "0.35s" }}>
 						<span className={styles.orDivider}>or</span>
-						<form
-							method="POST"
-							action="https://my.dawarich.app/users/auth/google_oauth2"
-							className={styles.googleForm}
+						<a
+							href="https://my.dawarich.app/users/sign_in"
+							className={`${styles.googleButton} ${styles.googleForm}`}
 						>
-							<button type="submit" className={styles.googleButton}>
-								<GoogleIcon />
-								<span>Sign in with Google</span>
-							</button>
-						</form>
+							<GoogleIcon />
+							<span>Sign in with Google</span>
+						</a>
 					</div>
 
 					<p className={styles.noCredit} style={{ animationDelay: "0.4s" }}>

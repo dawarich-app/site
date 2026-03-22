@@ -406,6 +406,7 @@
   font-weight: 500;
   font-family: 'Roboto', -apple-system, sans-serif;
   color: hsl(220, 10%, 30%);
+  text-decoration: none;
   background: hsl(0, 0%, 100%);
   border: 1px solid hsl(220, 13%, 87%);
   cursor: pointer;
