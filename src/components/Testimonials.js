@@ -29,6 +29,29 @@ const StarRating = () => (
 	</div>
 );
 
+const featuredIn = [
+	{
+		name: "XDA Developers",
+		url: "https://www.xda-developers.com/import-google-timeline-dawarich/",
+		style: { fontFamily: "'Roboto Condensed', sans-serif", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em" },
+	},
+	{
+		name: "MakeUseOf",
+		url: "https://www.makeuseof.com/i-use-free-open-source-app-track-everywhere-ive-been-without-google/",
+		style: { fontFamily: "'Inter', sans-serif", fontWeight: 800 },
+	},
+	{
+		name: "c't Magazine",
+		url: "https://www.heise.de/select/ct/",
+		style: { fontFamily: "'Georgia', serif", fontWeight: 700, fontStyle: "italic" },
+	},
+	{
+		name: "It's FOSS",
+		url: "https://itsfoss.com/",
+		style: { fontFamily: "'Inter', sans-serif", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.03em" },
+	},
+];
+
 const testimonials = [
 	{
 		quote:
@@ -86,9 +109,26 @@ export default function Testimonials() {
 			<div className={styles.container}>
 				<h2 className={styles.title}>What People Are Saying</h2>
 				<p className={styles.subtitle}>
-					Featured in XDA Developers, MakeUseOf, and c't Magazine (Europe's
-					largest IT publication).
+					Featured in leading tech publications worldwide.
 				</p>
+
+				<div className={styles.featuredIn}>
+					<span className={styles.featuredLabel}>As seen in</span>
+					<div className={styles.featuredLogos}>
+						{featuredIn.map((pub) => (
+							<a
+								key={pub.name}
+								href={pub.url}
+								target="_blank"
+								rel="noopener noreferrer"
+								className={styles.featuredLogo}
+								style={pub.style}
+							>
+								{pub.name}
+							</a>
+						))}
+					</div>
+				</div>
 
 				<div className={styles.grid}>
 					{testimonials.map((t, i) => (
