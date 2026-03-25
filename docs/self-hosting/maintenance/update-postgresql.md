@@ -6,6 +6,10 @@ description: Step-by-step guide to upgrade your Dawarich database from an older 
 
 # Updating to PostgreSQL 17 with Postgis
 
+:::info
+This guide is for users upgrading from PostgreSQL 14 to PostgreSQL 17. New installations of Dawarich already use PostgreSQL 17 with PostGIS — no migration needed.
+:::
+
 As of January 2025, Dawarich uses kinda obsolete version of PostgreSQL, so to make sure we'll be able to improve and expand the project, we need to update it to the most recent version.
 
 This post will serve you as an instruction on how to do that.
@@ -200,7 +204,7 @@ services:
     command: ['bin/rails', 'server', '-p', '3000', '-b', '::']
     restart: on-failure
     environment:
-      RAILS_ENV: development
+      RAILS_ENV: production
       REDIS_URL: redis://dawarich_redis:6379/0
       DATABASE_HOST: dawarich_db
       DATABASE_USERNAME: postgres
@@ -251,7 +255,7 @@ services:
     command: ['sidekiq']
     restart: on-failure
     environment:
-      RAILS_ENV: development
+      RAILS_ENV: production
       REDIS_URL: redis://dawarich_redis:6379/0
       DATABASE_HOST: dawarich_db
       DATABASE_USERNAME: postgres

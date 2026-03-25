@@ -23,8 +23,6 @@ If you don't want to be limited by the number of requests per second, and you do
 
 Since https://photon.komoot.io/ is a free service with limited usage, in order to decrease the load on the service, I strongly encourage you to host your [own reverse geocoding service](#setting-up-your-own-reverse-geocoding-service), or use the Photon API [for Patreon supporters](#using-photon-api-for-patreon-supporters), to support Dawarich development.
 
-Support for more reverse geocoding services is coming soon.
-
 :::
 
 :::danger
@@ -43,7 +41,7 @@ To enable reverse geocoding, you need to provide correct ENV variables for the r
   <summary>Show me!</summary>
 
   ```yml
-  version: '3'
+
   networks:
     dawarich:
   services:
@@ -51,7 +49,7 @@ To enable reverse geocoding, you need to provide correct ENV variables for the r
       image: freikin/dawarich:latest
       ...
       environment:
-        RAILS_ENV: development
+        RAILS_ENV: production
         ...
         APPLICATION_PROTOCOL: http
         PHOTON_API_HOST: photon.yourdomain.com
@@ -63,7 +61,7 @@ To enable reverse geocoding, you need to provide correct ENV variables for the r
       image: freikin/dawarich:latest
       ...
       environment:
-        RAILS_ENV: development
+        RAILS_ENV: production
         ...
         APPLICATION_PROTOCOL: http
         PHOTON_API_HOST: photon.yourdomain.com
@@ -108,7 +106,7 @@ After you deploy your own instance of the Photon service, you need to set the `P
   <summary>Show me!</summary>
 
   ```yaml
-  version: '3'
+
   networks:
     dawarich:
   services:
@@ -116,7 +114,7 @@ After you deploy your own instance of the Photon service, you need to set the `P
       image: freikin/dawarich:latest
       ...
       environment:
-        RAILS_ENV: development
+        RAILS_ENV: production
         ...
         APPLICATION_PROTOCOL: http
         PHOTON_API_HOST: photon.yourdomain.com # remove this line if you want to use the default Nominatim service
@@ -126,7 +124,7 @@ After you deploy your own instance of the Photon service, you need to set the `P
       image: freikin/dawarich:latest
       ...
       environment:
-        RAILS_ENV: development
+        RAILS_ENV: production
         ...
         APPLICATION_PROTOCOL: http
         PHOTON_API_HOST: photon.yourdomain.com # remove this line if you want to use the default Nominatim service

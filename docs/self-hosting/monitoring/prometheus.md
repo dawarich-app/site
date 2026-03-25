@@ -30,7 +30,7 @@ To enable metrics export, you need to set a few environment variables. The value
 
 ### Update to `docker-compose.yml`
 
-Also, the default `docker-compose.yml` file uses `command: ['bin/rails', 'server', '-p', '3000', '-b', '::']`. If you want to monitor Dawarich with prometheus, make sure to change it to `command: bin/dev`.
+The `web-entrypoint.sh` script automatically starts the Prometheus exporter when `PROMETHEUS_EXPORTER_ENABLED` is set to `true`. No changes to the Docker command are needed — just set the environment variables and uncomment the port mapping (`9394:9394`) in your `docker-compose.yml`.
 
 ## Metrics
 
