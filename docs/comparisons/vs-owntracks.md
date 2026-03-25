@@ -38,7 +38,7 @@ This page compares Dawarich with OwnTracks to help you understand the difference
 | GPX export | ✅ (web) | ❌ |
 | **Visualization** |
 | Interactive map | ✅ (web, iOS) | ⚠️ (basic web) |
-| Timeline view | ⚠️ (planned) | ❌ |
+| Timeline view | ✅ | ❌ |
 | Heatmap | ✅ (web) | ✅ |
 | Statistics dashboard | ✅ | ❌ |
 | **Places & Areas** |
@@ -51,7 +51,7 @@ This page compares Dawarich with OwnTracks to help you understand the difference
 | **Trips & Analysis** |
 | Trip creation | ✅ (web) | ❌ |
 | Distance tracking | ✅ (web) | ❌ |
-| Transport mode detection | ⚠️ (planned) | ❌ |
+| Transport mode detection | ✅ | ❌ |
 | **Technical Features** |
 | API access | ✅ | ✅ |
 | MQTT support | ❌ | ✅ |
@@ -59,7 +59,7 @@ This page compares Dawarich with OwnTracks to help you understand the difference
 | **Platform Support** |
 | Web interface | ✅ | ⚠️ (basic) |
 | iOS app | ✅ | ✅ |
-| Android app | ⚠️ (planned) | ✅ |
+| Android app | ✅ | ✅ |
 | **Setup & Maintenance** |
 | Easy installation | ✅ (Docker) | ⚠️ (technical) |
 | User management | ✅ | ❌ |

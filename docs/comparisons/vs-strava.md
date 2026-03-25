@@ -36,10 +36,10 @@ This page compares Dawarich with Strava to help you understand the differences a
 | Strava export | ❌ | ✅ |
 | JSON export | ✅ (web) | ⚠️ (limited) |
 | GPX export | ✅ (web) | ✅ |
-| Apple Health import | ⚠️ (planned) | ✅ |
+| Apple Health import | ✅ (iOS, Pro feature) | ✅ |
 | **Visualization** |
 | Interactive map | ✅ (web, iOS) | ✅ |
-| Timeline view | ⚠️ (planned) | ✅ |
+| Timeline view | ✅ | ✅ |
 | Heatmap | ✅ (web) | ❌ |
 | Statistics dashboard | ✅ | ✅ |
 | **Places & Areas** |
@@ -62,6 +62,6 @@ This page compares Dawarich with Strava to help you understand the differences a
 | **Platform Support** |
 | Web interface | ✅ | ✅ |
 | iOS app | ✅ | ✅ |
-| Android app | ⚠️ (planned) | ✅ |
+| Android app | ✅ | ✅ |
 
 <sup>1</sup> Photo timeline integration is available in the web interface, but currently only works with Immich and Photoprism.

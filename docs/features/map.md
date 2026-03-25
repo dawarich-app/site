@@ -12,18 +12,18 @@ The Map page provides interactive visualizations of your location data. You can 
 
 Dawarich offers two map implementations:
 
-### Map V1 (Leaflet)
+### Map V2 (MapLibre GL JS) — Default
 
-The original map implementation using Leaflet.js. This is the default for existing installations and provides reliable performance with standard features.
-
-### Map V2 (MapLibre GL JS)
-
-The newer map implementation using MapLibre GL JS. Map V2 offers:
+The current default map implementation using MapLibre GL JS. Map V2 offers:
 
 - **Better performance** - WebGL-based rendering for smoother interactions
 - **Globe view** - 3D globe rendering option
 - **Search functionality** - Built-in place search (see [Search](/docs/features/search))
 - **Modern styling** - More map style options
+
+### Map V1 (Leaflet) — Deprecated
+
+The original map implementation using Leaflet.js. Map V1 is deprecated and will be removed in summer 2026. If you are still using Map V1, please switch to Map V2.
 
 To switch between map versions, access `/map/v1` or `/map/v2` in your browser URL, or configure your preferred version in settings.
 

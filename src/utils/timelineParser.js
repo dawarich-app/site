@@ -371,8 +371,7 @@ export function parseLocationHistory(data) {
       const topCandidate = visit.topCandidate;
 
       if (topCandidate && topCandidate.placeLocation) {
-        // placeLocation is a string like "geo:37.7749,-122.4194"
-        const coords = parseGeoString(topCandidate.placeLocation);
+        const coords = parsePlaceLocation(topCandidate.placeLocation);
         if (coords) {
           const point = {
             id: `visit-${fileId}-${i}`,
@@ -487,7 +486,32 @@ export function parseSemanticSegments(data) {
   for (let i = 0; i < data.semanticSegments.length; i++) {
     const segment = data.semanticSegments[i];
 
-    // Parse timelinePath to extract points
+    // Parse visit entries (actual place visits)
+    if (segment.visit) {
+      const visit = segment.visit;
+      const topCandidate = visit.topCandidate;
+
+      if (topCandidate) {
+        const coords = parsePlaceLocation(topCandidate.placeLocation);
+        if (coords) {
+          points.push({
+            id: `visit-${fileId}-${i}`,
+            lat: coords.lat,
+            lng: coords.lng,
+            timestamp: segment.startTime || null,
+            arrived: segment.startTime || null,
+            departed: segment.endTime || null,
+            duration: calculateDuration(segment.startTime, segment.endTime),
+            placeId: topCandidate.placeId || topCandidate.placeID || null,
+            type: 'place_visit',
+            semanticType: topCandidate.semanticType || null,
+            probability: topCandidate.probability || null,
+          });
+        }
+      }
+    }
+
+    // Parse timelinePath to extract paths and activity points
     if (segment.timelinePath && Array.isArray(segment.timelinePath)) {
       const pathCoords = [];
 
@@ -498,7 +522,7 @@ export function parseSemanticSegments(data) {
           if (coords) {
             pathCoords.push([coords.lat, coords.lng]);
 
-            // Create a point for the first location in each segment (as a visit marker)
+            // Create a point for the first location in each activity segment
             if (j === 0) {
               points.push({
                 id: `segment-${fileId}-${i}`,
@@ -508,7 +532,7 @@ export function parseSemanticSegments(data) {
                 arrived: segment.startTime || null,
                 departed: segment.endTime || null,
                 duration: calculateDuration(segment.startTime, segment.endTime),
-                type: 'place_visit',
+                type: 'activity_start',
               });
             }
           }
@@ -566,7 +590,7 @@ export function parseSemanticSegments(data) {
 }
 
 /**
- * Parse geo string in format "geo:lat,lng" or "lat,lng"
+ * Parse geo string in format "geo:lat,lng", "lat,lng", or "lat°, lng°"
  * @param {string} geoString - Geographic coordinate string
  * @returns {Object|null} Object with lat/lng or null if invalid
  */
@@ -574,18 +598,58 @@ function parseGeoString(geoString) {
   if (!geoString || typeof geoString !== 'string') return null;
 
   // Remove "geo:" prefix if present
-  const coordString = geoString.replace(/^geo:/, '');
+  let coordString = geoString.replace(/^geo:/, '');
+
+  // Remove degree symbols (e.g., "37.7749°, -122.4194°")
+  coordString = coordString.replace(/°/g, '');
+
   const parts = coordString.split(',');
 
   if (parts.length !== 2) return null;
 
-  const lat = parseFloat(parts[0]);
-  const lng = parseFloat(parts[1]);
+  const lat = parseFloat(parts[0].trim());
+  const lng = parseFloat(parts[1].trim());
 
   if (isNaN(lat) || isNaN(lng)) return null;
   if (lat < -90 || lat > 90 || lng < -180 || lng > 180) return null;
 
   return { lat, lng };
+}
+
+/**
+ * Extract coordinates from a placeLocation value.
+ * Handles both string format ("geo:lat,lng") and object format ({ latLng: "lat°, lng°" }).
+ * @param {string|Object} placeLocation - Place location in various formats
+ * @returns {Object|null} Object with lat/lng or null if invalid
+ */
+function parsePlaceLocation(placeLocation) {
+  if (!placeLocation) return null;
+
+  // String format: "geo:37.7749,-122.4194"
+  if (typeof placeLocation === 'string') {
+    return parseGeoString(placeLocation);
+  }
+
+  // Object format: { latLng: "37.7749°, -122.4194°" }
+  if (typeof placeLocation === 'object') {
+    if (placeLocation.latLng) {
+      return parseGeoString(placeLocation.latLng);
+    }
+    // Direct lat/lng properties
+    if (placeLocation.latitude != null && placeLocation.longitude != null) {
+      const lat = parseFloat(placeLocation.latitude);
+      const lng = parseFloat(placeLocation.longitude);
+      if (isValidCoordinate(lat, lng)) return { lat, lng };
+    }
+    // E7 format
+    if (placeLocation.latitudeE7 != null && placeLocation.longitudeE7 != null) {
+      const lat = e7ToDecimal(placeLocation.latitudeE7);
+      const lng = e7ToDecimal(placeLocation.longitudeE7);
+      if (isValidCoordinate(lat, lng)) return { lat, lng };
+    }
+  }
+
+  return null;
 }
 
 // Main parser

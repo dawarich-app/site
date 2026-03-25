@@ -71,6 +71,6 @@ If  you're running Dawarich on an ARM64 server check out the [Moving to PostGIS]
 
 :::warning
 
-Although the `docker` directory contains `docker-compose.production.yml` file, it's not yet recommended to use. Use the `docker-compose.yml` file instead, with the `development` environment.
+Although the `docker` directory contains `docker-compose.production.yml` file, it's not yet recommended to use. Use the `docker-compose.yml` file instead, with the `production` environment.
 
 :::

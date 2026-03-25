@@ -24,20 +24,20 @@ This page compares Dawarich with Google Timeline to help you understand the diff
 | Own your data | ✅ | ❌ |
 | No data sharing with third parties | ✅ | ❌ |
 | **Location Tracking** |
-| Automatic location tracking | ✅ (iOS) | ✅ |
+| Automatic location tracking | ✅ (iOS, Android) | ✅ |
 | Manual location logging | ✅ (iOS) | ❌ |
-| GPS accuracy settings | ✅ (iOS) | ❌ |
+| GPS accuracy settings | ✅ (iOS, Android) | ❌ |
 | **Data Import/Export** |
 | Google Takeout import | ✅ (web) | ❌ |
 | GPX import | ✅ (web) | ❌ |
 | GeoJSON import | ✅ (web) | ❌ |
-| KML import | ⚠️ (planned) | ✅ |
+| KML import | ✅ (web) | ✅ |
 | JSON export | ✅ (web) | ⚠️ (via Takeout) |
 | GPX export | ✅ (web) | ❌ |
 | KML export | ⚠️ (planned) | ✅ |
 | **Visualization** |
-| Interactive map | ✅ (web, iOS) | ✅ |
-| Timeline view | ⚠️ (planned) | ✅ |
+| Interactive map | ✅ (web, iOS, Android) | ✅ |
+| Timeline view | ✅ (web) | ✅ |
 | Heatmap | ✅ (web) | ❌ |
 | Statistics dashboard | ✅ | ⚠️ (basic) |
 | **Places & Areas** |
@@ -50,13 +50,13 @@ This page compares Dawarich with Google Timeline to help you understand the diff
 | **Trips & Analysis** |
 | Trip creation | ✅ (web) | ❌ |
 | Distance tracking | ✅ (web) | ✅ |
-| Transport mode detection | ⚠️ (planned) | ✅ |
+| Transport mode detection | ✅ | ✅ |
 | **Technical Features** |
 | API access | ✅ | ⚠️ (limited) |
-| Family access | ⚠️ (planned) | ❌ |
+| Family access | ✅ (self-hosted) | ❌ |
 | **Platform Support** |
 | Web interface | ✅ | ✅ |
 | iOS app | ✅ | ✅ |
-| Android app | ⚠️ (planned) | ✅ |
+| Android app | ✅ | ✅ |
 
 <sup>1</sup> Photo timeline integration is available in the web interface, but currently only works with Immich and Photoprism.

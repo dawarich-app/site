@@ -17,8 +17,8 @@ First, let's update your `docker-compose.yml` file to include a new volume that 
     image: freikin/dawarich:latest
     container_name: dawarich_app
     volumes:
-      - public:/var/app/public
-+     - watched:/var/app/tmp/imports/watched
+      - dawarich_public:/var/app/public
++     - dawarich_watched:/var/app/tmp/imports/watched
 
   ...
 
@@ -26,16 +26,16 @@ First, let's update your `docker-compose.yml` file to include a new volume that 
       image: freikin/dawarich:latest
       container_name: dawarich_sidekiq
       volumes:
-        - public:/var/app/public
-+       - watched:/var/app/tmp/imports/watched
+        - dawarich_public:/var/app/public
++       - dawarich_watched:/var/app/tmp/imports/watched
 
   ...
 
 volumes:
-  db_data:
-  shared_data:
-  public:
-+ watched:
+  dawarich_db_data:
+  dawarich_shared:
+  dawarich_public:
++ dawarich_watched:
 ```
 
 Now, in the container, create a directory for your user (`/var/app/tmp/imports/watched/your_user@email.com/`) and put your GPX, Owntracks' `.rec` and GeoJSON files to the directory.

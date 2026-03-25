@@ -133,6 +133,7 @@ export default function TimelineMap({ points, paths, onPointClick, selectedPoint
 
   // Track previous points/paths to avoid unnecessary full re-renders
   const prevPointsLengthRef = useRef(0);
+  const prevPointsFirstIdRef = useRef(null);
   const prevPathsLengthRef = useRef(0);
 
   // Update markers and paths when data changes
@@ -144,8 +145,10 @@ export default function TimelineMap({ points, paths, onPointClick, selectedPoint
     const markersLayer = markersLayerRef.current;
     const pathsLayer = pathsLayerRef.current;
 
-    // Check if this is an incremental update (new points added) or full reset
-    const isIncrementalUpdate = points.length > prevPointsLengthRef.current && prevPointsLengthRef.current > 0;
+    // Check if this is an incremental update (same dataset growing) or full reset
+    const firstId = points.length > 0 ? points[0].id : null;
+    const sameDataset = firstId !== null && firstId === prevPointsFirstIdRef.current;
+    const isIncrementalUpdate = sameDataset && points.length > prevPointsLengthRef.current;
     const pointsToAdd = isIncrementalUpdate ? points.slice(prevPointsLengthRef.current) : points;
 
     if (!isIncrementalUpdate) {
@@ -263,6 +266,7 @@ export default function TimelineMap({ points, paths, onPointClick, selectedPoint
 
     // Update refs at the end
     prevPointsLengthRef.current = points.length;
+    prevPointsFirstIdRef.current = points.length > 0 ? points[0].id : null;
     prevPathsLengthRef.current = paths.length;
   }, [points, paths, isLoaded, onPointClick]);
 
