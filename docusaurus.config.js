@@ -196,6 +196,10 @@ const config = {
                 label: '🔗 Timeline Data Merger',
               },
               {
+                to: '/tools/google-timeline-splitter',
+                label: '✂️ Google Timeline Splitter',
+              },
+              {
                 to: '/tools/gps-file-splitter',
                 label: '✂️ GPS File Splitter',
               },
