@@ -118,6 +118,18 @@ Email is required for:
 Important note on Prometheus exporter: even if you want to use it, make sure you have `PROMETHEUS_EXPORTER_ENABLED` set to `false` in `dawarich_sidekiq` container. Otherwise, you'll end up with two exporters and will have to deal with duplicate metrics. The `PROMETHEUS_EXPORTER_HOST` for `dawarich_sidekiq` should be set to `dawarich_app` or your name of the container.
 :::
 
+### Two-Factor Authentication (2FA)
+
+| Environment Variable | Default Value | Description |
+| -------------------- | ------------- | ----------- |
+| `OTP_ENCRYPTION_PRIMARY_KEY` | Built-in default | Primary key for encrypting OTP secrets. Production deployments should set a unique value. |
+| `OTP_ENCRYPTION_DETERMINISTIC_KEY` | Built-in default | Deterministic key for OTP encryption. Production deployments should set a unique value. |
+| `OTP_ENCRYPTION_KEY_DERIVATION_SALT` | Built-in default | Salt for OTP key derivation. Production deployments should set a unique value. |
+
+:::tip
+These keys are used by Active Record Encryption to secure 2FA (TOTP) secrets. If not set, built-in defaults are used — fine for most self-hosted setups. For maximum security, generate unique values with `openssl rand -hex 32` and set them in your environment.
+:::
+
 ### Data Archival
 
 | Environment Variable | Default Value | Description |

@@ -14,7 +14,7 @@ The integration will allow you to see your photos on the map and in your trips. 
 
 In the Settings page, you can find the Photoprism and Immich integration settings. Provide URLs to your Photoprism and Immich instances, API keys for each service and click "Save".
 
-For Immich, you need a key with `asset.read` and `asset.view` scopes enabled.
+For Immich, you need a key with `asset.read` and `asset.view` scopes enabled. If you plan to use the [Enrich Photos](enrich-photos.md) feature, you also need `asset.update`.
 
 ![Photos settings](images/photos-integration.png)
 
