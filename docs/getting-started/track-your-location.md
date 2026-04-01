@@ -22,11 +22,22 @@ Dawarich provides an API for tracking your location. You can use the API to send
 
 ## Dawarich Android
 
+### Official
 1. Install the Dawarich Android app on your mobile device.
 2. Open the app and go to the settings.
 3. Set your server URL and API key.
 4. Tap on the "Save" button.
 5. You're all set! Dawarich will start tracking your location.
+
+### Community
+1. Install the Dawarich Community app on your mobile device.
+   Download:
+   - [GitHub Releases](https://github.com/sunstep/dawarich-android/releases)
+   - [Google Play Store](https://play.google.com/store/apps/details?id=com.sunstep.dawarich)
+2. Open the app and choose whether you are self-hosting or using a hosted instance.
+3. Enter your server URL if you connect to a self hosted instance and API key, or scan the QR code from your Dawarich account settings.
+4. Connect and complete the permissions onboarding flow.
+5. Enable tracking from the tracker page, and the app starts tracking.
 
 ## Overland
 
