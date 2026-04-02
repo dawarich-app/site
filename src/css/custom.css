@@ -221,6 +221,14 @@ section {
   border-bottom: 1px solid var(--dw-border);
 }
 
+/* When mobile sidebar is open, disable backdrop-filter so the sidebar's
+   position:fixed is relative to the viewport, not the navbar */
+.navbar.navbar-sidebar--show {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  background: var(--ifm-background-surface-color) !important;
+}
+
 [data-theme='dark'] .navbar {
   background: rgba(28, 28, 28, 0.75) !important;
 }
