@@ -3,6 +3,7 @@ import styles from './TimelineMap.module.css';
 
 export default function TimelineMap({ points, paths, onPointClick, selectedPointId }) {
   const mapRef = useRef(null);
+  const containerRef = useRef(null);
   const mapInstanceRef = useRef(null);
   const markersLayerRef = useRef(null);
   const pathsLayerRef = useRef(null);
@@ -10,7 +11,9 @@ export default function TimelineMap({ points, paths, onPointClick, selectedPoint
   const markersByIdRef = useRef(new Map());
   const polylinesRef = useRef([]);
   const layerControlRef = useRef(null);
+  const fullscreenControlRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   // Load Leaflet dynamically (client-side only)
   useEffect(() => {
@@ -121,6 +124,35 @@ export default function TimelineMap({ points, paths, onPointClick, selectedPoint
     const layerControl = L.control.layers(null, overlayLayers, { position: 'topright' }).addTo(map);
     layerControlRef.current = layerControl;
 
+    // Fullscreen control — sits below the zoom control
+    const FullscreenControl = L.Control.extend({
+      options: { position: 'topleft' },
+      onAdd: function () {
+        const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
+        const button = L.DomUtil.create('a', 'timeline-map-fullscreen-btn', container);
+        button.href = '#';
+        button.role = 'button';
+        button.title = 'Toggle fullscreen (F)';
+        button.setAttribute('aria-label', 'Toggle fullscreen');
+        button.innerHTML = fullscreenIconSVG(false);
+        this._button = button;
+
+        L.DomEvent.disableClickPropagation(container);
+        L.DomEvent.on(button, 'click', L.DomEvent.stop).on(button, 'click', toggleFullscreen);
+
+        return container;
+      },
+      update: function (active) {
+        if (!this._button) return;
+        this._button.innerHTML = fullscreenIconSVG(active);
+        this._button.title = active ? 'Exit fullscreen (Esc)' : 'Toggle fullscreen (F)';
+      },
+    });
+
+    const fullscreenControl = new FullscreenControl();
+    fullscreenControl.addTo(map);
+    fullscreenControlRef.current = fullscreenControl;
+
     mapInstanceRef.current = map;
 
     return () => {
@@ -128,6 +160,86 @@ export default function TimelineMap({ points, paths, onPointClick, selectedPoint
         mapInstanceRef.current.remove();
         mapInstanceRef.current = null;
       }
+    };
+  }, [isLoaded]);
+
+  // Fullscreen API — toggle and sync with browser state
+  function toggleFullscreen() {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const doc = document;
+    const fsElement =
+      doc.fullscreenElement ||
+      doc.webkitFullscreenElement ||
+      doc.msFullscreenElement;
+
+    if (!fsElement) {
+      const request =
+        el.requestFullscreen ||
+        el.webkitRequestFullscreen ||
+        el.msRequestFullscreen;
+      if (request) request.call(el);
+    } else {
+      const exit =
+        doc.exitFullscreen ||
+        doc.webkitExitFullscreen ||
+        doc.msExitFullscreen;
+      if (exit) exit.call(doc);
+    }
+  }
+
+  function fullscreenIconSVG(active) {
+    // Shrink (active) vs expand (inactive) glyph
+    if (active) {
+      return '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v4a2 2 0 0 1-2 2H3M21 9h-4a2 2 0 0 1-2-2V3M3 15h4a2 2 0 0 1 2 2v4M15 21v-4a2 2 0 0 1 2-2h4"/></svg>';
+    }
+    return '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9V5a2 2 0 0 1 2-2h4M21 9V5a2 2 0 0 0-2-2h-4M3 15v4a2 2 0 0 0 2 2h4M21 15v4a2 2 0 0 1-2 2h-4"/></svg>';
+  }
+
+  // Sync React state with browser fullscreen events + resize map
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const handleChange = () => {
+      const doc = document;
+      const fsElement =
+        doc.fullscreenElement ||
+        doc.webkitFullscreenElement ||
+        doc.msFullscreenElement;
+      const active = fsElement === containerRef.current;
+      setIsFullscreen(active);
+
+      if (fullscreenControlRef.current) {
+        fullscreenControlRef.current.update(active);
+      }
+
+      // Map container size changed — tell Leaflet to recalculate
+      if (mapInstanceRef.current) {
+        setTimeout(() => mapInstanceRef.current?.invalidateSize(), 100);
+      }
+    };
+
+    const handleKey = (e) => {
+      // "F" keyboard shortcut to toggle fullscreen, only when map container is focused/hovered
+      if (e.key !== 'f' && e.key !== 'F') return;
+      const target = e.target;
+      if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable)) return;
+      if (!containerRef.current?.matches(':hover')) return;
+      e.preventDefault();
+      toggleFullscreen();
+    };
+
+    document.addEventListener('fullscreenchange', handleChange);
+    document.addEventListener('webkitfullscreenchange', handleChange);
+    document.addEventListener('msfullscreenchange', handleChange);
+    window.addEventListener('keydown', handleKey);
+
+    return () => {
+      document.removeEventListener('fullscreenchange', handleChange);
+      document.removeEventListener('webkitfullscreenchange', handleChange);
+      document.removeEventListener('msfullscreenchange', handleChange);
+      window.removeEventListener('keydown', handleKey);
     };
   }, [isLoaded]);
 
@@ -452,7 +564,11 @@ export default function TimelineMap({ points, paths, onPointClick, selectedPoint
   }
 
   return (
-    <div className={styles.mapContainer}>
+    <div
+      ref={containerRef}
+      className={styles.mapContainer}
+      data-fullscreen={isFullscreen ? 'true' : 'false'}
+    >
       <div ref={mapRef} className={styles.map}></div>
     </div>
   );

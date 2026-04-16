@@ -5,6 +5,60 @@
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--ifm-color-emphasis-200);
+  background: var(--ifm-background-color);
+}
+
+/* When browser Fullscreen API is active, fill the entire viewport */
+.mapContainer[data-fullscreen='true'] {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+  border: none;
+}
+
+.mapContainer:fullscreen,
+.mapContainer:-webkit-full-screen {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+  border: none;
+}
+
+.mapContainer:fullscreen .map,
+.mapContainer:-webkit-full-screen .map {
+  border-radius: 0;
+}
+
+/* Fullscreen toggle button — matches Leaflet control styling */
+:global(.timeline-map-fullscreen-btn) {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: var(--ifm-color-emphasis-900);
+  background-color: var(--ifm-background-color);
+  cursor: pointer;
+}
+
+:global(.timeline-map-fullscreen-btn):hover {
+  background-color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-900);
+}
+
+:global(.timeline-map-fullscreen-btn) svg {
+  display: block;
+}
+
+[data-theme='dark'] :global(.timeline-map-fullscreen-btn) {
+  background-color: #242526;
+  color: #ffffff;
+}
+
+[data-theme='dark'] :global(.timeline-map-fullscreen-btn):hover {
+  background-color: #3a3b3c;
 }
 
 .map {
