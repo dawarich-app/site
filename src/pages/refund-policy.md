@@ -4,37 +4,26 @@ title: Refund Policy
 
 # Refund Policy
 
-Effective Date: 21.04.2026
+Effective **2026-04-21**.
 
-## 1. Subscription & Billing
+## 1. Plans, Billing and Cancellation
 
-Dawarich offers the following paid plans:
+- **Lite** — €49.99 / year (annual only)
+- **Pro** — €119.99 / year or €17.99 / month
 
-- **Lite** — €49.99 per year (annual billing only)
-- **Pro** — €119.99 per year or €17.99 per month
+All paid plans include a 7-day free trial. The trial requires no credit card and never results in an automatic charge — a paid subscription only begins if you explicitly subscribe and pay.
 
-All paid plans start with a 7-day free trial. The trial does not require a credit card — you are never charged automatically. A paid subscription only begins if you explicitly subscribe and pay at or after the end of the trial.
+Once started, subscriptions renew automatically at the end of each cycle unless canceled. You can cancel any time in Subscription Settings; cancellation takes effect at the end of the current cycle and requires no advance notice.
 
-Once started, a paid subscription renews automatically at the end of each billing cycle unless canceled in advance.
+## 2. Right of Withdrawal (Widerrufsrecht)
 
-## 2. Cancellation Policy
+As a consumer resident in the EU, you have a statutory right to withdraw from this contract within **14 days** of concluding it, without giving any reason (§ 312g, § 355 BGB).
 
-You can cancel your subscription at any time via your Subscription Settings. Cancellations take effect at the end of the current billing cycle, and you retain access until that date.
+**How to exercise it.** Inform us — ZeitFlow UG (haftungsbeschränkt), Kolonnenstraße 8, 10827 Berlin, Germany, hi@dawarich.app — by a clear statement (e.g. an email) of your decision to withdraw. You may use the model form below but are not required to.
 
-We do not require any advance notice period to cancel — a cancellation made at any point before the next renewal prevents the next charge.
+**Consequences.** If you withdraw in time, we refund all payments received from you within 14 days of receiving your notice, using the same payment method you used.
 
-## 3. Right of Withdrawal (Widerrufsrecht)
-
-As a consumer resident in the European Union, you have a statutory right to withdraw from this contract within **14 days** of concluding it, without giving any reason (§ 312g, § 355 BGB).
-
-**How to exercise the right of withdrawal:**
-To exercise your right of withdrawal, you must inform us (ZeitFlow UG (haftungsbeschränkt), Kolonnenstraße 8, 10827 Berlin, Germany, hi@dawarich.app) by means of a clear statement (e.g. a letter or email) of your decision to withdraw from this contract. You may use the model withdrawal form below, but it is not obligatory.
-
-**Consequences of withdrawal:**
-If you withdraw within the 14-day window, we will refund all payments received from you without undue delay and no later than 14 days after we received your withdrawal notice, using the same payment method you used for the original transaction.
-
-**Early loss of the right of withdrawal for digital services:**
-Your right of withdrawal expires before the 14 days if you have expressly consented to us beginning performance of the digital service before the end of the withdrawal period and have acknowledged that you thereby lose your right of withdrawal (§ 356 Abs. 5 BGB). When you activate a paid subscription, you will be asked to give this consent. If you do not wish to lose the withdrawal right, do not give this consent — you can still use the 7-day free trial.
+**Early loss for digital services.** Your right of withdrawal expires before the 14 days if you expressly consent to us beginning performance of the digital service before the period ends and acknowledge that you thereby lose it (§ 356 Abs. 5 BGB). You will be asked for this consent when activating a paid subscription. If you don't wish to lose the right, do not give consent — you can still use the 7-day free trial.
 
 ### Model Withdrawal Form
 
@@ -45,27 +34,23 @@ Your right of withdrawal expires before the 14 days if you have expressly consen
 > - Ordered on (*): ___________
 > - Name of consumer(s): ___________
 > - Address of consumer(s): ___________
-> - Signature of consumer(s) (only if this form is notified on paper): ___________
+> - Signature (only if on paper): ___________
 > - Date: ___________
 >
 > (*) Delete as appropriate.
 
-## 4. No Refunds Outside the Withdrawal Period
+## 3. No Refunds Outside the Withdrawal Period
 
-Outside of the statutory 14-day withdrawal window described in Section 3, Dawarich does not provide refunds for partial use, unused periods, or remaining time on a subscription. Once a subscription renews, it is non-refundable for that billing cycle.
+Outside the statutory 14-day window, we do not refund partial use, unused periods, or remaining time on a subscription. Once a subscription renews it is non-refundable for that cycle, except where applicable consumer protection law requires otherwise.
 
-Refunds beyond this are granted only where required by applicable consumer protection law.
+## 4. Contact
 
-## 5. Contact for Refund and Withdrawal Requests
-
-For billing inquiries or to exercise your right of withdrawal, contact: hi@dawarich.app
+For billing or withdrawal requests: **hi@dawarich.app**.
 
 ## Last updated
-
-This document was last edited on:
 
 | When          | What          |
 | ------------- | ------------- |
 | 2026-04-21    | Added statutory 14-day right of withdrawal, aligned plans with current pricing |
-| 2026-03-10    | Updated subscription and billing information to include monthly plans |
+| 2026-03-10    | Added monthly plan |
 | 2025-03-12    | Initial version |

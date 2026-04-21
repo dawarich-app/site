@@ -4,109 +4,65 @@ title: Mobile App Privacy Policy
 
 # Dawarich Mobile App Privacy Policy
 
-This policy applies to the Dawarich mobile app for iOS (`app.dawarich.Dawarich`) and Android (`com.zeitflow.dawarich`), published by ZeitFlow UG (haftungsbeschränkt), Kolonnenstraße 8, 10827 Berlin, Germany ("we", "us"). It explains what the app collects, where that data goes, and your rights.
+Applies to the Dawarich mobile app — iOS (`app.dawarich.Dawarich`) and Android (`com.zeitflow.dawarich`) — published by **ZeitFlow UG (haftungsbeschränkt)**, Kolonnenstraße 8, 10827 Berlin, Germany. Email: **hi@dawarich.app**. Full company details: [Impressum](/impressum).
 
 :::info TL;DR
-The app collects precise location data when you enable tracking, stores it locally on your device, and uploads it **only to the Dawarich server you configure** — your own self-hosted instance or our SaaS at dawarich.app. Crash reports go to Sentry. We never sell your data or use it for advertising.
+The app tracks location when you enable it, stores points locally, and uploads them **only to the Dawarich server you configure** — your own or our SaaS at dawarich.app. Crash reports go to Sentry. We don't sell data or run ads.
 :::
 
-## 1. Controller
-
-**ZeitFlow UG (haftungsbeschränkt)**
-Kolonnenstraße 8, 10827 Berlin, Germany
-Email: hi@dawarich.app
-
-For full company details see the [Impressum](/impressum).
-
-## 2. What the App Collects
+## 1. What the App Collects
 
 | Data | When | Where it goes |
 |---|---|---|
-| Precise location (GPS coordinates, timestamp, speed, altitude, accuracy) | When you enable location tracking; works in foreground and background | Local SQLite database on your device, then uploaded to the Dawarich server you configure |
-| Apple Health workouts and routes (iOS only) | Only if you explicitly grant HealthKit permission and trigger an import | Local processing and upload to your configured Dawarich server |
-| Camera image (QR code contents) | Only while you actively scan a QR code to import server settings | Parsed locally, not stored or transmitted |
-| App settings, tracking configuration | Always | Stored locally on your device |
-| Crash reports, error stack traces, device model, OS version | Automatically when the app crashes or hits an error | Sentry (see Section 4) |
+| Precise location (coordinates, timestamp, speed, altitude, accuracy) | When tracking is enabled (foreground + background) | Local SQLite, then uploaded to the Dawarich server you configure |
+| Apple Health workouts & routes (iOS) | Only if you grant HealthKit permission and trigger an import | Same as above |
+| Camera image (QR code contents) | Only while you scan a connection QR code | Parsed locally, not stored |
+| App settings, tracking configuration | Always | On-device |
+| Crash reports, stack traces, device model, OS version | On error | Sentry |
 
-The app does **not** contain advertising SDKs, analytics SDKs, or third-party trackers beyond Sentry.
+No advertising or analytics SDKs beyond Sentry.
 
-## 3. Where Your Location Data Goes
+## 2. Where Your Data Goes
 
-The app is designed to work with **any** Dawarich server. You decide which one:
+You choose the server: **self-hosted** (we never see it), **Dawarich SaaS** (governed by our main [Privacy Policy](/privacy-policy)), or **no server** (on-device only). All uploads use HTTPS and are authenticated via `Authorization: Bearer <api-key>`.
 
-- **Self-hosted:** data is uploaded only to your own server. We (ZeitFlow UG) never see it.
-- **Dawarich SaaS (dawarich.app):** data is uploaded to our servers and is governed by our main [Privacy Policy](/privacy-policy). In that case we act as controller for the data stored server-side.
-- **No server configured:** the app holds data locally on your device only.
+**Processors:** Apple Inc. (iOS App Store, US), Google LLC (Google Play, US), Functional Software Inc. / Sentry (crash reports, US). US transfers rely on the EU-US Data Privacy Framework and/or Standard Contractual Clauses (Art. 46 GDPR). If you use our SaaS, the additional processors in our main [Privacy Policy §3](/privacy-policy#3-recipients--processors) apply.
 
-All uploads use HTTPS and are authenticated with an API key bound to your account on the configured server. The API key is passed via the `Authorization` header.
+## 3. Legal Bases (GDPR Art. 6)
 
-## 4. Processors We Use
+- **Location tracking and upload:** (1)(b) — contract with the server operator you chose.
+- **Crash reports:** (1)(f) — legitimate interest in a stable app (can be disabled in-app).
+- **HealthKit:** (1)(a) — your explicit consent; revoke anytime in iOS Settings.
 
-| Processor | Purpose | Location |
-|---|---|---|
-| Apple Inc. | iOS App Store distribution | United States |
-| Google LLC | Google Play distribution | United States |
-| Functional Software, Inc. (Sentry) | Crash and error reporting for the app | United States |
+## 4. Retention
 
-If you use the Dawarich SaaS, the additional processors listed in our [main Privacy Policy §4](/privacy-policy#4-recipients--processors) apply to server-side data.
+- **On-device data:** until you uninstall, clear the app, or reset the local database in-app.
+- **Server-side data:** governed by the policy of the server you configure.
+- **Crash reports:** up to 90 days at Sentry.
 
-## 5. Legal Bases (GDPR Art. 6)
+## 5. Your Rights
 
-- **Location tracking and upload:** Art. 6(1)(b) — performance of the contract you entered with the operator of the Dawarich server you chose.
-- **Crash reports:** Art. 6(1)(f) — our legitimate interest in a stable, debuggable app. You can disable crash reporting in the app settings.
-- **HealthKit access:** Art. 6(1)(a) — your explicit consent, which you can revoke at any time in iOS Settings.
+You have the rights under Art. 15–21 GDPR (access, rectification, erasure, restriction, portability, objection) and the right to withdraw consent (Art. 7(3)) and lodge a complaint with a supervisory authority — our competent authority is the Berliner Beauftragte für Datenschutz und Informationsfreiheit ([datenschutz-berlin.de](https://www.datenschutz-berlin.de)). Email **hi@dawarich.app** to exercise any right, or uninstall the app and clear its data for on-device content. For server-side data, contact the operator of the server you use.
 
-## 6. International Transfers
+## 6. Permissions
 
-Crash reports to Sentry, and app distribution via Apple and Google, involve transfers to the United States. These rely on the EU-US Data Privacy Framework where the provider is certified, and on Standard Contractual Clauses (Art. 46(2)(c) GDPR) with supplementary measures.
+- **Location (when-in-use / always):** required to record trips and visits. You can limit to "when in use" or deny entirely.
+- **Notifications:** used for the Android foreground-service indicator and status notices.
+- **Camera:** only when you scan a connection QR code.
+- **HealthKit (iOS, optional):** only when you initiate a Health import.
 
-## 7. Retention
+All permissions can be revoked in iOS or Android system settings.
 
-- **On-device data:** retained until you delete the app, clear its data, or reset the local database from within the app.
-- **Server-side data:** governed by the policy of the server you configure (our main Privacy Policy if you use the SaaS).
-- **Crash reports:** retained by Sentry for a maximum of 90 days.
+## 7. Security, Children, Changes
 
-## 8. Your Rights
-
-Under the GDPR you have the right to access, rectify, erase, restrict, port, and object to processing of your personal data, and to withdraw any consent you gave. You may also lodge a complaint with your local supervisory authority. Our competent authority is:
-
-> Berliner Beauftragte für Datenschutz und Informationsfreiheit
-> Alt-Moabit 59–61, 10555 Berlin, Germany
-> [https://www.datenschutz-berlin.de](https://www.datenschutz-berlin.de)
-
-To exercise your rights, email **hi@dawarich.app**. For on-device data, you can also simply uninstall the app or use in-app settings to clear the local database. For server-side data, contact the operator of the Dawarich server you use.
-
-## 9. Children
-
-You must be at least **16 years old** to use the app and to consent to the processing described here. In some jurisdictions, a parent or legal guardian may consent on your behalf. We do not knowingly collect data from children under 16.
-
-## 10. Permissions the App Requests
-
-- **Location (always / when in use):** required to record trips and visits. You can grant "when in use" only, or deny entirely — tracking will be limited accordingly.
-- **Notifications:** used to show the foreground-service indicator on Android and status notifications.
-- **Camera:** used only when scanning a QR code to import server connection settings.
-- **HealthKit (iOS only):** optional; requested only when you initiate a Health import.
-
-All permissions can be revoked at any time in iOS or Android system settings.
-
-## 11. Security
-
-The app uses HTTPS for all network communication. API keys are stored in the platform's secure storage. We do not transmit your location data to anyone other than the Dawarich server you configure, and Sentry for crash reports.
-
-## 12. Changes
-
-We will notify you of material changes via an in-app notice at least 30 days before they take effect. Non-material changes are published on this page with an updated date below.
-
-## 13. Contact
-
-For privacy questions about the app: **hi@dawarich.app**.
+HTTPS everywhere; API keys stored in platform-secure storage. You must be **16 or older** to use the app. We notify of material changes via in-app notice at least 30 days before they take effect.
 
 ## Last updated
 
-This privacy policy is effective as of **2026-04-21**.
+Effective **2026-04-21**.
 
 | When          | What          |
 | ------------- | ------------- |
-| 2026-04-21    | Rewritten to accurately describe location tracking, HealthKit, camera, Sentry, and both iOS + Android platforms |
-| 2025-04-13    | Updated application developer information |
+| 2026-04-21    | Rewritten to accurately describe location tracking, HealthKit, camera, Sentry; covers iOS + Android |
+| 2025-04-13    | Updated developer information |
 | 2025-01-27    | Initial version |

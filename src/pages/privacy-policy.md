@@ -5,144 +5,97 @@ title: Privacy Policy
 # Dawarich Privacy Policy
 
 :::info TL;DR
-We don't sell your data. We don't train AI models on your data. We don't share your data with third parties except the processors listed below. All our processors are GDPR-compliant and primarily located in the EU.
+We don't sell your data, don't train AI on it, and don't share it beyond the processors listed below. Most of our processors are in the EU.
 :::
 
-We take your privacy seriously. We only collect the personal information that is necessary to provide you with our services, and we do not sell or rent your data.
-
-This policy applies to the Dawarich application ("Application") and related services, including the iOS app, Android app, self-hosted, SaaS, and hosted versions.
+This policy applies to the Dawarich SaaS at `dawarich.app`, the hosted tier, and the iOS and Android apps when connected to our SaaS. If you self-host, no data reaches us and you are the sole controller.
 
 ## 1. Controller
 
-The controller responsible for processing your personal data is:
+**ZeitFlow UG (haftungsbeschränkt)** — Kolonnenstraße 8, 10827 Berlin, Germany. Managing Director: Evgenii Burmakin. Email: **hi@dawarich.app**. Full company details: [Impressum](/impressum).
 
-**ZeitFlow UG (haftungsbeschränkt)**
-Kolonnenstraße 8, 10827 Berlin, Germany
-Managing Director: Evgenii Burmakin
-Email: hi@dawarich.app
+## 2. What We Process and Why
 
-## 2. Self-Hosted Version
-
-If you self-host Dawarich, no personal data is collected or transmitted to us. You act as the sole controller of any data your installation processes. The remainder of this policy applies only to our SaaS, hosted, and mobile-app-connected-to-our-SaaS offerings.
-
-## 3. What We Process, Why, and on Which Legal Basis
-
-| Data category | Purpose | Legal basis (GDPR Art. 6) |
+| Data | Purpose | Legal basis (GDPR Art. 6) |
 |---|---|---|
-| Account data (email, password hash, user ID, status, settings) | Create and operate your account | Art. 6(1)(b) — performance of contract |
-| Location history you upload or sync (coordinates, timestamps, device info) | Visualize your location history and compute statistics | Art. 6(1)(b) — performance of contract |
-| Billing data (name, email, billing address, tax ID, payment metadata) | Process subscriptions, invoicing, tax | Art. 6(1)(b) — performance of contract; Art. 6(1)(c) — legal obligation (tax law) |
-| Error logs, crash reports, performance metrics | Detect and fix bugs, keep the service secure and stable | Art. 6(1)(f) — legitimate interest in a functional and secure service |
-| Anonymized usage metrics | Understand aggregate usage patterns | Art. 6(1)(f) — legitimate interest in product improvement |
-| Support correspondence | Respond to your requests | Art. 6(1)(b) and Art. 6(1)(f) |
+| Account data (email, password hash, user ID, settings) | Operate your account | (1)(b) contract |
+| Location history (coordinates, timestamps, device info) | Visualize history, compute statistics | (1)(b) contract |
+| Billing data (name, email, address, tax ID, payment metadata) | Subscriptions, invoicing, tax | (1)(b) contract; (1)(c) legal obligation |
+| Error logs, crash reports, performance metrics | Keep the service stable and secure | (1)(f) legitimate interest |
+| Support correspondence | Respond to your requests | (1)(b) / (1)(f) |
 
-We do not use your data for automated decision-making or profiling with legal effect (Art. 22).
+No automated decision-making with legal effect (Art. 22). Providing this data is voluntary but necessary to use the service.
 
-Providing your account and location data is voluntary, but without it we cannot provide the service.
+Since March 2026, reverse-geocoded place names are no longer stored for SaaS users — they are computed on demand and discarded.
 
-## 4. Recipients / Processors
+## 3. Recipients / Processors
 
-We use the following processors. Each is bound by a data processing agreement under Art. 28 GDPR.
+All listed processors are bound by DPAs under Art. 28 GDPR. We do not sell data or share it for advertising.
 
 | Processor | Purpose | Location |
 |---|---|---|
-| Hetzner Online GmbH | Application hosting, database, backups | Germany (EU) |
-| Cloudflare, Inc. | CDN and hosting for our marketing website (dawarich.app) | Global CDN; EU-delivery where possible |
-| Paddle.com Market Ltd. | Billing, checkout, subscription management, invoicing | United Kingdom |
-| Functional Software, Inc. (Sentry) | Error tracking and crash reports | United States |
-| Simple Analytics B.V. | Cookieless, privacy-friendly website analytics for the marketing site (loads without consent) | Netherlands (EU) |
-| Google LLC (Google Ads) | Conversion tracking on the marketing site — loads only after you consent via the cookie banner (Art. 6(1)(a)) | United States |
-| Sendinblue SAS (Brevo) — email | Transactional email (account, billing, service emails) | France (EU) |
-| Sendinblue SAS (Brevo) — web tracker | Email-campaign analytics pixel on the marketing site — loads only after you consent via the cookie banner (Art. 6(1)(a)) | France (EU) |
-| Apple Inc. | iOS app distribution via the App Store | United States |
-| Google LLC | Android app distribution via Google Play | United States |
+| Hetzner Online GmbH | Hosting, database, backups | Germany (EU) |
+| Cloudflare, Inc. | Marketing-site CDN | Global; EU where possible |
+| Paddle.com Market Ltd. | Billing, checkout, invoicing | United Kingdom |
+| Functional Software, Inc. (Sentry) | Error and crash tracking | United States |
+| Simple Analytics B.V. | Cookieless site analytics (no consent needed) | Netherlands (EU) |
+| Google LLC (Google Ads) | Marketing-site conversion tracking — consent-based | United States |
+| Sendinblue SAS (Brevo) — email | Transactional emails | France (EU) |
+| Sendinblue SAS (Brevo) — web tracker | Marketing-site email-campaign pixel — consent-based | France (EU) |
+| Apple Inc. | iOS App Store distribution | United States |
+| Google LLC | Google Play distribution | United States |
 
-We do not sell data to, or share for advertising with, any third party.
+**International transfers:** UK (Paddle) is covered by the EU adequacy decision. US transfers rely on the EU-US Data Privacy Framework where the provider is certified, and on Standard Contractual Clauses (Art. 46 GDPR) otherwise.
 
-## 5. International Transfers
+## 4. Retention
 
-Some processors listed above are based outside the EU/EEA:
+- **Account and location data:** while your account is active; up to 12 months after cancellation unless you request earlier deletion.
+- **Billing data:** up to 10 years (§ 147 AO, § 257 HGB).
+- **Error logs:** up to 30 days.
+- **Support correspondence:** up to 3 years after last contact.
 
-- **United Kingdom** (Paddle): transfers are covered by the European Commission's adequacy decision for the UK.
-- **United States** (Sentry, Apple, Google): transfers rely on the EU-US Data Privacy Framework where the provider is certified, and on Standard Contractual Clauses (Art. 46(2)(c) GDPR) together with supplementary measures.
+## 5. Your Rights
 
-## 6. Retention
+You have the right to access (Art. 15), rectify (16), erase (17), restrict (18), port (20), object to processing based on legitimate interest (21), and withdraw consent at any time (7(3)) without affecting prior processing. To exercise any right, email **hi@dawarich.app** or delete your account in-app.
 
-- **Account and location data:** kept while your account is active. After you cancel, data is kept for up to 12 months and then deleted, unless you request earlier deletion.
-- **Billing data:** retained for up to 10 years to comply with German tax and commercial law (§ 147 AO, § 257 HGB).
-- **Error logs:** maximum 30 days.
-- **Support correspondence:** up to 3 years after the last contact.
-- **Self-hosted users:** you control retention on your own infrastructure.
+You may also lodge a complaint with a supervisory authority (Art. 77). Our competent authority is the Berliner Beauftragte für Datenschutz und Informationsfreiheit ([datenschutz-berlin.de](https://www.datenschutz-berlin.de)); you may instead complain in your country of residence or workplace.
 
-## 7. Your Rights
+## 6. Cookies {#cookies}
 
-Under the GDPR you have the right to:
+On `dawarich.app` we use:
 
-- **Access** your personal data (Art. 15)
-- **Rectification** of inaccurate data (Art. 16)
-- **Erasure** ("right to be forgotten") (Art. 17)
-- **Restriction** of processing (Art. 18)
-- **Data portability** — receive your data in a structured, machine-readable format (Art. 20)
-- **Object** to processing based on legitimate interest (Art. 21)
-- **Withdraw consent** at any time, where processing is based on consent (Art. 7(3)) — withdrawal does not affect processing carried out before withdrawal
-- **Lodge a complaint** with a supervisory authority (Art. 77). Our competent authority is:
-
-  > Berliner Beauftragte für Datenschutz und Informationsfreiheit
-  > Alt-Moabit 59–61, 10555 Berlin, Germany
-  > [https://www.datenschutz-berlin.de](https://www.datenschutz-berlin.de)
-
-  You may also complain to the supervisory authority in your country of residence or workplace.
-
-To exercise any of these rights, email us at **hi@dawarich.app**. You can also delete your account directly via the application.
-
-## 8. Cookies and Similar Technologies {#cookies}
-
-On our marketing website (`dawarich.app`) we use the following categories of cookies / storage:
-
-| Category | Purpose | Requires consent? | Provider |
+| Category | Purpose | Consent? | Provider |
 |---|---|---|---|
-| **Strictly necessary** | Remembering your cookie-banner choice | No (§ 25 Abs. 2 TTDSG) | Dawarich (first-party) |
-| **Cookieless analytics** | Aggregate traffic analytics (no cookies, no cross-site tracking) | No | Simple Analytics |
-| **Advertising / conversion** | Google Ads conversion tracking | **Yes** — loads only if you click "Accept" | Google Ads |
-| **Email analytics** | Brevo tracking pixel for email-campaign attribution | **Yes** — loads only if you click "Accept" | Brevo |
+| Strictly necessary | Remember your banner choice | No (§ 25(2) TTDSG) | First-party |
+| Cookieless analytics | Aggregate traffic | No | Simple Analytics |
+| Advertising | Google Ads conversion tracking | **Yes** | Google Ads |
+| Email analytics | Brevo tracking pixel | **Yes** | Brevo |
 
-You can accept or reject consent-based cookies at any time via the banner. Rejecting does not affect core site functionality. To withdraw consent after accepting, delete the `dawarichCookieConsent` cookie in your browser and reload the page.
+To withdraw consent after accepting, delete the `dawarichCookieConsent` cookie and reload. On `my.dawarich.app` we additionally use first-party session cookies strictly necessary for login.
 
-On the authenticated app (`my.dawarich.app`) we additionally use first-party session cookies strictly necessary for login and security (Art. 6(1)(b) GDPR, § 25 Abs. 2 TTDSG).
+## 7. Security
 
-## 10. Security
+HTTPS for all transfers, encrypted database storage and backups, application data stored in the EU. Crash traces may be sent to Sentry (US) and retained for up to 30 days.
 
-We use HTTPS for all transfers, encrypted database storage, and encrypted backups. All application data is stored in the EU. Logs and crash traces may be sent to Sentry (US) for debugging and are retained for a maximum of 30 days.
+## 8. Children
 
-## 11. Precise Location Data
+You must be at least **16 years old** to use Dawarich. We do not knowingly collect data from children under 16.
 
-Dawarich processes location data only when you upload it, sync it from a supported client, or explicitly enable tracking. For SaaS and hosted users, location data is stored securely and is accessible only to you.
+## 9. Hosted Dawarich (legacy Patreon tier)
 
-Since March 2026, reverse-geocoded place data (addresses derived from your coordinates) is no longer persistently stored for SaaS users; it is computed on demand and discarded.
+For the legacy "hosted dawarich" Patreon tier, each instance runs on a dedicated server, accessible only to the subscriber. We access it only for maintenance. Cancellation may lead to deletion after a grace period.
 
-## 12. Children
+## 10. Changes
 
-Dawarich is not designed for or marketed to children. You must be at least **16 years old** to use Dawarich and to consent to the processing described in this policy. In some jurisdictions, a parent or legal guardian may consent on your behalf. We do not knowingly collect personal data from children under 16; if you believe a child has provided data, contact us and we will delete it.
-
-## 13. Hosted Dawarich (legacy Patreon tier)
-
-Where users subscribe to the legacy "hosted dawarich" Patreon tier, each instance runs on a dedicated virtual server. Access is restricted to the subscriber, except for maintenance by us. If the subscription is canceled, the instance and its data may be deleted after a grace period.
-
-## 14. Changes to This Policy
-
-We will notify you of **material changes** (e.g. new purposes, new processors, new categories of recipients, changed retention) at least **30 days before they take effect**, by email and/or in-app notice. Non-material changes (clarifications, typos, reformatting) are published on this page with an updated date below.
-
-## 15. Contact
-
-For any privacy questions or to exercise your rights: **hi@dawarich.app**.
+We will notify you of **material changes** (new purposes, new processors, changed retention, etc.) by email and/or in-app notice at least **30 days before they take effect**. Non-material edits are published here with an updated date below.
 
 ## Last updated
 
-This privacy policy is effective as of **2026-04-21**.
+Effective **2026-04-21**. Contact for all privacy matters: **hi@dawarich.app**.
 
 | When          | What          |
 | ------------- | ------------- |
-| 2026-04-21    | Added named processor list, legal bases, data subject rights, supervisory authority, international transfers, cookie table (Google Ads, Brevo tracker, Simple Analytics); raised minimum age to 16; reflected STORE_GEODATA=false; committed to 30-day notice for material changes |
+| 2026-04-21    | Added processor list, legal bases, rights, supervisory authority, transfers, cookie table; age to 16; reflected STORE_GEODATA=false; 30-day notice for material changes |
 | 2025-09-12    | Added TL;DR section |
-| 2025-03-12    | Updated data retention section for SaaS users, added disclaimer about data privacy |
+| 2025-03-12    | Updated data retention section for SaaS users |
 | 2025-02-01    | Initial version |

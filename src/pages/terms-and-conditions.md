@@ -4,80 +4,51 @@ title: Terms and Conditions
 
 # Terms and Conditions
 
-## 0. General terms
+## 1. Operator
 
-You require an account to use Dawarich services.
+Dawarich is operated by **ZeitFlow UG (haftungsbeschränkt)**, Berlin, Germany (Amtsgericht Charlottenburg, HRB 273957). See [Impressum](/impressum). By using Dawarich you agree to these terms.
 
-You must be at least 16 years of age to use Dawarich services and to consent to the processing of your personal data as described in our Privacy Policy. If you are under the age of majority in your country, you may additionally need the consent of a parent or legal guardian to enter into a contract with us.
+## 2. Eligibility
 
-We reserve the right to change the service or any of its various functionalities at any time.
+You need an account to use Dawarich and must be at least **16 years old**. If you're under the age of majority in your country, you may need a parent or guardian's consent to enter into a contract with us.
 
-Your use of the service does not imply any form of partnership or joint venture.
+## 3. Plans and Billing
 
-## 1. Introduction
+- **Lite** — €49.99 / year (annual only)
+- **Pro** — €119.99 / year or €17.99 / month
 
-Dawarich is operated by ZeitFlow UG (haftungsbeschränkt), a company registered in Germany (Amtsgericht Charlottenburg, HRB 273957). These Terms & Conditions govern your use of our service. By accessing or using Dawarich, you agree to these terms.
+All paid plans include a 7-day free trial. The trial requires no credit card and never results in an automatic charge — a paid subscription only begins if you explicitly subscribe and pay.
 
-## 2. Plans and Subscription Terms
+Once started, subscriptions renew automatically at the end of each billing cycle unless canceled. You can cancel at any time from Subscription Settings; cancellation takes effect at the end of the current cycle and requires no advance notice. Your statutory right of withdrawal and refund conditions are set out in the [Refund Policy](/refund-policy).
 
-Dawarich offers the following paid plans:
+## 4. User Responsibilities
 
-- **Lite** — €49.99 per year (annual billing only)
-- **Pro** — €119.99 per year or €17.99 per month
+Provide accurate information at registration and do not misuse the service, attempt unauthorized access, or use Dawarich for illegal activities.
 
-All paid plans include a 7-day free trial at sign-up. The trial does not require a credit card and will never result in an automatic charge — a paid subscription only begins if you explicitly subscribe and pay.
+## 5. Abuse
 
-Once started, a paid subscription renews automatically at the end of each billing cycle (monthly or annual, depending on the plan you selected) unless canceled before the end of the current cycle.
+We may cancel any account we deem abusive, at our discretion. Where circumstances allow, we will provide a reasonable window to export your data.
 
-You can cancel your subscription at any time from your Subscription Settings. Cancellations take effect at the end of the current billing cycle, and no advance notice period is required.
+## 6. Service Availability
 
-Your statutory right of withdrawal (Widerrufsrecht) and the conditions for refunds are set out in our [Refund Policy](/refund-policy).
+Dawarich is provided "as is". We cannot guarantee uninterrupted availability, but we will give advance notice of significant changes and ensure you can export your data within the retention period if a feature or service is discontinued.
 
-## 3. User Responsibilities
+## 7. Liability
 
-Users must provide accurate information during registration.
+To the extent permitted by law, we are not liable for indirect, incidental, or consequential damages, or for data loss caused by third-party failures or force majeure. You are responsible for keeping your own backups. Nothing limits our liability for intent, gross negligence, injury to life, body or health, or liability under the German Product Liability Act.
 
-Users must not misuse the service, attempt unauthorized access, or engage in illegal activities.
+## 8. Governing Law and Dispute Resolution
 
-## 4. Abuse
+These terms are governed by the law of the Federal Republic of Germany, excluding the UN CISG. Mandatory consumer protection law of your country of residence remains unaffected. The EU online dispute resolution platform is at [ec.europa.eu/consumers/odr](https://ec.europa.eu/consumers/odr); we are not obliged and not willing to participate in consumer arbitration proceedings.
 
-We reserve the right to cancel the account of any user we, at our sole discretion, deem to be abusing our service. In such cases, we will provide a reasonable window to export your data where circumstances allow.
+## 9. Changes
 
-## 5. Service Availability
-
-Dawarich is provided "as is" without warranties of uninterrupted service.
-
-We are committed to maintaining Dawarich and ensuring continued access to your data. Any significant changes to our services will be communicated in advance. If we ever need to discontinue a feature or service, we will provide users with ample notice and ensure they have the ability to export their data within the retention period.
-
-## 6. Liability Disclaimer
-
-Dawarich strives to provide a reliable service, but we cannot guarantee uninterrupted availability.
-
-We are not responsible for data loss due to factors beyond our control, such as third-party failures or force majeure events.
-
-Users assume responsibility for their data and should regularly export backups.
-
-To the extent permitted by law, Dawarich is not liable for indirect, incidental, or consequential damages arising from the use of our service. Nothing in these terms limits our liability for intent, gross negligence, injury to life, body or health, or liability under the German Product Liability Act.
-
-## 7. Governing Law and Jurisdiction
-
-These terms are governed by the laws of the Federal Republic of Germany, excluding the UN Convention on Contracts for the International Sale of Goods. Mandatory consumer protection provisions of the country in which you have your habitual residence remain unaffected.
-
-## 8. Online Dispute Resolution
-
-The European Commission provides a platform for online dispute resolution: [https://ec.europa.eu/consumers/odr](https://ec.europa.eu/consumers/odr). We are not obliged and not willing to participate in dispute resolution proceedings before a consumer arbitration board.
-
-## 9. Changes to the Terms
-
-We reserve the right to update these terms and will notify users of major changes.
-
+We may update these terms and will notify users of material changes.
 
 ## Last updated
 
-This document was last edited on:
-
 | When          | What          |
 | ------------- | ------------- |
-| 2026-04-21    | Aligned plans with current pricing, set minimum age to 16, removed one-month cancellation notice, added governing law and ODR clauses |
+| 2026-04-21    | Aligned plans with current pricing, age to 16, removed one-month cancellation notice, added governing law and ODR |
 | 2025-04-13    | Added abuse section and general terms |
 | 2025-03-12    | Initial version |
