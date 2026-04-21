@@ -1,58 +1,68 @@
 ---
-title: iOS App Privacy Policy
+title: Mobile App Privacy Policy
 ---
 
-# iOS App Privacy Policy
+# Dawarich Mobile App Privacy Policy
 
-**Privacy Policy**
+Applies to the Dawarich mobile app — iOS (`app.dawarich.Dawarich`) and Android (`com.zeitflow.dawarich`) — published by **ZeitFlow UG (haftungsbeschränkt)**, Kolonnenstraße 8, 10827 Berlin, Germany. Email: **hi@dawarich.app**. Full company details: [Impressum](/impressum).
 
-This privacy policy applies to the Dawarich app (hereby referred to as "Application") for mobile devices that was created by ZeitFlow UG (haftungsbeschränkt) (hereby referred to as "Service Provider") as a Free service. This service is intended for use "AS IS".
+:::info TL;DR
+The app tracks location when you enable it, stores points locally, and uploads them **only to the Dawarich server you configure** — your own or our SaaS at dawarich.app. Crash reports go to Sentry. We don't sell data or run ads.
+:::
 
-**What information does the Application obtain and how is it used?**
+## 1. What the App Collects
 
-The Application does not obtain any information when you download and use it. Registration is not required to use the Application.
+| Data | When | Where it goes |
+|---|---|---|
+| Precise location (coordinates, timestamp, speed, altitude, accuracy) | When tracking is enabled (foreground + background) | Local SQLite, then uploaded to the Dawarich server you configure |
+| Apple Health workouts & routes (iOS) | Only if you grant HealthKit permission and trigger an import | Same as above |
+| Camera image (QR code contents) | Only while you scan a connection QR code | Parsed locally, not stored |
+| App settings, tracking configuration | Always | On-device |
+| Crash reports, stack traces, device model, OS version | On error | Sentry |
 
-**Does the Application collect precise real time location information of the device?**
+No advertising or analytics SDKs beyond Sentry.
 
-This Application does not collect precise information about the location of your mobile device.
+## 2. Where Your Data Goes
 
-**Do third parties see and/or have access to information obtained by the Application?**
+You choose the server: **self-hosted** (we never see it), **Dawarich SaaS** (governed by our main [Privacy Policy](/privacy-policy)), or **no server** (on-device only). All uploads use HTTPS and are authenticated via `Authorization: Bearer <api-key>`.
 
-Since the Application does not collect any information, no data is shared with third parties.
+**Processors:** Apple Inc. (iOS App Store, US), Google LLC (Google Play, US), Functional Software Inc. / Sentry (crash reports, US). US transfers rely on the EU-US Data Privacy Framework and/or Standard Contractual Clauses (Art. 46 GDPR). If you use our SaaS, the additional processors in our main [Privacy Policy §3](/privacy-policy#3-recipients--processors) apply.
 
-**What are my opt-out rights?**
+## 3. Legal Bases (GDPR Art. 6)
 
-You can stop all collection of information by the Application easily by uninstalling it. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.
+- **Location tracking and upload:** (1)(b) — contract with the server operator you chose.
+- **Crash reports:** (1)(f) — legitimate interest in a stable app (can be disabled in-app).
+- **HealthKit:** (1)(a) — your explicit consent; revoke anytime in iOS Settings.
 
-**Children**
+## 4. Retention
 
-The Application is not used to knowingly solicit data from or market to children under the age of 13.
+- **On-device data:** until you uninstall, clear the app, or reset the local database in-app.
+- **Server-side data:** governed by the policy of the server you configure.
+- **Crash reports:** up to 90 days at Sentry.
 
-The Service Provider does not knowingly collect personally identifiable information from children. The Service Provider encourages all children to never submit any personally identifiable information through the Application and/or Services. The Service Provider encourage parents and legal guardians to monitor their children's Internet usage and to help enforce this Policy by instructing their children never to provide personally identifiable information through the Application and/or Services without their permission. If you have reason to believe that a child has provided personally identifiable information to the Service Provider through the Application and/or Services, please contact the Service Provider (hi@dawarich.app) so that they will be able to take the necessary actions. You must also be at least 16 years of age to consent to the processing of your personally identifiable information in your country (in some countries we may allow your parent or guardian to do so on your behalf).
+## 5. Your Rights
 
-**Security**
+You have the rights under Art. 15–21 GDPR (access, rectification, erasure, restriction, portability, objection) and the right to withdraw consent (Art. 7(3)) and lodge a complaint with a supervisory authority — our competent authority is the Berliner Beauftragte für Datenschutz und Informationsfreiheit ([datenschutz-berlin.de](https://www.datenschutz-berlin.de)). Email **hi@dawarich.app** to exercise any right, or uninstall the app and clear its data for on-device content. For server-side data, contact the operator of the server you use.
 
-The Service Provider is concerned about safeguarding the confidentiality of your information. However, since the Application does not collect any information, there is no risk of your data being accessed by unauthorized individuals.
+## 6. Permissions
 
-**Changes**
+- **Location (when-in-use / always):** required to record trips and visits. You can limit to "when in use" or deny entirely.
+- **Notifications:** used for the Android foreground-service indicator and status notices.
+- **Camera:** only when you scan a connection QR code.
+- **HealthKit (iOS, optional):** only when you initiate a Health import.
 
-This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to their Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.
+All permissions can be revoked in iOS or Android system settings.
 
-This privacy policy is effective as of 2025-01-26
+## 7. Security, Children, Changes
 
-**Your Consent**
-
-By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by the Service Provider.
-
-**Contact Us**
-
-If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at hi@dawarich.app.
+HTTPS everywhere; API keys stored in platform-secure storage. You must be **16 or older** to use the app. We notify of material changes via in-app notice at least 30 days before they take effect.
 
 ## Last updated
 
-This document was last edited on:
+Effective **2026-04-21**.
 
 | When          | What          |
 | ------------- | ------------- |
-| 2025-04-13    | Updated application developer information |
+| 2026-04-21    | Rewritten to accurately describe location tracking, HealthKit, camera, Sentry; covers iOS + Android |
+| 2025-04-13    | Updated developer information |
 | 2025-01-27    | Initial version |

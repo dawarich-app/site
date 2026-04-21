@@ -5,116 +5,97 @@ title: Privacy Policy
 # Dawarich Privacy Policy
 
 :::info TL;DR
-We don't sell your data. We don't train AI models on your data. We don't share your data with third parties except for error tracking and hosting. We only work with GDPR-compliant providers.
+We don't sell your data, don't train AI on it, and don't share it beyond the processors listed below. Most of our processors are in the EU.
 :::
 
-We take your privacy seriously. We only collect the personal information that is necessary to provide you with our services, and we do not sell or rent your data to anyone else.
+This policy applies to the Dawarich SaaS at `dawarich.app`, the hosted tier, and the iOS and Android apps when connected to our SaaS. If you self-host, no data reaches us and you are the sole controller.
 
-This policy has been created to provide transparency to you about what personal information we collect and the purposes for doing so.
+## 1. Controller
 
-## Privacy Policy
+**ZeitFlow UG (haftungsbeschränkt)** — Kolonnenstraße 8, 10827 Berlin, Germany. Managing Director: Evgenii Burmakin. Email: **hi@dawarich.app**. Full company details: [Impressum](/impressum).
 
-This privacy policy applies to the Dawarich application ("Application") and related services, including the iOS app,self-hosted, SaaS (Software as a Service), and hosted versions provided to Patreon subscribers of the "hosted dawarich" tier. Dawarich is developed by ZeitFlow UG (haftungsbeschränkt) ("Service Provider"). This policy describes how data is handled within Dawarich and your privacy rights.
+## 2. What We Process and Why
 
-## What information does the Application obtain and how is it used?
+| Data | Purpose | Legal basis (GDPR Art. 6) |
+|---|---|---|
+| Account data (email, password hash, user ID, settings) | Operate your account | (1)(b) contract |
+| Location history (coordinates, timestamps, device info) | Visualize history, compute statistics | (1)(b) contract |
+| Billing data (name, email, address, tax ID, payment metadata) | Subscriptions, invoicing, tax | (1)(b) contract; (1)(c) legal obligation |
+| Error logs, crash reports, performance metrics | Keep the service stable and secure | (1)(f) legitimate interest |
+| Support correspondence | Respond to your requests | (1)(b) / (1)(f) |
 
-### Self-Hosted Version
-If you self-host Dawarich, no information is collected or transmitted by the Service Provider. Any data you process remains under your control and responsibility.
+No automated decision-making with legal effect (Art. 22). Providing this data is voluntary but necessary to use the service.
 
-### SaaS Version
-For users of the Dawarich SaaS service, we may collect and store the following data for functionality, security, and service improvements:
-- **User account information**
-- **Location history data**
-- **Analytics and performance metrics** (anonymized)
+Since March 2026, reverse-geocoded place names are no longer stored for SaaS users — they are computed on demand and discarded.
 
-This data is used solely for providing the Dawarich service and is not shared with third parties except where necessary for operation (e.g., hosting providers, database storage, bug tracking).
+## 3. Recipients / Processors
 
-### What data is being processed and stored?
+All listed processors are bound by DPAs under Art. 28 GDPR. We do not sell data or share it for advertising.
 
-#### User account information
+| Processor | Purpose | Location |
+|---|---|---|
+| Hetzner Online GmbH | Hosting, database, backups | Germany (EU) |
+| Cloudflare, Inc. | Marketing-site CDN | Global; EU where possible |
+| Paddle.com Market Ltd. | Billing, checkout, invoicing | United Kingdom |
+| Functional Software, Inc. (Sentry) | Error and crash tracking | United States |
+| Simple Analytics B.V. | Cookieless site analytics (no consent needed) | Netherlands (EU) |
+| Google LLC (Google Ads) | Marketing-site conversion tracking — consent-based | United States |
+| Sendinblue SAS (Brevo) — email | Transactional emails | France (EU) |
+| Sendinblue SAS (Brevo) — web tracker | Marketing-site email-campaign pixel — consent-based | France (EU) |
+| Apple Inc. | iOS App Store distribution | United States |
+| Google LLC | Google Play distribution | United States |
 
-User data is being collected from the user when they sign up for the SaaS version of Dawarich and used to provide the service.
+**International transfers:** UK (Paddle) is covered by the EU adequacy decision. US transfers rely on the EU-US Data Privacy Framework where the provider is certified, and on Standard Contractual Clauses (Art. 46 GDPR) otherwise.
 
-- **Email address**
-- **Password**
-- **User ID**
-- **User status**
-- **User settings**
+## 4. Retention
 
-#### Location history data
+- **Account and location data:** while your account is active; up to 12 months after cancellation unless you request earlier deletion.
+- **Billing data:** up to 10 years (§ 147 AO, § 257 HGB).
+- **Error logs:** up to 30 days.
+- **Support correspondence:** up to 3 years after last contact.
 
-Location data is being collected from the user when they explicitly upload their location history to the application. This data is used to provide the service: visualize user's location history and calculate statistics.
+## 5. Your Rights
 
-- **Location data**
-- **Device information**
-- **Application usage data**
-- **Error logs**
+You have the right to access (Art. 15), rectify (16), erase (17), restrict (18), port (20), object to processing based on legitimate interest (21), and withdraw consent at any time (7(3)) without affecting prior processing. To exercise any right, email **hi@dawarich.app** or delete your account in-app.
 
-#### Analytics and performance metrics
+You may also lodge a complaint with a supervisory authority (Art. 77). Our competent authority is the Berliner Beauftragte für Datenschutz und Informationsfreiheit ([datenschutz-berlin.de](https://www.datenschutz-berlin.de)); you may instead complain in your country of residence or workplace.
 
-Analytics and performance metrics are being collected from the user when they use the SaaS version of Dawarich. This data is used to improve the service: analyze usage patterns, identify and fix bugs, and enhance the user experience.
+## 6. Cookies {#cookies}
 
-- **Usage data**
-- **Error logs**
-- **Performance metrics**
-- **Device information**
-- **Application usage data**
+On `dawarich.app` we use:
 
-### How data is being stored?
+| Category | Purpose | Consent? | Provider |
+|---|---|---|---|
+| Strictly necessary | Remember your banner choice | No (§ 25(2) TTDSG) | First-party |
+| Cookieless analytics | Aggregate traffic | No | Simple Analytics |
+| Advertising | Google Ads conversion tracking | **Yes** | Google Ads |
+| Email analytics | Brevo tracking pixel | **Yes** | Brevo |
 
-All data is being stored on the Service Provider's infrastructure. This includes encrypted database storage and backups. All data is being transferred over HTTPS and stored in the EU. Logs and error traces can be sent to bug tracking services of Service Provider's choice (e.g. Sentry) for further analysis and fixing bugs. Logs are being stored for a maximum of 30 days.
+To withdraw consent after accepting, delete the `dawarichCookieConsent` cookie and reload. On `my.dawarich.app` we additionally use first-party session cookies strictly necessary for login.
 
-### Hosted Dawarich for Patreon Subscribers
-For users subscribed to the "hosted dawarich" tier on Patreon, each instance of Dawarich is hosted individually by the Service Provider on a separate virtual server. The following principles apply:
-- **Data Storage:** Each instance is isolated, and user data is stored on its dedicated server.
-- **Access Control:** Only the subscriber has access to their hosted instance unless they explicitly grant permissions to others.
-- **Service Provider Access:** The Service Provider may access the instance only for maintenance, troubleshooting, or updates, and will not share data with third parties.
-- **Data Retention:** If a subscriber cancels their Patreon subscription, their instance and associated data may be deleted after a grace period.
+## 7. Security
 
-## Does the Application collect precise real-time location information?
+HTTPS for all transfers, encrypted database storage and backups, application data stored in the EU. Crash traces may be sent to Sentry (US) and retained for up to 30 days.
 
-Dawarich only collects location data if explicitly enabled by the user. For self-hosted users, location data remains on their own infrastructure. For SaaS and hosted Dawarich users, location data is stored securely and is accessible only to the user.
+## 8. Children
 
-## Do third parties see and/or have access to information obtained by the Application?
+You must be at least **16 years old** to use Dawarich. We do not knowingly collect data from children under 16.
 
-- **Self-Hosted Users:** No data is transmitted to the Service Provider or third parties unless you configure integrations yourself.
-- **SaaS Users:** Data is not shared with third parties except where required for service functionality (e.g., cloud hosting, backups, analytics in an anonymized format).
-- **Hosted Dawarich Users:** No data is shared with third parties, and access is restricted to the Service Provider for necessary maintenance only.
+## 9. Hosted Dawarich (legacy Patreon tier)
 
-## Data retention and opt-out options
+For the legacy "hosted dawarich" Patreon tier, each instance runs on a dedicated server, accessible only to the subscriber. We access it only for maintenance. Cancellation may lead to deletion after a grace period.
 
-- **Self-Hosted Users:** You can stop using Dawarich at any time by deleting your installation and associated data.
-- **SaaS Users:** You can delete your account and associated data by contacting us at [hi@dawarich.app](mailto:hi@dawarich.app). By default, your data is being kept for a year after your subscription ends. You can also request to delete your data immediately.
-- **Hosted Dawarich Users:** You can cancel your Patreon subscription at any time. After cancellation, your instance and data may be deleted after a grace period.
+## 10. Changes
 
-## Children
-
-The Application is not designed for or marketed to children under 13. The Service Provider does not knowingly collect personally identifiable information from children. If you believe that a child has provided personal information, please contact us to request its removal.
-
-## Security
-
-The Service Provider takes data security seriously. For SaaS and hosted Dawarich users, reasonable measures are taken to protect data, including encryption and secure storage. However, self-hosted users are responsible for securing their own deployments.
-
-## Changes to This Privacy Policy
-
-This Privacy Policy may be updated periodically. Users are encouraged to review it regularly for any changes. Continued use of Dawarich constitutes acceptance of any modifications.
-
-This privacy policy is effective as of **12.03.2025**.
-
-## Your Consent
-
-By using Dawarich, whether self-hosted, SaaS, or hosted through Patreon, you consent to the data handling practices described in this Privacy Policy.
-
-## Contact Us
-
-If you have any questions regarding privacy while using Dawarich, please contact us at [hi@dawarich.app](mailto:hi@dawarich.app).
+We will notify you of **material changes** (new purposes, new processors, changed retention, etc.) by email and/or in-app notice at least **30 days before they take effect**. Non-material edits are published here with an updated date below.
 
 ## Last updated
 
-This document was last edited on:
+Effective **2026-04-21**. Contact for all privacy matters: **hi@dawarich.app**.
 
 | When          | What          |
 | ------------- | ------------- |
+| 2026-04-21    | Added processor list, legal bases, rights, supervisory authority, transfers, cookie table; age to 16; reflected STORE_GEODATA=false; 30-day notice for material changes |
 | 2025-09-12    | Added TL;DR section |
-| 2025-03-12    | Updated data retention section for SaaS users, added disclaimer about data privacy |
+| 2025-03-12    | Updated data retention section for SaaS users |
 | 2025-02-01    | Initial version |

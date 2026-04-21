@@ -4,64 +4,51 @@ title: Terms and Conditions
 
 # Terms and Conditions
 
-## 0. General terms
+## 1. Operator
 
-You require an account to use Dawarich services.
+Dawarich is operated by **ZeitFlow UG (haftungsbeschränkt)**, Berlin, Germany (Amtsgericht Charlottenburg, HRB 273957). See [Impressum](/impressum). By using Dawarich you agree to these terms.
 
-You must be over 18 years of age to use Dawarich services.
+## 2. Eligibility
 
-We reserve the right to change the service or any of its various functionalities at any time.
+You need an account to use Dawarich and must be at least **16 years old**. If you're under the age of majority in your country, you may need a parent or guardian's consent to enter into a contract with us.
 
-Your use of the service does not imply any form of partnership or joint venture.
+## 3. Plans and Billing
 
-## 1. Introduction
+- **Lite** — €49.99 / year (annual only)
+- **Pro** — €119.99 / year or €17.99 / month
 
-Dawarich is operated by ZeitFlow UG (haftungsbeschränkt), a company registered in Germany. These Terms & Conditions govern your use of our service. By accessing or using Dawarich, you agree to these terms.
+All paid plans include a 7-day free trial. The trial requires no credit card and never results in an automatic charge — a paid subscription only begins if you explicitly subscribe and pay.
 
-## 2. Subscription Terms
+Once started, subscriptions renew automatically at the end of each billing cycle unless canceled. You can cancel at any time from Subscription Settings; cancellation takes effect at the end of the current cycle and requires no advance notice. Your statutory right of withdrawal and refund conditions are set out in the [Refund Policy](/refund-policy).
 
-Dawarich operates on an annual subscription model.
+## 4. User Responsibilities
 
-Subscriptions renew automatically every 12 months unless canceled before renewal.
+Provide accurate information at registration and do not misuse the service, attempt unauthorized access, or use Dawarich for illegal activities.
 
-Users must cancel at least one month before renewal to avoid being charged for the next period.
+## 5. Abuse
 
-## 3. User Responsibilities
+We may cancel any account we deem abusive, at our discretion. Where circumstances allow, we will provide a reasonable window to export your data.
 
-Users must provide accurate information during registration.
+## 6. Service Availability
 
-Users must not misuse the service, attempt unauthorized access, or engage in illegal activities.
+Dawarich is provided "as is". We cannot guarantee uninterrupted availability, but we will give advance notice of significant changes and ensure you can export your data within the retention period if a feature or service is discontinued.
 
-## 4. Abuse
+## 7. Liability
 
-We reserve the right to cancel the account of any user we, at our sole discretion, deem to be abusing our service.
+To the extent permitted by law, we are not liable for indirect, incidental, or consequential damages, or for data loss caused by third-party failures or force majeure. You are responsible for keeping your own backups. Nothing limits our liability for intent, gross negligence, injury to life, body or health, or liability under the German Product Liability Act.
 
-## 5. Service Availability
+## 8. Governing Law and Dispute Resolution
 
-Dawarich is provided "as is" without warranties of uninterrupted service.
+These terms are governed by the law of the Federal Republic of Germany, excluding the UN CISG. Mandatory consumer protection law of your country of residence remains unaffected. The EU online dispute resolution platform is at [ec.europa.eu/consumers/odr](https://ec.europa.eu/consumers/odr); we are not obliged and not willing to participate in consumer arbitration proceedings.
 
-We are committed to maintaining Dawarich and ensuring continued access to your data. Any significant changes to our services will be communicated in advance. If we ever need to discontinue a feature or service, we will provide users with ample notice and ensure they have the ability to export their data within the retention period.
+## 9. Changes
 
-## 6. Liability Disclaimer
-
-Dawarich strives to provide a reliable service, but we cannot guarantee uninterrupted availability.
-
-We are not responsible for data loss due to factors beyond our control, such as third-party failures or force majeure events.
-
-Users assume responsibility for their data and should regularly export backups.
-
-To the extent permitted by law, Dawarich is not liable for indirect, incidental, or consequential damages arising from the use of our service.
-
-## 7. Changes to the Terms
-
-We reserve the right to update these terms and will notify users of major changes.
-
+We may update these terms and will notify users of material changes.
 
 ## Last updated
 
-This document was last edited on:
-
 | When          | What          |
 | ------------- | ------------- |
+| 2026-04-21    | Aligned plans with current pricing, age to 16, removed one-month cancellation notice, added governing law and ODR |
 | 2025-04-13    | Added abuse section and general terms |
 | 2025-03-12    | Initial version |
