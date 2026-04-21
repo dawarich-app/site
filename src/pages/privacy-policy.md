@@ -5,116 +5,144 @@ title: Privacy Policy
 # Dawarich Privacy Policy
 
 :::info TL;DR
-We don't sell your data. We don't train AI models on your data. We don't share your data with third parties except for error tracking and hosting. We only work with GDPR-compliant providers.
+We don't sell your data. We don't train AI models on your data. We don't share your data with third parties except the processors listed below. All our processors are GDPR-compliant and primarily located in the EU.
 :::
 
-We take your privacy seriously. We only collect the personal information that is necessary to provide you with our services, and we do not sell or rent your data to anyone else.
+We take your privacy seriously. We only collect the personal information that is necessary to provide you with our services, and we do not sell or rent your data.
 
-This policy has been created to provide transparency to you about what personal information we collect and the purposes for doing so.
+This policy applies to the Dawarich application ("Application") and related services, including the iOS app, Android app, self-hosted, SaaS, and hosted versions.
 
-## Privacy Policy
+## 1. Controller
 
-This privacy policy applies to the Dawarich application ("Application") and related services, including the iOS app,self-hosted, SaaS (Software as a Service), and hosted versions provided to Patreon subscribers of the "hosted dawarich" tier. Dawarich is developed by ZeitFlow UG (haftungsbeschränkt) ("Service Provider"). This policy describes how data is handled within Dawarich and your privacy rights.
+The controller responsible for processing your personal data is:
 
-## What information does the Application obtain and how is it used?
+**ZeitFlow UG (haftungsbeschränkt)**
+Kolonnenstraße 8, 10827 Berlin, Germany
+Managing Director: Evgenii Burmakin
+Email: hi@dawarich.app
 
-### Self-Hosted Version
-If you self-host Dawarich, no information is collected or transmitted by the Service Provider. Any data you process remains under your control and responsibility.
+## 2. Self-Hosted Version
 
-### SaaS Version
-For users of the Dawarich SaaS service, we may collect and store the following data for functionality, security, and service improvements:
-- **User account information**
-- **Location history data**
-- **Analytics and performance metrics** (anonymized)
+If you self-host Dawarich, no personal data is collected or transmitted to us. You act as the sole controller of any data your installation processes. The remainder of this policy applies only to our SaaS, hosted, and mobile-app-connected-to-our-SaaS offerings.
 
-This data is used solely for providing the Dawarich service and is not shared with third parties except where necessary for operation (e.g., hosting providers, database storage, bug tracking).
+## 3. What We Process, Why, and on Which Legal Basis
 
-### What data is being processed and stored?
+| Data category | Purpose | Legal basis (GDPR Art. 6) |
+|---|---|---|
+| Account data (email, password hash, user ID, status, settings) | Create and operate your account | Art. 6(1)(b) — performance of contract |
+| Location history you upload or sync (coordinates, timestamps, device info) | Visualize your location history and compute statistics | Art. 6(1)(b) — performance of contract |
+| Billing data (name, email, billing address, tax ID, payment metadata) | Process subscriptions, invoicing, tax | Art. 6(1)(b) — performance of contract; Art. 6(1)(c) — legal obligation (tax law) |
+| Error logs, crash reports, performance metrics | Detect and fix bugs, keep the service secure and stable | Art. 6(1)(f) — legitimate interest in a functional and secure service |
+| Anonymized usage metrics | Understand aggregate usage patterns | Art. 6(1)(f) — legitimate interest in product improvement |
+| Support correspondence | Respond to your requests | Art. 6(1)(b) and Art. 6(1)(f) |
 
-#### User account information
+We do not use your data for automated decision-making or profiling with legal effect (Art. 22).
 
-User data is being collected from the user when they sign up for the SaaS version of Dawarich and used to provide the service.
+Providing your account and location data is voluntary, but without it we cannot provide the service.
 
-- **Email address**
-- **Password**
-- **User ID**
-- **User status**
-- **User settings**
+## 4. Recipients / Processors
 
-#### Location history data
+We use the following processors. Each is bound by a data processing agreement under Art. 28 GDPR.
 
-Location data is being collected from the user when they explicitly upload their location history to the application. This data is used to provide the service: visualize user's location history and calculate statistics.
+| Processor | Purpose | Location |
+|---|---|---|
+| Hetzner Online GmbH | Application hosting, database, backups | Germany (EU) |
+| Cloudflare, Inc. | CDN and hosting for our marketing website (dawarich.app) | Global CDN; EU-delivery where possible |
+| Paddle.com Market Ltd. | Billing, checkout, subscription management, invoicing | United Kingdom |
+| Functional Software, Inc. (Sentry) | Error tracking and crash reports | United States |
+| Simple Analytics B.V. | Cookieless, privacy-friendly website analytics for the marketing site (loads without consent) | Netherlands (EU) |
+| Google LLC (Google Ads) | Conversion tracking on the marketing site — loads only after you consent via the cookie banner (Art. 6(1)(a)) | United States |
+| Sendinblue SAS (Brevo) — email | Transactional email (account, billing, service emails) | France (EU) |
+| Sendinblue SAS (Brevo) — web tracker | Email-campaign analytics pixel on the marketing site — loads only after you consent via the cookie banner (Art. 6(1)(a)) | France (EU) |
+| Apple Inc. | iOS app distribution via the App Store | United States |
+| Google LLC | Android app distribution via Google Play | United States |
 
-- **Location data**
-- **Device information**
-- **Application usage data**
-- **Error logs**
+We do not sell data to, or share for advertising with, any third party.
 
-#### Analytics and performance metrics
+## 5. International Transfers
 
-Analytics and performance metrics are being collected from the user when they use the SaaS version of Dawarich. This data is used to improve the service: analyze usage patterns, identify and fix bugs, and enhance the user experience.
+Some processors listed above are based outside the EU/EEA:
 
-- **Usage data**
-- **Error logs**
-- **Performance metrics**
-- **Device information**
-- **Application usage data**
+- **United Kingdom** (Paddle): transfers are covered by the European Commission's adequacy decision for the UK.
+- **United States** (Sentry, Apple, Google): transfers rely on the EU-US Data Privacy Framework where the provider is certified, and on Standard Contractual Clauses (Art. 46(2)(c) GDPR) together with supplementary measures.
 
-### How data is being stored?
+## 6. Retention
 
-All data is being stored on the Service Provider's infrastructure. This includes encrypted database storage and backups. All data is being transferred over HTTPS and stored in the EU. Logs and error traces can be sent to bug tracking services of Service Provider's choice (e.g. Sentry) for further analysis and fixing bugs. Logs are being stored for a maximum of 30 days.
+- **Account and location data:** kept while your account is active. After you cancel, data is kept for up to 12 months and then deleted, unless you request earlier deletion.
+- **Billing data:** retained for up to 10 years to comply with German tax and commercial law (§ 147 AO, § 257 HGB).
+- **Error logs:** maximum 30 days.
+- **Support correspondence:** up to 3 years after the last contact.
+- **Self-hosted users:** you control retention on your own infrastructure.
 
-### Hosted Dawarich for Patreon Subscribers
-For users subscribed to the "hosted dawarich" tier on Patreon, each instance of Dawarich is hosted individually by the Service Provider on a separate virtual server. The following principles apply:
-- **Data Storage:** Each instance is isolated, and user data is stored on its dedicated server.
-- **Access Control:** Only the subscriber has access to their hosted instance unless they explicitly grant permissions to others.
-- **Service Provider Access:** The Service Provider may access the instance only for maintenance, troubleshooting, or updates, and will not share data with third parties.
-- **Data Retention:** If a subscriber cancels their Patreon subscription, their instance and associated data may be deleted after a grace period.
+## 7. Your Rights
 
-## Does the Application collect precise real-time location information?
+Under the GDPR you have the right to:
 
-Dawarich only collects location data if explicitly enabled by the user. For self-hosted users, location data remains on their own infrastructure. For SaaS and hosted Dawarich users, location data is stored securely and is accessible only to the user.
+- **Access** your personal data (Art. 15)
+- **Rectification** of inaccurate data (Art. 16)
+- **Erasure** ("right to be forgotten") (Art. 17)
+- **Restriction** of processing (Art. 18)
+- **Data portability** — receive your data in a structured, machine-readable format (Art. 20)
+- **Object** to processing based on legitimate interest (Art. 21)
+- **Withdraw consent** at any time, where processing is based on consent (Art. 7(3)) — withdrawal does not affect processing carried out before withdrawal
+- **Lodge a complaint** with a supervisory authority (Art. 77). Our competent authority is:
 
-## Do third parties see and/or have access to information obtained by the Application?
+  > Berliner Beauftragte für Datenschutz und Informationsfreiheit
+  > Alt-Moabit 59–61, 10555 Berlin, Germany
+  > [https://www.datenschutz-berlin.de](https://www.datenschutz-berlin.de)
 
-- **Self-Hosted Users:** No data is transmitted to the Service Provider or third parties unless you configure integrations yourself.
-- **SaaS Users:** Data is not shared with third parties except where required for service functionality (e.g., cloud hosting, backups, analytics in an anonymized format).
-- **Hosted Dawarich Users:** No data is shared with third parties, and access is restricted to the Service Provider for necessary maintenance only.
+  You may also complain to the supervisory authority in your country of residence or workplace.
 
-## Data retention and opt-out options
+To exercise any of these rights, email us at **hi@dawarich.app**. You can also delete your account directly via the application.
 
-- **Self-Hosted Users:** You can stop using Dawarich at any time by deleting your installation and associated data.
-- **SaaS Users:** You can delete your account and associated data by contacting us at [hi@dawarich.app](mailto:hi@dawarich.app). By default, your data is being kept for a year after your subscription ends. You can also request to delete your data immediately.
-- **Hosted Dawarich Users:** You can cancel your Patreon subscription at any time. After cancellation, your instance and data may be deleted after a grace period.
+## 8. Cookies and Similar Technologies {#cookies}
 
-## Children
+On our marketing website (`dawarich.app`) we use the following categories of cookies / storage:
 
-The Application is not designed for or marketed to children under 13. The Service Provider does not knowingly collect personally identifiable information from children. If you believe that a child has provided personal information, please contact us to request its removal.
+| Category | Purpose | Requires consent? | Provider |
+|---|---|---|---|
+| **Strictly necessary** | Remembering your cookie-banner choice | No (§ 25 Abs. 2 TTDSG) | Dawarich (first-party) |
+| **Cookieless analytics** | Aggregate traffic analytics (no cookies, no cross-site tracking) | No | Simple Analytics |
+| **Advertising / conversion** | Google Ads conversion tracking | **Yes** — loads only if you click "Accept" | Google Ads |
+| **Email analytics** | Brevo tracking pixel for email-campaign attribution | **Yes** — loads only if you click "Accept" | Brevo |
 
-## Security
+You can accept or reject consent-based cookies at any time via the banner. Rejecting does not affect core site functionality. To withdraw consent after accepting, delete the `dawarichCookieConsent` cookie in your browser and reload the page.
 
-The Service Provider takes data security seriously. For SaaS and hosted Dawarich users, reasonable measures are taken to protect data, including encryption and secure storage. However, self-hosted users are responsible for securing their own deployments.
+On the authenticated app (`my.dawarich.app`) we additionally use first-party session cookies strictly necessary for login and security (Art. 6(1)(b) GDPR, § 25 Abs. 2 TTDSG).
 
-## Changes to This Privacy Policy
+## 10. Security
 
-This Privacy Policy may be updated periodically. Users are encouraged to review it regularly for any changes. Continued use of Dawarich constitutes acceptance of any modifications.
+We use HTTPS for all transfers, encrypted database storage, and encrypted backups. All application data is stored in the EU. Logs and crash traces may be sent to Sentry (US) for debugging and are retained for a maximum of 30 days.
 
-This privacy policy is effective as of **12.03.2025**.
+## 11. Precise Location Data
 
-## Your Consent
+Dawarich processes location data only when you upload it, sync it from a supported client, or explicitly enable tracking. For SaaS and hosted users, location data is stored securely and is accessible only to you.
 
-By using Dawarich, whether self-hosted, SaaS, or hosted through Patreon, you consent to the data handling practices described in this Privacy Policy.
+Since March 2026, reverse-geocoded place data (addresses derived from your coordinates) is no longer persistently stored for SaaS users; it is computed on demand and discarded.
 
-## Contact Us
+## 12. Children
 
-If you have any questions regarding privacy while using Dawarich, please contact us at [hi@dawarich.app](mailto:hi@dawarich.app).
+Dawarich is not designed for or marketed to children. You must be at least **16 years old** to use Dawarich and to consent to the processing described in this policy. In some jurisdictions, a parent or legal guardian may consent on your behalf. We do not knowingly collect personal data from children under 16; if you believe a child has provided data, contact us and we will delete it.
+
+## 13. Hosted Dawarich (legacy Patreon tier)
+
+Where users subscribe to the legacy "hosted dawarich" Patreon tier, each instance runs on a dedicated virtual server. Access is restricted to the subscriber, except for maintenance by us. If the subscription is canceled, the instance and its data may be deleted after a grace period.
+
+## 14. Changes to This Policy
+
+We will notify you of **material changes** (e.g. new purposes, new processors, new categories of recipients, changed retention) at least **30 days before they take effect**, by email and/or in-app notice. Non-material changes (clarifications, typos, reformatting) are published on this page with an updated date below.
+
+## 15. Contact
+
+For any privacy questions or to exercise your rights: **hi@dawarich.app**.
 
 ## Last updated
 
-This document was last edited on:
+This privacy policy is effective as of **2026-04-21**.
 
 | When          | What          |
 | ------------- | ------------- |
+| 2026-04-21    | Added named processor list, legal bases, data subject rights, supervisory authority, international transfers, cookie table (Google Ads, Brevo tracker, Simple Analytics); raised minimum age to 16; reflected STORE_GEODATA=false; committed to 30-day notice for material changes |
 | 2025-09-12    | Added TL;DR section |
 | 2025-03-12    | Updated data retention section for SaaS users, added disclaimer about data privacy |
 | 2025-02-01    | Initial version |
