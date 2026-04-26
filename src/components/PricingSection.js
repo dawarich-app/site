@@ -37,7 +37,7 @@ export default function PricingSection() {
 							buttonText="Try Lite Free"
 							buttonVariant="secondary"
 							buttonLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=pricing&utm_campaign=try7dayslite&plan=lite"
-							trialText="Annual only — no credit card required"
+							trialText="Annual only · Cancel anytime"
 						/>
 					</div>
 
@@ -65,7 +65,7 @@ export default function PricingSection() {
 							buttonText="Start Pro Free — 7 Days"
 							buttonVariant="primary"
 							buttonLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=pricing&utm_campaign=try7days"
-							trialText="No credit card required"
+							trialText="Cancel anytime"
 						/>
 					</div>
 				</div>

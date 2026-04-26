@@ -164,7 +164,7 @@ export default function MapPage() {
           <div className={styles.container}>
             <h2 className={styles.ctaTitle}>Ready to Visualize Your Journey?</h2>
             <p className={styles.ctaSubtitle}>
-              Start tracking your location history today with a 7-day free trial. No credit card required.
+              Start tracking your location history today with a 7-day free trial. Cancel anytime.
             </p>
             <div className={styles.ctaButtons}>
               <Link

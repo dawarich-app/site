@@ -145,174 +145,46 @@ const config = {
             items: [
               {
                 to: '/interactive-map',
-                label: '🗺️ Interactive Map',
+                label: 'Interactive Map',
               },
               {
                 to: '/trips',
-                label: '✈️ Trips & Journaling',
+                label: 'Trips & Journaling',
               },
               {
                 to: '/statistics',
-                label: '📊 Statistics & Analytics',
+                label: 'Statistics & Analytics',
               },
               {
                 to: '/location-tracking',
-                label: '📱 Location Tracking',
+                label: 'Location Tracking',
               },
               {
                 to: '/import-export',
-                label: '📦 Import & Export',
+                label: 'Import & Export',
               },
               {
                 to: '/integrations',
-                label: '📸 Photo Integrations',
+                label: 'Photo Integrations',
               },
             ],
           },
           {href: '/#pricing', label: 'Pricing', position: 'left'},
-          {
-            type: 'dropdown',
-            label: 'Free tools',
-            position: 'left',
-            items: [
-              {
-                to: '/tools/timeline-visualizer',
-                label: '🗺️ Google Timeline Visualizer',
-              },
-              {
-                to: '/tools/google-timeline-converter',
-                label: '🔄 Google Timeline Converter',
-              },
-              {
-                to: '/tools/timeline-statistics',
-                label: '📊 Timeline Statistics Analyzer',
-              },
-              {
-                to: '/tools/timeline-mileage-calculator',
-                label: '🚗 Timeline Mileage Calculator',
-              },
-              {
-                to: '/tools/timeline-merger',
-                label: '🔗 Timeline Data Merger',
-              },
-              {
-                to: '/tools/google-timeline-splitter',
-                label: '✂️ Google Timeline Splitter',
-              },
-              {
-                to: '/tools/gps-file-splitter',
-                label: '✂️ GPS File Splitter',
-              },
-              {
-                to: '/tools/timeline-format-detector',
-                label: '🔍 Timeline Format Detector',
-              },
-              {
-                to: '/tools/heatmap-generator',
-                label: '🔥 GPS Heatmap Generator',
-              },
-              {
-                to: '/tools/gpx-merger',
-                label: '🔗 GPX Track Merger',
-              },
-              {
-                to: '/tools/photo-geotagging',
-                label: '📸 Photo Geodata Extraction',
-              }
-            ],
-          },
-          {
-            type: 'dropdown',
-            label: 'Converters',
-            position: 'left',
-            items: [
-              {
-                to: '/tools/fit-to-gpx',
-                label: '🔄 FIT → GPX',
-              },
-              {
-                to: '/tools/fit-to-geojson',
-                label: '🔄 FIT → GeoJSON',
-              },
-              {
-                to: '/tools/fit-to-kml',
-                label: '🔄 FIT → KML',
-              },
-              {
-                to: '/tools/tcx-to-gpx',
-                label: '🔄 TCX → GPX',
-              },
-              {
-                to: '/tools/tcx-to-geojson',
-                label: '🔄 TCX → GeoJSON',
-              },
-              {
-                to: '/tools/tcx-to-kml',
-                label: '🔄 TCX → KML',
-              },
-              {
-                to: '/tools/gpx-to-geojson',
-                label: '🔄 GPX → GeoJSON',
-              },
-              {
-                to: '/tools/gpx-to-kml',
-                label: '🔄 GPX → KML',
-              },
-              {
-                to: '/tools/gpx-to-kmz',
-                label: '🔄 GPX → KMZ',
-              },
-              {
-                to: '/tools/geojson-to-gpx',
-                label: '🔄 GeoJSON → GPX',
-              },
-              {
-                to: '/tools/geojson-to-kml',
-                label: '🔄 GeoJSON → KML',
-              },
-              {
-                to: '/tools/geojson-to-kmz',
-                label: '🔄 GeoJSON → KMZ',
-              },
-              {
-                to: '/tools/kml-to-gpx',
-                label: '🔄 KML → GPX',
-              },
-              {
-                to: '/tools/kml-to-geojson',
-                label: '🔄 KML → GeoJSON',
-              },
-              {
-                to: '/tools/kml-to-kmz',
-                label: '🔄 KML → KMZ',
-              },
-              {
-                to: '/tools/kmz-to-gpx',
-                label: '🔄 KMZ → GPX',
-              },
-              {
-                to: '/tools/kmz-to-geojson',
-                label: '🔄 KMZ → GeoJSON',
-              },
-              {
-                to: '/tools/kmz-to-kml',
-                label: '🔄 KMZ → KML',
-              },
-            ]
-          },
+          {to: '/docs/self-hosting/introduction', label: 'Self-Hosted', position: 'left'},
+          {to: '/tools', label: 'Tools', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'right'},
           {
             type: 'dropdown',
-            label: 'Mobile Apps 📱',
+            label: 'Mobile Apps',
             position: 'left',
             items: [
               {
                 to: '/docs/dawarich-for-ios',
-                label: '🍎 Dawarich for iOS',
+                label: 'Dawarich for iOS',
               },
               {
                 to: '/docs/dawarich-for-android',
-                label: '🤖 Dawarich for Android',
+                label: 'Dawarich for Android',
               },
             ],
           },
@@ -340,7 +212,7 @@ const config = {
             title: 'Dawarich',
             items: [
               {
-                html: '<p>Made and hosted in 🇪🇺 Europe</p><p>&copy;ZeitFlow UG (haftungsbeschränkt)</p><p>Berlin, Germany</p>',
+                html: '<p style="display:inline-flex;align-items:center;gap:0.375rem;margin:0 0 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><span>Made and hosted in Europe</span></p><p>&copy;ZeitFlow UG (haftungsbeschränkt)</p><p>Berlin, Germany</p>',
               },
             ]
           },
@@ -400,6 +272,31 @@ const config = {
               {
                 label: 'Contact',
                 to: '/contact',
+              },
+            ],
+          },
+          {
+            title: 'Tools',
+            items: [
+              {
+                label: 'Google Timeline Visualizer',
+                to: '/tools/timeline-visualizer',
+              },
+              {
+                label: 'GPS Heatmap Generator',
+                to: '/tools/heatmap-generator',
+              },
+              {
+                label: 'FIT → GPX Converter',
+                to: '/tools/fit-to-gpx',
+              },
+              {
+                label: 'KML → GPX Converter',
+                to: '/tools/kml-to-gpx',
+              },
+              {
+                label: 'See all tools →',
+                to: '/tools',
               },
             ],
           },

@@ -1,0 +1,295 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Hero */
+.hero {
+  padding: 5rem 1rem 4rem;
+  background: linear-gradient(to bottom, var(--dw-bg-elevated), hsl(220, 15%, 97%));
+  text-align: center;
+  border-bottom: 1px solid var(--dw-border);
+}
+
+.heroTitle {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--dw-text);
+  margin: 0 0 1rem;
+}
+
+.heroSubtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--dw-text-secondary);
+  max-width: 42rem;
+  margin: 0 auto 2rem;
+}
+
+.heroNav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.heroNavLink {
+  padding: 0.625rem 1.25rem;
+  border-radius: 9999px;
+  background: var(--dw-bg);
+  border: 1px solid var(--dw-border);
+  color: var(--dw-text);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.heroNavLink:hover {
+  background: var(--dw-accent, #3b82f6);
+  color: white;
+  border-color: var(--dw-accent, #3b82f6);
+  text-decoration: none;
+}
+
+/* Sections */
+.section {
+  padding: 5rem 1rem;
+  scroll-margin-top: 5rem;
+}
+
+.section:nth-of-type(even) {
+  background: var(--dw-bg-sunken, hsl(220, 15%, 97%));
+}
+
+.sectionTitle {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: var(--dw-text);
+  text-align: center;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.025em;
+}
+
+.sectionSubtitle {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.6;
+  color: var(--dw-text-secondary);
+  text-align: center;
+  max-width: 42rem;
+  margin: 0 auto 3rem;
+}
+
+/* Free Tools grid */
+.toolsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.toolCard {
+  display: block;
+  padding: 1.75rem 1.5rem;
+  background: var(--dw-bg);
+  border: 1px solid var(--dw-border);
+  border-radius: 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.toolCard:hover {
+  border-color: var(--dw-accent, #3b82f6);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  color: inherit;
+}
+
+.toolIcon {
+  display: inline-block;
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.toolTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--dw-text);
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+
+.toolDescription {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--dw-text-secondary);
+  margin: 0;
+}
+
+/* Converter groups */
+.converterGroups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.converterGroup {
+  padding: 1.5rem;
+  background: var(--dw-bg);
+  border: 1px solid var(--dw-border);
+  border-radius: 1rem;
+}
+
+.converterGroupHeader {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--dw-border);
+}
+
+.converterSource {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--dw-text);
+  margin: 0 0 0.25rem;
+  letter-spacing: 0.02em;
+}
+
+.converterDescription {
+  font-size: 0.8125rem;
+  color: var(--dw-text-secondary);
+  margin: 0;
+}
+
+.converterList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.converterLink {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  color: var(--dw-text);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.converterLink:hover {
+  background: var(--dw-bg-sunken, hsl(220, 15%, 96%));
+  color: var(--dw-accent, #3b82f6);
+  text-decoration: none;
+  padding-left: 1rem;
+}
+
+/* CTA section */
+.ctaSection {
+  padding: 5rem 1rem;
+  background: linear-gradient(135deg, var(--dw-accent, #3b82f6) 0%, hsl(230, 80%, 55%) 100%);
+  color: white;
+  text-align: center;
+}
+
+.ctaTitle {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: white;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.025em;
+}
+
+.ctaSubtitle {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 42rem;
+  margin: 0 auto 2rem;
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary,
+.ctaSecondary {
+  padding: 0.875rem 1.75rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.ctaPrimary {
+  background: white;
+  color: var(--dw-accent, #3b82f6);
+}
+
+.ctaPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  color: var(--dw-accent, #3b82f6);
+  text-decoration: none;
+}
+
+.ctaSecondary {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.ctaSecondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  color: white;
+  text-decoration: none;
+}
+
+/* Dark mode support */
+[data-theme='dark'] .hero {
+  background: linear-gradient(to bottom, var(--dw-bg-elevated), var(--dw-bg));
+}
+
+[data-theme='dark'] .section:nth-of-type(even) {
+  background: var(--dw-bg);
+}
+
+[data-theme='dark'] .toolCard,
+[data-theme='dark'] .converterGroup {
+  background: var(--dw-bg-elevated);
+}
+
+[data-theme='dark'] .heroNavLink {
+  background: var(--dw-bg-elevated);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .hero {
+    padding: 3rem 1rem 2.5rem;
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .toolsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .converterGroups {
+    grid-template-columns: 1fr;
+  }
+}

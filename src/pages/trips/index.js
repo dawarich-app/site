@@ -163,7 +163,7 @@ export default function TripsPage() {
           <div className={styles.container}>
             <h2 className={styles.ctaTitle}>Start Documenting Your Travels</h2>
             <p className={styles.ctaSubtitle}>
-              Begin creating beautiful trip journals today with a 7-day free trial. No credit card required.
+              Begin creating beautiful trip journals today with a 7-day free trial. Cancel anytime.
             </p>
             <div className={styles.ctaButtons}>
               <Link

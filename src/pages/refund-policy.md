@@ -11,9 +11,12 @@ Effective **2026-04-21**.
 - **Lite** — €49.99 / year (annual only)
 - **Pro** — €119.99 / year or €17.99 / month
 
-All paid plans include a 7-day free trial. The trial requires no credit card and never results in an automatic charge — a paid subscription only begins if you explicitly subscribe and pay.
+All paid plans include a 7-day free trial. Depending on the sign-up flow shown to you, the trial may or may not require payment details upfront:
 
-Once started, subscriptions renew automatically at the end of each cycle unless canceled. You can cancel any time in Subscription Settings; cancellation takes effect at the end of the current cycle and requires no advance notice.
+- **Trial without payment details.** No charge ever occurs unless you explicitly subscribe and pay at the end of the trial.
+- **Trial with payment details (reverse trial).** The trial converts into a paid subscription automatically at the end of the 7-day period unless you cancel before it ends.
+
+In both cases you can cancel any time in Subscription Settings; cancellation during the trial prevents any charge. Once a paid subscription is active, it renews automatically at the end of each cycle unless canceled; cancellation takes effect at the end of the current cycle and requires no advance notice.
 
 ## 2. Right of Withdrawal (Widerrufsrecht)
 
@@ -51,6 +54,7 @@ For billing or withdrawal requests: **hi@dawarich.app**.
 
 | When          | What          |
 | ------------- | ------------- |
+| 2026-04-26    | Documented dual trial flows (with and without payment details upfront) |
 | 2026-04-21    | Added statutory 14-day right of withdrawal, aligned plans with current pricing |
 | 2026-03-10    | Added monthly plan |
 | 2025-03-12    | Initial version |

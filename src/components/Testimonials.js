@@ -70,6 +70,27 @@ const testimonials = [
 		type: "press",
 	},
 	{
+		quote:
+			"I moved to Kazakhstan not knowing the city at all. Google Timeline wasn't an option anymore, and I didn't trust it either way. Set up Dawarich, and now the map is like fog of war for me — the more I go out, the more it fills in. Plus every trip stays with me — I can look back at any of them and share the route.",
+		author: "Roman Bogdanov",
+		source: "Dawarich customer · Kazakhstan · since mid-2025",
+		type: "customer",
+	},
+	{
+		quote:
+			"I travel globally 60-70% of the year and was looking for something to keep my record without handing it to Google. I found Dawarich.app, set up my iPhone app in a few minutes, imported my Timeline history, and it just runs — tracking starts itself when I leave the house. I don't think about it anymore. My data is now my data again and meanwhile I have 260k km, 16 countries and 378 cities tracked.",
+		author: "Andreas",
+		source: "Germany · Global traveler · ex-Google Timeline · found via Reddit",
+		type: "customer",
+	},
+	{
+		quote:
+			"I used Google Timeline for years but never felt comfortable with my entire life sitting on U.S. servers. I moved everything (a few years' worth of data) into Dawarich in just an afternoon. Now I have a private, permanent diary of my life — something I hope to pass on to my grandchildren one day. I look forward to future enhancements as they have already done a remarkable job.",
+		author: "Manuel Torres",
+		source: "New York, U.S. · Former Google Timeline user · Building a location legacy",
+		type: "customer",
+	},
+	{
 		quote: "The UI is clean and user friendly. Basically no impact on battery.",
 		author: "P@tr!ck3",
 		source: "App Store Review",
@@ -131,27 +152,27 @@ export default function Testimonials() {
 				</div>
 
 				<div className={styles.grid}>
-					{testimonials.map((t, i) => (
-						<a
-							key={i}
-							className={styles.card}
-							href={t.url}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<div className={styles.quoteIcon}>
-								<QuoteIcon />
-							</div>
-							<p className={styles.quote}>{t.quote}</p>
-							<div className={styles.footer}>
-								{t.rating && <StarRating />}
-								<div className={styles.author}>
-									<span className={styles.authorName}>{t.author}</span>
-									<span className={styles.source}>{t.source}</span>
+					{testimonials.map((t, i) => {
+						const CardElement = t.url ? "a" : "div";
+						const linkProps = t.url
+							? { href: t.url, target: "_blank", rel: "noopener noreferrer" }
+							: {};
+						return (
+							<CardElement key={i} className={styles.card} {...linkProps}>
+								<div className={styles.quoteIcon}>
+									<QuoteIcon />
 								</div>
-							</div>
-						</a>
-					))}
+								<p className={styles.quote}>{t.quote}</p>
+								<div className={styles.footer}>
+									{t.rating && <StarRating />}
+									<div className={styles.author}>
+										<span className={styles.authorName}>{t.author}</span>
+										<span className={styles.source}>{t.source}</span>
+									</div>
+								</div>
+							</CardElement>
+						);
+					})}
 				</div>
 			</div>
 		</section>

@@ -209,7 +209,7 @@ export default function StatsPage() {
           <div className={styles.container}>
             <h2 className={styles.ctaTitle}>Start Tracking Your Stats</h2>
             <p className={styles.ctaSubtitle}>
-              Begin building your location statistics today with a 7-day free trial. No credit card required.
+              Begin building your location statistics today with a 7-day free trial. Cancel anytime.
             </p>
             <div className={styles.ctaButtons}>
               <Link

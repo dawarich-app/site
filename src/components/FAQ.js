@@ -40,7 +40,7 @@ const faqData = [
 	{
 		question: "Is there a free trial?",
 		answer:
-			"Yes! Dawarich Cloud offers a 7-day free trial with no credit card required. Import your Google data, explore the maps, and see if it's right for you — risk-free. You can also self-host for free with all features included.",
+			"Yes! Dawarich Cloud offers a 7-day free trial. Import your Google data, explore the maps, and see if it's right for you. Cancel anytime from Subscription Settings. You can also self-host for free with all features included.",
 	},
 ];
 

@@ -18,6 +18,7 @@ As many other applications, Dawarich uses environment variables to configure its
 | `SELF_HOSTED` | `true` | Set to `true` if you're self-hosting Dawarich |
 | `APPLICATION_HOSTS`  | `localhost,my.domain.com`   | Application hosts, provide multiple if you want your Dawarich instance to be available by multiple domains/ip addresses. Don't put protocols here, only host names. |
 | `APPLICATION_PROTOCOL` | `http` | Application protocol. Change to `https` if you want your Dawarich instance to be served via SSL |
+| `DOMAIN` | `nil` | Public hostname used to build absolute URLs in outgoing emails (family invitations, digest emails, password resets). **Required in production** — leaving it unset will cause email delivery to fail with a URL generation error. No protocol, no trailing slash. Example: `dawarich.example.com`. |
 | `TIME_ZONE`          | `Europe/London` | Time zone. Full list of supported timezones available on [Github](https://github.com/Freika/dawarich/issues/27#issuecomment-2094721396) |
 | `DISTANCE_UNIT` | `km` | Distance unit. For miles, change to `mi`. All settings still should be provided in meters/kilometers |
 | `MIN_MINUTES_SPENT_IN_CITY` | `60`   | Minimum minutes spent in a city |

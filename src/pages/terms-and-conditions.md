@@ -17,9 +17,12 @@ You need an account to use Dawarich and must be at least **16 years old**. If yo
 - **Lite** — €49.99 / year (annual only)
 - **Pro** — €119.99 / year or €17.99 / month
 
-All paid plans include a 7-day free trial. The trial requires no credit card and never results in an automatic charge — a paid subscription only begins if you explicitly subscribe and pay.
+All paid plans include a 7-day free trial. Depending on the sign-up flow shown to you, the trial may or may not require payment details upfront:
 
-Once started, subscriptions renew automatically at the end of each billing cycle unless canceled. You can cancel at any time from Subscription Settings; cancellation takes effect at the end of the current cycle and requires no advance notice. Your statutory right of withdrawal and refund conditions are set out in the [Refund Policy](/refund-policy).
+- **Trial without payment details.** No charge ever occurs unless you explicitly subscribe and pay at the end of the trial.
+- **Trial with payment details (reverse trial).** The trial converts into a paid subscription automatically at the end of the 7-day period unless you cancel before it ends.
+
+In both cases you can cancel at any time from Subscription Settings; cancellation during the trial prevents any charge. Once a paid subscription is active, it renews automatically at the end of each billing cycle unless canceled; cancellation takes effect at the end of the current cycle and requires no advance notice. Your statutory right of withdrawal and refund conditions are set out in the [Refund Policy](/refund-policy).
 
 ## 4. User Responsibilities
 
@@ -49,6 +52,7 @@ We may update these terms and will notify users of material changes.
 
 | When          | What          |
 | ------------- | ------------- |
+| 2026-04-26    | Documented dual trial flows (with and without payment details upfront) |
 | 2026-04-21    | Aligned plans with current pricing, age to 16, removed one-month cancellation notice, added governing law and ODR |
 | 2025-04-13    | Added abuse section and general terms |
 | 2025-03-12    | Initial version |

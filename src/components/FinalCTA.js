@@ -13,8 +13,8 @@ export default function FinalCTA() {
 							Your location history is yours. Keep it that way.
 						</h2>
 						<p className={styles.subtitle}>
-							Import your Google Timeline data before it's gone. Start free, no
-							credit card required.
+							Import your Google Timeline data before it's gone. Start with a
+							7-day free trial, cancel anytime.
 						</p>
 						<Link
 							to="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=final_cta&utm_campaign=try7days"

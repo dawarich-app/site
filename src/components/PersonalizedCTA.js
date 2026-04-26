@@ -28,7 +28,7 @@ export default function PersonalizedCTA({ toolName, headline, stats }) {
         />
 
         <p className={styles.body}>
-          Self-hosted or cloud. No credit card required.
+          Self-hosted or cloud. Cancel anytime.
         </p>
 
         <a

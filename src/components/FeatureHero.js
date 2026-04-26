@@ -57,7 +57,7 @@ export default function FeatureHero({
           )}
         </div>
 
-        <p className={styles.noCredit}>No credit card required</p>
+        <p className={styles.noCredit}>7-day free trial · Cancel anytime</p>
 
         {image && (
           <div className={styles.heroImageWrapper}>

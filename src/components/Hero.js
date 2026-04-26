@@ -127,7 +127,7 @@ export default function Hero() {
 					</div>
 
 					<p className={styles.noCredit} style={{ animationDelay: "0.4s" }}>
-						7-day free trial · No credit card required · Your data stays yours
+						7-day free trial · Cancel anytime · Your data stays yours
 					</p>
 				</div>
 

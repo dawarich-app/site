@@ -429,7 +429,7 @@ export default function TimelineVisualizer() {
                 href="https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=post-viz-cta&utm_campaign=timeline-visualizer"
                 className={styles.postVizCtaButton}
               >
-                Start Free Trial — 7 Days, No Credit Card &rarr;
+                Start Free Trial — 7 Days &rarr;
               </a>
             </div>
           )}
