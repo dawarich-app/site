@@ -444,8 +444,8 @@ export default function CloudPage() {
 					href: "#pricing",
 				}}
 				disclaimer="7-day free trial · Cancel anytime · Your data stays yours, in standard formats"
-				imageSrc="/img/map-heatmap.png"
-				imageAlt="Dawarich heatmap of a decade of location history"
+				imageSrc="/img/timeline.png"
+				imageAlt="Dawarich timeline view showing a decade of location history"
 			/>
 
 			<main>
