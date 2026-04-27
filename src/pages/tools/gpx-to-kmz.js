@@ -5,11 +5,12 @@ import FormatConverter from '@site/src/components/FormatConverter';
 import { parseGPX } from '@site/src/utils/formatParsers';
 import { toKMZ } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './converter.module.css';
 
 const pageTitle = "Free GPX to KMZ Converter - Convert GPS Track Files Online";
 const pageDescription = "Convert GPX files to KMZ format instantly. Free, privacy-first online converter for GPS tracks. Works entirely in your browser - no upload required.";
-const pageUrl = "https://dawarich.app/tools/gpx-to-kmz";
+const pageUrl = "https://dawarich.app/tools/gpx-to-kmz/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 export default function GPXToKMZ() {
@@ -120,6 +121,7 @@ export default function GPXToKMZ() {
           />
         </div>
       </div>
+        <RelatedTools slug="gpx-to-kmz" />
     </Layout>
   );
 }

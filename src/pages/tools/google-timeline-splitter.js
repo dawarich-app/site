@@ -4,11 +4,12 @@ import Head from '@docusaurus/Head';
 import { detectFormat } from '@site/src/utils/timelineParser';
 import { splitTimeline, packageChunksAsZip, precomputeItemSizes, estimateChunkCount } from '@site/src/utils/timelineSplitter';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './google-timeline-splitter.module.css';
 
 const pageTitle = "Google Timeline Splitter - Split Large Timeline JSON Files";
 const pageDescription = "Free tool to split large Google Timeline JSON files into smaller, valid chunks. Supports all export formats: Records.json, Semantic Location History, Semantic Segments, and more. Choose your target file size. Privacy-first — runs in your browser.";
-const pageUrl = "https://dawarich.app/tools/google-timeline-splitter";
+const pageUrl = "https://dawarich.app/tools/google-timeline-splitter/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 const SIZE_OPTIONS = [1, 5, 10, 20, 50, 100];
@@ -475,6 +476,7 @@ export default function GoogleTimelineSplitter() {
           </div>
         </div>
       </div>
+        <RelatedTools slug="google-timeline-splitter" />
     </Layout>
   );
 }

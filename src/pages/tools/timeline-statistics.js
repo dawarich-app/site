@@ -7,11 +7,12 @@ import ShareableCard from '@site/src/components/ShareableCard';
 import { parseTimeline } from '@site/src/utils/timelineParser';
 import { calculateTravelStats } from '@site/src/utils/timelineStats';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './timeline-statistics.module.css';
 
 const pageTitle = "Google Timeline Statistics Analyzer - Your Location History Insights";
 const pageDescription = "Free privacy-first tool to analyze your Google Timeline data. See total distance traveled, countries visited, top places, activity breakdown, and yearly trends. All processing in your browser.";
-const pageUrl = "https://dawarich.app/tools/timeline-statistics";
+const pageUrl = "https://dawarich.app/tools/timeline-statistics/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 const ACTIVITY_LABELS = {
@@ -686,6 +687,7 @@ export default function TimelineStatistics() {
           </div>
         </div>
       </div>
+        <RelatedTools slug="timeline-statistics" />
     </Layout>
   );
 }

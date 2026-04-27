@@ -5,11 +5,12 @@ import FormatConverter from '@site/src/components/FormatConverter';
 import { parseFIT, getFITMetadata } from '@site/src/utils/fitParser';
 import { toGeoJSON } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './converter.module.css';
 
 const pageTitle = "Free FIT to GeoJSON Converter - Convert Garmin Files to GeoJSON Online";
 const pageDescription = "Convert Garmin FIT files to GeoJSON format instantly. Free, privacy-first online converter for fitness activities. Perfect for web mapping - works entirely in your browser.";
-const pageUrl = "https://dawarich.app/tools/fit-to-geojson";
+const pageUrl = "https://dawarich.app/tools/fit-to-geojson/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 export default function FITToGeoJSON() {
@@ -162,6 +163,7 @@ export default function FITToGeoJSON() {
           />
         </div>
       </div>
+        <RelatedTools slug="fit-to-geojson" />
     </Layout>
   );
 }

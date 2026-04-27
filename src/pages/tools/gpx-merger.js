@@ -3,11 +3,12 @@ import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import { parseGPXDetailed, mergeGPXFiles, calculateMergeStats } from '@site/src/utils/gpxMerger';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './gpx-merger.module.css';
 
 const pageTitle = "Free GPX Merger - Combine Multiple GPS Track Files Online";
 const pageDescription = "Merge multiple GPX files into one. Free, privacy-first online tool to combine GPS tracks, waypoints, and routes. Works entirely in your browser - no upload required.";
-const pageUrl = "https://dawarich.app/tools/gpx-merger";
+const pageUrl = "https://dawarich.app/tools/gpx-merger/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 export default function GPXMerger() {
@@ -418,6 +419,7 @@ export default function GPXMerger() {
           ] : undefined}
         />
       </div>
+        <RelatedTools slug="gpx-merger" />
     </Layout>
   );
 }

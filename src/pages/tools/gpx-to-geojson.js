@@ -5,11 +5,12 @@ import FormatConverter from '@site/src/components/FormatConverter';
 import { parseGPX } from '@site/src/utils/formatParsers';
 import { toGeoJSON } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './converter.module.css';
 
 const pageTitle = "Free GPX to GeoJSON Converter - Convert GPS Track Files Online";
 const pageDescription = "Convert GPX files to GeoJSON format instantly. Free, privacy-first online converter for GPS tracks, waypoints, and routes. Works entirely in your browser - no upload required.";
-const pageUrl = "https://dawarich.app/tools/gpx-to-geojson";
+const pageUrl = "https://dawarich.app/tools/gpx-to-geojson/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 export default function GPXToGeoJSON() {
@@ -151,6 +152,7 @@ export default function GPXToGeoJSON() {
           />
         </div>
       </div>
+        <RelatedTools slug="gpx-to-geojson" />
     </Layout>
   );
 }

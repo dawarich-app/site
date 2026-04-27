@@ -5,11 +5,12 @@ import FormatConverter from '@site/src/components/FormatConverter';
 import { parseKML } from '@site/src/utils/formatParsers';
 import { toKMZ } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './converter.module.css';
 
 const pageTitle = "Free KML to KMZ Converter - Compress Google Earth Files Online";
 const pageDescription = "Convert KML files to compressed KMZ format instantly. Free, privacy-first online converter. Works entirely in your browser - no upload required.";
-const pageUrl = "https://dawarich.app/tools/kml-to-kmz";
+const pageUrl = "https://dawarich.app/tools/kml-to-kmz/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 export default function KMLToKMZ() {
@@ -120,6 +121,7 @@ export default function KMLToKMZ() {
           />
         </div>
       </div>
+        <RelatedTools slug="kml-to-kmz" />
     </Layout>
   );
 }

@@ -5,11 +5,12 @@ import FormatConverter from '@site/src/components/FormatConverter';
 import { parseKML } from '@site/src/utils/formatParsers';
 import { toGeoJSON } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './converter.module.css';
 
 const pageTitle = "Free KML to GeoJSON Converter - Convert Google Earth Files Online";
 const pageDescription = "Convert KML files to GeoJSON format instantly. Free, privacy-first online converter. Works entirely in your browser - no upload required.";
-const pageUrl = "https://dawarich.app/tools/kml-to-geojson";
+const pageUrl = "https://dawarich.app/tools/kml-to-geojson/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 export default function KMLToGeoJSON() {
@@ -121,6 +122,7 @@ export default function KMLToGeoJSON() {
           />
         </div>
       </div>
+        <RelatedTools slug="kml-to-geojson" />
     </Layout>
   );
 }

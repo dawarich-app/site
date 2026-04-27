@@ -5,11 +5,12 @@ import FormatConverter from '@site/src/components/FormatConverter';
 import { parseFIT, getFITMetadata } from '@site/src/utils/fitParser';
 import { toKML } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './converter.module.css';
 
 const pageTitle = "Free FIT to KML Converter - Convert Garmin Files to Google Earth Online";
 const pageDescription = "Convert Garmin FIT files to KML format instantly. Free, privacy-first online converter for viewing fitness activities in Google Earth. Works entirely in your browser.";
-const pageUrl = "https://dawarich.app/tools/fit-to-kml";
+const pageUrl = "https://dawarich.app/tools/fit-to-kml/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 export default function FITToKML() {
@@ -165,6 +166,7 @@ export default function FITToKML() {
           />
         </div>
       </div>
+        <RelatedTools slug="fit-to-kml" />
     </Layout>
   );
 }

@@ -5,11 +5,14 @@ import FormatConverter from '@site/src/components/FormatConverter';
 import { parseGPX } from '@site/src/utils/formatParsers';
 import { toKML } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
+import ToolGuide from '@site/src/components/ToolGuide';
+import toolGuideContent from '@site/src/data/tool-guides/gpx-to-kml';
 import styles from './converter.module.css';
 
 const pageTitle = "Free GPX to KML Converter - Convert GPS Track Files Online";
 const pageDescription = "Convert GPX files to KML format instantly. Free, privacy-first online converter for GPS tracks, waypoints, and routes. Works entirely in your browser - no upload required.";
-const pageUrl = "https://dawarich.app/tools/gpx-to-kml";
+const pageUrl = "https://dawarich.app/tools/gpx-to-kml/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 export default function GPXToKML() {
@@ -90,23 +93,6 @@ export default function GPXToKML() {
               )}
             </div>
             <div className={styles.infoSection}>
-              <div className={styles.infoCard}>
-                <h2>About GPX Format</h2>
-                <p>GPX (GPS Exchange Format) is an XML-based format for GPS data, widely used by GPS devices and fitness trackers.</p>
-              </div>
-              <div className={styles.infoCard}>
-                <h2>About KML Format</h2>
-                <p>KML (Keyhole Markup Language) is an XML-based format used by Google Earth and Google Maps for displaying geographic data.</p>
-              </div>
-              <div className={styles.infoCard}>
-                <h2>Why Convert GPX to KML?</h2>
-                <ul>
-                  <li>View your tracks in Google Earth with rich visualization</li>
-                  <li>Share location data with Google Maps users</li>
-                  <li>Add custom styling and placemarks to your GPS data</li>
-                  <li>Industry standard for geographic visualization</li>
-                </ul>
-              </div>
               <div className={styles.privacyCard}>
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -124,6 +110,8 @@ export default function GPXToKML() {
           />
         </div>
       </div>
+      <ToolGuide slug="gpx-to-kml" title="GPX to KML Converter" content={toolGuideContent} />
+      <RelatedTools slug="gpx-to-kml" />
     </Layout>
   );
 }

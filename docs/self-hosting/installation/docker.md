@@ -20,4 +20,4 @@ Setting up your Dawarich in Docker is described in the [Self-Hosting Introductio
 
 ### Synology
 
-Setting up your Dawarich on Synology is described in the [Synology](./synology) guide.
+Setting up your Dawarich on Synology is described in the [Synology](../synology) guide.

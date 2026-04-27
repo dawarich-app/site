@@ -6,11 +6,12 @@ import { parseGPX, parseGeoJSON, parseKML } from '@site/src/utils/formatParsers'
 import { splitBySize, splitByCount, splitByDate, packageAsZip, normalizePointsForSplit } from '@site/src/utils/fileSplitter';
 import JSZip from 'jszip';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './gps-file-splitter.module.css';
 
 const pageTitle = "GPS File Splitter - Split Large GPX, GeoJSON, KML & JSON Files";
 const pageDescription = "Free tool to split large GPS and location files into smaller chunks. Split GPX, GeoJSON, KML, KMZ, and Google Timeline JSON by size, point count, or date. Download as ZIP. Privacy-first — runs in your browser.";
-const pageUrl = "https://dawarich.app/tools/gps-file-splitter";
+const pageUrl = "https://dawarich.app/tools/gps-file-splitter/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 const faqItems = [
@@ -565,6 +566,7 @@ export default function GPSFileSplitter() {
           </div>
         </div>
       </div>
+        <RelatedTools slug="gps-file-splitter" />
     </Layout>
   );
 }

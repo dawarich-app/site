@@ -6,11 +6,12 @@ import { parseTimeline, detectFormat } from '@site/src/utils/timelineParser';
 import { timelineToConverterPoints, timelineToCSV } from '@site/src/utils/timelineToFormat';
 import { toGPX, toGeoJSON, toKML, toKMZ } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './google-timeline-converter.module.css';
 
 const pageTitle = "Google Timeline to GPX/KML/CSV Converter - Convert Location History Free";
 const pageDescription = "Free, privacy-first converter for Google Timeline data. Convert your location history to GPX, KML, GeoJSON, or CSV format. All processing in your browser — no data uploaded.";
-const pageUrl = "https://dawarich.app/tools/google-timeline-converter";
+const pageUrl = "https://dawarich.app/tools/google-timeline-converter/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 const FORMAT_LABELS = {
@@ -281,37 +282,6 @@ export default function GoogleTimelineConverter() {
               "Support for all 6 Google Timeline export formats",
               "No data sent to any server"
             ]
-          })}
-        </script>
-
-        {/* JSON-LD Structured Data - HowTo */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HowTo",
-            "name": "How to Convert Google Timeline Data to GPX, KML, or CSV",
-            "description": "Export your Google Timeline data and convert it to standard GPS formats using this free, privacy-first tool.",
-            "step": [
-              {
-                "@type": "HowToStep",
-                "name": "Export your Google Timeline data",
-                "text": "Visit takeout.google.com, select Location History (Timeline), and export. Alternatively, on Android: Google Maps → Settings → Location → Timeline → Export. On iOS: Google Maps → Settings → Personal Content → Export Timeline data."
-              },
-              {
-                "@type": "HowToStep",
-                "name": "Upload your JSON files and select output formats",
-                "text": "Drag and drop your exported Google Timeline JSON files into the converter. The tool automatically detects the format. Select your desired output formats: GPX, KML, GeoJSON, KMZ, or CSV."
-              },
-              {
-                "@type": "HowToStep",
-                "name": "Download your converted files",
-                "text": "Click the download button for each format or use 'Download All Selected' to get all chosen formats at once. Your converted files are ready to use in any compatible application."
-              }
-            ],
-            "tool": {
-              "@type": "HowToTool",
-              "name": "Google Timeline Converter by Dawarich"
-            }
           })}
         </script>
 
@@ -626,6 +596,7 @@ export default function GoogleTimelineConverter() {
           </div>
         </div>
       </div>
+        <RelatedTools slug="google-timeline-converter" />
     </Layout>
   );
 }

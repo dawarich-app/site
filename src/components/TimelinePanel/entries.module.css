@@ -1,0 +1,263 @@
+/* Timeline entries — visit rows + journey legs.
+   Tokens map Dawarich's oklch(var(--bc) / α) to Docusaurus emphasis vars. */
+
+.entriesList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.visitRow {
+  display: grid;
+  grid-template-columns: 56px 16px minmax(0, 1fr);
+  gap: 0.5rem;
+  align-items: start;
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  cursor: pointer;
+  transition: background-color 120ms ease;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  text-align: left;
+  width: 100%;
+  font: inherit;
+  color: inherit;
+}
+
+.visitRow:hover {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.visitRowSelected {
+  background-color: rgba(34, 197, 94, 0.08);
+  box-shadow: inset 3px 0 0 #22c55e;
+}
+
+[data-theme='dark'] .visitRowSelected {
+  background-color: rgba(34, 197, 94, 0.16);
+}
+
+.visitTime {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.visitTimeStart {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.75rem;
+}
+
+.visitTimeEnd {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.625rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.visitRail {
+  display: flex;
+  justify-content: center;
+  padding-top: 4px;
+}
+
+.visitDot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: #22c55e;
+  box-shadow: 0 0 0 2px var(--ifm-background-color);
+}
+
+.visitContent {
+  min-width: 0;
+}
+
+.visitTitle {
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.visitMeta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 2px;
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+/* --- Journey leg --- */
+
+.journeyEntry {
+  padding: 0;
+  border: none;
+}
+
+.journeyLeg {
+  display: grid;
+  grid-template-columns: 56px 16px minmax(0, 1fr) auto;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.7rem;
+  color: var(--ifm-color-emphasis-700);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  text-align: left;
+  width: 100%;
+  font-family: inherit;
+}
+
+.journeyLegNoTrack {
+  cursor: default;
+}
+
+.journeyLeg:hover {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.journeyTime {
+  text-align: right;
+  font-size: 0.65rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.journeyRailCol {
+  display: flex;
+  justify-content: center;
+  align-self: stretch;
+  position: relative;
+}
+
+.journeyRail {
+  width: 2px;
+  background: var(--ifm-color-emphasis-300);
+  border-radius: 1px;
+  margin: -0.2rem 0;
+}
+
+.journeySummary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.journeyEmoji {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.journeyVerb {
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.journeySep {
+  color: var(--ifm-color-emphasis-500);
+}
+
+.journeyChevron {
+  width: 0.75rem;
+  height: 0.75rem;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.journeyChevronExpanded {
+  transform: rotate(180deg);
+}
+
+/* Track info card */
+
+.trackInfoCard {
+  margin-top: 0.375rem;
+  padding: 0.5rem 0.625rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 0.5rem;
+  background: var(--ifm-background-color);
+  font-size: 0.75rem;
+}
+
+.trackInfoId {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 0.35rem;
+}
+
+.trackInfoStats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.875rem;
+}
+
+.trackInfoLabel {
+  color: var(--ifm-color-emphasis-700);
+  margin-right: 0.15rem;
+}
+
+.trackInfoMode {
+  margin-left: auto;
+  padding: 0.05rem 0.4rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 999px;
+  font-size: 0.65rem;
+  letter-spacing: 0.02em;
+  color: var(--ifm-color-emphasis-700);
+  text-transform: capitalize;
+}
+
+.trackInfoActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.replayControls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.replayButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.25rem;
+  background: var(--ifm-background-color);
+  cursor: pointer;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.replayButton:hover {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.replayProgress {
+  flex: 1;
+  height: 4px;
+}

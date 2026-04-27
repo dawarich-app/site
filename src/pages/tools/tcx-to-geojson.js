@@ -5,11 +5,12 @@ import FormatConverter from '@site/src/components/FormatConverter';
 import { parseTCX, getTCXMetadata } from '@site/src/utils/tcxParser';
 import { toGeoJSON } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './converter.module.css';
 
 const pageTitle = "Free TCX to GeoJSON Converter - Convert Training Files to GeoJSON Online";
 const pageDescription = "Convert TCX files to GeoJSON format instantly. Free, privacy-first online converter for fitness activities. Perfect for web mapping - works entirely in your browser.";
-const pageUrl = "https://dawarich.app/tools/tcx-to-geojson";
+const pageUrl = "https://dawarich.app/tools/tcx-to-geojson/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 export default function TCXToGeoJSON() {
@@ -160,6 +161,7 @@ export default function TCXToGeoJSON() {
           />
         </div>
       </div>
+        <RelatedTools slug="tcx-to-geojson" />
     </Layout>
   );
 }

@@ -1,0 +1,104 @@
+.guide {
+  max-width: 960px;
+  margin: 2.5rem auto 0;
+  padding: 0 1.25rem;
+}
+
+.guide section {
+  margin: 2rem 0;
+}
+
+.guide h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.875rem;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.guide h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.guide p {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ifm-color-emphasis-800);
+  margin: 0 0 0.875rem;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  margin: 0.5rem 0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.table th,
+.table td {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  padding: 0.625rem 0.875rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.table th {
+  background: var(--ifm-color-emphasis-100);
+  font-weight: 600;
+}
+
+.appList {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.appList li {
+  margin: 0.4rem 0;
+  line-height: 1.55;
+}
+
+.exampleGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .exampleGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.code {
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 6px;
+  padding: 0.875rem;
+  font-size: 0.825rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre;
+  margin: 0;
+}
+
+.faqList {
+  margin: 0;
+}
+
+.faqList dt {
+  font-weight: 600;
+  margin-top: 1rem;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.faqList dd {
+  margin: 0.35rem 0 0;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-800);
+}
