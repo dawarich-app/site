@@ -1,0 +1,81 @@
+.mapContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.webglError {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-800);
+  text-align: center;
+}
+
+.webglError h3 {
+  margin: 0 0 0.5rem;
+}
+
+.webglError a {
+  color: var(--ifm-color-primary);
+}
+
+.demoOverlay {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  z-index: 10;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Sits below MapLibre's NavigationControl group on the top-right.
+   The default nav group is 29px wide × ~92px tall (compass + zoom in + zoom out
+   stacked, no spacing inside the group). 10px page margin + 92px group + 10px
+   gap = 112px from the top. */
+.fullscreenButton {
+  position: absolute;
+  top: 112px;
+  right: 10px;
+  width: 29px;
+  height: 29px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #333;
+  z-index: 5;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  line-height: 1;
+}
+
+.fullscreenButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* MapLibre's default controls don't adapt to dark mode — they stay white.
+   No dark-mode override here, so all controls read as one coherent group. */

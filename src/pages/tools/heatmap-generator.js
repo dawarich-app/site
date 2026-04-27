@@ -4,11 +4,12 @@ import Head from '@docusaurus/Head';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import { parseFile, pointsToGeoJSON, calculateBounds, calculateStats, exportMapAsImage } from '@site/src/utils/heatmapUtils';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './heatmap-generator.module.css';
 
 const pageTitle = "Free GPS Heatmap Generator - Create Activity Heatmaps Online";
 const pageDescription = "Create beautiful heatmaps from your GPS data. Upload GPX, FIT, TCX, GeoJSON, KML, or Google Timeline JSON files to visualize your running, cycling, and activity patterns. Free, privacy-first - works entirely in your browser.";
-const pageUrl = "https://dawarich.app/tools/heatmap-generator";
+const pageUrl = "https://dawarich.app/tools/heatmap-generator/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 function HeatmapMap({ points, heatmapSettings }) {
@@ -626,6 +627,7 @@ export default function HeatmapGenerator() {
           ] : undefined}
         />
       </div>
+        <RelatedTools slug="heatmap-generator" />
     </Layout>
   );
 }

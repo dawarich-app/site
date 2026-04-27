@@ -1,0 +1,148 @@
+.rail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  border-right: 1px solid var(--ifm-color-emphasis-200);
+  height: 100%;
+  overflow-y: auto;
+}
+
+@media (max-width: 1024px) {
+  .rail {
+    border-right: none;
+    border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  }
+}
+
+.controlGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.yearSelect {
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.375rem;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font-size: 0.875rem;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.375rem;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font-size: 0.875rem;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.monthNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.monthTitle {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.navButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.navButton:hover {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.weekdayRow {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  font-size: 0.625rem;
+  color: var(--ifm-color-emphasis-600);
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.weekRow {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+}
+
+.cell {
+  position: relative;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 500;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+  color: var(--ifm-font-color-base);
+}
+
+.cell:hover:not(:disabled) {
+  outline: 1px solid var(--ifm-color-emphasis-400);
+}
+
+.cellOutOfMonth {
+  color: var(--ifm-color-emphasis-400);
+}
+
+.cellDisabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.cellSelected {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 1px;
+}
+
+/* Heat buckets */
+.heat0 { background: transparent; }
+.heat1 { background: rgba(34, 197, 94, 0.15); }
+.heat2 { background: rgba(34, 197, 94, 0.30); }
+.heat3 { background: rgba(34, 197, 94, 0.50); color: white; }
+.heat4 { background: rgba(34, 197, 94, 0.70); color: white; }
+.heat5 { background: rgba(34, 197, 94, 0.88); color: white; }
+
+[data-theme='dark'] .heat1 { background: rgba(34, 197, 94, 0.20); }
+[data-theme='dark'] .heat2 { background: rgba(34, 197, 94, 0.40); }
+[data-theme='dark'] .heat3 { background: rgba(34, 197, 94, 0.60); color: white; }
+[data-theme='dark'] .heat4 { background: rgba(34, 197, 94, 0.78); color: white; }
+[data-theme='dark'] .heat5 { background: rgba(34, 197, 94, 0.95); color: white; }

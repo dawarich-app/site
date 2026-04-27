@@ -5,11 +5,12 @@ import FormatConverter from '@site/src/components/FormatConverter';
 import { parseTCX, getTCXMetadata } from '@site/src/utils/tcxParser';
 import { toGPX } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './converter.module.css';
 
 const pageTitle = "Free TCX to GPX Converter - Convert Training Center XML Files Online";
 const pageDescription = "Convert TCX files to GPX format instantly. Free, privacy-first online converter for Garmin, Wahoo, and fitness device activities. Works entirely in your browser - no upload required.";
-const pageUrl = "https://dawarich.app/tools/tcx-to-gpx";
+const pageUrl = "https://dawarich.app/tools/tcx-to-gpx/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 export default function TCXToGPX() {
@@ -208,6 +209,7 @@ export default function TCXToGPX() {
           />
         </div>
       </div>
+        <RelatedTools slug="tcx-to-gpx" />
     </Layout>
   );
 }

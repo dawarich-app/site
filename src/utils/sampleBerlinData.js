@@ -114,4 +114,90 @@ const SAMPLE_PATHS = [
   },
 ];
 
+// SAMPLE_DAY — fabricated Day record matching `Day` shape from utils/timelineDays.
+// Used as a demo when no files have been uploaded yet, so the panel UI is
+// discoverable. Marked clearly with an `isDemo: true` flag so the UI can show
+// the "Demo data" badge.
+export const SAMPLE_DAY = {
+  date: '2024-06-15',
+  isDemo: true,
+  summary: {
+    totalDistance: 8.4,
+    distanceUnit: 'km',
+    placesVisited: 5,
+    timeMovingMinutes: 95,
+    timeStationaryMinutes: 240,
+    trackedSeconds: 28800,
+  },
+  bounds: { swLat: 52.5083, swLng: 13.3275, neLat: 52.5270, neLng: 13.4133 },
+  entries: [
+    {
+      type: 'visit',
+      visitId: 'demo-v1',
+      name: 'Alexanderplatz',
+      startedAt: '2024-06-15T09:00:00Z',
+      endedAt: '2024-06-15T09:25:00Z',
+      duration: 25,
+      pointCount: 1,
+      place: { name: 'Alexanderplatz', lat: 52.5200, lng: 13.4050, city: 'Berlin', country: 'Germany' },
+      area: null,
+      tags: [],
+      status: 'confirmed',
+      searchTokens: 'alexanderplatz',
+    },
+    {
+      type: 'journey',
+      trackId: 'demo-t1',
+      startedAt: '2024-06-15T09:25:00Z',
+      endedAt: '2024-06-15T10:00:00Z',
+      duration: 2100,
+      distance: 1.2,
+      distanceUnit: 'km',
+      dominantMode: 'walking',
+      avgSpeed: 2.1,
+      speedUnit: 'km/h',
+      coordinates: [[52.5200, 13.4050], [52.5186, 13.3762], [52.5163, 13.3777]],
+      pointTimes: null,
+    },
+    {
+      type: 'visit',
+      visitId: 'demo-v2',
+      name: 'Museumsinsel',
+      startedAt: '2024-06-15T10:00:00Z',
+      endedAt: '2024-06-15T11:15:00Z',
+      duration: 75,
+      pointCount: 1,
+      place: { name: 'Museumsinsel', lat: 52.5163, lng: 13.3777, city: 'Berlin', country: 'Germany' },
+      area: null, tags: [], status: 'confirmed',
+      searchTokens: 'museumsinsel',
+    },
+    {
+      type: 'journey',
+      trackId: 'demo-t2',
+      startedAt: '2024-06-15T11:15:00Z',
+      endedAt: '2024-06-15T12:00:00Z',
+      duration: 2700,
+      distance: 1.8,
+      distanceUnit: 'km',
+      dominantMode: 'cycling',
+      avgSpeed: 2.4,
+      speedUnit: 'km/h',
+      coordinates: [[52.5163, 13.3777], [52.5145, 13.3501], [52.5208, 13.4094]],
+      pointTimes: null,
+    },
+    {
+      type: 'visit',
+      visitId: 'demo-v3',
+      name: 'Brandenburger Tor',
+      startedAt: '2024-06-15T16:00:00Z',
+      endedAt: '2024-06-15T17:00:00Z',
+      duration: 60,
+      pointCount: 1,
+      place: { name: 'Brandenburger Tor', lat: 52.5145, lng: 13.3501, city: 'Berlin', country: 'Germany' },
+      area: null, tags: [], status: 'confirmed',
+      searchTokens: 'brandenburger tor',
+    },
+  ],
+};
+
 export { SAMPLE_POINTS, SAMPLE_PATHS };

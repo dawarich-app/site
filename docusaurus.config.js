@@ -18,6 +18,8 @@ const config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
+  trailingSlash: true,
+
   scripts: [
     {
       src: "https://scripts.simpleanalyticscdn.com/latest.js",
@@ -26,7 +28,34 @@ const config = {
     {
       src: "https://cdn.paddle.com/paddle/v2/paddle.js",
       async: true
+    },
+    {
+      src: "https://www.googletagmanager.com/gtag/js?id=AW-17899851408",
+      async: true
     }
+  ],
+
+  // Google Ads gtag bootstrap + cross-domain linker.
+  // The linker rewrites outbound links to my.dawarich.app to include a `_gl`
+  // param carrying the gclid + client_id. Without this, ad-click attribution
+  // is lost when users navigate from the marketing site to the manager,
+  // because the gclid cookie is scoped to dawarich.app only.
+  // We disable send_page_view because pageview events are not configured as
+  // conversions in Google Ads — sending them would just be noise.
+  headTags: [
+    {
+      tagName: "script",
+      attributes: {},
+      innerHTML: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17899851408', {
+          send_page_view: false,
+          linker: { domains: ['dawarich.app', 'my.dawarich.app'] }
+        });
+      `,
+    },
   ],
 
   onBrokenLinks: 'throw',
@@ -66,6 +95,17 @@ const config = {
         },
         theme: {
           customCss: './src/css/custom.css',
+        },
+        sitemap: {
+          ignorePatterns: [
+            '/docs/api/**',
+            '/docs/category/**',
+            '/blog/tags/**',
+            '/blog/page/**',
+            '/blog/archive/**',
+            '/blog/authors/**',
+            '/docs/intro/**',
+          ],
         },
       }),
     ],

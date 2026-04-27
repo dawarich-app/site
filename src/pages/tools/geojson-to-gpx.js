@@ -5,11 +5,12 @@ import FormatConverter from '@site/src/components/FormatConverter';
 import { parseGeoJSON } from '@site/src/utils/formatParsers';
 import { toGPX } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './converter.module.css';
 
 const pageTitle = "Free GeoJSON to GPX Converter - Convert Geographic Data Online";
 const pageDescription = "Convert GeoJSON files to GPX format instantly. Free, privacy-first online converter for geographic data. Works entirely in your browser - no upload required.";
-const pageUrl = "https://dawarich.app/tools/geojson-to-gpx";
+const pageUrl = "https://dawarich.app/tools/geojson-to-gpx/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 export default function GeoJSONToGPX() {
@@ -121,6 +122,7 @@ export default function GeoJSONToGPX() {
           />
         </div>
       </div>
+        <RelatedTools slug="geojson-to-gpx" />
     </Layout>
   );
 }

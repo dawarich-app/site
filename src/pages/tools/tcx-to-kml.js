@@ -5,11 +5,12 @@ import FormatConverter from '@site/src/components/FormatConverter';
 import { parseTCX, getTCXMetadata } from '@site/src/utils/tcxParser';
 import { toKML } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './converter.module.css';
 
 const pageTitle = "Free TCX to KML Converter - Convert Training Files to Google Earth Online";
 const pageDescription = "Convert TCX files to KML format instantly. Free, privacy-first online converter for viewing fitness activities in Google Earth. Works entirely in your browser.";
-const pageUrl = "https://dawarich.app/tools/tcx-to-kml";
+const pageUrl = "https://dawarich.app/tools/tcx-to-kml/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 export default function TCXToKML() {
@@ -163,6 +164,7 @@ export default function TCXToKML() {
           />
         </div>
       </div>
+        <RelatedTools slug="tcx-to-kml" />
     </Layout>
   );
 }

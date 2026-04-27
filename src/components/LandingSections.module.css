@@ -1,0 +1,389 @@
+/* Shared styling for landing page custom sections.
+ * Matches the homepage look-and-feel via design tokens.
+ */
+
+/* ---------- Generic section container ---------- */
+.section {
+	padding: 5rem 1.5rem;
+	background: var(--dw-bg);
+}
+
+.sectionElevated {
+	padding: 5rem 1.5rem;
+	background: var(--dw-bg-elevated);
+}
+
+.sectionSunken {
+	padding: 5rem 1.5rem;
+	background: var(--dw-bg-sunken);
+}
+
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.containerNarrow {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.title {
+	font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+	font-weight: 700;
+	color: var(--dw-text);
+	margin: 0 0 1rem;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+	text-align: center;
+}
+
+.subtitle {
+	font-size: clamp(1rem, 1.8vw, 1.125rem);
+	line-height: 1.7;
+	color: var(--dw-text-secondary);
+	text-align: center;
+	margin: 0 auto 3rem;
+	max-width: 720px;
+}
+
+/* ---------- Pain section (3 cards in a row) ---------- */
+.painGrid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.25rem;
+	margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+	.painGrid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.painCard {
+	background: var(--dw-bg-elevated);
+	border: 1px solid var(--dw-border);
+	border-radius: 0.875rem;
+	padding: 1.75rem;
+	box-shadow: var(--shadow);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.painCard:hover {
+	transform: translateY(-2px);
+	box-shadow: var(--shadow-lg);
+}
+
+.painCardHeader {
+	display: flex;
+	align-items: center;
+	gap: 0.625rem;
+	font-weight: 600;
+	font-size: 1.05rem;
+	color: var(--dw-text);
+	margin-bottom: 0.625rem;
+}
+
+.painCardBody {
+	font-size: 0.95rem;
+	line-height: 1.65;
+	color: var(--dw-text-secondary);
+	margin: 0;
+}
+
+/* ---------- Reframe / pull-quote section ---------- */
+.reframeSection {
+	padding: 5rem 1.5rem;
+	background: linear-gradient(180deg, var(--dw-bg-sunken), var(--dw-bg));
+	border-block: 1px solid var(--dw-border);
+}
+
+.reframeContainer {
+	max-width: 760px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.reframeTitle {
+	font-size: clamp(1.5rem, 3vw, 2rem);
+	font-weight: 700;
+	color: var(--dw-text);
+	margin: 0 0 1.5rem;
+	line-height: 1.3;
+	letter-spacing: -0.015em;
+}
+
+.reframeBody {
+	font-size: clamp(1rem, 1.8vw, 1.125rem);
+	line-height: 1.75;
+	color: var(--dw-text-secondary);
+	margin: 0 0 1.25rem;
+}
+
+.reframeBody:last-child {
+	margin-bottom: 0;
+}
+
+.reframeBody strong {
+	color: var(--dw-text);
+}
+
+/* ---------- Differentiators (4 columns) ---------- */
+.diffGrid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.25rem;
+	margin-top: 2.5rem;
+}
+
+@media (min-width: 640px) {
+	.diffGrid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 1024px) {
+	.diffGrid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.diffCard {
+	background: var(--dw-bg-elevated);
+	border: 1px solid var(--dw-border);
+	border-radius: 0.875rem;
+	padding: 1.75rem;
+}
+
+.diffCard h3 {
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: var(--dw-text);
+	margin: 0 0 0.5rem;
+}
+
+.diffCard p {
+	font-size: 0.95rem;
+	line-height: 1.65;
+	color: var(--dw-text-secondary);
+	margin: 0;
+}
+
+/* ---------- Competitor table ---------- */
+.compareWrapper {
+	margin-top: 2rem;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	border-radius: 0.875rem;
+	border: 1px solid var(--dw-border);
+	background: var(--dw-bg-elevated);
+	box-shadow: var(--shadow);
+}
+
+.compareTable {
+	width: 100%;
+	min-width: 640px;
+	border-collapse: collapse;
+	font-size: 0.95rem;
+}
+
+.compareTable thead th {
+	text-align: left;
+	padding: 1rem 1.25rem;
+	background: var(--dw-bg-sunken);
+	color: var(--dw-text-secondary);
+	font-weight: 600;
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	border-bottom: 1px solid var(--dw-border);
+}
+
+.compareTable tbody td {
+	padding: 1rem 1.25rem;
+	color: var(--dw-text);
+	border-bottom: 1px solid var(--dw-border);
+	vertical-align: top;
+}
+
+.compareTable tbody tr:last-child td {
+	border-bottom: none;
+}
+
+.compareTable tbody tr.highlight {
+	background: rgba(59, 130, 246, 0.04);
+}
+
+.compareTable tbody tr.highlight td {
+	color: var(--dw-text);
+	font-weight: 500;
+}
+
+.compareTable tbody tr.highlight td:first-child {
+	font-weight: 700;
+	color: var(--dw-primary);
+}
+
+.compareCaption {
+	margin-top: 1.25rem;
+	text-align: center;
+	font-size: 0.95rem;
+	color: var(--dw-text-secondary);
+}
+
+/* ---------- Promises / guarantees section ---------- */
+.promiseGrid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.25rem;
+	margin-top: 2.5rem;
+}
+
+@media (min-width: 768px) {
+	.promiseGrid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.promiseCard {
+	background: var(--dw-bg-elevated);
+	border: 1px solid var(--dw-border);
+	border-radius: 0.875rem;
+	padding: 1.75rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.promiseTitle {
+	font-size: 1.05rem;
+	font-weight: 600;
+	color: var(--dw-text);
+	margin: 0;
+}
+
+.promiseBody {
+	font-size: 0.95rem;
+	line-height: 1.65;
+	color: var(--dw-text-secondary);
+	margin: 0;
+}
+
+.promiseBody strong {
+	color: var(--dw-text);
+}
+
+/* ---------- Final CTA ---------- */
+.finalCta {
+	padding: 6rem 1.5rem;
+	background: linear-gradient(135deg, var(--dw-bg-sunken), var(--dw-bg-elevated));
+	text-align: center;
+}
+
+.finalCtaInner {
+	max-width: 720px;
+	margin: 0 auto;
+}
+
+.finalCtaTitle {
+	font-size: clamp(1.875rem, 4vw, 2.75rem);
+	font-weight: 700;
+	color: var(--dw-text);
+	margin: 0 0 1rem;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+}
+
+.finalCtaBody {
+	font-size: clamp(1rem, 1.8vw, 1.125rem);
+	line-height: 1.7;
+	color: var(--dw-text-secondary);
+	margin: 0 auto 2rem;
+	max-width: 580px;
+}
+
+.finalCtaButton {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.875rem 1.75rem;
+	background: var(--dw-primary);
+	color: #fff;
+	font-weight: 600;
+	font-size: 1rem;
+	border-radius: 0.625rem;
+	text-decoration: none;
+	transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.finalCtaButton:hover {
+	background: var(--dw-primary-hover);
+	transform: translateY(-1px);
+	color: #fff;
+	text-decoration: none;
+}
+
+.finalCtaSecondary {
+	display: block;
+	margin-top: 1.25rem;
+	font-size: 0.875rem;
+	color: var(--dw-text-secondary);
+}
+
+/* ---------- Inline FAQ (Timeline page) ---------- */
+.inlineFaq {
+	max-width: 760px;
+	margin: 0 auto;
+}
+
+.inlineFaqItem {
+	border-bottom: 1px solid var(--dw-border);
+	padding: 1.5rem 0;
+}
+
+.inlineFaqItem:first-child {
+	padding-top: 0;
+}
+
+.inlineFaqItem:last-child {
+	border-bottom: none;
+}
+
+.inlineFaqQuestion {
+	font-size: 1.05rem;
+	font-weight: 600;
+	color: var(--dw-text);
+	margin: 0 0 0.5rem;
+}
+
+.inlineFaqAnswer {
+	font-size: 0.95rem;
+	line-height: 1.7;
+	color: var(--dw-text-secondary);
+	margin: 0;
+}
+
+/* ---------- Reveal-on-scroll (matches homepage pattern) ---------- */
+.revealOnScroll {
+	opacity: 0;
+	transform: translateY(1rem);
+	transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.revealOnScroll.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.revealOnScroll {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+	.painCard,
+	.finalCtaButton {
+		transition: none;
+	}
+}

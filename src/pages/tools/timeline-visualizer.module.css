@@ -183,48 +183,6 @@
   text-decoration: none;
 }
 
-.mapSection {
-  position: relative;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 1rem 2rem 0;
-}
-
-.mapGrid {
-  display: grid;
-  grid-template-columns: 1fr 350px;
-  gap: 1rem;
-}
-
-.mapColumn {
-  position: relative;
-}
-
-.mapWrapper {
-  position: relative;
-}
-
-.sampleOverlay {
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 0.5rem 1.25rem;
-  border-radius: 8px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  z-index: 1000;
-  pointer-events: none;
-  white-space: nowrap;
-  backdrop-filter: blur(4px);
-}
-
-.listColumn {
-  /* Column for the points list */
-}
-
 .instructionsSection {
   max-width: 1200px;
   margin: 2rem auto;
@@ -432,6 +390,95 @@
   color: var(--ifm-color-emphasis-700);
 }
 
+/* Post-visualization CTA — slim ribbon under the map after a real upload.
+   Sits between the workspace and the bottomCtaPanel. Dismissible. */
+.postVizCta {
+  position: relative;
+  max-width: 1400px;
+  margin: 1.25rem auto 0;
+  padding: 1.25rem 3rem 1.25rem 1.5rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  animation: timelineFadeSlideUp 0.4s ease-out;
+}
+
+@keyframes timelineFadeSlideUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.postVizCtaDismiss {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.6rem;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.2rem 0.45rem;
+  transition: color 0.15s;
+}
+
+.postVizCtaDismiss:hover {
+  color: white;
+}
+
+.postVizCtaText {
+  flex: 1;
+  min-width: 240px;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.postVizCtaText strong {
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+.postVizCtaButton {
+  flex-shrink: 0;
+  display: inline-block;
+  background: white;
+  color: #1a1a2e;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.postVizCtaButton:hover {
+  background: #e2e8f0;
+  color: #1a1a2e;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .postVizCta {
+    margin: 1rem 1rem 0;
+    padding: 1rem 2.5rem 1rem 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .postVizCtaButton {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 /* Bottom CTA Panel */
 .bottomCtaPanel {
   max-width: 1400px;
@@ -458,77 +505,6 @@
   opacity: 0.95;
   font-size: 1rem;
   line-height: 1.6;
-}
-
-/* Post-visualization CTA */
-.postVizCta {
-  position: relative;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  border-radius: 12px;
-  padding: 1.5rem 2.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  color: white;
-  animation: fadeSlideUp 0.5s ease-out;
-}
-
-@keyframes fadeSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.postVizCtaDismiss {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.75rem;
-  background: none;
-  border: none;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 1.5rem;
-  line-height: 1;
-  cursor: pointer;
-  padding: 0.25rem 0.5rem;
-  transition: color 0.2s;
-}
-
-.postVizCtaDismiss:hover {
-  color: white;
-}
-
-.postVizCtaText {
-  margin: 0 0 1rem 0;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.postVizCtaText strong {
-  color: #60a5fa;
-}
-
-.postVizCtaButton {
-  display: inline-block;
-  background: #fff;
-  color: #1a1a2e;
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 0.75rem 2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.2s ease, transform 0.15s ease;
-}
-
-.postVizCtaButton:hover {
-  background: #e2e8f0;
-  color: #1a1a2e;
-  text-decoration: none;
-  transform: translateY(-1px);
 }
 
 /* Dark mode adjustments */
@@ -592,36 +568,6 @@
     font-size: 0.95rem;
   }
 
-  .postVizCta {
-    padding: 1.25rem 1rem;
-    padding-right: 2rem;
-  }
-
-  .postVizCtaText {
-    font-size: 0.95rem;
-  }
-
-  .postVizCtaButton {
-    width: 100%;
-    text-align: center;
-  }
-
-  .sampleOverlay {
-    font-size: 0.75rem;
-    white-space: normal;
-    text-align: center;
-    max-width: 90%;
-  }
-
-  .mapSection {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .mapGrid {
-    grid-template-columns: 1fr;
-  }
-
   .infoSection {
     padding: 0 1rem;
     margin-top: 2rem;
@@ -654,78 +600,69 @@
   }
 }
 
-/* Tablet responsive - stack map and list vertically */
-@media (max-width: 1024px) {
-  .mapGrid {
-    grid-template-columns: 1fr;
-  }
+/* Workspace — panel (left) + map (right) */
 
-  .listColumn {
-    order: 2;
-  }
+.workspaceSection {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem 0;
 }
 
-/* Year Filter Section */
-.filterSection {
-  display: flex;
-  align-items: center;
+.workspaceGrid {
+  display: grid;
+  grid-template-columns: 720px minmax(0, 1fr);
   gap: 1rem;
-  padding: 1rem;
-  background: var(--ifm-color-emphasis-100);
-  border: 1px solid var(--ifm-color-emphasis-200);
-  border-radius: 8px;
-  margin-bottom: 1rem;
+  height: min(70vh, 720px);
 }
 
-.filterLabel {
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: var(--ifm-font-color-base);
-  margin: 0;
+@media (max-width: 1280px) {
+  .workspaceGrid {
+    grid-template-columns: 620px minmax(0, 1fr);
+  }
 }
 
-.yearSelect {
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 6px;
-  background: var(--ifm-background-color);
-  color: var(--ifm-font-color-base);
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: all 0.2s;
-  min-width: 250px;
-}
-
-.yearSelect:hover {
-  border-color: var(--ifm-color-primary);
-}
-
-.yearSelect:focus {
-  outline: none;
-  border-color: var(--ifm-color-primary);
-  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.1);
-}
-
-.filterInfo {
-  color: var(--ifm-color-primary);
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-left: auto;
+@media (max-width: 1024px) {
+  .workspaceGrid {
+    grid-template-columns: 520px minmax(0, 1fr);
+    height: 60vh;
+  }
 }
 
 @media (max-width: 768px) {
-  .filterSection {
-    flex-direction: column;
-    align-items: stretch;
+  .workspaceGrid {
+    grid-template-columns: 1fr;
+    height: auto;
+    grid-template-rows: 50vh auto;
   }
+  .panelColumn {
+    order: 2;
+    height: 60vh;
+  }
+  .mapColumn {
+    order: 1;
+  }
+}
 
-  .yearSelect {
-    width: 100%;
-    min-width: auto;
-  }
+.panelColumn {
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+}
 
-  .filterInfo {
-    margin-left: 0;
-    text-align: center;
-  }
+.mapColumn {
+  position: relative;
+  min-width: 0;
+  height: 100%;
+}
+
+.mapLoading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.875rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
 }

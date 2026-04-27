@@ -44,7 +44,7 @@ What truly sets Dawarich apart is its unwavering commitment to user privacy and 
 | ------------------------- | ------------------------------------------------------------------------------------------------------- |
 | **Automatic Journaling**  | Passively records routes and places visited without manual input.                                       |
 | **Rich Visualizations**   | Includes interactive maps, trip summaries, statistics, and a "Scratch Map" of explored areas.           |
-| **Robust Privacy**        | European-based, GDPR compliant, with end-to-end encryption.                                             |
+| **Robust Privacy**        | European-based, GDPR compliant, encrypted in transit (SSL/TLS) and at rest (LUKS).                       |
 | **Data Portability**      | Features tools for importing and exporting your entire location history, including a Google Timeline visualizer. |
 | **Deployment Choice**     | Offers both a user-friendly Cloud subscription and a free, open-source self-hosted option.               |
 

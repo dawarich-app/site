@@ -5,11 +5,12 @@ import FormatConverter from '@site/src/components/FormatConverter';
 import { parseKML } from '@site/src/utils/formatParsers';
 import { parseKMZ, toGPX } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './converter.module.css';
 
 const pageTitle = "Free KMZ to GPX Converter - Extract and Convert Google Earth Files";
 const pageDescription = "Convert KMZ files to GPX format instantly. Free, privacy-first online converter. Works entirely in your browser - no upload required.";
-const pageUrl = "https://dawarich.app/tools/kmz-to-gpx";
+const pageUrl = "https://dawarich.app/tools/kmz-to-gpx/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 export default function KMZToGPX() {
@@ -121,6 +122,7 @@ export default function KMZToGPX() {
           />
         </div>
       </div>
+        <RelatedTools slug="kmz-to-gpx" />
     </Layout>
   );
 }

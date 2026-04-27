@@ -4,11 +4,12 @@ import Head from '@docusaurus/Head';
 import FormatConverter from '@site/src/components/FormatConverter';
 import { parseKMZ } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './converter.module.css';
 
 const pageTitle = "Free KMZ to KML Converter - Extract Google Earth Files Online";
 const pageDescription = "Convert KMZ files to KML format instantly. Free, privacy-first online converter to extract and decompress KMZ files. Works entirely in your browser - no upload required.";
-const pageUrl = "https://dawarich.app/tools/kmz-to-kml";
+const pageUrl = "https://dawarich.app/tools/kmz-to-kml/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 export default function KMZToKML() {
@@ -118,6 +119,7 @@ export default function KMZToKML() {
           />
         </div>
       </div>
+        <RelatedTools slug="kmz-to-kml" />
     </Layout>
   );
 }

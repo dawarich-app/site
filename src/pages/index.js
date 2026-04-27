@@ -169,6 +169,83 @@ export default function Home() {
 					name="twitter:image"
 					content="https://dawarich.app/img/meta-image.jpg"
 				/>
+
+				{/* JSON-LD: Organization + WebSite + SoftwareApplication */}
+				<script type="application/ld+json">
+					{JSON.stringify({
+						"@context": "https://schema.org",
+						"@graph": [
+							{
+								"@type": "Organization",
+								"@id": "https://dawarich.app/#organization",
+								name: "Dawarich",
+								url: "https://dawarich.app/",
+								logo: "https://dawarich.app/img/logo.svg",
+								founder: {
+									"@type": "Person",
+									name: "Evgenii Burmakin",
+									url: "https://github.com/Freika",
+									sameAs: ["https://github.com/Freika"],
+								},
+								sameAs: [
+									"https://github.com/Freika/dawarich",
+									"https://x.com/freymakesstuff",
+									"https://mastodon.social/@dawarich",
+									"https://reddit.com/r/dawarich",
+									"https://discord.gg/pHsBjpt5J8",
+								],
+							},
+							{
+								"@type": "WebSite",
+								"@id": "https://dawarich.app/#website",
+								url: "https://dawarich.app/",
+								name: "Dawarich",
+								publisher: { "@id": "https://dawarich.app/#organization" },
+								inLanguage: "en",
+							},
+							{
+								"@type": "SoftwareApplication",
+								"@id": "https://dawarich.app/#app",
+								name: "Dawarich",
+								url: "https://dawarich.app/",
+								applicationCategory: "LifestyleApplication",
+								operatingSystem: "Web, iOS, Android, Self-hosted (Docker)",
+								description:
+									"Privacy-first alternative to Google Timeline. Import your location history, keep it forever. Self-hostable, open source, no ads, no data selling.",
+								offers: [
+									{
+										"@type": "Offer",
+										name: "Dawarich Cloud — Lite (annual)",
+										price: "49.99",
+										priceCurrency: "EUR",
+										url: "https://dawarich.app/#pricing",
+									},
+									{
+										"@type": "Offer",
+										name: "Dawarich Cloud — Pro (monthly)",
+										price: "17.99",
+										priceCurrency: "EUR",
+										url: "https://dawarich.app/#pricing",
+									},
+									{
+										"@type": "Offer",
+										name: "Dawarich Cloud — Pro (annual)",
+										price: "119.99",
+										priceCurrency: "EUR",
+										url: "https://dawarich.app/#pricing",
+									},
+									{
+										"@type": "Offer",
+										name: "Self-hosted",
+										price: "0",
+										priceCurrency: "EUR",
+										url: "https://dawarich.app/docs/self-hosting/introduction",
+									},
+								],
+							},
+						],
+					})}
+				</script>
 			</Head>
 			<HomepageHeader />
 			<main>

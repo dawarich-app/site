@@ -5,11 +5,12 @@ import FormatConverter from '@site/src/components/FormatConverter';
 import { parseFIT, getFITMetadata } from '@site/src/utils/fitParser';
 import { toGPX } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './converter.module.css';
 
 const pageTitle = "Free FIT to GPX Converter - Convert Garmin Activity Files Online";
 const pageDescription = "Convert Garmin FIT files to GPX format instantly. Free, privacy-first online converter for cycling, running, and fitness activities. Works entirely in your browser - no upload required.";
-const pageUrl = "https://dawarich.app/tools/fit-to-gpx";
+const pageUrl = "https://dawarich.app/tools/fit-to-gpx/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 export default function FITToGPX() {
@@ -209,6 +210,7 @@ export default function FITToGPX() {
           />
         </div>
       </div>
+        <RelatedTools slug="fit-to-gpx" />
     </Layout>
   );
 }

@@ -1,16 +1,20 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useMemo, useEffect, lazy, Suspense } from 'react';
 import Layout from '@theme/Layout';
+import RelatedTools from '@site/src/components/RelatedTools';
 import Head from '@docusaurus/Head';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 import FileUploader from '@site/src/components/FileUploader';
-import TimelineMap from '@site/src/components/TimelineMap';
-import PointsList from '@site/src/components/PointsList';
+import TimelinePanel from '@site/src/components/TimelinePanel/TimelinePanel';
 import { parseTimeline } from '@site/src/utils/timelineParser';
-import { SAMPLE_POINTS, SAMPLE_PATHS } from '@site/src/utils/sampleBerlinData';
+import { SAMPLE_DAY } from '@site/src/utils/sampleBerlinData';
+import { buildDayIndex, buildYearStats, buildMonthGrid } from '@site/src/utils/timelineDays';
 import styles from './timeline-visualizer.module.css';
 
-const pageTitle = "Google Timeline Visualizer - View Your Location History on a Map";
-const pageDescription = "Free, privacy-first Google Timeline visualizer. View your location history on an interactive map. All processing happens in your browser — no data sent to any server.";
-const pageUrl = "https://dawarich.app/tools/timeline-visualizer";
+const TimelineMapV2 = lazy(() => import('@site/src/components/TimelineMapV2'));
+
+const pageTitle = "Google Timeline Visualizer - View Your Location History as a Calendar";
+const pageDescription = "Free, privacy-first Google Timeline visualizer. Browse your location history day-by-day with a calendar heat-grid, visit list, journey legs, and activity replay. All processing happens in your browser.";
+const pageUrl = "https://dawarich.app/tools/timeline-visualizer/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 const faqItems = [
@@ -48,183 +52,188 @@ const faqItems = [
   }
 ];
 
+function nextDateKey(currentKey, direction) {
+  if (!currentKey) return null;
+  const [y, m, d] = currentKey.split('-').map(Number);
+  const date = new Date(Date.UTC(y, m - 1, d));
+  date.setUTCDate(date.getUTCDate() + (direction === 'prev' ? -1 : 1));
+  return `${date.getUTCFullYear()}-${String(date.getUTCMonth() + 1).padStart(2, '0')}-${String(date.getUTCDate()).padStart(2, '0')}`;
+}
+
+function nextMonthKey(monthKey, direction) {
+  const [y, m] = monthKey.split('-').map(Number);
+  const date = new Date(y, m - 1 + (direction === 'prev' ? -1 : 1), 1);
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+}
+
 export default function TimelineVisualizer() {
   const [uploadedFiles, setUploadedFiles] = useState([]);
-  const [selectedPoint, setSelectedPoint] = useState(null);
   const [points, setPoints] = useState([]);
   const [paths, setPaths] = useState([]);
-  const [selectedYear, setSelectedYear] = useState('all');
-  const [yearStats, setYearStats] = useState({});
-  const [ctaDismissed, setCtaDismissed] = useState(false);
+  const [dayIndex, setDayIndex] = useState(() => new Map());
+  const [yearStats, setYearStats] = useState(() => new Map());
+
+  const [selectedYear, setSelectedYear] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [visibleMonth, setVisibleMonth] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const [selectedVisitId, setSelectedVisitId] = useState(null);
+  const [hoveredEntry, setHoveredEntry] = useState(null);
+  const [expandedTrackId, setExpandedTrackId] = useState(null);
+  const [replayState, setReplayState] = useState(null);
+
   const [isProcessing, setIsProcessing] = useState(false);
-  const [processingProgress, setProcessingProgress] = useState({ loaded: 0, file: '', fileIndex: 0, fileCount: 0 });
+  const [ctaDismissed, setCtaDismissed] = useState(false);
 
+  const isShowingSample = uploadedFiles.length === 0 && points.length === 0;
+
+  // Demo: synthetic dayIndex/yearStats from SAMPLE_DAY
+  const demoDayIndex = useMemo(() => new Map([[SAMPLE_DAY.date, SAMPLE_DAY]]), []);
+  const demoYearStats = useMemo(() => new Map([[2024, { months: new Set(['2024-06']), totalDays: 1, busiestSeconds: SAMPLE_DAY.summary.trackedSeconds }]]), []);
+
+  const effectiveDayIndex = isShowingSample ? demoDayIndex : dayIndex;
+  const effectiveYearStats = isShowingSample ? demoYearStats : yearStats;
+
+  // Default selection on file load
+  useEffect(() => {
+    if (isShowingSample) {
+      setSelectedYear(2024);
+      setSelectedDate(SAMPLE_DAY.date);
+      setVisibleMonth(SAMPLE_DAY.date.slice(0, 7));
+      return;
+    }
+    if (yearStats.size === 0) return;
+    const latestYear = Math.max(...yearStats.keys());
+    const days = [...dayIndex.keys()].filter((k) => k.startsWith(String(latestYear))).sort();
+    const latestDay = days[days.length - 1];
+    setSelectedYear(latestYear);
+    setSelectedDate(latestDay);
+    setVisibleMonth(latestDay.slice(0, 7));
+  }, [dayIndex, yearStats, isShowingSample]);
+
+  const currentDay = useMemo(
+    () => selectedDate ? effectiveDayIndex.get(selectedDate) : null,
+    [effectiveDayIndex, selectedDate]
+  );
+
+  const monthGrid = useMemo(() => {
+    if (!visibleMonth || !selectedYear) return null;
+    return buildMonthGrid(effectiveDayIndex, effectiveYearStats, selectedYear, visibleMonth);
+  }, [effectiveDayIndex, effectiveYearStats, selectedYear, visibleMonth]);
+
+  const filteredEntries = useMemo(() => {
+    if (!currentDay) return [];
+    if (!searchQuery) return currentDay.entries;
+    const q = searchQuery.toLowerCase();
+    return currentDay.entries.filter((e) => e.type === 'journey' || e.searchTokens.includes(q));
+  }, [currentDay, searchQuery]);
+
+  // Raw points on the selected day (for Records.json fallback)
+  const rawPointsForDay = useMemo(() => {
+    if (!selectedDate) return [];
+    return points.filter((p) => {
+      if (p.type !== 'location_record' || !p.timestamp) return false;
+      const d = new Date(p.timestamp);
+      const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+      return key === selectedDate;
+    });
+  }, [points, selectedDate]);
+
+  // File parsing (simplified — keep the streaming behavior of the previous implementation if desired)
   const handleFilesLoaded = useCallback(async (files) => {
-    console.log('='.repeat(60));
-    console.log('[Timeline Visualizer] Starting to process files');
-    console.log(`[Timeline Visualizer] Number of files: ${files.length}`);
-
     setUploadedFiles(files);
     setIsProcessing(true);
-    setProcessingProgress({ loaded: 0, file: '', fileIndex: 0, fileCount: files.length });
-
-    // Parse all files and stream points in batches
-    const BATCH_SIZE = 5000;
     const allPoints = [];
     const allPaths = [];
-
-    for (let fileIndex = 0; fileIndex < files.length; fileIndex++) {
-      const file = files[fileIndex];
-
+    for (const file of files) {
       try {
-        console.log(`\n[Timeline Visualizer] Processing file ${fileIndex + 1}/${files.length}: ${file.filename}`);
-        console.log(`[Timeline Visualizer] File size: ${(file.size / 1024 / 1024).toFixed(2)} MB`);
-        console.log(`[Timeline Visualizer] File data type:`, Array.isArray(file.data) ? 'Array' : 'Object');
-
-        if (Array.isArray(file.data)) {
-          console.log(`[Timeline Visualizer] Array length: ${file.data.length}`);
-        } else {
-          console.log(`[Timeline Visualizer] Object keys:`, Object.keys(file.data).join(', '));
-        }
-
-        const startTime = Date.now();
         const parsed = parseTimeline(file.data);
-        const endTime = Date.now();
-
-        console.log(`[Timeline Visualizer] ✓ Parsed in ${((endTime - startTime) / 1000).toFixed(2)}s`);
-        console.log(`[Timeline Visualizer]   Format: ${parsed.metadata?.format || 'unknown'}`);
-        console.log(`[Timeline Visualizer]   Points extracted: ${parsed.points.length}`);
-        console.log(`[Timeline Visualizer]   Paths extracted: ${parsed.paths.length}`);
-
-        // Add paths
-        if (parsed.paths.length > 0) {
-          for (let i = 0; i < parsed.paths.length; i++) {
-            allPaths.push(parsed.paths[i]);
-          }
-        }
-
-        // Stream points to map in batches to keep UI responsive
-        console.log(`[Timeline Visualizer] Streaming ${parsed.points.length} points in batches of ${BATCH_SIZE}...`);
-        let batchCount = 0;
-
-        for (let i = 0; i < parsed.points.length; i++) {
-          allPoints.push(parsed.points[i]);
-
-          // Every BATCH_SIZE points, update the map and progress
-          if (allPoints.length % BATCH_SIZE === 0) {
-            batchCount++;
-            console.log(`[Timeline Visualizer]   Batch ${batchCount}: ${allPoints.length} points loaded`);
-
-            // Update map with current points
-            setPoints([...allPoints]);
-            setProcessingProgress({ loaded: allPoints.length, file: file.filename, fileIndex: fileIndex + 1, fileCount: files.length });
-
-            // Yield to browser to prevent freezing
-            await new Promise(resolve => setTimeout(resolve, 0));
-          }
-        }
-
-        // Update with any remaining points
-        if (allPoints.length % BATCH_SIZE !== 0) {
-          console.log(`[Timeline Visualizer]   Final: ${allPoints.length} points loaded`);
-          setPoints([...allPoints]);
-          setProcessingProgress({ loaded: allPoints.length, file: file.filename, fileIndex: fileIndex + 1, fileCount: files.length });
-        }
-
-      } catch (error) {
-        console.error(`[Timeline Visualizer] ✗ Error parsing ${file.filename}:`, error);
-        console.error('[Timeline Visualizer] Error stack:', error.stack);
+        allPoints.push(...parsed.points);
+        allPaths.push(...parsed.paths);
+      } catch (err) {
+        console.error('[Timeline Visualizer] Parse error', err);
       }
     }
-
-    console.log('\n' + '='.repeat(60));
-    console.log(`[Timeline Visualizer] Processing complete!`);
-    console.log(`[Timeline Visualizer] Total points: ${allPoints.length}`);
-    console.log(`[Timeline Visualizer] Total paths: ${allPaths.length}`);
-
-    // Calculate year statistics
-    console.log('[Timeline Visualizer] Calculating year statistics...');
-    const yearCounts = {};
-
-    for (let i = 0; i < allPoints.length; i++) {
-      const point = allPoints[i];
-      if (point.timestamp) {
-        const year = new Date(point.timestamp).getFullYear();
-        if (!isNaN(year)) {
-          yearCounts[year] = (yearCounts[year] || 0) + 1;
-        }
-      }
-    }
-
-    console.log(`[Timeline Visualizer] Year statistics:`, yearCounts);
-
-    // Default to the earliest year (first chronologically) for better initial performance
-    const years = Object.keys(yearCounts).map(Number).sort((a, b) => a - b);
-    const defaultYear = years.length > 0 ? String(years[0]) : 'all';
-
-    console.log(`[Timeline Visualizer] Defaulting to year: ${defaultYear} (${yearCounts[defaultYear]?.toLocaleString() || 0} points)`);
-    console.log('='.repeat(60));
-
-    // Set final state
     setPoints(allPoints);
     setPaths(allPaths);
-    setYearStats(yearCounts);
-    setSelectedYear(defaultYear);
+    const idx = buildDayIndex(allPoints, allPaths);
+    setDayIndex(idx);
+    setYearStats(buildYearStats(idx));
     setIsProcessing(false);
   }, []);
 
   const handleClear = useCallback(() => {
     setUploadedFiles([]);
-    setSelectedPoint(null);
     setPoints([]);
     setPaths([]);
+    setDayIndex(new Map());
+    setYearStats(new Map());
+    setSelectedYear(null);
+    setSelectedDate(null);
+    setVisibleMonth(null);
+    setSelectedVisitId(null);
+    setExpandedTrackId(null);
+    setReplayState(null);
+    setCtaDismissed(false);
   }, []);
 
-  const handlePointClick = useCallback((point) => {
-    setSelectedPoint(point);
-  }, []);
-
-  const handleYearChange = useCallback((event) => {
-    setSelectedYear(event.target.value);
-    setSelectedPoint(null);
-  }, []);
-
-  const isShowingSample = uploadedFiles.length === 0;
-
-  // Filter points by selected year
-  const filteredPoints = React.useMemo(() => {
-    if (selectedYear === 'all') {
-      return points;
+  // Handlers wired to TimelinePanel
+  const onYearChange = useCallback((year) => {
+    setSelectedYear(year);
+    const monthsForYear = [...effectiveDayIndex.keys()].filter((k) => k.startsWith(String(year))).sort();
+    if (monthsForYear.length > 0) {
+      const latestDay = monthsForYear[monthsForYear.length - 1];
+      setSelectedDate(latestDay);
+      setVisibleMonth(latestDay.slice(0, 7));
     }
+    setSelectedVisitId(null);
+    setExpandedTrackId(null);
+    setReplayState(null);
+  }, [effectiveDayIndex]);
 
-    const year = parseInt(selectedYear);
-    return points.filter(point => {
-      if (!point.timestamp) return false;
-      const pointYear = new Date(point.timestamp).getFullYear();
-      return pointYear === year;
-    });
-  }, [points, selectedYear]);
+  const onSelectDay = useCallback((date) => {
+    setSelectedDate(date);
+    setSelectedVisitId(null);
+    setExpandedTrackId(null);
+    setReplayState(null);
+  }, []);
 
-  // Filter paths by selected year (based on startTimestamp or endTimestamp)
-  const filteredPaths = React.useMemo(() => {
-    if (selectedYear === 'all') {
-      return paths;
-    }
+  const onPrevDay = useCallback(() => {
+    setSelectedDate((d) => nextDateKey(d, 'prev'));
+    setSelectedVisitId(null);
+    setExpandedTrackId(null);
+    setReplayState(null);
+  }, []);
 
-    const year = parseInt(selectedYear);
-    return paths.filter(path => {
-      // Check if path's start or end timestamp falls in the selected year
-      if (path.startTimestamp) {
-        const pathYear = new Date(path.startTimestamp).getFullYear();
-        if (pathYear === year) return true;
-      }
-      if (path.endTimestamp) {
-        const pathYear = new Date(path.endTimestamp).getFullYear();
-        if (pathYear === year) return true;
-      }
-      return false;
-    });
-  }, [paths, selectedYear]);
+  const onNextDay = useCallback(() => {
+    setSelectedDate((d) => nextDateKey(d, 'next'));
+    setSelectedVisitId(null);
+    setExpandedTrackId(null);
+    setReplayState(null);
+  }, []);
+
+  const onPrevMonth = useCallback(() => setVisibleMonth((m) => nextMonthKey(m, 'prev')), []);
+  const onNextMonth = useCallback(() => setVisibleMonth((m) => nextMonthKey(m, 'next')), []);
+
+  const onSelectVisit = useCallback((visitId) => setSelectedVisitId(visitId), []);
+  const onHoverEntry = useCallback((entry) => setHoveredEntry(entry), []);
+  const onUnhoverEntry = useCallback(() => setHoveredEntry(null), []);
+  const onToggleTrack = useCallback((trackId) => {
+    setExpandedTrackId((prev) => prev === trackId ? null : trackId);
+    setReplayState(null);
+  }, []);
+
+  // Keyboard arrow nav
+  useEffect(() => {
+    const handler = (e) => {
+      if (e.target.matches?.('input, textarea, select')) return;
+      if (e.key === 'ArrowLeft') onPrevDay();
+      else if (e.key === 'ArrowRight') onNextDay();
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [onPrevDay, onNextDay]);
 
   return (
     <Layout
@@ -364,9 +373,8 @@ export default function TimelineVisualizer() {
         <div className={styles.heroSection}>
           <div className={styles.header}>
             <h1>Google Timeline Visualizer</h1>
-            <p>Free, privacy-first tool to visualize your Google Timeline location history on an interactive map. Upload your exported JSON files — all processing happens in your browser.</p>
+            <p>Free, privacy-first tool to visualize your Google Timeline location history. Browse day by day with a calendar heat-grid, visit list, and activity replay.</p>
           </div>
-
           <div className={styles.uploadRow}>
             <FileUploader onFilesLoaded={handleFilesLoaded} onClear={handleClear} />
             <div className={styles.uploadMeta}>
@@ -408,102 +416,91 @@ export default function TimelineVisualizer() {
           </div>
         </div>
 
-        <div className={styles.mapSection}>
-          {uploadedFiles.length > 0 && !ctaDismissed && points.length > 0 && (
-            <div className={styles.postVizCta}>
-              <button
-                className={styles.postVizCtaDismiss}
-                onClick={() => setCtaDismissed(true)}
-                aria-label="Dismiss"
-              >
-                &times;
-              </button>
-              <p className={styles.postVizCtaText}>
-                You just visualized <strong>{points.length.toLocaleString()}</strong> location points
-                {Object.keys(yearStats).length > 0 && (
-                  <> from <strong>{Math.min(...Object.keys(yearStats).map(Number))}</strong> to <strong>{Math.max(...Object.keys(yearStats).map(Number))}</strong></>
-                )}.
-                {' '}This view disappears when you close this tab. Keep your location history forever — and add to it automatically.
-              </p>
-              <a
-                href="https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=post-viz-cta&utm_campaign=timeline-visualizer"
-                className={styles.postVizCtaButton}
-              >
-                Start Free Trial — 7 Days &rarr;
-              </a>
-            </div>
-          )}
-
-          {points.length > 0 && (
-            <div className={styles.filterSection}>
-              <label htmlFor="yearFilter" className={styles.filterLabel}>
-                Filter by Year:
-              </label>
-              <select
-                id="yearFilter"
-                value={selectedYear}
-                onChange={handleYearChange}
-                className={styles.yearSelect}
-              >
-                <option value="all">
-                  All Years ({points.length.toLocaleString()} points)
-                </option>
-                {Object.keys(yearStats)
-                  .sort((a, b) => b - a)
-                  .map(year => (
-                    <option key={year} value={year}>
-                      {year} ({yearStats[year].toLocaleString()} points)
-                    </option>
-                  ))}
-              </select>
-              {selectedYear !== 'all' && (
-                <span className={styles.filterInfo}>
-                  Showing {filteredPoints.length.toLocaleString()} of {points.length.toLocaleString()} points
-                </span>
-              )}
-            </div>
-          )}
-
-          <div className={styles.mapGrid}>
-            <div className={styles.mapColumn}>
-              <div className={styles.mapWrapper}>
-                <TimelineMap
-                  points={isShowingSample ? SAMPLE_POINTS : filteredPoints}
-                  paths={isShowingSample ? SAMPLE_PATHS : filteredPaths}
-                  onPointClick={isShowingSample ? () => {} : handlePointClick}
-                  selectedPointId={selectedPoint?.id}
-                />
-                {isShowingSample && (
-                  <div className={styles.sampleOverlay}>
-                    Sample data — drop your files above to see your own history
-                  </div>
-                )}
-              </div>
-            </div>
-
-            <div className={styles.listColumn}>
-              <PointsList
-                points={isShowingSample ? SAMPLE_POINTS : filteredPoints}
-                selectedPointId={selectedPoint?.id}
-                onPointSelect={isShowingSample ? () => {} : handlePointClick}
-                isProcessing={isProcessing}
-                processingProgress={processingProgress}
+        <div className={styles.workspaceSection}>
+          <div className={styles.workspaceGrid}>
+            <div className={styles.panelColumn}>
+              <TimelinePanel
+                monthGrid={monthGrid}
+                selectedDate={selectedDate}
+                selectedYear={selectedYear}
+                yearStats={effectiveYearStats}
+                searchQuery={searchQuery}
+                day={currentDay}
+                filteredEntries={filteredEntries}
+                rawPointCount={rawPointsForDay.length}
+                selectedVisitId={selectedVisitId}
+                expandedTrackId={expandedTrackId}
+                replayState={replayState}
+                onYearChange={onYearChange}
+                onSearchChange={setSearchQuery}
+                onSelectDay={onSelectDay}
+                onPrevMonth={onPrevMonth}
+                onNextMonth={onNextMonth}
+                onPrevDay={onPrevDay}
+                onNextDay={onNextDay}
+                onSelectVisit={onSelectVisit}
+                onHoverEntry={onHoverEntry}
+                onUnhoverEntry={onUnhoverEntry}
+                onToggleTrack={onToggleTrack}
+                onReplayChange={setReplayState}
               />
             </div>
-          </div>
-
-          {uploadedFiles.length === 0 && (
-            <div className={styles.preCtaPanel}>
-              <div className={styles.preCtaContent}>
-                <span className={styles.preCtaIcon}>
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </span>
-                <span>Looking for a long-term Google Timeline replacement? <a href="https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-visualizer">Dawarich</a> tracks your location history automatically, with full data ownership and privacy. <a href="/blog/migrating-from-google-location-history-to-dawarich">Learn how to migrate</a>.</span>
-              </div>
+            <div className={styles.mapColumn}>
+              <BrowserOnly>
+                {() => (
+                  <Suspense fallback={<div className={styles.mapLoading}>Loading map…</div>}>
+                    <TimelineMapV2
+                      day={currentDay}
+                      rawPoints={rawPointsForDay}
+                      selectedVisitId={selectedVisitId}
+                      hoveredEntry={hoveredEntry}
+                      replayState={replayState}
+                      isSample={isShowingSample}
+                      onVisitClick={onSelectVisit}
+                      onTrackClick={onToggleTrack}
+                      onReplayChange={setReplayState}
+                    />
+                  </Suspense>
+                )}
+              </BrowserOnly>
             </div>
-          )}
+          </div>
+        </div>
+
+        {!isShowingSample && !ctaDismissed && points.length > 0 && (
+          <div className={styles.postVizCta}>
+            <button
+              type="button"
+              className={styles.postVizCtaDismiss}
+              onClick={() => setCtaDismissed(true)}
+              aria-label="Dismiss"
+            >
+              &times;
+            </button>
+            <p className={styles.postVizCtaText}>
+              You just visualized <strong>{points.length.toLocaleString()}</strong> location points
+              {yearStats.size > 0 && (
+                <>
+                  {' '}from <strong>{Math.min(...yearStats.keys())}</strong> to <strong>{Math.max(...yearStats.keys())}</strong>
+                </>
+              )}.
+              {' '}This view disappears when you close this tab. Keep your location history forever — and add to it automatically.
+            </p>
+            <a
+              href="https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=post-viz-cta&utm_campaign=timeline-visualizer"
+              className={styles.postVizCtaButton}
+            >
+              Start Free Trial — 7 Days &rarr;
+            </a>
+          </div>
+        )}
+
+        <div className={styles.bottomCtaPanel}>
+          <div className={styles.ctaContent}>
+            <h3>Looking for a Google Timeline Replacement?</h3>
+            <p>Dawarich is an open-source location tracking platform that gives you full control over your data. Import your Google Timeline export, track ongoing location from your phone, and visualize years of movement history — all self-hosted or in the cloud.</p>
+            <a href="https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=post-map-cta&utm_campaign=timeline-visualizer" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
+          </div>
         </div>
 
         <div className={styles.infoSection}>
@@ -578,14 +575,8 @@ export default function TimelineVisualizer() {
           </div>
         </div>
 
-        <div className={styles.bottomCtaPanel}>
-          <div className={styles.ctaContent}>
-            <h3>Looking for a Google Timeline Replacement?</h3>
-            <p>Dawarich is an open-source location tracking platform that gives you full control over your data. Import your Google Timeline export, track ongoing location from your phone, and visualize years of movement history — all self-hosted or in the cloud.</p>
-            <a href="https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=bottom-cta&utm_campaign=timeline-visualizer" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
-          </div>
-        </div>
       </div>
+      <RelatedTools slug="timeline-visualizer" />
     </Layout>
   );
 }

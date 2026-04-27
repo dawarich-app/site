@@ -7,11 +7,12 @@ import { mergeWithDedup } from '@site/src/utils/timelineDedup';
 import { timelineToConverterPoints } from '@site/src/utils/timelineToFormat';
 import { toGPX } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './timeline-merger.module.css';
 
 const pageTitle = "Google Timeline Data Merger - Combine Location History Exports";
 const pageDescription = "Free tool to merge multiple Google Timeline exports into one file. Smart deduplication removes overlapping data points. Combine Records.json, Semantic History, and phone exports. Privacy-first.";
-const pageUrl = "https://dawarich.app/tools/timeline-merger";
+const pageUrl = "https://dawarich.app/tools/timeline-merger/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 const FILE_COLORS = [
@@ -678,7 +679,7 @@ export default function TimelineMerger() {
                 {/* Post-upload CTA */}
                 <div className={styles.postCtaPanel}>
                   <h3>Never risk losing your location data again</h3>
-                  <p>Dawarich stores everything securely with full backup, end-to-end encryption, and an interactive map. Import your merged Timeline data and keep tracking automatically.</p>
+                  <p>Dawarich stores everything in EU data centers, encrypted in transit (SSL/TLS) and at rest (LUKS), with full backups and an interactive map. Import your merged Timeline data and keep tracking automatically.</p>
                   <a href="/?utm_source=tool&utm_medium=post-merge-cta&utm_campaign=timeline-merger" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
                 </div>
               </>
@@ -770,6 +771,7 @@ export default function TimelineMerger() {
           </div>
         </div>
       </div>
+        <RelatedTools slug="timeline-merger" />
     </Layout>
   );
 }

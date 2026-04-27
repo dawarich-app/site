@@ -5,11 +5,12 @@ import FormatConverter from '@site/src/components/FormatConverter';
 import { parseGeoJSON } from '@site/src/utils/formatParsers';
 import { toKMZ } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './converter.module.css';
 
 const pageTitle = "Free GeoJSON to KMZ Converter - Convert Geographic Data Online";
 const pageDescription = "Convert GeoJSON files to KMZ format instantly. Free, privacy-first online converter. Works entirely in your browser - no upload required.";
-const pageUrl = "https://dawarich.app/tools/geojson-to-kmz";
+const pageUrl = "https://dawarich.app/tools/geojson-to-kmz/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 export default function GeoJSONToKMZ() {
@@ -120,6 +121,7 @@ export default function GeoJSONToKMZ() {
           />
         </div>
       </div>
+        <RelatedTools slug="geojson-to-kmz" />
     </Layout>
   );
 }

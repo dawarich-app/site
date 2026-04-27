@@ -5,11 +5,12 @@ import FormatConverter from '@site/src/components/FormatConverter';
 import { parseKML } from '@site/src/utils/formatParsers';
 import { toGPX } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
+import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './converter.module.css';
 
 const pageTitle = "Free KML to GPX Converter - Convert Google Earth Files Online";
 const pageDescription = "Convert KML files to GPX format instantly. Free, privacy-first online converter for geographic data. Works entirely in your browser - no upload required.";
-const pageUrl = "https://dawarich.app/tools/kml-to-gpx";
+const pageUrl = "https://dawarich.app/tools/kml-to-gpx/";
 const imageUrl = "https://dawarich.app/img/meta-image.jpg";
 
 export default function KMLToGPX() {
@@ -121,6 +122,7 @@ export default function KMLToGPX() {
           />
         </div>
       </div>
+        <RelatedTools slug="kml-to-gpx" />
     </Layout>
   );
 }
