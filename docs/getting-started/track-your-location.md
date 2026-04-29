@@ -120,7 +120,6 @@ You may include %SAT as part of an OwnTracks tag like `&tag=satellites/%SAT`, al
 
 ## Home Assistant
 
-There is a way to have your geolocation data from Home Assistant in Dawarich. It might be useful for those who already have Home Assistant and don't want to use another app for tracking.
+You can run Dawarich directly on Home Assistant as a native app — no separate server needed. See the [Home Assistant installation guide](/docs/self-hosting/installation/home-assistant).
 
-For a customized integration, follow the guide available on GitHub: [Home Assistant integration](https://github.com/Freika/dawarich/discussions/77#discussioncomment-9904099).
-Alternatively, you can install the HACS integration: [dawarich-home-assistant](https://github.com/AlbinLind/dawarich-home-assistant).
+If you already have a Dawarich instance running elsewhere and want to send location data from Home Assistant to it, you can use a customized integration: [Home Assistant integration](https://github.com/Freika/dawarich/discussions/77#discussioncomment-9904099), or install the HACS integration: [dawarich-home-assistant](https://github.com/AlbinLind/dawarich-home-assistant).
