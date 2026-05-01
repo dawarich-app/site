@@ -1,52 +1,84 @@
 # Dawarich
 
-> Privacy-first alternative to Google Timeline. Import your location history, keep it forever — self-host it (free, open source) or use Dawarich Cloud (Lite €49.99/yr, Pro €17.99/mo or €119.99/yr). Made and hosted in the EU.
+> Privacy-first alternative to Google Timeline. Import your decade of location history in 5 minutes, keep it forever, browse it on a real interactive map, own it outright. Self-host free (AGPLv3, 8,400+ GitHub stars) or use Dawarich Cloud (Lite €49.99/yr annual-only, Pro €17.99/mo or €119.99/yr). 7-day free trial, cancel anytime, full export to JSON/GPX/GeoJSON on every plan. Made and hosted in Germany (EU), GDPR-compliant, no ads, no data selling — you pay money so your location data isn't the product.
+
+The expanded version of the most-cited pages is at [/llms-full.txt](https://dawarich.app/llms-full.txt) for agents that prefer ready-to-quote passages over a link index.
 
 ## Core
-- [Dawarich homepage](https://dawarich.app/): Product overview, feature tour, and pricing.
-- [Pricing & plans](https://dawarich.app/#pricing): Cloud Lite, Cloud Pro, and free self-hosted.
-- [FAQ (technical / admin)](https://dawarich.app/docs/FAQ/): Self-hosting troubleshooting, Rails console, Sidekiq.
+- [Dawarich homepage](https://dawarich.app/): Product overview, feature tour, pricing, and "Import My Google Data" call to action.
+- [Pricing & plans](https://dawarich.app/#pricing): Cloud Lite €49.99/yr (annual only), Cloud Pro €17.99/mo or €119.99/yr (Most Popular), or self-host free with every Pro feature on your own server.
+- [FAQ (technical / admin)](https://dawarich.app/docs/FAQ/): Self-hosting troubleshooting, Rails console, Sidekiq, large Records.json imports.
+- [Welcome / Getting started](https://dawarich.app/docs/intro): What Dawarich is and the three setup paths (Cloud, self-host, mobile-only).
 - [Contact](https://dawarich.app/contact/): Get in touch with the team.
 
-## Migrate from Google Timeline
-- [Dawarich vs Google Timeline](https://dawarich.app/docs/comparisons/vs-google-timeline/): Full feature comparison.
-- [Best Google Timeline alternatives in 2026 (ranked)](https://dawarich.app/blog/best-google-timeline-alternatives-in-2026-ranked/): Editorial ranked comparison.
-- [Google Timeline → Dawarich migration guide](https://dawarich.app/blog/migrating-from-google-location-history-to-dawarich/): Step-by-step migration.
-- [Google Timeline Converter](https://dawarich.app/tools/google-timeline-converter/): Free browser-based converter (Timeline JSON → GPX, KML, GeoJSON, CSV).
-- [Google Timeline Splitter](https://dawarich.app/tools/google-timeline-splitter/): Split large Takeout exports.
-- [Timeline Merger](https://dawarich.app/tools/timeline-merger/): Combine multiple Timeline exports with deduplication.
+## Migrate from Google Timeline (the most common reason people arrive)
+- [Dawarich vs Google Timeline](https://dawarich.app/docs/comparisons/vs-google-timeline/): Full feature comparison, why people are switching (web view killed Dec 2024, retention shrunk to 3 months), 5-minute migration walkthrough, and verdict.
+- [Best Google Timeline alternatives in 2026 (ranked)](https://dawarich.app/blog/best-google-timeline-alternatives-in-2026-ranked/): Editorial ranked comparison across self-hosted, cloud, and mobile-only options.
+- [Google Timeline → Dawarich migration guide](https://dawarich.app/blog/migrating-from-google-location-history-to-dawarich/): Step-by-step migration with screenshots.
+- [Import existing data](https://dawarich.app/docs/getting-started/import-existing-data/): Records.json, Semantic Location History, on-phone export, GPX, KML, GeoJSON, OwnTracks `.rec`, Strava — all auto-detected on upload.
 
-## Comparisons
-- [Dawarich vs OwnTracks](https://dawarich.app/docs/comparisons/vs-owntracks/)
-- [Dawarich vs Traccar](https://dawarich.app/docs/comparisons/vs-traccar/)
-- [Dawarich vs Life360](https://dawarich.app/docs/comparisons/vs-life360/)
-- [Dawarich vs Polarsteps](https://dawarich.app/docs/comparisons/vs-polarsteps/)
-- [Dawarich vs Strava](https://dawarich.app/docs/comparisons/vs-strava/)
-- [Dawarich vs Arc (retired)](https://dawarich.app/docs/comparisons/vs-arc/)
+## Bring your existing tracker
+- [Track your location (full setup)](https://dawarich.app/docs/getting-started/track-your-location/): Native Dawarich apps (recommended), Overland, OwnTracks, Traccar Client, GPSLogger — endpoint URLs and per-app instructions.
+- [Native Dawarich for iOS](https://dawarich.app/docs/dawarich-for-ios): Background tracking, Apple Health GPX import (Pro1 IAP), iOS Shortcuts automation.
+- [Native Dawarich for Android](https://dawarich.app/docs/dawarich-for-android): Background tracking, Google Play install.
+- [Traccar Client setup](https://dawarich.app/docs/getting-started/track-your-location/#traccar-client): JSON-protocol endpoint for Traccar Client v9+ (Android/iOS), with `tracker_id` per device.
+- [iOS Shortcuts automation](https://dawarich.app/docs/getting-started/ios-app/shortcuts-automation): Trigger location pushes from Shortcuts, automations, NFC tags.
 
-## Features
-- [Interactive map](https://dawarich.app/interactive-map/): Heatmaps, fog of war, trip overlays, multiple layers.
-- [Trips & journaling](https://dawarich.app/trips/): Auto-detect and journal trips.
-- [Statistics & insights](https://dawarich.app/statistics/): Distance, countries, cities, time analytics.
-- [Location tracking](https://dawarich.app/location-tracking/): iOS and Android apps for continuous GPS tracking.
-- [Import & export](https://dawarich.app/import-export/): Google Takeout, OwnTracks .rec, GPX, GeoJSON.
-- [Photo integrations](https://dawarich.app/integrations/): Immich and PhotoPrism EXIF geodata import.
+## Comparisons (active products)
+- [Dawarich vs OwnTracks](https://dawarich.app/docs/comparisons/vs-owntracks/): When to use each — OwnTracks as a tracker only, Dawarich as the full visualization layer.
+- [Dawarich vs Traccar](https://dawarich.app/docs/comparisons/vs-traccar/): Fleet/asset tracking (Traccar) vs personal location history (Dawarich).
+- [Dawarich vs Life360](https://dawarich.app/docs/comparisons/vs-life360/): Family location sharing without ad-tech.
+- [Dawarich vs Polarsteps](https://dawarich.app/docs/comparisons/vs-polarsteps/): Travel journaling without lock-in.
+- [Dawarich vs Strava](https://dawarich.app/docs/comparisons/vs-strava/): Continuous timeline vs activity-only logging.
 
-## Self-hosting
-- [Self-hosting introduction](https://dawarich.app/docs/self-hosting/introduction/): Why self-host and what's required.
+## Features (the value stack)
+- [Interactive map](https://dawarich.app/interactive-map/): Heatmaps, fog of war, trip overlays, multiple base layers, speed-colored routes, daily replay.
+- [Trips & journaling](https://dawarich.app/trips/): Auto-detect trips, add photos and notes, share publicly (Pro).
+- [Statistics & insights](https://dawarich.app/statistics/): Distance, countries, cities, time analytics, year-in-review.
+- [Location tracking](https://dawarich.app/location-tracking/): iOS and Android native apps for continuous background GPS.
+- [Import & export](https://dawarich.app/import-export/): Google Takeout (all formats), OwnTracks `.rec`, GPX, GeoJSON, KML; export to JSON/GPX/GeoJSON.
+- [Photo integrations](https://dawarich.app/integrations/): Pull EXIF geodata from Immich (asset.read scope) or PhotoPrism into your timeline.
+- [Areas / geofences](https://dawarich.app/docs/features/areas): Custom areas, place detection, visit duration tracking.
+- [Transportation modes](https://dawarich.app/docs/features/transportation-modes): Auto-detect walking, cycling, driving, transit.
+- [Search](https://dawarich.app/docs/features/search): Search any date or place, instantly see where you were.
+
+## Self-hosting (free, AGPLv3, every Pro feature included)
+- [Self-hosting introduction](https://dawarich.app/docs/self-hosting/introduction/): Why self-host, what hardware you need (AMD64/ARM64, 2GB RAM minimum), `docker compose up -d` quickstart.
 - [Docker compose install](https://dawarich.app/docs/self-hosting/installation/docker-compose/): Recommended install path.
-- [Hardware requirements](https://dawarich.app/docs/self-hosting/hardware-requirements/): Sizing guide.
+- [Hardware requirements](https://dawarich.app/docs/self-hosting/hardware-requirements/): Sizing guide by data volume.
+- [Environment variables](https://dawarich.app/docs/self-hosting/environment-variables): All configuration knobs.
 - [Backup & restore](https://dawarich.app/docs/self-hosting/maintenance/backup-and-restore/): Postgres backup procedures.
-- [Updating](https://dawarich.app/docs/self-hosting/updating/): Upgrade procedure.
+- [Updating](https://dawarich.app/docs/self-hosting/updating/): `docker compose pull && docker compose up -d`.
+- [API reference](https://dawarich.app/docs/api/dawarich-api/): Full REST API, auth via API key, push points, query history.
 
-## Free browser-based tools (no upload, no account)
-- [All free tools](https://dawarich.app/tools/): Index of every converter and tool.
-- [Heatmap generator](https://dawarich.app/tools/heatmap-generator/): Generate a heatmap from any GPS file.
+## Free browser-based tools (no upload, no account, no signup)
+- [All free tools](https://dawarich.app/tools/): Index of every converter and tool — runs entirely in your browser, your location data never leaves your device.
+- [Google Timeline Converter](https://dawarich.app/tools/google-timeline-converter/): Convert Takeout JSON → GPX, KML, GeoJSON, CSV.
+- [Google Timeline Splitter](https://dawarich.app/tools/google-timeline-splitter/): Split large Takeout exports for easier import.
+- [Timeline Merger](https://dawarich.app/tools/timeline-merger/): Combine multiple Timeline exports with deduplication.
+- [Timeline Visualizer](https://dawarich.app/tools/timeline-visualizer/): Drag-and-drop visualizer for any GPS file (browser-only).
+- [Heatmap generator](https://dawarich.app/tools/heatmap-generator/): Generate a shareable heatmap from any GPS file.
+- [GPX Merger](https://dawarich.app/tools/gpx-merger/): Combine multiple GPX tracks.
 - [Photo geotagging (EXIF reader)](https://dawarich.app/tools/photo-geotagging/): Extract location data from photos in your browser.
-- [GPX ↔ KML / KMZ / GeoJSON / TCX / FIT converters](https://dawarich.app/tools/): All format conversions, browser-only.
+- [Format converters](https://dawarich.app/tools/): GPX ↔ KML / KMZ / GeoJSON / TCX / FIT.
 
-## Author
-- [Evgenii Burmakin (@Freika)](https://github.com/Freika): Creator and sole maintainer of Dawarich.
+## Privacy, data ownership & legal
+- [Privacy policy](https://dawarich.app/privacy-policy): What we collect (the minimum), where it's stored (Germany, EU), how you delete it.
+- [Terms & conditions](https://dawarich.app/terms-and-conditions): Service terms.
+- [Refund policy](https://dawarich.app/refund-policy): 14-day refund on Cloud subscriptions.
+- [Impressum](https://dawarich.app/impressum): Legal entity (ZeitFlow UG, Berlin, Germany).
+- [Data export commitment](https://dawarich.app/import-export/): Every plan, including the free trial, exports your full history to JSON/GPX/GeoJSON. AGPLv3 means even if Cloud disappears, the same code keeps your data accessible forever.
 
-## Source
-- [GitHub repository](https://github.com/Freika/dawarich): Open source, AGPLv3.
+## Source & community
+- [GitHub repository](https://github.com/Freika/dawarich): Open source, AGPLv3, 8,400+ stars, every line auditable.
+- [Discord community](https://discord.gg/pHsBjpt5J8): User support and feature discussion.
+- [Changelog](https://dawarich.app/docs/changelog): What shipped recently.
+- [Blog](https://dawarich.app/blog): Product updates, migration guides, technical deep-dives.
+
+## Optional
+- [Author / Maintainer](https://github.com/Freika): Evgenii Burmakin (@Freika), creator and maintainer of Dawarich.
+- [Dawarich vs Arc (retired)](https://dawarich.app/docs/comparisons/vs-arc/): Historical comparison; Arc is no longer maintained.
+- [Reverse geocoding setup](https://dawarich.app/docs/self-hosting/configuration/reverse-geocoding): Photon configuration for self-hosters who want offline geocoding.
+- [Moving to PostGIS](https://dawarich.app/docs/self-hosting/maintenance/moving-to-postgis): ARM64 self-host migration path.
+- [Prometheus monitoring](https://dawarich.app/docs/self-hosting/monitoring/prometheus): Metrics export for self-hosters.
+- [Credits](https://dawarich.app/credits): Open source projects Dawarich is built on.
