@@ -1,12 +1,12 @@
 ---
 sidebar_position: 1
 title: Track Your Location
-description: Set up location tracking using the Dawarich app, Overland, OwnTracks, or GPSLogger mobile applications.
+description: Set up location tracking using the Dawarich app, Overland, OwnTracks, Traccar, or GPSLogger mobile applications.
 ---
 
 # Track your location
 
-Dawarich allows you to track your location using [Overland](https://overland.p3k.app/), [OwnTracks](https://owntracks.org/) or [GPSLogger](https://gpslogger.app/) mobile application.
+Dawarich allows you to track your location using [Overland](https://overland.p3k.app/), [OwnTracks](https://owntracks.org/), [Traccar Client](https://www.traccar.org/client/) or [GPSLogger](https://gpslogger.app/) mobile application.
 
 ## API
 
@@ -60,6 +60,20 @@ Dawarich provides an API for tracking your location. You can use the API to send
 6. Paste the following URL: `http://<your-dawarich-instance>/api/v1/owntracks/points?api_key=<your-api-key>`.
 7. Tap on "Back" button (top left corner).
 8. You're all set! OwnTracks will start sending your location data to Dawarich.
+
+## Traccar Client
+
+Dawarich accepts data from [Traccar Client](https://www.traccar.org/client/) (Android and iOS) using its modern JSON protocol (Traccar Client v9.0 or newer).
+
+1. Install Traccar Client on your mobile device.
+2. Open the app and go to settings.
+3. Set the **Server URL** to: `http://<your-dawarich-instance>/api/v1/traccar/points?api_key=<your-api-key>`.
+4. Pick a **Device Identifier** — this is stored on the point as `tracker_id`, useful if you push from multiple devices to one account.
+5. Enable the service. Traccar Client will start sending your location to Dawarich.
+
+:::note
+Dawarich only supports the JSON payload sent by Traccar Client v9+. The legacy OsmAnd query-string protocol used by older clients and some third-party trackers is not supported on this endpoint — use the OwnTracks endpoint with those instead.
+:::
 
 ## GPS Logger
 
