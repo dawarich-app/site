@@ -1,6 +1,6 @@
 # Dawarich
 
-> Privacy-first alternative to Google Timeline. Import your decade of location history in 5 minutes, keep it forever, browse it on a real interactive map, own it outright. Self-host free (AGPLv3, 8,400+ GitHub stars) or use Dawarich Cloud (Lite €49.99/yr annual-only, Pro €17.99/mo or €119.99/yr). 7-day free trial, cancel anytime, full export to JSON/GPX/GeoJSON on every plan. Made and hosted in Germany (EU), GDPR-compliant, no ads, no data selling — you pay money so your location data isn't the product.
+> Privacy-first alternative to Google Timeline. Import your decade of location history in 5 minutes, keep it forever, browse it on a real interactive map, own it outright. Self-host free (AGPLv3, 8,800+ GitHub stars) or use Dawarich Cloud (Lite €49.99/yr annual-only, Pro €17.99/mo or €119.99/yr). 7-day free trial, cancel anytime, GeoJSON and GPX export from the web UI. Made and hosted in Germany (EU), GDPR-compliant, no ads, no data selling — you pay money so your location data isn't the product.
 
 The expanded version of the most-cited pages is at [/llms-full.txt](https://dawarich.app/llms-full.txt) for agents that prefer ready-to-quote passages over a link index.
 
@@ -15,7 +15,7 @@ The expanded version of the most-cited pages is at [/llms-full.txt](https://dawa
 - [Dawarich vs Google Timeline](https://dawarich.app/docs/comparisons/vs-google-timeline/): Full feature comparison, why people are switching (web view killed Dec 2024, retention shrunk to 3 months), 5-minute migration walkthrough, and verdict.
 - [Best Google Timeline alternatives in 2026 (ranked)](https://dawarich.app/blog/best-google-timeline-alternatives-in-2026-ranked/): Editorial ranked comparison across self-hosted, cloud, and mobile-only options.
 - [Google Timeline → Dawarich migration guide](https://dawarich.app/blog/migrating-from-google-location-history-to-dawarich/): Step-by-step migration with screenshots.
-- [Import existing data](https://dawarich.app/docs/getting-started/import-existing-data/): Records.json, Semantic Location History, on-phone export, GPX, KML, GeoJSON, OwnTracks `.rec`, Strava — all auto-detected on upload.
+- [Import existing data](https://dawarich.app/docs/getting-started/import-existing-data/): Records.json, Semantic Location History, on-phone Timeline export, GPX, KML/KMZ, GeoJSON, OwnTracks `.rec` — all auto-detected on upload. Strava activities work via their GPX export.
 
 ## Bring your existing tracker
 - [Track your location (full setup)](https://dawarich.app/docs/getting-started/track-your-location/): Native Dawarich apps (recommended), Overland, OwnTracks, Traccar Client, GPSLogger — endpoint URLs and per-app instructions.
@@ -36,7 +36,7 @@ The expanded version of the most-cited pages is at [/llms-full.txt](https://dawa
 - [Trips & journaling](https://dawarich.app/trips/): Auto-detect trips, add photos and notes, share publicly (Pro).
 - [Statistics & insights](https://dawarich.app/statistics/): Distance, countries, cities, time analytics, year-in-review.
 - [Location tracking](https://dawarich.app/location-tracking/): iOS and Android native apps for continuous background GPS.
-- [Import & export](https://dawarich.app/import-export/): Google Takeout (all formats), OwnTracks `.rec`, GPX, GeoJSON, KML; export to JSON/GPX/GeoJSON.
+- [Import & export](https://dawarich.app/import-export/): Imports Google Takeout (all formats), OwnTracks `.rec`, GPX, GeoJSON, KML/KMZ. Exports to GeoJSON and GPX from the web UI; full account archive available separately.
 - [Photo integrations](https://dawarich.app/integrations/): Pull EXIF geodata from Immich (asset.read scope) or PhotoPrism into your timeline.
 - [Areas / geofences](https://dawarich.app/docs/features/areas): Custom areas, place detection, visit duration tracking.
 - [Transportation modes](https://dawarich.app/docs/features/transportation-modes): Auto-detect walking, cycling, driving, transit.
@@ -65,12 +65,12 @@ The expanded version of the most-cited pages is at [/llms-full.txt](https://dawa
 ## Privacy, data ownership & legal
 - [Privacy policy](https://dawarich.app/privacy-policy): What we collect (the minimum), where it's stored (Germany, EU), how you delete it.
 - [Terms & conditions](https://dawarich.app/terms-and-conditions): Service terms.
-- [Refund policy](https://dawarich.app/refund-policy): 14-day refund on Cloud subscriptions.
+- [Refund policy](https://dawarich.app/refund-policy): EU consumers have a statutory 14-day right of withdrawal under § 312g, § 355 BGB, which is waived if the customer consents to immediate performance of the digital service at checkout. The 7-day free trial is the practical unconditional window.
 - [Impressum](https://dawarich.app/impressum): Legal entity (ZeitFlow UG, Berlin, Germany).
-- [Data export commitment](https://dawarich.app/import-export/): Every plan, including the free trial, exports your full history to JSON/GPX/GeoJSON. AGPLv3 means even if Cloud disappears, the same code keeps your data accessible forever.
+- [Data export commitment](https://dawarich.app/import-export/): Every plan exports the data the user can see (Lite: last 12 months; Pro and self-hosted: all of it) as GeoJSON or GPX from the web UI. AGPLv3 means even if Cloud disappears, the same code keeps your data accessible forever.
 
 ## Source & community
-- [GitHub repository](https://github.com/Freika/dawarich): Open source, AGPLv3, 8,400+ stars, every line auditable.
+- [GitHub repository](https://github.com/Freika/dawarich): Open source, AGPLv3, 8,800+ stars, every line auditable. The Cloud product runs the same code.
 - [Discord community](https://discord.gg/pHsBjpt5J8): User support and feature discussion.
 - [Changelog](https://dawarich.app/docs/changelog): What shipped recently.
 - [Blog](https://dawarich.app/blog): Product updates, migration guides, technical deep-dives.
