@@ -47,6 +47,7 @@ The expanded version of the most-cited pages is at [/llms-full.txt](https://dawa
 - [Docker compose install](https://dawarich.app/docs/self-hosting/installation/docker-compose/): Recommended install path.
 - [Hardware requirements](https://dawarich.app/docs/self-hosting/hardware-requirements/): Sizing guide by data volume.
 - [Environment variables](https://dawarich.app/docs/self-hosting/environment-variables): All configuration knobs.
+- [Configuring SMTP](https://dawarich.app/docs/self-hosting/configuration/smtp/): Outgoing email setup (password resets, digests, family invites); Office 365 / Gmail / local relay examples; mailer-protocol decoupling in 1.7.6.
 - [Backup & restore](https://dawarich.app/docs/self-hosting/maintenance/backup-and-restore/): Postgres backup procedures.
 - [Updating](https://dawarich.app/docs/self-hosting/updating/): `docker compose pull && docker compose up -d`.
 - [API reference](https://dawarich.app/docs/api/dawarich-api/): Full REST API, auth via API key, push points, query history.
