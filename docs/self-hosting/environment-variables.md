@@ -8,7 +8,7 @@ description: Reference for all Dawarich environment variables including database
 
 ## Environment Variables
 
-As many other applications, Dawarich uses environment variables to configure its behavior. The following environment variables are supported:
+As many other applications, Dawarich uses environment variables to configure its behavior. The default `docker-compose.yml` file provides defaults that are good enough to deploy the app and start using it. The following environment variables are supported:
 
 ### Core Settings
 
@@ -93,19 +93,31 @@ If your identity provider doesn't support OIDC discovery, use these instead of `
 
 ### Email (SMTP)
 
+:::tip Full guide
+
+See [Configuring SMTP](./configuration/smtp.md) for provider-specific examples (Office 365, Gmail, Brevo, local Postfix), the email link protocol behavior, and a troubleshooting matrix.
+
+:::
+
 | Environment Variable | Default Value | Description |
 | -------------------- | ------------- | ----------- |
 | `SMTP_SERVER` | `nil` | Your SMTP server hostname |
 | `SMTP_PORT` | `nil` | Your SMTP port (typically 587 for TLS) |
-| `SMTP_DOMAIN` | `nil` | Your SMTP domain |
+| `SMTP_DOMAIN` | `nil` | HELO/EHLO domain. For transactional relays (Brevo, Mailgun, SendGrid, Postmark, Resend), set this to your verified sender domain — typically the part after `@` in `SMTP_FROM`. |
 | `SMTP_USERNAME` | `nil` | Your SMTP username |
 | `SMTP_PASSWORD` | `nil` | Your SMTP password |
 | `SMTP_FROM` | `nil` | Email address to send emails from |
+| `SMTP_AUTHENTICATION` | `plain` | Auth mechanism. Common values: `plain`, `login` (Office 365 / Microsoft 365 requires this), `cram_md5`. `digest_md5`, `gssapi`, `ntlm`, `xoauth2` also accepted but rarely useful. |
+| `SMTP_STARTTLS` | `true` | Opportunistic TLS upgrade on port 587. Leave `true` for internet-facing relays. Set `false` only for plain SMTP on port 25 to a trusted local relay. No effect on port 465 (SMTPS / implicit TLS). |
+| `SMTP_OPEN_TIMEOUT` | `5` | Seconds to wait for the TCP connection. Bump to `25` for slow providers. |
+| `SMTP_READ_TIMEOUT` | `5` | Seconds to wait for an SMTP response. Bump to `25` for slow providers. |
 
 Email is required for:
 - Password reset
 - Year-end digest emails
 - Family invitation emails
+
+Email links are sent as `https://` regardless of `APPLICATION_PROTOCOL`. Plain-HTTP self-hosters need a one-line initializer override — see [Configuring SMTP → Email link protocol](./configuration/smtp.md#email-link-protocol).
 
 ### Prometheus Monitoring
 
