@@ -8,7 +8,7 @@ description: Reference for all Dawarich environment variables including database
 
 ## Environment Variables
 
-As many other applications, Dawarich uses environment variables to configure its behavior. The following environment variables are supported:
+As many other applications, Dawarich uses environment variables to configure its behavior. The default `docker-compose.yml` file provides defaults that are good enough to deploy the app and start using it. The following environment variables are supported:
 
 ### Core Settings
 
