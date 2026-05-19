@@ -1,0 +1,1 @@
+{"parameters":[{"name":"api_key","in":"query","required":true,"description":"API Key","schema":{"type":"string"}},{"name":"year","in":"query","required":false,"description":"Year to compute residency for. Defaults to the latest year that has data for the user.","schema":{"type":"integer"}}]}

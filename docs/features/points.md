@@ -8,7 +8,7 @@ description: Browse, search, export, and manage your recorded GPS location point
 
 The Points page gives you a paginated table of all your recorded GPS location points. You can filter, export, and delete points from here.
 
-![Points](../points.jpeg)
+![Points](images/points.png)
 
 ## Searching and filtering
 

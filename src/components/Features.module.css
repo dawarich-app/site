@@ -166,6 +166,34 @@
   min-height: 240px;
 }
 
+/* Full-width card: Timeline — spans all 3 cols, 16:9 hero treatment */
+.fullWidthCard {
+  grid-column: span 3;
+  min-height: 420px;
+}
+
+.fullWidthCard .cardImageWrapper {
+  aspect-ratio: 16 / 9;
+}
+
+.fullWidthCard .cardImage {
+  object-fit: cover;
+  object-position: top;
+}
+
+.fullWidthCard .cardOverlay {
+  padding: 1.5rem 1.75rem;
+}
+
+.fullWidthCard .cardTitle {
+  font-size: 1.2rem;
+}
+
+.fullWidthCard .cardDescription {
+  font-size: 0.925rem;
+  max-width: 60ch;
+}
+
 /* ------- Modal ------- */
 
 .imageModal {
@@ -298,6 +326,12 @@
     grid-column: span 2;
     min-height: 200px;
   }
+
+  /* Full-width card spans both cols on tablet */
+  .fullWidthCard {
+    grid-column: span 2;
+    min-height: 320px;
+  }
 }
 
 /* Mobile: single column */
@@ -322,7 +356,8 @@
 
   .heroCard,
   .standardCard,
-  .wideCard {
+  .wideCard,
+  .fullWidthCard {
     grid-column: span 1;
     grid-row: span 1;
     min-height: 200px;

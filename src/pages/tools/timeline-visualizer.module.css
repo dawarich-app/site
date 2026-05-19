@@ -616,6 +616,24 @@
   height: min(70vh, 720px);
 }
 
+.workspaceGrid:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  max-width: none;
+  padding: 1rem;
+  gap: 1rem;
+  background: var(--ifm-background-color);
+}
+
+.workspaceGrid:-webkit-full-screen {
+  width: 100vw;
+  height: 100vh;
+  max-width: none;
+  padding: 1rem;
+  gap: 1rem;
+  background: var(--ifm-background-color);
+}
+
 @media (max-width: 1280px) {
   .workspaceGrid {
     grid-template-columns: 620px minmax(0, 1fr);

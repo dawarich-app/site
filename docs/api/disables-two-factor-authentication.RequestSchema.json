@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"password":{"type":"string","format":"password","description":"Current password"},"otp_code":{"type":"string","description":"Current TOTP code or unused backup code"}},"required":["password","otp_code"]}}}}}

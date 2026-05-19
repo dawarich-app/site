@@ -118,6 +118,36 @@
   transform: scale(1.02);
 }
 
+.imageLink {
+  display: block;
+  line-height: 0;
+}
+
+.imageLink:hover {
+  text-decoration: none;
+}
+
+/* When the image is a clickable store badge, drop the wrapper border so
+   badges with built-in whitespace (Google Play) match flush badges (App Store). */
+.imageWrapper:has(.imageLink) {
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  cursor: default;
+  background: transparent;
+}
+
+.imageWrapper:has(.imageLink) .image {
+  max-height: 60px;
+  width: auto;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.imageLink:hover .image {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
 /* Modal styles */
 .imageModal {
   position: fixed;

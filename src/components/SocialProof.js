@@ -48,7 +48,7 @@ function formatNumber(num) {
 }
 
 const metrics = [
-  { target: 8400, suffix: '+', label: 'GitHub Stars', icon: <StarIcon /> },
+  { target: 9000, prefix: 'OVER ', suffix: '', label: 'GitHub Stars', icon: <StarIcon /> },
   { target: 1_000_000, suffix: '+', label: 'Docker Pulls', icon: <DownloadIcon /> },
   { target: 2000, suffix: '+', label: 'Users', icon: <PeopleIcon /> },
   { target: 1_000_000_000, suffix: '+', label: 'Points Tracked', icon: <MapPinIcon /> },
@@ -96,14 +96,14 @@ function useCountUp(target, duration, shouldStart) {
   return display;
 }
 
-function AnimatedMetric({ target, suffix, label, icon }) {
+function AnimatedMetric({ target, prefix, suffix, label, icon }) {
   const display = useCountUp(target, 2000, true);
 
   return (
     <div className={styles.metric}>
       <div className={styles.icon}>{icon}</div>
       <div className={styles.value}>
-        {display}{suffix}
+        {prefix}{display}{suffix}
       </div>
       <div className={styles.label}>{label}</div>
     </div>
@@ -142,6 +142,7 @@ export default function SocialProof() {
               <AnimatedMetric
                 key={index}
                 target={metric.target}
+                prefix={metric.prefix}
                 suffix={metric.suffix}
                 label={metric.label}
                 icon={metric.icon}
@@ -149,7 +150,7 @@ export default function SocialProof() {
             ) : (
               <div key={index} className={styles.metric}>
                 <div className={styles.icon}>{metric.icon}</div>
-                <div className={styles.value}>0{metric.suffix}</div>
+                <div className={styles.value}>{metric.prefix}0{metric.suffix}</div>
                 <div className={styles.label}>{metric.label}</div>
               </div>
             )

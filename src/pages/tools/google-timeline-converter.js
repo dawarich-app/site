@@ -12,7 +12,7 @@ import styles from './google-timeline-converter.module.css';
 const pageTitle = "Google Timeline to GPX/KML/CSV Converter - Convert Location History Free";
 const pageDescription = "Free, privacy-first converter for Google Timeline data. Convert your location history to GPX, KML, GeoJSON, or CSV format. All processing in your browser — no data uploaded.";
 const pageUrl = "https://dawarich.app/tools/google-timeline-converter/";
-const imageUrl = "https://dawarich.app/img/meta-image.jpg";
+const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 const FORMAT_LABELS = {
   records: 'Records.json (Raw GPS)',

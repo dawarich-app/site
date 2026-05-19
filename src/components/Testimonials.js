@@ -70,11 +70,12 @@ const testimonials = [
 		type: "press",
 	},
 	{
-		quote:
-			"I moved to Kazakhstan not knowing the city at all. Google Timeline wasn't an option anymore, and I didn't trust it either way. Set up Dawarich, and now the map is like fog of war for me — the more I go out, the more it fills in. Plus every trip stays with me — I can look back at any of them and share the route.",
-		author: "Roman Bogdanov",
-		source: "Dawarich customer · Kazakhstan · since mid-2025",
-		type: "customer",
+		quote: "The UI is clean and user friendly. Basically no impact on battery.",
+		author: "P@tr!ck3",
+		source: "App Store Review",
+		url: "https://apps.apple.com/us/app/dawarich/id6739544999",
+		rating: 4,
+		type: "review",
 	},
 	{
 		quote:
@@ -91,12 +92,11 @@ const testimonials = [
 		type: "customer",
 	},
 	{
-		quote: "The UI is clean and user friendly. Basically no impact on battery.",
-		author: "P@tr!ck3",
-		source: "App Store Review",
-		url: "https://apps.apple.com/us/app/dawarich/id6739544999",
-		rating: 4,
-		type: "review",
+		quote:
+			"I moved to Kazakhstan not knowing the city at all. Google Timeline wasn't an option anymore, and I didn't trust it either way. Set up Dawarich, and now the map is like fog of war for me — the more I go out, the more it fills in. Plus every trip stays with me — I can look back at any of them and share the route.",
+		author: "Roman Bogdanov",
+		source: "Dawarich customer · Kazakhstan · since mid-2025",
+		type: "customer",
 	},
 	{
 		quote:

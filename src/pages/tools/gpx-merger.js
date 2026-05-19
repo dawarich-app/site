@@ -9,7 +9,7 @@ import styles from './gpx-merger.module.css';
 const pageTitle = "Free GPX Merger - Combine Multiple GPS Track Files Online";
 const pageDescription = "Merge multiple GPX files into one. Free, privacy-first online tool to combine GPS tracks, waypoints, and routes. Works entirely in your browser - no upload required.";
 const pageUrl = "https://dawarich.app/tools/gpx-merger/";
-const imageUrl = "https://dawarich.app/img/meta-image.jpg";
+const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 export default function GPXMerger() {
   const [files, setFiles] = useState([]);
@@ -56,7 +56,7 @@ export default function GPXMerger() {
 
     try {
       const gpxFiles = newFiles.filter(f => f.name.toLowerCase().endsWith('.gpx'));
-      
+
       if (gpxFiles.length === 0) {
         setError('Please select GPX files only.');
         setIsProcessing(false);
@@ -233,14 +233,14 @@ export default function GPXMerger() {
                 {files.map((fileName, index) => {
                   const gpx = parsedFiles[index];
                   const trackCount = gpx?.tracks?.length || 0;
-                  const pointCount = gpx?.tracks?.reduce((sum, t) => 
+                  const pointCount = gpx?.tracks?.reduce((sum, t) =>
                     sum + t.segments.reduce((s, seg) => s + seg.length, 0), 0) || 0;
 
                   return (
                     <div key={index} className={styles.fileItem}>
                       <div className={styles.fileOrder}>
-                        <button 
-                          onClick={() => moveFile(index, -1)} 
+                        <button
+                          onClick={() => moveFile(index, -1)}
                           disabled={index === 0}
                           className={styles.orderButton}
                         >
@@ -249,8 +249,8 @@ export default function GPXMerger() {
                           </svg>
                         </button>
                         <span className={styles.orderNumber}>{index + 1}</span>
-                        <button 
-                          onClick={() => moveFile(index, 1)} 
+                        <button
+                          onClick={() => moveFile(index, 1)}
                           disabled={index === files.length - 1}
                           className={styles.orderButton}
                         >
@@ -265,8 +265,8 @@ export default function GPXMerger() {
                           {trackCount} track{trackCount !== 1 ? 's' : ''} | {pointCount.toLocaleString()} points
                         </span>
                       </div>
-                      <button 
-                        onClick={() => handleRemoveFile(index)} 
+                      <button
+                        onClick={() => handleRemoveFile(index)}
                         className={styles.removeButton}
                         title="Remove file"
                       >
@@ -305,7 +305,7 @@ export default function GPXMerger() {
 
               <div className={styles.optionsPanel}>
                 <h4>Merge Options</h4>
-                
+
                 <div className={styles.optionItem}>
                   <label>
                     <input
@@ -344,8 +344,8 @@ export default function GPXMerger() {
                 </div>
               </div>
 
-              <button 
-                onClick={handleMerge} 
+              <button
+                onClick={handleMerge}
                 className={styles.mergeButton}
                 disabled={files.length < 2}
               >

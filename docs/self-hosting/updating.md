@@ -10,6 +10,75 @@ Dawarich is a rapidly evolving project, and some changes may break compatibility
 
 After each update, please make sure there is no jobs running in the Sidekiq interface (/sidekiq). If there are, please wait for them to finish. Once all jobs are finished, you can proceed with the update.
 
+## 1.7.7
+
+:::warning
+
+This release migrates the Prometheus metrics backend from `discourse/prometheus_exporter` to [Yabeda](https://github.com/yabeda-rb/yabeda). If you scrape Dawarich with Prometheus, **you must update your scrape configuration, environment variables, and any dashboards or alerts built on the old metric names.**
+
+:::
+
+### Scrape target
+
+Dawarich now serves metrics in-process — no separate exporter container. Prometheus scrapes a single endpoint on `dawarich_app`:
+
+```yaml
+scrape_configs:
+  - job_name: dawarich
+    metrics_path: /metrics
+    basic_auth:
+      username: prometheus     # value of METRICS_USERNAME
+      password: prometheus     # value of METRICS_PASSWORD
+    static_configs:
+      - targets: ['dawarich_app:3000']
+```
+
+Basic auth is now required. Set `METRICS_USERNAME` and `METRICS_PASSWORD` on both `dawarich_app` and `dawarich_sidekiq`. Requests without valid credentials return 401.
+
+If Sidekiq is unreachable during a scrape, the web container returns its own metrics only and logs a warning — Prometheus sees a momentary gap in `sidekiq_*` series rather than a failed scrape.
+
+### Environment variables
+
+**Remove from `docker-compose.yml`:**
+
+- `PROMETHEUS_EXPORTER_HOST`
+- `PROMETHEUS_EXPORTER_HOST_SIDEKIQ`
+
+Both are obsolete. Metrics are no longer hosted by a separate process, so there is nothing to bind to.
+
+**Keep / add:**
+
+| Variable | Notes |
+|---|---|
+| `PROMETHEUS_EXPORTER_ENABLED` | Still the single on/off switch. Must be `true` on both services. |
+| `METRICS_USERNAME`, `METRICS_PASSWORD` | Unchanged from previous releases. Required. |
+| `PROMETHEUS_EXPORTER_PORT` | Now the port the in-process Sidekiq metrics endpoint binds to on `dawarich_sidekiq` (default `9394`). |
+| `SIDEKIQ_METRICS_URL` (new, optional) | Internal URL the web container uses to fetch Sidekiq metrics. Default `http://dawarich_sidekiq:9394/metrics`. Override on Dokku, Kubernetes, or any deployment where the worker hostname differs from the docker-compose default. |
+
+### Metric name renames
+
+`dawarich_archive_*` metric names are unchanged — dashboards built on them continue to work.
+
+**Infrastructure metric names have changed.** Update any dashboard or alert that references the old names:
+
+| Category | Before (`prometheus_exporter`) | After (Yabeda) |
+|---|---|---|
+| HTTP requests total | `ruby_http_requests_total` | `rails_requests_total` |
+| HTTP request duration | `ruby_http_request_duration_seconds` | `rails_request_duration` |
+| Sidekiq jobs total | `ruby_sidekiq_jobs_total` | `sidekiq_jobs_executed_total` |
+| Sidekiq failed jobs | `ruby_sidekiq_failed_jobs_total` | `sidekiq_jobs_failed_total` |
+| Sidekiq job duration | `ruby_sidekiq_job_duration_seconds` | `sidekiq_job_runtime_seconds` |
+| Sidekiq queue latency | `ruby_sidekiq_queue_latency_seconds` | `sidekiq_queue_latency` |
+| Sidekiq queue backlog | `ruby_sidekiq_queue_backlog_total` | `sidekiq_jobs_waiting_count` |
+| Sidekiq process count | `ruby_sidekiq_process_count` | `sidekiq_active_processes` |
+| Puma workers | `ruby_puma_workers` | `puma_workers` |
+| Puma backlog | `ruby_puma_request_backlog` | `puma_backlog` |
+| Puma thread-pool capacity | `ruby_puma_thread_pool_capacity` | `puma_pool_capacity` |
+| ActiveRecord pool size | `active_record_connection_pool_connections` | `activerecord_connection_pool_size` |
+| Process / GC (`ruby_rss`, `ruby_heap_live_slots`, …) | emitted by default | not emitted by default; register a custom Yabeda group if needed |
+
+For the full updated reference, see [Monitoring with Prometheus](./monitoring/prometheus.md).
+
 ## 0.28.0
 
 :::warning

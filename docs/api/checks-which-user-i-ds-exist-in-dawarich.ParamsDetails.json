@@ -1,0 +1,1 @@
+{"parameters":[{"name":"X-Webhook-Secret","in":"header","required":true,"description":"Shared secret matching SUBSCRIPTION_WEBHOOK_SECRET on the server","schema":{"type":"string"}}]}

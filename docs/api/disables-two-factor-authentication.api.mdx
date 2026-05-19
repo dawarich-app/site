@@ -1,0 +1,69 @@
+---
+id: disables-two-factor-authentication
+title: "Disables two-factor authentication"
+description: "Removes the TOTP secret, clears backup codes, and disables 2FA. Requires both the current password AND a valid TOTP code (or unused backup code)."
+sidebar_label: "Disables two-factor authentication"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNlU2P4kYQhv9KqU6J1Dswm5x8Y3cmySpRMpqwJ4RGhV3gXuxub3fZLLH476tqY2BglFMO4QLGVV1f71Pdo9AmYrbAz5FDxKXBgmMebCPWO8zwmWvfcQQpGeZ/zZ8gch5YDOQVU4iwonzbNpD7gqMBcgUUNtKq4gjvf5ndwTN/bW3gCCsvZTolb0NgJ9BQjDsfCpj9+QAEHVW2GELoYfCDD9C6NnJxGePHOzQYOW+DlT1mix5XTIHDC7VSYrZYHpYGGwpUs2g9auGoZsxw1krpg/2HUmUGrZZXMhUc0GAY8iwwk9DydRc+pCAgfssOrEt1rH2oSTI4vuupsS9b3h80wbzkmjDrUfaNxo4SrNvgQbMLHBvvIkd9/3461a/X0WTn360pFx/GZhZoMPdO2ImaU9NUNk+FTL5E9elvY/rVF84FDTbBNxzEDhFrjpE2/FZy+jH48/T+NqXaxmjdBnwA64ZR5YELdmKpiqh+2kGO8sEXe/X/j9IdVXKbr8FhApidja7n9vFKa3gw6KV5USm9deLb3mdRvqnJU/WDfhaX6ZyCLYfm1iylLzDDgisW1nJJhYsTauyku5+0iuGk5ons/MsggqT40I1ybkOlwhVpssmkL3hNbSW/+SiqvI6CTfQNIzy9u3jEDCufU1X6KNlP0+lUJ788U/W3TmY44Cjpi05RY3/nPZoRqtHiiNPXlsP+po+zp0+w5X2aAhdAEQiSJZxI1cG8IvkUUQsdkdLnweomxitC9QiV5qC5NB/V3fNZoY/fqG4qfq2wsw7OGjnRoRWufUrMinriA+0o2LyE2dMnbT2HOOTS3b/ZgrUPMPoY2Ps2wJo6H6wwUCUcHIntGMTDr95vKoa5rbmyju/gKfjOFhyBXdF46ySm42pytFEudaIaCgoSMiCB8m000NloJRqIQmKj2Py4o2sf+E5ranyUmhKRx4k+jOv7Ygtd9fOquAvW/5fXxVFIwt9k0lRknRaeKOqP9C1UxzpCHVwiEBVV9T1TuDRYJpIW2Pcrivw5VIeD/j2oPlssz/ylq8iM14timzjCj0On3s01JzWv2gGjqw15MKPHLM+5kX+1XV7slYfHPx7nj2hwddzD9SDjQDu95WiHGarA0+wS5Om/HitymzZdDDicqtRcsXhi7/hD6xoXg9tf5Nj3g8VccTzoYhqKSXjiQZfhd+kx8lE=
+sidebar_class_name: "delete api-method"
+info_path: docs/api/dawarich-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Disables two-factor authentication"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/v1/users/me/two_factor"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes the TOTP secret, clears backup codes, and disables 2FA. Requires both the current password AND a valid TOTP code (or unused backup code).
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./disables-two-factor-authentication.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./disables-two-factor-authentication.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./disables-two-factor-authentication.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

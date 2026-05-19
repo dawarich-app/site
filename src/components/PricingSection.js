@@ -82,14 +82,18 @@ export default function PricingSection() {
 							strokeLinecap="round"
 							strokeLinejoin="round"
 						>
-							<path d="M12 22S4 18 4 12V6L12 2L20 6V12C20 18 12 22 12 22Z" />
-							<path d="M9 12L11 14L15 10" />
+							<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+							<path d="m9 12 2 2 4-4" />
 						</svg>
 					</div>
 					<div className={styles.guaranteeText}>
-						<strong>Risk-free guarantee:</strong> Try free for 7 days. If it's
-						not for you, just don't subscribe — your data export is yours to
-						keep.
+						<strong>14-day risk-free refund.</strong> Try Dawarich for 7 days
+						free, then for 14 days after subscribing — change your mind and we
+						refund you, no questions asked. Your data export is always yours to
+						keep.{" "}
+						<Link to="/refund-policy" className={styles.guaranteeLink}>
+							Refund policy →
+						</Link>
 					</div>
 				</div>
 			</div>

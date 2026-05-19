@@ -11,7 +11,7 @@ import styles from './converter.module.css';
 const pageTitle = "Free KMZ to GPX Converter - Extract and Convert Google Earth Files";
 const pageDescription = "Convert KMZ files to GPX format instantly. Free, privacy-first online converter. Works entirely in your browser - no upload required.";
 const pageUrl = "https://dawarich.app/tools/kmz-to-gpx/";
-const imageUrl = "https://dawarich.app/img/meta-image.jpg";
+const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 export default function KMZToGPX() {
   const [isConverting, setIsConverting] = useState(false);

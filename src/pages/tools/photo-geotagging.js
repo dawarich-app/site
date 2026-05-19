@@ -13,7 +13,7 @@ import styles from './timeline-visualizer.module.css';
 const pageTitle = "Photo Geodata Extraction - Extract GPS Data from Photos";
 const pageDescription = "Free, privacy-first tool to extract GPS coordinates from your photos and export them as GPX files. All data processing happens in your browser - no data is sent to any server.";
 const pageUrl = "https://dawarich.app/tools/photo-geotagging/";
-const imageUrl = "https://dawarich.app/img/meta-image.jpg";
+const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 export default function PhotoGeotagging() {
   const [uploadedPhotos, setUploadedPhotos] = useState([]);

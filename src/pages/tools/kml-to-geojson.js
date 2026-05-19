@@ -11,7 +11,7 @@ import styles from './converter.module.css';
 const pageTitle = "Free KML to GeoJSON Converter - Convert Google Earth Files Online";
 const pageDescription = "Convert KML files to GeoJSON format instantly. Free, privacy-first online converter. Works entirely in your browser - no upload required.";
 const pageUrl = "https://dawarich.app/tools/kml-to-geojson/";
-const imageUrl = "https://dawarich.app/img/meta-image.jpg";
+const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 export default function KMLToGeoJSON() {
   const [isConverting, setIsConverting] = useState(false);

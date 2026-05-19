@@ -5,43 +5,56 @@ import FeatureHero from '@site/src/components/FeatureHero';
 import FeatureShowcase from '@site/src/components/FeatureShowcase';
 import HowItWorks from '@site/src/components/HowItWorks';
 import FeatureCard, { FeatureCardGrid } from '@site/src/components/FeatureCard';
+import {
+  MapIcon,
+  BarChartIcon,
+  FileTextIcon,
+  CameraIcon,
+  ClipboardListIcon,
+  SmartphoneIcon,
+  PlusIcon,
+  PencilIcon,
+  TargetIcon,
+  SaveIcon,
+  BookOpenIcon,
+  GlobeIcon,
+  BotIcon,
+  HandIcon,
+} from '@site/src/components/LucideIcons';
 import Link from '@docusaurus/Link';
 import styles from './trips.module.css';
 
 const showcaseItems = [
   {
-    icon: '🗺️',
+    icon: <MapIcon />,
     title: 'Interactive Trip Map',
     description: 'Every trip page comes with a beautiful interactive map showing your complete route with all the points you visited along the way.',
-
   },
   {
-    icon: '📊',
+    icon: <BarChartIcon />,
     title: 'Comprehensive Statistics',
     description: 'See detailed stats for each trip including total distance traveled, duration, countries visited, and more features coming soon.',
   },
   {
-    icon: '📝',
+    icon: <FileTextIcon />,
     title: 'Rich Text Journaling',
     description: 'Document your adventures with rich text descriptions and notes. Preserve memories and stories from your travels.',
   },
   {
-    icon: '📸',
+    icon: <CameraIcon />,
     title: 'Photo Integration',
     description: 'Photos from your Immich or PhotoPrism instance automatically appear on your trip map at the locations they were taken.',
-
   },
   {
-    icon: '📋',
+    icon: <ClipboardListIcon />,
     title: 'Trip List Management',
     description: 'Organize all your trips in one place. Browse through past adventures and create new ones anytime.',
-
   }
 ];
 
 const howItWorksSteps = [
   {
-    icon: '📱',
+    icon: <SmartphoneIcon size={32} />,
     title: 'Track Your Movement',
     description: 'Let Dawarich automatically record your location while you travel using any supported tracking app.',
     details: [
@@ -51,7 +64,7 @@ const howItWorksSteps = [
     ]
   },
   {
-    icon: '➕',
+    icon: <PlusIcon size={32} />,
     title: 'Create Your Trip',
     description: 'When you\'re back, create a new trip by setting the name and date range.',
     details: [
@@ -61,7 +74,7 @@ const howItWorksSteps = [
     ]
   },
   {
-    icon: '✍️',
+    icon: <PencilIcon size={32} />,
     title: 'Add Your Story',
     description: 'Enhance your trip with notes, descriptions, and journal entries using the rich text editor.',
     details: [
@@ -71,7 +84,7 @@ const howItWorksSteps = [
     ]
   },
   {
-    icon: '🎯',
+    icon: <TargetIcon size={32} />,
     title: 'Explore and Share',
     description: 'View your trip on the interactive map, review statistics, and relive your adventure (Trips sharing coming soon)',
     details: [
@@ -90,7 +103,7 @@ export default function TripsPage() {
       <Head>
         <meta property="og:title" content="Dawarich Trips — Document Your Travel Adventures" />
         <meta property="og:description" content="Create comprehensive travel journals with interactive maps, detailed statistics, rich text descriptions, and automatic photo integration." />
-        <meta property="og:image" content="https://dawarich.app/img/meta-image.jpg" />
+        <meta property="og:image" content="https://dawarich.app/img/meta-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -99,7 +112,7 @@ export default function TripsPage() {
         title="Turn Your Travels Into"
         titleHighlight="Beautiful Trip Stories"
         subtitle="Automatically capture your movements and transform them into comprehensive travel journals. Each trip includes an interactive map, detailed statistics, rich text descriptions, and photos — all in one place."
-        image="img/trip-details.png"
+        image="/img/trip-details.png"
         imageAlt="Trip details with map and statistics"
         ctaLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-hero&utm_campaign=trips"
         showSecondary={true}
@@ -111,17 +124,17 @@ export default function TripsPage() {
             <h2 className={styles.benefitsTitle}>Why Trips Matter</h2>
             <FeatureCardGrid columns={3}>
               <FeatureCard
-                icon="💾"
+                icon={<SaveIcon />}
                 title="Memory Preservation"
                 description="Never forget the details of your adventures. Every trip is permanently saved with complete location data and your personal notes."
               />
               <FeatureCard
-                icon="📖"
+                icon={<BookOpenIcon />}
                 title="Travel Journaling"
                 description="Combine location data with your thoughts and stories. Create a rich, multimedia travel journal that goes beyond simple notes."
               />
               <FeatureCard
-                icon="🌍"
+                icon={<GlobeIcon />}
                 title="Relive Adventures"
                 description="Look back at past trips anytime. See exactly where you went, how long you traveled, and rediscover places you visited."
               />
@@ -146,12 +159,12 @@ export default function TripsPage() {
             <h2 className={styles.sectionTitle}>Flexible Trip Creation</h2>
             <FeatureCardGrid columns={2}>
               <FeatureCard
-                icon="🤖"
+                icon={<BotIcon />}
                 title="Automatic Grouping"
                 description="Simply set your trip dates and Dawarich automatically collects all your location points from that period. Perfect for when you want quick results."
               />
               <FeatureCard
-                icon="✋"
+                icon={<HandIcon />}
                 title="Manual Details"
                 description="Create trips for storytelling purposes or to document specific adventures. Add your own narrative and notes to enrich the experience."
               />
@@ -177,6 +190,9 @@ export default function TripsPage() {
                 Self-Host for Free
               </Link>
             </div>
+            <p className="feature-cta-reassurance">
+              7-day free trial · 14-day risk-free refund · Cancel anytime
+            </p>
           </div>
         </section>
       </main>

@@ -279,7 +279,7 @@ function Differentiators() {
 							>
 								GitHub
 							</a>{" "}
-							with 8,900+ stars. Cloud is the convenience layer — the product
+							with OVER 9,000 stars. Cloud is the convenience layer — the product
 							underneath is yours to take and run forever.
 						</p>
 					</div>
@@ -395,7 +395,7 @@ function Promises() {
 							>
 								GitHub
 							</a>{" "}
-							with 8,900+ stars.{" "}
+							with OVER 9,000 stars.{" "}
 							<strong>
 								You physically cannot lose your timeline by switching to us.
 							</strong>
@@ -557,7 +557,7 @@ export default function GoogleTimelineAlternativePage() {
 				/>
 				<meta
 					property="og:image"
-					content="https://dawarich.app/img/meta-image.jpg"
+					content="https://dawarich.app/img/meta-image.png"
 				/>
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta
@@ -574,7 +574,7 @@ export default function GoogleTimelineAlternativePage() {
 				/>
 				<meta
 					name="twitter:image"
-					content="https://dawarich.app/img/meta-image.jpg"
+					content="https://dawarich.app/img/meta-image.png"
 				/>
 				<link
 					rel="canonical"

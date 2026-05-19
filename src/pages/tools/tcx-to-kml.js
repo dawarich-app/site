@@ -11,7 +11,7 @@ import styles from './converter.module.css';
 const pageTitle = "Free TCX to KML Converter - Convert Training Files to Google Earth Online";
 const pageDescription = "Convert TCX files to KML format instantly. Free, privacy-first online converter for viewing fitness activities in Google Earth. Works entirely in your browser.";
 const pageUrl = "https://dawarich.app/tools/tcx-to-kml/";
-const imageUrl = "https://dawarich.app/img/meta-image.jpg";
+const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 export default function TCXToKML() {
   const [isConverting, setIsConverting] = useState(false);

@@ -4,32 +4,42 @@ import Head from '@docusaurus/Head';
 import FeatureHero from '@site/src/components/FeatureHero';
 import FeatureShowcase from '@site/src/components/FeatureShowcase';
 import HowItWorks from '@site/src/components/HowItWorks';
+import {
+  BarChartIcon,
+  GlobeIcon,
+  RouteIcon,
+  MailIcon,
+  SmartphoneIcon,
+  MapIcon,
+  RefreshIcon,
+  LinkIcon,
+  LockIcon,
+  CalendarIcon,
+  DumbbellIcon,
+  SearchIcon,
+  PartyIcon,
+} from '@site/src/components/LucideIcons';
 import Link from '@docusaurus/Link';
 import styles from './stats.module.css';
 
 const showcaseItems = [
   {
-    icon: '📊',
+    icon: <BarChartIcon />,
     title: 'Monthly & Yearly Insights',
     description: 'Get automatic summaries of your location data broken down by month and year. See trends, patterns, and highlights from each period.',
   },
   {
-    icon: '🌍',
+    icon: <GlobeIcon />,
     title: 'Cities & Countries Visited',
     description: 'Track every country you\'ve been to with automatic counting and visualization. Perfect for travel enthusiasts collecting passport stamps.',
   },
   {
-    icon: '🛣️',
+    icon: <RouteIcon />,
     title: 'Total Distance',
     description: 'Calculate the total distance you\'ve traveled across all your recorded location data. See how far you\'ve gone over time.',
   },
-  // {
-  //   icon: '⏱️',
-  //   title: 'Time Tracking',
-  //   description: 'Understand how much time you\'ve spent in different places, cities, and countries.',
-  // },
   {
-    icon: '📧',
+    icon: <MailIcon />,
     title: 'Email Digests',
     description: 'Receive automatic monthly and yearly summary emails highlighting your travel achievements and statistics.',
   }
@@ -37,7 +47,7 @@ const showcaseItems = [
 
 const howItWorksSteps = [
   {
-    icon: '📱',
+    icon: <SmartphoneIcon size={32} />,
     title: 'Track Automatically',
     description: 'Your stats are automatically calculated in the background every hour as you track your location.',
     details: [
@@ -47,7 +57,7 @@ const howItWorksSteps = [
     ]
   },
   {
-    icon: '📊',
+    icon: <BarChartIcon size={32} />,
     title: 'View Your Stats',
     description: 'Navigate to the Stats page to see your comprehensive location analytics.',
     details: [
@@ -57,7 +67,7 @@ const howItWorksSteps = [
     ]
   },
   {
-    icon: '🗺️',
+    icon: <MapIcon size={32} />,
     title: 'Explore on Map',
     description: 'Use the [Map] links to visualize your stats geographically.',
     details: [
@@ -67,7 +77,7 @@ const howItWorksSteps = [
     ]
   },
   {
-    icon: '🔄',
+    icon: <RefreshIcon size={32} />,
     title: 'Manual Updates',
     description: 'Force an immediate stats update anytime with the "Update stats" button.',
     details: [
@@ -80,17 +90,12 @@ const howItWorksSteps = [
 
 const shareFeatures = [
   {
-    icon: '🔗',
+    icon: <LinkIcon size={48} />,
     title: 'Shareable Links',
     description: 'Generate public links to share your yearly summaries with friends and family while keeping the rest of your data private.'
   },
-  // {
-  //   icon: '🖼️',
-  //   title: 'Export Images',
-  //   description: 'Download your stats as images to share on social media or include in presentations and reports.'
-  // },
   {
-    icon: '🔒',
+    icon: <LockIcon size={48} />,
     title: 'Privacy Friendly',
     description: 'You control what to share. Only shared stats are visible—everything else remains private to you.'
   }
@@ -104,7 +109,7 @@ export default function StatsPage() {
       <Head>
         <meta property="og:title" content="Dawarich Stats — See Your Life in Numbers" />
         <meta property="og:description" content="Comprehensive location statistics including countries visited, total distance, time tracking, and automatic monthly & yearly email digests." />
-        <meta property="og:image" content="https://dawarich.app/img/meta-image.jpg" />
+        <meta property="og:image" content="https://dawarich.app/img/meta-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -125,7 +130,7 @@ export default function StatsPage() {
             <h2 className={styles.sectionTitle}>What You Can Track</h2>
             <div className={styles.statsGrid}>
               <div className={styles.statCard}>
-                <div className={styles.statIcon}>🌍</div>
+                <div className={styles.statIcon}><GlobeIcon /></div>
                 <h3 className={styles.statTitle}>Global Stats</h3>
                 <ul className={styles.statList}>
                   <li>Countries visited</li>
@@ -134,7 +139,7 @@ export default function StatsPage() {
                 </ul>
               </div>
               <div className={styles.statCard}>
-                <div className={styles.statIcon}>📅</div>
+                <div className={styles.statIcon}><CalendarIcon /></div>
                 <h3 className={styles.statTitle}>Time-Based Stats</h3>
                 <ul className={styles.statList}>
                   <li>Yearly summaries</li>
@@ -181,21 +186,21 @@ export default function StatsPage() {
             <h2 className={styles.sectionTitle}>Why Stats Matter</h2>
             <div className={styles.reasonsGrid}>
               <div className={styles.reason}>
-                <div className={styles.reasonIcon}>💪</div>
+                <div className={styles.reasonIcon}><DumbbellIcon size={48} /></div>
                 <h3 className={styles.reasonTitle}>Motivation</h3>
                 <p className={styles.reasonText}>
                   Seeing your travel achievements in numbers motivates you to explore more and set new goals.
                 </p>
               </div>
               <div className={styles.reason}>
-                <div className={styles.reasonIcon}>🔍</div>
+                <div className={styles.reasonIcon}><SearchIcon size={48} /></div>
                 <h3 className={styles.reasonTitle}>Understanding Habits</h3>
                 <p className={styles.reasonText}>
                   Discover patterns in your movement and understand how you spend your time across different locations.
                 </p>
               </div>
               <div className={styles.reason}>
-                <div className={styles.reasonIcon}>🎊</div>
+                <div className={styles.reasonIcon}><PartyIcon size={48} /></div>
                 <h3 className={styles.reasonTitle}>Annual Memory Recap</h3>
                 <p className={styles.reasonText}>
                   Get beautiful yearly summaries that help you remember and celebrate your adventures and experiences.
@@ -223,6 +228,9 @@ export default function StatsPage() {
                 Self-Host for Free
               </Link>
             </div>
+            <p className="feature-cta-reassurance">
+              7-day free trial · 14-day risk-free refund · Cancel anytime
+            </p>
           </div>
         </section>
       </main>

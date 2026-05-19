@@ -127,7 +127,7 @@ export default function Hero() {
 					</div>
 
 					<p className={styles.noCredit} style={{ animationDelay: "0.4s" }}>
-						7-day free trial · Cancel anytime · Your data stays yours
+						7-day free trial · 14-day risk-free refund · Cancel anytime
 					</p>
 				</div>
 
@@ -147,6 +147,7 @@ export default function Hero() {
 							className={styles.heroVideo}
 							poster="/img/the_map.png"
 						>
+							<source src="/hero-video.webm" type="video/webm" />
 							<source src="/hero-video.mp4" type="video/mp4" />
 						</video>
 						<div className={styles.imageFadeOverlay} />
@@ -179,7 +180,8 @@ export default function Hero() {
 								playsInline
 								className={styles.modalVideo}
 							>
-								<source src="/hero-video.mp4" type="video/mp4" />
+								<source src="/hero-video.webm" type="video/webm" />
+							<source src="/hero-video.mp4" type="video/mp4" />
 							</video>
 						</div>
 					</div>,

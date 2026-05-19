@@ -10,7 +10,7 @@ import styles from './timeline-format-detector.module.css';
 const pageTitle = "Google Timeline Format Detector - Identify Your Location Export File Type";
 const pageDescription = "Free tool to detect your Google Timeline export format. Upload any Google Takeout location file to instantly see the format name, point count, date range, file size, and data quality. All processing in your browser.";
 const pageUrl = "https://dawarich.app/tools/timeline-format-detector/";
-const imageUrl = "https://dawarich.app/img/meta-image.jpg";
+const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 const formatNames = {
   records: 'Records.json (Raw GPS Data)',

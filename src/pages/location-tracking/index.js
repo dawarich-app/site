@@ -4,39 +4,58 @@ import Head from '@docusaurus/Head';
 import FeatureHero from '@site/src/components/FeatureHero';
 import FeatureShowcase from '@site/src/components/FeatureShowcase';
 import HowItWorks from '@site/src/components/HowItWorks';
+import {
+  SmartphoneIcon,
+  GlobeIcon,
+  HomeIcon,
+  MapPinIcon,
+  PhoneIcon,
+  KeyIcon,
+  SettingsIcon,
+  CheckIcon,
+} from '@site/src/components/LucideIcons';
 import Link from '@docusaurus/Link';
 import styles from './tracking.module.css';
 
 const appShowcase = [
   {
-    icon: '📱',
+    icon: <SmartphoneIcon />,
     title: 'Dawarich iOS App',
     description: 'Our official iOS app provides seamless location tracking directly to your Dawarich instance. Available on the App Store.',
     image: '/img/app-store.png',
-    imageAlt: 'Dawarich iOS App'
+    imageAlt: 'Download Dawarich on the App Store',
+    imageHref: 'https://apps.apple.com/app/apple-store/id6739544999?pt=128010810&ct=location-tracking&mt=8',
   },
   {
-    icon: '🌐',
+    icon: <SmartphoneIcon />,
+    title: 'Dawarich Android App',
+    description: 'Our official Android app brings the same effortless background tracking to your Dawarich instance. Available on Google Play.',
+    image: 'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png',
+    imageAlt: 'Get Dawarich on Google Play',
+    imageHref: 'https://play.google.com/store/apps/details?id=com.zeitflow.dawarich',
+  },
+  {
+    icon: <GlobeIcon />,
     title: 'Overland',
     description: 'Open-source location tracking app that sends data in batches. Works on iOS with configurable accuracy and frequency.',
   },
   {
-    icon: '🏠',
+    icon: <HomeIcon />,
     title: 'OwnTracks',
     description: 'Popular location tracking solution with extensive customization options and low battery consumption.',
   },
   {
-    icon: '📍',
+    icon: <MapPinIcon />,
     title: 'GPSLogger',
     description: 'Lightweight Android app focused on battery efficiency with customizable logging intervals and data formats.',
   },
   {
-    icon: '📞',
+    icon: <PhoneIcon />,
     title: 'PhoneTrack',
     description: 'NextCloud-integrated app that supports custom log jobs. Perfect for users already in the NextCloud ecosystem.',
   },
   {
-    icon: '🏡',
+    icon: <HomeIcon />,
     title: 'Home Assistant',
     description: 'For smart home enthusiasts, integrate your Home Assistant geolocation data directly into Dawarich.',
   }
@@ -44,7 +63,7 @@ const appShowcase = [
 
 const howItWorksSteps = [
   {
-    icon: '🔑',
+    icon: <KeyIcon size={32} />,
     title: 'Get Your API Key',
     description: 'Find your unique API key in the Account section of your Dawarich dashboard.',
     details: [
@@ -54,17 +73,17 @@ const howItWorksSteps = [
     ]
   },
   {
-    icon: '📲',
+    icon: <SmartphoneIcon size={32} />,
     title: 'Choose Your App',
     description: 'Select any supported tracking app that fits your needs and device platform.',
     details: [
-      'iOS: Dawarich app or Overland',
-      'Android: GPSLogger or PhoneTrack',
+      'iOS: official Dawarich app or Overland',
+      'Android: official Dawarich app, GPSLogger, or PhoneTrack',
       'Both: OwnTracks or Home Assistant integration'
     ]
   },
   {
-    icon: '⚙️',
+    icon: <SettingsIcon size={32} />,
     title: 'Configure the App',
     description: 'Enter your Dawarich instance URL and API key in your chosen app\'s settings.',
     details: [
@@ -75,7 +94,7 @@ const howItWorksSteps = [
     ]
   },
   {
-    icon: '✅',
+    icon: <CheckIcon size={32} />,
     title: 'Start Tracking',
     description: 'Once configured, your location data automatically syncs to your private Dawarich account.',
     details: [
@@ -93,6 +112,17 @@ const appDetails = [
     features: ['Seamless setup', 'Low battery impact', 'Background tracking', 'App Store availability'],
     setupSteps: [
       'Install from App Store',
+      'Open app and go to settings',
+      'Enter your API key',
+      'Tap Save and start tracking'
+    ]
+  },
+  {
+    name: 'Dawarich Android App',
+    description: 'Native Android application built specifically for Dawarich',
+    features: ['Seamless setup', 'Low battery impact', 'Background tracking', 'Available on Google Play'],
+    setupSteps: [
+      'Install from Google Play',
       'Open app and go to settings',
       'Enter your API key',
       'Tap Save and start tracking'
@@ -152,11 +182,11 @@ export default function TrackingPage() {
   return (
     <Layout
       title="Location Tracking Setup"
-      description="Track your location automatically with multiple supported apps including Dawarich iOS, Overland, OwnTracks, GPSLogger, PhoneTrack, and Home Assistant.">
+      description="Track your location automatically with multiple supported apps including the official Dawarich iOS and Android apps, Overland, OwnTracks, GPSLogger, PhoneTrack, and Home Assistant.">
       <Head>
         <meta property="og:title" content="Dawarich Location Tracking — Multiple Apps Supported" />
-        <meta property="og:description" content="Set up automatic location tracking with Dawarich iOS app, Overland, OwnTracks, GPSLogger, PhoneTrack, or Home Assistant integration." />
-        <meta property="og:image" content="https://dawarich.app/img/meta-image.jpg" />
+        <meta property="og:description" content="Set up automatic location tracking with the official Dawarich iOS or Android app, Overland, OwnTracks, GPSLogger, PhoneTrack, or Home Assistant integration." />
+        <meta property="og:image" content="https://dawarich.app/img/meta-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -164,7 +194,7 @@ export default function TrackingPage() {
         badge="Automatic Tracking"
         title="Track Your Location"
         titleHighlight="Effortlessly"
-        subtitle="Choose from multiple tracking apps to automatically record your location. Whether you prefer our official iOS app or popular open-source alternatives, Dawarich works with what you love."
+        subtitle="Choose from multiple tracking apps to automatically record your location. Whether you prefer our official iOS and Android apps or popular open-source alternatives, Dawarich works with what you love."
         image="/img/the_map.png"
         imageAlt="Location tracking visualization"
         ctaLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-hero&utm_campaign=tracking"
@@ -250,7 +280,8 @@ export default function TrackingPage() {
               </div>
             </div>
             <p className={styles.apiNote}>
-              📘 Full API documentation available at <code>/api-docs</code> on your Dawarich instance
+              Full API documentation is available at{' '}
+              <Link to="/docs/api/dawarich-api">our API reference</Link>.
             </p>
           </div>
         </section>
@@ -273,6 +304,9 @@ export default function TrackingPage() {
                 Self-Host for Free
               </Link>
             </div>
+            <p className="feature-cta-reassurance">
+              7-day free trial · 14-day risk-free refund · Cancel anytime
+            </p>
           </div>
         </section>
       </main>

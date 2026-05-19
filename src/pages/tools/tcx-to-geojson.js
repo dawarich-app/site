@@ -11,7 +11,7 @@ import styles from './converter.module.css';
 const pageTitle = "Free TCX to GeoJSON Converter - Convert Training Files to GeoJSON Online";
 const pageDescription = "Convert TCX files to GeoJSON format instantly. Free, privacy-first online converter for fitness activities. Perfect for web mapping - works entirely in your browser.";
 const pageUrl = "https://dawarich.app/tools/tcx-to-geojson/";
-const imageUrl = "https://dawarich.app/img/meta-image.jpg";
+const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 export default function TCXToGeoJSON() {
   const [isConverting, setIsConverting] = useState(false);

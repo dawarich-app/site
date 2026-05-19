@@ -11,7 +11,7 @@ import styles from './converter.module.css';
 const pageTitle = "Free TCX to GPX Converter - Convert Training Center XML Files Online";
 const pageDescription = "Convert TCX files to GPX format instantly. Free, privacy-first online converter for Garmin, Wahoo, and fitness device activities. Works entirely in your browser - no upload required.";
 const pageUrl = "https://dawarich.app/tools/tcx-to-gpx/";
-const imageUrl = "https://dawarich.app/img/meta-image.jpg";
+const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 export default function TCXToGPX() {
   const [isConverting, setIsConverting] = useState(false);
@@ -221,7 +221,7 @@ function formatDuration(seconds) {
   const hours = Math.floor(seconds / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
   const secs = Math.floor(seconds % 60);
-  
+
   if (hours > 0) {
     return `${hours}h ${minutes}m ${secs}s`;
   } else if (minutes > 0) {

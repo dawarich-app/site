@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo, useEffect, lazy, Suspense } from 'react';
+import React, { useState, useCallback, useMemo, useEffect, useRef, lazy, Suspense } from 'react';
 import Layout from '@theme/Layout';
 import RelatedTools from '@site/src/components/RelatedTools';
 import Head from '@docusaurus/Head';
@@ -15,7 +15,7 @@ const TimelineMapV2 = lazy(() => import('@site/src/components/TimelineMapV2'));
 const pageTitle = "Google Timeline Visualizer - View Your Location History as a Calendar";
 const pageDescription = "Free, privacy-first Google Timeline visualizer. Browse your location history day-by-day with a calendar heat-grid, visit list, journey legs, and activity replay. All processing happens in your browser.";
 const pageUrl = "https://dawarich.app/tools/timeline-visualizer/";
-const imageUrl = "https://dawarich.app/img/meta-image.jpg";
+const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 const faqItems = [
   {
@@ -85,6 +85,8 @@ export default function TimelineVisualizer() {
 
   const [isProcessing, setIsProcessing] = useState(false);
   const [ctaDismissed, setCtaDismissed] = useState(false);
+
+  const workspaceRef = useRef(null);
 
   const isShowingSample = uploadedFiles.length === 0 && points.length === 0;
 
@@ -417,7 +419,7 @@ export default function TimelineVisualizer() {
         </div>
 
         <div className={styles.workspaceSection}>
-          <div className={styles.workspaceGrid}>
+          <div ref={workspaceRef} className={styles.workspaceGrid}>
             <div className={styles.panelColumn}>
               <TimelinePanel
                 monthGrid={monthGrid}
@@ -459,6 +461,7 @@ export default function TimelineVisualizer() {
                       onVisitClick={onSelectVisit}
                       onTrackClick={onToggleTrack}
                       onReplayChange={setReplayState}
+                      fullscreenTarget={workspaceRef}
                     />
                   </Suspense>
                 )}

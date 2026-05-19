@@ -22,7 +22,7 @@ Click **Create** to save. Dawarich automatically pulls in all points recorded wi
 
 The trips list shows all your saved trips in one place.
 
-![Trips list](images/trips-list.png)
+![Trips list](images/trips.png)
 
 ## Trip detail page
 

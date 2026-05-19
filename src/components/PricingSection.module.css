@@ -198,6 +198,17 @@
   color: var(--dw-text);
 }
 
+.guaranteeLink {
+  color: var(--dw-primary);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.guaranteeLink:hover {
+  text-decoration: underline;
+}
+
 [data-theme='dark'] .guarantee {
   background: rgba(13, 148, 136, 0.1);
   border-color: rgba(13, 148, 136, 0.25);

@@ -16,7 +16,7 @@ Stats display:
 - **Cities Visited** - Number of unique cities
 - **Points Recorded** - Total GPS points in your database
 
-![Stats](../stats.jpeg)
+![Stats](images/stats.png)
 
 ## Yearly Stats
 
@@ -25,7 +25,7 @@ Click on any year to see detailed statistics:
 - Countries visited that year
 - Map view link for the entire year
 
-![Stats by year](../stats-by-year.jpeg)
+![Stats by year](images/stats-by-year.png)
 
 ## Monthly Stats
 

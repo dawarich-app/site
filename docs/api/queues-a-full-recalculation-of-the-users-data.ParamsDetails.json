@@ -1,0 +1,1 @@
+{"parameters":[{"name":"api_key","in":"query","required":true,"description":"API Key","schema":{"type":"string"}},{"name":"year","in":"query","required":false,"description":"Restrict the recalculation to a single year (2000..current_year+1)","schema":{"type":"integer"}}]}

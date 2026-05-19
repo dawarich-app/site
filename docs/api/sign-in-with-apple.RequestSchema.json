@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"id_token":{"type":"string","description":"Apple-issued ID token (JWT)"},"nonce":{"type":"string","description":"Nonce echoed from the Apple sign-in flow","nullable":true}},"required":["id_token"]}}}}}

@@ -7,7 +7,7 @@ import styles from './index.module.css';
 const pageTitle = 'Free GPS Tools & Format Converters | Dawarich';
 const pageDescription = 'Privacy-first online tools for visualizing, analyzing, merging, and converting GPS and location history files. Everything runs in your browser — no data leaves your device.';
 const pageUrl = 'https://dawarich.app/tools';
-const imageUrl = 'https://dawarich.app/img/meta-image.jpg';
+const imageUrl = 'https://dawarich.app/img/meta-image.png';
 
 const freeTools = [
   {

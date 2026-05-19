@@ -5,44 +5,60 @@ import FeatureHero from '@site/src/components/FeatureHero';
 import FeatureShowcase from '@site/src/components/FeatureShowcase';
 import HowItWorks from '@site/src/components/HowItWorks';
 import FeatureCard, { FeatureCardGrid } from '@site/src/components/FeatureCard';
+import {
+  CameraIcon,
+  ImageIcon,
+  MapIcon,
+  PlaneIcon,
+  CalendarIcon,
+  LockIcon,
+  KeyIcon,
+  SettingsIcon,
+  RefreshIcon,
+  PartyIcon,
+  SmartphoneIcon,
+  FileTextIcon,
+  MusicIcon,
+  CloudIcon,
+} from '@site/src/components/LucideIcons';
 import Link from '@docusaurus/Link';
 import styles from './integrations.module.css';
 
 const integrationsShowcase = [
   {
-    icon: '📸',
+    icon: <CameraIcon />,
     title: 'Immich',
     description: 'Self-hosted photo and video backup solution. Connect your Immich instance to display your photos on the map at the exact locations they were taken.',
-    image: 'img/map-photos.png',
+    image: '/img/map-photos.png',
     imageAlt: 'Photos on map from Immich'
   },
   {
-    icon: '🖼️',
+    icon: <ImageIcon />,
     title: 'PhotoPrism',
     description: 'AI-powered photo management app. Integrate PhotoPrism to see your entire photo library on your location timeline.',
-    image: 'img/trip-details.png',
+    image: '/img/trip-details.png',
     imageAlt: 'Trip with PhotoPrism photos'
   }
 ];
 
 const benefits = [
   {
-    icon: '🗺️',
+    icon: <MapIcon />,
     title: 'Photos on Map',
     description: 'See all your photos plotted on the interactive map at their exact GPS coordinates. Rediscover where each memory was made.'
   },
   {
-    icon: '✈️',
+    icon: <PlaneIcon />,
     title: 'Photos in Trips',
     description: 'Trip pages automatically show photos taken during that trip. Your travel journal becomes a rich multimedia experience.'
   },
   {
-    icon: '📅',
+    icon: <CalendarIcon />,
     title: 'Photo Timeline',
     description: 'Browse your photos chronologically alongside your location data. See the complete story of each day.'
   },
   {
-    icon: '🔒',
+    icon: <LockIcon />,
     title: 'Privacy Preserved',
     description: 'Dawarich never stores your photos. It only reads location data from your self-hosted photo apps via their APIs.'
   }
@@ -50,17 +66,17 @@ const benefits = [
 
 const setupSteps = [
   {
-    icon: '🔑',
+    icon: <KeyIcon size={32} />,
     title: 'Get API Keys',
     description: 'Generate API keys from your Immich or PhotoPrism instance.',
     details: [
-      'Immich: Create key with asset.read scope',
+      'Immich: Create key with asset.read and asset.view scopes (asset.update for Enrich Photos)',
       'PhotoPrism: Generate key in Apps and Devices settings',
       'Keep your keys secure'
     ]
   },
   {
-    icon: '⚙️',
+    icon: <SettingsIcon size={32} />,
     title: 'Configure in Dawarich',
     description: 'Enter your photo service details in Dawarich settings.',
     details: [
@@ -72,7 +88,7 @@ const setupSteps = [
     ]
   },
   {
-    icon: '🔄',
+    icon: <RefreshIcon size={32} />,
     title: 'Sync Complete',
     description: 'Dawarich connects to your photo service and indexes location data.',
     details: [
@@ -83,7 +99,7 @@ const setupSteps = [
     ]
   },
   {
-    icon: '🎉',
+    icon: <PartyIcon size={32} />,
     title: 'View Photos',
     description: 'Photos now appear on your map and in your trips.',
     details: [
@@ -97,22 +113,22 @@ const setupSteps = [
 
 const futureIntegrations = [
   {
-    icon: '📱',
+    icon: <SmartphoneIcon />,
     title: 'Fitness Apps',
     description: 'Integration with fitness tracking apps to combine workout routes with your location history.'
   },
   {
-    icon: '📝',
+    icon: <FileTextIcon />,
     title: 'Note-Taking Apps',
     description: 'Connect your notes to locations automatically. See what you wrote and where you wrote it.'
   },
   {
-    icon: '🎵',
+    icon: <MusicIcon />,
     title: 'Music Services',
     description: 'Track what you were listening to at different locations throughout your day.'
   },
   {
-    icon: '☁️',
+    icon: <CloudIcon />,
     title: 'Cloud Services',
     description: 'Deeper integrations with various cloud storage and productivity services.'
   }
@@ -126,7 +142,7 @@ export default function IntegrationsPage() {
       <Head>
         <meta property="og:title" content="Dawarich Integrations — Connect Your Digital Life" />
         <meta property="og:description" content="Integrate Immich and PhotoPrism photo libraries with your location history. See photos on the map and in trips automatically." />
-        <meta property="og:image" content="https://dawarich.app/img/meta-image.jpg" />
+        <meta property="og:image" content="https://dawarich.app/img/meta-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -135,7 +151,7 @@ export default function IntegrationsPage() {
         title="Connect Your"
         titleHighlight="Digital Life"
         subtitle="Bring your photos into your location timeline. Dawarich integrates with Immich and PhotoPrism to display your photos on the map and in trips—turning your location history into a rich, visual experience."
-        image="img/map-photos.png"
+        image="/img/map-photos.png"
         imageAlt="Photos displayed on map"
         ctaLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-hero&utm_campaign=integrations"
         showSecondary={true}
@@ -177,7 +193,7 @@ export default function IntegrationsPage() {
         <section className={styles.privacySection}>
           <div className={styles.container}>
             <div className={styles.privacyCard}>
-              <div className={styles.privacyIcon}>🔒</div>
+              <div className={styles.privacyIcon}><LockIcon size={48} /></div>
               <div className={styles.privacyContent}>
                 <h3 className={styles.privacyTitle}>Your Photos Stay Private</h3>
                 <p className={styles.privacyText}>
@@ -195,17 +211,22 @@ export default function IntegrationsPage() {
             <h2 className={styles.sectionTitle}>Technical Details</h2>
             <div className={styles.detailsGrid}>
               <div className={styles.detailCard}>
-                <h3 className={styles.detailTitle}>🔧 Immich Setup</h3>
+                <h3 className={styles.detailTitle}>
+                  <SettingsIcon size={20} /> Immich Setup
+                </h3>
                 <p className={styles.detailText}>
-                  Requires an API key with <code>asset.read</code> scope. Dawarich queries the Immich API
-                  to read photo metadata including GPS coordinates from EXIF data.
+                  Requires an API key with <code>asset.read</code> and <code>asset.view</code> scopes.
+                  Add <code>asset.update</code> if you also want to use the Enrich Photos feature.
+                  Dawarich queries the Immich API to read photo metadata including GPS coordinates from EXIF data.
                 </p>
                 <Link to="https://immich.app/docs/features/command-line-interface#obtain-the-api-key" className={styles.detailLink}>
                   How to obtain Immich API key →
                 </Link>
               </div>
               <div className={styles.detailCard}>
-                <h3 className={styles.detailTitle}>🖼️ PhotoPrism Setup</h3>
+                <h3 className={styles.detailTitle}>
+                  <ImageIcon size={20} /> PhotoPrism Setup
+                </h3>
                 <p className={styles.detailText}>
                   Generate an API key in PhotoPrism's "Apps and Devices" settings. Dawarich uses this
                   to access your photo library and extract location information.
@@ -258,6 +279,9 @@ export default function IntegrationsPage() {
                 Self-Host for Free
               </Link>
             </div>
+            <p className="feature-cta-reassurance">
+              7-day free trial · 14-day risk-free refund · Cancel anytime
+            </p>
           </div>
         </section>
       </main>

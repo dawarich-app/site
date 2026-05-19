@@ -172,7 +172,7 @@ function Differentiators() {
 							>
 								GitHub
 							</a>{" "}
-							with 8,900+ stars. If we ever shut down, you self-host the same
+							with OVER 9,000 stars. If we ever shut down, you self-host the same
 							software with one command and import your exported data.
 						</p>
 					</div>
@@ -411,7 +411,7 @@ export default function CloudPage() {
 				/>
 				<meta
 					property="og:image"
-					content="https://dawarich.app/img/meta-image.jpg"
+					content="https://dawarich.app/img/meta-image.png"
 				/>
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:url" content="https://dawarich.app/cloud" />
@@ -425,7 +425,7 @@ export default function CloudPage() {
 				/>
 				<meta
 					name="twitter:image"
-					content="https://dawarich.app/img/meta-image.jpg"
+					content="https://dawarich.app/img/meta-image.png"
 				/>
 				<link rel="canonical" href="https://dawarich.app/cloud" />
 			</Head>

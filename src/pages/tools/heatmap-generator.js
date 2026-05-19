@@ -10,7 +10,7 @@ import styles from './heatmap-generator.module.css';
 const pageTitle = "Free GPS Heatmap Generator - Create Activity Heatmaps Online";
 const pageDescription = "Create beautiful heatmaps from your GPS data. Upload GPX, FIT, TCX, GeoJSON, KML, or Google Timeline JSON files to visualize your running, cycling, and activity patterns. Free, privacy-first - works entirely in your browser.";
 const pageUrl = "https://dawarich.app/tools/heatmap-generator/";
-const imageUrl = "https://dawarich.app/img/meta-image.jpg";
+const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 function HeatmapMap({ points, heatmapSettings }) {
   const mapContainer = useRef(null);
@@ -513,10 +513,10 @@ export default function HeatmapGenerator() {
 
             <div className={styles.settingsSection}>
               <h3>Heatmap Settings</h3>
-              
+
               <div className={styles.settingItem}>
                 <label>Color Scheme</label>
-                <select 
+                <select
                   value={heatmapSettings.colorScheme}
                   onChange={(e) => updateSetting('colorScheme', e.target.value)}
                 >

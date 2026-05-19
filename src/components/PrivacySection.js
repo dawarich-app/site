@@ -2,155 +2,45 @@ import Link from "@docusaurus/Link";
 import React from "react";
 import styles from "./PrivacySection.module.css";
 
+const lucideProps = {
+	width: 24,
+	height: 24,
+	viewBox: "0 0 24 24",
+	fill: "none",
+	stroke: "currentColor",
+	strokeWidth: 2,
+	strokeLinecap: "round",
+	strokeLinejoin: "round",
+	xmlns: "http://www.w3.org/2000/svg",
+};
+
 const NoAdsIcon = () => (
-	<svg
-		width="24"
-		height="24"
-		viewBox="0 0 24 24"
-		fill="none"
-		xmlns="http://www.w3.org/2000/svg"
-	>
-		<circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
-		<line
-			x1="4.93"
-			y1="4.93"
-			x2="19.07"
-			y2="19.07"
-			stroke="currentColor"
-			strokeWidth="2"
-			strokeLinecap="round"
-		/>
-		<path
-			d="M12 8V12L15 15"
-			stroke="currentColor"
-			strokeWidth="2"
-			strokeLinecap="round"
-			strokeLinejoin="round"
-		/>
+	<svg {...lucideProps}>
+		<circle cx="12" cy="12" r="10" />
+		<path d="m4.9 4.9 14.2 14.2" />
 	</svg>
 );
 
 const SelfHostIcon = () => (
-	<svg
-		width="24"
-		height="24"
-		viewBox="0 0 24 24"
-		fill="none"
-		xmlns="http://www.w3.org/2000/svg"
-	>
-		<rect
-			x="2"
-			y="3"
-			width="20"
-			height="4"
-			rx="1"
-			stroke="currentColor"
-			strokeWidth="2"
-		/>
-		<rect
-			x="2"
-			y="9"
-			width="20"
-			height="4"
-			rx="1"
-			stroke="currentColor"
-			strokeWidth="2"
-		/>
-		<rect
-			x="2"
-			y="15"
-			width="20"
-			height="4"
-			rx="1"
-			stroke="currentColor"
-			strokeWidth="2"
-		/>
-		<line
-			x1="6"
-			y1="5"
-			x2="6.01"
-			y2="5"
-			stroke="currentColor"
-			strokeWidth="2"
-			strokeLinecap="round"
-		/>
-		<line
-			x1="6"
-			y1="11"
-			x2="6.01"
-			y2="11"
-			stroke="currentColor"
-			strokeWidth="2"
-			strokeLinecap="round"
-		/>
-		<line
-			x1="6"
-			y1="17"
-			x2="6.01"
-			y2="17"
-			stroke="currentColor"
-			strokeWidth="2"
-			strokeLinecap="round"
-		/>
+	<svg {...lucideProps}>
+		<rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+		<rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+		<line x1="6" x2="6.01" y1="6" y2="6" />
+		<line x1="6" x2="6.01" y1="18" y2="18" />
 	</svg>
 );
 
 const OpenSourceIcon = () => (
-	<svg
-		width="24"
-		height="24"
-		viewBox="0 0 24 24"
-		fill="none"
-		xmlns="http://www.w3.org/2000/svg"
-	>
-		<path
-			d="M16 18L22 12L16 6"
-			stroke="currentColor"
-			strokeWidth="2"
-			strokeLinecap="round"
-			strokeLinejoin="round"
-		/>
-		<path
-			d="M8 6L2 12L8 18"
-			stroke="currentColor"
-			strokeWidth="2"
-			strokeLinecap="round"
-			strokeLinejoin="round"
-		/>
-		<line
-			x1="14"
-			y1="4"
-			x2="10"
-			y2="20"
-			stroke="currentColor"
-			strokeWidth="2"
-			strokeLinecap="round"
-		/>
+	<svg {...lucideProps}>
+		<path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+		<path d="M9 18c-4.51 2-5-2-7-2" />
 	</svg>
 );
 
 const ShieldIcon = () => (
-	<svg
-		width="24"
-		height="24"
-		viewBox="0 0 24 24"
-		fill="none"
-		xmlns="http://www.w3.org/2000/svg"
-	>
-		<path
-			d="M12 22S4 18 4 12V6L12 2L20 6V12C20 18 12 22 12 22Z"
-			stroke="currentColor"
-			strokeWidth="2"
-			strokeLinecap="round"
-			strokeLinejoin="round"
-		/>
-		<path
-			d="M9 12L11 14L15 10"
-			stroke="currentColor"
-			strokeWidth="2"
-			strokeLinecap="round"
-			strokeLinejoin="round"
-		/>
+	<svg {...lucideProps}>
+		<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+		<path d="m9 12 2 2 4-4" />
 	</svg>
 );
 
@@ -220,7 +110,7 @@ export default function PrivacySection() {
 								Open Source: Inspect Every Line
 							</h3>
 							<p className={styles.cardDescription}>
-								Don't trust us? Read the code. 8,400+ GitHub stars. Thousands of
+								Don't trust us? Read the code. OVER 9,000 GitHub stars. Thousands of
 								developers have reviewed it. No hidden tracking. No surprises.
 							</p>
 						</div>

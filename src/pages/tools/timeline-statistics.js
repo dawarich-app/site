@@ -13,7 +13,7 @@ import styles from './timeline-statistics.module.css';
 const pageTitle = "Google Timeline Statistics Analyzer - Your Location History Insights";
 const pageDescription = "Free privacy-first tool to analyze your Google Timeline data. See total distance traveled, countries visited, top places, activity breakdown, and yearly trends. All processing in your browser.";
 const pageUrl = "https://dawarich.app/tools/timeline-statistics/";
-const imageUrl = "https://dawarich.app/img/meta-image.jpg";
+const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 const ACTIVITY_LABELS = {
   'IN_PASSENGER_VEHICLE': 'Driving',

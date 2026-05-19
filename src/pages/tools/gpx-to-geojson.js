@@ -11,7 +11,7 @@ import styles from './converter.module.css';
 const pageTitle = "Free GPX to GeoJSON Converter - Convert GPS Track Files Online";
 const pageDescription = "Convert GPX files to GeoJSON format instantly. Free, privacy-first online converter for GPS tracks, waypoints, and routes. Works entirely in your browser - no upload required.";
 const pageUrl = "https://dawarich.app/tools/gpx-to-geojson/";
-const imageUrl = "https://dawarich.app/img/meta-image.jpg";
+const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 export default function GPXToGeoJSON() {
   const [isConverting, setIsConverting] = useState(false);

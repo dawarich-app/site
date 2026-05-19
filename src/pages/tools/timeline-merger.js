@@ -13,7 +13,7 @@ import styles from './timeline-merger.module.css';
 const pageTitle = "Google Timeline Data Merger - Combine Location History Exports";
 const pageDescription = "Free tool to merge multiple Google Timeline exports into one file. Smart deduplication removes overlapping data points. Combine Records.json, Semantic History, and phone exports. Privacy-first.";
 const pageUrl = "https://dawarich.app/tools/timeline-merger/";
-const imageUrl = "https://dawarich.app/img/meta-image.jpg";
+const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 const FILE_COLORS = [
   '#3b82f6',

@@ -41,7 +41,7 @@ const FeatureList = [
   },
   {
     title: 'Visualize your trips on a map',
-    image: require('@site/docs/features/images/trips-list.png').default,
+    image: require('@site/docs/features/images/trips.png').default,
     description: (
       <>
         Create and view your trips on a map, add your notes and see photos from your trip pulled from your own photo library on Immich or Photoprism.

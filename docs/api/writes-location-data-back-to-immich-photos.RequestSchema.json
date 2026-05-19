@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"assets":{"type":"array","description":"List of assets to enrich","items":{"type":"object","properties":{"immich_asset_id":{"type":"string"},"latitude":{"type":"number"},"longitude":{"type":"number"}},"required":["immich_asset_id","latitude","longitude"]}}},"required":["assets"]}}}}}

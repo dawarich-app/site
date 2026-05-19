@@ -193,6 +193,7 @@ export default function TimelineMapV2({
   onVisitClick,
   onTrackClick,
   onReplayChange,
+  fullscreenTarget,
 }) {
   const containerRef = useRef(null);
   const mapNodeRef = useRef(null);
@@ -386,9 +387,10 @@ export default function TimelineMapV2({
     };
   }, [replayState, day, styleReady, onReplayChange]);
 
-  // Fullscreen toggle
+  // Fullscreen toggle — prefers an external target (e.g. the workspace grid) so the
+  // panel goes fullscreen with the map. Falls back to the map container.
   const toggleFullscreen = () => {
-    const el = containerRef.current;
+    const el = fullscreenTarget?.current || containerRef.current;
     if (!el) return;
     const fsElement = document.fullscreenElement || document.webkitFullscreenElement;
     if (!fsElement) {
@@ -401,7 +403,8 @@ export default function TimelineMapV2({
   useEffect(() => {
     const handler = () => {
       const fsElement = document.fullscreenElement || document.webkitFullscreenElement;
-      setIsFullscreen(fsElement === containerRef.current);
+      const target = fullscreenTarget?.current || containerRef.current;
+      setIsFullscreen(fsElement === target);
       setTimeout(() => mapRef.current?.resize(), 100);
     };
     document.addEventListener('fullscreenchange', handler);

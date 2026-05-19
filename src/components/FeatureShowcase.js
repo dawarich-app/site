@@ -28,12 +28,27 @@ export default function FeatureShowcase({ title, subtitle, items }) {
               )}
               {item.image && (
                 <div className={styles.imageWrapper}>
-                  <img
-                    src={item.image}
-                    alt={item.imageAlt || item.title}
-                    className={styles.image}
-                    onClick={() => openModal(item.image, item.imageAlt || item.title)}
-                  />
+                  {item.imageHref ? (
+                    <a
+                      href={item.imageHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.imageLink}
+                    >
+                      <img
+                        src={item.image}
+                        alt={item.imageAlt || item.title}
+                        className={styles.image}
+                      />
+                    </a>
+                  ) : (
+                    <img
+                      src={item.image}
+                      alt={item.imageAlt || item.title}
+                      className={styles.image}
+                      onClick={() => openModal(item.image, item.imageAlt || item.title)}
+                    />
+                  )}
                 </div>
               )}
             </div>

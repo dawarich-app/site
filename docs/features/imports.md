@@ -18,7 +18,7 @@ For each import, you can see:
 
 Click on an import to view its details.
 
-![Imports](./images/imports.jpeg)
+![Imports](./images/imports.png)
 
 ## Deleting Imports
 

@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"two-factor disabled","content":{"application/json":{"schema":{"type":"object","properties":{"message":{"type":"string"}}}}}},"401":{"description":"missing or invalid credentials"}}}

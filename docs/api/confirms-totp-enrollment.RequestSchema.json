@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"password":{"type":"string","format":"password"},"otp_code":{"type":"string","description":"Current 6-digit TOTP code"}},"required":["password","otp_code"]}}}}}

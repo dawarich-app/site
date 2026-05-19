@@ -10,7 +10,7 @@ import styles from './converter.module.css';
 const pageTitle = "Free KMZ to KML Converter - Extract Google Earth Files Online";
 const pageDescription = "Convert KMZ files to KML format instantly. Free, privacy-first online converter to extract and decompress KMZ files. Works entirely in your browser - no upload required.";
 const pageUrl = "https://dawarich.app/tools/kmz-to-kml/";
-const imageUrl = "https://dawarich.app/img/meta-image.jpg";
+const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 export default function KMZToKML() {
   const [isConverting, setIsConverting] = useState(false);

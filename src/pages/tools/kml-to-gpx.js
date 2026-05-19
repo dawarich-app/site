@@ -11,7 +11,7 @@ import styles from './converter.module.css';
 const pageTitle = "Free KML to GPX Converter - Convert Google Earth Files Online";
 const pageDescription = "Convert KML files to GPX format instantly. Free, privacy-first online converter for geographic data. Works entirely in your browser - no upload required.";
 const pageUrl = "https://dawarich.app/tools/kml-to-gpx/";
-const imageUrl = "https://dawarich.app/img/meta-image.jpg";
+const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 export default function KMLToGPX() {
   const [isConverting, setIsConverting] = useState(false);

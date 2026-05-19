@@ -20,6 +20,9 @@ export default function CTABanner() {
 						View Documentation
 					</Link>
 				</div>
+				<p className={styles.reassurance}>
+					7-day free trial · 14-day risk-free refund · Cancel anytime
+				</p>
 			</div>
 		</section>
 	);

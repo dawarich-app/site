@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"two-factor enabled","content":{"application/json":{"schema":{"type":"object","properties":{"backup_codes":{"type":"array","items":{"type":"string"},"description":"Single-use recovery codes"}}}}}},"422":{"description":"invalid otp code"}}}

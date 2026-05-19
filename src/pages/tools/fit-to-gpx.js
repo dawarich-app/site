@@ -11,7 +11,7 @@ import styles from './converter.module.css';
 const pageTitle = "Free FIT to GPX Converter - Convert Garmin Activity Files Online";
 const pageDescription = "Convert Garmin FIT files to GPX format instantly. Free, privacy-first online converter for cycling, running, and fitness activities. Works entirely in your browser - no upload required.";
 const pageUrl = "https://dawarich.app/tools/fit-to-gpx/";
-const imageUrl = "https://dawarich.app/img/meta-image.jpg";
+const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 export default function FITToGPX() {
   const [isConverting, setIsConverting] = useState(false);
@@ -222,7 +222,7 @@ function formatDuration(seconds) {
   const hours = Math.floor(seconds / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
   const secs = Math.floor(seconds % 60);
-  
+
   if (hours > 0) {
     return `${hours}h ${minutes}m ${secs}s`;
   } else if (minutes > 0) {

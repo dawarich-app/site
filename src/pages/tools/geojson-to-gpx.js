@@ -11,7 +11,7 @@ import styles from './converter.module.css';
 const pageTitle = "Free GeoJSON to GPX Converter - Convert Geographic Data Online";
 const pageDescription = "Convert GeoJSON files to GPX format instantly. Free, privacy-first online converter for geographic data. Works entirely in your browser - no upload required.";
 const pageUrl = "https://dawarich.app/tools/geojson-to-gpx/";
-const imageUrl = "https://dawarich.app/img/meta-image.jpg";
+const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 export default function GeoJSONToGPX() {
   const [isConverting, setIsConverting] = useState(false);

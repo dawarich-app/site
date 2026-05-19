@@ -1,0 +1,1 @@
+{"parameters":[{"name":"api_key","in":"query","required":true,"description":"API Key","schema":{"type":"string"}},{"name":"start_at","in":"query","required":true,"description":"Start of the time range (ISO 8601)","schema":{"type":"string"}},{"name":"end_at","in":"query","required":true,"description":"End of the time range (ISO 8601)","schema":{"type":"string"}}]}

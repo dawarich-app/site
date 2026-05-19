@@ -91,12 +91,21 @@ const CrosshairIcon = () => (
 
 const features = [
 	{
+		id: "timeline",
+		icon: <RouteIcon />,
+		title: "Replay Any Day, Minute by Minute",
+		description:
+			"Pick a date. Every stop, every route, every minute — laid out in a single glance. The granular timeline view Google quietly killed.",
+		image: "/img/timeline.png",
+		className: "fullWidthCard",
+	},
+	{
 		id: "map",
 		icon: <TabMapIcon />,
 		title: 'Answer "Where Was I?" Instantly',
 		description:
 			"Type a date. See exactly where you were, what route you took, how long you stayed. Every trip, commute, and detour — searchable forever.",
-		image: "img/the_map.png",
+		image: "/img/the_map.png",
 		className: "heroCard",
 	},
 	{
@@ -105,7 +114,7 @@ const features = [
 		title: "Relive Any Trip in Detail",
 		description:
 			"Pick a date range. Dawarich builds the map, calculates the distance, traces the route. Add photos and it becomes a travel journal.",
-		image: "img/features-trip-details.png",
+		image: "/img/features-trip-details.png",
 		className: "standardCard",
 	},
 	{
@@ -114,7 +123,7 @@ const features = [
 		title: "See Your Life in Numbers",
 		description:
 			"How many countries. How many kilometers. Your most-visited city. Monthly patterns you never noticed. Share your stats with a single link.",
-		image: "img/features-stats.png",
+		image: "/img/features-stats.png",
 		className: "standardCard",
 	},
 	{

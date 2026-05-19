@@ -12,7 +12,7 @@ import styles from './timeline-mileage-calculator.module.css';
 const pageTitle = "Google Timeline Mileage Calculator - Track Driving Distance Free";
 const pageDescription = "Free mileage calculator using your Google Timeline data. Calculate driving distance, generate mileage logs, and export CSV reports for tax deductions. Privacy-first — runs in your browser.";
 const pageUrl = "https://dawarich.app/tools/timeline-mileage-calculator/";
-const imageUrl = "https://dawarich.app/img/meta-image.jpg";
+const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 const faqItems = [
   {

@@ -116,23 +116,6 @@ export default function Home() {
 		initializePaddle({
 			token: "live_8593fad779b610288ad3ca40789",
 		});
-
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						entry.target.classList.add("visible");
-					}
-				});
-			},
-			{ threshold: 0.1 },
-		);
-
-		document.querySelectorAll(".animateOnScroll").forEach((el) => {
-			observer.observe(el);
-		});
-
-		return () => observer.disconnect();
 	}, []);
 
 	return (
@@ -151,7 +134,7 @@ export default function Home() {
 				/>
 				<meta
 					property="og:image"
-					content="https://dawarich.app/img/meta-image.jpg"
+					content="https://dawarich.app/img/meta-image.png"
 				/>
 
 				{/* X (Twitter) */}
@@ -167,7 +150,7 @@ export default function Home() {
 				/>
 				<meta
 					name="twitter:image"
-					content="https://dawarich.app/img/meta-image.jpg"
+					content="https://dawarich.app/img/meta-image.png"
 				/>
 
 				{/* JSON-LD: Organization + WebSite + SoftwareApplication */}
@@ -249,32 +232,21 @@ export default function Home() {
 			</Head>
 			<HomepageHeader />
 			<main>
-				{[
-					<SocialProof key="social" />,
-					<Comparison key="comparison" />,
-					<HowItWorks
-						key="how"
-						title="How It Works"
-						subtitle="Get started in three simple steps."
-						steps={howItWorksSteps}
-						horizontal
-					/>,
-					<Features key="features" />,
-					<CTABanner key="cta" />,
-					<PrivacySection key="privacy" />,
-					<Testimonials key="testimonials" />,
-					<PricingSection key="pricing" />,
-					<FAQ key="faq" />,
-					<FinalCTA key="final-cta" />,
-				].map((section, i) => (
-					<div
-						key={section.key}
-						className="animateOnScroll"
-						style={{ transitionDelay: `${i * 0.1}s` }}
-					>
-						{section}
-					</div>
-				))}
+				<SocialProof />
+				<Comparison />
+				<HowItWorks
+					title="How It Works"
+					subtitle="Get started in three simple steps."
+					steps={howItWorksSteps}
+					horizontal
+				/>
+				<Features />
+				<CTABanner />
+				<PrivacySection />
+				<Testimonials />
+				<PricingSection />
+				<FAQ />
+				<FinalCTA />
 			</main>
 		</Layout>
 	);

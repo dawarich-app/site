@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"challenge_token":{"type":"string","description":"Token issued by /auth/login when 2FA is required"},"otp_code":{"type":"string","description":"6-digit TOTP code or one of the user's backup codes"}},"required":["challenge_token","otp_code"]}}}}}

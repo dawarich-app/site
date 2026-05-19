@@ -19,13 +19,13 @@ One important thing is that Google Takeout might have at least 3 (three) differe
 To import your data, visit Imports -> New Import page of your Dawarich instance. There you will have to select the source of your data, then select one or multiple files to upload, and finally click the "Import" button. The import process will start and you will be redirected to the Imports page. The import process will run in the background and you can ~~check the status of the import on the Imports page~~ No status indication is yet implemented.
 
 
-![Imports](./new-import.jpeg)
+![Imports](./new-import.png)
 
 ## Sources of data
 
-### Google Maps app export 
+### Google Maps app export
 
-The following steps describe how to export your timeline data after the [Timeline update](https://support.google.com/maps/answer/14169818).  
+The following steps describe how to export your timeline data after the [Timeline update](https://support.google.com/maps/answer/14169818).
 If this update has not rolled out to you yet, see the *Google Takeout (legacy/outdated)* section below.
 
 #### Android
@@ -34,7 +34,7 @@ If this update has not rolled out to you yet, see the *Google Takeout (legacy/ou
 2. Look for the category `Location`
 3. Tap `Location services`
 4. Tap `Timeline`
-5. (if you have multiple) Select the Google account you want to export data from  
+5. (if you have multiple) Select the Google account you want to export data from
 Note: If you're redirected to the `Activity Controls` page of your Google account settings, the update hasn't rolled out to you yet.
 6. Tap `Export Timeline data`
 7. Select a location in your storage. This is where your `Timeline.json` will be saved to.
@@ -48,7 +48,7 @@ Note: If you're redirected to the `Activity Controls` page of your Google accoun
 
 ### Google Takeout (legacy/outdated)
 
-**Important information:**  
+**Important information:**
 After [Google's change to how Timeline data is stored](https://support.google.com/maps/answer/14169818), the following method **will not work** for all users where this update has been rolled out to. When trying to use Takeout, you will only receive a txt file that tells you there is encrypted data present, but no way to decrypt it. See the *Google Maps app export* section if this applies to you.
 
 Google allows you to download your data from their services using [Google Takeout](https://takeout.google.com/settings/takeout?pli=1). Extract your Takeout archive, go to the Takeout directory, then to the Location History directory. There you will find the following files: `Records.json` and `Semantic location history` directory.

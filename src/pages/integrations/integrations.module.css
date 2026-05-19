@@ -175,6 +175,9 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   color: var(--ifm-heading-color);
 }
 

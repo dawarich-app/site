@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"scan completed","content":{"application/json":{"schema":{"type":"object","properties":{"matches":{"type":"array","items":{"type":"object"}},"total_without_geodata":{"type":"integer"},"total_matched":{"type":"integer"},"error":{"type":"string","nullable":true}}}}}},"401":{"description":"unauthorized"}}}
