@@ -43,6 +43,7 @@ Configure the following environment variables in your `docker-compose.yml` file 
 |----------|---------|-------------|
 | `OIDC_PROVIDER_NAME` | `Openid Connect` | Custom display name for the login button |
 | `OIDC_AUTO_REGISTER` | `true` | Automatically create accounts for new OIDC users |
+| `OIDC_PKCE_ENABLED` | `false` | Enable PKCE (S256) for the authorization code flow. Required when your OIDC client enforces PKCE (e.g. Pocket ID, hardened Authentik/Keycloak) |
 | `ALLOW_EMAIL_PASSWORD_REGISTRATION` | `false` | Allow traditional email/password registration and signing in alongside OIDC |
 
 ### Manual Endpoint Configuration (Alternative to Discovery)
