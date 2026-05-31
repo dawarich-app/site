@@ -1,0 +1,145 @@
+.welcomeBanner {
+  position: relative;
+  background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+  color: #ffffff;
+  padding: 0.875rem 1.5rem;
+  font-size: 0.95rem;
+  text-align: center;
+  z-index: 10;
+}
+
+.welcomeBannerInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding-right: 2.5rem;
+}
+
+.welcomeBannerGreeting {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.welcomeBannerGreeting strong {
+  font-weight: 700;
+}
+
+.welcomeBannerSeparator {
+  opacity: 0.6;
+}
+
+.welcomeBannerCode {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.welcomeBannerClose {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  opacity: 0.8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcomeBannerClose:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 640px) {
+  .welcomeBanner {
+    font-size: 0.875rem;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+  }
+  .welcomeBannerInner {
+    padding-right: 0;
+    gap: 0.5rem;
+  }
+  .welcomeBannerSeparator {
+    display: none;
+  }
+}
+
+.promoCallout {
+  padding: 4rem 1.5rem 3rem;
+}
+
+.promoCalloutInner {
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.08) 0%, rgba(99, 102, 241, 0.08) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.promoCalloutText {
+  flex: 1 1 280px;
+  min-width: 0;
+}
+
+.promoCalloutHeadline {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+  color: var(--ifm-heading-color);
+}
+
+.promoCalloutBody {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 1rem;
+}
+
+.promoCalloutCode {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: #ffffff;
+  border: 2px dashed #6366f1;
+  color: #4f46e5;
+  padding: 0.85rem 1.4rem;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+[data-theme='dark'] .promoCalloutCode {
+  background: rgba(255, 255, 255, 0.08);
+  color: #a5b4fc;
+}
+
+@media (max-width: 640px) {
+  .promoCalloutInner {
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  .promoCalloutCode {
+    font-size: 1.25rem;
+  }
+}
