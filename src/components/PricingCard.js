@@ -7,6 +7,8 @@ export default function PricingCard({
 	title = "Annual Subscription",
 	annualPrice = 120,
 	monthlyPrice = null,
+	priceLabel = null,
+	priceSuffix = "/yr",
 	description = "Full access to all features.",
 	perDayText = null,
 	features = [],
@@ -37,20 +39,30 @@ export default function PricingCard({
 			{badge && <div className={styles.planBadge}>{badge}</div>}
 			<h2 className={styles.title}>{title}</h2>
 
-			<div className={styles.priceContainer}>
-				<div className={styles.mainPrice}>
-					<span className={styles.currency}>&euro;</span>
-					<span className={styles.currentPrice}>{displayPrice}</span>
-					<span className={styles.period}>/{displayPeriod}</span>
-				</div>
-				{(isAnnual || !hasMonthly) && (
-					<div className={styles.equivalentPrice}>
-						&euro;{monthlyEquivalent}/month
+			{priceLabel ? (
+				<div className={styles.priceContainer}>
+					<div className={styles.mainPrice}>
+						{/* TODO: set Family annual price before launch */}
+						<span className={styles.currentPrice}>{priceLabel}</span>
+						<span className={styles.period}>{priceSuffix}</span>
 					</div>
-				)}
-			</div>
+				</div>
+			) : (
+				<div className={styles.priceContainer}>
+					<div className={styles.mainPrice}>
+						<span className={styles.currency}>&euro;</span>
+						<span className={styles.currentPrice}>{displayPrice}</span>
+						<span className={styles.period}>/{displayPeriod}</span>
+					</div>
+					{(isAnnual || !hasMonthly) && (
+						<div className={styles.equivalentPrice}>
+							&euro;{monthlyEquivalent}/month
+						</div>
+					)}
+				</div>
+			)}
 
-			{hasMonthly && (
+			{!priceLabel && hasMonthly && (
 				<div className={styles.toggleContainer}>
 					<div className={styles.toggleTrack}>
 						<button

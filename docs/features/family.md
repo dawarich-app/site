@@ -9,7 +9,7 @@ description: Share your real-time location with trusted family members and frien
 The Family feature allows you to share your real-time location with trusted family members and friends. This enables you to see each other's locations on the map while maintaining full control over your privacy.
 
 :::info
-The Family feature is currently only available for self-hosted instances of Dawarich.
+On self-hosted instances, the Family feature is available for free with no member limit. On Dawarich Cloud, creating a family requires the [Family plan](/docs/features/family-plan), which covers up to five members on one annual subscription.
 :::
 
 ## Overview

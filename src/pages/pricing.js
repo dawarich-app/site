@@ -4,6 +4,7 @@ import Layout from "@theme/Layout";
 import { initializePaddle } from "@paddle/paddle-js";
 import PricingSection from "@site/src/components/PricingSection";
 import FAQ from "@site/src/components/FAQ";
+import { pricingOffers } from "@site/src/data/pricingOffers";
 
 export default function PricingPage() {
 	useEffect(() => {
@@ -15,7 +16,7 @@ export default function PricingPage() {
 	return (
 		<Layout
 			title="Pricing — Dawarich"
-			description="Simple pricing for Dawarich Cloud. Lite €49.99/yr or Pro €17.99/mo. 7-day free trial, 14-day risk-free refund, cancel anytime. Or self-host for free."
+			description="Simple pricing for Dawarich Cloud. Lite €49.99/yr, Pro €17.99/mo, or Family for up to 5 members. 7-day free trial, 14-day risk-free refund, cancel anytime. Or self-host for free."
 		>
 			<Head>
 				<meta property="og:type" content="website" />
@@ -23,7 +24,7 @@ export default function PricingPage() {
 				<meta property="og:title" content="Pricing — Dawarich" />
 				<meta
 					property="og:description"
-					content="Lite €49.99/yr or Pro €17.99/mo. 7-day free trial, 14-day risk-free refund. Or self-host for free."
+					content="Lite €49.99/yr, Pro €17.99/mo, or Family for up to 5 members. 7-day free trial, 14-day risk-free refund. Or self-host for free."
 				/>
 				<meta
 					property="og:image"
@@ -33,7 +34,7 @@ export default function PricingPage() {
 				<meta name="twitter:title" content="Pricing — Dawarich" />
 				<meta
 					name="twitter:description"
-					content="Lite €49.99/yr or Pro €17.99/mo. 7-day free trial, 14-day risk-free refund. Or self-host for free."
+					content="Lite €49.99/yr, Pro €17.99/mo, or Family for up to 5 members. 7-day free trial, 14-day risk-free refund. Or self-host for free."
 				/>
 				<meta
 					name="twitter:image"
@@ -49,36 +50,7 @@ export default function PricingPage() {
 						description:
 							"Privacy-first alternative to Google Timeline. Hosted in Europe. Self-hostable, open source.",
 						brand: { "@type": "Brand", name: "Dawarich" },
-						offers: [
-							{
-								"@type": "Offer",
-								name: "Lite (annual)",
-								price: "49.99",
-								priceCurrency: "EUR",
-								url: "https://dawarich.app/pricing/",
-							},
-							{
-								"@type": "Offer",
-								name: "Pro (monthly)",
-								price: "17.99",
-								priceCurrency: "EUR",
-								url: "https://dawarich.app/pricing/",
-							},
-							{
-								"@type": "Offer",
-								name: "Pro (annual)",
-								price: "119.99",
-								priceCurrency: "EUR",
-								url: "https://dawarich.app/pricing/",
-							},
-							{
-								"@type": "Offer",
-								name: "Self-hosted",
-								price: "0",
-								priceCurrency: "EUR",
-								url: "https://dawarich.app/docs/self-hosting/introduction",
-							},
-						],
+						offers: pricingOffers,
 					})}
 				</script>
 			</Head>

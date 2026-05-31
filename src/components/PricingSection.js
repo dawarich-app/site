@@ -68,6 +68,29 @@ export default function PricingSection() {
 							trialText="Cancel anytime"
 						/>
 					</div>
+
+					<div className={styles.cardWrapper}>
+						<PricingCard
+							title="Family"
+							priceLabel="€TBD"
+							priceSuffix="/yr"
+							description="Every Pro feature for the whole household — one annual subscription, up to 5 people."
+							perDayText={false}
+							includesLabel="Everything in Pro, plus:"
+							features={[]}
+							proOnlyFeatures={[
+								"Up to 5 members on one subscription",
+								"Each member gets full Pro access",
+								"Invite or remove members anytime",
+								"Members inherit access while in the family",
+								"Real-time family location sharing",
+							]}
+							buttonText="Notify Me"
+							buttonVariant="secondary"
+							buttonLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=pricing&utm_campaign=family&plan=family"
+							trialText="Annual only · Cancel anytime"
+						/>
+					</div>
 				</div>
 
 				<div className={styles.guarantee}>
