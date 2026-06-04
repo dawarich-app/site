@@ -53,10 +53,12 @@ Places are saved locations that can be associated with visits. When you confirm 
 
 ### Home Location
 
-Dawarich can automatically detect your home location based on where you spend the most time overnight. This helps with:
-- Filtering out home visits from statistics
-- Calculating time away from home
-- Trip detection
+You can mark where you live by creating a tag named **Home** and assigning it to a place:
+
+1. Create a tag named `Home` (see [Creating Tags](#creating-tags) below). The name is case-insensitive.
+2. Assign that tag to the place where you live.
+
+Dawarich uses this home location to center the map when you open it.
 
 ## Tags and Privacy Zones
 
