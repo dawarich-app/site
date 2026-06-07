@@ -5,7 +5,7 @@
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -43,9 +43,9 @@
   display: flex;
   justify-content: center;
   align-items: stretch;
-  gap: 2rem;
+  gap: 1.75rem;
   margin-top: 3rem;
-  max-width: 56rem;
+  max-width: 84rem;
   margin-left: auto;
   margin-right: auto;
 }

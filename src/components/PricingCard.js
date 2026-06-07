@@ -1,139 +1,146 @@
 import Link from "@docusaurus/Link";
 import React, { useState } from "react";
+import { DwIcon } from "@site/src/data/pricingPlans";
+import WaitlistForm from "./WaitlistForm";
 import styles from "./PricingCard.module.css";
 
-export default function PricingCard({
-	className,
-	title = "Annual Subscription",
-	annualPrice = 120,
-	monthlyPrice = null,
-	description = "Full access to all features.",
-	perDayText = null,
-	features = [],
-	proOnlyFeatures = [],
-	includesLabel = null,
-	buttonText = "Get Started",
-	buttonLink = "/pricing",
-	buttonVariant = "primary",
-	trialText = null,
-	badge = null,
-	disabled = false,
-}) {
-	const [isAnnual, setIsAnnual] = useState(true);
-	const hasMonthly = monthlyPrice !== null;
+export default function PricingCard({ plan, popular = false, deemph = false }) {
+	const [billing, setBilling] = useState("annual");
+	const isPro = plan.key === "pro";
+	const monthly = isPro && billing === "monthly";
+	const bigPrice = monthly ? plan.priceMonthly : plan.price;
+	const bigPeriod = monthly ? plan.periodMonthly : plan.period;
 
-	const displayPrice = isAnnual || !hasMonthly ? annualPrice : monthlyPrice;
-	const displayPeriod = isAnnual || !hasMonthly ? "year" : "month";
-	const monthlyEquivalent = (annualPrice / 12).toFixed(2);
-
-	const perDayAmount = isAnnual || !hasMonthly
-		? (annualPrice / 365).toFixed(2)
-		: (monthlyPrice / 30).toFixed(2);
+	const cardClass = [
+		styles.card,
+		plan.accent === "teal" ? styles.accentTeal : styles.accentBlue,
+		popular ? styles.popular : "",
+		deemph ? styles.deemph : "",
+	]
+		.filter(Boolean)
+		.join(" ");
 
 	return (
-		<div
-			className={`${styles.pricingCard} ${className || ""} ${disabled ? styles.disabled : ""}`}
-		>
-			{badge && <div className={styles.planBadge}>{badge}</div>}
-			<h2 className={styles.title}>{title}</h2>
+		<div className={cardClass}>
+			{popular && <div className={styles.mapWash} aria-hidden="true" />}
 
-			<div className={styles.priceContainer}>
-				<div className={styles.mainPrice}>
-					<span className={styles.currency}>&euro;</span>
-					<span className={styles.currentPrice}>{displayPrice}</span>
-					<span className={styles.period}>/{displayPeriod}</span>
+			{popular && (
+				<div className={styles.ribbon}>
+					<DwIcon name="sparkles" size={12} stroke={2.4} /> MOST POPULAR
 				</div>
-				{(isAnnual || !hasMonthly) && (
-					<div className={styles.equivalentPrice}>
-						&euro;{monthlyEquivalent}/month
-					</div>
-				)}
+			)}
+			{deemph && <div className={styles.comingSoon}>COMING SOON</div>}
+
+			<div className={styles.header}>
+				<span className={styles.planIcon}>
+					<DwIcon name={plan.icon} size={20} stroke={2} />
+				</span>
+				<span className={styles.planName}>{plan.name}</span>
 			</div>
 
-			{hasMonthly && (
-				<div className={styles.toggleContainer}>
-					<div className={styles.toggleTrack}>
-						<button
-							className={`${styles.toggleButton} ${!isAnnual ? styles.active : ""}`}
-							onClick={() => setIsAnnual(false)}
-							disabled={disabled}
-						>
-							Monthly
-						</button>
-						<button
-							className={`${styles.toggleButton} ${isAnnual ? styles.active : ""}`}
-							onClick={() => setIsAnnual(true)}
-							disabled={disabled}
-						>
-							Annual
-						</button>
+			{plan.price && (
+				<div className={styles.priceBlock}>
+					<div className={styles.priceTopRow}>
+						{plan.oldPrice && !monthly && (
+							<span className={styles.oldPrice}>&euro;{plan.oldPrice}</span>
+						)}
+						{isPro && plan.save && !monthly && (
+							<span className={styles.saveBadge}>
+								<DwIcon name="trending-up" size={12} stroke={2.4} /> {plan.save}
+							</span>
+						)}
 					</div>
-					{isAnnual && monthlyPrice && (
-						<span className={styles.saveBadge}>
-							Save {Math.round((1 - annualPrice / (monthlyPrice * 12)) * 100)}%
-						</span>
+					<div className={styles.priceMainRow}>
+						<span className={styles.currency}>&euro;</span>
+						<span className={styles.bigPrice}>{bigPrice}</span>
+						<span className={styles.period}>{bigPeriod}</span>
+					</div>
+					<div className={styles.perMonth}>
+						{monthly ? "billed monthly" : plan.perMonth}
+					</div>
+				</div>
+			)}
+
+			{isPro && (
+				<div className={styles.toggleRow}>
+					<div className={styles.toggleTrack}>
+						{["monthly", "annual"].map((opt) => (
+							<button
+								key={opt}
+								type="button"
+								className={`${styles.toggleBtn} ${billing === opt ? styles.toggleActive : ""}`}
+								onClick={() => setBilling(opt)}
+							>
+								{opt}
+							</button>
+						))}
+					</div>
+					{billing === "monthly" && (
+						<span className={styles.toggleHint}>Save 44% on annual &rarr;</span>
 					)}
 				</div>
 			)}
 
-			{perDayText && <div className={styles.perDay}>&euro;{perDayAmount}/day</div>}
+			{plan.urgency && (
+				<div className={styles.urgency}>
+					<DwIcon name="lock" size={15} stroke={2} className={styles.urgencyIcon} />
+					<span>{plan.urgency}</span>
+				</div>
+			)}
 
-			<p className={styles.description}>{description}</p>
+			{(monthly ? plan.perDayMonthly : plan.perDay) && (
+				<div className={styles.perDay}>
+					<DwIcon name="zap" size={13} stroke={2.4} />{" "}
+					{monthly ? plan.perDayMonthly : plan.perDay}
+				</div>
+			)}
+
+			<p className={styles.tagline}>{plan.tagline}</p>
 
 			<div className={styles.divider} />
 
-			{includesLabel && (
-				<div className={styles.includesLabel}>{includesLabel}</div>
+			{plan.featuresHeading && (
+				<div className={styles.featuresHeading}>{plan.featuresHeading}</div>
 			)}
 
-			<ul className={styles.featuresList}>
-				{features.map((feature, index) => (
-					<li key={index} className={styles.featureItem}>
-						<span className={styles.checkIcon}>
-							<svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-								<path
-									d="M11.5 3.5L5.5 10L2.5 7"
-									stroke="currentColor"
-									strokeWidth="2"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								/>
-							</svg>
+			<ul className={styles.features}>
+				{plan.features.map((f, i) => (
+					<li key={i} className={styles.featureRow}>
+						<span className={styles.featureChip}>
+							<DwIcon name={f.icon} size={15} stroke={2} />
 						</span>
-						<span className={styles.featureText}>{feature}</span>
-					</li>
-				))}
-				{proOnlyFeatures.map((feature, index) => (
-					<li key={`pro-${index}`} className={`${styles.featureItem} ${styles.proFeature}`}>
-						<span className={`${styles.checkIcon} ${styles.proCheckIcon}`}>
-							<svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-								<path
-									d="M11.5 3.5L5.5 10L2.5 7"
-									stroke="currentColor"
-									strokeWidth="2"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								/>
-							</svg>
-						</span>
-						<span className={styles.featureText}>
-							{feature}
-						</span>
+						<span className={styles.featureLabel}>{f.label}</span>
 					</li>
 				))}
 			</ul>
 
-			{buttonLink && (
-				<Link
-					to={buttonLink}
-					className={`${styles.ctaButton} ${styles[buttonVariant]} ${disabled ? styles.disabledButton : ""}`}
-					aria-disabled={disabled}
-				>
-					{buttonText}
-				</Link>
-			)}
+			<div className={styles.spacer} />
 
-			{trialText && <p className={styles.trialText}>{trialText}</p>}
+			{plan.waitlistListId ? (
+				<WaitlistForm
+					listId={plan.waitlistListId}
+					heading="Join the Family waitlist"
+					subtext="Be first to know the moment it launches — annual only, every Pro feature."
+					buttonLabel="Join the waitlist"
+					note="No spam, just the launch email."
+				/>
+			) : (
+				<>
+					<div className={styles.guarantee}>
+						<DwIcon name="shield-check" size={15} stroke={2} /> 14-day money-back
+						guarantee
+					</div>
+
+					<Link
+						to={plan.href}
+						className={`${styles.cta} ${plan.ctaStyle === "primary" ? styles.ctaPrimary : styles.ctaOutline}`}
+					>
+						{plan.cta}
+					</Link>
+
+					<div className={styles.footnote}>{plan.footnote}</div>
+				</>
+			)}
 		</div>
 	);
 }
