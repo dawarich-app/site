@@ -234,3 +234,201 @@
   color: var(--ifm-color-primary);
   font-weight: 700;
 }
+
+/* ============================================================
+   variant="route" — GPS route & pins
+   The three steps become stops on a tracked route: a dashed
+   path with map-pin nodes, a faint ghosted map behind, and a
+   dot that replays along the path.
+   ============================================================ */
+.routeWrap {
+  margin-top: 3rem;
+  position: relative;
+}
+
+.routeBand {
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+  aspect-ratio: 980 / 300;
+  margin: 0 auto;
+}
+
+.routeBand::before {
+  content: '';
+  position: absolute;
+  inset: -24px -40px;
+  background-image: url('/img/the_map.png');
+  background-size: cover;
+  background-position: center 38%;
+  filter: grayscale(1) contrast(0.9);
+  opacity: 0.1;
+  -webkit-mask-image: radial-gradient(ellipse 75% 80% at 50% 45%, #000 35%, transparent 78%);
+  mask-image: radial-gradient(ellipse 75% 80% at 50% 45%, #000 35%, transparent 78%);
+  pointer-events: none;
+}
+
+[data-theme='dark'] .routeBand::before {
+  opacity: 0.14;
+  filter: grayscale(1) contrast(1.1) brightness(0.9);
+}
+
+.routeSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.routePin {
+  position: absolute;
+  transform: translate(-50%, -100%);
+}
+
+.pinBody {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  background: var(--ifm-color-primary);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4), 0 2px 4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #fff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pinBodyAccent {
+  background: var(--ifm-color-accent);
+  box-shadow: 0 6px 16px rgba(20, 184, 166, 0.4), 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.routePin:hover .pinBody {
+  transform: rotate(-45deg) scale(1.06);
+  box-shadow: 0 10px 22px rgba(59, 130, 246, 0.45), 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+
+.routePin:hover .pinBodyAccent {
+  box-shadow: 0 10px 22px rgba(20, 184, 166, 0.45), 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+
+.pinIcon {
+  transform: rotate(45deg);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pinIcon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.pinNum {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  color: #1a1a1a;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+  transform: rotate(45deg);
+}
+
+.routeSteps {
+  display: flex;
+  width: 100%;
+  max-width: 980px;
+  margin: 18px auto 0;
+}
+
+.routeStep {
+  flex: 1;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.routeKicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary);
+  margin: 0 0 6px;
+}
+
+.routeStepTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 10px;
+  color: var(--ifm-heading-color);
+}
+
+.routeStepDesc {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+}
+
+[data-theme='dark'] .routeStepDesc {
+  color: var(--ifm-color-emphasis-600);
+}
+
+.routeStepDesc a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.routeStepDesc a:hover {
+  text-decoration: underline;
+}
+
+/* Per-step pin marker: hidden on desktop (the band carries the pins),
+   shown above each step when the band collapses on mobile. Compound
+   selector keeps specificity above .pinBody regardless of bundle order. */
+.pinBody.routeStepPinMobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .routeBand {
+    display: none;
+  }
+
+  .routeSteps {
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 1rem;
+  }
+
+  .routeStep {
+    padding: 0;
+  }
+
+  .pinBody.routeStepPinMobile {
+    display: flex;
+    margin: 0 auto 1.25rem;
+  }
+
+  .routeStepTitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pinBody {
+    transition: none;
+  }
+}
