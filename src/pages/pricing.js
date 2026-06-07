@@ -3,6 +3,7 @@ import Head from "@docusaurus/Head";
 import Layout from "@theme/Layout";
 import { initializePaddle } from "@paddle/paddle-js";
 import PricingSection from "@site/src/components/PricingSection";
+import PricingCompare from "@site/src/components/PricingCompare";
 import FAQ from "@site/src/components/FAQ";
 
 export default function PricingPage() {
@@ -85,6 +86,7 @@ export default function PricingPage() {
 
 			<main>
 				<PricingSection />
+				<PricingCompare />
 				<FAQ />
 			</main>
 		</Layout>
