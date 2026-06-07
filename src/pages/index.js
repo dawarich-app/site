@@ -238,7 +238,7 @@ export default function Home() {
 					title="How It Works"
 					subtitle="Get started in three simple steps."
 					steps={howItWorksSteps}
-					horizontal
+					variant="route"
 				/>
 				<Features />
 				<CTABanner />
