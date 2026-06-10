@@ -44,6 +44,34 @@ const config = {
   // conversions in Google Ads — sending them would just be noise.
   headTags: [
     {
+      tagName: "link",
+      attributes: {
+        rel: "apple-touch-icon",
+        sizes: "180x180",
+        href: "/img/apple-touch-icon.png",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "icon",
+        type: "image/png",
+        sizes: "512x512",
+        href: "/img/icon-512.png",
+        media: "(prefers-color-scheme: light)",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "icon",
+        type: "image/png",
+        sizes: "512x512",
+        href: "/img/icon-512-dark.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+    },
+    {
       tagName: "script",
       attributes: {},
       innerHTML: `

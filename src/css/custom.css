@@ -441,3 +441,7 @@ article a {
 article a:hover {
   text-decoration: none;
 }
+
+.navbar__logo img {
+  border-radius: 20%;
+}
