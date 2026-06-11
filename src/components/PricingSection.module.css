@@ -269,3 +269,52 @@
 [data-theme='dark'] .selfHostButton:hover {
   color: #60A5FA;
 }
+
+/* ── Bonus banner ── */
+.bonus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2.5rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(217, 119, 6, 0.08);
+  border: 1px dashed rgba(217, 119, 6, 0.45);
+  border-radius: 0.75rem;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.bonusBadge {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  border-radius: 9999px;
+  background: rgba(217, 119, 6, 0.15);
+  color: #b45309;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.bonusText {
+  font-size: 0.9375rem;
+  color: var(--dw-text-secondary);
+  line-height: 1.5;
+}
+
+.bonusText strong {
+  color: var(--dw-text);
+}
+
+[data-theme='dark'] .bonus {
+  background: rgba(217, 119, 6, 0.12);
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+[data-theme='dark'] .bonusBadge {
+  background: rgba(245, 158, 11, 0.18);
+  color: #fbbf24;
+}

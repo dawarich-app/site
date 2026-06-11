@@ -8,7 +8,9 @@ export default function PricingSection() {
 	return (
 		<section id="pricing" className={styles.section}>
 			<div className={styles.container}>
-				<div className={styles.badge}>Simple Pricing</div>
+				<div className={styles.badge}>
+					Founding-member pricing — limited time
+				</div>
 
 				<h2 className={styles.title}>Own Your Location History</h2>
 
@@ -29,6 +31,15 @@ export default function PricingSection() {
 					</div>
 				</div>
 
+				<div className={styles.bonus}>
+					<div className={styles.bonusBadge}>Free Bonus · €99 value</div>
+					<div className={styles.bonusText}>
+						<strong>White-Glove Import Service.</strong> Send us your Google
+						Takeout and we import your entire location history for you —
+						usually within 24 hours. Included free with every plan.
+					</div>
+				</div>
+
 				<div className={styles.guarantee}>
 					<div className={styles.guaranteeIcon}>
 						<svg
@@ -46,12 +57,10 @@ export default function PricingSection() {
 						</svg>
 					</div>
 					<div className={styles.guaranteeText}>
-						<strong>
-							Import your Google Timeline in 10 minutes — or let us do it for
-							you, free.
-						</strong>{" "}
-						And you're covered by a 14-day money-back guarantee: change your mind
-						after subscribing and we refund you, no questions asked.{" "}
+						<strong>The Import Guarantee:</strong> if your Google Takeout
+						doesn't import cleanly, we fix it personally — or refund every
+						cent. Plus a 14-day no-questions money-back guarantee on every
+						plan.{" "}
 						<Link to="/refund-policy" className={styles.guaranteeLink}>
 							Refund policy →
 						</Link>

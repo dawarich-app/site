@@ -483,3 +483,53 @@
 		font-size: 52px;
 	}
 }
+
+
+/* ── Value stack ── */
+.valueStack {
+	margin-top: 14px;
+	padding: 12px 14px;
+	border-radius: 12px;
+	background: var(--teal-bg);
+	border: 1px dashed var(--teal-text);
+	font-size: 12.5px;
+}
+.valueRow {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	padding: 2.5px 0;
+	color: var(--text);
+}
+.valueBonus {
+	font-weight: 700;
+	color: var(--teal-text);
+}
+.valueAmount {
+	font-variant-numeric: tabular-nums;
+	color: var(--strike);
+	text-decoration: line-through;
+	white-space: nowrap;
+}
+.valueTotalRow {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	margin-top: 6px;
+	padding-top: 7px;
+	border-top: 1px solid var(--teal-text);
+	font-weight: 700;
+	color: var(--text);
+}
+.valueTotal {
+	text-decoration: line-through;
+	color: var(--strike);
+	font-variant-numeric: tabular-nums;
+}
+.valuePayLine {
+	margin-top: 5px;
+	font-weight: 800;
+	font-size: 14px;
+	color: var(--teal-text);
+	text-align: right;
+}
