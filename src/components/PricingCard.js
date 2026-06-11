@@ -114,6 +114,27 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 				))}
 			</ul>
 
+			{plan.valueStack && (
+				<div className={styles.valueStack}>
+					{plan.valueStack.items.map((item, i) => (
+						<div key={i} className={styles.valueRow}>
+							<span className={item.bonus ? styles.valueBonus : ""}>
+								{item.bonus ? "BONUS: " : ""}
+								{item.label}
+							</span>
+							<span className={styles.valueAmount}>&euro;{item.value}</span>
+						</div>
+					))}
+					<div className={styles.valueTotalRow}>
+						<span>Total value</span>
+						<span className={styles.valueTotal}>
+							&euro;{plan.valueStack.total}
+						</span>
+					</div>
+					<div className={styles.valuePayLine}>{plan.valueStack.payLine}</div>
+				</div>
+			)}
+
 			<div className={styles.spacer} />
 
 			{plan.waitlistListId ? (
@@ -127,8 +148,8 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 			) : (
 				<>
 					<div className={styles.guarantee}>
-						<DwIcon name="shield-check" size={15} stroke={2} /> 14-day money-back
-						guarantee
+						<DwIcon name="shield-check" size={15} stroke={2} /> The Import
+						Guarantee &middot; 14-day money-back
 					</div>
 
 					<Link

@@ -71,7 +71,18 @@ export const PLANS = {
 		ctaStyle: "outline",
 		href: `${SIGNUP}&utm_campaign=try7dayslite&plan=lite`,
 		footnote: "Annual only · Cancel anytime",
-		urgency: "Prices will be increased soon — lock in €49.99 today",
+		urgency: "Founding price ends July 31, 2026 — lock in €49.99 for life",
+		valueStack: {
+			items: [
+				{ label: "iOS & Android tracking apps", value: 30 },
+				{ label: "12 months of searchable history", value: 25 },
+				{ label: "Unlimited imports & exports", value: 15 },
+				{ label: "Stats & monthly breakdowns", value: 10 },
+				{ label: "White-Glove Import Service", value: 99, bonus: true },
+			],
+			total: 179,
+			payLine: "Yours for €49.99/yr",
+		},
 		featuresHeading: null,
 		features: [
 			{ icon: "smartphone", label: "iOS & Android native apps" },
@@ -105,7 +116,18 @@ export const PLANS = {
 		ctaStyle: "primary",
 		href: `${SIGNUP}&utm_campaign=try7days`,
 		footnote: "Cancel anytime",
-		urgency: "Prices will be increased soon — lock in €119.99 today",
+		urgency: "Founding price ends July 31, 2026 — lock in €119.99 for life",
+		valueStack: {
+			items: [
+				{ label: "Everything in Lite", value: 179 },
+				{ label: "Unlimited history — forever", value: 60 },
+				{ label: "Heatmap, Fog of War & 3D globe", value: 30 },
+				{ label: "Photo & Immich/PhotoPrism integration", value: 25 },
+				{ label: "Full Write API access", value: 25 },
+			],
+			total: 319,
+			payLine: "Yours for €119.99/yr",
+		},
 		featuresHeading: "Everything in Lite, plus:",
 		features: [
 			{ icon: "infinity", label: "Unlimited data history — forever" },
