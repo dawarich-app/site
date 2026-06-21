@@ -1,0 +1,263 @@
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
+}
+
+.section {
+  padding: 3.5rem 0 1rem;
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.05rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 1.85rem;
+  }
+}
+
+/* --- Tags (status + platform) --------------------------------------------- */
+
+.inProgressBadge,
+.plannedBadge,
+.platformWeb,
+.platformMobile {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.inProgressBadge {
+  color: var(--ifm-color-primary);
+  background-color: rgba(59, 130, 246, 0.12);
+}
+
+.plannedBadge {
+  color: #b45309;
+  background-color: rgba(245, 158, 11, 0.14);
+}
+
+[data-theme='dark'] .plannedBadge {
+  color: #fbbf24;
+  background-color: rgba(245, 158, 11, 0.18);
+}
+
+/* Platform chips are outlined so they read as a separate axis from the
+   filled status badges. */
+.platformWeb,
+.platformMobile {
+  background-color: transparent;
+  border: 1px solid currentColor;
+}
+
+.platformWeb {
+  color: var(--ifm-color-emphasis-600);
+}
+
+.platformMobile {
+  color: #7c3aed;
+}
+
+[data-theme='dark'] .platformMobile {
+  color: #a78bfa;
+}
+
+/* --- Timeline ------------------------------------------------------------- */
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--ifm-color-primary) 0%,
+    var(--ifm-color-emphasis-300) 100%
+  );
+}
+
+.timelineItem {
+  position: relative;
+  padding-left: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
+.timelineItem:last-child {
+  padding-bottom: 0;
+}
+
+.timelineMarker {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 3px solid var(--ifm-background-color);
+}
+
+/* In progress — vivid blue with a soft live glow. */
+.markerInProgress {
+  background-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 1px var(--ifm-color-primary),
+    0 0 0 5px rgba(59, 130, 246, 0.18);
+}
+
+/* Planned — hollow amber ring. */
+.markerPlanned {
+  background-color: var(--ifm-background-color);
+  box-shadow: 0 0 0 2px #f59e0b;
+}
+
+/* Shipped — solid primary, no glow. */
+.markerShipped {
+  background-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 1px var(--ifm-color-primary);
+}
+
+/* --- Upcoming entry ------------------------------------------------------- */
+
+.upcomingHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.upcomingTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.upcomingDescription {
+  font-size: 0.97rem;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+  line-height: 1.55;
+  max-width: 60ch;
+}
+
+/* --- "Released" divider --------------------------------------------------- */
+
+.timelineDivider {
+  position: relative;
+  padding-left: 2.25rem;
+  padding-bottom: 2.25rem;
+  list-style: none;
+}
+
+.timelineDivider span {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ifm-color-emphasis-600);
+  background-color: var(--ifm-background-color);
+  padding: 0.1rem 0.6rem 0.1rem 0;
+}
+
+.releaseHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.releaseVersion {
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.releaseTheme {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+.releaseDate {
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-left: auto;
+}
+
+.highlights {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.highlights li {
+  margin-bottom: 0.35rem;
+  line-height: 1.55;
+}
+
+/* --- Footer CTA ----------------------------------------------------------- */
+
+.footerCta {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  border-radius: 18px;
+  background-color: var(--ifm-color-primary-lightest);
+}
+
+[data-theme='dark'] .footerCta {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.footerCtaTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.footerCtaText {
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 1.5rem;
+}
+
+.footerCtaButton {
+  display: inline-block;
+  background-color: var(--ifm-color-primary);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.footerCtaButton:hover {
+  background-color: var(--ifm-color-primary-dark);
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-2px);
+}

@@ -245,6 +245,7 @@ const config = {
           {to: '/pricing', label: 'Pricing', position: 'left'},
           {to: '/docs/self-hosting/introduction', label: 'Self-Hosted', position: 'left'},
           {to: '/tools', label: 'Tools', position: 'left'},
+          {to: '/roadmap', label: 'Roadmap', position: 'right'},
           {to: '/blog', label: 'Blog', position: 'right'},
           {
             type: 'dropdown',
