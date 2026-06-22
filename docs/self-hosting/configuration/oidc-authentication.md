@@ -44,7 +44,8 @@ Configure the following environment variables in your `docker-compose.yml` file 
 | `OIDC_PROVIDER_NAME` | `Openid Connect` | Custom display name for the login button |
 | `OIDC_AUTO_REGISTER` | `true` | Automatically create accounts for new OIDC users |
 | `OIDC_PKCE_ENABLED` | `false` | Enable PKCE (S256) for the authorization code flow. Required when your OIDC client enforces PKCE (e.g. Pocket ID, hardened Authentik/Keycloak) |
-| `ALLOW_EMAIL_PASSWORD_REGISTRATION` | `false` | Allow traditional email/password registration and signing in alongside OIDC |
+| `ALLOW_EMAIL_PASSWORD_REGISTRATION` | `false` | Allow traditional email/password account registration alongside OIDC |
+| `ALLOW_EMAIL_PASSWORD_LOGIN` | `true` | Allow signing in with email/password. Set to `false` to hide the email/password form and force OIDC-only sign-in |
 
 ### Manual Endpoint Configuration (Alternative to Discovery)
 
@@ -76,6 +77,7 @@ services:
       OIDC_PROVIDER_NAME: "Sign in with Authentik"
       OIDC_AUTO_REGISTER: "true"
       ALLOW_EMAIL_PASSWORD_REGISTRATION: "false"
+      ALLOW_EMAIL_PASSWORD_LOGIN: "false"
     # ... rest of configuration ...
 
   dawarich_sidekiq:
@@ -89,6 +91,7 @@ services:
       OIDC_PROVIDER_NAME: "Sign in with Authentik"
       OIDC_AUTO_REGISTER: "true"
       ALLOW_EMAIL_PASSWORD_REGISTRATION: "false"
+      ALLOW_EMAIL_PASSWORD_LOGIN: "false"
     # ... rest of configuration ...
 ```
 
@@ -185,16 +188,19 @@ When a user authenticates via OIDC:
 - No new accounts are created automatically
 - Users without existing accounts will see an error
 
-## Disabling Email/Password Registration
+## Disabling Email/Password Sign-In
 
 To use OIDC as the only authentication method:
 
 ```yaml
 OIDC_AUTO_REGISTER: "true"
 ALLOW_EMAIL_PASSWORD_REGISTRATION: "false"
+ALLOW_EMAIL_PASSWORD_LOGIN: "false"
 ```
 
 This ensures all users must authenticate through your identity provider.
+
+`ALLOW_EMAIL_PASSWORD_REGISTRATION: "false"` only blocks creating new accounts with email/password — on its own it does **not** hide the email/password sign-in form. To remove that form and force OIDC-only sign-in you must also set `ALLOW_EMAIL_PASSWORD_LOGIN: "false"`. (Before v1.7.8 a single variable controlled both; sign-in is now gated by `ALLOW_EMAIL_PASSWORD_LOGIN`.)
 
 ## Troubleshooting
 
