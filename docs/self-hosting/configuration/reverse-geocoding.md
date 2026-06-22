@@ -8,8 +8,17 @@ description: Configure reverse geocoding in Dawarich using Photon, Geoapify, Nom
 
 Reverse geocoding is the process of converting geographic coordinates into a human-readable address. By default, reverse geocoding is disabled in Dawarich.
 
-Currently, Dawarich supports 4 options for reverse geocoding services:
+:::tip Recommended: chibigeo
 
+[**chibigeo**](https://chibigeo.com) is a hosted reverse geocoding service built and run by the same people behind Dawarich. It's a worldwide, drop-in [Photon](https://github.com/komoot/photon) replacement, so you get fast, reliable geocoding without hosting it yourself or hitting the per-second limits of the free public services — and using it directly supports Dawarich's development.
+
+Sign up at [chibigeo.com](https://chibigeo.com) to get an API key, then configure it exactly like Photon ([see below](#how-to-enable-reverse-geocoding)): set `PHOTON_API_HOST` to the chibigeo host, `PHOTON_API_KEY` to your chibigeo API key, and `PHOTON_API_USE_HTTPS` to `true`.
+
+:::
+
+Currently, Dawarich supports the following options for reverse geocoding services:
+
+- [chibigeo](https://chibigeo.com) (**recommended** — hosted by the team behind Dawarich, worldwide coverage, Photon-compatible)
 - [Geoapify](https://www.geoapify.com/) (free, limited usage, see [Geoapify pricing](https://www.geoapify.com/pricing))
 - [Photon](https://photon.komoot.io/) (free, limited usage, [1 request per second](https://photon.komoot.io/))
 - [Self-hosted Photon](#setting-up-your-own-reverse-geocoding-service) (free, unlimited usage)
