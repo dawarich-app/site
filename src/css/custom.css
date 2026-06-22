@@ -445,3 +445,12 @@ article a:hover {
 .navbar__logo img {
   border-radius: 20%;
 }
+
+/* Search lives only in the docs — keep it out of the marketing navbar */
+.navbar__search {
+  display: none;
+}
+
+html.plugin-docs .navbar__search {
+  display: inherit;
+}
