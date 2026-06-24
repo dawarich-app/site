@@ -158,7 +158,7 @@ Install the `dawarich_app` CA template from `grtgbln's Repository`.
 - For any other settings refer to the [official documentation for environment variables and settings](https://dawarich.app/docs/environment-variables-and-settings).
 
   :::warning
-  The CA template sets `PHOTON_API_HOST` to `photon.komoot.io` and `STORE_GEODATA` to `true` by default. This means the container will try to translate your location data (longitude, latitude) to addresses, cities etc. and [save the result in the database](https://github.com/Freika/dawarich/discussions/1457). In order to do so, the app will [send your data to the service provider, which might raise privacy concerns](https://dawarich.app/docs/tutorials/reverse-geocoding/). If you don't want this behavior you should leave `PHOTON_API_HOST` empty! You could also [set up your own reverse geocoding service](#setup-reverse-geocoding).
+  The CA template sets `PHOTON_API_HOST` to `photon.komoot.io` and `STORE_GEODATA` to `true` by default. This means the container will try to translate your location data (longitude, latitude) to addresses, cities etc. and [save the result in the database](https://github.com/Freika/dawarich/discussions/1457). In order to do so, the app will [send your data to the service provider, which might raise privacy concerns](https://dawarich.app/docs/self-hosting/configuration/reverse-geocoding/). If you don't want this behavior you should leave `PHOTON_API_HOST` empty! You could also [set up your own reverse geocoding service](#setup-reverse-geocoding).
   :::
 
 ### 5. Install `dawarich_sidekiq` container
@@ -177,7 +177,7 @@ Install the `dawarich_sidekiq` CA template from `grtgbln's Repository`.
   :::
 
 :::warning
-The CA template sets `PHOTON_API_HOST` to `photon.komoot.io` and `STORE_GEODATA` to `true` by default. This means the container will try to translate your location data (longitude, latitude) to addresses, cities etc. and [save the result in the database](https://github.com/Freika/dawarich/discussions/1457). In order to do so, the app will [send your data to the service provider, which might raise privacy concerns](https://dawarich.app/docs/tutorials/reverse-geocoding/). If you don't want this behavior you should leave `PHOTON_API_HOST` empty! You could also [set up your own reverse geocoding service](#setup-reverse-geocoding).
+The CA template sets `PHOTON_API_HOST` to `photon.komoot.io` and `STORE_GEODATA` to `true` by default. This means the container will try to translate your location data (longitude, latitude) to addresses, cities etc. and [save the result in the database](https://github.com/Freika/dawarich/discussions/1457). In order to do so, the app will [send your data to the service provider, which might raise privacy concerns](https://dawarich.app/docs/self-hosting/configuration/reverse-geocoding/). If you don't want this behavior you should leave `PHOTON_API_HOST` empty! You could also [set up your own reverse geocoding service](#setup-reverse-geocoding).
 :::
 
 ## Post installation
@@ -242,12 +242,12 @@ The `sysctl vm.overcommit_memory=1` command referenced there has to be run on th
 ## Setup Reverse Geocoding
 
 :::note
-Please check out the Dawarich [docs on reverse geocoding](https://dawarich.app/docs/tutorials/reverse-geocoding).
+Please check out the Dawarich [docs on reverse geocoding](https://dawarich.app/docs/self-hosting/configuration/reverse-geocoding).
 :::
 
 ### 1. Install `Photon` container
 
-If you want to [set up your own reverse geocoding service](https://dawarich.app/docs/tutorials/reverse-geocoding/#setting-up-your-own-reverse-geocoding-service) install the `Photon` CA template from `Pa7rickStar's Repository` and change the [environment variables](https://github.com/rtuszik/photon-docker?tab=readme-ov-file#configuration-options) to your liking.
+If you want to [set up your own reverse geocoding service](https://dawarich.app/docs/self-hosting/configuration/reverse-geocoding/#setting-up-your-own-reverse-geocoding-service) install the `Photon` CA template from `Pa7rickStar's Repository` and change the [environment variables](https://github.com/rtuszik/photon-docker?tab=readme-ov-file#configuration-options) to your liking.
 
 - To reduce the load on the official Photon servers you can use the [community mirrors](https://github.com/rtuszik/photon-docker?tab=readme-ov-file#community-mirrors).
 - The default value for `REGION` is `planet` which might be more than you need.
