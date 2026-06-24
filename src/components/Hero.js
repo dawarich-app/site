@@ -145,7 +145,7 @@ export default function Hero() {
 							muted
 							playsInline
 							className={styles.heroVideo}
-							poster="/img/the_map.png"
+							poster="/img/the_map.webp"
 						>
 							<source src="/hero-video.webm" type="video/webm" />
 							<source src="/hero-video.mp4" type="video/mp4" />

@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Visualize Your Location History',
-    image: require('@site/docs/features/images/map.png').default,
+    image: require('@site/docs/features/images/map.webp').default,
     description: (
       <>
         Effortlessly import your location history from Google Maps Timeline, OwnTracks, HomeAssistant, Immich, Photos, and more. View your journeys on an interactive map, complete with customizable layers like heatmaps, points, and connecting lines to visualize your travels.
@@ -14,7 +14,7 @@ const FeatureList = [
   },
   {
     title: 'Continuosly track and visualize your location',
-    image: require('@site/docs/features/images/map-points.png').default,
+    image: require('@site/docs/features/images/map-points.webp').default,
     description: (
       <>
         You can use a number of different mobile apps to track your location and upload it to Dawarich. Currently supported apps are: Overland, OwnTracks, HomeAssistant and GPSLogger.
@@ -41,7 +41,7 @@ const FeatureList = [
   },
   {
     title: 'Visualize your trips on a map',
-    image: require('@site/docs/features/images/trips.png').default,
+    image: require('@site/docs/features/images/trips.webp').default,
     description: (
       <>
         Create and view your trips on a map, add your notes and see photos from your trip pulled from your own photo library on Immich or Photoprism.

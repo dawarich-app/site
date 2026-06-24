@@ -449,7 +449,7 @@ export default function TechLorePage() {
 				disclaimer={`7-day free trial · Use code ${PROMO_CODE} for 20% off your first year · Cancel anytime`}
 				videoWebm="/hero-video.webm"
 				videoMp4="/hero-video.mp4"
-				videoPoster="/img/the_map.png"
+				videoPoster="/img/the_map.webp"
 			/>
 
 			<main>

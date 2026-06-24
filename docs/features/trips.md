@@ -22,7 +22,7 @@ Click **Create** to save. Dawarich automatically pulls in all points recorded wi
 
 The trips list shows all your saved trips in one place.
 
-![Trips list](images/trips.png)
+![Trips list](images/trips.webp)
 
 ## Trip detail page
 
@@ -34,7 +34,7 @@ Clicking a trip opens the detail view, which includes:
 - **Notes** — your formatted notes for the trip
 - **Photos** — thumbnail previews pulled from connected photo services (Immich or PhotoPrism), with a link to view the full set
 
-![Trip details](images/trip-details.png)
+![Trip details](images/trip-details.webp)
 
 ## Editing a trip
 

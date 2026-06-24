@@ -29,14 +29,14 @@ const integrationsShowcase = [
     icon: <CameraIcon />,
     title: 'Immich',
     description: 'Self-hosted photo and video backup solution. Connect your Immich instance to display your photos on the map at the exact locations they were taken.',
-    image: '/img/map-photos.png',
+    image: '/img/map-photos.webp',
     imageAlt: 'Photos on map from Immich'
   },
   {
     icon: <ImageIcon />,
     title: 'PhotoPrism',
     description: 'AI-powered photo management app. Integrate PhotoPrism to see your entire photo library on your location timeline.',
-    image: '/img/trip-details.png',
+    image: '/img/trip-details.webp',
     imageAlt: 'Trip with PhotoPrism photos'
   }
 ];
@@ -151,7 +151,7 @@ export default function IntegrationsPage() {
         title="Connect Your"
         titleHighlight="Digital Life"
         subtitle="Bring your photos into your location timeline. Dawarich integrates with Immich and PhotoPrism to display your photos on the map and in trips—turning your location history into a rich, visual experience."
-        image="/img/map-photos.png"
+        image="/img/map-photos.webp"
         imageAlt="Photos displayed on map"
         ctaLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-hero&utm_campaign=integrations"
         showSecondary={true}

@@ -258,7 +258,7 @@
   content: '';
   position: absolute;
   inset: -24px -40px;
-  background-image: url('/img/the_map.png');
+  background-image: url('/img/the_map.webp');
   background-size: cover;
   background-position: center 38%;
   filter: grayscale(1) contrast(0.9);

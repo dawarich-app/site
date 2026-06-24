@@ -10,6 +10,6 @@ If you're frequently visiting the same area, you can create an area in Dawrich a
 
 To create an area, enable the "Areas" layer in the [Map](/docs/features/map) page and then click on the "Create area" button. A popup will appear where you can draw a circle area.
 
-![Areas](images/areas-tool.png)
+![Areas](images/areas-tool.webp)
 
 ⚠️ Important: If an area is being destroyed, all visits to the area will be deleted as well.

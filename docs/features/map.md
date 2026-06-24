@@ -63,43 +63,43 @@ Hover over or click on a route to see:
 
 Shows individual GPS points on the map as markers.
 
-![Points](images/map-points.png)
+![Points](images/map-points.webp)
 
 ### Polylines (Routes)
 
 Displays your routes connecting GPS points. Routes are automatically generated based on your configured time and distance thresholds.
 
-![Polylines](images/map-polylines.png)
+![Polylines](images/map-polylines.webp)
 
 ### Heatmap
 
 Visualizes point density as a heatmap, showing areas where you spend the most time.
 
-![Heatmap](images/map-heatmap.png)
+![Heatmap](images/map-heatmap.webp)
 
 ### Fog of War
 
 Shows unexplored areas as "fog," revealing only the regions you've visited. Great for visualizing your travel coverage.
 
-![Fog of war](images/map-fog-of-war.png)
+![Fog of war](images/map-fog-of-war.webp)
 
 ### Scratch Map
 
 Highlights countries you've visited on a world map overlay.
 
-![Scratch map](images/map-scratch-map.png)
+![Scratch map](images/map-scratch-map.webp)
 
 ### Areas
 
 Shows [custom areas](/docs/features/areas) you've drawn on the map. Also enables area drawing tools.
 
-![Areas](images/map-areas.png)
+![Areas](images/map-areas.webp)
 
 ### Photos
 
 Displays photos from connected [Immich and/or Photoprism](/docs/features/photos) instances at their GPS locations.
 
-![Photos](images/map-photos.png)
+![Photos](images/map-photos.webp)
 
 ### Family (Map V2)
 

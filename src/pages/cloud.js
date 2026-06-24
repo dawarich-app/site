@@ -444,7 +444,7 @@ export default function CloudPage() {
 					href: "#pricing",
 				}}
 				disclaimer="7-day free trial · Cancel anytime · Your data stays yours, in standard formats"
-				imageSrc="/img/timeline.png"
+				imageSrc="/img/timeline.webp"
 				imageAlt="Dawarich timeline view showing a decade of location history"
 			/>
 
