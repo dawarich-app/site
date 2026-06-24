@@ -210,7 +210,7 @@ volumes:
 ```
 
 
-# 0.27.4 - 2025-06-06
+## 0.27.4 - 2025-06-06
 
 Update your `docker-compose.yml` to use SQLite database names for queue, cache and cable databases.
 
