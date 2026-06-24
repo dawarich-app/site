@@ -146,6 +146,29 @@ const config = {
 
   plugins: [
     [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            from: '/docs',
+            to: '/docs/intro',
+          },
+          {
+            from: '/docs/tutorials/reverse-geocoding',
+            to: '/docs/self-hosting/configuration/reverse-geocoding',
+          },
+          {
+            from: '/docs/self-hosting/configuration/telemetry',
+            to: '/docs/self-hosting/environment-variables',
+          },
+          {
+            from: '/docs/updating-guides',
+            to: '/docs/self-hosting/updating',
+          },
+        ],
+      },
+    ],
+    [
       'docusaurus-plugin-openapi-docs',
       {
         id: "api",
@@ -205,6 +228,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       metadata: [
+        { name: 'description', content: 'Dawarich is a privacy-focused, self-hosted location history app that maps your life automatically and gives you full control over your data.' },
         { name: 'twitter:image', content: 'img/meta-image.png' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'Dawarich' },

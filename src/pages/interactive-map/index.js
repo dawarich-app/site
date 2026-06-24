@@ -124,49 +124,49 @@ const showcaseItems = [
     icon: <MapPinIcon />,
     title: 'Points',
     description: 'View every location point captured with precise timestamps and details. Click any point to see its information including coordinates, time, and more.',
-    image: '/img/map-points.png',
+    image: '/img/map-points.webp',
     imageAlt: 'Map showing individual location points'
   },
   {
     icon: <RouteIcon />,
     title: 'Polylines',
     description: 'See your complete routes connecting all your location points. Visualize your journeys as continuous paths across the map.',
-    image: '/img/map-polylines.png',
+    image: '/img/map-polylines.webp',
     imageAlt: 'Map with polyline routes'
   },
   {
     icon: <FlameIcon />,
     title: 'Heatmap',
     description: 'Discover where you spend most of your time with an intensity-based heatmap visualization showing your most visited areas.',
-    image: '/img/map-heatmap.png',
+    image: '/img/map-heatmap.webp',
     imageAlt: 'Heatmap visualization'
   },
   {
     icon: <CloudFogIcon />,
     title: 'Fog of War',
     description: 'Reveal the world as you explore it. Areas you\'ve visited are cleared while unexplored regions remain covered.',
-    image: '/img/map-fog-of-war.png',
+    image: '/img/map-fog-of-war.webp',
     imageAlt: 'Fog of war visualization'
   },
   {
     icon: <MapIcon />,
     title: 'Scratch Map',
     description: 'Watch countries light up as you visit them. Perfect for travel enthusiasts tracking their global adventures.',
-    image: '/img/map-scratch-map.png',
+    image: '/img/map-scratch-map.webp',
     imageAlt: 'Scratch map showing visited countries'
   },
   {
     icon: <HexagonIcon />,
     title: 'Areas',
     description: 'Draw custom areas on your map to mark important locations, neighborhoods, or regions of interest.',
-    image: '/img/map-areas.png',
+    image: '/img/map-areas.webp',
     imageAlt: 'Custom areas on map'
   },
   {
     icon: <CameraIcon />,
     title: 'Photos',
     description: 'See your photos from Immich or PhotoPrism directly on the map at the exact locations they were taken. (fow now, only available with self-hosting)',
-    image: '/img/map-photos.png',
+    image: '/img/map-photos.webp',
     imageAlt: 'Photos displayed on map'
   }
 ];
@@ -243,7 +243,7 @@ export default function MapPage() {
         title="Explore Where You've Been,"
         titleHighlight="Never Forget a Place"
         subtitle="Your location history comes alive on an interactive map with multiple visualization layers. From detailed points to beautiful heatmaps, see your life's journey in stunning detail."
-        image="/img/the_map.png"
+        image="/img/the_map.webp"
         imageAlt="Dawarich interactive map"
         ctaLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-hero&utm_campaign=map"
         showSecondary={true}

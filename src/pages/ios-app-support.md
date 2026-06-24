@@ -1,5 +1,6 @@
 ---
 title: iOS App Support
+description: Get help with the Dawarich iOS app — report issues, request features, and find support resources.
 ---
 
 # iOS App Support

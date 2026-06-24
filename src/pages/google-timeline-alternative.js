@@ -596,7 +596,7 @@ export default function GoogleTimelineAlternativePage() {
 					href: "#pricing",
 				}}
 				disclaimer="7-day free trial · We've successfully imported 15-year Takeouts of 6.8 million points without breaking a sweat"
-				imageSrc="/img/timeline.png"
+				imageSrc="/img/timeline.webp"
 				imageAlt="Dawarich timeline view replacing Google Timeline"
 			/>
 

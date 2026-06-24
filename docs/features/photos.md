@@ -25,6 +25,6 @@ For Immich, you need a key with `asset.read` and `asset.view` scopes enabled. If
 
 Once the integration is configured, you will be able to see your photos on the map (when Photos layer is enabled) and in your trips.
 
-![Photos on the map](images/map-photos.png)
+![Photos on the map](images/map-photos.webp)
 
-![Photos in trips](images/trip-details.png)
+![Photos in trips](images/trip-details.webp)

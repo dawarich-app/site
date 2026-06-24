@@ -1,4 +1,3 @@
-@@ -0,0 +1,50 @@
 ---
 sidebar_position: 4
 title: Home Assistant

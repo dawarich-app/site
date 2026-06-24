@@ -112,7 +112,7 @@ export default function TripsPage() {
         title="Turn Your Travels Into"
         titleHighlight="Beautiful Trip Stories"
         subtitle="Automatically capture your movements and transform them into comprehensive travel journals. Each trip includes an interactive map, detailed statistics, rich text descriptions, and photos — all in one place."
-        image="/img/trip-details.png"
+        image="/img/trip-details.webp"
         imageAlt="Trip details with map and statistics"
         ctaLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-hero&utm_campaign=trips"
         showSecondary={true}

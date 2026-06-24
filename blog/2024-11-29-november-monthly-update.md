@@ -52,7 +52,7 @@ This one is more about QoL, making your UI more alive. Notifications, new points
 
 Yeah, you can now enable the "Scratch Map" layer on the map. Have a look:
 
-![](./images/dawarich-scratch-map.png)
+![](./images/dawarich-scratch-map.webp)
 
 ## Changelog
 
