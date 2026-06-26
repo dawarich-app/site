@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"note":{"type":"object","properties":{"title":{"type":"string"},"body":{"type":"string"},"latitude":{"type":"number"},"longitude":{"type":"number"},"noted_at":{"type":"string","format":"datetime"}}}}}}}}}

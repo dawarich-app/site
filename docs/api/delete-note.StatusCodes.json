@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"note deleted"},"401":{"description":"unauthorized"},"404":{"description":"note not found"}}}

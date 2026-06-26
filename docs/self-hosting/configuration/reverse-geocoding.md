@@ -12,7 +12,7 @@ Reverse geocoding is the process of converting geographic coordinates into a hum
 
 [**chibigeo**](https://chibigeo.com) is a hosted reverse geocoding service built and run by the same people behind Dawarich. It's a worldwide, drop-in [Photon](https://github.com/komoot/photon) replacement, so you get fast, reliable geocoding without hosting it yourself or hitting the per-second limits of the free public services — and using it directly supports Dawarich's development.
 
-Sign up at [chibigeo.com](https://chibigeo.com) to get an API key, then configure it exactly like Photon ([see below](#how-to-enable-reverse-geocoding)): set `PHOTON_API_HOST` to the chibigeo host, `PHOTON_API_KEY` to your chibigeo API key, and `PHOTON_API_USE_HTTPS` to `true`.
+Sign up at [chibigeo.com](https://chibigeo.com) to get an API key, then configure it exactly like Photon ([see below](#how-to-enable-reverse-geocoding)): set `PHOTON_API_HOST` to `app.chibigeo.com/v1/photon`, `PHOTON_API_KEY` to your chibigeo API key, and `PHOTON_API_USE_HTTPS` to `true`.
 
 :::
 
