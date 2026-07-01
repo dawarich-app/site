@@ -32,7 +32,7 @@ const appShowcase = [
     description: 'Our official Android app brings the same effortless background tracking to your Dawarich instance. Available on Google Play.',
     image: 'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png',
     imageAlt: 'Get Dawarich on Google Play',
-    imageHref: 'https://play.google.com/store/apps/details?id=com.zeitflow.dawarich',
+    imageHref: 'https://play.google.com/store/apps/details?id=app.dawarich.Dawarich',
   },
   {
     icon: <GlobeIcon />,

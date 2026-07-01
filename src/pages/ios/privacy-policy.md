@@ -4,7 +4,7 @@ title: Mobile App Privacy Policy
 
 # Dawarich Mobile App Privacy Policy
 
-Applies to the Dawarich mobile app — iOS (`app.dawarich.Dawarich`) and Android (`com.zeitflow.dawarich`) — published by **ZeitFlow UG (haftungsbeschränkt)**, Kolonnenstraße 8, 10827 Berlin, Germany. Email: **hi@dawarich.app**. Full company details: [Impressum](/impressum).
+Applies to the Dawarich mobile app — iOS (`app.dawarich.Dawarich`) and Android (`app.dawarich.Dawarich`) — published by **ZeitFlow UG (haftungsbeschränkt)**, Kolonnenstraße 8, 10827 Berlin, Germany. Email: **hi@dawarich.app**. Full company details: [Impressum](/impressum).
 
 :::info TL;DR
 The app tracks location when you enable it, stores points locally, and uploads them **only to the Dawarich server you configure** — your own or our SaaS at dawarich.app. Crash reports go to Sentry. We don't sell data or run ads.
@@ -59,10 +59,11 @@ HTTPS everywhere; API keys stored in platform-secure storage. You must be **16 o
 
 ## Last updated
 
-Effective **2026-04-21**.
+Effective **2026-07-01**.
 
 | When          | What          |
 | ------------- | ------------- |
+| 2026-07-01    | Updated Android package identifier to `app.dawarich.Dawarich` |
 | 2026-04-21    | Rewritten to accurately describe location tracking, HealthKit, camera, Sentry; covers iOS + Android |
 | 2025-04-13    | Updated developer information |
 | 2025-01-27    | Initial version |

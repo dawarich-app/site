@@ -14,7 +14,7 @@ Dawarich is available on Android. You can download it from Google Play.
 2. Search for "Dawarich".
 3. Tap "Install" and follow the instructions to install the app.
 
-<a href="https://play.google.com/store/apps/details?id=com.zeitflow.dawarich">
+<a href="https://play.google.com/store/apps/details?id=app.dawarich.Dawarich">
   <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style={{width: "250px"}} />
 </a>
 

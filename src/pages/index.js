@@ -81,7 +81,7 @@ const howItWorksSteps = [
 				</a>{" "}
 				and{" "}
 				<a
-					href="https://play.google.com/store/apps/details?id=com.zeitflow.dawarich"
+					href="https://play.google.com/store/apps/details?id=app.dawarich.Dawarich"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
