@@ -19,27 +19,6 @@ const CHANGELOG_URL =
 // ---------------------------------------------------------------------------
 const upcoming = [
   {
-    platform: 'web',
-    status: 'in-progress',
-    title: 'AirTrail flight integration',
-    description:
-      'Pull your flight history from a self-hosted AirTrail instance and draw the flights as arcs on Map v2, with daily re-sync and a dedicated Flights layer.',
-  },
-  {
-    platform: 'web',
-    status: 'in-progress',
-    title: 'Redesigned trip pages',
-    description:
-      'A sticky-map layout with a per-day accordion, day-colored routes, a photo overlay toggle, and a timeline replay scrubber — built on MapLibre v2.',
-  },
-  {
-    platform: 'web',
-    status: 'in-progress',
-    title: 'Per-day trip notes',
-    description:
-      'Add a short note to any day of a trip straight from the accordion, with a matching notes API.',
-  },
-  {
     platform: 'mobile',
     status: 'in-progress',
     title: 'Smoother in-app purchases',
@@ -54,11 +33,32 @@ const upcoming = [
       'Android records the first point immediately when a session starts, and Google / Apple sign-in no longer double-submits on a quick double tap.',
   },
   {
-    platform: 'web',
-    status: 'in-progress',
-    title: 'Public sharing',
+    platform: 'mobile',
+    status: 'planned',
+    title: 'App UI rework',
     description:
-      'Share your trips, time periods, tracks or even live location with a public link, with optional password protection and expiration.',
+      'A visual refresh of the mobile app — updated navigation, screens and components to match the redesigned web experience.',
+  },
+  {
+    platform: 'web',
+    status: 'planned',
+    title: 'More map customization',
+    description:
+      'Additional controls for tuning Map v2 to your taste — more style and layer options beyond the current basemap and layer toggles.',
+  },
+  {
+    platform: 'web',
+    status: 'planned',
+    title: 'Posters generation',
+    description:
+      'Turn your location history into a printable, minimalist city map poster, generated straight from your Dawarich data.',
+  },
+  {
+    platform: 'web',
+    status: 'planned',
+    title: 'Search rework',
+    description:
+      'A refreshed search experience for finding places and visits faster across your tracked history.',
   },
 ];
 
@@ -68,6 +68,36 @@ const upcoming = [
 // user-facing highlights. Newest first.
 // ---------------------------------------------------------------------------
 const releases = [
+  {
+    version: '1.9.1',
+    date: 'June 2026',
+    theme: 'Trip photos',
+    highlights: [
+      'Trip photos from Immich now appear on Map v2 trip and replay views, popping in as the replay reaches each photo\'s timestamp',
+      'The same photos show on public shared-trip links, with privacy-zone masking still applied',
+    ],
+  },
+  {
+    version: '1.9.0',
+    date: 'June 2026',
+    theme: 'AirTrail & redesigned trips',
+    highlights: [
+      'AirTrail integration pulls your flight history from a self-hosted instance and draws it as arcs on Map v2, with daily re-sync',
+      'Trip pages redesigned around Map v2: sticky map, day-colored per-day accordion, and a timeline replay scrubber',
+      'Per-day trip notes, editable straight from the accordion',
+      'Public sharing for tracks and live location, plus a redesigned public trip page with per-section toggles',
+    ],
+  },
+  {
+    version: '1.8.1',
+    date: 'June 2026',
+    theme: 'Fog of War & faster maps',
+    highlights: [
+      'Visit Max Gap slider to tune the stay-point visit detector\'s maximum gap between points',
+      'Fog of War can now reveal explored areas per hexagon instead of per point',
+      'Faster point loading on large histories using the spatial index',
+    ],
+  },
   {
     version: '1.8.0',
     date: 'June 2026',
