@@ -21,13 +21,6 @@ const upcoming = [
   {
     platform: 'mobile',
     status: 'in-progress',
-    title: 'Smoother in-app purchases',
-    description:
-      'After buying a subscription, the app shows a "payment is processing" spinner and auto-unlocks once it clears — no manual refresh or restart.',
-  },
-  {
-    platform: 'mobile',
-    status: 'in-progress',
     title: 'Tracking & sign-in fixes',
     description:
       'Android records the first point immediately when a session starts, and Google / Apple sign-in no longer double-submits on a quick double tap.',
@@ -44,7 +37,7 @@ const upcoming = [
     status: 'planned',
     title: 'More map customization',
     description:
-      'Additional controls for tuning Map v2 to your taste — more style and layer options beyond the current basemap and layer toggles.',
+      'Additional controls for tuning Map v2 to your taste beyond the current basemap options.',
   },
   {
     platform: 'web',
