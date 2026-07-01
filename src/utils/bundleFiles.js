@@ -7,12 +7,14 @@
 export async function bundleFiles(files) {
   const { default: JSZip } = await import('jszip');
   const zip = new JSZip();
-  const seen = new Map();
+  const used = new Set();
 
   files.forEach((f) => {
-    const count = seen.get(f.name) || 0;
-    seen.set(f.name, count + 1);
-    const name = count === 0 ? f.name : dedupedName(f.name, count);
+    let name = f.name;
+    for (let i = 1; used.has(name); i++) {
+      name = dedupedName(f.name, i);
+    }
+    used.add(name);
     zip.file(name, f.blob);
   });
 
