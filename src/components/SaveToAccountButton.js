@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './SaveToAccountButton.module.css';
 
 const API_BASE = 'https://my.dawarich.app';
+const MAX_UPLOAD_BYTES = 100 * 1024 * 1024;
 
 const ERROR_MESSAGES = {
   413: 'Your file is too large for instant import. Sign up first, then upload from your dashboard.',
@@ -9,19 +10,42 @@ const ERROR_MESSAGES = {
   default: 'Upload failed. Please try again.',
 };
 
+function trackEvent(name) {
+  if (typeof window !== 'undefined' && typeof window.sa_event === 'function') {
+    window.sa_event(name);
+  }
+}
+
 export default function SaveToAccountButton({ toolName, sourceHint, getFiles, disabled }) {
+  const busyRef = useRef(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState(null);
 
   const handleClick = async () => {
+    if (busyRef.current) return;
+    busyRef.current = true;
     setBusy(true);
     setError(null);
+    trackEvent(`handoff_click_${toolName}`);
+
+    const fail = (message) => {
+      trackEvent(`handoff_error_${toolName}`);
+      setError(message);
+      busyRef.current = false;
+      setBusy(false);
+    };
 
     try {
       const files = await getFiles();
       if (!files || files.length === 0) {
-        setError('No files to save. Upload a file first.');
-        return;
+        return fail('No files to save. Upload a file first.');
+      }
+
+      // Check the raw total before zipping: compression won't rescue a
+      // multi-hundred-MB Takeout, and JSZip would freeze the tab trying.
+      const totalBytes = files.reduce((sum, f) => sum + (f.blob?.size || 0), 0);
+      if (totalBytes > MAX_UPLOAD_BYTES) {
+        return fail(ERROR_MESSAGES[413]);
       }
 
       const { bundleFiles } = await import('@site/src/utils/bundleFiles');
@@ -42,16 +66,19 @@ export default function SaveToAccountButton({ toolName, sourceHint, getFiles, di
 
       if (response.status === 201) {
         const data = await response.json();
-        window.location.href = `${data.claim_url}&utm_campaign=${encodeURIComponent(toolName)}`;
+        const claimUrl = new URL(data.claim_url);
+        claimUrl.searchParams.set('utm_campaign', toolName);
+        trackEvent(`handoff_success_${toolName}`);
+        // Deliberately stay busy: re-enabling before navigation completes
+        // would let a second click create a duplicate pending import.
+        window.location.href = claimUrl.toString();
         return;
       }
 
-      setError(ERROR_MESSAGES[response.status] || ERROR_MESSAGES.default);
+      fail(ERROR_MESSAGES[response.status] || ERROR_MESSAGES.default);
     } catch (e) {
       console.error('[SaveToAccountButton] Upload failed:', e);
-      setError(ERROR_MESSAGES.default);
-    } finally {
-      setBusy(false);
+      fail(ERROR_MESSAGES.default);
     }
   };
 

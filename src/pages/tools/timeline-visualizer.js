@@ -21,7 +21,7 @@ const imageUrl = "https://dawarich.app/img/meta-image.png";
 const faqItems = [
   {
     question: "Is it safe to upload my Google Timeline data here?",
-    answer: "Yes. All data processing happens entirely in your browser using JavaScript. Your location history files are never uploaded to any server — they stay on your device. When you close the tab, the data is gone. The tool is also open source, so you can verify exactly what the code does."
+    answer: "Yes. All visualization happens entirely in your browser using JavaScript — your files stay on your device and are gone when you close the tab. The only exception is the optional “Save to my Dawarich account” button, which uploads your file to Dawarich Cloud so it can be imported into your new account. The tool is open source, so you can verify exactly what the code does."
   },
   {
     question: "What file formats does this visualizer support?",
@@ -403,7 +403,7 @@ export default function TimelineVisualizer() {
                 <svg className={styles.privacyIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
-                <span>All processing happens in your browser. Your data never leaves your device.</span>
+                <span>All processing happens in your browser. Your data stays on your device unless you choose “Save to my Dawarich account.”</span>
               </div>
               <details className={styles.instructionsCollapsible}>
                 <summary className={styles.instructionsSummary}>
@@ -530,7 +530,7 @@ export default function TimelineVisualizer() {
             <div className={styles.infoCard}>
               <h2>What Is a Google Timeline Visualizer?</h2>
               <p>A Google Timeline visualizer takes the raw JSON files from your Google location history export and turns them into an interactive map you can explore. Instead of scrolling through thousands of lines of coordinates and timestamps, you see your actual journeys plotted on a map — every trip, commute, and walk you've taken while Google was tracking your location.</p>
-              <p>This tool processes everything in your browser, so your sensitive location data never leaves your device. It's the privacy-first way to explore years of location history.</p>
+              <p>This tool visualizes everything in your browser, so exploring your history never sends your location data anywhere. It's the privacy-first way to explore years of location history. (If you use “Save to my Dawarich account,” that one action uploads your file to Dawarich Cloud to set up your import — nothing is sent otherwise.)</p>
             </div>
 
             <div className={styles.infoCard}>

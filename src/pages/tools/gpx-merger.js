@@ -8,7 +8,7 @@ import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './gpx-merger.module.css';
 
 const pageTitle = "Free GPX Merger - Combine Multiple GPS Track Files Online";
-const pageDescription = "Merge multiple GPX files into one. Free, privacy-first online tool to combine GPS tracks, waypoints, and routes. Works entirely in your browser - no upload required.";
+const pageDescription = "Merge multiple GPX files into one. Free, privacy-first online tool to combine GPS tracks, waypoints, and routes. Works entirely in your browser.";
 const pageUrl = "https://dawarich.app/tools/gpx-merger/";
 const imageUrl = "https://dawarich.app/img/meta-image.png";
 
@@ -130,7 +130,8 @@ export default function GPXMerger() {
     if (parsedFiles.length < 2) return [];
 
     const mergedGpx = mergeGPXFiles(parsedFiles, options);
-    const name = `${options.outputName.replace(/[^a-z0-9]/gi, '_')}.gpx`;
+    const sanitized = options.outputName.replace(/[^a-z0-9]/gi, '_');
+    const name = `${sanitized || 'merged_tracks'}.gpx`;
     return [{ name, blob: new Blob([mergedGpx], { type: 'application/gpx+xml' }) }];
   }, [parsedFiles, options]);
 
@@ -382,7 +383,7 @@ export default function GPXMerger() {
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
             </svg>
-            <span>Your files stay in your browser. Nothing is uploaded to any server.</span>
+            <span>Merging happens in your browser. Nothing is uploaded unless you choose “Save to my Dawarich account.”</span>
           </div>
         </div>
 
