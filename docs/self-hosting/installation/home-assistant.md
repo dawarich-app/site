@@ -32,7 +32,7 @@ This app requires **Home Assistant OS (HAOS)**. It does not work with Home Assis
 
 ## Installation
 
-1. Add the [repository](https://github.com/thomdev-j/homeassistant-addon-dawarich) to your Home Assistant app store
+1. Add the [repository](https://github.com/thomdev-j/homeassistant-app-dawarich) to your Home Assistant app store
 2. Install and start the Dawarich app
 3. Configure your tracked entities (e.g. `device_tracker.your_phone`)
 4. Access Dawarich from the HA sidebar
