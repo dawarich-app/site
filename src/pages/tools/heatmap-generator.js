@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react';
+import SaveToAccountButton from '@site/src/components/SaveToAccountButton';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import BrowserOnly from '@docusaurus/BrowserOnly';
@@ -358,6 +359,7 @@ export default function HeatmapGenerator() {
           processedFiles.push({
             name: file.name,
             pointCount: filePoints.length,
+            blob: file,
           });
         } catch (err) {
           console.error(`Error parsing ${file.name}:`, err);
@@ -374,6 +376,11 @@ export default function HeatmapGenerator() {
       setIsLoading(false);
     }
   };
+
+  const getOriginalFiles = useCallback(
+    () => files.map((f) => ({ name: f.name, blob: f.blob })).filter((f) => f.blob),
+    [files]
+  );
 
   const handleClear = () => {
     setFiles([]);
@@ -490,6 +497,20 @@ export default function HeatmapGenerator() {
                 </div>
               )}
 
+              {files.length > 0 && (
+                <div className={styles.saveToAccountSection}>
+                  <p className={styles.saveToAccountIntro}>
+                    Want this in your Dawarich account too? We'll import it during signup — no second upload needed.
+                  </p>
+                  <SaveToAccountButton
+                    toolName="heatmap-generator"
+                    sourceHint={null}
+                    getFiles={getOriginalFiles}
+                    disabled={files.length === 0}
+                  />
+                </div>
+              )}
+
               {stats && (
                 <div className={styles.statsPanel}>
                   <h4>Statistics</h4>
@@ -569,7 +590,7 @@ export default function HeatmapGenerator() {
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
-              <span>Your data stays in your browser. Nothing is uploaded to any server.</span>
+              <span>Rendering happens in your browser. Nothing is uploaded unless you choose “Save to my Dawarich account.”</span>
             </div>
           </div>
 

@@ -2,6 +2,7 @@ import React, { useState, useCallback, useMemo } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import FileUploader from '@site/src/components/FileUploader';
+import SaveToAccountButton from '@site/src/components/SaveToAccountButton';
 import StatsCard from '@site/src/components/StatsCard';
 import { parseTimeline } from '@site/src/utils/timelineParser';
 import { generateMileageLog, mileageLogToCSV } from '@site/src/utils/timelineStats';
@@ -17,7 +18,7 @@ const imageUrl = "https://dawarich.app/img/meta-image.png";
 const faqItems = [
   {
     question: "Is it safe to upload my Google Timeline data?",
-    answer: "Absolutely. This tool runs 100% in your browser using client-side JavaScript. Your Google Timeline files are never uploaded to any server, never leave your device, and are discarded the moment you close or refresh the page. There is no backend, no database, and no tracking of your location data. The tool is part of the Dawarich open-source ecosystem, so you can inspect the source code yourself to verify."
+    answer: "Absolutely. The calculator runs 100% in your browser using client-side JavaScript — your files stay on your device and are discarded when you close or refresh the page, with no tracking of your location data. The only exception is the optional “Save to my Dawarich account” button, which uploads your file to Dawarich Cloud so it can be imported into your new account. The tool is part of the Dawarich open-source ecosystem, so you can inspect the source code yourself."
   },
   {
     question: "How accurate is the mileage calculation?",
@@ -88,6 +89,11 @@ export default function TimelineMileageCalculator() {
   const [mileageLog, setMileageLog] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const [visibleTrips, setVisibleTrips] = useState(20);
+
+  const getOriginalFiles = useCallback(
+    () => uploadedFiles.map((f) => ({ name: f.filename, blob: f.blob })),
+    [uploadedFiles]
+  );
 
   const handleFilesLoaded = useCallback(async (files) => {
     setUploadedFiles(files);
@@ -333,7 +339,7 @@ export default function TimelineMileageCalculator() {
         <div className={styles.contentWrapper}>
           <div className={styles.header}>
             <h1>Google Timeline Mileage Calculator</h1>
-            <p>Calculate driving mileage from your Google Timeline data. Generate downloadable mileage logs with per-trip details, daily and monthly summaries. All processing happens in your browser — your data never leaves your device.</p>
+            <p>Calculate driving mileage from your Google Timeline data. Generate downloadable mileage logs with per-trip details, daily and monthly summaries. All processing happens in your browser — your data stays on your device unless you choose “Save to my Dawarich account.”</p>
           </div>
 
           <div className={styles.topSection}>
@@ -364,6 +370,20 @@ export default function TimelineMileageCalculator() {
             <div className={styles.uploaderWrapper}>
               <FileUploader onFilesLoaded={handleFilesLoaded} onClear={handleClear} />
 
+              {uploadedFiles.length > 0 && (
+                <div className={styles.saveToAccountSection}>
+                  <p className={styles.saveToAccountIntro}>
+                    Want this in your Dawarich account too? We'll import it during signup — no second upload needed.
+                  </p>
+                  <SaveToAccountButton
+                    toolName="timeline-mileage-calculator"
+                    sourceHint={null}
+                    getFiles={getOriginalFiles}
+                    disabled={uploadedFiles.length === 0}
+                  />
+                </div>
+              )}
+
               <div className={styles.privacyNote}>
                 <div>
                   <strong>
@@ -372,7 +392,7 @@ export default function TimelineMileageCalculator() {
                     </svg>
                     Privacy First
                   </strong>
-                  <p>All mileage calculations happen entirely in your browser. Your location data never leaves your device and is not sent to any server.</p>
+                  <p>All mileage calculations happen entirely in your browser — your location data stays on your device unless you choose “Save to my Dawarich account.”</p>
                 </div>
               </div>
             </div>
@@ -622,7 +642,7 @@ export default function TimelineMileageCalculator() {
             <div className={styles.infoCard}>
               <h2>What Is the Timeline Mileage Calculator?</h2>
               <p>The Timeline Mileage Calculator is a free browser-based tool that extracts driving trip data from your Google Timeline export files and calculates the total distance traveled. It identifies driving-related activity segments — including car trips, bus rides, train journeys, and motorcycle travel — and generates a structured mileage log with per-trip details.</p>
-              <p>Unlike server-based tools, everything runs in your browser. Your sensitive location data is never uploaded anywhere. You get instant results with full privacy, and the generated CSV mileage log can be used for expense reports, tax documentation, or personal record-keeping.</p>
+              <p>Unlike server-based tools, all calculations run in your browser, so generating your mileage log never sends your location data anywhere. You get instant results with full privacy, and the generated CSV mileage log can be used for expense reports, tax documentation, or personal record-keeping. (If you use “Save to my Dawarich account,” that one action uploads your file to Dawarich Cloud to set up your import — nothing is sent otherwise.)</p>
             </div>
 
             <div className={styles.infoCard}>

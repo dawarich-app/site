@@ -7,10 +7,12 @@ import { timelineToConverterPoints, timelineToCSV } from '@site/src/utils/timeli
 import { toGPX, toGeoJSON, toKML, toKMZ } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import RelatedTools from '@site/src/components/RelatedTools';
+import SaveToAccountButton from '@site/src/components/SaveToAccountButton';
+import { detectGoogleSource } from '@site/src/utils/detectGoogleSource';
 import styles from './google-timeline-converter.module.css';
 
 const pageTitle = "Google Timeline to GPX/KML/CSV Converter - Convert Location History Free";
-const pageDescription = "Free, privacy-first converter for Google Timeline data. Convert your location history to GPX, KML, GeoJSON, or CSV format. All processing in your browser — no data uploaded.";
+const pageDescription = "Free, privacy-first converter for Google Timeline data. Convert your location history to GPX, KML, GeoJSON, or CSV format. All processing in your browser.";
 const pageUrl = "https://dawarich.app/tools/google-timeline-converter/";
 const imageUrl = "https://dawarich.app/img/meta-image.png";
 
@@ -27,7 +29,7 @@ const FORMAT_LABELS = {
 const faqItems = [
   {
     question: "Is it safe to upload my Google Timeline data?",
-    answer: "Yes. All data processing happens entirely in your browser using JavaScript. Your location history files are never uploaded to any server — they stay on your device. When you close the tab, the data is gone. There is no backend, no cookies tracking your files, and no analytics on your location data. The tool is also open source, so you can verify the code yourself."
+    answer: "Yes. All conversion happens entirely in your browser using JavaScript — your files stay on your device and are gone when you close the tab. There are no cookies tracking your files and no analytics on your location data. The only exception is the optional “Save to my Dawarich account” button, which uploads your file to Dawarich Cloud so it can be imported into your new account. The tool is open source, so you can verify the code yourself."
   },
   {
     question: "What Google Timeline formats can I convert?",
@@ -158,6 +160,11 @@ export default function GoogleTimelineConverter() {
   const handleFormatToggle = useCallback((format) => {
     setSelectedFormats(prev => ({ ...prev, [format]: !prev[format] }));
   }, []);
+
+  const getOriginalFiles = useCallback(
+    () => uploadedFiles.map((f) => ({ name: f.filename, blob: f.blob })),
+    [uploadedFiles]
+  );
 
   const handleDownload = useCallback(async (format) => {
     if (allPoints.length === 0 && allPaths.length === 0) return;
@@ -374,7 +381,7 @@ export default function GoogleTimelineConverter() {
                     </svg>
                     Privacy First
                   </strong>
-                  <p>All data processing happens entirely in your browser. Your location data never leaves your device and is not sent to any server.</p>
+                  <p>All conversion happens entirely in your browser — your location data stays on your device unless you choose “Save to my Dawarich account.”</p>
                 </div>
               </div>
             </div>
@@ -497,6 +504,18 @@ export default function GoogleTimelineConverter() {
                       </button>
                     )}
                   </div>
+
+                  <div className={styles.saveToAccountSection}>
+                    <p className={styles.saveToAccountIntro}>
+                      Want this in your Dawarich account too? We'll import it during signup — no second upload needed.
+                    </p>
+                    <SaveToAccountButton
+                      toolName="google-timeline-converter"
+                      sourceHint={detectGoogleSource(parsedResults)}
+                      getFiles={getOriginalFiles}
+                      disabled={!hasData}
+                    />
+                  </div>
                 </>
               )}
 
@@ -518,7 +537,7 @@ export default function GoogleTimelineConverter() {
             <div className={styles.infoCard}>
               <h2>What Is a Google Timeline Converter?</h2>
               <p>A Google Timeline converter takes the raw JSON files from your Google location history export and transforms them into standard GPS formats that are widely supported by mapping applications, fitness trackers, and geographic information systems. Instead of being locked into Google's proprietary JSON format, you get files that work everywhere.</p>
-              <p>This tool processes everything in your browser, so your sensitive location data never leaves your device. Upload your files, pick your formats, and download — it takes seconds for most exports and handles files with hundreds of thousands of location points.</p>
+              <p>This tool converts everything in your browser, so downloading your formats never sends your location data anywhere. Upload your files, pick your formats, and download — it takes seconds for most exports and handles files with hundreds of thousands of location points. (If you use “Save to my Dawarich account,” that one action uploads your file to Dawarich Cloud to set up your import — nothing is sent otherwise.)</p>
             </div>
 
             <div className={styles.infoCard}>
