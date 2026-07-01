@@ -4,6 +4,7 @@ import RelatedTools from '@site/src/components/RelatedTools';
 import Head from '@docusaurus/Head';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import FileUploader from '@site/src/components/FileUploader';
+import SaveToAccountButton from '@site/src/components/SaveToAccountButton';
 import TimelinePanel from '@site/src/components/TimelinePanel/TimelinePanel';
 import { parseTimeline } from '@site/src/utils/timelineParser';
 import { SAMPLE_DAY } from '@site/src/utils/sampleBerlinData';
@@ -164,6 +165,11 @@ export default function TimelineVisualizer() {
     setYearStats(buildYearStats(idx));
     setIsProcessing(false);
   }, []);
+
+  const getOriginalFiles = useCallback(
+    () => uploadedFiles.map((f) => ({ name: f.filename, blob: f.blob })),
+    [uploadedFiles]
+  );
 
   const handleClear = useCallback(() => {
     setUploadedFiles([]);
@@ -379,6 +385,19 @@ export default function TimelineVisualizer() {
           </div>
           <div className={styles.uploadRow}>
             <FileUploader onFilesLoaded={handleFilesLoaded} onClear={handleClear} />
+            {!isShowingSample && points.length > 0 && (
+              <div className={styles.saveToAccountSection}>
+                <p className={styles.saveToAccountIntro}>
+                  Want this in your Dawarich account too? We'll import it during signup — no second upload needed.
+                </p>
+                <SaveToAccountButton
+                  toolName="timeline-visualizer"
+                  sourceHint={null}
+                  getFiles={getOriginalFiles}
+                  disabled={uploadedFiles.length === 0}
+                />
+              </div>
+            )}
             <div className={styles.uploadMeta}>
               <div className={styles.privacyBadge}>
                 <svg className={styles.privacyIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">

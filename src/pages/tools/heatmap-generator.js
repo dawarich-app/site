@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react';
+import SaveToAccountButton from '@site/src/components/SaveToAccountButton';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import BrowserOnly from '@docusaurus/BrowserOnly';
@@ -358,6 +359,7 @@ export default function HeatmapGenerator() {
           processedFiles.push({
             name: file.name,
             pointCount: filePoints.length,
+            blob: file,
           });
         } catch (err) {
           console.error(`Error parsing ${file.name}:`, err);
@@ -374,6 +376,11 @@ export default function HeatmapGenerator() {
       setIsLoading(false);
     }
   };
+
+  const getOriginalFiles = useCallback(
+    () => files.map((f) => ({ name: f.name, blob: f.blob })).filter((f) => f.blob),
+    [files]
+  );
 
   const handleClear = () => {
     setFiles([]);
@@ -487,6 +494,20 @@ export default function HeatmapGenerator() {
                       <span className={styles.pointCount}>{file.pointCount.toLocaleString()} pts</span>
                     </div>
                   ))}
+                </div>
+              )}
+
+              {files.length > 0 && (
+                <div className={styles.saveToAccountSection}>
+                  <p className={styles.saveToAccountIntro}>
+                    Want this in your Dawarich account too? We'll import it during signup — no second upload needed.
+                  </p>
+                  <SaveToAccountButton
+                    toolName="heatmap-generator"
+                    sourceHint={null}
+                    getFiles={getOriginalFiles}
+                    disabled={files.length === 0}
+                  />
                 </div>
               )}
 

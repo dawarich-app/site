@@ -7,6 +7,8 @@ import { timelineToConverterPoints, timelineToCSV } from '@site/src/utils/timeli
 import { toGPX, toGeoJSON, toKML, toKMZ } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import RelatedTools from '@site/src/components/RelatedTools';
+import SaveToAccountButton from '@site/src/components/SaveToAccountButton';
+import { detectGoogleSource } from '@site/src/utils/detectGoogleSource';
 import styles from './google-timeline-converter.module.css';
 
 const pageTitle = "Google Timeline to GPX/KML/CSV Converter - Convert Location History Free";
@@ -158,6 +160,11 @@ export default function GoogleTimelineConverter() {
   const handleFormatToggle = useCallback((format) => {
     setSelectedFormats(prev => ({ ...prev, [format]: !prev[format] }));
   }, []);
+
+  const getOriginalFiles = useCallback(
+    () => uploadedFiles.map((f) => ({ name: f.filename, blob: f.blob })),
+    [uploadedFiles]
+  );
 
   const handleDownload = useCallback(async (format) => {
     if (allPoints.length === 0 && allPaths.length === 0) return;
@@ -496,6 +503,18 @@ export default function GoogleTimelineConverter() {
                         {isConverting ? 'Converting...' : `Download All Selected (${selectedCount})`}
                       </button>
                     )}
+                  </div>
+
+                  <div className={styles.saveToAccountSection}>
+                    <p className={styles.saveToAccountIntro}>
+                      Want this in your Dawarich account too? We'll import it during signup — no second upload needed.
+                    </p>
+                    <SaveToAccountButton
+                      toolName="google-timeline-converter"
+                      sourceHint={detectGoogleSource(parsedResults)}
+                      getFiles={getOriginalFiles}
+                      disabled={!hasData}
+                    />
                   </div>
                 </>
               )}

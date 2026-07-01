@@ -35,6 +35,7 @@ export default function FileUploader({ onFilesLoaded, onClear }) {
           filename: file.name,
           data: json,
           size: file.size,
+          blob: file,
         });
       }
 

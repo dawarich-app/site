@@ -394,3 +394,18 @@
   margin-bottom: 0.5rem;
 }
 
+
+/* Save-to-account handoff */
+.saveToAccountSection {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  border: 1px dashed var(--ifm-color-primary);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.saveToAccountIntro {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  color: var(--ifm-color-emphasis-700);
+}

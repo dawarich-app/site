@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import SaveToAccountButton from '@site/src/components/SaveToAccountButton';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import { parseGPXDetailed, mergeGPXFiles, calculateMergeStats } from '@site/src/utils/gpxMerger';
@@ -124,6 +125,14 @@ export default function GPXMerger() {
       setError(`Error merging files: ${err.message}`);
     }
   };
+
+  const getMergedFile = useCallback(async () => {
+    if (parsedFiles.length < 2) return [];
+
+    const mergedGpx = mergeGPXFiles(parsedFiles, options);
+    const name = `${options.outputName.replace(/[^a-z0-9]/gi, '_')}.gpx`;
+    return [{ name, blob: new Blob([mergedGpx], { type: 'application/gpx+xml' }) }];
+  }, [parsedFiles, options]);
 
   const moveFile = (index, direction) => {
     const newIndex = index + direction;
@@ -354,6 +363,18 @@ export default function GPXMerger() {
                 </svg>
                 Merge & Download GPX
               </button>
+
+              <div className={styles.saveToAccountSection}>
+                <p className={styles.saveToAccountIntro}>
+                  Or skip the download — we'll merge and import it into your Dawarich account during signup.
+                </p>
+                <SaveToAccountButton
+                  toolName="gpx-merger"
+                  sourceHint="gpx"
+                  getFiles={getMergedFile}
+                  disabled={files.length < 2}
+                />
+              </div>
             </div>
           )}
 

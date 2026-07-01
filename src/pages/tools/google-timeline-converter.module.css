@@ -332,6 +332,21 @@
   margin-bottom: 2rem;
 }
 
+/* Save-to-account handoff */
+.saveToAccountSection {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px dashed var(--ifm-color-primary);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.saveToAccountIntro {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
 .downloadButtons {
   display: flex;
   flex-wrap: wrap;
