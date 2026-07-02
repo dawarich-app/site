@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './SaveToAccountButton.module.css';
 
-const API_BASE = 'https://my.dawarich.app';
+const API_BASE = 'https://staging.dawarich.app';
 const MAX_UPLOAD_BYTES = 100 * 1024 * 1024;
 
 const ERROR_MESSAGES = {
