@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './SaveToAccountButton.module.css';
 
 const API_BASE = 'https://my.dawarich.app';
@@ -9,6 +9,22 @@ const ERROR_MESSAGES = {
   429: 'Too many uploads from your network. Please try again in an hour.',
   default: 'Upload failed. Please try again.',
 };
+
+/**
+ * Dark-launch gate: the save-to-account UI only renders when the page is
+ * opened with ?handoff=1 (checked client-side after hydration, so SSR and
+ * first paint match). Lets the site deploy ahead of the backend endpoint
+ * and enables testing against production before the public rollout.
+ */
+export function useHandoffEnabled() {
+  const [enabled, setEnabled] = useState(false);
+
+  useEffect(() => {
+    setEnabled(new URLSearchParams(window.location.search).has('handoff'));
+  }, []);
+
+  return enabled;
+}
 
 function trackEvent(name) {
   if (typeof window !== 'undefined' && typeof window.sa_event === 'function') {
