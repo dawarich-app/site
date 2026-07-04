@@ -33,6 +33,11 @@ const faqData = [
 			"Dawarich has official apps for both iOS and Android with background location tracking and minimal battery impact. You can also use OwnTracks, GPSLogger, Overland, and other compatible tracking apps.",
 	},
 	{
+		question: "Does location tracking work without an internet connection?",
+		answer:
+			"Yes. The official iOS and Android apps record your location on the device itself, so tracking keeps running with no signal — on a plane, underground, hiking off-grid, or abroad without data. Your points are stored safely on your phone and upload to your Dawarich instance automatically the moment you're back online. You never lose track data to a dropped connection.",
+	},
+	{
 		question: "Can I export my data?",
 		answer:
 			"Yes, you can export all your location data at any time in multiple formats (GPX, GeoJSON). Even on the Lite plan, exports include your full history — not just the 12-month viewing window. You're never locked in.",

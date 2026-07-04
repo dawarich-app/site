@@ -33,3 +33,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 7. Tap "Start tracking".
 8. Move around and see your location on the map.
 9. To upload your location to Dawarich, tap "Stop tracking" and then "Upload points".
+
+## Offline tracking
+
+The app records your location on your device, so tracking keeps working even without an internet connection — on a plane, underground, hiking off-grid, or travelling abroad without data. Your points are stored safely on the iPhone and uploaded to your Dawarich instance automatically once you're back online. Nothing is lost to a dropped connection.

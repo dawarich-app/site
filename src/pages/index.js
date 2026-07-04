@@ -87,7 +87,8 @@ const howItWorksSteps = [
 				>
 					Android
 				</a>{" "}
-				apps. Also works with OwnTracks, GPSLogger, and more.
+				apps — which even track offline and upload automatically once
+				you're back online. Also works with OwnTracks, GPSLogger, and more.
 			</>
 		),
 	},

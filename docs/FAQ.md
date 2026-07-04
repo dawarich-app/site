@@ -7,6 +7,16 @@ description: Frequently asked questions about Dawarich, including setup, configu
 # FAQ
 
 
+## Does location tracking work without an internet connection?
+
+<details>
+  <summary>Show me!</summary>
+
+  Yes. The official Dawarich [iOS](/docs/dawarich-for-ios) and [Android](/docs/dawarich-for-android) apps record your location on the device itself, so tracking keeps running even when your phone has no signal — on a plane, underground, hiking off-grid, or travelling abroad without data.
+
+  Your points are stored safely on the device and are uploaded to your Dawarich instance automatically as soon as you're back online. Nothing is lost to a dropped connection.
+</details>
+
 ## How to enter Dawarich console?
 <details>
   <summary>Show me!</summary>

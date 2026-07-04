@@ -21,7 +21,7 @@ const appShowcase = [
   {
     icon: <SmartphoneIcon />,
     title: 'Dawarich iOS App',
-    description: 'Our official iOS app provides seamless location tracking directly to your Dawarich instance. Available on the App Store.',
+    description: 'Our official iOS app provides seamless location tracking directly to your Dawarich instance. Tracks offline and uploads automatically when you\'re back online. Available on the App Store.',
     image: '/img/app-store.png',
     imageAlt: 'Download Dawarich on the App Store',
     imageHref: 'https://apps.apple.com/app/apple-store/id6739544999?pt=128010810&ct=location-tracking&mt=8',
@@ -29,7 +29,7 @@ const appShowcase = [
   {
     icon: <SmartphoneIcon />,
     title: 'Dawarich Android App',
-    description: 'Our official Android app brings the same effortless background tracking to your Dawarich instance. Available on Google Play.',
+    description: 'Our official Android app brings the same effortless background tracking to your Dawarich instance. Tracks offline and uploads automatically when you\'re back online. Available on Google Play.',
     image: 'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png',
     imageAlt: 'Get Dawarich on Google Play',
     imageHref: 'https://play.google.com/store/apps/details?id=app.dawarich.Dawarich',
@@ -99,6 +99,7 @@ const howItWorksSteps = [
     description: 'Once configured, your location data automatically syncs to your private Dawarich account.',
     details: [
       'Location updates sent in real-time or batches',
+      'Tracks offline and uploads when back online',
       'Data syncs automatically in the background',
       'View your location history on the map'
     ]
@@ -109,7 +110,7 @@ const appDetails = [
   {
     name: 'Dawarich iOS App',
     description: 'Native iOS application built specifically for Dawarich',
-    features: ['Seamless setup', 'Low battery impact', 'Background tracking', 'App Store availability'],
+    features: ['Seamless setup', 'Low battery impact', 'Background tracking', 'Offline tracking with auto-upload', 'App Store availability'],
     setupSteps: [
       'Install from App Store',
       'Open app and go to settings',
@@ -120,7 +121,7 @@ const appDetails = [
   {
     name: 'Dawarich Android App',
     description: 'Native Android application built specifically for Dawarich',
-    features: ['Seamless setup', 'Low battery impact', 'Background tracking', 'Available on Google Play'],
+    features: ['Seamless setup', 'Low battery impact', 'Background tracking', 'Offline tracking with auto-upload', 'Available on Google Play'],
     setupSteps: [
       'Install from Google Play',
       'Open app and go to settings',
