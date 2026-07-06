@@ -8,7 +8,7 @@ import { extractPhotoGeodata } from '@site/src/utils/exifParser';
 import { generateGPX } from '@site/src/utils/gpxGenerator';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import RelatedTools from '@site/src/components/RelatedTools';
-import styles from './timeline-visualizer.module.css';
+import styles from './photo-geotagging.module.css';
 
 const pageTitle = "Photo Geodata Extraction - Extract GPS Data from Photos";
 const pageDescription = "Free, privacy-first tool to extract GPS coordinates from your photos and export them as GPX files. All data processing happens in your browser - no data is sent to any server.";
