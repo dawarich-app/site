@@ -454,3 +454,63 @@ article a:hover {
 html.plugin-docs .navbar__search {
   display: inherit;
 }
+
+.footer .container .footer__links {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(5, 1fr);
+  gap: 1.5rem 1rem;
+}
+
+.footer .container .footer__links .footer__col {
+  --ifm-spacing-horizontal: 0;
+  margin-bottom: 0;
+  min-width: 0;
+}
+
+.footer .container .footer__links .footer__link-item {
+  width: auto;
+}
+
+.footer__items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.footer__item {
+  font-size: 0.875rem;
+  line-height: 1.35;
+}
+
+.dawarich-footer-cta a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .footer .container .footer__links {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer .container .footer__links {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem 0.75rem;
+  }
+
+  .footer__col:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer__item {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer .container .footer__links {
+    grid-template-columns: 1fr;
+  }
+}
