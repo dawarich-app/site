@@ -1,0 +1,93 @@
+.tableWrap {
+	overflow-x: auto;
+	margin: 2rem 0;
+	border: 1px solid var(--ifm-color-emphasis-200);
+	border-radius: 12px;
+}
+
+.table {
+	width: 100%;
+	min-width: 760px;
+	border-collapse: collapse;
+	font-size: 0.92rem;
+	display: table;
+	margin-bottom: 0;
+}
+
+.table th,
+.table td {
+	padding: 0.7rem 0.9rem;
+	border: none;
+	border-bottom: 1px solid var(--ifm-color-emphasis-200);
+	text-align: left;
+	vertical-align: top;
+}
+
+.table thead th {
+	background: var(--ifm-color-emphasis-100);
+	font-size: 0.95rem;
+	position: sticky;
+	top: 0;
+}
+
+.table tbody tr:last-child td {
+	border-bottom: none;
+}
+
+.featureCol {
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.dawarichCol {
+	background: color-mix(in srgb, var(--ifm-color-primary) 6%, transparent);
+}
+
+.yes {
+	color: var(--ifm-color-success-darkest);
+	font-weight: 600;
+}
+
+.no {
+	color: var(--ifm-color-emphasis-600);
+}
+
+.partial {
+	color: var(--ifm-color-warning-darkest);
+	font-weight: 500;
+}
+
+.chooseGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 1.25rem;
+	margin: 2rem 0;
+}
+
+.chooseCard {
+	border: 1px solid var(--ifm-color-emphasis-200);
+	border-radius: 12px;
+	padding: 1.4rem;
+	background: var(--ifm-background-surface-color);
+}
+
+.chooseCard h3 {
+	margin-bottom: 0.6rem;
+	font-size: 1.1rem;
+}
+
+.chooseCard ul {
+	padding-left: 1.1rem;
+	margin-bottom: 0;
+}
+
+.chooseCard li {
+	margin-bottom: 0.35rem;
+}
+
+.updated {
+	font-size: 0.85rem;
+	color: var(--ifm-color-emphasis-600);
+	text-align: center;
+	margin-top: 0.5rem;
+}
