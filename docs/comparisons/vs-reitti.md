@@ -54,7 +54,7 @@ This page compares Dawarich with Reitti to help you understand the differences a
 | PhotoPrism | ✅ | ❌ |
 | OIDC / SSO | ✅ | ✅ |
 | **Technical** |
-| Resource footprint | ⚠️ (heavier today; ~20% lighter stack ships in the next release) | ⚠️ (moderate: JVM + Redis + PostGIS) |
+| Resource footprint | ⚠️ (heavier: Rails + Sidekiq + Redis + PostGIS) | ⚠️ (moderate: JVM + Redis + PostGIS) |
 | Community | ✅ 9.7k stars, 56 contributors | ⚠️ 2.3k stars, 17 contributors |
 
 ## What Reitti Does Well
