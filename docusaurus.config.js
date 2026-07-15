@@ -390,6 +390,14 @@ const config = {
             title: 'More',
             items: [
               {
+                label: 'Dawarich vs GeoPulse',
+                to: '/docs/comparisons/vs-geopulse',
+              },
+              {
+                label: 'Dawarich vs Reitti',
+                to: '/docs/comparisons/vs-reitti',
+              },
+              {
                 label: 'Privacy Policy',
                 to: '/privacy-policy',
               },
