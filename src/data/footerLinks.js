@@ -57,6 +57,8 @@ export const footerLinks = [
       { label: 'vs Polarsteps', to: '/docs/comparisons/vs-polarsteps' },
       { label: 'vs Life360', to: '/docs/comparisons/vs-life360' },
       { label: 'vs Arc', to: '/docs/comparisons/vs-arc' },
+      { label: 'vs GeoPulse', to: '/docs/comparisons/vs-geopulse' },
+      { label: 'vs Reitti', to: '/docs/comparisons/vs-reitti' },
     ],
   },
   {
