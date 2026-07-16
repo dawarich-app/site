@@ -10,6 +10,8 @@ const COMPARISONS = [
   '/docs/comparisons/vs-polarsteps',
   '/docs/comparisons/vs-life360',
   '/docs/comparisons/vs-arc',
+  '/docs/comparisons/vs-geopulse',
+  '/docs/comparisons/vs-reitti',
 ];
 
 const TOP_TOOLS = [
