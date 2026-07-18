@@ -23,6 +23,9 @@ This policy applies to the Dawarich SaaS at `dawarich.app`, the hosted tier, and
 | Billing data (name, email, address, tax ID, payment metadata) | Subscriptions, invoicing, tax | (1)(b) contract; (1)(c) legal obligation |
 | Error logs, crash reports, performance metrics | Keep the service stable and secure | (1)(f) legitimate interest |
 | Support correspondence | Respond to your requests | (1)(b) / (1)(f) |
+| Poster print orders (name, shipping address, email, phone, the poster file) | Produce and ship posters you order, invoicing | (1)(b) contract; (1)(c) legal obligation |
+
+The poster file you order is a map rendering of the location data you selected in the Poster Studio. It is shared with our payment and print partners (Section 3) solely to process and produce your order.
 
 No automated decision-making with legal effect (Art. 22). Providing this data is voluntary but necessary to use the service.
 
@@ -44,13 +47,16 @@ All listed processors are bound by DPAs under Art. 28 GDPR. We do not sell data 
 | Sendinblue SAS (Brevo) — web tracker | Marketing-site email-campaign pixel — consent-based | France (EU) |
 | Apple Inc. | iOS App Store distribution | United States |
 | Google LLC | Google Play distribution | United States |
+| Stripe Payments Europe, Ltd. | Payment processing for poster print orders | Ireland (EU); parent Stripe, Inc. (US) |
+| Gelato ASA | Poster printing and shipping (receives shipping details and the poster file) | Norway (EEA); production within the EU |
 
-**International transfers:** UK (Paddle) is covered by the EU adequacy decision. US transfers rely on the EU-US Data Privacy Framework where the provider is certified, and on Standard Contractual Clauses (Art. 46 GDPR) otherwise.
+**International transfers:** UK (Paddle) is covered by the EU adequacy decision. Norway (Gelato) is in the EEA, where the GDPR applies directly. US transfers rely on the EU-US Data Privacy Framework where the provider is certified, and on Standard Contractual Clauses (Art. 46 GDPR) otherwise.
 
 ## 4. Retention
 
 - **Account and location data:** while your account is active; up to 12 months after cancellation unless you request earlier deletion.
-- **Billing data:** up to 10 years (§ 147 AO, § 257 HGB).
+- **Poster print files:** deleted within 48 hours if the order is not paid; kept up to 90 days after purchase for reprints and support, then deleted.
+- **Billing data (including poster order records):** up to 10 years (§ 147 AO, § 257 HGB).
 - **Error logs:** up to 30 days.
 - **Support correspondence:** up to 3 years after last contact.
 
@@ -95,6 +101,7 @@ Effective **2026-04-21**. Contact for all privacy matters: **hi@dawarich.app**.
 
 | When          | What          |
 | ------------- | ------------- |
+| 2026-07-18    | Added poster print orders: order data, Stripe and Gelato processors, print-file retention (48h unpaid / 90 days paid) |
 | 2026-04-21    | Added processor list, legal bases, rights, supervisory authority, transfers, cookie table; age to 16; reflected STORE_GEODATA=false; 30-day notice for material changes |
 | 2025-09-12    | Added TL;DR section |
 | 2025-03-12    | Updated data retention section for SaaS users |
