@@ -42,11 +42,25 @@ As a consumer resident in the EU, you have a statutory right to withdraw from th
 >
 > (*) Delete as appropriate.
 
-## 3. No Refunds Outside the Withdrawal Period
+## 3. Poster Prints (Physical Goods)
+
+Printed posters ordered in the Poster Studio are produced individually from your own location data.
+
+**No right of withdrawal.** Because each poster is made to your specification and clearly personalized, the statutory 14-day right of withdrawal does not apply to poster print orders (§ 312g Abs. 2 Nr. 1 BGB). You are informed of this before completing the order, and by placing the order you acknowledge it. This means a correctly produced poster cannot be returned or refunded simply because you changed your mind.
+
+**Defective, damaged, or lost orders.** Your statutory warranty rights (§§ 434 ff. BGB) are unaffected. If your poster
+
+- arrives damaged or with a print defect,
+- materially differs from what you ordered, or
+- does not arrive at all,
+
+contact **hi@dawarich.app** — ideally with your order reference and, for damage or defects, a photo. We will reprint the poster free of charge or refund the full purchase price, at your choice.
+
+## 4. No Refunds Outside the Withdrawal Period
 
 Outside the statutory 14-day window, we do not refund partial use, unused periods, or remaining time on a subscription. Once a subscription renews it is non-refundable for that cycle, except where applicable consumer protection law requires otherwise.
 
-## 4. Contact
+## 5. Contact
 
 For billing or withdrawal requests: **hi@dawarich.app**.
 
@@ -54,6 +68,7 @@ For billing or withdrawal requests: **hi@dawarich.app**.
 
 | When          | What          |
 | ------------- | ------------- |
+| 2026-07-18    | Added poster prints: § 312g Abs. 2 Nr. 1 BGB withdrawal exclusion for personalized goods, warranty and replacement terms |
 | 2026-04-26    | Documented dual trial flows (with and without payment details upfront) |
 | 2026-04-21    | Added statutory 14-day right of withdrawal, aligned plans with current pricing |
 | 2026-03-10    | Added monthly plan |
