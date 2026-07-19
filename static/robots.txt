@@ -26,6 +26,7 @@
 User-agent: *
 Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
+Disallow: /cdn-cgi/
 
 # AI search engines that cite — explicitly allow
 User-agent: GPTBot
