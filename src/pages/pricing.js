@@ -56,6 +56,7 @@ export default function PricingPage() {
 								name: "Lite (annual)",
 								price: "49.99",
 								priceCurrency: "EUR",
+								availability: "https://schema.org/InStock",
 								url: "https://dawarich.app/pricing/",
 							},
 							{
@@ -63,6 +64,7 @@ export default function PricingPage() {
 								name: "Pro (monthly)",
 								price: "17.99",
 								priceCurrency: "EUR",
+								availability: "https://schema.org/InStock",
 								url: "https://dawarich.app/pricing/",
 							},
 							{
@@ -70,6 +72,17 @@ export default function PricingPage() {
 								name: "Pro (annual)",
 								price: "119.99",
 								priceCurrency: "EUR",
+								availability: "https://schema.org/InStock",
+								url: "https://dawarich.app/pricing/",
+							},
+							{
+								"@type": "Offer",
+								name: "Family (annual)",
+								description:
+									"One annual subscription covering up to 5 members, each with full Pro access.",
+								price: "299.99",
+								priceCurrency: "EUR",
+								availability: "https://schema.org/PreOrder",
 								url: "https://dawarich.app/pricing/",
 							},
 							{
@@ -77,6 +90,7 @@ export default function PricingPage() {
 								name: "Self-hosted",
 								price: "0",
 								priceCurrency: "EUR",
+								availability: "https://schema.org/InStock",
 								url: "https://dawarich.app/docs/self-hosting/introduction",
 							},
 						],
