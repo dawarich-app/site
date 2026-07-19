@@ -84,6 +84,11 @@ describe('footerLinks', () => {
     expect(compare).toEqual(COMPARISONS);
   });
 
+  it('links the About page at the top of the Company column', () => {
+    const company = footerLinks.find((c) => c.title === 'Company').items.map((i) => i.to);
+    expect(company[0]).toBe('/about');
+  });
+
   it('pins FOOTER_LINK_CAP to its specified value', () => {
     expect(FOOTER_LINK_CAP).toBe(60);
   });

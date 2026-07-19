@@ -78,6 +78,7 @@ export const footerLinks = [
   {
     title: 'Company',
     items: [
+      { label: 'About Us', to: '/about' },
       { label: 'Contact', to: '/contact' },
       { label: 'Blog', to: '/blog' },
       { label: 'Credits', to: '/credits' },

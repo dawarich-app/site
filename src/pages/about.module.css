@@ -1,0 +1,84 @@
+.page {
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+  max-width: 720px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.story p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.values {
+  margin-top: 2.5rem;
+}
+
+.values ul {
+  padding-left: 1.25rem;
+}
+
+.values li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.founders {
+  margin-top: 3rem;
+}
+
+.founderGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.founderCard {
+  text-align: center;
+}
+
+.founderPhoto {
+  width: 180px;
+  height: 180px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.founderCard h3 {
+  margin: 1rem 0 0.25rem;
+}
+
+.founderRole {
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 0.5rem;
+}
+
+.founderBio {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.founderLinks {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.company {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  text-align: center;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.95rem;
+}
