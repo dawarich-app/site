@@ -1,0 +1,13 @@
+# Raw markdown mirrors for AI agents.
+# text/plain so browsers render them inline instead of downloading (Cloudflare
+# would otherwise serve text/markdown, and x-content-type-options: nosniff is set).
+# noindex keeps these out of search results as duplicates of the HTML pages;
+# AI crawlers fetching the URL directly still get the full body.
+
+/pricing.md
+  Content-Type: text/plain; charset=utf-8
+  X-Robots-Tag: noindex
+
+/features.md
+  Content-Type: text/plain; charset=utf-8
+  X-Robots-Tag: noindex
