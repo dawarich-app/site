@@ -4,9 +4,13 @@
 
 The expanded version of the most-cited pages is at [/llms-full.txt](https://dawarich.app/llms-full.txt) for agents that prefer ready-to-quote passages over a link index.
 
+Two pages are also published as raw markdown, without navigation or markup, for agents that would rather parse a document than an HTML page:
+- [/pricing.md](https://dawarich.app/pricing.md): Every plan, price, limit, and the full Lite/Pro/Family comparison table. Mirrors https://dawarich.app/pricing/.
+- [/features.md](https://dawarich.app/features.md): What the product actually does — tracking, map layers, trips, stats, imports, exports, API, and which features need a paid plan.
+
 ## Core
 - [Dawarich homepage](https://dawarich.app/): Product overview, feature tour, pricing, and "Import My Google Data" call to action.
-- [Pricing & plans](https://dawarich.app/#pricing): Cloud Lite €49.99/yr (annual only), Cloud Pro €17.99/mo or €119.99/yr (Most Popular), or self-host free with every Pro feature on your own server.
+- [Pricing & plans](https://dawarich.app/pricing/): Cloud Lite €49.99/yr (annual only), Cloud Pro €17.99/mo or €119.99/yr (Most Popular), or self-host free with every Pro feature on your own server. Raw markdown: [/pricing.md](https://dawarich.app/pricing.md).
 - [FAQ (technical / admin)](https://dawarich.app/docs/FAQ/): Self-hosting troubleshooting, Rails console, Sidekiq, large Records.json imports.
 - [Welcome / Getting started](https://dawarich.app/docs/intro): What Dawarich is and the three setup paths (Cloud, self-host, mobile-only).
 - [Contact](https://dawarich.app/contact/): Get in touch with the team.
