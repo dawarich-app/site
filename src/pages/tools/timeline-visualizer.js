@@ -4,7 +4,7 @@ import RelatedTools from '@site/src/components/RelatedTools';
 import Head from '@docusaurus/Head';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import FileUploader from '@site/src/components/FileUploader';
-import SaveToAccountButton, { useHandoffEnabled } from '@site/src/components/SaveToAccountButton';
+import SaveToAccountButton from '@site/src/components/SaveToAccountButton';
 import TimelinePanel from '@site/src/components/TimelinePanel/TimelinePanel';
 import { parseTimeline } from '@site/src/utils/timelineParser';
 import { SAMPLE_DAY } from '@site/src/utils/sampleBerlinData';
@@ -68,7 +68,6 @@ function nextMonthKey(monthKey, direction) {
 }
 
 export default function TimelineVisualizer() {
-  const handoffEnabled = useHandoffEnabled();
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const [points, setPoints] = useState([]);
   const [paths, setPaths] = useState([]);
@@ -386,7 +385,7 @@ export default function TimelineVisualizer() {
           </div>
           <div className={styles.uploadRow}>
             <FileUploader onFilesLoaded={handleFilesLoaded} onClear={handleClear} />
-            {handoffEnabled && !isShowingSample && points.length > 0 && (
+            {!isShowingSample && points.length > 0 && (
               <div className={styles.saveToAccountSection}>
                 <p className={styles.saveToAccountIntro}>
                   Want this in your Dawarich account too? We'll import it during signup — no second upload needed.
