@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react';
-import SaveToAccountButton, { useHandoffEnabled } from '@site/src/components/SaveToAccountButton';
+import SaveToAccountButton from '@site/src/components/SaveToAccountButton';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import BrowserOnly from '@docusaurus/BrowserOnly';
@@ -305,7 +305,6 @@ function getColorRamp(scheme) {
 }
 
 export default function HeatmapGenerator() {
-  const handoffEnabled = useHandoffEnabled();
   const [files, setFiles] = useState([]);
   const [points, setPoints] = useState([]);
   const [stats, setStats] = useState(null);
@@ -498,7 +497,7 @@ export default function HeatmapGenerator() {
                 </div>
               )}
 
-              {handoffEnabled && files.length > 0 && (
+              {files.length > 0 && (
                 <div className={styles.saveToAccountSection}>
                   <p className={styles.saveToAccountIntro}>
                     Want this in your Dawarich account too? We'll import it during signup — no second upload needed.

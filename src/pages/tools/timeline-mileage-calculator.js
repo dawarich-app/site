@@ -2,7 +2,7 @@ import React, { useState, useCallback, useMemo } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import FileUploader from '@site/src/components/FileUploader';
-import SaveToAccountButton, { useHandoffEnabled } from '@site/src/components/SaveToAccountButton';
+import SaveToAccountButton from '@site/src/components/SaveToAccountButton';
 import StatsCard from '@site/src/components/StatsCard';
 import { parseTimeline } from '@site/src/utils/timelineParser';
 import { generateMileageLog, mileageLogToCSV } from '@site/src/utils/timelineStats';
@@ -80,7 +80,6 @@ function formatActivityType(type) {
 }
 
 export default function TimelineMileageCalculator() {
-  const handoffEnabled = useHandoffEnabled();
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const [allPoints, setAllPoints] = useState([]);
   const [allPaths, setAllPaths] = useState([]);
@@ -371,7 +370,7 @@ export default function TimelineMileageCalculator() {
             <div className={styles.uploaderWrapper}>
               <FileUploader onFilesLoaded={handleFilesLoaded} onClear={handleClear} />
 
-              {handoffEnabled && uploadedFiles.length > 0 && (
+              {uploadedFiles.length > 0 && (
                 <div className={styles.saveToAccountSection}>
                   <p className={styles.saveToAccountIntro}>
                     Want this in your Dawarich account too? We'll import it during signup — no second upload needed.

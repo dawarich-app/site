@@ -24,6 +24,7 @@ This policy applies to the Dawarich SaaS at `dawarich.app`, the hosted tier, and
 | Error logs, crash reports, performance metrics | Keep the service stable and secure | (1)(f) legitimate interest |
 | Support correspondence | Respond to your requests | (1)(b) / (1)(f) |
 | Poster print orders (name, shipping address, email, phone, the poster file) | Produce and ship posters you order, invoicing | (1)(b) contract; (1)(c) legal obligation |
+| Files uploaded to the free tools with "Save to my Dawarich account" | Hold the file so it can be imported into the account you create next | (1)(b) pre-contractual measures at your request |
 
 The poster file you order is a map rendering of the location data you selected in the Poster Studio. It is shared with our payment and print partners (Section 3) solely to process and produce your order.
 
@@ -59,6 +60,9 @@ All listed processors are bound by DPAs under Art. 28 GDPR. We do not sell data 
 - **Billing data (including poster order records):** up to 10 years (§ 147 AO, § 257 HGB).
 - **Error logs:** up to 30 days.
 - **Support correspondence:** up to 3 years after last contact.
+- **Tool uploads awaiting an account:** deleted within 24 hours if you do not complete signup. Once claimed, the file becomes an import in your account and follows the account-data rule above.
+
+The free tools at `dawarich.app/tools/` process your files entirely in your browser by default; nothing is uploaded unless you press "Save to my Dawarich account".
 
 ## 5. Your Rights
 
@@ -97,10 +101,11 @@ We will notify you of **material changes** (new purposes, new processors, change
 
 ## Last updated
 
-Effective **2026-04-21**. Contact for all privacy matters: **hi@dawarich.app**.
+Effective **2026-07-28**. Contact for all privacy matters: **hi@dawarich.app**.
 
 | When          | What          |
 | ------------- | ------------- |
+| 2026-07-28    | Disclosed tool uploads held for signup ("Save to my Dawarich account") and their 24-hour deletion window |
 | 2026-07-18    | Added poster print orders: order data, Stripe and Gelato processors, print-file retention (48h unpaid / 90 days paid) |
 | 2026-04-21    | Added processor list, legal bases, rights, supervisory authority, transfers, cookie table; age to 16; reflected STORE_GEODATA=false; 30-day notice for material changes |
 | 2025-09-12    | Added TL;DR section |

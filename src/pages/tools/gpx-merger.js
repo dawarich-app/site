@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import SaveToAccountButton, { useHandoffEnabled } from '@site/src/components/SaveToAccountButton';
+import SaveToAccountButton from '@site/src/components/SaveToAccountButton';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import { parseGPXDetailed, mergeGPXFiles, calculateMergeStats } from '@site/src/utils/gpxMerger';
@@ -13,7 +13,6 @@ const pageUrl = "https://dawarich.app/tools/gpx-merger/";
 const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 export default function GPXMerger() {
-  const handoffEnabled = useHandoffEnabled();
   const [files, setFiles] = useState([]);
   const [parsedFiles, setParsedFiles] = useState([]);
   const [stats, setStats] = useState(null);
@@ -366,19 +365,17 @@ export default function GPXMerger() {
                 Merge & Download GPX
               </button>
 
-              {handoffEnabled && (
-                <div className={styles.saveToAccountSection}>
-                  <p className={styles.saveToAccountIntro}>
-                    Or skip the download — we'll merge and import it into your Dawarich account during signup.
-                  </p>
-                  <SaveToAccountButton
-                    toolName="gpx-merger"
-                    sourceHint="gpx"
-                    getFiles={getMergedFile}
-                    disabled={files.length < 2}
-                  />
-                </div>
-              )}
+              <div className={styles.saveToAccountSection}>
+                <p className={styles.saveToAccountIntro}>
+                  Or skip the download — we'll merge and import it into your Dawarich account during signup.
+                </p>
+                <SaveToAccountButton
+                  toolName="gpx-merger"
+                  sourceHint="gpx"
+                  getFiles={getMergedFile}
+                  disabled={files.length < 2}
+                />
+              </div>
             </div>
           )}
 
