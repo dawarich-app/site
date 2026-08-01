@@ -55,7 +55,7 @@ This page compares Dawarich with GeoPulse to help you understand the differences
 | OIDC / SSO | ✅ | ✅ |
 | **Technical** |
 | Resource footprint | ⚠️ (heavier: Rails + Sidekiq + Redis + PostGIS) | ✅ (very light native binary) |
-| Community | ✅ 9.7k stars, 56 contributors | ⚠️ 1.3k stars, 12 contributors |
+| Community | ✅ 10k stars, 56 contributors | ⚠️ 1.3k stars, 12 contributors |
 
 ## What GeoPulse Does Well
 
@@ -77,7 +77,7 @@ This page compares Dawarich with GeoPulse to help you understand the differences
 | Plan | Dawarich | GeoPulse |
 |------|----------|----------|
 | Self-hosted | Free (open source) | Free for personal use (BSL 1.1) |
-| Cloud | €120/year or €18/month | N/A |
+| Cloud | €180/year or €18/month | N/A |
 | Free trial | 7-day Cloud trial | N/A |
 
 ## Migrating from GeoPulse

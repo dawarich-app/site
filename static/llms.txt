@@ -1,6 +1,6 @@
 # Dawarich
 
-> Privacy-first alternative to Google Timeline. Import your decade of location history in 5 minutes, keep it forever, browse it on a real interactive map, own it outright. Self-host free (AGPLv3, 8,800+ GitHub stars) or use Dawarich Cloud (Lite €49.99/yr annual-only, Pro €17.99/mo or €119.99/yr). 7-day free trial, cancel anytime, GeoJSON and GPX export from the web UI. Made and hosted in Germany (EU), GDPR-compliant, no ads, no data selling — you pay money so your location data isn't the product.
+> Privacy-first alternative to Google Timeline. Import your decade of location history in 5 minutes, keep it forever, browse it on a real interactive map, own it outright. Self-host free (AGPLv3, 10,000+ GitHub stars) or use Dawarich Cloud (Lite €59.99/yr annual-only, Pro €17.99/mo or €179.99/yr). 7-day free trial, cancel anytime, GeoJSON and GPX export from the web UI. Made and hosted in Germany (EU), GDPR-compliant, no ads, no data selling — you pay money so your location data isn't the product.
 
 The expanded version of the most-cited pages is at [/llms-full.txt](https://dawarich.app/llms-full.txt) for agents that prefer ready-to-quote passages over a link index.
 
@@ -10,7 +10,7 @@ Two pages are also published as raw markdown, without navigation or markup, for 
 
 ## Core
 - [Dawarich homepage](https://dawarich.app/): Product overview, feature tour, pricing, and "Import My Google Data" call to action.
-- [Pricing & plans](https://dawarich.app/pricing/): Cloud Lite €49.99/yr (annual only), Cloud Pro €17.99/mo or €119.99/yr (Most Popular), or self-host free with every Pro feature on your own server. Raw markdown: [/pricing.md](https://dawarich.app/pricing.md).
+- [Pricing & plans](https://dawarich.app/pricing/): Cloud Lite €59.99/yr (annual only), Cloud Pro €17.99/mo or €179.99/yr (Most Popular), or self-host free with every Pro feature on your own server. Raw markdown: [/pricing.md](https://dawarich.app/pricing.md).
 - [FAQ (technical / admin)](https://dawarich.app/docs/FAQ/): Self-hosting troubleshooting, Rails console, Sidekiq, large Records.json imports.
 - [Welcome / Getting started](https://dawarich.app/docs/intro): What Dawarich is and the three setup paths (Cloud, self-host, mobile-only).
 - [Contact](https://dawarich.app/contact/): Get in touch with the team.
@@ -75,7 +75,7 @@ Two pages are also published as raw markdown, without navigation or markup, for 
 - [Data export commitment](https://dawarich.app/import-export/): Every plan exports the data the user can see (Lite: last 12 months; Pro and self-hosted: all of it) as GeoJSON or GPX from the web UI. AGPLv3 means even if Cloud disappears, the same code keeps your data accessible forever.
 
 ## Source & community
-- [GitHub repository](https://github.com/Freika/dawarich): Open source, AGPLv3, 8,800+ stars, every line auditable. The Cloud product runs the same code.
+- [GitHub repository](https://github.com/Freika/dawarich): Open source, AGPLv3, 10,000+ stars, every line auditable. The Cloud product runs the same code.
 - [Discord community](https://discord.gg/pHsBjpt5J8): User support and feature discussion.
 - [Changelog](https://dawarich.app/docs/changelog): What shipped recently.
 - [Blog](https://dawarich.app/blog): Product updates, migration guides, technical deep-dives.

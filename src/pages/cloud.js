@@ -258,7 +258,7 @@ function CompetitorReframe() {
 							</tr>
 							<tr className={sections.highlight}>
 								<td>Dawarich Cloud Pro</td>
-								<td>&euro;119.99/yr</td>
+								<td>&euro;179.99/yr</td>
 								<td>Full lifetime history, heatmaps, trips, stats</td>
 								<td>Nothing. Ever.</td>
 							</tr>
@@ -396,7 +396,7 @@ export default function CloudPage() {
 	return (
 		<Layout
 			title="Dawarich Cloud — Private Location History You Actually Own"
-			description="Privacy-first location history hosted in Germany. Heatmaps, trips, statistics — without selling your data. Imports from Google Takeout, Strava, Garmin, and 12 more. From €49.99/year. 7-day free trial."
+			description="Privacy-first location history hosted in Germany. Heatmaps, trips, statistics — without selling your data. Imports from Google Takeout, Strava, Garmin, and 12 more. From €59.99/year. 7-day free trial."
 		>
 			<Head>
 				<meta property="og:type" content="website" />
@@ -407,7 +407,7 @@ export default function CloudPage() {
 				/>
 				<meta
 					property="og:description"
-					content="Privacy-first location history hosted in Germany. Heatmaps, trips, statistics — without selling your data. From €49.99/year. 7-day free trial."
+					content="Privacy-first location history hosted in Germany. Heatmaps, trips, statistics — without selling your data. From €59.99/year. 7-day free trial."
 				/>
 				<meta
 					property="og:image"

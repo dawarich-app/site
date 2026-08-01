@@ -113,7 +113,7 @@ export default function NewsletterForm() {
 					type="text"
 					name="first_name"
 					autoComplete="given-name"
-					placeholder="Evgenii"
+					placeholder="Michael"
 					value={firstName}
 					onChange={(e) => setFirstName(e.target.value)}
 					disabled={isLoading}

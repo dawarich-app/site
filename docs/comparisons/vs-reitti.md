@@ -55,7 +55,7 @@ This page compares Dawarich with Reitti to help you understand the differences a
 | OIDC / SSO | ✅ | ✅ |
 | **Technical** |
 | Resource footprint | ⚠️ (heavier: Rails + Sidekiq + Redis + PostGIS) | ⚠️ (moderate: JVM + Redis + PostGIS) |
-| Community | ✅ 9.7k stars, 56 contributors | ⚠️ 2.3k stars, 17 contributors |
+| Community | ✅ 10k stars, 56 contributors | ⚠️ 2.3k stars, 17 contributors |
 
 ## What Reitti Does Well
 
@@ -77,7 +77,7 @@ This page compares Dawarich with Reitti to help you understand the differences a
 | Plan | Dawarich | Reitti |
 |------|----------|--------|
 | Self-hosted | Free (open source) | Free (open source) |
-| Cloud | €120/year or €18/month | N/A |
+| Cloud | €180/year or €18/month | N/A |
 | Free trial | 7-day Cloud trial | N/A |
 
 ## Migrating from Reitti

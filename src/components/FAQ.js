@@ -5,7 +5,7 @@ const faqData = [
 	{
 		question: "Why should I pay when Google Timeline is free?",
 		answer:
-			'Google Timeline is "free" because your location data funds their $300B ad business. With Dawarich, you pay a small fee and your data stays private — no ads, no tracking, no data selling. At less than \u20AC0.14/day on Lite, you\'re buying back your privacy.',
+			'Google Timeline is "free" because your location data funds their $300B ad business. With Dawarich, you pay a small fee and your data stays private — no ads, no tracking, no data selling. At less than \u20AC0.16/day on Lite, you\'re buying back your privacy.',
 	},
 	{
 		question: "How do I import my Google Timeline data?",

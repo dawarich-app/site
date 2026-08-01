@@ -33,18 +33,18 @@ const upcoming = [
       'A visual refresh of the mobile app — updated navigation, screens and components to match the redesigned web experience.',
   },
   {
-    platform: 'web',
+    platform: 'mobile',
     status: 'planned',
-    title: 'More map customization',
+    title: 'Demo data in the mobile app',
     description:
-      'Additional controls for tuning Map v2 to your taste beyond the current basemap options.',
+      'Load a fully populated sample history straight from the app to see what tracking looks like before importing your own, and remove it in one tap.',
   },
   {
     platform: 'web',
     status: 'planned',
-    title: 'Posters generation',
+    title: 'Geofencing',
     description:
-      'Turn your location history into a printable, minimalist city map poster, generated straight from your Dawarich data.',
+      'Define areas that react when you arrive or leave, so entering and exiting the places that matter to you can be recorded automatically.',
   },
   {
     platform: 'web',
@@ -61,6 +61,17 @@ const upcoming = [
 // user-facing highlights. Newest first.
 // ---------------------------------------------------------------------------
 const releases = [
+  {
+    version: '1.10.0',
+    date: 'July 2026',
+    theme: 'Poster Studio',
+    highlights: [
+      'Poster Studio: design a printable poster of your travels in a full-screen studio opened from Map v2, with live preview, theme and layout presets, text controls, and PNG/PDF export',
+      'Custom map colors: pick from theme presets or edit individual color tokens, in a reorganized, collapsible Settings tab',
+      'Map v2 reopens at your last viewport instead of the zoomed-out globe when the selected dates have no data',
+      'The default self-hosted stack idles about 20% lighter',
+    ],
+  },
   {
     version: '1.9.1',
     date: 'June 2026',
