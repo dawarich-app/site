@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { COMPARE_GROUPS, DwIcon } from "@site/src/data/pricingPlans";
+import { COMPARE_GROUPS, DwIcon, PLANS } from "@site/src/data/pricingPlans";
 import styles from "./PricingCompare.module.css";
 
 const COLS = [
-	{ key: "lite", name: "Lite", sub: "€49.99/yr", accent: "blue", popular: false },
-	{ key: "pro", name: "Pro", sub: "€119.99/yr", accent: "blue", popular: true },
+	{ key: "lite", name: "Lite", sub: `€/yr`, accent: "blue", popular: false },
+	{ key: "pro", name: "Pro", sub: `€/yr`, accent: "blue", popular: true },
 	{ key: "family", name: "Family", sub: "Coming soon", accent: "teal", popular: false },
 ];
 

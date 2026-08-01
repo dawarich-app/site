@@ -80,7 +80,7 @@ Arc users often mention these features they loved:
 | Plan | Dawarich | Arc (was) |
 |------|----------|-----------|
 | Self-hosted | Free (open source) | N/A |
-| Cloud | €120/year or €18/month | ~$5/month (subscription) |
+| Cloud | €180/year or €18/month | ~$5/month (subscription) |
 | Free trial | 7-day Cloud trial | N/A (retired) |
 
 ## Migrating from Arc

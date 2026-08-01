@@ -355,7 +355,7 @@ function CompetitorReframe() {
 							</tr>
 							<tr className={sections.highlight}>
 								<td>Dawarich Cloud Pro</td>
-								<td>&euro;119.99/yr</td>
+								<td>&euro;179.99/yr</td>
 								<td>Yes — full Takeout import, heatmaps, trips</td>
 								<td>No. Ever.</td>
 							</tr>
@@ -539,7 +539,7 @@ export default function GoogleTimelineAlternativePage() {
 	return (
 		<Layout
 			title="Google Timeline Alternative — Save Your Location History Before You Lose It"
-			description="Google killed Timeline and moved your data on-device only. Dawarich Cloud imports your Google Takeout in minutes, gives you back heatmaps and trip detection, and stores it all privately in Germany. From €119.99/year. 7-day free trial."
+			description="Google killed Timeline and moved your data on-device only. Dawarich Cloud imports your Google Takeout in minutes, gives you back heatmaps and trip detection, and stores it all privately in Germany. From €179.99/year. 7-day free trial."
 		>
 			<Head>
 				<meta property="og:type" content="website" />

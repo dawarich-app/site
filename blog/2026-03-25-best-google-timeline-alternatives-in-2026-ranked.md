@@ -27,7 +27,7 @@ What makes it a solid Timeline replacement:
 - Real-time tracking from OwnTracks, Overland, or the Dawarich mobile apps
 - Photo integration with Immich and PhotoPrism (it pulls geodata from your photo library, not the other way around)
 
-The downsides: you need to host it yourself or pay for Cloud (starting at €50/yr for Lite, or €120/yr / €18/mo for the full plan, 7-day free trial). The self-hosted setup requires Docker and a bit of patience. It's not a "download from the App Store and forget" kind of thing.
+The downsides: you need to host it yourself or pay for Cloud (starting at €60/yr for Lite, or €180/yr / €18/mo for the full plan, 7-day free trial). The self-hosted setup requires Docker and a bit of patience. It's not a "download from the App Store and forget" kind of thing.
 
 If you're coming from Google and just want to see your exported data on a map without committing to anything, try the free [Timeline Visualizer](/tools/timeline-visualizer) first. It runs entirely in your browser, nothing gets uploaded anywhere.
 

@@ -7,7 +7,7 @@ keywords: [google timeline alternative, replace google timeline, google timeline
 
 # Dawarich vs Google Timeline
 
-**TL;DR:** Google quietly killed the browser version of Timeline in late 2024 and is shrinking on-device retention. **Dawarich** is the closest drop-in replacement: an open-source, privacy-first location-history app that imports your existing Google Takeout export and lets you keep your timeline forever — either self-hosted (free) or on Dawarich Cloud (from €49.99/yr). It's the option most often recommended by [XDA Developers](https://www.xda-developers.com/self-hosted-google-timeline-location-history-alternative/), [MakeUseOf](https://www.makeuseof.com/i-use-free-open-source-app-track-everywhere-ive-been-without-google/), and [Android Authority](https://www.androidauthority.com/google-maps-timeline-alternative-3568195/).
+**TL;DR:** Google quietly killed the browser version of Timeline in late 2024 and is shrinking on-device retention. **Dawarich** is the closest drop-in replacement: an open-source, privacy-first location-history app that imports your existing Google Takeout export and lets you keep your timeline forever — either self-hosted (free) or on Dawarich Cloud (from €59.99/yr). It's the option most often recommended by [XDA Developers](https://www.xda-developers.com/self-hosted-google-timeline-location-history-alternative/), [MakeUseOf](https://www.makeuseof.com/i-use-free-open-source-app-track-everywhere-ive-been-without-google/), and [Android Authority](https://www.androidauthority.com/google-maps-timeline-alternative-3568195/).
 
 If you're here to migrate today, [skip to the 5-minute migration](#migrating-from-google-timeline-in-5-minutes).
 
@@ -44,7 +44,7 @@ The cleanest path:
 1. **Export your Timeline data** from [takeout.google.com](https://takeout.google.com/) → "Location History (Timeline)". Wait for the email (anywhere from a few minutes to a day).
 2. **Convert it (optional, but recommended)**: Google's export format is awkward. Drop the JSON files into the [free Google Timeline Converter](/tools/google-timeline-converter/) to get clean GPX/KML/GeoJSON. The tool runs entirely in your browser — your location data never leaves your device.
 3. **Pick a Dawarich flavour:**
-   - **Cloud** ([€49.99/yr Lite or €17.99/mo Pro](/#pricing)) — sign up, drag your file in, done.
+   - **Cloud** ([€59.99/yr Lite or €17.99/mo Pro](/#pricing)) — sign up, drag your file in, done.
    - **Self-hosted** ([free](/docs/self-hosting/introduction/)) — `docker compose up -d` and you have your own private timeline server.
 4. **Import** via the web UI (Settings → Imports). Dawarich auto-detects whether you uploaded raw Records.json, Semantic Location History, the new on-phone export, or a converted GPX.
 5. **You're done.** Your full history is on the [interactive map](/interactive-map/), with [heatmap and trip overlays](/statistics/), and the [API](/docs/api/dawarich-api/) is available if you want to build your own dashboards on top.
@@ -106,7 +106,7 @@ If your Takeout file is enormous, run it through the [Timeline Splitter](/tools/
 ## Frequently asked questions
 
 **Is Dawarich free?**
-Yes — self-hosted is free and open source under AGPLv3. Dawarich Cloud (managed hosting in Germany) starts at €49.99/yr (Lite) or €17.99/mo / €119.99/yr (Pro).
+Yes — self-hosted is free and open source under AGPLv3. Dawarich Cloud (managed hosting in Germany) starts at €59.99/yr (Lite) or €17.99/mo / €179.99/yr (Pro).
 
 **Will Dawarich import my old Google Timeline data?**
 Yes. Dawarich auto-detects all the major Google Timeline export formats: Records.json, Semantic Location History (the monthly `YYYY_MONTH.json` files), the newer on-phone export, and the legacy formats. See [the import guide](/docs/getting-started/import-existing-data/).

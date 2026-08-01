@@ -76,7 +76,7 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 						))}
 					</div>
 					{billing === "monthly" && (
-						<span className={styles.toggleHint}>Save 44% on annual &rarr;</span>
+						<span className={styles.toggleHint}>{plan.saveHint}</span>
 					)}
 				</div>
 			)}

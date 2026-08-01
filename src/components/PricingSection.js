@@ -9,13 +9,13 @@ export default function PricingSection() {
 		<section id="pricing" className={styles.section}>
 			<div className={styles.container}>
 				<div className={styles.badge}>
-					Founding-member pricing — limited time
+					7-day free trial — 14-day money-back guarantee
 				</div>
 
 				<h2 className={styles.title}>Own Your Location History</h2>
 
 				<p className={styles.subtitle}>
-					Less than €1 a week to keep a lifetime of memories. Your data is always
+					From €5 a month to keep a lifetime of memories. Your data is always
 					yours — export everything, anytime, on any plan.
 				</p>
 

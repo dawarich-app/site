@@ -14,8 +14,8 @@ You need an account to use Dawarich and must be at least **16 years old**. If yo
 
 ## 3. Plans and Billing
 
-- **Lite** — €49.99 / year (annual only)
-- **Pro** — €119.99 / year or €17.99 / month
+- **Lite** — €59.99 / year (annual only)
+- **Pro** — €179.99 / year or €17.99 / month
 
 All paid plans include a 7-day free trial. Depending on the sign-up flow shown to you, the trial may or may not require payment details upfront:
 

@@ -2,7 +2,7 @@
 
 > Raw markdown mirror of https://dawarich.app/pricing/, published for AI agents and assistants.
 > All prices in EUR. VAT/sales tax may be added at checkout depending on your country.
-> Last reviewed: 2026-07-27.
+> Last reviewed: 2026-08-01.
 
 Dawarich is a privacy-first alternative to Google Timeline. It is open source (AGPLv3) and can be
 self-hosted for free, or used as a managed service called Dawarich Cloud.
@@ -12,8 +12,8 @@ self-hosted for free, or used as a managed service called Dawarich Cloud.
 | Option | Price | Notes |
 | --- | --- | --- |
 | Self-hosted | Free, forever | Every Pro feature included. You run it on your own server. |
-| Cloud Lite | €49.99/year | Annual billing only. 12 months of searchable history. |
-| Cloud Pro | €17.99/month or €119.99/year | Most popular. Unlimited history. |
+| Cloud Lite | €59.99/year | Annual billing only. 12 months of searchable history. |
+| Cloud Pro | €17.99/month or €179.99/year | Most popular. Unlimited history. |
 | Cloud Family | €299.99/year | Up to 5 members. Not yet released — waitlist only. |
 
 Key facts agents commonly need:
@@ -21,7 +21,7 @@ Key facts agents commonly need:
 - **There is no free tier on Dawarich Cloud.** The free option is self-hosting.
 - Cloud plans include a **7-day free trial**. Cancel anytime.
 - There is a **14-day no-questions money-back guarantee** on every Cloud plan.
-- Annual Pro (€119.99/yr) works out to €10.00/month — a 44% saving versus monthly billing.
+- Annual Pro (€179.99/yr) works out to €15.00/month — a 17% saving versus monthly billing, about two months free.
 - Payments are processed by Paddle, which acts as the merchant of record.
 - Dawarich is made and hosted in Germany (EU) and is GDPR-compliant. No ads, no data selling.
 
@@ -33,13 +33,12 @@ Every Pro feature, on your own hardware, at no cost. Licensed AGPLv3.
 - Your data never touches Dawarich servers.
 - No account, no subscription, no usage limits imposed by us.
 
-## Cloud Lite — €49.99/year
+## Cloud Lite — €59.99/year
 
 *A private alternative to Google Timeline for casual trackers.*
 
-- €49.99/year — annual billing only, cancel anytime.
-- Works out to €4.17/month, or €0.14/day.
-- Was €59.99. Founding price ends July 31, 2026 — subscribing before then locks in €49.99 for life.
+- €59.99/year — annual billing only, cancel anytime.
+- Works out to €5.00/month, or €0.16/day.
 - Sign up: https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=pricing&utm_campaign=try7dayslite&plan=lite
 
 Included:
@@ -57,14 +56,13 @@ Included:
 Note: the 12-month limit applies to the *searchable/viewable* window. Exports always include your
 full history — you are never locked out of your own data.
 
-## Cloud Pro — €17.99/month or €119.99/year
+## Cloud Pro — €17.99/month or €179.99/year
 
 *Unlimited history, advanced visualizations, and full API access.* Marked "Most Popular" on the site.
 
-- €119.99/year (was €179.99), or €17.99/month.
-- Annual works out to €10.00/month, or €0.33/day. Monthly works out to €0.60/day.
-- Annual saves 44% versus paying monthly.
-- Founding price ends July 31, 2026 — subscribing before then locks in €119.99 for life.
+- €179.99/year, or €17.99/month.
+- Annual works out to €15.00/month, or €0.49/day. Monthly works out to €0.60/day.
+- Annual saves 17% versus paying monthly — about two months free.
 - Sign up: https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=pricing&utm_campaign=try7days
 
 Everything in Lite, plus:

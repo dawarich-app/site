@@ -36,7 +36,7 @@ What truly sets Dawarich apart is its unwavering commitment to user privacy and 
 
 ### Pricing and Platform Availability
 
-*   **Dawarich Cloud:** The managed service costs €7.50/month or €90 when billed annually. It includes a 7-day free trial (no credit card required) and generous limits of up to 10 million data points.
+*   **Dawarich Cloud:** Lite costs €59.99/year, and Pro costs €17.99/month or €179.99/year. Both include a 7-day free trial and a 14-day money-back guarantee.
 *   **Self-Hosted:** Free for users who prefer to manage their own server and installation.
 *   **Platforms:** The managed Cloud plan includes an official iOS app. Android users can still use the platform effectively via third-party apps that feed data to their Dawarich instance.
 
@@ -264,7 +264,7 @@ The initial experience can be daunting; the interface is dense and packed with f
 
 | Product | Core features | Privacy & data controls | Best for / Target audience | Price & value |
 |---|---:|---|---|---|
-| **Dawarich (Recommended)** | Automatic location journaling; private searchable timeline; Trips, Map, Stats, Scratch Map; photo geotagging; import/export | SSL/TLS in transit, LUKS at rest, EU servers, GDPR‑compliant; self‑host option | Travelers, lifeloggers, privacy‑conscious users, compliant field teams | Cloud €7.50/mo or €90/yr; Business custom; self‑host free; 7‑day trial; up to 10M points |
+| **Dawarich (Recommended)** | Automatic location journaling; private searchable timeline; Trips, Map, Stats, Scratch Map; photo geotagging; import/export | SSL/TLS in transit, LUKS at rest, EU servers, GDPR‑compliant; self‑host option | Travelers, lifeloggers, privacy‑conscious users, compliant field teams | Cloud Lite €59.99/yr, Pro €17.99/mo or €179.99/yr; self‑host free; 7‑day trial |
 | AllTrails | Large trail database, reviews, elevation profiles, route navigation (paid) | Community data sharing; standard app data collection | Hikers, trail discovery, casual walkers | Free; AllTrails+ and Peak paid tiers (offline maps, nav) |
 | Strava | Activity tracking, route builder, popularity heatmaps, social features, wearable sync | Activity sharing defaults; data used for social/metrics; some features behind paywall | Runners, fitness‑focused walkers, wearable users | Free + subscription (varies by country) |
 | MapMyWalk (Under Armour) | Walking routes, training plans, audio coaching, live tracking, wearable sync | Under Armour data policies; standard account data collection | Walk training, motivated walkers, wearable syncing | Free + MVP subscription (relatively low annual price) |
