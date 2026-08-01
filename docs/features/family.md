@@ -8,8 +8,33 @@ description: Share your real-time location with trusted family members and frien
 
 The Family feature allows you to share your real-time location with trusted family members and friends. This enables you to see each other's locations on the map while maintaining full control over your privacy.
 
+The feature is available on **self-hosted** instances for everyone, and on **Dawarich Cloud** through the [Family plan](#family-plan-dawarich-cloud).
+
+## Family plan (Dawarich Cloud)
+
+On Dawarich Cloud, creating and owning a family requires the **Family plan**. It is a single annual subscription that covers a whole household:
+
+- **€299.99 / year**, annual billing only (like Lite).
+- **Up to 5 members total** — the owner (payer) plus up to 4 invited members.
+- **Every member gets full Pro access** — unlimited history, heatmap, Fog of War, globe view, photo/Immich/PhotoPrism integrations, full write API — for as long as they are in the family. Invited members do **not** need their own paid subscription.
+- **Members inherit access automatically.** Access is computed at read time from family membership, so it is granted the moment a member joins and revoked the moment they leave, are removed, or the owner's subscription ends. There is no separate per-member billing.
+- **Your data is never deleted.** When a member leaves (or the plan ends) their access reverts to their own plan, but every point they recorded stays in their account and remains fully exportable.
+
+### Who needs the plan
+
+- **The owner** (the person who creates the family and pays) needs the Family plan.
+- **Invited members** join for free and inherit full access while in the family — joining is never gated on their own plan.
+
+### Upgrading to Family
+
+If you are on Lite or Pro, you can switch to Family from your subscription page; Paddle charges a prorated amount for the remainder of your current period. Self-hosted instances have all family features without any plan.
+
+### If the owner cancels
+
+The family stays intact and dormant — members simply revert to their own plans (Lite or Pro), and can regain full access if the owner re-subscribes. No family data is lost.
+
 :::info
-The Family feature is currently only available for self-hosted instances of Dawarich.
+Self-hosted instances have every family feature with no plan and no member cap beyond the app's built-in limit.
 :::
 
 ## Overview

@@ -3,9 +3,9 @@ import { COMPARE_GROUPS, DwIcon, PLANS } from "@site/src/data/pricingPlans";
 import styles from "./PricingCompare.module.css";
 
 const COLS = [
-	{ key: "lite", name: "Lite", sub: `€/yr`, accent: "blue", popular: false },
-	{ key: "pro", name: "Pro", sub: `€/yr`, accent: "blue", popular: true },
-	{ key: "family", name: "Family", sub: "Coming soon", accent: "teal", popular: false },
+	{ key: "lite", name: "Lite", sub: `€${PLANS.lite.price}/yr`, accent: "blue", popular: false },
+	{ key: "pro", name: "Pro", sub: `€${PLANS.pro.price}/yr`, accent: "blue", popular: true },
+	{ key: "family", name: "Family", sub: `€${PLANS.family.price}/yr`, accent: "teal", popular: false },
 ];
 
 // Comparison table gets its own UTM tagging, distinct from the pricing cards
@@ -14,7 +14,7 @@ const COMPARE_UTM = "utm_source=site&utm_medium=pricing_compare";
 const CTA_LINKS = {
 	lite: `https://my.dawarich.app/users/sign_up?${COMPARE_UTM}&utm_campaign=try7dayslite&utm_content=compare_lite&plan=lite`,
 	pro: `https://my.dawarich.app/users/sign_up?${COMPARE_UTM}&utm_campaign=try7days&utm_content=compare_pro`,
-	family: "#pricing",
+	family: `https://my.dawarich.app/users/sign_up?${COMPARE_UTM}&utm_campaign=try7daysfamily&utm_content=compare_family&plan=family`,
 };
 
 const norm = (v) => (v === true ? "✓" : v === false ? "✗" : String(v));
@@ -188,11 +188,7 @@ export default function PricingCompare() {
 										href={CTA_LINKS[c.key]}
 										className={`${styles.footCta} ${c.popular ? styles.footCtaPrimary : c.accent === "teal" ? styles.footCtaTeal : styles.footCtaBlue}`}
 									>
-										{c.key === "family"
-											? "Notify me"
-											: c.key === "pro"
-												? "Start free"
-												: "Choose Lite"}
+										{c.key === "lite" ? "Choose Lite" : "Start free"}
 									</a>
 								</div>
 							))}
