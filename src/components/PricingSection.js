@@ -27,7 +27,7 @@ export default function PricingSection() {
 						<PricingCard plan={PLANS.pro} popular />
 					</div>
 					<div className={styles.cardWrapper}>
-						<PricingCard plan={PLANS.family} deemph />
+						<PricingCard plan={PLANS.family} />
 					</div>
 				</div>
 

@@ -149,9 +149,12 @@ export const PLANS = {
 		period: "/year",
 		perMonth: "€25.00/month",
 		perDay: "€0.82/day",
-		badge: "COMING SOON",
+		badge: null,
+		cta: "Start Family Free — 7 Days",
+		ctaStyle: "outline",
+		href: `${SIGNUP}&utm_campaign=try7daysfamily&plan=family`,
+		footnote: "Annual only · Up to 5 members · Cancel anytime",
 		urgency: null,
-		waitlistListId: "dawarichfamilywaitlist",
 		valueStack: {
 			items: [
 				{ label: "Pro access for the payer", value: 180 },
