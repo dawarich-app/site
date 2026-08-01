@@ -55,7 +55,7 @@ This page compares Dawarich with GeoPulse to help you understand the differences
 | OIDC / SSO | ✅ | ✅ |
 | **Technical** |
 | Resource footprint | ⚠️ (heavier: Rails + Sidekiq + Redis + PostGIS) | ✅ (very light native binary) |
-| Community | ✅ 9.7k stars, 56 contributors | ⚠️ 1.3k stars, 12 contributors |
+| Community | ✅ 10k stars, 56 contributors | ⚠️ 1.3k stars, 12 contributors |
 
 ## What GeoPulse Does Well
 

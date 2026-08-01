@@ -168,7 +168,7 @@ Yes, at any time, on every plan — including Lite, where exports cover the full
 just the visible 12-month window.
 
 **What happens if Dawarich shuts down?**
-The project is open source (AGPLv3, 9,000+ GitHub stars). A self-hosted instance keeps running
+The project is open source (AGPLv3, 10,000+ GitHub stars). A self-hosted instance keeps running
 regardless, and data exports to standard formats.
 
 **Where is data stored?**

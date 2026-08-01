@@ -239,7 +239,7 @@ const techloreFaq = [
 	{
 		question: "Can I self-host instead of paying?",
 		answer:
-			"Absolutely. The entire engine is open source under AGPL-3.0 with 9,000+ GitHub stars. There's a single Docker Compose file, full documentation, and an active community. Self-hosting is free forever and supports every feature Cloud does.",
+			"Absolutely. The entire engine is open source under AGPL-3.0 with 10,000+ GitHub stars. There's a single Docker Compose file, full documentation, and an active community. Self-hosting is free forever and supports every feature Cloud does.",
 	},
 	{
 		question: "Do you sell data or run ads?",
@@ -437,7 +437,7 @@ export default function TechLorePage() {
 				badge="Privacy-first location tracking"
 				title="Your location history"
 				titleHighlight="belongs to you."
-				subtitle="Open-source, EU-hosted, GDPR-compliant. We make money from subscriptions — not from your data. Self-host on your own hardware or use our managed cloud. AGPL-3.0 code, 9,000+ GitHub stars, built by a small EU company."
+				subtitle="Open-source, EU-hosted, GDPR-compliant. We make money from subscriptions — not from your data. Self-host on your own hardware or use our managed cloud. AGPL-3.0 code, 10,000+ GitHub stars, built by a small EU company."
 				primaryCta={{
 					text: "Start free trial",
 					href: SIGNUP_URL,

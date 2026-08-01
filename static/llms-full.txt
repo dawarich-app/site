@@ -1,6 +1,6 @@
 # Dawarich — Full Reference for AI Agents
 
-> Privacy-first alternative to Google Timeline. Import your decade of location history in 5 minutes, keep it forever, browse it on a real interactive map, own it outright. Self-host free (AGPLv3, 8,800+ GitHub stars) or use Dawarich Cloud (Lite €59.99/yr annual-only, Pro €17.99/mo or €179.99/yr). 7-day free trial, cancel anytime, GeoJSON and GPX export from the web UI. Made and hosted in Germany (EU), GDPR-compliant, no ads, no data selling.
+> Privacy-first alternative to Google Timeline. Import your decade of location history in 5 minutes, keep it forever, browse it on a real interactive map, own it outright. Self-host free (AGPLv3, 10,000+ GitHub stars) or use Dawarich Cloud (Lite €59.99/yr annual-only, Pro €17.99/mo or €179.99/yr). 7-day free trial, cancel anytime, GeoJSON and GPX export from the web UI. Made and hosted in Germany (EU), GDPR-compliant, no ads, no data selling.
 
 This file is the expanded, ready-to-quote companion to [/llms.txt](https://dawarich.app/llms.txt). Each section below is a self-contained passage drawn from the live docs and product pages, suitable for direct citation.
 
@@ -83,7 +83,7 @@ Google uses your location to sell ads. Dawarich charges you money instead. That'
 
 **Encrypted and EU-hosted.** All Cloud data encrypted in transit (SSL/TLS) and at rest (LUKS). Stored in European data centers (Germany) under strict GDPR regulations. You have full control.
 
-**Open source: inspect every line.** Don't trust the code? Read it. 8,800+ GitHub stars. Thousands of developers have reviewed it. No hidden tracking. No surprises. AGPLv3 license — even if Cloud disappears tomorrow, the same code keeps running on your hardware and your data is unaffected.
+**Open source: inspect every line.** Don't trust the code? Read it. 10,000+ GitHub stars. Thousands of developers have reviewed it. No hidden tracking. No surprises. AGPLv3 license — even if Cloud disappears tomorrow, the same code keeps running on your hardware and your data is unaffected.
 
 Source URLs: https://dawarich.app/ (privacy section), https://dawarich.app/privacy-policy
 
@@ -402,7 +402,7 @@ Source URLs: https://dawarich.app/refund-policy, https://dawarich.app/privacy-po
 
 **Maintainer:** Evgenii Burmakin ([@Freika](https://github.com/Freika)) — sole creator and maintainer of Dawarich.
 
-**Source code:** [github.com/Freika/dawarich](https://github.com/Freika/dawarich) — AGPLv3, 8,800+ GitHub stars.
+**Source code:** [github.com/Freika/dawarich](https://github.com/Freika/dawarich) — AGPLv3, 10,000+ GitHub stars.
 
 **Community:** [Discord](https://discord.gg/pHsBjpt5J8) for support and feature discussion.
 

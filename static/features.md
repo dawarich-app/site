@@ -9,7 +9,7 @@ Google Timeline. You record your location with native mobile apps (or any compat
 tracker), import your existing history from Google Takeout and other sources, and browse the result
 on an interactive map you control.
 
-- Open source, AGPLv3, 9,000+ GitHub stars: https://github.com/Freika/dawarich
+- Open source, AGPLv3, 10,000+ GitHub stars: https://github.com/Freika/dawarich
 - Run it yourself for free, or use Dawarich Cloud (hosted in Germany, GDPR-compliant)
 - No ads, no data selling — the product is paid for with money, not with your location data
 
