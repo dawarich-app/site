@@ -176,9 +176,9 @@
 }
 
 .itemCoords {
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   color: var(--ifm-color-secondary);
-  font-family: 'Courier New', monospace;
+  font-family: var(--ifm-font-family-monospace);
 }
 
 .progressState {
@@ -208,20 +208,20 @@
 
 .progressText {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--ifm-font-color-base);
 }
 
 .progressFile {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   color: var(--ifm-font-color-secondary);
 }
 
 .progressHint {
   margin: 0.5rem 0 0;
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   color: var(--ifm-font-color-secondary);
   font-style: italic;
 }

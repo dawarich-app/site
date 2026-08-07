@@ -100,7 +100,7 @@
 .featuresList li,
 .stepsList li {
   margin-bottom: 0.5rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--ifm-color-emphasis-700);
 }
@@ -185,7 +185,7 @@
 }
 
 .endpointDesc {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--ifm-color-emphasis-700);
   margin: 0;
 }

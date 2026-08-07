@@ -32,7 +32,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .emojiMarker div {
@@ -53,13 +53,13 @@
 .routePopup h3 {
   margin: 0 0 8px;
   color: #3b82f6;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
 }
 
 .routePopup p {
   margin: 0;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 :global(.leaflet-popup-tip) {

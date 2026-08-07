@@ -9,21 +9,21 @@
 }
 
 .sectionTitle {
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   margin-bottom: 0.5rem;
 }
 
 .sectionSubtitle {
-  font-size: 1.05rem;
+  font-size: 1.125rem;
   color: var(--ifm-color-emphasis-700);
   margin-bottom: 2rem;
 }
 
 @media (max-width: 768px) {
   .sectionTitle {
-    font-size: 1.85rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -34,7 +34,7 @@
 .platformWeb,
 .platformMobile {
   display: inline-block;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -150,13 +150,13 @@
 }
 
 .upcomingTitle {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.4rem;
 }
 
 .upcomingDescription {
-  font-size: 0.97rem;
+  font-size: 1rem;
   color: var(--ifm-color-emphasis-700);
   margin: 0;
   line-height: 1.55;
@@ -174,7 +174,7 @@
 
 .timelineDivider span {
   display: inline-block;
-  font-size: 0.78rem;
+  font-size: 0.8125rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -192,19 +192,19 @@
 }
 
 .releaseVersion {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
 }
 
 .releaseTheme {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--ifm-color-primary);
 }
 
 .releaseDate {
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-600);
   margin-left: auto;
 }
@@ -235,7 +235,7 @@
 }
 
 .footerCtaTitle {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.4rem;
 }

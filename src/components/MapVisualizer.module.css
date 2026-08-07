@@ -22,7 +22,7 @@
 }
 
 .mapLabel {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--dw-text-secondary);
   margin-bottom: 16px;
 }
@@ -52,7 +52,7 @@
   display: inline-block;
   background-color: rgba(59, 130, 246, 0.1);
   color: #3b82f6;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   padding: 6px 16px;
   border-radius: 50px;
@@ -60,7 +60,7 @@
 }
 
 .title {
-  font-size: 36px;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--dw-text);
   margin: 0 0 16px;
@@ -68,7 +68,7 @@
 }
 
 .description {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--dw-bg-hover);
   margin-bottom: 32px;
@@ -99,14 +99,14 @@
 }
 
 .featureTitle {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 600;
   color: var(--dw-text);
   margin: 0 0 8px;
 }
 
 .featureDescription {
-  font-size: 15px;
+  font-size: 0.875rem;
   line-height: 1.5;
   color: var(--dw-bg-hover);
   margin: 0;
@@ -158,7 +158,7 @@
   }
 
   .title {
-    font-size: 30px;
+    font-size: 1.75rem;
   }
 }
 
@@ -168,7 +168,7 @@
   }
 
   .title {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 
   .featureIcon {
@@ -177,14 +177,14 @@
   }
 
   .featureTitle {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
 .mutedNote {
   text-align: center;
   color: var(--dw-text-secondary);
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-top: 40px;
   padding: 0 20px;
   font-style: italic;

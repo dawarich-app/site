@@ -16,7 +16,7 @@
 }
 
 .guide h3 {
-  font-size: 1.05rem;
+  font-size: 1.125rem;
   font-weight: 600;
   margin: 0 0 0.5rem;
   color: var(--ifm-color-emphasis-800);
@@ -37,7 +37,7 @@
 .table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .table th,
@@ -80,7 +80,7 @@
   border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 6px;
   padding: 0.875rem;
-  font-size: 0.825rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
   overflow-x: auto;
   white-space: pre;

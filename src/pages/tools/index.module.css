@@ -42,7 +42,7 @@
   border: 1px solid var(--dw-border);
   color: var(--dw-text);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1rem;
   text-decoration: none;
   transition: all 0.2s ease;
 }
@@ -124,7 +124,7 @@
 }
 
 .toolDescription {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   line-height: 1.55;
   color: var(--dw-text-secondary);
   margin: 0;
@@ -179,7 +179,7 @@
   border-radius: 0.5rem;
   color: var(--dw-text);
   text-decoration: none;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 500;
   transition: all 0.15s ease;
 }

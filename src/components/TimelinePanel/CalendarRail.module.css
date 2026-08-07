@@ -22,7 +22,7 @@
 }
 
 .label {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -88,7 +88,7 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 1px;
-  font-size: 0.625rem;
+  font-size: 0.75rem;
   color: var(--ifm-color-emphasis-600);
   text-align: center;
   margin-bottom: 0.25rem;
@@ -107,7 +107,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 3px;
-  font-size: 11px;
+  font-size: 0.75rem;
   font-weight: 500;
   border: 0;
   cursor: pointer;

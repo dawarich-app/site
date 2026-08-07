@@ -91,6 +91,47 @@
 
   /* Blue that only ever sits on a surface as a tint or a large numeral */
   --dw-primary-tint: #3B82F6;
+
+  /* ── Type scale ────────────────────────────────────────────────────────
+     Seven roles, every one in rem so browser font-size settings still work.
+     Adjacent roles differ by at least 1.14x in size or a full weight class;
+     anything closer cannot carry a different job. Leading runs inversely to
+     measure, from 1.05 on display down to 1.65 on body. */
+  --type-display-size: clamp(2rem, 4vw, 3.25rem);
+  --type-display-weight: 700;
+  --type-display-leading: 1.05;
+  --type-display-tracking: -0.03em;
+
+  --type-title-size: 1.75rem;
+  --type-title-weight: 700;
+  --type-title-leading: 1.2;
+  --type-title-tracking: -0.02em;
+
+  --type-heading-size: 1.25rem;
+  --type-heading-weight: 700;
+  --type-heading-leading: 1.3;
+  --type-heading-tracking: -0.01em;
+
+  --type-subtitle-size: 1.125rem;
+  --type-subtitle-weight: 400;
+  --type-subtitle-leading: 1.6;
+
+  --type-body-size: 1rem;
+  --type-body-weight: 400;
+  --type-body-leading: 1.65;
+
+  --type-label-size: 0.875rem;
+  --type-label-weight: 600;
+  --type-label-leading: 1.4;
+  --type-label-tracking: 0.04em;
+
+  --type-meta-size: 0.8125rem;
+  --type-meta-weight: 500;
+  --type-meta-leading: 1.5;
+
+  /* Prose measure. 66ch sits mid-range of the comfortable 45-75. */
+  --type-measure: 52ch;
+  --type-measure-narrow: 40ch;
 }
 
 /* Dark theme — warm charcoal from Dawarich app */
@@ -164,6 +205,96 @@
   --dw-btn-primary-fg: #FFFFFF;
 
   --dw-primary-tint: #60A5FA;
+}
+
+/* Infima's heading ramp, restated on the scale. Its defaults put h1 and h2
+   1.33x apart and h3 and h4 only 1.25x, which reads as one blurred band. */
+:root {
+  --ifm-h1-font-size: var(--type-title-size);
+  --ifm-h2-font-size: 1.5rem;
+  --ifm-h3-font-size: var(--type-heading-size);
+  --ifm-h4-font-size: var(--type-body-size);
+  --ifm-h5-font-size: var(--type-label-size);
+  --ifm-h6-font-size: var(--type-meta-size);
+  --ifm-heading-line-height: 1.25;
+  --ifm-line-height-base: var(--type-body-leading);
+}
+
+.markdown > h1 { letter-spacing: var(--type-title-tracking); }
+.markdown > h2,
+.markdown > h3 { letter-spacing: var(--type-heading-tracking); }
+
+/* Reading measure. Prose in docs and blog ran 92-103 characters per line;
+   tables, code, images and embeds keep the full column. */
+.markdown > p,
+.markdown > ul,
+.markdown > ol,
+.markdown > blockquote,
+.markdown > h2,
+.markdown > h3,
+.markdown > h4 {
+  max-width: var(--type-measure);
+}
+
+.markdown > blockquote {
+  font-size: var(--type-body-size);
+}
+
+/* Type roles for component use */
+.type-display {
+  font-size: var(--type-display-size);
+  font-weight: var(--type-display-weight);
+  line-height: var(--type-display-leading);
+  letter-spacing: var(--type-display-tracking);
+  text-wrap: balance;
+}
+
+.type-title {
+  font-size: var(--type-title-size);
+  font-weight: var(--type-title-weight);
+  line-height: var(--type-title-leading);
+  letter-spacing: var(--type-title-tracking);
+  text-wrap: balance;
+}
+
+.type-heading {
+  font-size: var(--type-heading-size);
+  font-weight: var(--type-heading-weight);
+  line-height: var(--type-heading-leading);
+  letter-spacing: var(--type-heading-tracking);
+  text-wrap: balance;
+}
+
+.type-subtitle {
+  font-size: var(--type-subtitle-size);
+  font-weight: var(--type-subtitle-weight);
+  line-height: var(--type-subtitle-leading);
+  max-width: var(--type-measure);
+}
+
+.type-body {
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  line-height: var(--type-body-leading);
+  max-width: var(--type-measure);
+}
+
+.type-label {
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  line-height: var(--type-label-leading);
+  letter-spacing: var(--type-label-tracking);
+}
+
+.type-meta {
+  font-size: var(--type-meta-size);
+  font-weight: var(--type-meta-weight);
+  line-height: var(--type-meta-leading);
+}
+
+/* Figures, money and stats read better on a fixed advance width */
+.type-tabular {
+  font-variant-numeric: tabular-nums;
 }
 
 /* Global resets */
@@ -382,7 +513,7 @@ section {
 .api-method > .menu__link::before {
   width: 55px;
   height: 20px;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 20px;
   text-transform: uppercase;
   font-weight: 600;

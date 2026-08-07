@@ -71,7 +71,7 @@
 }
 
 .benefitText {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--ifm-color-emphasis-700);
 }
@@ -182,7 +182,7 @@
 }
 
 .detailText {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--ifm-color-emphasis-700);
   margin-bottom: 1rem;
@@ -201,7 +201,7 @@
 }
 
 .detailLink {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--ifm-color-primary);
   text-decoration: none;
   font-weight: 500;
@@ -249,7 +249,7 @@
 }
 
 .futureText {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--ifm-color-emphasis-700);
 }

@@ -103,7 +103,7 @@
 }
 
 .quote {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   line-height: 1.7;
   color: var(--dw-text);
   margin: 0 0 1.25rem;
@@ -213,7 +213,7 @@
   }
 
   .featuredLogo {
-    font-size: 1.1rem;
+    font-size: 1.125rem;
   }
 }
 

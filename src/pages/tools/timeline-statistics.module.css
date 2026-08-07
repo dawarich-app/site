@@ -69,13 +69,13 @@
 
 .instructionItem strong {
   color: var(--ifm-font-color-base);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .instructionItem p {
   margin: 0;
   color: var(--ifm-color-emphasis-700);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   padding-left: 1rem;
 }
 
@@ -137,7 +137,7 @@
 
 .privacyNote p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   color: var(--ifm-font-color-base);
 }
@@ -149,7 +149,7 @@
   background: var(--ifm-color-emphasis-100);
   border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 8px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--ifm-font-color-base);
 }
@@ -185,7 +185,7 @@
 
 .ctaContent p {
   margin: 0 0 1.5rem 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   opacity: 0.95;
 }
@@ -233,7 +233,7 @@
   border: 1px solid rgba(245, 158, 11, 0.3);
   border-radius: 8px;
   margin-bottom: 2rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--ifm-font-color-base);
 }
@@ -250,7 +250,7 @@
 }
 
 .tagSection h3 {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   margin: 0 0 0.75rem 0;
   color: var(--ifm-heading-color);
 }
@@ -267,7 +267,7 @@
   background: var(--ifm-color-emphasis-100);
   border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 9999px;
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   color: var(--ifm-font-color-base);
   font-weight: 500;
 }
@@ -278,7 +278,7 @@
 }
 
 .placesSection h3 {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   margin: 0 0 0.75rem 0;
   color: var(--ifm-heading-color);
 }
@@ -296,7 +296,7 @@
   padding: 0.75rem 1rem;
   background: var(--ifm-color-emphasis-100);
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-700);
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -307,7 +307,7 @@
   grid-template-columns: 2fr 1fr 3fr;
   padding: 0.75rem 1rem;
   border-top: 1px solid var(--ifm-color-emphasis-200);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--ifm-font-color-base);
   align-items: center;
 }
@@ -324,7 +324,7 @@
 
 .placesRow span:nth-child(3) {
   color: var(--ifm-color-emphasis-600);
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
 }
 
 /* Time Breakdown */
@@ -333,7 +333,7 @@
 }
 
 .timeBreakdown h3 {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   margin: 0 0 0.75rem 0;
   color: var(--ifm-heading-color);
 }
@@ -352,7 +352,7 @@
   align-items: center;
   justify-content: center;
   color: var(--dw-btn-primary-fg);
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   min-width: 40px;
   transition: width 0.5s ease;
@@ -364,7 +364,7 @@
   align-items: center;
   justify-content: center;
   color: var(--ifm-font-color-base);
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   min-width: 40px;
   transition: width 0.5s ease;
@@ -373,7 +373,7 @@
 .timeLegend {
   display: flex;
   gap: 2rem;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--ifm-font-color-base);
 }
 
@@ -396,7 +396,7 @@
 }
 
 .chartSection h3 {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   margin: 0 0 0.75rem 0;
   color: var(--ifm-heading-color);
 }
@@ -415,7 +415,7 @@
 }
 
 .barLabel {
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: var(--ifm-font-color-base);
   text-align: right;
@@ -439,7 +439,7 @@
 }
 
 .barValue {
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-600);
   white-space: nowrap;
 }
@@ -450,7 +450,7 @@
 }
 
 .shareSection h3 {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   margin: 0 0 0.75rem 0;
   color: var(--ifm-heading-color);
 }
@@ -476,14 +476,14 @@
 }
 
 .infoCard h2 {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   margin: 0 0 0.75rem 0;
 }
 
 .infoCard p {
   color: var(--ifm-color-emphasis-700);
   margin: 0 0 0.75rem 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -495,7 +495,7 @@
   margin: 0 0 0.75rem 0;
   padding-left: 1.25rem;
   color: var(--ifm-color-emphasis-700);
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -554,7 +554,7 @@
 .faqQuestion {
   padding: 1rem 1.25rem;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1rem;
   cursor: pointer;
   color: var(--ifm-font-color-base);
   list-style: none;
@@ -588,7 +588,7 @@
 .faqAnswer {
   padding: 0 1.25rem 1rem;
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--ifm-color-emphasis-700);
 }
@@ -734,7 +734,7 @@
   }
 
   .barLabel {
-    font-size: 0.8rem;
+    font-size: 0.8125rem;
   }
 
   .placesHeader,

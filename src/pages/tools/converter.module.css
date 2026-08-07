@@ -65,7 +65,7 @@
 
 .infoCard p {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--ifm-font-color-base);
   opacity: 0.9;
@@ -74,7 +74,7 @@
 .infoCard ul {
   margin: 0.5rem 0 0 0;
   padding-left: 1.5rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.8;
   color: var(--ifm-font-color-base);
   opacity: 0.9;
@@ -103,13 +103,13 @@
 .privacyCard strong {
   display: block;
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   color: var(--ifm-heading-color);
 }
 
 .privacyCard p {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--ifm-font-color-base);
   opacity: 0.9;

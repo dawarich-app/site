@@ -16,7 +16,7 @@
 
 .header p {
   color: var(--ifm-color-emphasis-600);
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -85,7 +85,7 @@
 }
 
 .supportedFormats {
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-500);
 }
 
@@ -104,7 +104,7 @@
   background: var(--ifm-color-primary-lightest);
   border-radius: 8px;
   margin-top: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
 .spinner {
@@ -128,7 +128,7 @@
   border: 1px solid #fecaca;
   border-radius: 8px;
   color: #dc2626;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   margin-top: 1rem;
 }
 
@@ -146,7 +146,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.75rem;
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-600);
 }
 
@@ -155,7 +155,7 @@
   border: none;
   color: var(--ifm-color-primary);
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   padding: 0;
 }
 
@@ -171,7 +171,7 @@
   background: var(--ifm-color-emphasis-100);
   border-radius: 6px;
   margin-bottom: 0.5rem;
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
 }
 
 .fileName {
@@ -183,7 +183,7 @@
 
 .pointCount {
   color: var(--ifm-color-emphasis-600);
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
 }
 
 .statsPanel {
@@ -193,7 +193,7 @@
 }
 
 .statsPanel h4 {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   margin: 0 0 0.75rem 0;
   color: var(--ifm-color-emphasis-700);
 }
@@ -202,7 +202,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0.4rem 0;
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
 }
 
 .statItem span {
@@ -223,7 +223,7 @@
 
 .settingItem label {
   display: block;
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-700);
   margin-bottom: 0.5rem;
 }
@@ -235,7 +235,7 @@
   border-radius: 6px;
   background: var(--ifm-background-color);
   color: var(--ifm-font-color-base);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
 .settingItem input[type="range"] {
@@ -272,7 +272,7 @@
   padding: 1rem;
   background: var(--ifm-color-success-lightest, rgba(16, 185, 129, 0.1));
   border-radius: 8px;
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-700);
 }
 
@@ -343,7 +343,7 @@
   color: var(--dw-btn-primary-fg);
   border: none;
   border-radius: 6px;
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   cursor: pointer;
   transition: background 0.2s ease;
@@ -372,14 +372,14 @@
 }
 
 .infoCard h2 {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   margin: 0 0 0.75rem 0;
 }
 
 .infoCard p {
   color: var(--ifm-color-emphasis-700);
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -387,7 +387,7 @@
   margin: 0;
   padding-left: 1.25rem;
   color: var(--ifm-color-emphasis-700);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .infoCard li {
@@ -406,6 +406,6 @@
 
 .saveToAccountIntro {
   margin: 0 0 1rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--ifm-color-emphasis-700);
 }

@@ -66,14 +66,14 @@
 }
 .title {
 	margin: 0 0 4px;
-	font-size: 26px;
+	font-size: 1.75rem;
 	font-weight: 800;
 	letter-spacing: -0.02em;
 	color: var(--text);
 }
 .subtitle {
 	margin: 0;
-	font-size: 14.5px;
+	font-size: 0.875rem;
 	color: var(--muted);
 }
 .controls {
@@ -87,7 +87,7 @@
 	background: transparent;
 	cursor: pointer;
 	font-family: inherit;
-	font-size: 13px;
+	font-size: 0.8125rem;
 	font-weight: 600;
 	color: var(--text2);
 	padding: 8px 14px;
@@ -149,7 +149,7 @@
 }
 .headerFeatures {
 	padding: 18px 20px;
-	font-size: 13px;
+	font-size: 0.8125rem;
 	font-weight: 600;
 	color: var(--muted);
 	align-self: center;
@@ -174,7 +174,7 @@
 	display: inline-flex;
 	align-items: center;
 	gap: 6px;
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 700;
 	color: var(--text);
 }
@@ -182,7 +182,7 @@
 	color: var(--primary);
 }
 .colSub {
-	font-size: 12px;
+	font-size: 0.75rem;
 	font-weight: 600;
 	color: var(--muted);
 	margin-top: 2px;
@@ -221,13 +221,13 @@
 	transform: rotate(-90deg);
 }
 .groupName {
-	font-size: 13.5px;
+	font-size: 0.8125rem;
 	font-weight: 700;
 	color: var(--text);
 	letter-spacing: 0.01em;
 }
 .groupCount {
-	font-size: 12px;
+	font-size: 0.75rem;
 	font-weight: 600;
 	color: var(--faint);
 }
@@ -243,7 +243,7 @@
 }
 .rowLabel {
 	padding: 11px 20px 11px 45px;
-	font-size: 14px;
+	font-size: 0.875rem;
 	font-weight: 500;
 	color: var(--text2);
 }
@@ -281,7 +281,7 @@
 	opacity: 0.8;
 }
 .cellText {
-	font-size: 13.5px;
+	font-size: 0.8125rem;
 	font-weight: 700;
 	color: var(--text);
 }
@@ -296,7 +296,7 @@
 }
 .footerLabel {
 	padding: 16px 20px;
-	font-size: 13px;
+	font-size: 0.8125rem;
 	font-weight: 600;
 	color: var(--muted);
 }
@@ -309,7 +309,7 @@
 	width: 90%;
 	cursor: pointer;
 	font-family: inherit;
-	font-size: 13px;
+	font-size: 0.8125rem;
 	font-weight: 700;
 	padding: 9px 16px;
 	border-radius: 9999px;

@@ -70,13 +70,13 @@
 
 .instructionItem strong {
   color: var(--ifm-font-color-base);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .instructionItem p {
   margin: 0;
   color: var(--ifm-color-emphasis-700);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   padding-left: 1rem;
 }
 
@@ -138,7 +138,7 @@
 
 .privacyNote p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   color: var(--ifm-font-color-base);
 }
@@ -150,7 +150,7 @@
   background: var(--ifm-color-emphasis-100);
   border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 8px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--ifm-font-color-base);
 }
@@ -194,7 +194,7 @@
   border: 1px solid #fecaca;
   border-radius: 8px;
   color: #dc2626;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   margin-bottom: 1rem;
 }
 
@@ -218,7 +218,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.35rem 0;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   border-bottom: 1px solid var(--ifm-color-emphasis-100);
 }
 
@@ -243,7 +243,7 @@
 
 .fileInfoValueError {
   color: #dc2626;
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   text-align: right;
   max-width: 60%;
 }
@@ -258,7 +258,7 @@
   border: 1px solid var(--ifm-color-primary-lighter, rgba(25, 118, 210, 0.2));
   border-radius: 8px;
   margin-bottom: 1.5rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--ifm-font-color-base);
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -270,7 +270,7 @@
 }
 
 .formatSelection h3 {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   margin: 0 0 1rem 0;
   color: var(--ifm-heading-color);
 }
@@ -317,13 +317,13 @@
 }
 
 .formatLabel strong {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--ifm-font-color-base);
   transition: color 0.2s;
 }
 
 .formatLabel span {
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-600);
 }
 
@@ -343,7 +343,7 @@
 
 .saveToAccountIntro {
   margin: 0 0 1rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--ifm-color-emphasis-700);
 }
 
@@ -363,7 +363,7 @@
   color: var(--dw-btn-primary-fg);
   border: none;
   border-radius: 8px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s, transform 0.15s;
@@ -423,7 +423,7 @@
 
 .ctaContent p {
   margin: 0 0 1.5rem 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   opacity: 0.95;
 }
@@ -467,14 +467,14 @@
 }
 
 .infoCard h2 {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   margin: 0 0 0.75rem 0;
 }
 
 .infoCard p {
   color: var(--ifm-color-emphasis-700);
   margin: 0 0 0.75rem 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -486,7 +486,7 @@
   margin: 0 0 0.75rem 0;
   padding-left: 1.25rem;
   color: var(--ifm-color-emphasis-700);
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -545,7 +545,7 @@
 .faqQuestion {
   padding: 1rem 1.25rem;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1rem;
   cursor: pointer;
   color: var(--ifm-font-color-base);
   list-style: none;
@@ -579,7 +579,7 @@
 .faqAnswer {
   padding: 0 1.25rem 1rem;
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--ifm-color-emphasis-700);
 }

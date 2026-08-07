@@ -138,7 +138,7 @@
 }
 
 .cardTitle {
-  font-size: 1.05rem;
+  font-size: 1.125rem;
   font-weight: 600;
   color: var(--dw-text);
   margin: 0;
@@ -150,6 +150,7 @@
   line-height: 1.55;
   color: var(--dw-text-secondary);
   margin: 0;
+  max-width: var(--type-measure);
 }
 
 /* ------- Grid placement variants ------- */
@@ -170,11 +171,11 @@
 }
 
 .heroCard .cardTitle {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 }
 
 .heroCard .cardDescription {
-  font-size: 0.925rem;
+  font-size: 0.875rem;
 }
 
 /* Standard single cards: Trip Tracking, Travel Statistics, Scratch Map */
@@ -208,11 +209,11 @@
 }
 
 .fullWidthCard .cardTitle {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 }
 
 .fullWidthCard .cardDescription {
-  font-size: 0.925rem;
+  font-size: 0.875rem;
   max-width: 60ch;
 }
 
@@ -363,7 +364,7 @@
   }
 
   .title {
-    font-size: 1.875rem;
+    font-size: 1.75rem;
   }
 
   .subtitle {

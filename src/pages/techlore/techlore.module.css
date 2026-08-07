@@ -3,7 +3,7 @@
   background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
   color: #ffffff;
   padding: 0.875rem 1.5rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
   text-align: center;
   z-index: 10;
 }
@@ -33,7 +33,7 @@
 }
 
 .welcomeBannerCode {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-family: var(--ifm-font-family-monospace);
   background: rgba(255, 255, 255, 0.18);
   border: 1px solid rgba(255, 255, 255, 0.35);
   padding: 0.2rem 0.6rem;
@@ -102,7 +102,7 @@
 }
 
 .promoCalloutHeadline {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 700;
   margin: 0 0 0.35rem;
   color: var(--ifm-heading-color);
@@ -115,7 +115,7 @@
 }
 
 .promoCalloutCode {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-family: var(--ifm-font-family-monospace);
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.08em;

@@ -51,7 +51,7 @@
 }
 
 .dropText {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   color: var(--ifm-font-color-base);
   margin: 0;
   opacity: 0.8;
@@ -82,7 +82,7 @@
 }
 
 .fileName {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   font-weight: 600;
   color: var(--ifm-font-color-base);
   margin: 0 0 0.25rem 0;
@@ -90,7 +90,7 @@
 }
 
 .fileSize {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--ifm-color-emphasis-700);
   margin: 0;
 }
@@ -125,7 +125,7 @@
   color: var(--dw-btn-primary-fg);
   border: none;
   border-radius: 8px;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;

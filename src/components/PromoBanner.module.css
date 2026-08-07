@@ -31,7 +31,7 @@
 }
 
 .emoji {
-  font-size: 24px;
+  font-size: 1.5rem;
   animation: bounce 2s infinite;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .text {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
   text-align: center;
 }
@@ -54,7 +54,7 @@
   background: rgba(255, 255, 255, 0.2);
   padding: 2px 8px;
   border-radius: 4px;
-  font-family: 'Courier New', monospace;
+  font-family: var(--ifm-font-family-monospace);
   font-weight: bold;
   letter-spacing: 1px;
 }
@@ -63,7 +63,7 @@
   background: rgba(255, 255, 255, 0.2);
   border: none;
   color: #fff;
-  font-size: 28px;
+  font-size: 1.75rem;
   line-height: 1;
   width: 32px;
   height: 32px;
@@ -97,18 +97,18 @@
   }
 
   .text {
-    font-size: 14px;
+    font-size: 0.875rem;
     flex: 1;
   }
 
   .emoji {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .closeButton {
     width: 28px;
     height: 28px;
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-left: 0;
   }
 }

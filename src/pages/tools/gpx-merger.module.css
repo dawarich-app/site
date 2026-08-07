@@ -16,7 +16,7 @@
 
 .header p {
   color: var(--ifm-color-emphasis-600);
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -61,12 +61,12 @@
 .dropZone p {
   margin: 0 0 0.25rem 0;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   color: var(--ifm-color-emphasis-700);
 }
 
 .hint {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--ifm-color-emphasis-500);
 }
 
@@ -86,7 +86,7 @@
   background: var(--ifm-color-primary-lightest);
   border-radius: 8px;
   margin-top: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
 .spinner {
@@ -110,7 +110,7 @@
   border: 1px solid #fecaca;
   border-radius: 8px;
   color: #dc2626;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   margin-top: 1rem;
 }
 
@@ -135,7 +135,7 @@
 
 .filesPanelHeader h3 {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
 }
 
 .clearButton {
@@ -143,7 +143,7 @@
   border: none;
   color: var(--ifm-color-primary);
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   padding: 0;
 }
 
@@ -152,7 +152,7 @@
 }
 
 .orderHint {
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-500);
   margin: 0 0 1rem 0;
 }
@@ -206,7 +206,7 @@
 }
 
 .orderNumber {
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: var(--ifm-color-emphasis-600);
   min-width: 20px;
@@ -228,7 +228,7 @@
 
 .fileMeta {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-500);
   margin-top: 2px;
 }
@@ -261,7 +261,7 @@
 
 .statsPanel h4 {
   margin: 0 0 0.75rem 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--ifm-color-emphasis-700);
 }
 
@@ -290,7 +290,7 @@
 
 .statLabel {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-600);
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -305,7 +305,7 @@
 
 .optionsPanel h4 {
   margin: 0 0 1rem 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--ifm-color-emphasis-700);
 }
 
@@ -324,7 +324,7 @@
   border-radius: 6px;
   background: var(--ifm-background-color);
   color: var(--ifm-font-color-base);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   margin-bottom: 0.25rem;
 }
 
@@ -335,7 +335,7 @@
 
 .optionLabel {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-500);
 }
 
@@ -353,12 +353,12 @@
 }
 
 .checkboxLabel span {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
 .optionHint {
   margin: 0.25rem 0 0 26px;
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-500);
 }
 
@@ -397,7 +397,7 @@
   padding: 1rem;
   background: var(--ifm-color-success-lightest, rgba(16, 185, 129, 0.1));
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--ifm-color-emphasis-700);
 }
 
@@ -424,14 +424,14 @@
 }
 
 .infoCard h2 {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   margin: 0 0 0.75rem 0;
 }
 
 .infoCard p {
   color: var(--ifm-color-emphasis-700);
   margin: 0 0 0.5rem 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -439,7 +439,7 @@
   margin: 0;
   padding-left: 1.25rem;
   color: var(--ifm-color-emphasis-700);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .infoCard li {
@@ -458,6 +458,6 @@
 
 .saveToAccountIntro {
   margin: 0 0 1rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--ifm-color-emphasis-700);
 }

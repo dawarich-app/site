@@ -80,13 +80,13 @@
 	align-items: center;
 	gap: 0.625rem;
 	font-weight: 600;
-	font-size: 1.05rem;
+	font-size: 1.125rem;
 	color: var(--dw-text);
 	margin-bottom: 0.625rem;
 }
 
 .painCardBody {
-	font-size: 0.95rem;
+	font-size: 1rem;
 	line-height: 1.65;
 	color: var(--dw-text-secondary);
 	margin: 0;
@@ -164,7 +164,7 @@
 }
 
 .diffCard p {
-	font-size: 0.95rem;
+	font-size: 1rem;
 	line-height: 1.65;
 	color: var(--dw-text-secondary);
 	margin: 0;
@@ -185,7 +185,7 @@
 	width: 100%;
 	min-width: 640px;
 	border-collapse: collapse;
-	font-size: 0.95rem;
+	font-size: 1rem;
 }
 
 .compareTable thead th {
@@ -194,7 +194,7 @@
 	background: var(--dw-bg-sunken);
 	color: var(--dw-text-secondary);
 	font-weight: 600;
-	font-size: 0.85rem;
+	font-size: 0.8125rem;
 	text-transform: uppercase;
 	letter-spacing: 0.04em;
 	border-bottom: 1px solid var(--dw-border);
@@ -228,7 +228,7 @@
 .compareCaption {
 	margin-top: 1.25rem;
 	text-align: center;
-	font-size: 0.95rem;
+	font-size: 1rem;
 	color: var(--dw-text-secondary);
 }
 
@@ -257,14 +257,14 @@
 }
 
 .promiseTitle {
-	font-size: 1.05rem;
+	font-size: 1.125rem;
 	font-weight: 600;
 	color: var(--dw-text);
 	margin: 0;
 }
 
 .promiseBody {
-	font-size: 0.95rem;
+	font-size: 1rem;
 	line-height: 1.65;
 	color: var(--dw-text-secondary);
 	margin: 0;
@@ -351,14 +351,14 @@
 }
 
 .inlineFaqQuestion {
-	font-size: 1.05rem;
+	font-size: 1.125rem;
 	font-weight: 600;
 	color: var(--dw-text);
 	margin: 0 0 0.5rem;
 }
 
 .inlineFaqAnswer {
-	font-size: 0.95rem;
+	font-size: 1rem;
 	line-height: 1.7;
 	color: var(--dw-text-secondary);
 	margin: 0;

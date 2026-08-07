@@ -11,13 +11,13 @@
 	margin-bottom: 2px;
 }
 .promptTitle {
-	font-size: 14px;
+	font-size: 0.875rem;
 	font-weight: 700;
 	color: var(--text);
 }
 .promptText {
 	margin: 3px 0 0;
-	font-size: 13px;
+	font-size: 0.8125rem;
 	line-height: 1.45;
 	color: var(--muted);
 }
@@ -30,7 +30,7 @@
 	background: transparent;
 	color: var(--text);
 	font-family: inherit;
-	font-size: 14px;
+	font-size: 0.875rem;
 	transition: border-color 150ms ease;
 }
 .input::placeholder {
@@ -48,7 +48,7 @@
 	font-family: inherit;
 	padding: 13px 16px;
 	border-radius: 10px;
-	font-size: 15px;
+	font-size: 0.875rem;
 	font-weight: 700;
 	color: #ffffff;
 	background: var(--accent);
@@ -93,7 +93,7 @@
 
 .error {
 	margin: 0;
-	font-size: 12.5px;
+	font-size: 0.8125rem;
 	font-weight: 600;
 	color: #dc2626;
 }
@@ -104,7 +104,7 @@
 .note {
 	margin: 4px 0 0;
 	text-align: center;
-	font-size: 12px;
+	font-size: 0.75rem;
 	color: var(--faint);
 }
 
@@ -116,7 +116,7 @@
 	border-radius: 10px;
 	background: var(--accent-chip);
 	color: var(--teal-text);
-	font-size: 13.5px;
+	font-size: 0.8125rem;
 	font-weight: 600;
 	line-height: 1.4;
 }

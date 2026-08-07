@@ -54,7 +54,7 @@
 .useCases p {
   color: var(--ifm-font-color-base);
   margin-bottom: 0.75rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -72,13 +72,13 @@
 
 .useCaseItem strong {
   color: var(--ifm-font-color-base);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .useCaseItem p {
   margin: 0;
   color: var(--ifm-color-emphasis-700);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   padding-left: 1rem;
 }
 
@@ -131,7 +131,7 @@
 
 .privacyNote p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   color: var(--ifm-font-color-base);
 }
@@ -143,7 +143,7 @@
   background: var(--ifm-color-emphasis-100);
   border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 8px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--ifm-font-color-base);
 }
@@ -179,7 +179,7 @@
 
 .ctaContent p {
   margin: 0 0 1.5rem 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   opacity: 0.95;
 }
@@ -220,13 +220,13 @@
 
 .fileSummary h3 {
   margin: 0 0 1rem 0;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
 }
 
 .fileSummaryTable {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
 .fileSummaryTable thead th {
@@ -235,7 +235,7 @@
   border-bottom: 2px solid var(--ifm-color-emphasis-300);
   font-weight: 600;
   color: var(--ifm-color-emphasis-700);
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   text-transform: uppercase;
   letter-spacing: 0.3px;
 }
@@ -260,7 +260,7 @@
   background: var(--ifm-color-primary-lightest);
   color: var(--ifm-color-primary-dark);
   border-radius: 4px;
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   font-weight: 500;
 }
 
@@ -275,14 +275,14 @@
 
 .timelineViz h3 {
   margin: 0 0 1rem 0;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
 }
 
 .timelineAxis {
   display: flex;
   justify-content: space-between;
   padding: 0 120px 0.5rem 120px;
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-500);
   font-weight: 600;
 }
@@ -301,7 +301,7 @@
 .timelineFileName {
   width: 110px;
   flex-shrink: 0;
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   color: var(--ifm-font-color-base);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -355,7 +355,7 @@
   margin-top: 0.75rem;
   padding-top: 0.75rem;
   border-top: 1px solid var(--ifm-color-emphasis-200);
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-600);
   flex-wrap: wrap;
 }
@@ -399,12 +399,12 @@
 
 .dedupSettings h3 {
   margin: 0 0 1rem 0;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
 }
 
 .dedupSettingsDesc {
   margin: 0 0 1.25rem 0;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--ifm-color-emphasis-600);
   line-height: 1.5;
 }
@@ -422,7 +422,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 500;
   color: var(--ifm-font-color-base);
 }
@@ -430,7 +430,7 @@
 .sliderValue {
   font-weight: 700;
   color: var(--ifm-color-primary);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .slider {
@@ -470,7 +470,7 @@
 
 .sliderHint {
   margin: 0.25rem 0 0 0;
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-500);
 }
 
@@ -486,7 +486,7 @@
   color: var(--dw-btn-primary-fg);
   border: none;
   border-radius: 8px;
-  font-size: 1.05rem;
+  font-size: 1.125rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -537,7 +537,7 @@
 
 .mergeResults h3 {
   margin: 0 0 1rem 0;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
 }
 
 .mergeStatsGrid {
@@ -563,7 +563,7 @@
 
 .statLabel {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-600);
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -578,7 +578,7 @@
 
 .overlapDetails h4 {
   margin: 0 0 0.75rem 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--ifm-color-emphasis-700);
 }
 
@@ -590,7 +590,7 @@
   background: var(--ifm-color-emphasis-100);
   border-radius: 6px;
   margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
 .overlapItem:last-child {
@@ -601,7 +601,7 @@
   display: inline-block;
   padding: 0.15rem 0.5rem;
   border-radius: 4px;
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   flex-shrink: 0;
 }
@@ -634,7 +634,7 @@
   background: transparent;
   color: var(--ifm-color-primary);
   border-radius: 8px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -668,7 +668,7 @@
 
 .postCtaPanel p {
   margin: 0 0 1.25rem 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   opacity: 0.95;
   max-width: 600px;
   margin-left: auto;
@@ -697,14 +697,14 @@
 }
 
 .infoCard h2 {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   margin: 0 0 0.75rem 0;
 }
 
 .infoCard p {
   color: var(--ifm-color-emphasis-700);
   margin: 0 0 0.75rem 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -716,7 +716,7 @@
   margin: 0 0 0.75rem 0;
   padding-left: 1.25rem;
   color: var(--ifm-color-emphasis-700);
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -775,7 +775,7 @@
 .faqQuestion {
   padding: 1rem 1.25rem;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1rem;
   cursor: pointer;
   color: var(--ifm-font-color-base);
   list-style: none;
@@ -809,7 +809,7 @@
 .faqAnswer {
   padding: 0 1.25rem 1rem;
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--ifm-color-emphasis-700);
 }
@@ -852,7 +852,7 @@
   background: var(--ifm-color-primary-lightest);
   border-radius: 8px;
   margin-bottom: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--ifm-font-color-base);
 }
 
@@ -872,7 +872,7 @@
   border: 1px solid #fecaca;
   border-radius: 8px;
   color: #dc2626;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   margin-bottom: 1rem;
 }
 
@@ -990,11 +990,11 @@
 
   .timelineFileName {
     width: 70px;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
   }
 
   .fileSummaryTable {
-    font-size: 0.8rem;
+    font-size: 0.8125rem;
   }
 
   .fileSummaryTable thead th,

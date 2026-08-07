@@ -69,13 +69,13 @@
 
 .instructionItem strong {
   color: var(--ifm-font-color-base);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .instructionItem p {
   margin: 0;
   color: var(--ifm-color-emphasis-700);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   padding-left: 1rem;
 }
 
@@ -136,7 +136,7 @@
 
 .privacyNote p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   color: var(--ifm-font-color-base);
 }
@@ -148,7 +148,7 @@
   background: var(--ifm-color-emphasis-100);
   border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 8px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--ifm-font-color-base);
 }
@@ -184,7 +184,7 @@
 
 .ctaContent p {
   margin: 0 0 1.5rem 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   opacity: 0.95;
 }
@@ -223,7 +223,7 @@
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--ifm-color-emphasis-700);
 }
 
@@ -280,7 +280,7 @@
   align-items: center;
   padding: 0.35rem 0.85rem;
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   background: var(--ifm-color-primary-lightest);
   color: var(--ifm-color-primary-darkest);
@@ -332,7 +332,7 @@
 
 .formatDescription {
   margin: 0 0 1.25rem 0;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   line-height: 1.6;
   color: var(--ifm-color-emphasis-700);
 }
@@ -363,7 +363,7 @@
 }
 
 .statValue {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--ifm-font-color-base);
 }
@@ -375,7 +375,7 @@
 
 .qualitySection h4 {
   margin: 0 0 0.75rem 0;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: var(--ifm-font-color-base);
 }
@@ -409,7 +409,7 @@
 }
 
 .qualityLabel {
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-700);
 }
 
@@ -421,7 +421,7 @@
 
 .recommendedTools h4 {
   margin: 0 0 0.75rem 0;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: var(--ifm-font-color-base);
 }
@@ -465,13 +465,13 @@
 }
 
 .toolLink strong {
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: var(--ifm-color-primary);
 }
 
 .toolLink span {
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-600);
   line-height: 1.4;
 }
@@ -497,14 +497,14 @@
 }
 
 .infoCard h2 {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   margin: 0 0 0.75rem 0;
 }
 
 .infoCard p {
   color: var(--ifm-color-emphasis-700);
   margin: 0 0 0.75rem 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -516,7 +516,7 @@
   margin: 0 0 0.75rem 0;
   padding-left: 1.25rem;
   color: var(--ifm-color-emphasis-700);
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -575,7 +575,7 @@
 .faqQuestion {
   padding: 1rem 1.25rem;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1rem;
   cursor: pointer;
   color: var(--ifm-font-color-base);
   list-style: none;
@@ -609,7 +609,7 @@
 .faqAnswer {
   padding: 0 1.25rem 1rem;
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--ifm-color-emphasis-700);
 }

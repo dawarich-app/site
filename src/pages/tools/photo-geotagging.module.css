@@ -70,13 +70,13 @@
 
 .instructionItem strong {
   color: var(--ifm-font-color-base);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .instructionItem p {
   margin: 0;
   color: var(--ifm-color-emphasis-700);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   padding-left: 1rem;
 }
 
@@ -129,7 +129,7 @@
 
 .privacyNote p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   color: var(--ifm-font-color-base);
 }
@@ -154,7 +154,7 @@
 }
 
 .filterLabel {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--ifm-font-color-base);
 }

@@ -10,12 +10,12 @@
 }
 
 .subtitle {
-  font-size: 1.15rem;
+  font-size: 1.125rem;
   color: var(--ifm-color-emphasis-700);
 }
 
 .story p {
-  font-size: 1.05rem;
+  font-size: 1.125rem;
   line-height: 1.7;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .founderBio {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -80,5 +80,5 @@
   border-top: 1px solid var(--ifm-color-emphasis-300);
   text-align: center;
   color: var(--ifm-color-emphasis-700);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }

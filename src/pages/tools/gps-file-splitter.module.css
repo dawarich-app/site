@@ -67,13 +67,13 @@
 }
 
 .instructionItem strong {
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .instructionItem p {
   margin: 0;
   color: var(--ifm-color-emphasis-700);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   padding-left: 1rem;
 }
 
@@ -134,13 +134,13 @@
 }
 
 .hint {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--ifm-color-emphasis-500);
   font-weight: 400;
 }
 
 .formats {
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-400);
   margin-top: 0.5rem;
   font-weight: 400;
@@ -190,7 +190,7 @@
 
 .privacyNote p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
@@ -201,7 +201,7 @@
   background: var(--ifm-color-emphasis-100);
   border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 8px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -261,7 +261,7 @@
 
 .fileInfoLabel {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   color: var(--ifm-color-emphasis-600);
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -278,7 +278,7 @@
 
 .strategySection h3 {
   margin: 0 0 1rem 0;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
 }
 
 .strategyOptions {
@@ -294,7 +294,7 @@
   border-radius: 8px;
   background: var(--ifm-background-color);
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 500;
   transition: all 0.2s;
   color: var(--ifm-font-color-base);
@@ -323,7 +323,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 500;
 }
 
@@ -359,7 +359,7 @@
   border-radius: 6px;
   background: var(--ifm-background-color);
   color: var(--ifm-font-color-base);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .countInput:focus {
@@ -377,7 +377,7 @@
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 /* Output format */
@@ -392,7 +392,7 @@
 
 .outputSection label {
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   white-space: nowrap;
 }
 
@@ -402,7 +402,7 @@
   border-radius: 6px;
   background: var(--ifm-background-color);
   color: var(--ifm-font-color-base);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   cursor: pointer;
 }
 
@@ -413,7 +413,7 @@
   background: rgba(25, 118, 210, 0.08);
   border: 1px solid rgba(25, 118, 210, 0.2);
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--ifm-color-primary-dark);
   font-weight: 500;
 }
@@ -456,7 +456,7 @@
 
 .ctaContent p {
   margin: 0 0 1.5rem 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   opacity: 0.95;
 }
@@ -500,14 +500,14 @@
 }
 
 .infoCard h2 {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   margin: 0 0 0.75rem 0;
 }
 
 .infoCard p {
   color: var(--ifm-color-emphasis-700);
   margin: 0 0 0.75rem 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -517,7 +517,7 @@
   margin: 0 0 0.75rem 0;
   padding-left: 1.25rem;
   color: var(--ifm-color-emphasis-700);
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -566,7 +566,7 @@
 .faqQuestion {
   padding: 1rem 1.25rem;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1rem;
   cursor: pointer;
   list-style: none;
   display: flex;
@@ -592,7 +592,7 @@
 .faqAnswer {
   padding: 0 1.25rem 1rem;
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--ifm-color-emphasis-700);
 }

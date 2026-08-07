@@ -430,7 +430,6 @@
   border-radius: 0.5rem;
   font-size: 0.875rem;
   font-weight: 500;
-  font-family: 'Roboto', -apple-system, sans-serif;
   color: var(--dw-text-secondary);
   text-decoration: none;
   background: var(--dw-bg-elevated);
@@ -587,7 +586,7 @@
   }
 
   .title {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   .subtitle {

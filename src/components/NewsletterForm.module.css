@@ -32,7 +32,7 @@
   width: 100%;
   box-sizing: border-box;
   padding: 0.625rem 0.875rem;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   color: var(--dw-text);
   background: var(--dw-bg, #FFFFFF);
   border: 1px solid var(--dw-border, #D1D5DB);
@@ -63,7 +63,7 @@
   gap: 0.5rem;
   width: 100%;
   padding: 0.6875rem 1.25rem;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: var(--dw-btn-primary-fg);
   background: var(--dw-btn-primary-bg);
@@ -135,7 +135,7 @@
 
 .successText {
   margin: 0;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.6;
   color: var(--dw-text);
