@@ -334,6 +334,7 @@ export default function TimelineMileageCalculator() {
           })}
         </script>
       </Head>
+      <main>
 
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
@@ -714,6 +715,7 @@ export default function TimelineMileageCalculator() {
         </div>
       </div>
         <RelatedTools slug="timeline-mileage-calculator" />
+      </main>
     </Layout>
   );
 }

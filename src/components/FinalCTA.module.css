@@ -43,8 +43,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #3B82F6;
-  color: #FFFFFF;
+  background: var(--dw-btn-primary-bg);
+  color: var(--dw-btn-primary-fg);
   border: none;
   border-radius: 0.5rem;
   padding: 0.75rem 1.75rem;
@@ -56,7 +56,7 @@
 }
 
 .primaryButton:hover {
-  color: #FFFFFF;
+  color: var(--dw-btn-primary-fg);
   text-decoration: none;
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
   transform: translateY(-1px);

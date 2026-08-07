@@ -92,6 +92,7 @@ export default function FITToGeoJSON() {
           })}
         </script>
       </Head>
+      <main>
 
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
@@ -164,6 +165,7 @@ export default function FITToGeoJSON() {
         </div>
       </div>
         <RelatedTools slug="fit-to-geojson" />
+      </main>
     </Layout>
   );
 }

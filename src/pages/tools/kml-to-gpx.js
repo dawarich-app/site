@@ -69,6 +69,7 @@ export default function KMLToGPX() {
           })}
         </script>
       </Head>
+      <main>
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           <div className={styles.header}>
@@ -123,6 +124,7 @@ export default function KMLToGPX() {
         </div>
       </div>
         <RelatedTools slug="kml-to-gpx" />
+      </main>
     </Layout>
   );
 }

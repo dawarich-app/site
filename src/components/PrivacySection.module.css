@@ -62,7 +62,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #60A5FA;
+  color: var(--dw-primary);
 }
 
 .cardTitle {
@@ -89,13 +89,13 @@
   align-items: center;
   font-size: 1rem;
   font-weight: 500;
-  color: #60A5FA;
+  color: var(--dw-primary);
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .policyLink:hover {
-  color: #60A5FA;
+  color: var(--dw-primary-hover);
   transform: translateX(4px);
 }
 

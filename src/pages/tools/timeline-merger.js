@@ -353,6 +353,7 @@ export default function TimelineMerger() {
           })}
         </script>
       </Head>
+      <main>
 
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
@@ -772,6 +773,7 @@ export default function TimelineMerger() {
         </div>
       </div>
         <RelatedTools slug="timeline-merger" />
+      </main>
     </Layout>
   );
 }

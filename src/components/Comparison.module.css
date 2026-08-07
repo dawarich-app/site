@@ -8,9 +8,9 @@
 	--card-bg: #ffffff;
 	--border: rgba(26, 26, 26, 0.07);
 	--text: #1a1a1a;
-	--muted: #6b7280;
-	--faint: #9ca3af;
-	--primary: #3b82f6;
+	--muted: #565D6B;
+	--faint: #6B7280;
+	--primary: #2563EB;
 	--teal-bg: rgba(13, 148, 136, 0.1);
 	--teal-text: #0d7a70;
 	--amber-bg: rgba(245, 158, 11, 0.12);
@@ -34,8 +34,8 @@
 	--card-bg: #1c1c1c;
 	--border: rgba(234, 234, 234, 0.09);
 	--text: #eaeaea;
-	--muted: #8a8a8a;
-	--faint: #5c5c5c;
+	--muted: #9C9C9C;
+	--faint: #858585;
 	--primary: #60a5fa;
 	--teal-bg: rgba(45, 212, 191, 0.12);
 	--teal-text: #2dd4bf;
@@ -263,8 +263,8 @@
 	font-family: inherit;
 	font-size: 14px;
 	font-weight: 700;
-	color: #ffffff;
-	background: #3b82f6;
+	color: var(--dw-btn-primary-fg);
+	background: var(--dw-btn-primary-bg);
 	padding: 11px 18px;
 	border-radius: 10px;
 	white-space: nowrap;
@@ -273,7 +273,7 @@
 	transition: transform 160ms ease, box-shadow 160ms ease;
 }
 .footCta:hover {
-	color: #ffffff;
+	color: var(--dw-btn-primary-fg);
 	text-decoration: none;
 	transform: translateY(-1px);
 	box-shadow: 0 8px 22px rgba(59, 130, 246, 0.42);

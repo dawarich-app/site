@@ -66,6 +66,7 @@ export default function KMZToKML() {
           })}
         </script>
       </Head>
+      <main>
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           <div className={styles.header}>
@@ -120,6 +121,7 @@ export default function KMZToKML() {
         </div>
       </div>
         <RelatedTools slug="kmz-to-kml" />
+      </main>
     </Layout>
   );
 }

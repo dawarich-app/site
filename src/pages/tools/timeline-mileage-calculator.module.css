@@ -308,18 +308,18 @@
 }
 
 .unitOptionActive {
-  background: var(--ifm-color-primary);
-  color: white;
+  background: var(--dw-btn-primary-bg);
+  color: var(--dw-btn-primary-fg);
 }
 
 .unitOptionActive:hover {
-  background: var(--ifm-color-primary-dark);
+  background: var(--dw-btn-primary-bg-hover);
 }
 
 .calculateButton {
   padding: 0.5rem 1.75rem;
-  background: var(--ifm-color-primary);
-  color: white;
+  background: var(--dw-btn-primary-bg);
+  color: var(--dw-btn-primary-fg);
   border: none;
   border-radius: 6px;
   font-size: 0.95rem;
@@ -330,7 +330,7 @@
 }
 
 .calculateButton:hover {
-  background: var(--ifm-color-primary-dark);
+  background: var(--dw-btn-primary-bg-hover);
   transform: translateY(-1px);
 }
 
@@ -465,8 +465,8 @@
   align-items: center;
   gap: 0.6rem;
   padding: 0.85rem 2rem;
-  background: var(--ifm-color-primary);
-  color: white;
+  background: var(--dw-btn-primary-bg);
+  color: var(--dw-btn-primary-fg);
   border: none;
   border-radius: 8px;
   font-size: 1rem;
@@ -476,7 +476,7 @@
 }
 
 .downloadButton:hover {
-  background: var(--ifm-color-primary-dark);
+  background: var(--dw-btn-primary-bg-hover);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }

@@ -152,6 +152,7 @@ export default function ToolsHub() {
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={imageUrl} />
       </Head>
+      <main>
 
       <header className={styles.hero}>
         <div className={styles.container}>
@@ -226,6 +227,7 @@ export default function ToolsHub() {
           </div>
         </div>
       </section>
+      </main>
     </Layout>
   );
 }

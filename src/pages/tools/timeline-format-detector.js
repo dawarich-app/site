@@ -389,6 +389,7 @@ export default function TimelineFormatDetector() {
           })}
         </script>
       </Head>
+      <main>
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           <div className={styles.header}>
@@ -663,6 +664,7 @@ export default function TimelineFormatDetector() {
         </div>
       </div>
         <RelatedTools slug="timeline-format-detector" />
+      </main>
     </Layout>
   );
 }

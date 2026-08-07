@@ -437,6 +437,7 @@ export default function HeatmapGenerator() {
           })}
         </script>
       </Head>
+      <main>
 
       <div className={styles.container}>
         <div className={styles.header}>
@@ -447,7 +448,7 @@ export default function HeatmapGenerator() {
         <div className={styles.mainContent}>
           <div className={styles.sidebar}>
             <div className={styles.uploadSection}>
-              <h3>Upload Files</h3>
+              <h2>Upload Files</h2>
               <div
                 className={`${styles.dropZone} ${dragActive ? styles.dragActive : ''}`}
                 onDragEnter={handleDrag}
@@ -461,6 +462,7 @@ export default function HeatmapGenerator() {
                 <p>Drag & drop files here</p>
                 <span className={styles.supportedFormats}>GPX, FIT, TCX, GeoJSON, KML, KMZ, Google Timeline JSON</span>
                 <input
+                  aria-label="Choose files to process"
                   type="file"
                   className={styles.fileInput}
                   accept=".gpx,.fit,.tcx,.geojson,.json,.kml,.kmz"
@@ -533,11 +535,12 @@ export default function HeatmapGenerator() {
             </div>
 
             <div className={styles.settingsSection}>
-              <h3>Heatmap Settings</h3>
+              <h2>Heatmap Settings</h2>
 
               <div className={styles.settingItem}>
-                <label>Color Scheme</label>
+                <label htmlFor="heatmap-color-scheme">Color Scheme</label>
                 <select
+                  id="heatmap-color-scheme"
                   value={heatmapSettings.colorScheme}
                   onChange={(e) => updateSetting('colorScheme', e.target.value)}
                 >
@@ -550,8 +553,9 @@ export default function HeatmapGenerator() {
               </div>
 
               <div className={styles.settingItem}>
-                <label>Intensity: {heatmapSettings.intensity.toFixed(1)}</label>
+                <label htmlFor="heatmap-intensity">Intensity: {heatmapSettings.intensity.toFixed(1)}</label>
                 <input
+                  id="heatmap-intensity"
                   type="range"
                   min="0.1"
                   max="3"
@@ -562,8 +566,9 @@ export default function HeatmapGenerator() {
               </div>
 
               <div className={styles.settingItem}>
-                <label>Radius: {heatmapSettings.radius}</label>
+                <label htmlFor="heatmap-radius">Radius: {heatmapSettings.radius}</label>
                 <input
+                  id="heatmap-radius"
                   type="range"
                   min="2"
                   max="30"
@@ -574,8 +579,9 @@ export default function HeatmapGenerator() {
               </div>
 
               <div className={styles.settingItem}>
-                <label>Opacity: {heatmapSettings.opacity.toFixed(1)}</label>
+                <label htmlFor="heatmap-opacity">Opacity: {heatmapSettings.opacity.toFixed(1)}</label>
                 <input
+                  id="heatmap-opacity"
                   type="range"
                   min="0.1"
                   max="1"
@@ -649,6 +655,7 @@ export default function HeatmapGenerator() {
         />
       </div>
         <RelatedTools slug="heatmap-generator" />
+      </main>
     </Layout>
   );
 }

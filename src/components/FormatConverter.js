@@ -79,6 +79,7 @@ export default function FormatConverter({
                 Drag and drop your {fromFormat} file here, or click to browse
               </p>
               <input
+                aria-label="Choose files to process"
                 type="file"
                 className={styles.fileInput}
                 accept={acceptedFormats[fromFormat]}

@@ -377,6 +377,7 @@ export default function TimelineVisualizer() {
           })}
         </script>
       </Head>
+      <main>
       <div className={styles.container}>
         <div className={styles.heroSection}>
           <div className={styles.header}>
@@ -599,6 +600,7 @@ export default function TimelineVisualizer() {
 
       </div>
       <RelatedTools slug="timeline-visualizer" />
+      </main>
     </Layout>
   );
 }

@@ -288,6 +288,7 @@ export default function GPSFileSplitter() {
           })}
         </script>
       </Head>
+      <main>
 
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
@@ -328,6 +329,7 @@ export default function GPSFileSplitter() {
                 onDrop={handleDrop}
               >
                 <input
+                  aria-label="Choose files to process"
                   type="file"
                   id="splitterFileInput"
                   accept=".json,.gpx,.geojson,.kml,.kmz"
@@ -433,7 +435,7 @@ export default function GPSFileSplitter() {
                       <span>Target chunk size</span>
                       <span className={styles.sliderValue}>{targetSizeMB} MB</span>
                     </div>
-                    <input type="range" min="1" max="50" value={targetSizeMB} onChange={(e) => setTargetSizeMB(Number(e.target.value))} className={styles.slider} />
+                    <input aria-label="Target chunk size in megabytes" type="range" min="1" max="50" value={targetSizeMB} onChange={(e) => setTargetSizeMB(Number(e.target.value))} className={styles.slider} />
                   </div>
                 )}
 
@@ -442,7 +444,7 @@ export default function GPSFileSplitter() {
                     <div className={styles.sliderLabel}>
                       <span>Points per chunk</span>
                     </div>
-                    <input type="number" min="100" max="1000000" value={countPerChunk} onChange={(e) => setCountPerChunk(Math.max(1, Number(e.target.value)))} className={styles.countInput} />
+                    <input aria-label="Points per chunk" type="number" min="100" max="1000000" value={countPerChunk} onChange={(e) => setCountPerChunk(Math.max(1, Number(e.target.value)))} className={styles.countInput} />
                   </div>
                 )}
 
@@ -460,8 +462,8 @@ export default function GPSFileSplitter() {
                 )}
 
                 <div className={styles.outputSection}>
-                  <label>Output format:</label>
-                  <select value={outputFormat} onChange={(e) => setOutputFormat(e.target.value)} className={styles.outputFormatSelect}>
+                  <label htmlFor="splitter-output-format">Output format:</label>
+                  <select id="splitter-output-format" value={outputFormat} onChange={(e) => setOutputFormat(e.target.value)} className={styles.outputFormatSelect}>
                     <option value="same">Same as input</option>
                     <option value="gpx">GPX</option>
                     <option value="geojson">GeoJSON</option>
@@ -567,6 +569,7 @@ export default function GPSFileSplitter() {
         </div>
       </div>
         <RelatedTools slug="gps-file-splitter" />
+      </main>
     </Layout>
   );
 }

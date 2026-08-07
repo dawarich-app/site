@@ -339,8 +339,8 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: var(--ifm-color-primary);
-  color: white;
+  background: var(--dw-btn-primary-bg);
+  color: var(--dw-btn-primary-fg);
   border: none;
   border-radius: 6px;
   font-size: 0.85rem;
@@ -351,7 +351,7 @@
 }
 
 .exportButton:hover {
-  background: var(--ifm-color-primary-dark);
+  background: var(--dw-btn-primary-bg-hover);
 }
 
 .infoSection {

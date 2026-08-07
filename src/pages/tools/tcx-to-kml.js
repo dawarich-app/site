@@ -93,6 +93,7 @@ export default function TCXToKML() {
           })}
         </script>
       </Head>
+      <main>
 
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
@@ -165,6 +166,7 @@ export default function TCXToKML() {
         </div>
       </div>
         <RelatedTools slug="tcx-to-kml" />
+      </main>
     </Layout>
   );
 }

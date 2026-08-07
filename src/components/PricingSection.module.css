@@ -199,6 +199,9 @@
 }
 
 .guaranteeLink {
+  /* Vertical padding on an inline box grows the tap target without growing
+     the line box — inline-flex here would push the paragraph's last line down. */
+  padding: 0.8125rem 0.25rem;
   color: var(--dw-primary);
   font-weight: 600;
   text-decoration: none;

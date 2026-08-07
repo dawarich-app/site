@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import styles from './FeatureShowcase.module.css';
+import useDialog from './useDialog';
 
 export default function FeatureShowcase({ title, subtitle, items }) {
   const [modalImage, setModalImage] = useState(null);
@@ -8,9 +9,9 @@ export default function FeatureShowcase({ title, subtitle, items }) {
     setModalImage({ src: image, alt: title });
   };
 
-  const closeModal = () => {
-    setModalImage(null);
-  };
+  const closeModal = useCallback(() => setModalImage(null), []);
+
+  const dialogRef = useDialog(Boolean(modalImage), closeModal);
 
   return (
     <section className={styles.showcase}>
@@ -42,12 +43,18 @@ export default function FeatureShowcase({ title, subtitle, items }) {
                       />
                     </a>
                   ) : (
-                    <img
-                      src={item.image}
-                      alt={item.imageAlt || item.title}
-                      className={styles.image}
+                    <button
+                      type="button"
+                      className={styles.imageButton}
                       onClick={() => openModal(item.image, item.imageAlt || item.title)}
-                    />
+                      aria-label={`View ${item.imageAlt || item.title} full size`}
+                    >
+                      <img
+                        src={item.image}
+                        alt={item.imageAlt || item.title}
+                        className={styles.image}
+                      />
+                    </button>
                   )}
                 </div>
               )}
@@ -57,8 +64,19 @@ export default function FeatureShowcase({ title, subtitle, items }) {
       </div>
 
       {modalImage && (
-        <div className={styles.imageModal} onClick={closeModal}>
-          <button className={styles.closeButton} onClick={closeModal}>
+        <div
+          className={styles.imageModal}
+          onClick={closeModal}
+          ref={dialogRef}
+          role="dialog"
+          aria-modal="true"
+          aria-label={modalImage.alt}
+        >
+          <button
+            className={styles.closeButton}
+            onClick={closeModal}
+            aria-label="Close image"
+          >
             ×
           </button>
           <img

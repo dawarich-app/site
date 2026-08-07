@@ -76,8 +76,8 @@
 }
 
 .tab.active {
-  background: #3B82F6;
-  color: white; /* text-primary-foreground */
+  background: var(--dw-btn-primary-bg);
+  color: var(--dw-btn-primary-fg); /* text-primary-foreground */
   box-shadow: var(--shadow-md);
 }
 
@@ -220,8 +220,8 @@
 }
 
 [data-theme='dark'] .tab.active {
-  background: #3B82F6;
-  color: white;
+  background: var(--dw-btn-primary-bg);
+  color: var(--dw-btn-primary-fg);
 }
 
 [data-theme='dark'] .tabContent {

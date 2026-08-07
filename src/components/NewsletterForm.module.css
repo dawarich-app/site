@@ -65,8 +65,8 @@
   padding: 0.6875rem 1.25rem;
   font-size: 0.9375rem;
   font-weight: 600;
-  color: #FFFFFF;
-  background: #3B82F6;
+  color: var(--dw-btn-primary-fg);
+  background: var(--dw-btn-primary-bg);
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -74,7 +74,7 @@
 }
 
 .button:hover:not(:disabled) {
-  background: #2563EB;
+  background: var(--dw-btn-primary-bg-hover);
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
   transform: translateY(-1px);
 }

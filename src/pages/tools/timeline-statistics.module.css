@@ -347,11 +347,11 @@
 }
 
 .timeBarTraveling {
-  background: var(--ifm-color-primary);
+  background: var(--dw-btn-primary-bg);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--dw-btn-primary-fg);
   font-size: 0.8rem;
   font-weight: 600;
   min-width: 40px;

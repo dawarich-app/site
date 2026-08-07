@@ -1,7 +1,8 @@
 import Link from "@docusaurus/Link";
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import styles from "./Hero.module.css";
+import useDialog from "./useDialog";
 
 const GoogleIcon = () => (
 	<svg width="18" height="18" viewBox="0 0 48 48">
@@ -97,7 +98,16 @@ const trustBadges = [
 
 export default function Hero() {
 	const [modalOpen, setModalOpen] = useState(false);
+	const [showInlineVideo, setShowInlineVideo] = useState(false);
 	const modalVideoRef = useRef(null);
+
+	useEffect(() => {
+		if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
+		const idle = window.requestIdleCallback || ((fn) => setTimeout(fn, 1200));
+		const cancel = window.cancelIdleCallback || clearTimeout;
+		const handle = idle(() => setShowInlineVideo(true));
+		return () => cancel(handle);
+	}, []);
 
 	const scrollToFeatures = () => {
 		document.getElementById("features")?.scrollIntoView({ behavior: "smooth" });
@@ -105,16 +115,16 @@ export default function Hero() {
 
 	const openModal = useCallback(() => {
 		setModalOpen(true);
-		document.body.style.overflow = "hidden";
 	}, []);
 
 	const closeModal = useCallback(() => {
 		setModalOpen(false);
-		document.body.style.overflow = "";
 		if (modalVideoRef.current) {
 			modalVideoRef.current.pause();
 		}
 	}, []);
+
+	const dialogRef = useDialog(modalOpen, closeModal);
 
 	return (
 		<section className={styles.hero}>
@@ -189,19 +199,38 @@ export default function Hero() {
 						onClick={openModal}
 						role="button"
 						tabIndex={0}
-						onKeyDown={(e) => e.key === "Enter" && openModal()}
+						aria-label="Play the Dawarich product tour"
+						onKeyDown={(e) => {
+							if (e.key === "Enter" || e.key === " ") {
+								e.preventDefault();
+								openModal();
+							}
+						}}
 					>
-						<video
-							autoPlay
-							loop
-							muted
-							playsInline
-							className={styles.heroVideo}
-							poster="/img/the_map.webp"
-						>
-							<source src="/hero-video.webm" type="video/webm" />
-							<source src="/hero-video.mp4" type="video/mp4" />
-						</video>
+						{showInlineVideo ? (
+							<video
+								autoPlay
+								loop
+								muted
+								playsInline
+								preload="none"
+								width="1600"
+								height="900"
+								className={styles.heroVideo}
+								poster="/img/the_map.webp"
+							>
+								<source src="/hero-video.webm" type="video/webm" />
+								<source src="/hero-video.mp4" type="video/mp4" />
+							</video>
+						) : (
+							<img
+								src="/img/the_map.webp"
+								alt=""
+								width="1600"
+								height="900"
+								className={styles.heroVideo}
+							/>
+						)}
 						<div className={styles.imageFadeOverlay} />
 						<div className={styles.playButton}>
 							<PlayIcon />
@@ -213,7 +242,14 @@ export default function Hero() {
 			{modalOpen &&
 				typeof document !== "undefined" &&
 				createPortal(
-					<div className={styles.videoModal} onClick={closeModal}>
+					<div
+						className={styles.videoModal}
+						onClick={closeModal}
+						ref={dialogRef}
+						role="dialog"
+						aria-modal="true"
+						aria-label="Dawarich product tour"
+					>
 						<button
 							className={styles.modalClose}
 							onClick={closeModal}

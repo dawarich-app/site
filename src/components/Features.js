@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { createPortal } from "react-dom";
 import styles from "./Features.module.css";
+import useDialog from "./useDialog";
 
 const RouteIcon = () => (
 	<svg
@@ -151,13 +152,11 @@ export default function Features() {
 
 	const openModal = (image, title) => {
 		setModalImage({ src: image, alt: title });
-		document.body.style.overflow = "hidden";
 	};
 
-	const closeModal = () => {
-		setModalImage(null);
-		document.body.style.overflow = "";
-	};
+	const closeModal = useCallback(() => setModalImage(null), []);
+
+	const dialogRef = useDialog(Boolean(modalImage), closeModal);
 
 	return (
 		<section id="features" className={styles.featuresSection}>
@@ -171,10 +170,12 @@ export default function Features() {
 
 				<div className={styles.bentoGrid}>
 					{features.map((feature) => (
-						<div
+						<button
+							type="button"
 							key={feature.id}
 							className={`${styles.card} ${styles[feature.className]}`}
 							onClick={() => openModal(feature.image, feature.title)}
+							aria-label={`View ${feature.title} full size`}
 						>
 							<div className={styles.cardImageWrapper}>
 								<img
@@ -182,6 +183,8 @@ export default function Features() {
 									alt={feature.title}
 									className={styles.cardImage}
 									loading="lazy"
+									width="1600"
+									height="900"
 								/>
 							</div>
 							<div className={styles.cardOverlay}>
@@ -189,7 +192,7 @@ export default function Features() {
 								<h3 className={styles.cardTitle}>{feature.title}</h3>
 								<p className={styles.cardDescription}>{feature.description}</p>
 							</div>
-						</div>
+						</button>
 					))}
 				</div>
 			</div>
@@ -197,8 +200,19 @@ export default function Features() {
 			{modalImage &&
 				typeof document !== "undefined" &&
 				createPortal(
-					<div className={styles.imageModal} onClick={closeModal}>
-						<button className={styles.closeButton} onClick={closeModal}>
+					<div
+						className={styles.imageModal}
+						onClick={closeModal}
+						ref={dialogRef}
+						role="dialog"
+						aria-modal="true"
+						aria-label={modalImage.alt}
+					>
+						<button
+							className={styles.closeButton}
+							onClick={closeModal}
+							aria-label="Close image"
+						>
 							&times;
 						</button>
 						<img

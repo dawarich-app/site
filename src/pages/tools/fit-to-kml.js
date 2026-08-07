@@ -95,6 +95,7 @@ export default function FITToKML() {
           })}
         </script>
       </Head>
+      <main>
 
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
@@ -167,6 +168,7 @@ export default function FITToKML() {
         </div>
       </div>
         <RelatedTools slug="fit-to-kml" />
+      </main>
     </Layout>
   );
 }

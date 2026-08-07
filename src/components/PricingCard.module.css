@@ -11,10 +11,10 @@
 	--border: rgba(26, 26, 26, 0.07);
 	--text: #1a1a1a;
 	--text2: #4b4b4b;
-	--muted: #6b7280;
-	--faint: #9ca3af;
-	--primary: #3b82f6;
-	--teal: #0d9488;
+	--muted: #565D6B;
+	--faint: #6B7280;
+	--primary: #2563EB;
+	--teal: #0F766E;
 	--amber-bg: rgba(245, 158, 11, 0.12);
 	--amber-text: #b45309;
 	--amber-border: rgba(245, 158, 11, 0.25);
@@ -22,7 +22,7 @@
 	--teal-text: #0d7a70;
 	--chip-blue-bg: rgba(59, 130, 246, 0.1);
 	--chip-teal-bg: rgba(13, 148, 136, 0.1);
-	--strike: #9ca3af;
+	--strike: #6B7280;
 	--grid: rgba(59, 130, 246, 0.05);
 	--tog-bg: #ededea;
 	--tog-active: #ffffff;
@@ -30,7 +30,7 @@
 	--card-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 	--card-shadow-hover: 0 18px 40px -14px rgba(0, 0, 0, 0.22);
 	--pro-shadow: 0 0 0 1.5px #3b82f6, 0 22px 48px -16px rgba(59, 130, 246, 0.4);
-	--ribbon-bg: #3b82f6;
+	--ribbon-bg: #2563EB;
 	--ribbon-text: #ffffff;
 	--ribbon-border: transparent;
 
@@ -55,8 +55,8 @@
 	--border: rgba(234, 234, 234, 0.09);
 	--text: #eaeaea;
 	--text2: #b8b8b8;
-	--muted: #8a8a8a;
-	--faint: #5c5c5c;
+	--muted: #9C9C9C;
+	--faint: #858585;
 	--primary: #60a5fa;
 	--teal: #2dd4bf;
 	--amber-bg: rgba(251, 191, 36, 0.12);
@@ -66,7 +66,7 @@
 	--teal-text: #2dd4bf;
 	--chip-blue-bg: rgba(96, 165, 250, 0.14);
 	--chip-teal-bg: rgba(45, 212, 191, 0.14);
-	--strike: #6b6b6b;
+	--strike: #858585;
 	--grid: rgba(255, 255, 255, 0.035);
 	--tog-bg: #0f0f0f;
 	--tog-active: #2a2f3a;
@@ -298,6 +298,11 @@
 	border: 0;
 	cursor: pointer;
 	font-family: inherit;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 38px;
+	min-width: 88px;
 	padding: 6px 16px;
 	border-radius: 9999px;
 	font-size: 13px;
@@ -306,6 +311,11 @@
 	background: transparent;
 	color: var(--muted);
 	transition: all 150ms ease;
+}
+
+.toggleBtn:focus-visible {
+	outline: 2px solid var(--primary);
+	outline-offset: 2px;
 }
 .toggleActive {
 	background: var(--tog-active);
@@ -439,12 +449,12 @@
 	transition: all 160ms ease;
 }
 .ctaPrimary {
-	background: #3b82f6;
-	color: #ffffff;
+	background: var(--dw-btn-primary-bg);
+	color: var(--dw-btn-primary-fg);
 	box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
 }
 .ctaPrimary:hover {
-	color: #ffffff;
+	color: var(--dw-btn-primary-fg);
 	text-decoration: none;
 	transform: translateY(-1px);
 	box-shadow: 0 8px 22px rgba(59, 130, 246, 0.45);

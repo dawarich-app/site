@@ -349,8 +349,8 @@
   border-radius: 0.5rem;
   font-size: 1rem;
   font-weight: 500;
-  color: white;
-  background-color: #3B82F6;
+  color: var(--dw-btn-primary-fg);
+  background-color: var(--dw-btn-primary-bg);
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: var(--shadow-lg);
@@ -363,8 +363,8 @@
 
 .primaryButton:hover,
 .earlyAccessButton:hover {
-  background-color: #2563EB;
-  color: white;
+  background-color: var(--dw-btn-primary-bg-hover);
+  color: var(--dw-btn-primary-fg);
   text-decoration: none;
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35), var(--shadow-xl);
 }

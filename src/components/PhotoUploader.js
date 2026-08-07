@@ -94,6 +94,7 @@ export default function PhotoUploader({ onPhotosLoaded, onClear }) {
         onDrop={handleDrop}
       >
         <input
+          aria-label="Choose files to process"
           type="file"
           id="photoInput"
           multiple

@@ -186,6 +186,7 @@ export default function GPXMerger() {
           })}
         </script>
       </Head>
+      <main>
 
       <div className={styles.container}>
         <div className={styles.header}>
@@ -208,6 +209,7 @@ export default function GPXMerger() {
               <p>Drag & drop GPX files here</p>
               <span className={styles.hint}>or click to browse</span>
               <input
+                aria-label="Choose files to process"
                 type="file"
                 className={styles.fileInput}
                 accept=".gpx"
@@ -442,6 +444,7 @@ export default function GPXMerger() {
         />
       </div>
         <RelatedTools slug="gpx-merger" />
+      </main>
     </Layout>
   );
 }

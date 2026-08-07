@@ -148,6 +148,7 @@ export default function PhotoGeotagging() {
           })}
         </script>
       </Head>
+      <main>
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           <div className={styles.header}>
@@ -245,6 +246,7 @@ export default function PhotoGeotagging() {
         </div>
       </div>
         <RelatedTools slug="photo-geotagging" />
+      </main>
     </Layout>
   );
 }

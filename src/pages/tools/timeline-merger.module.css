@@ -482,8 +482,8 @@
   gap: 0.5rem;
   width: 100%;
   padding: 1rem;
-  background: var(--ifm-color-primary);
-  color: white;
+  background: var(--dw-btn-primary-bg);
+  color: var(--dw-btn-primary-fg);
   border: none;
   border-radius: 8px;
   font-size: 1.05rem;
@@ -494,7 +494,7 @@
 }
 
 .mergeButton:hover:not(:disabled) {
-  background: var(--ifm-color-primary-dark);
+  background: var(--dw-btn-primary-bg-hover);
   transform: translateY(-1px);
 }
 
@@ -641,8 +641,8 @@
 }
 
 .exportButton:hover {
-  background: var(--ifm-color-primary);
-  color: white;
+  background: var(--dw-btn-primary-bg);
+  color: var(--dw-btn-primary-fg);
   transform: translateY(-1px);
 }
 

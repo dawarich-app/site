@@ -81,8 +81,8 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.875rem 2rem;
-  background-color: #3B82F6;
-  color: white;
+  background-color: var(--dw-btn-primary-bg);
+  color: var(--dw-btn-primary-fg);
   border-radius: 8px;
   font-weight: 600;
   font-size: 1rem;
@@ -94,7 +94,7 @@
 .primaryButton:hover {
   background-color: var(--ifm-color-primary-dark);
   border-color: var(--ifm-color-primary-dark);
-  color: white;
+  color: var(--dw-btn-primary-fg);
   text-decoration: none;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);

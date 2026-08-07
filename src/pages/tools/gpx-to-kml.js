@@ -74,6 +74,7 @@ export default function GPXToKML() {
           })}
         </script>
       </Head>
+      <main>
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           <div className={styles.header}>
@@ -112,6 +113,7 @@ export default function GPXToKML() {
       </div>
       <ToolGuide slug="gpx-to-kml" title="GPX to KML Converter" content={toolGuideContent} />
       <RelatedTools slug="gpx-to-kml" />
+      </main>
     </Layout>
   );
 }

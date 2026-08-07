@@ -66,8 +66,8 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.625rem 1.25rem;
-  background: var(--ifm-color-primary);
-  color: white;
+  background: var(--dw-btn-primary-bg);
+  color: var(--dw-btn-primary-fg);
   border: none;
   border-radius: 6px;
   font-size: 0.9rem;
@@ -77,7 +77,7 @@
 }
 
 .downloadButton:hover {
-  background: var(--ifm-color-primary-dark);
+  background: var(--dw-btn-primary-bg-hover);
 }
 
 @media (max-width: 480px) {

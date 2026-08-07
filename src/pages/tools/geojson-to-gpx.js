@@ -69,6 +69,7 @@ export default function GeoJSONToGPX() {
           })}
         </script>
       </Head>
+      <main>
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           <div className={styles.header}>
@@ -123,6 +124,7 @@ export default function GeoJSONToGPX() {
         </div>
       </div>
         <RelatedTools slug="geojson-to-gpx" />
+      </main>
     </Layout>
   );
 }

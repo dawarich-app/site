@@ -69,6 +69,7 @@ export default function KMZToGeoJSON() {
           })}
         </script>
       </Head>
+      <main>
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           <div className={styles.header}>
@@ -123,6 +124,7 @@ export default function KMZToGeoJSON() {
         </div>
       </div>
         <RelatedTools slug="kmz-to-geojson" />
+      </main>
     </Layout>
   );
 }

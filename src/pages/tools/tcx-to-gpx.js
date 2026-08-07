@@ -104,6 +104,7 @@ export default function TCXToGPX() {
           })}
         </script>
       </Head>
+      <main>
 
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
@@ -210,6 +211,7 @@ export default function TCXToGPX() {
         </div>
       </div>
         <RelatedTools slug="tcx-to-gpx" />
+      </main>
     </Layout>
   );
 }

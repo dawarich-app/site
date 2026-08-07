@@ -1,6 +1,10 @@
 .howItWorks {
   padding: 8rem 1rem;
   background-color: var(--ifm-background-color);
+  /* .routeBand::before bleeds 40px past the band on each side; below ~1110px
+     that bleed reaches past the viewport and the whole page scrolls sideways.
+     clip contains it without making this a scroll container. */
+  overflow-x: clip;
 }
 
 [data-theme='dark'] .howItWorks {
@@ -121,8 +125,8 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background-color: var(--ifm-color-primary);
-  color: white;
+  background-color: var(--dw-btn-primary-bg);
+  color: var(--dw-btn-primary-fg);
   display: flex;
   align-items: center;
   justify-content: center;

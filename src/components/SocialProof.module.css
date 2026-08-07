@@ -80,7 +80,7 @@
 .value {
   font-size: 2rem;
   font-weight: 700;
-  color: #60A5FA;
+  color: var(--dw-primary);
   line-height: 1.2;
   font-variant-numeric: tabular-nums;
   text-shadow: none;
@@ -154,7 +154,7 @@
 
 .integrationPill:hover {
   border-color: rgba(59, 130, 246, 0.6);
-  color: #60A5FA;
+  color: var(--dw-primary);
   box-shadow: 0 0 12px rgba(59, 130, 246, 0.2);
 }
 

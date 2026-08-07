@@ -90,6 +90,7 @@ export default function TCXToGeoJSON() {
           })}
         </script>
       </Head>
+      <main>
 
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
@@ -162,6 +163,7 @@ export default function TCXToGeoJSON() {
         </div>
       </div>
         <RelatedTools slug="tcx-to-geojson" />
+      </main>
     </Layout>
   );
 }

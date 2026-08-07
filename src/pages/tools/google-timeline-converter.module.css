@@ -359,8 +359,8 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.625rem 1.25rem;
-  background: var(--ifm-color-primary);
-  color: white;
+  background: var(--dw-btn-primary-bg);
+  color: var(--dw-btn-primary-fg);
   border: none;
   border-radius: 8px;
   font-size: 0.95rem;
@@ -370,7 +370,7 @@
 }
 
 .downloadButton:hover {
-  background: var(--ifm-color-primary-dark);
+  background: var(--dw-btn-primary-bg-hover);
   transform: translateY(-1px);
 }
 

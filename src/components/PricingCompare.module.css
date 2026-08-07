@@ -11,10 +11,10 @@
 	--border-strong: rgba(26, 26, 26, 0.12);
 	--text: #1a1a1a;
 	--text2: #4b4b4b;
-	--muted: #6b7280;
-	--faint: #9ca3af;
-	--primary: #3b82f6;
-	--teal: #0d9488;
+	--muted: #565D6B;
+	--faint: #6B7280;
+	--primary: #2563EB;
+	--teal: #0F766E;
 	--teal-text: #0d7a70;
 	--chip-blue-bg: rgba(59, 130, 246, 0.1);
 	--chip-teal-bg: rgba(13, 148, 136, 0.1);
@@ -36,8 +36,8 @@
 	--border-strong: rgba(234, 234, 234, 0.16);
 	--text: #eaeaea;
 	--text2: #b8b8b8;
-	--muted: #8a8a8a;
-	--faint: #5c5c5c;
+	--muted: #9C9C9C;
+	--faint: #858585;
 	--primary: #60a5fa;
 	--teal: #2dd4bf;
 	--teal-text: #2dd4bf;
@@ -318,12 +318,12 @@
 }
 .footCtaPrimary {
 	border: 0;
-	background: #3b82f6;
-	color: #fff;
+	background: var(--dw-btn-primary-bg);
+	color: var(--dw-btn-primary-fg);
 	box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 .footCtaPrimary:hover {
-	color: #fff;
+	color: var(--dw-btn-primary-fg);
 	text-decoration: none;
 	transform: translateY(-1px);
 }

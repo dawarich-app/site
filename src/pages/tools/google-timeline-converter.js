@@ -336,6 +336,7 @@ export default function GoogleTimelineConverter() {
           })}
         </script>
       </Head>
+      <main>
 
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
@@ -616,6 +617,7 @@ export default function GoogleTimelineConverter() {
         </div>
       </div>
         <RelatedTools slug="google-timeline-converter" />
+      </main>
     </Layout>
   );
 }

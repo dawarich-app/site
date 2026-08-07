@@ -9,12 +9,14 @@
 
 /* Light theme — warm neutrals from Dawarich app */
 :root {
-  /* Primary colors — #3B82F6 base */
-  --ifm-color-primary: #3B82F6;
-  --ifm-color-primary-dark: #2563EB;
-  --ifm-color-primary-darker: #1D4ED8;
-  --ifm-color-primary-darkest: #1E40AF;
-  --ifm-color-primary-light: #60A5FA;
+  /* Primary colors — #2563EB base.
+     #3B82F6 reads at only 3.5:1 on our off-white, so it stays a tint
+     (--ifm-color-primary-light) and never carries text. */
+  --ifm-color-primary: #2563EB;
+  --ifm-color-primary-dark: #1D4ED8;
+  --ifm-color-primary-darker: #1E40AF;
+  --ifm-color-primary-darkest: #1E3A8A;
+  --ifm-color-primary-light: #3B82F6;
   --ifm-color-primary-lighter: #60A5FA;
   --ifm-color-primary-lightest: #DBEAFE;
 
@@ -28,8 +30,8 @@
   --ifm-font-color-base: #1A1A1A;
   --ifm-font-color-secondary: #585858;
   --ifm-heading-color: #1A1A1A;
-  --ifm-color-link: #3B82F6;
-  --ifm-color-link-hover: #2563EB;
+  --ifm-color-link: #2563EB;
+  --ifm-color-link-hover: #1D4ED8;
 
   /* Muted colors */
   --muted-foreground: #585858;
@@ -74,12 +76,21 @@
   --dw-bg-hover: #EFEFED;
   --dw-text: #1A1A1A;
   --dw-text-secondary: #585858;
-  --dw-text-tertiary: #999999;
+  --dw-text-tertiary: #6E6E6E;
   --dw-border: #E5E5E2;
-  --dw-primary: #3B82F6;
-  --dw-primary-hover: #2563EB;
-  --dw-primary-light: rgba(59, 130, 246, 0.10);
-  --dw-accent: #0D9488;
+  --dw-primary: #2563EB;
+  --dw-primary-hover: #1D4ED8;
+  --dw-primary-light: rgba(37, 99, 235, 0.10);
+  --dw-accent: #0F766E;
+
+  /* Filled brand surfaces. Kept identical in both themes so a white label
+     always clears 4.5:1 — the light-theme blues do not survive on dark. */
+  --dw-btn-primary-bg: #2563EB;
+  --dw-btn-primary-bg-hover: #1D4ED8;
+  --dw-btn-primary-fg: #FFFFFF;
+
+  /* Blue that only ever sits on a surface as a tint or a large numeral */
+  --dw-primary-tint: #3B82F6;
 }
 
 /* Dark theme — warm charcoal from Dawarich app */
@@ -139,12 +150,20 @@
   --dw-bg-hover: #282828;
   --dw-text: #EAEAEA;
   --dw-text-secondary: #9A9A9A;
-  --dw-text-tertiary: #636363;
+  --dw-text-tertiary: #8C8C8C;
   --dw-border: #2A2A2A;
   --dw-primary: #60A5FA;
-  --dw-primary-hover: #3B82F6;
+  --dw-primary-hover: #93C5FD;
   --dw-primary-light: rgba(96, 165, 250, 0.15);
   --dw-accent: #2DD4BF;
+
+  /* Same filled pair as light — a white label needs a dark enough blue,
+     and #60A5FA only reaches 2.5:1 behind white. */
+  --dw-btn-primary-bg: #2563EB;
+  --dw-btn-primary-bg-hover: #1D4ED8;
+  --dw-btn-primary-fg: #FFFFFF;
+
+  --dw-primary-tint: #60A5FA;
 }
 
 /* Global resets */
@@ -181,7 +200,7 @@ header {
 }
 
 .footer__copyright {
-  color: #636363;
+  color: #A0A0A0;
 }
 
 /* Social icon row + trendshift badge live inside footer__copyright */
@@ -199,8 +218,8 @@ header {
   align-items: center;
   justify-content: center;
   color: #9A9A9A;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
   border-radius: 0.5rem;
   transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 }
@@ -229,7 +248,7 @@ header {
 
 .dawarich-footer-copyright-text {
   margin: 0;
-  color: #636363;
+  color: #A0A0A0;
   font-size: 0.875rem;
 }
 
@@ -282,14 +301,6 @@ section {
   background: rgba(28, 28, 28, 0.75) !important;
 }
 
-/* Gradient text utility */
-.gradientText {
-  background: linear-gradient(135deg, #3B82F6, #6366F1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 /* Feature-page CTA reassurance microcopy (shared across all feature pages) */
 .feature-cta-reassurance {
   margin: 1.25rem 0 0;
@@ -337,6 +348,29 @@ section {
 .cardHoverGlow:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-lift);
+}
+
+/* Reduced motion: content arrives already in place rather than sliding in,
+   and hover still answers — with shadow instead of travel. */
+@media (prefers-reduced-motion: reduce) {
+  .animateOnScroll,
+  .animateOnScroll.visible,
+  .staggerChildren > *,
+  .staggerChildren.visible > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    transition-delay: 0s;
+  }
+
+  .cardHoverGlow {
+    transition: box-shadow 0.2s ease;
+  }
+
+  .cardHoverGlow:hover {
+    transform: none;
+    box-shadow: var(--shadow-lift);
+  }
 }
 
 /* API sidebar method badges */
@@ -483,8 +517,10 @@ html.plugin-docs .navbar__search {
 }
 
 .dawarich-footer-cta a {
-  display: inline-block;
-  margin-top: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 0.25rem;
   font-weight: 600;
 }
 
@@ -514,3 +550,17 @@ html.plugin-docs .navbar__search {
     grid-template-columns: 1fr;
   }
 }
+
+/* Must stay inside the navbar breakpoint: Infima hides .navbar__toggle with a
+   base `display: none` and only reveals it here, so an unscoped display value
+   would show a dead hamburger on desktop. */
+@media (max-width: 996px) {
+  .navbar__toggle {
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.25rem;
+  }
+}
+

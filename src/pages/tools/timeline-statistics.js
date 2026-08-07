@@ -297,6 +297,7 @@ export default function TimelineStatistics() {
           })}
         </script>
       </Head>
+      <main>
 
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
@@ -688,6 +689,7 @@ export default function TimelineStatistics() {
         </div>
       </div>
         <RelatedTools slug="timeline-statistics" />
+      </main>
     </Layout>
   );
 }

@@ -110,6 +110,7 @@ export default function FileUploader({ onFilesLoaded, onClear }) {
         onDrop={handleDrop}
       >
         <input
+          aria-label="Choose files to process"
           type="file"
           id="fileInput"
           multiple

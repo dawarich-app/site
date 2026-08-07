@@ -232,6 +232,7 @@ export default function GoogleTimelineSplitter() {
           })}
         </script>
       </Head>
+      <main>
 
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
@@ -272,6 +273,7 @@ export default function GoogleTimelineSplitter() {
                 onDrop={handleDrop}
               >
                 <input
+                  aria-label="Choose files to process"
                   type="file"
                   id="splitterFileInput"
                   accept=".json"
@@ -477,6 +479,7 @@ export default function GoogleTimelineSplitter() {
         </div>
       </div>
         <RelatedTools slug="google-timeline-splitter" />
+      </main>
     </Layout>
   );
 }

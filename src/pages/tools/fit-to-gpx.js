@@ -106,6 +106,7 @@ export default function FITToGPX() {
           })}
         </script>
       </Head>
+      <main>
 
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
@@ -211,6 +212,7 @@ export default function FITToGPX() {
         </div>
       </div>
         <RelatedTools slug="fit-to-gpx" />
+      </main>
     </Layout>
   );
 }

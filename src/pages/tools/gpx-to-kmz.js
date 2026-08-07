@@ -68,6 +68,7 @@ export default function GPXToKMZ() {
           })}
         </script>
       </Head>
+      <main>
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           <div className={styles.header}>
@@ -122,6 +123,7 @@ export default function GPXToKMZ() {
         </div>
       </div>
         <RelatedTools slug="gpx-to-kmz" />
+      </main>
     </Layout>
   );
 }
