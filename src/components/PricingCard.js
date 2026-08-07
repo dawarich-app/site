@@ -114,6 +114,8 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 				))}
 			</ul>
 
+			<div className={styles.spacer} />
+
 			{plan.valueStack && (
 				<div className={styles.valueStack}>
 					{plan.valueStack.items.map((item, i) => (
@@ -134,8 +136,6 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 					<div className={styles.valuePayLine}>{plan.valueStack.payLine}</div>
 				</div>
 			)}
-
-			<div className={styles.spacer} />
 
 			{plan.waitlistListId ? (
 				<WaitlistForm
