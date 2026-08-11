@@ -105,6 +105,7 @@ const config = {
 
   clientModules: [
     require.resolve('./src/client-modules/utm-preservation.js'),
+    require.resolve('./src/client-modules/image-zoom.js'),
   ],
 
   presets: [
