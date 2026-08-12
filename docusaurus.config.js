@@ -280,6 +280,22 @@ const config = {
                 to: '/integrations',
                 label: 'Photo Integrations',
               },
+              {
+                to: '/location-sharing',
+                label: 'Location Sharing',
+              },
+              {
+                to: '/family',
+                label: 'Family Location Sharing',
+              },
+              {
+                to: '/tax-residency',
+                label: 'Tax Residency Day Counter',
+              },
+              {
+                to: '/poster-studio',
+                label: 'Map Poster Studio',
+              },
             ],
           },
           {to: '/pricing', label: 'Pricing', position: 'left'},

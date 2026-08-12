@@ -358,3 +358,112 @@ export const HandIcon = (props) => (
 		<path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
 	</Icon>
 );
+
+export const UsersIcon = (props) => (
+	<Icon {...props}>
+		<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+		<circle cx="9" cy="7" r="4" />
+		<path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+		<path d="M16 3.13a4 4 0 0 1 0 7.75" />
+	</Icon>
+);
+
+export const UserPlusIcon = (props) => (
+	<Icon {...props}>
+		<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+		<circle cx="9" cy="7" r="4" />
+		<line x1="19" x2="19" y1="8" y2="14" />
+		<line x1="22" x2="16" y1="11" y2="11" />
+	</Icon>
+);
+
+export const ShareIcon = (props) => (
+	<Icon {...props}>
+		<circle cx="18" cy="5" r="3" />
+		<circle cx="6" cy="12" r="3" />
+		<circle cx="18" cy="19" r="3" />
+		<line x1="8.59" x2="15.42" y1="13.51" y2="17.49" />
+		<line x1="15.41" x2="8.59" y1="6.51" y2="10.49" />
+	</Icon>
+);
+
+export const PrinterIcon = (props) => (
+	<Icon {...props}>
+		<path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+		<path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6" />
+		<rect x="6" y="14" width="12" height="8" rx="1" />
+	</Icon>
+);
+
+export const ShieldIcon = (props) => (
+	<Icon {...props}>
+		<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+		<path d="m9 12 2 2 4-4" />
+	</Icon>
+);
+
+export const ClockIcon = (props) => (
+	<Icon {...props}>
+		<circle cx="12" cy="12" r="10" />
+		<polyline points="12 6 12 12 16 14" />
+	</Icon>
+);
+
+export const EyeOffIcon = (props) => (
+	<Icon {...props}>
+		<path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49" />
+		<path d="M14.084 14.158a3 3 0 0 1-4.242-4.242" />
+		<path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143" />
+		<path d="m2 2 20 20" />
+	</Icon>
+);
+
+export const PaletteIcon = (props) => (
+	<Icon {...props}>
+		<path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" />
+		<circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+		<circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+		<circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+		<circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+	</Icon>
+);
+
+export const ScaleIcon = (props) => (
+	<Icon {...props}>
+		<path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
+		<path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
+		<path d="M7 21h10" />
+		<path d="M12 3v18" />
+		<path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" />
+	</Icon>
+);
+
+export const FlagIcon = (props) => (
+	<Icon {...props}>
+		<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+		<line x1="4" x2="4" y1="22" y2="15" />
+	</Icon>
+);
+
+export const FrameIcon = (props) => (
+	<Icon {...props}>
+		<line x1="22" x2="2" y1="6" y2="6" />
+		<line x1="22" x2="2" y1="18" y2="18" />
+		<line x1="6" x2="6" y1="2" y2="22" />
+		<line x1="18" x2="18" y1="2" y2="22" />
+	</Icon>
+);
+
+export const SlidersIcon = (props) => (
+	<Icon {...props}>
+		<line x1="21" x2="14" y1="4" y2="4" />
+		<line x1="10" x2="3" y1="4" y2="4" />
+		<line x1="21" x2="12" y1="12" y2="12" />
+		<line x1="8" x2="3" y1="12" y2="12" />
+		<line x1="21" x2="16" y1="20" y2="20" />
+		<line x1="12" x2="3" y1="20" y2="20" />
+		<line x1="14" x2="14" y1="2" y2="6" />
+		<line x1="8" x2="8" y1="10" y2="14" />
+		<line x1="16" x2="16" y1="18" y2="22" />
+	</Icon>
+);

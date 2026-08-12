@@ -119,6 +119,35 @@ const LockIcon = (props) => (
   </Icon>
 );
 
+const ListIcon = (props) => (
+  <Icon {...props}>
+    <path d="M8 6h13" />
+    <path d="M8 12h13" />
+    <path d="M8 18h13" />
+    <path d="M3 6h.01" />
+    <path d="M3 12h.01" />
+    <path d="M3 18h.01" />
+  </Icon>
+);
+
+const timelineItems = [
+  {
+    icon: <ListIcon />,
+    title: 'A Day You Can Read',
+    description: 'Each day opens with a single-line header and per-mode distance chips — how far you walked, cycled and drove, at a glance. Pick any day from the calendar and the map follows it.',
+  },
+  {
+    icon: <RouteIcon />,
+    title: 'Edit a Leg in Place',
+    description: 'Tracks expand into a mode ribbon showing only the legs that matter. Got one wrong? Click the leg\'s mode name and change it right there. The full segment list stays tucked behind "All segments" until you ask for it.',
+  },
+  {
+    icon: <CloudFogIcon />,
+    title: 'Honest About Gaps',
+    description: 'When tracking genuinely stopped, the timeline says so instead of drawing a straight line through the missing hours. Detected visits carry a confidence score, so a firm stay and a weak guess never look identical.',
+  },
+];
+
 const showcaseItems = [
   {
     icon: <MapPinIcon />,
@@ -250,6 +279,12 @@ export default function MapPage() {
       />
 
       <main>
+        <FeatureShowcase
+          title="The Timeline"
+          subtitle="The map shows you where. The timeline, right beside it, shows you what happened — one day at a time, in plain language."
+          items={timelineItems}
+        />
+
         <FeatureShowcase
           title="Multiple Visualization Layers"
           subtitle="Toggle between different map layers to see your location data in various ways. Each layer reveals unique insights about your travels and habits."
