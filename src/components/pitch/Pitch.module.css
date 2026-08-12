@@ -1,0 +1,397 @@
+/* Pitch surfaces — the four keyword feature pages.
+   Built only from tokens the site already owns: --ifm-color-primary carries
+   both action and emphasis, plus the existing shadow and neutral scales.
+   Deliberately avoids a uniform icon+heading+text card grid as the page
+   skeleton. */
+
+.shell {
+  /* Emphasis rides the brand primary; it is already theme-aware. */
+  --pitch-accent: var(--ifm-color-primary);
+  --pitch-rule: var(--dw-border);
+  --pitch-artifact-bg: var(--dw-bg-sunken);
+}
+
+[data-theme='dark'] .shell {
+  --pitch-rule: var(--ifm-color-emphasis-300);
+  --pitch-artifact-bg: rgba(255, 255, 255, 0.03);
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ── Hero ─────────────────────────────────────────────────────────── */
+
+.hero {
+  padding: clamp(3.5rem, 8vw, 6.5rem) 0 clamp(2.5rem, 5vw, 4rem);
+  border-bottom: 1px solid var(--pitch-rule);
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+.heroTitle {
+  font-size: clamp(2.25rem, 5.2vw, 3.75rem);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  font-weight: 800;
+  margin: 0 0 1.25rem;
+  text-wrap: balance;
+}
+
+.heroTitle em {
+  font-style: normal;
+  color: var(--pitch-accent);
+}
+
+.heroSub {
+  font-size: clamp(1.0625rem, 1.6vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 34rem;
+  margin: 0 0 2rem;
+}
+
+[data-theme='dark'] .heroSub {
+  color: var(--ifm-color-emphasis-600);
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.primaryCta,
+.secondaryCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9375rem 1.75rem;
+  border-radius: 10px;
+  font-weight: 650;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: transform 0.18s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.18s cubic-bezier(0.2, 0.8, 0.2, 1),
+    background-color 0.18s ease, border-color 0.18s ease;
+}
+
+.primaryCta {
+  background-color: var(--dw-btn-primary-bg);
+  color: var(--dw-btn-primary-fg);
+  border: 1px solid var(--dw-btn-primary-bg);
+  box-shadow: var(--shadow-md);
+}
+
+.primaryCta:hover {
+  background-color: var(--dw-btn-primary-bg-hover);
+  border-color: var(--dw-btn-primary-bg-hover);
+  color: var(--dw-btn-primary-fg);
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.secondaryCta {
+  background-color: transparent;
+  color: var(--ifm-font-color-base);
+  border: 1px solid var(--pitch-rule);
+}
+
+.secondaryCta:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.reassurance {
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-600);
+  margin: 0;
+}
+
+/* ── Artifact frame ───────────────────────────────────────────────── */
+
+.artifact {
+  background-color: var(--pitch-artifact-bg);
+  border: 1px solid var(--pitch-rule);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.artifactWide {
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
+.artifactCaption {
+  font-size: 0.8125rem;
+  color: var(--ifm-color-emphasis-600);
+  margin: 0.875rem 0 0;
+  text-align: center;
+}
+
+/* ── Proof strip ──────────────────────────────────────────────────── */
+
+.proof {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--pitch-rule);
+}
+
+.proofInner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 2.25rem;
+}
+
+.proofLabel {
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-600);
+  margin: 0;
+}
+
+.proofName {
+  font-size: 1rem;
+  font-weight: 650;
+  color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme='dark'] .proofName {
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* ── Value rows (asymmetric, alternating) ─────────────────────────── */
+
+.rows {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+.sectionHead {
+  max-width: 40rem;
+  margin: 0 0 clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.sectionTitle {
+  font-size: clamp(1.875rem, 3.4vw, 2.625rem);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  font-weight: 750;
+  margin: 0 0 0.75rem;
+  text-wrap: balance;
+}
+
+.sectionSub {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+}
+
+[data-theme='dark'] .sectionSub {
+  color: var(--ifm-color-emphasis-600);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.75rem, 4vw, 4rem);
+  align-items: center;
+  padding: clamp(2rem, 4vw, 3rem) 0;
+  border-top: 1px solid var(--pitch-rule);
+}
+
+.rowReversed .rowMedia {
+  order: -1;
+}
+
+.rowTitle {
+  font-size: clamp(1.375rem, 2.2vw, 1.75rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+}
+
+.rowBody {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+  max-width: 34rem;
+}
+
+[data-theme='dark'] .rowBody {
+  color: var(--ifm-color-emphasis-600);
+}
+
+.rowNote {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--pitch-accent);
+}
+
+/* ── Objections ───────────────────────────────────────────────────── */
+
+.objections {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  background-color: var(--dw-bg-sunken);
+  border-top: 1px solid var(--pitch-rule);
+  border-bottom: 1px solid var(--pitch-rule);
+}
+
+[data-theme='dark'] .objections {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.objectionList {
+  display: grid;
+  gap: 0;
+  max-width: 52rem;
+}
+
+.objection {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--pitch-rule);
+}
+
+.objection:first-child {
+  border-top: none;
+}
+
+.objectionQ {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.objectionA {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+  max-width: 46rem;
+}
+
+[data-theme='dark'] .objectionA {
+  color: var(--ifm-color-emphasis-600);
+}
+
+/* ── Close ────────────────────────────────────────────────────────── */
+
+.close {
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0;
+  text-align: center;
+}
+
+.closeTitle {
+  font-size: clamp(1.875rem, 3.6vw, 2.75rem);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  font-weight: 750;
+  margin: 0 0 0.875rem;
+  text-wrap: balance;
+}
+
+.closeSub {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 38rem;
+  margin: 0 auto 2rem;
+}
+
+[data-theme='dark'] .closeSub {
+  color: var(--ifm-color-emphasis-600);
+}
+
+.closeActions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.guarantee {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.9375rem;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+[data-theme='dark'] .guarantee {
+  color: var(--ifm-color-emphasis-600);
+}
+
+.guarantee li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4375rem;
+}
+
+.guaranteeMark {
+  color: var(--pitch-accent);
+  flex-shrink: 0;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .heroGrid,
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .rowReversed .rowMedia {
+    order: 0;
+  }
+
+  .heroSub {
+    max-width: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .primaryCta,
+  .secondaryCta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .artifact {
+    padding: 1.125rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primaryCta,
+  .secondaryCta {
+    transition: none;
+  }
+
+  .primaryCta:hover,
+  .secondaryCta:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,124 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 4.5rem;
+  background: rgba(8, 8, 10, 0.94);
+  border: none;
+  cursor: zoom-out;
+}
+
+.figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.875rem;
+  max-height: 100%;
+}
+
+.image {
+  max-width: min(88vw, 660px);
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+  cursor: default;
+}
+
+.caption {
+  color: #f3f4f6;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.625rem;
+}
+
+.counter {
+  color: #9ca3af;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Controls share one circular treatment. */
+.control {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.control:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.control:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.close {
+  top: 1rem;
+  right: 1.25rem;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.prev {
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 700px) {
+  .modal {
+    padding: 3.5rem 0.75rem 5.5rem;
+  }
+
+  .image {
+    max-width: 94vw;
+    max-height: 68vh;
+  }
+
+  .prev,
+  .next {
+    top: auto;
+    bottom: 1.25rem;
+    transform: none;
+  }
+
+  .prev {
+    left: 25%;
+  }
+
+  .next {
+    right: 25%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .control {
+    transition: none;
+  }
+}
