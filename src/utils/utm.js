@@ -10,11 +10,23 @@
  * 3. If no external UTM params exist, internal UTM params work normally
  *
  * This solution is UNIVERSAL - it automatically applies to all external links on the site.
+ *
+ * It also carries the Partnero affiliate key (`via`) to the app. PartneroJS stores
+ * that key in a first-party cookie scoped to dawarich.app, which is never sent to
+ * my.dawarich.app where signup happens — the same subdomain gap the gtag linker in
+ * docusaurus.config.js works around for gclid. Appending `via` to outbound links lets
+ * PartneroJS on the app re-read it from the URL and set its own cookie there.
  */
 
 const UTM_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
 const STORAGE_KEY = 'original_utm_params';
 const STORAGE_DURATION = 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
+
+const REFERRAL_PARAM = 'via';
+const REFERRAL_STORAGE_KEY = 'partnero_referral';
+// Keep at or above the cookie lifetime configured in the Partnero program, otherwise
+// the site stops forwarding a key that Partnero would still have honoured.
+const REFERRAL_STORAGE_DURATION = 90 * 24 * 60 * 60 * 1000; // 90 days in milliseconds
 
 /**
  * Get UTM parameters from URL
@@ -57,6 +69,58 @@ export function saveOriginalUtmParams() {
 }
 
 /**
+ * Save the Partnero affiliate key from the URL.
+ *
+ * Unlike UTM params this is last-touch: a visitor arriving through a newer affiliate
+ * link overwrites the stored key. Partnero owns the attribution rule and computes
+ * commissions from its own cookie, so the site forwards whichever key the visitor
+ * actually arrived with rather than imposing a first-touch policy Partnero never saw.
+ */
+export function saveReferralKey() {
+  if (typeof window === 'undefined') return;
+
+  const key = new URLSearchParams(window.location.search).get(REFERRAL_PARAM);
+  if (!key) return;
+
+  localStorage.setItem(
+    REFERRAL_STORAGE_KEY,
+    JSON.stringify({ key, timestamp: Date.now() })
+  );
+}
+
+/**
+ * Get the stored Partnero affiliate key, or null if absent or expired
+ */
+export function getReferralKey() {
+  if (typeof window === 'undefined') return null;
+
+  try {
+    const stored = localStorage.getItem(REFERRAL_STORAGE_KEY);
+    if (!stored) return null;
+
+    const data = JSON.parse(stored);
+
+    if (Date.now() - data.timestamp > REFERRAL_STORAGE_DURATION) {
+      localStorage.removeItem(REFERRAL_STORAGE_KEY);
+      return null;
+    }
+
+    return data.key || null;
+  } catch (e) {
+    return null;
+  }
+}
+
+/**
+ * Clear the stored Partnero affiliate key (useful for testing or user logout)
+ */
+export function clearReferralKey() {
+  if (typeof window !== 'undefined') {
+    localStorage.removeItem(REFERRAL_STORAGE_KEY);
+  }
+}
+
+/**
  * Get saved original UTM parameters if still valid
  */
 function getOriginalUtmParams() {
@@ -92,7 +156,7 @@ function getOriginalUtmParams() {
  * @param {string} urlString - The URL to append params to
  * @returns {string} URL with UTM parameters
  */
-export function buildUrlWithUtm(urlString) {
+export function buildOutboundUrl(urlString) {
   if (typeof window === 'undefined') return urlString;
 
   try {
@@ -114,6 +178,13 @@ export function buildUrlWithUtm(urlString) {
     // If no original params exist, keep the internal UTM params as-is
     // (they're already in the URL - no changes needed)
 
+    // A `via` already on the link is an explicit choice by whoever authored it
+    // and outranks the stored key.
+    const referralKey = getReferralKey();
+    if (referralKey && !url.searchParams.has(REFERRAL_PARAM)) {
+      url.searchParams.set(REFERRAL_PARAM, referralKey);
+    }
+
     return url.toString();
   } catch (e) {
     return urlString;
@@ -127,8 +198,9 @@ export function buildUrlWithUtm(urlString) {
 export function initializeUtmPreservation() {
   if (typeof window === 'undefined') return;
 
-  // Save UTM params on page load
+  // Save UTM params and any affiliate key on page load
   saveOriginalUtmParams();
+  saveReferralKey();
 
   // Intercept all clicks on external links
   document.addEventListener('click', (e) => {
@@ -138,13 +210,13 @@ export function initializeUtmPreservation() {
     const href = link.getAttribute('href');
     if (!href) return;
 
-    // Check if it's an external link with UTM params
+    // Rewrite external links carrying UTM params, and any external link at all once
+    // an affiliate key is stored — CTAs without utm_ still need to carry `via`.
     const isExternal = href.startsWith('http://') || href.startsWith('https://');
     const hasUtmParams = href.includes('utm_');
 
-    if (isExternal && hasUtmParams) {
-      // Update the href with preserved UTM params
-      const newHref = buildUrlWithUtm(href);
+    if (isExternal && (hasUtmParams || getReferralKey())) {
+      const newHref = buildOutboundUrl(href);
       if (newHref !== href) {
         link.setAttribute('href', newHref);
       }

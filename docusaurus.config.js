@@ -90,6 +90,23 @@ const config = {
         });
       `,
     },
+    // Partnero affiliate tracking. Reads ?via=PARTNER_KEY and stores it in a
+    // first-party cookie on dawarich.app. That cookie does not reach
+    // my.dawarich.app, so src/utils/utm.js also appends `via` to outbound CTAs
+    // and PartneroJS on the app re-reads it there.
+    {
+      tagName: "script",
+      attributes: {},
+      innerHTML: `
+        (function(p,t,n,e,r,o){ p['__partnerObject']=r;function f(){
+        var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
+        f.q=f.q||[];p[r]=p[r]||f.bind(f.q);p[r].q=p[r].q||f.q;o=t.createElement(n);
+        var _=t.getElementsByTagName(n)[0];o.async=1;o.src=e+'?v'+(~~(new Date().getTime()/1e6));
+        _.parentNode.insertBefore(o,_);})(window, document, 'script', 'https://app.partnero.com/js/universal.js', 'po');
+        po('settings', 'assets_host', 'https://assets.partnero.com');
+        po('program', '1NNVU1NU', 'load');
+      `,
+    },
   ],
 
   onBrokenLinks: 'throw',
