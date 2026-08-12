@@ -29,6 +29,30 @@ export default function CustomCookieConsent() {
         }
       ]);
     };
+
+    // Affiliate attribution. The cookie this sets is not strictly necessary
+    // under § 25 TTDSG, so it waits for consent like the two above. Attribution
+    // itself does not depend on it — the `via` key travels to the app on the
+    // CTA URL (see src/utils/utm.js), so declining costs Partnero only its own
+    // click statistics.
+    (function (p, t, n, e, r, o) {
+      p['__partnerObject'] = r;
+      function f() {
+        var c = { a: arguments, q: [] };
+        var r = this.push(c);
+        return typeof r != "number" ? r : f.bind(c.q);
+      }
+      f.q = f.q || [];
+      p[r] = p[r] || f.bind(f.q);
+      p[r].q = p[r].q || f.q;
+      o = t.createElement(n);
+      var _ = t.getElementsByTagName(n)[0];
+      o.async = 1;
+      o.src = e + '?v' + (~~(new Date().getTime() / 1e6));
+      _.parentNode.insertBefore(o, _);
+    })(window, document, 'script', 'https://app.partnero.com/js/universal.js', 'po');
+    window.po('settings', 'assets_host', 'https://assets.partnero.com');
+    window.po('program', '1NNVU1NU', 'load');
   };
 
   const buttonStyle = {
@@ -68,8 +92,8 @@ export default function CustomCookieConsent() {
       onAccept={handleAccept}
     >
       We use a cookieless analytics service (Simple Analytics) that requires no consent.
-      You can optionally accept cookies for Google Ads conversion tracking and Brevo email
-      analytics — these only load if you click "Accept".
+      You can optionally accept cookies for Google Ads conversion tracking, Brevo email
+      analytics and affiliate referral credit — these only load if you click "Accept".
       <a
         href="/privacy-policy#cookies"
         style={{
