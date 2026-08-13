@@ -11,6 +11,10 @@ I maintain [Dawarich](https://dawarich.app), which imports all of these formats,
 
 <!-- truncate -->
 
+:::tip Just want to look at your data?
+Drop your export into the free [Google Timeline Visualizer](/tools/timeline-visualizer/) to see it on a map, or turn it into GPX, KML, or GeoJSON with the [Google Timeline Converter](/tools/google-timeline-converter/) — both run entirely in your browser.
+:::
+
 ## Three formats, one mess
 
 Google has shipped three different export formats over the years. Which one you get depends on when you exported, how you exported, and seemingly what mood their servers were in that day. Some people get one, some get all three. So the first thing is figuring out what you're dealing with.
