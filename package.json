@@ -76,6 +76,7 @@
   },
   "overrides": {
     "picomatch": "^4.0.3",
+    "websocket-driver": "0.7.5"
     "shell-quote": "1.8.4"
   }
 }
