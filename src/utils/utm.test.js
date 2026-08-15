@@ -22,6 +22,38 @@ describe('referral (via) preservation', () => {
     visit('');
   });
 
+  it.each(['aff', 'via'])('saves the key from a ?%s= referral link', (param) => {
+    visit(`?${param}=PARTNER123`);
+    saveReferralKey();
+
+    expect(getReferralKey()).toBe('PARTNER123');
+  });
+
+  it('forwards the key under the same param it arrived on', () => {
+    visit('?aff=PARTNER123');
+    saveReferralKey();
+
+    const url = new URL(buildOutboundUrl(SIGNUP));
+    expect(url.searchParams.get('aff')).toBe('PARTNER123');
+    expect(url.searchParams.get('via')).toBeNull();
+  });
+
+  it('prefers aff when a link carries both', () => {
+    visit('?aff=FROM_AFF&via=FROM_VIA');
+    saveReferralKey();
+
+    expect(getReferralKey()).toBe('FROM_AFF');
+  });
+
+  it('does not clobber an explicit aff already on the link', () => {
+    visit('?via=STORED');
+    saveReferralKey();
+
+    const url = new URL(buildOutboundUrl(`${SIGNUP}?aff=EXPLICIT`));
+    expect(url.searchParams.get('aff')).toBe('EXPLICIT');
+    expect(url.searchParams.get('via')).toBeNull();
+  });
+
   it('saves the via key when a visitor lands from a referral link', () => {
     visit('?via=PARTNER123');
     saveReferralKey();
