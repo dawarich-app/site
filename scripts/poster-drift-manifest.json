@@ -1,0 +1,53 @@
+{
+  "note": "Maps each vendored module under src/lib/poster-studio/ to its Rails source and declares the line patterns of intentional deltas. Patterns are regexes tested against trimmed lines of BOTH files, so a declared delta must match the vendored replacement AND the original it replaced.",
+  "modules": {
+    "data/fonts.js": { "source": "app/javascript/poster_studio/data/fonts.js" },
+    "data/layouts.js": { "source": "app/javascript/poster_studio/data/layouts.js" },
+    "data/paper_sizes.js": { "source": "app/javascript/poster_studio/data/paper_sizes.js" },
+    "data/print_products.js": { "source": "app/javascript/poster_studio/data/print_products.js" },
+    "data/protomaps_schema.js": { "source": "app/javascript/poster_studio/data/protomaps_schema.js" },
+    "data/theme_loader.js": { "source": "app/javascript/poster_studio/data/theme_loader.js" },
+    "export/download.js": { "source": "app/javascript/poster_studio/export/download.js" },
+    "export/pdf_encoder.js": { "source": "app/javascript/poster_studio/export/pdf_encoder.js" },
+    "export/png_encoder.js": { "source": "app/javascript/poster_studio/export/png_encoder.js" },
+    "render/offscreen_map.js": { "source": "app/javascript/poster_studio/render/offscreen_map.js" },
+    "render/overlay.js": { "source": "app/javascript/poster_studio/render/overlay.js" },
+    "render/style_builder.js": { "source": "app/javascript/poster_studio/render/style_builder.js" },
+    "render/text_layout.js": { "source": "app/javascript/poster_studio/render/text_layout.js" },
+    "ui/exporter.js": { "source": "app/javascript/poster_studio/ui/exporter.js" },
+    "ui/order_client.js": {
+      "source": "app/javascript/poster_studio/ui/order_client.js",
+      "deltaPatterns": [
+        "^const ERROR_(KEYS|MESSAGES) = \\{",
+        "^(wrong_size|too_large|unknown_sku|payment_unavailable|not_pdf|unreadable|generic|connection):",
+        "^\"(The exported PDF is too large|Payment is temporarily unavailable)",
+        "^throw new Error\\(",
+        "^translate\\(",
+        "^\\)$",
+        "^reject\\(new Error\\("
+      ]
+    },
+    "ui/preview.js": {
+      "source": "app/javascript/poster_studio/ui/preview.js",
+      "deltaPatterns": [
+        "^// (The studio snapshots the canvas|The site has no blurred-backdrop)",
+        "^preserveDrawingBuffer:",
+        "^const (targetName|role) = el\\.dataset",
+        "^return (targetName|role) !== \"frame\""
+      ]
+    },
+    "render/outliers.js": {
+      "source": "app/javascript/maps_maplibre/utils/geometry.js",
+      "manual": true,
+      "requiredSymbols": [
+        "trimOutlierCoords",
+        "axisInlierRange",
+        "OUTLIER_MIN_COORDS",
+        "OUTLIER_BUDGET_RATIO",
+        "OUTLIER_MIN_BUDGET",
+        "OUTLIER_GAP_RATIO",
+        "OUTLIER_MIN_GAP_DEGREES"
+      ]
+    }
+  }
+}
