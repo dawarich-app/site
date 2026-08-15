@@ -106,7 +106,13 @@ export default function PosterStudioPage() {
         <CloseCTA
           campaign="poster-studio"
           title="Put your own route on the wall — or the lock screen"
-          sub="Import a route you already have or track a new one, then open the studio and start composing."
+          sub={
+            <>
+              Import a route you already have or track a new one, then open the studio and start
+              composing. No account yet?{' '}
+              <a href="/tools/map-poster-maker/">Try the free browser version with any GPS file</a>.
+            </>
+          }
         />
       </PitchPage>
     </Layout>

@@ -65,6 +65,12 @@ const freeTools = [
     description: 'Turn location history into a heatmap showing where you spend the most time.',
   },
   {
+    to: '/tools/map-poster-maker',
+    icon: '🖼️',
+    title: 'Map Poster Maker',
+    description: 'Compose a map poster from any GPS file — 17 themes, PNG/PDF export, optional prints.',
+  },
+  {
     to: '/tools/gpx-merger',
     icon: '🔗',
     title: 'GPX Track Merger',

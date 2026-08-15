@@ -1,0 +1,231 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.25rem 1rem 3rem;
+}
+
+.header {
+  max-width: 720px;
+  margin: 0 auto 1.9rem;
+  text-align: center;
+}
+
+.header h1 {
+  margin-bottom: 0.65rem;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.header p {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: var(--ifm-font-color-secondary);
+}
+
+.header .valueStrip {
+  margin-top: 0.9rem;
+  font-size: 0.84rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+  color: var(--ifm-font-color-secondary);
+}
+
+/* ---------- Toolbar: demo toggle + upload ---------- */
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.toolbarStatus {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.demoToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.demoToggle input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--ifm-color-primary);
+}
+
+.demoToggle input:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+.dropZoneCompact {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  min-width: 280px;
+  max-width: 540px;
+  padding: 0.65rem 0.9rem;
+  border: 1.5px dashed var(--ifm-color-emphasis-300);
+  border-radius: 10px;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.dropZoneCompact:hover,
+.dropZoneCompact:focus-within,
+.dragActive {
+  border-color: var(--ifm-color-primary);
+  background: rgba(37, 99, 235, 0.05);
+}
+
+:global([data-theme='dark']) .dropZoneCompact:hover,
+:global([data-theme='dark']) .dropZoneCompact:focus-within,
+:global([data-theme='dark']) .dragActive {
+  background: rgba(96, 165, 250, 0.09);
+}
+
+.dropIcon {
+  flex-shrink: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  color: var(--ifm-color-primary);
+}
+
+.dropText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.dropTitle {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.supportedFormats {
+  font-size: 0.74rem;
+  color: var(--ifm-font-color-secondary);
+}
+
+.fileInput {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.studioBarLabel {
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--ifm-font-color-secondary);
+}
+
+.clearButton {
+  padding: 0.32rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.clearButton:hover {
+  background: var(--ifm-color-emphasis-100);
+  border-color: var(--ifm-color-emphasis-400, var(--ifm-color-emphasis-300));
+}
+
+.clearButton:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* ---------- Notes ---------- */
+
+.loadingNote {
+  margin: 0.75rem 0;
+  text-align: center;
+  color: var(--ifm-font-color-secondary);
+}
+
+.errorMessage {
+  margin: 0.75rem 0;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  background: rgba(220, 38, 38, 0.08);
+  color: var(--ifm-color-danger);
+  font-size: 0.9rem;
+}
+
+/* ---------- Sections below the studio ---------- */
+
+.studioSection {
+  margin-bottom: 3rem;
+}
+
+.saveSection {
+  max-width: 640px;
+  margin: 1.75rem auto 0;
+  text-align: center;
+}
+
+.saveIntro {
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--ifm-font-color-secondary);
+}
+
+.faqSection {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+}
+
+.faqSection h2 {
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.faqItem {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 10px;
+  background: var(--ifm-background-surface-color);
+}
+
+.faqQuestion {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faqAnswer {
+  margin: 0.6rem 0 0;
+  max-width: 70ch;
+  color: var(--ifm-font-color-secondary);
+  line-height: 1.55;
+}
