@@ -22,7 +22,12 @@ const UTM_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm
 const STORAGE_KEY = 'original_utm_params';
 const STORAGE_DURATION = 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
 
-const REFERRAL_PARAM = 'via';
+// Partnero's referral param is configured per program — their docs describe
+// `via`, the snippet generated for this program emits `aff`. Both are read so a
+// dashboard setting cannot silently cost every commission; `aff` wins because
+// that is what the program's own snippet writes. The key is forwarded under the
+// param it arrived on, so the app sees exactly what Partnero produced.
+const REFERRAL_PARAMS = ['aff', 'via'];
 const REFERRAL_STORAGE_KEY = 'partnero_referral';
 // Keep at or above the cookie lifetime configured in the Partnero program, otherwise
 // the site stops forwarding a key that Partnero would still have honoured.
@@ -79,12 +84,13 @@ export function saveOriginalUtmParams() {
 export function saveReferralKey() {
   if (typeof window === 'undefined') return;
 
-  const key = new URLSearchParams(window.location.search).get(REFERRAL_PARAM);
-  if (!key) return;
+  const search = new URLSearchParams(window.location.search);
+  const param = REFERRAL_PARAMS.find((name) => search.get(name));
+  if (!param) return;
 
   localStorage.setItem(
     REFERRAL_STORAGE_KEY,
-    JSON.stringify({ key, timestamp: Date.now() })
+    JSON.stringify({ key: search.get(param), param, timestamp: Date.now() })
   );
 }
 
@@ -108,6 +114,18 @@ export function getReferralKey() {
     return data.key || null;
   } catch (e) {
     return null;
+  }
+}
+
+/**
+ * The query param the stored key arrived on, so it is forwarded unchanged
+ */
+function getReferralParam() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(REFERRAL_STORAGE_KEY));
+    return REFERRAL_PARAMS.includes(stored?.param) ? stored.param : REFERRAL_PARAMS[0];
+  } catch (e) {
+    return REFERRAL_PARAMS[0];
   }
 }
 
@@ -181,8 +199,9 @@ export function buildOutboundUrl(urlString) {
     // A `via` already on the link is an explicit choice by whoever authored it
     // and outranks the stored key.
     const referralKey = getReferralKey();
-    if (referralKey && !url.searchParams.has(REFERRAL_PARAM)) {
-      url.searchParams.set(REFERRAL_PARAM, referralKey);
+    const alreadyCarriesReferral = REFERRAL_PARAMS.some((name) => url.searchParams.has(name));
+    if (referralKey && !alreadyCarriesReferral) {
+      url.searchParams.set(getReferralParam(), referralKey);
     }
 
     return url.toString();
