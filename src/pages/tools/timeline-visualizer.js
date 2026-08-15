@@ -13,8 +13,8 @@ import styles from './timeline-visualizer.module.css';
 
 const TimelineMapV2 = lazy(() => import('@site/src/components/TimelineMapV2'));
 
-const pageTitle = "Google Timeline Visualizer - View Your Location History as a Calendar";
-const pageDescription = "Free, privacy-first Google Timeline visualizer. Browse your location history day-by-day with a calendar heat-grid, visit list, journey legs, and activity replay. All processing happens in your browser.";
+const pageTitle = "Google Timeline Visualizer — View Your Timeline on the Web Again";
+const pageDescription = "Google removed Timeline from the web. This free visualizer brings it back: upload your Takeout export and see your location history on a map, in your browser.";
 const pageUrl = "https://dawarich.app/tools/timeline-visualizer/";
 const imageUrl = "https://dawarich.app/img/meta-image.png";
 
@@ -30,6 +30,14 @@ const faqItems = [
   {
     question: "Why did Google shut down Timeline on the web?",
     answer: "In late 2024, Google discontinued the web-based version of Google Maps Timeline and moved all location data to on-device storage. Users' last 90 days of data were transferred to their phone, but older data was deleted unless manually backed up. Many users lost years of location history in the transition. This visualizer helps you view and explore any Google Timeline data you managed to export."
+  },
+  {
+    question: "Where did my Google Timeline go?",
+    answer: "If Timeline disappeared from Google Maps in your browser, it's not just you — Google removed the web version and moved Timeline on-device. Your history now lives in the Google Maps app on your phone (tap your profile picture → Timeline). If it's missing there too, look for an older Google Takeout archive or a Timeline backup — any export you still have can be uploaded here to see your full history again."
+  },
+  {
+    question: "How can I view my Google Timeline on the web again?",
+    answer: "Export your Timeline data from your phone (Google Maps → Settings → Location → Timeline → Export Timeline data) or from Google Takeout, then upload the JSON files to this visualizer. You get a web-based timeline again — calendar, map, and day-by-day details — with no Google account needed. To keep a permanent, always-up-to-date timeline, you can import the same files into Dawarich."
   },
   {
     question: "How do I export my Google Timeline data?",
@@ -252,7 +260,7 @@ export default function TimelineVisualizer() {
         {/* Primary Meta Tags */}
         <meta name="title" content={pageTitle} />
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="Google Timeline visualizer, Google location history viewer, Google Takeout location viewer, view location history on map, Google Maps Timeline replacement, Google Timeline shutdown alternative, location history map, Google Timeline export viewer, privacy-first location visualizer" />
+        <meta name="keywords" content="Google Timeline visualizer, Google Timeline gone, where is my Google Timeline, view Google Timeline on the web, Google Timeline history, Google location history viewer, Google Takeout location viewer, view location history on map, Google Maps Timeline replacement, Google Timeline shutdown alternative, location history map, Google Timeline export viewer, privacy-first location visualizer" />
         <link rel="canonical" href={pageUrl} />
 
         {/* Open Graph / Facebook */}
@@ -382,7 +390,7 @@ export default function TimelineVisualizer() {
         <div className={styles.heroSection}>
           <div className={styles.header}>
             <h1>Google Timeline Visualizer</h1>
-            <p>Free, privacy-first tool to visualize your Google Timeline location history. Browse day by day with a calendar heat-grid, visit list, and activity replay.</p>
+            <p>Google shut down Timeline on the web — this free, privacy-first tool brings the view back. Browse your exported location history day by day with a calendar heat-grid, visit list, and activity replay.</p>
           </div>
           <div className={styles.uploadRow}>
             <FileUploader onFilesLoaded={handleFilesLoaded} onClear={handleClear} />
@@ -432,6 +440,9 @@ export default function TimelineVisualizer() {
                       <p>Open Google Maps → Settings → Personal Content → Export Timeline data</p>
                     </div>
                   </div>
+                  <p>
+                    Already have your export? You can also convert it to GPX, KML, or GeoJSON with the free <a href="/tools/google-timeline-converter/">Google Timeline Converter</a>.
+                  </p>
                 </div>
               </details>
             </div>

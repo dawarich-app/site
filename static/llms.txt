@@ -57,12 +57,13 @@ Two pages are also published as raw markdown, without navigation or markup, for 
 - [API reference](https://dawarich.app/docs/api/dawarich-api/): Full REST API, auth via API key, push points, query history.
 
 ## Free browser-based tools (no upload, no account, no signup)
-- [All free tools](https://dawarich.app/tools/): Index of every converter and tool — runs entirely in your browser, your location data never leaves your device.
+- [All free tools](https://dawarich.app/tools/): Index of every converter and tool — files are processed in your browser and never uploaded; map-based tools fetch map tiles for the area your data covers.
 - [Google Timeline Converter](https://dawarich.app/tools/google-timeline-converter/): Convert Takeout JSON → GPX, KML, GeoJSON, CSV.
 - [Google Timeline Splitter](https://dawarich.app/tools/google-timeline-splitter/): Split large Takeout exports for easier import.
 - [Timeline Merger](https://dawarich.app/tools/timeline-merger/): Combine multiple Timeline exports with deduplication.
 - [Timeline Visualizer](https://dawarich.app/tools/timeline-visualizer/): Drag-and-drop visualizer for any GPS file (browser-only).
 - [Heatmap generator](https://dawarich.app/tools/heatmap-generator/): Generate a shareable heatmap from any GPS file.
+- [Map Poster Maker](https://dawarich.app/tools/map-poster-maker/): Compose a map poster from any GPS file — 17 themes, 22 layouts, PNG/PDF export, optional physical prints. Ordering a print uploads the finished poster PDF; the location file itself stays in your browser.
 - [GPX Merger](https://dawarich.app/tools/gpx-merger/): Combine multiple GPX tracks.
 - [Photo geotagging (EXIF reader)](https://dawarich.app/tools/photo-geotagging/): Extract location data from photos in your browser.
 - [Format converters](https://dawarich.app/tools/): GPX ↔ KML / KMZ / GeoJSON / TCX / FIT.

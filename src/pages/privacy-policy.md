@@ -50,6 +50,7 @@ All listed processors are bound by DPAs under Art. 28 GDPR. We do not sell data 
 | Google LLC | Google Play distribution | United States |
 | Stripe Payments Europe, Ltd. | Payment processing for poster print orders | Ireland (EU); parent Stripe, Inc. (US) |
 | Gelato ASA | Poster printing and shipping (receives shipping details and the poster file) | Norway (EEA); production within the EU |
+| Partnero, Inc. | Affiliate-referral attribution — receives your email and name only if you arrived via an affiliate link | United States |
 
 **International transfers:** UK (Paddle) is covered by the EU adequacy decision. Norway (Gelato) is in the EEA, where the GDPR applies directly. US transfers rely on the EU-US Data Privacy Framework where the provider is certified, and on Standard Contractual Clauses (Art. 46 GDPR) otherwise.
 
@@ -80,6 +81,7 @@ On `dawarich.app` we use:
 | Cookieless analytics | Aggregate traffic | No | Simple Analytics |
 | Advertising | Google Ads conversion tracking | **Yes** | Google Ads |
 | Email analytics | Brevo tracking pixel | **Yes** | Brevo |
+| Affiliate attribution | Credit a referring partner for a sign-up | **Yes** | Partnero |
 
 To withdraw consent after accepting, delete the `dawarichCookieConsent` cookie and reload. On `my.dawarich.app` we additionally use first-party session cookies strictly necessary for login.
 
@@ -101,10 +103,11 @@ We will notify you of **material changes** (new purposes, new processors, change
 
 ## Last updated
 
-Effective **2026-07-28**. Contact for all privacy matters: **hi@dawarich.app**.
+Effective **2026-08-12**. Contact for all privacy matters: **hi@dawarich.app**.
 
 | When          | What          |
 | ------------- | ------------- |
+| 2026-08-12    | Added Partnero as a processor for affiliate-referral attribution, and the affiliate cookie to the cookie table |
 | 2026-07-28    | Disclosed tool uploads held for signup ("Save to my Dawarich account") and their 24-hour deletion window |
 | 2026-07-18    | Added poster print orders: order data, Stripe and Gelato processors, print-file retention (48h unpaid / 90 days paid) |
 | 2026-04-21    | Added processor list, legal bases, rights, supervisory authority, transfers, cookie table; age to 16; reflected STORE_GEODATA=false; 30-day notice for material changes |

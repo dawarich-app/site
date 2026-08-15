@@ -120,7 +120,7 @@ const RELATED = {
   ],
   'timeline-visualizer': [
     { href: '/interactive-map/',        label: 'Interactive Map',    note: 'Full visualization in Dawarich' },
-    { href: '/tools/heatmap-generator/',label: 'Heatmap Generator',  note: 'Aggregate density view' },
+    { href: '/tools/map-poster-maker/', label: 'Map Poster Maker',   note: 'Turn the same file into wall art' },
     { href: '/tools/timeline-statistics/', label: 'Timeline Statistics', note: 'Numbers behind the map' },
   ],
   'timeline-statistics': [
@@ -137,7 +137,7 @@ const RELATED = {
   // ───── Mergers / splitters / generic ─────
   'gpx-merger': [
     { href: '/tools/gps-file-splitter/', label: 'GPS File Splitter', note: 'Reverse direction' },
-    { href: '/tools/gpx-to-kml/',       label: 'GPX to KML',         note: 'Convert merged file' },
+    { href: '/tools/map-poster-maker/', label: 'Map Poster Maker',   note: 'Print the merged track' },
     { href: '/import-export/',          label: 'Import & Export',    note: 'Bring merged data into Dawarich' },
   ],
   'gps-file-splitter': [
@@ -148,7 +148,12 @@ const RELATED = {
   'heatmap-generator': [
     { href: '/interactive-map/',        label: 'Interactive Map',    note: 'Heatmap layer + tracks + visits' },
     { href: '/tools/timeline-visualizer/', label: 'Timeline Visualizer', note: 'Per-track view' },
-    { href: '/tools/timeline-statistics/', label: 'Timeline Statistics', note: 'Numbers for the same data' },
+    { href: '/tools/map-poster-maker/', label: 'Map Poster Maker',   note: 'Same file, printable poster' },
+  ],
+  'map-poster-maker': [
+    { href: '/poster-studio/',          label: 'Poster Studio in Dawarich', note: 'Print any month of your history' },
+    { href: '/tools/heatmap-generator/', label: 'Heatmap Generator', note: 'Density view of the same file' },
+    { href: '/tools/gpx-merger/',       label: 'GPX Merger',         note: 'Combine tracks into one poster' },
   ],
   'photo-geotagging': [
     { href: '/integrations/',           label: 'Photo Integrations', note: 'Immich & PhotoPrism geodata import' },

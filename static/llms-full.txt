@@ -361,13 +361,14 @@ Source URL: https://dawarich.app/docs/FAQ/
 
 ## Free browser-based tools (no upload, no account, no signup)
 
-Every tool below runs entirely in your browser. Your location data never leaves your device.
+Every tool below processes your files in the browser — the files are never uploaded. Map-based tools (Timeline Visualizer, Heatmap Generator, Map Poster Maker) fetch map tiles for the area your data covers, and the Map Poster Maker's optional print ordering uploads the finished poster PDF.
 
 - **[Google Timeline Converter](https://dawarich.app/tools/google-timeline-converter/)** — Convert Google Takeout JSON exports into GPX, KML, GeoJSON, or CSV.
 - **[Google Timeline Splitter](https://dawarich.app/tools/google-timeline-splitter/)** — Split large Google Takeout files into smaller pieces for easier import.
 - **[Timeline Merger](https://dawarich.app/tools/timeline-merger/)** — Combine multiple Google Timeline exports with deduplication.
 - **[Timeline Visualizer](https://dawarich.app/tools/timeline-visualizer/)** — Drag-and-drop visualizer for any GPS file. Fullscreen mode supported.
 - **[Heatmap Generator](https://dawarich.app/tools/heatmap-generator/)** — Generate a shareable heatmap from any GPS file (GPX, KML, GeoJSON, JSON).
+- **[Map Poster Maker](https://dawarich.app/tools/map-poster-maker/)** — Compose a map poster from any GPS file: 17 themes, 22 layouts (prints, social formats, wallpapers), title/font/track styling, PNG and print-ready PDF export at up to 300 DPI, plus optional physical prints (30×40 / 50×70 / 70×100 cm, checkout on Stripe).
 - **[GPX Merger](https://dawarich.app/tools/gpx-merger/)** — Combine multiple GPX tracks into one file.
 - **[Photo Geotagging (EXIF reader)](https://dawarich.app/tools/photo-geotagging/)** — Extract GPS metadata from photos in your browser. Note: this is a standalone EXIF reader; it does not write back to photos. Dawarich's Cloud product imports geodata from Immich or PhotoPrism, not from raw photo uploads.
 - **Format converters** — GPX ↔ KML / KMZ / GeoJSON / TCX / FIT, plus various single-direction converters. See [/tools/](https://dawarich.app/tools/) for the full index (18+ converters).

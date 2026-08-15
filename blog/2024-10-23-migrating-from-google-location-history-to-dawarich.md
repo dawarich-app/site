@@ -20,6 +20,8 @@ The least you can do is to export your data from Google. You can do it either us
 
 <!-- truncate -->
 
+If you want to inspect your export before importing it anywhere, the free [Google Timeline Visualizer](/tools/timeline-visualizer/) shows it on a map right in your browser, and the [Google Timeline Converter](/tools/google-timeline-converter/) turns it into GPX, KML, or GeoJSON.
+
 ## What's next?
 
 That's where Dawarich comes in very handy. Although Google lacks consistency when it comes to the export file format, Dawarich already supports all three (3) kinds of files that you can get from Google.
