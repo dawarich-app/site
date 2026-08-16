@@ -70,7 +70,7 @@ export default function PricingPage() {
 							{
 								"@type": "Offer",
 								name: "Pro (annual)",
-								price: "179.99",
+								price: "149.99",
 								priceCurrency: "EUR",
 								availability: "https://schema.org/InStock",
 								url: "https://dawarich.app/pricing/",

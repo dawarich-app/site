@@ -258,7 +258,7 @@ function CompetitorReframe() {
 							</tr>
 							<tr className={sections.highlight}>
 								<td>Dawarich Cloud Pro</td>
-								<td>&euro;179.99/yr</td>
+								<td>&euro;149.99/yr</td>
 								<td>Full lifetime history, heatmaps, trips, stats</td>
 								<td>Nothing. Ever.</td>
 							</tr>

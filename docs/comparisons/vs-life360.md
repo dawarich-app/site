@@ -70,7 +70,7 @@ Dawarich takes the opposite approach: your data stays on your server (self-hoste
 | Plan | Dawarich | Life360 |
 |------|----------|---------|
 | Free tier | ✅ Self-hosted (unlimited) | ✅ (limited features, 2-day history) |
-| Paid cloud | €180/year or €18/month | ~$8-25/month depending on plan |
+| Paid cloud | €150/year or €18/month | ~$8-25/month depending on plan |
 | Free trial | 7-day Cloud trial | Free tier available |
 | Data limits | Unlimited | History limited by plan |
 
