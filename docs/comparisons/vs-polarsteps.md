@@ -72,7 +72,7 @@ While Polarsteps focuses on **travel journaling and social sharing**, Dawarich f
 | Plan | Dawarich | Polarsteps |
 |------|----------|------------|
 | Free tier | ✅ Self-hosted (unlimited) | ✅ (basic features) |
-| Paid cloud | €180/year or €18/month | €30/year (Plus) |
+| Paid cloud | €150/year or €18/month | €30/year (Plus) |
 | Free trial | 7-day Cloud trial | Free tier available |
 | Premium features | All features in all plans | Travel books, offline maps, advanced stats |
 

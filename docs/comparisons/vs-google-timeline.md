@@ -106,7 +106,7 @@ If your Takeout file is enormous, run it through the [Timeline Splitter](/tools/
 ## Frequently asked questions
 
 **Is Dawarich free?**
-Yes — self-hosted is free and open source under AGPLv3. Dawarich Cloud (managed hosting in Germany) starts at €59.99/yr (Lite) or €17.99/mo / €179.99/yr (Pro).
+Yes — self-hosted is free and open source under AGPLv3. Dawarich Cloud (managed hosting in Germany) starts at €59.99/yr (Lite) or €17.99/mo / €149.99/yr (Pro).
 
 **Will Dawarich import my old Google Timeline data?**
 Yes. Dawarich auto-detects all the major Google Timeline export formats: Records.json, Semantic Location History (the monthly `YYYY_MONTH.json` files), the newer on-phone export, and the legacy formats. See [the import guide](/docs/getting-started/import-existing-data/).

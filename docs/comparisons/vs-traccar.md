@@ -72,7 +72,7 @@ Both Dawarich and Traccar are open source and self-hosted, but they serve differ
 | Plan | Dawarich | Traccar |
 |------|----------|---------|
 | Self-hosted | Free (open source) | Free (open source) |
-| Cloud | €180/year or €18/month | $6-60/month (by device count) |
+| Cloud | €150/year or €18/month | $6-60/month (by device count) |
 | Free trial | 7-day Cloud trial | Free demo |
 
 ## When to Choose Dawarich

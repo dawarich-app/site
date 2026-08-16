@@ -214,7 +214,7 @@ export default function Home() {
 									{
 										"@type": "Offer",
 										name: "Dawarich Cloud — Pro (annual)",
-										price: "179.99",
+										price: "149.99",
 										priceCurrency: "EUR",
 										url: "https://dawarich.app/#pricing",
 									},
