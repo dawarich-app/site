@@ -1,8 +1,13 @@
 import React from 'react';
 import CookieConsent from 'react-cookie-consent';
+import { saveReferralKey, clearReferralKey } from '@site/src/utils/utm';
 
 export default function CustomCookieConsent() {
   const handleAccept = () => {
+    // Page load refused to store the affiliate key without consent, so capture it
+    // now — the referral link's query param is still on the URL at this point.
+    saveReferralKey();
+
     const gtagScript = document.createElement('script');
     gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17899851408';
     gtagScript.async = true;
@@ -90,6 +95,7 @@ export default function CustomCookieConsent() {
       declineButtonStyle={declineButtonStyle}
       expires={150}
       onAccept={handleAccept}
+      onDecline={clearReferralKey}
     >
       We use a cookieless analytics service (Simple Analytics) that requires no consent.
       You can optionally accept cookies for Google Ads conversion tracking, Brevo email

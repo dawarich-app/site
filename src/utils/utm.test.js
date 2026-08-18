@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import {
+  hasTrackingConsent,
   buildOutboundUrl,
   saveOriginalUtmParams,
   clearOriginalUtmParams,
@@ -10,6 +11,21 @@ import {
 
 const SIGNUP = 'https://my.dawarich.app/users/sign_up';
 
+
+const CONSENT_COOKIE = 'dawarichCookieConsent';
+
+function grantConsent() {
+  document.cookie = `${CONSENT_COOKIE}=true; path=/`;
+}
+
+function declineConsent() {
+  document.cookie = `${CONSENT_COOKIE}=false; path=/`;
+}
+
+function clearConsent() {
+  document.cookie = `${CONSENT_COOKIE}=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+}
+
 function visit(search) {
   window.history.replaceState({}, '', `/${search}`);
 }
@@ -17,6 +33,7 @@ function visit(search) {
 describe('referral (via) preservation', () => {
   beforeEach(() => {
     localStorage.clear();
+    grantConsent();
     clearOriginalUtmParams();
     clearReferralKey();
     visit('');
@@ -127,5 +144,65 @@ describe('referral (via) preservation', () => {
     localStorage.setItem('partnero_referral', JSON.stringify(stored));
 
     expect(getReferralKey()).toBeNull();
+  });
+});
+
+// The cookie banner and the privacy policy both state that affiliate referral
+// credit requires consent. These pin the code to that promise.
+describe('referral consent gate', () => {
+  beforeEach(() => {
+    localStorage.clear();
+    clearConsent();
+    visit('');
+  });
+
+  it('treats an unanswered banner as no consent', () => {
+    expect(hasTrackingConsent()).toBe(false);
+  });
+
+  it('does not store a referral key before the banner is answered', () => {
+    visit('?aff=PARTNER123');
+    saveReferralKey();
+
+    expect(localStorage.getItem('partnero_referral')).toBeNull();
+    expect(getReferralKey()).toBeNull();
+  });
+
+  it('does not store a referral key when consent is declined', () => {
+    declineConsent();
+    visit('?aff=PARTNER123');
+    saveReferralKey();
+
+    expect(localStorage.getItem('partnero_referral')).toBeNull();
+  });
+
+  it('stores the key once consent is granted', () => {
+    grantConsent();
+    visit('?aff=PARTNER123');
+    saveReferralKey();
+
+    expect(getReferralKey()).toBe('PARTNER123');
+  });
+
+  it('forgets a key already stored if consent is later declined', () => {
+    grantConsent();
+    visit('?aff=PARTNER123');
+    saveReferralKey();
+    expect(getReferralKey()).toBe('PARTNER123');
+
+    declineConsent();
+
+    expect(getReferralKey()).toBeNull();
+    expect(localStorage.getItem('partnero_referral')).toBeNull();
+  });
+
+  it('does not append a referral param to outbound links without consent', () => {
+    grantConsent();
+    visit('?aff=PARTNER123');
+    saveReferralKey();
+
+    declineConsent();
+
+    expect(buildOutboundUrl(SIGNUP)).toBe(SIGNUP);
   });
 });

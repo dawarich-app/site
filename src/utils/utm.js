@@ -28,6 +28,11 @@ const STORAGE_DURATION = 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
 // that is what the program's own snippet writes. The key is forwarded under the
 // param it arrived on, so the app sees exactly what Partnero produced.
 const REFERRAL_PARAMS = ['aff', 'via'];
+
+// Set by the cookie banner (src/components/CookieConsent.js). The affiliate key
+// is not strictly necessary under § 25 TTDSG, and both the banner and the privacy
+// policy tell visitors it is only stored if they accept — so the code has to ask.
+const CONSENT_COOKIE = 'dawarichCookieConsent';
 const REFERRAL_STORAGE_KEY = 'partnero_referral';
 // Keep at or above the cookie lifetime configured in the Partnero program, otherwise
 // the site stops forwarding a key that Partnero would still have honoured.
@@ -76,6 +81,20 @@ export function saveOriginalUtmParams() {
 }
 
 /**
+ * Whether the visitor accepted the cookie banner.
+ *
+ * An unanswered banner is not consent, so anything but an explicit "true" means no.
+ */
+export function hasTrackingConsent() {
+  if (typeof document === 'undefined') return false;
+
+  return document.cookie
+    .split(';')
+    .map((entry) => entry.trim())
+    .some((entry) => entry === `${CONSENT_COOKIE}=true`);
+}
+
+/**
  * Save the Partnero affiliate key from the URL.
  *
  * Unlike UTM params this is last-touch: a visitor arriving through a newer affiliate
@@ -85,6 +104,7 @@ export function saveOriginalUtmParams() {
  */
 export function saveReferralKey() {
   if (typeof window === 'undefined') return;
+  if (!hasTrackingConsent()) return;
 
   const search = new URLSearchParams(window.location.search);
   const param = REFERRAL_PARAMS.find((name) => search.get(name));
@@ -101,6 +121,13 @@ export function saveReferralKey() {
  */
 export function getReferralKey() {
   if (typeof window === 'undefined') return null;
+
+  // Consent can be withdrawn after a key was stored; drop it rather than keep
+  // forwarding a referral the visitor has since refused.
+  if (!hasTrackingConsent()) {
+    clearReferralKey();
+    return null;
+  }
 
   try {
     const stored = localStorage.getItem(REFERRAL_STORAGE_KEY);
