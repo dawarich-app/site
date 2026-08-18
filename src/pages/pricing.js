@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import Head from "@docusaurus/Head";
 import Layout from "@theme/Layout";
+import Link from "@docusaurus/Link";
 import { initializePaddle } from "@paddle/paddle-js";
+import { COMMISSION_PERCENT } from "@site/src/data/affiliateProgram";
 import PricingSection from "@site/src/components/PricingSection";
 import PricingCompare from "@site/src/components/PricingCompare";
 import FAQ from "@site/src/components/FAQ";
@@ -101,6 +103,13 @@ export default function PricingPage() {
 			<main>
 				<PricingSection />
 				<PricingCompare />
+				<p className="margin-top--lg text--center">
+					Writing about Dawarich?{" "}
+					<Link to="/affiliate">
+						Earn {COMMISSION_PERCENT}% of the first year
+					</Link>{" "}
+					for every subscriber you refer.
+				</p>
 				<FAQ />
 			</main>
 		</Layout>

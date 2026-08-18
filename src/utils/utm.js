@@ -31,7 +31,9 @@ const REFERRAL_PARAMS = ['aff', 'via'];
 const REFERRAL_STORAGE_KEY = 'partnero_referral';
 // Keep at or above the cookie lifetime configured in the Partnero program, otherwise
 // the site stops forwarding a key that Partnero would still have honoured.
-const REFERRAL_STORAGE_DURATION = 90 * 24 * 60 * 60 * 1000; // 90 days in milliseconds
+// Exported so affiliateProgram.js/its tests can assert the advertised
+// COOKIE_WINDOW_DAYS actually matches what this file enforces.
+export const REFERRAL_STORAGE_DURATION = 90 * 24 * 60 * 60 * 1000; // 90 days in milliseconds
 
 /**
  * Get UTM parameters from URL
