@@ -23,6 +23,7 @@ export const footerLinks = [
       { label: 'Map Poster Studio', to: '/poster-studio' },
       { label: 'Pricing', to: '/pricing' },
       { label: 'Dawarich Cloud', to: '/cloud' },
+      { label: 'Affiliate Program', to: '/affiliate' },
       { label: 'Roadmap', to: '/roadmap' },
       { label: 'Changelog', to: '/docs/changelog' },
     ],

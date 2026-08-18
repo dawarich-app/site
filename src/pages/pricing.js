@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Head from "@docusaurus/Head";
 import Layout from "@theme/Layout";
+import Link from "@docusaurus/Link";
 import { initializePaddle } from "@paddle/paddle-js";
 import PricingSection from "@site/src/components/PricingSection";
 import PricingCompare from "@site/src/components/PricingCompare";
@@ -101,6 +102,10 @@ export default function PricingPage() {
 			<main>
 				<PricingSection />
 				<PricingCompare />
+				<p className="margin-top--lg text--center">
+					Writing about Dawarich? <Link to="/affiliate">Earn 40% of the first year</Link> for
+					every subscriber you refer.
+				</p>
 				<FAQ />
 			</main>
 		</Layout>
