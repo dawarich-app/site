@@ -69,7 +69,7 @@ const objections = [
 export default function AffiliatePage() {
   return (
     <Layout
-      title="Affiliate Program — Earn 40% of the First Year"
+      title={`Affiliate Program — Earn ${PERCENT} of the First Year`}
       description={`Earn ${PERCENT} of first-year revenue for every Dawarich Cloud subscriber you refer. ${COOKIE_WINDOW_DAYS}-day window, server-side attribution, paid after the refund window.`}>
       <Head>
         <meta property="og:title" content="Dawarich Affiliate Program" />
