@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 import { PitchPage, Objections, ProofStrip } from '@site/src/components/pitch';
 import pitch from '@site/src/components/pitch/Pitch.module.css';
 import {
-  COMMISSION_RATE,
+  COMMISSION_PERCENT,
   COOKIE_WINDOW_DAYS,
   REVIEW_PERIOD_DAYS,
   PORTAL_SIGNUP_URL,
@@ -13,9 +13,10 @@ import {
 } from '@site/src/data/affiliateProgram';
 import styles from './styles.module.css';
 
-const PERCENT = `${Math.round(COMMISSION_RATE * 100)}%`;
+const PERCENT = `${COMMISSION_PERCENT}%`;
 const HEADLINE = EARNINGS.find((r) => r.key === 'proAnnual');
 const money = (n) => `€${n.toFixed(2)}`;
+const moneyShort = (n) => (Number.isInteger(n) ? `€${n}` : money(n));
 
 const STATS = [
   { value: `${PERCENT} of the first year`, label: 'On every plan, including renewals within that year' },
@@ -27,7 +28,7 @@ const HOW = [
   {
     title: 'Your link works even when cookies do not',
     body:
-      'Most affiliate programs live and die by a browser cookie. Ours records the referral on our servers the moment the account is created, so a visitor who clears cookies, declines the banner, or switches from your blog to their laptop is still credited to you.',
+      'Most affiliate programs live and die by a browser cookie. Your referral is recorded on our servers the moment the account is created, so it survives the gap between someone reading your post and deciding to sign up days later — as long as they come back in the same browser.',
     note: 'Server-side attribution',
   },
   {
@@ -86,9 +87,9 @@ export default function AffiliatePage() {
         <section className={pitch.hero}>
           <div className={pitch.container}>
             <h1 className={pitch.heroTitle}>
-              Earn {money(HEADLINE.commission)} for every Pro
+              Earn {moneyShort(HEADLINE.commission)} for every annual Pro
               <br />
-              <em>subscriber you send us.</em>
+              <span className={pitch.accent}>subscriber you send us.</span>
             </h1>
             <p className={pitch.heroSub}>
               Dawarich is a private alternative to Google Timeline. If you write about privacy,
@@ -131,9 +132,9 @@ export default function AffiliatePage() {
               <table className={styles.table}>
                 <thead>
                   <tr>
-                    <th>Plan</th>
-                    <th>They pay</th>
-                    <th>You earn</th>
+                    <th scope="col">Plan</th>
+                    <th scope="col">They pay</th>
+                    <th scope="col">You earn</th>
                   </tr>
                 </thead>
                 <tbody>

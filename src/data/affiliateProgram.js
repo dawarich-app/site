@@ -7,6 +7,10 @@ import { PLANS } from './pricingPlans';
  */
 
 export const COMMISSION_RATE = 0.4;
+// Whole-percent form of COMMISSION_RATE, exported so pages that display the
+// rate as text (affiliate page, pricing page) derive it from one place
+// instead of each computing Math.round(COMMISSION_RATE * 100) themselves.
+export const COMMISSION_PERCENT = Math.round(COMMISSION_RATE * 100);
 export const COOKIE_WINDOW_DAYS = 90;
 export const REVIEW_PERIOD_DAYS = 14;
 
@@ -15,10 +19,21 @@ export const REVIEW_PERIOD_DAYS = 14;
 export const PORTAL_SIGNUP_URL = 'https://dawarich.partneroapp.com/register';
 
 const euros = (price) => {
-  // Strip leading currency symbol (€, $, etc.) and thousands separators (,)
-  const cleaned = String(price)
-    .replace(/^[^\d.-]*/, '') // Remove leading non-digit chars (currency symbols)
-    .replace(/,/g, ''); // Remove thousands separators
+  // Strip leading currency symbol (€, $, etc.) only — commas are handled below.
+  const stripped = String(price).replace(/^[^\d.-]*/, '');
+
+  // A string with both '.' and ',' is ambiguous: "1,299.99" (US: comma
+  // thousands, dot decimal) and "1.299,99" (European: dot thousands, comma
+  // decimal) look similar but parse to very different numbers. Refuse to
+  // guess — every real price here is well under 1,000 and never needs a
+  // thousands separator at all.
+  if (stripped.includes('.') && stripped.includes(',')) {
+    throw new Error(
+      `euros() received an ambiguous price: ${JSON.stringify(price)}. A string with both '.' and ',' could be US or European formatting — pass a plain decimal number or string instead.`
+    );
+  }
+
+  const cleaned = stripped.replace(/,/g, ''); // Remove thousands separators
 
   const num = Number.parseFloat(cleaned);
 
@@ -41,14 +56,21 @@ const row = (key, plan, basis, firstYearRevenue, note = null) => ({
   note,
 });
 
+const proMonthlyRevenue = euros(PLANS.pro.priceMonthly) * 12;
+const proMonthlyCommission = commissionOn(proMonthlyRevenue);
+// What actually lands in the dashboard on each of the 12 payments, not just
+// the first-year total — derived from the row's own commission so it can
+// never drift out of sync with the number shown in the "You earn" column.
+const proMonthlyPerPayment = Math.round((proMonthlyCommission / 12) * 100) / 100;
+
 export const EARNINGS = [
   row('proAnnual', 'Pro', `€${PLANS.pro.price}/year`, euros(PLANS.pro.price)),
   row(
     'proMonthly',
     'Pro',
     `€${PLANS.pro.priceMonthly}/month`,
-    euros(PLANS.pro.priceMonthly) * 12,
-    'Paid across 12 payments, and stops early if they cancel.'
+    proMonthlyRevenue,
+    `€${proMonthlyPerPayment.toFixed(2)} on each of the first 12 payments, and stops early if they cancel.`
   ),
   row('family', 'Family', `€${PLANS.family.price}/year`, euros(PLANS.family.price)),
   row('lite', 'Lite', `€${PLANS.lite.price}/year`, euros(PLANS.lite.price)),

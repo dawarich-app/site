@@ -3,7 +3,7 @@ import Head from "@docusaurus/Head";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import { initializePaddle } from "@paddle/paddle-js";
-import { COMMISSION_RATE } from "@site/src/data/affiliateProgram";
+import { COMMISSION_PERCENT } from "@site/src/data/affiliateProgram";
 import PricingSection from "@site/src/components/PricingSection";
 import PricingCompare from "@site/src/components/PricingCompare";
 import FAQ from "@site/src/components/FAQ";
@@ -106,7 +106,7 @@ export default function PricingPage() {
 				<p className="margin-top--lg text--center">
 					Writing about Dawarich?{" "}
 					<Link to="/affiliate">
-						Earn {Math.round(COMMISSION_RATE * 100)}% of the first year
+						Earn {COMMISSION_PERCENT}% of the first year
 					</Link>{" "}
 					for every subscriber you refer.
 				</p>

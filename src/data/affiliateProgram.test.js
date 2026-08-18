@@ -1,7 +1,9 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { PLANS } from './pricingPlans';
+import { REFERRAL_STORAGE_DURATION } from '../utils/utm';
 import {
   COMMISSION_RATE,
+  COMMISSION_PERCENT,
   COOKIE_WINDOW_DAYS,
   PORTAL_SIGNUP_URL,
   EARNINGS,
@@ -33,12 +35,16 @@ describe('affiliate program data', () => {
     expect(monthly.note).toMatch(/12 payments/i);
   });
 
-  it('states the cookie window the code actually honours', () => {
-    expect(COOKIE_WINDOW_DAYS).toBe(90);
+  it('advertises the window the forwarding code actually honours', () => {
+    expect(COOKIE_WINDOW_DAYS * 24 * 60 * 60 * 1000).toBe(REFERRAL_STORAGE_DURATION);
   });
 
   it('sends new affiliates to the register page, not the login page', () => {
     expect(PORTAL_SIGNUP_URL).toBe('https://dawarich.partneroapp.com/register');
+  });
+
+  it('exposes the commission rate as the whole percent shown on the page', () => {
+    expect(COMMISSION_PERCENT).toBe(Math.round(COMMISSION_RATE * 100));
   });
 });
 
@@ -57,7 +63,6 @@ describe('euros() price parser', () => {
   it('removes thousands separators', async () => {
     const { parseEurosForTest } = await import('./affiliateProgram');
     expect(parseEurosForTest('1,039')).toBe(1039);
-    expect(parseEurosForTest('1,299.99')).toBe(1299.99);
   });
 
   it('throws on invalid/non-finite values', async () => {
@@ -65,6 +70,16 @@ describe('euros() price parser', () => {
     expect(() => parseEurosForTest('not a number')).toThrow();
     expect(() => parseEurosForTest('€abc')).toThrow();
     expect(() => parseEurosForTest(NaN)).toThrow();
+  });
+
+  it('throws on strings mixing "." and "," instead of guessing the format', async () => {
+    const { parseEurosForTest } = await import('./affiliateProgram');
+    // European formatting (dot thousands, comma decimal) — would silently
+    // become 1.29999 if commas were just stripped.
+    expect(() => parseEurosForTest('1.299,99')).toThrow();
+    // US formatting (comma thousands, dot decimal) is equally ambiguous
+    // once both separators can appear, so it is rejected too.
+    expect(() => parseEurosForTest('1,299.99')).toThrow();
   });
 });
 
