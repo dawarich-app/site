@@ -7,7 +7,7 @@ import FileUploader from '@site/src/components/FileUploader';
 import SaveToAccountButton from '@site/src/components/SaveToAccountButton';
 import TimelinePanel from '@site/src/components/TimelinePanel/TimelinePanel';
 import { parseTimeline } from '@site/src/utils/timelineParser';
-import { SAMPLE_DAY } from '@site/src/utils/sampleBerlinData';
+import { loadDemoTimeline } from '@site/src/utils/demoTimeline';
 import { buildDayIndex, buildYearStats, buildMonthGrid } from '@site/src/utils/timelineDays';
 import styles from './timeline-visualizer.module.css';
 
@@ -92,6 +92,8 @@ export default function TimelineVisualizer() {
   const [expandedTrackId, setExpandedTrackId] = useState(null);
   const [replayState, setReplayState] = useState(null);
 
+  const [demo, setDemo] = useState(() => ({ dayIndex: new Map(), yearStats: new Map(), latestDate: null }));
+
   const [isProcessing, setIsProcessing] = useState(false);
   const [ctaDismissed, setCtaDismissed] = useState(false);
 
@@ -99,21 +101,24 @@ export default function TimelineVisualizer() {
 
   const isShowingSample = uploadedFiles.length === 0 && points.length === 0;
 
-  // Demo: synthetic dayIndex/yearStats from SAMPLE_DAY
-  const demoDayIndex = useMemo(() => new Map([[SAMPLE_DAY.date, SAMPLE_DAY]]), []);
-  const demoYearStats = useMemo(() => new Map([[2024, { months: new Set(['2024-06']), totalDays: 1, busiestSeconds: SAMPLE_DAY.summary.trackedSeconds }]]), []);
+  const effectiveDayIndex = isShowingSample ? demo.dayIndex : dayIndex;
+  const effectiveYearStats = isShowingSample ? demo.yearStats : yearStats;
 
-  const effectiveDayIndex = isShowingSample ? demoDayIndex : dayIndex;
-  const effectiveYearStats = isShowingSample ? demoYearStats : yearStats;
+  // Demo: dawarich's own demo dataset, re-anchored to the last 30 days. Client
+  // side only — the anchor is the visitor's local midnight.
+  useEffect(() => { setDemo(loadDemoTimeline()); }, []);
+
+  // Default selection while the demo is showing — also on clear, which flips
+  // isShowingSample back to true.
+  useEffect(() => {
+    if (!isShowingSample || !demo.latestDate) return;
+    setSelectedYear(Number(demo.latestDate.slice(0, 4)));
+    setSelectedDate(demo.latestDate);
+    setVisibleMonth(demo.latestDate.slice(0, 7));
+  }, [isShowingSample, demo.latestDate]);
 
   // Default selection on file load
   useEffect(() => {
-    if (isShowingSample) {
-      setSelectedYear(2024);
-      setSelectedDate(SAMPLE_DAY.date);
-      setVisibleMonth(SAMPLE_DAY.date.slice(0, 7));
-      return;
-    }
     if (yearStats.size === 0) return;
     const latestYear = Math.max(...yearStats.keys());
     const days = [...dayIndex.keys()].filter((k) => k.startsWith(String(latestYear))).sort();
@@ -121,7 +126,7 @@ export default function TimelineVisualizer() {
     setSelectedYear(latestYear);
     setSelectedDate(latestDay);
     setVisibleMonth(latestDay.slice(0, 7));
-  }, [dayIndex, yearStats, isShowingSample]);
+  }, [dayIndex, yearStats]);
 
   const currentDay = useMemo(
     () => selectedDate ? effectiveDayIndex.get(selectedDate) : null,
