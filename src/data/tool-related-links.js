@@ -99,6 +99,7 @@ const RELATED = {
 
   // ───── Google Timeline tools ─────
   'google-timeline-converter': [
+    { href: '/tools/route-video-maker/', label: 'Route Video Maker', note: 'Turn your Timeline into a travel video' },
     { href: '/tools/google-timeline-splitter/', label: 'Timeline Splitter', note: 'Split a giant Takeout export' },
     { href: '/tools/timeline-merger/',  label: 'Timeline Merger',    note: 'Combine multiple exports' },
     { href: '/blog/migrating-from-google-location-history-to-dawarich/', label: 'Migration guide', note: 'Step-by-step move to Dawarich' },
@@ -119,6 +120,7 @@ const RELATED = {
     { href: '/blog/whats-inside-your-google-timeline-export/', label: "What's in a Timeline export", note: 'Format reference' },
   ],
   'timeline-visualizer': [
+    { href: '/tools/route-video-maker/', label: 'Route Video Maker', note: 'Turn the same file into a video' },
     { href: '/interactive-map/',        label: 'Interactive Map',    note: 'Full visualization in Dawarich' },
     { href: '/tools/map-poster-maker/', label: 'Map Poster Maker',   note: 'Turn the same file into wall art' },
     { href: '/tools/timeline-statistics/', label: 'Timeline Statistics', note: 'Numbers behind the map' },
@@ -152,8 +154,14 @@ const RELATED = {
   ],
   'map-poster-maker': [
     { href: '/poster-studio/',          label: 'Poster Studio in Dawarich', note: 'Print any month of your history' },
+    { href: '/tools/route-video-maker/', label: 'Route Video Maker', note: 'Same file, animated video' },
     { href: '/tools/heatmap-generator/', label: 'Heatmap Generator', note: 'Density view of the same file' },
     { href: '/tools/gpx-merger/',       label: 'GPX Merger',         note: 'Combine tracks into one poster' },
+  ],
+  'route-video-maker': [
+    { href: '/tools/map-poster-maker/', label: 'Map Poster Maker',   note: 'Same file, printable poster' },
+    { href: '/tools/heatmap-generator/', label: 'Heatmap Generator', note: 'Density view of the same file' },
+    { href: '/tools/gpx-merger/',       label: 'GPX Merger',         note: 'Combine tracks into one video' },
   ],
   'photo-geotagging': [
     { href: '/integrations/',           label: 'Photo Integrations', note: 'Immich & PhotoPrism geodata import' },
