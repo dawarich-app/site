@@ -71,6 +71,12 @@ const freeTools = [
     description: 'Compose a map poster from any GPS file — 17 themes, PNG/PDF export, optional prints.',
   },
   {
+    to: '/tools/route-video-maker',
+    icon: '🎬',
+    title: 'Route Video Maker',
+    description: 'Animate any GPS track into a shareable MP4 — the route draws itself across a styled map.',
+  },
+  {
     to: '/tools/gpx-merger',
     icon: '🔗',
     title: 'GPX Track Merger',
