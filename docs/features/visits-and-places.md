@@ -42,6 +42,8 @@ In the visit popup, you can:
 
 Places are saved locations that can be associated with visits. When you confirm a visit, the location is saved as a place.
 
+Places can also come from a file you import. Waypoints in a GPX file — for example the favourites exported by OsmAnd+ as `favourites.gpx` — are imported as places rather than as timeline points, and their category becomes a tag. See [Waypoints and favourites](/docs/getting-started/import-existing-data#waypoints-and-favourites) for details.
+
 ### Managing Places
 
 - Places can be viewed and managed in the Places section
