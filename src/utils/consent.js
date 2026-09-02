@@ -1,8 +1,11 @@
 /**
  * Consent gating for the tags that write to a visitor's device.
  *
- * Simple Analytics and Rybbit are cookieless and stay outside this module —
- * they need no consent under § 25(2) TTDSG. Everything here does.
+ * Simple Analytics stays outside this module: it is genuinely cookieless and
+ * needs no consent under § 25(2) TTDSG. Rybbit also stays outside it, but for a
+ * different reason — it writes a `rybbit-visitor-id` to localStorage before the
+ * banner, and the decision was to disclose that in § 6 of the privacy policy
+ * rather than gate it. Do not read its absence here as "it stores nothing".
  *
  * The Google tag is a special case. It has to be present on the page before
  * the visitor clicks anything, because the cross-domain linker can only
@@ -14,6 +17,25 @@
  */
 
 export const CONSENT_COOKIE_NAME = 'dawarichCookieConsent';
+// The banner's own cookie is host-only, because react-cookie-consent v9 ignores
+// a `domain` prop. The tag cookies below are not — gtag scopes `_gcl_au` to the
+// registrable domain — so expiry is attempted on both scopes for every name.
+export const SITE_COOKIE_DOMAIN = '.dawarich.app';
+
+// Cookies that only exist because consent was given, and so must not outlive it.
+const CONSENTED_COOKIES = [
+  '_gcl_au',
+  '_gcl_aw',
+  '_gcl_dc',
+  'sib_cuid',
+  'partnero_session_uuid',
+];
+
+// The same, for the storage the tags reach for when a cookie will not do.
+// § 25 TTDSG governs writing to the device, not the mechanism used to write.
+// `partnero_referral` is absent on purpose: utm.js owns it, and clearing it
+// there keeps utm.js -> consent.js a one-way dependency.
+const CONSENTED_STORAGE_KEYS = ['_gcl_ls', '__wpfvdk', '_wpinitialpermissionstate'];
 export const GOOGLE_ADS_ID = 'AW-17899851408';
 export const LINKER_DOMAINS = ['dawarich.app', 'my.dawarich.app'];
 
@@ -62,15 +84,42 @@ gtag('config', '${GOOGLE_ADS_ID}', {
 `.trim();
 }
 
+/**
+ * gtag.js dispatches a dataLayer entry to its consent command table only when
+ * the entry is an `arguments` object — an array is read as a legacy
+ * "call this method path" instruction instead, throws, and is swallowed by an
+ * empty catch. So the push has to go through a real gtag shim, never an array
+ * literal, or the command is silently dropped and consent never changes.
+ */
 function pushConsent(state) {
   if (typeof window === 'undefined') return;
   window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push(['consent', 'update', state]);
+  function gtag() {
+    window.dataLayer.push(arguments);
+  }
+  gtag('consent', 'update', state);
+}
+
+export const CONSENT_ACCEPTED = 'accepted';
+export const CONSENT_DECLINED = 'declined';
+export const CONSENT_UNANSWERED = 'unanswered';
+
+/**
+ * A declined banner and an unanswered one look the same to the tags — both mean
+ * denied — but only the first needs a way back, because the banner shows itself
+ * again while the cookie is absent and never once it has been set.
+ */
+export function readConsentChoice() {
+  if (typeof document === 'undefined') return CONSENT_UNANSWERED;
+
+  const entries = document.cookie.split('; ');
+  if (entries.indexOf(`${CONSENT_COOKIE_NAME}=true`) !== -1) return CONSENT_ACCEPTED;
+  if (entries.indexOf(`${CONSENT_COOKIE_NAME}=false`) !== -1) return CONSENT_DECLINED;
+  return CONSENT_UNANSWERED;
 }
 
 export function hasAcceptedConsent() {
-  if (typeof document === 'undefined') return false;
-  return document.cookie.split('; ').indexOf(`${CONSENT_COOKIE_NAME}=true`) !== -1;
+  return readConsentChoice() === CONSENT_ACCEPTED;
 }
 
 export function grantGoogleConsent() {
@@ -81,10 +130,36 @@ export function denyGoogleConsent() {
   pushConsent(DENIED_CONSENT);
 }
 
-let integrationsLoaded = false;
+/**
+ * Withdrawal has to be as easy as consent was to give, so this drops the stored
+ * answer and re-denies straight away rather than waiting for the next load.
+ * The banner reappears on the following render because its cookie is gone.
+ */
+function expireCookie(name) {
+  const expiry = 'expires=Thu, 01 Jan 1970 00:00:00 GMT';
+  document.cookie = `${name}=; path=/; ${expiry}`;
+  document.cookie = `${name}=; path=/; domain=${SITE_COOKIE_DOMAIN}; ${expiry}`;
+}
 
-export function resetConsentedIntegrationsForTest() {
-  integrationsLoaded = false;
+export function revokeConsent() {
+  if (typeof document === 'undefined') return;
+
+  expireCookie(CONSENT_COOKIE_NAME);
+  CONSENTED_COOKIES.forEach(expireCookie);
+
+  try {
+    CONSENTED_STORAGE_KEYS.forEach((key) => localStorage.removeItem(key));
+  } catch {
+    // Storage can be unavailable or full; the cookies are already gone.
+  }
+
+  denyGoogleConsent();
+}
+
+const TAG_MARKER = 'data-consent-tag';
+
+function alreadyLoaded(name) {
+  return document.querySelector(`script[${TAG_MARKER}="${name}"]`) !== null;
 }
 
 /**
@@ -97,17 +172,21 @@ export function resetConsentedIntegrationsForTest() {
  * visitor's stored consent was never honoured.
  */
 export function loadConsentedIntegrations() {
-  if (typeof document === 'undefined' || integrationsLoaded) return;
-  integrationsLoaded = true;
+  if (typeof document === 'undefined') return;
 
-  const brevoScript = document.createElement('script');
-  brevoScript.src = 'https://cdn.brevo.com/js/sdk-loader.js';
-  brevoScript.async = true;
-  brevoScript.onload = () => {
-    window.Brevo = window.Brevo || [];
-    window.Brevo.push(['init', { client_key: BREVO_CLIENT_KEY }]);
-  };
-  document.head.appendChild(brevoScript);
+  if (!alreadyLoaded('brevo')) {
+    const brevoScript = document.createElement('script');
+    brevoScript.src = 'https://cdn.brevo.com/js/sdk-loader.js';
+    brevoScript.async = true;
+    brevoScript.setAttribute(TAG_MARKER, 'brevo');
+    brevoScript.onload = () => {
+      window.Brevo = window.Brevo || [];
+      window.Brevo.push(['init', { client_key: BREVO_CLIENT_KEY }]);
+    };
+    document.head.appendChild(brevoScript);
+  }
+
+  if (alreadyLoaded('partnero')) return;
 
   // Partnero's queue stub has to exist before its script is appended, so calls
   // made while it downloads are replayed rather than thrown away.
@@ -124,6 +203,7 @@ export function loadConsentedIntegrations() {
   const partneroScript = document.createElement('script');
   partneroScript.src = `https://app.partnero.com/js/universal.js?v${~~(Date.now() / 1e6)}`;
   partneroScript.async = true;
+  partneroScript.setAttribute(TAG_MARKER, 'partnero');
   document.head.appendChild(partneroScript);
 
   window.po('settings', 'assets_host', 'https://assets.partnero.com');

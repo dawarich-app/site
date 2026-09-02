@@ -2,6 +2,8 @@
 title: Privacy Policy
 ---
 
+import CookiePreferences from '@site/src/components/CookiePreferences';
+
 # Dawarich Privacy Policy
 
 :::info TL;DR
@@ -52,6 +54,8 @@ All listed processors are bound by DPAs under Art. 28 GDPR. We do not sell data 
 | Gelato ASA | Poster printing and shipping (receives shipping details and the poster file) | Norway (EEA); production within the EU |
 | Partnero, Inc. | Affiliate-referral attribution — receives your email and name only if you arrived via an affiliate link | United States |
 
+Rybbit, the analytics tool named in section 6, runs on our own Hetzner infrastructure (`rybbit.dwri.xyz`) rather than a vendor's hosted service, so it adds no processor to this table — no third party receives that data.
+
 **International transfers:** UK (Paddle) is covered by the EU adequacy decision. Norway (Gelato) is in the EEA, where the GDPR applies directly. US transfers rely on the EU-US Data Privacy Framework where the provider is certified, and on Standard Contractual Clauses (Art. 46 GDPR) otherwise.
 
 ## 4. Retention
@@ -78,14 +82,25 @@ On `dawarich.app` we use:
 | Category | Purpose | Consent? | Provider |
 |---|---|---|---|
 | Strictly necessary | Remember your banner choice | No (§ 25(2) TTDSG) | First-party |
-| Cookieless analytics | Aggregate traffic | No | Simple Analytics, Rybbit |
-| Advertising | Google Ads conversion tracking | **Yes** | Google Ads |
+| Cookieless analytics | Aggregate traffic | No | Simple Analytics |
+| Site analytics | Aggregate traffic; stores a visitor ID in your browser's local storage | Not currently asked | Rybbit (self-hosted) |
+| Advertising | Google Ads conversion tracking — tag present on every page, storage denied until you accept | **Yes**, for storage | Google Ads |
 | Email analytics | Brevo tracking pixel | **Yes** | Brevo |
 | Affiliate attribution | Credit a referring partner for a sign-up | **Yes** | Partnero |
 
+Rybbit stores a randomly generated visitor ID in your browser's local storage so that repeat visits are counted as one visitor rather than several. It is written on the first page you open, before the banner appears, and we do not currently ask for consent before writing it. It contains no personal data, is never sent to a third party, and you can remove it by clearing site data for `dawarich.app`.
+
 The Google Ads tag is present on every page, but it runs under Google Consent Mode with `ad_storage`, `ad_user_data`, `ad_personalization` and `analytics_storage` all set to **denied** until you accept. In that state it writes no cookies and no identifiers to your device; if you never accept, or you decline, it stays denied. The Brevo and Partnero tags are not loaded at all before consent.
 
-To withdraw consent after accepting, delete the `dawarichCookieConsent` cookie and reload. On `my.dawarich.app` we additionally use first-party session cookies strictly necessary for login.
+Because the tag itself loads, it does send Google a cookieless request on each page view containing the page address, your IP address and browser user agent, with ad-click identifiers redacted. It sets nothing on your device and carries no identifier that would let Google recognise you on someone else's site — but it happens whether or not you accept.
+
+If you reached us from one of our ads, the tag also copies the ad-click identifier Google placed in your landing URL (`gclid`, alongside a `_gl` parameter) onto links you follow to `my.dawarich.app`, so that the click and the sign-up can be matched. This travels in the address bar rather than in a cookie, is limited to our own two domains, and also happens whether or not you accept. It is the reason we keep the tag loaded at all: without it, that link between an ad click and a sign-up is lost.
+
+To change your mind either way, use the control below — the **Cookie Settings** link in the footer of every page brings you back here. It clears your stored answer, switches Google Ads storage back off straight away, and reloads the page so the Brevo and Partnero tags stop running and the banner asks you again.
+
+<CookiePreferences />
+
+On `my.dawarich.app` we additionally use first-party session cookies strictly necessary for login.
 
 ## 7. Security
 
@@ -109,7 +124,7 @@ Effective **2026-09-02**. Contact for all privacy matters: **hi@dawarich.app**.
 
 | When          | What          |
 | ------------- | ------------- |
-| 2026-09-02    | Google Ads now loads denied-by-default under Google Consent Mode; documented that it stores nothing before consent. No new purposes or processors |
+| 2026-09-02    | Google Ads now loads denied-by-default under Google Consent Mode; disclosed the cookieless request it still sends before consent and the ad-click identifier passed to `my.dawarich.app` in the URL, and added a one-click control to withdraw or reconsider. Corrected the description of Rybbit, which stores a visitor ID rather than being cookieless, and recorded that it is self-hosted and adds no processor. No new purposes or processors |
 | 2026-08-12    | Added Partnero as a processor for affiliate-referral attribution, and the affiliate cookie to the cookie table |
 | 2026-07-28    | Disclosed tool uploads held for signup ("Save to my Dawarich account") and their 24-hour deletion window |
 | 2026-07-18    | Added poster print orders: order data, Stripe and Gelato processors, print-file retention (48h unpaid / 90 days paid) |

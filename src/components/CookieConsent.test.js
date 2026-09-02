@@ -1,16 +1,16 @@
 import React from 'react';
-import { describe, it, expect, beforeEach, afterEach } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { render, screen, cleanup, fireEvent } from '@testing-library/react';
 import CustomCookieConsent from './CookieConsent';
-import { CONSENT_COOKIE_NAME, resetConsentedIntegrationsForTest } from '@site/src/utils/consent';
+import { CONSENT_COOKIE_NAME } from '@site/src/utils/consent';
 
 function setConsentCookie(value) {
   document.cookie = `${CONSENT_COOKIE_NAME}=${value}; path=/`;
 }
 
-// The banner writes its cookie with `domain=.dawarich.app`, so expiring it
-// needs the same domain attribute or the value survives into the next test and
-// the banner mounts hidden.
+// react-cookie-consent v9 drops an unsupported `domain` prop, so the banner's
+// cookie is host-only on `path=/`. The domain-scoped expiry is kept only to
+// clear a cookie left over from a version where the attribute did apply.
 function clearConsentCookie() {
   const expiry = 'expires=Thu, 01 Jan 1970 00:00:00 GMT';
   document.cookie = `${CONSENT_COOKIE_NAME}=; path=/; ${expiry}`;
@@ -31,7 +31,7 @@ beforeEach(() => {
   clearConsentCookie();
   document.head.innerHTML = '';
   window.dataLayer = [];
-  resetConsentedIntegrationsForTest();
+  delete window.po;
 });
 
 afterEach(cleanup);
@@ -58,6 +58,17 @@ describe('CustomCookieConsent', () => {
 
     expect(srcs.some((s) => s.includes('brevo.com'))).toBe(true);
     expect(srcs.some((s) => s.includes('partnero.com'))).toBe(true);
+  });
+
+  it('survives a blocked script append instead of tearing down the page', () => {
+    setConsentCookie('true');
+    const spy = vi.spyOn(document.head, 'appendChild').mockImplementation(() => {
+      throw new Error('blocked by content security policy');
+    });
+
+    expect(() => render(<CustomCookieConsent />)).not.toThrow();
+
+    spy.mockRestore();
   });
 
   it('grants consent and loads the tags when Accept is clicked', () => {

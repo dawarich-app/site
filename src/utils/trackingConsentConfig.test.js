@@ -1,3 +1,5 @@
+import { readFileSync, readdirSync, statSync } from 'node:fs';
+import { join } from 'node:path';
 import { describe, it, expect } from 'vitest';
 import config from '@site/docusaurus.config.js';
 
@@ -57,8 +59,39 @@ describe('no advertising tag may load outside the consent bootstrap', () => {
     expect(order.indexOf('bootstrap')).toBeLessThan(order.indexOf('loader'));
   });
 
-  it('still loads the cookieless analytics that need no consent', () => {
+  it('still loads the analytics that are not gated behind the banner', () => {
     expect(scriptSrcs.some((s) => s.includes('simpleanalyticscdn.com'))).toBe(true);
     expect(scriptSrcs.some((s) => s.includes('rybbit'))).toBe(true);
+  });
+});
+
+// The Google tag loads on every page and is held back by Consent Mode, not by
+// the banner. Three separate pages used to say it only fires once you accept;
+// two of them were fixed in this change and the third was found by review.
+describe('no page claims the ad tag is withheld until consent', () => {
+  const STALE_CLAIMS = [
+    'only fire if you accept',
+    'fires only if you accept',
+    'only load if you click',
+    'only loads if you accept',
+  ];
+
+  function sourceFiles(dir) {
+    return readdirSync(dir).flatMap((entry) => {
+      const path = join(dir, entry);
+      if (statSync(path).isDirectory()) return sourceFiles(path);
+      return /\.(js|jsx|md|mdx)$/.test(entry) && !/\.test\./.test(entry) ? [path] : [];
+    });
+  }
+
+  // Matched against whitespace-collapsed source, because JSX wraps prose across
+  // lines and tabs — the same sentence would otherwise slip past on a reflow.
+  it('says nowhere in src/ that the tag waits for the banner', () => {
+    const offenders = sourceFiles('src').filter((path) => {
+      const text = readFileSync(path, 'utf8').replace(/\s+/g, ' ');
+      return STALE_CLAIMS.some((claim) => text.includes(claim));
+    });
+
+    expect(offenders).toEqual([]);
   });
 });
