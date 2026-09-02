@@ -80,8 +80,7 @@ export default function CustomCookieConsent() {
       onAccept={handleAccept}
       onDecline={handleDecline}
     >
-      We use self-hosted Rybbit for traffic statistics; it counts repeat visits using an
-      ID in your browser and sends nothing to an advertiser.
+      Our traffic statistics come from our own server, not a third party.
       Nothing is stored on your device for advertising, email or affiliate tracking unless
       you accept: Google Ads loads with storage switched off — it still tells Google which
       page you opened, but sets nothing on your device — and the Brevo and Partnero tags
