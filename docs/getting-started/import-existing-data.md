@@ -88,11 +88,30 @@ Hit "Create Import" and your data will be imported in the background.
 
 ### GPX routes
 
-GPX is a common format for storing GPS data. You can import your GPX routes to Dawarich. Important: Dawarich supports only GPX files of recorded routes, not planned ones.
+GPX is a common format for storing GPS data. You can import your GPX routes to Dawarich. Important: Dawarich imports recorded routes, not planned ones — a route you plotted in advance (`<rte>`) is ignored. Saved waypoints are imported as places; see [Waypoints and favourites](#waypoints-and-favourites) below.
 
 Select `GPX` as the source of your data and select the GPX file to upload.
 
 Hit "Create Import" and your data will be imported in the background.
+
+#### Waypoints and favourites
+
+A GPX file can hold two different kinds of data: a recorded track (`<trkpt>`) and individual waypoints (`<wpt>`). Apps such as OsmAnd+ export your saved favourites as a waypoint-only file, usually named `favourites.gpx`.
+
+Dawarich imports both:
+
+- **Trackpoints** become location points on your timeline, and count towards your distance and statistics.
+- **Waypoints** become [places](/docs/features/visits-and-places), and are shown on the map. They never become timeline points, so a favourite you saved while browsing the map at home will not invent a visit or add distance you never travelled.
+
+If a waypoint has a category, that category becomes a tag on the place, so you can show and hide groups of favourites on the map. Colours set in the source app are carried over to newly created tags; a tag you already styled yourself is never repainted. Favourites are never added to a tag that has a privacy zone radius — an imported file cannot widen a privacy zone, so your existing shared links keep showing what they showed before. You can attach such a tag yourself afterwards if you want to.
+
+Waypoints are matched on re-import by name and position, so importing an updated `favourites.gpx` adds only what is new instead of duplicating everything. This means you can point the [import watcher](/docs/self-hosting/monitoring/watcher) at a favourites file and let it stay in sync as you add favourites on your phone.
+
+:::note
+
+A GPX file that contains only waypoints imports 0 points, which is expected — look for the results under Places rather than on your timeline.
+
+:::
 
 ### Immich
 
