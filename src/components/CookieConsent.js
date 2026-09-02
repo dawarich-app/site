@@ -1,63 +1,47 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import CookieConsent from 'react-cookie-consent';
 import { saveReferralKey, clearReferralKey } from '@site/src/utils/utm';
+import {
+  CONSENT_COOKIE_NAME,
+  denyGoogleConsent,
+  grantGoogleConsent,
+  hasAcceptedConsent,
+  loadConsentedIntegrations,
+} from '@site/src/utils/consent';
 
 export default function CustomCookieConsent() {
+  // react-cookie-consent fires onAccept only on the click itself, never on
+  // mount, so without this a returning visitor who accepted months ago got
+  // none of the tags they consented to. The Google tag is already handled
+  // earlier by the head bootstrap, which reads the same cookie synchronously.
+  useEffect(() => {
+    if (!hasAcceptedConsent()) return;
+    try {
+      loadConsentedIntegrations();
+    } catch {
+      // A hardened context can refuse the append. Losing an optional tag is
+      // survivable; letting the throw reach the root boundary is not.
+    }
+  }, []);
+
   const handleAccept = () => {
     // Page load refused to store the affiliate key without consent, so capture it
     // now — the referral link's query param is still on the URL at this point.
     saveReferralKey();
 
-    const gtagScript = document.createElement('script');
-    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17899851408';
-    gtagScript.async = true;
-    document.head.appendChild(gtagScript);
+    // The Google tag is already loaded and denied; flip it rather than
+    // appending a second loader.
+    grantGoogleConsent();
+    try {
+      loadConsentedIntegrations();
+    } catch {
+      // As above: consent is recorded either way.
+    }
+  };
 
-    gtagScript.onload = () => {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){window.dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-17899851408');
-    };
-
-    const brevoScript = document.createElement('script');
-    brevoScript.src = 'https://cdn.brevo.com/js/sdk-loader.js';
-    brevoScript.async = true;
-    document.head.appendChild(brevoScript);
-
-    brevoScript.onload = () => {
-      window.Brevo = window.Brevo || [];
-      window.Brevo.push([
-        "init",
-        {
-          client_key: "pe4hklelof20ofjrbum6bcx8"
-        }
-      ]);
-    };
-
-    // Affiliate attribution. The cookie this sets is not strictly necessary
-    // under § 25 TTDSG, so it waits for consent like the two above. Attribution
-    // itself does not depend on it — the `via` key travels to the app on the
-    // CTA URL (see src/utils/utm.js), so declining costs Partnero only its own
-    // click statistics.
-    (function (p, t, n, e, r, o) {
-      p['__partnerObject'] = r;
-      function f() {
-        var c = { a: arguments, q: [] };
-        var r = this.push(c);
-        return typeof r != "number" ? r : f.bind(c.q);
-      }
-      f.q = f.q || [];
-      p[r] = p[r] || f.bind(f.q);
-      p[r].q = p[r].q || f.q;
-      o = t.createElement(n);
-      var _ = t.getElementsByTagName(n)[0];
-      o.async = 1;
-      o.src = e + '?v' + (~~(new Date().getTime() / 1e6));
-      _.parentNode.insertBefore(o, _);
-    })(window, document, 'script', 'https://app.partnero.com/js/universal.js', 'po');
-    window.po('settings', 'assets_host', 'https://assets.partnero.com');
-    window.po('program', '1NNVU1NU', 'load');
+  const handleDecline = () => {
+    denyGoogleConsent();
+    clearReferralKey();
   };
 
   const buttonStyle = {
@@ -83,8 +67,7 @@ export default function CustomCookieConsent() {
       buttonText="Accept"
       declineButtonText="Reject"
       enableDeclineButton
-      cookieName="dawarichCookieConsent"
-      domain=".dawarich.app"
+      cookieName={CONSENT_COOKIE_NAME}
       style={{
         background: "#2B373B",
         zIndex: 9999,
@@ -95,11 +78,14 @@ export default function CustomCookieConsent() {
       declineButtonStyle={declineButtonStyle}
       expires={150}
       onAccept={handleAccept}
-      onDecline={clearReferralKey}
+      onDecline={handleDecline}
     >
-      We use a cookieless analytics service (Simple Analytics) that requires no consent.
-      You can optionally accept cookies for Google Ads conversion tracking, Brevo email
-      analytics and affiliate referral credit — these only load if you click "Accept".
+      We use Simple Analytics, which is cookieless, and self-hosted Rybbit, which counts
+      repeat visits using an ID in your browser — neither sends anything to an advertiser.
+      Nothing is stored on your device for advertising, email or affiliate tracking unless
+      you accept: Google Ads loads with storage switched off — it still tells Google which
+      page you opened, but sets nothing on your device — and the Brevo and Partnero tags
+      are not loaded at all, until you click "Accept".
       <a
         href="/privacy-policy#cookies"
         style={{

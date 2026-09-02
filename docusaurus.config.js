@@ -6,6 +6,7 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 import {footerLinks} from './src/data/footerLinks.js';
+import {buildConsentBootstrapScript, GOOGLE_ADS_ID} from './src/utils/consent.js';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -31,23 +32,26 @@ const config = {
       async: true
     },
     {
-      src: "https://www.googletagmanager.com/gtag/js?id=AW-17899851408",
-      async: true
-    },
-    {
       src: "https://rybbit.dwri.xyz/api/script.js",
       "data-site-id": "18ca92af4f9c",
       defer: true
     }
   ],
 
-  // Google Ads gtag bootstrap + cross-domain linker.
-  // The linker rewrites outbound links to my.dawarich.app to include a `_gl`
-  // param carrying the gclid + client_id. Without this, ad-click attribution
-  // is lost when users navigate from the marketing site to the manager,
-  // because the gclid cookie is scoped to dawarich.app only.
-  // We disable send_page_view because pageview events are not configured as
-  // conversions in Google Ads — sending them would just be noise.
+  // Google Ads gtag, gated by Consent Mode v2 (see src/utils/consent.js).
+  //
+  // The tag loads on every page because the cross-domain linker only works
+  // while it is present — it rewrites outbound links to my.dawarich.app with a
+  // `_gl` param carrying the gclid, which would otherwise be lost across the
+  // subdomain boundary. But it loads *denied*: no `_gcl_au`, no ad or
+  // analytics storage, until the visitor accepts. `url_passthrough` keeps
+  // attribution alive on the URL for everyone who never does.
+  //
+  // Order matters. The bootstrap must be emitted before the loader so the
+  // denied default is already in dataLayer when gtag.js first reads it.
+  // src/utils/trackingConsentConfig.test.js guards both that ordering and the
+  // absence of any second loader in `scripts`.
+  // send_page_view stays off because pageviews are not Google Ads conversions.
   headTags: [
     {
       tagName: "link",
@@ -80,15 +84,14 @@ const config = {
     {
       tagName: "script",
       attributes: {},
-      innerHTML: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-17899851408', {
-          send_page_view: false,
-          linker: { domains: ['dawarich.app', 'my.dawarich.app'] }
-        });
-      `,
+      innerHTML: buildConsentBootstrapScript(),
+    },
+    {
+      tagName: "script",
+      attributes: {
+        src: `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`,
+        async: "true",
+      },
     },
   ],
 

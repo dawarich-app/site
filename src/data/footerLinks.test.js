@@ -90,6 +90,14 @@ describe('footerLinks', () => {
   });
 
   it('pins FOOTER_LINK_CAP to its specified value', () => {
-    expect(FOOTER_LINK_CAP).toBe(60);
+    expect(FOOTER_LINK_CAP).toBe(61);
+  });
+
+  // Withdrawing consent has to be as easy as giving it, and the banner that
+  // gives it in one click from any page is gone for good once answered. The
+  // footer is the only element that persists everywhere afterwards.
+  it('reaches the cookie controls from every page', () => {
+    const company = footerLinks.find((c) => c.title === 'Company').items.map((i) => i.to);
+    expect(company).toContain('/privacy-policy#cookies');
   });
 });

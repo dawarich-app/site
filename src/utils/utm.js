@@ -18,6 +18,8 @@
  * PartneroJS on the app re-read it from the URL and set its own cookie there.
  */
 
+import { hasAcceptedConsent } from './consent';
+
 const UTM_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
 const STORAGE_KEY = 'original_utm_params';
 const STORAGE_DURATION = 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
@@ -32,7 +34,6 @@ const REFERRAL_PARAMS = ['aff', 'via'];
 // Set by the cookie banner (src/components/CookieConsent.js). The affiliate key
 // is not strictly necessary under § 25 TTDSG, and both the banner and the privacy
 // policy tell visitors it is only stored if they accept — so the code has to ask.
-const CONSENT_COOKIE = 'dawarichCookieConsent';
 const REFERRAL_STORAGE_KEY = 'partnero_referral';
 // Keep at or above the cookie lifetime configured in the Partnero program, otherwise
 // the site stops forwarding a key that Partnero would still have honoured.
@@ -84,14 +85,11 @@ export function saveOriginalUtmParams() {
  * Whether the visitor accepted the cookie banner.
  *
  * An unanswered banner is not consent, so anything but an explicit "true" means no.
+ * The cookie itself is read by src/utils/consent.js, which owns the banner's
+ * name and the gating of every tag that writes to the device.
  */
 export function hasTrackingConsent() {
-  if (typeof document === 'undefined') return false;
-
-  return document.cookie
-    .split(';')
-    .map((entry) => entry.trim())
-    .some((entry) => entry === `${CONSENT_COOKIE}=true`);
+  return hasAcceptedConsent();
 }
 
 /**
