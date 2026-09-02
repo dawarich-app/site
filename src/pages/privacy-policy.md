@@ -43,7 +43,7 @@ All listed processors are bound by DPAs under Art. 28 GDPR. We do not sell data 
 | Paddle.com Market Ltd. | Billing, checkout, invoicing | United Kingdom |
 | Functional Software, Inc. (Sentry) | Error and crash tracking | United States |
 | Simple Analytics B.V. | Cookieless site analytics (no consent needed) | Netherlands (EU) |
-| Google LLC (Google Ads) | Marketing-site conversion tracking — consent-based | United States |
+| Google LLC (Google Ads) | Marketing-site conversion tracking — denied by default, consent-based | United States |
 | Sendinblue SAS (Brevo) — email | Transactional emails | France (EU) |
 | Sendinblue SAS (Brevo) — web tracker | Marketing-site email-campaign pixel — consent-based | France (EU) |
 | Apple Inc. | iOS App Store distribution | United States |
@@ -78,10 +78,12 @@ On `dawarich.app` we use:
 | Category | Purpose | Consent? | Provider |
 |---|---|---|---|
 | Strictly necessary | Remember your banner choice | No (§ 25(2) TTDSG) | First-party |
-| Cookieless analytics | Aggregate traffic | No | Simple Analytics |
+| Cookieless analytics | Aggregate traffic | No | Simple Analytics, Rybbit |
 | Advertising | Google Ads conversion tracking | **Yes** | Google Ads |
 | Email analytics | Brevo tracking pixel | **Yes** | Brevo |
 | Affiliate attribution | Credit a referring partner for a sign-up | **Yes** | Partnero |
+
+The Google Ads tag is present on every page, but it runs under Google Consent Mode with `ad_storage`, `ad_user_data`, `ad_personalization` and `analytics_storage` all set to **denied** until you accept. In that state it writes no cookies and no identifiers to your device; if you never accept, or you decline, it stays denied. The Brevo and Partnero tags are not loaded at all before consent.
 
 To withdraw consent after accepting, delete the `dawarichCookieConsent` cookie and reload. On `my.dawarich.app` we additionally use first-party session cookies strictly necessary for login.
 
@@ -103,10 +105,11 @@ We will notify you of **material changes** (new purposes, new processors, change
 
 ## Last updated
 
-Effective **2026-08-12**. Contact for all privacy matters: **hi@dawarich.app**.
+Effective **2026-09-02**. Contact for all privacy matters: **hi@dawarich.app**.
 
 | When          | What          |
 | ------------- | ------------- |
+| 2026-09-02    | Google Ads now loads denied-by-default under Google Consent Mode; documented that it stores nothing before consent. No new purposes or processors |
 | 2026-08-12    | Added Partnero as a processor for affiliate-referral attribution, and the affiliate cookie to the cookie table |
 | 2026-07-28    | Disclosed tool uploads held for signup ("Save to my Dawarich account") and their 24-hour deletion window |
 | 2026-07-18    | Added poster print orders: order data, Stripe and Gelato processors, print-file retention (48h unpaid / 90 days paid) |
