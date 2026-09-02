@@ -66,7 +66,7 @@ git push origin main
 - Dark/light theme support via Docusaurus theming
 
 ### Analytics
-- Simple Analytics integration configured in `docusaurus.config.js`
+- Self-hosted Rybbit configured in `docusaurus.config.js`
 - Cookie consent handled by `react-cookie-consent`
 
 ### Homepage Structure

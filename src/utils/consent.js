@@ -1,11 +1,10 @@
 /**
  * Consent gating for the tags that write to a visitor's device.
  *
- * Simple Analytics stays outside this module: it is genuinely cookieless and
- * needs no consent under § 25(2) TTDSG. Rybbit also stays outside it, but for a
- * different reason — it writes a `rybbit-visitor-id` to localStorage before the
- * banner, and the decision was to disclose that in § 6 of the privacy policy
- * rather than gate it. Do not read its absence here as "it stores nothing".
+ * Rybbit stays outside this module, but not because it stores nothing: it
+ * writes a `rybbit-visitor-id` to localStorage before the banner, and the
+ * decision was to disclose that in § 6 of the privacy policy rather than gate
+ * it. Do not read its absence here as "it writes nothing to the device".
  *
  * The Google tag is a special case. It has to be present on the page before
  * the visitor clicks anything, because the cross-domain linker can only

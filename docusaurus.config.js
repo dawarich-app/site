@@ -24,10 +24,6 @@ const config = {
 
   scripts: [
     {
-      src: "https://scripts.simpleanalyticscdn.com/latest.js",
-      async: true
-    },
-    {
       src: "https://cdn.paddle.com/paddle/v2/paddle.js",
       async: true
     },

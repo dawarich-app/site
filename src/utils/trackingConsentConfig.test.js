@@ -60,8 +60,14 @@ describe('no advertising tag may load outside the consent bootstrap', () => {
   });
 
   it('still loads the analytics that are not gated behind the banner', () => {
-    expect(scriptSrcs.some((s) => s.includes('simpleanalyticscdn.com'))).toBe(true);
     expect(scriptSrcs.some((s) => s.includes('rybbit'))).toBe(true);
+  });
+
+  // Simple Analytics was dropped; Rybbit already covers the same traffic
+  // numbers from our own infrastructure. Re-adding the loader would put a
+  // third-party processor back on every page without a policy row to match.
+  it('does not load Simple Analytics', () => {
+    expect(scriptSrcs.filter((s) => s.includes('simpleanalytics'))).toHaveLength(0);
   });
 });
 

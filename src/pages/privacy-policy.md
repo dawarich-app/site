@@ -44,7 +44,6 @@ All listed processors are bound by DPAs under Art. 28 GDPR. We do not sell data 
 | Cloudflare, Inc. | Marketing-site CDN | Global; EU where possible |
 | Paddle.com Market Ltd. | Billing, checkout, invoicing | United Kingdom |
 | Functional Software, Inc. (Sentry) | Error and crash tracking | United States |
-| Simple Analytics B.V. | Cookieless site analytics (no consent needed) | Netherlands (EU) |
 | Google LLC (Google Ads) | Marketing-site conversion tracking — denied by default, consent-based | United States |
 | Sendinblue SAS (Brevo) — email | Transactional emails | France (EU) |
 | Sendinblue SAS (Brevo) — web tracker | Marketing-site email-campaign pixel — consent-based | France (EU) |
@@ -82,7 +81,6 @@ On `dawarich.app` we use:
 | Category | Purpose | Consent? | Provider |
 |---|---|---|---|
 | Strictly necessary | Remember your banner choice | No (§ 25(2) TTDSG) | First-party |
-| Cookieless analytics | Aggregate traffic | No | Simple Analytics |
 | Site analytics | Aggregate traffic; stores a visitor ID in your browser's local storage | Not currently asked | Rybbit (self-hosted) |
 | Advertising | Google Ads conversion tracking — tag present on every page, storage denied until you accept | **Yes**, for storage | Google Ads |
 | Email analytics | Brevo tracking pixel | **Yes** | Brevo |
@@ -124,6 +122,7 @@ Effective **2026-09-02**. Contact for all privacy matters: **hi@dawarich.app**.
 
 | When          | What          |
 | ------------- | ------------- |
+| 2026-09-02    | Removed Simple Analytics. Traffic statistics now come only from self-hosted Rybbit, so one processor fewer receives anything and no analytics data leaves our own infrastructure |
 | 2026-09-02    | Google Ads now loads denied-by-default under Google Consent Mode; disclosed the cookieless request it still sends before consent and the ad-click identifier passed to `my.dawarich.app` in the URL, and added a one-click control to withdraw or reconsider. Corrected the description of Rybbit, which stores a visitor ID rather than being cookieless, and recorded that it is self-hosted and adds no processor. No new purposes or processors |
 | 2026-08-12    | Added Partnero as a processor for affiliate-referral attribution, and the affiliate cookie to the cookie table |
 | 2026-07-28    | Disclosed tool uploads held for signup ("Save to my Dawarich account") and their 24-hour deletion window |
