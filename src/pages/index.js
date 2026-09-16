@@ -121,14 +121,14 @@ export default function Home() {
 
 	return (
 		<Layout
-			title="Dawarich — Your Timeline, Forever"
+			title="Dawarich — Your Private Timeline, Forever"
 			description="The private alternative to Google Timeline. Import your location history, keep it forever. No ads, no data selling."
 		>
 			<Head>
 				{/* Open Graph / Facebook */}
 				<meta property="og:type" content="website" />
 				<meta property="og:url" content="https://dawarich.app/" />
-				<meta property="og:title" content="Dawarich — Your Timeline, Forever" />
+				<meta property="og:title" content="Dawarich — Your Private Timeline, Forever" />
 				<meta
 					property="og:description"
 					content="The private alternative to Google Timeline. Import your location history, keep it forever."
@@ -143,7 +143,7 @@ export default function Home() {
 				<meta name="twitter:url" content="https://dawarich.app/" />
 				<meta
 					name="twitter:title"
-					content="Dawarich — Your Timeline, Forever"
+					content="Dawarich — Your Private Timeline, Forever"
 				/>
 				<meta
 					name="twitter:description"

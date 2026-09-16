@@ -49,8 +49,8 @@ function formatNumber(num) {
 
 const metrics = [
   { target: 9000, prefix: 'OVER ', suffix: '', label: 'GitHub Stars', icon: <StarIcon /> },
-  { target: 1_000_000, suffix: '+', label: 'Docker Pulls', icon: <DownloadIcon /> },
-  { target: 2000, suffix: '+', label: 'Users', icon: <PeopleIcon /> },
+  { target: 8_000_000, suffix: '+', label: 'Docker Pulls', icon: <DownloadIcon /> },
+  { target: 5000, suffix: '+', label: 'Users', icon: <PeopleIcon /> },
   { target: 1_000_000_000, suffix: '+', label: 'Points Tracked', icon: <MapPinIcon /> },
 ];
 
@@ -60,6 +60,8 @@ const integrations = [
   'Immich',
   'PhotoPrism',
   'GPSLogger',
+  'AirTrail',
+  'TeslaMate API',
 ];
 
 function useCountUp(target, duration, shouldStart) {
