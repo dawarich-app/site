@@ -14,7 +14,8 @@ As many other applications, Dawarich uses environment variables to configure its
 
 | Environment Variable | Default Value | Description |
 | -------------------- | ------------- | ----------- |
-| `RAILS_ENV`          | `development` | Application environment. `development` value makes sure all errors will be shown explicitly, making easier remote debugging |
+| `RAILS_ENV`          | `production` | Application environment. Self-hosted instances should use `production`. `development` is for working on Dawarich itself: it reloads code when it changes and logs every SQL query. See [Switching an existing instance to production](#switching-an-existing-instance-to-production). |
+| `SECRET_KEY_BASE` | `CHANGE_ME` in `docker-compose.yml` | Signs sessions and cookies, and derives encryption keys that aren't set explicitly. Required in production. Generate a value with `openssl rand -hex 64` and keep it: changing it signs everyone out and can make encrypted data unreadable. |
 | `SELF_HOSTED` | `true` | Set to `true` if you're self-hosting Dawarich |
 | `APPLICATION_HOSTS`  | `localhost,my.domain.com`   | Application hosts, provide multiple if you want your Dawarich instance to be available by multiple domains/ip addresses. Don't put protocols here, only host names. |
 | `APPLICATION_PROTOCOL` | `http` | Application protocol. Change to `https` if you want your Dawarich instance to be served via SSL |
@@ -22,6 +23,17 @@ As many other applications, Dawarich uses environment variables to configure its
 | `TIME_ZONE`          | `Europe/London` | Time zone. Full list of supported timezones available on [Github](https://github.com/Freika/dawarich/issues/27#issuecomment-2094721396) |
 | `DISTANCE_UNIT` | `km` | Distance unit. For miles, change to `mi`. All settings still should be provided in meters/kilometers |
 | `MIN_MINUTES_SPENT_IN_CITY` | `60`   | Minimum minutes spent in a city |
+
+#### Switching an existing instance to production
+
+`docker-compose.yml` has set `RAILS_ENV=production` since Dawarich 1.3.0. Compose files from earlier versions and older copies of the Synology template default to `development`, and Dawarich prints a warning at startup when a self-hosted instance runs that way. To switch:
+
+1. Set `RAILS_ENV=production` for both the `dawarich_app` and `dawarich_sidekiq` containers, in your compose file or `.env`.
+2. If the app container's command is `bin/dev`, change it to `['bin/rails', 'server', '-p', '3000', '-b', '::']`, as in `docker-compose.yml`.
+3. Add every hostname and IP address you open Dawarich with, including the ones your phone apps send locations to, to `APPLICATION_HOSTS`. Development accepts requests to any IP address; production rejects hosts that aren't listed.
+4. Set `SECRET_KEY_BASE`. If it already holds a value other than `CHANGE_ME`, keep it. Otherwise, if `ARCHIVE_RAW_DATA=true` and `ARCHIVE_ENCRYPTION_KEY` isn't set, first copy the old `SECRET_KEY_BASE` value into `ARCHIVE_ENCRYPTION_KEY` so existing archives stay readable. Then generate a new value with `openssl rand -hex 64`; everyone is signed out once.
+5. If you haven't set the three `OTP_ENCRYPTION_*` variables, geocoding API keys saved in Settings → Instance (on the Settings page before 1.15.0) can't be read in production, because development encrypted them with different keys. Geocoding stays off until the key is saved again. Geocoding configured through environment variables isn't affected.
+6. Recreate the containers with `docker compose up -d`.
 
 ### Database Settings
 
@@ -141,7 +153,7 @@ Important note on Prometheus exporter: even if you want to use it, make sure you
 | `OTP_ENCRYPTION_KEY_DERIVATION_SALT` | Built-in default | Salt for OTP key derivation. Production deployments should set a unique value. |
 
 :::tip
-These keys are used by Active Record Encryption to secure 2FA (TOTP) secrets. If not set, built-in defaults are used — fine for most self-hosted setups. For maximum security, generate unique values with `openssl rand -hex 32` and set them in your environment.
+These keys are used by Active Record Encryption to secure 2FA (TOTP) secrets and geocoding API keys saved in Settings → Instance. Two-factor authentication is only available when all three are set. Generate each value with `openssl rand -hex 32` and keep them afterwards: changing them makes the data they encrypted unreadable. When they aren't set, development and production use different built-in keys, see [Switching an existing instance to production](#switching-an-existing-instance-to-production).
 :::
 
 ### Data Archival

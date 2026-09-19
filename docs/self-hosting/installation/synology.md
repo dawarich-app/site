@@ -39,8 +39,96 @@ If you don't want to use dedicated share for projects installed by docker skip i
 
 1. Open your [Docker root folder](#docker-root-share) in **File station**.
 2. Create new folder **dawarich** and open it.
-3. Create folders **redis**, **db_data**, **db_shared**, **gem_cache**, **storage** and **public** in **dawarich** folder.
-4. Copy [docker compose](https://github.com/Freika/dawarich/blob/master/docs/synology/docker-compose.yml) and [.env](https://github.com/Freika/dawarich/blob/master/docs/synology/.env) files form **synology** repo folder into **dawarich** folder on your synology.
+3. Create folders **redis**, **db_data**, **db_shared**, **app_storage** and **public** in **dawarich** folder.
+4. In the **dawarich** folder, create the files `docker-compose.yml` and `.env` with the contents below.
+
+```yaml title="docker-compose.yml"
+version: '3'
+
+services:
+  dawarich_redis:
+    image: redis:7.4-alpine
+    container_name: dawarich_redis
+    command: redis-server
+    restart: unless-stopped
+    volumes:
+      - ./redis:/var/shared/redis
+  dawarich_db:
+    image: postgis/postgis:17-3.5-alpine
+    container_name: dawarich_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${DATABASE_USERNAME}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_DB: ${DATABASE_NAME}
+    volumes:
+      - ./db_data:/var/lib/postgresql/data
+      - ./db_shared:/var/shared
+
+  dawarich_app:
+    image: freikin/dawarich:latest
+    container_name: dawarich_app
+    depends_on:
+      - dawarich_db
+      - dawarich_redis
+    stdin_open: true
+    tty: true
+    entrypoint: web-entrypoint.sh
+    command: ['bin/rails', 'server', '-p', '3000', '-b', '::']
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./public:/var/app/public
+      - ./app_storage:/var/app/storage
+    ports:
+      - 32568:3000
+
+  dawarich_sidekiq:
+    image: freikin/dawarich:latest
+    container_name: dawarich_sidekiq
+    depends_on:
+      - dawarich_db
+      - dawarich_redis
+      - dawarich_app
+    entrypoint: sidekiq-entrypoint.sh
+    command: ['sidekiq']
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./public:/var/app/public
+      - ./app_storage:/var/app/storage
+```
+
+```bash title=".env"
+###################################################################################
+# Dawarich
+###################################################################################
+
+RAILS_ENV=production
+SECRET_KEY_BASE=
+MIN_MINUTES_SPENT_IN_CITY=60
+APPLICATION_HOSTS=dawarich.example.synology.me
+TIME_ZONE=Europe/Berlin
+BACKGROUND_PROCESSING_CONCURRENCY=10
+STORE_GEODATA=false
+
+###################################################################################
+# Database
+###################################################################################
+
+DATABASE_HOST=dawarich_db
+DATABASE_USERNAME=postgres
+DATABASE_PASSWORD=password
+DATABASE_NAME=dawarich
+
+###################################################################################
+# Redis
+###################################################################################
+
+REDIS_URL=redis://dawarich_redis:6379
+```
 
 ## Installation
 
@@ -80,10 +168,11 @@ If you don't yet have a DNS server you can install [Synology DNS](https://www.sy
 1. Open /[Docker root folder](#docker-root-share)/[Dawarich root folder](#dawarich-root-folder)/.env file in any text editor. For example, you can use [Text editor](https://www.synology.com/en-global/dsm/packages/TextEditor) package or download it from **File station**, edit locally and upload it back, or get access by file share.
 2. Update your `APPLICATION_HOSTS` value to include your **Dawarich hostname** that you set in **Web station**. In example above **dawarich.my-syno.com**. If you want to set multiple hosts, separate them by a comma: `dawarich.my-syno.com,dawarich2.my-syno.com`.
 3. Set your current `TIME_ZONE`. The full list [here](https://github.com/Freika/dawarich/issues/27#issuecomment-2094721396).
-4. Optionally change `DATABASE_USERNAME`, `DATABASE_USERNAME`, `DATABASE_NAME`.
+4. Set `SECRET_KEY_BASE` to a random value, for example the output of `openssl rand -hex 64`. Dawarich doesn't start without it. Keep the value afterwards: changing it signs everyone out and can make archived data unreadable.
+5. Optionally change `DATABASE_USERNAME`, `DATABASE_PASSWORD`, `DATABASE_NAME`.
 
-5. Click on the name of your project.
-6. Open **YAML Configurations** tab.
+6. Click on the name of your project.
+7. Open **YAML Configurations** tab.
 
 ## Run
 
