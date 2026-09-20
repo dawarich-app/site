@@ -39,8 +39,10 @@ If you don't want to use dedicated share for projects installed by docker skip i
 
 1. Open your [Docker root folder](#docker-root-share) in **File station**.
 2. Create new folder **dawarich** and open it.
-3. Create folders **redis**, **db_data**, **db_shared**, **gem_cache**, **storage** and **public** in **dawarich** folder.
-4. Copy [docker compose](https://github.com/Freika/dawarich/blob/master/docs/synology/docker-compose.yml) and [.env](https://github.com/Freika/dawarich/blob/master/docs/synology/.env) files form **synology** repo folder into **dawarich** folder on your synology.
+3. Create folders **redis**, **db_data**, **db_shared**, **app_storage** and **public** in the **dawarich** folder.
+4. Download <a href="/downloads/synology/docker-compose.yml" download="docker-compose.yml">docker-compose.yml</a> and <a href="/downloads/synology/synology.env" download="synology.env">synology.env</a> into the **dawarich** folder. Rename `synology.env` to `.env` (including the leading dot). If your browser displays a file, use **Save link as** and keep the filename.
+
+These templates are for a new installation and run Dawarich in production mode. For an existing installation, follow [Updating Dawarich](../updating.md) and keep your existing environment settings, secrets and storage paths instead of replacing them with these templates.
 
 ## Installation
 
@@ -80,10 +82,10 @@ If you don't yet have a DNS server you can install [Synology DNS](https://www.sy
 1. Open /[Docker root folder](#docker-root-share)/[Dawarich root folder](#dawarich-root-folder)/.env file in any text editor. For example, you can use [Text editor](https://www.synology.com/en-global/dsm/packages/TextEditor) package or download it from **File station**, edit locally and upload it back, or get access by file share.
 2. Update your `APPLICATION_HOSTS` value to include your **Dawarich hostname** that you set in **Web station**. In example above **dawarich.my-syno.com**. If you want to set multiple hosts, separate them by a comma: `dawarich.my-syno.com,dawarich2.my-syno.com`.
 3. Set your current `TIME_ZONE`. The full list [here](https://github.com/Freika/dawarich/issues/27#issuecomment-2094721396).
-4. Optionally change `DATABASE_USERNAME`, `DATABASE_USERNAME`, `DATABASE_NAME`.
-
-5. Click on the name of your project.
-6. Open **YAML Configurations** tab.
+4. Set `DATABASE_PASSWORD` to a strong password. You can also change `DATABASE_USERNAME` and `DATABASE_NAME` before the first start.
+5. Generate a `SECRET_KEY_BASE` with `openssl rand -hex 64` on a computer with OpenSSL, then paste the result after `SECRET_KEY_BASE=` in `.env`. Keep this value for future restarts and upgrades, and keep `.env` private.
+6. Save `.env`. Leave `RAILS_ENV=production`, `DATABASE_HOST=dawarich_db` and `REDIS_URL=redis://dawarich_redis:6379` as provided.
+7. Click on the name of your project and open the **YAML Configurations** tab.
 
 ## Run
 
@@ -107,10 +109,10 @@ There are two possible options:
 
 Synology allows you to create custom applications and install them by **Package Center**
 [Here](https://github.com/vletroye/Mods) you can find a tool that creates dummy applications only with icon on the main menu.
-You can use this tool and create your own app, or use the prepared one in this repo. But you need to change url to Dawarich inside it.
+You can use that tool to create your own app, or download the prepared <a href="/downloads/synology/update.sh" download="update.sh">update.sh</a> and <a href="/downloads/synology/spk.tgz" download="spk.tgz">spk.tgz</a> into a new folder.
 
-- Edit `update.sh` from `synology` folder. And in the first lines set correct values for `author` and `URL`.
-- Run  `update.sh`. When the script finishes you will see the `spk` and `Dawarich.spk` in the same folder.
+- Edit `update.sh` and set `author` and `URL` at the top of the file.
+- In a Linux shell, change to that folder and run `sh update.sh`. When the script finishes, you will see `spk` and `Dawarich.spk` in the same folder.
 
 If you don't have Linux console you can create a temporal docker project to generate spk package.
 - Create a new folder in [Docker root folder](#docker-root-share).
@@ -125,11 +127,12 @@ services:
   spk-template:
     container_name: spk-template
     image: alpine
-    restart: unless-stopped
+    restart: "no"
     working_dir: /app
     volumes:
       - ./app:/app
     command:
+      - sh
       - /app/update.sh
 ```
 - Click **Next**, **Next**, **Done**
