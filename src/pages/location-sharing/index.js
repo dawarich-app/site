@@ -44,7 +44,7 @@ const objections = [
   },
   {
     q: 'Can I see whether anyone opened it?',
-    a: 'Yes. Every link you have made is listed in one place with how many times it has been opened and when it was last accessed.',
+    a: 'Yes. Live location, date-range, trip and track links show how many times they have been opened and when they were last viewed, and all of them are listed together in one place.',
   },
   {
     q: 'What happens to my links if my subscription expires?',
@@ -64,7 +64,7 @@ export default function LocationSharingPage() {
         />
         <meta
           property="og:description"
-          content="Send one link that shows one thing: a date range, live location, a track, a trip, a month of stats or a yearly digest. Passphrase, expiry and instant revoke on every link."
+          content="Send one link that shows one thing: a date range, live location, a track, a trip, a month of stats or a yearly digest. Every link expires or can be revoked, and most can be locked with a passphrase."
         />
         <meta property="og:image" content="https://dawarich.app/img/meta-image.png" />
         <meta name="twitter:card" content="summary_large_image" />

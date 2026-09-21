@@ -103,7 +103,9 @@ Displays photos from connected [Immich and/or Photoprism](/docs/features/photos)
 
 ### Family (Map V2)
 
-When you have [Family Location Sharing](/docs/features/family) enabled, shows real-time locations of family members who are sharing their location with you.
+When you are in a [family](/docs/features/family), switch on **Family Members** in **Map Layers** to see the members who share their location with you. Their positions update in real time. For members who also share their location history, their track is drawn for the dates selected on the map.
+
+![Family Members layer](images/family-map-v2.webp)
 
 ## Map Styles
 

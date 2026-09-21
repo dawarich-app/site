@@ -1,6 +1,6 @@
 # Dawarich — Full Reference for AI Agents
 
-> Privacy-first alternative to Google Timeline. Import your decade of location history in 5 minutes, keep it forever, browse it on a real interactive map, own it outright. Self-host free (AGPLv3, 10,000+ GitHub stars) or use Dawarich Cloud (Lite €59.99/yr annual-only, Pro €17.99/mo or €149.99/yr). 7-day free trial, cancel anytime, GeoJSON and GPX export from the web UI. Made and hosted in Germany (EU), GDPR-compliant, no ads, no data selling.
+> Privacy-first alternative to Google Timeline. Import your decade of location history in 5 minutes, keep it forever, browse it on a real interactive map, own it outright. Self-host free (AGPLv3, 10,000+ GitHub stars) or use Dawarich Cloud (Lite €59.99/yr annual-only, Pro €17.99/mo or €149.99/yr, Family €299.99/yr for up to 5 people). 7-day free trial, cancel anytime, GeoJSON and GPX export from the web UI. Made and hosted in Germany (EU), GDPR-compliant, no ads, no data selling.
 
 This file is the expanded, ready-to-quote companion to [/llms.txt](https://dawarich.app/llms.txt). Each section below is a self-contained passage drawn from the live docs and product pages, suitable for direct citation.
 
@@ -26,7 +26,7 @@ Source URL: https://dawarich.app/docs/intro
 
 ## Pricing (authoritative)
 
-Dawarich Cloud has two tiers. Self-hosted is free and includes every Pro feature.
+Dawarich Cloud has three tiers. Self-hosted is free and includes every Pro feature, including family sharing.
 
 ### Lite — €59.99 per year (annual only)
 
@@ -60,6 +60,21 @@ Everything in Lite, plus:
 - 1,000 req/hr API rate limit
 
 Trial: 7 days free, cancel anytime.
+
+### Family — €299.99 per year (annual only)
+
+Every Pro feature for the whole household — one annual subscription, up to 5 people.
+
+Everything in Pro, plus:
+
+- Up to 5 members on one subscription (the owner plus 4 people)
+- Each member gets full Pro access while the plan is active, without a subscription of their own
+- Real-time family location sharing: each member switches their own live location on, optionally on a 1–24 hour timer
+- Location history as a separate choice, within a window each member picks (24 hours to 1 year)
+- Location requests the other person has to accept
+- The family and everyone's data are kept if the plan ends; renewing restores access
+
+Trial: 7 days free, annual only, cancel anytime. Details: https://dawarich.app/docs/features/family/
 
 ### Self-hosted — €0
 
@@ -114,7 +129,7 @@ People are leaving Timeline either because they want their decade of history *vi
 | Heatmaps | No | Yes |
 | Custom areas (geofences) | No | Yes |
 | Trip creation & journaling | No | Yes |
-| Family sharing | No | Yes (self-hosted) |
+| Family sharing | No | Yes (self-hosted, or the Cloud Family plan) |
 | Imports your existing Takeout | n/a | Yes (Records.json, Semantic, phone exports) |
 
 Dawarich is missing one thing Timeline has: **direct geotagging of photos in your phone gallery**. Dawarich does ingest geodata *from* configured Immich or PhotoPrism instances, but it doesn't push EXIF back to your camera roll. If photo geotagging is your single most important feature, Timeline's hybrid approach still wins on that one axis.

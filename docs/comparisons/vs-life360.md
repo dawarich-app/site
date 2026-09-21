@@ -8,7 +8,7 @@ description: Compare Dawarich with Life360 for family location tracking, privacy
 
 Life360 is a family safety and location sharing app that lets you track family members in real-time through "circles." It's one of the most popular location apps with over 50 million users.
 
-While Life360 focuses on real-time family tracking and safety features, Dawarich focuses on **location history**, **data ownership**, and **privacy**. This page compares both to help you choose the right tool for your needs.
+While Life360 focuses on real-time family tracking and safety features, Dawarich focuses on **location history**, **data ownership**, and **privacy**. Dawarich also has [family location sharing](/docs/features/family), built around consent: nothing is shared until each person switches it on, sharing can run on a timer, and asking where someone is means sending a request they can decline. This page compares both to help you choose the right tool for your needs.
 
 ## Legend
 
@@ -27,7 +27,7 @@ While Life360 focuses on real-time family tracking and safety features, Dawarich
 | Open source | ✅ | ❌ |
 | **Location Tracking** |
 | Automatic location tracking | ✅ (iOS, Android) | ✅ |
-| Real-time family sharing | ⚠️ (multi-user self-hosted) | ✅ |
+| Real-time family sharing | ✅ (self-hosted, or the Cloud Family plan) | ✅ |
 | Geofencing / place alerts | ✅ (custom areas) | ✅ |
 | Crash detection | ❌ | ✅ (paid) |
 | SOS / emergency alerts | ❌ | ✅ |
@@ -70,9 +70,10 @@ Dawarich takes the opposite approach: your data stays on your server (self-hoste
 | Plan | Dawarich | Life360 |
 |------|----------|---------|
 | Free tier | ✅ Self-hosted (unlimited) | ✅ (limited features, 2-day history) |
-| Paid cloud | €150/year or €18/month | ~$8-25/month depending on plan |
+| Paid cloud | Lite €59.99/year, Pro €149.99/year or €17.99/month | ~$8-25/month depending on plan |
+| Family plan | €299.99/year for up to 5 people, each with full Pro access | See paid cloud |
 | Free trial | 7-day Cloud trial | Free tier available |
-| Data limits | Unlimited | History limited by plan |
+| Data limits | Unlimited (Lite: 12 months searchable) | History limited by plan |
 
 ## When to Choose Dawarich
 
@@ -81,10 +82,11 @@ Dawarich takes the opposite approach: your data stays on your server (self-hoste
 - You want to **import data** from Google Timeline, GPX files, or other sources
 - You want **visualizations** like heatmaps, statistics, and trip timelines
 - You want a **web interface** for exploring your data on a big screen
+- You want **family location sharing** where each person decides what they share, for how long, and whether others can see their history
 
 ## When to Choose Life360
 
-- You need **real-time family tracking** with safety features (crash detection, SOS)
+- You need **safety features** such as crash detection and SOS alerts
 - You want **driving reports** for teen drivers
 - You don't need location history beyond 30 days
 
