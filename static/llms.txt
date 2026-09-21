@@ -1,6 +1,6 @@
 # Dawarich
 
-> Privacy-first alternative to Google Timeline. Import your decade of location history in 5 minutes, keep it forever, browse it on a real interactive map, own it outright. Self-host free (AGPLv3, 10,000+ GitHub stars) or use Dawarich Cloud (Lite €59.99/yr annual-only, Pro €17.99/mo or €149.99/yr). 7-day free trial, cancel anytime, GeoJSON and GPX export from the web UI. Made and hosted in Germany (EU), GDPR-compliant, no ads, no data selling — you pay money so your location data isn't the product.
+> Privacy-first alternative to Google Timeline. Import your decade of location history in 5 minutes, keep it forever, browse it on a real interactive map, own it outright. Self-host free (AGPLv3, 10,000+ GitHub stars) or use Dawarich Cloud (Lite €59.99/yr annual-only, Pro €17.99/mo or €149.99/yr, Family €299.99/yr for up to 5 people). 7-day free trial, cancel anytime, GeoJSON and GPX export from the web UI. Made and hosted in Germany (EU), GDPR-compliant, no ads, no data selling — you pay money so your location data isn't the product.
 
 The expanded version of the most-cited pages is at [/llms-full.txt](https://dawarich.app/llms-full.txt) for agents that prefer ready-to-quote passages over a link index.
 
@@ -10,7 +10,7 @@ Two pages are also published as raw markdown, without navigation or markup, for 
 
 ## Core
 - [Dawarich homepage](https://dawarich.app/): Product overview, feature tour, pricing, and "Import My Google Data" call to action.
-- [Pricing & plans](https://dawarich.app/pricing/): Cloud Lite €59.99/yr (annual only), Cloud Pro €17.99/mo or €149.99/yr (Most Popular), or self-host free with every Pro feature on your own server. Raw markdown: [/pricing.md](https://dawarich.app/pricing.md).
+- [Pricing & plans](https://dawarich.app/pricing/): Cloud Lite €59.99/yr (annual only), Cloud Pro €17.99/mo or €149.99/yr (Most Popular), Cloud Family €299.99/yr (annual only, up to 5 people, each with full Pro access), or self-host free with every Pro feature on your own server. Raw markdown: [/pricing.md](https://dawarich.app/pricing.md).
 - [FAQ (technical / admin)](https://dawarich.app/docs/FAQ/): Self-hosting troubleshooting, Rails console, Sidekiq, large Records.json imports.
 - [Welcome / Getting started](https://dawarich.app/docs/intro): What Dawarich is and the three setup paths (Cloud, self-host, mobile-only).
 - [Contact](https://dawarich.app/contact/): Get in touch with the team.
@@ -45,6 +45,8 @@ Two pages are also published as raw markdown, without navigation or markup, for 
 - [Areas / geofences](https://dawarich.app/docs/features/areas): Custom areas, place detection, visit duration tracking.
 - [Transportation modes](https://dawarich.app/docs/features/transportation-modes): Auto-detect walking, cycling, driving, transit.
 - [Search](https://dawarich.app/docs/features/search): Search any date or place, instantly see where you were.
+- [Family location sharing](https://dawarich.app/family/): Up to 5 people share live location on their own terms — per-person switches, sharing timers, a separate history window, and location requests that must be accepted. Cloud Family plan €299.99/yr, or free self-hosted. Docs: https://dawarich.app/docs/features/family/
+- [Sharing links](https://dawarich.app/location-sharing/): Share live location, a date range, a trip or a single track by private link, with a magic phrase, expiry, view counter and instant revoke. Docs: https://dawarich.app/docs/features/sharing/
 
 ## Self-hosting (free, AGPLv3, every Pro feature included)
 - [Self-hosting introduction](https://dawarich.app/docs/self-hosting/introduction/): Why self-host, what hardware you need (AMD64/ARM64, 2GB RAM minimum), `docker compose up -d` quickstart.

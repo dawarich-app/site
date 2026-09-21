@@ -51,7 +51,11 @@ const objections = [
   },
   {
     q: 'What happens if the plan owner\'s subscription expires?',
-    a: 'The family is kept. Members fall back to their own plans once the subscription expires, and resubscribing restores it. Nobody is locked out of their own history.',
+    a: 'The family is kept and nothing is deleted. Access runs until the end of the period that was already paid for. After that, members without a plan of their own fall back to Lite and their tracking pauses until a plan is active again, while their history stays in their account and can be exported. Renewing restores everyone at once.',
+  },
+  {
+    q: 'Does it work on our phones?',
+    a: 'Yes. The Dawarich apps for iOS and Android show your family on the map. From the app you can turn your own sharing on or off, choose what history to share, and send or answer location requests.',
   },
   {
     q: 'Do I have to pay at all?',
@@ -105,7 +109,7 @@ export default function FamilyPage() {
         <CloseCTA
           campaign="family"
           title="Share with your household, not with a data broker"
-          sub="€299.99 a year covers five people on Dawarich Cloud. Or run the same thing on your own hardware for nothing."
+          sub="€299.99 a year covers five people on Dawarich Cloud, with a 7-day free trial. Or run the same thing on your own hardware for nothing."
           primaryLabel="Start a family plan"
         />
       </PitchPage>

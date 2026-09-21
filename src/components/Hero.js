@@ -141,7 +141,7 @@ export default function Hero() {
 					</div>
 
 					<h1 className={styles.title} style={{ animationDelay: "0.1s" }}>
-						Your Timeline, <span className={styles.highlight}>Forever</span>
+						Your Private Timeline, <span className={styles.highlight}>Forever</span>
 					</h1>
 
 					<p className={styles.subtitle} style={{ animationDelay: "0.2s" }}>
