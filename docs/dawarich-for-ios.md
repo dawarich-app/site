@@ -119,6 +119,17 @@ Choose how visits are detected:
 - **Layers** — toggle routes, visits, points and the heatmap. **Points source** switches between **Server + device** and **Device only**.
 - **Replay** — play back the selected day's movement from the timeline controls.
 
+## Family
+
+If you are in a [family](/docs/features/family), tap the **Family** button on the map to open the family panel. From there you can:
+
+- See who is in your family and who is sharing, and show every sharing member on the map
+- Turn your own live location on or off and choose how long to share
+- Share your location history and pick the history window, including whether movements from before you started sharing may be shown
+- Request a member's location, and accept or decline requests sent to you
+
+Families are created, and members invited, in Dawarich on the web. If the family's plan ends, the panel says so and, for the owner, offers to renew.
+
 ## Insights
 
 The **Insights** tab has three sub-tabs:
