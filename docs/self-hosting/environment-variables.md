@@ -120,7 +120,7 @@ See [Configuring SMTP](./configuration/smtp.md) for provider-specific examples (
 | `SMTP_USERNAME` | `nil` | Your SMTP username |
 | `SMTP_PASSWORD` | `nil` | Your SMTP password |
 | `SMTP_FROM` | `nil` | Email address to send emails from |
-| `SMTP_AUTHENTICATION` | `plain` | Auth mechanism. Common values: `plain`, `login` (Office 365 / Microsoft 365 requires this), `cram_md5`. `digest_md5`, `gssapi`, `ntlm`, `xoauth2` also accepted but rarely useful. |
+| `SMTP_AUTHENTICATION` | `plain` | Auth mechanism. Common values: `plain`, `login` (Office 365 / Microsoft 365 requires this), and `cram_md5`. Use `none` for an unauthenticated relay. `digest_md5`, `gssapi`, `ntlm`, and `xoauth2` are also accepted but rarely useful. |
 | `SMTP_STARTTLS` | `true` | Opportunistic TLS upgrade on port 587. Leave `true` for internet-facing relays. Set `false` only for plain SMTP on port 25 to a trusted local relay. No effect on port 465 (SMTPS / implicit TLS). |
 | `SMTP_OPEN_TIMEOUT` | `5` | Seconds to wait for the TCP connection. Bump to `25` for slow providers. |
 | `SMTP_READ_TIMEOUT` | `5` | Seconds to wait for an SMTP response. Bump to `25` for slow providers. |
@@ -148,12 +148,12 @@ Important note on Prometheus exporter: even if you want to use it, make sure you
 
 | Environment Variable | Default Value | Description |
 | -------------------- | ------------- | ----------- |
-| `OTP_ENCRYPTION_PRIMARY_KEY` | Built-in default | Primary key for encrypting OTP secrets. Production deployments should set a unique value. |
-| `OTP_ENCRYPTION_DETERMINISTIC_KEY` | Built-in default | Deterministic key for OTP encryption. Production deployments should set a unique value. |
-| `OTP_ENCRYPTION_KEY_DERIVATION_SALT` | Built-in default | Salt for OTP key derivation. Production deployments should set a unique value. |
+| `OTP_ENCRYPTION_PRIMARY_KEY` | Derived from `SECRET_KEY_BASE` in production | Primary key for encrypting OTP secrets. Set explicitly to enable two-factor authentication. |
+| `OTP_ENCRYPTION_DETERMINISTIC_KEY` | Derived from `SECRET_KEY_BASE` in production | Deterministic key for OTP encryption. Set explicitly to enable two-factor authentication. |
+| `OTP_ENCRYPTION_KEY_DERIVATION_SALT` | Derived from `SECRET_KEY_BASE` in production | Salt for OTP key derivation. Set explicitly to enable two-factor authentication. |
 
 :::tip
-These keys are used by Active Record Encryption to secure 2FA (TOTP) secrets and geocoding API keys saved in Settings → Instance. Two-factor authentication is only available when all three are set. Generate each value with `openssl rand -hex 32` and keep them afterwards: changing them makes the data they encrypted unreadable. When they aren't set, development and production use different built-in keys, see [Switching an existing instance to production](#switching-an-existing-instance-to-production).
+These keys are used by Active Record Encryption to secure 2FA (TOTP) secrets and geocoding API keys saved in Settings → Instance. Two-factor authentication is only available when all three are set explicitly. Generate each value with `openssl rand -hex 32` and keep them afterwards: changing them makes the data they encrypted unreadable. When they aren't set, development uses built-in development-only values and production derives stable keys from `SECRET_KEY_BASE`; see [Switching an existing instance to production](#switching-an-existing-instance-to-production).
 :::
 
 ### Data Archival
