@@ -75,8 +75,11 @@ You can share your monthly statistics publicly with others without requiring the
      - 1 hour
      - 12 hours
      - 24 hours
-     - Permanent (never expires)
+     - 1 week
+     - 1 month
 4. Copy the generated share URL
+
+On Dawarich Cloud, public stats sharing requires the Pro plan. To share your live location, a date range, a trip or a single track instead, use [Sharing Links](/docs/features/sharing).
 
 ### Share Link
 
@@ -112,7 +115,7 @@ Once disabled, the share link becomes invalid.
 
 ### Automatic Expiration
 
-Links with expiration times automatically become inactive after the set period. For permanent links, you must manually disable sharing.
+Every link becomes inactive once the chosen period has passed. To keep sharing after that, enable sharing again.
 
 ## API Access for Shared Stats
 
