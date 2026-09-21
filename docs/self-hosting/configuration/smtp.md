@@ -19,7 +19,7 @@ Dawarich sends outgoing email for password resets, year-end digests, and family 
 | `SMTP_USERNAME` | _(optional)_ | SMTP username. Leave unset for unauthenticated relays. |
 | `SMTP_PASSWORD` | _(optional)_ | SMTP password. Leave unset for unauthenticated relays. |
 | `SMTP_FROM` | _(required)_ | "From" address on outgoing email. Example: `dawarich@example.com`. |
-| `SMTP_AUTHENTICATION` | `plain` | Auth mechanism. The common values are `plain`, `login` (Office 365 / Microsoft 365 requires this), and `cram_md5`. `digest_md5`, `gssapi`, `ntlm`, and `xoauth2` are also accepted by the underlying Net::SMTP driver but are rarely useful for self-hosted Dawarich — choose one of the first three unless you know you need an enterprise mechanism. |
+| `SMTP_AUTHENTICATION` | `plain` | Auth mechanism. The common values are `plain`, `login` (Office 365 / Microsoft 365 requires this), and `cram_md5`. Use `none` for an unauthenticated relay. `digest_md5`, `gssapi`, `ntlm`, and `xoauth2` are also accepted by the underlying Net::SMTP driver but are rarely useful for self-hosted Dawarich. |
 | `SMTP_STARTTLS` | `true` | Opportunistic TLS upgrade on port 587. Leave `true` for any internet-facing relay (Brevo, Gmail, Office 365, etc.) so credentials and message bodies are encrypted in transit. Set to `false` only for plain SMTP on port 25 to a trusted local relay (LAN Postfix, internal MTA). On port 465 (SMTPS / implicit TLS) this setting has no effect — the connection is TLS from byte one. |
 | `SMTP_OPEN_TIMEOUT` | `5` | Seconds to wait for the TCP connection. Bump to `25` for slow providers (Office 365, Gmail). |
 | `SMTP_READ_TIMEOUT` | `5` | Seconds to wait for a response after a command is sent. Bump to `25` for slow providers. |
@@ -78,10 +78,11 @@ DOMAIN: "dawarich.example.com"
 SMTP_SERVER: "192.168.1.10"
 SMTP_PORT: "25"
 SMTP_FROM: "dawarich@example.com"
+SMTP_AUTHENTICATION: "none"
 SMTP_STARTTLS: "false"
 ```
 
-Leave `SMTP_USERNAME`, `SMTP_PASSWORD`, and `SMTP_AUTHENTICATION` unset.
+Set `SMTP_AUTHENTICATION` to `none`, and leave `SMTP_USERNAME` and `SMTP_PASSWORD` unset.
 
 ## Testing the configuration
 

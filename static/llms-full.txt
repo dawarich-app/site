@@ -281,7 +281,7 @@ Dawarich sends outgoing email for password resets, year-end digests, and family 
 
 - `SMTP_USERNAME`, `SMTP_PASSWORD` — leave unset for unauthenticated local relays.
 - `SMTP_DOMAIN` — HELO/EHLO domain. For transactional relays (Brevo, Mailgun, SendGrid, Postmark, Resend), set to your verified sender domain — typically the part after `@` in `SMTP_FROM`. The relay cross-checks HELO/EHLO against the verified domain for DKIM/SPF alignment.
-- `SMTP_AUTHENTICATION` (default `plain`) — `plain`, `login` (Office 365 / Microsoft 365), or `cram_md5` are the common values. `digest_md5`, `gssapi`, `ntlm`, and `xoauth2` are also accepted but rarely useful.
+- `SMTP_AUTHENTICATION` (default `plain`) — `plain`, `login` (Office 365 / Microsoft 365), or `cram_md5` are the common values. Set `none` for an unauthenticated relay. `digest_md5`, `gssapi`, `ntlm`, and `xoauth2` are also accepted but rarely useful.
 - `SMTP_STARTTLS` (default `true`) — opportunistic TLS upgrade on port 587. Leave `true` for internet-facing relays so credentials and message bodies are encrypted. Set `false` only for plain SMTP on port 25 to a trusted local relay. No effect on port 465 (SMTPS / implicit TLS — connection is TLS from byte one).
 - `SMTP_OPEN_TIMEOUT` (default `5`) and `SMTP_READ_TIMEOUT` (default `5`) — bump to `25` for slow providers (Office 365, Gmail).
 
