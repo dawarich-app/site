@@ -122,6 +122,8 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          blogTitle: 'Dawarich Blog',
+          blogDescription: 'Dawarich product updates, guides and location history news.',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:

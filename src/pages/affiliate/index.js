@@ -80,7 +80,7 @@ export default function AffiliatePage() {
         />
         <meta property="og:image" content="https://dawarich.app/img/meta-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://dawarich.app/affiliate" />
+        <link rel="canonical" href="https://dawarich.app/affiliate/" />
       </Head>
 
       <PitchPage>

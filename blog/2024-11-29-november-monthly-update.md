@@ -52,7 +52,7 @@ This one is more about QoL, making your UI more alive. Notifications, new points
 
 Yeah, you can now enable the "Scratch Map" layer on the map. Have a look:
 
-![](./images/dawarich-scratch-map.webp)
+![Dawarich Scratch Map showing visited countries on a world map](./images/dawarich-scratch-map.webp)
 
 ## Changelog
 
@@ -142,4 +142,3 @@ What a month huh? Feel free to reach out to me on [X](https://x.com/freymakesstu
 You can also support the project by sponsoring it on [Patreon](https://www.patreon.com/freika), [Ko-Fi](https://ko-fi.com/freika) or [Github Sponsors](https://github.com/sponsors/Freika) ✨
 
 Thank you and see you in the next monthly update!
-

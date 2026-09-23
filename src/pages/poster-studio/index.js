@@ -70,7 +70,7 @@ export default function PosterStudioPage() {
         />
         <meta property="og:image" content="https://dawarich.app/img/meta-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://dawarich.app/poster-studio" />
+        <link rel="canonical" href="https://dawarich.app/poster-studio/" />
       </Head>
 
       <PitchPage>

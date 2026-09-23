@@ -6,7 +6,7 @@ description: Share your live location and recent history with up to five family 
 
 # Family Location Sharing
 
-Family lets a small group of people see each other on the map. Every member keeps their own Dawarich account, with their own map, timeline and statistics. Nothing is shared until a member switches it on themselves, and there are two separate choices:
+Family lets a small group of people see each other on the map. Every member keeps their own Dawarich account, with their own map, timeline and statistics. Invited members start with sharing off; on Cloud, starting a Family plan turns on the owner's sharing before anyone else joins, and the owner can turn it off at any time. There are two separate choices:
 
 - **Live location**: your current position, optionally on a timer.
 - **Location history**: your recent track, within a time window you choose.
@@ -184,7 +184,7 @@ A family that still has other members cannot be deleted. For the same reason, th
 
 ## Privacy
 
-- **Nothing is shared by default.** Every member decides for themselves, and nobody can switch sharing on for someone else.
+- **Invited members start with sharing off.** The Cloud plan owner's sharing starts on when the family is created, but they can turn it off at any time. Nobody can switch sharing on for another member.
 - **Live location and history are separate choices.** History is limited to the window you pick and, unless you allow more in the app, to what was recorded after you started sharing.
 - **Timers end on their own.** A 1, 6, 12 or 24-hour share switches itself off.
 - **Asking requires consent.** A location request shares nothing until the other person accepts it.

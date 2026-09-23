@@ -427,7 +427,7 @@ export default function CloudPage() {
 					name="twitter:image"
 					content="https://dawarich.app/img/meta-image.png"
 				/>
-				<link rel="canonical" href="https://dawarich.app/cloud" />
+				<link rel="canonical" href="https://dawarich.app/cloud/" />
 			</Head>
 
 			<LandingHero

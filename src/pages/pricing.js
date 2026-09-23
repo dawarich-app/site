@@ -101,7 +101,10 @@ export default function PricingPage() {
 			</Head>
 
 			<main>
-				<PricingSection />
+				<PricingSection
+					heading="Dawarich Cloud pricing"
+					headingLevel="h1"
+				/>
 				<PricingCompare />
 				<p className="margin-top--lg text--center">
 					Writing about Dawarich?{" "}
