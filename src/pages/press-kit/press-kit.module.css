@@ -327,6 +327,8 @@
   min-height: 74px;
   align-items: center;
   justify-content: space-between;
+  gap: 1.25rem;
+  padding: 0.85rem 0;
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
   color: var(--ifm-heading-color);
   font-size: 1.1rem;
@@ -336,6 +338,19 @@
 
 .coverageList a:hover {
   color: var(--ifm-color-primary);
+}
+
+.coverageText {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.coverageText small {
+  color: var(--ifm-font-color-secondary);
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
 .contact {

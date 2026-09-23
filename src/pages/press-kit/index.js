@@ -44,6 +44,18 @@ const founders = [
 ];
 
 const coverage = [
+  {
+    outlet: 'heise online',
+    title: 'Dawarich: Open-Source-Alternative zum Google Standortverlauf',
+    date: '23 Sep 2026',
+    href: 'https://www.heise.de/ratgeber/Dawarich-Open-Source-Alternative-zum-Google-Standortverlauf-11453464.html',
+  },
+  {
+    outlet: 'c’t / heise online',
+    title: 'Raspi: Privaten Standortverlauf mit Dawarich lokal aufzeichnen',
+    date: '14 Jan 2025',
+    href: 'https://www.heise.de/ratgeber/Raspi-Privaten-Standortverlauf-mit-Dawarich-lokal-aufzeichnen-10235624.html',
+  },
   { outlet: 'XDA Developers', href: 'https://www.xda-developers.com/import-google-timeline-dawarich/' },
   { outlet: 'MakeUseOf', href: 'https://www.makeuseof.com/i-use-free-open-source-app-track-everywhere-ive-been-without-google/' },
 ];
@@ -173,7 +185,11 @@ export default function PressKitPage() {
             <div className={styles.coverageList}>
               {coverage.map((item) => (
                 <a key={item.outlet} href={item.href} target="_blank" rel="noopener noreferrer">
-                  <span>{item.outlet}</span><span aria-hidden="true">↗</span>
+                  <span className={styles.coverageText}>
+                    <span>{item.title || item.outlet}</span>
+                    {item.title && <small>{item.outlet} · {item.date}</small>}
+                  </span>
+                  <span aria-hidden="true">↗</span>
                 </a>
               ))}
             </div>
