@@ -242,13 +242,15 @@
 }
 
 .logoPreview img,
-.darkLogoPreview img,
 .iconPreview img {
   width: 150px;
   height: 150px;
 }
 
-.darkLogoPreview,
+.logoPreview {
+  background: #8f9798;
+}
+
 .horizontalDarkPreview {
   background: #1d1d1d;
 }
