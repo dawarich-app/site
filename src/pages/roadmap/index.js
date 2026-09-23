@@ -11,7 +11,8 @@ const CHANGELOG_URL =
 // ---------------------------------------------------------------------------
 // Upcoming work — shown at the TOP of the timeline, tagged by status and
 // platform. Curated by hand; seeded from the [Unreleased] sections of the web
-// and mobile changelogs.
+// and mobile changelogs. Keep shipped work in `releases`, even when it was
+// originally listed here as in progress.
 //   status:   'in-progress' (default) | 'planned'
 //   platform: 'web' | 'mobile'
 // Order in-progress first, then planned, so the timeline reads nearest-first.
@@ -21,16 +22,9 @@ const upcoming = [
   {
     platform: 'mobile',
     status: 'in-progress',
-    title: 'Tracking & sign-in fixes',
+    title: 'Insights and map refresh',
     description:
-      'Android records the first point immediately when a session starts, and Google / Apple sign-in no longer double-submits on a quick double tap.',
-  },
-  {
-    platform: 'mobile',
-    status: 'planned',
-    title: 'App UI rework',
-    description:
-      'A visual refresh of the mobile app — updated navigation, screens and components to match the redesigned web experience.',
+      'A new Insights tab with yearly trends, activity patterns and digests, plus a refreshed map with a day ribbon, range selection and route replay.',
   },
   {
     platform: 'mobile',
@@ -38,6 +32,13 @@ const upcoming = [
     title: 'Demo data in the mobile app',
     description:
       'Load a fully populated sample history straight from the app to see what tracking looks like before importing your own, and remove it in one tap.',
+  },
+  {
+    platform: 'mobile',
+    status: 'planned',
+    title: 'Photo geodata import in mobile apps',
+    description:
+      'Import location data from photos on your phone into your Dawarich history.',
   },
   {
     platform: 'web',
@@ -53,14 +54,103 @@ const upcoming = [
     description:
       'A refreshed search experience for finding places and visits faster across your tracked history.',
   },
+  {
+    platform: 'web',
+    status: 'planned',
+    title: 'Place and area unification',
+    description:
+      'Bring places and areas together in a consistent experience for managing meaningful locations.',
+  },
+  {
+    platform: 'web',
+    status: 'planned',
+    title: 'Map matching',
+    description:
+      'Match recorded routes to roads and paths for clearer journey traces on the map.',
+  },
+  {
+    platform: 'web',
+    status: 'planned',
+    title: 'Database size optimizations',
+    description:
+      'Reduce the storage needed for location history and related data, especially on large instances.',
+  },
 ];
 
 // ---------------------------------------------------------------------------
 // "Recently shipped" — curated milestone releases across the whole history.
-// Patch-only releases are intentionally omitted; each entry keeps a few
-// user-facing highlights. Newest first.
+// Patch-only releases are intentionally omitted unless they introduce notable
+// features. Each entry keeps a few user-facing highlights. Newest first.
 // ---------------------------------------------------------------------------
 const releases = [
+  {
+    version: '1.15.2',
+    date: 'September 2026',
+    theme: 'MCP and exploration achievements',
+    highlights: [
+      'Experimental read-only MCP endpoint for querying recent timeline data, latest location and visits (Pro, Family and self-hosted)',
+      'Collectible country and region achievements, currently behind the achievements feature flag',
+    ],
+  },
+  {
+    version: '1.15.0',
+    date: 'September 2026',
+    theme: 'Faster maps and planned trips',
+    highlights: [
+      'TREK integration brings trip plans, stops and day notes into Dawarich',
+      'The main map now uses vector tiles for points and tracks by default, with direct point and track editing',
+      'Video Studio adds a customizable Fog of War mode',
+    ],
+  },
+  {
+    version: '2.6.132',
+    date: 'September 2026',
+    platform: 'mobile',
+    theme: 'Family and reliable tracking',
+    highlights: [
+      'Family location sharing, requests and map pins arrive in the mobile apps',
+      'Tracking settings sync across devices, with a distance-unit preference',
+      'Android records the first point when tracking starts; Google and Apple sign-in no longer double-submits',
+    ],
+  },
+  {
+    version: '1.14.0',
+    date: 'August 2026',
+    theme: 'Video Studio',
+    highlights: [
+      'Turn a map route or trip into an animated MP4 with themes, format and length controls',
+      'Switch between the poster and video studios from the map Share menu',
+      'Polish and Catalan join the available interface languages',
+    ],
+  },
+  {
+    version: '1.13.0',
+    date: 'August 2026',
+    theme: 'Vector tile beta',
+    highlights: [
+      'Opt-in tiled map rendering loads the visible points instead of downloading an entire location history',
+      'Dense areas appear as aggregated markers and cached tiles refresh as history changes',
+    ],
+  },
+  {
+    version: '1.12.0',
+    date: 'August 2026',
+    theme: 'A clearer timeline',
+    highlights: [
+      'Visit detection now distinguishes real stays from movement and untracked gaps, with confidence shown on the timeline',
+      'Transportation modes can be edited in place on the timeline',
+      'German, Spanish and French interface translations; Map v1 retired',
+    ],
+  },
+  {
+    version: '1.11.0',
+    date: 'August 2026',
+    theme: 'Richer imports',
+    highlights: [
+      'Google Takeout and Polarsteps imports can extract visits, places, tracks and transportation modes alongside GPS points',
+      'Printed posters can now be ordered from Poster Studio without a feature flag',
+    ],
+  },
   {
     version: '1.10.0',
     date: 'July 2026',
@@ -434,6 +524,9 @@ function ReleaseEntry({ release }) {
       <div className={styles.timelineContent}>
         <div className={styles.releaseHeader}>
           <span className={styles.releaseVersion}>v{release.version}</span>
+          {release.platform === 'mobile' && (
+            <span className={styles.platformMobile}>Mobile apps</span>
+          )}
           {release.theme && (
             <span className={styles.releaseTheme}>{release.theme}</span>
           )}
