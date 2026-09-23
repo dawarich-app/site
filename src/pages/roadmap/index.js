@@ -34,6 +34,13 @@ const upcoming = [
       'Load a fully populated sample history straight from the app to see what tracking looks like before importing your own, and remove it in one tap.',
   },
   {
+    platform: 'mobile',
+    status: 'planned',
+    title: 'Photo geodata import in mobile apps',
+    description:
+      'Import location data from photos on your phone into your Dawarich history.',
+  },
+  {
     platform: 'web',
     status: 'planned',
     title: 'Geofencing',
@@ -46,6 +53,27 @@ const upcoming = [
     title: 'Search rework',
     description:
       'A refreshed search experience for finding places and visits faster across your tracked history.',
+  },
+  {
+    platform: 'web',
+    status: 'planned',
+    title: 'Place and area unification',
+    description:
+      'Bring places and areas together in a consistent experience for managing meaningful locations.',
+  },
+  {
+    platform: 'web',
+    status: 'planned',
+    title: 'Map matching',
+    description:
+      'Match recorded routes to roads and paths for clearer journey traces on the map.',
+  },
+  {
+    platform: 'web',
+    status: 'planned',
+    title: 'Database size optimizations',
+    description:
+      'Reduce the storage needed for location history and related data, especially on large instances.',
   },
 ];
 
