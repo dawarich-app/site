@@ -5,16 +5,16 @@ import styles from './press-kit.module.css';
 
 const assets = [
   {
-    title: 'Logo mark',
-    detail: 'For dark backgrounds · SVG',
+    title: 'Logo mark, dark backgrounds',
+    detail: 'Light artwork · SVG',
     image: '/img/logo.svg',
     download: '/img/logo.svg',
     filename: 'dawarich-logo.svg',
-    className: styles.darkLogoPreview,
+    className: styles.logoPreview,
   },
   {
     title: 'Logo mark, light backgrounds',
-    detail: 'For light backgrounds · SVG',
+    detail: 'Dark artwork · SVG',
     image: '/img/press-kit/dawarich-logo-darkmode.svg',
     download: '/img/press-kit/dawarich-logo-darkmode.svg',
     filename: 'dawarich-logo-darkmode.svg',
