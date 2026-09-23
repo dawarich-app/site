@@ -647,6 +647,20 @@ html.plugin-docs .navbar__search {
   line-height: 1.35;
 }
 
+.dawarich-footer-subtitle {
+  margin: 0.9rem 0 0.15rem;
+  color: #D8D8D8;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.footer__items .footer__item:first-child .dawarich-footer-subtitle {
+  margin-top: 0;
+}
+
 .dawarich-footer-cta a {
   display: inline-flex;
   align-items: center;
@@ -694,4 +708,3 @@ html.plugin-docs .navbar__search {
     margin-right: 0.25rem;
   }
 }
-

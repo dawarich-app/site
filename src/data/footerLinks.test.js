@@ -71,26 +71,30 @@ describe('footerLinks', () => {
     for (const i of linkItems()) expect(i.label.trim().length).toBeGreaterThan(0);
   });
 
-  it('keeps the Tools column in measured-click order', () => {
-    const tools = footerLinks.find((c) => c.title === 'Tools').items.map((i) => i.to);
-    expect(tools).toEqual([
-      ...TOP_TOOLS,
-      '/tools',
-    ]);
+  it('groups long columns by the task a visitor wants to do', () => {
+    const headings = (title) => footerLinks
+      .find((c) => c.title === title)
+      .items.filter((i) => i.html)
+      .map((i) => i.html.match(/>([^<]+)<\/h5>/)?.[1]);
+
+    expect(headings('Product')).toEqual(['Explore', 'Share & create', 'Get started']);
+    expect(headings('Tools')).toEqual(['Explore your data', 'Convert files', 'Edit & extract']);
+    expect(headings('Company')).toEqual(['About', 'Legal']);
+    expect(internalTargets()).toContain('/press-kit');
   });
 
   it('keeps the Compare column in correct order', () => {
-    const compare = footerLinks.find((c) => c.title === 'Compare').items.map((i) => i.to);
+    const compare = footerLinks.find((c) => c.title === 'Compare').items.filter((i) => i.to).map((i) => i.to);
     expect(compare).toEqual(COMPARISONS);
   });
 
   it('links the About page at the top of the Company column', () => {
-    const company = footerLinks.find((c) => c.title === 'Company').items.map((i) => i.to);
+    const company = footerLinks.find((c) => c.title === 'Company').items.filter((i) => i.to).map((i) => i.to);
     expect(company[0]).toBe('/about');
   });
 
   it('pins FOOTER_LINK_CAP to its specified value', () => {
-    expect(FOOTER_LINK_CAP).toBe(61);
+    expect(FOOTER_LINK_CAP).toBe(62);
   });
 
   // Withdrawing consent has to be as easy as giving it, and the banner that

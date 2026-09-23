@@ -4,6 +4,12 @@ This is the source code for the website of the [Dawarich](https://dawarich.app) 
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
+### Press resources and footer
+
+The public press kit is at `/press-kit`. Its page source is `src/pages/press-kit/`; it uses the original logo, app icon, product screenshots, and founder portraits in `static/img/`. Update the page when those assets or the company facts change.
+
+Footer navigation is defined in `src/data/footerLinks.js`. Long columns use non-link subsection headings so visitors can scan product features, tools, documentation, and company links. Keep the press kit linked from the Company section and check `src/data/footerLinks.test.js` when moving links.
+
 ### Installation
 
 ```
