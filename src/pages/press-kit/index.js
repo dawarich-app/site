@@ -5,12 +5,36 @@ import styles from './press-kit.module.css';
 
 const assets = [
   {
-    title: 'Dawarich mark',
-    detail: 'Vector artwork · SVG',
+    title: 'Logo mark',
+    detail: 'For dark backgrounds · SVG',
     image: '/img/logo.svg',
     download: '/img/logo.svg',
     filename: 'dawarich-logo.svg',
+    className: styles.darkLogoPreview,
+  },
+  {
+    title: 'Logo mark, light backgrounds',
+    detail: 'For light backgrounds · SVG',
+    image: '/img/press-kit/dawarich-logo-darkmode.svg',
+    download: '/img/press-kit/dawarich-logo-darkmode.svg',
+    filename: 'dawarich-logo-darkmode.svg',
     className: styles.logoPreview,
+  },
+  {
+    title: 'Horizontal logo, light backgrounds',
+    detail: 'Icon and wordmark · PNG',
+    image: '/img/press-kit/dawarich-logo-horizontal-light.png',
+    download: '/img/press-kit/dawarich-logo-horizontal-light.png',
+    filename: 'dawarich-logo-horizontal-light.png',
+    className: styles.horizontalPreview,
+  },
+  {
+    title: 'Horizontal logo, dark backgrounds',
+    detail: 'Icon and wordmark · PNG',
+    image: '/img/press-kit/dawarich-logo-horizontal-dark.png',
+    download: '/img/press-kit/dawarich-logo-horizontal-dark.png',
+    filename: 'dawarich-logo-horizontal-dark.png',
+    className: styles.horizontalDarkPreview,
   },
   {
     title: 'App icon',
@@ -18,6 +42,14 @@ const assets = [
     image: '/img/icon-512.png',
     download: '/img/icon-512.png',
     filename: 'dawarich-icon-512.png',
+    className: styles.iconPreview,
+  },
+  {
+    title: 'App icon, light backgrounds',
+    detail: 'Square icon · PNG',
+    image: '/img/icon-512-dark.png',
+    download: '/img/icon-512-dark.png',
+    filename: 'dawarich-icon-512-dark.png',
     className: styles.iconPreview,
   },
   {

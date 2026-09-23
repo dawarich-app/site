@@ -6,7 +6,7 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 
 ### Press resources and footer
 
-The public press kit is at `/press-kit`. Its page source is `src/pages/press-kit/`; it uses the original logo, app icon, product screenshots, and founder portraits in `static/img/`. Update the page when those assets or the company facts change.
+The public press kit is at `/press-kit`. Its page source is `src/pages/press-kit/`; it uses the original app logo and icon, light and dark logo variants, horizontal wordmarks, product screenshots, and founder portraits in `static/img/`. The additional downloadable logo files live in `static/img/press-kit/` and come from the project's existing brand assets. Update the page when those assets or the company facts change.
 
 Footer navigation is defined in `src/data/footerLinks.js`. Long columns use non-link subsection headings so visitors can scan product features, tools, documentation, and company links. Keep the press kit linked from the Company section and check `src/data/footerLinks.test.js` when moving links.
 
