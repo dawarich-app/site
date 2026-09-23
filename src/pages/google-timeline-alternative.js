@@ -578,7 +578,7 @@ export default function GoogleTimelineAlternativePage() {
 				/>
 				<link
 					rel="canonical"
-					href="https://dawarich.app/google-timeline-alternative"
+					href="https://dawarich.app/google-timeline-alternative/"
 				/>
 			</Head>
 
