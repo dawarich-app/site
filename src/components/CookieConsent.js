@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import CookieConsent from 'react-cookie-consent';
-import { saveReferralKey, clearReferralKey } from '@site/src/utils/utm';
+import { saveOriginalUtmParams, clearOriginalUtmParams, saveReferralKey, clearReferralKey } from '@site/src/utils/utm';
 import {
   CONSENT_COOKIE_NAME,
   denyGoogleConsent,
@@ -25,6 +25,7 @@ export default function CustomCookieConsent() {
   }, []);
 
   const handleAccept = () => {
+    saveOriginalUtmParams();
     // Page load refused to store the affiliate key without consent, so capture it
     // now — the referral link's query param is still on the URL at this point.
     saveReferralKey();
@@ -41,6 +42,7 @@ export default function CustomCookieConsent() {
 
   const handleDecline = () => {
     denyGoogleConsent();
+    clearOriginalUtmParams();
     clearReferralKey();
   };
 
@@ -80,11 +82,9 @@ export default function CustomCookieConsent() {
       onAccept={handleAccept}
       onDecline={handleDecline}
     >
-      Our traffic statistics come from our own server, not a third party.
-      Nothing is stored on your device for advertising, email or affiliate tracking unless
-      you accept: Google Ads loads with storage switched off — it still tells Google which
-      page you opened, but sets nothing on your device — and the Brevo and Partnero tags
-      are not loaded at all, until you click "Accept".
+      Optional site analytics (self-hosted Rybbit), email and affiliate trackers
+      run only after you accept. Google Ads loads with storage switched off before
+      consent, but still sends Google a request about the page you opened.
       <a
         href="/privacy-policy#cookies"
         style={{

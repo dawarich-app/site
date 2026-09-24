@@ -5,7 +5,7 @@ import {
   readConsentChoice,
   revokeConsent,
 } from '@site/src/utils/consent';
-import { clearReferralKey } from '@site/src/utils/utm';
+import { clearOriginalUtmParams, clearReferralKey } from '@site/src/utils/utm';
 
 const buttonStyle = {
   color: '#fff',
@@ -35,6 +35,7 @@ export default function CookiePreferences({ reload = () => window.location.reloa
   // from here rather than from revokeConsent keeps that dependency one-way.
   const startOver = () => {
     revokeConsent();
+    clearOriginalUtmParams();
     clearReferralKey();
     reload();
   };

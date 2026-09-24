@@ -26,11 +26,6 @@ const config = {
     {
       src: "https://cdn.paddle.com/paddle/v2/paddle.js",
       async: true
-    },
-    {
-      src: "https://rybbit.dwri.xyz/api/script.js",
-      "data-site-id": "18ca92af4f9c",
-      defer: true
     }
   ],
 

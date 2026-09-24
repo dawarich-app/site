@@ -58,6 +58,7 @@ describe('CustomCookieConsent', () => {
 
     expect(srcs.some((s) => s.includes('brevo.com'))).toBe(true);
     expect(srcs.some((s) => s.includes('partnero.com'))).toBe(true);
+    expect(srcs.some((s) => s.includes('rybbit.dwri.xyz'))).toBe(true);
   });
 
   it('survives a blocked script append instead of tearing down the page', () => {
@@ -77,6 +78,17 @@ describe('CustomCookieConsent', () => {
 
     expect(consentUpdates()[0][2].ad_storage).toBe('granted');
     expect(loadedThirdParties().some((s) => s.includes('brevo.com'))).toBe(true);
+  });
+
+  it('saves the landing campaign only after Accept is clicked', () => {
+    localStorage.removeItem('original_utm_params');
+    window.history.replaceState({}, '', '/?utm_source=google&utm_medium=cpc&utm_campaign=123456789');
+    render(<CustomCookieConsent />);
+    expect(localStorage.getItem('original_utm_params')).toBeNull();
+
+    fireEvent.click(screen.getByText('Accept'));
+    expect(JSON.parse(localStorage.getItem('original_utm_params')).params.utm_campaign).toBe('123456789');
+    window.history.replaceState({}, '', '/');
   });
 
   it('does not append a second Google tag loader on Accept', () => {
