@@ -151,6 +151,7 @@ describe('referral (via) preservation', () => {
 describe('ad campaign handoff', () => {
   beforeEach(() => {
     localStorage.clear();
+    grantConsent();
     visit('');
   });
 
@@ -185,6 +186,34 @@ describe('ad campaign handoff', () => {
 
     expect(link.href).toBe('https://example.com/help');
     link.remove();
+  });
+});
+
+describe('campaign storage consent', () => {
+  beforeEach(() => {
+    localStorage.clear();
+    clearConsent();
+    visit('?utm_source=google&utm_medium=cpc&utm_campaign=123456789');
+  });
+
+  it('does not store a campaign before consent or after refusal', () => {
+    saveOriginalUtmParams();
+    expect(localStorage.getItem('original_utm_params')).toBeNull();
+
+    declineConsent();
+    saveOriginalUtmParams();
+    expect(localStorage.getItem('original_utm_params')).toBeNull();
+    expect(buildOutboundUrl(SIGNUP)).toBe(SIGNUP);
+  });
+
+  it('forgets a stored campaign when consent is withdrawn', () => {
+    grantConsent();
+    saveOriginalUtmParams();
+    expect(localStorage.getItem('original_utm_params')).not.toBeNull();
+
+    declineConsent();
+    expect(buildOutboundUrl(SIGNUP)).toBe(SIGNUP);
+    expect(localStorage.getItem('original_utm_params')).toBeNull();
   });
 });
 

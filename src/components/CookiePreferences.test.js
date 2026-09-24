@@ -95,6 +95,15 @@ describe('CookiePreferences', () => {
     expect(localStorage.getItem('partnero_referral')).toBeNull();
   });
 
+  it('drops a saved campaign on withdrawal', () => {
+    document.cookie = `${CONSENT_COOKIE_NAME}=true; path=/`;
+    localStorage.setItem('original_utm_params', JSON.stringify({ params: { utm_campaign: '123' }, timestamp: Date.now() }));
+    render(<CookiePreferences reload={vi.fn()} />);
+    fireEvent.click(screen.getByRole('button', { name: /withdraw consent/i }));
+
+    expect(localStorage.getItem('original_utm_params')).toBeNull();
+  });
+
   // Brevo and Partnero are already executing in this page and cannot be unloaded,
   // and the banner reads its cookie only when it first mounts — which Docusaurus
   // never does again during client-side navigation. Only a reload finishes the job.

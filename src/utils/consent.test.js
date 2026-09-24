@@ -209,6 +209,14 @@ describe('revokeConsent', () => {
     expect(hasAcceptedConsent()).toBe(false);
   });
 
+  it('removes the optional analytics visitor ID on withdrawal', () => {
+    document.cookie = `${CONSENT_COOKIE_NAME}=true; path=/`;
+    localStorage.setItem('rybbit-visitor-id', 'visitor');
+    revokeConsent();
+
+    expect(localStorage.getItem('rybbit-visitor-id')).toBeNull();
+  });
+
   // Withdrawal that leaves the authorised cookies in place is not withdrawal.
   it('expires the cookies the consent authorised, not just the answer', () => {
     document.cookie = `${CONSENT_COOKIE_NAME}=true; path=/`;

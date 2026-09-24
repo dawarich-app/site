@@ -59,8 +59,8 @@ describe('no advertising tag may load outside the consent bootstrap', () => {
     expect(order.indexOf('bootstrap')).toBeLessThan(order.indexOf('loader'));
   });
 
-  it('still loads the analytics that are not gated behind the banner', () => {
-    expect(scriptSrcs.some((s) => s.includes('rybbit'))).toBe(true);
+  it('does not load Rybbit before the visitor consents', () => {
+    expect(scriptSrcs.some((s) => s.includes('rybbit'))).toBe(false);
   });
 
   // Simple Analytics was dropped; Rybbit already covers the same traffic

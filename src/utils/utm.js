@@ -65,6 +65,7 @@ function getUtmParamsFromUrl() {
  */
 export function saveOriginalUtmParams() {
   if (typeof window === 'undefined') return;
+  if (!hasTrackingConsent()) return;
 
   const utmParams = getUtmParamsFromUrl();
 
@@ -170,6 +171,10 @@ export function clearReferralKey() {
  */
 function getOriginalUtmParams() {
   if (typeof window === 'undefined') return {};
+  if (!hasTrackingConsent()) {
+    clearOriginalUtmParams();
+    return {};
+  }
 
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
