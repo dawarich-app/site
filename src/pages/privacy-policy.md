@@ -25,6 +25,7 @@ This policy applies to the Dawarich SaaS at `dawarich.app`, the hosted tier, and
 | Billing data (name, email, address, tax ID, payment metadata) | Subscriptions, invoicing, tax | (1)(b) contract; (1)(c) legal obligation |
 | Error logs, crash reports, performance metrics | Keep the service stable and secure | (1)(f) legitimate interest |
 | Support correspondence | Respond to your requests | (1)(b) / (1)(f) |
+| Optional product analytics (signup, usage milestones, subscription events and numeric ad campaign ID) | Measure and improve Dawarich Cloud | (1)(a) consent; no events sent to PostHog without opt-in |
 | Poster print orders (name, shipping address, email, phone, the poster file) | Produce and ship posters you order, invoicing | (1)(b) contract; (1)(c) legal obligation |
 | Files uploaded to the free tools with "Save to my Dawarich account" | Hold the file so it can be imported into the account you create next | (1)(b) pre-contractual measures at your request |
 
@@ -36,7 +37,7 @@ Since March 2026, reverse-geocoded place names are no longer stored for SaaS use
 
 ## 3. Recipients / Processors
 
-All listed processors are bound by DPAs under Art. 28 GDPR. We do not sell data or share it for advertising.
+We require an Art. 28 DPA for each active processor. Before enabling the optional PostHog integration, we must verify its DPA and international-transfer terms. We do not sell location history or use it for advertising.
 
 | Processor | Purpose | Location |
 |---|---|---|
@@ -45,6 +46,7 @@ All listed processors are bound by DPAs under Art. 28 GDPR. We do not sell data 
 | Paddle.com Market Ltd. | Billing, checkout, invoicing | United Kingdom |
 | Functional Software, Inc. (Sentry) | Error and crash tracking | United States |
 | Google LLC (Google Ads) | Marketing-site conversion tracking — denied by default, consent-based | United States |
+| PostHog, Inc. | Optional Cloud product analytics; EU project, activation pending DPA review | EU project; provider based in the US |
 | Sendinblue SAS (Brevo) — email | Transactional emails | France (EU) |
 | Sendinblue SAS (Brevo) — web tracker | Marketing-site email-campaign pixel — consent-based | France (EU) |
 | Apple Inc. | iOS App Store distribution | United States |
@@ -63,6 +65,7 @@ Rybbit, the analytics tool named in section 6, runs on our own Hetzner infrastru
 - **Poster print files:** deleted within 48 hours if the order is not paid; kept up to 90 days after purchase for reprints and support, then deleted.
 - **Billing data (including poster order records):** up to 10 years (§ 147 AO, § 257 HGB).
 - **Error logs:** up to 30 days.
+- **Optional product analytics:** delete the pseudonymous PostHog record after withdrawal; verify and publish the project retention period before enabling production capture.
 - **Support correspondence:** up to 3 years after last contact.
 - **Tool uploads awaiting an account:** deleted within 24 hours if you do not complete signup. Once claimed, the file becomes an import in your account and follows the account-data rule above.
 
@@ -81,12 +84,13 @@ On `dawarich.app` we use:
 | Category | Purpose | Consent? | Provider |
 |---|---|---|---|
 | Strictly necessary | Remember your banner choice | No (§ 25(2) TTDSG) | First-party |
-| Site analytics | Aggregate traffic; stores a visitor ID in your browser's local storage | Not currently asked | Rybbit (self-hosted) |
+| Site analytics | Aggregate traffic; stores a visitor ID in your browser's local storage | **Yes** | Rybbit (self-hosted) |
 | Advertising | Google Ads conversion tracking — tag present on every page, storage denied until you accept | **Yes**, for storage | Google Ads |
+| Campaign handoff | Keeps landing UTM parameters in browser storage for up to 30 days to carry them to signup | **Yes** | First-party |
 | Email analytics | Brevo tracking pixel | **Yes** | Brevo |
 | Affiliate attribution | Credit a referring partner for a sign-up | **Yes** | Partnero |
 
-Rybbit stores a randomly generated visitor ID in your browser's local storage so that repeat visits are counted as one visitor rather than several. It is written on the first page you open, before the banner appears, and we do not currently ask for consent before writing it. It contains no personal data, is never sent to a third party, and you can remove it by clearing site data for `dawarich.app`.
+Rybbit stores a randomly generated visitor ID in your browser's local storage so that repeat visits are counted as one visitor rather than several. This pseudonymous ID may be personal data. Rybbit is loaded only after you accept, and withdrawal clears its local storage ID. Landing UTM parameters are also saved only after acceptance; withdrawal clears them. The Cloud app separately asks for optional product analytics consent before sending events to PostHog.
 
 The Google Ads tag is present on every page, but it runs under Google Consent Mode with `ad_storage`, `ad_user_data`, `ad_personalization` and `analytics_storage` all set to **denied** until you accept. In that state it writes no cookies and no identifiers to your device; if you never accept, or you decline, it stays denied. The Brevo and Partnero tags are not loaded at all before consent.
 

@@ -1,10 +1,8 @@
 /**
  * Consent gating for the tags that write to a visitor's device.
  *
- * Rybbit stays outside this module, but not because it stores nothing: it
- * writes a `rybbit-visitor-id` to localStorage before the banner, and the
- * decision was to disclose that in § 6 of the privacy policy rather than gate
- * it. Do not read its absence here as "it writes nothing to the device".
+ * Rybbit writes a visitor ID to localStorage, so it follows the same consent
+ * gate as the other optional measurement scripts.
  *
  * The Google tag is a special case. It has to be present on the page before
  * the visitor clicks anything, because the cross-domain linker can only
@@ -34,7 +32,7 @@ const CONSENTED_COOKIES = [
 // § 25 TTDSG governs writing to the device, not the mechanism used to write.
 // `partnero_referral` is absent on purpose: utm.js owns it, and clearing it
 // there keeps utm.js -> consent.js a one-way dependency.
-const CONSENTED_STORAGE_KEYS = ['_gcl_ls', '__wpfvdk', '_wpinitialpermissionstate'];
+const CONSENTED_STORAGE_KEYS = ['_gcl_ls', '__wpfvdk', '_wpinitialpermissionstate', 'rybbit-visitor-id'];
 export const GOOGLE_ADS_ID = 'AW-17899851408';
 export const LINKER_DOMAINS = ['dawarich.app', 'my.dawarich.app'];
 
@@ -172,6 +170,15 @@ function alreadyLoaded(name) {
  */
 export function loadConsentedIntegrations() {
   if (typeof document === 'undefined') return;
+
+  if (!alreadyLoaded('rybbit')) {
+    const rybbitScript = document.createElement('script');
+    rybbitScript.src = 'https://rybbit.dwri.xyz/api/script.js';
+    rybbitScript.async = true;
+    rybbitScript.setAttribute('data-site-id', '18ca92af4f9c');
+    rybbitScript.setAttribute(TAG_MARKER, 'rybbit');
+    document.head.appendChild(rybbitScript);
+  }
 
   if (!alreadyLoaded('brevo')) {
     const brevoScript = document.createElement('script');
