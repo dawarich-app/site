@@ -2,6 +2,7 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import {
   hasTrackingConsent,
   buildOutboundUrl,
+  initializeUtmPreservation,
   saveOriginalUtmParams,
   clearOriginalUtmParams,
   saveReferralKey,
@@ -144,6 +145,46 @@ describe('referral (via) preservation', () => {
     localStorage.setItem('partnero_referral', JSON.stringify(stored));
 
     expect(getReferralKey()).toBeNull();
+  });
+});
+
+describe('ad campaign handoff', () => {
+  beforeEach(() => {
+    localStorage.clear();
+    visit('');
+  });
+
+  it('forwards a saved Google Ads campaign on a signup link without UTM params', () => {
+    visit('?utm_source=google&utm_medium=cpc&utm_campaign=123456789');
+    saveOriginalUtmParams();
+    initializeUtmPreservation();
+
+    const link = document.createElement('a');
+    link.href = SIGNUP;
+    link.addEventListener('click', (event) => event.preventDefault());
+    document.body.appendChild(link);
+    link.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+
+    const destination = new URL(link.href);
+    expect(destination.searchParams.get('utm_source')).toBe('google');
+    expect(destination.searchParams.get('utm_medium')).toBe('cpc');
+    expect(destination.searchParams.get('utm_campaign')).toBe('123456789');
+    link.remove();
+  });
+
+  it('does not append a saved campaign to an unrelated external link', () => {
+    visit('?utm_source=google&utm_medium=cpc&utm_campaign=123456789');
+    saveOriginalUtmParams();
+    initializeUtmPreservation();
+
+    const link = document.createElement('a');
+    link.href = 'https://example.com/help';
+    link.addEventListener('click', (event) => event.preventDefault());
+    document.body.appendChild(link);
+    link.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+
+    expect(link.href).toBe('https://example.com/help');
+    link.remove();
   });
 });
 
