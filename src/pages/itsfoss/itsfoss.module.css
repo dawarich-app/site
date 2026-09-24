@@ -1,0 +1,109 @@
+.welcomeBanner {
+  position: relative;
+  padding: 0.875rem 3rem;
+  background: linear-gradient(110deg, #064e3b 0%, #0f766e 58%, #155e75 100%);
+  color: #fff;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.welcomeBannerInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.welcomeBannerCode {
+  padding: 0.15rem 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  border-radius: 5px;
+  font-family: var(--ifm-font-family-monospace);
+  letter-spacing: 0.08em;
+}
+
+.welcomeBannerClose {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.welcomeBannerClose:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+.promoCallout {
+  padding: 4rem 1.5rem 3rem;
+}
+
+.promoCalloutInner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid rgba(15, 118, 110, 0.35);
+  border-radius: 16px;
+  background: linear-gradient(110deg, rgba(6, 78, 59, 0.09), rgba(21, 94, 117, 0.08));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.promoCalloutText {
+  min-width: 0;
+}
+
+.promoCalloutHeadline {
+  margin: 0 0 0.35rem;
+  color: var(--ifm-heading-color);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.promoCalloutBody {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.promoCalloutCode {
+  padding: 0.85rem 1.4rem;
+  border: 2px dashed #0f766e;
+  border-radius: 12px;
+  background: var(--ifm-background-surface-color);
+  color: #0f766e;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+[data-theme="dark"] .promoCalloutCode {
+  color: #5eead4;
+}
+
+@media (max-width: 640px) {
+  .welcomeBanner {
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+  }
+
+  .promoCalloutInner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .promoCalloutCode {
+    font-size: 1.25rem;
+  }
+}

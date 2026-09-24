@@ -4,7 +4,7 @@ import { PLANS } from "@site/src/data/pricingPlans";
 import PricingCard from "./PricingCard";
 import styles from "./PricingSection.module.css";
 
-export default function PricingSection() {
+export default function PricingSection({ plans = PLANS }) {
 	return (
 		<section id="pricing" className={styles.section}>
 			<div className={styles.container}>
@@ -21,13 +21,13 @@ export default function PricingSection() {
 
 				<div className={styles.cardContainer}>
 					<div className={styles.cardWrapper}>
-						<PricingCard plan={PLANS.lite} />
+						<PricingCard plan={plans.lite} />
 					</div>
 					<div className={styles.cardWrapper}>
-						<PricingCard plan={PLANS.pro} popular />
+						<PricingCard plan={plans.pro} popular />
 					</div>
 					<div className={styles.cardWrapper}>
-						<PricingCard plan={PLANS.family} />
+						<PricingCard plan={plans.family} />
 					</div>
 				</div>
 
