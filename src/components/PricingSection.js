@@ -4,7 +4,12 @@ import { PLANS } from "@site/src/data/pricingPlans";
 import PricingCard from "./PricingCard";
 import styles from "./PricingSection.module.css";
 
-export default function PricingSection({ plans = PLANS }) {
+export default function PricingSection({
+	plans = PLANS,
+	heading = "Own Your Location History",
+	headingLevel = "h2",
+}) {
+	const Heading = headingLevel;
 	return (
 		<section id="pricing" className={styles.section}>
 			<div className={styles.container}>
@@ -12,7 +17,7 @@ export default function PricingSection({ plans = PLANS }) {
 					7-day free trial — 14-day money-back guarantee
 				</div>
 
-				<h2 className={styles.title}>Own Your Location History</h2>
+				<Heading className={styles.title}>{heading}</Heading>
 
 				<p className={styles.subtitle}>
 					From €5 a month to keep a lifetime of memories. Your data is always

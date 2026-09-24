@@ -1,0 +1,45 @@
+.setupSteps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  padding-left: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.setupSteps li {
+  padding-right: 1rem;
+  line-height: 1.6;
+}
+
+.setupSteps strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.appLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+
+.appLinks a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--pitch-rule);
+  border-radius: 10px;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.appLinks a:hover {
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .setupSteps {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}

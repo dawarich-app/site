@@ -75,7 +75,7 @@ describe('footerLinks', () => {
     const headings = (title) => footerLinks
       .find((c) => c.title === title)
       .items.filter((i) => i.html)
-      .map((i) => i.html.match(/>([^<]+)<\/h5>/)?.[1]);
+      .map((i) => i.html.match(/>([^<]+)<\/div>/)?.[1]);
 
     expect(headings('Product')).toEqual(['Explore', 'Share & create', 'Get started']);
     expect(headings('Tools')).toEqual(['Explore your data', 'Convert files', 'Edit & extract']);

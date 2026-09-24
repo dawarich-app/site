@@ -6,6 +6,7 @@ import {
   PitchHero,
   ProofStrip,
   ValueRows,
+  WideBlock,
   Objections,
   CloseCTA,
 } from '@site/src/components/pitch';
@@ -15,6 +16,7 @@ import {
   FamilyRequestShot,
   FamilyPageShot,
 } from '@site/src/components/pitch/Artifacts';
+import styles from './FamilyPage.module.css';
 
 const rows = [
   {
@@ -25,7 +27,7 @@ const rows = [
   },
   {
     title: 'Nobody can switch it on for you',
-    body: 'Five people, five independent switches. The person who pays for the plan has no more power over your sharing than anyone else does. Turning your own sharing off keeps working even if the subscription expires, because that is a privacy action and never a paid one.',
+    body: 'Five people, five independent switches. Starting a Cloud Family plan turns on the owner\'s sharing, which they can turn off immediately. Invited members start with sharing off. The plan owner cannot switch it on for anyone else, and turning your own sharing off still works if the subscription expires.',
     media: <FamilyMembersShot />,
   },
   {
@@ -39,11 +41,11 @@ const rows = [
 const objections = [
   {
     q: 'Is this just Life360 with different branding?',
-    a: 'No. The default here is that nothing is shared. Every member controls their own switch, live sharing can expire on a timer, location history is a separate decision from live position, and asking where somebody is means sending a request they can decline.',
+    a: 'No. Invited members start with sharing off, and every member controls their own switch. The Cloud plan owner starts with sharing on but can turn it off. Live sharing can expire on a timer, history is a separate choice, and a location request can be declined.',
   },
   {
     q: 'Can my teenager see that I am tracking them?',
-    a: 'There is nothing hidden to see. Sharing is something each person turns on for themselves, and the family page shows exactly who is currently sharing and who is not. Covert tracking is not a feature we have.',
+    a: 'There is nothing hidden to see. Invited members decide whether to share, and the family page shows exactly who is currently sharing and who is not. Covert tracking is not a feature we have.',
   },
   {
     q: 'What does each person actually get?',
@@ -66,8 +68,8 @@ const objections = [
 export default function FamilyPage() {
   return (
     <Layout
-      title="Family Location Sharing — Private, Consent-Based, No Tracking"
-      description="Share live location with up to five family members on your terms: per-person control, sharing timers, separate history windows, and location requests that must be accepted. €299.99/year or self-host free.">
+      title="Family Location Sharing App for iPhone and Android"
+      description="Share family locations in the Dawarich iOS and Android apps. Invite up to five people; each controls live sharing, history and location requests. €299.99/year or self-host free.">
       <Head>
         <meta
           property="og:title"
@@ -75,11 +77,11 @@ export default function FamilyPage() {
         />
         <meta
           property="og:description"
-          content="Five people, five independent switches. Live sharing on a timer, history as a separate choice, and location requests that have to be accepted. Nothing is shared by default."
+          content="Five people, five independent switches. Live sharing on a timer, history as a separate choice, and location requests that have to be accepted."
         />
         <meta property="og:image" content="https://dawarich.app/img/meta-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://dawarich.app/family" />
+        <link rel="canonical" href="https://dawarich.app/family/" />
       </Head>
 
       <PitchPage>
@@ -87,22 +89,37 @@ export default function FamilyPage() {
           campaign="family"
           title={
             <>
-              Family location sharing
+              Family location sharing app
               <br />
               <em>that everyone agrees to.</em>
             </>
           }
-          sub="Family tracking apps assume the answer is watching everybody all the time. Dawarich assumes the opposite: nothing is shared until a person switches it on themselves, sharing can expire on a timer, and finding out where someone is means asking them."
+          sub="See your household on iPhone and Android. Invited members choose when to share, live sharing can expire on a timer, and finding out where someone is means asking them. The Cloud plan owner starts with sharing on and can turn it off at any time."
           artifact={<FamilyPageShot />}
         />
 
         <ProofStrip />
 
         <ValueRows
-          title="Built so nobody is watched by default"
-          sub="Up to five people on one plan, each with a full Dawarich account and complete control of what they share."
+          title="Built around each person's choice"
+          sub="Up to five people on one plan, each with a full Dawarich account and control of what they share."
           rows={rows}
         />
+
+        <WideBlock
+          title="Get your family set up on iPhone and Android"
+          body="The Family plan covers up to five separate accounts. Everyone uses their own phone and decides what to share.">
+          <ol className={styles.setupSteps}>
+            <li><strong>Start a Family plan.</strong> Dawarich creates the Cloud family for you, or you can create one on your self-hosted instance.</li>
+            <li><strong>Invite your household.</strong> Send invitations from the Family page on the web. Each person accepts using the invited email address.</li>
+            <li><strong>Install and sign in.</strong> Open the Dawarich app on each phone, then use the Family panel on the map to choose live sharing and history settings.</li>
+          </ol>
+          <div className={styles.appLinks}>
+            <a href="https://apps.apple.com/app/apple-store/id6739544999?pt=128010810&ct=family-page&mt=8">Download the iOS app</a>
+            <a href="https://play.google.com/store/apps/details?id=app.dawarich.Dawarich">Get the Android app</a>
+            <a href="/docs/features/family">Read the setup guide</a>
+          </div>
+        </WideBlock>
 
         <Objections title="What parents and partners ask us" items={objections} />
 
