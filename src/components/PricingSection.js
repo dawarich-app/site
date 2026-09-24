@@ -5,6 +5,7 @@ import PricingCard from "./PricingCard";
 import styles from "./PricingSection.module.css";
 
 export default function PricingSection({
+	plans = PLANS,
 	heading = "Own Your Location History",
 	headingLevel = "h2",
 }) {
@@ -25,13 +26,13 @@ export default function PricingSection({
 
 				<div className={styles.cardContainer}>
 					<div className={styles.cardWrapper}>
-						<PricingCard plan={PLANS.lite} />
+						<PricingCard plan={plans.lite} />
 					</div>
 					<div className={styles.cardWrapper}>
-						<PricingCard plan={PLANS.pro} popular />
+						<PricingCard plan={plans.pro} popular />
 					</div>
 					<div className={styles.cardWrapper}>
-						<PricingCard plan={PLANS.family} />
+						<PricingCard plan={plans.family} />
 					</div>
 				</div>
 

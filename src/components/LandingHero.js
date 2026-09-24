@@ -44,6 +44,7 @@ export default function LandingHero({
 	disclaimer,
 	imageSrc,
 	imageAlt,
+	imageContainerStyle,
 }) {
 	return (
 		<section className={styles.hero}>
@@ -102,7 +103,7 @@ export default function LandingHero({
 
 				{imageSrc && (
 					<div className={styles.imageColumn}>
-						<div className={styles.heroImageContainer}>
+						<div className={styles.heroImageContainer} style={imageContainerStyle}>
 							<img
 								src={imageSrc}
 								alt={imageAlt || ""}
