@@ -256,12 +256,14 @@ export function initializeUtmPreservation() {
     const href = link.getAttribute('href');
     if (!href) return;
 
-    // Rewrite external links carrying UTM params, and any external link at all once
-    // an affiliate key is stored — CTAs without utm_ still need to carry `via`.
+    // Signup links without their own UTM params still need the ad campaign
+    // saved from the landing page. Keep that propagation on Dawarich domains.
     const isExternal = href.startsWith('http://') || href.startsWith('https://');
     const hasUtmParams = href.includes('utm_');
+    const isDawarichApp = /^https:\/\/(?:my|subscription)\.dawarich\.app(?:[/?#]|$)/i.test(href);
+    const hasSavedUtm = Object.keys(getOriginalUtmParams()).length > 0;
 
-    if (isExternal && (hasUtmParams || getReferralKey())) {
+    if (isExternal && (hasUtmParams || getReferralKey() || (isDawarichApp && hasSavedUtm))) {
       const newHref = buildOutboundUrl(href);
       if (newHref !== href) {
         link.setAttribute('href', newHref);
