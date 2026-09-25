@@ -1,6 +1,5 @@
 import Head from "@docusaurus/Head";
 import Link from "@docusaurus/Link";
-import { initializePaddle } from "@paddle/paddle-js";
 import HowItWorks from "@site/src/components/HowItWorks";
 import LandingHero from "@site/src/components/LandingHero";
 import sections from "@site/src/components/LandingSections.module.css";
@@ -11,7 +10,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./techlore.module.css";
 
 const PROMO_CODE = "TECHLORE";
-const SIGNUP_URL = `https://my.dawarich.app/users/sign_up?promo=${PROMO_CODE}&utm_source=techlore&utm_medium=video&utm_campaign=techlore_2026`;
+const SIGNUP_URL = `https://my.dawarich.app/users/sign_up?promo=${PROMO_CODE}`;
 const GITHUB_URL = "https://github.com/Freika/dawarich";
 const BANNER_STORAGE_KEY = "techlore_banner_dismissed";
 
@@ -358,10 +357,6 @@ function TechLoreFinalCTA() {
 
 export default function TechLorePage() {
 	useEffect(() => {
-		initializePaddle({
-			token: "live_8593fad779b610288ad3ca40789",
-		});
-
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {

@@ -180,7 +180,7 @@ export default function ImportExportPage() {
         subtitle="Import your location history from anywhere. Export it anytime, in any format. Dawarich believes in complete data portability with no lock-in — you're always in control."
         image="/img/imports.png"
         imageAlt="Import and export interface"
-        ctaLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-hero&utm_campaign=import-export"
+        ctaLink="https://my.dawarich.app/users/sign_up"
         showSecondary={true}
       />
 
@@ -291,7 +291,7 @@ export default function ImportExportPage() {
             <div className={styles.ctaButtons}>
               <Link
                 className={styles.primaryCta}
-                href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-cta&utm_campaign=import-export">
+                href="https://my.dawarich.app/users/sign_up">
                 Try 7 Days for Free
               </Link>
               <Link

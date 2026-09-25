@@ -7,14 +7,14 @@
  * How it works:
  * 1. User arrives from external source (e.g., Google Ads) with UTM params → saved to localStorage
  * 2. User clicks any CTA button on the site → external UTM params are used instead
- * 3. If no external UTM params exist, internal UTM params work normally
+ * 3. Signup links receive the saved campaign after an affirmative choice
  *
  * This solution is UNIVERSAL - it automatically applies to all external links on the site.
  *
  * It also carries the Partnero affiliate key (`via`) to the app. PartneroJS stores
  * that key in a first-party cookie scoped to dawarich.app, which is never sent to
- * my.dawarich.app where signup happens — the same subdomain gap the gtag linker in
- * docusaurus.config.js works around for gclid. Appending `via` to outbound links lets
+ * my.dawarich.app where signup happens — the same subdomain gap the consented
+ * gtag linker works around for gclid. Appending `via` to outbound links lets
  * PartneroJS on the app re-read it from the URL and set its own cookie there.
  */
 
@@ -211,6 +211,18 @@ export function buildOutboundUrl(urlString) {
 
   try {
     const url = new URL(urlString);
+    if (!hasTrackingConsent()) {
+      clearOriginalUtmParams();
+      clearReferralKey();
+      // Internal campaign and affiliate links are still tracking links. Never
+      // pass their identifiers to Cloud when the visitor did not opt in.
+      if (['my.dawarich.app', 'subscription.dawarich.app'].includes(url.hostname)) {
+        [...UTM_PARAMS, ...REFERRAL_PARAMS, 'gclid', 'gbraid', 'wbraid', '_gl'].forEach((key) => {
+          url.searchParams.delete(key);
+        });
+      }
+      return url.toString();
+    }
     const originalUtm = getOriginalUtmParams();
 
     // If we have original UTM params from external source, use ONLY those
@@ -242,6 +254,40 @@ export function buildOutboundUrl(urlString) {
   }
 }
 
+// Hard-coded CTA URLs also contain campaign parameters. Remove them from the
+// actual DOM before a visitor can copy, open in a new tab, or middle-click a
+// link. Keep the original link only in this page so it can be restored after
+// an affirmative choice.
+export function refreshOutboundLinks() {
+  if (typeof document === 'undefined') return;
+
+  document.querySelectorAll('a[href], a[data-original-tracking-href]').forEach((link) => {
+    const original = link.dataset.originalTrackingHref || link.getAttribute('href');
+    if (!original) return;
+
+    let url;
+    try { url = new URL(original); } catch { return; }
+    if (!['my.dawarich.app', 'subscription.dawarich.app'].includes(url.hostname)) return;
+
+    if (hasTrackingConsent()) {
+      if (link.dataset.originalTrackingHref) {
+        link.setAttribute('href', original);
+        delete link.dataset.originalTrackingHref;
+      }
+      return;
+    }
+
+    [...UTM_PARAMS, ...REFERRAL_PARAMS, 'gclid', 'gbraid', 'wbraid', '_gl'].forEach((key) => {
+      url.searchParams.delete(key);
+    });
+    const clean = url.toString();
+    if (clean !== original && !link.dataset.originalTrackingHref) {
+      link.dataset.originalTrackingHref = original;
+    }
+    if (link.getAttribute('href') !== clean) link.setAttribute('href', clean);
+  });
+}
+
 /**
  * Initialize global UTM preservation
  * This automatically handles ALL links on the page
@@ -252,6 +298,13 @@ export function initializeUtmPreservation() {
   // Save UTM params and any affiliate key on page load
   saveOriginalUtmParams();
   saveReferralKey();
+  refreshOutboundLinks();
+
+  if (!window.__dawarichTrackingLinkObserver && document.body) {
+    const observer = new MutationObserver(() => refreshOutboundLinks());
+    observer.observe(document.body, { subtree: true, childList: true, attributes: true, attributeFilter: ['href'] });
+    window.__dawarichTrackingLinkObserver = observer;
+  }
 
   // Intercept all clicks on external links
   document.addEventListener('click', (e) => {
@@ -268,7 +321,7 @@ export function initializeUtmPreservation() {
     const isDawarichApp = /^https:\/\/(?:my|subscription)\.dawarich\.app(?:[/?#]|$)/i.test(href);
     const hasSavedUtm = Object.keys(getOriginalUtmParams()).length > 0;
 
-    if (isExternal && (hasUtmParams || getReferralKey() || (isDawarichApp && hasSavedUtm))) {
+    if (isExternal && (hasUtmParams || getReferralKey() || (isDawarichApp && (hasSavedUtm || !hasTrackingConsent())))) {
       const newHref = buildOutboundUrl(href);
       if (newHref !== href) {
         link.setAttribute('href', newHref);

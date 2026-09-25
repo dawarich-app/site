@@ -2,6 +2,7 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import {
   hasTrackingConsent,
   buildOutboundUrl,
+  refreshOutboundLinks,
   initializeUtmPreservation,
   saveOriginalUtmParams,
   clearOriginalUtmParams,
@@ -204,6 +205,20 @@ describe('campaign storage consent', () => {
     saveOriginalUtmParams();
     expect(localStorage.getItem('original_utm_params')).toBeNull();
     expect(buildOutboundUrl(SIGNUP)).toBe(SIGNUP);
+  });
+
+  it('removes tracking parameters from visible signup links until consent', () => {
+    const link = document.createElement('a');
+    link.href = `${SIGNUP}?utm_source=site&utm_campaign=hero&_gl=click`;
+    document.body.appendChild(link);
+
+    refreshOutboundLinks();
+    expect(link.href).toBe(SIGNUP);
+
+    grantConsent();
+    refreshOutboundLinks();
+    expect(link.href).toContain('utm_campaign=hero');
+    link.remove();
   });
 
   it('forgets a stored campaign when consent is withdrawn', () => {

@@ -141,7 +141,7 @@ And if you just want to see what your Google export contains before committing t
 
 ## Getting started
 
-Dawarich is open source and self-hostable, and Days per Country is unrestricted when you run it yourself. If you'd rather not deal with Docker, [Dawarich Cloud](https://my.dawarich.app/users/sign_in?utm_source=blog&utm_medium=post-cta&utm_campaign=location-history-for-taxes) has a 7-day trial that runs on the Pro plan, so the day counter works while you're trying it out.
+Dawarich is open source and self-hostable, and Days per Country is unrestricted when you run it yourself. If you'd rather not deal with Docker, [Dawarich Cloud](https://my.dawarich.app/users/sign_in) has a 7-day trial that runs on the Pro plan, so the day counter works while you're trying it out.
 
 Either way, the useful move today is starting the tracking. The mileage log and the day count are just what you read off it later.
 

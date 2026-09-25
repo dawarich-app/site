@@ -8,13 +8,10 @@ const COLS = [
 	{ key: "family", name: "Family", sub: `€${PLANS.family.price}/yr`, accent: "teal", popular: false },
 ];
 
-// Comparison table gets its own UTM tagging, distinct from the pricing cards
-// (cards use utm_medium=pricing; this section uses utm_medium=pricing_compare).
-const COMPARE_UTM = "utm_source=site&utm_medium=pricing_compare";
 const CTA_LINKS = {
-	lite: `https://my.dawarich.app/users/sign_up?${COMPARE_UTM}&utm_campaign=try7dayslite&utm_content=compare_lite&plan=lite`,
-	pro: `https://my.dawarich.app/users/sign_up?${COMPARE_UTM}&utm_campaign=try7days&utm_content=compare_pro`,
-	family: `https://my.dawarich.app/users/sign_up?${COMPARE_UTM}&utm_campaign=try7daysfamily&utm_content=compare_family&plan=family`,
+	lite: "https://my.dawarich.app/users/sign_up?plan=lite",
+	pro: "https://my.dawarich.app/users/sign_up",
+	family: "https://my.dawarich.app/users/sign_up?plan=family",
 };
 
 const norm = (v) => (v === true ? "✓" : v === false ? "✗" : String(v));

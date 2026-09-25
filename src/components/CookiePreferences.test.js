@@ -3,7 +3,7 @@ import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { render, screen, cleanup, fireEvent } from '@testing-library/react';
 import { renderToString } from 'react-dom/server';
 import CookiePreferences from './CookiePreferences';
-import { CONSENT_COOKIE_NAME, hasAcceptedConsent } from '@site/src/utils/consent';
+import { CONSENT_COOKIE_NAME, hasAcceptedConsent, loadConsentedIntegrations } from '@site/src/utils/consent';
 
 function clearConsentCookie() {
   document.cookie = `${CONSENT_COOKIE_NAME}=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
@@ -12,6 +12,7 @@ function clearConsentCookie() {
 beforeEach(() => {
   clearConsentCookie();
   window.dataLayer = [];
+  document.querySelectorAll('script[data-consent-tag]').forEach((script) => script.remove());
 });
 
 afterEach(cleanup);
@@ -74,6 +75,7 @@ describe('CookiePreferences', () => {
 
   it('re-denies Google storage in the live tag rather than only on next load', () => {
     document.cookie = `${CONSENT_COOKIE_NAME}=true; path=/`;
+    loadConsentedIntegrations();
     render(<CookiePreferences reload={vi.fn()} />);
     fireEvent.click(screen.getByRole('button', { name: /withdraw consent/i }));
 

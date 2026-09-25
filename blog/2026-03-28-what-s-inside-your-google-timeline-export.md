@@ -496,7 +496,7 @@ Dawarich imports all three Google formats — Records.json, Semantic Location Hi
 
 The difference from Google? Your data stays on your server. No one's mining it for ads, no one's going to randomly deprecate the feature, and you get proper [statistics](/statistics), [trip detection](/trips), and a [map](/interactive-map) that actually works on the web — unlike Google's new mobile-only Timeline.
 
-Either self-host it or use [Dawarich Cloud](https://my.dawarich.app/users/sign_in?utm_source=blog&utm_medium=post-cta&utm_campaign=whats-inside-your-google-timeline-export) if you don't want to manage a server. 7-day free trial, no credit card required.
+Either self-host it or use [Dawarich Cloud](https://my.dawarich.app/users/sign_in) if you don't want to manage a server. 7-day free trial, no credit card required.
 
 ## Export your data now
 

@@ -198,7 +198,7 @@ export default function TrackingPage() {
         subtitle="Choose from multiple tracking apps to automatically record your location. Whether you prefer our official iOS and Android apps or popular open-source alternatives, Dawarich works with what you love."
         image="/img/the_map.webp"
         imageAlt="Location tracking visualization"
-        ctaLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-hero&utm_campaign=tracking"
+        ctaLink="https://my.dawarich.app/users/sign_up"
         showSecondary={true}
       />
 
@@ -296,7 +296,7 @@ export default function TrackingPage() {
             <div className={styles.ctaButtons}>
               <Link
                 className={styles.primaryCta}
-                href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-cta&utm_campaign=tracking">
+                href="https://my.dawarich.app/users/sign_up">
                 Try 7 Days for Free
               </Link>
               <Link
