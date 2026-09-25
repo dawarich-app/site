@@ -174,6 +174,19 @@ describe('ad campaign handoff', () => {
     link.remove();
   });
 
+  it('updates the visible signup URL after consent for copied or new-tab links', () => {
+    visit('?utm_source=google&utm_medium=cpc&utm_campaign=123456789');
+    saveOriginalUtmParams();
+
+    const link = document.createElement('a');
+    link.href = SIGNUP;
+    document.body.appendChild(link);
+    refreshOutboundLinks();
+
+    expect(new URL(link.href).searchParams.get('utm_campaign')).toBe('123456789');
+    link.remove();
+  });
+
   it('does not append a saved campaign to an unrelated external link', () => {
     visit('?utm_source=google&utm_medium=cpc&utm_campaign=123456789');
     saveOriginalUtmParams();

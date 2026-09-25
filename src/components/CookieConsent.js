@@ -25,11 +25,11 @@ export default function CustomCookieConsent() {
   }, []);
 
   const handleAccept = () => {
-    refreshOutboundLinks();
     saveOriginalUtmParams();
     // Page load refused to store the affiliate key without consent, so capture it
     // now — the referral link's query param is still on the URL at this point.
     saveReferralKey();
+    refreshOutboundLinks();
 
     try {
       loadConsentedIntegrations();
