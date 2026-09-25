@@ -1,7 +1,7 @@
 export const FOOTER_LINK_CAP = 62;
 
 const BRAND_HTML =
-  '<p style="display:inline-flex;align-items:center;gap:0.375rem;margin:0 0 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><span>Made and hosted in Europe</span></p><p>&copy;ZeitFlow UG (haftungsbeschränkt)</p><p>Berlin, Germany</p><p class="dawarich-footer-cta"><a href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=footer&utm_campaign=footer_cta">Start tracking →</a></p>';
+  '<p style="display:inline-flex;align-items:center;gap:0.375rem;margin:0 0 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><span>Made and hosted in Europe</span></p><p>&copy;ZeitFlow UG (haftungsbeschränkt)</p><p>Berlin, Germany</p><p class="dawarich-footer-cta"><a href="https://my.dawarich.app/users/sign_up">Start tracking →</a></p>';
 
 const section = (title) => ({ html: `<div class="dawarich-footer-subtitle">${title}</div>` });
 

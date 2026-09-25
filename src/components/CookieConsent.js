@@ -1,19 +1,19 @@
 import React, { useEffect } from 'react';
 import CookieConsent from 'react-cookie-consent';
-import { saveReferralKey, clearReferralKey } from '@site/src/utils/utm';
+import { saveOriginalUtmParams, clearOriginalUtmParams, saveReferralKey, clearReferralKey, refreshOutboundLinks } from '@site/src/utils/utm';
 import {
   CONSENT_COOKIE_NAME,
   denyGoogleConsent,
   grantGoogleConsent,
   hasAcceptedConsent,
   loadConsentedIntegrations,
+  syncAttributionConsent,
 } from '@site/src/utils/consent';
 
 export default function CustomCookieConsent() {
   // react-cookie-consent fires onAccept only on the click itself, never on
   // mount, so without this a returning visitor who accepted months ago got
-  // none of the tags they consented to. The Google tag is already handled
-  // earlier by the head bootstrap, which reads the same cookie synchronously.
+  // none of the tags they consented to.
   useEffect(() => {
     if (!hasAcceptedConsent()) return;
     try {
@@ -25,15 +25,15 @@ export default function CustomCookieConsent() {
   }, []);
 
   const handleAccept = () => {
+    saveOriginalUtmParams();
     // Page load refused to store the affiliate key without consent, so capture it
     // now — the referral link's query param is still on the URL at this point.
     saveReferralKey();
+    refreshOutboundLinks();
 
-    // The Google tag is already loaded and denied; flip it rather than
-    // appending a second loader.
-    grantGoogleConsent();
     try {
       loadConsentedIntegrations();
+      grantGoogleConsent();
     } catch {
       // As above: consent is recorded either way.
     }
@@ -41,7 +41,10 @@ export default function CustomCookieConsent() {
 
   const handleDecline = () => {
     denyGoogleConsent();
+    syncAttributionConsent();
+    clearOriginalUtmParams();
     clearReferralKey();
+    refreshOutboundLinks();
   };
 
   const buttonStyle = {
@@ -80,11 +83,8 @@ export default function CustomCookieConsent() {
       onAccept={handleAccept}
       onDecline={handleDecline}
     >
-      Our traffic statistics come from our own server, not a third party.
-      Nothing is stored on your device for advertising, email or affiliate tracking unless
-      you accept: Google Ads loads with storage switched off — it still tells Google which
-      page you opened, but sets nothing on your device — and the Brevo and Partnero tags
-      are not loaded at all, until you click "Accept".
+      Optional site analytics, advertising, email and affiliate trackers run only
+      after you accept. Rejecting keeps them off and disables campaign handoff.
       <a
         href="/privacy-policy#cookies"
         style={{

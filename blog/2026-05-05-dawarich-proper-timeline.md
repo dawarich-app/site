@@ -62,4 +62,4 @@ Cheers!
 
 *This post was originally published on [r/selfhosted](https://www.reddit.com/r/selfhosted/comments/1t4emiu/dawarich_proper_timeline_and_birthday/).*
 
-*Dawarich is free, open-source and self-hostable. If you'd rather not run your own server, [Dawarich Cloud](https://my.dawarich.app/users/sign_in?utm_source=blog&utm_medium=post-cta&utm_campaign=dawarich-proper-timeline) does the hosting for you.*
+*Dawarich is free, open-source and self-hostable. If you'd rather not run your own server, [Dawarich Cloud](https://my.dawarich.app/users/sign_in) does the hosting for you.*

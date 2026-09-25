@@ -74,4 +74,4 @@ Cheers!
 
 *This post was originally published on [r/selfhosted](https://www.reddit.com/r/selfhosted/comments/1n0imj4/state_of_dawarich_august_2025/).*
 
-*Dawarich is free, open-source and self-hostable. If you'd rather not run your own server, [Dawarich Cloud](https://my.dawarich.app/users/sign_in?utm_source=blog&utm_medium=post-cta&utm_campaign=state-of-dawarich-august-2025) does the hosting for you.*
+*Dawarich is free, open-source and self-hostable. If you'd rather not run your own server, [Dawarich Cloud](https://my.dawarich.app/users/sign_in) does the hosting for you.*

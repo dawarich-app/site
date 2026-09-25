@@ -15,7 +15,7 @@ const VERSUS_ROWS = [
 ];
 
 const SWITCH_HREF =
-	"https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=vs_table&utm_campaign=try7days";
+	"https://my.dawarich.app/users/sign_up";
 
 function VsCell({ cell, win }) {
 	const chipClass =

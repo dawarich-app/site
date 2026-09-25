@@ -407,7 +407,7 @@ export default function TimelineMileageCalculator() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </span>
-                <span>Need ongoing mileage tracking? <a href="/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-mileage-calculator">Dawarich</a> records your trips automatically with full data ownership and privacy. No more manual exports — just continuous, accurate tracking.</span>
+                <span>Need ongoing mileage tracking? <a href="/">Dawarich</a> records your trips automatically with full data ownership and privacy. No more manual exports — just continuous, accurate tracking.</span>
               </div>
             </div>
           )}
@@ -631,7 +631,7 @@ export default function TimelineMileageCalculator() {
               <div className={styles.ctaContent}>
                 <h3>Tired of manually exporting and calculating mileage?</h3>
                 <p>Dawarich automatically tracks every drive, calculates distances using actual GPS data, and lets you export mileage reports anytime. Self-hosted or cloud — your data, your choice.</p>
-                <a href="/?utm_source=tool&utm_medium=post-upload-cta&utm_campaign=timeline-mileage-calculator" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
+                <a href="/" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
               </div>
             </div>
           </div>
@@ -657,7 +657,7 @@ export default function TimelineMileageCalculator() {
               <h2>Using Mileage Logs for Tax Deductions</h2>
               <p>In the United States, the IRS allows a standard mileage deduction for business use of a personal vehicle. The rate changes every year, so check the current one before you file. To claim this deduction, you need a mileage log that records the date, destination, business purpose, and distance for each trip.</p>
               <p>While Google Timeline data can provide the date and distance for each driving segment, it does not distinguish between business and personal trips. You would need to annotate the exported CSV with business purpose and destination information. The IRS also requires that records be kept contemporaneously — meaning at or near the time of each trip — so a retrospective log from Google Timeline is best used as a supporting document rather than your sole record.</p>
-              <p>To record trips as they happen instead of reconstructing them later, consider using <a href="/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-mileage-calculator">Dawarich</a> — you still add the business purpose yourself.</p>
+              <p>To record trips as they happen instead of reconstructing them later, consider using <a href="/">Dawarich</a> — you still add the business purpose yourself.</p>
             </div>
 
             <div className={styles.infoCard}>
@@ -710,7 +710,7 @@ export default function TimelineMileageCalculator() {
           <div className={styles.ctaContent}>
             <h3>Looking for a Google Timeline Replacement with Built-in Mileage Tracking?</h3>
             <p>Dawarich is an open-source location tracking platform that automatically logs every trip, calculates driving distance, and gives you full control over your data. Import your Google Timeline export, track ongoing mileage from your phone, and generate reports anytime — all self-hosted or in the cloud.</p>
-            <a href="/?utm_source=tool&utm_medium=bottom-cta&utm_campaign=timeline-mileage-calculator" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
+            <a href="/" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
           </div>
         </div>
       </div>
