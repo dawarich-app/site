@@ -270,10 +270,9 @@ export function refreshOutboundLinks() {
     if (!['my.dawarich.app', 'subscription.dawarich.app'].includes(url.hostname)) return;
 
     if (hasTrackingConsent()) {
-      if (link.dataset.originalTrackingHref) {
-        link.setAttribute('href', original);
-        delete link.dataset.originalTrackingHref;
-      }
+      const consentedUrl = buildOutboundUrl(original);
+      if (link.getAttribute('href') !== consentedUrl) link.setAttribute('href', consentedUrl);
+      delete link.dataset.originalTrackingHref;
       return;
     }
 
