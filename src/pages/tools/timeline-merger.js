@@ -409,7 +409,7 @@ export default function TimelineMerger() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </span>
-                <span>Want to visualize your Timeline data first? Try our <a href="/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger">Google Timeline Visualizer</a> to explore your location history on an interactive map. Need a long-term Timeline replacement? <a href="/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger">Dawarich</a> gives you full data ownership.</span>
+                <span>Want to visualize your Timeline data first? Try our <a href="/tools/timeline-visualizer">Google Timeline Visualizer</a> to explore your location history on an interactive map. Need a long-term Timeline replacement? <a href="/">Dawarich</a> gives you full data ownership.</span>
               </div>
             </div>
           )}
@@ -681,7 +681,7 @@ export default function TimelineMerger() {
                 <div className={styles.postCtaPanel}>
                   <h3>Never risk losing your location data again</h3>
                   <p>Dawarich stores everything in EU data centers, encrypted in transit (SSL/TLS) and at rest (LUKS), with full backups and an interactive map. Import your merged Timeline data and keep tracking automatically.</p>
-                  <a href="/?utm_source=tool&utm_medium=post-merge-cta&utm_campaign=timeline-merger" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
+                  <a href="/" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
                 </div>
               </>
             )}
@@ -723,7 +723,7 @@ export default function TimelineMerger() {
               <h2>What Happened to Google Maps Timeline?</h2>
               <p>In late 2024, Google discontinued the web version of Google Maps Timeline and moved all location data to on-device storage. Only the last 90 days of data were automatically transferred to users' phones. Older location history was permanently deleted unless users had manually exported it before the deadline.</p>
               <p>This left millions of users with fragmented data: partial Takeout exports, phone exports of recent data, and Semantic Location History files from different periods. The Timeline Data Merger helps piece these fragments back together into a complete location history.</p>
-              <p>For ongoing location tracking with full data ownership, consider <a href="/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-merger">Dawarich</a> as a self-hosted or cloud-based replacement.</p>
+              <p>For ongoing location tracking with full data ownership, consider <a href="/">Dawarich</a> as a self-hosted or cloud-based replacement.</p>
             </div>
 
             <div className={styles.infoCard}>
@@ -768,7 +768,7 @@ export default function TimelineMerger() {
           <div className={styles.ctaContent}>
             <h3>Looking for a Long-Term Google Timeline Replacement?</h3>
             <p>Dawarich is an open-source location tracking platform that gives you full control over your data. Import your merged Google Timeline export, track ongoing location from your phone, and visualize years of movement history -- all self-hosted or in the cloud.</p>
-            <a href="/?utm_source=tool&utm_medium=bottom-cta&utm_campaign=timeline-merger" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
+            <a href="/" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
           </div>
         </div>
       </div>

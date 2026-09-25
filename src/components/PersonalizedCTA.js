@@ -3,11 +3,7 @@ import styles from './PersonalizedCTA.module.css';
 
 const SIGNUP_BASE_URL = 'https://my.dawarich.app/users/sign_up';
 
-function buildSignupUrl(toolName) {
-  return `${SIGNUP_BASE_URL}?utm_source=tool&utm_medium=personalized-cta&utm_campaign=${toolName}`;
-}
-
-export default function PersonalizedCTA({ toolName, headline, stats }) {
+export default function PersonalizedCTA({ headline, stats }) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -32,7 +28,7 @@ export default function PersonalizedCTA({ toolName, headline, stats }) {
         </p>
 
         <a
-          href={buildSignupUrl(toolName)}
+          href={SIGNUP_BASE_URL}
           className={styles.button}
           target="_blank"
           rel="noopener noreferrer"

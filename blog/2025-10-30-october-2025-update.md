@@ -69,4 +69,4 @@ P.S.: Oh, and if you're using Dawarich, can you pretty please drop a line on how
 
 *This post was originally published on [r/selfhosted](https://www.reddit.com/r/selfhosted/comments/1ok1mwj/dawarich_october_2025/).*
 
-*Dawarich is free, open-source and self-hostable. If you'd rather not run your own server, [Dawarich Cloud](https://my.dawarich.app/users/sign_in?utm_source=blog&utm_medium=post-cta&utm_campaign=october-2025-update) does the hosting for you.*
+*Dawarich is free, open-source and self-hostable. If you'd rather not run your own server, [Dawarich Cloud](https://my.dawarich.app/users/sign_in) does the hosting for you.*

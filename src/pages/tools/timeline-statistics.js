@@ -357,7 +357,7 @@ export default function TimelineStatistics() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </span>
-                <span>Like these insights? <a href="/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-statistics">Dawarich</a> generates travel statistics automatically from your ongoing location data — total distance, countries, cities, and activity breakdowns updated in real time. <a href="/blog/migrating-from-google-location-history-to-dawarich">Learn how to migrate</a>.</span>
+                <span>Like these insights? <a href="/">Dawarich</a> generates travel statistics automatically from your ongoing location data — total distance, countries, cities, and activity breakdowns updated in real time. <a href="/blog/migrating-from-google-location-history-to-dawarich">Learn how to migrate</a>.</span>
               </div>
             </div>
           )}
@@ -639,7 +639,7 @@ export default function TimelineStatistics() {
             <div className={styles.infoCard}>
               <h2>What Happened to Google Maps Timeline?</h2>
               <p>In late 2024, Google discontinued the web version of Google Maps Timeline and moved all location data to on-device storage. Only the last 90 days were migrated — older data was deleted unless users manually backed it up before the deadline. Many people <a href="https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/" target="_blank" rel="noopener noreferrer">lost years of location history</a> in the transition.</p>
-              <p>If you managed to export your data before or during the transition, this analyzer lets you extract meaningful statistics from it. For a long-term replacement that keeps tracking your location with full data ownership, check out <a href="/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-statistics">Dawarich</a>.</p>
+              <p>If you managed to export your data before or during the transition, this analyzer lets you extract meaningful statistics from it. For a long-term replacement that keeps tracking your location with full data ownership, check out <a href="/">Dawarich</a>.</p>
             </div>
 
             <div className={styles.infoCard}>
@@ -684,7 +684,7 @@ export default function TimelineStatistics() {
           <div className={styles.ctaContent}>
             <h3>Looking for a Google Timeline Replacement?</h3>
             <p>Dawarich is an open-source location tracking platform that gives you full control over your data. Import your Google Timeline export, track ongoing location from your phone, and get live travel statistics with maps, distance tracking, and yearly summaries — all self-hosted or in the cloud.</p>
-            <a href="/?utm_source=tool&utm_medium=bottom-cta&utm_campaign=timeline-statistics" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
+            <a href="/" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
           </div>
         </div>
       </div>

@@ -28,4 +28,4 @@ A couple of pictures so you could have an idea of how it might look like:
 
 *This post was originally published on [r/selfhosted](https://www.reddit.com/r/selfhosted/comments/1bvoe8a/dawarich_google_location_historygoogle_maps/).*
 
-*Dawarich is free, open-source and self-hostable. If you'd rather not run your own server, [Dawarich Cloud](https://my.dawarich.app/users/sign_in?utm_source=blog&utm_medium=post-cta&utm_campaign=introducing-dawarich) does the hosting for you.*
+*Dawarich is free, open-source and self-hostable. If you'd rather not run your own server, [Dawarich Cloud](https://my.dawarich.app/users/sign_in) does the hosting for you.*

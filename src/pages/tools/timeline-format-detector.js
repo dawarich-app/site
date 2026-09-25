@@ -448,7 +448,7 @@ export default function TimelineFormatDetector() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </span>
-                <span>Not sure what to do with your Google Timeline data? Upload your file above to find out, or explore <a href="/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-format-detector">Dawarich</a> for automatic location tracking with full data ownership.</span>
+                <span>Not sure what to do with your Google Timeline data? Upload your file above to find out, or explore <a href="/">Dawarich</a> for automatic location tracking with full data ownership.</span>
               </div>
             </div>
           )}
@@ -566,7 +566,7 @@ export default function TimelineFormatDetector() {
                           {relatedTools.map((tool, toolIndex) => (
                             <a
                               key={toolIndex}
-                              href={`${tool.href}?utm_source=tool&utm_medium=recommendation&utm_campaign=timeline-format-detector`}
+                              href={`${tool.href}`}
                               className={styles.toolLink}
                             >
                               <span className={styles.toolIcon}>{tool.icon}</span>
@@ -615,7 +615,7 @@ export default function TimelineFormatDetector() {
             <div className={styles.infoCard}>
               <h2>What Happened to Google Maps Timeline?</h2>
               <p>In late 2024, Google shut down the web version of Google Maps Timeline and moved all location data to on-device storage. Only the last 90 days were migrated — older data was deleted unless users manually backed it up. Many people <a href="https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/" target="_blank" rel="noopener noreferrer">lost years of location history</a> in the transition.</p>
-              <p>If you have exported files, this detector helps you understand what you've got. For a long-term replacement, <a href="/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-format-detector">Dawarich</a> offers self-hosted and cloud-based location tracking with full data ownership.</p>
+              <p>If you have exported files, this detector helps you understand what you've got. For a long-term replacement, <a href="/">Dawarich</a> offers self-hosted and cloud-based location tracking with full data ownership.</p>
             </div>
 
             <div className={styles.infoCard}>
@@ -659,7 +659,7 @@ export default function TimelineFormatDetector() {
           <div className={styles.ctaContent}>
             <h3>Looking for a Google Timeline Replacement?</h3>
             <p>Dawarich is an open-source location tracking platform that gives you full control over your data. Import your Google Timeline export, track ongoing location from your phone, and visualize years of movement history — all self-hosted or in the cloud.</p>
-            <a href="/?utm_source=tool&utm_medium=bottom-cta&utm_campaign=timeline-format-detector" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
+            <a href="/" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
           </div>
         </div>
       </div>

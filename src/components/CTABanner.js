@@ -12,7 +12,7 @@ export default function CTABanner() {
 				<div className={styles.buttons}>
 					<Link
 						className={styles.primaryButton}
-						href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=cta_banner&utm_campaign=try7days"
+						href="https://my.dawarich.app/users/sign_up"
 					>
 						Start Importing — Free for 7 Days
 					</Link>

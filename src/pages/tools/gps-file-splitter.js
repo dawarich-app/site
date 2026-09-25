@@ -391,7 +391,7 @@ export default function GPSFileSplitter() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </span>
-                <span>Working with large location files? <a href="/?utm_source=tool&utm_medium=inline-cta&utm_campaign=gps-file-splitter">Dawarich</a> handles imports of any size automatically, with full data ownership and privacy.</span>
+                <span>Working with large location files? <a href="/">Dawarich</a> handles imports of any size automatically, with full data ownership and privacy.</span>
               </div>
             </div>
           )}
@@ -564,7 +564,7 @@ export default function GPSFileSplitter() {
           <div className={styles.ctaContent}>
             <h3>Looking for a Google Timeline Replacement?</h3>
             <p>Dawarich is an open-source location tracking platform that gives you full control over your data. Import your Google Timeline export, track ongoing location from your phone, and visualize years of movement history — all self-hosted or in the cloud.</p>
-            <a href="/?utm_source=tool&utm_medium=bottom-cta&utm_campaign=gps-file-splitter" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
+            <a href="/" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
           </div>
         </div>
       </div>

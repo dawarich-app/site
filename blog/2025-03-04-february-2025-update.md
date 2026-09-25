@@ -51,4 +51,4 @@ We're currently working on more exciting stuff for Dawarich, so stay tuned!
 
 *This post was originally published on [r/selfhosted](https://www.reddit.com/r/selfhosted/comments/1j38pww/dawarich_february_2025_update/).*
 
-*Dawarich is free, open-source and self-hostable. If you'd rather not run your own server, [Dawarich Cloud](https://my.dawarich.app/users/sign_in?utm_source=blog&utm_medium=post-cta&utm_campaign=february-2025-update) does the hosting for you.*
+*Dawarich is free, open-source and self-hostable. If you'd rather not run your own server, [Dawarich Cloud](https://my.dawarich.app/users/sign_in) does the hosting for you.*

@@ -120,7 +120,7 @@ export default function StatsPage() {
         subtitle="Turn your location data into meaningful insights. Discover patterns, track achievements, and celebrate milestones with comprehensive statistics updated automatically every hour."
         image="/img/features-stats.png"
         imageAlt="Comprehensive statistics dashboard"
-        ctaLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-hero&utm_campaign=stats"
+        ctaLink="https://my.dawarich.app/users/sign_up"
         showSecondary={true}
       />
 
@@ -219,7 +219,7 @@ export default function StatsPage() {
             <div className={styles.ctaButtons}>
               <Link
                 className={styles.primaryCta}
-                href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-cta&utm_campaign=stats">
+                href="https://my.dawarich.app/users/sign_up">
                 Try 7 Days for Free
               </Link>
               <Link

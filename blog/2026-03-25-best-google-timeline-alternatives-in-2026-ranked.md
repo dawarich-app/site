@@ -16,7 +16,7 @@ So what are the actual options in 2026? I went through the most popular alternat
 
 Yeah, I'm putting my own project first. I built it, I'm biased, deal with it.
 
-Dawarich is a self-hosted, open-source location history tracker. You run it on your own server (or use [Dawarich Cloud](https://my.dawarich.app/users/sign_in?utm_source=blog&utm_medium=post-cta&utm_campaign=best-google-timeline-alternatives-in-2026-ranked) if you don't want to bother with Docker), and it stores all your location data in your own database. Nobody else sees it.
+Dawarich is a self-hosted, open-source location history tracker. You run it on your own server (or use [Dawarich Cloud](https://my.dawarich.app/users/sign_in) if you don't want to bother with Docker), and it stores all your location data in your own database. Nobody else sees it.
 
 What makes it a solid Timeline replacement:
 

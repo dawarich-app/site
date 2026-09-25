@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Head from "@docusaurus/Head";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
-import { initializePaddle } from "@paddle/paddle-js";
 import { COMMISSION_PERCENT } from "@site/src/data/affiliateProgram";
 import PricingSection from "@site/src/components/PricingSection";
 import PricingCompare from "@site/src/components/PricingCompare";
@@ -13,12 +12,6 @@ const SEO_DESCRIPTION =
 	"Compare Dawarich Cloud plans: Lite, Pro and Family for up to 5 people. Try free for 7 days, or self-host with every Pro feature at no cost.";
 
 export default function PricingPage() {
-	useEffect(() => {
-		initializePaddle({
-			token: "live_8593fad779b610288ad3ca40789",
-		});
-	}, []);
-
 	return (
 		<Layout
 			title={SEO_TITLE}

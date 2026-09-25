@@ -45,7 +45,7 @@ We require an Art. 28 DPA for each active processor. Before enabling the optiona
 | Cloudflare, Inc. | Marketing-site CDN | Global; EU where possible |
 | Paddle.com Market Ltd. | Billing, checkout, invoicing | United Kingdom |
 | Functional Software, Inc. (Sentry) | Error and crash tracking | United States |
-| Google LLC (Google Ads) | Marketing-site conversion tracking — denied by default, consent-based | United States |
+| Google LLC (Google Ads) | Marketing-site conversion tracking after consent | United States |
 | PostHog, Inc. | Optional Cloud product analytics; EU project, activation pending DPA review | EU project; provider based in the US |
 | Sendinblue SAS (Brevo) — email | Transactional emails | France (EU) |
 | Sendinblue SAS (Brevo) — web tracker | Marketing-site email-campaign pixel — consent-based | France (EU) |
@@ -85,24 +85,20 @@ On `dawarich.app` we use:
 |---|---|---|---|
 | Strictly necessary | Remember your banner choice | No (§ 25(2) TTDSG) | First-party |
 | Site analytics | Aggregate traffic; stores a visitor ID in your browser's local storage | **Yes** | Rybbit (self-hosted) |
-| Advertising | Google Ads conversion tracking — tag present on every page, storage denied until you accept | **Yes**, for storage | Google Ads |
+| Advertising | Google Ads conversion tracking and cross-domain attribution | **Yes** | Google Ads |
 | Campaign handoff | Keeps landing UTM parameters in browser storage for up to 30 days to carry them to signup | **Yes** | First-party |
 | Email analytics | Brevo tracking pixel | **Yes** | Brevo |
 | Affiliate attribution | Credit a referring partner for a sign-up | **Yes** | Partnero |
 
-Rybbit stores a randomly generated visitor ID in your browser's local storage so that repeat visits are counted as one visitor rather than several. This pseudonymous ID may be personal data. Rybbit is loaded only after you accept, and withdrawal clears its local storage ID. Landing UTM parameters are also saved only after acceptance; withdrawal clears them. The Cloud app separately asks for optional product analytics consent before sending events to PostHog.
+Rybbit stores a randomly generated visitor ID in your browser's local storage so that repeat visits are counted as one visitor rather than several. This pseudonymous ID may be personal data. Rybbit is loaded only after you accept, and withdrawal clears its local storage ID. Landing UTM parameters are also saved only after acceptance; withdrawal clears them. A first-party consent cookie on `.dawarich.app` lets the Cloud signup page know you accepted campaign handoff. Cloud asks separately for product analytics consent before attaching a campaign to your account or sending events to PostHog.
 
-The Google Ads tag is present on every page, but it runs under Google Consent Mode with `ad_storage`, `ad_user_data`, `ad_personalization` and `analytics_storage` all set to **denied** until you accept. In that state it writes no cookies and no identifiers to your device; if you never accept, or you decline, it stays denied. The Brevo and Partnero tags are not loaded at all before consent.
+The Google Ads, Rybbit, Brevo and Partnero tags are not loaded before you accept. Without consent, our links to the Cloud app do not pass campaign, affiliate or ad-click identifiers. After consent, the Google tag can associate an ad click with a signup across our domains; its storage and data-sharing consent settings are granted. Rejecting means we cannot make that association.
 
-Because the tag itself loads, it does send Google a cookieless request on each page view containing the page address, your IP address and browser user agent, with ad-click identifiers redacted. It sets nothing on your device and carries no identifier that would let Google recognise you on someone else's site — but it happens whether or not you accept.
-
-If you reached us from one of our ads, the tag also copies the ad-click identifier Google placed in your landing URL (`gclid`, alongside a `_gl` parameter) onto links you follow to `my.dawarich.app`, so that the click and the sign-up can be matched. This travels in the address bar rather than in a cookie, is limited to our own two domains, and also happens whether or not you accept. It is the reason we keep the tag loaded at all: without it, that link between an ad click and a sign-up is lost.
-
-To change your mind either way, use the control below — the **Cookie Settings** link in the footer of every page brings you back here. It clears your stored answer, switches Google Ads storage back off straight away, and reloads the page so the Brevo and Partnero tags stop running and the banner asks you again.
+To change your mind either way, use the control below — the **Cookie Settings** link in the footer of every page brings you back here. It clears your stored answer and optional storage, then reloads the page so the tags stop running and the banner asks you again.
 
 <CookiePreferences />
 
-On `my.dawarich.app` we additionally use first-party session cookies strictly necessary for login.
+On `my.dawarich.app` we additionally use first-party session cookies strictly necessary for login. Optional Cloud product analytics requires a separate affirmative choice. After that choice, self-hosted Rybbit may store a browser visitor ID and Cloud may send a pseudonymous account ID with allowlisted signup, usage milestone and billing events to the EU PostHog project. Google Ads and Partnero on Cloud require both this Cloud choice and the marketing-site consent. Declining either choice keeps those marketing scripts off. Withdrawing Cloud product analytics consent clears the account's campaign fields and queues deletion of its PostHog identity and events.
 
 ## 7. Security
 
