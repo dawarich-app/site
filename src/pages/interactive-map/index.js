@@ -274,7 +274,7 @@ export default function MapPage() {
         subtitle="Your location history comes alive on an interactive map with multiple visualization layers. From detailed points to beautiful heatmaps, see your life's journey in stunning detail."
         image="/img/the_map.webp"
         imageAlt="Dawarich interactive map"
-        ctaLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-hero&utm_campaign=map"
+        ctaLink="https://my.dawarich.app/users/sign_up"
         showSecondary={true}
       />
 
@@ -319,7 +319,7 @@ export default function MapPage() {
             <div className={styles.ctaButtons}>
               <Link
                 className={styles.primaryCta}
-                href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-cta&utm_campaign=map">
+                href="https://my.dawarich.app/users/sign_up">
                 Try 7 Days for Free
               </Link>
               <Link

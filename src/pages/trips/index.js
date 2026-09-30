@@ -114,7 +114,7 @@ export default function TripsPage() {
         subtitle="Automatically capture your movements and transform them into comprehensive travel journals. Each trip includes an interactive map, detailed statistics, rich text descriptions, and photos — all in one place."
         image="/img/trip-details.webp"
         imageAlt="Trip details with map and statistics"
-        ctaLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-hero&utm_campaign=trips"
+        ctaLink="https://my.dawarich.app/users/sign_up"
         showSecondary={true}
       />
 
@@ -181,7 +181,7 @@ export default function TripsPage() {
             <div className={styles.ctaButtons}>
               <Link
                 className={styles.primaryCta}
-                href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-cta&utm_campaign=trips">
+                href="https://my.dawarich.app/users/sign_up">
                 Try 7 Days for Free
               </Link>
               <Link

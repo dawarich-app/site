@@ -11,8 +11,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./itsfoss.module.css";
 
 const PROMO_CODE = "ITSFOSS";
-const CAMPAIGN_QUERY = "utm_source=itsfoss&utm_medium=newsletter&utm_campaign=itsfoss_2026";
-const SIGNUP_URL = `https://my.dawarich.app/users/sign_up?promo=${PROMO_CODE}&${CAMPAIGN_QUERY}`;
+const SIGNUP_URL = `https://my.dawarich.app/users/sign_up?promo=${PROMO_CODE}`;
 const GITHUB_URL = "https://github.com/Freika/dawarich";
 const BANNER_STORAGE_KEY = "itsfoss_banner_dismissed";
 
@@ -21,7 +20,7 @@ const partnerPlans = {
 	pro: { ...PLANS.pro, href: SIGNUP_URL },
 	family: {
 		...PLANS.family,
-		href: `https://my.dawarich.app/users/sign_up?${CAMPAIGN_QUERY}&plan=family`,
+		href: "https://my.dawarich.app/users/sign_up?plan=family",
 	},
 };
 

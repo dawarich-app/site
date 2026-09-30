@@ -50,4 +50,4 @@ Thank you for being interested in this project. It wouldn't become what it is no
 
 *This post was originally published on [r/selfhosted](https://www.reddit.com/r/selfhosted/comments/1kq76uq/happy_birthday_dawarich/).*
 
-*Dawarich is free, open-source and self-hostable. If you'd rather not run your own server, [Dawarich Cloud](https://my.dawarich.app/users/sign_in?utm_source=blog&utm_medium=post-cta&utm_campaign=happy-birthday-dawarich) does the hosting for you.*
+*Dawarich is free, open-source and self-hostable. If you'd rather not run your own server, [Dawarich Cloud](https://my.dawarich.app/users/sign_in) does the hosting for you.*

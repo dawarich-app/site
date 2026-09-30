@@ -526,7 +526,7 @@ export default function TimelineVisualizer() {
               {' '}This view disappears when you close this tab. Keep your location history forever — and add to it automatically.
             </p>
             <a
-              href="https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=post-viz-cta&utm_campaign=timeline-visualizer"
+              href="https://my.dawarich.app/users/sign_up"
               className={styles.postVizCtaButton}
             >
               Start Free Trial — 7 Days &rarr;
@@ -538,7 +538,7 @@ export default function TimelineVisualizer() {
           <div className={styles.ctaContent}>
             <h3>Looking for a Google Timeline Replacement?</h3>
             <p>Dawarich is an open-source location tracking platform that gives you full control over your data. Import your Google Timeline export, track ongoing location from your phone, and visualize years of movement history — all self-hosted or in the cloud.</p>
-            <a href="https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=post-map-cta&utm_campaign=timeline-visualizer" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
+            <a href="https://my.dawarich.app/users/sign_up" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
           </div>
         </div>
 
@@ -575,7 +575,7 @@ export default function TimelineVisualizer() {
             <div className={styles.infoCard}>
               <h2>What Happened to Google Maps Timeline?</h2>
               <p>In late 2024, Google discontinued the web version of Google Maps Timeline and moved all location data to on-device storage. Only the last 90 days were migrated — older data was deleted unless users manually backed it up. Many people <a href="https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/" target="_blank" rel="noopener noreferrer">lost years of location history</a> in the transition.</p>
-              <p>If you exported your data before or during the transition, this visualizer lets you view it. For a long-term replacement, <a href="https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-visualizer">Dawarich</a> offers self-hosted and cloud-based location tracking with full data ownership.</p>
+              <p>If you exported your data before or during the transition, this visualizer lets you view it. For a long-term replacement, <a href="https://my.dawarich.app/users/sign_up">Dawarich</a> offers self-hosted and cloud-based location tracking with full data ownership.</p>
             </div>
 
             <div className={styles.infoCard}>

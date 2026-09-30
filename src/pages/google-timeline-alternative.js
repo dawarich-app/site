@@ -1,6 +1,5 @@
 import Head from "@docusaurus/Head";
 import Link from "@docusaurus/Link";
-import { initializePaddle } from "@paddle/paddle-js";
 import HowItWorks from "@site/src/components/HowItWorks";
 import LandingHero from "@site/src/components/LandingHero";
 import sections from "@site/src/components/LandingSections.module.css";
@@ -10,7 +9,7 @@ import Layout from "@theme/Layout";
 import React, { useEffect } from "react";
 
 const SIGNUP_URL =
-	"https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=timeline_landing&utm_campaign=timeline_alt";
+	"https://my.dawarich.app/users/sign_up";
 
 const ArrowIcon = () => (
 	<svg
@@ -494,10 +493,6 @@ function TimelineFinalCTA() {
 
 export default function GoogleTimelineAlternativePage() {
 	useEffect(() => {
-		initializePaddle({
-			token: "live_8593fad779b610288ad3ca40789",
-		});
-
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
