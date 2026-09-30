@@ -78,7 +78,7 @@ Life360's [history help page](https://support.life360.com/hc/en-us/articles/2305
 | Plan | Dawarich | Life360 |
 |------|----------|---------|
 | Free tier | ✅ Self-hosted (unlimited) | ✅ (limited features, 2-day history) |
-| Paid cloud | Lite €59.99/year, Pro €149.99/year or €17.99/month | US monthly: Silver $9.99, Gold $16.99, Platinum $24.99 |
+| Paid cloud | Lite €59.99/year, Pro €119.99/year or €17.99/month | US monthly: Silver $9.99, Gold $16.99, Platinum $24.99 |
 | Family plan | [€299.99/year for up to 5 people](/family/), each with full Pro access | Membership benefits apply to Circle members |
 | Free trial | 7-day Cloud trial | Free tier available |
 | Data limits | Unlimited history on Pro and Family (Lite: 12 months searchable) | 2, 7 or 30 days of history, depending on US plan |
