@@ -1,6 +1,6 @@
 # Dawarich — Full Reference for AI Agents
 
-> Privacy-first alternative to Google Timeline. Import your decade of location history in 5 minutes, keep it forever, browse it on a real interactive map, own it outright. Self-host free (AGPLv3, 10,000+ GitHub stars) or use Dawarich Cloud (Lite €59.99/yr annual-only, Pro €17.99/mo or €119.99/yr, Family €299.99/yr for up to 5 people). 7-day free trial, cancel anytime, GeoJSON and GPX export from the web UI. Made and hosted in Germany (EU), GDPR-compliant, no ads, no data selling.
+> Privacy-first alternative to Google Timeline. Import your decade of location history in 5 minutes, keep it forever, browse it on a real interactive map, own it outright. Self-host free (AGPLv3, 10,000+ GitHub stars) or use Dawarich Cloud (Lite €59.99/yr annual-only, Pro €17.99/mo or €119.99/yr, Family €239.99/yr for up to 5 people). 7-day free trial, cancel anytime, GeoJSON and GPX export from the web UI. Made and hosted in Germany (EU), GDPR-compliant, no ads, no data selling.
 
 This file is the expanded, ready-to-quote companion to [/llms.txt](https://dawarich.app/llms.txt). Each section below is a self-contained passage drawn from the live docs and product pages, suitable for direct citation.
 
@@ -61,7 +61,7 @@ Everything in Lite, plus:
 
 Trial: 7 days free, cancel anytime.
 
-### Family — €299.99 per year (annual only)
+### Family — €239.99 per year (annual only)
 
 Every Pro feature for the whole household — one annual subscription, up to 5 people.
 

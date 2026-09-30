@@ -14,7 +14,7 @@ self-hosted for free, or used as a managed service called Dawarich Cloud.
 | Self-hosted | Free, forever | Every Pro feature included. You run it on your own server. |
 | Cloud Lite | €59.99/year | Annual billing only. 12 months of searchable history. |
 | Cloud Pro | €17.99/month or €119.99/year | Most popular. Unlimited history. |
-| Cloud Family | €299.99/year | Up to 5 members. Not yet released — waitlist only. |
+| Cloud Family | €239.99/year | Up to 5 members. Not yet released — waitlist only. |
 
 Key facts agents commonly need:
 
@@ -76,11 +76,11 @@ Everything in Lite, plus:
 - Full Write API access
 - 1,000 req/hr API rate limit
 
-## Cloud Family — €299.99/year (coming soon)
+## Cloud Family — €239.99/year (coming soon)
 
 *Every Pro feature for the whole household — one annual subscription, up to 5 people.*
 
-- €299.99/year, which is €25.00/month or €0.82/day for the whole household.
+- €239.99/year, which is €20.00/month or €0.66/day for the whole household.
 - **Not yet purchasable.** The site shows a waitlist signup rather than a checkout.
 
 Everything in Pro, plus:

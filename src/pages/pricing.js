@@ -18,7 +18,7 @@ export default function PricingPage() {
 	return (
 		<Layout
 			title="Pricing — Dawarich"
-			description="Simple pricing for Dawarich Cloud. Lite €59.99/yr, Pro €17.99/mo, or Family €299.99/yr for up to 5 people. 7-day free trial, 14-day risk-free refund, cancel anytime. Or self-host for free."
+			description="Simple pricing for Dawarich Cloud. Lite €59.99/yr, Pro €17.99/mo, or Family €239.99/yr for up to 5 people. 7-day free trial, 14-day risk-free refund, cancel anytime. Or self-host for free."
 		>
 			<Head>
 				<meta property="og:type" content="website" />
@@ -26,7 +26,7 @@ export default function PricingPage() {
 				<meta property="og:title" content="Pricing — Dawarich" />
 				<meta
 					property="og:description"
-					content="Lite €59.99/yr, Pro €17.99/mo, or Family €299.99/yr for up to 5 people. 7-day free trial, 14-day risk-free refund. Or self-host for free."
+					content="Lite €59.99/yr, Pro €17.99/mo, or Family €239.99/yr for up to 5 people. 7-day free trial, 14-day risk-free refund. Or self-host for free."
 				/>
 				<meta
 					property="og:image"
@@ -36,7 +36,7 @@ export default function PricingPage() {
 				<meta name="twitter:title" content="Pricing — Dawarich" />
 				<meta
 					name="twitter:description"
-					content="Lite €59.99/yr, Pro €17.99/mo, or Family €299.99/yr for up to 5 people. 7-day free trial, 14-day risk-free refund. Or self-host for free."
+					content="Lite €59.99/yr, Pro €17.99/mo, or Family €239.99/yr for up to 5 people. 7-day free trial, 14-day risk-free refund. Or self-host for free."
 				/>
 				<meta
 					name="twitter:image"
@@ -82,7 +82,7 @@ export default function PricingPage() {
 								name: "Family (annual)",
 								description:
 									"One annual subscription covering up to 5 members, each with full Pro access.",
-								price: "299.99",
+								price: "239.99",
 								priceCurrency: "EUR",
 								availability: "https://schema.org/InStock",
 								url: "https://dawarich.app/pricing/",
