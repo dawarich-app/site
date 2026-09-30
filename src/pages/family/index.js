@@ -69,7 +69,7 @@ export default function FamilyPage() {
   return (
     <Layout
       title="Family Location Sharing App for iPhone and Android"
-      description="Share family locations in the Dawarich iOS and Android apps. Invite up to five people; each controls live sharing, history and location requests. €299.99/year or self-host free.">
+      description="Share family locations in the Dawarich iOS and Android apps. Invite up to five people; each controls live sharing, history and location requests. €239.99/year or self-host free.">
       <Head>
         <meta
           property="og:title"
@@ -126,7 +126,7 @@ export default function FamilyPage() {
         <CloseCTA
           campaign="family"
           title="Share with your household, not with a data broker"
-          sub="€299.99 a year covers five people on Dawarich Cloud, with a 7-day free trial. Or run the same thing on your own hardware for nothing."
+          sub="€239.99 a year covers five people on Dawarich Cloud, with a 7-day free trial. Or run the same thing on your own hardware for nothing."
           primaryLabel="Start a family plan"
         />
       </PitchPage>

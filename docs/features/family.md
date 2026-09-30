@@ -19,7 +19,7 @@ Family is available on **self-hosted** instances for everyone, with no plan and 
 
 On Dawarich Cloud, owning a family requires the **Family plan**. It is one annual subscription that covers a whole household:
 
-- **€299.99 / year**, annual billing only, with a 7-day free trial.
+- **€239.99 / year**, annual billing only, with a 7-day free trial.
 - **Up to 5 members in total**: the owner plus up to 4 people. Pending invitations count towards the 5.
 - **Every member gets full Pro access** while the plan is active: unlimited history, heatmap, Fog of War, globe view, photo integrations and the full write API. Invited members do **not** need a subscription of their own, and signing up from an invitation skips the checkout.
 - **Members with their own subscription keep it.** The family never changes a plan somebody pays for themselves.
