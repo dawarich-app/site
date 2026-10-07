@@ -9,6 +9,10 @@ import Testimonials from "@site/src/components/Testimonials";
 import Layout from "@theme/Layout";
 import React, { useEffect } from "react";
 
+const SEO_TITLE = "Google Timeline Alternative: Private History";
+const SEO_DESCRIPTION =
+	"Import your Google Timeline into Dawarich, explore your history on a web map, and track new journeys with iOS and Android apps. 7-day Cloud trial.";
+
 const SIGNUP_URL =
 	"https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=timeline_landing&utm_campaign=timeline_alt";
 
@@ -538,8 +542,8 @@ export default function GoogleTimelineAlternativePage() {
 
 	return (
 		<Layout
-			title="Google Timeline Alternative — Save Your Location History Before You Lose It"
-			description="Google killed Timeline and moved your data on-device only. Dawarich Cloud imports your Google Takeout in minutes, gives you back heatmaps and trip detection, and stores it all privately in Germany. From €119.99/year. 7-day free trial."
+			title={SEO_TITLE}
+			description={SEO_DESCRIPTION}
 		>
 			<Head>
 				<meta property="og:type" content="website" />
@@ -549,11 +553,11 @@ export default function GoogleTimelineAlternativePage() {
 				/>
 				<meta
 					property="og:title"
-					content="Google Timeline Alternative — Save Your Location History Before You Lose It"
+					content={SEO_TITLE}
 				/>
 				<meta
 					property="og:description"
-					content="Google killed Timeline and moved your data on-device only. Save your entire history in minutes with Dawarich Cloud — privately, EU-hosted, GDPR-compliant. 7-day free trial."
+					content={SEO_DESCRIPTION}
 				/>
 				<meta
 					property="og:image"
@@ -566,11 +570,11 @@ export default function GoogleTimelineAlternativePage() {
 				/>
 				<meta
 					name="twitter:title"
-					content="Google Timeline Alternative — Save Your Location History"
+					content={SEO_TITLE}
 				/>
 				<meta
 					name="twitter:description"
-					content="Google killed Timeline. Save your history privately with Dawarich Cloud. EU-hosted, GDPR-compliant. 7-day free trial."
+					content={SEO_DESCRIPTION}
 				/>
 				<meta
 					name="twitter:image"

@@ -28,3 +28,7 @@ yarn-error.log*
 
 # Worktrees
 .worktrees/
+
+# Private SEO working data and locally configured agent skill
+/seo/
+/.agents/skills/seo-autopilot

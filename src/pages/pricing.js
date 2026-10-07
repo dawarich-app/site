@@ -8,6 +8,10 @@ import PricingSection from "@site/src/components/PricingSection";
 import PricingCompare from "@site/src/components/PricingCompare";
 import FAQ from "@site/src/components/FAQ";
 
+const SEO_TITLE = "Cloud Pricing & Plans";
+const SEO_DESCRIPTION =
+	"Compare Dawarich Cloud plans: Lite, Pro and Family for up to 5 people. Try free for 7 days, or self-host with every Pro feature at no cost.";
+
 export default function PricingPage() {
 	useEffect(() => {
 		initializePaddle({
@@ -17,26 +21,26 @@ export default function PricingPage() {
 
 	return (
 		<Layout
-			title="Pricing — Dawarich"
-			description="Simple pricing for Dawarich Cloud. Lite €59.99/yr, Pro €17.99/mo, or Family €239.99/yr for up to 5 people. 7-day free trial, 14-day risk-free refund, cancel anytime. Or self-host for free."
+			title={SEO_TITLE}
+			description={SEO_DESCRIPTION}
 		>
 			<Head>
 				<meta property="og:type" content="website" />
 				<meta property="og:url" content="https://dawarich.app/pricing/" />
-				<meta property="og:title" content="Pricing — Dawarich" />
+				<meta property="og:title" content={`${SEO_TITLE} | Dawarich`} />
 				<meta
 					property="og:description"
-					content="Lite €59.99/yr, Pro €17.99/mo, or Family €239.99/yr for up to 5 people. 7-day free trial, 14-day risk-free refund. Or self-host for free."
+					content={SEO_DESCRIPTION}
 				/>
 				<meta
 					property="og:image"
 					content="https://dawarich.app/img/meta-image.png"
 				/>
 				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:title" content="Pricing — Dawarich" />
+				<meta name="twitter:title" content={`${SEO_TITLE} | Dawarich`} />
 				<meta
 					name="twitter:description"
-					content="Lite €59.99/yr, Pro €17.99/mo, or Family €239.99/yr for up to 5 people. 7-day free trial, 14-day risk-free refund. Or self-host for free."
+					content={SEO_DESCRIPTION}
 				/>
 				<meta
 					name="twitter:image"

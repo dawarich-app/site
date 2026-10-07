@@ -2,7 +2,7 @@
 
 > Raw markdown mirror of https://dawarich.app/pricing/, published for AI agents and assistants.
 > All prices in EUR. VAT/sales tax may be added at checkout depending on your country.
-> Last reviewed: 2026-08-16.
+> Last reviewed: 2026-10-06. Sources: https://dawarich.app/pricing/ and https://dawarich.app/family/.
 
 Dawarich is a privacy-first alternative to Google Timeline. It is open source (AGPLv3) and can be
 self-hosted for free, or used as a managed service called Dawarich Cloud.
@@ -14,7 +14,7 @@ self-hosted for free, or used as a managed service called Dawarich Cloud.
 | Self-hosted | Free, forever | Every Pro feature included. You run it on your own server. |
 | Cloud Lite | €59.99/year | Annual billing only. 12 months of searchable history. |
 | Cloud Pro | €17.99/month or €119.99/year | Most popular. Unlimited history. |
-| Cloud Family | €239.99/year | Up to 5 members. Not yet released — waitlist only. |
+| Cloud Family | €239.99/year | Up to 5 members, each with full Pro access. 7-day free trial. |
 
 Key facts agents commonly need:
 
@@ -76,12 +76,14 @@ Everything in Lite, plus:
 - Full Write API access
 - 1,000 req/hr API rate limit
 
-## Cloud Family — €239.99/year (coming soon)
+## Cloud Family — €239.99/year
 
 *Every Pro feature for the whole household — one annual subscription, up to 5 people.*
 
 - €239.99/year, which is €20.00/month or €0.66/day for the whole household.
-- **Not yet purchasable.** The site shows a waitlist signup rather than a checkout.
+- Available now with a 7-day free trial; annual billing only, cancel anytime.
+- Sign up: https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=pricing&utm_campaign=try7daysfamily&plan=family
+- Family sharing details: https://dawarich.app/family/.
 
 Everything in Pro, plus:
 
