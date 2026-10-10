@@ -12,7 +12,7 @@ Run Dawarich directly on your Home Assistant device as a native app — no separ
 This app requires **Home Assistant OS (HAOS)**. It does not work with Home Assistant Container or Core installations.
 :::
 
-**Source:** [github.com/thomdev-j/homeassistant-app-dawarich](https://github.com/thomdev-j/homeassistant-app-dawarich)
+**Source:** [Dawarich Home Assistant add-on](https://github.com/thomdev-j/dawarich-home-assistant-addon)
 
 ## Features
 
@@ -32,7 +32,7 @@ This app requires **Home Assistant OS (HAOS)**. It does not work with Home Assis
 
 ## Installation
 
-1. Add the [repository](https://github.com/thomdev-j/homeassistant-app-dawarich) to your Home Assistant app store
+1. Add the [Dawarich Home Assistant add-on repository](https://github.com/thomdev-j/dawarich-home-assistant-addon) to your Home Assistant app store
 2. Install and start the Dawarich app
 3. Configure your tracked entities (e.g. `device_tracker.your_phone`)
 4. Access Dawarich from the HA sidebar
@@ -47,4 +47,4 @@ device_tracker.phone_alice:Alice, device_tracker.phone_bob:Bob
 
 This creates separate Dawarich accounts per person (e.g. `alice@dawarich.local` with default password `password`).
 
-See the [full documentation](https://github.com/thomdev-j/homeassistant-app-dawarich) for all configuration options and troubleshooting.
+See the [Dawarich Home Assistant add-on documentation](https://github.com/thomdev-j/dawarich-home-assistant-addon) for all configuration options and troubleshooting.
