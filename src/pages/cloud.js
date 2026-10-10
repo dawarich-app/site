@@ -1,6 +1,5 @@
 import Head from "@docusaurus/Head";
 import Link from "@docusaurus/Link";
-import { initializePaddle } from "@paddle/paddle-js";
 import FAQ from "@site/src/components/FAQ";
 import HowItWorks from "@site/src/components/HowItWorks";
 import LandingHero from "@site/src/components/LandingHero";
@@ -11,7 +10,7 @@ import Layout from "@theme/Layout";
 import React, { useEffect } from "react";
 
 const SIGNUP_URL =
-	"https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=cloud_landing&utm_campaign=cloud";
+	"https://my.dawarich.app/users/sign_up";
 
 const SignupIcon = () => (
 	<svg
@@ -353,10 +352,6 @@ function CloudFinalCTA() {
 
 export default function CloudPage() {
 	useEffect(() => {
-		initializePaddle({
-			token: "live_8593fad779b610288ad3ca40789",
-		});
-
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {

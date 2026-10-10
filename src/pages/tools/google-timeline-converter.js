@@ -396,7 +396,7 @@ export default function GoogleTimelineConverter() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </span>
-                <span>Looking for a long-term Google Timeline replacement? <a href="/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-converter">Dawarich</a> tracks your location history automatically, with full data ownership and privacy. <a href="/blog/migrating-from-google-location-history-to-dawarich">Learn how to migrate</a>.</span>
+                <span>Looking for a long-term Google Timeline replacement? <a href="/">Dawarich</a> tracks your location history automatically, with full data ownership and privacy. <a href="/blog/migrating-from-google-location-history-to-dawarich">Learn how to migrate</a>.</span>
               </div>
             </div>
           )}
@@ -566,7 +566,7 @@ export default function GoogleTimelineConverter() {
                 <li><strong>Long-term preservation</strong> — Standard formats will be readable decades from now, regardless of Google's future decisions</li>
                 <li><strong>Analysis</strong> — Import CSV into spreadsheets for statistical analysis of your movement patterns</li>
                 <li><strong>Visualization</strong> — View your history in Google Earth, QGIS, or web mapping tools</li>
-                <li><strong>Migration</strong> — Import into self-hosted alternatives like <a href="/?utm_source=tool&utm_medium=info-section&utm_campaign=google-timeline-converter">Dawarich</a> for ongoing location tracking with full data ownership</li>
+                <li><strong>Migration</strong> — Import into self-hosted alternatives like <a href="/">Dawarich</a> for ongoing location tracking with full data ownership</li>
               </ul>
             </div>
 
@@ -612,7 +612,7 @@ export default function GoogleTimelineConverter() {
           <div className={styles.ctaContent}>
             <h3>Looking for a Google Timeline Replacement?</h3>
             <p>Dawarich is an open-source location tracking platform that gives you full control over your data. Import your Google Timeline export, track ongoing location from your phone, and visualize years of movement history — all self-hosted or in the cloud.</p>
-            <a href="/?utm_source=tool&utm_medium=bottom-cta&utm_campaign=google-timeline-converter" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
+            <a href="/" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
           </div>
         </div>
       </div>

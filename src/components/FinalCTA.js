@@ -18,7 +18,7 @@ export default function FinalCTA() {
 							7-day free trial, cancel anytime.
 						</p>
 						<Link
-							to="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=final_cta&utm_campaign=try7days"
+							to="https://my.dawarich.app/users/sign_up"
 							className={styles.primaryButton}
 						>
 							Save Your Location History

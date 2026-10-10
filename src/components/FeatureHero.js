@@ -15,7 +15,7 @@ export default function FeatureHero({
   titleHighlight,
   subtitle,
   ctaText = "Try 7 Days for Free",
-  ctaLink = "https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature&utm_campaign=feature",
+  ctaLink = "https://my.dawarich.app/users/sign_up",
   showSecondary = false,
   image,
   imageAlt
