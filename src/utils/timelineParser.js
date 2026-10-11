@@ -341,6 +341,82 @@ export function parseTimelineEdits(data) {
   };
 }
 
+// Standalone iOS timelinePath records cover time buckets, not individual activities.
+// Index their samples once so each activity can read only its own time range.
+function collectLocationHistorySamples(data) {
+  const samples = [];
+  for (const entry of data) {
+    if (entry.activity || !Array.isArray(entry.timelinePath)) continue;
+    const start = new Date(entry.startTime).getTime();
+    const end = new Date(entry.endTime).getTime();
+    if (!Number.isFinite(start) || !Number.isFinite(end) || end < start) continue;
+
+    for (const point of entry.timelinePath) {
+      const coords = parseGeoString(point.point);
+      if (!coords) continue;
+      const offset = point.durationMinutesOffsetFromStartTime;
+      const timestamp = point.time != null
+        ? new Date(point.time).getTime()
+        : offset != null && String(offset).trim() !== ''
+          ? start + Number(offset) * 60000
+          : NaN;
+      if (!Number.isFinite(timestamp) || timestamp < start || timestamp > end) continue;
+      samples.push({ timestamp, coordinates: [coords.lat, coords.lng] });
+    }
+  }
+  return samples.sort((a, b) => a.timestamp - b.timestamp);
+}
+
+function locationHistoryActivityCoordinates(entry, samples) {
+  const inline = (Array.isArray(entry.timelinePath) ? entry.timelinePath : []).flatMap(point => {
+    const coords = parseGeoString(point.point);
+    return coords ? [[coords.lat, coords.lng]] : [];
+  });
+  // Combined exports already associate geometry with their activity.
+  if (inline.length >= 2) return inline;
+
+  const start = new Date(entry.startTime).getTime();
+  const end = new Date(entry.endTime).getTime();
+  const startCoords = parsePlaceLocation(entry.activity.start);
+  const endCoords = parsePlaceLocation(entry.activity.end);
+  const coordinates = [];
+  const append = coords => {
+    if (!coords) return;
+    const previous = coordinates[coordinates.length - 1];
+    if (!previous || previous[0] !== coords[0] || previous[1] !== coords[1]) {
+      coordinates.push(coords);
+    }
+  };
+  append(startCoords && [startCoords.lat, startCoords.lng]);
+
+  if (Number.isFinite(start) && Number.isFinite(end) && end >= start) {
+    // Lower bound avoids rescanning an entire export for every activity.
+    let low = 0;
+    let high = samples.length;
+    while (low < high) {
+      const mid = Math.floor((low + high) / 2);
+      if (samples[mid].timestamp < start) low = mid + 1;
+      else high = mid;
+    }
+    for (let i = low; i < samples.length && samples[i].timestamp <= end; i++) {
+      append(samples[i].coordinates);
+    }
+  }
+  append(endCoords && [endCoords.lat, endCoords.lng]);
+
+  // Keep even a round trip's reported distance when no route samples survived.
+  if (coordinates.length < 2 && startCoords && endCoords) {
+    return [[startCoords.lat, startCoords.lng], [endCoords.lat, endCoords.lng]];
+  }
+  return coordinates;
+}
+
+function normalizeGoogleActivityType(type) {
+  return typeof type === 'string' && type.trim()
+    ? type.trim().toUpperCase().replace(/\s+/g, '_')
+    : 'UNKNOWN';
+}
+
 /**
  * Parse location-history format (new Google Timeline export format)
  * @param {Array} data - Array of timeline entries
@@ -357,6 +433,7 @@ export function parseLocationHistory(data) {
   }
 
   console.log(`[parseLocationHistory] Found ${data.length} timeline entries`);
+  const samples = collectLocationHistorySamples(data);
 
   // Generate unique ID prefix for this file
   const fileId = Math.random().toString(36).substr(2, 9);
@@ -395,20 +472,10 @@ export function parseLocationHistory(data) {
     if (entry.activity) {
       const activity = entry.activity;
       const topCandidate = activity.topCandidate;
-      const pathCoords = [];
-
-      // Parse timelinePath for the actual route
-      if (entry.timelinePath && Array.isArray(entry.timelinePath)) {
-        for (let j = 0; j < entry.timelinePath.length; j++) {
-          const pathPoint = entry.timelinePath[j];
-          if (pathPoint.point) {
-            const coords = parseGeoString(pathPoint.point);
-            if (coords) {
-              pathCoords.push([coords.lat, coords.lng]);
-            }
-          }
-        }
-      }
+      const pathCoords = locationHistoryActivityCoordinates(entry, samples);
+      const activityType = normalizeGoogleActivityType(topCandidate?.type);
+      const distance = activity.distanceMeters == null || String(activity.distanceMeters).trim() === ''
+        ? NaN : Number(activity.distanceMeters);
 
       // Create path if we have coordinates
       if (pathCoords.length >= 2) {
@@ -416,12 +483,12 @@ export function parseLocationHistory(data) {
           id: `activity-path-${fileId}-${i}`,
           coordinates: pathCoords,
           type: 'activity_segment',
-          activityType: topCandidate?.type || 'UNKNOWN',
-          distance: activity.distanceMeters ? parseInt(activity.distanceMeters) : null,
+          activityType,
+          distance: Number.isFinite(distance) && distance >= 0 ? distance : null,
           startTimestamp: entry.startTime,
           endTimestamp: entry.endTime,
           duration: calculateDuration(entry.startTime, entry.endTime),
-          color: getActivityColor(topCandidate?.type || 'UNKNOWN'),
+          color: getActivityColor(activityType),
           probability: topCandidate?.probability || null,
         });
       }
