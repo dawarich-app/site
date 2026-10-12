@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: Installation
-description: Install Dawarich using Docker and Docker Compose on Linux, macOS, Windows, or Synology.
+description: Install Dawarich using Docker and Docker Compose on Linux, macOS, Windows, Synology, or UGREEN.
 ---
 
 # Installation
@@ -12,7 +12,7 @@ Currently, you can install Dawarich only using Docker. This guide will walk you 
 
 Dawarich can be installed on any platform that supports Docker and Docker Compose. This includes Linux, macOS, and Windows.
 
-Another option is Synology.
+Synology and UGREEN NAS devices are also supported.
 
 ### Docker
 
@@ -20,4 +20,8 @@ Setting up your Dawarich in Docker is described in the [Self-Hosting Introductio
 
 ### Synology
 
-Setting up your Dawarich on Synology is described in the [Synology](../synology) guide.
+Follow the [Synology](./synology.md) installation guide by Marius Hosting.
+
+### UGREEN
+
+Follow the [UGREEN](./ugreen.md) installation guide by Marius Hosting.
