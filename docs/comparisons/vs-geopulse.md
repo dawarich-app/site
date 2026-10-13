@@ -86,4 +86,4 @@ Export your data from GeoPulse as GPX or GeoJSON and import it into Dawarich —
 
 ## Try Dawarich Cloud
 
-No server to set up, works with the Dawarich mobile apps, automatic backups, and a 7-day free trial. [Start your free trial →](https://dawarich.app/pricing)
+No server to set up, works with the Dawarich mobile apps, automatic backups, and a 7-day free trial. [Start your free trial →](https://dawarich.app/pricing?utm_source=site&utm_medium=comparison_page&utm_campaign=vs_geopulse)

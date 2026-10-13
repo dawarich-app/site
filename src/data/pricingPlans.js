@@ -52,7 +52,7 @@ export function DwIcon({ name, size = 18, stroke = 2, className, style }) {
 	);
 }
 
-const SIGNUP = "https://my.dawarich.app/users/sign_up";
+const SIGNUP = "https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=pricing";
 
 export const PLANS = {
 	lite: {
@@ -68,7 +68,7 @@ export const PLANS = {
 		badge: null,
 		cta: "Try Lite Free",
 		ctaStyle: "outline",
-		href: `${SIGNUP}?plan=lite`,
+		href: `${SIGNUP}&utm_campaign=try7dayslite&plan=lite`,
 		footnote: "Annual only · Cancel anytime",
 		urgency: null,
 		valueStack: {
@@ -113,7 +113,7 @@ export const PLANS = {
 		badge: "MOST POPULAR",
 		cta: "Start Pro Free — 7 Days",
 		ctaStyle: "primary",
-		href: `${SIGNUP}`,
+		href: `${SIGNUP}&utm_campaign=try7days`,
 		footnote: "Cancel anytime",
 		urgency: null,
 		valueStack: {
@@ -152,7 +152,7 @@ export const PLANS = {
 		badge: null,
 		cta: "Start Family Free — 7 Days",
 		ctaStyle: "outline",
-		href: `${SIGNUP}?plan=family`,
+		href: `${SIGNUP}&utm_campaign=try7daysfamily&plan=family`,
 		footnote: "Annual only · Up to 5 members · Cancel anytime",
 		urgency: null,
 		valueStack: {

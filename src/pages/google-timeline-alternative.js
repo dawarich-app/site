@@ -13,7 +13,7 @@ const SEO_DESCRIPTION =
 	"Import your Google Timeline into Dawarich, explore your history on a web map, and track new journeys with iOS and Android apps. 7-day Cloud trial.";
 
 const SIGNUP_URL =
-	"https://my.dawarich.app/users/sign_up";
+	"https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=timeline_landing&utm_campaign=timeline_alt";
 
 const ArrowIcon = () => (
 	<svg

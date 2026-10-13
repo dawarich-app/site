@@ -153,7 +153,7 @@ export default function Hero() {
 					<div className={styles.buttons} style={{ animationDelay: "0.3s" }}>
 						<Link
 							className={styles.primaryButton}
-							href="https://my.dawarich.app/users/sign_up"
+							href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=hero&utm_campaign=hero"
 						>
 							Import My Google Data
 							<span className={styles.arrow}>

@@ -10,7 +10,7 @@ import Layout from "@theme/Layout";
 import React, { useEffect } from "react";
 
 const SIGNUP_URL =
-	"https://my.dawarich.app/users/sign_up";
+	"https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=cloud_landing&utm_campaign=cloud";
 
 const SignupIcon = () => (
 	<svg

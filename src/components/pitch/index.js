@@ -4,6 +4,9 @@ import styles from './Pitch.module.css';
 
 const SIGNUP = 'https://my.dawarich.app/users/sign_up';
 
+const signupHref = (campaign, medium) =>
+  `${SIGNUP}?utm_source=site&utm_medium=${medium}&utm_campaign=${campaign}`;
+
 const CheckMark = () => (
   <svg
     className={styles.guaranteeMark}
@@ -29,7 +32,7 @@ export function PitchPage({ children }) {
  * Hero: dream outcome, the mechanism in one sentence, dual CTA, risk reversal.
  * Deliberately has no eyebrow/kicker label above the heading.
  */
-export function PitchHero({ title, sub, artifact, primaryLabel = 'Try 7 days free' }) {
+export function PitchHero({ title, sub, campaign, artifact, primaryLabel = 'Try 7 days free' }) {
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
@@ -38,7 +41,7 @@ export function PitchHero({ title, sub, artifact, primaryLabel = 'Try 7 days fre
             <h1 className={styles.heroTitle}>{title}</h1>
             <p className={styles.heroSub}>{sub}</p>
             <div className={styles.heroActions}>
-              <Link className={styles.primaryCta} href={SIGNUP}>
+              <Link className={styles.primaryCta} href={signupHref(campaign, 'pitch-hero')}>
                 {primaryLabel}
               </Link>
               <Link className={styles.secondaryCta} to="/docs/self-hosting/installation/docker">
@@ -136,14 +139,14 @@ export function Objections({ title, items }) {
 }
 
 /** Close with the risk reversal spelled out. */
-export function CloseCTA({ title, sub, primaryLabel = 'Try 7 days free' }) {
+export function CloseCTA({ title, sub, campaign, primaryLabel = 'Try 7 days free' }) {
   return (
     <section className={styles.close}>
       <div className={styles.container}>
         <h2 className={styles.closeTitle}>{title}</h2>
         <p className={styles.closeSub}>{sub}</p>
         <div className={styles.closeActions}>
-          <Link className={styles.primaryCta} href={SIGNUP}>
+          <Link className={styles.primaryCta} href={signupHref(campaign, 'pitch-close')}>
             {primaryLabel}
           </Link>
           <Link className={styles.secondaryCta} to="/pricing">
