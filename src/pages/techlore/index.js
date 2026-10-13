@@ -1,6 +1,5 @@
 import Head from "@docusaurus/Head";
 import Link from "@docusaurus/Link";
-import { initializePaddle } from "@paddle/paddle-js";
 import HowItWorks from "@site/src/components/HowItWorks";
 import LandingHero from "@site/src/components/LandingHero";
 import sections from "@site/src/components/LandingSections.module.css";
@@ -358,10 +357,6 @@ function TechLoreFinalCTA() {
 
 export default function TechLorePage() {
 	useEffect(() => {
-		initializePaddle({
-			token: "live_8593fad779b610288ad3ca40789",
-		});
-
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {

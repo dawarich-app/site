@@ -2,6 +2,7 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import {
   hasTrackingConsent,
   buildOutboundUrl,
+  refreshOutboundLinks,
   initializeUtmPreservation,
   saveOriginalUtmParams,
   clearOriginalUtmParams,
@@ -151,6 +152,7 @@ describe('referral (via) preservation', () => {
 describe('ad campaign handoff', () => {
   beforeEach(() => {
     localStorage.clear();
+    grantConsent();
     visit('');
   });
 
@@ -172,6 +174,19 @@ describe('ad campaign handoff', () => {
     link.remove();
   });
 
+  it('updates the visible signup URL after consent for copied or new-tab links', () => {
+    visit('?utm_source=google&utm_medium=cpc&utm_campaign=123456789');
+    saveOriginalUtmParams();
+
+    const link = document.createElement('a');
+    link.href = SIGNUP;
+    document.body.appendChild(link);
+    refreshOutboundLinks();
+
+    expect(new URL(link.href).searchParams.get('utm_campaign')).toBe('123456789');
+    link.remove();
+  });
+
   it('does not append a saved campaign to an unrelated external link', () => {
     visit('?utm_source=google&utm_medium=cpc&utm_campaign=123456789');
     saveOriginalUtmParams();
@@ -185,6 +200,48 @@ describe('ad campaign handoff', () => {
 
     expect(link.href).toBe('https://example.com/help');
     link.remove();
+  });
+});
+
+describe('campaign storage consent', () => {
+  beforeEach(() => {
+    localStorage.clear();
+    clearConsent();
+    visit('?utm_source=google&utm_medium=cpc&utm_campaign=123456789');
+  });
+
+  it('does not store a campaign before consent or after refusal', () => {
+    saveOriginalUtmParams();
+    expect(localStorage.getItem('original_utm_params')).toBeNull();
+
+    declineConsent();
+    saveOriginalUtmParams();
+    expect(localStorage.getItem('original_utm_params')).toBeNull();
+    expect(buildOutboundUrl(SIGNUP)).toBe(SIGNUP);
+  });
+
+  it('removes tracking parameters from visible signup links until consent', () => {
+    const link = document.createElement('a');
+    link.href = `${SIGNUP}?utm_source=site&utm_campaign=hero&_gl=click`;
+    document.body.appendChild(link);
+
+    refreshOutboundLinks();
+    expect(link.href).toBe(SIGNUP);
+
+    grantConsent();
+    refreshOutboundLinks();
+    expect(link.href).toContain('utm_campaign=hero');
+    link.remove();
+  });
+
+  it('forgets a stored campaign when consent is withdrawn', () => {
+    grantConsent();
+    saveOriginalUtmParams();
+    expect(localStorage.getItem('original_utm_params')).not.toBeNull();
+
+    declineConsent();
+    expect(buildOutboundUrl(SIGNUP)).toBe(SIGNUP);
+    expect(localStorage.getItem('original_utm_params')).toBeNull();
   });
 });
 

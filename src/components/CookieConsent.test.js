@@ -58,6 +58,8 @@ describe('CustomCookieConsent', () => {
 
     expect(srcs.some((s) => s.includes('brevo.com'))).toBe(true);
     expect(srcs.some((s) => s.includes('partnero.com'))).toBe(true);
+    expect(srcs.some((s) => s.includes('rybbit.dwri.xyz'))).toBe(true);
+    expect(srcs.some((s) => s.includes('googletagmanager.com'))).toBe(true);
   });
 
   it('survives a blocked script append instead of tearing down the page', () => {
@@ -75,23 +77,34 @@ describe('CustomCookieConsent', () => {
     render(<CustomCookieConsent />);
     fireEvent.click(screen.getByText('Accept'));
 
-    expect(consentUpdates()[0][2].ad_storage).toBe('granted');
+    expect((window.dataLayer || []).map((args) => Array.from(args))[0][2].ad_storage).toBe('granted');
     expect(loadedThirdParties().some((s) => s.includes('brevo.com'))).toBe(true);
   });
 
-  it('does not append a second Google tag loader on Accept', () => {
+  it('saves the landing campaign only after Accept is clicked', () => {
+    localStorage.removeItem('original_utm_params');
+    window.history.replaceState({}, '', '/?utm_source=google&utm_medium=cpc&utm_campaign=123456789');
+    render(<CustomCookieConsent />);
+    expect(localStorage.getItem('original_utm_params')).toBeNull();
+
+    fireEvent.click(screen.getByText('Accept'));
+    expect(JSON.parse(localStorage.getItem('original_utm_params')).params.utm_campaign).toBe('123456789');
+    window.history.replaceState({}, '', '/');
+  });
+
+  it('appends one Google tag loader on Accept', () => {
     render(<CustomCookieConsent />);
     fireEvent.click(screen.getByText('Accept'));
 
     const loaders = loadedThirdParties().filter((s) => s.includes('googletagmanager.com'));
-    expect(loaders).toHaveLength(0);
+    expect(loaders).toHaveLength(1);
   });
 
   it('re-denies consent and loads nothing when Reject is clicked', () => {
     render(<CustomCookieConsent />);
     fireEvent.click(screen.getByText('Reject'));
 
-    expect(consentUpdates()[0][2].ad_storage).toBe('denied');
+    expect(consentUpdates()).toHaveLength(0);
     expect(loadedThirdParties()).toHaveLength(0);
   });
 });
