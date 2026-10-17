@@ -10,7 +10,9 @@ The Insights page provides a comprehensive dashboard for analyzing your location
 
 ## Accessing Insights
 
-Navigate to the Insights page from the main navigation menu. You can select different years to view historical data, or choose "All Time" to see aggregated statistics across your entire location history.
+Navigate to the Insights page from the main navigation menu, or open `/insights` directly. Insights is also where your statistics live: the old Stats page and its yearly views (`/stats` and `/stats/:year`) now redirect here. Pick a year from the period bar at the top, or choose **All Time** to see your whole history.
+
+Use **Update stats** in the page header to recalculate the selected year, or every year when **All Time** is selected. Monthly statistics pages and public month sharing are described on the [Stats](/docs/features/stats) page.
 
 ## Overview Stats
 
@@ -21,19 +23,49 @@ At the top of the Insights page, you'll find key metrics for the selected period
 - **Cities Visited** - Number of unique cities
 - **Days Traveling** - Number of active days with recorded movement
 
-## Activity Heatmap
+## All Time: Years
 
-The Activity Heatmap displays a GitHub-style contribution graph showing your daily activity throughout the year. Each cell represents a day, with color intensity indicating the level of activity:
+With **All Time** selected, the page shows a summary of your tracking and one card per year. Each card has:
 
-- **Lighter colors** indicate less movement
-- **Darker colors** indicate more movement
-- **Gray cells** indicate no recorded activity
+- A map of that year's routes (shown on the six most recent years)
+- The year's distance and when its statistics were last updated
+- A strip of the twelve months, showing how the distance was spread across the year
+- The number of countries and cities, which opens the full list when clicked
+- A link to the map for that year
 
-Hover over any cell to see the exact date and distance traveled that day. The heatmap also shows the number of active days for the selected year.
+Click the countries or cities count in the summary at the top to see the full list for your whole history.
+
+## A Single Year
+
+Selecting a year shows **Distance by month**: one card per month with its distance, linking to that month's statistics page.
+
+### Year Calendar
+
+Below the months, a calendar shows every day of the year. On Pro plans and self-hosted instances, the calendar has three views:
+
+- **Countries + distance** - each day is coloured by the country you were in, and its shade shows how far you travelled
+- **Countries** - only the country colours
+- **Distance** - only how far you travelled each day
+
+Hover over a day to see its date, country and distance. Countries are counted per UTC day and distances per day in your time zone, so a day near midnight can show one day's country next to another day's distance.
+
+On Dawarich Cloud Lite, the calendar shows distance only.
+
+### Where You Spent the Year
+
+On Pro plans and self-hosted instances, a country timeline shows the stretches of the year you spent in each country, with the number of days for each.
+
+:::tip
+Countries come from reverse geocoding. If your points have not been reverse geocoded yet, the calendar and the country timeline have no countries to show. See [Reverse Geocoding](/docs/self-hosting/configuration/reverse-geocoding).
+:::
+
+### Distance Race
+
+When you also have data for the previous year, a chart compares your cumulative distance this year with the same days of the previous year, and shows whether you are ahead or behind. Hover over the chart to compare any day. On Dawarich Cloud Lite, the race is shown as a preview that is available on Pro.
 
 ## Activity Streak
 
-The Activity Streak section tracks consecutive days of recorded movement:
+Below the year calendar, Insights tracks consecutive days of recorded movement:
 
 - **Current Streak** - Shows how many consecutive days you've been active (only shown for the current year)
 - **Longest Streak** - Your best consecutive active days record, including the date range when it occurred

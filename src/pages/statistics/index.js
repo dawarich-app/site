@@ -59,11 +59,11 @@ const howItWorksSteps = [
   {
     icon: <BarChartIcon size={32} />,
     title: 'View Your Stats',
-    description: 'Navigate to the Stats page to see your comprehensive location analytics.',
+    description: 'Open the Insights page to see your comprehensive location analytics.',
     details: [
-      'Overall summary at the top',
-      'Click on any year to see detailed stats',
-      'Click on any month to see it on the map'
+      'All Time summary with a card and route map per year',
+      'Pick any year to see its months, calendar and comparisons',
+      'Click on any month to see its statistics and map'
     ]
   },
   {

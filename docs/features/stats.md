@@ -1,66 +1,39 @@
 ---
 sidebar_position: 3
 title: Stats
-description: View summary statistics of your location data including distance traveled, countries and cities visited, and points recorded.
+description: Find your yearly and monthly statistics on the Insights page, recalculate them, and share a month publicly.
 ---
 
 # Stats
 
-The Stats page provides a summary of your location data including distance traveled, countries visited, cities visited, and points recorded over different time periods.
+Your statistics now live on the [Insights](/docs/features/insights) page. The separate Stats page and its yearly views are gone: `/stats` and `/stats/:year` redirect to Insights, so old bookmarks still work.
 
-## Overview
+## Where to Find Your Statistics
 
-Stats display:
-- **Total Distance** - Cumulative distance traveled
-- **Countries Visited** - Number of unique countries
-- **Cities Visited** - Number of unique cities
-- **Points Recorded** - Total GPS points in your database
+- **All of your history** - open Insights and choose **All Time**. You get your totals and one card per year with its distance, a map of its routes, its months, and its countries and cities.
+- **One year** - pick the year in the period bar at the top of Insights. **Distance by month** lists every month of that year.
+- **One month** - click a month card to open that month's statistics page.
 
-![Stats](images/stats.png)
-
-## Yearly Stats
-
-Click on any year to see detailed statistics:
-- Monthly breakdown of distance and cities
-- Countries visited that year
-- Map view link for the entire year
-
-![Stats by year](images/stats-by-year.png)
+Click a countries or cities count to see the full list of places, with links to the map.
 
 ## Monthly Stats
 
-From the yearly view, click on a month to see:
-- Distance traveled that month
-- Cities and countries visited
-- Direct link to view those points on the map
+A month's page shows:
+
+- Distance traveled, plus flight distance imported from AirTrail, which is not counted in the distance
+- Active days, countries and cities visited
+- A map of the month's points or heatmap
+- Daily activity, with the month's peak day and quietest week
+- A **Share** button for public sharing (see below) and a link back to Insights
 
 ## Updating Stats
 
-Stats are calculated periodically in the background. You can also manually update them:
+Stats are calculated in the background after imports and new points arrive, and are recalculated every hour. To recalculate them yourself:
 
-1. Go to the Stats page
-2. Click **Update Stats**
-3. Wait for the background job to complete (usually a few minutes)
-
-Stats are automatically recalculated every hour.
-
-### Year Recalculation
-
-You can recalculate statistics for a specific year:
-1. Navigate to the year's stats page
-2. Click the **Recalculate** button
-3. The stats for that year will be refreshed
-
-### Month Recalculation
-
-Similarly, individual months can be recalculated from their stats page.
-
-## Countries and Cities Modal
-
-Click on the countries or cities count to see a popup with:
-- Full list of countries/cities visited
-- Visit counts per location
-- Links to view on the map
+1. Open Insights
+2. Select a year, or **All Time** to recalculate every year
+3. Click **Update stats** in the page header
+4. Wait for the background job to finish (usually a few minutes)
 
 ## Public Stats Sharing
 

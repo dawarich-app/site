@@ -1,1 +1,1 @@
-{"parameters":[]}
+{"parameters":[{"name":"X-Webhook-Secret","in":"header","required":true,"description":"Shared webhook secret used to authenticate the caller","schema":{"type":"string"}}]}

@@ -24,6 +24,17 @@ The trips list shows all your saved trips in one place.
 
 ![Trips list](images/trips.webp)
 
+### Searching, sorting and filtering
+
+Above the list you can narrow down your trips:
+
+- **Search** - matches the trip name, its description, the countries it visited and its notes
+- **Sort** - Newest first, Oldest first, Name (A–Z) or Longest distance
+- **Year** and **Month** - show trips from a given year, or a month of that year (choose a year first)
+- **Country** - show trips that visited a given country
+
+Click **Apply** to update the list, or **Reset** to clear every filter. The filters are kept in the page address, so you can bookmark or share a filtered list.
+
 ## Trip detail page
 
 Clicking a trip opens the detail view, which includes:

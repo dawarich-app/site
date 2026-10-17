@@ -140,9 +140,9 @@ When your own location is being shared, a green dot appears next to **Family** i
 ## Seeing your family on the map
 
 - **Family page**: the map shows the current position of every member who is sharing.
-- **Map v2**: open **Map Layers** and switch on **Family Members**. Positions update in real time. For members who share their history, their track is drawn for the dates selected on the map.
+- **Map**: open the **Family** tab (`F`) and switch on **Show family member locations**. Positions update in real time. For members who share their history, their track is drawn for the dates selected on the map. The tab also lists every sharing member with their last known address; click a member to center the map on them.
 
-![Map v2 with the Family Members layer: two members' positions and their tracks over the last 7 days](images/family-map-v2.webp)
+![The map with the Family tab: two members' positions and their tracks over the last 7 days](images/family-map-v2.webp)
 
 ### In the mobile apps
 
