@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"demo data removed","content":{"application/json":{"schema":{"type":"object","properties":{"status":{"type":"string","enum":["destroyed","no_demo_data"],"description":"Result of the removal"}},"required":["status"]}}}},"401":{"description":"unauthorized"}}}

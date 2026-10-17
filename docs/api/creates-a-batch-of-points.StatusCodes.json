@@ -1,1 +1,1 @@
-{"responses":{"201":{"description":"Batch of points created"},"401":{"description":"Unauthorized"}}}
+{"responses":{"201":{"description":"Batch of points created"},"401":{"description":"Unauthorized"},"422":{"description":"Invalid timestamp"}}}

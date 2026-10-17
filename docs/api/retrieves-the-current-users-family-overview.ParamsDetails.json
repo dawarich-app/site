@@ -1,0 +1,1 @@
+{"parameters":[{"name":"Authorization","in":"header","required":true,"description":"Bearer <API Key>","schema":{"type":"string"}}]}

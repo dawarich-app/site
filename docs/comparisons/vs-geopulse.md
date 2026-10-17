@@ -77,7 +77,7 @@ This page compares Dawarich with GeoPulse to help you understand the differences
 | Plan | Dawarich | GeoPulse |
 |------|----------|----------|
 | Self-hosted | Free (open source) | Free for personal use (BSL 1.1) |
-| Cloud | €150/year or €18/month | N/A |
+| Cloud | Lite €59.99/year, Pro €119.99/year or €17.99/month | N/A |
 | Free trial | 7-day Cloud trial | N/A |
 
 ## Migrating from GeoPulse

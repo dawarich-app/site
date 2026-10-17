@@ -8,24 +8,9 @@ description: Explore your location history on interactive maps with points, rout
 
 The Map page provides interactive visualizations of your location data. You can view points, routes, heatmaps, and various other layers to explore your travel history.
 
-## Map Versions
+## One Map
 
-Dawarich offers two map implementations:
-
-### Map V2 (MapLibre GL JS) — Default
-
-The current default map implementation using MapLibre GL JS. Map V2 offers:
-
-- **Better performance** - WebGL-based rendering for smoother interactions
-- **Globe view** - 3D globe rendering option
-- **Search functionality** - Built-in place search (see [Search](/docs/features/search))
-- **Modern styling** - More map style options
-
-### Map V1 (Leaflet) — Deprecated
-
-The original map implementation using Leaflet.js. Map V1 is deprecated and will be removed in summer 2026. If you are still using Map V1, please switch to Map V2.
-
-To switch between map versions, access `/map/v1` or `/map/v2` in your browser URL, or configure your preferred version in settings.
+Dawarich has one map, built on MapLibre GL JS. It renders with WebGL, supports a 3D globe, built-in place search (see [Search](/docs/features/search)) and several map styles. The old Leaflet map (Map V1) has been removed: `/map/v1` now redirects to the current map.
 
 ## Map Interface
 
@@ -33,12 +18,21 @@ To switch between map versions, access `/map/v1` or `/map/v2` in your browser UR
 
 Use the date picker at the top to select the time range for displayed data. You can view data from a single day to your entire history.
 
-### Sidebar
+### Map Buttons
 
-The sidebar provides:
-- **Year/Month Navigation** - Browse your data by time period
-- **Countries & Cities** - View statistics on places you've visited
-- **Layer Controls** - Toggle map layers on/off
+The buttons on the left edge of the map open its panels. Each has a keyboard shortcut:
+
+| Button | Shortcut | Opens |
+|--------|----------|-------|
+| Timeline | `T` | Your days and visits for the selected dates |
+| Layers | `L` | Map layers and their options |
+| Search | `/` | [Place search](/docs/features/search) |
+| Family | `F` | Family members on the map (only when you are in a [family](/docs/features/family)) |
+| Tools | `C` | Create visits, places and areas, select points, enrich photos |
+| Replay | `R` | Replay the points for the selected dates |
+| Settings | `S` | [Map settings](#map-settings) |
+
+Poster Studio, Video Studio and Links are in the same strip.
 
 ### Point Details
 
@@ -58,6 +52,8 @@ Hover over or click on a route to see:
 - Transportation mode (if detected)
 
 ## Map Layers
+
+Open **Layers** (`L`) to turn layers on and off. Layers are shown as tiles: click a tile to switch the layer on, and the options for the layers that are on appear below the tiles. The Anomalies layer is only available while Points is on.
 
 ### Points
 
@@ -101,21 +97,27 @@ Displays photos from connected [Immich and/or Photoprism](/docs/features/photos)
 
 ![Photos](images/map-photos.webp)
 
-### Family (Map V2)
+### Family
 
-When you are in a [family](/docs/features/family), switch on **Family Members** in **Map Layers** to see the members who share their location with you. Their positions update in real time. For members who also share their location history, their track is drawn for the dates selected on the map.
+When you are in a [family](/docs/features/family), open the **Family** tab (`F`) and switch on **Show family member locations** to see the members who share their location with you. Their positions update in real time, and for members who also share their location history, their track is drawn for the dates selected on the map.
 
-![Family Members layer](images/family-map-v2.webp)
+The tab lists every sharing member with their last known address and when they were last seen. Click a member to center the map on them, or use **Manage family** to open the Family page.
+
+![Family members on the map](images/family-map-v2.webp)
+
+## Tools
+
+Open **Tools** (`C`) to:
+
+- **Create Visit** and **Create Place** at a spot on the map
+- **Select Area** to select points for [bulk actions](#bulk-selection-tool)
+- **Create Area** to draw a [custom area](/docs/features/areas)
+- **Enrich Photos** to match [Immich](/docs/features/enrich-photos) photos without GPS to your location history
 
 ## Map Styles
 
 You can choose from multiple map styles:
 
-**Map V1:**
-- OpenStreetMap (default)
-- Various other tile providers
-
-**Map V2:**
 - Light theme
 - Dark theme
 - Satellite imagery
@@ -131,9 +133,9 @@ Enable "Fancy Routes" or "Speed Colored Routes" in settings to color your routes
 
 The color scale is customizable to match your typical travel speeds.
 
-## Globe View (Map V2)
+## Globe View
 
-Map V2 supports 3D globe rendering:
+The map supports 3D globe rendering:
 
 1. Go to Settings
 2. Enable "Globe Projection"
@@ -150,7 +152,7 @@ When enabled, Live Map Mode:
 
 ## Point Drag & Drop
 
-In Map V2, you can drag points to adjust their position:
+You can drag points to adjust their position:
 
 1. Enable point editing mode
 2. Click and drag a point to a new location
@@ -162,13 +164,13 @@ This is useful for correcting GPS drift or inaccurate readings.
 
 Select multiple points at once:
 
-1. Enable the selection tool
+1. Open **Tools** (`C`) and choose **Select Area**
 2. Draw a rectangle around points to select
 3. Perform bulk actions (delete, export, etc.)
 
 ## Map Settings
 
-Access map settings through the **Settings** button in the top right corner of the map. Available settings include:
+Open map settings with the **Settings** button (`S`) on the left edge of the map. Available settings include:
 
 | Setting | Description |
 |---------|-------------|
@@ -178,16 +180,16 @@ Access map settings through the **Settings** button in the top right corner of t
 | Minutes Between Routes | Time gap to start a new route |
 | Meters Between Routes | Distance gap to start a new route |
 | Speed Colored Routes | Enable speed-based route coloring |
-| Globe Projection | Enable 3D globe view (V2 only) |
+| Globe Projection | Enable 3D globe view |
 | Live Map Enabled | Auto-update with new points |
 
-## Search (Map V2)
+## Search
 
-Map V2 includes a built-in place search feature. See the [Search documentation](/docs/features/search) for details.
+The map includes a built-in place search. See the [Search documentation](/docs/features/search) for details.
 
 ## Tips
 
 - **Performance**: For large datasets, disable layers you're not using
 - **Time ranges**: Start with shorter time ranges and expand as needed
 - **Zoom levels**: Some layers render differently at various zoom levels
-- **Mobile**: Pinch to zoom, two-finger drag to rotate (V2)
+- **Mobile**: Pinch to zoom, two-finger drag to rotate

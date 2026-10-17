@@ -1,0 +1,1 @@
+{"responses":{"201":{"description":"demo data created","content":{"application/json":{"schema":{"type":"object","properties":{"status":{"type":"string","enum":["created"],"description":"Result of the import"}},"required":["status"]}}}},"401":{"description":"unauthorized"}}}
