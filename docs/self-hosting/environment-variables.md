@@ -88,6 +88,7 @@ For detailed setup instructions, see the [OIDC Authentication Tutorial](/docs/se
 | `OIDC_REDIRECT_URI` | Auto-generated | Callback URL. Defaults to `{APPLICATION_URL}/users/auth/openid_connect/callback` |
 | `OIDC_PROVIDER_NAME` | `Openid Connect` | Custom display name for the OIDC login button |
 | `OIDC_AUTO_REGISTER` | `true` | Automatically create accounts for new OIDC users |
+| `OIDC_AUTO_LOGIN` | `false` | Send signed-out visitors straight to the identity provider instead of showing the sign-in page. `/users/sign_in?auto_login=false` still shows the regular sign-in page |
 | `OIDC_PKCE_ENABLED` | `false` | Enable PKCE (S256) for the authorization code flow. Required when your OIDC client enforces PKCE (e.g. Pocket ID, hardened Authentik/Keycloak) |
 | `ALLOW_EMAIL_PASSWORD_REGISTRATION` | `false` | Allow traditional email/password registration alongside OIDC |
 

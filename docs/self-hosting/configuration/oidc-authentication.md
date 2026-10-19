@@ -43,6 +43,7 @@ Configure the following environment variables in your `docker-compose.yml` file 
 |----------|---------|-------------|
 | `OIDC_PROVIDER_NAME` | `Openid Connect` | Custom display name for the login button |
 | `OIDC_AUTO_REGISTER` | `true` | Automatically create accounts for new OIDC users |
+| `OIDC_AUTO_LOGIN` | `false` | Send signed-out visitors straight to your identity provider instead of showing the sign-in page. See [Automatic Sign-In](#automatic-sign-in) |
 | `OIDC_PKCE_ENABLED` | `false` | Enable PKCE (S256) for the authorization code flow. Required when your OIDC client enforces PKCE (e.g. Pocket ID, hardened Authentik/Keycloak) |
 | `ALLOW_EMAIL_PASSWORD_REGISTRATION` | `false` | Allow traditional email/password account registration alongside OIDC |
 | `ALLOW_EMAIL_PASSWORD_LOGIN` | `true` | Allow signing in with email/password. Set to `false` to hide the email/password form and force OIDC-only sign-in |
@@ -201,6 +202,22 @@ ALLOW_EMAIL_PASSWORD_LOGIN: "false"
 This ensures all users must authenticate through your identity provider.
 
 `ALLOW_EMAIL_PASSWORD_REGISTRATION: "false"` only blocks creating new accounts with email/password — on its own it does **not** hide the email/password sign-in form. To remove that form and force OIDC-only sign-in you must also set `ALLOW_EMAIL_PASSWORD_LOGIN: "false"`. (Before v1.7.8 a single variable controlled both; sign-in is now gated by `ALLOW_EMAIL_PASSWORD_LOGIN`.)
+
+## Automatic Sign-In
+
+To skip the Dawarich sign-in page and send signed-out visitors straight to your identity provider:
+
+```yaml
+OIDC_AUTO_LOGIN: "true"
+```
+
+- Visiting Dawarich while signed out starts the OIDC flow immediately.
+- After signing out, you land on the regular sign-in page, so you are not signed back in right away.
+- If the provider login fails or is cancelled, the regular sign-in page is shown instead of retrying.
+- Family invitation links always show the regular sign-in page.
+- To reach the regular sign-in page at any time (for example to use an email/password account), open `/users/sign_in?auto_login=false`.
+
+`OIDC_AUTO_LOGIN` works with or without `ALLOW_EMAIL_PASSWORD_LOGIN`.
 
 ## Troubleshooting
 
