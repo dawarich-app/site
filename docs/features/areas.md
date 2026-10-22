@@ -1,15 +1,16 @@
 ---
 sidebar_position: 7
 title: Areas
-description: Define geographic areas on the map to automatically track and log your visits in their boundaries.
+description: Areas are now Places with a Visit Radius. This page explains what changed when Areas were merged into Places.
 ---
 
 # Areas
 
-If you're frequently visiting the same area, you can create an area in Dawrich and it will be shown on the map. The main purpose of areas is to help you track your visits to the same area. Every day at midnight, Dawrich will check if you've visited the area today and if you have, it will suggest a visit to the area in the [Visits](/docs/features/visits-and-places) page.
+Since Dawarich 1.18.0, Areas are part of [Places](/docs/features/visits-and-places#places). Every Place has a **Visit Radius**: a visit whose center falls inside it can be matched to the Place, just as a visit inside an Area was before.
 
-To create an area, enable the "Areas" layer in the [Map](/docs/features/map) page and then click on the "Create area" button. A popup will appear where you can draw a circle area.
+When you upgrade, each Area becomes a Place with the same name, center and radius, and keeps its notes and visits. The separate Areas layer and the **Create Area** tool are gone:
 
-![Areas](images/areas-tool.webp)
+- To mark a spot you visit often, create a Place and set its Visit Radius. See [Places](/docs/features/visits-and-places#places).
+- To see the circles on the map, turn on **Show place boundaries** in the Places layer options. See [Map layers](/docs/features/map#places).
 
-⚠️ Important: If an area is being destroyed, all visits to the area will be deleted as well.
+Deleting a Place keeps its visits; they just lose the attached place.

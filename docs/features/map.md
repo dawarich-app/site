@@ -28,7 +28,7 @@ The buttons on the left edge of the map open its panels. Each has a keyboard sho
 | Layers | `L` | Map layers and their options |
 | Search | `/` | [Place search](/docs/features/search) |
 | Family | `F` | Family members on the map (only when you are in a [family](/docs/features/family)) |
-| Tools | `C` | Create visits, places and areas, select points, enrich photos |
+| Tools | `C` | Create visits and places, select data on the map, enrich photos |
 | Replay | `R` | Replay the points for the selected dates |
 | Settings | `S` | [Map settings](#map-settings) |
 
@@ -85,11 +85,14 @@ Highlights countries you've visited on a world map overlay.
 
 ![Scratch map](images/map-scratch-map.webp)
 
-### Areas
+### Places
 
-Shows [custom areas](/docs/features/areas) you've drawn on the map. Also enables area drawing tools.
+Shows your [places](/docs/features/visits-and-places#places) with their names. The map shows places you created or imported, places with a tag or note, and places with a confirmed visit. Automatically found places without any of these stay on the Places page under **Unconfirmed**.
 
-![Areas](images/map-areas.webp)
+In the Places options below the tiles:
+
+- **Show place boundaries** draws each place's Visit Radius as a circle. It is off by default.
+- Tag filters show only places with the selected tags.
 
 ### Photos
 
@@ -109,9 +112,8 @@ The tab lists every sharing member with their last known address and when they w
 
 Open **Tools** (`C`) to:
 
-- **Create Visit** and **Create Place** at a spot on the map
-- **Select Area** to select points for [bulk actions](#bulk-selection-tool)
-- **Create Area** to draw a [custom area](/docs/features/areas)
+- **Create Visit** and **Create Place** at a spot on the map. A new place gets a Visit Radius, 50 meters unless you change it
+- **Select data on map** to select points for [bulk actions](#bulk-selection-tool)
 - **Enrich Photos** to match [Immich](/docs/features/enrich-photos) photos without GPS to your location history
 
 ## Map Styles
@@ -164,7 +166,7 @@ This is useful for correcting GPS drift or inaccurate readings.
 
 Select multiple points at once:
 
-1. Open **Tools** (`C`) and choose **Select Area**
+1. Open **Tools** (`C`) and choose **Select data on map**
 2. Draw a rectangle around points to select
 3. Perform bulk actions (delete, export, etc.)
 
