@@ -6,7 +6,7 @@ description: Configure outgoing email (password reset, digests, family invitatio
 
 # Configuring SMTP
 
-Dawarich sends outgoing email for password resets, year-end digests, and family invitations. Configure your SMTP server with the environment variables below. Set them on **both** `dawarich_app` and `dawarich_sidekiq` — the Sidekiq container is what actually delivers the messages.
+Dawarich sends outgoing email for password resets, year-end digests, and family invitations. Configure your SMTP server with the environment variables below. Set them on `dawarich_app`, which also delivers the messages. If you run a [separate worker](/docs/self-hosting/configuration/background-jobs#running-a-separate-worker), set them on `dawarich_sidekiq` too — that container then delivers the messages.
 
 ## Environment variables
 
@@ -89,13 +89,13 @@ Set `SMTP_AUTHENTICATION` to `none`, and leave `SMTP_USERNAME` and `SMTP_PASSWOR
 After updating your compose file, recreate both services:
 
 ```bash
-docker compose up -d --force-recreate dawarich_app dawarich_sidekiq
+docker compose up -d --force-recreate dawarich_app
 ```
 
-Then trigger a password-reset email from the login page (or use the Rails console) and watch the Sidekiq logs:
+Then trigger a password-reset email from the login page (or use the Rails console) and watch the logs (`dawarich_sidekiq` instead of `dawarich_app` if you run a separate worker):
 
 ```bash
-docker compose logs -f dawarich_sidekiq | grep -i mail
+docker compose logs -f dawarich_app | grep -i mail
 ```
 
 A successful delivery logs `Sent mail to ... (NNNms)`. A failure logs the SMTP error verbatim — most commonly:

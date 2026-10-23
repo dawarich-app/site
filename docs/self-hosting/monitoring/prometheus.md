@@ -14,20 +14,20 @@ If you're upgrading from a version before 1.7.7, see the [1.7.7 entry in the Upd
 
 ### Enable the exporter
 
-Set the same flag on both the `dawarich_app` and `dawarich_sidekiq` services in your `docker-compose.yml`:
+Set the flag on `dawarich_app` in your `docker-compose.yml`. If you run a [separate worker](../configuration/background-jobs.md#running-a-separate-worker), set it on `dawarich_sidekiq` too:
 
 | Variable | Default | Description |
 | -------- | ------- | ----------- |
-| `PROMETHEUS_EXPORTER_ENABLED` | `false` | Master on/off switch. Must be `true` on both services. |
+| `PROMETHEUS_EXPORTER_ENABLED` | `false` | Master on/off switch. With a separate worker, it must be `true` on both services. |
 | `METRICS_USERNAME` | _(unset)_ | HTTP basic auth username Prometheus uses to scrape `/metrics`. Required. |
 | `METRICS_PASSWORD` | _(unset)_ | HTTP basic auth password. Required. |
-| `PROMETHEUS_EXPORTER_PORT` | `9394` | Port on `dawarich_sidekiq` that serves the in-process Sidekiq metrics endpoint. |
-| `SIDEKIQ_METRICS_URL` | `http://dawarich_sidekiq:9394/metrics` | Internal URL the web container uses to fetch Sidekiq metrics. Override on Dokku/Kubernetes or any deployment where the worker hostname differs from the compose default. |
+| `PROMETHEUS_EXPORTER_PORT` | `9394` | Separate worker only: port on `dawarich_sidekiq` that serves its metrics. |
+| `SIDEKIQ_METRICS_URL` | `http://dawarich_sidekiq:9394/metrics` | Separate worker only: internal URL the web container fetches worker metrics from. Override when the worker hostname differs. With embedded jobs it is ignored unless set. |
 
 Behaviour notes:
 
-- **Single scrape target.** Prometheus scrapes `dawarich_app:3000/metrics`. The web service fetches Sidekiq metrics over the internal network and concatenates them into the same response.
-- **Graceful Sidekiq fallback.** If Sidekiq is unreachable during a scrape, the web container returns its own metrics only and logs a warning. Prometheus sees a momentary gap in `sidekiq_*` series instead of a failed scrape.
+- **Single scrape target.** Prometheus scrapes `dawarich_app:3000/metrics`. With the default setup (since 1.17.0) background jobs run in the same process, so their metrics are already in that response. With a separate worker, the web service fetches the worker's metrics over the internal network and concatenates them into the same response.
+- **Graceful Sidekiq fallback.** With a separate worker, if it is unreachable during a scrape, the web container returns its own metrics only and logs a warning. Prometheus sees a momentary gap in `sidekiq_*` series instead of a failed scrape.
 - **Basic auth is required.** Requests without valid `METRICS_USERNAME` / `METRICS_PASSWORD` credentials return 401.
 - **No more `PROMETHEUS_EXPORTER_HOST` / `PROMETHEUS_EXPORTER_HOST_SIDEKIQ`.** These environment variables were removed in 1.7.7 — metrics are no longer hosted by a separate process, so there is nothing to bind to.
 

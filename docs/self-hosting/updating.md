@@ -10,6 +10,29 @@ Dawarich is a rapidly evolving project, and some changes may break compatibility
 
 After each update, please make sure there is no jobs running in the Sidekiq interface (/sidekiq). If there are, please wait for them to finish. Once all jobs are finished, you can proceed with the update.
 
+## 1.17.0
+
+### One container for the app and background jobs
+
+The default `docker-compose.yml` no longer has a `dawarich_sidekiq` service: background jobs run inside `dawarich_app`. Before you replace the Compose file, stop and remove the old worker with the **old** file still in place:
+
+```bash
+docker compose stop -t 60 dawarich_sidekiq
+docker compose rm -f dawarich_sidekiq
+```
+
+Then take the new `docker-compose.yml`, keep your Redis, database and volume settings, and start the stack as usual. Queued jobs stay in Redis and are picked up by `dawarich_app`. If your `.env` sets `BACKGROUND_PROCESSING_CONCURRENCY=10`, remove it or set it to `2`.
+
+To keep a separate worker instead, see [Background jobs](./configuration/background-jobs.md#running-a-separate-worker).
+
+### Reverse geocoding threads
+
+`REVERSE_GEOCODING_CONCURRENCY` now counts threads across all workers, and defaults to the provider's rate limit (`REVERSE_GEOCODING_RPS`) instead of a third of all threads. If you use Geoapify, LocationIQ or the public Nominatim, set `REVERSE_GEOCODING_RPS` to your plan's limit.
+
+### Database migrations
+
+The migrations add small tables and triggers that track which months of points and tracks changed. They briefly lock the `points` and `tracks` tables and retry if those are busy; no existing rows are rewritten.
+
 ## 1.16.0
 
 ### `/` now redirects to sign-in

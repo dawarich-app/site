@@ -18,7 +18,7 @@ This post will serve you as an instruction on how to do that.
 
 Be careful with this process. Make sure you're aware of the risks and have a local backup of the database.
 
-Also, make sure your Dawarich app is not running. All four containers (`dawarich_app`, `dawarich_sidekiq`, `dawarich_db`, `dawarich_redis`) should be stopped after performing the local backup in step 0.
+Also, make sure your Dawarich app is not running. All containers (`dawarich_app`, `dawarich_db`, `dawarich_redis`, and `dawarich_sidekiq` if you run a separate worker) should be stopped after performing the local backup in step 0.
 
 :::
 

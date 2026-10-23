@@ -29,7 +29,7 @@ The application image rebuilds generated assets in `dawarich_public`, but older 
 
 Use a new backup directory outside the application's volumes. Restrict access to it: the backup contains private location history and secrets. Save your Compose configuration and secret files there without changing their values, and record the Dawarich and PostgreSQL/PostGIS image versions.
 
-Run these commands in **Bash**, from the directory containing your Compose file. Adapt container and service names if you changed them. Stop the web app and worker so the database and files cannot change independently during the backup, then stop Redis to persist its queued jobs. Keep external writers to the watched directory paused too. Allow the worker to shut down cleanly before stopping Redis so unfinished jobs can return to the queue. The 60-second grace period below covers Sidekiq’s default shutdown timeout; if you customized that timeout, use a grace period at least five seconds longer. Check the worker logs for a clean shutdown before proceeding.
+Run these commands in **Bash**, from the directory containing your Compose file. Adapt container and service names if you changed them. Stop the web app and worker so the database and files cannot change independently during the backup, then stop Redis to persist its queued jobs. Keep external writers to the watched directory paused too. Allow the worker to shut down cleanly before stopping Redis so unfinished jobs can return to the queue. The 60-second grace period below covers Sidekiq’s default shutdown timeout; if you customized that timeout, use a grace period at least five seconds longer. Check the logs for a clean shutdown before proceeding. Since 1.17.0 the default setup runs background jobs inside `dawarich_app`; add `dawarich_sidekiq` to the commands below only if you run a [separate worker](/docs/self-hosting/configuration/background-jobs#running-a-separate-worker).
 
 ```bash
 set -o pipefail
@@ -37,7 +37,7 @@ umask 077
 backup_dir="/path/to/backup"
 mkdir -p "$backup_dir"
 
-docker compose stop --timeout 60 dawarich_app dawarich_sidekiq
+docker compose stop --timeout 60 dawarich_app
 docker compose stop dawarich_redis
 
 docker exec dawarich_db pg_dumpall --clean --if-exists --username=postgres \
@@ -51,7 +51,7 @@ docker cp dawarich_redis:/data/. - | gzip > "$backup_dir/redis.tar.gz"
 Check that **each command succeeds** before treating the backup as complete. Keep the configuration and secrets alongside these archives, then restart the services:
 
 ```bash
-docker compose start dawarich_redis dawarich_app dawarich_sidekiq
+docker compose start dawarich_redis dawarich_app
 ```
 
 [Docker can copy files from stopped containers](https://docs.docker.com/reference/cli/docker/container/cp/). Using a tar stream preserves the file metadata for restoration.
@@ -91,6 +91,12 @@ Review the restore output for errors before starting the remaining services. Res
 
 ```bash
 docker compose up -d
+```
+
+If you restored the database without the Redis data saved at the same time, clear the application cache before checking the result, so map tiles and point counts are rebuilt from the restored data:
+
+```bash
+docker exec dawarich_app bin/rails runner 'Rails.cache.clear'
 ```
 
 Check that you can sign in, view historical points, download an existing import or export, and read a raw-data archive if you use archival. If 2FA is enabled, verify it as well. Keep the original installation and backup until these checks pass.
