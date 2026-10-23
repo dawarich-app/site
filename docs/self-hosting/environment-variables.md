@@ -28,7 +28,7 @@ As many other applications, Dawarich uses environment variables to configure its
 
 `docker-compose.yml` has set `RAILS_ENV=production` since Dawarich 1.3.0. Compose files from earlier versions and older copies of the Synology template default to `development`, and Dawarich prints a warning at startup when a self-hosted instance runs that way. To switch:
 
-1. Set `RAILS_ENV=production` for both the `dawarich_app` and `dawarich_sidekiq` containers, in your compose file or `.env`.
+1. Set `RAILS_ENV=production` on `dawarich_app` (and on `dawarich_sidekiq` if you run a [separate worker](/docs/self-hosting/configuration/background-jobs#running-a-separate-worker)), in your compose file or `.env`.
 2. If the app container's command is `bin/dev`, change it to `['bin/rails', 'server', '-p', '3000', '-b', '::']`, as in `docker-compose.yml`.
 3. Add every hostname and IP address you open Dawarich with, including the ones your phone apps send locations to, to `APPLICATION_HOSTS`. Development accepts requests to any IP address; production rejects hosts that aren't listed.
 4. Set `SECRET_KEY_BASE`. If it already holds a value other than `CHANGE_ME`, keep it. Otherwise, if `ARCHIVE_RAW_DATA=true` and `ARCHIVE_ENCRYPTION_KEY` isn't set, first copy the old `SECRET_KEY_BASE` value into `ARCHIVE_ENCRYPTION_KEY` so existing archives stay readable. Then generate a new value with `openssl rand -hex 64`; everyone is signed out once.
@@ -59,7 +59,10 @@ As many other applications, Dawarich uses environment variables to configure its
 
 | Environment Variable | Default Value | Description |
 | -------------------- | ------------- | ----------- |
-| `BACKGROUND_PROCESSING_CONCURRENCY` | `5` | Background processing concurrency. Should not be higher than `RAILS_MAX_THREADS`. More info on [Sidekiq docs](https://github.com/sidekiq/sidekiq/wiki/Advanced-Options#concurrency) |
+| `SIDEKIQ_EMBEDDED` | `true` in `docker-compose.yml` | Run background jobs inside the web process. Leave it unset when you run a [separate worker](/docs/self-hosting/configuration/background-jobs#running-a-separate-worker). |
+| `WEB_CONCURRENCY` | `0` in `docker-compose.yml` | Number of web worker processes. Keep `0` with embedded jobs. |
+| `BACKGROUND_PROCESSING_CONCURRENCY` | `2` in `docker-compose.yml` | Background job threads. More info on [Sidekiq docs](https://github.com/sidekiq/sidekiq/wiki/Advanced-Options#concurrency) |
+| `SIDEKIQ_METRICS_URL` | `http://dawarich_sidekiq:9394/metrics` | With a separate worker only: where `dawarich_app` fetches the worker's metrics. Not used with embedded jobs unless set. |
 | `SIDEKIQ_USERNAME` | `nil` | Sidekiq dashboard username |
 | `SIDEKIQ_PASSWORD` | `nil` | Sidekiq dashboard password |
 
@@ -68,6 +71,8 @@ As many other applications, Dawarich uses environment variables to configure its
 | Environment Variable | Default Value | Description |
 | -------------------- | ------------- | ----------- |
 | `PHOTON_API_HOST` | `nil` | Photon API host. Useful if you're self-hosting your [own Photon instance](/docs/self-hosting/configuration/reverse-geocoding#setting-up-your-own-reverse-geocoding-service) |
+| `REVERSE_GEOCODING_RPS` | `nil` | Requests per second your provider allows. Set it for Geoapify, LocationIQ or the public Nominatim. `photon.komoot.io` is always limited to 1. |
+| `REVERSE_GEOCODING_CONCURRENCY` | the rate limit, rounded up | Reverse-geocoding threads across all workers. No limit when no rate is set. See [Background jobs](/docs/self-hosting/configuration/background-jobs#reverse-geocoding-threads). |
 | `PHOTON_API_KEY` | `nil` | Photon API key. Useful if you're supporting Dawarich development on [Patreon](https://www.patreon.com/c/freika/membership) and want to use Photon API instance hosted by Freika without any limits |
 | `PHOTON_API_USE_HTTPS` | `false` | Use HTTPS for Photon API requests. Set to true if you're using your own Photon instance behind a reverse proxy with SSL |
 | `GEOAPIFY_API_KEY` | `nil` | Geoapify API key. Provide your own key if you want to use Geoapify reverse geocoding service |
@@ -140,8 +145,8 @@ Email links are sent as `https://` regardless of `APPLICATION_PROTOCOL`. Plain-H
 | `PROMETHEUS_EXPORTER_HOST` | `0.0.0.0` | Prometheus exporter host |
 | `PROMETHEUS_EXPORTER_PORT` | `9394` | Prometheus exporter port |
 
-:::warning
-Important note on Prometheus exporter: even if you want to use it, make sure you have `PROMETHEUS_EXPORTER_ENABLED` set to `false` in `dawarich_sidekiq` container. Otherwise, you'll end up with two exporters and will have to deal with duplicate metrics. The `PROMETHEUS_EXPORTER_HOST` for `dawarich_sidekiq` should be set to `dawarich_app` or your name of the container.
+:::info
+With the default setup, `dawarich_app` serves both web and background-job metrics on `/metrics`. With a separate worker, see [Prometheus monitoring](/docs/self-hosting/monitoring/prometheus).
 :::
 
 ### Two-Factor Authentication (2FA)

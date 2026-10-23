@@ -21,12 +21,16 @@ This guide is written for:
 
 ## Installation methods: CA Templates vs. Docker Compose
 
-For Dawarich to run 4 docker containers are required:
+The Unraid templates run Dawarich in 4 docker containers:
 
 - `dawarich_db` - PostgreSQL database
 - `dawarich_redis` - Redis database
 - `dawarich_app` - Dawarich web application
 - `dawarich_sidekiq` - Sidekiq worker (for background jobs)
+
+:::info
+The default `docker-compose.yml` runs background jobs inside `dawarich_app` since 1.17.0. The Unraid templates keep a [separate worker](/docs/self-hosting/configuration/background-jobs#running-a-separate-worker), which still works: just don't set `SIDEKIQ_EMBEDDED=true` on `dawarich_app`, or jobs will run in both containers.
+:::
 
 :::note
 Some containers depend on others to be running first. Therefore this guide will follow this order: `dawarich_db` >> `dawarich_redis` >> `dawarich_app` >> `dawarich_sidekiq`.

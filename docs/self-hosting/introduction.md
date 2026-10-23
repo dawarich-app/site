@@ -116,14 +116,13 @@ docker compose up -d # Start the updated instance
 
 :::info
 
-After starting the application, you should have at least 4 running containers:
+After starting the application, you should have 3 running containers:
 
 - `dawarich_db` - PostgreSQL database
 - `dawarich_redis` - Redis database
-- `dawarich_sidekiq` - Sidekiq worker (for background jobs)
-- `dawarich_app` - Dawarich web application
+- `dawarich_app` - Dawarich web application, which also runs background jobs
 
-Make sure all of them are running.
+Make sure all of them are running. Since 1.17.0 there is no separate `dawarich_sidekiq` container by default; see [Background jobs](./configuration/background-jobs.md).
 
 :::
 
