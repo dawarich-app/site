@@ -28,7 +28,7 @@ export default function GPSFileSplitter() {
   const pageUrl = useLocalizedUrl('/tools/gps-file-splitter/');
   const homeUrl = useLocalizedUrl('/');
   const toolsUrl = useLocalizedUrl('/tools/');
-  const formatSize = (size, digits) => interpolate(content.sizeValue, {
+  const formatSize = (size, digits) => interpolate(content.results.sizeValue, {
     size: size.toLocaleString(htmlLang, { minimumFractionDigits: digits, maximumFractionDigits: digits }),
   });
   const [isDragging, setIsDragging] = useState(false);
@@ -97,19 +97,19 @@ export default function GPSFileSplitter() {
       } else if (ext === 'kmz') {
         const zip = await JSZip.loadAsync(file);
         const kmlFile = zip.file(/\.kml$/i)[0];
-        if (!kmlFile) throw new Error(content.missingKmlError);
+        if (!kmlFile) throw new Error(content.errors.missingKmlError);
         const kmlText = await kmlFile.async('string');
         parsedPoints = parseKML(kmlText);
         format = 'kml';
       } else {
-        throw new Error(interpolate(content.unsupportedFormatError, { format: ext }));
+        throw new Error(interpolate(content.errors.unsupportedFormatError, { format: ext }));
       }
 
       setPoints(parsedPoints);
       setFileFormat(format);
     } catch (error) {
       console.error('Error parsing file:', error);
-      alert(interpolate(content.parseError, { message: error.message }));
+      alert(interpolate(content.errors.parseError, { message: error.message }));
     } finally {
       setIsLoading(false);
     }
@@ -187,7 +187,7 @@ export default function GPSFileSplitter() {
       URL.revokeObjectURL(url);
     } catch (error) {
       console.error('Error splitting file:', error);
-      alert(interpolate(content.splitError, { message: error.message }));
+      alert(interpolate(content.errors.splitError, { message: error.message }));
     } finally {
       setIsSplitting(false);
     }
@@ -309,7 +309,7 @@ export default function GPSFileSplitter() {
                 onDrop={handleDrop}
               >
                 <input
-                  aria-label={content.inputLabel}
+                  aria-label={content.upload.inputLabel}
                   type="file"
                   id="splitterFileInput"
                   accept=".json,.gpx,.geojson,.kml,.kmz"
@@ -320,7 +320,7 @@ export default function GPSFileSplitter() {
                   {isLoading ? (
                     <>
                       <div className={styles.spinner}></div>
-                      <p>{content.parsing}</p>
+                      <p>{content.upload.parsing}</p>
                     </>
                   ) : points.length > 0 ? (
                     <>
@@ -328,16 +328,16 @@ export default function GPSFileSplitter() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <p>{fileName}</p>
-                      <p className={styles.hint}>{interpolate(content.pointsLoaded, { points: points.length.toLocaleString(htmlLang) })}</p>
+                      <p className={styles.hint}>{interpolate(content.results.pointsLoaded, { points: points.length.toLocaleString(htmlLang) })}</p>
                     </>
                   ) : (
                     <>
                       <svg className={styles.uploadIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                       </svg>
-                      <p>{content.dropFile}</p>
-                      <p className={styles.hint}>{content.browse}</p>
-                      <p className={styles.formats}>{content.formats}</p>
+                      <p>{content.upload.dropFile}</p>
+                      <p className={styles.hint}>{content.upload.browse}</p>
+                      <p className={styles.formats}>{content.upload.formats}</p>
                     </>
                   )}
                 </label>
@@ -345,7 +345,7 @@ export default function GPSFileSplitter() {
 
               {points.length > 0 && (
                 <button onClick={handleClear} style={{background: 'none', border: 'none', color: 'var(--ifm-color-primary)', cursor: 'pointer', fontSize: '0.9rem'}}>
-                  {content.clearButton}
+                  {content.upload.clearButton}
                 </button>
               )}
 
@@ -383,48 +383,48 @@ export default function GPSFileSplitter() {
               <div className={styles.fileInfoGrid}>
                 <div className={styles.fileInfoItem}>
                   <span className={styles.fileInfoValue}>{fileName}</span>
-                  <span className={styles.fileInfoLabel}>{content.fileNameLabel}</span>
+                  <span className={styles.fileInfoLabel}>{content.results.fileNameLabel}</span>
                 </div>
                 <div className={styles.fileInfoItem}>
                   <span className={styles.fileInfoValue}>{formatSize(fileSize / 1024 / 1024, 2)}</span>
-                  <span className={styles.fileInfoLabel}>{content.fileSizeLabel}</span>
+                  <span className={styles.fileInfoLabel}>{content.results.fileSizeLabel}</span>
                 </div>
                 <div className={styles.fileInfoItem}>
                   <span className={styles.fileInfoValue}>{fileFormat}</span>
-                  <span className={styles.fileInfoLabel}>{content.formatLabel}</span>
+                  <span className={styles.fileInfoLabel}>{content.results.formatLabel}</span>
                 </div>
                 <div className={styles.fileInfoItem}>
                   <span className={styles.fileInfoValue}>{points.length.toLocaleString(htmlLang)}</span>
-                  <span className={styles.fileInfoLabel}>{content.pointsLabel}</span>
+                  <span className={styles.fileInfoLabel}>{content.results.pointsLabel}</span>
                 </div>
               </div>
             </div>
 
             <div className={styles.strategySection}>
-              <h3>{content.strategyTitle}</h3>
+              <h3>{content.options.strategyTitle}</h3>
               <div className={styles.strategyOptions}>
-                <button className={`${styles.strategyOption} ${strategy === 'size' ? styles.strategyOptionActive : ''}`} onClick={() => setStrategy('size')}>{content.bySize}</button>
-                <button className={`${styles.strategyOption} ${strategy === 'count' ? styles.strategyOptionActive : ''}`} onClick={() => setStrategy('count')}>{content.byCount}</button>
-                <button className={`${styles.strategyOption} ${strategy === 'date' ? styles.strategyOptionActive : ''}`} onClick={() => setStrategy('date')}>{content.byDate}</button>
+                <button className={`${styles.strategyOption} ${strategy === 'size' ? styles.strategyOptionActive : ''}`} onClick={() => setStrategy('size')}>{content.options.bySize}</button>
+                <button className={`${styles.strategyOption} ${strategy === 'count' ? styles.strategyOptionActive : ''}`} onClick={() => setStrategy('count')}>{content.options.byCount}</button>
+                <button className={`${styles.strategyOption} ${strategy === 'date' ? styles.strategyOptionActive : ''}`} onClick={() => setStrategy('date')}>{content.options.byDate}</button>
               </div>
 
               <div className={styles.controlsArea}>
                 {strategy === 'size' && (
                   <div className={styles.sliderGroup}>
                     <div className={styles.sliderLabel}>
-                      <span>{content.targetSizeLabel}</span>
+                      <span>{content.options.targetSizeLabel}</span>
                       <span className={styles.sliderValue}>{formatSize(targetSizeMB, 0)}</span>
                     </div>
-                    <input aria-label={content.targetSizeAriaLabel} type="range" min="1" max="50" value={targetSizeMB} onChange={(e) => setTargetSizeMB(Number(e.target.value))} className={styles.slider} />
+                    <input aria-label={content.options.targetSizeAriaLabel} type="range" min="1" max="50" value={targetSizeMB} onChange={(e) => setTargetSizeMB(Number(e.target.value))} className={styles.slider} />
                   </div>
                 )}
 
                 {strategy === 'count' && (
                   <div className={styles.sliderGroup}>
                     <div className={styles.sliderLabel}>
-                      <span>{content.pointsPerChunkLabel}</span>
+                      <span>{content.options.pointsPerChunkLabel}</span>
                     </div>
-                    <input aria-label={content.pointsPerChunkLabel} type="number" min="100" max="1000000" value={countPerChunk} onChange={(e) => setCountPerChunk(Math.max(1, Number(e.target.value)))} className={styles.countInput} />
+                    <input aria-label={content.options.pointsPerChunkLabel} type="number" min="100" max="1000000" value={countPerChunk} onChange={(e) => setCountPerChunk(Math.max(1, Number(e.target.value)))} className={styles.countInput} />
                   </div>
                 )}
 
@@ -432,46 +432,46 @@ export default function GPSFileSplitter() {
                   <div className={styles.dateRadios}>
                     <label>
                       <input type="radio" name="dateGranularity" value="year" checked={dateGranularity === 'year'} onChange={() => setDateGranularity('year')} />
-                      {content.yearLabel}
+                      {content.options.yearLabel}
                     </label>
                     <label>
                       <input type="radio" name="dateGranularity" value="month" checked={dateGranularity === 'month'} onChange={() => setDateGranularity('month')} />
-                      {content.monthLabel}
+                      {content.options.monthLabel}
                     </label>
                   </div>
                 )}
 
                 <div className={styles.outputSection}>
-                  <label htmlFor="splitter-output-format">{content.outputLabel}</label>
+                  <label htmlFor="splitter-output-format">{content.options.outputLabel}</label>
                   <select id="splitter-output-format" value={outputFormat} onChange={(e) => setOutputFormat(e.target.value)} className={styles.outputFormatSelect}>
-                    <option value="same">{content.sameFormat}</option>
-                    <option value="gpx">GPX</option>
-                    <option value="geojson">GeoJSON</option>
-                    <option value="kml">KML</option>
-                    <option value="csv">CSV</option>
-                    <option value="json">JSON</option>
+                    <option value="same">{content.options.sameFormat}</option>
+                    <option value="gpx">{content.options.formats.gpx}</option>
+                    <option value="geojson">{content.options.formats.geojson}</option>
+                    <option value="kml">{content.options.formats.kml}</option>
+                    <option value="csv">{content.options.formats.csv}</option>
+                    <option value="json">{content.options.formats.json}</option>
                   </select>
                 </div>
               </div>
 
               {chunkPreview > 0 && (
                 <div className={styles.previewInfo}>
-                  <RichText text={interpolate(selectMessage(chunkPreview, content.chunkPreview), {
+                  <RichText text={interpolate(selectMessage(chunkPreview, content.options.chunkPreview), {
                     count: chunkPreview.toLocaleString(htmlLang), points: points.length.toLocaleString(htmlLang),
                   })} />
                 </div>
               )}
 
               <button onClick={handleSplit} disabled={isSplitting || points.length === 0} className={styles.splitButton}>
-                {isSplitting ? content.splitting : content.splitButton}
+                {isSplitting ? content.options.splitting : content.options.splitButton}
               </button>
             </div>
 
             <PersonalizedCTA
               toolName="gps-file-splitter"
-              headline={<RichText text={interpolate(content.ctaHeadline, { points: points.length.toLocaleString(htmlLang) })} />}
+              headline={<RichText text={interpolate(content.cta.headline, { points: points.length.toLocaleString(htmlLang) })} />}
               stats={[
-                { label: content.statLabels.points, value: points.length.toLocaleString(htmlLang) },
+                { label: content.cta.statLabels.points, value: points.length.toLocaleString(htmlLang) },
               ]}
             />
           </div>
@@ -509,9 +509,9 @@ export default function GPSFileSplitter() {
 
         <div className={styles.bottomCtaPanel}>
           <div className={styles.ctaContent}>
-            <h3>{content.bottomCtaTitle}</h3>
-            <p>{content.bottomCtaBody}</p>
-            <SmartLink href="/?utm_source=tool&utm_medium=bottom-cta&utm_campaign=gps-file-splitter" className={styles.ctaButton}>{content.ctaButton}</SmartLink>
+            <h3>{content.cta.title}</h3>
+            <p>{content.cta.body}</p>
+            <SmartLink href="/?utm_source=tool&utm_medium=bottom-cta&utm_campaign=gps-file-splitter" className={styles.ctaButton}>{content.cta.button}</SmartLink>
           </div>
         </div>
       </div>

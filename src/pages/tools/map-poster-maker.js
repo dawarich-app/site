@@ -161,7 +161,7 @@ export default function MapPosterMaker() {
       const nextPoints = [...points];
       for (const file of newFiles) {
         if (file.size > MAX_FILE_BYTES) {
-          setError(interpolate(content.sizeError, { fileName: file.name }));
+          setError(interpolate(content.errors.sizeError, { fileName: file.name }));
           continue;
         }
         try {
@@ -177,7 +177,7 @@ export default function MapPosterMaker() {
           nextPoints.push(...filePoints);
           nextFiles.push({ name: file.name, pointCount: filePoints.length, blob: file, format });
         } catch (parseError) {
-          setError(interpolate(content.parseError, { fileName: file.name, message: parseError.message }));
+          setError(interpolate(content.errors.parseError, { fileName: file.name, message: parseError.message }));
         }
       }
       if (nextFiles.length > files.length) {
@@ -254,7 +254,9 @@ export default function MapPosterMaker() {
               {content.intro}
             </p>
             <p className={styles.valueStrip}>
-              {interpolate(content.valueStrip, { price: '€0' })}
+              {interpolate(content.valueStrip, { price: new Intl.NumberFormat(htmlLang, {
+                style: 'currency', currency: 'EUR', minimumFractionDigits: 0, maximumFractionDigits: 0,
+              }).format(0) })}
             </p>
           </div>
 
@@ -262,7 +264,7 @@ export default function MapPosterMaker() {
             {uploadedTrack ? (
               <div className={styles.toolbarStatus}>
                 <span className={styles.studioBarLabel}>
-                  {interpolate(selectMessage(files.length, content.fileSummary), {
+                  {interpolate(selectMessage(files.length, content.toolbar.fileSummary), {
                     count: files.length.toLocaleString(htmlLang), points: points.length.toLocaleString(htmlLang),
                   })}
                 </span>
@@ -272,7 +274,7 @@ export default function MapPosterMaker() {
                   data-testid="poster-start-over"
                   onClick={handleClear}
                 >
-                  {content.startOver}
+                  {content.toolbar.startOver}
                 </button>
               </div>
             ) : (
@@ -283,7 +285,7 @@ export default function MapPosterMaker() {
                   checked={showDemo}
                   onChange={(event) => setShowDemo(event.target.checked)}
                 />
-                <span>{content.demoLabel}</span>
+                <span>{content.toolbar.demoLabel}</span>
               </label>
             )}
 
@@ -310,14 +312,14 @@ export default function MapPosterMaker() {
               </svg>
               <span className={styles.dropText}>
                 <span className={styles.dropTitle}>
-                  {uploadedTrack ? content.addFiles : content.dropFiles}
+                  {uploadedTrack ? content.upload.addFiles : content.upload.dropFiles}
                 </span>
                 <span className={styles.supportedFormats}>
-                  {content.formats}
+                  {content.upload.formats}
                 </span>
               </span>
               <input
-                aria-label={content.inputLabel}
+                aria-label={content.upload.inputLabel}
                 type="file"
                 className={styles.fileInput}
                 accept=".gpx,.fit,.tcx,.geojson,.json,.kml,.kmz"
@@ -329,7 +331,7 @@ export default function MapPosterMaker() {
             </div>
           </div>
 
-          {isLoading && <p className={styles.loadingNote}>{content.processing}</p>}
+          {isLoading && <p className={styles.loadingNote}>{content.upload.processing}</p>}
           {error && (
             <p className={styles.errorMessage} role="alert">
               {error}
@@ -337,12 +339,12 @@ export default function MapPosterMaker() {
           )}
           {files.length > 0 && !uploadedTrack && !isLoading && (
             <p className={styles.errorMessage}>
-              {content.emptyError}
+              {content.errors.emptyError}
             </p>
           )}
           {demoError && !uploadedTrack && showDemo && (
             <p className={styles.errorMessage}>
-              {content.demoError}
+              {content.errors.demoError}
             </p>
           )}
 
@@ -389,8 +391,8 @@ export default function MapPosterMaker() {
             toolName="map-poster-maker"
             headline={
               uploadedTrack
-                ? <RichText text={interpolate(content.ctaHeadline, { points: points.length.toLocaleString(htmlLang) })} />
-                : content.ctaFallback
+                ? <RichText text={interpolate(content.cta.headline, { points: points.length.toLocaleString(htmlLang) })} />
+                : content.cta.fallback
             }
           />
           <RelatedTools slug="map-poster-maker" />

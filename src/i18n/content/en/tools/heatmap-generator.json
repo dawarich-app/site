@@ -6,53 +6,11 @@
   },
   "h1": "GPS Heatmap Generator",
   "intro": "Create beautiful heatmaps from your GPS activities. Upload multiple files to see your running, cycling, and activity patterns visualized on a map.",
-  "uploadTitle": "Upload Files",
-  "dropFiles": "Drag & drop files here",
-  "formats": "GPX, FIT, TCX, GeoJSON, KML, KMZ, Google Timeline JSON",
-  "clearButton": "Clear All",
   "saveIntro": "Want this in your Dawarich account too? We'll import it during signup — no second upload needed.",
-  "statsTitle": "Statistics",
-  "pointsLabel": "Total Points",
-  "distanceLabel": "Total Distance",
-  "dateRangeLabel": "Date Range",
-  "settingsTitle": "Heatmap Settings",
-  "schemeLabel": "Color Scheme",
   "privacy": "Rendering happens in your browser. Nothing is uploaded unless you choose “Save to my Dawarich account.”",
   "exportButton": "Export as PNG",
-  "inputLabel": "Choose files to process",
-  "processing": "Processing files...",
   "loadingMap": "Loading map...",
-  "ctaFallback": "Want to visualize years of location history? Dawarich builds your heatmap continuously from all your GPS sources.",
-  "schemes": [
-    {
-      "label": "Fire (Red/Orange)"
-    },
-    {
-      "label": "Strava (Orange)"
-    },
-    {
-      "label": "Plasma (Purple/Yellow)"
-    },
-    {
-      "label": "Ocean (Blue)"
-    },
-    {
-      "label": "Forest (Green)"
-    }
-  ],
-  "loadedFiles": "Loaded Files ({count})",
-  "pointCount": "{points} pts",
-  "intensityLabel": "Intensity: {intensity}",
-  "radiusLabel": "Radius: {radius}",
-  "opacityLabel": "Opacity: {opacity}",
   "parseError": "Error parsing {fileName}: {message}",
-  "ctaHeadline": "Your heatmap covers **{points}** GPS points across **{distance} km**. This is a snapshot — Dawarich builds your heatmap continuously.",
-  "distanceValue": "{distance} km",
-  "statLabels": {
-    "points": "points",
-    "distance": "distance",
-    "dateRange": "date range"
-  },
   "cards": [
     {
       "title": "What is a GPS Heatmap?",
@@ -105,5 +63,55 @@
         "Strava's heatmap feature requires a paid subscription. This free tool lets you create similar heatmaps from your exported data without any subscription or account required."
       ]
     }
-  ]
+  ],
+  "upload": {
+    "uploadTitle": "Upload Files",
+    "dropFiles": "Drag & drop files here",
+    "formats": "GPX, FIT, TCX, GeoJSON, KML, KMZ, Google Timeline JSON",
+    "clearButton": "Clear All",
+    "inputLabel": "Choose files to process",
+    "processing": "Processing files..."
+  },
+  "results": {
+    "statsTitle": "Statistics",
+    "pointsLabel": "Total Points",
+    "distanceLabel": "Total Distance",
+    "dateRangeLabel": "Date Range",
+    "loadedFiles": "Loaded Files ({count})",
+    "pointCount": "{points} pts",
+    "distanceValue": "{distance} km"
+  },
+  "settings": {
+    "settingsTitle": "Heatmap Settings",
+    "schemeLabel": "Color Scheme",
+    "schemes": [
+      {
+        "label": "Fire (Red/Orange)"
+      },
+      {
+        "label": "Strava (Orange)"
+      },
+      {
+        "label": "Plasma (Purple/Yellow)"
+      },
+      {
+        "label": "Ocean (Blue)"
+      },
+      {
+        "label": "Forest (Green)"
+      }
+    ],
+    "intensityLabel": "Intensity: {intensity}",
+    "radiusLabel": "Radius: {radius}",
+    "opacityLabel": "Opacity: {opacity}"
+  },
+  "cta": {
+    "headline": "Your heatmap covers **{points}** GPS points across **{distance} km**. This is a snapshot — Dawarich builds your heatmap continuously.",
+    "fallback": "Want to visualize years of location history? Dawarich builds your heatmap continuously from all your GPS sources.",
+    "statLabels": {
+      "points": "points",
+      "distance": "distance",
+      "dateRange": "date range"
+    }
+  }
 }

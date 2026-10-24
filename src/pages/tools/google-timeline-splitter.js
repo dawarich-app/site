@@ -38,7 +38,7 @@ export default function GoogleTimelineSplitter() {
   const pageUrl = useLocalizedUrl('/tools/google-timeline-splitter/');
   const homeUrl = useLocalizedUrl('/');
   const toolsUrl = useLocalizedUrl('/tools/');
-  const formatSize = (size, digits) => interpolate(content.sizeValue, {
+  const formatSize = (size, digits) => interpolate(content.results.sizeValue, {
     size: size.toLocaleString(htmlLang, { minimumFractionDigits: digits, maximumFractionDigits: digits }),
   });
   const [isDragging, setIsDragging] = useState(false);
@@ -55,7 +55,7 @@ export default function GoogleTimelineSplitter() {
   const handleFile = useCallback(async (file) => {
     const ext = file.name.split('.').pop().toLowerCase();
     if (ext !== 'json') {
-      alert(content.jsonOnlyError);
+      alert(content.errors.jsonOnlyError);
       return;
     }
 
@@ -70,7 +70,7 @@ export default function GoogleTimelineSplitter() {
       const format = detectFormat(data);
 
       if (format === 'unknown') {
-        throw new Error(content.unknownFormatError);
+        throw new Error(content.errors.unknownFormatError);
       }
 
       // Count items to show in UI
@@ -91,7 +91,7 @@ export default function GoogleTimelineSplitter() {
       setItemCount(count);
     } catch (error) {
       console.error('Error parsing file:', error);
-      alert(interpolate(content.parseError, { message: error.message }));
+      alert(interpolate(content.errors.parseError, { message: error.message }));
     } finally {
       setIsLoading(false);
     }
@@ -130,7 +130,7 @@ export default function GoogleTimelineSplitter() {
       URL.revokeObjectURL(url);
     } catch (error) {
       console.error('Error splitting file:', error);
-      alert(interpolate(content.splitError, { message: error.message }));
+      alert(interpolate(content.errors.splitError, { message: error.message }));
     } finally {
       setIsSplitting(false);
     }
@@ -252,7 +252,7 @@ export default function GoogleTimelineSplitter() {
                 onDrop={handleDrop}
               >
                 <input
-                  aria-label={content.inputLabel}
+                  aria-label={content.upload.inputLabel}
                   type="file"
                   id="splitterFileInput"
                   accept=".json"
@@ -263,7 +263,7 @@ export default function GoogleTimelineSplitter() {
                   {isLoading ? (
                     <>
                       <div className={styles.spinner}></div>
-                      <p>{content.parsing}</p>
+                      <p>{content.upload.parsing}</p>
                     </>
                   ) : fileData ? (
                     <>
@@ -271,16 +271,16 @@ export default function GoogleTimelineSplitter() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <p>{fileName}</p>
-                      <p className={styles.hint}>{interpolate(content.entriesLoaded, { count: itemCount.toLocaleString(htmlLang) })}</p>
+                      <p className={styles.hint}>{interpolate(content.results.entriesLoaded, { count: itemCount.toLocaleString(htmlLang) })}</p>
                     </>
                   ) : (
                     <>
                       <svg className={styles.uploadIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                       </svg>
-                      <p>{content.dropFile}</p>
-                      <p className={styles.hint}>{content.browse}</p>
-                      <p className={styles.formats}>{content.formats}</p>
+                      <p>{content.upload.dropFile}</p>
+                      <p className={styles.hint}>{content.upload.browse}</p>
+                      <p className={styles.formats}>{content.upload.formats}</p>
                     </>
                   )}
                 </label>
@@ -288,7 +288,7 @@ export default function GoogleTimelineSplitter() {
 
               {fileData && (
                 <button onClick={handleClear} style={{background: 'none', border: 'none', color: 'var(--ifm-color-primary)', cursor: 'pointer', fontSize: '0.9rem'}}>
-                  {content.clearButton}
+                  {content.upload.clearButton}
                 </button>
               )}
 
@@ -326,25 +326,25 @@ export default function GoogleTimelineSplitter() {
               <div className={styles.fileInfoGrid}>
                 <div className={styles.fileInfoItem}>
                   <span className={styles.fileInfoValue}>{fileName}</span>
-                  <span className={styles.fileInfoLabel}>{content.fileNameLabel}</span>
+                  <span className={styles.fileInfoLabel}>{content.results.fileNameLabel}</span>
                 </div>
                 <div className={styles.fileInfoItem}>
                   <span className={styles.fileInfoValue}>{formatSize(fileSize / 1024 / 1024, 2)}</span>
-                  <span className={styles.fileInfoLabel}>{content.fileSizeLabel}</span>
+                  <span className={styles.fileInfoLabel}>{content.results.fileSizeLabel}</span>
                 </div>
                 <div className={styles.fileInfoItem}>
                   <span className={styles.fileInfoValue}>{FORMAT_LABELS[fileFormat] || fileFormat}</span>
-                  <span className={styles.fileInfoLabel}>{content.formatLabel}</span>
+                  <span className={styles.fileInfoLabel}>{content.results.formatLabel}</span>
                 </div>
                 <div className={styles.fileInfoItem}>
                   <span className={styles.fileInfoValue}>{itemCount.toLocaleString(htmlLang)}</span>
-                  <span className={styles.fileInfoLabel}>{content.entriesLabel}</span>
+                  <span className={styles.fileInfoLabel}>{content.results.entriesLabel}</span>
                 </div>
               </div>
             </div>
 
             <div className={styles.sizeSection}>
-              <h3>{content.targetSizeTitle}</h3>
+              <h3>{content.options.targetSizeTitle}</h3>
               <div className={styles.sizeOptions}>
                 {SIZE_OPTIONS.map((size) => (
                   <button
@@ -359,23 +359,23 @@ export default function GoogleTimelineSplitter() {
 
               {chunkPreview > 0 && (
                 <div className={styles.previewInfo}>
-                  <RichText text={interpolate(selectMessage(chunkPreview, content.chunkPreview), {
+                  <RichText text={interpolate(selectMessage(chunkPreview, content.options.chunkPreview), {
                     count: chunkPreview.toLocaleString(htmlLang), entries: itemCount.toLocaleString(htmlLang), size: targetSizeMB.toLocaleString(htmlLang),
                   })} />
                 </div>
               )}
 
               <button onClick={handleSplit} disabled={isSplitting || !fileData} className={styles.splitButton}>
-                {isSplitting ? content.splitting : content.splitButton}
+                {isSplitting ? content.options.splitting : content.options.splitButton}
               </button>
             </div>
 
             <PersonalizedCTA
               toolName="google-timeline-splitter"
-              headline={<RichText text={interpolate(content.ctaHeadline, { count: itemCount.toLocaleString(htmlLang) })} />}
+              headline={<RichText text={interpolate(content.cta.headline, { count: itemCount.toLocaleString(htmlLang) })} />}
               stats={[
-                { label: content.statLabels.entries, value: itemCount.toLocaleString(htmlLang) },
-                { label: content.statLabels.fileSize, value: formatSize(fileSize / 1024 / 1024, 1) },
+                { label: content.cta.statLabels.entries, value: itemCount.toLocaleString(htmlLang) },
+                { label: content.cta.statLabels.fileSize, value: formatSize(fileSize / 1024 / 1024, 1) },
               ]}
             />
           </div>
@@ -413,9 +413,9 @@ export default function GoogleTimelineSplitter() {
 
         <div className={styles.bottomCtaPanel}>
           <div className={styles.ctaContent}>
-            <h3>{content.bottomCtaTitle}</h3>
-            <p>{content.bottomCtaBody}</p>
-            <SmartLink href="/?utm_source=tool&utm_medium=bottom-cta&utm_campaign=google-timeline-splitter" className={styles.ctaButton}>{content.ctaButton}</SmartLink>
+            <h3>{content.cta.title}</h3>
+            <p>{content.cta.body}</p>
+            <SmartLink href="/?utm_source=tool&utm_medium=bottom-cta&utm_campaign=google-timeline-splitter" className={styles.ctaButton}>{content.cta.button}</SmartLink>
           </div>
         </div>
       </div>

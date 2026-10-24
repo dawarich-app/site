@@ -455,7 +455,7 @@ export default function HeatmapGenerator() {
         <div className={styles.mainContent}>
           <div className={styles.sidebar}>
             <div className={styles.uploadSection}>
-              <h2>{content.uploadTitle}</h2>
+              <h2>{content.upload.uploadTitle}</h2>
               <div
                 className={`${styles.dropZone} ${dragActive ? styles.dragActive : ''}`}
                 onDragEnter={handleDrag}
@@ -466,10 +466,10 @@ export default function HeatmapGenerator() {
                 <svg className={styles.uploadIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                 </svg>
-                <p>{content.dropFiles}</p>
-                <span className={styles.supportedFormats}>{content.formats}</span>
+                <p>{content.upload.dropFiles}</p>
+                <span className={styles.supportedFormats}>{content.upload.formats}</span>
                 <input
-                  aria-label={content.inputLabel}
+                  aria-label={content.upload.inputLabel}
                   type="file"
                   className={styles.fileInput}
                   accept=".gpx,.fit,.tcx,.geojson,.json,.kml,.kmz"
@@ -481,7 +481,7 @@ export default function HeatmapGenerator() {
               {isLoading && (
                 <div className={styles.loadingIndicator}>
                   <div className={styles.spinner}></div>
-                  {content.processing}
+                  {content.upload.processing}
                 </div>
               )}
 
@@ -494,13 +494,13 @@ export default function HeatmapGenerator() {
               {files.length > 0 && (
                 <div className={styles.fileList}>
                   <div className={styles.fileListHeader}>
-                    <span>{interpolate(content.loadedFiles, { count: files.length.toLocaleString(htmlLang) })}</span>
-                    <button onClick={handleClear} className={styles.clearButton}>{content.clearButton}</button>
+                    <span>{interpolate(content.results.loadedFiles, { count: files.length.toLocaleString(htmlLang) })}</span>
+                    <button onClick={handleClear} className={styles.clearButton}>{content.upload.clearButton}</button>
                   </div>
                   {files.map((file, index) => (
                     <div key={index} className={styles.fileItem}>
                       <span className={styles.fileName}>{file.name}</span>
-                      <span className={styles.pointCount}>{interpolate(content.pointCount, { points: file.pointCount.toLocaleString(htmlLang) })}</span>
+                      <span className={styles.pointCount}>{interpolate(content.results.pointCount, { points: file.pointCount.toLocaleString(htmlLang) })}</span>
                     </div>
                   ))}
                 </div>
@@ -522,18 +522,18 @@ export default function HeatmapGenerator() {
 
               {stats && (
                 <div className={styles.statsPanel}>
-                  <h4>{content.statsTitle}</h4>
+                  <h4>{content.results.statsTitle}</h4>
                   <div className={styles.statItem}>
-                    <span>{content.pointsLabel}</span>
+                    <span>{content.results.pointsLabel}</span>
                     <strong>{stats.totalPoints.toLocaleString(htmlLang)}</strong>
                   </div>
                   <div className={styles.statItem}>
-                    <span>{content.distanceLabel}</span>
-                    <strong>{interpolate(content.distanceValue, { distance: formatDecimal(stats.totalDistance) })}</strong>
+                    <span>{content.results.distanceLabel}</span>
+                    <strong>{interpolate(content.results.distanceValue, { distance: formatDecimal(stats.totalDistance) })}</strong>
                   </div>
                   {stats.timeRange && (
                     <div className={styles.statItem}>
-                      <span>{content.dateRangeLabel}</span>
+                      <span>{content.results.dateRangeLabel}</span>
                       <strong>{stats.timeRange.start.toLocaleDateString(htmlLang)} - {stats.timeRange.end.toLocaleDateString(htmlLang)}</strong>
                     </div>
                   )}
@@ -542,25 +542,25 @@ export default function HeatmapGenerator() {
             </div>
 
             <div className={styles.settingsSection}>
-              <h2>{content.settingsTitle}</h2>
+              <h2>{content.settings.settingsTitle}</h2>
 
               <div className={styles.settingItem}>
-                <label htmlFor="heatmap-color-scheme">{content.schemeLabel}</label>
+                <label htmlFor="heatmap-color-scheme">{content.settings.schemeLabel}</label>
                 <select
                   id="heatmap-color-scheme"
                   value={heatmapSettings.colorScheme}
                   onChange={(e) => updateSetting('colorScheme', e.target.value)}
                 >
-                  <option value="fire">{content.schemes[0].label}</option>
-                  <option value="strava">{content.schemes[1].label}</option>
-                  <option value="plasma">{content.schemes[2].label}</option>
-                  <option value="ocean">{content.schemes[3].label}</option>
-                  <option value="green">{content.schemes[4].label}</option>
+                  <option value="fire">{content.settings.schemes[0].label}</option>
+                  <option value="strava">{content.settings.schemes[1].label}</option>
+                  <option value="plasma">{content.settings.schemes[2].label}</option>
+                  <option value="ocean">{content.settings.schemes[3].label}</option>
+                  <option value="green">{content.settings.schemes[4].label}</option>
                 </select>
               </div>
 
               <div className={styles.settingItem}>
-                <label htmlFor="heatmap-intensity">{interpolate(content.intensityLabel, { intensity: formatDecimal(heatmapSettings.intensity) })}</label>
+                <label htmlFor="heatmap-intensity">{interpolate(content.settings.intensityLabel, { intensity: formatDecimal(heatmapSettings.intensity) })}</label>
                 <input
                   id="heatmap-intensity"
                   type="range"
@@ -573,7 +573,7 @@ export default function HeatmapGenerator() {
               </div>
 
               <div className={styles.settingItem}>
-                <label htmlFor="heatmap-radius">{interpolate(content.radiusLabel, { radius: heatmapSettings.radius.toLocaleString(htmlLang) })}</label>
+                <label htmlFor="heatmap-radius">{interpolate(content.settings.radiusLabel, { radius: heatmapSettings.radius.toLocaleString(htmlLang) })}</label>
                 <input
                   id="heatmap-radius"
                   type="range"
@@ -586,7 +586,7 @@ export default function HeatmapGenerator() {
               </div>
 
               <div className={styles.settingItem}>
-                <label htmlFor="heatmap-opacity">{interpolate(content.opacityLabel, { opacity: formatDecimal(heatmapSettings.opacity) })}</label>
+                <label htmlFor="heatmap-opacity">{interpolate(content.settings.opacityLabel, { opacity: formatDecimal(heatmapSettings.opacity) })}</label>
                 <input
                   id="heatmap-opacity"
                   type="range"
@@ -635,14 +635,14 @@ export default function HeatmapGenerator() {
         <PersonalizedCTA
           toolName="heatmap-generator"
           headline={stats
-            ? <RichText text={interpolate(content.ctaHeadline, {
+            ? <RichText text={interpolate(content.cta.headline, {
               points: stats.totalPoints.toLocaleString(htmlLang), distance: formatDecimal(stats.totalDistance),
             })} />
-            : content.ctaFallback}
+            : content.cta.fallback}
           stats={stats ? [
-            { label: content.statLabels.points, value: stats.totalPoints.toLocaleString(htmlLang) },
-            { label: content.statLabels.distance, value: interpolate(content.distanceValue, { distance: formatDecimal(stats.totalDistance) }) },
-            ...(stats.timeRange ? [{ label: content.statLabels.dateRange,
+            { label: content.cta.statLabels.points, value: stats.totalPoints.toLocaleString(htmlLang) },
+            { label: content.cta.statLabels.distance, value: interpolate(content.results.distanceValue, { distance: formatDecimal(stats.totalDistance) }) },
+            ...(stats.timeRange ? [{ label: content.cta.statLabels.dateRange,
               value: `${stats.timeRange.start.toLocaleDateString(htmlLang)} – ${stats.timeRange.end.toLocaleDateString(htmlLang)}` }] : []),
           ] : undefined}
         />

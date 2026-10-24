@@ -65,22 +65,94 @@
   ],
   "converters": [
     {
-      "description": "Garmin activity files"
+      "description": "Garmin activity files",
+      "source": "FIT",
+      "targets": [
+        {
+          "label": "FIT → GPX"
+        },
+        {
+          "label": "FIT → GeoJSON"
+        },
+        {
+          "label": "FIT → KML"
+        }
+      ]
     },
     {
-      "description": "Training Center XML"
+      "description": "Training Center XML",
+      "source": "TCX",
+      "targets": [
+        {
+          "label": "TCX → GPX"
+        },
+        {
+          "label": "TCX → GeoJSON"
+        },
+        {
+          "label": "TCX → KML"
+        }
+      ]
     },
     {
-      "description": "GPS exchange format"
+      "description": "GPS exchange format",
+      "source": "GPX",
+      "targets": [
+        {
+          "label": "GPX → GeoJSON"
+        },
+        {
+          "label": "GPX → KML"
+        },
+        {
+          "label": "GPX → KMZ"
+        }
+      ]
     },
     {
-      "description": "Web-standard GPS format"
+      "description": "Web-standard GPS format",
+      "source": "GeoJSON",
+      "targets": [
+        {
+          "label": "GeoJSON → GPX"
+        },
+        {
+          "label": "GeoJSON → KML"
+        },
+        {
+          "label": "GeoJSON → KMZ"
+        }
+      ]
     },
     {
-      "description": "Google Earth format"
+      "description": "Google Earth format",
+      "source": "KML",
+      "targets": [
+        {
+          "label": "KML → GPX"
+        },
+        {
+          "label": "KML → GeoJSON"
+        },
+        {
+          "label": "KML → KMZ"
+        }
+      ]
     },
     {
-      "description": "Compressed Google Earth format"
+      "description": "Compressed Google Earth format",
+      "source": "KMZ",
+      "targets": [
+        {
+          "label": "KMZ → GPX"
+        },
+        {
+          "label": "KMZ → GeoJSON"
+        },
+        {
+          "label": "KMZ → KML"
+        }
+      ]
     }
   ]
 }

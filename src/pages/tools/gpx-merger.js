@@ -68,7 +68,7 @@ export default function GPXMerger() {
       const gpxFiles = newFiles.filter(f => f.name.toLowerCase().endsWith('.gpx'));
 
       if (gpxFiles.length === 0) {
-        setError(content.gpxOnlyError);
+        setError(content.errors.gpxOnly);
         setIsProcessing(false);
         return;
       }
@@ -81,7 +81,7 @@ export default function GPXMerger() {
           parsed.push(gpxData);
         } catch (err) {
           console.error(`Error parsing ${file.name}:`, err);
-          setError(interpolate(content.parseError, { fileName: file.name, message: err.message }));
+          setError(interpolate(content.errors.parse, { fileName: file.name, message: err.message }));
         }
       }
 
@@ -113,7 +113,7 @@ export default function GPXMerger() {
 
   const handleMerge = () => {
     if (parsedFiles.length < 2) {
-      setError(content.minimumFilesError);
+      setError(content.errors.minimumFiles);
       return;
     }
 
@@ -131,7 +131,7 @@ export default function GPXMerger() {
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
     } catch (err) {
-      setError(interpolate(content.mergeError, { message: err.message }));
+      setError(interpolate(content.errors.merge, { message: err.message }));
     }
   };
 
@@ -214,10 +214,10 @@ export default function GPXMerger() {
               <svg className={styles.uploadIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
               </svg>
-              <p>{content.dropFiles}</p>
-              <span className={styles.hint}>{content.browse}</span>
+              <p>{content.upload.dropFiles}</p>
+              <span className={styles.hint}>{content.upload.browse}</span>
               <input
-                aria-label={content.inputLabel}
+                aria-label={content.upload.inputLabel}
                 type="file"
                 className={styles.fileInput}
                 accept=".gpx"
@@ -229,7 +229,7 @@ export default function GPXMerger() {
             {isProcessing && (
               <div className={styles.processingIndicator}>
                 <div className={styles.spinner}></div>
-                {content.processing}
+                {content.upload.processing}
               </div>
             )}
 
@@ -243,11 +243,11 @@ export default function GPXMerger() {
           {files.length > 0 && (
             <div className={styles.filesPanel}>
               <div className={styles.filesPanelHeader}>
-                <h3>{interpolate(content.filesToMergeHeading, { count: files.length.toLocaleString(htmlLang) })}</h3>
-                <button onClick={handleClear} className={styles.clearButton}>{content.clearButton}</button>
+                <h3>{interpolate(content.results.filesToMergeHeading, { count: files.length.toLocaleString(htmlLang) })}</h3>
+                <button onClick={handleClear} className={styles.clearButton}>{content.upload.clearButton}</button>
               </div>
 
-              <p className={styles.orderHint}>{content.orderHint}</p>
+              <p className={styles.orderHint}>{content.results.orderHint}</p>
 
               <div className={styles.fileList}>
                 {files.map((fileName, index) => {
@@ -282,15 +282,16 @@ export default function GPXMerger() {
                       <div className={styles.fileInfo}>
                         <span className={styles.fileName}>{fileName}</span>
                         <span className={styles.fileMeta}>
-                          {interpolate(selectMessage(trackCount, content.fileSummary), {
-                            trackCount: trackCount.toLocaleString(htmlLang), points: pointCount.toLocaleString(htmlLang),
+                          {interpolate(content.results.fileSummary, {
+                            tracks: interpolate(selectMessage(trackCount, content.results.trackCount), { count: trackCount.toLocaleString(htmlLang) }),
+                            points: pointCount.toLocaleString(htmlLang),
                           })}
                         </span>
                       </div>
                       <button
                         onClick={() => handleRemoveFile(index)}
                         className={styles.removeButton}
-                        title={content.removeFileTitle}
+                        title={content.results.removeFileTitle}
                       >
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -303,30 +304,30 @@ export default function GPXMerger() {
 
               {stats && (
                 <div className={styles.statsPanel}>
-                  <h4>{content.summaryHeading}</h4>
+                  <h4>{content.results.summaryHeading}</h4>
                   <div className={styles.statsGrid}>
                     <div className={styles.statItem}>
                       <span className={styles.statValue}>{stats.files.toLocaleString(htmlLang)}</span>
-                      <span className={styles.statLabel}>{content.filesLabel}</span>
+                      <span className={styles.statLabel}>{content.results.filesLabel}</span>
                     </div>
                     <div className={styles.statItem}>
                       <span className={styles.statValue}>{stats.tracks.toLocaleString(htmlLang)}</span>
-                      <span className={styles.statLabel}>{content.tracksLabel}</span>
+                      <span className={styles.statLabel}>{content.results.tracksLabel}</span>
                     </div>
                     <div className={styles.statItem}>
                       <span className={styles.statValue}>{stats.trackPoints.toLocaleString(htmlLang)}</span>
-                      <span className={styles.statLabel}>{content.pointsLabel}</span>
+                      <span className={styles.statLabel}>{content.results.pointsLabel}</span>
                     </div>
                     <div className={styles.statItem}>
                       <span className={styles.statValue}>{stats.waypoints.toLocaleString(htmlLang)}</span>
-                      <span className={styles.statLabel}>{content.waypointsLabel}</span>
+                      <span className={styles.statLabel}>{content.results.waypointsLabel}</span>
                     </div>
                   </div>
                 </div>
               )}
 
               <div className={styles.optionsPanel}>
-                <h4>{content.optionsHeading}</h4>
+                <h4>{content.options.heading}</h4>
 
                 <div className={styles.optionItem}>
                   <label>
@@ -334,9 +335,9 @@ export default function GPXMerger() {
                       type="text"
                       value={options.outputName}
                       onChange={(e) => setOptions({ ...options, outputName: e.target.value })}
-                      placeholder={content.outputPlaceholder}
+                      placeholder={content.options.outputPlaceholder}
                     />
-                    <span className={styles.optionLabel}>{content.outputName}</span>
+                    <span className={styles.optionLabel}>{content.options.outputName}</span>
                   </label>
                 </div>
 
@@ -347,9 +348,9 @@ export default function GPXMerger() {
                       checked={options.mergeTracksIntoOne}
                       onChange={(e) => setOptions({ ...options, mergeTracksIntoOne: e.target.checked })}
                     />
-                    <span>{content.singleTrack}</span>
+                    <span>{content.options.singleTrack}</span>
                   </label>
-                  <p className={styles.optionHint}>{content.singleTrackHint}</p>
+                  <p className={styles.optionHint}>{content.options.singleTrackHint}</p>
                 </div>
 
                 <div className={styles.optionItem}>
@@ -360,9 +361,9 @@ export default function GPXMerger() {
                       onChange={(e) => setOptions({ ...options, sortByTime: e.target.checked })}
                       disabled={!options.mergeTracksIntoOne}
                     />
-                    <span>{content.sortByTime}</span>
+                    <span>{content.options.sortByTime}</span>
                   </label>
-                  <p className={styles.optionHint}>{content.sortByTimeHint}</p>
+                  <p className={styles.optionHint}>{content.options.sortByTimeHint}</p>
                 </div>
               </div>
 
@@ -374,7 +375,7 @@ export default function GPXMerger() {
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
-                {content.mergeButton}
+                {content.options.mergeButton}
               </button>
 
               <div className={styles.saveToAccountSection}>
@@ -420,14 +421,14 @@ export default function GPXMerger() {
         <PersonalizedCTA
           toolName="gpx-merger"
           headline={stats
-            ? <RichText text={interpolate(content.ctaHeadline, {
+            ? <RichText text={interpolate(content.cta.headline, {
               count: stats.files.toLocaleString(htmlLang), points: stats.trackPoints.toLocaleString(htmlLang),
             })} />
-            : content.ctaFallback}
+            : content.cta.fallback}
           stats={stats ? [
-            { label: content.filesLabel.toLowerCase(), value: stats.files.toLocaleString(htmlLang) },
-            { label: content.tracksLabel.toLowerCase(), value: stats.tracks.toLocaleString(htmlLang) },
-            { label: content.pointsLabel.toLowerCase(), value: stats.trackPoints.toLocaleString(htmlLang) },
+            { label: content.cta.statLabels.files, value: stats.files.toLocaleString(htmlLang) },
+            { label: content.cta.statLabels.tracks, value: stats.tracks.toLocaleString(htmlLang) },
+            { label: content.cta.statLabels.points, value: stats.trackPoints.toLocaleString(htmlLang) },
           ] : undefined}
         />
       </div>

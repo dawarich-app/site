@@ -1,23 +1,12 @@
 {
   "h1": "Anyone can hang a map poster of Berlin. Only you have your route.",
   "intro": "The poster below is the demo — one month of getting around Berlin. Drop any GPX, Google Timeline, KML, FIT or TCX file and it becomes a map nobody else can hang — your rides, your runs, your road trips. About two minutes, no account.",
-  "startOver": "Start over",
-  "demoLabel": "Show demo data",
-  "formats": "GPX, FIT, TCX, GeoJSON, KML, KMZ, Google Timeline JSON",
-  "processing": "Processing files…",
-  "emptyError": "No plottable points found in the uploaded files — check that they contain location data.",
-  "demoError": "The demo route failed to load — drop your own file to start composing.",
   "saveIntro": "Want this data in your Dawarich account too? We'll import it during signup — no second upload needed.",
-  "faqTitle": "Frequently Asked Questions",
   "appName": "Map Poster Maker",
   "homeLabel": "Home",
   "toolsLabel": "Free Tools",
-  "addFiles": "Add more files",
-  "dropFiles": "Drop your location file here or click to browse",
-  "inputLabel": "Choose files to make a poster from",
   "loadingStudio": "Loading the studio…",
   "valueStrip": "17 map themes · 22 formats, A5 to A0 and 4K · 300 DPI PNG & PDF · {price} · no watermark",
-  "ctaFallback": "One file makes one poster. Dawarich records every route automatically — any month of your history becomes a poster. 7-day free trial, 14-day refund, cancel anytime.",
   "meta": {
     "title": "Free Map Poster Maker - Route Posters from GPS Files",
     "description": "Turn GPX, Google Timeline, KML, FIT or TCX files into a custom map poster in your browser. 17 themes, 22 layouts, free PNG and PDF export, optional prints.",
@@ -42,10 +31,6 @@
     ],
     "tool": "Map Poster Maker by Dawarich"
   },
-  "fileSummary": "{count} file · {points} points|{count} files · {points} points",
-  "sizeError": "{fileName} is larger than 100 MB — split it first (try the GPS File Splitter).",
-  "parseError": "Error parsing {fileName}: {message}",
-  "ctaHeadline": "Your poster is built from **{points}** GPS points from one file. Dawarich records every route automatically — any month of your history becomes a poster. 7-day free trial, 14-day refund, cancel anytime.",
   "faq": [
     {
       "q": "How do I make a poster from my GPS data?",
@@ -71,5 +56,28 @@
       "q": "Which files work with the poster maker?",
       "a": "GPX tracks, Google Timeline exports (Records.json, Semantic Location History and phone Takeout formats), GeoJSON, KML, KMZ, FIT and TCX. You can drop several files at once — they are combined into one track, split wherever there is a gap of more than an hour."
     }
-  ]
+  ],
+  "toolbar": {
+    "startOver": "Start over",
+    "demoLabel": "Show demo data",
+    "fileSummary": "{count} file · {points} points|{count} files · {points} points"
+  },
+  "upload": {
+    "formats": "GPX, FIT, TCX, GeoJSON, KML, KMZ, Google Timeline JSON",
+    "processing": "Processing files…",
+    "addFiles": "Add more files",
+    "dropFiles": "Drop your location file here or click to browse",
+    "inputLabel": "Choose files to make a poster from"
+  },
+  "errors": {
+    "emptyError": "No plottable points found in the uploaded files — check that they contain location data.",
+    "demoError": "The demo route failed to load — drop your own file to start composing.",
+    "sizeError": "{fileName} is larger than 100 MB — split it first (try the GPS File Splitter).",
+    "parseError": "Error parsing {fileName}: {message}"
+  },
+  "cta": {
+    "headline": "Your poster is built from **{points}** GPS points from one file. Dawarich records every route automatically — any month of your history becomes a poster. 7-day free trial, 14-day refund, cancel anytime.",
+    "fallback": "One file makes one poster. Dawarich records every route automatically — any month of your history becomes a poster. 7-day free trial, 14-day refund, cancel anytime."
+  },
+  "faqTitle": "Frequently Asked Questions"
 }

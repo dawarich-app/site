@@ -6,37 +6,9 @@
   },
   "h1": "GPX Track Merger",
   "intro": "Combine multiple GPX files into a single file. Merge tracks from different activities, days, or devices into one unified GPS file.",
-  "dropFiles": "Drag & drop GPX files here",
-  "browse": "or click to browse",
-  "clearButton": "Clear All",
-  "orderHint": "Drag to reorder or use arrows. Files will be merged in this order.",
-  "summaryHeading": "Merge Summary",
-  "filesLabel": "Files",
-  "tracksLabel": "Tracks",
-  "pointsLabel": "Points",
-  "waypointsLabel": "Waypoints",
-  "optionsHeading": "Merge Options",
-  "outputName": "Output Name",
-  "singleTrack": "Merge all tracks into a single track",
-  "singleTrackHint": "Combines all track segments into one continuous track",
-  "sortByTime": "Sort points by timestamp",
-  "sortByTimeHint": "Only available when merging into single track",
   "saveIntro": "Or skip the download — we'll merge and import it into your Dawarich account during signup.",
   "privacy": "Merging happens in your browser. Nothing is uploaded unless you choose “Save to my Dawarich account.”",
-  "gpxOnlyError": "Please select GPX files only.",
-  "minimumFilesError": "Please add at least 2 GPX files to merge.",
   "appName": "GPX Merger",
-  "inputLabel": "Choose files to process",
-  "processing": "Processing files...",
-  "removeFileTitle": "Remove file",
-  "outputPlaceholder": "Output file name",
-  "mergeButton": "Merge & Download GPX",
-  "ctaFallback": "Need to manage years of GPS data? Dawarich automatically organizes and visualizes all your GPS activities in one place.",
-  "filesToMergeHeading": "Files to Merge ({count})",
-  "fileSummary": "{trackCount} track | {points} points|{trackCount} tracks | {points} points",
-  "parseError": "Error parsing {fileName}: {message}",
-  "mergeError": "Error merging files: {message}",
-  "ctaHeadline": "You combined **{count}** files with **{points}** points into one. Dawarich does this automatically with all your GPS sources.",
   "cards": [
     {
       "title": "Why Merge GPX Files?",
@@ -104,5 +76,49 @@
         }
       ]
     }
-  ]
+  ],
+  "upload": {
+    "dropFiles": "Drag & drop GPX files here",
+    "browse": "or click to browse",
+    "clearButton": "Clear All",
+    "inputLabel": "Choose files to process",
+    "processing": "Processing files..."
+  },
+  "results": {
+    "orderHint": "Drag to reorder or use arrows. Files will be merged in this order.",
+    "summaryHeading": "Merge Summary",
+    "filesLabel": "Files",
+    "tracksLabel": "Tracks",
+    "pointsLabel": "Points",
+    "waypointsLabel": "Waypoints",
+    "removeFileTitle": "Remove file",
+    "filesToMergeHeading": "Files to Merge ({count})",
+    "fileSummary": "{tracks} | {points} points",
+    "trackCount": "{count} track|{count} tracks"
+  },
+  "options": {
+    "heading": "Merge Options",
+    "outputName": "Output Name",
+    "singleTrack": "Merge all tracks into a single track",
+    "singleTrackHint": "Combines all track segments into one continuous track",
+    "sortByTime": "Sort points by timestamp",
+    "sortByTimeHint": "Only available when merging into single track",
+    "outputPlaceholder": "Output file name",
+    "mergeButton": "Merge & Download GPX"
+  },
+  "errors": {
+    "gpxOnly": "Please select GPX files only.",
+    "minimumFiles": "Please add at least 2 GPX files to merge.",
+    "parse": "Error parsing {fileName}: {message}",
+    "merge": "Error merging files: {message}"
+  },
+  "cta": {
+    "fallback": "Need to manage years of GPS data? Dawarich automatically organizes and visualizes all your GPS activities in one place.",
+    "headline": "You combined **{count}** files with **{points}** points into one. Dawarich does this automatically with all your GPS sources.",
+    "statLabels": {
+      "files": "files",
+      "tracks": "tracks",
+      "points": "points"
+    }
+  }
 }

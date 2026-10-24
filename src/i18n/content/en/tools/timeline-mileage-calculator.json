@@ -1,0 +1,238 @@
+{
+  "h1": "Google Timeline Mileage Calculator",
+  "intro": "Calculate driving mileage from your Google Timeline data. Generate downloadable mileage logs with per-trip details, daily and monthly summaries. All processing happens in your browser — your data stays on your device unless you choose “Save to my Dawarich account.”",
+  "privacyTitle": "Privacy First",
+  "privacyBody": "All mileage calculations happen entirely in your browser — your location data stays on your device unless you choose “Save to my Dawarich account.”",
+  "preCta": "Need ongoing mileage tracking? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-mileage-calculator) records your trips automatically with full data ownership and privacy. No more manual exports — just continuous, accurate tracking.",
+  "saveIntro": "Want this in your Dawarich account too? We'll import it during signup — no second upload needed.",
+  "faqTitle": "Frequently Asked Questions",
+  "homeLabel": "Home",
+  "toolsLabel": "Free Tools",
+  "meta": {
+    "title": "Google Timeline Mileage Calculator - Track Driving Distance Free",
+    "description": "Free mileage calculator using your Google Timeline data. Calculate driving distance, generate mileage logs, and export CSV reports for tax deductions. Privacy-first — runs in your browser.",
+    "keywords": "google timeline mileage, mileage calculator from location history, driving distance from google maps, mileage log google timeline, tax mileage calculator, google maps mileage tracker, IRS mileage log, driving distance calculator, google timeline driving distance, mileage reimbursement calculator",
+    "featureList": [
+      "Calculate driving mileage from Google Timeline data",
+      "Filter trips by date range",
+      "Toggle between kilometers and miles",
+      "Generate downloadable CSV mileage log",
+      "Daily and monthly trip summaries",
+      "Privacy-first - all processing in browser",
+      "No data sent to any server"
+    ]
+  },
+  "howTo": {
+    "name": "How to Calculate Mileage from Google Timeline Data",
+    "description": "Export your Google Timeline data and calculate driving mileage using this free, privacy-first calculator.",
+    "steps": [
+      {
+        "name": "Export your Google Timeline data",
+        "text": "Visit takeout.google.com, select Location History (Timeline), and export. Alternatively, on Android: Google Maps > Settings > Location > Timeline > Export. On iOS: Google Maps > Settings > Personal Content > Export Timeline data."
+      },
+      {
+        "name": "Upload your JSON files",
+        "text": "Drag and drop your exported Google Timeline JSON files into the mileage calculator. The tool automatically detects the format and extracts driving segments."
+      },
+      {
+        "name": "Set your date range and unit preference",
+        "text": "Select a start and end date to filter your mileage log, and choose between kilometers or miles."
+      },
+      {
+        "name": "Review and download your mileage log",
+        "text": "Review the trip log, monthly summaries, and total mileage. Download the complete mileage log as a CSV file for your records."
+      }
+    ],
+    "tool": "Google Timeline Mileage Calculator by Dawarich"
+  },
+  "exportData": {
+    "title": "How to Get Your Timeline Data",
+    "intro": "Export your Google Timeline location history using one of these methods. If one does not work, try another.",
+    "note": "For the most accurate mileage data, Semantic Location History files (monthly JSON files like 2023_JANUARY.json) work best, as they contain labeled activity segments with driving classifications.",
+    "methods": [
+      {
+        "title": "Google Takeout:",
+        "body": "Visit [takeout.google.com](https://takeout.google.com/) → Choose Location History (Timeline) → Export as JSON"
+      },
+      {
+        "title": "On Android:",
+        "body": "Open Google Maps → Settings → Location → Location Services → Timeline → Export Timeline"
+      },
+      {
+        "title": "On iOS:",
+        "body": "Open Google Maps → Settings → Personal Content → Export Timeline data"
+      }
+    ]
+  },
+  "units": {
+    "km": "km",
+    "miles": "miles"
+  },
+  "activities": {
+    "driving": "Driving",
+    "bus": "Bus",
+    "train": "Train",
+    "subway": "Subway",
+    "motorcycle": "Motorcycle"
+  },
+  "duration": {
+    "minutes": "{minutes}m",
+    "hoursMinutes": "{hours}h {minutes}m"
+  },
+  "results": {
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "disclaimer": "Distances are calculated using GPS coordinates (Haversine formula) and represent straight-line approximations between recorded points. Actual road distances may be higher. This tool is for estimation purposes.",
+    "monthlyTitle": "Monthly Summary",
+    "month": "Month",
+    "tripCount": "Trip Count",
+    "tripLogTitle": "Trip Log",
+    "trip": "Trip #",
+    "date": "Date",
+    "activity": "Activity Type",
+    "duration": "Duration",
+    "emptyTitle": "No driving trips found",
+    "emptyIntro": "No driving activity segments were detected in your data for the selected date range. This can happen if:",
+    "calculateButton": "Calculate",
+    "distanceTitle": "Total Driving Distance",
+    "distanceHint": "All driving segments combined",
+    "tripsTitle": "Total Trips",
+    "tripsHint": "Driving segments detected",
+    "averageTitle": "Average Trip Distance",
+    "averageHint": "Per driving segment",
+    "downloadButton": "Download Mileage Log (CSV)",
+    "processing": "Processing...",
+    "distanceHeading": "Distance ({unit})",
+    "emptyReasons": [
+      {
+        "body": "Your export contains only raw GPS points (Records.json) without activity classification"
+      },
+      {
+        "body": "The date range does not overlap with your data"
+      },
+      {
+        "body": "Your data does not contain driving segments — try Semantic Location History files for best results"
+      }
+    ],
+    "showMore": "Show More ({count} remaining)",
+    "distanceValue": "{distance} {unit}"
+  },
+  "cta": {
+    "fallback": "Need ongoing mileage tracking without manual exports? Dawarich records your trips automatically.",
+    "postTitle": "Tired of manually exporting and calculating mileage?",
+    "postBody": "Dawarich automatically tracks every drive, calculates distances using actual GPS data, and lets you export mileage reports anytime. Self-hosted or cloud — your data, your choice.",
+    "title": "Looking for a Google Timeline Replacement with Built-in Mileage Tracking?",
+    "body": "Dawarich is an open-source location tracking platform that automatically logs every trip, calculates driving distance, and gives you full control over your data. Import your Google Timeline export, track ongoing mileage from your phone, and generate reports anytime — all self-hosted or in the cloud.",
+    "button": "Try Dawarich Free for 7 Days",
+    "headline": "You logged **{count}** trips covering **{distance} {unit}**. Dawarich tracks this automatically — no more manual exports.",
+    "tripsLabel": "trips"
+  },
+  "faq": [
+    {
+      "q": "Is it safe to upload my Google Timeline data?",
+      "a": "Absolutely. The calculator runs 100% in your browser using client-side JavaScript — your files stay on your device and are discarded when you close or refresh the page, with no tracking of your location data. The only exception is the optional “Save to my Dawarich account” button, which uploads your file to Dawarich Cloud so it can be imported into your new account. The tool is part of the Dawarich open-source ecosystem, so you can inspect the source code yourself."
+    },
+    {
+      "q": "How accurate is the mileage calculation?",
+      "a": "Distances are calculated using the Haversine formula, which computes the great-circle distance between GPS coordinates. This gives straight-line approximations between recorded points, which typically underestimates actual road distance by 10-30% depending on route complexity. Highways will be more accurate than winding city streets. For IRS mileage deductions, the standard practice is to use odometer readings or a dedicated mileage tracking app for precise figures, but this tool provides a solid estimate for planning and review."
+    },
+    {
+      "q": "Can I use this for tax deductions?",
+      "a": "This tool generates a mileage log that can serve as a supplementary record for tax purposes. However, the IRS requires contemporaneous records — meaning mileage should ideally be logged at the time of each trip, not reconstructed later. Google Timeline data can support your records but may not be sufficient as the sole source. Consult a tax professional for guidance specific to your situation. If you'd rather have the date and distance recorded as trips happen than reconstruct them months later, Dawarich logs them automatically."
+    },
+    {
+      "q": "What driving activities does it track?",
+      "a": "The calculator identifies driving-related activity types from Google's classification system: IN_PASSENGER_VEHICLE (car trips), DRIVING, IN_BUS, IN_TRAIN, IN_SUBWAY, and MOTORCYCLING. These activity types are assigned by Google based on speed, movement patterns, and sensor data. The accuracy depends on how well Google classified your activities — occasionally walking or cycling may be misclassified as driving or vice versa."
+    },
+    {
+      "q": "Can I filter by date range?",
+      "a": "Yes. After uploading your files, you can set a start date and end date to filter your mileage log to a specific period. This is useful for generating quarterly or annual mileage reports, isolating business travel periods, or comparing mileage across different timeframes. The monthly and daily summaries will also reflect only the filtered date range."
+    },
+    {
+      "q": "What format is the CSV export?",
+      "a": "The CSV file includes columns for Trip #, Date, Start Time, End Time, Activity Type, Distance (in your chosen unit), and Duration. Each row represents one driving segment identified in your Timeline data. The file ends with a total row summarizing the overall distance and trip count. The CSV can be opened in Excel, Google Sheets, or any spreadsheet application for further analysis."
+    },
+    {
+      "q": "Why are some trips missing?",
+      "a": "Several factors can cause missing trips: (1) Google Timeline only records data when Location History is enabled on your device — any periods where it was off will have no data. (2) Short trips or trips with poor GPS signal may not generate enough data points. (3) Google may not have classified certain movement as driving, especially at low speeds. (4) If you exported using the newer phone-based method, you may only have the last 90 days of data due to Google's 2024 policy change. (5) Some export formats contain less detail than others."
+    }
+  ],
+  "cards": [
+    {
+      "title": "What Is the Timeline Mileage Calculator?",
+      "paragraphs": [
+        "The Timeline Mileage Calculator is a free browser-based tool that extracts driving trip data from your Google Timeline export files and calculates the total distance traveled. It identifies driving-related activity segments — including car trips, bus rides, train journeys, and motorcycle travel — and generates a structured mileage log with per-trip details.",
+        "Unlike server-based tools, all calculations run in your browser, so generating your mileage log never sends your location data anywhere. You get instant results with full privacy, and the generated CSV mileage log can be used for expense reports, tax documentation, or personal record-keeping. (If you use “Save to my Dawarich account,” that one action uploads your file to Dawarich Cloud to set up your import — nothing is sent otherwise.)"
+      ]
+    },
+    {
+      "title": "How Mileage Is Calculated",
+      "paragraphs": [
+        "The calculator uses the Haversine formula to compute great-circle distances between consecutive GPS coordinates in each driving segment. This is the standard method for calculating distance between two points on a sphere (the Earth).",
+        "For each driving segment identified in your Google Timeline data, the tool sums the distances between all recorded waypoints along that segment. The result is a straight-line approximation — actual road distance will typically be 10-30% higher due to road curvature, elevation changes, and detours not captured by GPS point spacing.",
+        "Jumps greater than 500 km between consecutive points are automatically excluded to avoid counting GPS glitches or teleportation artifacts in the data."
+      ]
+    },
+    {
+      "title": "Using Mileage Logs for Tax Deductions",
+      "paragraphs": [
+        "In the United States, the IRS allows a standard mileage deduction for business use of a personal vehicle. The rate changes every year, so check the current one before you file. To claim this deduction, you need a mileage log that records the date, destination, business purpose, and distance for each trip.",
+        "While Google Timeline data can provide the date and distance for each driving segment, it does not distinguish between business and personal trips. You would need to annotate the exported CSV with business purpose and destination information. The IRS also requires that records be kept contemporaneously — meaning at or near the time of each trip — so a retrospective log from Google Timeline is best used as a supporting document rather than your sole record.",
+        "To record trips as they happen instead of reconstructing them later, consider using [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-mileage-calculator) — you still add the business purpose yourself."
+      ]
+    },
+    {
+      "title": "What Happened to Google Maps Timeline?",
+      "paragraphs": [
+        "In late 2024, Google discontinued the web-based version of Google Maps Timeline and transitioned all location data to on-device storage on users' phones. Only the most recent 90 days of data were migrated — all older location history was permanently deleted unless users had manually backed it up before the deadline.",
+        "This change left many users without access to years of location history that they had relied on for mileage tracking, travel memories, and expense documentation. If you managed to export your data via Google Takeout or the Timeline export feature before the transition, this calculator can help you extract the mileage information from those files.",
+        "For more details, see our [guide on migrating from Google Location History](/blog/migrating-from-google-location-history-to-dawarich)."
+      ]
+    },
+    {
+      "title": "Accuracy and Limitations",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**GPS precision** — Google Timeline typically records locations every few seconds to minutes, depending on device activity. Gaps between readings mean some segments of a trip are interpolated rather than precisely measured"
+        },
+        {
+          "body": "**Activity classification** — Google uses machine learning to classify activity types. Misclassifications happen — a slow drive in traffic might be labeled as cycling, or a bus ride as a car trip"
+        },
+        {
+          "body": "**Straight-line distances** — The Haversine formula gives the shortest path between two points on the Earth's surface. Real roads are longer due to curves, hills, and routing"
+        },
+        {
+          "body": "**Missing data** — Periods where your phone was off, in airplane mode, or had Location History disabled will have no data"
+        },
+        {
+          "body": "**Export format matters** — Semantic Location History files contain the most detailed driving data. Raw Records.json files may lack activity type labels"
+        }
+      ]
+    },
+    {
+      "title": "Related Tools",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Google Timeline Visualizer](/tools/timeline-visualizer) — View your complete location history on an interactive map"
+        },
+        {
+          "body": "[GPS Heatmap Generator](/tools/heatmap-generator) — Create heatmaps from GPX, FIT, TCX, and other GPS files"
+        },
+        {
+          "body": "[GPX Track Merger](/tools/gpx-merger) — Combine multiple GPX files into one"
+        },
+        {
+          "body": "[Photo Geodata Extraction](/tools/photo-geotagging) — Extract GPS coordinates from your photos"
+        },
+        {
+          "body": "[GeoJSON to GPX Converter](/tools/geojson-to-gpx) — Convert your location data to GPX format"
+        }
+      ],
+      "footer": [
+        "Read more: [Migrating from Google Location History](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}

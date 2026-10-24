@@ -87,57 +87,57 @@ const freeTools = [
 
 const converterGroups = [
   {
-    source: 'FIT',
+    source: content.converters[0].source,
     description: content.converters[0].description,
     targets: [
-      { to: '/tools/fit-to-gpx', label: 'FIT → GPX' },
-      { to: '/tools/fit-to-geojson', label: 'FIT → GeoJSON' },
-      { to: '/tools/fit-to-kml', label: 'FIT → KML' },
+      { to: '/tools/fit-to-gpx', label: content.converters[0].targets[0].label },
+      { to: '/tools/fit-to-geojson', label: content.converters[0].targets[1].label },
+      { to: '/tools/fit-to-kml', label: content.converters[0].targets[2].label },
     ],
   },
   {
-    source: 'TCX',
+    source: content.converters[1].source,
     description: content.converters[1].description,
     targets: [
-      { to: '/tools/tcx-to-gpx', label: 'TCX → GPX' },
-      { to: '/tools/tcx-to-geojson', label: 'TCX → GeoJSON' },
-      { to: '/tools/tcx-to-kml', label: 'TCX → KML' },
+      { to: '/tools/tcx-to-gpx', label: content.converters[1].targets[0].label },
+      { to: '/tools/tcx-to-geojson', label: content.converters[1].targets[1].label },
+      { to: '/tools/tcx-to-kml', label: content.converters[1].targets[2].label },
     ],
   },
   {
-    source: 'GPX',
+    source: content.converters[2].source,
     description: content.converters[2].description,
     targets: [
-      { to: '/tools/gpx-to-geojson', label: 'GPX → GeoJSON' },
-      { to: '/tools/gpx-to-kml', label: 'GPX → KML' },
-      { to: '/tools/gpx-to-kmz', label: 'GPX → KMZ' },
+      { to: '/tools/gpx-to-geojson', label: content.converters[2].targets[0].label },
+      { to: '/tools/gpx-to-kml', label: content.converters[2].targets[1].label },
+      { to: '/tools/gpx-to-kmz', label: content.converters[2].targets[2].label },
     ],
   },
   {
-    source: 'GeoJSON',
+    source: content.converters[3].source,
     description: content.converters[3].description,
     targets: [
-      { to: '/tools/geojson-to-gpx', label: 'GeoJSON → GPX' },
-      { to: '/tools/geojson-to-kml', label: 'GeoJSON → KML' },
-      { to: '/tools/geojson-to-kmz', label: 'GeoJSON → KMZ' },
+      { to: '/tools/geojson-to-gpx', label: content.converters[3].targets[0].label },
+      { to: '/tools/geojson-to-kml', label: content.converters[3].targets[1].label },
+      { to: '/tools/geojson-to-kmz', label: content.converters[3].targets[2].label },
     ],
   },
   {
-    source: 'KML',
+    source: content.converters[4].source,
     description: content.converters[4].description,
     targets: [
-      { to: '/tools/kml-to-gpx', label: 'KML → GPX' },
-      { to: '/tools/kml-to-geojson', label: 'KML → GeoJSON' },
-      { to: '/tools/kml-to-kmz', label: 'KML → KMZ' },
+      { to: '/tools/kml-to-gpx', label: content.converters[4].targets[0].label },
+      { to: '/tools/kml-to-geojson', label: content.converters[4].targets[1].label },
+      { to: '/tools/kml-to-kmz', label: content.converters[4].targets[2].label },
     ],
   },
   {
-    source: 'KMZ',
+    source: content.converters[5].source,
     description: content.converters[5].description,
     targets: [
-      { to: '/tools/kmz-to-gpx', label: 'KMZ → GPX' },
-      { to: '/tools/kmz-to-geojson', label: 'KMZ → GeoJSON' },
-      { to: '/tools/kmz-to-kml', label: 'KMZ → KML' },
+      { to: '/tools/kmz-to-gpx', label: content.converters[5].targets[0].label },
+      { to: '/tools/kmz-to-geojson', label: content.converters[5].targets[1].label },
+      { to: '/tools/kmz-to-kml', label: content.converters[5].targets[2].label },
     ],
   },
 ];

@@ -9,6 +9,7 @@ export default function PhotoList({ photos, onPhotoSelect, selectedPhotoId }) {
   const { i18n } = useDocusaurusContext();
   const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
   const { selectMessage } = usePluralForm();
+  const formatCoordinate = (value) => value.toLocaleString(htmlLang, { useGrouping: false, minimumFractionDigits: 6, maximumFractionDigits: 6 });
   const photoCount = (count) => interpolate(selectMessage(count, content.photoCount), { count: count.toLocaleString(htmlLang) });
   const [sortBy, setSortBy] = useState('time-desc'); // time-desc, time-asc, name
 
@@ -152,7 +153,7 @@ export default function PhotoList({ photos, onPhotoSelect, selectedPhotoId }) {
                 <div className={styles.itemName}>{photo.filename}</div>
 
                 <div className={styles.itemCoords}>
-                  {photo.lat.toFixed(6)}, {photo.lng.toFixed(6)}
+                  {formatCoordinate(photo.lat)}, {formatCoordinate(photo.lng)}
                 </div>
 
                 {photo.altitude && (

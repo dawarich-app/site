@@ -7,6 +7,7 @@ import styles from './TimelineMap.module.css';
 export default function PhotoMap({ points, onPointClick, selectedPointId }) {
   const { i18n } = useDocusaurusContext();
   const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const formatCoordinate = (value) => value.toLocaleString(htmlLang, { useGrouping: false, minimumFractionDigits: 6, maximumFractionDigits: 6 });
   const mapRef = useRef(null);
   const mapInstanceRef = useRef(null);
   const markersLayerRef = useRef(null);
@@ -173,7 +174,7 @@ export default function PhotoMap({ points, onPointClick, selectedPointId }) {
       content += `<strong style="font-size: 1.05em;">${point.filename}</strong><br><br>`;
     }
 
-    content += `<strong>${copy.coordinates}</strong><br>${point.lat.toFixed(6)}, ${point.lng.toFixed(6)}<br>`;
+    content += `<strong>${copy.coordinates}</strong><br>${formatCoordinate(point.lat)}, ${formatCoordinate(point.lng)}<br>`;
 
     if (point.altitude) {
       const altitude = point.altitude.toLocaleString(htmlLang, { minimumFractionDigits: 1, maximumFractionDigits: 1 });

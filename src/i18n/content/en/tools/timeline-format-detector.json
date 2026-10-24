@@ -1,0 +1,291 @@
+{
+  "h1": "Google Timeline Format Detector",
+  "intro": "Upload any Google Timeline export file to instantly identify its format, see data statistics, and get recommendations for what to do next. All processing happens in your browser.",
+  "privacyTitle": "Privacy First",
+  "privacyBody": "All data processing happens entirely in your browser. Your location data never leaves your device and is not sent to any server.",
+  "preCta": "Not sure what to do with your Google Timeline data? Upload your file above to find out, or explore [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-format-detector) for automatic location tracking with full data ownership.",
+  "faqTitle": "Frequently Asked Questions",
+  "homeLabel": "Home",
+  "toolsLabel": "Free Tools",
+  "meta": {
+    "title": "Google Timeline Format Detector - Identify Your Location Export File Type",
+    "description": "Free tool to detect your Google Timeline export format. Upload any Google Takeout location file to instantly see the format name, point count, date range, file size, and data quality. All processing in your browser.",
+    "keywords": "google timeline format, what format is my google export, google takeout location file type, google location history format, google timeline file detector, google maps timeline export format, google takeout json format, location history file type, google timeline data format, identify google export file",
+    "featureList": [
+      "Detect Google Timeline export format instantly",
+      "Support for all 6 Google Timeline formats",
+      "Show point count, path count, and date range",
+      "Data quality indicators",
+      "Privacy-first - all processing in browser",
+      "No data sent to any server"
+    ]
+  },
+  "howTo": {
+    "name": "How to Identify Your Google Timeline Export Format",
+    "description": "Upload your Google Timeline export file to instantly detect its format, see statistics, and get recommendations for what to do next.",
+    "steps": [
+      {
+        "name": "Export your Google Timeline data",
+        "text": "Visit takeout.google.com, select Location History (Timeline), and export. Alternatively, on Android: Google Maps > Settings > Location > Timeline > Export. On iOS: Google Maps > Settings > Personal Content > Export Timeline data."
+      },
+      {
+        "name": "Upload your JSON file",
+        "text": "Drag and drop your exported Google Timeline JSON file into the detector. The tool automatically identifies the format within seconds."
+      },
+      {
+        "name": "Review your results",
+        "text": "See the detected format, point count, path count, date range, file size, and data quality indicators. Then follow the recommended tool links based on your format."
+      }
+    ],
+    "tool": "Google Timeline Format Detector by Dawarich"
+  },
+  "exportData": {
+    "title": "How to Get Your Timeline Data",
+    "intro": "You can export your Google Timeline data using one of the following methods. If one of them doesn't work, try another.",
+    "warning": "Unfortunately, some users might not be able to export their location data due to how Google went with transition to new location storage policies.",
+    "methods": [
+      {
+        "title": "Google Takeout:",
+        "steps": [
+          "Visit [takeout.google.com](https://takeout.google.com/) → Choose Location History (Timeline) → Export",
+          "This way might not work for everyone because Google changed the way location data is being stored and exported. More details in our [blog](https://dawarich.app/blog/migrating-from-google-location-history-to-dawarich)."
+        ]
+      },
+      {
+        "title": "On Android:",
+        "steps": [
+          "Open Google Maps → Settings → Location → Location Services → Timeline → Export Timeline"
+        ]
+      },
+      {
+        "title": "On iOS:",
+        "steps": [
+          "Open Google Maps → Settings → Personal Content → Export Timeline data"
+        ]
+      }
+    ]
+  },
+  "formats": {
+    "records": {
+      "title": "Records.json (Raw GPS Data)",
+      "description": "This is the classic Google Takeout export containing raw GPS coordinates in E7 format. It includes every location ping recorded by Google, along with accuracy, altitude, velocity, and device metadata. These files can be very large (100+ MB for years of data)."
+    },
+    "semantic": {
+      "title": "Semantic Location History",
+      "description": "This format contains structured monthly location data with place visits (including addresses and business names) and activity segments (walking, driving, cycling). Files are named like 2022_APRIL.json."
+    },
+    "settings": {
+      "title": "Settings.json (Device Info)",
+      "description": "This file contains device configuration information from your Google Timeline export. It lists devices that contributed location data but does not contain GPS coordinates."
+    },
+    "timelineEdits": {
+      "title": "Timeline Edits",
+      "description": "This format contains edits and corrections made to your Timeline data, including place aggregates and raw signals. It may contain some location points from user modifications."
+    },
+    "semanticSegments": {
+      "title": "Semantic Segments",
+      "description": "This is a parsed version of the location history with semantic segments containing timeline paths. It includes geo-coordinates in string format and time ranges for each segment."
+    },
+    "locationHistory": {
+      "title": "Location History (New Format)",
+      "description": "This is the newer Google Timeline export format from Android/iOS phone exports. It contains visit and activity data with geo-coordinates in string format, timeline paths, and probability scores."
+    },
+    "unknown": {
+      "title": "Unknown Format",
+      "description": "The format of this file could not be identified. It may not be a Google Timeline export, or it could be a format variant not yet supported."
+    }
+  },
+  "relatedTools": [
+    {
+      "title": "Google Timeline Converter",
+      "description": "Convert your Timeline data to GPX, GeoJSON, or KML"
+    },
+    {
+      "title": "Timeline Visualizer",
+      "description": "View your location history on an interactive map"
+    },
+    {
+      "title": "Statistics Analyzer",
+      "description": "Get detailed stats about your location data"
+    },
+    {
+      "title": "File Splitter",
+      "description": "Split large Timeline files into smaller chunks"
+    },
+    {
+      "title": "Data Merger",
+      "description": "Combine multiple Timeline files into one"
+    },
+    {
+      "title": "Mileage Calculator",
+      "description": "Calculate total distance traveled from your data"
+    }
+  ],
+  "results": {
+    "title": "Detection Results",
+    "points": "Points",
+    "paths": "Paths",
+    "fileSize": "File Size",
+    "dateRange": "Date Range",
+    "qualityTitle": "Data Quality",
+    "toolsTitle": "Recommended Tools",
+    "noDates": "No dates found",
+    "noTimestamps": "No timestamp data",
+    "noAccuracy": "No accuracy data",
+    "parseErrorTitle": "Parse Error",
+    "filesAnalyzed": "{count} files analyzed",
+    "totalPoints": "{points} total points",
+    "totalPaths": "{paths} total paths",
+    "parseError": "Could not parse this file: {message}",
+    "timestampCoverage": "{percent}% have timestamps",
+    "accuracyCoverage": "{percent}% have accuracy info"
+  },
+  "fileSize": {
+    "empty": "0 B",
+    "units": [
+      "B",
+      "KB",
+      "MB",
+      "GB"
+    ],
+    "value": "{size} {unit}"
+  },
+  "cta": {
+    "title": "Looking for a Google Timeline Replacement?",
+    "body": "Dawarich is an open-source location tracking platform that gives you full control over your data. Import your Google Timeline export, track ongoing location from your phone, and visualize years of movement history — all self-hosted or in the cloud.",
+    "button": "Try Dawarich Free for 7 Days",
+    "headline": "You analyzed {files} with {formats}. Dawarich handles all of them — import and visualize your location history instantly.",
+    "fileCount": "**{count}** file|**{count}** files",
+    "formatCount": "**{count}** detected format|**{count}** detected formats",
+    "statLabels": {
+      "files": "files",
+      "formats": "formats",
+      "points": "points"
+    }
+  },
+  "faq": [
+    {
+      "q": "What Google Timeline formats does this tool detect?",
+      "a": "This tool detects all six known Google Timeline export formats: Records.json (raw GPS data from Google Takeout), Semantic Location History (monthly files with place visits and activity segments), Settings.json (device information), Timeline Edits (user corrections), Semantic Segments (parsed location history with timeline paths), and Location History (the newer phone-based export format from Android and iOS). The format is identified automatically the moment you upload a file."
+    },
+    {
+      "q": "Is my data safe when I upload it here?",
+      "a": "Yes. All data processing happens entirely in your browser using JavaScript. Your Google Timeline files are never uploaded to any server — they stay on your device the entire time. When you close the tab, the data is gone. The tool is open source, so you can verify exactly what the code does. No accounts, no sign-ups, no tracking."
+    },
+    {
+      "q": "What happened to Google Maps Timeline?",
+      "a": "In late 2024, Google discontinued the web-based version of Google Maps Timeline and moved all location data to on-device storage on your phone. Users were given a limited window to export their data — only the last 90 days were automatically migrated, and older data was deleted unless manually backed up through Google Takeout. Many users lost years of location history. This tool helps you understand what format your exported files are in so you can use them with the right tools."
+    },
+    {
+      "q": "How do I export my Google Timeline data?",
+      "a": "There are three methods: (1) Google Takeout at takeout.google.com — select Location History and export as JSON. This produces Records.json, Semantic Location History files, Settings.json, and Timeline Edits. (2) On Android: Google Maps > Settings > Location > Location Services > Timeline > Export Timeline. This produces the newer Location History format. (3) On iOS: Google Maps > Settings > Personal Content > Export Timeline data. We recommend trying all methods and keeping all exported files."
+    },
+    {
+      "q": "What's the difference between Records.json and Semantic Location History?",
+      "a": "Records.json contains raw GPS coordinates — every single location ping Google recorded, with timestamps, accuracy values, altitude, and velocity. These files are very large and contain the most granular data. Semantic Location History files (named like 2022_APRIL.json) are more structured: they contain place visits with business names and addresses, activity segments (walking, driving, cycling) with routes, and duration information. Records.json is best for precise location data; Semantic files are best for understanding where you went and how you got there."
+    },
+    {
+      "q": "Which tool should I use after detecting my format?",
+      "a": "It depends on what you want to do. To see your data on a map, use the Timeline Visualizer. To convert to GPX/GeoJSON/KML for use in other apps, use the Google Timeline Converter. To understand your travel patterns and statistics, use the Statistics Analyzer. If your file is too large, the File Splitter can break it into smaller pieces. If you have multiple export files, the Data Merger can combine them. For distance calculations, use the Mileage Calculator."
+    },
+    {
+      "q": "Why can't the tool detect my file's format?",
+      "a": "If the tool shows 'Unknown Format', your file may not be a Google Timeline export. Common reasons include: uploading a non-JSON file (the tool only accepts .json files), uploading a Google Takeout file from a different service (like YouTube or Chrome), or uploading a corrupted or truncated file. Make sure you're uploading files from the Location History section of your Google Takeout export."
+    },
+    {
+      "q": "Can I detect the format of multiple files at once?",
+      "a": "Yes. You can upload multiple JSON files simultaneously. The tool will analyze each file individually and display the detected format, point count, path count, date range, and data quality for every file. This is useful when you have a full Google Takeout export with multiple files (Records.json, Semantic files, Settings.json, etc.)."
+    }
+  ],
+  "cards": [
+    {
+      "title": "What Is a Google Timeline Format Detector?",
+      "paragraphs": [
+        "When you export your Google Timeline data through Google Takeout or your phone, you get JSON files in several possible formats. Each format has a different structure, different data fields, and is suited for different tools. This detector reads your file, identifies the format, and tells you exactly what you're working with — so you know which conversion tool, visualizer, or analysis method to use.",
+        "The detection happens instantly in your browser. Your data never leaves your device."
+      ]
+    },
+    {
+      "title": "Google Timeline Export Formats Explained",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Records.json** — Raw GPS data in E7 coordinate format with timestamps, accuracy, altitude, and velocity. The largest and most detailed format"
+        },
+        {
+          "body": "**Semantic Location History** — Monthly files with place visits (addresses, names) and activity segments (walking, driving)"
+        },
+        {
+          "body": "**Location History (New)** — Phone-based export with visits, activities, and geo-coordinates in string format"
+        },
+        {
+          "body": "**Semantic Segments** — Timeline paths with geo-coordinates and time ranges"
+        },
+        {
+          "body": "**Settings.json** — Device metadata, no GPS coordinates"
+        },
+        {
+          "body": "**Timeline Edits** — User corrections and place aggregates"
+        }
+      ]
+    },
+    {
+      "title": "Why Does the Format Matter?",
+      "paragraphs": [
+        "Different formats contain different types of data. Records.json has the most precise location coordinates but no place names. Semantic Location History has addresses and activity types but fewer raw GPS points. The newer phone export format combines both but uses a different coordinate encoding.",
+        "Knowing your format helps you choose the right tool: converters need to know the input format, visualizers handle different fields, and statistics analyzers extract different metrics depending on the format."
+      ]
+    },
+    {
+      "title": "What Happened to Google Maps Timeline?",
+      "paragraphs": [
+        "In late 2024, Google shut down the web version of Google Maps Timeline and moved all location data to on-device storage. Only the last 90 days were migrated — older data was deleted unless users manually backed it up. Many people [lost years of location history](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/) in the transition.",
+        "If you have exported files, this detector helps you understand what you've got. For a long-term replacement, [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-format-detector) offers self-hosted and cloud-based location tracking with full data ownership."
+      ]
+    },
+    {
+      "title": "Data Quality Indicators",
+      "paragraphs": [
+        "The detector shows two key quality metrics for your data:"
+      ],
+      "items": [
+        {
+          "body": "**Timestamp coverage** — What percentage of data points include a timestamp. High coverage means you can filter by date, calculate travel times, and build timelines"
+        },
+        {
+          "body": "**Accuracy coverage** — What percentage of data points include GPS accuracy values. This helps you assess how precise the location data is (lower accuracy values mean more precise GPS readings)"
+        }
+      ],
+      "footer": [
+        "Records.json typically has the highest quality scores, while Semantic Location History prioritizes structured data over raw GPS precision."
+      ]
+    },
+    {
+      "title": "Related Tools",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Timeline Visualizer](/tools/timeline-visualizer) — View your location history on an interactive map"
+        },
+        {
+          "body": "[Google Timeline Converter](/tools/google-timeline-converter) — Convert to GPX, GeoJSON, or KML"
+        },
+        {
+          "body": "[Statistics Analyzer](/tools/timeline-statistics) — Get detailed stats about your data"
+        },
+        {
+          "body": "[File Splitter](/tools/gps-file-splitter) — Split large files into smaller chunks"
+        },
+        {
+          "body": "[Data Merger](/tools/timeline-merger) — Combine multiple Timeline files"
+        },
+        {
+          "body": "[Mileage Calculator](/tools/timeline-mileage-calculator) — Calculate total distance traveled"
+        }
+      ],
+      "footer": [
+        "Read more: [Migrating from Google Location History](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}
