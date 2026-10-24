@@ -10,16 +10,21 @@ import { parseFile } from '@site/src/utils/heatmapUtils';
 import { fetchDemoRoutePoints } from '@site/src/utils/demoPosterRoute';
 import { pointsToTrackGeoJSON } from '@site/src/utils/posterTrack';
 import { detectFormat } from '@site/src/utils/timelineParser';
+import { interpolate } from '@docusaurus/Interpolate';
+import { usePluralForm } from '@docusaurus/theme-common';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import RichText, { toPlainText } from '@site/src/i18n/RichText';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
+import content from '@locale-content/tools/map-poster-maker.json';
 import styles from './map-poster-maker.module.css';
 
 const LazyPosterStudioEditor = React.lazy(
   () => import('@site/src/components/PosterStudio/PosterStudioEditor'),
 );
 
-const pageTitle = 'Free Map Poster Maker - Route Posters from GPS Files';
+const pageTitle = content.meta.title;
 const pageDescription =
-  'Turn GPX, Google Timeline, KML, FIT or TCX files into a custom map poster in your browser. 17 themes, 22 layouts, free PNG and PDF export, optional prints.';
-const pageUrl = 'https://dawarich.app/tools/map-poster-maker/';
+  content.meta.description;
 const imageUrl = 'https://dawarich.app/img/meta-image.png';
 
 const MAX_FILE_BYTES = 100 * 1024 * 1024;
@@ -33,44 +38,13 @@ const BERLIN_FALLBACK_BOUNDS = [
 
 const EMPTY_TRACK = { type: 'FeatureCollection', features: [] };
 
-const faqItems = [
-  {
-    question: 'How do I make a poster from my GPS data?',
-    answer:
-      'The studio opens with a demo route through Berlin so you can try everything immediately. Drop your own GPX, Google Timeline JSON, GeoJSON, KML, KMZ, FIT or TCX file into the upload area to replace it, pick one of 17 map themes and 22 layouts, add a title, and download the finished poster as PNG or print-ready PDF.',
-  },
-  {
-    question: 'Is my location data private?',
-    answer:
-      "Your file is parsed entirely in your browser and never uploaded to any server. To draw the map, tiles for the area your data covers are requested from Dawarich's tile server — that discloses the rough bounding box you are looking at, the same as any online map. Two optional actions upload data: ordering a print uploads the finished poster PDF to Dawarich's print service, and \"Save to my account\" uploads your file during signup.",
-  },
-  {
-    question: 'Is it free? Do I need an account?',
-    answer:
-      'Yes, free — no account, no signup, no watermark. PNG and PDF downloads are unlimited. Only ordering a physical print costs money, and creating a Dawarich account is optional.',
-  },
-  {
-    question: 'What resolution are the exported posters?',
-    answer:
-      'Print layouts export at up to 300 DPI with the physical size stamped into the PNG (pHYs) or PDF page. Social and wallpaper layouts export at their exact pixel dimensions, e.g. 1080 × 1920 for a story or 3840 × 2160 for a 4K wallpaper. Very large sizes are automatically stepped down to what your device’s graphics memory can render, and the notice tells you when that happens.',
-  },
-  {
-    question: 'Can I order my poster as a physical print?',
-    answer:
-      'Yes — pick one of three print sizes (30 × 40, 50 × 70 or 70 × 100 cm), and the studio prepares a 300 DPI PDF and uploads it to Dawarich’s print service. Checkout runs on Stripe, prints ship on 200 gsm matte paper with free EU shipping. The final price is confirmed at checkout.',
-  },
-  {
-    question: 'Which files work with the poster maker?',
-    answer:
-      'GPX tracks, Google Timeline exports (Records.json, Semantic Location History and phone Takeout formats), GeoJSON, KML, KMZ, FIT and TCX. You can drop several files at once — they are combined into one track, split wherever there is a gap of more than an hour.',
-  },
-];
+const faqItems = content.faq;
 
-function jsonLdWebApplication() {
+function jsonLdWebApplication(pageUrl) {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
-    name: 'Map Poster Maker',
+    name: content.appName,
     url: pageUrl,
     description: pageDescription,
     applicationCategory: 'DesignApplication',
@@ -83,27 +57,27 @@ function jsonLdHowTo() {
   return {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
-    name: 'How to Create a Map Poster from Your GPS Data',
+    name: content.howTo.name,
     description:
-      'Turn a GPS track or your Google Timeline history into a printable map poster, free and in the browser.',
+      content.howTo.description,
     step: [
       {
         '@type': 'HowToStep',
-        name: 'Upload a location file',
-        text: 'The studio opens with a Berlin demo route. Drag and drop a GPX, Google Timeline JSON, GeoJSON, KML, KMZ, FIT or TCX file to replace it with your own track.',
+        name: content.howTo.steps[0].name,
+        text: content.howTo.steps[0].text,
       },
       {
         '@type': 'HowToStep',
-        name: 'Compose your poster',
-        text: 'Pick one of 17 map themes and 22 layouts, add a title and subtitle, choose a font, and fine-tune the track color, opacity and width. Pan and zoom the preview to frame your route.',
+        name: content.howTo.steps[1].name,
+        text: content.howTo.steps[1].text,
       },
       {
         '@type': 'HowToStep',
-        name: 'Export or order a print',
-        text: 'Download the poster as PNG or print-ready PDF at up to 300 DPI, or order a physical print in 30×40, 50×70 or 70×100 cm.',
+        name: content.howTo.steps[2].name,
+        text: content.howTo.steps[2].text,
       },
     ],
-    tool: { '@type': 'HowToTool', name: 'Map Poster Maker by Dawarich' },
+    tool: { '@type': 'HowToTool', name: content.howTo.tool },
   };
 }
 
@@ -113,25 +87,31 @@ function jsonLdFaq() {
     '@type': 'FAQPage',
     mainEntity: faqItems.map((item) => ({
       '@type': 'Question',
-      name: item.question,
-      acceptedAnswer: { '@type': 'Answer', text: item.answer },
+      name: toPlainText(item.q),
+      acceptedAnswer: { '@type': 'Answer', text: toPlainText(item.a) },
     })),
   };
 }
 
-function jsonLdBreadcrumbs() {
+function jsonLdBreadcrumbs(pageUrl, homeUrl, toolsUrl) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://dawarich.app' },
-      { '@type': 'ListItem', position: 2, name: 'Free Tools', item: 'https://dawarich.app/tools' },
-      { '@type': 'ListItem', position: 3, name: 'Map Poster Maker', item: pageUrl },
+      { '@type': 'ListItem', position: 1, name: content.homeLabel, item: homeUrl },
+      { '@type': 'ListItem', position: 2, name: content.toolsLabel, item: toolsUrl },
+      { '@type': 'ListItem', position: 3, name: content.appName, item: pageUrl },
     ],
   };
 }
 
 export default function MapPosterMaker() {
+  const { i18n } = useDocusaurusContext();
+  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const { selectMessage } = usePluralForm();
+  const pageUrl = useLocalizedUrl('/tools/map-poster-maker/');
+  const homeUrl = useLocalizedUrl('/');
+  const toolsUrl = useLocalizedUrl('/tools/');
   const [files, setFiles] = useState([]);
   const [points, setPoints] = useState([]);
   const [showDemo, setShowDemo] = useState(true);
@@ -181,7 +161,7 @@ export default function MapPosterMaker() {
       const nextPoints = [...points];
       for (const file of newFiles) {
         if (file.size > MAX_FILE_BYTES) {
-          setError(`${file.name} is larger than 100 MB — split it first (try the GPS File Splitter).`);
+          setError(interpolate(content.errors.sizeError, { fileName: file.name }));
           continue;
         }
         try {
@@ -197,7 +177,7 @@ export default function MapPosterMaker() {
           nextPoints.push(...filePoints);
           nextFiles.push({ name: file.name, pointCount: filePoints.length, blob: file, format });
         } catch (parseError) {
-          setError(`Error parsing ${file.name}: ${parseError.message}`);
+          setError(interpolate(content.errors.parseError, { fileName: file.name, message: parseError.message }));
         }
       }
       if (nextFiles.length > files.length) {
@@ -246,9 +226,8 @@ export default function MapPosterMaker() {
         <meta name="description" content={pageDescription} />
         <meta
           name="keywords"
-          content="map poster maker, route poster, GPX poster, city map poster, Google Timeline poster, running route poster, custom map print, map wall art, GPS art"
+          content={content.meta.keywords}
         />
-        <link rel="canonical" href={pageUrl} />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content={pageUrl} />
@@ -262,23 +241,22 @@ export default function MapPosterMaker() {
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={imageUrl} />
 
-        <script type="application/ld+json">{JSON.stringify(jsonLdWebApplication())}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdWebApplication(pageUrl))}</script>
         <script type="application/ld+json">{JSON.stringify(jsonLdHowTo())}</script>
         <script type="application/ld+json">{JSON.stringify(jsonLdFaq())}</script>
-        <script type="application/ld+json">{JSON.stringify(jsonLdBreadcrumbs())}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdBreadcrumbs(pageUrl, homeUrl, toolsUrl))}</script>
       </Head>
       <main>
         <div className={styles.container}>
           <div className={styles.header}>
-            <h1>Anyone can hang a map poster of Berlin. Only you have your route.</h1>
+            <h1>{content.h1}</h1>
             <p>
-              The poster below is the demo — one month of getting around Berlin. Drop any GPX,
-              Google Timeline, KML, FIT or TCX file and it becomes a map nobody else can hang —
-              your rides, your runs, your road trips. About two minutes, no account.
+              {content.intro}
             </p>
             <p className={styles.valueStrip}>
-              17 map themes · 22 formats, A5 to A0 and 4K · 300 DPI PNG &amp; PDF · €0 · no
-              watermark
+              {interpolate(content.valueStrip, { price: new Intl.NumberFormat(htmlLang, {
+                style: 'currency', currency: 'EUR', minimumFractionDigits: 0, maximumFractionDigits: 0,
+              }).format(0) })}
             </p>
           </div>
 
@@ -286,8 +264,9 @@ export default function MapPosterMaker() {
             {uploadedTrack ? (
               <div className={styles.toolbarStatus}>
                 <span className={styles.studioBarLabel}>
-                  {files.length} file{files.length === 1 ? '' : 's'} ·{' '}
-                  {points.length.toLocaleString()} points
+                  {interpolate(selectMessage(files.length, content.toolbar.fileSummary), {
+                    count: files.length.toLocaleString(htmlLang), points: points.length.toLocaleString(htmlLang),
+                  })}
                 </span>
                 <button
                   type="button"
@@ -295,7 +274,7 @@ export default function MapPosterMaker() {
                   data-testid="poster-start-over"
                   onClick={handleClear}
                 >
-                  Start over
+                  {content.toolbar.startOver}
                 </button>
               </div>
             ) : (
@@ -306,7 +285,7 @@ export default function MapPosterMaker() {
                   checked={showDemo}
                   onChange={(event) => setShowDemo(event.target.checked)}
                 />
-                <span>Show demo data</span>
+                <span>{content.toolbar.demoLabel}</span>
               </label>
             )}
 
@@ -333,14 +312,14 @@ export default function MapPosterMaker() {
               </svg>
               <span className={styles.dropText}>
                 <span className={styles.dropTitle}>
-                  {uploadedTrack ? 'Add more files' : 'Drop your location file here or click to browse'}
+                  {uploadedTrack ? content.upload.addFiles : content.upload.dropFiles}
                 </span>
                 <span className={styles.supportedFormats}>
-                  GPX, FIT, TCX, GeoJSON, KML, KMZ, Google Timeline JSON
+                  {content.upload.formats}
                 </span>
               </span>
               <input
-                aria-label="Choose files to make a poster from"
+                aria-label={content.upload.inputLabel}
                 type="file"
                 className={styles.fileInput}
                 accept=".gpx,.fit,.tcx,.geojson,.json,.kml,.kmz"
@@ -352,7 +331,7 @@ export default function MapPosterMaker() {
             </div>
           </div>
 
-          {isLoading && <p className={styles.loadingNote}>Processing files…</p>}
+          {isLoading && <p className={styles.loadingNote}>{content.upload.processing}</p>}
           {error && (
             <p className={styles.errorMessage} role="alert">
               {error}
@@ -360,20 +339,19 @@ export default function MapPosterMaker() {
           )}
           {files.length > 0 && !uploadedTrack && !isLoading && (
             <p className={styles.errorMessage}>
-              No plottable points found in the uploaded files — check that they contain location
-              data.
+              {content.errors.emptyError}
             </p>
           )}
           {demoError && !uploadedTrack && showDemo && (
             <p className={styles.errorMessage}>
-              The demo route failed to load — drop your own file to start composing.
+              {content.errors.demoError}
             </p>
           )}
 
           <section className={styles.studioSection}>
-            <BrowserOnly fallback={<div className={styles.loadingNote}>Loading the studio…</div>}>
+            <BrowserOnly fallback={<div className={styles.loadingNote}>{content.loadingStudio}</div>}>
               {() => (
-                <Suspense fallback={<div className={styles.loadingNote}>Loading the studio…</div>}>
+                <Suspense fallback={<div className={styles.loadingNote}>{content.loadingStudio}</div>}>
                   <LazyPosterStudioEditor
                     trackGeojson={activeTrack}
                     fallbackBounds={BERLIN_FALLBACK_BOUNDS}
@@ -385,8 +363,7 @@ export default function MapPosterMaker() {
             {files.length > 0 && uploadedTrack && (
               <div className={styles.saveSection}>
                 <p className={styles.saveIntro}>
-                  Want this data in your Dawarich account too? We&apos;ll import it during signup —
-                  no second upload needed.
+                  {content.saveIntro}
                 </p>
                 <SaveToAccountButton
                   toolName="map-poster-maker"
@@ -399,12 +376,12 @@ export default function MapPosterMaker() {
           </section>
 
           <div className={styles.faqSection}>
-            <h2>Frequently Asked Questions</h2>
+            <h2>{content.faqTitle}</h2>
             <div className={styles.faqList}>
               {faqItems.map((item) => (
-                <details key={item.question} className={styles.faqItem}>
-                  <summary className={styles.faqQuestion}>{item.question}</summary>
-                  <p className={styles.faqAnswer}>{item.answer}</p>
+                <details key={item.q} className={styles.faqItem}>
+                  <summary className={styles.faqQuestion}>{item.q}</summary>
+                  <p className={styles.faqAnswer}><RichText text={item.a} /></p>
                 </details>
               ))}
             </div>
@@ -414,8 +391,8 @@ export default function MapPosterMaker() {
             toolName="map-poster-maker"
             headline={
               uploadedTrack
-                ? `Your poster is built from <strong>${points.length.toLocaleString()}</strong> GPS points from one file. Dawarich records every route automatically — any month of your history becomes a poster. 7-day free trial, 14-day refund, cancel anytime.`
-                : 'One file makes one poster. Dawarich records every route automatically — any month of your history becomes a poster. 7-day free trial, 14-day refund, cancel anytime.'
+                ? <RichText text={interpolate(content.cta.headline, { points: points.length.toLocaleString(htmlLang) })} />
+                : content.cta.fallback
             }
           />
           <RelatedTools slug="map-poster-maker" />

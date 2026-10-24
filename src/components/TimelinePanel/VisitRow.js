@@ -1,25 +1,30 @@
 import React from 'react';
+import { interpolate } from '@docusaurus/Interpolate';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import content from '@locale-content/components/VisitRow.json';
 import styles from './entries.module.css';
 
 const ALL_DAY_THRESHOLD_MIN = 23 * 60;
 
-function formatHHMM(iso) {
+function formatHHMM(iso, htmlLang) {
   if (!iso) return '';
   const d = new Date(iso);
-  return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+  return d.toLocaleTimeString(htmlLang, { hour: '2-digit', minute: '2-digit', hourCycle: 'h23' });
 }
 
-function formatDwell(minutes) {
+function formatDwell(minutes, htmlLang) {
   const m = Math.max(0, Math.round(minutes));
-  if (m <= 0) return '0m';
+  if (m <= 0) return content.duration.zero;
   const h = Math.floor(m / 60);
   const mm = m % 60;
-  if (h && mm) return `${h}h ${mm}m`;
-  if (h) return `${h}h`;
-  return `${m}m`;
+  if (h && mm) return interpolate(content.duration.hoursMinutes, { hours: h.toLocaleString(htmlLang), minutes: mm.toLocaleString(htmlLang) });
+  if (h) return interpolate(content.duration.hours, { hours: h.toLocaleString(htmlLang) });
+  return interpolate(content.duration.minutes, { minutes: m.toLocaleString(htmlLang) });
 }
 
 export default function VisitRow({ entry, onSelect, onHover, onUnhover, isSelected }) {
+  const { i18n } = useDocusaurusContext();
+  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
   const isAllDay = entry.duration >= ALL_DAY_THRESHOLD_MIN;
   const className = `${styles.visitRow} ${isSelected ? styles.visitRowSelected : ''}`.trim();
 
@@ -36,17 +41,17 @@ export default function VisitRow({ entry, onSelect, onHover, onUnhover, isSelect
           onSelect(entry.visitId);
         }
       }}
-      aria-label={`${entry.name} · ${formatHHMM(entry.startedAt)}`}
+      aria-label={`${entry.name} · ${formatHHMM(entry.startedAt, htmlLang)}`}
       aria-pressed={isSelected}
       data-testid="visit-row"
     >
       <div className={styles.visitTime}>
         {isAllDay ? (
-          <span style={{ fontSize: '0.75rem' }}>All day</span>
+          <span style={{ fontSize: '0.75rem' }}>{content.allDay}</span>
         ) : (
           <>
-            <div className={styles.visitTimeStart}>{formatHHMM(entry.startedAt)}</div>
-            <div className={styles.visitTimeEnd}>{formatHHMM(entry.endedAt)}</div>
+            <div className={styles.visitTimeStart}>{formatHHMM(entry.startedAt, htmlLang)}</div>
+            <div className={styles.visitTimeEnd}>{formatHHMM(entry.endedAt, htmlLang)}</div>
           </>
         )}
       </div>
@@ -56,7 +61,7 @@ export default function VisitRow({ entry, onSelect, onHover, onUnhover, isSelect
       <div className={styles.visitContent}>
         <div className={styles.visitTitle}>{entry.name}</div>
         <div className={styles.visitMeta}>
-          {formatDwell(entry.duration)} · {entry.pointCount} pts
+          {interpolate(content.summary, { duration: formatDwell(entry.duration, htmlLang), points: entry.pointCount.toLocaleString(htmlLang) })}
         </div>
       </div>
     </button>

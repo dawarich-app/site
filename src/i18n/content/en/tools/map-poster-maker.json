@@ -1,0 +1,83 @@
+{
+  "h1": "Anyone can hang a map poster of Berlin. Only you have your route.",
+  "intro": "The poster below is the demo — one month of getting around Berlin. Drop any GPX, Google Timeline, KML, FIT or TCX file and it becomes a map nobody else can hang — your rides, your runs, your road trips. About two minutes, no account.",
+  "saveIntro": "Want this data in your Dawarich account too? We'll import it during signup — no second upload needed.",
+  "appName": "Map Poster Maker",
+  "homeLabel": "Home",
+  "toolsLabel": "Free Tools",
+  "loadingStudio": "Loading the studio…",
+  "valueStrip": "17 map themes · 22 formats, A5 to A0 and 4K · 300 DPI PNG & PDF · {price} · no watermark",
+  "meta": {
+    "title": "Free Map Poster Maker - Route Posters from GPS Files",
+    "description": "Turn GPX, Google Timeline, KML, FIT or TCX files into a custom map poster in your browser. 17 themes, 22 layouts, free PNG and PDF export, optional prints.",
+    "keywords": "map poster maker, route poster, GPX poster, city map poster, Google Timeline poster, running route poster, custom map print, map wall art, GPS art"
+  },
+  "howTo": {
+    "name": "How to Create a Map Poster from Your GPS Data",
+    "description": "Turn a GPS track or your Google Timeline history into a printable map poster, free and in the browser.",
+    "steps": [
+      {
+        "name": "Upload a location file",
+        "text": "The studio opens with a Berlin demo route. Drag and drop a GPX, Google Timeline JSON, GeoJSON, KML, KMZ, FIT or TCX file to replace it with your own track."
+      },
+      {
+        "name": "Compose your poster",
+        "text": "Pick one of 17 map themes and 22 layouts, add a title and subtitle, choose a font, and fine-tune the track color, opacity and width. Pan and zoom the preview to frame your route."
+      },
+      {
+        "name": "Export or order a print",
+        "text": "Download the poster as PNG or print-ready PDF at up to 300 DPI, or order a physical print in 30×40, 50×70 or 70×100 cm."
+      }
+    ],
+    "tool": "Map Poster Maker by Dawarich"
+  },
+  "faq": [
+    {
+      "q": "How do I make a poster from my GPS data?",
+      "a": "The studio opens with a demo route through Berlin so you can try everything immediately. Drop your own GPX, Google Timeline JSON, GeoJSON, KML, KMZ, FIT or TCX file into the upload area to replace it, pick one of 17 map themes and 22 layouts, add a title, and download the finished poster as PNG or print-ready PDF."
+    },
+    {
+      "q": "Is my location data private?",
+      "a": "Your file is parsed entirely in your browser and never uploaded to any server. To draw the map, tiles for the area your data covers are requested from Dawarich's tile server — that discloses the rough bounding box you are looking at, the same as any online map. Two optional actions upload data: ordering a print uploads the finished poster PDF to Dawarich's print service, and \"Save to my account\" uploads your file during signup."
+    },
+    {
+      "q": "Is it free? Do I need an account?",
+      "a": "Yes, free — no account, no signup, no watermark. PNG and PDF downloads are unlimited. Only ordering a physical print costs money, and creating a Dawarich account is optional."
+    },
+    {
+      "q": "What resolution are the exported posters?",
+      "a": "Print layouts export at up to 300 DPI with the physical size stamped into the PNG (pHYs) or PDF page. Social and wallpaper layouts export at their exact pixel dimensions, e.g. 1080 × 1920 for a story or 3840 × 2160 for a 4K wallpaper. Very large sizes are automatically stepped down to what your device’s graphics memory can render, and the notice tells you when that happens."
+    },
+    {
+      "q": "Can I order my poster as a physical print?",
+      "a": "Yes — pick one of three print sizes (30 × 40, 50 × 70 or 70 × 100 cm), and the studio prepares a 300 DPI PDF and uploads it to Dawarich’s print service. Checkout runs on Stripe, prints ship on 200 gsm matte paper with free EU shipping. The final price is confirmed at checkout."
+    },
+    {
+      "q": "Which files work with the poster maker?",
+      "a": "GPX tracks, Google Timeline exports (Records.json, Semantic Location History and phone Takeout formats), GeoJSON, KML, KMZ, FIT and TCX. You can drop several files at once — they are combined into one track, split wherever there is a gap of more than an hour."
+    }
+  ],
+  "toolbar": {
+    "startOver": "Start over",
+    "demoLabel": "Show demo data",
+    "fileSummary": "{count} file · {points} points|{count} files · {points} points"
+  },
+  "upload": {
+    "formats": "GPX, FIT, TCX, GeoJSON, KML, KMZ, Google Timeline JSON",
+    "processing": "Processing files…",
+    "addFiles": "Add more files",
+    "dropFiles": "Drop your location file here or click to browse",
+    "inputLabel": "Choose files to make a poster from"
+  },
+  "errors": {
+    "emptyError": "No plottable points found in the uploaded files — check that they contain location data.",
+    "demoError": "The demo route failed to load — drop your own file to start composing.",
+    "sizeError": "{fileName} is larger than 100 MB — split it first (try the GPS File Splitter).",
+    "parseError": "Error parsing {fileName}: {message}"
+  },
+  "cta": {
+    "headline": "Your poster is built from **{points}** GPS points from one file. Dawarich records every route automatically — any month of your history becomes a poster. 7-day free trial, 14-day refund, cancel anytime.",
+    "fallback": "One file makes one poster. Dawarich records every route automatically — any month of your history becomes a poster. 7-day free trial, 14-day refund, cancel anytime."
+  },
+  "faqTitle": "Frequently Asked Questions"
+}

@@ -8,11 +8,16 @@ import { timelineToConverterPoints } from '@site/src/utils/timelineToFormat';
 import { toGPX } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import RelatedTools from '@site/src/components/RelatedTools';
+import { interpolate } from '@docusaurus/Interpolate';
+import { usePluralForm } from '@docusaurus/theme-common';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import RichText, { SmartLink, toPlainText } from '@site/src/i18n/RichText';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
+import content from '@locale-content/tools/timeline-merger.json';
 import styles from './timeline-merger.module.css';
 
-const pageTitle = "Google Timeline Data Merger - Combine Location History Exports";
-const pageDescription = "Free tool to merge multiple Google Timeline exports into one file. Smart deduplication removes overlapping data points. Combine Records.json, Semantic History, and phone exports. Privacy-first.";
-const pageUrl = "https://dawarich.app/tools/timeline-merger/";
+const pageTitle = content.meta.title;
+const pageDescription = content.meta.description;
 const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 const FILE_COLORS = [
@@ -28,40 +33,11 @@ const FILE_COLORS = [
   '#84cc16',
 ];
 
-const faqItems = [
-  {
-    question: "Is it safe to upload my Google Timeline data?",
-    answer: "Yes. All data processing happens entirely in your browser using JavaScript. Your location history files are never uploaded to any server. The files are read locally, parsed, merged, and exported without any network requests. When you close the tab, the data is gone. The tool is also open source, so you can verify the code."
-  },
-  {
-    question: "How does deduplication work?",
-    answer: "The deduplication algorithm sorts all points by timestamp, then compares each point to the previous one. If two consecutive points are within both the distance threshold (default 50 meters) and time threshold (default 60 seconds), the duplicate is removed. When a duplicate is found, the point with more metadata (such as place names or activity types) is kept. You can adjust both thresholds using the sliders before merging."
-  },
-  {
-    question: "Can I merge different format types?",
-    answer: "Yes. The merger supports all Google Timeline export formats: Records.json from Google Takeout, Semantic Location History monthly files (like 2022_APRIL.json), and the newer phone-based Timeline exports with semanticSegments. You can mix and match any combination of these formats. The parser auto-detects each file's format and normalizes the data before merging."
-  },
-  {
-    question: "What happens to overlapping data?",
-    answer: "Overlapping data is handled by the deduplication step. When two files cover the same time period, you will likely have duplicate location points recorded at the same time and place. The merger identifies these duplicates based on proximity in both space and time, then keeps only one copy of each point (preferring the copy with richer metadata). The overlap report shows you exactly which files overlap and by how many days."
-  },
-  {
-    question: "Will merging lose any of my data?",
-    answer: "No meaningful data is lost. The deduplication only removes true duplicates, points that are essentially the same location recorded at the same time from multiple export sources. All unique points, place visits, activity segments, and paths from every file are preserved in the merged output. If you want to be safe, you can set the distance threshold to 0 to disable deduplication entirely."
-  },
-  {
-    question: "What export formats are available?",
-    answer: "You can export the merged data as JSON (an array of all deduplicated location points with full metadata) or as GPX (a standard GPS format compatible with most mapping applications, fitness trackers, and GIS tools). The JSON export preserves all original metadata like place names, addresses, and activity types. The GPX export converts place visits to waypoints and location records to track points."
-  },
-  {
-    question: "How many files can I merge at once?",
-    answer: "There is no hard limit on the number of files. The tool has been tested with over 10 files simultaneously, including large Records.json files with hundreds of thousands of points. Processing time depends on the total number of points across all files and your device's processing power. A typical merge of 3-5 files with a combined 500,000 points takes 10-30 seconds on a modern computer."
-  }
-];
+const faqItems = content.faq;
 
-function formatDate(date) {
-  if (!date) return 'N/A';
-  return new Date(date).toLocaleDateString('en-US', {
+function formatDate(date, htmlLang) {
+  if (!date) return content.results.noDate;
+  return new Date(date).toLocaleDateString(htmlLang, {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
@@ -94,6 +70,12 @@ function downloadFile(content, filename, mimeType) {
 }
 
 export default function TimelineMerger() {
+  const { i18n } = useDocusaurusContext();
+  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const { selectMessage } = usePluralForm();
+  const pageUrl = useLocalizedUrl('/tools/timeline-merger/');
+  const homeUrl = useLocalizedUrl('/');
+  const toolsUrl = useLocalizedUrl('/tools/');
   const [parsedFiles, setParsedFiles] = useState([]);
   const [distanceThreshold, setDistanceThreshold] = useState(50);
   const [timeThreshold, setTimeThreshold] = useState(60);
@@ -126,13 +108,13 @@ export default function TimelineMerger() {
           });
         } catch (err) {
           console.error(`Error parsing ${file.filename}:`, err);
-          setError(`Error parsing ${file.filename}: ${err.message}`);
+          setError(interpolate(content.results.parseError, { fileName: file.filename, message: err.message }));
         }
       }
 
       setParsedFiles(parsed);
     } catch (err) {
-      setError(`Error processing files: ${err.message}`);
+      setError(interpolate(content.results.processingError, { message: err.message }));
     } finally {
       setIsParsing(false);
     }
@@ -161,7 +143,7 @@ export default function TimelineMerger() {
 
       setMergeResult(result);
     } catch (err) {
-      setError(`Error merging files: ${err.message}`);
+      setError(interpolate(content.results.mergeError, { message: err.message }));
     } finally {
       setIsMerging(false);
     }
@@ -216,8 +198,7 @@ export default function TimelineMerger() {
         {/* Primary Meta Tags */}
         <meta name="title" content={pageTitle} />
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="merge google timeline exports, combine location history files, google timeline data recovery, merge Records.json, combine Google Takeout location, merge semantic location history, Google Timeline merger, location history deduplication, merge GPS data" />
-        <link rel="canonical" href={pageUrl} />
+        <meta name="keywords" content={content.meta.keywords} />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
@@ -236,7 +217,7 @@ export default function TimelineMerger() {
 
         {/* Additional Meta Tags */}
         <meta name="author" content="Dawarich" />
-        <meta name="language" content="English" />
+        <meta name="language" content={htmlLang} />
         <meta name="revisit-after" content="7 days" />
 
         {/* JSON-LD Structured Data - WebApplication */}
@@ -244,7 +225,7 @@ export default function TimelineMerger() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "Google Timeline Data Merger",
+            "name": content.h1,
             "url": pageUrl,
             "description": pageDescription,
             "applicationCategory": "UtilityApplication",
@@ -254,16 +235,7 @@ export default function TimelineMerger() {
               "price": "0",
               "priceCurrency": "USD"
             },
-            "featureList": [
-              "Merge multiple Google Timeline exports into one file",
-              "Smart deduplication removes overlapping data points",
-              "Support for Records.json, Semantic Location History, and phone exports",
-              "Adjustable distance and time thresholds for deduplication",
-              "Visual timeline overlap report",
-              "Export as JSON or GPX",
-              "Privacy-first - all processing in browser",
-              "No data sent to any server"
-            ]
+            "featureList": content.meta.featureList
           })}
         </script>
 
@@ -272,38 +244,38 @@ export default function TimelineMerger() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "HowTo",
-            "name": "How to Merge Google Timeline Exports",
-            "description": "Combine multiple Google Timeline export files into a single unified dataset with smart deduplication.",
+            "name": content.howTo.name,
+            "description": content.howTo.description,
             "step": [
               {
                 "@type": "HowToStep",
-                "name": "Export your Google Timeline data",
-                "text": "Use Google Takeout, Android, or iOS to export your Google Timeline data. Export using multiple methods if possible to ensure you have all your data."
+                "name": content.howTo.steps[0].name,
+                "text": content.howTo.steps[0].text
               },
               {
                 "@type": "HowToStep",
-                "name": "Upload your JSON files",
-                "text": "Drag and drop all your exported Google Timeline JSON files into the merger tool. The tool auto-detects Records.json, Semantic Location History, and phone export formats."
+                "name": content.howTo.steps[1].name,
+                "text": content.howTo.steps[1].text
               },
               {
                 "@type": "HowToStep",
-                "name": "Review file summary and overlaps",
-                "text": "Check the file summary table and timeline visualization to see how your files overlap. The tool shows date ranges, point counts, and detected formats for each file."
+                "name": content.howTo.steps[2].name,
+                "text": content.howTo.steps[2].text
               },
               {
                 "@type": "HowToStep",
-                "name": "Adjust deduplication settings",
-                "text": "Set the distance threshold (10-500 meters) and time threshold (10-300 seconds) for deduplication. Points within both thresholds are considered duplicates."
+                "name": content.howTo.steps[3].name,
+                "text": content.howTo.steps[3].text
               },
               {
                 "@type": "HowToStep",
-                "name": "Merge and export",
-                "text": "Click Merge Files to combine all data with deduplication. Download the result as JSON (preserves all metadata) or GPX (compatible with mapping applications)."
+                "name": content.howTo.steps[4].name,
+                "text": content.howTo.steps[4].text
               }
             ],
             "tool": {
               "@type": "HowToTool",
-              "name": "Google Timeline Data Merger by Dawarich"
+              "name": content.howTo.tool
             }
           })}
         </script>
@@ -315,10 +287,10 @@ export default function TimelineMerger() {
             "@type": "FAQPage",
             "mainEntity": faqItems.map(item => ({
               "@type": "Question",
-              "name": item.question,
+              "name": toPlainText(item.q),
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": item.answer
+                "text": toPlainText(item.a)
               }
             }))
           })}
@@ -333,19 +305,19 @@ export default function TimelineMerger() {
               {
                 "@type": "ListItem",
                 "position": 1,
-                "name": "Home",
-                "item": "https://dawarich.app"
+                "name": content.homeLabel,
+                "item": homeUrl
               },
               {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Free Tools",
-                "item": "https://dawarich.app/tools"
+                "name": content.toolsLabel,
+                "item": toolsUrl
               },
               {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Google Timeline Data Merger",
+                "name": content.h1,
                 "item": pageUrl
               }
             ]
@@ -357,28 +329,28 @@ export default function TimelineMerger() {
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           <div className={styles.header}>
-            <h1>Google Timeline Data Merger</h1>
-            <p>Merge multiple Google Timeline exports into one unified file. Smart deduplication removes overlapping data points while preserving all unique location records. Free, privacy-first, and entirely in your browser.</p>
+            <h1>{content.h1}</h1>
+            <p>{content.intro}</p>
           </div>
 
           <div className={styles.topSection}>
             <div className={styles.useCases}>
-              <h2>Why Merge Timeline Exports?</h2>
+              <h2>{content.benefitsTitle}</h2>
               <p>
-                Google provides multiple ways to export Timeline data, each capturing different information. Combining them gives you the most complete location history possible.
+                {content.benefitsIntro}
               </p>
               <div className={styles.useCasesList}>
                 <div className={styles.useCaseItem}>
-                  <strong>Multiple export methods:</strong>
-                  <p>Google Takeout, phone-based export, and Semantic Location History each contain different data. Merging captures everything from every source.</p>
+                  <strong>{content.benefits[0].title}</strong>
+                  <p>{content.benefits[0].body}</p>
                 </div>
                 <div className={styles.useCaseItem}>
-                  <strong>Data recovery:</strong>
-                  <p>After Google's 2024 Timeline migration, many users have partial exports from different dates. Merge them to reconstruct as much history as possible.</p>
+                  <strong>{content.benefits[1].title}</strong>
+                  <p>{content.benefits[1].body}</p>
                 </div>
                 <div className={styles.useCaseItem}>
-                  <strong>Combining old and new exports:</strong>
-                  <p>Exported your Timeline in 2022 and again in 2024? Merge both exports to get continuous coverage without duplicate entries.</p>
+                  <strong>{content.benefits[2].title}</strong>
+                  <p>{content.benefits[2].body}</p>
                 </div>
               </div>
             </div>
@@ -392,9 +364,9 @@ export default function TimelineMerger() {
                     <svg className={styles.privacyIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
-                    Privacy First
+                    {content.privacyTitle}
                   </strong>
-                  <p>All merging and deduplication happens entirely in your browser. Your location data never leaves your device and is not sent to any server.</p>
+                  <p>{content.privacyBody}</p>
                 </div>
               </div>
             </div>
@@ -408,7 +380,7 @@ export default function TimelineMerger() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </span>
-                <span>Want to visualize your Timeline data first? Try our <a href="/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger">Google Timeline Visualizer</a> to explore your location history on an interactive map. Need a long-term Timeline replacement? <a href="/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger">Dawarich</a> gives you full data ownership.</span>
+                <span><RichText text={content.preCta} /></span>
               </div>
             </div>
           )}
@@ -417,12 +389,14 @@ export default function TimelineMerger() {
             <PersonalizedCTA
               toolName="timeline-merger"
               headline={mergeResult
-                ? `You combined <strong>${mergeResult.metadata.fileCount}</strong> files with <strong>${mergeResult.metadata.totalOutputPoints.toLocaleString()}</strong> points into one. Dawarich does this automatically with all your GPS sources.`
-                : 'Want to keep your merged location data safe and always accessible? Dawarich stores your complete location history securely.'}
+                ? <RichText text={interpolate(content.cta.headline, {
+                  count: mergeResult.metadata.fileCount.toLocaleString(htmlLang), points: mergeResult.metadata.totalOutputPoints.toLocaleString(htmlLang),
+                })} />
+                : content.cta.fallback}
               stats={mergeResult ? [
-                { label: 'points', value: mergeResult.metadata.totalOutputPoints.toLocaleString() },
-                { label: 'files', value: mergeResult.metadata.fileCount.toString() },
-                { label: 'duplicates removed', value: mergeResult.metadata.duplicatesRemoved.toLocaleString() },
+                { label: content.cta.statLabels.points, value: mergeResult.metadata.totalOutputPoints.toLocaleString(htmlLang) },
+                { label: content.cta.statLabels.files, value: mergeResult.metadata.fileCount.toLocaleString(htmlLang) },
+                { label: content.cta.statLabels.duplicates, value: mergeResult.metadata.duplicatesRemoved.toLocaleString(htmlLang) },
               ] : undefined}
             />
           )}
@@ -432,7 +406,7 @@ export default function TimelineMerger() {
           <div className={styles.resultsSection}>
             <div className={styles.processingIndicator}>
               <div className={styles.spinner}></div>
-              Parsing uploaded files...
+              {content.results.parsing}
             </div>
           </div>
         )}
@@ -447,15 +421,15 @@ export default function TimelineMerger() {
           <div className={styles.resultsSection}>
             {/* File summary table */}
             <div className={styles.fileSummary}>
-              <h3>Uploaded Files ({parsedFiles.length})</h3>
+              <h3>{interpolate(content.results.uploadedFiles, { count: parsedFiles.length.toLocaleString(htmlLang) })}</h3>
               <table className={styles.fileSummaryTable}>
                 <thead>
                   <tr>
-                    <th>File</th>
-                    <th>Format</th>
-                    <th>Points</th>
-                    <th>Paths</th>
-                    <th>Date Range</th>
+                    <th>{content.results.file}</th>
+                    <th>{content.results.format}</th>
+                    <th>{content.results.points}</th>
+                    <th>{content.results.paths}</th>
+                    <th>{content.results.dateRange}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -465,13 +439,13 @@ export default function TimelineMerger() {
                         <span style={{ display: 'inline-block', width: 10, height: 10, borderRadius: 2, backgroundColor: FILE_COLORS[index % FILE_COLORS.length], marginRight: 8, verticalAlign: 'middle' }}></span>
                         {file.filename}
                       </td>
-                      <td><span className={styles.formatBadge}>{file.metadata?.format || 'unknown'}</span></td>
-                      <td>{file.points.length.toLocaleString()}</td>
-                      <td>{file.paths.length.toLocaleString()}</td>
+                      <td><span className={styles.formatBadge}>{file.metadata?.format || content.results.unknown}</span></td>
+                      <td>{file.points.length.toLocaleString(htmlLang)}</td>
+                      <td>{file.paths.length.toLocaleString(htmlLang)}</td>
                       <td>
                         {file.dateRange.start
-                          ? `${formatDate(file.dateRange.start)} - ${formatDate(file.dateRange.end)}`
-                          : 'No timestamps'
+                          ? `${formatDate(file.dateRange.start, htmlLang)} - ${formatDate(file.dateRange.end, htmlLang)}`
+                          : content.results.noTimestamps
                         }
                       </td>
                     </tr>
@@ -483,7 +457,7 @@ export default function TimelineMerger() {
             {/* Timeline overlap visualization */}
             {overallRange && (
               <div className={styles.timelineViz}>
-                <h3>Date Coverage</h3>
+                <h3>{content.results.dateCoverage}</h3>
                 <div className={styles.timelineAxis}>
                   <span>{overallRange.start.getFullYear()}</span>
                   <span>{overallRange.end.getFullYear()}</span>
@@ -536,7 +510,7 @@ export default function TimelineMerger() {
                                 left: `${overlapLeft}%`,
                                 width: `${Math.max(overlapWidth, 0.3)}%`,
                               }}
-                              title={`Overlap with ${otherFile.filename}`}
+                              title={interpolate(content.results.overlapWith, { fileName: otherFile.filename })}
                             />
                           );
                         })}
@@ -556,7 +530,7 @@ export default function TimelineMerger() {
                   ))}
                   <div className={styles.legendItem}>
                     <span className={styles.legendOverlap}></span>
-                    <span>Overlap</span>
+                    <span>{content.results.overlap}</span>
                   </div>
                 </div>
               </div>
@@ -564,15 +538,15 @@ export default function TimelineMerger() {
 
             {/* Dedup settings */}
             <div className={styles.dedupSettings}>
-              <h3>Deduplication Settings</h3>
+              <h3>{content.settings.title}</h3>
               <p className={styles.dedupSettingsDesc}>
-                Adjust how aggressively duplicate points are detected. Two points are considered duplicates if they are within both the distance and time thresholds of each other. The point with richer metadata is kept.
+                {content.settings.intro}
               </p>
 
               <div className={styles.sliderGroup}>
                 <div className={styles.sliderLabel}>
-                  <span>Distance Threshold</span>
-                  <span className={styles.sliderValue}>{distanceThreshold}m</span>
+                  <span>{content.settings.distanceLabel}</span>
+                  <span className={styles.sliderValue}>{interpolate(content.results.distanceValue, { distance: distanceThreshold.toLocaleString(htmlLang) })}</span>
                 </div>
                 <input
                   type="range"
@@ -582,13 +556,13 @@ export default function TimelineMerger() {
                   onChange={(e) => setDistanceThreshold(Number(e.target.value))}
                   className={styles.slider}
                 />
-                <p className={styles.sliderHint}>Points closer than this distance may be duplicates (10m = strict, 500m = aggressive)</p>
+                <p className={styles.sliderHint}>{content.settings.distanceHint}</p>
               </div>
 
               <div className={styles.sliderGroup}>
                 <div className={styles.sliderLabel}>
-                  <span>Time Threshold</span>
-                  <span className={styles.sliderValue}>{timeThreshold}s</span>
+                  <span>{content.settings.timeLabel}</span>
+                  <span className={styles.sliderValue}>{interpolate(content.results.timeValue, { seconds: timeThreshold.toLocaleString(htmlLang) })}</span>
                 </div>
                 <input
                   type="range"
@@ -598,7 +572,7 @@ export default function TimelineMerger() {
                   onChange={(e) => setTimeThreshold(Number(e.target.value))}
                   className={styles.slider}
                 />
-                <p className={styles.sliderHint}>Points recorded within this time window may be duplicates (10s = strict, 300s = aggressive)</p>
+                <p className={styles.sliderHint}>{content.settings.timeHint}</p>
               </div>
             </div>
 
@@ -611,47 +585,53 @@ export default function TimelineMerger() {
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
               </svg>
-              {isMerging ? 'Merging...' : `Merge ${parsedFiles.length} File${parsedFiles.length !== 1 ? 's' : ''}`}
+              {isMerging ? content.results.merging : interpolate(selectMessage(parsedFiles.length, content.results.mergeButton), {
+                count: parsedFiles.length.toLocaleString(htmlLang),
+              })}
             </button>
 
             {/* Merge results */}
             {mergeResult && (
               <>
                 <div className={styles.mergeResults}>
-                  <h3>Merge Results</h3>
+                  <h3>{content.results.title}</h3>
                   <div className={styles.mergeStatsGrid}>
                     <div className={styles.mergeStat}>
-                      <span className={styles.statValue}>{mergeResult.metadata.totalInputPoints.toLocaleString()}</span>
-                      <span className={styles.statLabel}>Input Points</span>
+                      <span className={styles.statValue}>{mergeResult.metadata.totalInputPoints.toLocaleString(htmlLang)}</span>
+                      <span className={styles.statLabel}>{content.results.inputPoints}</span>
                     </div>
                     <div className={styles.mergeStat}>
-                      <span className={styles.statValue}>{mergeResult.metadata.totalOutputPoints.toLocaleString()}</span>
-                      <span className={styles.statLabel}>Output Points</span>
+                      <span className={styles.statValue}>{mergeResult.metadata.totalOutputPoints.toLocaleString(htmlLang)}</span>
+                      <span className={styles.statLabel}>{content.results.outputPoints}</span>
                     </div>
                     <div className={styles.mergeStat}>
-                      <span className={styles.statValue}>{mergeResult.metadata.duplicatesRemoved.toLocaleString()}</span>
-                      <span className={styles.statLabel}>Duplicates Removed</span>
+                      <span className={styles.statValue}>{mergeResult.metadata.duplicatesRemoved.toLocaleString(htmlLang)}</span>
+                      <span className={styles.statLabel}>{content.results.duplicatesRemoved}</span>
                     </div>
                     <div className={styles.mergeStat}>
-                      <span className={styles.statValue}>{mergeResult.metadata.fileCount}</span>
-                      <span className={styles.statLabel}>Files Merged</span>
+                      <span className={styles.statValue}>{mergeResult.metadata.fileCount.toLocaleString(htmlLang)}</span>
+                      <span className={styles.statLabel}>{content.results.filesMerged}</span>
                     </div>
                   </div>
 
                   {mergeResult.metadata.overlapReports.length > 0 && (
                     <div className={styles.overlapDetails}>
-                      <h4>Overlap Details</h4>
+                      <h4>{content.results.overlapDetails}</h4>
                       {mergeResult.metadata.overlapReports.map((report, index) => (
                         <div key={index} className={styles.overlapItem}>
                           <span
                             className={`${styles.overlapBadge} ${report.overlap.hasOverlap ? styles.overlapBadgeOverlap : styles.overlapBadgeNone}`}
                           >
-                            {report.overlap.hasOverlap ? `${report.overlap.days} day${report.overlap.days !== 1 ? 's' : ''}` : 'None'}
+                            {report.overlap.hasOverlap ? interpolate(selectMessage(report.overlap.days, content.results.dayCount), {
+                              count: report.overlap.days.toLocaleString(htmlLang),
+                            }) : content.results.none}
                           </span>
                           <span>
-                            <strong>{report.fileA}</strong> and <strong>{report.fileB}</strong>
+                            <RichText text={interpolate(content.results.filePair, { fileA: report.fileA, fileB: report.fileB })} />
                             {report.overlap.hasOverlap && (
-                              <> overlap from {formatDate(report.overlap.start)} to {formatDate(report.overlap.end)}</>
+                              <>{interpolate(content.results.overlapRange, {
+                                startDate: formatDate(report.overlap.start, htmlLang), endDate: formatDate(report.overlap.end, htmlLang),
+                              })}</>
                             )}
                           </span>
                         </div>
@@ -666,21 +646,21 @@ export default function TimelineMerger() {
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
-                    Download as JSON
+                    {content.results.downloadJson}
                   </button>
                   <button onClick={handleDownloadGPX} className={styles.exportButton}>
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
-                    Download as GPX
+                    {content.results.downloadGpx}
                   </button>
                 </div>
 
                 {/* Post-upload CTA */}
                 <div className={styles.postCtaPanel}>
-                  <h3>Never risk losing your location data again</h3>
-                  <p>Dawarich stores everything in EU data centers, encrypted in transit (SSL/TLS) and at rest (LUKS), with full backups and an interactive map. Import your merged Timeline data and keep tracking automatically.</p>
-                  <a href="/?utm_source=tool&utm_medium=post-merge-cta&utm_campaign=timeline-merger" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
+                  <h3>{content.cta.postTitle}</h3>
+                  <p>{content.cta.postBody}</p>
+                  <SmartLink href="/?utm_source=tool&utm_medium=post-merge-cta&utm_campaign=timeline-merger" className={styles.ctaButton}>{content.cta.button}</SmartLink>
                 </div>
               </>
             )}
@@ -689,75 +669,32 @@ export default function TimelineMerger() {
 
         <div className={styles.infoSection}>
           <div className={styles.infoGrid}>
-            <div className={styles.infoCard}>
-              <h2>What Is the Timeline Data Merger?</h2>
-              <p>The Timeline Data Merger is a free browser-based tool that combines multiple Google Timeline export files into a single, unified dataset. When you export your Google location history using different methods (Google Takeout, phone export, Semantic History), you often end up with overlapping files containing duplicate data points. This tool intelligently merges them, removing duplicates while preserving every unique location record.</p>
-              <p>All processing happens locally in your browser. Your location data is never transmitted to any server, making it safe to use even with sensitive personal location history spanning years.</p>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>How Deduplication Works</h2>
-              <p>The deduplication algorithm uses a two-factor approach to identify duplicate location points:</p>
-              <ul>
-                <li><strong>Spatial proximity</strong> -- Points within the distance threshold (default 50 meters) are candidates for deduplication</li>
-                <li><strong>Temporal proximity</strong> -- Points must also be within the time threshold (default 60 seconds) to be considered duplicates</li>
-                <li><strong>Both conditions required</strong> -- A point is only removed as a duplicate if it matches on both distance AND time</li>
-                <li><strong>Metadata preservation</strong> -- When duplicates are found, the version with more metadata (place names, addresses, activity types) is kept</li>
-              </ul>
-              <p>Points are sorted chronologically before deduplication, ensuring consistent results regardless of upload order.</p>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>Why Merge Timeline Exports?</h2>
-              <p>There are several common scenarios where merging Google Timeline data is essential:</p>
-              <ul>
-                <li><strong>Multiple export sources</strong> -- Google Takeout, Android export, and iOS export each capture different subsets of your data</li>
-                <li><strong>Recovering from Google's 2024 migration</strong> -- When Google moved Timeline to on-device storage, many users made multiple partial exports. Merging recovers the most complete history</li>
-                <li><strong>Periodic backups</strong> -- If you exported in 2021 and again in 2024, merging creates a continuous dataset spanning both periods</li>
-                <li><strong>Device transitions</strong> -- Switched phones? Merge exports from your old and new devices</li>
-              </ul>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>What Happened to Google Maps Timeline?</h2>
-              <p>In late 2024, Google discontinued the web version of Google Maps Timeline and moved all location data to on-device storage. Only the last 90 days of data were automatically transferred to users' phones. Older location history was permanently deleted unless users had manually exported it before the deadline.</p>
-              <p>This left millions of users with fragmented data: partial Takeout exports, phone exports of recent data, and Semantic Location History files from different periods. The Timeline Data Merger helps piece these fragments back together into a complete location history.</p>
-              <p>For ongoing location tracking with full data ownership, consider <a href="/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-merger">Dawarich</a> as a self-hosted or cloud-based replacement.</p>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>Supported Formats</h2>
-              <p>The merger automatically detects and processes all Google Timeline export formats:</p>
-              <ul>
-                <li><strong>Records.json</strong> -- Raw GPS records from Google Takeout in E7 coordinate format. These files are typically the largest, containing every location ping</li>
-                <li><strong>Semantic Location History</strong> -- Monthly files (e.g., 2022_APRIL.json) with structured place visits, addresses, and activity segments</li>
-                <li><strong>Phone Timeline Export</strong> -- Newer format from Google Maps on Android/iOS with semanticSegments and timeline paths</li>
-                <li><strong>Settings &amp; TimelineEdits</strong> -- Additional metadata files from Google Takeout exports</li>
-              </ul>
-              <p>You can mix any combination of these formats in a single merge operation.</p>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>Related Tools</h2>
-              <ul>
-                <li><a href="/tools/timeline-visualizer">Google Timeline Visualizer</a> -- View your location history on an interactive map</li>
-                <li><a href="/tools/heatmap-generator">GPS Heatmap Generator</a> -- Create heatmaps from GPX, FIT, TCX, and other GPS files</li>
-                <li><a href="/tools/gpx-merger">GPX Track Merger</a> -- Combine multiple GPX files into one</li>
-                <li><a href="/tools/photo-geotagging">Photo Geodata Extraction</a> -- Extract GPS coordinates from your photos</li>
-                <li><a href="/tools/geojson-to-gpx">GeoJSON to GPX Converter</a> -- Convert location data to GPX format</li>
-              </ul>
-              <p>Read more: <a href="/blog/migrating-from-google-location-history-to-dawarich">Migrating from Google Location History</a></p>
-            </div>
+            {content.cards.map((card, index) => (
+              <div className={styles.infoCard} key={index}>
+                <h2>{card.title}</h2>
+                {card.paragraphs.map((text, index) => (
+                  <p key={index}><RichText text={text} /></p>
+                ))}
+                {card.items && <ul>
+                  {card.items.map((item, index) => (
+                    <li key={index}><RichText text={item.body} /></li>
+                  ))}
+                </ul>}
+                {card.footer?.map((text, index) => (
+                  <p key={index}><RichText text={text} /></p>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
 
         <div className={styles.faqSection}>
-          <h2>Frequently Asked Questions</h2>
+          <h2>{content.faqTitle}</h2>
           <div className={styles.faqList}>
             {faqItems.map((item, index) => (
               <details key={index} className={styles.faqItem}>
-                <summary className={styles.faqQuestion}>{item.question}</summary>
-                <p className={styles.faqAnswer}>{item.answer}</p>
+                <summary className={styles.faqQuestion}>{item.q}</summary>
+                <p className={styles.faqAnswer}><RichText text={item.a} /></p>
               </details>
             ))}
           </div>
@@ -765,9 +702,9 @@ export default function TimelineMerger() {
 
         <div className={styles.bottomCtaPanel}>
           <div className={styles.ctaContent}>
-            <h3>Looking for a Long-Term Google Timeline Replacement?</h3>
-            <p>Dawarich is an open-source location tracking platform that gives you full control over your data. Import your merged Google Timeline export, track ongoing location from your phone, and visualize years of movement history -- all self-hosted or in the cloud.</p>
-            <a href="/?utm_source=tool&utm_medium=bottom-cta&utm_campaign=timeline-merger" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
+            <h3>{content.cta.bottomTitle}</h3>
+            <p>{content.cta.bottomBody}</p>
+            <SmartLink href="/?utm_source=tool&utm_medium=bottom-cta&utm_campaign=timeline-merger" className={styles.ctaButton}>{content.cta.button}</SmartLink>
           </div>
         </div>
       </div>

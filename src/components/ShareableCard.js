@@ -1,7 +1,12 @@
 import React, { useRef, useCallback } from 'react';
+import { interpolate } from '@docusaurus/Interpolate';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import content from '@locale-content/components/ShareableCard.json';
 import styles from './ShareableCard.module.css';
 
 export default function ShareableCard({ stats }) {
+  const { i18n } = useDocusaurusContext();
+  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
   const cardRef = useRef(null);
 
   const handleDownload = useCallback(() => {
@@ -85,35 +90,35 @@ export default function ShareableCard({ stats }) {
     <div className={styles.container}>
       <div ref={cardRef} className={styles.card}>
         <div className={styles.cardHeader}>
-          <h3>My Location History Stats</h3>
+          <h3>{content.title}</h3>
           {stats.dateRange && (
             <span className={styles.dateRange}>
-              {stats.dateRange.start.toLocaleDateString()} - {stats.dateRange.end.toLocaleDateString()}
+              {stats.dateRange.start.toLocaleDateString(htmlLang)} - {stats.dateRange.end.toLocaleDateString(htmlLang)}
             </span>
           )}
         </div>
         <div className={styles.statsGrid}>
           <div className={styles.statItem}>
-            <span className={styles.statValue}>{stats.totalDistanceKm.toFixed(0)} km</span>
-            <span className={styles.statLabel}>Total Distance</span>
+            <span className={styles.statValue}>{interpolate(content.distanceValue, { distance: stats.totalDistanceKm.toLocaleString(htmlLang, { maximumFractionDigits: 0 }) })}</span>
+            <span className={styles.statLabel}>{content.totalDistance}</span>
           </div>
           <div className={styles.statItem}>
-            <span className={styles.statValue}>{stats.totalPoints.toLocaleString()}</span>
-            <span className={styles.statLabel}>Data Points</span>
+            <span className={styles.statValue}>{stats.totalPoints.toLocaleString(htmlLang)}</span>
+            <span className={styles.statLabel}>{content.dataPoints}</span>
           </div>
           <div className={styles.statItem}>
-            <span className={styles.statValue}>{stats.uniquePlacesCount}</span>
-            <span className={styles.statLabel}>Places Visited</span>
+            <span className={styles.statValue}>{stats.uniquePlacesCount.toLocaleString(htmlLang)}</span>
+            <span className={styles.statLabel}>{content.placesVisited}</span>
           </div>
           <div className={styles.statItem}>
-            <span className={styles.statValue}>{stats.countries.length}</span>
-            <span className={styles.statLabel}>Countries</span>
+            <span className={styles.statValue}>{stats.countries.length.toLocaleString(htmlLang)}</span>
+            <span className={styles.statLabel}>{content.countries}</span>
           </div>
         </div>
-        <div className={styles.branding}>Generated with dawarich.app</div>
+        <div className={styles.branding}>{content.branding}</div>
       </div>
       <button onClick={handleDownload} className={styles.downloadButton}>
-        Download Stats Card as Image
+        {content.downloadButton}
       </button>
     </div>
   );

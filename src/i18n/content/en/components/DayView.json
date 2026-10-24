@@ -1,0 +1,22 @@
+{
+  "movingLabel": "moving",
+  "stationaryLabel": "stationary",
+  "visitsLabel": "Visits",
+  "tracksLabel": "Tracks",
+  "distanceLabel": "Distance",
+  "movingTitle": "Moving",
+  "emptyDay": "No visits tracked this day.",
+  "previousDay": "Previous day",
+  "nextDay": "Next day",
+  "selectDay": "Select a day to see your timeline.",
+  "rawHint": "This file contains raw GPS records only — no place visits or activity segments. Switch to Semantic Location History or phone-export files for the full timeline view.",
+  "places": "{count} places",
+  "movingDuration": "{duration} moving",
+  "duration": {
+    "zero": "0m",
+    "hoursMinutes": "{hours}h {minutes}m",
+    "hours": "{hours}h",
+    "minutes": "{minutes}m"
+  },
+  "visitCount": "{count} visit|{count} visits"
+}

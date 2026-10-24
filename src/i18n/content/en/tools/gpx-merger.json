@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "title": "Free GPX Merger - Combine Multiple GPS Track Files Online",
+    "description": "Merge multiple GPX files into one. Free, privacy-first online tool to combine GPS tracks, waypoints, and routes. Works entirely in your browser.",
+    "keywords": "GPX merger, merge GPX files, combine GPS tracks, GPX combiner, join GPX files, merge GPS files, GPX joiner, combine tracks"
+  },
+  "h1": "GPX Track Merger",
+  "intro": "Combine multiple GPX files into a single file. Merge tracks from different activities, days, or devices into one unified GPS file.",
+  "saveIntro": "Or skip the download — we'll merge and import it into your Dawarich account during signup.",
+  "privacy": "Merging happens in your browser. Nothing is uploaded unless you choose “Save to my Dawarich account.”",
+  "appName": "GPX Merger",
+  "cards": [
+    {
+      "title": "Why Merge GPX Files?",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "Combine multi-day hikes or bike trips into one file"
+        },
+        {
+          "body": "Merge tracks from different GPS devices"
+        },
+        {
+          "body": "Create a complete route from separate segments"
+        },
+        {
+          "body": "Consolidate activities for easier sharing"
+        },
+        {
+          "body": "Build a comprehensive track for visualization"
+        }
+      ]
+    },
+    {
+      "title": "What Gets Merged?",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Tracks** - All GPS track segments with timestamps and elevation"
+        },
+        {
+          "body": "**Waypoints** - Named points of interest, markers"
+        },
+        {
+          "body": "**Routes** - Planned navigation routes"
+        },
+        {
+          "body": "**Metadata** - Combined into a new merged file description"
+        }
+      ]
+    },
+    {
+      "title": "Merge Options Explained",
+      "paragraphs": [
+        "**Keep tracks separate:** Each input file's tracks remain as individual tracks in the output. Good for maintaining activity boundaries.",
+        "**Merge into single track:** All track points are combined into one continuous track. Useful for creating a unified route visualization."
+      ]
+    },
+    {
+      "title": "Compatible Applications",
+      "paragraphs": [
+        "The merged GPX file works with:"
+      ],
+      "items": [
+        {
+          "body": "Garmin Connect, Strava, Komoot"
+        },
+        {
+          "body": "Google Earth, QGIS, CalTopo"
+        },
+        {
+          "body": "Gaia GPS, AllTrails, ViewRanger"
+        },
+        {
+          "body": "Any application that supports GPX 1.1"
+        }
+      ]
+    }
+  ],
+  "upload": {
+    "dropFiles": "Drag & drop GPX files here",
+    "browse": "or click to browse",
+    "clearButton": "Clear All",
+    "inputLabel": "Choose files to process",
+    "processing": "Processing files..."
+  },
+  "results": {
+    "orderHint": "Drag to reorder or use arrows. Files will be merged in this order.",
+    "summaryHeading": "Merge Summary",
+    "filesLabel": "Files",
+    "tracksLabel": "Tracks",
+    "pointsLabel": "Points",
+    "waypointsLabel": "Waypoints",
+    "removeFileTitle": "Remove file",
+    "filesToMergeHeading": "Files to Merge ({count})",
+    "fileSummary": "{tracks} | {points} points",
+    "trackCount": "{count} track|{count} tracks"
+  },
+  "options": {
+    "heading": "Merge Options",
+    "outputName": "Output Name",
+    "singleTrack": "Merge all tracks into a single track",
+    "singleTrackHint": "Combines all track segments into one continuous track",
+    "sortByTime": "Sort points by timestamp",
+    "sortByTimeHint": "Only available when merging into single track",
+    "outputPlaceholder": "Output file name",
+    "mergeButton": "Merge & Download GPX"
+  },
+  "errors": {
+    "gpxOnly": "Please select GPX files only.",
+    "minimumFiles": "Please add at least 2 GPX files to merge.",
+    "parse": "Error parsing {fileName}: {message}",
+    "merge": "Error merging files: {message}"
+  },
+  "cta": {
+    "fallback": "Need to manage years of GPS data? Dawarich automatically organizes and visualizes all your GPS activities in one place.",
+    "headline": "You combined **{count}** files with **{points}** points into one. Dawarich does this automatically with all your GPS sources.",
+    "statLabels": {
+      "files": "files",
+      "tracks": "tracks",
+      "points": "points"
+    }
+  }
+}

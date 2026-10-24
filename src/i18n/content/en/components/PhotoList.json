@@ -1,0 +1,14 @@
+{
+  "title": "Photos",
+  "emptyTitle": "No photos with GPS data",
+  "emptyHint": "Upload photos to extract location data",
+  "newestFirst": "Newest first",
+  "oldestFirst": "Oldest first",
+  "byName": "By name",
+  "photoLabel": "Photo",
+  "sortLabel": "Sort photos",
+  "unknownDate": "Unknown Date",
+  "unknownTime": "Unknown time",
+  "photoCount": "{count} photo|{count} photos",
+  "altitude": "Altitude: {altitude}m"
+}

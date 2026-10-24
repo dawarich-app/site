@@ -1,18 +1,21 @@
 import React from 'react';
+import { interpolate } from '@docusaurus/Interpolate';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import content from '@locale-content/components/CalendarRail.json';
 import styles from './CalendarRail.module.css';
 
-const WEEKDAY_LABELS = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
+const WEEKDAY_LABELS = content.weekdays;
 
-function monthTitle(monthKey) {
+function monthTitle(monthKey, htmlLang) {
   const [y, m] = monthKey.split('-').map(Number);
-  return new Date(y, m - 1, 1).toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
+  return new Date(y, m - 1, 1).toLocaleDateString(htmlLang, { month: 'long', year: 'numeric' });
 }
 
-function cellAriaLabel(cell) {
-  if (cell.disabled && !cell.inMonth) return `${cell.date} (other month)`;
-  if (cell.disabled) return `${cell.date} — no data`;
+function cellAriaLabel(cell, htmlLang) {
+  if (cell.disabled && !cell.inMonth) return interpolate(content.otherMonth, { date: cell.date });
+  if (cell.disabled) return interpolate(content.noData, { date: cell.date });
   const hours = Math.round(cell.trackedSeconds / 3600);
-  return `${cell.date} — ${hours} hours tracked`;
+  return interpolate(content.hoursTracked, { date: cell.date, hours: hours.toLocaleString(htmlLang) });
 }
 
 function ChevronLeft() {
@@ -43,12 +46,14 @@ export default function CalendarRail({
   onPrevMonth,
   onNextMonth,
 }) {
+  const { i18n } = useDocusaurusContext();
+  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
   const years = [...yearStats.keys()].sort((a, b) => b - a);
 
   return (
     <div className={styles.rail}>
       <div className={styles.controlGroup}>
-        <label className={styles.label} htmlFor="timeline-year-select">Year</label>
+        <label className={styles.label} htmlFor="timeline-year-select">{content.yearLabel}</label>
         <select
           id="timeline-year-select"
           className={styles.yearSelect}
@@ -57,40 +62,40 @@ export default function CalendarRail({
         >
           {years.map((y) => (
             <option key={y} value={y}>
-              {y} ({yearStats.get(y).totalDays} days)
+              {interpolate(content.yearDays, { year: y, count: yearStats.get(y).totalDays.toLocaleString(htmlLang) })}
             </option>
           ))}
-          {years.length === 0 && <option value="">No data</option>}
+          {years.length === 0 && <option value="">{content.emptyLabel}</option>}
         </select>
       </div>
 
       <div className={styles.controlGroup}>
-        <label className={styles.label} htmlFor="timeline-search">Search</label>
+        <label className={styles.label} htmlFor="timeline-search">{content.searchLabel}</label>
         <input
           id="timeline-search"
           type="search"
           className={styles.searchInput}
-          placeholder="Search visits…"
+          placeholder={content.searchPlaceholder}
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
-          aria-label="Search visits"
+          aria-label={content.searchAriaLabel}
         />
       </div>
 
       {monthGrid && (
         <div className={styles.calendar}>
           <div className={styles.monthNav}>
-            <button type="button" className={styles.navButton} onClick={onPrevMonth} aria-label="Previous month">
+            <button type="button" className={styles.navButton} onClick={onPrevMonth} aria-label={content.previousMonth}>
               <ChevronLeft />
             </button>
-            <div className={styles.monthTitle}>{monthTitle(monthGrid.month)}</div>
-            <button type="button" className={styles.navButton} onClick={onNextMonth} aria-label="Next month">
+            <div className={styles.monthTitle}>{monthTitle(monthGrid.month, htmlLang)}</div>
+            <button type="button" className={styles.navButton} onClick={onNextMonth} aria-label={content.nextMonth}>
               <ChevronRight />
             </button>
           </div>
 
           <div className={styles.weekdayRow}>
-            {WEEKDAY_LABELS.map((label, i) => <div key={i}>{label}</div>)}
+            {WEEKDAY_LABELS.map((day, i) => <div key={i}>{day.label}</div>)}
           </div>
 
           {monthGrid.weeks.map((week, wi) => (
@@ -111,7 +116,7 @@ export default function CalendarRail({
                     className={cn}
                     disabled={cell.disabled}
                     onClick={() => onSelectDay(cell.date)}
-                    aria-label={cellAriaLabel(cell)}
+                    aria-label={cellAriaLabel(cell, htmlLang)}
                   >
                     {dayNum}
                   </button>

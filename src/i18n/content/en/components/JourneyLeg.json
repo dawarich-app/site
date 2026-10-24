@@ -1,0 +1,41 @@
+{
+  "distanceLabel": "Dist",
+  "averageLabel": "Avg",
+  "timeLabel": "Time",
+  "pauseReplay": "Pause replay",
+  "playReplay": "Play replay",
+  "restart": "Restart",
+  "replayProgress": "Replay progress",
+  "trackLabel": "Track #{trackId}",
+  "throughTrack": "{percent}% through track",
+  "verbs": {
+    "walking": "walked",
+    "running": "ran",
+    "cycling": "cycled",
+    "driving": "drove",
+    "bus": "bus",
+    "train": "train",
+    "flying": "flew",
+    "boat": "sailed",
+    "motorcycle": "rode",
+    "unknown": "traveled"
+  },
+  "modeLabels": {
+    "walking": "walking",
+    "running": "running",
+    "cycling": "cycling",
+    "driving": "driving",
+    "bus": "bus",
+    "train": "train",
+    "flying": "flying",
+    "boat": "boat",
+    "motorcycle": "motorcycle",
+    "unknown": "unknown"
+  },
+  "duration": {
+    "seconds": "{seconds}s",
+    "minutes": "{minutes}m",
+    "hoursMinutes": "{hours}h {minutes}m",
+    "hours": "{hours}h"
+  }
+}

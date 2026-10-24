@@ -9,57 +9,20 @@ import TimelinePanel from '@site/src/components/TimelinePanel/TimelinePanel';
 import { parseTimeline } from '@site/src/utils/timelineParser';
 import { SAMPLE_DAY } from '@site/src/utils/sampleBerlinData';
 import { buildDayIndex, buildYearStats, buildMonthGrid } from '@site/src/utils/timelineDays';
+import { interpolate } from '@docusaurus/Interpolate';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import RichText, { SmartLink, toPlainText } from '@site/src/i18n/RichText';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
+import content from '@locale-content/tools/timeline-visualizer.json';
 import styles from './timeline-visualizer.module.css';
 
 const TimelineMapV2 = lazy(() => import('@site/src/components/TimelineMapV2'));
 
-const pageTitle = "Google Timeline Visualizer — View Your Timeline on the Web Again";
-const pageDescription = "Google removed Timeline from the web. This free visualizer brings it back: upload your Takeout export and see your location history on a map, in your browser.";
-const pageUrl = "https://dawarich.app/tools/timeline-visualizer/";
+const pageTitle = content.meta.title;
+const pageDescription = content.meta.description;
 const imageUrl = "https://dawarich.app/img/meta-image.png";
 
-const faqItems = [
-  {
-    question: "Is it safe to upload my Google Timeline data here?",
-    answer: "Yes. All visualization happens entirely in your browser using JavaScript — your files stay on your device and are gone when you close the tab. The only exception is the optional “Save to my Dawarich account” button, which uploads your file to Dawarich Cloud so it can be imported into your new account. The tool is open source, so you can verify exactly what the code does."
-  },
-  {
-    question: "What file formats does this visualizer support?",
-    answer: "The visualizer supports all Google Timeline export formats: Records.json (raw GPS location records), Semantic Location History (monthly YYYY_MONTH.json files with place visits and activity segments), Location History exported from your phone (the newer format with semanticSegments), and Settings/TimelineEdits files. It auto-detects the format when you upload."
-  },
-  {
-    question: "Why did Google shut down Timeline on the web?",
-    answer: "In late 2024, Google discontinued the web-based version of Google Maps Timeline and moved all location data to on-device storage. Users' last 90 days of data were transferred to their phone, but older data was deleted unless manually backed up. Many users lost years of location history in the transition. This visualizer helps you view and explore any Google Timeline data you managed to export."
-  },
-  {
-    question: "Where did my Google Timeline go?",
-    answer: "If Timeline disappeared from Google Maps in your browser, it's not just you — Google removed the web version and moved Timeline on-device. Your history now lives in the Google Maps app on your phone (tap your profile picture → Timeline). If it's missing there too, look for an older Google Takeout archive or a Timeline backup — any export you still have can be uploaded here to see your full history again."
-  },
-  {
-    question: "How can I view my Google Timeline on the web again?",
-    answer: "Export your Timeline data from your phone (Google Maps → Settings → Location → Timeline → Export Timeline data) or from Google Takeout, then upload the JSON files to this visualizer. You get a web-based timeline again — calendar, map, and day-by-day details — with no Google account needed. To keep a permanent, always-up-to-date timeline, you can import the same files into Dawarich."
-  },
-  {
-    question: "How do I export my Google Timeline data?",
-    answer: "There are three methods: (1) Google Takeout at takeout.google.com — select Location History and export, though this no longer works for everyone. (2) On Android: Google Maps → Settings → Location → Location Services → Timeline → Export Timeline. (3) On iOS: Google Maps → Settings → Personal Content → Export Timeline data. We recommend trying all methods and exporting as soon as possible."
-  },
-  {
-    question: "Can I visualize years of location data at once?",
-    answer: "Yes. The visualizer has been tested with files containing over 630,000 location points spanning 15+ years. It processes data in batches to keep your browser responsive, and includes a year filter so you can focus on specific time periods. A 170 MB file typically takes 20-30 seconds to process on a modern computer."
-  },
-  {
-    question: "What's the difference between Records.json and Semantic Location History?",
-    answer: "Records.json contains raw GPS coordinates and timestamps — every location ping Google recorded. These files tend to be very large. Semantic Location History files (named like 2022_APRIL.json) are more structured, containing place visits with addresses, activity segments (walking, driving, cycling), and duration information. Both formats are supported by this visualizer."
-  },
-  {
-    question: "Can I view my Google Timeline without Google Maps?",
-    answer: "Yes — that's exactly what this tool does. After exporting your Google Timeline data, upload the JSON files here to view everything on an interactive OpenStreetMap-based map. No Google account or Google Maps app needed. You can filter by year, click on individual points for details, and explore your complete location history independently of Google."
-  },
-  {
-    question: "How is this different from other Google Timeline viewers?",
-    answer: "This visualizer is built with privacy as the top priority — zero data leaves your browser. It supports all Google export formats (including the newer phone-based exports that many tools don't handle), processes files progressively so large datasets don't crash your browser, and is maintained as part of the Dawarich open-source ecosystem. It's also completely free with no accounts or sign-ups required."
-  }
-];
+const faqItems = content.faq;
 
 function nextDateKey(currentKey, direction) {
   if (!currentKey) return null;
@@ -76,6 +39,11 @@ function nextMonthKey(monthKey, direction) {
 }
 
 export default function TimelineVisualizer() {
+  const { i18n } = useDocusaurusContext();
+  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const pageUrl = useLocalizedUrl('/tools/timeline-visualizer/');
+  const homeUrl = useLocalizedUrl('/');
+  const toolsUrl = useLocalizedUrl('/tools/');
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const [points, setPoints] = useState([]);
   const [paths, setPaths] = useState([]);
@@ -260,8 +228,7 @@ export default function TimelineVisualizer() {
         {/* Primary Meta Tags */}
         <meta name="title" content={pageTitle} />
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="Google Timeline visualizer, Google Timeline gone, where is my Google Timeline, view Google Timeline on the web, Google Timeline history, Google location history viewer, Google Takeout location viewer, view location history on map, Google Maps Timeline replacement, Google Timeline shutdown alternative, location history map, Google Timeline export viewer, privacy-first location visualizer" />
-        <link rel="canonical" href={pageUrl} />
+        <meta name="keywords" content={content.meta.keywords} />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
@@ -280,7 +247,7 @@ export default function TimelineVisualizer() {
 
         {/* Additional Meta Tags */}
         <meta name="author" content="Dawarich" />
-        <meta name="language" content="English" />
+        <meta name="language" content={htmlLang} />
         <meta name="revisit-after" content="7 days" />
 
         {/* JSON-LD Structured Data - WebApplication */}
@@ -288,7 +255,7 @@ export default function TimelineVisualizer() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "Google Timeline Visualizer",
+            "name": content.h1,
             "url": pageUrl,
             "description": pageDescription,
             "applicationCategory": "UtilityApplication",
@@ -298,14 +265,7 @@ export default function TimelineVisualizer() {
               "price": "0",
               "priceCurrency": "USD"
             },
-            "featureList": [
-              "Visualize Google Timeline data on an interactive map",
-              "Privacy-first - all processing in browser",
-              "Support for Records.json, Semantic Location History, and phone exports",
-              "Year-based filtering for large datasets",
-              "No data sent to any server",
-              "Open source and transparent"
-            ]
+            "featureList": content.meta.featureList
           })}
         </script>
 
@@ -314,28 +274,28 @@ export default function TimelineVisualizer() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "HowTo",
-            "name": "How to Visualize Your Google Timeline Location History",
-            "description": "Export your Google Timeline data and visualize it on an interactive map using this free, privacy-first tool.",
+            "name": content.howTo.name,
+            "description": content.howTo.description,
             "step": [
               {
                 "@type": "HowToStep",
-                "name": "Export your Google Timeline data",
-                "text": "Visit takeout.google.com, select Location History (Timeline), and export. Alternatively, on Android: Google Maps → Settings → Location → Timeline → Export. On iOS: Google Maps → Settings → Personal Content → Export Timeline data."
+                "name": content.howTo.steps[0].name,
+                "text": content.howTo.steps[0].text
               },
               {
                 "@type": "HowToStep",
-                "name": "Upload your JSON files",
-                "text": "Drag and drop your exported Google Timeline JSON files into the visualizer. The tool automatically detects the format (Records.json, Semantic Timeline, Location History, etc.)."
+                "name": content.howTo.steps[1].name,
+                "text": content.howTo.steps[1].text
               },
               {
                 "@type": "HowToStep",
-                "name": "Explore your location history",
-                "text": "Your location data appears on an interactive map. Use the year filter to focus on specific time periods, click on points for details, and explore your complete location history."
+                "name": content.howTo.steps[2].name,
+                "text": content.howTo.steps[2].text
               }
             ],
             "tool": {
               "@type": "HowToTool",
-              "name": "Google Timeline Visualizer by Dawarich"
+              "name": content.howTo.tool
             }
           })}
         </script>
@@ -347,10 +307,10 @@ export default function TimelineVisualizer() {
             "@type": "FAQPage",
             "mainEntity": faqItems.map(item => ({
               "@type": "Question",
-              "name": item.question,
+              "name": toPlainText(item.q),
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": item.answer
+                "text": toPlainText(item.a)
               }
             }))
           })}
@@ -365,19 +325,19 @@ export default function TimelineVisualizer() {
               {
                 "@type": "ListItem",
                 "position": 1,
-                "name": "Home",
-                "item": "https://dawarich.app"
+                "name": content.homeLabel,
+                "item": homeUrl
               },
               {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Free Tools",
-                "item": "https://dawarich.app/tools"
+                "name": content.toolsLabel,
+                "item": toolsUrl
               },
               {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Google Timeline Visualizer",
+                "name": content.h1,
                 "item": pageUrl
               }
             ]
@@ -388,15 +348,15 @@ export default function TimelineVisualizer() {
       <div className={styles.container}>
         <div className={styles.heroSection}>
           <div className={styles.header}>
-            <h1>Google Timeline Visualizer</h1>
-            <p>Google shut down Timeline on the web — this free, privacy-first tool brings the view back. Browse your exported location history day by day with a calendar heat-grid, visit list, and activity replay.</p>
+            <h1>{content.h1}</h1>
+            <p>{content.intro}</p>
           </div>
           <div className={styles.uploadRow}>
             <FileUploader onFilesLoaded={handleFilesLoaded} onClear={handleClear} />
             {!isShowingSample && points.length > 0 && (
               <div className={styles.saveToAccountSection}>
                 <p className={styles.saveToAccountIntro}>
-                  Want this in your Dawarich account too? We'll import it during signup — no second upload needed.
+                  {content.saveIntro}
                 </p>
                 <SaveToAccountButton
                   toolName="timeline-visualizer"
@@ -411,36 +371,36 @@ export default function TimelineVisualizer() {
                 <svg className={styles.privacyIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
-                <span>All processing happens in your browser. Your data stays on your device unless you choose “Save to my Dawarich account.”</span>
+                <span>{content.privacy}</span>
               </div>
               <details className={styles.instructionsCollapsible}>
                 <summary className={styles.instructionsSummary}>
-                  Don't have your data yet? Here's how to export it
+                  {content.exportData.title}
                 </summary>
                 <div className={styles.instructionsContent}>
                   <p>
-                    You can export your Google Timeline data using one of the following methods. If one of them doesn't work, try another.
+                    {content.exportData.intro}
                   </p>
                   <p>
-                    Unfortunately, some users might not be able to export their location data due to how Google went with transition to new location storage policies.
+                    {content.exportData.warning}
                   </p>
                   <div className={styles.instructionsList}>
                     <div className={styles.instructionItem}>
-                      <strong>Google Takeout:</strong>
-                      <p>Visit <a href="https://takeout.google.com/" target="_blank" rel="noopener noreferrer">takeout.google.com</a> → Choose Location History (Timeline) → Export</p>
-                      <p>This way might not work for everyone because Google changed the way location data is being stored and exported. More details in our <a href="https://dawarich.app/blog/migrating-from-google-location-history-to-dawarich">blog</a>.</p>
+                      <strong>{content.exportData.methods[0].title}</strong>
+                      <p><RichText text={content.exportData.methods[0].steps[0]} /></p>
+                      <p><RichText text={content.exportData.methods[0].steps[1]} /></p>
                     </div>
                     <div className={styles.instructionItem}>
-                      <strong>On Android:</strong>
-                      <p>Open Google Maps → Settings → Location → Location Services → Timeline → Export Timeline</p>
+                      <strong>{content.exportData.methods[1].title}</strong>
+                      <p>{content.exportData.methods[1].steps[0]}</p>
                     </div>
                     <div className={styles.instructionItem}>
-                      <strong>On iOS:</strong>
-                      <p>Open Google Maps → Settings → Personal Content → Export Timeline data</p>
+                      <strong>{content.exportData.methods[2].title}</strong>
+                      <p>{content.exportData.methods[2].steps[0]}</p>
                     </div>
                   </div>
                   <p>
-                    Already have your export? You can also convert it to GPX, KML, or GeoJSON with the free <a href="/tools/google-timeline-converter/">Google Timeline Converter</a>.
+                    <RichText text={content.exportData.converterHint} />
                   </p>
                 </div>
               </details>
@@ -480,7 +440,7 @@ export default function TimelineVisualizer() {
             <div className={styles.mapColumn}>
               <BrowserOnly>
                 {() => (
-                  <Suspense fallback={<div className={styles.mapLoading}>Loading map…</div>}>
+                  <Suspense fallback={<div className={styles.mapLoading}>{content.loadingMap}</div>}>
                     <TimelineMapV2
                       day={currentDay}
                       rawPoints={rawPointsForDay}
@@ -506,103 +466,63 @@ export default function TimelineVisualizer() {
               type="button"
               className={styles.postVizCtaDismiss}
               onClick={() => setCtaDismissed(true)}
-              aria-label="Dismiss"
+              aria-label={content.cta.dismissLabel}
             >
               &times;
             </button>
             <p className={styles.postVizCtaText}>
-              You just visualized <strong>{points.length.toLocaleString()}</strong> location points
-              {yearStats.size > 0 && (
-                <>
-                  {' '}from <strong>{Math.min(...yearStats.keys())}</strong> to <strong>{Math.max(...yearStats.keys())}</strong>
-                </>
-              )}.
-              {' '}This view disappears when you close this tab. Keep your location history forever — and add to it automatically.
+              <RichText text={interpolate(content.cta.headline, {
+                points: points.length.toLocaleString(htmlLang),
+                dateRange: yearStats.size > 0 ? interpolate(content.cta.dateRange, {
+                  startYear: Math.min(...yearStats.keys()), endYear: Math.max(...yearStats.keys()),
+                }) : '',
+              })} />
             </p>
             <a
               href="https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=post-viz-cta&utm_campaign=timeline-visualizer"
               className={styles.postVizCtaButton}
             >
-              Start Free Trial — 7 Days &rarr;
+              {content.cta.trialButton}
             </a>
           </div>
         )}
 
         <div className={styles.bottomCtaPanel}>
           <div className={styles.ctaContent}>
-            <h3>Looking for a Google Timeline Replacement?</h3>
-            <p>Dawarich is an open-source location tracking platform that gives you full control over your data. Import your Google Timeline export, track ongoing location from your phone, and visualize years of movement history — all self-hosted or in the cloud.</p>
-            <a href="https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=post-map-cta&utm_campaign=timeline-visualizer" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
+            <h3>{content.cta.title}</h3>
+            <p>{content.cta.body}</p>
+            <SmartLink href="https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=post-map-cta&utm_campaign=timeline-visualizer" className={styles.ctaButton}>{content.cta.button}</SmartLink>
           </div>
         </div>
 
         <div className={styles.infoSection}>
           <div className={styles.infoGrid}>
-            <div className={styles.infoCard}>
-              <h2>What Is a Google Timeline Visualizer?</h2>
-              <p>A Google Timeline visualizer takes the raw JSON files from your Google location history export and turns them into an interactive map you can explore. Instead of scrolling through thousands of lines of coordinates and timestamps, you see your actual journeys plotted on a map — every trip, commute, and walk you've taken while Google was tracking your location.</p>
-              <p>This tool visualizes everything in your browser, so exploring your history never sends your location data anywhere. It's the privacy-first way to explore years of location history. (If you use “Save to my Dawarich account,” that one action uploads your file to Dawarich Cloud to set up your import — nothing is sent otherwise.)</p>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>What Can You Discover in Your Data?</h2>
-              <ul>
-                <li><strong>Travel patterns</strong> — See every trip you've taken, from daily commutes to international travel</li>
-                <li><strong>Place visits</strong> — Discover which locations you've visited most, with arrival and departure times</li>
-                <li><strong>Activity types</strong> — View walking, driving, cycling, and transit segments from Semantic Location History</li>
-                <li><strong>Year-by-year changes</strong> — Filter by year to see how your movement patterns evolved over time</li>
-                <li><strong>Forgotten memories</strong> — Rediscover that restaurant, park, or neighborhood you visited years ago</li>
-              </ul>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>Supported Google Export Formats</h2>
-              <ul>
-                <li><strong>Records.json</strong> — Raw GPS records in E7 coordinate format. Largest file, contains every location ping</li>
-                <li><strong>Semantic Location History</strong> — Monthly files (e.g. 2022_APRIL.json) with place visits, addresses, and activity segments</li>
-                <li><strong>Phone Timeline Export</strong> — Newer format from Google Maps on Android/iOS with semanticSegments and timeline paths</li>
-                <li><strong>Settings &amp; TimelineEdits</strong> — Additional metadata files from Google Takeout exports</li>
-              </ul>
-              <p>The visualizer auto-detects the format. You can upload multiple files at once to combine data from different export methods.</p>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>What Happened to Google Maps Timeline?</h2>
-              <p>In late 2024, Google discontinued the web version of Google Maps Timeline and moved all location data to on-device storage. Only the last 90 days were migrated — older data was deleted unless users manually backed it up. Many people <a href="https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/" target="_blank" rel="noopener noreferrer">lost years of location history</a> in the transition.</p>
-              <p>If you exported your data before or during the transition, this visualizer lets you view it. For a long-term replacement, <a href="https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-visualizer">Dawarich</a> offers self-hosted and cloud-based location tracking with full data ownership.</p>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>How This Compares to Other Visualizers</h2>
-              <p>Several tools exist for viewing Google location data. Here's how this one differs:</p>
-              <ul>
-                <li><strong>vs LocationHistoryVisualizer.com</strong> — Focused on heatmaps only. This tool shows individual points, paths, place visits, and activity segments with detailed filtering</li>
-                <li><strong>vs Google Maps Timeline</strong> — Google's web timeline was shut down. This is an independent, privacy-first alternative that works with your exported data</li>
-                <li><strong>vs GitHub projects</strong> — Most open-source viewers support only older export formats. This tool handles all Google formats including the latest phone-based exports</li>
-              </ul>
-              <p>Need a heatmap instead? Try our <a href="/tools/heatmap-generator">GPS Heatmap Generator</a>.</p>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>Related Tools</h2>
-              <ul>
-                <li><a href="/tools/heatmap-generator">GPS Heatmap Generator</a> — Create heatmaps from GPX, FIT, TCX, and other GPS files</li>
-                <li><a href="/tools/gpx-merger">GPX Track Merger</a> — Combine multiple GPX files into one</li>
-                <li><a href="/tools/photo-geotagging">Photo Geodata Extraction</a> — Extract GPS coordinates from your photos</li>
-                <li><a href="/tools/geojson-to-gpx">GeoJSON to GPX Converter</a> — Convert your location data to GPX format</li>
-              </ul>
-              <p>Read more: <a href="/blog/building-a-privacy-first-google-timeline-visualizer">How we built this visualizer</a> | <a href="/blog/migrating-from-google-location-history-to-dawarich">Migrating from Google Location History</a></p>
-            </div>
+            {content.cards.map((card, index) => (
+              <div className={styles.infoCard} key={index}>
+                <h2>{card.title}</h2>
+                {card.paragraphs.map((text, index) => (
+                  <p key={index}><RichText text={text} /></p>
+                ))}
+                {card.items && <ul>
+                  {card.items.map((item, index) => (
+                    <li key={index}><RichText text={item.body} /></li>
+                  ))}
+                </ul>}
+                {card.footer?.map((text, index) => (
+                  <p key={index}><RichText text={text} /></p>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
 
         <div className={styles.faqSection}>
-          <h2>Frequently Asked Questions</h2>
+          <h2>{content.faqTitle}</h2>
           <div className={styles.faqList}>
             {faqItems.map((item, index) => (
               <details key={index} className={styles.faqItem}>
-                <summary className={styles.faqQuestion}>{item.question}</summary>
-                <p className={styles.faqAnswer}>{item.answer}</p>
+                <summary className={styles.faqQuestion}>{item.q}</summary>
+                <p className={styles.faqAnswer}><RichText text={item.a} /></p>
               </details>
             ))}
           </div>
