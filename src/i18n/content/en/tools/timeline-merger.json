@@ -1,0 +1,261 @@
+{
+  "meta": {
+    "title": "Google Timeline Data Merger - Combine Location History Exports",
+    "description": "Free tool to merge multiple Google Timeline exports into one file. Smart deduplication removes overlapping data points. Combine Records.json, Semantic History, and phone exports. Privacy-first.",
+    "keywords": "merge google timeline exports, combine location history files, google timeline data recovery, merge Records.json, combine Google Takeout location, merge semantic location history, Google Timeline merger, location history deduplication, merge GPS data",
+    "featureList": [
+      "Merge multiple Google Timeline exports into one file",
+      "Smart deduplication removes overlapping data points",
+      "Support for Records.json, Semantic Location History, and phone exports",
+      "Adjustable distance and time thresholds for deduplication",
+      "Visual timeline overlap report",
+      "Export as JSON or GPX",
+      "Privacy-first - all processing in browser",
+      "No data sent to any server"
+    ]
+  },
+  "howTo": {
+    "name": "How to Merge Google Timeline Exports",
+    "description": "Combine multiple Google Timeline export files into a single unified dataset with smart deduplication.",
+    "steps": [
+      {
+        "name": "Export your Google Timeline data",
+        "text": "Use Google Takeout, Android, or iOS to export your Google Timeline data. Export using multiple methods if possible to ensure you have all your data."
+      },
+      {
+        "name": "Upload your JSON files",
+        "text": "Drag and drop all your exported Google Timeline JSON files into the merger tool. The tool auto-detects Records.json, Semantic Location History, and phone export formats."
+      },
+      {
+        "name": "Review file summary and overlaps",
+        "text": "Check the file summary table and timeline visualization to see how your files overlap. The tool shows date ranges, point counts, and detected formats for each file."
+      },
+      {
+        "name": "Adjust deduplication settings",
+        "text": "Set the distance threshold (10-500 meters) and time threshold (10-300 seconds) for deduplication. Points within both thresholds are considered duplicates."
+      },
+      {
+        "name": "Merge and export",
+        "text": "Click Merge Files to combine all data with deduplication. Download the result as JSON (preserves all metadata) or GPX (compatible with mapping applications)."
+      }
+    ],
+    "tool": "Google Timeline Data Merger by Dawarich"
+  },
+  "h1": "Google Timeline Data Merger",
+  "intro": "Merge multiple Google Timeline exports into one unified file. Smart deduplication removes overlapping data points while preserving all unique location records. Free, privacy-first, and entirely in your browser.",
+  "preCta": "Want to visualize your Timeline data first? Try our [Google Timeline Visualizer](/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) to explore your location history on an interactive map. Need a long-term Timeline replacement? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) gives you full data ownership.",
+  "faqTitle": "Frequently Asked Questions",
+  "homeLabel": "Home",
+  "toolsLabel": "Free Tools",
+  "privacyTitle": "Privacy First",
+  "privacyBody": "All merging and deduplication happens entirely in your browser. Your location data never leaves your device and is not sent to any server.",
+  "benefitsTitle": "Why Merge Timeline Exports?",
+  "benefitsIntro": "Google provides multiple ways to export Timeline data, each capturing different information. Combining them gives you the most complete location history possible.",
+  "benefits": [
+    {
+      "title": "Multiple export methods:",
+      "body": "Google Takeout, phone-based export, and Semantic Location History each contain different data. Merging captures everything from every source."
+    },
+    {
+      "title": "Data recovery:",
+      "body": "After Google's 2024 Timeline migration, many users have partial exports from different dates. Merge them to reconstruct as much history as possible."
+    },
+    {
+      "title": "Combining old and new exports:",
+      "body": "Exported your Timeline in 2022 and again in 2024? Merge both exports to get continuous coverage without duplicate entries."
+    }
+  ],
+  "settings": {
+    "title": "Deduplication Settings",
+    "intro": "Adjust how aggressively duplicate points are detected. Two points are considered duplicates if they are within both the distance and time thresholds of each other. The point with richer metadata is kept.",
+    "distanceLabel": "Distance Threshold",
+    "distanceHint": "Points closer than this distance may be duplicates (10m = strict, 500m = aggressive)",
+    "timeLabel": "Time Threshold",
+    "timeHint": "Points recorded within this time window may be duplicates (10s = strict, 300s = aggressive)"
+  },
+  "results": {
+    "file": "File",
+    "format": "Format",
+    "points": "Points",
+    "paths": "Paths",
+    "dateRange": "Date Range",
+    "dateCoverage": "Date Coverage",
+    "overlap": "Overlap",
+    "title": "Merge Results",
+    "inputPoints": "Input Points",
+    "outputPoints": "Output Points",
+    "duplicatesRemoved": "Duplicates Removed",
+    "filesMerged": "Files Merged",
+    "overlapDetails": "Overlap Details",
+    "parsing": "Parsing uploaded files...",
+    "unknown": "unknown",
+    "noTimestamps": "No timestamps",
+    "none": "None",
+    "downloadJson": "Download as JSON",
+    "downloadGpx": "Download as GPX",
+    "noDate": "N/A",
+    "merging": "Merging...",
+    "uploadedFiles": "Uploaded Files ({count})",
+    "distanceValue": "{distance}m",
+    "timeValue": "{seconds}s",
+    "filePair": "**{fileA}** and **{fileB}**",
+    "overlapRange": " overlap from {startDate} to {endDate}",
+    "overlapWith": "Overlap with {fileName}",
+    "mergeButton": "Merge {count} File|Merge {count} Files",
+    "dayCount": "{count} day|{count} days",
+    "parseError": "Error parsing {fileName}: {message}",
+    "processingError": "Error processing files: {message}",
+    "mergeError": "Error merging files: {message}"
+  },
+  "cta": {
+    "fallback": "Want to keep your merged location data safe and always accessible? Dawarich stores your complete location history securely.",
+    "postTitle": "Never risk losing your location data again",
+    "postBody": "Dawarich stores everything in EU data centers, encrypted in transit (SSL/TLS) and at rest (LUKS), with full backups and an interactive map. Import your merged Timeline data and keep tracking automatically.",
+    "bottomTitle": "Looking for a Long-Term Google Timeline Replacement?",
+    "bottomBody": "Dawarich is an open-source location tracking platform that gives you full control over your data. Import your merged Google Timeline export, track ongoing location from your phone, and visualize years of movement history -- all self-hosted or in the cloud.",
+    "button": "Try Dawarich Free for 7 Days",
+    "headline": "You combined **{count}** files with **{points}** points into one. Dawarich does this automatically with all your GPS sources.",
+    "statLabels": {
+      "files": "files",
+      "points": "points",
+      "duplicates": "duplicates removed"
+    }
+  },
+  "faq": [
+    {
+      "q": "Is it safe to upload my Google Timeline data?",
+      "a": "Yes. All data processing happens entirely in your browser using JavaScript. Your location history files are never uploaded to any server. The files are read locally, parsed, merged, and exported without any network requests. When you close the tab, the data is gone. The tool is also open source, so you can verify the code."
+    },
+    {
+      "q": "How does deduplication work?",
+      "a": "The deduplication algorithm sorts all points by timestamp, then compares each point to the previous one. If two consecutive points are within both the distance threshold (default 50 meters) and time threshold (default 60 seconds), the duplicate is removed. When a duplicate is found, the point with more metadata (such as place names or activity types) is kept. You can adjust both thresholds using the sliders before merging."
+    },
+    {
+      "q": "Can I merge different format types?",
+      "a": "Yes. The merger supports all Google Timeline export formats: Records.json from Google Takeout, Semantic Location History monthly files (like 2022_APRIL.json), and the newer phone-based Timeline exports with semanticSegments. You can mix and match any combination of these formats. The parser auto-detects each file's format and normalizes the data before merging."
+    },
+    {
+      "q": "What happens to overlapping data?",
+      "a": "Overlapping data is handled by the deduplication step. When two files cover the same time period, you will likely have duplicate location points recorded at the same time and place. The merger identifies these duplicates based on proximity in both space and time, then keeps only one copy of each point (preferring the copy with richer metadata). The overlap report shows you exactly which files overlap and by how many days."
+    },
+    {
+      "q": "Will merging lose any of my data?",
+      "a": "No meaningful data is lost. The deduplication only removes true duplicates, points that are essentially the same location recorded at the same time from multiple export sources. All unique points, place visits, activity segments, and paths from every file are preserved in the merged output. If you want to be safe, you can set the distance threshold to 0 to disable deduplication entirely."
+    },
+    {
+      "q": "What export formats are available?",
+      "a": "You can export the merged data as JSON (an array of all deduplicated location points with full metadata) or as GPX (a standard GPS format compatible with most mapping applications, fitness trackers, and GIS tools). The JSON export preserves all original metadata like place names, addresses, and activity types. The GPX export converts place visits to waypoints and location records to track points."
+    },
+    {
+      "q": "How many files can I merge at once?",
+      "a": "There is no hard limit on the number of files. The tool has been tested with over 10 files simultaneously, including large Records.json files with hundreds of thousands of points. Processing time depends on the total number of points across all files and your device's processing power. A typical merge of 3-5 files with a combined 500,000 points takes 10-30 seconds on a modern computer."
+    }
+  ],
+  "cards": [
+    {
+      "title": "What Is the Timeline Data Merger?",
+      "paragraphs": [
+        "The Timeline Data Merger is a free browser-based tool that combines multiple Google Timeline export files into a single, unified dataset. When you export your Google location history using different methods (Google Takeout, phone export, Semantic History), you often end up with overlapping files containing duplicate data points. This tool intelligently merges them, removing duplicates while preserving every unique location record.",
+        "All processing happens locally in your browser. Your location data is never transmitted to any server, making it safe to use even with sensitive personal location history spanning years."
+      ]
+    },
+    {
+      "title": "How Deduplication Works",
+      "paragraphs": [
+        "The deduplication algorithm uses a two-factor approach to identify duplicate location points:"
+      ],
+      "items": [
+        {
+          "body": "**Spatial proximity** -- Points within the distance threshold (default 50 meters) are candidates for deduplication"
+        },
+        {
+          "body": "**Temporal proximity** -- Points must also be within the time threshold (default 60 seconds) to be considered duplicates"
+        },
+        {
+          "body": "**Both conditions required** -- A point is only removed as a duplicate if it matches on both distance AND time"
+        },
+        {
+          "body": "**Metadata preservation** -- When duplicates are found, the version with more metadata (place names, addresses, activity types) is kept"
+        }
+      ],
+      "footer": [
+        "Points are sorted chronologically before deduplication, ensuring consistent results regardless of upload order."
+      ]
+    },
+    {
+      "title": "Why Merge Timeline Exports?",
+      "paragraphs": [
+        "There are several common scenarios where merging Google Timeline data is essential:"
+      ],
+      "items": [
+        {
+          "body": "**Multiple export sources** -- Google Takeout, Android export, and iOS export each capture different subsets of your data"
+        },
+        {
+          "body": "**Recovering from Google's 2024 migration** -- When Google moved Timeline to on-device storage, many users made multiple partial exports. Merging recovers the most complete history"
+        },
+        {
+          "body": "**Periodic backups** -- If you exported in 2021 and again in 2024, merging creates a continuous dataset spanning both periods"
+        },
+        {
+          "body": "**Device transitions** -- Switched phones? Merge exports from your old and new devices"
+        }
+      ]
+    },
+    {
+      "title": "What Happened to Google Maps Timeline?",
+      "paragraphs": [
+        "In late 2024, Google discontinued the web version of Google Maps Timeline and moved all location data to on-device storage. Only the last 90 days of data were automatically transferred to users' phones. Older location history was permanently deleted unless users had manually exported it before the deadline.",
+        "This left millions of users with fragmented data: partial Takeout exports, phone exports of recent data, and Semantic Location History files from different periods. The Timeline Data Merger helps piece these fragments back together into a complete location history.",
+        "For ongoing location tracking with full data ownership, consider [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-merger) as a self-hosted or cloud-based replacement."
+      ]
+    },
+    {
+      "title": "Supported Formats",
+      "paragraphs": [
+        "The merger automatically detects and processes all Google Timeline export formats:"
+      ],
+      "items": [
+        {
+          "body": "**Records.json** -- Raw GPS records from Google Takeout in E7 coordinate format. These files are typically the largest, containing every location ping"
+        },
+        {
+          "body": "**Semantic Location History** -- Monthly files (e.g., 2022_APRIL.json) with structured place visits, addresses, and activity segments"
+        },
+        {
+          "body": "**Phone Timeline Export** -- Newer format from Google Maps on Android/iOS with semanticSegments and timeline paths"
+        },
+        {
+          "body": "**Settings & TimelineEdits** -- Additional metadata files from Google Takeout exports"
+        }
+      ],
+      "footer": [
+        "You can mix any combination of these formats in a single merge operation."
+      ]
+    },
+    {
+      "title": "Related Tools",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Google Timeline Visualizer](/tools/timeline-visualizer) -- View your location history on an interactive map"
+        },
+        {
+          "body": "[GPS Heatmap Generator](/tools/heatmap-generator) -- Create heatmaps from GPX, FIT, TCX, and other GPS files"
+        },
+        {
+          "body": "[GPX Track Merger](/tools/gpx-merger) -- Combine multiple GPX files into one"
+        },
+        {
+          "body": "[Photo Geodata Extraction](/tools/photo-geotagging) -- Extract GPS coordinates from your photos"
+        },
+        {
+          "body": "[GeoJSON to GPX Converter](/tools/geojson-to-gpx) -- Convert location data to GPX format"
+        }
+      ],
+      "footer": [
+        "Read more: [Migrating from Google Location History](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}

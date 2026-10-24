@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "title": "Google Timeline Splitter - Split Large Timeline JSON Files",
+    "description": "Free tool to split large Google Timeline JSON files into smaller, valid chunks. Supports all export formats: Records.json, Semantic Location History, Semantic Segments, and more. Choose your target file size. Privacy-first — runs in your browser.",
+    "keywords": "split google timeline json, split records.json, split large google location history, google timeline splitter, split google takeout location, break up timeline json, google timeline file too large",
+    "featureList": [
+      "Split large Google Timeline JSON files into smaller chunks",
+      "Support for all 6 Google Timeline export formats",
+      "Choose target chunk size: 1, 5, 10, 20, 50, or 100 MB",
+      "Each chunk is a valid JSON file in the original format",
+      "Download all chunks as a single ZIP file",
+      "Privacy-first - all processing in browser",
+      "No data sent to any server"
+    ]
+  },
+  "howTo": {
+    "name": "How to Split a Large Google Timeline JSON File",
+    "description": "Upload your Google Timeline export and split it into smaller, valid JSON chunks.",
+    "steps": [
+      {
+        "name": "Upload your Google Timeline JSON",
+        "text": "Drag and drop your Records.json, Semantic Location History, or other Google Timeline export file into the splitter."
+      },
+      {
+        "name": "Choose target chunk size",
+        "text": "Select your desired chunk size: 1 MB, 5 MB, 10 MB, 20 MB, 50 MB, or 100 MB per file."
+      },
+      {
+        "name": "Download your split files",
+        "text": "Click Split & Download ZIP to get all chunks packaged in a single ZIP file. Each chunk is a valid JSON file in the original format."
+      }
+    ]
+  },
+  "h1": "Google Timeline Splitter",
+  "intro": "Split large Google Timeline JSON exports into smaller, valid chunks. Each chunk stays in the original format so it can be imported anywhere. Choose your target file size and download a ZIP.",
+  "benefitsTitle": "Why Split Timeline Files?",
+  "parsing": "Parsing file...",
+  "dropFile": "Drop a Google Timeline JSON file here",
+  "browse": "or click to browse",
+  "formats": "Supports: Records.json, Semantic, Location History, and more",
+  "clearButton": "Clear File",
+  "privacyBody": "All data processing happens in your browser. Your files never leave your device.",
+  "preCta": "Working with large Google Timeline exports? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-splitter) handles imports of any size automatically, with full data ownership and privacy.",
+  "fileNameLabel": "File Name",
+  "fileSizeLabel": "File Size",
+  "formatLabel": "Format",
+  "entriesLabel": "Entries",
+  "targetSizeTitle": "Target Chunk Size",
+  "faqTitle": "Frequently Asked Questions",
+  "bottomCtaTitle": "Looking for a Google Timeline Replacement?",
+  "bottomCtaBody": "Dawarich is an open-source location tracking platform that gives you full control over your data. Import your Google Timeline export, track ongoing location from your phone, and visualize years of movement history — all self-hosted or in the cloud.",
+  "jsonOnlyError": "Please upload a JSON file. Google Timeline exports are always in JSON format.",
+  "homeLabel": "Home",
+  "toolsLabel": "Free Tools",
+  "inputLabel": "Choose files to process",
+  "privacyTitle": "Privacy First",
+  "splitButton": "Split & Download ZIP",
+  "ctaButton": "Try Dawarich Free for 7 Days",
+  "unknownFormatError": "This does not appear to be a Google Timeline export file. Supported formats: Records.json, Semantic Location History, Semantic Segments, Location History, Settings, Timeline Edits.",
+  "splitting": "Splitting...",
+  "benefits": [
+    {
+      "title": "Import size limits:",
+      "body": "Many tools have file size limits for imports. Splitting a 500 MB Records.json into 10 MB chunks makes importing painless."
+    },
+    {
+      "title": "Faster batch imports:",
+      "body": "Importing several smaller files is often faster and more reliable than a single massive file, especially over slow connections."
+    },
+    {
+      "title": "Preserves original format:",
+      "body": "Unlike converters, this tool keeps your data in the exact same Google Timeline JSON format. Every chunk is a valid, standalone file."
+    },
+    {
+      "title": "All formats supported:",
+      "body": "Works with Records.json, Semantic Location History, Semantic Segments, Location History phone exports, Settings, and Timeline Edits."
+    }
+  ],
+  "entriesLoaded": "{count} entries loaded",
+  "sizeValue": "{size} MB",
+  "chunkPreview": "This will create **{count}** chunk from {entries} entries (~{size} MB each)|This will create **{count}** chunks from {entries} entries (~{size} MB each)",
+  "parseError": "Error parsing file: {message}",
+  "splitError": "Error splitting file: {message}",
+  "ctaHeadline": "Your file has **{count}** entries. Dawarich handles imports of any size automatically — no splitting needed.",
+  "statLabels": {
+    "entries": "entries",
+    "fileSize": "file size"
+  },
+  "formatLabels": {
+    "records": "Records.json (Raw GPS)",
+    "semantic": "Semantic Location History",
+    "semanticSegments": "Semantic Segments",
+    "locationHistory": "Location History (Phone Export)",
+    "settings": "Settings",
+    "timelineEdits": "Timeline Edits",
+    "unknown": "Unknown"
+  },
+  "faq": [
+    {
+      "q": "Is it safe to upload my Google Timeline data?",
+      "a": "Yes. All data processing happens entirely in your browser using JavaScript. Your location history files are never uploaded to any server — they stay on your device. When you close the tab, the data is gone. The tool is open source so you can verify exactly what the code does."
+    },
+    {
+      "q": "What Google Timeline formats can I split?",
+      "a": "This splitter supports all six Google Timeline export formats: Records.json (raw GPS location records), Semantic Location History (monthly YYYY_MONTH.json files), Semantic Segments (newer phone-based export), Location History (array format with startTime/endTime), Settings, and Timeline Edits. The tool auto-detects the format when you upload a file."
+    },
+    {
+      "q": "Will splitting damage my data?",
+      "a": "No. Every entry in your original file will appear in exactly one output chunk. No data is lost, duplicated, or modified. Each chunk is a valid JSON file in the exact same format as the original, so it can be imported into any tool that accepts Google Timeline files."
+    },
+    {
+      "q": "Why would I need to split a Google Timeline file?",
+      "a": "Google Timeline exports — especially Records.json — can be hundreds of megabytes or even gigabytes. Many import tools (including Dawarich) handle large files better when they are split into smaller pieces. Splitting also helps if you want to share a portion of your data or process it in batches."
+    },
+    {
+      "q": "How does the size targeting work?",
+      "a": "The tool samples entries from your file to estimate average entry size, then calculates how many entries fit in each chunk to hit the target. Actual chunk sizes may vary slightly because individual entries differ in size, but the tool errs on the side of staying under the target."
+    },
+    {
+      "q": "Can I import the split files into Dawarich?",
+      "a": "Yes. Each chunk is a valid Google Timeline JSON file in the original format. You can import them one by one into Dawarich or any other tool that accepts Google Timeline exports. Dawarich also handles large files directly, but splitting can speed up the import process."
+    }
+  ],
+  "cards": [
+    {
+      "title": "What Is the Google Timeline Splitter?",
+      "paragraphs": [
+        "This tool takes a large Google Timeline JSON export and divides it into smaller files, each targeting the size you choose. Every chunk is a valid, standalone JSON file in the exact same format as the original — it preserves the full structure, not just the coordinates.",
+        "Unlike format converters that extract points into GPX or CSV, this splitter keeps your data in native Google Timeline format. This means you can import each chunk into any tool that accepts Google Timeline JSON, including Dawarich."
+      ]
+    },
+    {
+      "title": "Supported Google Timeline Formats",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Records.json** — Raw GPS location records with E7 coordinates, timestamps, accuracy, and activity data. Often the largest file in a Google Takeout export."
+        },
+        {
+          "body": "**Semantic Location History** — Monthly files (YYYY_MONTH.json) with place visits and activity segments including names and addresses."
+        },
+        {
+          "body": "**Semantic Segments** — Newer phone-based export format with visit and path data."
+        },
+        {
+          "body": "**Location History** — Array format with startTime/endTime entries and timeline paths."
+        },
+        {
+          "body": "**Settings** — Device settings and configuration data."
+        },
+        {
+          "body": "**Timeline Edits** — Place aggregates and raw signal data from user edits."
+        }
+      ]
+    },
+    {
+      "title": "Choosing the Right Chunk Size",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**1 MB** — Maximum number of small files. Good for tools with very low import limits or for sharing individual portions."
+        },
+        {
+          "body": "**5 MB** — Small chunks that work with almost any import tool. Good default for email attachments."
+        },
+        {
+          "body": "**10 MB** — Balanced size that works with most import tools. Recommended for Dawarich imports."
+        },
+        {
+          "body": "**20 MB** — Fewer files, still manageable for most tools."
+        },
+        {
+          "body": "**50 MB** — Large chunks for tools that handle big files well."
+        },
+        {
+          "body": "**100 MB** — Minimal splitting. Use when you just need to break a very large file in half or into a few pieces."
+        }
+      ]
+    },
+    {
+      "title": "How It Works",
+      "paragraphs": [
+        "The splitter detects your file's format automatically, then divides the main data array (locations, timeline objects, segments, etc.) into evenly-sized groups. Each group is wrapped in the same JSON structure as the original file.",
+        "The tool samples entries from your file to estimate average entry size, then calculates how many entries fit in each chunk to hit your target size. All chunks are packaged into a single ZIP file for easy download."
+      ]
+    },
+    {
+      "title": "Privacy and Security",
+      "paragraphs": [
+        "Your Google Timeline data contains sensitive location information. This tool processes everything entirely in your browser — no data is ever sent to a server. The files stay on your device from upload to download.",
+        "We don't use cookies, analytics, or tracking for your uploaded files. The tool is part of the open-source Dawarich project, so you can inspect the code yourself."
+      ]
+    },
+    {
+      "title": "Related Tools",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Google Timeline Converter](/tools/google-timeline-converter) — Convert timeline data to GPX, KML, CSV, or GeoJSON"
+        },
+        {
+          "body": "[Google Timeline Visualizer](/tools/timeline-visualizer) — View your location history on an interactive map"
+        },
+        {
+          "body": "[Timeline Statistics Analyzer](/tools/timeline-statistics) — Get insights from your location data"
+        },
+        {
+          "body": "[Timeline Data Merger](/tools/timeline-merger) — Combine multiple timeline exports"
+        },
+        {
+          "body": "[GPS File Splitter](/tools/gps-file-splitter) — Split GPX, GeoJSON, KML, and other GPS files"
+        },
+        {
+          "body": "[Timeline Format Detector](/tools/timeline-format-detector) — Identify your export file type"
+        }
+      ]
+    }
+  ]
+}
