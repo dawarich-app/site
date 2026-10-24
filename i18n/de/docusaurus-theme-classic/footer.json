@@ -1,0 +1,266 @@
+{
+  "link.title.Dawarich": {
+    "message": "Dawarich",
+    "description": "The title of the footer links column with title=Dawarich in the footer"
+  },
+  "link.title.Product": {
+    "message": "Product",
+    "description": "The title of the footer links column with title=Product in the footer"
+  },
+  "link.title.Tools": {
+    "message": "Tools",
+    "description": "The title of the footer links column with title=Tools in the footer"
+  },
+  "link.title.Compare": {
+    "message": "Compare",
+    "description": "The title of the footer links column with title=Compare in the footer"
+  },
+  "link.title.Docs": {
+    "message": "Docs",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.title.Company": {
+    "message": "Company",
+    "description": "The title of the footer links column with title=Company in the footer"
+  },
+  "link.item.label.Interactive Map": {
+    "message": "Interactive Map",
+    "description": "The label of footer link with label=Interactive Map linking to /interactive-map"
+  },
+  "link.item.label.Trips & Journaling": {
+    "message": "Trips & Journaling",
+    "description": "The label of footer link with label=Trips & Journaling linking to /trips"
+  },
+  "link.item.label.Statistics": {
+    "message": "Statistics",
+    "description": "The label of footer link with label=Statistics linking to /statistics"
+  },
+  "link.item.label.Location Tracking": {
+    "message": "Location Tracking",
+    "description": "The label of footer link with label=Location Tracking linking to /location-tracking"
+  },
+  "link.item.label.Import & Export": {
+    "message": "Import & Export",
+    "description": "The label of footer link with label=Import & Export linking to /import-export"
+  },
+  "link.item.label.Photo Integrations": {
+    "message": "Photo Integrations",
+    "description": "The label of footer link with label=Photo Integrations linking to /integrations"
+  },
+  "link.item.label.Location Sharing": {
+    "message": "Location Sharing",
+    "description": "The label of footer link with label=Location Sharing linking to /location-sharing"
+  },
+  "link.item.label.Family Location Sharing": {
+    "message": "Family Location Sharing",
+    "description": "The label of footer link with label=Family Location Sharing linking to /family"
+  },
+  "link.item.label.Tax Residency Day Counter": {
+    "message": "Tax Residency Day Counter",
+    "description": "The label of footer link with label=Tax Residency Day Counter linking to /tax-residency"
+  },
+  "link.item.label.Map Poster Studio": {
+    "message": "Map Poster Studio",
+    "description": "The label of footer link with label=Map Poster Studio linking to /poster-studio"
+  },
+  "link.item.label.Pricing": {
+    "message": "Pricing",
+    "description": "The label of footer link with label=Pricing linking to /pricing"
+  },
+  "link.item.label.Dawarich Cloud": {
+    "message": "Dawarich Cloud",
+    "description": "The label of footer link with label=Dawarich Cloud linking to /cloud"
+  },
+  "link.item.label.Roadmap": {
+    "message": "Roadmap",
+    "description": "The label of footer link with label=Roadmap linking to pathname:///roadmap/"
+  },
+  "link.item.label.Changelog": {
+    "message": "Changelog",
+    "description": "The label of footer link with label=Changelog linking to pathname:///docs/changelog/"
+  },
+  "link.item.label.Google Timeline Visualizer": {
+    "message": "Google Timeline Visualizer",
+    "description": "The label of footer link with label=Google Timeline Visualizer linking to /tools/timeline-visualizer"
+  },
+  "link.item.label.KML to KMZ Converter": {
+    "message": "KML to KMZ Converter",
+    "description": "The label of footer link with label=KML to KMZ Converter linking to /tools/kml-to-kmz"
+  },
+  "link.item.label.Extract GPS From Photo": {
+    "message": "Extract GPS From Photo",
+    "description": "The label of footer link with label=Extract GPS From Photo linking to /tools/photo-geotagging"
+  },
+  "link.item.label.Google Timeline Converter": {
+    "message": "Google Timeline Converter",
+    "description": "The label of footer link with label=Google Timeline Converter linking to /tools/google-timeline-converter"
+  },
+  "link.item.label.KMZ to KML Converter": {
+    "message": "KMZ to KML Converter",
+    "description": "The label of footer link with label=KMZ to KML Converter linking to /tools/kmz-to-kml"
+  },
+  "link.item.label.Mileage Calculator": {
+    "message": "Mileage Calculator",
+    "description": "The label of footer link with label=Mileage Calculator linking to /tools/timeline-mileage-calculator"
+  },
+  "link.item.label.GeoJSON to KML Converter": {
+    "message": "GeoJSON to KML Converter",
+    "description": "The label of footer link with label=GeoJSON to KML Converter linking to /tools/geojson-to-kml"
+  },
+  "link.item.label.GPX Merger": {
+    "message": "GPX Merger",
+    "description": "The label of footer link with label=GPX Merger linking to /tools/gpx-merger"
+  },
+  "link.item.label.TCX to GPX Converter": {
+    "message": "TCX to GPX Converter",
+    "description": "The label of footer link with label=TCX to GPX Converter linking to /tools/tcx-to-gpx"
+  },
+  "link.item.label.GPS Heatmap Generator": {
+    "message": "GPS Heatmap Generator",
+    "description": "The label of footer link with label=GPS Heatmap Generator linking to /tools/heatmap-generator"
+  },
+  "link.item.label.KMZ to GPX Converter": {
+    "message": "KMZ to GPX Converter",
+    "description": "The label of footer link with label=KMZ to GPX Converter linking to /tools/kmz-to-gpx"
+  },
+  "link.item.label.GPS File Splitter": {
+    "message": "GPS File Splitter",
+    "description": "The label of footer link with label=GPS File Splitter linking to /tools/gps-file-splitter"
+  },
+  "link.item.label.GPX to KMZ Converter": {
+    "message": "GPX to KMZ Converter",
+    "description": "The label of footer link with label=GPX to KMZ Converter linking to /tools/gpx-to-kmz"
+  },
+  "link.item.label.Timeline Statistics": {
+    "message": "Timeline Statistics",
+    "description": "The label of footer link with label=Timeline Statistics linking to /tools/timeline-statistics"
+  },
+  "link.item.label.Timeline Merger": {
+    "message": "Timeline Merger",
+    "description": "The label of footer link with label=Timeline Merger linking to /tools/timeline-merger"
+  },
+  "link.item.label.KML to GPX Converter": {
+    "message": "KML to GPX Converter",
+    "description": "The label of footer link with label=KML to GPX Converter linking to /tools/kml-to-gpx"
+  },
+  "link.item.label.FIT to GPX Converter": {
+    "message": "FIT to GPX Converter",
+    "description": "The label of footer link with label=FIT to GPX Converter linking to /tools/fit-to-gpx"
+  },
+  "link.item.label.All 29 tools →": {
+    "message": "All 29 tools →",
+    "description": "The label of footer link with label=All 29 tools → linking to /tools"
+  },
+  "link.item.label.Google Timeline Alternative": {
+    "message": "Google Timeline Alternative",
+    "description": "The label of footer link with label=Google Timeline Alternative linking to /google-timeline-alternative"
+  },
+  "link.item.label.vs OwnTracks": {
+    "message": "vs OwnTracks",
+    "description": "The label of footer link with label=vs OwnTracks linking to pathname:///docs/comparisons/vs-owntracks/"
+  },
+  "link.item.label.vs Traccar": {
+    "message": "vs Traccar",
+    "description": "The label of footer link with label=vs Traccar linking to pathname:///docs/comparisons/vs-traccar/"
+  },
+  "link.item.label.vs Google Timeline": {
+    "message": "vs Google Timeline",
+    "description": "The label of footer link with label=vs Google Timeline linking to pathname:///docs/comparisons/vs-google-timeline/"
+  },
+  "link.item.label.vs Strava": {
+    "message": "vs Strava",
+    "description": "The label of footer link with label=vs Strava linking to pathname:///docs/comparisons/vs-strava/"
+  },
+  "link.item.label.vs Polarsteps": {
+    "message": "vs Polarsteps",
+    "description": "The label of footer link with label=vs Polarsteps linking to pathname:///docs/comparisons/vs-polarsteps/"
+  },
+  "link.item.label.vs Life360": {
+    "message": "vs Life360",
+    "description": "The label of footer link with label=vs Life360 linking to pathname:///docs/comparisons/vs-life360/"
+  },
+  "link.item.label.vs Arc": {
+    "message": "vs Arc",
+    "description": "The label of footer link with label=vs Arc linking to pathname:///docs/comparisons/vs-arc/"
+  },
+  "link.item.label.vs GeoPulse": {
+    "message": "vs GeoPulse",
+    "description": "The label of footer link with label=vs GeoPulse linking to pathname:///docs/comparisons/vs-geopulse/"
+  },
+  "link.item.label.vs Reitti": {
+    "message": "vs Reitti",
+    "description": "The label of footer link with label=vs Reitti linking to pathname:///docs/comparisons/vs-reitti/"
+  },
+  "link.item.label.Documentation": {
+    "message": "Documentation",
+    "description": "The label of footer link with label=Documentation linking to pathname:///docs/intro/"
+  },
+  "link.item.label.Self-Hosting Guide": {
+    "message": "Self-Hosting Guide",
+    "description": "The label of footer link with label=Self-Hosting Guide linking to pathname:///docs/self-hosting/introduction/"
+  },
+  "link.item.label.Importing existing data": {
+    "message": "Importing existing data",
+    "description": "The label of footer link with label=Importing existing data linking to pathname:///docs/getting-started/import-existing-data/"
+  },
+  "link.item.label.Exporting data": {
+    "message": "Exporting data",
+    "description": "The label of footer link with label=Exporting data linking to pathname:///docs/getting-started/export-your-data/"
+  },
+  "link.item.label.API Docs": {
+    "message": "API Docs",
+    "description": "The label of footer link with label=API Docs linking to pathname:///docs/api/dawarich-api/"
+  },
+  "link.item.label.FAQ": {
+    "message": "FAQ",
+    "description": "The label of footer link with label=FAQ linking to pathname:///docs/FAQ/"
+  },
+  "link.item.label.Dawarich for iOS": {
+    "message": "Dawarich for iOS",
+    "description": "The label of footer link with label=Dawarich for iOS linking to pathname:///docs/dawarich-for-ios/"
+  },
+  "link.item.label.Dawarich for Android": {
+    "message": "Dawarich for Android",
+    "description": "The label of footer link with label=Dawarich for Android linking to pathname:///docs/dawarich-for-android/"
+  },
+  "link.item.label.Community": {
+    "message": "Community",
+    "description": "The label of footer link with label=Community linking to https://discourse.dawarich.app/"
+  },
+  "link.item.label.About Us": {
+    "message": "About Us",
+    "description": "The label of footer link with label=About Us linking to /about"
+  },
+  "link.item.label.Contact": {
+    "message": "Contact",
+    "description": "The label of footer link with label=Contact linking to /contact"
+  },
+  "link.item.label.Blog": {
+    "message": "Blog",
+    "description": "The label of footer link with label=Blog linking to pathname:///blog/"
+  },
+  "link.item.label.Credits": {
+    "message": "Credits",
+    "description": "The label of footer link with label=Credits linking to pathname:///credits/"
+  },
+  "link.item.label.Impressum": {
+    "message": "Impressum",
+    "description": "The label of footer link with label=Impressum linking to pathname:///impressum/"
+  },
+  "link.item.label.Privacy Policy": {
+    "message": "Privacy Policy",
+    "description": "The label of footer link with label=Privacy Policy linking to pathname:///privacy-policy/"
+  },
+  "link.item.label.Terms and Conditions": {
+    "message": "Terms and Conditions",
+    "description": "The label of footer link with label=Terms and Conditions linking to pathname:///terms-and-conditions/"
+  },
+  "link.item.label.Refund Policy": {
+    "message": "Refund Policy",
+    "description": "The label of footer link with label=Refund Policy linking to pathname:///refund-policy/"
+  },
+  "copyright": {
+    "message": "<div class=\"dawarich-footer-social\" role=\"navigation\" aria-label=\"Community links\">\n  <a href=\"https://discord.gg/pHsBjpt5J8\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Discord\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M20.317 4.3698a19.7913 19.7913 0 0 0-4.8851-1.5152.0741.0741 0 0 0-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 0 0-.0785-.037 19.7363 19.7363 0 0 0-4.8852 1.515.0699.0699 0 0 0-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 0 0 .0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 0 0 .0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 0 0-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 0 1-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 0 1 .0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 0 1 .0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 0 1-.0066.1276 12.2986 12.2986 0 0 1-1.873.8914.0766.0766 0 0 0-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 0 0 .0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 0 0 .0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 0 0-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z\"/></svg></a>\n  <a href=\"https://x.com/freymakesstuff\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"X (Twitter)\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z\"/></svg></a>\n  <a href=\"https://github.com/Freika/dawarich\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"GitHub\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12\"/></svg></a>\n  <a href=\"https://mastodon.social/@dawarich\" target=\"_blank\" rel=\"me noopener noreferrer\" aria-label=\"Mastodon\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057 0 0 0 .023-.043v-1.809a.052.052 0 0 0-.02-.041.053.053 0 0 0-.046-.01 20.282 20.282 0 0 1-4.709.545c-2.73 0-3.463-1.284-3.674-1.818a5.593 5.593 0 0 1-.319-1.433.053.053 0 0 1 .066-.054c1.517.363 3.072.546 4.632.546.376 0 .75 0 1.125-.01 1.57-.044 3.224-.124 4.768-.422.038-.008.077-.015.11-.024 2.435-.464 4.753-1.92 4.989-5.604.008-.145.03-1.52.03-1.67.002-.512.167-3.63-.024-5.545zm-3.748 9.195h-2.561V8.29c0-1.309-.55-1.976-1.67-1.976-1.23 0-1.846.79-1.846 2.35v3.403h-2.546V8.663c0-1.56-.617-2.35-1.848-2.35-1.112 0-1.668.668-1.67 1.977v6.218H4.822V8.102c0-1.31.337-2.35 1.011-3.12.696-.77 1.608-1.164 2.74-1.164 1.311 0 2.302.5 2.962 1.498l.638 1.06.638-1.06c.66-.999 1.65-1.498 2.96-1.498 1.13 0 2.043.395 2.74 1.164.675.77 1.012 1.81 1.012 3.12z\"/></svg></a>\n  <a href=\"https://reddit.com/r/dawarich\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Reddit\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z\"/></svg></a>\n</div>\n<a href=\"https://trendshift.io/repositories/11108\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dawarich-footer-trendshift\"><img src=\"https://trendshift.io/api/badge/repositories/11108\" alt=\"Dawarich on Trendshift\" /></a>\n<p class=\"dawarich-footer-copyright-text\">Copyright © 2026 Dawarich</p>",
+    "description": "The footer copyright"
+  }
+}

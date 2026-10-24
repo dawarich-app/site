@@ -22,10 +22,14 @@ export default function PersonalizedCTA({ toolName, headline, stats }) {
           </div>
         )}
 
-        <h3
-          className={styles.headline}
-          dangerouslySetInnerHTML={{ __html: headline }}
-        />
+        {typeof headline === 'string' ? (
+          <h3
+            className={styles.headline}
+            dangerouslySetInnerHTML={{ __html: headline }}
+          />
+        ) : (
+          <h3 className={styles.headline}>{headline}</h3>
+        )}
 
         <p className={styles.body}>
           Self-hosted or cloud. Cancel anytime.

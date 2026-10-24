@@ -20,6 +20,7 @@ export default defineConfig({
       '@docusaurus/useDocusaurusContext': fileURLToPath(
         new URL('./src/test/mocks/useDocusaurusContext.js', import.meta.url),
       ),
+      '@locale-content': fileURLToPath(new URL('./src/i18n/content/en', import.meta.url)),
       '@docusaurus/theme-common': fileURLToPath(
         new URL('./src/test/mocks/themeCommon.js', import.meta.url),
       ),
@@ -27,7 +28,7 @@ export default defineConfig({
   },
   esbuild: {
     loader: 'jsx',
-    include: /src\/.*\.(js|jsx|ts|tsx)$/,
+    include: /(src|test)\/.*\.(js|jsx|ts|tsx)$/,
     exclude: [],
   },
   optimizeDeps: {
@@ -40,6 +41,11 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.js'],
     css: { modules: { classNameStrategy: 'non-scoped' } },
-    include: ['src/**/*.{test,spec}.{js,jsx,ts,tsx}', 'scripts/**/*.{test,spec}.{js,mjs}'],
+    include: [
+      'src/**/*.{test,spec}.{js,jsx,ts,tsx}',
+      'scripts/**/*.{test,spec}.{js,mjs}',
+      'plugins/**/*.{test,spec}.js',
+      'test/**/*.{test,spec}.{js,jsx}',
+    ],
   },
 });

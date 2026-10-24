@@ -152,7 +152,9 @@ const config = {
     ],
   ],
 
-  plugins: isDefaultLocale ? [
+  plugins: [
+    './plugins/locale-content',
+    ...(isDefaultLocale ? [
     [
       '@docusaurus/plugin-client-redirects',
       {
@@ -214,7 +216,8 @@ const config = {
         },
       },
     ],
-  ] : [],
+    ] : []),
+  ],
 
   themes: isDefaultLocale ? [
     "docusaurus-theme-openapi-docs",
