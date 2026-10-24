@@ -58,3 +58,10 @@ User-agent: Amazonbot
 Disallow: /
 
 Sitemap: https://dawarich.app/sitemap.xml
+Sitemap: https://dawarich.app/de/sitemap.xml
+Sitemap: https://dawarich.app/es/sitemap.xml
+Sitemap: https://dawarich.app/fr/sitemap.xml
+Sitemap: https://dawarich.app/pl/sitemap.xml
+Sitemap: https://dawarich.app/ca/sitemap.xml
+Sitemap: https://dawarich.app/zh/sitemap.xml
+Sitemap: https://dawarich.app/pt-br/sitemap.xml

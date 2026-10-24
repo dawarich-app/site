@@ -227,7 +227,6 @@ export default function GPSFileSplitter() {
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={imageUrl} />
         <meta name="author" content="Dawarich" />
-        <meta name="robots" content="index, follow" />
 
         <script type="application/ld+json">
           {JSON.stringify({

@@ -239,14 +239,8 @@ const config = {
         { name: 'description', content: 'Dawarich is a privacy-focused, self-hosted location history app that maps your life automatically and gives you full control over your data.' },
         { name: 'twitter:image', content: 'img/meta-image.png' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Dawarich' },
-        { name: 'twitter:description', content: 'Your Life, Mapped Automatically' },
-        { name: 'twitter:url', content: 'https://dawarich.app' },
         { name: 'og:image', content: 'img/meta-image.png' },
         { name: 'og:type', content: 'website' },
-        { name: 'og:title', content: 'Dawarich' },
-        { name: 'og:description', content: 'Your Life, Mapped Automatically' },
-        { name: 'og:url', content: 'https://dawarich.app' },
       ],
       // Replace with your project's social card
       // image: 'img/docusaurus-social-card.jpg',
@@ -327,6 +321,10 @@ const config = {
           {
             to: 'https://discourse.dawarich.app/',
             label: 'Community',
+            position: 'right',
+          },
+          {
+            type: 'localeDropdown',
             position: 'right',
           },
           {
