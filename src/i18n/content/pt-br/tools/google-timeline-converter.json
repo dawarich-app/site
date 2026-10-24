@@ -49,7 +49,7 @@
     "title": "Privacidade em primeiro lugar",
     "body": "Toda a conversão acontece no navegador — seus dados de localização ficam no dispositivo, a menos que você escolha “Salvar na minha conta Dawarich”."
   },
-  "preCta": "Procurando uma alternativa de longo prazo ao Google Timeline? O [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-converter) registra seu histórico de localização automaticamente, com controle total dos dados e privacidade. [Saiba como migrar](/blog/migrating-from-google-location-history-to-dawarich).",
+  "preCta": "Procurando uma alternativa de longo prazo ao Google Timeline? O [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-converter) registra seu histórico de localização automaticamente, com plena propriedade dos seus dados e privacidade. [Saiba como migrar](/blog/migrating-from-google-location-history-to-dawarich).",
   "results": {
     "title": "Arquivos carregados",
     "file": "Arquivo",
@@ -126,7 +126,7 @@
         "**Preservação de longo prazo** — Formatos padrão continuarão legíveis por décadas, independentemente das decisões futuras do Google",
         "**Análise** — Importe CSV em planilhas para analisar estatisticamente seus padrões de deslocamento",
         "**Visualização** — Veja seu histórico no Google Earth, QGIS ou em ferramentas de mapas na web",
-        "**Migração** — Importe em alternativas de hospedagem própria como o [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=google-timeline-converter) para continuar registrando sua localização com controle total dos dados"
+        "**Migração** — Importe em alternativas de hospedagem própria como o [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=google-timeline-converter) para continuar registrando sua localização com plena propriedade dos seus dados"
       ]
     },
     {
@@ -162,7 +162,7 @@
     },
     {
       "q": "Quais formatos do Google Timeline posso converter?",
-      "a": "Este conversor aceita os seis formatos de exportação do Google Timeline: Records.json (registros GPS brutos com coordenadas E7), Semantic Location History (arquivos mensais YYYY_MONTH.json com visitas e segmentos de atividade), Semantic Segments (o formato mais recente de exportação pelo celular, com semanticSegments), Location History (formato de array com startTime/endTime), Settings e TimelineEdits. A ferramenta detecta o formato automaticamente ao carregar um arquivo."
+      "a": "Este conversor aceita os seis formatos de exportação do Google Timeline: Records.json (registros GPS brutos com coordenadas E7), Semantic Location History (arquivos mensais YYYY_MONTH.json com visitas e segmentos de atividade), Semantic Segments (um formato mais recente de exportação pelo celular, com semanticSegments), Location History (formato de array com startTime/endTime), Settings e TimelineEdits. A ferramenta detecta o formato automaticamente ao carregar um arquivo."
     },
     {
       "q": "Qual é o melhor formato de saída para mim?",

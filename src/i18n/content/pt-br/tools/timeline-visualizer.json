@@ -82,7 +82,7 @@
     },
     {
       "q": "Quais formatos de arquivo este visualizador aceita?",
-      "a": "O visualizador aceita todos os formatos de exportação do Google Timeline: Records.json (registros brutos de localização GPS), Semantic Location History (arquivos mensais YYYY_MONTH.json com visitas a lugares e segmentos de atividade), Location History exportado do celular (o formato mais recente com semanticSegments) e arquivos de Configurações/TimelineEdits. Ele detecta o formato automaticamente ao carregar."
+      "a": "O visualizador aceita todos os formatos de exportação do Google Timeline: Records.json (registros brutos de localização GPS), Semantic Location History (arquivos mensais YYYY_MONTH.json com visitas a lugares e segmentos de atividade), Location History exportado do celular (um formato mais recente com semanticSegments) e arquivos de Configurações/TimelineEdits. Ele detecta o formato automaticamente ao carregar."
     },
     {
       "q": "Por que o Google encerrou a linha do tempo na web?",
@@ -114,7 +114,7 @@
     },
     {
       "q": "Qual é a diferença em relação a outros visualizadores do Google Timeline?",
-      "a": "Este visualizador foi criado com a privacidade como prioridade máxima — nenhum dado sai do seu navegador. Ele aceita todos os formatos de exportação do Google (incluindo os mais recentes do celular, que muitas ferramentas não processam), processa os arquivos progressivamente para que grandes conjuntos de dados não travem o navegador e é mantido como parte do ecossistema de código aberto do Dawarich. Também é totalmente gratuito, sem exigir conta ou cadastro."
+      "a": "Este visualizador foi criado com a privacidade como prioridade máxima — nenhum dado sai do seu navegador. Ele aceita todos os formatos de exportação do Google (incluindo formatos mais recentes do celular, que muitas ferramentas não processam), processa os arquivos progressivamente para que grandes conjuntos de dados não travem o navegador e é mantido como parte do ecossistema de código aberto do Dawarich. Também é totalmente gratuito, sem exigir conta ou cadastro."
     }
   ],
   "cards": [
@@ -157,7 +157,7 @@
           "body": "**Semantic Location History** — Arquivos mensais (por exemplo, 2022_APRIL.json) com visitas a lugares, endereços e segmentos de atividade"
         },
         {
-          "body": "**Exportação da linha do tempo pelo celular** — Formato mais recente do Google Maps no Android/iOS com semanticSegments e percursos da linha do tempo"
+          "body": "**Exportação da linha do tempo pelo celular** — Um formato mais recente do Google Maps no Android/iOS com semanticSegments e percursos da linha do tempo"
         },
         {
           "body": "**Configurações e TimelineEdits** — Arquivos adicionais de metadados das exportações do Google Takeout"
@@ -171,7 +171,7 @@
       "title": "O que aconteceu com o Google Maps Timeline?",
       "paragraphs": [
         "No fim de 2024, o Google encerrou a versão web do Google Maps Timeline e passou a armazenar todos os dados de localização no próprio dispositivo. Apenas os últimos 90 dias foram migrados — os dados mais antigos foram excluídos, a menos que os usuários tivessem feito um backup manual. Muitas pessoas [perderam anos de histórico de localização](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/) na transição.",
-        "Se você exportou seus dados antes ou durante a transição, este visualizador permite vê-los. Para uma alternativa de longo prazo, o [Dawarich](https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-visualizer) oferece registro de localização em hospedagem própria ou na nuvem, com controle total sobre seus dados."
+        "Se você exportou seus dados antes ou durante a transição, este visualizador permite vê-los. Para uma alternativa de longo prazo, o [Dawarich](https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-visualizer) oferece registro de localização em hospedagem própria ou na nuvem, com plena propriedade dos seus dados."
       ]
     },
     {

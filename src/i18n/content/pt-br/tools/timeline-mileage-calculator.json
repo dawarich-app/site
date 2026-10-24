@@ -3,14 +3,14 @@
   "intro": "Calcule a quilometragem percorrida de carro a partir dos seus dados do Google Timeline. Gere registros de quilometragem para baixar, com detalhes de cada viagem e resumos diários e mensais. Todo o processamento acontece no seu navegador — seus dados ficam no seu dispositivo, a menos que você escolha “Salvar na minha conta Dawarich”.",
   "privacyTitle": "Privacidade em primeiro lugar",
   "privacyBody": "Todos os cálculos de quilometragem acontecem no seu navegador — seus dados de localização ficam no seu dispositivo, a menos que você escolha “Salvar na minha conta Dawarich”.",
-  "preCta": "Precisa registrar sua quilometragem continuamente? O [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-mileage-calculator) registra suas viagens automaticamente, com controle total sobre seus dados e privacidade. Chega de exportações manuais — apenas um registro contínuo e preciso.",
+  "preCta": "Precisa registrar sua quilometragem continuamente? O [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-mileage-calculator) registra suas viagens automaticamente, com plena propriedade dos seus dados e privacidade. Chega de exportações manuais — apenas um registro contínuo e preciso.",
   "saveIntro": "Quer ter isso na sua conta Dawarich também? Vamos importar os dados durante o cadastro — sem precisar carregá-los novamente.",
   "faqTitle": "Perguntas frequentes",
   "homeLabel": "Início",
   "toolsLabel": "Ferramentas gratuitas",
   "meta": {
     "title": "Calculadora de quilometragem do Google Timeline grátis",
-    "description": "Calcule distâncias com dados do Google Timeline e gere registros de quilometragem e relatórios CSV para deduções fiscais. Grátis, com privacidade no navegador.",
+    "description": "Calcule distâncias de carro do Google Timeline, gere registros de quilometragem e exporte CSV para deduções fiscais. Grátis, com privacidade no navegador.",
     "keywords": "quilometragem google timeline, calculadora de quilometragem pelo histórico de localização, distância de carro pelo google maps, registro de quilometragem google timeline, calculadora de quilometragem para impostos, registro de quilometragem google maps, registro de quilometragem IRS, calculadora de distância de carro, distância de carro google timeline, calculadora de reembolso por quilometragem",
     "featureList": [
       "Calcular quilometragem de carro com dados do Google Timeline",
@@ -154,7 +154,7 @@
     },
     {
       "q": "Por que algumas viagens não aparecem?",
-      "a": "Vários fatores podem causar a ausência de viagens: (1) O Google Timeline só registra dados quando o Histórico de localização está ativado no dispositivo — os períodos em que ele ficou desativado não terão dados. (2) Viagens curtas ou com sinal GPS fraco podem não gerar pontos suficientes. (3) O Google pode não ter classificado certos deslocamentos como viagens em veículos, especialmente em velocidades baixas. (4) Se você exportou pelo método mais recente do celular, talvez tenha apenas os últimos 90 dias de dados devido à mudança de política do Google em 2024. (5) Alguns formatos de exportação contêm menos detalhes que outros."
+      "a": "Vários fatores podem causar a ausência de viagens: (1) O Google Timeline só registra dados quando o Histórico de localização está ativado no dispositivo — os períodos em que ele ficou desativado não terão dados. (2) Viagens curtas ou com sinal GPS fraco podem não gerar pontos suficientes. (3) O Google pode não ter classificado certos deslocamentos como trajetos de carro, especialmente em velocidades baixas. (4) Se você exportou por um método mais recente de exportação pelo celular, talvez tenha apenas os últimos 90 dias de dados devido à mudança de política do Google em 2024. (5) Alguns formatos de exportação contêm menos detalhes que outros."
     }
   ],
   "cards": [

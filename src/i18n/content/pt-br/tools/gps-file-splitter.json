@@ -34,7 +34,7 @@
   "intro": "Divida arquivos grandes de GPS e localização em partes menores e mais fáceis de usar. Aceita GPX, GeoJSON, KML, KMZ e JSON do Google Timeline. Baixe todas as partes em um único arquivo ZIP.",
   "benefitsTitle": "Por que dividir arquivos GPS?",
   "privacyBody": "Todo o processamento acontece no seu navegador. Seus arquivos nunca saem do seu dispositivo.",
-  "preCta": "Trabalhando com arquivos grandes de localização? O [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=gps-file-splitter) processa importações de qualquer tamanho automaticamente, com controle total sobre seus dados e privacidade.",
+  "preCta": "Trabalhando com arquivos grandes de localização? O [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=gps-file-splitter) processa importações de qualquer tamanho automaticamente, com plena propriedade dos seus dados e privacidade.",
   "faqTitle": "Perguntas frequentes",
   "homeLabel": "Início",
   "toolsLabel": "Ferramentas gratuitas",
@@ -76,7 +76,7 @@
     },
     {
       "q": "Posso dividir arquivos JSON do Google Timeline?",
-      "a": "Sim. Carregue qualquer arquivo JSON do Google Timeline — Records.json, Semantic Location History ou a exportação mais recente do celular. A ferramenta detecta o formato automaticamente, lê os dados de localização e os divide em partes que você pode baixar em um arquivo ZIP no formato de saída que preferir."
+      "a": "Sim. Carregue qualquer arquivo JSON do Google Timeline — Records.json, Semantic Location History ou uma exportação mais recente do celular. A ferramenta detecta o formato automaticamente, lê os dados de localização e os divide em partes que você pode baixar em um arquivo ZIP no formato de saída que preferir."
     },
     {
       "q": "Por que eu precisaria dividir um arquivo GPS?",

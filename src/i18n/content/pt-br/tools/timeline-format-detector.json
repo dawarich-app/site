@@ -3,13 +3,13 @@
   "intro": "Carregue qualquer arquivo exportado do Google Timeline para identificar seu formato na hora, ver estatísticas dos dados e receber recomendações do que fazer a seguir. Todo o processamento acontece no seu navegador.",
   "privacyTitle": "Privacidade em primeiro lugar",
   "privacyBody": "Todo o processamento acontece no seu navegador. Seus dados de localização nunca saem do seu dispositivo e não são enviados a nenhum servidor.",
-  "preCta": "Não sabe o que fazer com seus dados do Google Timeline? Carregue seu arquivo acima para descobrir ou conheça o [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-format-detector) para registrar sua localização automaticamente com controle total sobre seus dados.",
+  "preCta": "Não sabe o que fazer com seus dados do Google Timeline? Carregue seu arquivo acima para descobrir ou conheça o [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-format-detector) para registrar sua localização automaticamente com plena propriedade dos seus dados.",
   "faqTitle": "Perguntas frequentes",
   "homeLabel": "Início",
   "toolsLabel": "Ferramentas gratuitas",
   "meta": {
     "title": "Google Timeline — detector de formato de arquivos",
-    "description": "Detecte o formato do Google Timeline e de arquivos de localização do Google Takeout. Veja pontos, percursos, período, tamanho e qualidade. Tudo no navegador.",
+    "description": "Arquivo de localização do Google Takeout? Veja grátis na hora: formato do Google Timeline, nº de pontos, período, tamanho e qualidade. Tudo no navegador.",
     "keywords": "formato google timeline, qual o formato da minha exportação google, tipo de arquivo de localização google takeout, formato do histórico de localização google, detector de arquivo google timeline, formato de exportação google maps timeline, formato json google takeout, tipo de arquivo de histórico de localização, formato de dados google timeline, identificar arquivo de exportação google",
     "featureList": [
       "Detectar o formato de exportação do Google Timeline na hora",
@@ -88,7 +88,7 @@
     },
     "locationHistory": {
       "title": "Location History (novo formato)",
-      "description": "Este é o formato mais recente de exportação do Google Timeline feito pelo celular Android/iOS. Contém dados de visitas e atividades com coordenadas geográficas em formato de texto, percursos da linha do tempo e índices de probabilidade."
+      "description": "Este é um formato mais recente de exportação do Google Timeline feito pelo celular Android/iOS. Contém dados de visitas e atividades com coordenadas geográficas em formato de texto, percursos da linha do tempo e índices de probabilidade."
     },
     "unknown": {
       "title": "Formato desconhecido",
@@ -166,7 +166,7 @@
   "faq": [
     {
       "q": "Quais formatos do Google Timeline esta ferramenta detecta?",
-      "a": "Esta ferramenta detecta todos os seis formatos conhecidos de exportação do Google Timeline: Records.json (dados brutos de GPS do Google Takeout), Semantic Location History (arquivos mensais com visitas a lugares e segmentos de atividade), Settings.json (informações do dispositivo), Timeline Edits (correções do usuário), Semantic Segments (histórico de localização processado com percursos da linha do tempo) e Location History (o formato mais recente de exportação pelo celular Android e iOS). O formato é identificado automaticamente assim que você carrega um arquivo."
+      "a": "Esta ferramenta detecta todos os seis formatos conhecidos de exportação do Google Timeline: Records.json (dados brutos de GPS do Google Takeout), Semantic Location History (arquivos mensais com visitas a lugares e segmentos de atividade), Settings.json (informações do dispositivo), Timeline Edits (correções do usuário), Semantic Segments (histórico de localização processado com percursos da linha do tempo) e Location History (um formato mais recente de exportação pelo celular Android e iOS). O formato é identificado automaticamente assim que você carrega um arquivo."
     },
     {
       "q": "Meus dados ficam seguros quando os carrego aqui?",
@@ -178,7 +178,7 @@
     },
     {
       "q": "Como exporto meus dados do Google Timeline?",
-      "a": "Há três métodos: (1) Google Takeout em takeout.google.com — selecione Histórico de localização e exporte como JSON. Isso gera Records.json, arquivos Semantic Location History, Settings.json e Timeline Edits. (2) No Android: Google Maps > Configurações > Localização > Serviços de localização > Linha do tempo > Exportar linha do tempo. Isso gera o formato mais recente, Location History. (3) No iOS: Google Maps > Configurações > Conteúdo pessoal > Exportar dados da linha do tempo. Recomendamos tentar todos os métodos e guardar todos os arquivos exportados."
+      "a": "Há três métodos: (1) Google Takeout em takeout.google.com — selecione Histórico de localização e exporte como JSON. Isso gera Records.json, arquivos Semantic Location History, Settings.json e Timeline Edits. (2) No Android: Google Maps > Configurações > Localização > Serviços de localização > Linha do tempo > Exportar linha do tempo. Isso gera um formato mais recente, Location History. (3) No iOS: Google Maps > Configurações > Conteúdo pessoal > Exportar dados da linha do tempo. Recomendamos tentar todos os métodos e guardar todos os arquivos exportados."
     },
     {
       "q": "Qual é a diferença entre Records.json e Semantic Location History?",
@@ -232,7 +232,7 @@
     {
       "title": "Por que o formato importa?",
       "paragraphs": [
-        "Formatos diferentes contêm tipos de dados diferentes. O Records.json tem as coordenadas de localização mais precisas, mas não inclui nomes de lugares. O Semantic Location History tem endereços e tipos de atividade, mas menos pontos brutos de GPS. O formato mais recente de exportação pelo celular combina ambos, mas usa uma codificação de coordenadas diferente.",
+        "Formatos diferentes contêm tipos de dados diferentes. O Records.json tem as coordenadas de localização mais precisas, mas não inclui nomes de lugares. O Semantic Location History tem endereços e tipos de atividade, mas menos pontos brutos de GPS. Um formato mais recente de exportação pelo celular combina ambos, mas usa uma codificação de coordenadas diferente.",
         "Saber o formato ajuda você a escolher a ferramenta certa: conversores precisam conhecer o formato de entrada, visualizadores lidam com campos diferentes e analisadores de estatísticas extraem métricas diferentes conforme o formato."
       ]
     },
@@ -240,7 +240,7 @@
       "title": "O que aconteceu com o Google Maps Timeline?",
       "paragraphs": [
         "No fim de 2024, o Google encerrou a versão web do Google Maps Timeline e passou a armazenar todos os dados de localização no próprio dispositivo. Apenas os últimos 90 dias foram migrados — os dados mais antigos foram excluídos, a menos que os usuários tivessem feito um backup manual. Muitas pessoas [perderam anos de histórico de localização](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/) na transição.",
-        "Se você tem arquivos exportados, este detector ajuda a entender o que eles contêm. Para uma alternativa de longo prazo, o [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-format-detector) oferece registro de localização em hospedagem própria ou na nuvem, com controle total sobre seus dados."
+        "Se você tem arquivos exportados, este detector ajuda a entender o que eles contêm. Para uma alternativa de longo prazo, o [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-format-detector) oferece registro de localização em hospedagem própria ou na nuvem, com plena propriedade dos seus dados."
       ]
     },
     {

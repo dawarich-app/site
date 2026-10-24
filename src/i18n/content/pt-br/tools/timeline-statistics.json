@@ -10,7 +10,7 @@
   "toolsLabel": "Ferramentas gratuitas",
   "meta": {
     "title": "Estatísticas do Google Timeline — seu histórico em números",
-    "description": "Analise seus dados do Google Timeline: distância, países visitados, principais lugares, atividades e tendências anuais. Grátis, com privacidade no navegador.",
+    "description": "Analise grátis o Google Timeline: distância total, países visitados, principais lugares, distribuição de atividades e tendências anuais. Privado no navegador.",
     "keywords": "estatísticas google timeline, estatísticas do histórico de localização, qual distância percorri, insights google maps timeline, analisador google timeline, estatísticas de viagem, análise de dados de localização, estatísticas google takeout, calculadora de distância percorrida, contador de lugares visitados",
     "featureList": [
       "Calcular a distância total percorrida com dados do Google Timeline",
@@ -229,7 +229,7 @@
       "title": "O que aconteceu com o Google Maps Timeline?",
       "paragraphs": [
         "No fim de 2024, o Google encerrou a versão web do Google Maps Timeline e passou a armazenar todos os dados de localização no próprio dispositivo. Apenas os últimos 90 dias foram migrados — os dados mais antigos foram excluídos, a menos que os usuários tivessem feito um backup manual antes do prazo. Muitas pessoas [perderam anos de histórico de localização](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/) na transição.",
-        "Se você conseguiu exportar seus dados antes ou durante a transição, este analisador permite extrair estatísticas úteis deles. Para uma alternativa de longo prazo que continue registrando sua localização com controle total sobre seus dados, conheça o [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-statistics)."
+        "Se você conseguiu exportar seus dados antes ou durante a transição, este analisador permite extrair estatísticas úteis deles. Para uma alternativa de longo prazo que continue registrando sua localização com plena propriedade dos seus dados, conheça o [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-statistics)."
       ]
     },
     {

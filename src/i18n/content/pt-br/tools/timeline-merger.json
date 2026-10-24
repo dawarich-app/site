@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Google Timeline — una históricos de localização",
-    "description": "Una exportações do Google Timeline com privacidade e remoção inteligente de duplicatas. Combine Records.json, Semantic History e exportações do celular.",
+    "description": "Una grátis exportações do Google Timeline num arquivo. Remova pontos duplicados de forma inteligente. Records.json, Semantic History e celular. Com privacidade.",
     "keywords": "unir exportações google timeline, combinar arquivos de histórico de localização, recuperar dados google timeline, unir Records.json, combinar localização Google Takeout, unir semantic location history, unificador Google Timeline, remoção de duplicatas do histórico de localização, unir dados GPS",
     "featureList": [
       "Unir várias exportações do Google Timeline em um arquivo",
@@ -43,7 +43,7 @@
   },
   "h1": "Unificador de dados do Google Timeline",
   "intro": "Una várias exportações do Google Timeline em um único arquivo. A remoção inteligente de duplicatas elimina pontos repetidos em períodos sobrepostos e preserva todos os registros únicos de localização. Grátis, com privacidade e inteiramente no navegador.",
-  "preCta": "Quer visualizar seus dados da linha do tempo primeiro? Experimente nosso [Visualizador do Google Timeline](/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) para explorar seu histórico de localização em um mapa interativo. Precisa de uma alternativa de longo prazo para a linha do tempo? O [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) dá a você controle total sobre seus dados.",
+  "preCta": "Quer visualizar seus dados da linha do tempo primeiro? Experimente nosso [Visualizador do Google Timeline](/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) para explorar seu histórico de localização em um mapa interativo. Precisa de uma alternativa de longo prazo para a linha do tempo? O [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) dá a você plena propriedade dos seus dados.",
   "faqTitle": "Perguntas frequentes",
   "homeLabel": "Início",
   "toolsLabel": "Ferramentas gratuitas",
@@ -132,7 +132,7 @@
     },
     {
       "q": "Posso unir tipos de formato diferentes?",
-      "a": "Sim. O unificador aceita todos os formatos de exportação do Google Timeline: Records.json do Google Takeout, arquivos mensais Semantic Location History (como 2022_APRIL.json) e as exportações mais recentes da linha do tempo pelo celular com semanticSegments. Você pode usar qualquer combinação desses formatos. O leitor detecta automaticamente o formato de cada arquivo e normaliza os dados antes de unir."
+      "a": "Sim. O unificador aceita todos os formatos de exportação do Google Timeline: Records.json do Google Takeout, arquivos mensais Semantic Location History (como 2022_APRIL.json) e exportações mais recentes da linha do tempo pelo celular com semanticSegments. Você pode usar qualquer combinação desses formatos. O leitor detecta automaticamente o formato de cada arquivo e normaliza os dados antes de unir."
     },
     {
       "q": "O que acontece com os dados sobrepostos?",
@@ -207,7 +207,7 @@
       "paragraphs": [
         "No fim de 2024, o Google encerrou a versão web do Google Maps Timeline e passou a armazenar todos os dados de localização no próprio dispositivo. Apenas os últimos 90 dias de dados foram transferidos automaticamente para os celulares dos usuários. O histórico de localização mais antigo foi excluído permanentemente, a menos que os usuários o tivessem exportado manualmente antes do prazo.",
         "Isso deixou milhões de usuários com dados fragmentados: exportações parciais do Takeout, exportações do celular com dados recentes e arquivos Semantic Location History de períodos diferentes. O Unificador de dados da linha do tempo ajuda a reunir esses fragmentos em um histórico de localização completo.",
-        "Para continuar registrando sua localização com controle total sobre seus dados, considere o [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-merger) como alternativa em hospedagem própria ou na nuvem."
+        "Para continuar registrando sua localização com plena propriedade dos seus dados, considere o [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-merger) como alternativa em hospedagem própria ou na nuvem."
       ]
     },
     {
@@ -223,7 +223,7 @@
           "body": "**Semantic Location History** -- Arquivos mensais (por exemplo, 2022_APRIL.json) com visitas estruturadas a lugares, endereços e segmentos de atividade"
         },
         {
-          "body": "**Exportação da linha do tempo pelo celular** -- Formato mais recente do Google Maps no Android/iOS com semanticSegments e percursos da linha do tempo"
+          "body": "**Exportação da linha do tempo pelo celular** -- Um formato mais recente do Google Maps no Android/iOS com semanticSegments e percursos da linha do tempo"
         },
         {
           "body": "**Configurações e TimelineEdits** -- Arquivos adicionais de metadados das exportações do Google Takeout"

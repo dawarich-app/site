@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Divisor do Google Timeline — divida arquivos JSON grandes",
-    "description": "Divida JSON do Google Timeline por MB. Aceita Records.json, Semantic Location History, Semantic Segments e mais. Grátis, com privacidade no navegador.",
+    "description": "Divida arquivos JSON grandes do Google Timeline em partes menores e válidas. Todos os formatos de exportação: Records.json, Semantic Location History, Semantic Segments e mais. Escolha o tamanho. Grátis, com privacidade no navegador.",
     "keywords": "dividir json google timeline, dividir records.json, dividir histórico de localização google grande, divisor google timeline, dividir localização google takeout, separar json da linha do tempo, arquivo google timeline grande demais",
     "featureList": [
       "Dividir arquivos JSON grandes do Google Timeline em partes menores",
@@ -35,7 +35,7 @@
   "intro": "Divida exportações JSON grandes do Google Timeline em partes menores e válidas. Cada parte mantém o formato original para poder ser importada em qualquer lugar. Escolha o tamanho desejado dos arquivos e baixe um ZIP.",
   "benefitsTitle": "Por que dividir arquivos da linha do tempo?",
   "privacyBody": "Todo o processamento acontece no seu navegador. Seus arquivos nunca saem do seu dispositivo.",
-  "preCta": "Trabalhando com exportações grandes do Google Timeline? O [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-splitter) processa importações de qualquer tamanho automaticamente, com controle total sobre seus dados e privacidade.",
+  "preCta": "Trabalhando com exportações grandes do Google Timeline? O [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-splitter) processa importações de qualquer tamanho automaticamente, com plena propriedade dos seus dados e privacidade.",
   "faqTitle": "Perguntas frequentes",
   "homeLabel": "Início",
   "toolsLabel": "Ferramentas gratuitas",
@@ -74,7 +74,7 @@
     },
     {
       "q": "Quais formatos do Google Timeline posso dividir?",
-      "a": "Este divisor aceita todos os seis formatos de exportação do Google Timeline: Records.json (registros brutos de localização GPS), Semantic Location History (arquivos mensais YYYY_MONTH.json), Semantic Segments (exportação mais recente do celular), Location History (formato de array com startTime/endTime), Configurações e Timeline Edits. A ferramenta detecta o formato automaticamente quando você carrega um arquivo."
+      "a": "Este divisor aceita todos os seis formatos de exportação do Google Timeline: Records.json (registros brutos de localização GPS), Semantic Location History (arquivos mensais YYYY_MONTH.json), Semantic Segments (uma exportação mais recente do celular), Location History (formato de array com startTime/endTime), Configurações e Timeline Edits. A ferramenta detecta o formato automaticamente quando você carrega um arquivo."
     },
     {
       "q": "Dividir o arquivo pode danificar meus dados?",
@@ -112,7 +112,7 @@
           "body": "**Semantic Location History** — Arquivos mensais (YYYY_MONTH.json) com visitas a lugares e segmentos de atividade, incluindo nomes e endereços."
         },
         {
-          "body": "**Semantic Segments** — Formato mais recente de exportação do celular com dados de visitas e percursos."
+          "body": "**Semantic Segments** — Um formato mais recente de exportação do celular com dados de visitas e percursos."
         },
         {
           "body": "**Location History** — Formato de array com registros startTime/endTime e percursos da linha do tempo."

@@ -268,7 +268,7 @@
     {
       "href": "/tools/fit-to-gpx/",
       "label": "FIT para GPX",
-      "note": "Formato mais recente da Garmin"
+      "note": "Um formato mais recente da Garmin"
     }
   ],
   "tcx-to-kml": [
@@ -302,7 +302,7 @@
     {
       "href": "/tools/fit-to-geojson/",
       "label": "FIT para GeoJSON",
-      "note": "Formato mais recente da Garmin"
+      "note": "Um formato mais recente da Garmin"
     }
   ],
   "google-timeline-converter": [
