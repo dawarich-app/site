@@ -114,7 +114,7 @@
     },
     {
       "q": "¿En qué se diferencia de otros visores de Google Timeline?",
-      "a": "Este visualizador da máxima prioridad a la privacidad: ningún dato sale de tu navegador. Admite todos los formatos de exportación de Google (incluidas las exportaciones más recientes desde el teléfono que muchas herramientas no gestionan), procesa los archivos de forma progresiva para que los conjuntos de datos grandes no bloqueen tu navegador y se mantiene como parte del ecosistema de código abierto Dawarich. Además, es completamente gratuito y no requiere cuenta ni registro."
+      "a": "Este visualizador da máxima prioridad a la privacidad: ningún dato sale de tu navegador. Admite todos los formatos de exportación de Google (incluidas las exportaciones más recientes desde el teléfono que muchas herramientas no gestionan), procesa los archivos de forma progresiva para que los conjuntos de datos grandes no provoquen fallos en tu navegador y se mantiene como parte del ecosistema de código abierto Dawarich. Además, es completamente gratuito y no requiere cuenta ni registro."
     }
   ],
   "cards": [

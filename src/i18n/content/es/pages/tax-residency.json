@@ -34,7 +34,7 @@
   ],
   "meta": {
     "title": "Residencia fiscal: contador automático para la regla de 183 días",
-    "description": "Días por país del historial GPS, estancias consecutivas y aviso de 183 días. Para nómadas digitales, trabajadores transfronterizos y viajeros de larga estancia.",
+    "description": "Cuenta días por país con tu historial GPS, periodos de estancia consecutivos y aviso del umbral de 183 días. Para nómadas digitales, trabajadores transfronterizos y viajeros de larga estancia.",
     "ogTitle": "Residencia fiscal — La regla de los 183 días en tu historial GPS",
     "ogDescription": "Recuento de días por país a partir de tu historial de ubicaciones, con periodos de estancia consecutivos y aviso de 183 días. Datos para dudas de residencia, no asesoramiento fiscal."
   },

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Divisor GPS: divide archivos GPX, GeoJSON, KML y JSON",
-    "description": "Divide archivos GPS: GPX, GeoJSON, KML, KMZ y JSON de Google Timeline por tamaño, puntos o fecha. Descarga un ZIP gratis. Todo en tu navegador.",
+    "title": "Divisor GPS: divide GPX, GeoJSON, KML y JSON grandes",
+    "description": "Divide gratis archivos GPS y de ubicación grandes en partes menores: GPX, GeoJSON, KML, KMZ y JSON de Google Timeline, por tamaño, número de puntos o fecha. Descarga ZIP. Privacidad ante todo, en tu navegador.",
     "keywords": "dividir archivo GPX grande, dividir GeoJSON en partes, dividir archivo KML, reducir tamaño de archivo GPS, dividir archivo JSON grande de ubicaciones, divisor de archivos GPS, dividir Google Timeline",
     "featureList": [
       "Divide archivos GPS grandes en partes más pequeñas",

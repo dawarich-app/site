@@ -8,8 +8,8 @@
   "homeLabel": "Inicio",
   "toolsLabel": "Herramientas gratuitas",
   "meta": {
-    "title": "Detector de formato de Google Timeline",
-    "description": "Detecta gratis el formato de tu archivo de Google Timeline o Google Takeout. Consulta puntos, recorridos, fechas, tamaño y calidad de datos desde tu navegador.",
+    "title": "Google Timeline: identifica el formato de tu archivo exportado",
+    "description": "Detecta tu formato de Google Timeline gratis. Carga cualquier archivo de ubicaciones de Google Takeout: formato, número de puntos, intervalo de fechas, tamaño y calidad al instante. Todo se procesa en tu navegador.",
     "keywords": "formato de Google Timeline, qué formato tiene mi exportación de Google, tipo de archivo de ubicación de Google Takeout, formato de historial de ubicaciones de Google, detector de archivos de Google Timeline, formato de exportación de Google Maps Timeline, formato JSON de Google Takeout, tipo de archivo de historial de ubicaciones, formato de datos de Google Timeline, identificar archivo exportado de Google",
     "featureList": [
       "Detecta al instante el formato de exportación de Google Timeline",
