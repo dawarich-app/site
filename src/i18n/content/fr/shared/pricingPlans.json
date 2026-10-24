@@ -14,7 +14,7 @@
             "label": "Applications de suivi iOS et Android"
           },
           {
-            "label": "12 mois d’historique consultable"
+            "label": "12 mois d’historique dans lequel effectuer des recherches"
           },
           {
             "label": "Importations et exports illimités"
@@ -36,7 +36,7 @@
           "label": "Suivi de localisation en arrière-plan"
         },
         {
-          "label": "12 mois d’historique consultable"
+          "label": "12 mois d’historique dans lequel effectuer des recherches"
         },
         {
           "label": "Importations et exports illimités"
@@ -183,7 +183,7 @@
       "name": "Historique et données",
       "rows": [
         {
-          "label": "Historique consultable",
+          "label": "Historique dans lequel effectuer des recherches",
           "lite": "12 mois",
           "pro": "Illimité",
           "family": "Illimité"

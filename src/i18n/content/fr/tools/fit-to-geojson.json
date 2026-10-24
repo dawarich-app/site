@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Convertisseur FIT vers GeoJSON gratuit — Garmin",
-    "description": "Convertissez vos activités Garmin FIT en GeoJSON pour la cartographie web. Outil gratuit et privé, entièrement dans votre navigateur.",
+    "description": "Convertissez instantanément vos activités Garmin FIT en GeoJSON pour la cartographie web. Gratuit et privé, entièrement dans votre navigateur.",
     "keywords": "FIT vers GeoJSON, Garmin vers GeoJSON, convertisseur FIT, convertisseur de fichiers sportifs, convertisseur GeoJSON, cartographie web, Leaflet, Mapbox",
     "appName": "Convertisseur FIT vers GeoJSON"
   },

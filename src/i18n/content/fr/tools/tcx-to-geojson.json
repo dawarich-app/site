@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Convertisseur TCX vers GeoJSON gratuit en ligne",
-    "description": "Convertissez vos activités sportives TCX en GeoJSON pour la cartographie web. Outil gratuit et privé, entièrement dans votre navigateur.",
+    "description": "Convertissez instantanément vos activités sportives TCX en GeoJSON pour la cartographie web. Gratuit et privé, entièrement dans votre navigateur.",
     "keywords": "TCX vers GeoJSON, Training Center XML vers GeoJSON, convertisseur TCX, convertisseur GeoJSON, convertisseur de fichiers sportifs, cartographie web, Leaflet, Mapbox",
     "appName": "Convertisseur TCX vers GeoJSON"
   },

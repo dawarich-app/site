@@ -26,7 +26,7 @@
     },
     {
       "q": "Que reçoit chaque personne ?",
-      "a": "Un compte Dawarich complet, avec sa propre carte, sa chronologie, ses déplacements, ses statistiques et ses analyses. Famille permet le partage de localisation entre cinq comptes distincts, sans partager un seul compte."
+      "a": "Un compte Dawarich complet, avec sa propre carte, sa chronologie, ses déplacements, ses statistiques et sa page Vos analyses. Famille permet le partage de localisation entre cinq comptes distincts, sans partager un seul compte."
     },
     {
       "q": "Que se passe-t-il si l’abonnement du titulaire expire ?",
@@ -38,8 +38,8 @@
     }
   ],
   "meta": {
-    "title": "Localisation en famille — Partage privé et consenti",
-    "description": "Jusqu’à cinq membres : partage en direct contrôlé par chacun, minuteur, historique distinct et demandes à accepter. {price} ou auto-hébergement gratuit.",
+    "title": "Partage familial de localisation privé, consenti, sans suivi",
+    "description": "Jusqu’à 5 proches : position en direct, contrôle individuel, minuteurs, plages d’historique séparées, demandes à accepter. {price} ou auto-hébergement gratuit.",
     "ogTitle": "Le partage de localisation en famille, sans surveillance",
     "ogDescription": "Cinq personnes, cinq réglages indépendants. Partage en direct avec minuteur, historique au choix et demandes à accepter. Rien n’est partagé par défaut."
   },
