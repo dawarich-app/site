@@ -44,7 +44,12 @@ export function validateTranslations({ english, localized, locale, glossary }) {
     }
     if (!same(placeholders(source), placeholders(translation))) fail(key, 'placeholders');
     if (!same(links(source), links(translation))) fail(key, 'links');
-    if (boldCount(source) !== boldCount(translation)) fail(key, 'bold');
+    if (isPlural(source)) {
+      const perForm = boldCount(source.split('|')[0]);
+      if (translation.split('|').some((form) => boldCount(form) !== perForm)) fail(key, 'bold');
+    } else if (boldCount(source) !== boldCount(translation)) {
+      fail(key, 'bold');
+    }
     if (!same(tags(source), tags(translation))) fail(key, 'tags');
     const spaced = translation.replace(/-/g, ' ');
     if (glossary.doNotTranslate.some((term) => source.includes(term) && !spaced.includes(term.replace(/-/g, ' ')))) {

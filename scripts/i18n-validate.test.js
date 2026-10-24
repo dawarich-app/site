@@ -59,6 +59,12 @@ describe('validateTranslations', () => {
     expect(run(english, { a: '{count} 个文件' }, 'zh')).toEqual([]);
   });
 
+  it('should compare bold markup per plural form', () => {
+    const english = { a: '**{count}** file loaded|**{count}** files loaded' };
+    expect(run(english, { a: 'Wczytano **{count}** plik|Wczytano **{count}** pliki|Wczytano **{count}** plików' }, 'pl')).toEqual([]);
+    expect(run(english, { a: 'Wczytano **{count}** plik|Wczytano **{count}** pliki|Wczytano {count} plików' }, 'pl')).toEqual(['a: bold']);
+  });
+
   it('should skip keys that are not translated yet', () => {
     expect(run({ a: 'Save', b: 'Load' }, { a: 'Speichern' })).toEqual([]);
   });

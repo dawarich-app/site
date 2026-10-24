@@ -374,7 +374,7 @@
     "message": "Proszę czekać..."
   },
   "shared.uploader.loaded": {
-    "message": "Wczytano **{count}** plik|Wczytano **{count}** pliki|Wczytano {count} plików"
+    "message": "Wczytano **{count}** plik|Wczytano **{count}** pliki|Wczytano **{count}** plików"
   },
   "shared.uploader.addMore": {
     "message": "Kliknij lub przeciągnij, aby dodać kolejne pliki"
