@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
+import { SmartLink } from '@site/src/i18n/RichText';
 import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import content from '@locale-content/tools/index.json';
 import styles from './index.module.css';
@@ -188,11 +189,11 @@ export default function ToolsHub() {
           </p>
           <div className={styles.toolsGrid}>
             {freeTools.map((tool) => (
-              <Link key={tool.to} to={tool.to} className={styles.toolCard}>
+              <SmartLink key={tool.to} href={tool.to} className={styles.toolCard}>
                 <span className={styles.toolIcon}>{tool.icon}</span>
                 <h3 className={styles.toolTitle}>{tool.title}</h3>
                 <p className={styles.toolDescription}>{tool.description}</p>
-              </Link>
+              </SmartLink>
             ))}
           </div>
         </div>

@@ -15,6 +15,7 @@ export const EN_ONLY_PREFIXES = [
   '/press-kit',
   '/affiliate',
   '/itsfoss',
+  '/tools/route-video-maker',
 ];
 
 export function isEnOnlyPath(path) {

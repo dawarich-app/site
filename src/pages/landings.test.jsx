@@ -70,6 +70,15 @@ describe('Feature landing pages', () => {
     render(<Page7 />);
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(content7.familyPage.text);
   });
+  it('family renders the setup steps, app links and every objection from locale content', () => {
+    render(<Page7 />);
+    const steps = screen.getByText(content7.setup.steps[0].match(/\*\*(.+?)\*\*/)[1]).closest('ol');
+    expect(steps.querySelectorAll('li')).toHaveLength(content7.setup.steps.length);
+    expect(steps.querySelectorAll('li strong')).toHaveLength(content7.setup.steps.length);
+    expect(screen.getByRole('link', { name: content7.setup.guide })).toHaveAttribute('href', '/docs/features/family');
+    expect(screen.getByRole('link', { name: content7.setup.ios }).getAttribute('href')).toContain('apps.apple.com');
+    for (const item of content7.objections) expect(screen.getByText(item.q)).toBeInTheDocument();
+  });
   it('tax-residency renders its heading from locale content', () => {
     render(<Page8 />);
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(content8.taxResidencyPage.text);

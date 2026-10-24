@@ -37,6 +37,7 @@ describe('isEnOnlyPath', () => {
     expect(isEnOnlyPath('/press-kit/')).toBe(true);
     expect(isEnOnlyPath('/affiliate')).toBe(true);
     expect(isEnOnlyPath('/itsfoss/')).toBe(true);
+    expect(isEnOnlyPath('/tools/route-video-maker/')).toBe(true);
   });
 
   it('should not match localized routes or external URLs', () => {
