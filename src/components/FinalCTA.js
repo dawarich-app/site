@@ -1,4 +1,5 @@
-import Link from "@docusaurus/Link";
+import content from '@locale-content/components/FinalCTA.json';
+import { SmartLink } from '@site/src/i18n/RichText';
 import React from "react";
 import styles from "./FinalCTA.module.css";
 import NewsletterForm from "./NewsletterForm";
@@ -11,26 +12,24 @@ export default function FinalCTA() {
 					{/* Left Column: CTA */}
 					<div className={styles.ctaColumn}>
 						<h2 className={styles.title}>
-							Your location history is yours. Keep it that way.
+							{content.title}
 						</h2>
 						<p className={styles.subtitle}>
-							Import your Google Timeline data before it's gone. Start with a
-							7-day free trial, cancel anytime.
+							{content.subtitle}
 						</p>
-						<Link
-							to="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=final_cta&utm_campaign=try7days"
+						<SmartLink
+							href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=final_cta&utm_campaign=try7days"
 							className={styles.primaryButton}
 						>
-							Save Your Location History
-						</Link>
+							{content.primaryButton}
+						</SmartLink>
 					</div>
 
 					{/* Right Column: Newsletter */}
 					<div className={styles.newsletterColumn}>
-						<h3 className={styles.newsletterTitle}>Stay Updated</h3>
+						<h3 className={styles.newsletterTitle}>{content.newsletterTitle}</h3>
 						<p className={styles.newsletterSubtitle}>
-							Get notified about new features and Google Timeline migration
-							tips.
+							{content.newsletterSubtitle}
 						</p>
 						<NewsletterForm />
 					</div>

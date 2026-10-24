@@ -1,0 +1,23 @@
+{
+  "metrics": [
+    {
+      "prefix": "OVER ",
+      "label": "GitHub Stars"
+    },
+    {
+      "suffix": "+",
+      "label": "Docker Pulls"
+    },
+    {
+      "suffix": "+",
+      "label": "Users"
+    },
+    {
+      "suffix": "+",
+      "label": "Points Tracked"
+    }
+  ],
+  "integrationsLabel": "Works with",
+  "billion": "{value}B",
+  "million": "{value}M"
+}

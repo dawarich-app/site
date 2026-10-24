@@ -1,3 +1,5 @@
+import { SmartLink } from '@site/src/i18n/RichText';
+import content from '@locale-content/components/Testimonials.json';
 import React from "react";
 import styles from "./Testimonials.module.css";
 
@@ -128,34 +130,31 @@ export default function Testimonials() {
 	return (
 		<section className={styles.section}>
 			<div className={styles.container}>
-				<h2 className={styles.title}>What People Are Saying</h2>
+				<h2 className={styles.title}>{content.title}</h2>
 				<p className={styles.subtitle}>
-					Featured in leading tech publications worldwide.
+					{content.subtitle}
 				</p>
 
 				<div className={styles.featuredIn}>
-					<span className={styles.featuredLabel}>As seen in</span>
+					<span className={styles.featuredLabel}>{content.featuredLabel}</span>
 					<div className={styles.featuredLogos}>
 						{featuredIn.map((pub) => (
-							<a
+							<SmartLink
 								key={pub.name}
 								href={pub.url}
-								target="_blank"
-								rel="noopener noreferrer"
 								className={styles.featuredLogo}
-								style={pub.style}
 							>
-								{pub.name}
-							</a>
+								<span style={pub.style}>{pub.name}</span>
+							</SmartLink>
 						))}
 					</div>
 				</div>
 
 				<div className={styles.grid}>
 					{testimonials.map((t, i) => {
-						const CardElement = t.url ? "a" : "div";
+						const CardElement = t.url ? SmartLink : "div";
 						const linkProps = t.url
-							? { href: t.url, target: "_blank", rel: "noopener noreferrer" }
+							? { href: t.url }
 							: {};
 						return (
 							<CardElement key={i} className={styles.card} {...linkProps}>

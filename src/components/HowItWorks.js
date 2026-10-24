@@ -1,3 +1,6 @@
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import content from '@locale-content/components/HowItWorks.json';
+import { interpolate } from '@docusaurus/Interpolate';
 import { useEffect, useState } from 'react';
 import styles from './HowItWorks.module.css';
 
@@ -17,6 +20,8 @@ function Pin({ icon, num, accent, className }) {
 }
 
 function RouteHowItWorks({ title, subtitle, steps }) {
+  const { i18n } = useDocusaurusContext();
+  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
   const [animate, setAnimate] = useState(true);
 
   useEffect(() => {
@@ -94,7 +99,7 @@ function RouteHowItWorks({ title, subtitle, steps }) {
                   className={styles.routeStepPinMobile}
                 />
                 <p className={styles.routeKicker}>
-                  Step {String(index + 1).padStart(2, '0')}
+                  {interpolate(content.step, { number: (index + 1).toLocaleString(htmlLang, { minimumIntegerDigits: 2, useGrouping: false }) })}
                 </p>
                 <h3 className={styles.routeStepTitle}>{step.title}</h3>
                 {step.description && (

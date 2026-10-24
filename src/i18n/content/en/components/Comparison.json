@@ -1,0 +1,84 @@
+{
+  "versusRows": [
+    {
+      "feature": "Browser access",
+      "g": {
+        "text": "Killed (mobile only)"
+      },
+      "d": {
+        "text": "Full web app"
+      }
+    },
+    {
+      "feature": "Data retention",
+      "g": {
+        "text": "Limited (auto-deletes)"
+      },
+      "d": {
+        "text": "Forever (Pro)"
+      }
+    },
+    {
+      "feature": "Your data used for ads",
+      "g": {
+        "text": "Yes"
+      },
+      "d": {
+        "text": "Never"
+      }
+    },
+    {
+      "feature": "Data sold to third parties",
+      "g": {
+        "text": "Yes (ad network)"
+      },
+      "d": {
+        "text": "Never"
+      }
+    },
+    {
+      "feature": "Export your data",
+      "g": {
+        "text": "Partial, complex"
+      },
+      "d": {
+        "text": "One-click, any format"
+      }
+    },
+    {
+      "feature": "Self-host option",
+      "g": {
+        "text": "No"
+      },
+      "d": {
+        "text": "Yes — full control"
+      }
+    },
+    {
+      "feature": "Open source",
+      "g": {
+        "text": "No"
+      },
+      "d": {
+        "text": "Yes — inspect every line"
+      }
+    },
+    {
+      "feature": "Works if company kills the product",
+      "g": {
+        "text": "No"
+      },
+      "d": {
+        "text": "Yes (self-host lives on)"
+      }
+    }
+  ],
+  "switchPill": " Make the switch",
+  "title": "Google Timeline vs Dawarich",
+  "subtitle": "See what you're gaining when you make the switch.",
+  "dawarichName": "DAWARICH",
+  "footNote": "It's your data. Keep it that way.",
+  "footCta": "Switch to Dawarich",
+  "featureHeader": "Feature",
+  "googleTimelineHeader": "Google Timeline"
+}
