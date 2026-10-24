@@ -20,6 +20,12 @@ describe('buildTodo', () => {
 });
 
 describe('recordHashes', () => {
+  it('should not stamp strings left identical to English unless they are declared intentional', () => {
+    const english = { a: 'Format', b: 'Upload' };
+    const localized = { a: 'Format', b: 'Upload' };
+    expect(recordHashes({ english, localized, errors: [], identicalOk: ['a'] })).toEqual({ a: hashMessage('Format') });
+  });
+
   it('should stamp the English hash for translated keys without validation errors', () => {
     const english = { a: 'Save', b: 'Load', c: 'Quit' };
     const localized = { a: 'Speichern', b: 'Laden' };

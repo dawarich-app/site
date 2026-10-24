@@ -24,11 +24,14 @@ export function buildTodo({ english, status, locale }) {
   }));
 }
 
-export function recordHashes({ english, localized, errors, previous = {} }) {
+export function recordHashes({ english, localized, errors, previous = {}, identicalOk = [] }) {
   const invalid = new Set(errors.map((e) => e.key));
+  const intentional = new Set(identicalOk);
   const hashes = { ...previous };
   for (const key of Object.keys(localized)) {
-    if (english[key] !== undefined && !invalid.has(key)) hashes[key] = hashMessage(english[key]);
+    if (english[key] === undefined || invalid.has(key)) continue;
+    if (localized[key] === english[key] && !intentional.has(key)) continue;
+    hashes[key] = hashMessage(english[key]);
   }
   return hashes;
 }
@@ -49,7 +52,8 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     const { english, localized } = loadSources({ root, locale });
     if (mode === 'record') {
       const errors = validateTranslations({ english, localized, locale, glossary });
-      allHashes[locale] = recordHashes({ english, localized, errors, previous: allHashes[locale] });
+      const identicalOk = readJson(path.join(root, 'i18n', locale, 'identical.json'), []);
+      allHashes[locale] = recordHashes({ english, localized, errors, previous: allHashes[locale], identicalOk });
       console.log(`${locale}: recorded ${Object.keys(allHashes[locale]).length} hashes (${errors.length} invalid skipped)`);
     } else {
       const status = computeStatus({
