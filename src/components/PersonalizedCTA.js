@@ -23,14 +23,7 @@ export default function PersonalizedCTA({ toolName, headline, stats }) {
           </div>
         )}
 
-        {typeof headline === 'string' ? (
-          <h3
-            className={styles.headline}
-            dangerouslySetInnerHTML={{ __html: headline }}
-          />
-        ) : (
-          <h3 className={styles.headline}>{headline}</h3>
-        )}
+        <h3 className={styles.headline}>{headline}</h3>
 
         <p className={styles.body}>
           {translate({ id: 'shared.personalizedCta.body', message: 'Self-hosted or cloud. Cancel anytime.' })}
