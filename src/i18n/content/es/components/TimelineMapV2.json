@@ -1,0 +1,10 @@
+{
+  "unavailableTitle": "Mapa no disponible",
+  "unavailableBody": "Tu navegador no admite WebGL, necesario para mostrar el mapa.",
+  "webglLink": "[Más información sobre WebGL](https://get.webgl.org)",
+  "exitFullscreen": "Salir de pantalla completa",
+  "enterFullscreen": "Ver en pantalla completa",
+  "exitHint": "Salir de pantalla completa (Esc)",
+  "toggleHint": "Alternar pantalla completa (F)",
+  "demoLabel": "Datos de demostración: suelta tus archivos arriba"
+}

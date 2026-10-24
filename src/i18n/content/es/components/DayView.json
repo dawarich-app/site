@@ -1,0 +1,22 @@
+{
+  "movingLabel": "en movimiento",
+  "stationaryLabel": "sin movimiento",
+  "visitsLabel": "Visitas",
+  "tracksLabel": "Trayectos",
+  "distanceLabel": "Distancia",
+  "movingTitle": "En movimiento",
+  "emptyDay": "No se registraron visitas este día.",
+  "previousDay": "Día anterior",
+  "nextDay": "Día siguiente",
+  "selectDay": "Selecciona un día para ver tu cronología.",
+  "rawHint": "Este archivo solo contiene registros GPS sin procesar, sin visitas a lugares ni segmentos de actividad. Usa archivos de Semantic Location History o exportados desde el teléfono para ver la cronología completa.",
+  "places": "{count} lugares",
+  "movingDuration": "{duration} en movimiento",
+  "duration": {
+    "zero": "0m",
+    "hoursMinutes": "{hours}h {minutes}m",
+    "hours": "{hours}h",
+    "minutes": "{minutes}m"
+  },
+  "visitCount": "{count} visita|{count} visitas"
+}

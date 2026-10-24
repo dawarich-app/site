@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "title": "Herramientas GPS y conversores gratuitos | Dawarich",
+    "description": "Herramientas privadas para visualizar, analizar, combinar y convertir archivos GPS e historiales de ubicaciones. Todo en tu navegador, sin enviar datos."
+  },
+  "h1": "Herramientas gratuitas de GPS y ubicaciones",
+  "intro": "Herramientas que priorizan tu privacidad para trabajar con archivos GPS e historiales de ubicaciones. Todo se ejecuta en tu navegador: tus datos nunca salen de tu dispositivo.",
+  "toolsHeading": "Herramientas gratuitas",
+  "toolsIntro": "Visualiza, analiza, combina y divide tu historial de ubicaciones sin subir archivos ni crear cuentas.",
+  "convertersHeading": "Conversores de formato",
+  "convertersIntro": "Convierte datos GPS y de mapas entre formatos. Todo se procesa localmente en tu navegador.",
+  "ctaTitle": "¿Quieres disfrutar de toda la experiencia Dawarich?",
+  "ctaBody": "Estas herramientas resuelven tareas puntuales. Dawarich es la plataforma completa de historial de ubicaciones: mapas interactivos, viajes, estadísticas, integración con fotos y privacidad de datos alojados en la UE.",
+  "ctaButton": "Descubre Dawarich",
+  "pricingButton": "Precios",
+  "tools": [
+    {
+      "title": "Visualizador de Google Timeline",
+      "description": "Consulta tus datos exportados de Google Timeline en un mapa interactivo. Compatible con todos los formatos de exportación."
+    },
+    {
+      "title": "Conversor de Google Timeline",
+      "description": "Convierte exportaciones de Google Timeline entre formatos. Compatible con Records.json y Semantic Location History."
+    },
+    {
+      "title": "Analizador de estadísticas de cronología",
+      "description": "Descubre información sobre tu historial de ubicaciones: distancia total, países, ciudades, visitas y más."
+    },
+    {
+      "title": "Calculadora de distancias de cronología",
+      "description": "Calcula la distancia total recorrida en coche y en otros viajes a partir de tus datos de Google Timeline."
+    },
+    {
+      "title": "Combinador de datos de cronología",
+      "description": "Combina varias exportaciones de Google Timeline en un solo conjunto de datos sin duplicados."
+    },
+    {
+      "title": "Divisor de Google Timeline",
+      "description": "Divide un archivo grande de Google Timeline en partes más pequeñas por año o mes."
+    },
+    {
+      "title": "Divisor de archivos GPS",
+      "description": "Divide archivos GPX, KML y GeoJSON grandes en partes más pequeñas para manejarlos fácilmente."
+    },
+    {
+      "title": "Detector de formato de cronología",
+      "description": "Identifica qué formato de exportación de Google Timeline usa tu archivo para saber cómo procesarlo."
+    },
+    {
+      "title": "Generador de mapas de calor GPS",
+      "description": "Convierte tu historial de ubicaciones en un mapa de calor que muestra dónde pasas más tiempo."
+    },
+    {
+      "title": "Creador de pósteres de mapas",
+      "description": "Diseña un póster de mapa con cualquier archivo GPS: 17 temas, exportación PNG/PDF e impresión opcional."
+    },
+    {
+      "title": "Combinador de trayectos GPX",
+      "description": "Combina varios archivos GPX en un solo trayecto. Útil para viajes de varios días o importaciones."
+    },
+    {
+      "title": "Extracción de geodatos de fotos",
+      "description": "Extrae coordenadas GPS y metadatos de ubicación de tus fotos (datos EXIF)."
+    }
+  ],
+  "converters": [
+    {
+      "description": "Archivos de actividad de Garmin",
+      "source": "FIT",
+      "targets": [
+        {
+          "label": "FIT → GPX"
+        },
+        {
+          "label": "FIT → GeoJSON"
+        },
+        {
+          "label": "FIT → KML"
+        }
+      ]
+    },
+    {
+      "description": "Training Center XML",
+      "source": "TCX",
+      "targets": [
+        {
+          "label": "TCX → GPX"
+        },
+        {
+          "label": "TCX → GeoJSON"
+        },
+        {
+          "label": "TCX → KML"
+        }
+      ]
+    },
+    {
+      "description": "Formato de intercambio GPS",
+      "source": "GPX",
+      "targets": [
+        {
+          "label": "GPX → GeoJSON"
+        },
+        {
+          "label": "GPX → KML"
+        },
+        {
+          "label": "GPX → KMZ"
+        }
+      ]
+    },
+    {
+      "description": "Formato GPS estándar para la web",
+      "source": "GeoJSON",
+      "targets": [
+        {
+          "label": "GeoJSON → GPX"
+        },
+        {
+          "label": "GeoJSON → KML"
+        },
+        {
+          "label": "GeoJSON → KMZ"
+        }
+      ]
+    },
+    {
+      "description": "Formato de Google Earth",
+      "source": "KML",
+      "targets": [
+        {
+          "label": "KML → GPX"
+        },
+        {
+          "label": "KML → GeoJSON"
+        },
+        {
+          "label": "KML → KMZ"
+        }
+      ]
+    },
+    {
+      "description": "Formato comprimido de Google Earth",
+      "source": "KMZ",
+      "targets": [
+        {
+          "label": "KMZ → GPX"
+        },
+        {
+          "label": "KMZ → GeoJSON"
+        },
+        {
+          "label": "KMZ → KML"
+        }
+      ]
+    }
+  ]
+}

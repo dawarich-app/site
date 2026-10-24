@@ -1,0 +1,261 @@
+{
+  "meta": {
+    "title": "Combina exportaciones de Google Timeline",
+    "description": "Combina exportaciones de Google Timeline, Records.json, Semantic History y del teléfono. Elimina duplicados de forma inteligente y con privacidad. Gratis.",
+    "keywords": "combinar exportaciones de Google Timeline, unir archivos de historial de ubicaciones, recuperar datos de Google Timeline, combinar Records.json, combinar ubicaciones de Google Takeout, combinar historial de ubicaciones semántico, combinador de Google Timeline, eliminar duplicados del historial de ubicaciones, combinar datos GPS",
+    "featureList": [
+      "Combina varias exportaciones de Google Timeline en un archivo",
+      "Elimina de forma inteligente los puntos de datos duplicados",
+      "Compatible con Records.json, Semantic Location History y exportaciones desde el teléfono",
+      "Umbrales de distancia y tiempo ajustables para eliminar duplicados",
+      "Informe visual del solapamiento de cronologías",
+      "Exporta como JSON o GPX",
+      "La privacidad es lo primero: todo se procesa en el navegador",
+      "No se envían datos a ningún servidor"
+    ]
+  },
+  "howTo": {
+    "name": "Cómo combinar exportaciones de Google Timeline",
+    "description": "Combina varios archivos exportados de Google Timeline en un único conjunto de datos con eliminación inteligente de duplicados.",
+    "steps": [
+      {
+        "name": "Exporta tus datos de Google Timeline",
+        "text": "Usa Google Takeout, Android o iOS para exportar tus datos de Google Timeline. Si es posible, utiliza varios métodos de exportación para asegurarte de tener todos tus datos."
+      },
+      {
+        "name": "Carga tus archivos JSON",
+        "text": "Arrastra y suelta todos tus archivos JSON exportados de Google Timeline en el combinador. La herramienta detecta automáticamente los formatos Records.json, Semantic Location History y las exportaciones desde el teléfono."
+      },
+      {
+        "name": "Revisa el resumen de archivos y los solapamientos",
+        "text": "Consulta la tabla de resumen de archivos y la visualización de la cronología para ver cómo se solapan tus archivos. La herramienta muestra los intervalos de fechas, el número de puntos y los formatos detectados de cada archivo."
+      },
+      {
+        "name": "Ajusta la eliminación de duplicados",
+        "text": "Establece el umbral de distancia (10-500 metros) y el de tiempo (10-300 segundos) para eliminar duplicados. Los puntos que estén dentro de ambos umbrales se consideran duplicados."
+      },
+      {
+        "name": "Combina y exporta",
+        "text": "Haz clic en Combinar archivos para unir todos los datos y eliminar duplicados. Descarga el resultado como JSON (conserva todos los metadatos) o GPX (compatible con aplicaciones de mapas)."
+      }
+    ],
+    "tool": "Combinador de datos de Google Timeline de Dawarich"
+  },
+  "h1": "Combinador de datos de Google Timeline",
+  "intro": "Combina varias exportaciones de Google Timeline en un único archivo. La eliminación inteligente de duplicados quita los puntos solapados y conserva todos los registros de ubicación únicos. Gratis, con privacidad y todo en tu navegador.",
+  "preCta": "¿Quieres visualizar primero tus datos de cronología? Prueba nuestro [visualizador de Google Timeline](/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) para explorar tu historial de ubicaciones en un mapa interactivo. ¿Necesitas una alternativa a largo plazo? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) te da plena propiedad de tus datos.",
+  "faqTitle": "Preguntas frecuentes",
+  "homeLabel": "Inicio",
+  "toolsLabel": "Herramientas gratuitas",
+  "privacyTitle": "La privacidad es lo primero",
+  "privacyBody": "La combinación y la eliminación de duplicados se realizan íntegramente en tu navegador. Tus datos de ubicación nunca salen de tu dispositivo ni se envían a ningún servidor.",
+  "benefitsTitle": "¿Por qué combinar exportaciones de cronología?",
+  "benefitsIntro": "Google ofrece varias formas de exportar los datos de cronología, cada una con información distinta. Combinarlas te da el historial de ubicaciones más completo posible.",
+  "benefits": [
+    {
+      "title": "Varios métodos de exportación:",
+      "body": "Google Takeout, la exportación desde el teléfono y Semantic Location History contienen datos distintos. Combinarlos reúne todo lo que hay en cada fuente."
+    },
+    {
+      "title": "Recuperación de datos:",
+      "body": "Tras la migración de la cronología de Google en 2024, muchos usuarios tienen exportaciones parciales de distintas fechas. Combínalas para reconstruir tanto historial como sea posible."
+    },
+    {
+      "title": "Combinar exportaciones antiguas y nuevas:",
+      "body": "¿Exportaste tu cronología en 2022 y otra vez en 2024? Combina ambas exportaciones para obtener una cobertura continua sin registros duplicados."
+    }
+  ],
+  "settings": {
+    "title": "Ajustes de eliminación de duplicados",
+    "intro": "Ajusta con qué intensidad se detectan puntos duplicados. Dos puntos se consideran duplicados si la distancia y el tiempo entre ellos están dentro de ambos umbrales. Se conserva el punto con más metadatos.",
+    "distanceLabel": "Umbral de distancia",
+    "distanceHint": "Los puntos separados por menos de esta distancia pueden ser duplicados (10m = estricto, 500m = agresivo)",
+    "timeLabel": "Umbral de tiempo",
+    "timeHint": "Los puntos registrados dentro de este intervalo pueden ser duplicados (10s = estricto, 300s = agresivo)"
+  },
+  "results": {
+    "file": "Archivo",
+    "format": "Formato",
+    "points": "Puntos",
+    "paths": "Recorridos",
+    "dateRange": "Intervalo de fechas",
+    "dateCoverage": "Cobertura de fechas",
+    "overlap": "Solapamiento",
+    "title": "Resultados de la combinación",
+    "inputPoints": "Puntos de entrada",
+    "outputPoints": "Puntos de salida",
+    "duplicatesRemoved": "Duplicados eliminados",
+    "filesMerged": "Archivos combinados",
+    "overlapDetails": "Detalles del solapamiento",
+    "parsing": "Analizando archivos cargados...",
+    "unknown": "desconocido",
+    "noTimestamps": "Sin marcas de tiempo",
+    "none": "Ninguno",
+    "downloadJson": "Descargar como JSON",
+    "downloadGpx": "Descargar como GPX",
+    "noDate": "No disponible",
+    "merging": "Combinando...",
+    "uploadedFiles": "Archivos cargados ({count})",
+    "distanceValue": "{distance}m",
+    "timeValue": "{seconds}s",
+    "filePair": "**{fileA}** y **{fileB}**",
+    "overlapRange": " se solapan del {startDate} al {endDate}",
+    "overlapWith": "Solapamiento con {fileName}",
+    "mergeButton": "Combinar {count} archivo|Combinar {count} archivos",
+    "dayCount": "{count} día|{count} días",
+    "parseError": "Error al analizar {fileName}: {message}",
+    "processingError": "Error al procesar los archivos: {message}",
+    "mergeError": "Error al combinar los archivos: {message}"
+  },
+  "cta": {
+    "fallback": "¿Quieres mantener tus datos de ubicación combinados seguros y siempre accesibles? Dawarich almacena tu historial de ubicaciones completo de forma segura.",
+    "postTitle": "No vuelvas a arriesgarte a perder tus datos de ubicación",
+    "postBody": "Dawarich lo almacena todo en centros de datos de la UE, cifrado en tránsito (SSL/TLS) y en reposo (LUKS), con copias de seguridad completas y un mapa interactivo. Importa tus datos de cronología combinados y sigue registrando tu ubicación automáticamente.",
+    "bottomTitle": "¿Buscas una alternativa a largo plazo a Google Timeline?",
+    "bottomBody": "Dawarich es una plataforma de código abierto para registrar ubicaciones que te da el control total de tus datos. Importa tu exportación combinada de Google Timeline, sigue registrando tu ubicación desde el teléfono y visualiza años de desplazamientos, en tu propio servidor o en la nube.",
+    "button": "Prueba Dawarich gratis durante 7 días",
+    "headline": "Has combinado **{count}** archivos con **{points}** puntos en uno solo. Dawarich lo hace automáticamente con todas tus fuentes GPS.",
+    "statLabels": {
+      "files": "archivos",
+      "points": "puntos",
+      "duplicates": "duplicados eliminados"
+    }
+  },
+  "faq": [
+    {
+      "q": "¿Es seguro cargar mis datos de Google Timeline?",
+      "a": "Sí. Todos los datos se procesan íntegramente en tu navegador con JavaScript. Tus archivos de historial de ubicaciones nunca se suben a ningún servidor. Los archivos se leen localmente, se analizan, se combinan y se exportan sin ninguna solicitud de red. Al cerrar la pestaña, los datos desaparecen. La herramienta también es de código abierto, así que puedes comprobar el código."
+    },
+    {
+      "q": "¿Cómo funciona la eliminación de duplicados?",
+      "a": "El algoritmo ordena todos los puntos por marca de tiempo y compara cada uno con el anterior. Si dos puntos consecutivos están dentro del umbral de distancia (50 metros de forma predeterminada) y del umbral de tiempo (60 segundos de forma predeterminada), se elimina el duplicado. Cuando se encuentra un duplicado, se conserva el punto con más metadatos (como nombres de lugares o tipos de actividad). Puedes ajustar ambos umbrales con los controles deslizantes antes de combinar."
+    },
+    {
+      "q": "¿Puedo combinar distintos tipos de formato?",
+      "a": "Sí. El combinador admite todos los formatos de exportación de Google Timeline: Records.json de Google Takeout, archivos mensuales de Semantic Location History (como 2022_APRIL.json) y las exportaciones de cronología más recientes desde el teléfono con semanticSegments. Puedes mezclar estos formatos en cualquier combinación. El analizador detecta automáticamente el formato de cada archivo y normaliza los datos antes de combinarlos."
+    },
+    {
+      "q": "¿Qué ocurre con los datos solapados?",
+      "a": "Los datos solapados se gestionan al eliminar duplicados. Cuando dos archivos cubren el mismo periodo, es probable que tengas puntos de ubicación duplicados registrados en el mismo momento y lugar. El combinador los identifica por su proximidad tanto en el espacio como en el tiempo y conserva solo una copia de cada punto, dando preferencia a la que tenga más metadatos. El informe de solapamientos muestra exactamente qué archivos se solapan y durante cuántos días."
+    },
+    {
+      "q": "¿Se perderá alguno de mis datos al combinarlos?",
+      "a": "No se pierde ningún dato relevante. La eliminación de duplicados solo quita duplicados reales: puntos que representan esencialmente la misma ubicación registrada al mismo tiempo desde varias fuentes de exportación. Todos los puntos únicos, visitas a lugares, segmentos de actividad y recorridos de cada archivo se conservan en el resultado combinado. Si quieres ir sobre seguro, puedes fijar el umbral de distancia en 0 para desactivar por completo la eliminación de duplicados."
+    },
+    {
+      "q": "¿Qué formatos de exportación están disponibles?",
+      "a": "Puedes exportar los datos combinados como JSON (una matriz de todos los puntos de ubicación sin duplicados y con todos sus metadatos) o como GPX (un formato GPS estándar compatible con la mayoría de aplicaciones de mapas, dispositivos de actividad física y herramientas SIG). La exportación JSON conserva todos los metadatos originales, como nombres de lugares, direcciones y tipos de actividad. La exportación GPX convierte las visitas a lugares en puntos de referencia y los registros de ubicación en puntos de trayecto."
+    },
+    {
+      "q": "¿Cuántos archivos puedo combinar a la vez?",
+      "a": "No hay un límite fijo de archivos. La herramienta se ha probado con más de 10 archivos a la vez, incluidos archivos Records.json grandes con cientos de miles de puntos. El tiempo de procesamiento depende del número total de puntos de todos los archivos y de la capacidad de tu dispositivo. Una combinación típica de 3-5 archivos con un total de 500,000 puntos tarda 10-30 segundos en un equipo moderno."
+    }
+  ],
+  "cards": [
+    {
+      "title": "¿Qué es el combinador de datos de cronología?",
+      "paragraphs": [
+        "El combinador de datos de cronología es una herramienta gratuita para el navegador que reúne varios archivos exportados de Google Timeline en un único conjunto de datos. Cuando exportas tu historial de ubicaciones de Google con distintos métodos (Google Takeout, exportación desde el teléfono, Semantic History), a menudo obtienes archivos solapados con puntos de datos duplicados. Esta herramienta los combina de forma inteligente, eliminando duplicados y conservando cada registro de ubicación único.",
+        "Todo se procesa localmente en tu navegador. Tus datos de ubicación nunca se transmiten a ningún servidor, así que puedes usarla de forma segura incluso con años de historial personal de ubicaciones sensible."
+      ]
+    },
+    {
+      "title": "Cómo funciona la eliminación de duplicados",
+      "paragraphs": [
+        "El algoritmo de eliminación de duplicados usa dos factores para identificar puntos de ubicación repetidos:"
+      ],
+      "items": [
+        {
+          "body": "**Proximidad espacial**: los puntos dentro del umbral de distancia (50 metros de forma predeterminada) son candidatos a eliminarse como duplicados"
+        },
+        {
+          "body": "**Proximidad temporal**: los puntos también deben estar dentro del umbral de tiempo (60 segundos de forma predeterminada) para considerarse duplicados"
+        },
+        {
+          "body": "**Se requieren ambas condiciones**: un punto solo se elimina como duplicado si coincide tanto en distancia COMO en tiempo"
+        },
+        {
+          "body": "**Conservación de metadatos**: cuando se encuentran duplicados, se conserva la versión con más metadatos (nombres de lugares, direcciones y tipos de actividad)"
+        }
+      ],
+      "footer": [
+        "Los puntos se ordenan cronológicamente antes de eliminar los duplicados, lo que garantiza resultados coherentes sin importar el orden de carga."
+      ]
+    },
+    {
+      "title": "¿Por qué combinar exportaciones de cronología?",
+      "paragraphs": [
+        "Hay varias situaciones habituales en las que combinar datos de Google Timeline resulta esencial:"
+      ],
+      "items": [
+        {
+          "body": "**Varias fuentes de exportación**: Google Takeout y las exportaciones de Android e iOS recogen distintos subconjuntos de tus datos"
+        },
+        {
+          "body": "**Recuperación tras la migración de Google de 2024**: cuando Google trasladó la cronología al almacenamiento local del dispositivo, muchos usuarios hicieron varias exportaciones parciales. Combinarlas recupera el historial más completo"
+        },
+        {
+          "body": "**Copias de seguridad periódicas**: si exportaste en 2021 y otra vez en 2024, combinarlas crea un conjunto de datos continuo que abarca ambos periodos"
+        },
+        {
+          "body": "**Cambio de dispositivo**: ¿has cambiado de teléfono? Combina las exportaciones del dispositivo antiguo y del nuevo"
+        }
+      ]
+    },
+    {
+      "title": "¿Qué ocurrió con Google Maps Timeline?",
+      "paragraphs": [
+        "A finales de 2024, Google retiró la versión web de Google Maps Timeline y trasladó todos los datos de ubicación al almacenamiento local del dispositivo. Solo los últimos 90 días de datos se transfirieron automáticamente a los teléfonos de los usuarios. El historial de ubicaciones anterior se eliminó de forma permanente salvo que los usuarios lo hubieran exportado manualmente antes de la fecha límite.",
+        "Esto dejó a millones de usuarios con datos fragmentados: exportaciones parciales de Takeout, exportaciones desde el teléfono de datos recientes y archivos Semantic Location History de distintos periodos. El combinador de datos de cronología ayuda a reunir estos fragmentos en un historial de ubicaciones completo.",
+        "Para seguir registrando tu ubicación con plena propiedad de tus datos, considera [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-merger) como alternativa en tu propio servidor o en la nube."
+      ]
+    },
+    {
+      "title": "Formatos compatibles",
+      "paragraphs": [
+        "El combinador detecta y procesa automáticamente todos los formatos de exportación de Google Timeline:"
+      ],
+      "items": [
+        {
+          "body": "**Records.json**: registros GPS sin procesar de Google Takeout en formato de coordenadas E7. Suelen ser los archivos más grandes y contienen cada registro de ubicación"
+        },
+        {
+          "body": "**Semantic Location History**: archivos mensuales (p. ej., 2022_APRIL.json) con visitas a lugares, direcciones y segmentos de actividad estructurados"
+        },
+        {
+          "body": "**Exportación de cronología desde el teléfono**: formato más reciente de Google Maps en Android/iOS con semanticSegments y recorridos de cronología"
+        },
+        {
+          "body": "**Ajustes y TimelineEdits**: archivos de metadatos adicionales de las exportaciones de Google Takeout"
+        }
+      ],
+      "footer": [
+        "Puedes mezclar estos formatos en cualquier combinación en una sola operación."
+      ]
+    },
+    {
+      "title": "Herramientas relacionadas",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Visualizador de Google Timeline](/tools/timeline-visualizer): consulta tu historial de ubicaciones en un mapa interactivo"
+        },
+        {
+          "body": "[Generador de mapas de calor GPS](/tools/heatmap-generator): crea mapas de calor con GPX, FIT, TCX y otros archivos GPS"
+        },
+        {
+          "body": "[Combinador de trayectos GPX](/tools/gpx-merger): combina varios archivos GPX en uno"
+        },
+        {
+          "body": "[Extracción de geodatos de fotos](/tools/photo-geotagging): extrae coordenadas GPS de tus fotos"
+        },
+        {
+          "body": "[Conversor de GeoJSON a GPX](/tools/geojson-to-gpx): convierte datos de ubicación al formato GPX"
+        }
+      ],
+      "footer": [
+        "Más información: [Migrar desde el historial de ubicaciones de Google](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}
