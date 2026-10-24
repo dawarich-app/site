@@ -1,9 +1,9 @@
 {
   "meta": {
-    "title": "Google Timeline in GPX/KML/CSV umwandeln – kostenloser Converter",
-    "description": "Kostenloser, datenschutzfreundlicher Converter für Google-Timeline-Daten. Wandle deinen Standortverlauf in GPX, KML, GeoJSON oder CSV um – alles im Browser.",
-    "keywords": "Google Timeline in GPX umwandeln, Google Takeout in KML, Google Standortverlauf in CSV, Timeline GeoJSON Converter, Google Timeline Converter, Google Maps Timeline exportieren, Standortverlauf GPX, Google Takeout Standort Converter",
-    "appName": "Google Timeline zu GPX/KML/CSV Converter",
+    "title": "Google Timeline in GPX/KML/CSV umwandeln – kostenlos",
+    "description": "Kostenloser, datenschutzfreundlicher Konverter für Google-Timeline-Daten. Wandle deinen Standortverlauf in GPX, KML, GeoJSON oder CSV um – alles im Browser.",
+    "keywords": "Google Timeline in GPX umwandeln, Google Takeout in KML, Google Standortverlauf in CSV, Timeline in GeoJSON umwandeln, Google-Timeline-Konverter, Google Maps Timeline exportieren, Standortverlauf in GPX, Google Takeout Standortkonverter, Timeline-Daten umwandeln",
+    "appName": "Google Timeline zu GPX/KML/CSV Konverter",
     "featureList": [
       "Google-Timeline-JSON in GPX umwandeln",
       "Google-Timeline-JSON in KML und KMZ umwandeln",
@@ -15,8 +15,8 @@
       "Keine Daten werden an einen Server gesendet"
     ]
   },
-  "h1": "Google Timeline Converter",
-  "intro": "Kostenloses, datenschutzfreundliches Tool, das deinen Google-Timeline-Standortverlauf in GPX, KML, GeoJSON, KMZ oder CSV umwandelt. Lade deine exportierten JSON-Dateien hoch – die gesamte Verarbeitung passiert in deinem Browser.",
+  "h1": "Google Timeline umwandeln",
+  "intro": "Kostenloses, datenschutzfreundliches Tool, das deinen Standortverlauf aus Google Timeline in GPX, KML, GeoJSON, KMZ oder CSV umwandelt. Lade deine exportierten JSON-Dateien hoch – die gesamte Verarbeitung passiert in deinem Browser.",
   "howTo": {
     "title": "So bekommst du deine Timeline-Daten",
     "paragraphs": [
@@ -93,9 +93,9 @@
   },
   "info": [
     {
-      "title": "Was ist ein Google Timeline Converter?",
+      "title": "Was ist ein Google-Timeline-Konverter?",
       "paragraphs": [
-        "Ein Google Timeline Converter nimmt die rohen JSON-Dateien aus deinem Google-Standortverlauf-Export und wandelt sie in Standard-GPS-Formate um, die von Kartenanwendungen, Fitness-Trackern und Geoinformationssystemen breit unterstützt werden. Statt an Googles proprietäres JSON-Format gebunden zu sein, bekommst du Dateien, die überall funktionieren.",
+        "Ein Google-Timeline-Konverter nimmt die rohen JSON-Dateien aus deinem Google-Standortverlauf-Export und wandelt sie in Standard-GPS-Formate um, die von Kartenanwendungen, Fitness-Trackern und Geoinformationssystemen breit unterstützt werden. Statt an Googles proprietäres JSON-Format gebunden zu sein, bekommst du Dateien, die überall funktionieren.",
         "Dieses Tool wandelt alles in deinem Browser um – beim Herunterladen deiner Formate werden deine Standortdaten nirgendwohin gesendet. Dateien hochladen, Formate wählen, herunterladen: Bei den meisten Exporten dauert das Sekunden, und es verarbeitet auch Dateien mit Hunderttausenden Standortpunkten. (Wenn du „In meinem Dawarich-Konto speichern“ nutzt, lädt genau diese eine Aktion deine Datei zu Dawarich Cloud hoch, um deinen Import vorzubereiten – sonst wird nichts gesendet.)"
       ]
     },
@@ -113,7 +113,7 @@
       "title": "Was ist mit Google Maps Timeline passiert?",
       "paragraphs": [
         "Ende 2024 hat Google die Webversion von Google Maps Timeline eingestellt und alle Standortdaten auf die Geräte verlagert. Übernommen wurden nur die letzten 90 Tage – ältere Daten wurden gelöscht, wenn sie nicht manuell gesichert wurden. Viele Menschen haben bei der Umstellung [jahrelangen Standortverlauf verloren](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/).",
-        "Wenn du deine Daten vor oder während der Umstellung exportiert hast, kannst du sie mit diesem Converter in Standardformate für die langfristige Aufbewahrung umwandeln. Mit GPX, KML oder CSV bleibt dein Standortverlauf zugänglich – egal, was Google als Nächstes tut."
+        "Wenn du deine Daten vor oder während der Umstellung exportiert hast, kannst du sie mit diesem Konverter in Standardformate für die langfristige Aufbewahrung umwandeln. Mit GPX, KML oder CSV bleibt dein Standortverlauf zugänglich – egal, was Google als Nächstes tut."
       ]
     },
     {
@@ -132,7 +132,7 @@
     {
       "title": "Genauigkeit und Grenzen",
       "paragraphs": [
-        "Der Converter übernimmt alle geografischen Koordinaten und Zeitstempel aus deinem Google-Timeline-Export originalgetreu. Ein paar grundsätzliche Grenzen solltest du aber kennen:"
+        "Der Konverter übernimmt alle geografischen Koordinaten und Zeitstempel aus deinem Google-Timeline-Export originalgetreu. Ein paar grundsätzliche Grenzen solltest du aber kennen:"
       ],
       "items": [
         "**Koordinatengenauigkeit** – Records.json nutzt das E7-Format (7 Nachkommastellen), das in normale Dezimalgrad umgerechnet wird, ohne Genauigkeit zu verlieren",
@@ -144,12 +144,12 @@
     {
       "title": "Verwandte Tools",
       "items": [
-        "[Google Timeline Visualizer](/tools/timeline-visualizer) – Sieh dir deine Google-Timeline-Daten auf einer interaktiven Karte an, ohne sie umzuwandeln",
+        "[Google Timeline visualisieren](/tools/timeline-visualizer) – Sieh dir deine Daten aus Google Timeline auf einer interaktiven Karte an, ohne sie umzuwandeln",
         "[GPS-Heatmap-Generator](/tools/heatmap-generator) – Erstelle Heatmaps aus GPX-, FIT-, TCX- und anderen GPS-Dateien",
-        "[GPX-Track-Merger](/tools/gpx-merger) – Kombiniere mehrere GPX-Dateien zu einer",
+        "[GPX-Tracks zusammenführen](/tools/gpx-merger) – Kombiniere mehrere GPX-Dateien zu einer",
         "[Geodaten aus Fotos extrahieren](/tools/photo-geotagging) – Lies GPS-Koordinaten aus deinen Fotos aus",
-        "[GeoJSON-zu-GPX-Converter](/tools/geojson-to-gpx) – Wandle GeoJSON-Dateien in GPX um",
-        "[KML-zu-GPX-Converter](/tools/kml-to-gpx) – Wandle KML-Dateien in GPX um"
+        "[GeoJSON in GPX umwandeln](/tools/geojson-to-gpx) – Wandle GeoJSON-Dateien in GPX um",
+        "[KML in GPX umwandeln](/tools/kml-to-gpx) – Wandle KML-Dateien in GPX um"
       ],
       "footer": "Weiterlesen: [Umzug vom Google-Standortverlauf](/blog/migrating-from-google-location-history-to-dawarich)"
     }
@@ -162,7 +162,7 @@
     },
     {
       "q": "Welche Google-Timeline-Formate kann ich umwandeln?",
-      "a": "Dieser Converter unterstützt alle sechs Exportformate von Google Timeline: Records.json (rohe GPS-Standortdaten mit E7-Koordinaten), Semantic Location History (monatliche Dateien YYYY_MONTH.json mit Ortsbesuchen und Aktivitätssegmenten), Semantic Segments (das neuere Exportformat vom Handy mit semanticSegments), Location History (Array-Format mit startTime/endTime), Settings und TimelineEdits. Das Tool erkennt das Format beim Hochladen automatisch."
+      "a": "Dieser Konverter unterstützt alle sechs Exportformate von Google Timeline: Records.json (rohe GPS-Standortdaten mit E7-Koordinaten), Semantic Location History (monatliche Dateien YYYY_MONTH.json mit Aufenthalten an Orten und Aktivitätssegmenten), Semantic Segments (das neuere Exportformat vom Handy mit semanticSegments), Location History (Array-Format mit startTime/endTime), Settings und TimelineEdits. Das Tool erkennt das Format beim Hochladen automatisch."
     },
     {
       "q": "Welches Ausgabeformat ist das richtige für mich?",
@@ -174,7 +174,7 @@
     },
     {
       "q": "Kann ich mehrere Dateien auf einmal umwandeln?",
-      "a": "Ja. Du kannst mehrere Google-Timeline-JSON-Dateien gleichzeitig hochladen – zum Beispiel alle monatlichen Semantic-Location-History-Dateien (2022_JANUARY.json bis 2022_DECEMBER.json). Der Converter führt die Daten aller hochgeladenen Dateien zu einer Ausgabe pro Format zusammen. Das ist besonders praktisch für Semantic-Exporte aus Google Takeout, die deinen Verlauf auf monatliche Dateien aufteilen."
+      "a": "Ja. Du kannst mehrere Google-Timeline-JSON-Dateien gleichzeitig hochladen – zum Beispiel alle monatlichen Dateien aus Semantic Location History (2022_JANUARY.json bis 2022_DECEMBER.json). Der Konverter führt die Daten aller hochgeladenen Dateien zu einer Ausgabe pro Format zusammen. Das ist besonders praktisch für Semantic-Exporte aus Google Takeout, die deinen Verlauf auf monatliche Dateien aufteilen."
     },
     {
       "q": "Wie öffne ich die umgewandelten Dateien?",

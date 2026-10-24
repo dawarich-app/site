@@ -1,0 +1,110 @@
+{
+  "showcaseItems": [
+    {
+      "title": "Monatliche & jährliche Einblicke",
+      "description": "Erhalte automatische Zusammenfassungen deiner Standortdaten nach Monat und Jahr. Entdecke Trends, Muster und Höhepunkte jedes Zeitraums."
+    },
+    {
+      "title": "Besuchte Städte & Länder",
+      "description": "Erfasse jedes besuchte Land mit automatischer Zählung und Darstellung. Ideal für Reisebegeisterte, die Stempel im Reisepass sammeln."
+    },
+    {
+      "title": "Gesamtstrecke",
+      "description": "Berechne die insgesamt zurückgelegte Strecke aus allen aufgezeichneten Standortdaten. Sieh, wie weit du im Laufe der Zeit gekommen bist."
+    },
+    {
+      "title": "E-Mail-Zusammenfassungen",
+      "description": "Erhalte automatisch monatliche und jährliche E-Mails mit deinen Reiseerfolgen und Statistiken."
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Automatisch aufzeichnen",
+      "description": "Während du deinen Standort aufzeichnest, werden deine Statistiken jede Stunde automatisch im Hintergrund berechnet.",
+      "details": [
+        "Keine manuelle Eingabe nötig",
+        "Automatische Aktualisierung",
+        "Verlaufsdaten werden fortlaufend verarbeitet"
+      ]
+    },
+    {
+      "title": "Deine Statistiken ansehen",
+      "description": "Öffne die Statistikseite für umfassende Auswertungen deiner Standortdaten.",
+      "details": [
+        "Gesamtübersicht ganz oben",
+        "Klicke auf ein Jahr für detaillierte Statistiken",
+        "Klicke auf einen Monat, um ihn auf der Karte zu sehen"
+      ]
+    },
+    {
+      "title": "Auf der Karte erkunden",
+      "description": "Nutze die Links [Karte], um deine Statistiken geografisch darzustellen.",
+      "details": [
+        "Klicke neben einem Jahr auf [Karte]",
+        "Monatsdaten auf der interaktiven Karte ansehen",
+        "Deine vollständigen Routen und Punkte sehen"
+      ]
+    },
+    {
+      "title": "Manuell aktualisieren",
+      "description": "Stoße mit der Schaltfläche „Statistiken aktualisieren“ jederzeit eine sofortige Neuberechnung an.",
+      "details": [
+        "Klicke auf „Statistiken aktualisieren“, um sie sofort zu erneuern",
+        "Meist in wenigen Minuten abgeschlossen",
+        "Nützlich nach dem Import großer Datensätze"
+      ]
+    }
+  ],
+  "shareFeatures": [
+    {
+      "title": "Teilbare Links",
+      "description": "Erstelle öffentliche Links, um deine Jahreszusammenfassungen mit Freunden und Familie zu teilen. Deine übrigen Daten bleiben privat."
+    },
+    {
+      "title": "Datenschutzfreundlich",
+      "description": "Du bestimmst, was du teilst. Nur freigegebene Statistiken sind sichtbar – alles andere bleibt privat."
+    }
+  ],
+  "meta": {
+    "title": "Standortstatistiken & Einblicke",
+    "description": "Dein Leben in Zahlen: umfassende Standortstatistiken zu Ländern, Städten und Entfernungen sowie monatliche und jährliche E-Mail-Zusammenfassungen.",
+    "ogTitle": "Dawarich-Statistiken – dein Leben in Zahlen",
+    "ogDescription": "Umfassende Standortstatistiken mit besuchten Ländern, Gesamtstrecke, Zeiterfassung sowie automatischen monatlichen und jährlichen E-Mail-Zusammenfassungen."
+  },
+  "hero": {
+    "badge": "Auswertungen & Einblicke",
+    "title": "Dein Leben in",
+    "titleHighlight": "Zahlen",
+    "subtitle": "Gewinne aussagekräftige Einblicke aus deinen Standortdaten. Entdecke Muster, verfolge Erfolge und feiere Meilensteine mit umfassenden Statistiken, die jede Stunde automatisch aktualisiert werden.",
+    "imageAlt": "Übersicht mit umfassenden Statistiken"
+  },
+  "statsPage": {
+    "heading": "Was du erfassen kannst",
+    "h3": "Gesamtstatistiken",
+    "li": "Besuchte Länder",
+    "li2": "Erkundete Städte",
+    "li3": "Zurückgelegte Gesamtstrecke",
+    "h32": "Statistiken nach Zeitraum",
+    "li4": "Jahreszusammenfassungen",
+    "li5": "Monatliche Aufschlüsselungen",
+    "li6": "Aktivste Zeiträume",
+    "title3": "Umfassende Auswertungen",
+    "subtitle2": "Alles, was du brauchst, um deinen Standortverlauf auf einen Blick zu verstehen.",
+    "heading2": "Teile deine Erfolge",
+    "p": "Feiere deine Reisemeilensteine, indem du deine Jahreszusammenfassungen teilst. Deine detaillierten Daten bleiben privat.",
+    "title4": "So funktioniert’s",
+    "subtitle3": "Deine Statistiken werden automatisch berechnet – ohne manuelle Arbeit.",
+    "heading3": "Warum Statistiken wichtig sind",
+    "h33": "Motivation",
+    "p2": "Deine Reiseerfolge in Zahlen zu sehen, motiviert dich, mehr zu entdecken und neue Ziele zu setzen.",
+    "h34": "Gewohnheiten verstehen",
+    "p3": "Entdecke Muster in deinen Wegen und verstehe, wie du deine Zeit an verschiedenen Orten verbringst.",
+    "h35": "Jährlicher Rückblick",
+    "p4": "Erhalte anschauliche Jahreszusammenfassungen, die dich an deine Abenteuer und Erlebnisse erinnern und sie feiern.",
+    "heading4": "Beginne mit deinen Statistiken",
+    "p5": "Baue ab heute deine Standortstatistiken auf und teste Dawarich 7 Tage kostenlos. Jederzeit kündbar.",
+    "Link": "7 Tage kostenlos testen",
+    "EnOnlyLink": "Kostenlos selbst hosten",
+    "p6": "7 Tage kostenlos testen · 14 Tage Geld-zurück-Garantie · Jederzeit kündbar"
+  }
+}

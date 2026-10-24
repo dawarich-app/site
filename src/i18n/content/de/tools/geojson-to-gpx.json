@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "GeoJSON in GPX umwandeln – kostenloser Online-Konverter",
+    "description": "GeoJSON-Dateien sofort in GPX umwandeln. Kostenloser, datenschutzfreundlicher Online-Konverter für Geodaten. Direkt im Browser – kein Upload nötig.",
+    "keywords": "GeoJSON in GPX, GeoJSON-Konverter, GPX-Konverter, Geodatenkonverter, GPS-Konverter",
+    "appName": "GeoJSON-zu-GPX-Konverter"
+  },
+  "h1": "GeoJSON in GPX umwandeln",
+  "intro": "Wandle deine GeoJSON-Dateien sofort in GPX um. Die gesamte Verarbeitung läuft in deinem Browser – deine Daten verlassen dein Gerät nie.",
+  "cards": [
+    {
+      "title": "Über das GeoJSON-Format",
+      "body": "GeoJSON ist ein JSON-basiertes Format zur Darstellung geografischer Datenstrukturen und in Webkarten-Anwendungen weit verbreitet."
+    },
+    {
+      "title": "Über das GPX-Format",
+      "body": "GPX (GPS Exchange Format) ist das Standard-XML-Format für GPS-Daten und wird von den meisten GPS-Geräten und Fitness-Trackern unterstützt."
+    },
+    {
+      "title": "Warum GeoJSON in GPX umwandeln?",
+      "items": [
+        "Daten aus Webkarten in GPS-Geräte importieren",
+        "Mit Fitness-Tracking-Apps und -Geräten nutzen",
+        "Kompatibel mit Garmin, Suunto und weiteren GPS-Geräten",
+        "Standardformat für Outdoor-Navigation"
+      ]
+    }
+  ],
+  "privacyBody": "Die gesamte Umwandlung läuft ausschließlich in deinem Browser. Deine Daten verlassen dein Gerät nie."
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Datenschutz als Gegenmodell zu Google",
+  "subtitle": "Google nutzt deinen Standort, um Werbung zu verkaufen. Wir berechnen dir stattdessen Geld. Das ist unser gesamtes Geschäftsmodell.",
+  "cardTitle": "Keine Werbung. Kein Datenverkauf. Niemals.",
+  "cardDescription": "Deine Daten finanzieren Googles Werbegeschäft im Wert von $300B. Bei Dawarich sind deine Standortdaten das Produkt, das du kaufst – nicht das Produkt, das wir verkaufen.",
+  "cardTitle2": "Selbst hosten: Du musst niemandem vertrauen",
+  "cardDescription2": "Du möchtest niemandem deine Daten anvertrauen? Betreibe Dawarich auf deinem eigenen Server. Deine Daten berühren nie unsere Infrastruktur. Wir können sie schlicht nicht einsehen.",
+  "cardTitle3": "Verschlüsselt und in der EU gehostet",
+  "cardDescription3": "Alle Daten werden bei der Übertragung (SSL/TLS) und Speicherung (LUKS) verschlüsselt. Sie liegen in europäischen Rechenzentren unter den strengen Vorgaben der DSGVO. Du behältst die volle Kontrolle über deine Daten.",
+  "cardTitle4": "Open Source: Prüfe jede Zeile",
+  "cardDescription4": "Du vertraust uns nicht? Lies den Code. ÜBER 9,000 Sterne auf GitHub. Tausende Entwickler haben ihn geprüft. Kein verstecktes Tracking. Keine Überraschungen.",
+  "policyLink": "Vollständige Datenschutzerklärung lesen →"
+}

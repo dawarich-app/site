@@ -1,0 +1,25 @@
+{
+  "trustBadges": [
+    {
+      "label": "Funktioniert offline"
+    },
+    {
+      "label": "Open Source"
+    },
+    {
+      "label": "In der EU gehostet & verschlüsselt"
+    }
+  ],
+  "title": "Deine Zeitleiste, ",
+  "highlight": "für immer",
+  "subtitle": "Google hat die Timeline im Browser eingestellt und begrenzt die Aufbewahrung der Daten. Importiere deinen gesamten Standortverlauf in wenigen Minuten in Dawarich – privat, verschlüsselt, unter deiner Kontrolle. Keine Werbung. Kein Datenverkauf.",
+  "primaryButton": "Meine Google-Daten importieren",
+  "secondaryButton": "Funktionen entdecken",
+  "orDivider": "oder",
+  "noCredit": "7 Tage kostenlos testen · 14 Tage Geld-zurück-Garantie · Jederzeit kündbar",
+  "badgeLabel": "Die private Alternative zu Google Timeline",
+  "googleSignIn": "Mit Google anmelden",
+  "playTour": "Dawarich-Produkttour abspielen",
+  "tourLabel": "Dawarich-Produkttour",
+  "closeVideo": "Video schließen"
+}

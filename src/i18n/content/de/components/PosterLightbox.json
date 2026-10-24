@@ -1,0 +1,62 @@
+{
+  "poster": {
+    "themes": [
+      {
+        "name": "Herbst"
+      },
+      {
+        "name": "Blaupause"
+      },
+      {
+        "name": "Kontrastzonen"
+      },
+      {
+        "name": "Kupferpatina"
+      },
+      {
+        "name": "Smaragdstadt"
+      },
+      {
+        "name": "Wald"
+      },
+      {
+        "name": "Farbverlauf-Straßen"
+      },
+      {
+        "name": "Japanische Tusche"
+      },
+      {
+        "name": "Mitternachtsblau"
+      },
+      {
+        "name": "Monochromes Blau"
+      },
+      {
+        "name": "Neon-Cyberpunk"
+      },
+      {
+        "name": "Noir"
+      },
+      {
+        "name": "Ozean"
+      },
+      {
+        "name": "Pastelltraum"
+      },
+      {
+        "name": "Sonnenuntergang"
+      },
+      {
+        "name": "Terrakotta"
+      },
+      {
+        "name": "Warmes Beige"
+      }
+    ]
+  },
+  "position": "Poster „{name}“, {position} von {total}",
+  "close": "Schließen",
+  "previous": "Vorheriges Poster",
+  "next": "Nächstes Poster",
+  "posterAlt": "Routenposter von Berlin im Design „{name}“, vergrößert"
+}

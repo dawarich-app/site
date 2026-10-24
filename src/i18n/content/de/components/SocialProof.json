@@ -1,0 +1,23 @@
+{
+  "metrics": [
+    {
+      "prefix": "ÜBER ",
+      "label": "GitHub-Sterne"
+    },
+    {
+      "suffix": "+",
+      "label": "Docker-Downloads"
+    },
+    {
+      "suffix": "+",
+      "label": "Nutzer"
+    },
+    {
+      "suffix": "+",
+      "label": "Aufgezeichnete Punkte"
+    }
+  ],
+  "integrationsLabel": "Funktioniert mit",
+  "billion": "{value} Mrd.",
+  "million": "{value} Mio."
+}

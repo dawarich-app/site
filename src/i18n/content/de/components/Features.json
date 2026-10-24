@@ -1,0 +1,32 @@
+{
+  "features": [
+    {
+      "title": "Erlebe jeden Tag noch einmal – Minute für Minute",
+      "description": "Wähle ein Datum. Jeder Stopp, jede Route, jede Minute – alles auf einen Blick. Die detaillierte Zeitleistenansicht, die Google still und leise eingestellt hat."
+    },
+    {
+      "title": "Beantworte sofort die Frage „Wo war ich?“",
+      "description": "Gib ein Datum ein. Sieh genau, wo du warst, welche Route du genommen hast und wie lange du geblieben bist. Jede Reise, jeder Arbeitsweg und jeder Umweg – dauerhaft durchsuchbar."
+    },
+    {
+      "title": "Erlebe jede Reise im Detail noch einmal",
+      "description": "Wähle einen Zeitraum. Dawarich erstellt die Karte, berechnet die Entfernung und zeichnet die Route nach. Mit Fotos wird daraus ein Reisetagebuch."
+    },
+    {
+      "title": "Dein Leben in Zahlen",
+      "description": "Wie viele Länder? Wie viele Kilometer? Welche Stadt besuchst du am häufigsten? Entdecke monatliche Muster, die dir bisher entgangen sind. Teile deine Statistiken mit einem einzigen Link."
+    },
+    {
+      "title": "Behalte deine Entdeckungen im Blick",
+      "description": "Sieh, wie sich besuchte Länder auf der Karte einfärben. Entdecke die Lücken. Plane dein nächstes Ziel."
+    },
+    {
+      "title": "Verstehe deine Gewohnheiten",
+      "description": "Reist du weniger als letztes Jahr? Verbringst du mehr Zeit in einer Stadt? Dawarich erkennt Trends, die dir allein nie auffallen würden."
+    }
+  ],
+  "title": "Alles, was Google Timeline hätte sein sollen",
+  "subtitle": "Alle Funktionen, die du geliebt hast – ohne Abstriche beim Datenschutz.",
+  "ariaLabel": "Bild schließen",
+  "viewFullSize": "{title} in voller Größe ansehen"
+}

@@ -1,0 +1,88 @@
+{
+  "posterThemes": {
+    "arialabel": "Poster „{name}“ vergrößern",
+    "alt": "Routenposter von Berlin im Design „{name}“"
+  },
+  "posterStudioShot": {
+    "alt": "Das Poster-Studio beim Gestalten einer Route, mit Einstellungen für Layout, Design und Text"
+  },
+  "exportFormats": {
+    "groups": [
+      {
+        "label": "Druck · 12",
+        "items": [
+          "A5",
+          "A4",
+          "A3",
+          "A2",
+          "A1",
+          "A0",
+          "30 × 40 cm",
+          "50 × 70 cm",
+          "70 × 100 cm",
+          "Letter (US)",
+          "A4 Querformat",
+          "A3 Querformat"
+        ]
+      },
+      {
+        "label": "Social Media · 5",
+        "items": [
+          "Instagram Quadrat",
+          "Instagram Hochformat",
+          "Story (9:16)",
+          "X-Kopfbild",
+          "YouTube-Vorschaubild"
+        ]
+      },
+      {
+        "label": "Hintergrundbild · 5",
+        "items": [
+          "Desktop Full HD",
+          "Desktop 4K",
+          "Desktop Ultrawide",
+          "Handy",
+          "Tablet"
+        ]
+      }
+    ]
+  },
+  "shareTargets": {
+    "items": [
+      "Ein Zeitraum",
+      "Live-Standort",
+      "Ein Track",
+      "Eine Reise",
+      "Die Statistiken eines Monats",
+      "Ein Jahresrückblick"
+    ],
+    "p": "Sechs Dinge, sechs separate Links"
+  },
+  "familySharingShot": {
+    "alt": "Einstellungen zum Teilen in der Familie: Live-Standort für sechs Stunden mit verbleibender Zeit und ein separater Schalter für den Standortverlauf der letzten 7 Tage"
+  },
+  "familyMembersShot": {
+    "alt": "Liste der Familienmitglieder: Zwei teilen ihren Standort, zwei nicht; jeweils mit einer Schaltfläche zum Anfragen"
+  },
+  "familyPageShot": {
+    "alt": "Die Familienseite von Dawarich: eine gemeinsame Karte neben Einstellungen zum Teilen, Mitgliederliste und Einladungen"
+  },
+  "familyRequestShot": {
+    "alt": "Zwei Familienmitglieder mit dem Status „Teilt nicht“, jeweils mit einer Schaltfläche zum Anfragen"
+  },
+  "residencyCountriesShot": {
+    "alt": "Länderkarte mit Tagen pro Land für 2023: Deutschland mit 353 Tagen und 96.7% samt Schwellenwertwarnung, gefolgt von Belgien, Griechenland, der Schweiz, Dänemark, Frankreich und Polen"
+  },
+  "residencyStaysShot": {
+    "alt": "Deutschland aufgeklappt mit acht aufeinanderfolgenden Aufenthaltszeiträumen in 2023, jeweils mit Datum und Dauer"
+  },
+  "residencyCalendarShot": {
+    "alt": "Kalender-Heatmap für ein ganzes Jahr mit einer Farbe pro Land und einer Legende mit den Ländernamen"
+  },
+  "shareHubShot": {
+    "alt": "Die Freigabeübersicht: ein öffentlicher Link mit zugehöriger Geheimphrase, zwölf Aufrufe und Schaltflächen zum Erneuern der URL, Ändern der Phrase oder Widerrufen des Links"
+  },
+  "shareFormShot": {
+    "alt": "Erstellen eines Freigabelinks: Start- und Enddatum, eine optionale Geheimphrase, eine standardmäßige Gültigkeit von einer Woche und der ausgeschaltete Schalter „Fotos anzeigen“"
+  }
+}

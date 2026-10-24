@@ -96,7 +96,7 @@
     "description": "The label used to navigate to the next doc"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
-    "message": "Breadcrumbs",
+    "message": "Brotkrumennavigation",
     "description": "The ARIA label for the breadcrumbs"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
@@ -167,7 +167,7 @@
     "description": "The default label used for the Danger admonition (:::danger)"
   },
   "theme.admonition.info": {
-    "message": "info",
+    "message": "Info",
     "description": "The default label used for the Info admonition (:::info)"
   },
   "theme.admonition.note": {
@@ -199,7 +199,7 @@
     "description": "The copy button label on code blocks"
   },
   "theme.CodeBlock.wordWrapToggle": {
-    "message": "Toggle word wrap",
+    "message": "Zeilenumbruch umschalten",
     "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.blog.sidebar.navAriaLabel": {
@@ -207,23 +207,23 @@
     "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
-    "message": "Expand sidebar category '{label}'",
+    "message": "Kategorie „{label}“ in der Seitenleiste ausklappen",
     "description": "The ARIA label to expand the sidebar category"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "Collapse sidebar category '{label}'",
+    "message": "Kategorie „{label}“ in der Seitenleiste einklappen",
     "description": "The ARIA label to collapse the sidebar category"
   },
   "theme.NavBar.navAriaLabel": {
-    "message": "Main",
+    "message": "Hauptnavigation",
     "description": "The ARIA label for the main navigation"
   },
   "theme.NotFound.p1": {
-    "message": "Wir konnten nicht finden, wonach Sie gesucht haben.",
+    "message": "Wir konnten nicht finden, wonach du gesucht hast.",
     "description": "The first paragraph of the 404 page"
   },
   "theme.NotFound.p2": {
-    "message": "Bitte kontaktieren Sie den Besitzer der Seite, die Sie mit der ursprünglichen URL verlinkt hat, und teilen Sie ihm mit, dass der Link nicht mehr funktioniert.",
+    "message": "Bitte kontaktiere die Person, deren Seite dich über die ursprüngliche URL hierher verlinkt hat, und teile ihr mit, dass der Link nicht mehr funktioniert.",
     "description": "The 2nd paragraph of the 404 page"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
@@ -255,19 +255,19 @@
     "description": "The ARIA label for the link to full blog posts from excerpts"
   },
   "theme.docs.sidebar.navAriaLabel": {
-    "message": "Docs sidebar",
+    "message": "Seitenleiste der Dokumentation",
     "description": "The ARIA label for the sidebar navigation"
   },
   "theme.docs.breadcrumbs.home": {
-    "message": "Home page",
+    "message": "Startseite",
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
-    "message": "Close navigation bar",
+    "message": "Navigationsleiste schließen",
     "description": "The ARIA label for close button of mobile sidebar"
   },
   "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
-    "message": "Toggle navigation bar",
+    "message": "Navigationsleiste umschalten",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
   "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
@@ -295,31 +295,31 @@
     "description": "The title of the page for a blog author"
   },
   "theme.blog.authorsList.pageTitle": {
-    "message": "Authors",
+    "message": "Autorinnen und Autoren",
     "description": "The title of the authors page"
   },
   "theme.blog.authorsList.viewAll": {
-    "message": "View All Authors",
+    "message": "Alle Autorinnen und Autoren ansehen",
     "description": "The label of the link targeting the blog authors page"
   },
   "theme.blog.author.noPosts": {
-    "message": "This author has not written any posts yet.",
+    "message": "Von dieser Person gibt es noch keine Beiträge.",
     "description": "The text for authors with 0 blog post"
   },
   "theme.contentVisibility.unlistedBanner.title": {
-    "message": "Unlisted page",
+    "message": "Nicht gelistete Seite",
     "description": "The unlisted content banner title"
   },
   "theme.contentVisibility.unlistedBanner.message": {
-    "message": "This page is unlisted. Search engines will not index it, and only users having a direct link can access it.",
+    "message": "Diese Seite ist nicht gelistet. Suchmaschinen indexieren sie nicht. Du kannst sie nur über einen direkten Link aufrufen.",
     "description": "The unlisted content banner message"
   },
   "theme.contentVisibility.draftBanner.title": {
-    "message": "Draft page",
+    "message": "Seitenentwurf",
     "description": "The draft content banner title"
   },
   "theme.contentVisibility.draftBanner.message": {
-    "message": "This page is a draft. It will only be visible in dev and be excluded from the production build.",
+    "message": "Diese Seite ist ein Entwurf. Sie ist nur in der Entwicklungsumgebung sichtbar und wird beim Produktionsbuild ausgeschlossen.",
     "description": "The draft content banner message"
   },
   "theme.ErrorPageContent.tryAgain": {
@@ -335,114 +335,114 @@
     "description": "The title of the tag list page"
   },
   "shared.cookieConsent.accept": {
-    "message": "Accept"
+    "message": "Akzeptieren"
   },
   "shared.cookieConsent.reject": {
-    "message": "Reject"
+    "message": "Ablehnen"
   },
   "shared.cookieConsent.acceptAria": {
-    "message": "Accept cookies"
+    "message": "Cookies akzeptieren"
   },
   "shared.cookieConsent.rejectAria": {
-    "message": "Decline cookies"
+    "message": "Cookies ablehnen"
   },
   "shared.cookieConsent.body": {
-    "message": "We use a cookieless analytics service (Simple Analytics) that requires no consent. You can optionally accept cookies for Google Ads conversion tracking, Brevo email analytics and affiliate referral credit — these only load if you click \"Accept\"."
+    "message": "Wir nutzen einen Analysedienst ohne Cookies (Simple Analytics), der keine Einwilligung benötigt. Optional kannst du Cookies für Google Ads-Conversion-Tracking, Brevo-E-Mail-Analysen und die Zuordnung von Affiliate-Empfehlungen akzeptieren. Diese werden erst geladen, wenn du auf „Akzeptieren“ klickst."
   },
   "shared.cookieConsent.learnMore": {
-    "message": "Learn more"
+    "message": "Mehr erfahren"
   },
   "shared.uploader.noJson": {
-    "message": "No JSON files found. Please upload Google Timeline JSON files."
+    "message": "Keine JSON-Dateien gefunden. Bitte lade JSON-Dateien von Google Timeline hoch."
   },
   "shared.uploader.reading": {
-    "message": "Reading file {current}/{total}: {name}"
+    "message": "Datei {current}/{total} wird gelesen: {name}"
   },
   "shared.uploader.parsing": {
-    "message": "Parsing file {current}/{total}: {name}"
+    "message": "Datei {current}/{total} wird eingelesen: {name}"
   },
   "shared.uploader.processing": {
-    "message": "Processing timeline data..."
+    "message": "Zeitleistendaten werden verarbeitet …"
   },
   "shared.uploader.loadError": {
-    "message": "Error loading files: {message}"
+    "message": "Fehler beim Laden der Dateien: {message}"
   },
   "shared.uploader.chooseFiles": {
-    "message": "Choose files to process"
+    "message": "Dateien zur Verarbeitung auswählen"
   },
   "shared.uploader.wait": {
-    "message": "Please wait..."
+    "message": "Bitte warten …"
   },
   "shared.uploader.loaded": {
-    "message": "**{count}** file loaded|**{count}** files loaded"
+    "message": "**{count}** Datei geladen|**{count}** Dateien geladen"
   },
   "shared.uploader.addMore": {
-    "message": "Click or drag to add more files"
+    "message": "Klicke hier oder ziehe weitere Dateien hierher"
   },
   "shared.uploader.dropPrompt": {
-    "message": "Drop Google Timeline JSON files here"
+    "message": "Ziehe JSON-Dateien von Google Timeline hierher"
   },
   "shared.uploader.browse": {
-    "message": "or click to browse"
+    "message": "oder klicke zum Auswählen"
   },
   "shared.uploader.supports": {
-    "message": "Supports: {formats}"
+    "message": "Unterstützt: {formats}"
   },
   "shared.uploader.clearAll": {
-    "message": "Clear All Files"
+    "message": "Alle Dateien entfernen"
   },
   "shared.converter.dropPrompt": {
-    "message": "Drag and drop your {format} file here, or click to browse"
+    "message": "Ziehe deine {format}-Datei hierher oder klicke zum Auswählen"
   },
   "shared.converter.removeFile": {
-    "message": "Remove file"
+    "message": "Datei entfernen"
   },
   "shared.converter.converting": {
-    "message": "Converting..."
+    "message": "Wird umgewandelt …"
   },
   "shared.converter.convertTo": {
-    "message": "Convert to {format}"
+    "message": "In {format} umwandeln"
   },
   "shared.personalizedCta.body": {
-    "message": "Self-hosted or cloud. Cancel anytime."
+    "message": "Selbst gehostet oder in der Cloud. Jederzeit kündbar."
   },
   "shared.personalizedCta.button": {
-    "message": "Start Your Free Trial"
+    "message": "Kostenlos testen"
   },
   "shared.relatedTools.ariaLabel": {
-    "message": "Related tools and pages"
+    "message": "Verwandte Tools und Seiten"
   },
   "shared.relatedTools.heading": {
-    "message": "Related tools & pages"
+    "message": "Verwandte Tools & Seiten"
   },
   "shared.toolGuide.whenToConvert": {
-    "message": "When you'd convert {subject}"
+    "message": "Wann sich die Umwandlung {subject} lohnt"
   },
   "shared.toolGuide.preserved": {
-    "message": "What gets preserved (and what doesn't)"
+    "message": "Was erhalten bleibt und was verloren geht"
   },
   "shared.toolGuide.field": {
-    "message": "Field"
+    "message": "Feld"
   },
   "shared.toolGuide.preservedColumn": {
-    "message": "Preserved?"
+    "message": "Bleibt erhalten?"
   },
   "shared.toolGuide.notes": {
-    "message": "Notes"
+    "message": "Hinweise"
   },
   "shared.toolGuide.apps": {
-    "message": "Apps that read your converted file"
+    "message": "Apps, die deine umgewandelte Datei öffnen"
   },
   "shared.toolGuide.example": {
-    "message": "Worked example"
+    "message": "Praxisbeispiel"
   },
   "shared.toolGuide.input": {
-    "message": "Input ({format})"
+    "message": "Eingabe ({format})"
   },
   "shared.toolGuide.output": {
-    "message": "Output ({format})"
+    "message": "Ausgabe ({format})"
   },
   "shared.toolGuide.faq": {
-    "message": "Frequently asked questions"
+    "message": "Häufige Fragen"
   }
 }

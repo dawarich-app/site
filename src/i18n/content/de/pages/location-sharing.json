@@ -1,0 +1,53 @@
+{
+  "rows": [
+    {
+      "title": "Ein Link, eine Sache",
+      "body": "Ein Link zeigt genau das, was du ausgewählt hast: einen Zeitraum, deinen Live-Standort, einen einzelnen Track, eine Reise, die Statistiken eines Monats oder einen Jahresrückblick. Wer deine Radtour vom letzten Wochenende sieht, erfährt nichts über deinen letzten Dienstag."
+    },
+    {
+      "title": "Du bestimmst vor dem Senden, was der Link zeigt",
+      "body": "Eine Phrase wird für dich erzeugt. Du kannst sie entfernen, wenn du keine nutzen möchtest. Standardmäßig läuft der Link nach einer Woche ab; ohne Ablaufdatum bleibt er dauerhaft gültig. Fotos sind anfangs ausgeschaltet. So verschickst du keine Seite, die unbemerkt mehr zeigt, als du beabsichtigt hast.",
+      "note": "Standardmäßig aus, bewusst eingeschaltet"
+    }
+  ],
+  "objections": [
+    {
+      "q": "Gibt ein geteilter Link meinen gesamten Verlauf preis?",
+      "a": "Nein. Ein Link zeigt nur die Ressource, für die er erstellt wurde. Ein Zeitleistenlink ist auf deine gewählten Daten begrenzt, ein Track-Link zeigt diesen Track. Von einer geteilten Seite gelangt man nicht zum Rest deines Kontos."
+    },
+    {
+      "q": "Was passiert, wenn ich ihn der falschen Person schicke?",
+      "a": "Widerrufe ihn. Der Link funktioniert sofort nicht mehr. Wenn du eine Passphrase festgelegt hast, kannst du stattdessen nur die Phrase erneuern. Dadurch werden alle bisherigen Entsperrungen ungültig, während der Link selbst bestehen bleibt."
+    },
+    {
+      "q": "Brauchen die Empfänger ein Konto?",
+      "a": "Nein. Eine geteilte Seite lässt sich in jedem Browser öffnen. Wenn du eine Passphrase festgelegt hast, geben die Empfänger nur diese ein."
+    },
+    {
+      "q": "Kann ich sehen, ob jemand den Link geöffnet hat?",
+      "a": "Ja. Alle von dir erstellten Links stehen an einem Ort, jeweils mit der Anzahl der Aufrufe und dem Zeitpunkt des letzten Zugriffs."
+    },
+    {
+      "q": "Was passiert mit meinen Links, wenn mein Abo abläuft?",
+      "a": "Du kannst jederzeit alles exportieren. Die gesamte Anwendung ist Open Source – dieselben Funktionen kannst du dauerhaft kostenlos auf deiner eigenen Hardware betreiben."
+    }
+  ],
+  "meta": {
+    "title": "Standort teilen – deinen Standortverlauf per Link freigeben",
+    "description": "Live-Standort oder Verlauf per privatem Link teilen: Passphrase, Ablaufdatum, widerrufbar, nur dein gewählter Umfang. 7 Tage gratis oder gratis selbst hosten.",
+    "ogTitle": "Standortverlauf über einen privaten Link teilen",
+    "ogDescription": "Ein Link für einen Zeitraum, Live-Standort, Track, eine Reise, Monatsstatistiken oder einen Jahresrückblick. Mit Passphrase, Ablaufdatum und sofortigem Widerruf."
+  },
+  "locationSharingPage": {
+    "text": "Teile, wo du bist.",
+    "em": "Nicht überall, wo du warst.",
+    "title2": "Teilen mit klaren Grenzen",
+    "sub2": "Sechs Dinge zum Teilen, jeweils mit eigenem Link, eigenen Einstellungen und eigenem Ablaufdatum.",
+    "title3": "Was du vorher wissen solltest",
+    "title4": "Verschicke einen Link, nicht deinen ganzen Verlauf",
+    "sub3": "Starte mit 7 Tagen Testphase in Dawarich Cloud oder nutze dieselben Funktionen kostenlos auf deiner eigenen Hardware."
+  },
+  "hero": {
+    "sub": "Standortteilen ist meist ein Schalter: einmal an, und jemand kann dir unbegrenzt folgen. Dawarich gibt dir stattdessen einen Link – für genau eine Sache, durch eine Passphrase geschützt, bis zu deinem gewählten Datum gültig und sofort widerrufbar, wenn du es dir anders überlegst."
+  }
+}

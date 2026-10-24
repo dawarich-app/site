@@ -1,0 +1,97 @@
+{
+  "showcaseItems": [
+    {
+      "title": "Interaktive Reisekarte",
+      "description": "Jede Reiseseite enthält eine interaktive Karte mit deiner vollständigen Route und allen Punkten, die du unterwegs besucht hast."
+    },
+    {
+      "title": "Umfassende Statistiken",
+      "description": "Sieh detaillierte Statistiken zu jeder Reise: zurückgelegte Gesamtstrecke, Dauer, besuchte Länder und bald weitere Funktionen."
+    },
+    {
+      "title": "Reisetagebuch mit formatiertem Text",
+      "description": "Dokumentiere deine Abenteuer mit formatierten Beschreibungen und Notizen. Bewahre Erinnerungen und Geschichten von deinen Reisen."
+    },
+    {
+      "title": "Foto-Integration",
+      "description": "Fotos aus deiner Immich- oder PhotoPrism-Instanz erscheinen automatisch auf deiner Reisekarte an ihren Aufnahmeorten."
+    },
+    {
+      "title": "Reisen verwalten",
+      "description": "Organisiere alle deine Reisen an einem Ort. Stöbere durch vergangene Abenteuer und erstelle jederzeit neue Reisen."
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Deine Wege aufzeichnen",
+      "description": "Lass Dawarich deinen Standort unterwegs mit einer unterstützten Tracking-App automatisch aufzeichnen.",
+      "details": [
+        "Dawarich-App für iOS zur nahtlosen Aufzeichnung",
+        "Drittanbieter-Apps wie Overland, OwnTracks, GPSLogger",
+        "Daten werden automatisch mit deinem Konto synchronisiert"
+      ]
+    },
+    {
+      "title": "Deine Reise erstellen",
+      "description": "Erstelle nach deiner Rückkehr eine neue Reise mit Namen und Zeitraum.",
+      "details": [
+        "Start- und Enddatum wählen",
+        "Deiner Reise einen einprägsamen Namen geben",
+        "Dawarich gruppiert deine Standortdaten automatisch"
+      ]
+    },
+    {
+      "title": "Deine Geschichte ergänzen",
+      "description": "Ergänze mit dem Rich-Text-Editor Notizen, Beschreibungen und Tagebucheinträge zu deiner Reise.",
+      "details": [
+        "Über deine Erlebnisse schreiben",
+        "Deinen Orten Kontext geben",
+        "Die Geschichte deiner Reise erzählen"
+      ]
+    },
+    {
+      "title": "Entdecken und teilen",
+      "description": "Sieh dir deine Reise auf der interaktiven Karte an, prüfe die Statistiken und erlebe dein Abenteuer noch einmal (Teilen von Reisen bald verfügbar).",
+      "details": [
+        "Deine vollständige Route auf der Karte sehen",
+        "Entfernung, Dauer und besuchte Orte ansehen",
+        "Fotos erscheinen automatisch auf der Karte"
+      ]
+    }
+  ],
+  "meta": {
+    "title": "Reisen & Reisetagebuch",
+    "description": "Dokumentiere deine Reisen mit interaktiven Karten, Statistiken, einem Reisetagebuch mit formatiertem Text und Foto-Integration.",
+    "ogTitle": "Dawarich-Reisen – halte deine Reiseabenteuer fest",
+    "ogDescription": "Erstelle umfassende Reisetagebücher mit interaktiven Karten, detaillierten Statistiken, formatierten Beschreibungen und automatischer Foto-Integration."
+  },
+  "hero": {
+    "badge": "Reisetagebuch",
+    "title": "Verwandle deine Reisen in",
+    "titleHighlight": "lebendige Reisegeschichten",
+    "subtitle": "Zeichne deine Wege automatisch auf und verwandle sie in umfassende Reisetagebücher. Jede Reise vereint eine interaktive Karte, detaillierte Statistiken, formatierte Beschreibungen und Fotos – alles an einem Ort.",
+    "imageAlt": "Reisedetails mit Karte und Statistiken"
+  },
+  "tripsPage": {
+    "heading": "Warum Reisen festhalten?",
+    "title3": "Erinnerungen bewahren",
+    "description2": "Vergiss nie die Details deiner Abenteuer. Jede Reise wird mit vollständigen Standortdaten und deinen persönlichen Notizen dauerhaft gespeichert.",
+    "description3": "Verbinde Standortdaten mit deinen Gedanken und Geschichten. Erstelle ein vielseitiges, multimediales Reisetagebuch, das über einfache Notizen hinausgeht.",
+    "title4": "Abenteuer noch einmal erleben",
+    "description4": "Blicke jederzeit auf vergangene Reisen zurück. Sieh genau, wo du warst und wie lange du unterwegs warst, und entdecke besuchte Orte neu.",
+    "title5": "Alles für deine Reise an einem Ort",
+    "subtitle2": "Jede Reise enthält automatisch mehrere Bausteine, die zusammen ihre ganze Geschichte erzählen.",
+    "title6": "So funktioniert’s",
+    "subtitle3": "Reisen erstellen und verwalten ist einfach und intuitiv – mit wenigen Klicks werden aus deinen Standortdaten Geschichten.",
+    "heading2": "Reisen flexibel erstellen",
+    "title7": "Automatisch gruppieren",
+    "description5": "Lege einfach die Reisedaten fest und Dawarich sammelt automatisch alle Standortpunkte aus diesem Zeitraum. Ideal, wenn du schnell ein Ergebnis möchtest.",
+    "title8": "Eigene Details",
+    "description6": "Erstelle Reisen, um Geschichten zu erzählen oder bestimmte Abenteuer zu dokumentieren. Ergänze deine eigenen Erzählungen und Notizen.",
+    "heading3": "Beginne, deine Reisen festzuhalten",
+    "p": "Erstelle ab heute lebendige Reisetagebücher mit einer kostenlosen 7-tägigen Testphase. Jederzeit kündbar.",
+    "Link": "7 Tage kostenlos testen",
+    "EnOnlyLink": "Kostenlos selbst hosten",
+    "p2": "7 Tage kostenlos testen · 14 Tage Geld-zurück-Garantie · Jederzeit kündbar"
+  }
+}

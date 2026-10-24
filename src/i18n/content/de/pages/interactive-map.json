@@ -1,0 +1,130 @@
+{
+  "timelineItems": [
+    {
+      "title": "Ein Tag, den du lesen kannst",
+      "description": "Jeder Tag beginnt mit einer einzeiligen Übersicht und Entfernungsanzeigen je Fortbewegungsart: wie weit du gelaufen, Rad gefahren und Auto gefahren bist, auf einen Blick. Wähle einen beliebigen Tag im Kalender und die Karte folgt."
+    },
+    {
+      "title": "Abschnitte direkt bearbeiten",
+      "description": "Tracks lassen sich zu einer Leiste der Fortbewegungsarten aufklappen, die nur die relevanten Abschnitte zeigt. Eine Zuordnung stimmt nicht? Klicke auf die Fortbewegungsart des Abschnitts und ändere sie direkt dort. Die vollständige Liste bleibt hinter „Alle Segmente“ verborgen, bis du sie brauchst."
+    },
+    {
+      "title": "Lücken klar benennen",
+      "description": "Wenn die Aufzeichnung tatsächlich unterbrochen war, zeigt die Zeitleiste das an, statt eine gerade Linie durch die fehlenden Stunden zu ziehen. Erkannte Aufenthalte erhalten einen Konfidenzwert. Ein sicher erkannter Aufenthalt sieht dadurch anders aus als eine unsichere Vermutung."
+    }
+  ],
+  "showcaseItems": [
+    {
+      "title": "Punkte",
+      "description": "Sieh jeden aufgezeichneten Standortpunkt mit präzisem Zeitstempel und Details. Klicke auf einen Punkt, um Koordinaten, Uhrzeit und weitere Informationen anzuzeigen.",
+      "imageAlt": "Karte mit einzelnen Standortpunkten"
+    },
+    {
+      "title": "Polylinien",
+      "description": "Sieh deine vollständigen Routen, die alle Standortpunkte verbinden. Stelle deine Wege als durchgehende Linien auf der Karte dar.",
+      "imageAlt": "Karte mit Polylinienrouten"
+    },
+    {
+      "title": "Heatmap",
+      "description": "Entdecke mit einer Heatmap, wo du die meiste Zeit verbringst. Die Farbintensität zeigt deine am häufigsten besuchten Gebiete.",
+      "imageAlt": "Heatmap-Darstellung"
+    },
+    {
+      "title": "Nebel des Krieges",
+      "description": "Decke die Welt auf, während du sie erkundest. Besuchte Gebiete werden sichtbar, unerkundete Regionen bleiben verdeckt.",
+      "imageAlt": "Darstellung mit Nebel des Krieges"
+    },
+    {
+      "title": "Rubbelkarte",
+      "description": "Sieh, wie sich Länder bei deinem Besuch einfärben. Ideal für Reisebegeisterte, die ihre weltweiten Abenteuer festhalten möchten.",
+      "imageAlt": "Rubbelkarte mit besuchten Ländern"
+    },
+    {
+      "title": "Gebiete",
+      "description": "Zeichne eigene Gebiete auf der Karte, um wichtige Orte, Stadtviertel oder interessante Regionen zu markieren.",
+      "imageAlt": "Eigene Gebiete auf der Karte"
+    },
+    {
+      "title": "Fotos",
+      "description": "Sieh deine Fotos aus Immich oder PhotoPrism direkt auf der Karte, genau an ihren Aufnahmeorten. (Derzeit nur beim Selbsthosten verfügbar.)",
+      "imageAlt": "Fotos auf der Karte"
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Deinen Standort aufzeichnen",
+      "description": "Nutze eine unterstützte Tracking-App, um deinen Standort im Tagesverlauf automatisch aufzuzeichnen.",
+      "details": [
+        "Dawarich-App für iOS",
+        "Overland",
+        "OwnTracks",
+        "GPSLogger",
+        "PhoneTrack"
+      ]
+    },
+    {
+      "title": "Ansicht auswählen",
+      "description": "Wähle aus verschiedenen Kartenstilen und schalte Ebenen ein oder aus, um die Darstellung anzupassen.",
+      "details": [
+        "Punkte, Routen oder Heatmap umschalten",
+        "Nebel des Krieges oder Rubbelkarte aktivieren",
+        "Fotos und Gebiete ein- oder ausblenden"
+      ]
+    },
+    {
+      "title": "Nach Zeit filtern",
+      "description": "Wähle einen beliebigen Zeitraum, um deinen Standortverlauf für diese Zeit anzusehen.",
+      "details": [
+        "Nach Jahr und Monat navigieren",
+        "Statistiken zu besuchten Ländern und Städten ansehen",
+        "Nach bestimmten Orten suchen"
+      ]
+    },
+    {
+      "title": "Erstellen und speichern",
+      "description": "Erstelle Orte und Aufenthalte manuell, um Lücken zu füllen oder deinen Standortverlauf zu korrigieren.",
+      "details": [
+        "Lieblingsorte speichern",
+        "Fehlende Aufenthalte manuell ergänzen",
+        "Eigene Gebiete auf der Karte zeichnen"
+      ]
+    },
+    {
+      "title": "Nach Standort suchen",
+      "description": "Gib einen Ort oder eine Adresse ein und finde schnell heraus, wann du dort warst und wie lange.",
+      "details": [
+        "Nach Ortsnamen oder Adresse suchen",
+        "Aufenthalte und interessante Punkte schnell finden",
+        "Aufenthalte aus deinen Suchergebnissen erstellen"
+      ]
+    }
+  ],
+  "meta": {
+    "title": "Interaktive Kartendarstellung",
+    "description": "Erkunde deinen Standortverlauf auf einer interaktiven Karte mit Ebenen für Punkte, Routen, Heatmap, Nebel des Krieges und mehr.",
+    "ogTitle": "Dawarich-Karte – interaktive Standortdarstellung",
+    "ogDescription": "Erkunde deinen Standortverlauf mit verschiedenen Ebenen: Punkte, Routen, Heatmap, Nebel des Krieges, Rubbelkarte und Foto-Integration."
+  },
+  "hero": {
+    "badge": "Interaktive Darstellung",
+    "title": "Entdecke, wo du warst,",
+    "titleHighlight": "vergiss keinen Ort",
+    "subtitle": "Dein Standortverlauf wird auf einer interaktiven Karte mit verschiedenen Ebenen lebendig. Von detaillierten Punkten bis zu eindrucksvollen Heatmaps siehst du deinen Lebensweg bis ins Detail.",
+    "imageAlt": "Interaktive Karte von Dawarich"
+  },
+  "mapPage": {
+    "title3": "Die Zeitleiste",
+    "subtitle2": "Die Karte zeigt dir, wo du warst. Die Zeitleiste direkt daneben zeigt dir, was passiert ist – Tag für Tag, in klarer Sprache.",
+    "title4": "Verschiedene Kartenebenen",
+    "subtitle3": "Wechsle zwischen den Ebenen, um deine Standortdaten aus verschiedenen Perspektiven zu sehen. Jede Ebene gibt dir andere Einblicke in deine Reisen und Gewohnheiten.",
+    "title5": "So funktioniert’s",
+    "subtitle4": "Visualisiere deinen Standortverlauf in wenigen Minuten mit unserer intuitiven Kartenoberfläche.",
+    "span": "Deine Daten bleiben privat",
+    "p": "Alle deine Standortdaten werden bei der Speicherung und Übertragung verschlüsselt. In Europa gehostet und vollständig DSGVO-konform. Für volle Kontrolle kannst du auch selbst hosten.",
+    "heading": "Bereit, deine Wege sichtbar zu machen?",
+    "p2": "Beginne heute mit der Aufzeichnung deines Standortverlaufs und teste Dawarich 7 Tage kostenlos. Jederzeit kündbar.",
+    "Link": "7 Tage kostenlos testen",
+    "EnOnlyLink": "Kostenlos selbst hosten",
+    "p3": "7 Tage kostenlos testen · 14 Tage Geld-zurück-Garantie · Jederzeit kündbar"
+  }
+}

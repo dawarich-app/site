@@ -1,0 +1,19 @@
+{
+  "primaryLabel": "7 Tage kostenlos testen",
+  "selfHost": "Dauerhaft kostenlos selbst hosten",
+  "reassurance": "Testphase ohne Karte · Danach 14 Tage Erstattungsrecht · Alles jederzeit exportieren",
+  "proofLabel": "Berichtet haben",
+  "publishers": {
+    "xda": "XDA Developers",
+    "makeUseOf": "MakeUseOf",
+    "ct": "c't Magazin",
+    "itsFoss": "It's FOSS"
+  },
+  "pricing": "Preise ansehen",
+  "guarantee": {
+    "trial": "7 Tage kostenlos, ohne Karte",
+    "refund": "14 Tage Erstattungsrecht",
+    "export": "Alles jederzeit exportieren",
+    "selfHost": "Oder kostenlos selbst hosten"
+  }
+}

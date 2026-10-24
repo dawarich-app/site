@@ -1,0 +1,31 @@
+{
+  "howItWorksTrack": "Importiere deine Daten aus Google Timeline in wenigen Minuten – oder starte neu mit unseren Apps für [iOS]({iosUrl}) und [Android]({androidUrl}). Sie zeichnen sogar offline auf und laden die Daten automatisch hoch, sobald du wieder online bist. Funktioniert auch mit OwnTracks, GPSLogger und weiteren Apps.",
+  "howItWorksSteps": [
+    {
+      "title": "Aufzeichnen"
+    },
+    {
+      "title": "Visualisieren",
+      "description": "Sieh auf einer interaktiven Karte, wo du überall warst. Erstelle Reisen, erkunde eine Rubbelkarte und stöbere durch deine täglichen Zeitleisten."
+    },
+    {
+      "title": "Erinnern",
+      "description": "Erhalte Statistiken zu Entfernungen, Städten und Zeit. Erlebe deine Reisen mit Fotos, Notizen und Erinnerungen zu jedem Ort noch einmal. Gewinne Einblicke in deine Reisegewohnheiten und Bewegungsmuster."
+    }
+  ],
+  "subtitle": "Starte in drei einfachen Schritten.",
+  "meta": {
+    "title": "Dawarich – Deine Zeitleiste, für immer",
+    "description": "Die private Alternative zu Google Timeline. Importiere deinen Standortverlauf und bewahre ihn dauerhaft auf. Keine Werbung, kein Datenverkauf.",
+    "socialDescription": "Die private Alternative zu Google Timeline. Importiere deinen Standortverlauf und bewahre ihn dauerhaft auf."
+  },
+  "howItWorksTitle": "So funktioniert’s",
+  "schema": {
+    "description": "Datenschutzfreundliche Alternative zu Google Timeline. Importiere deinen Standortverlauf und bewahre ihn dauerhaft auf. Selbst hostbar, Open Source, keine Werbung, kein Datenverkauf.",
+    "name": "Dawarich",
+    "liteAnnual": "Dawarich Cloud – Lite (jährlich)",
+    "proMonthly": "Dawarich Cloud – Pro (monatlich)",
+    "proAnnual": "Dawarich Cloud – Pro (jährlich)",
+    "selfHosted": "Selbst gehostet"
+  }
+}

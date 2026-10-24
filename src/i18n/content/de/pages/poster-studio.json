@@ -1,0 +1,57 @@
+{
+  "rows": [
+    {
+      "title": "Ein Poster ist nur eine von zweiundzwanzig Möglichkeiten",
+      "body": "Druck ist die naheliegende Wahl – A5 bis A0, 30 × 40, 50 × 70 und 70 × 100 cm, US Letter, Hoch- oder Querformat. Dieselbe Karte lässt sich aber auch als Handy- oder Desktop-Hintergrund bis hin zu 4K und Ultrawide exportieren, als Instagram-Beitrag, Story, X-Kopfbild oder YouTube-Vorschaubild. Drucklayouts nutzen echte Papiermaße und DPI, Bildschirmlayouts sind pixelgenau.",
+      "note": "Dieselbe Komposition, zweiundzwanzig Ausgabeformate"
+    },
+    {
+      "title": "Der sichtbare Ausschnitt ist der fertige Ausschnitt",
+      "body": "Wähle vor dem Gestalten ein Layout. Die Vorschau passt sich an, damit dich der Zuschnitt einer Story nicht überrascht. Das Studio zeigt während der Arbeit die fertigen Maße an – ein A3-Hochformat bei 300 DPI ergibt 3508 × 4961 Pixel – und warnt, wenn eine Ansicht für die größte Posterfläche zu breit ist, statt stillschweigend hineinzuzoomen."
+    }
+  ],
+  "objections": [
+    {
+      "q": "Wie unterscheidet sich das von den Kartenpostern, die überall verkauft werden?",
+      "a": "Das sind Stadtumrisse mit einem Namen darunter, die jeder kaufen kann. Hier geht es um die tatsächliche Strecke, die du zu Fuß, mit dem Rad oder mit dem Auto zurückgelegt hast – gezeichnet aus den GPS-Punkten deines eigenen Kontos."
+    },
+    {
+      "q": "Entspricht das gedruckte Poster meinem Entwurf?",
+      "a": "Der Ausschnitt, den du gestaltest, wird auch gedruckt. Das Studio verwendet denselben Ausschnitt wie der Renderer und warnt, wenn eine Ansicht für die größte Postergröße zu breit ist, statt stillschweigend hineinzuzoomen."
+    },
+    {
+      "q": "Wie ist die Druckqualität?",
+      "a": "Hochwertiges mattes Papier mit 200 g/m² ohne Spiegelungen, damit die Routenlinie auch bei Raumbeleuchtung klar bleibt. Versand innerhalb der EU ist im Preis enthalten. Die Zahlung läuft über Stripe, sodass deine Kartendaten Dawarich nie erreichen."
+    },
+    {
+      "q": "Muss ich einen Druck bestellen, um das Studio zu nutzen?",
+      "a": "Nein. Lade die PNG- oder PDF-Datei herunter und bringe sie zu einer Druckerei deiner Wahl, behalte die Datei oder verzichte ganz auf Papier. Viele exportieren einfach einen 4K-Desktop- oder Handy-Hintergrund. Eine Bestellung ist eine Möglichkeit, nicht der Zweck der Funktion."
+    },
+    {
+      "q": "Kann ich das auf einer selbst gehosteten Instanz nutzen?",
+      "a": "Ja, das Studio gehört zur Open-Source-Anwendung. Druckbestellungen sind standardmäßig aktiviert und lassen sich auf deiner eigenen Instanz vollständig ausschalten."
+    }
+  ],
+  "meta": {
+    "title": "Kartenposter-Studio – GPS-Routen als Poster und Hintergrund",
+    "description": "GPS-Route als Poster, 4K-Hintergrund oder Social-Media-Post: 17 Designs, 22 Layouts, Ebenenfarben, PNG/PDF, 300 DPI. Druck: 200 g/m² matt, EU-Versand gratis.",
+    "ogTitle": "Poster-Studio – deine GPS-Routen als Poster und Hintergrund",
+    "ogDescription": "Gestalte eine Karte deiner echten Wege und exportiere sie in 22 Formaten: Druck von A5 bis A0, 4K- und Ultrawide-Hintergründe, Handy-Hintergründe und Social Media."
+  },
+  "posterStudioPage": {
+    "text": "Eine Karte von Berlin kann jeder kaufen.",
+    "em": "Diese Route hast nur du.",
+    "title2": "Siebzehn Designs und jede einzelne Farbe darunter",
+    "body": "Jedes Poster unten zeigt dieselben zwei Jahre in Berlin – vom 15. Juli 2024 bis zum 15. Juli 2026 – aus dem Studio exportiert, nur das Design wurde geändert. Wenn keines der siebzehn ganz passt, öffne den Farbeditor und gestalte Wasser, Parks, Bahnstrecken, Grenzen, Gebäude und jede Straßenklasse selbst. Gib dem Track eine eigene Farbe, Deckkraft und Breite von 50% bis 300%, damit die Linie auf A0 genauso gut erkennbar bleibt wie auf dem Handy.",
+    "title3": "Ein Gestaltungswerkzeug, kein Erzeugen-Knopf",
+    "sub2": "Studio im Vollbild. Ziehen zum Verschieben, Scrollen zum Zoomen, Ausschnitt gestalten und dann in der Größe exportieren, die du wirklich brauchst.",
+    "title4": "Vor dem Export",
+    "title5": "Deine eigene Route an der Wand – oder auf dem Sperrbildschirm",
+    "text2": "Importiere eine vorhandene Route oder zeichne eine neue auf. Öffne dann das Studio und gestalte los. Noch kein Konto?",
+    "a": "Teste die kostenlose Browserversion mit einer beliebigen GPS-Datei",
+    "text3": "."
+  },
+  "hero": {
+    "sub": "Die Radtour, für die du trainiert hast, das Jahr, in dem du überall zu Fuß hingegangen bist, der Roadtrip, von dem du immer noch erzählst – all das liegt schon in deinem Standortverlauf, als Linie, die niemand sonst hat. Das Poster-Studio macht daraus etwas zum Einrahmen, als Hintergrundbild oder zum Posten."
+  }
+}

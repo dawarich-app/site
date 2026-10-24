@@ -1,0 +1,59 @@
+{
+  "rows": [
+    {
+      "title": "Teilen, das sich von selbst ausschaltet",
+      "body": "Teile deinen Live-Standort für eine Stunde, sechs, zwölf, vierundzwanzig – oder dauerhaft, wenn du das möchtest. Die Zeit läuft von allein ab. So endet „nur auf dem Heimweg“ tatsächlich, wenn du zu Hause bist, statt die nächsten drei Jahre weiterzulaufen.",
+      "note": "Du wählst die Dauer, jedes Mal"
+    },
+    {
+      "title": "Niemand kann es für dich einschalten",
+      "body": "Fünf Menschen, fünf unabhängige Schalter. Wer den Tarif bezahlt, hat nicht mehr Kontrolle über deine Freigaben als alle anderen. Du kannst deine Freigabe auch dann ausschalten, wenn das Abo abläuft. Das ist eine Datenschutzfunktion und niemals kostenpflichtig."
+    },
+    {
+      "title": "Fragen statt verfolgen",
+      "body": "Wenn du wissen möchtest, wo jemand ist, schick eine Standortanfrage. Die Person sieht, wer fragt, und kann zustimmen oder ablehnen. Ohne ihre Zustimmung in diesem Moment kannst du den Standort eines Familienmitglieds nicht abrufen.",
+      "note": "Einwilligung ist das Prinzip, keine Einstellung"
+    }
+  ],
+  "objections": [
+    {
+      "q": "Ist das einfach Life360 unter anderem Namen?",
+      "a": "Nein. Standardmäßig wird hier nichts geteilt. Jedes Mitglied hat einen eigenen Schalter. Live-Freigaben können nach einer festgelegten Zeit enden, der Standortverlauf wird unabhängig vom Live-Standort freigegeben, und wer wissen will, wo jemand ist, sendet eine Anfrage, die abgelehnt werden kann."
+    },
+    {
+      "q": "Kann mein Teenager sehen, dass ich seinen Standort verfolge?",
+      "a": "Es gibt nichts Verstecktes. Jede Person schaltet das Teilen selbst ein. Die Familienseite zeigt genau, wer gerade teilt und wer nicht. Heimliches Tracking bieten wir nicht an."
+    },
+    {
+      "q": "Was bekommt jede Person genau?",
+      "a": "Ein vollständiges Dawarich-Konto – mit eigener Karte, Zeitleiste, Reisen, Statistiken und Einblicken. Der Familientarif verbindet fünf separate Konten zum Standortteilen. Es melden sich nicht fünf Menschen im selben Konto an."
+    },
+    {
+      "q": "Was passiert, wenn das Abo der zahlenden Person abläuft?",
+      "a": "Die Familie bleibt erhalten. Nach Ablauf des Abos nutzen die Mitglieder wieder ihre eigenen Tarife. Ein erneutes Abo stellt den Familientarif wieder her. Niemand verliert den Zugriff auf den eigenen Verlauf."
+    },
+    {
+      "q": "Muss ich überhaupt etwas bezahlen?",
+      "a": "Nicht, wenn du selbst hostest. Die Familienfunktionen laufen kostenlos auf deiner eigenen Instanz, denn alle Funktionen des kostenpflichtigen Cloud-Produkts funktionieren auch auf deiner eigenen Hardware."
+    }
+  ],
+  "meta": {
+    "title": "Standort mit der Familie teilen – privat und mit Zustimmung",
+    "description": "Live-Standort für bis zu fünf Angehörige: eigene Schalter, Zeitlimits, separate Verlaufszeiträume, Anfragen mit Zustimmung. {price} oder gratis selbst hosten.",
+    "ogTitle": "Standort mit der Familie teilen, ohne Überwachung",
+    "ogDescription": "Fünf Menschen, fünf unabhängige Schalter. Zeitlich begrenzte Live-Freigaben, Verlauf separat und Anfragen mit Zustimmung. Standardmäßig wird nichts geteilt."
+  },
+  "familyPage": {
+    "text": "Standort mit der Familie teilen – ",
+    "em": "mit Zustimmung aller.",
+    "title2": "Entwickelt, damit niemand standardmäßig beobachtet wird",
+    "sub2": "Bis zu fünf Personen in einem Tarif, jeweils mit vollständigem Dawarich-Konto und voller Kontrolle über die eigenen Freigaben.",
+    "title3": "Was Eltern und Partner uns fragen",
+    "title4": "Teile mit deinem Haushalt, nicht mit einem Datenhändler",
+    "sub3": "{price} im Jahr deckt fünf Personen in Dawarich Cloud ab. Oder betreibe dieselben Funktionen kostenlos auf deiner eigenen Hardware.",
+    "primaryLabel": "Familientarif starten"
+  },
+  "hero": {
+    "sub": "Familien-Tracking-Apps gehen davon aus, dass alle jederzeit beobachtet werden sollen. Dawarich geht vom Gegenteil aus: Nichts wird geteilt, bis eine Person es selbst einschaltet. Freigaben können zeitlich ablaufen, und wer wissen will, wo jemand ist, muss fragen."
+  }
+}

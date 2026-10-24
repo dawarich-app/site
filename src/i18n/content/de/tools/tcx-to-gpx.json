@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "title": "TCX in GPX umwandeln – kostenloser Online-Konverter",
+    "description": "TCX sofort in GPX umwandeln. Kostenloser, datenschutzfreundlicher Konverter für Garmin, Wahoo und Fitnessgeräte. Direkt im Browser, ohne Upload.",
+    "keywords": "TCX in GPX, TCX-Konverter, Training Center XML, Garmin TCX, Wahoo TCX, Fitness-Dateikonverter, Radfahren GPX, Laufen GPX, Aktivitätskonverter",
+    "appName": "TCX-zu-GPX-Konverter"
+  },
+  "h1": "TCX in GPX umwandeln",
+  "intro": "Wandle deine TCX-Dateien (Training Center XML) sofort in GPX um. Die gesamte Verarbeitung läuft in deinem Browser – deine Fitnessdaten verlassen dein Gerät nie.",
+  "cards": [
+    {
+      "title": "Über das TCX-Format",
+      "body": "TCX (Training Center XML) ist Garmins XML-basiertes Format für Fitnessaktivitäten. Garmin Connect, Wahoo, Polar und viele weitere Fitnessplattformen nutzen es, um Trainingseinheiten mit GPS-Daten, Herzfrequenz, Trittfrequenz und Leistungswerten zu speichern."
+    },
+    {
+      "title": "Über das GPX-Format",
+      "body": "GPX (GPS Exchange Format) ist ein offener XML-Standard für GPS-Daten. Er wird von Fitnessplattformen, Kartensoftware und Navigationsapps universell unterstützt und ist damit das am breitesten nutzbare Format für GPS-Tracks."
+    },
+    {
+      "title": "Warum TCX in GPX umwandeln?",
+      "items": [
+        "Aktivitäten in Plattformen importieren, die TCX nicht unterstützen",
+        "Routen mit Nutzern anderer Fitnessplattformen teilen",
+        "Tracks in Google Earth, QGIS oder anderen Kartentools ansehen",
+        "Backups in einem universell unterstützten Format erstellen",
+        "Tracks mit GPX-kompatiblen Tools kombinieren oder bearbeiten"
+      ]
+    },
+    {
+      "title": "Kompatible Plattformen",
+      "body": "TCX-Dateien dieser Plattformen funktionieren mit diesem Konverter:",
+      "items": [
+        "Exporte aus Garmin Connect",
+        "Wahoo ELEMNT und TICKR",
+        "Exporte aus Polar Flow",
+        "TCX-Exporte aus Strava",
+        "TrainingPeaks",
+        "Aktivitätsexporte aus Zwift",
+        "Jede App, die standardkonforme TCX-Dateien exportiert"
+      ]
+    },
+    {
+      "title": "Welche Daten bleiben erhalten?",
+      "body": "Der Konverter erhält:",
+      "items": [
+        "GPS-Koordinaten (Breitengrad, Längengrad)",
+        "Zeitstempel",
+        "Höhenangaben",
+        "Rundenmarkierungen (als Wegpunkte)",
+        "Aktivitätsmetadaten (Sportart, Entfernung usw.)"
+      ],
+      "note": "Hinweis: Herzfrequenz-, Trittfrequenz- und Leistungsdaten werden gelesen, aber nicht in die Standard-GPX-Ausgabe übernommen, da sie GPX-Erweiterungen erfordern."
+    }
+  ],
+  "privacyBody": "Die gesamte Umwandlung läuft ausschließlich in deinem Browser. Deine Fitnessdaten verlassen dein Gerät nie und werden an keinen Server gesendet.",
+  "noGpsData": "Keine GPS-Daten in der TCX-Datei gefunden. Die Datei enthält möglicherweise nur Sensordaten ohne GPS-Koordinaten."
+}
