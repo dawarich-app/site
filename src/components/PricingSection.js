@@ -1,4 +1,4 @@
-import Link from "@docusaurus/Link";
+import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import React from "react";
 import { PLANS } from "@site/src/data/pricingPlans";
 import PricingCard from "./PricingCard";
@@ -61,18 +61,18 @@ export default function PricingSection() {
 						doesn't import cleanly, we fix it personally — or refund every
 						cent. Plus a 14-day no-questions money-back guarantee on every
 						plan.{" "}
-						<Link to="/refund-policy" className={styles.guaranteeLink}>
+						<EnOnlyLink to="/refund-policy" className={styles.guaranteeLink}>
 							Refund policy →
-						</Link>
+						</EnOnlyLink>
 					</div>
 				</div>
 			</div>
 
 			<div className={styles.selfHostContainer}>
-				<Link to="/docs/self-hosting/introduction" className={styles.selfHostButton}>
+				<EnOnlyLink to="/docs/self-hosting/introduction" className={styles.selfHostButton}>
 					Don't trust anyone with your data? Self-host for free — every Pro
 					feature, your server, zero cost
-				</Link>
+				</EnOnlyLink>
 			</div>
 		</section>
 	);

@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "@docusaurus/Head";
 import Link from "@docusaurus/Link";
+import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import Layout from "@theme/Layout";
 import styles from "./about.module.css";
 
@@ -140,7 +141,7 @@ export default function AboutPage() {
           <p>
             Dawarich is made by ZeitFlow UG (haftungsbeschränkt), a small
             company registered in Berlin, Germany. Legal details live in the{" "}
-            <Link to="/impressum">Impressum</Link>. Want to say hi?{" "}
+            <EnOnlyLink to="/impressum">Impressum</EnOnlyLink>. Want to say hi?{" "}
             <Link to="/contact">Contact us</Link>. We read every message.
           </p>
         </section>

@@ -22,6 +22,7 @@ import {
   HandIcon,
 } from '@site/src/components/LucideIcons';
 import Link from '@docusaurus/Link';
+import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import styles from './trips.module.css';
 
 const showcaseItems = [
@@ -184,11 +185,11 @@ export default function TripsPage() {
                 href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-cta&utm_campaign=trips">
                 Try 7 Days for Free
               </Link>
-              <Link
+              <EnOnlyLink
                 className={styles.secondaryCta}
                 to="/docs/self-hosting/installation/docker">
                 Self-Host for Free
-              </Link>
+              </EnOnlyLink>
             </div>
             <p className="feature-cta-reassurance">
               7-day free trial · 14-day risk-free refund · Cancel anytime

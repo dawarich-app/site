@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { footerLinks, FOOTER_LINK_CAP } from './footerLinks';
+import { footerLinks, buildFooterLinks, FOOTER_LINK_CAP } from './footerLinks';
 
 const COMPARISONS = [
   '/google-timeline-alternative',
@@ -91,5 +91,27 @@ describe('footerLinks', () => {
 
   it('pins FOOTER_LINK_CAP to its specified value', () => {
     expect(FOOTER_LINK_CAP).toBe(60);
+  });
+});
+
+describe('buildFooterLinks', () => {
+  const find = (links, label) => links.flatMap((c) => c.items).find((i) => i.label === label);
+
+  it('returns the source links unchanged for the default locale', () => {
+    expect(buildFooterLinks('en')).toEqual(footerLinks);
+  });
+
+  it('points docs, blog and English-only pages at the root English URL in other locales', () => {
+    const links = buildFooterLinks('de');
+    expect(find(links, 'Changelog')).toMatchObject({ to: 'pathname:///docs/changelog/', target: '_self', autoAddBaseUrl: false });
+    expect(find(links, 'Blog')).toMatchObject({ to: 'pathname:///blog/', autoAddBaseUrl: false });
+    expect(find(links, 'Impressum')).toMatchObject({ to: 'pathname:///impressum/' });
+    expect(find(links, 'Roadmap')).toMatchObject({ to: 'pathname:///roadmap/' });
+  });
+
+  it('keeps localized routes and external links untouched in other locales', () => {
+    const links = buildFooterLinks('de');
+    expect(find(links, 'Pricing')).toEqual({ label: 'Pricing', to: '/pricing' });
+    expect(find(links, 'Community')).toEqual({ label: 'Community', href: 'https://discourse.dawarich.app/' });
   });
 });

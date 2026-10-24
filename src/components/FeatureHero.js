@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import styles from './FeatureHero.module.css';
 
 const ArrowRightIcon = () => (
@@ -49,11 +50,11 @@ export default function FeatureHero({
             </span>
           </Link>
           {showSecondary && (
-            <Link
+            <EnOnlyLink
               className={styles.secondaryButton}
               to="/docs/self-hosting/installation/docker">
               Self-Host for Free
-            </Link>
+            </EnOnlyLink>
           )}
         </div>
 

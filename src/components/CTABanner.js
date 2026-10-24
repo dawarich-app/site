@@ -1,4 +1,5 @@
 import Link from "@docusaurus/Link";
+import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import React from "react";
 import styles from "./CTABanner.module.css";
 
@@ -16,9 +17,9 @@ export default function CTABanner() {
 					>
 						Start Importing — Free for 7 Days
 					</Link>
-					<Link className={styles.ghostButton} to="/docs/intro">
+					<EnOnlyLink className={styles.ghostButton} to="/docs/intro">
 						View Documentation
-					</Link>
+					</EnOnlyLink>
 				</div>
 				<p className={styles.reassurance}>
 					7-day free trial · 14-day risk-free refund · Cancel anytime

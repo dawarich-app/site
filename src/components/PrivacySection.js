@@ -1,4 +1,4 @@
-import Link from "@docusaurus/Link";
+import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import React from "react";
 import styles from "./PrivacySection.module.css";
 
@@ -118,9 +118,9 @@ export default function PrivacySection() {
 				</div>
 
 				<div className={styles.policyLinkContainer}>
-					<Link to="/privacy-policy" className={styles.policyLink}>
+					<EnOnlyLink to="/privacy-policy" className={styles.policyLink}>
 						Read our full Privacy Policy →
-					</Link>
+					</EnOnlyLink>
 				</div>
 			</div>
 		</section>

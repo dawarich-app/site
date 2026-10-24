@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import styles from './Pitch.module.css';
 
 const SIGNUP = 'https://my.dawarich.app/users/sign_up';
@@ -44,9 +45,9 @@ export function PitchHero({ title, sub, campaign, artifact, primaryLabel = 'Try 
               <Link className={styles.primaryCta} href={signupHref(campaign, 'pitch-hero')}>
                 {primaryLabel}
               </Link>
-              <Link className={styles.secondaryCta} to="/docs/self-hosting/installation/docker">
+              <EnOnlyLink className={styles.secondaryCta} to="/docs/self-hosting/installation/docker">
                 Self-host free forever
-              </Link>
+              </EnOnlyLink>
             </div>
             <p className={styles.reassurance}>
               No card for the trial · 14-day refund after that · Export everything, any time

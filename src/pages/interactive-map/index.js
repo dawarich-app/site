@@ -5,6 +5,7 @@ import FeatureHero from '@site/src/components/FeatureHero';
 import FeatureShowcase from '@site/src/components/FeatureShowcase';
 import HowItWorks from '@site/src/components/HowItWorks';
 import Link from '@docusaurus/Link';
+import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import styles from './map.module.css';
 
 const Icon = ({ size = 40, children }) => (
@@ -322,11 +323,11 @@ export default function MapPage() {
                 href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-cta&utm_campaign=map">
                 Try 7 Days for Free
               </Link>
-              <Link
+              <EnOnlyLink
                 className={styles.secondaryCta}
                 to="/docs/self-hosting/installation/docker">
                 Self-Host for Free
-              </Link>
+              </EnOnlyLink>
             </div>
             <p className="feature-cta-reassurance">
               7-day free trial · 14-day risk-free refund · Cancel anytime

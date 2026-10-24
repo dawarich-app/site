@@ -15,6 +15,7 @@ import {
   CheckIcon,
 } from '@site/src/components/LucideIcons';
 import Link from '@docusaurus/Link';
+import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import styles from './tracking.module.css';
 
 const appShowcase = [
@@ -252,7 +253,7 @@ export default function TrackingPage() {
             <div className={styles.docsLink}>
               <p>
                 For complete setup instructions including Home Assistant integration, visit our{' '}
-                <Link to="/docs/getting-started/track-your-location">detailed tracking tutorial</Link>.
+                <EnOnlyLink to="/docs/getting-started/track-your-location">detailed tracking tutorial</EnOnlyLink>.
               </p>
             </div>
           </div>
@@ -282,7 +283,7 @@ export default function TrackingPage() {
             </div>
             <p className={styles.apiNote}>
               Full API documentation is available at{' '}
-              <Link to="/docs/api/dawarich-api">our API reference</Link>.
+              <EnOnlyLink to="/docs/api/dawarich-api">our API reference</EnOnlyLink>.
             </p>
           </div>
         </section>
@@ -299,11 +300,11 @@ export default function TrackingPage() {
                 href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-cta&utm_campaign=tracking">
                 Try 7 Days for Free
               </Link>
-              <Link
+              <EnOnlyLink
                 className={styles.secondaryCta}
                 to="/docs/self-hosting/installation/docker">
                 Self-Host for Free
-              </Link>
+              </EnOnlyLink>
             </div>
             <p className="feature-cta-reassurance">
               7-day free trial · 14-day risk-free refund · Cancel anytime

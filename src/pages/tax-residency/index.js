@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
-import Link from '@docusaurus/Link';
+import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import {
   PitchPage,
   PitchHero,
@@ -103,7 +103,7 @@ export default function TaxResidencyPage() {
             <>
               Track from today and next year&apos;s answer is already counted. The full counting
               rules are in the{' '}
-              <Link to="/docs/features/tax-residency">Days per Country documentation</Link>.
+              <EnOnlyLink to="/docs/features/tax-residency">Days per Country documentation</EnOnlyLink>.
             </>
           }
         />

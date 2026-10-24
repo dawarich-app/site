@@ -1,3 +1,5 @@
+import { enOnlyLinkProps, isEnOnlyPath } from '../i18n/enOnlyLinkProps.js';
+
 export const FOOTER_LINK_CAP = 60;
 
 const BRAND_HTML =
@@ -93,3 +95,12 @@ export const footerLinks = [
     ],
   },
 ];
+
+export function buildFooterLinks(locale) {
+  return footerLinks.map((column) => ({
+    ...column,
+    items: column.items.map((item) =>
+      item.to && isEnOnlyPath(item.to) ? { ...item, ...enOnlyLinkProps(item.to, locale) } : item,
+    ),
+  }));
+}
