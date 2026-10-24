@@ -8,6 +8,6 @@ describe('configString', () => {
   });
 
   it('should fall back to English when a locale has no config strings yet', () => {
-    expect(configString('ca', 'googleSignIn')).toBe('Sign in with Google');
+    expect(configString('xx', 'googleSignIn')).toBe('Sign in with Google');
   });
 });
