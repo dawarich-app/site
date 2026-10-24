@@ -1,51 +1,54 @@
+import { interpolate } from '@docusaurus/Interpolate';
+import content from '@locale-content/components/FAQ.json';
+import RichText from '@site/src/i18n/RichText';
 import React, { useState } from "react";
 import styles from "./FAQ.module.css";
 
 const faqData = [
 	{
-		question: "Why should I pay when Google Timeline is free?",
+		question: content.faqData[0].question,
 		answer:
-			'Google Timeline is "free" because your location data funds their $300B ad business. With Dawarich, you pay a small fee and your data stays private — no ads, no tracking, no data selling. At less than \u20AC0.16/day on Lite, you\'re buying back your privacy.',
+			interpolate(content.faqData[0].answer, { price: "€0.16" }),
 	},
 	{
-		question: "How do I import my Google Timeline data?",
+		question: content.faqData[1].question,
 		answer:
-			"Export your location history from Google Takeout and import it directly into Dawarich. The process takes just a few minutes, and years of historical data will appear on your interactive map immediately.",
+			content.faqData[1].answer,
 	},
 	{
-		question: "Will Dawarich disappear like other startups?",
+		question: content.faqData[2].question,
 		answer:
-			"Dawarich is open source with OVER 9,000 GitHub stars. Even if the company shut down tomorrow, your self-hosted instance keeps running and your data exports to standard formats (GPX, GeoJSON). You are never locked in.",
+			content.faqData[2].answer,
 	},
 	{
-		question: "Is my data really private?",
+		question: content.faqData[3].question,
 		answer:
-			"On our cloud service, data is encrypted in transit and at rest, stored in European data centers with full GDPR compliance. Want zero trust? Self-host it — your data never touches our servers. Either way, we never sell data or show ads.",
+			content.faqData[3].answer,
 	},
 	{
-		question: "What if Google changes their export format?",
+		question: content.faqData[4].question,
 		answer:
-			"We actively maintain importers for Google's data formats. When they change (and they do), we update within days. Our open-source community of thousands of developers helps catch format changes fast.",
+			content.faqData[4].answer,
 	},
 	{
-		question: "What mobile apps are supported?",
+		question: content.faqData[5].question,
 		answer:
-			"Dawarich has official apps for both iOS and Android with background location tracking and minimal battery impact. You can also use OwnTracks, GPSLogger, Overland, and other compatible tracking apps.",
+			content.faqData[5].answer,
 	},
 	{
-		question: "Does location tracking work without an internet connection?",
+		question: content.faqData[6].question,
 		answer:
-			"Yes. The official iOS and Android apps record your location on the device itself, so tracking keeps running with no signal — on a plane, underground, hiking off-grid, or abroad without data. Your points are stored safely on your phone and upload to your Dawarich instance automatically the moment you're back online. You never lose track data to a dropped connection.",
+			content.faqData[6].answer,
 	},
 	{
-		question: "Can I export my data?",
+		question: content.faqData[7].question,
 		answer:
-			"Yes, you can export all your location data at any time in multiple formats (GPX, GeoJSON). Even on the Lite plan, exports include your full history — not just the 12-month viewing window. You're never locked in.",
+			content.faqData[7].answer,
 	},
 	{
-		question: "Is there a free trial?",
+		question: content.faqData[8].question,
 		answer:
-			"Yes! Dawarich Cloud offers a 7-day free trial. Import your Google data, explore the maps, and see if it's right for you. Cancel anytime from Subscription Settings. You can also self-host for free with all features included.",
+			content.faqData[8].answer,
 	},
 ];
 
@@ -74,13 +77,13 @@ function FAQItem({ question, answer, isOpen, onClick }) {
 	return (
 		<div className={styles.faqItem}>
 			<button className={styles.question} onClick={onClick}>
-				<span>{question}</span>
+				<span><RichText text={question} /></span>
 				<ChevronIcon isOpen={isOpen} />
 			</button>
 			<div
 				className={`${styles.answerWrapper} ${isOpen ? styles.answerWrapperOpen : ""}`}
 			>
-				<div className={styles.answer}>{answer}</div>
+				<div className={styles.answer}><RichText text={answer} /></div>
 			</div>
 		</div>
 	);
@@ -96,9 +99,9 @@ export default function FAQ() {
 	return (
 		<section className={styles.faqSection}>
 			<div className={styles.container}>
-				<h2 className={styles.title}>Frequently Asked Questions</h2>
+				<h2 className={styles.title}>{content.title}</h2>
 				<p className={styles.subtitle}>
-					Everything you need to know about Dawarich.
+					{content.subtitle}
 				</p>
 				<div className={styles.faqList}>
 					{faqData.map((item, index) => (

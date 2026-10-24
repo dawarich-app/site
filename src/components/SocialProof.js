@@ -1,3 +1,6 @@
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { interpolate } from '@docusaurus/Interpolate';
+import content from '@locale-content/components/SocialProof.json';
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './SocialProof.module.css';
 
@@ -35,23 +38,23 @@ function easeOutCubic(t) {
   return 1 - Math.pow(1 - t, 3);
 }
 
-function formatNumber(num) {
+function formatNumber(num, htmlLang) {
   if (num >= 1_000_000_000) {
     const val = num / 1_000_000_000;
-    return val % 1 === 0 ? `${val}B` : `${val.toFixed(1)}B`;
+    return interpolate(content.billion, { value: val.toLocaleString(htmlLang, { minimumFractionDigits: val % 1 === 0 ? 0 : 1, maximumFractionDigits: 1 }) });
   }
   if (num >= 1_000_000) {
     const val = num / 1_000_000;
-    return val % 1 === 0 ? `${val}M` : `${val.toFixed(1)}M`;
+    return interpolate(content.million, { value: val.toLocaleString(htmlLang, { minimumFractionDigits: val % 1 === 0 ? 0 : 1, maximumFractionDigits: 1 }) });
   }
-  return num.toLocaleString('en-US');
+  return num.toLocaleString(htmlLang);
 }
 
 const metrics = [
-  { target: 9000, prefix: 'OVER ', suffix: '', label: 'GitHub Stars', icon: <StarIcon /> },
-  { target: 1_000_000, suffix: '+', label: 'Docker Pulls', icon: <DownloadIcon /> },
-  { target: 2000, suffix: '+', label: 'Users', icon: <PeopleIcon /> },
-  { target: 1_000_000_000, suffix: '+', label: 'Points Tracked', icon: <MapPinIcon /> },
+  { target: 9000, prefix: content.metrics[0].prefix, suffix: '', label: content.metrics[0].label, icon: <StarIcon /> },
+  { target: 1_000_000, suffix: content.metrics[1].suffix, label: content.metrics[1].label, icon: <DownloadIcon /> },
+  { target: 2000, suffix: content.metrics[2].suffix, label: content.metrics[2].label, icon: <PeopleIcon /> },
+  { target: 1_000_000_000, suffix: content.metrics[3].suffix, label: content.metrics[3].label, icon: <MapPinIcon /> },
 ];
 
 const integrations = [
@@ -63,6 +66,8 @@ const integrations = [
 ];
 
 function useCountUp(target, duration, shouldStart) {
+  const { i18n } = useDocusaurusContext();
+  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
   const [display, setDisplay] = useState('0');
   const rafRef = useRef(null);
 
@@ -77,7 +82,7 @@ function useCountUp(target, duration, shouldStart) {
       const easedProgress = easeOutCubic(progress);
       const currentValue = Math.round(easedProgress * target);
 
-      setDisplay(formatNumber(currentValue));
+      setDisplay(formatNumber(currentValue, htmlLang));
 
       if (progress < 1) {
         rafRef.current = requestAnimationFrame(animate);
@@ -91,7 +96,7 @@ function useCountUp(target, duration, shouldStart) {
         cancelAnimationFrame(rafRef.current);
       }
     };
-  }, [target, duration, shouldStart]);
+  }, [target, duration, shouldStart, htmlLang]);
 
   return display;
 }
@@ -160,7 +165,7 @@ export default function SocialProof() {
         <div className={styles.divider} />
 
         <div className={styles.integrations}>
-          <span className={styles.integrationsLabel}>Works with</span>
+          <span className={styles.integrationsLabel}>{content.integrationsLabel}</span>
           <div className={styles.integrationsList}>
             {integrations.map((name) => (
               <span key={name} className={styles.integrationPill}>

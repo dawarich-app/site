@@ -1,0 +1,25 @@
+{
+  "trustBadges": [
+    {
+      "label": "Works offline"
+    },
+    {
+      "label": "Open source"
+    },
+    {
+      "label": "EU-hosted & encrypted"
+    }
+  ],
+  "title": "Your Timeline, ",
+  "highlight": "Forever",
+  "subtitle": "Google killed browser Timeline and is limiting data retention. Import your entire location history into Dawarich in minutes — private, encrypted, yours. No ads. No data selling.",
+  "primaryButton": "Import My Google Data",
+  "secondaryButton": "Explore Features",
+  "orDivider": "or",
+  "noCredit": "7-day free trial · 14-day risk-free refund · Cancel anytime",
+  "badgeLabel": "The Private Alternative to Google Timeline",
+  "googleSignIn": "Sign in with Google",
+  "playTour": "Play the Dawarich product tour",
+  "tourLabel": "Dawarich product tour",
+  "closeVideo": "Close video"
+}

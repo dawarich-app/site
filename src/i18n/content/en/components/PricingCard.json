@@ -1,0 +1,16 @@
+{
+  "ribbon": " MOST POPULAR",
+  "comingSoon": "COMING SOON",
+  "billedMonthly": "billed monthly",
+  "heading": "Join the Family waitlist",
+  "subtext": "Be first to know the moment it launches — annual only, every Pro feature.",
+  "buttonLabel": "Join the waitlist",
+  "note": "No spam, just the launch email.",
+  "guarantee": " The Import Guarantee · 14-day money-back",
+  "billing": {
+    "monthly": "monthly",
+    "annual": "annual"
+  },
+  "totalValue": "Total value",
+  "bonusPrefix": "BONUS: "
+}

@@ -1,0 +1,14 @@
+{
+  "subscribe": "Subscribe",
+  "privacyNote": "No spam. Unsubscribe anytime.",
+  "invalidEmail": "Please enter a valid email address.",
+  "requestError": "Something went wrong. Please try again later.",
+  "success": "You're subscribed! Check your inbox to confirm.",
+  "networkError": "Network error. Please check your connection and try again.",
+  "firstNameLabel": "First name ",
+  "emailLabel": "Email ",
+  "optionalLabel": "(optional)",
+  "firstNamePlaceholder": "Michael",
+  "emailPlaceholder": "you@example.com",
+  "subscribing": "Subscribing…"
+}

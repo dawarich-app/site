@@ -1,4 +1,5 @@
-import Link from "@docusaurus/Link";
+import content from '@locale-content/components/Hero.json';
+import { SmartLink } from '@site/src/i18n/RichText';
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import styles from "./Hero.module.css";
@@ -91,9 +92,9 @@ const ShieldCheckIcon = () => (
 );
 
 const trustBadges = [
-	{ icon: <OfflineIcon />, label: "Works offline" },
-	{ icon: <CodeIcon />, label: "Open source" },
-	{ icon: <ShieldCheckIcon />, label: "EU-hosted & encrypted" },
+	{ icon: <OfflineIcon />, label: content.trustBadges[0].label },
+	{ icon: <CodeIcon />, label: content.trustBadges[1].label },
+	{ icon: <ShieldCheckIcon />, label: content.trustBadges[2].label },
 ];
 
 export default function Hero() {
@@ -137,50 +138,48 @@ export default function Hero() {
 				<div className={styles.textColumn}>
 					<div className={styles.badge} style={{ animationDelay: "0s" }}>
 						<MapPinIcon />
-						<span>The Private Alternative to Google Timeline</span>
+						<span>{content.badgeLabel}</span>
 					</div>
 
 					<h1 className={styles.title} style={{ animationDelay: "0.1s" }}>
-						Your Timeline, <span className={styles.highlight}>Forever</span>
+						{content.title}<span className={styles.highlight}>{content.highlight}</span>
 					</h1>
 
 					<p className={styles.subtitle} style={{ animationDelay: "0.2s" }}>
-						Google killed browser Timeline and is limiting data retention.
-						Import your entire location history into Dawarich in minutes —
-						private, encrypted, yours. No ads. No data selling.
+						{content.subtitle}
 					</p>
 
 					<div className={styles.buttons} style={{ animationDelay: "0.3s" }}>
-						<Link
+						<SmartLink
 							className={styles.primaryButton}
 							href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=hero&utm_campaign=hero"
 						>
-							Import My Google Data
+							{content.primaryButton}
 							<span className={styles.arrow}>
 								<ArrowRightIcon />
 							</span>
-						</Link>
+						</SmartLink>
 						<button
 							className={styles.secondaryButton}
 							onClick={scrollToFeatures}
 						>
-							Explore Features
+							{content.secondaryButton}
 						</button>
 					</div>
 
 					<div className={styles.googleSignIn} style={{ animationDelay: "0.35s" }}>
-						<span className={styles.orDivider}>or</span>
-						<a
+						<span className={styles.orDivider}>{content.orDivider}</span>
+						<SmartLink
 							href="https://my.dawarich.app/users/sign_in"
 							className={`${styles.googleButton} ${styles.googleForm}`}
 						>
 							<GoogleIcon />
-							<span>Sign in with Google</span>
-						</a>
+							<span>{content.googleSignIn}</span>
+						</SmartLink>
 					</div>
 
 					<p className={styles.noCredit} style={{ animationDelay: "0.4s" }}>
-						7-day free trial · 14-day risk-free refund · Cancel anytime
+						{content.noCredit}
 					</p>
 
 					<div className={styles.trustBadges} style={{ animationDelay: "0.45s" }}>
@@ -199,7 +198,7 @@ export default function Hero() {
 						onClick={openModal}
 						role="button"
 						tabIndex={0}
-						aria-label="Play the Dawarich product tour"
+						aria-label={content.playTour}
 						onKeyDown={(e) => {
 							if (e.key === "Enter" || e.key === " ") {
 								e.preventDefault();
@@ -248,12 +247,12 @@ export default function Hero() {
 						ref={dialogRef}
 						role="dialog"
 						aria-modal="true"
-						aria-label="Dawarich product tour"
+						aria-label={content.tourLabel}
 					>
 						<button
 							className={styles.modalClose}
 							onClick={closeModal}
-							aria-label="Close video"
+							aria-label={content.closeVideo}
 						>
 							&times;
 						</button>

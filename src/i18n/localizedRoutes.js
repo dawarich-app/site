@@ -20,6 +20,8 @@ export const LOCALIZED_ROUTES = [
   '/tools/tcx-to-geojson/',
   '/tools/tcx-to-gpx/',
   '/tools/tcx-to-kml/',
+  '/',
+  '/pricing/',
 ];
 
 function normalize(path) {

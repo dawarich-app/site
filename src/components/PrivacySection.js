@@ -1,3 +1,4 @@
+import content from '@locale-content/components/PrivacySection.json';
 import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import React from "react";
 import styles from "./PrivacySection.module.css";
@@ -48,10 +49,9 @@ export default function PrivacySection() {
 	return (
 		<section className={styles.privacySection}>
 			<div className={styles.container}>
-				<h2 className={styles.title}>The Anti-Google Privacy Stack</h2>
+				<h2 className={styles.title}>{content.title}</h2>
 				<p className={styles.subtitle}>
-					Google uses your location to sell ads. We charge you money instead.
-					That's the entire business model.
+					{content.subtitle}
 				</p>
 
 				<div className={styles.grid}>
@@ -61,12 +61,10 @@ export default function PrivacySection() {
 						</div>
 						<div>
 							<h3 className={styles.cardTitle}>
-								No Ads. No Data Selling. Ever.
+								{content.cardTitle}
 							</h3>
 							<p className={styles.cardDescription}>
-								Your data funds Google's $300B ad business. At Dawarich, your
-								location data is the product you're buying — not the product
-								we're selling.
+								{content.cardDescription}
 							</p>
 						</div>
 					</div>
@@ -77,12 +75,10 @@ export default function PrivacySection() {
 						</div>
 						<div>
 							<h3 className={styles.cardTitle}>
-								Self-Host: Zero Trust Required
+								{content.cardTitle2}
 							</h3>
 							<p className={styles.cardDescription}>
-								Don't trust anyone with your data? Run Dawarich on your own
-								server. Your data never touches our infrastructure. We literally
-								cannot see it.
+								{content.cardDescription2}
 							</p>
 						</div>
 					</div>
@@ -92,11 +88,9 @@ export default function PrivacySection() {
 							<ShieldIcon />
 						</div>
 						<div>
-							<h3 className={styles.cardTitle}>Encrypted and EU-Hosted</h3>
+							<h3 className={styles.cardTitle}>{content.cardTitle3}</h3>
 							<p className={styles.cardDescription}>
-								All data encrypted in transit (SSL/TLS) and at rest (LUKS).
-								Stored in European data centers under strict GDPR regulations.
-								You have full control over your data.
+								{content.cardDescription3}
 							</p>
 						</div>
 					</div>
@@ -107,11 +101,10 @@ export default function PrivacySection() {
 						</div>
 						<div>
 							<h3 className={styles.cardTitle}>
-								Open Source: Inspect Every Line
+								{content.cardTitle4}
 							</h3>
 							<p className={styles.cardDescription}>
-								Don't trust us? Read the code. OVER 9,000 GitHub stars. Thousands of
-								developers have reviewed it. No hidden tracking. No surprises.
+								{content.cardDescription4}
 							</p>
 						</div>
 					</div>
@@ -119,7 +112,7 @@ export default function PrivacySection() {
 
 				<div className={styles.policyLinkContainer}>
 					<EnOnlyLink to="/privacy-policy" className={styles.policyLink}>
-						Read our full Privacy Policy →
+						{content.policyLink}
 					</EnOnlyLink>
 				</div>
 			</div>
