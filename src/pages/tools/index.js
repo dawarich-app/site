@@ -174,8 +174,8 @@ export default function ToolsHub() {
             {content.intro}
           </p>
           <div className={styles.heroNav}>
-            <Link to="#free-tools" className={styles.heroNavLink}>{content.toolsHeading}</Link>
-            <Link to="#converters" className={styles.heroNavLink}>{content.convertersHeading}</Link>
+            <a href="#free-tools" className={styles.heroNavLink}>{content.toolsHeading}</a>
+            <a href="#converters" className={styles.heroNavLink}>{content.convertersHeading}</a>
           </div>
         </div>
       </header>
