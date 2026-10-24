@@ -16,7 +16,9 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "test": "vitest run",
     "test:watch": "vitest",
-    "check:poster-drift": "node scripts/check-poster-drift.mjs"
+    "check:poster-drift": "node scripts/check-poster-drift.mjs",
+    "i18n:extract": "node scripts/i18n-extract.mjs",
+    "i18n:status": "node scripts/i18n-status.mjs"
   },
   "dependencies": {
     "@docusaurus/core": "3.6.3",
