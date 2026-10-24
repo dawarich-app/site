@@ -69,6 +69,10 @@
   gap: 1rem;
 }
 
+.exampleGrid > div {
+  min-width: 0;
+}
+
 @media (min-width: 768px) {
   .exampleGrid {
     grid-template-columns: 1fr 1fr;
