@@ -374,7 +374,7 @@
     "message": "Espera, si us plau..."
   },
   "shared.uploader.loaded": {
-    "message": "**{count}** fitxer carregat|{count} fitxers carregats|**{count}** fitxers carregats"
+    "message": "**{count}** fitxer carregat|**{count}** fitxers carregats|**{count}** fitxers carregats"
   },
   "shared.uploader.addMore": {
     "message": "Fes clic o arrossega per afegir més fitxers"

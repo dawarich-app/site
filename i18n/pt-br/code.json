@@ -374,7 +374,7 @@
     "message": "Aguarde..."
   },
   "shared.uploader.loaded": {
-    "message": "**{count}** arquivo carregado|{count} arquivos carregados|**{count}** arquivos carregados"
+    "message": "**{count}** arquivo carregado|**{count}** arquivos carregados|**{count}** arquivos carregados"
   },
   "shared.uploader.addMore": {
     "message": "Clique ou arraste para adicionar mais arquivos"

@@ -374,7 +374,7 @@
     "message": "Veuillez patienter..."
   },
   "shared.uploader.loaded": {
-    "message": "**{count}** fichier chargé|{count} fichiers chargés|**{count}** fichiers chargés"
+    "message": "**{count}** fichier chargé|**{count}** fichiers chargés|**{count}** fichiers chargés"
   },
   "shared.uploader.addMore": {
     "message": "Cliquez ou faites glisser d’autres fichiers"

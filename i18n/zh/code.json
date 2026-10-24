@@ -374,7 +374,7 @@
     "message": "请稍候…"
   },
   "shared.uploader.loaded": {
-    "message": "已加载 **{count}** 个**文件**"
+    "message": "已加载 **{count}** 个文件"
   },
   "shared.uploader.addMore": {
     "message": "点击或拖放以添加更多文件"
