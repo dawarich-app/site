@@ -1,0 +1,22 @@
+{
+  "movingLabel": "en mouvement",
+  "stationaryLabel": "à l’arrêt",
+  "visitsLabel": "Visites",
+  "tracksLabel": "Trajets",
+  "distanceLabel": "Distance",
+  "movingTitle": "En mouvement",
+  "emptyDay": "Aucune visite enregistrée ce jour-là.",
+  "previousDay": "Jour précédent",
+  "nextDay": "Jour suivant",
+  "selectDay": "Sélectionnez un jour pour voir votre chronologie.",
+  "rawHint": "Ce fichier contient uniquement des relevés GPS bruts, sans visites de lieux ni segments d’activité. Utilisez des fichiers Semantic Location History ou exportés depuis votre téléphone pour afficher la chronologie complète.",
+  "places": "{count} lieux",
+  "movingDuration": "{duration} en mouvement",
+  "duration": {
+    "zero": "0 min",
+    "hoursMinutes": "{hours} h {minutes} min",
+    "hours": "{hours} h",
+    "minutes": "{minutes} min"
+  },
+  "visitCount": "{count} visite|{count} visites|{count} visites"
+}

@@ -1,0 +1,83 @@
+{
+  "h1": "Tout le monde peut accrocher une carte de Berlin. Votre parcours, lui, n’appartient qu’à vous.",
+  "intro": "L’affiche ci-dessous est une démonstration : un mois de déplacements à Berlin. Déposez un fichier GPX, Google Timeline, KML, FIT ou TCX pour créer une carte que personne d’autre ne peut afficher : vos sorties à vélo, vos courses, vos voyages sur la route. Environ deux minutes, sans compte.",
+  "saveIntro": "Vous souhaitez aussi retrouver ces données dans votre compte Dawarich ? Nous les importerons lors de l’inscription, sans nouvel envoi.",
+  "appName": "Créateur d’affiches cartographiques",
+  "homeLabel": "Accueil",
+  "toolsLabel": "Outils gratuits",
+  "loadingStudio": "Chargement du studio…",
+  "valueStrip": "17 thèmes cartographiques · 22 formats, de A5 à A0 et 4K · PNG et PDF à 300 DPI · {price} · sans filigrane",
+  "meta": {
+    "title": "Affiches cartographiques gratuites à partir de fichiers GPS",
+    "description": "Créez une affiche avec vos fichiers GPX, Google Timeline, KML, FIT ou TCX. 17 thèmes, 22 mises en page, exports PNG et PDF gratuits, impressions en option.",
+    "keywords": "créateur d’affiches cartographiques, affiche de parcours, affiche GPX, affiche de plan de ville, affiche Google Timeline, parcours de course, impression de carte personnalisée, décoration murale, art GPS"
+  },
+  "howTo": {
+    "name": "Comment créer une affiche cartographique avec vos données GPS",
+    "description": "Transformez un trajet GPS ou votre historique Google Timeline en affiche imprimable, gratuitement et dans votre navigateur.",
+    "steps": [
+      {
+        "name": "Ajoutez un fichier de localisation",
+        "text": "Le studio s’ouvre avec un parcours de démonstration à Berlin. Glissez-déposez un fichier GPX, JSON Google Timeline, GeoJSON, KML, KMZ, FIT ou TCX pour le remplacer par votre propre trajet."
+      },
+      {
+        "name": "Composez votre affiche",
+        "text": "Choisissez parmi 17 thèmes cartographiques et 22 mises en page, ajoutez un titre et un sous-titre, choisissez une police, puis ajustez la couleur, l’opacité et la largeur du trajet. Déplacez la carte et zoomez dans l’aperçu pour cadrer votre parcours."
+      },
+      {
+        "name": "Exportez ou commandez une impression",
+        "text": "Téléchargez l’affiche en PNG ou en PDF prêt à imprimer jusqu’à 300 DPI, ou commandez une impression en 30×40, 50×70 ou 70×100 cm."
+      }
+    ],
+    "tool": "Créateur d’affiches cartographiques de Dawarich"
+  },
+  "faq": [
+    {
+      "q": "Comment créer une affiche à partir de mes données GPS ?",
+      "a": "Le studio s’ouvre avec un parcours de démonstration à Berlin pour que vous puissiez tout essayer immédiatement. Déposez votre fichier GPX, JSON Google Timeline, GeoJSON, KML, KMZ, FIT ou TCX dans la zone d’ajout pour le remplacer, choisissez parmi 17 thèmes cartographiques et 22 mises en page, ajoutez un titre et téléchargez l’affiche terminée en PNG ou en PDF prêt à imprimer."
+    },
+    {
+      "q": "Mes données de localisation restent-elles privées ?",
+      "a": "Votre fichier est analysé entièrement dans votre navigateur et n’est jamais envoyé à un serveur. Pour dessiner la carte, les tuiles couvrant la zone de vos données sont demandées au serveur de tuiles de Dawarich : cela révèle approximativement la zone que vous regardez, comme pour toute carte en ligne. Deux actions facultatives envoient des données : commander une impression envoie le PDF final au service d’impression de Dawarich, et « Enregistrer dans mon compte » envoie votre fichier lors de l’inscription."
+    },
+    {
+      "q": "Est-ce gratuit ? Faut-il un compte ?",
+      "a": "Oui, c’est gratuit : sans compte, sans inscription et sans filigrane. Les téléchargements PNG et PDF sont illimités. Seule la commande d’une impression est payante, et la création d’un compte Dawarich est facultative."
+    },
+    {
+      "q": "Quelle est la résolution des affiches exportées ?",
+      "a": "Les mises en page pour l’impression sont exportées jusqu’à 300 DPI, avec les dimensions physiques inscrites dans le PNG (pHYs) ou la page PDF. Les formats pour réseaux sociaux et fonds d’écran sont exportés à leurs dimensions exactes en pixels, par exemple 1080 × 1920 pour une story ou 3840 × 2160 pour un fond d’écran 4K. Les très grands formats sont automatiquement réduits à une taille que la mémoire graphique de votre appareil peut restituer, et un message vous en informe."
+    },
+    {
+      "q": "Puis-je commander une impression de mon affiche ?",
+      "a": "Oui : choisissez l’un des trois formats d’impression (30 × 40, 50 × 70 ou 70 × 100 cm). Le studio prépare un PDF à 300 DPI et l’envoie au service d’impression de Dawarich. Le paiement se fait sur Stripe. Les affiches sont imprimées sur papier mat de 200 g/m² et la livraison est gratuite dans l’UE. Le prix final est confirmé au paiement."
+    },
+    {
+      "q": "Quels fichiers fonctionnent avec le créateur d’affiches ?",
+      "a": "Les trajets GPX, les exports Google Timeline (Records.json, Semantic Location History et formats Takeout du téléphone), GeoJSON, KML, KMZ, FIT et TCX. Vous pouvez déposer plusieurs fichiers à la fois : ils sont regroupés en un seul trajet, avec une coupure à chaque interruption de plus d’une heure."
+    }
+  ],
+  "toolbar": {
+    "startOver": "Recommencer",
+    "demoLabel": "Afficher les données de démonstration",
+    "fileSummary": "{count} fichier · {points} points|{count} fichiers · {points} points|{count} fichiers · {points} points"
+  },
+  "upload": {
+    "formats": "GPX, FIT, TCX, GeoJSON, KML, KMZ, Google Timeline JSON",
+    "processing": "Traitement des fichiers…",
+    "addFiles": "Ajouter d’autres fichiers",
+    "dropFiles": "Déposez votre fichier de localisation ici ou cliquez pour parcourir vos fichiers",
+    "inputLabel": "Choisir les fichiers pour créer une affiche"
+  },
+  "errors": {
+    "emptyError": "Aucun point affichable trouvé dans les fichiers ajoutés. Vérifiez qu’ils contiennent des données de localisation.",
+    "demoError": "Le parcours de démonstration n’a pas pu être chargé. Déposez votre fichier pour commencer la composition.",
+    "sizeError": "{fileName} dépasse 100 MB. Découpez-le d’abord (essayez l’outil de découpage de fichiers GPS).",
+    "parseError": "Erreur d’analyse de {fileName} : {message}"
+  },
+  "cta": {
+    "headline": "Votre affiche est créée à partir de **{points}** points GPS d’un fichier. Dawarich enregistre automatiquement chaque parcours : n’importe quel mois de votre historique devient une affiche. Essai gratuit de 7 jours, remboursement sous 14 jours, résiliation à tout moment.",
+    "fallback": "Un fichier, une affiche. Dawarich enregistre automatiquement chaque parcours : n’importe quel mois de votre historique devient une affiche. Essai gratuit de 7 jours, remboursement sous 14 jours, résiliation à tout moment."
+  },
+  "faqTitle": "Questions fréquentes"
+}

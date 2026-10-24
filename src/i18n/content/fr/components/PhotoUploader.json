@@ -1,0 +1,13 @@
+{
+  "waiting": "Veuillez patienter...",
+  "addPhotos": "Cliquez ou faites glisser pour ajouter d’autres photos",
+  "dropPhotos": "Déposez vos photos ici",
+  "browse": "ou cliquez pour parcourir vos fichiers",
+  "formats": "Formats pris en charge : JPEG, PNG, HEIC et autres formats d’image",
+  "clearButton": "Effacer toutes les photos",
+  "noImages": "Aucun fichier image trouvé. Veuillez ajouter des photos (JPEG, PNG, HEIC, etc.)",
+  "inputLabel": "Choisir les fichiers à traiter",
+  "loaded": "**{count}** photo chargée|**{count}** photos chargées|**{count}** photos chargées",
+  "processing": "Traitement de {count} photo...|Traitement de {count} photos...|Traitement de {count} photos...",
+  "loadError": "Erreur lors du chargement des photos : {message}"
+}

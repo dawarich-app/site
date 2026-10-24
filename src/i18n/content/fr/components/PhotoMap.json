@@ -1,0 +1,8 @@
+{
+  "loading": "Chargement de la carte...",
+  "photoLabel": "Photo",
+  "coordinates": "Coordonnées :",
+  "altitude": "Altitude :",
+  "taken": "Prise le :",
+  "altitudeValue": "{altitude}m"
+}
