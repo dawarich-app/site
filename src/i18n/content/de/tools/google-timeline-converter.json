@@ -138,7 +138,7 @@
         "**Koordinatengenauigkeit** – Records.json nutzt das E7-Format (7 Nachkommastellen), das in normale Dezimalgrad umgerechnet wird, ohne Genauigkeit zu verlieren",
         "**Aktivitätssegmente** – Geh-, Auto- und Radsegmente bleiben in der CSV-Ausgabe erhalten. In GPX und KML werden Pfadkoordinaten als Track-Segmente übernommen",
         "**Ortsnamen** – Semantic Location History enthält Ortsnamen und Adressen, die als Wegpunktnamen erhalten bleiben. Records.json enthält in der Regel keine Ortsnamen",
-        "**Große Dateien** – Dateien über 100 MB brauchen je nach Gerät 10–30 Sekunden. Das Tool verarbeitet die Daten schrittweise, damit dein Browser reaktionsfähig bleibt"
+        "**Große Dateien** – Dateien über 100 MB können je nach Gerät 10–30 Sekunden benötigen. Das Tool verarbeitet die Daten schrittweise, damit dein Browser reaktionsfähig bleibt"
       ]
     },
     {
