@@ -1,0 +1,19 @@
+{
+  "primaryLabel": "Try 7 days free",
+  "selfHost": "Self-host free forever",
+  "reassurance": "No card for the trial · 14-day refund after that · Export everything, any time",
+  "proofLabel": "Covered by",
+  "publishers": {
+    "xda": "XDA Developers",
+    "makeUseOf": "MakeUseOf",
+    "ct": "c't Magazine",
+    "itsFoss": "It's FOSS"
+  },
+  "pricing": "See pricing",
+  "guarantee": {
+    "trial": "7 days free, no card",
+    "refund": "14-day refund",
+    "export": "Export everything, any time",
+    "selfHost": "Or self-host it free"
+  }
+}

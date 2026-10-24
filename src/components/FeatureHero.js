@@ -1,5 +1,6 @@
+import { SmartLink } from '@site/src/i18n/RichText';
+import content from '@locale-content/components/FeatureHero.json';
 import React from 'react';
-import Link from '@docusaurus/Link';
 import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import styles from './FeatureHero.module.css';
 
@@ -15,7 +16,7 @@ export default function FeatureHero({
   title,
   titleHighlight,
   subtitle,
-  ctaText = "Try 7 Days for Free",
+  ctaText = content.ctaText,
   ctaLink = "https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature&utm_campaign=feature",
   showSecondary = false,
   image,
@@ -41,24 +42,22 @@ export default function FeatureHero({
         )}
 
         <div className={styles.buttons}>
-          <Link
+          <SmartLink
             className={styles.primaryButton}
             href={ctaLink}>
             {ctaText}
             <span className={styles.arrow}>
               <ArrowRightIcon />
             </span>
-          </Link>
+          </SmartLink>
           {showSecondary && (
             <EnOnlyLink
               className={styles.secondaryButton}
-              to="/docs/self-hosting/installation/docker">
-              Self-Host for Free
-            </EnOnlyLink>
+              to="/docs/self-hosting/installation/docker">{content.selfHost}</EnOnlyLink>
           )}
         </div>
 
-        <p className={styles.noCredit}>7-day free trial · Cancel anytime</p>
+        <p className={styles.noCredit}>{content.trialDisclaimer}</p>
 
         {image && (
           <div className={styles.heroImageWrapper}>
