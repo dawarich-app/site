@@ -1,91 +1,11 @@
 {
-  "version.label": {
-    "message": "Next",
-    "description": "The label for version current"
-  },
-  "sidebar.tutorialSidebar.category.Features": {
-    "message": "Features",
-    "description": "The label for category Features in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Features.link.generated-index.description": {
-    "message": "Learn about Dawarich features.",
-    "description": "The generated-index page description for category Features in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Getting Started": {
-    "message": "Getting Started",
-    "description": "The label for category Getting Started in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Getting Started.link.generated-index.description": {
-    "message": "Learn how to use Dawarich to track and visualize your location history.",
-    "description": "The generated-index page description for category Getting Started in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.iOS App": {
-    "message": "iOS App",
-    "description": "The label for category iOS App in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.iOS App.link.generated-index.description": {
-    "message": "Guides for using Dawarich iOS app features.",
-    "description": "The generated-index page description for category iOS App in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Self-Hosting": {
-    "message": "Self-Hosting",
-    "description": "The label for category Self-Hosting in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Self-Hosting.link.generated-index.description": {
-    "message": "Everything you need to deploy and maintain your own Dawarich instance.",
-    "description": "The generated-index page description for category Self-Hosting in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Installation": {
-    "message": "Installation",
-    "description": "The label for category Installation in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Installation.link.generated-index.description": {
-    "message": "Install Dawarich on various platforms.",
-    "description": "The generated-index page description for category Installation in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Configuration": {
-    "message": "Configuration",
-    "description": "The label for category Configuration in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Configuration.link.generated-index.description": {
-    "message": "Configure authentication, reverse proxies, and external services.",
-    "description": "The generated-index page description for category Configuration in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Maintenance": {
-    "message": "Maintenance",
-    "description": "The label for category Maintenance in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Maintenance.link.generated-index.description": {
-    "message": "Backup, upgrade, and maintain your Dawarich instance.",
-    "description": "The generated-index page description for category Maintenance in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Monitoring": {
-    "message": "Monitoring",
-    "description": "The label for category Monitoring in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Monitoring.link.generated-index.description": {
-    "message": "Monitor your Dawarich instance health and performance.",
-    "description": "The generated-index page description for category Monitoring in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Tools": {
-    "message": "Tools",
-    "description": "The label for category Tools in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Tools.link.generated-index.description": {
-    "message": "External tools and integrations for Dawarich.",
-    "description": "The generated-index page description for category Tools in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Comparisons": {
-    "message": "Comparisons",
-    "description": "The label for category Comparisons in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Comparisons.link.generated-index.description": {
-    "message": "See how Dawarich compares to other location tracking solutions.",
-    "description": "The generated-index page description for category Comparisons in sidebar tutorialSidebar"
-  },
   "sidebar.apiSidebar.category.Areas": {
     "message": "Areas",
     "description": "The label for category Areas in sidebar apiSidebar"
+  },
+  "sidebar.apiSidebar.category.Batches": {
+    "message": "Batches",
+    "description": "The label for category Batches in sidebar apiSidebar"
   },
   "sidebar.apiSidebar.category.Countries": {
     "message": "Countries",
@@ -115,14 +35,6 @@
     "message": "Maps",
     "description": "The label for category Maps in sidebar apiSidebar"
   },
-  "sidebar.apiSidebar.category.Batches": {
-    "message": "Batches",
-    "description": "The label for category Batches in sidebar apiSidebar"
-  },
-  "sidebar.apiSidebar.category.Points": {
-    "message": "Points",
-    "description": "The label for category Points in sidebar apiSidebar"
-  },
   "sidebar.apiSidebar.category.Photos": {
     "message": "Photos",
     "description": "The label for category Photos in sidebar apiSidebar"
@@ -130,6 +42,10 @@
   "sidebar.apiSidebar.category.Places": {
     "message": "Places",
     "description": "The label for category Places in sidebar apiSidebar"
+  },
+  "sidebar.apiSidebar.category.Points": {
+    "message": "Points",
+    "description": "The label for category Points in sidebar apiSidebar"
   },
   "sidebar.apiSidebar.category.Settings": {
     "message": "Settings",
@@ -163,161 +79,157 @@
     "message": "Visits",
     "description": "The label for category Visits in sidebar apiSidebar"
   },
-  "sidebar.apiSidebar.doc.Creates an area": {
-    "message": "Creates an area",
-    "description": "The label for the doc item Creates an area in sidebar apiSidebar, linking to the doc api/creates-an-area"
+  "sidebar.apiSidebar.doc.Bulk deletes points": {
+    "message": "Bulk deletes points",
+    "description": "The label for the doc item Bulk deletes points in sidebar apiSidebar, linking to the doc api/bulk-deletes-points"
   },
-  "sidebar.apiSidebar.doc.Retrieves all areas": {
-    "message": "Retrieves all areas",
-    "description": "The label for the doc item Retrieves all areas in sidebar apiSidebar, linking to the doc api/retrieves-all-areas"
+  "sidebar.apiSidebar.doc.Bulk update visits": {
+    "message": "Bulk update visits",
+    "description": "The label for the doc item Bulk update visits in sidebar apiSidebar, linking to the doc api/bulk-update-visits"
   },
-  "sidebar.apiSidebar.doc.Retrieves a specific area": {
-    "message": "Retrieves a specific area",
-    "description": "The label for the doc item Retrieves a specific area in sidebar apiSidebar, linking to the doc api/retrieves-a-specific-area"
-  },
-  "sidebar.apiSidebar.doc.Updates an area": {
-    "message": "Updates an area",
-    "description": "The label for the doc item Updates an area in sidebar apiSidebar, linking to the doc api/updates-an-area"
-  },
-  "sidebar.apiSidebar.doc.Deletes an area": {
-    "message": "Deletes an area",
-    "description": "The label for the doc item Deletes an area in sidebar apiSidebar, linking to the doc api/deletes-an-area"
-  },
-  "sidebar.apiSidebar.doc.Retrieves country borders GeoJSON data": {
-    "message": "Retrieves country borders GeoJSON data",
-    "description": "The label for the doc item Retrieves country borders GeoJSON data in sidebar apiSidebar, linking to the doc api/retrieves-country-borders-geo-json-data"
-  },
-  "sidebar.apiSidebar.doc.Get visited cities by date range": {
-    "message": "Get visited cities by date range",
-    "description": "The label for the doc item Get visited cities by date range in sidebar apiSidebar, linking to the doc api/get-visited-cities-by-date-range"
-  },
-  "sidebar.apiSidebar.doc.Lists all yearly digests": {
-    "message": "Lists all yearly digests",
-    "description": "The label for the doc item Lists all yearly digests in sidebar apiSidebar, linking to the doc api/lists-all-yearly-digests"
-  },
-  "sidebar.apiSidebar.doc.Generates a yearly digest": {
-    "message": "Generates a yearly digest",
-    "description": "The label for the doc item Generates a yearly digest in sidebar apiSidebar, linking to the doc api/generates-a-yearly-digest"
-  },
-  "sidebar.apiSidebar.doc.Retrieves a yearly digest": {
-    "message": "Retrieves a yearly digest",
-    "description": "The label for the doc item Retrieves a yearly digest in sidebar apiSidebar, linking to the doc api/retrieves-a-yearly-digest"
-  },
-  "sidebar.apiSidebar.doc.Deletes a yearly digest": {
-    "message": "Deletes a yearly digest",
-    "description": "The label for the doc item Deletes a yearly digest in sidebar apiSidebar, linking to the doc api/deletes-a-yearly-digest"
-  },
-  "sidebar.apiSidebar.doc.Retrieves family members' locations": {
-    "message": "Retrieves family members' locations",
-    "description": "The label for the doc item Retrieves family members' locations in sidebar apiSidebar, linking to the doc api/retrieves-family-members-locations"
-  },
-  "sidebar.apiSidebar.doc.Retrieves application status": {
-    "message": "Retrieves application status",
-    "description": "The label for the doc item Retrieves application status in sidebar apiSidebar, linking to the doc api/retrieves-application-status"
-  },
-  "sidebar.apiSidebar.doc.Retrieves insights overview for a year": {
-    "message": "Retrieves insights overview for a year",
-    "description": "The label for the doc item Retrieves insights overview for a year in sidebar apiSidebar, linking to the doc api/retrieves-insights-overview-for-a-year"
-  },
-  "sidebar.apiSidebar.doc.Retrieves detailed insights with comparisons and travel patterns": {
-    "message": "Retrieves detailed insights with comparisons and travel patterns",
-    "description": "The label for the doc item Retrieves detailed insights with comparisons and travel patterns in sidebar apiSidebar, linking to the doc api/retrieves-detailed-insights-with-comparisons-and-travel-patterns"
-  },
-  "sidebar.apiSidebar.doc.Searches for location history near coordinates": {
-    "message": "Searches for location history near coordinates",
-    "description": "The label for the doc item Searches for location history near coordinates in sidebar apiSidebar, linking to the doc api/searches-for-location-history-near-coordinates"
-  },
-  "sidebar.apiSidebar.doc.Get location suggestions from text search": {
-    "message": "Get location suggestions from text search",
-    "description": "The label for the doc item Get location suggestions from text search in sidebar apiSidebar, linking to the doc api/get-location-suggestions-from-text-search"
-  },
-  "sidebar.apiSidebar.doc.Retrieves hexagon grid data for the map": {
-    "message": "Retrieves hexagon grid data for the map",
-    "description": "The label for the doc item Retrieves hexagon grid data for the map in sidebar apiSidebar, linking to the doc api/retrieves-hexagon-grid-data-for-the-map"
-  },
-  "sidebar.apiSidebar.doc.Retrieves geographic bounds for hexagon data": {
-    "message": "Retrieves geographic bounds for hexagon data",
-    "description": "The label for the doc item Retrieves geographic bounds for hexagon data in sidebar apiSidebar, linking to the doc api/retrieves-geographic-bounds-for-hexagon-data"
+  "sidebar.apiSidebar.doc.Create visit": {
+    "message": "Create visit",
+    "description": "The label for the doc item Create visit in sidebar apiSidebar, linking to the doc api/create-visit"
   },
   "sidebar.apiSidebar.doc.Creates a batch of points": {
     "message": "Creates a batch of points",
     "description": "The label for the doc item Creates a batch of points in sidebar apiSidebar, linking to the doc api/creates-a-batch-of-points"
   },
-  "sidebar.apiSidebar.doc.Creates a point": {
-    "message": "Creates a point",
-    "description": "The label for the doc item Creates a point in sidebar apiSidebar, linking to the doc api/creates-a-point"
-  },
-  "sidebar.apiSidebar.doc.Returns list of tracked years and months": {
-    "message": "Returns list of tracked years and months",
-    "description": "The label for the doc item Returns list of tracked years and months in sidebar apiSidebar, linking to the doc api/returns-list-of-tracked-years-and-months"
-  },
-  "sidebar.apiSidebar.doc.Retrieves all points": {
-    "message": "Retrieves all points",
-    "description": "The label for the doc item Retrieves all points in sidebar apiSidebar, linking to the doc api/retrieves-all-points"
-  },
-  "sidebar.apiSidebar.doc.Updates a point": {
-    "message": "Updates a point",
-    "description": "The label for the doc item Updates a point in sidebar apiSidebar, linking to the doc api/updates-a-point"
-  },
-  "sidebar.apiSidebar.doc.Deletes a point": {
-    "message": "Deletes a point",
-    "description": "The label for the doc item Deletes a point in sidebar apiSidebar, linking to the doc api/deletes-a-point"
-  },
-  "sidebar.apiSidebar.doc.Bulk deletes points": {
-    "message": "Bulk deletes points",
-    "description": "The label for the doc item Bulk deletes points in sidebar apiSidebar, linking to the doc api/bulk-deletes-points"
-  },
-  "sidebar.apiSidebar.doc.Lists photos": {
-    "message": "Lists photos",
-    "description": "The label for the doc item Lists photos in sidebar apiSidebar, linking to the doc api/lists-photos"
-  },
-  "sidebar.apiSidebar.doc.Retrieves a photo thumbnail": {
-    "message": "Retrieves a photo thumbnail",
-    "description": "The label for the doc item Retrieves a photo thumbnail in sidebar apiSidebar, linking to the doc api/retrieves-a-photo-thumbnail"
-  },
-  "sidebar.apiSidebar.doc.Retrieves all places for the authenticated user": {
-    "message": "Retrieves all places for the authenticated user",
-    "description": "The label for the doc item Retrieves all places for the authenticated user in sidebar apiSidebar, linking to the doc api/retrieves-all-places-for-the-authenticated-user"
-  },
   "sidebar.apiSidebar.doc.Creates a place": {
     "message": "Creates a place",
     "description": "The label for the doc item Creates a place in sidebar apiSidebar, linking to the doc api/creates-a-place"
   },
-  "sidebar.apiSidebar.doc.Searches for nearby places using Photon geocoding API": {
-    "message": "Searches for nearby places using Photon geocoding API",
-    "description": "The label for the doc item Searches for nearby places using Photon geocoding API in sidebar apiSidebar, linking to the doc api/searches-for-nearby-places-using-photon-geocoding-api"
+  "sidebar.apiSidebar.doc.Creates a point": {
+    "message": "Creates a point",
+    "description": "The label for the doc item Creates a point in sidebar apiSidebar, linking to the doc api/creates-a-point"
   },
-  "sidebar.apiSidebar.doc.Retrieves a specific place": {
-    "message": "Retrieves a specific place",
-    "description": "The label for the doc item Retrieves a specific place in sidebar apiSidebar, linking to the doc api/retrieves-a-specific-place"
+  "sidebar.apiSidebar.doc.Creates an area": {
+    "message": "Creates an area",
+    "description": "The label for the doc item Creates an area in sidebar apiSidebar, linking to the doc api/creates-an-area"
   },
-  "sidebar.apiSidebar.doc.Updates a place": {
-    "message": "Updates a place",
-    "description": "The label for the doc item Updates a place in sidebar apiSidebar, linking to the doc api/updates-a-place"
+  "sidebar.apiSidebar.doc.Delete visit": {
+    "message": "Delete visit",
+    "description": "The label for the doc item Delete visit in sidebar apiSidebar, linking to the doc api/delete-visit"
   },
   "sidebar.apiSidebar.doc.Deletes a place": {
     "message": "Deletes a place",
     "description": "The label for the doc item Deletes a place in sidebar apiSidebar, linking to the doc api/deletes-a-place"
   },
-  "sidebar.apiSidebar.doc.Updates user settings": {
-    "message": "Updates user settings",
-    "description": "The label for the doc item Updates user settings in sidebar apiSidebar, linking to the doc api/updates-user-settings"
+  "sidebar.apiSidebar.doc.Deletes a point": {
+    "message": "Deletes a point",
+    "description": "The label for the doc item Deletes a point in sidebar apiSidebar, linking to the doc api/deletes-a-point"
   },
-  "sidebar.apiSidebar.doc.Retrieves user settings": {
-    "message": "Retrieves user settings",
-    "description": "The label for the doc item Retrieves user settings in sidebar apiSidebar, linking to the doc api/retrieves-user-settings"
+  "sidebar.apiSidebar.doc.Deletes a yearly digest": {
+    "message": "Deletes a yearly digest",
+    "description": "The label for the doc item Deletes a yearly digest in sidebar apiSidebar, linking to the doc api/deletes-a-yearly-digest"
   },
-  "sidebar.apiSidebar.doc.Retrieves transportation mode recalculation status": {
-    "message": "Retrieves transportation mode recalculation status",
-    "description": "The label for the doc item Retrieves transportation mode recalculation status in sidebar apiSidebar, linking to the doc api/retrieves-transportation-mode-recalculation-status"
+  "sidebar.apiSidebar.doc.Deletes an area": {
+    "message": "Deletes an area",
+    "description": "The label for the doc item Deletes an area in sidebar apiSidebar, linking to the doc api/deletes-an-area"
+  },
+  "sidebar.apiSidebar.doc.Generates a yearly digest": {
+    "message": "Generates a yearly digest",
+    "description": "The label for the doc item Generates a yearly digest in sidebar apiSidebar, linking to the doc api/generates-a-yearly-digest"
+  },
+  "sidebar.apiSidebar.doc.Get location suggestions from text search": {
+    "message": "Get location suggestions from text search",
+    "description": "The label for the doc item Get location suggestions from text search in sidebar apiSidebar, linking to the doc api/get-location-suggestions-from-text-search"
+  },
+  "sidebar.apiSidebar.doc.Get possible places for visit": {
+    "message": "Get possible places for visit",
+    "description": "The label for the doc item Get possible places for visit in sidebar apiSidebar, linking to the doc api/get-possible-places-for-visit"
+  },
+  "sidebar.apiSidebar.doc.Get visited cities by date range": {
+    "message": "Get visited cities by date range",
+    "description": "The label for the doc item Get visited cities by date range in sidebar apiSidebar, linking to the doc api/get-visited-cities-by-date-range"
+  },
+  "sidebar.apiSidebar.doc.List visits": {
+    "message": "List visits",
+    "description": "The label for the doc item List visits in sidebar apiSidebar, linking to the doc api/list-visits"
+  },
+  "sidebar.apiSidebar.doc.Lists all yearly digests": {
+    "message": "Lists all yearly digests",
+    "description": "The label for the doc item Lists all yearly digests in sidebar apiSidebar, linking to the doc api/lists-all-yearly-digests"
+  },
+  "sidebar.apiSidebar.doc.Lists photos": {
+    "message": "Lists photos",
+    "description": "The label for the doc item Lists photos in sidebar apiSidebar, linking to the doc api/lists-photos"
+  },
+  "sidebar.apiSidebar.doc.Merge visits": {
+    "message": "Merge visits",
+    "description": "The label for the doc item Merge visits in sidebar apiSidebar, linking to the doc api/merge-visits"
+  },
+  "sidebar.apiSidebar.doc.Processes a subscription callback": {
+    "message": "Processes a subscription callback",
+    "description": "The label for the doc item Processes a subscription callback in sidebar apiSidebar, linking to the doc api/processes-a-subscription-callback"
+  },
+  "sidebar.apiSidebar.doc.Retrieves a photo thumbnail": {
+    "message": "Retrieves a photo thumbnail",
+    "description": "The label for the doc item Retrieves a photo thumbnail in sidebar apiSidebar, linking to the doc api/retrieves-a-photo-thumbnail"
+  },
+  "sidebar.apiSidebar.doc.Retrieves a single track as GeoJSON": {
+    "message": "Retrieves a single track as GeoJSON",
+    "description": "The label for the doc item Retrieves a single track as GeoJSON in sidebar apiSidebar, linking to the doc api/retrieves-a-single-track-as-geo-json"
+  },
+  "sidebar.apiSidebar.doc.Retrieves a specific area": {
+    "message": "Retrieves a specific area",
+    "description": "The label for the doc item Retrieves a specific area in sidebar apiSidebar, linking to the doc api/retrieves-a-specific-area"
+  },
+  "sidebar.apiSidebar.doc.Retrieves a specific place": {
+    "message": "Retrieves a specific place",
+    "description": "The label for the doc item Retrieves a specific place in sidebar apiSidebar, linking to the doc api/retrieves-a-specific-place"
+  },
+  "sidebar.apiSidebar.doc.Retrieves a yearly digest": {
+    "message": "Retrieves a yearly digest",
+    "description": "The label for the doc item Retrieves a yearly digest in sidebar apiSidebar, linking to the doc api/retrieves-a-yearly-digest"
+  },
+  "sidebar.apiSidebar.doc.Retrieves all areas": {
+    "message": "Retrieves all areas",
+    "description": "The label for the doc item Retrieves all areas in sidebar apiSidebar, linking to the doc api/retrieves-all-areas"
+  },
+  "sidebar.apiSidebar.doc.Retrieves all places for the authenticated user": {
+    "message": "Retrieves all places for the authenticated user",
+    "description": "The label for the doc item Retrieves all places for the authenticated user in sidebar apiSidebar, linking to the doc api/retrieves-all-places-for-the-authenticated-user"
+  },
+  "sidebar.apiSidebar.doc.Retrieves all points": {
+    "message": "Retrieves all points",
+    "description": "The label for the doc item Retrieves all points in sidebar apiSidebar, linking to the doc api/retrieves-all-points"
   },
   "sidebar.apiSidebar.doc.Retrieves all stats": {
     "message": "Retrieves all stats",
     "description": "The label for the doc item Retrieves all stats in sidebar apiSidebar, linking to the doc api/retrieves-all-stats"
   },
-  "sidebar.apiSidebar.doc.Processes a subscription callback": {
-    "message": "Processes a subscription callback",
-    "description": "The label for the doc item Processes a subscription callback in sidebar apiSidebar, linking to the doc api/processes-a-subscription-callback"
+  "sidebar.apiSidebar.doc.Retrieves application status": {
+    "message": "Retrieves application status",
+    "description": "The label for the doc item Retrieves application status in sidebar apiSidebar, linking to the doc api/retrieves-application-status"
+  },
+  "sidebar.apiSidebar.doc.Retrieves country borders GeoJSON data": {
+    "message": "Retrieves country borders GeoJSON data",
+    "description": "The label for the doc item Retrieves country borders GeoJSON data in sidebar apiSidebar, linking to the doc api/retrieves-country-borders-geo-json-data"
+  },
+  "sidebar.apiSidebar.doc.Retrieves detailed insights with comparisons and travel patterns": {
+    "message": "Retrieves detailed insights with comparisons and travel patterns",
+    "description": "The label for the doc item Retrieves detailed insights with comparisons and travel patterns in sidebar apiSidebar, linking to the doc api/retrieves-detailed-insights-with-comparisons-and-travel-patterns"
+  },
+  "sidebar.apiSidebar.doc.Retrieves family members' locations": {
+    "message": "Retrieves family members' locations",
+    "description": "The label for the doc item Retrieves family members' locations in sidebar apiSidebar, linking to the doc api/retrieves-family-members-locations"
+  },
+  "sidebar.apiSidebar.doc.Retrieves geographic bounds for hexagon data": {
+    "message": "Retrieves geographic bounds for hexagon data",
+    "description": "The label for the doc item Retrieves geographic bounds for hexagon data in sidebar apiSidebar, linking to the doc api/retrieves-geographic-bounds-for-hexagon-data"
+  },
+  "sidebar.apiSidebar.doc.Retrieves hexagon grid data for the map": {
+    "message": "Retrieves hexagon grid data for the map",
+    "description": "The label for the doc item Retrieves hexagon grid data for the map in sidebar apiSidebar, linking to the doc api/retrieves-hexagon-grid-data-for-the-map"
+  },
+  "sidebar.apiSidebar.doc.Retrieves insights overview for a year": {
+    "message": "Retrieves insights overview for a year",
+    "description": "The label for the doc item Retrieves insights overview for a year in sidebar apiSidebar, linking to the doc api/retrieves-insights-overview-for-a-year"
+  },
+  "sidebar.apiSidebar.doc.Retrieves points for a track": {
+    "message": "Retrieves points for a track",
+    "description": "The label for the doc item Retrieves points for a track in sidebar apiSidebar, linking to the doc api/retrieves-points-for-a-track"
   },
   "sidebar.apiSidebar.doc.Retrieves privacy zone tags": {
     "message": "Retrieves privacy zone tags",
@@ -327,48 +239,136 @@
     "message": "Retrieves timeline data for a date range",
     "description": "The label for the doc item Retrieves timeline data for a date range in sidebar apiSidebar, linking to the doc api/retrieves-timeline-data-for-a-date-range"
   },
-  "sidebar.apiSidebar.doc.Retrieves points for a track": {
-    "message": "Retrieves points for a track",
-    "description": "The label for the doc item Retrieves points for a track in sidebar apiSidebar, linking to the doc api/retrieves-points-for-a-track"
-  },
   "sidebar.apiSidebar.doc.Retrieves tracks as GeoJSON": {
     "message": "Retrieves tracks as GeoJSON",
     "description": "The label for the doc item Retrieves tracks as GeoJSON in sidebar apiSidebar, linking to the doc api/retrieves-tracks-as-geo-json"
   },
-  "sidebar.apiSidebar.doc.Retrieves a single track as GeoJSON": {
-    "message": "Retrieves a single track as GeoJSON",
-    "description": "The label for the doc item Retrieves a single track as GeoJSON in sidebar apiSidebar, linking to the doc api/retrieves-a-single-track-as-geo-json"
+  "sidebar.apiSidebar.doc.Retrieves transportation mode recalculation status": {
+    "message": "Retrieves transportation mode recalculation status",
+    "description": "The label for the doc item Retrieves transportation mode recalculation status in sidebar apiSidebar, linking to the doc api/retrieves-transportation-mode-recalculation-status"
+  },
+  "sidebar.apiSidebar.doc.Retrieves user settings": {
+    "message": "Retrieves user settings",
+    "description": "The label for the doc item Retrieves user settings in sidebar apiSidebar, linking to the doc api/retrieves-user-settings"
+  },
+  "sidebar.apiSidebar.doc.Returns list of tracked years and months": {
+    "message": "Returns list of tracked years and months",
+    "description": "The label for the doc item Returns list of tracked years and months in sidebar apiSidebar, linking to the doc api/returns-list-of-tracked-years-and-months"
   },
   "sidebar.apiSidebar.doc.Returns the current user": {
     "message": "Returns the current user",
     "description": "The label for the doc item Returns the current user in sidebar apiSidebar, linking to the doc api/returns-the-current-user"
   },
-  "sidebar.apiSidebar.doc.List visits": {
-    "message": "List visits",
-    "description": "The label for the doc item List visits in sidebar apiSidebar, linking to the doc api/list-visits"
+  "sidebar.apiSidebar.doc.Searches for location history near coordinates": {
+    "message": "Searches for location history near coordinates",
+    "description": "The label for the doc item Searches for location history near coordinates in sidebar apiSidebar, linking to the doc api/searches-for-location-history-near-coordinates"
   },
-  "sidebar.apiSidebar.doc.Create visit": {
-    "message": "Create visit",
-    "description": "The label for the doc item Create visit in sidebar apiSidebar, linking to the doc api/create-visit"
+  "sidebar.apiSidebar.doc.Searches for nearby places using Photon geocoding API": {
+    "message": "Searches for nearby places using Photon geocoding API",
+    "description": "The label for the doc item Searches for nearby places using Photon geocoding API in sidebar apiSidebar, linking to the doc api/searches-for-nearby-places-using-photon-geocoding-api"
   },
   "sidebar.apiSidebar.doc.Update visit": {
     "message": "Update visit",
     "description": "The label for the doc item Update visit in sidebar apiSidebar, linking to the doc api/update-visit"
   },
-  "sidebar.apiSidebar.doc.Delete visit": {
-    "message": "Delete visit",
-    "description": "The label for the doc item Delete visit in sidebar apiSidebar, linking to the doc api/delete-visit"
+  "sidebar.apiSidebar.doc.Updates a place": {
+    "message": "Updates a place",
+    "description": "The label for the doc item Updates a place in sidebar apiSidebar, linking to the doc api/updates-a-place"
   },
-  "sidebar.apiSidebar.doc.Get possible places for visit": {
-    "message": "Get possible places for visit",
-    "description": "The label for the doc item Get possible places for visit in sidebar apiSidebar, linking to the doc api/get-possible-places-for-visit"
+  "sidebar.apiSidebar.doc.Updates a point": {
+    "message": "Updates a point",
+    "description": "The label for the doc item Updates a point in sidebar apiSidebar, linking to the doc api/updates-a-point"
   },
-  "sidebar.apiSidebar.doc.Merge visits": {
-    "message": "Merge visits",
-    "description": "The label for the doc item Merge visits in sidebar apiSidebar, linking to the doc api/merge-visits"
+  "sidebar.apiSidebar.doc.Updates an area": {
+    "message": "Updates an area",
+    "description": "The label for the doc item Updates an area in sidebar apiSidebar, linking to the doc api/updates-an-area"
   },
-  "sidebar.apiSidebar.doc.Bulk update visits": {
-    "message": "Bulk update visits",
-    "description": "The label for the doc item Bulk update visits in sidebar apiSidebar, linking to the doc api/bulk-update-visits"
+  "sidebar.apiSidebar.doc.Updates user settings": {
+    "message": "Updates user settings",
+    "description": "The label for the doc item Updates user settings in sidebar apiSidebar, linking to the doc api/updates-user-settings"
+  },
+  "sidebar.tutorialSidebar.category.Comparisons": {
+    "message": "Comparisons",
+    "description": "The label for category Comparisons in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Comparisons.link.generated-index.description": {
+    "message": "See how Dawarich compares to other location tracking solutions.",
+    "description": "The generated-index page description for category Comparisons in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Configuration": {
+    "message": "Configuration",
+    "description": "The label for category Configuration in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Configuration.link.generated-index.description": {
+    "message": "Configure authentication, reverse proxies, and external services.",
+    "description": "The generated-index page description for category Configuration in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Features": {
+    "message": "Features",
+    "description": "The label for category Features in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Features.link.generated-index.description": {
+    "message": "Learn about Dawarich features.",
+    "description": "The generated-index page description for category Features in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Getting Started": {
+    "message": "Getting Started",
+    "description": "The label for category Getting Started in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Getting Started.link.generated-index.description": {
+    "message": "Learn how to use Dawarich to track and visualize your location history.",
+    "description": "The generated-index page description for category Getting Started in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Installation": {
+    "message": "Installation",
+    "description": "The label for category Installation in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Installation.link.generated-index.description": {
+    "message": "Install Dawarich on various platforms.",
+    "description": "The generated-index page description for category Installation in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Maintenance": {
+    "message": "Maintenance",
+    "description": "The label for category Maintenance in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Maintenance.link.generated-index.description": {
+    "message": "Backup, upgrade, and maintain your Dawarich instance.",
+    "description": "The generated-index page description for category Maintenance in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Monitoring": {
+    "message": "Monitoring",
+    "description": "The label for category Monitoring in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Monitoring.link.generated-index.description": {
+    "message": "Monitor your Dawarich instance health and performance.",
+    "description": "The generated-index page description for category Monitoring in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Self-Hosting": {
+    "message": "Self-Hosting",
+    "description": "The label for category Self-Hosting in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Self-Hosting.link.generated-index.description": {
+    "message": "Everything you need to deploy and maintain your own Dawarich instance.",
+    "description": "The generated-index page description for category Self-Hosting in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tools": {
+    "message": "Tools",
+    "description": "The label for category Tools in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tools.link.generated-index.description": {
+    "message": "External tools and integrations for Dawarich.",
+    "description": "The generated-index page description for category Tools in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.iOS App": {
+    "message": "iOS App",
+    "description": "The label for category iOS App in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.iOS App.link.generated-index.description": {
+    "message": "Guides for using Dawarich iOS app features.",
+    "description": "The generated-index page description for category iOS App in sidebar tutorialSidebar"
+  },
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
   }
 }

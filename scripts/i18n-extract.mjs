@@ -15,6 +15,10 @@ export function unexpectedWarnings(files, allowed = ALLOWED_WARNING_PREFIXES) {
   return files.filter((file) => !allowed.some((prefix) => file.startsWith(prefix)));
 }
 
+export function sortKeys(data) {
+  return Object.fromEntries(Object.keys(data).sort().map((key) => [key, data[key]]));
+}
+
 export function stripCopyright(footer) {
   const { copyright, ...rest } = footer;
   return rest;
@@ -38,6 +42,14 @@ function stripFooterCopyright(dir) {
   fs.writeFileSync(file, `${JSON.stringify(data, null, 2)}\n`);
 }
 
+function listJsonFiles(dir) {
+  return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) return listJsonFiles(full);
+    return entry.name.endsWith('.json') ? [full] : [];
+  });
+}
+
 function snapshotEnglish(i18nDir) {
   const englishDir = path.join(i18nDir, DEFAULT_LOCALE);
   const sourceDir = path.join(i18nDir, '.source', DEFAULT_LOCALE);
@@ -46,6 +58,9 @@ function snapshotEnglish(i18nDir) {
   fs.mkdirSync(path.dirname(sourceDir), { recursive: true });
   fs.renameSync(englishDir, sourceDir);
   stripFooterCopyright(sourceDir);
+  for (const file of listJsonFiles(sourceDir)) {
+    fs.writeFileSync(file, `${JSON.stringify(sortKeys(JSON.parse(fs.readFileSync(file, 'utf8'))), null, 2)}\n`);
+  }
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {

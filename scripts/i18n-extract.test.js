@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { warningFiles, unexpectedWarnings, stripCopyright } from './i18n-extract.mjs';
+import { warningFiles, unexpectedWarnings, stripCopyright, sortKeys } from './i18n-extract.mjs';
 
 const output = [
   '[INFO] 88 translations will be written',
@@ -25,5 +25,11 @@ describe('stripCopyright', () => {
     expect(stripCopyright({ copyright: { message: '© 2026' }, 'link.item.label.Blog': { message: 'Blog' } })).toEqual({
       'link.item.label.Blog': { message: 'Blog' },
     });
+  });
+});
+
+describe('sortKeys', () => {
+  it('should order top-level keys so snapshots are stable between runs', () => {
+    expect(Object.keys(sortKeys({ b: { message: 'B' }, a: { message: 'A' } }))).toEqual(['a', 'b']);
   });
 });
