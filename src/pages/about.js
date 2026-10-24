@@ -1,54 +1,59 @@
+import { SmartLink } from '@site/src/i18n/RichText';
+import content from '@locale-content/pages/about.json';
+import { interpolate } from '@docusaurus/Interpolate';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import React from "react";
 import Head from "@docusaurus/Head";
-import Link from "@docusaurus/Link";
 import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import Layout from "@theme/Layout";
 import styles from "./about.module.css";
 
 const FOUNDERS = [
   {
-    name: "Evgenii Burmakin",
-    role: "Co-founder & Chief Everything Officer",
-    bio: "Builds everything that isn't a mobile app: the product, the cloud, the website, and this very page.",
+    name: content.founders[0].name,
+    role: content.founders[0].role,
+    bio: content.founders[0].bio,
     photo: "/img/founders/evgenii.webp",
     links: [
-      { label: "GitHub", href: "https://github.com/Freika" },
-      { label: "X", href: "https://x.com/freymakesstuff" },
-      { label: "Mastodon", href: "https://mastodon.social/@dawarich" },
+      { label: content.founders[0].links[0].label, href: "https://github.com/Freika" },
+      { label: content.founders[0].links[1].label, href: "https://x.com/freymakesstuff" },
+      { label: content.founders[0].links[2].label, href: "https://mastodon.social/@dawarich" },
     ],
   },
   {
-    name: "Konstantin Priemchenko",
-    role: "Co-founder & Mobile Apps",
-    bio: "Builds the Dawarich apps for iOS and Android.",
+    name: content.founders[1].name,
+    role: content.founders[1].role,
+    bio: content.founders[1].bio,
     photo: "/img/founders/konstantin.webp",
     links: [],
   },
 ];
 
 export default function AboutPage() {
+  const pageUrl = useLocalizedUrl('/about/');
   return (
     <Layout
-      title="About Us — Dawarich"
-      description="Meet the people behind Dawarich: the weekend project that became a privacy-first Google Timeline alternative, built in Berlin."
+      title={content.meta.title}
+      description={content.meta.description}
     >
       <Head>
+        <meta name="twitter:url" content={pageUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dawarich.app/about/" />
-        <meta property="og:title" content="About Us — Dawarich" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={content.meta.title} />
         <meta
           property="og:description"
-          content="How a weekend project became a privacy-first Google Timeline alternative, built in Berlin."
+          content={content.meta.ogDescription}
         />
         <meta
           property="og:image"
           content="https://dawarich.app/img/meta-image.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Us — Dawarich" />
+        <meta name="twitter:title" content={content.meta.title} />
         <meta
           name="twitter:description"
-          content="How a weekend project became a privacy-first Google Timeline alternative, built in Berlin."
+          content={content.meta.ogDescription}
         />
         <meta
           name="twitter:image"
@@ -57,61 +62,35 @@ export default function AboutPage() {
       </Head>
       <main className={styles.page}>
         <header className={styles.header}>
-          <h1>About Us</h1>
-          <p className={styles.subtitle}>
-            The name comes from the German <em>„Da war ich“</em>, which means{" "}
-            <em>“I was there.”</em>
+          <h1>{content.aboutPage.heading}</h1>
+          <p className={styles.subtitle}>{content.aboutPage.text}<em>{content.aboutPage.em}</em>{content.aboutPage.text2}{" "}
+            <em>{content.aboutPage.em2}</em>
           </p>
         </header>
         <section className={styles.story}>
-          <h2>How it started</h2>
-          <p>
-            Dawarich started in March 2024 as a weekend project. After years of
-            feeding location data into Google Timeline and getting very little
-            back, Evgenii built a tiny self-hosted endpoint to catch location
-            pings from his own iPhone. He had no product plans and no company,
-            just an itch to own his own data.
-          </p>
-          <p>
-            The code went up on GitHub, and it turned out plenty of people had
-            the same itch. Within a year Dawarich had grown into one of the
-            better-known open-source alternatives to Google Timeline, and today
-            it runs on thousands of home labs around the world.
-          </p>
-          <p>
-            In July 2025 we launched Dawarich Cloud for everyone who would
-            rather skip Docker, reverse proxies, and backups. Today the two of
-            us build Dawarich as a small, independent company: Konstantin makes
-            the mobile apps, Evgenii makes everything else.
-          </p>
-          <p>The self-hosted version is free, and it will stay free.</p>
+          <h2>{content.aboutPage.heading2}</h2>
+          <p>{content.aboutPage.p}</p>
+          <p>{content.aboutPage.p2}</p>
+          <p>{content.aboutPage.p3}</p>
+          <p>{content.aboutPage.p4}</p>
         </section>
         <section className={styles.values}>
-          <h2>What we believe</h2>
+          <h2>{content.aboutPage.heading3}</h2>
           <ul>
-            <li>
-              Your location history belongs to you. You can export everything,
-              in open formats, whenever you want.
-            </li>
-            <li>
-              Privacy is the product. We make money from subscriptions, not
-              from ads or selling data.
-            </li>
-            <li>Made and hosted in Europe.</li>
-            <li>
-              Open source. Development happens in public, on GitHub, bugs and
-              all.
-            </li>
+            <li>{content.aboutPage.li}</li>
+            <li>{content.aboutPage.li2}</li>
+            <li>{content.aboutPage.li3}</li>
+            <li>{content.aboutPage.li4}</li>
           </ul>
         </section>
         <section className={styles.founders}>
-          <h2>Who we are</h2>
+          <h2>{content.aboutPage.heading4}</h2>
           <div className={styles.founderGrid}>
             {FOUNDERS.map((founder) => (
               <div key={founder.name} className={styles.founderCard}>
                 <img
                   src={founder.photo}
-                  alt={`Portrait of ${founder.name}`}
+                  alt={interpolate(content.aboutPage.alt, { name: founder.name })}
                   width="180"
                   height="180"
                   className={styles.founderPhoto}
@@ -122,14 +101,12 @@ export default function AboutPage() {
                 {founder.links.length > 0 && (
                   <p className={styles.founderLinks}>
                     {founder.links.map((link) => (
-                      <a
+                      <SmartLink
                         key={link.href}
                         href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
                       >
                         {link.label}
-                      </a>
+                      </SmartLink>
                     ))}
                   </p>
                 )}
@@ -138,12 +115,9 @@ export default function AboutPage() {
           </div>
         </section>
         <section className={styles.company}>
-          <p>
-            Dawarich is made by ZeitFlow UG (haftungsbeschränkt), a small
-            company registered in Berlin, Germany. Legal details live in the{" "}
-            <EnOnlyLink to="/impressum">Impressum</EnOnlyLink>. Want to say hi?{" "}
-            <Link to="/contact">Contact us</Link>. We read every message.
-          </p>
+          <p>{content.aboutPage.text3}{" "}
+            <EnOnlyLink to="/impressum">{content.aboutPage.EnOnlyLink}</EnOnlyLink>{content.aboutPage.text4}{" "}
+            <SmartLink href="/contact">{content.aboutPage.Link}</SmartLink>{content.aboutPage.text5}</p>
         </section>
       </main>
     </Layout>

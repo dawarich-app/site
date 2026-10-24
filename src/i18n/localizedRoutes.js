@@ -1,6 +1,21 @@
 import { DEFAULT_LOCALE, LOCALES } from './locales.js';
 
-export const LOCALIZED_ROUTES = ['/tools/google-timeline-converter/'];
+export const LOCALIZED_ROUTES = [
+  '/tools/google-timeline-converter/',
+  '/interactive-map/',
+  '/trips/',
+  '/statistics/',
+  '/location-tracking/',
+  '/import-export/',
+  '/integrations/',
+  '/location-sharing/',
+  '/family/',
+  '/tax-residency/',
+  '/poster-studio/',
+  '/cloud/',
+  '/about/',
+  '/google-timeline-alternative/',
+];
 
 function normalize(path) {
   const pathname = path.replace(/[?#].*$/, '');

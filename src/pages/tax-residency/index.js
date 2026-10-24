@@ -1,3 +1,5 @@
+import content from '@locale-content/pages/tax-residency.json';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import React from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
@@ -18,93 +20,91 @@ import {
 
 const rows = [
   {
-    title: 'Every country, counted, with the 183-day line drawn',
-    body: 'Pick a year and see how many distinct days you spent in each country, ordered largest first. Any country where you reach 183 days or more is flagged — the threshold behind a great many residency rules, and the number you want to see coming rather than discover in April.',
+    title: content.rows[0].title,
+    body: content.rows[0].body,
     media: <ResidencyCountriesShot />,
   },
   {
-    title: 'The runs behind the total, not just the total',
-    body: 'A total of 353 days tells you less than the eight separate stretches that made it up — a 133-day run, a 104-day run, then a scatter of short ones in December. Each stay is listed with its start date, end date and length, which is what you need when a rule cares about unbroken presence rather than an annual sum.',
-    note: 'Exportable evidence, not a dashboard number',
+    title: content.rows[1].title,
+    body: content.rows[1].body,
+    note: content.rows[1].note,
     media: <ResidencyStaysShot />,
   },
 ];
 
 const objections = [
   {
-    q: 'Is this tax advice?',
-    a: 'No, and it does not pretend to be. Dawarich reports what your location history says. It does not interpret any country\'s tax law, and jurisdictions count days differently — some count partial days, some exclude travel days, some average across several years. It is evidence to bring to a professional, not a conclusion to act on.',
+    q: content.objections[0].q,
+    a: content.objections[0].a,
   },
   {
-    q: 'How exactly is a day counted?',
-    a: 'A day counts for a country if you have at least one recorded point there that day. Fly Germany to France on a Tuesday and that Tuesday counts for both, so per-country days can add up to more than your tracked days. Days are bounded by UTC, which near midnight and near a border can move a day.',
+    q: content.objections[1].q,
+    a: content.objections[1].a,
   },
   {
-    q: 'What about days I did not track?',
-    a: 'They count for nothing and are never attributed to your last known country. The report also shows your total tracked days, so you can see how much of the year your numbers actually cover — the first thing an accountant will ask.',
+    q: content.objections[2].q,
+    a: content.objections[2].a,
   },
   {
-    q: 'I have years of history in Google Timeline. Does that work?',
-    a: 'Yes. Import your Google Takeout archive and the days come with it. Imported points need reverse geocoding before they can be attributed to a country, which Dawarich handles for you.',
+    q: content.objections[3].q,
+    a: content.objections[3].a,
   },
   {
-    q: 'Do I have to trust you with years of location data?',
-    a: 'You do not have to trust anyone. The entire application is open source and every capability runs on hardware you own. Self-host it and the data never leaves your machine.',
+    q: content.objections[4].q,
+    a: content.objections[4].a,
   },
 ];
 
 export default function TaxResidencyPage() {
+  const pageUrl = useLocalizedUrl('/tax-residency/');
   return (
     <Layout
-      title="Tax Residency Day Counter — Track the 183-Day Rule Automatically"
-      description="Count the days you spent in each country from your own GPS history, with consecutive stay periods and a 183-day threshold flag. Built for digital nomads, cross-border commuters and long-term travellers.">
+      title={content.meta.title}
+      description={content.meta.description}>
       <Head>
+        <meta name="twitter:url" content={pageUrl} />
+        <meta property="og:url" content={pageUrl} />
         <meta
           property="og:title"
-          content="Tax Residency Day Counter — Track the 183-Day Rule From Your GPS History"
+          content={content.meta.ogTitle}
         />
         <meta
           property="og:description"
-          content="Per-country day counts from location history you already collect, with consecutive stay periods and a 183-day threshold flag. Evidence for residency questions, not tax advice."
+          content={content.meta.ogDescription}
         />
         <meta property="og:image" content="https://dawarich.app/img/meta-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://dawarich.app/tax-residency" />
+
       </Head>
 
       <PitchPage>
         <PitchHero
           campaign="tax-residency"
           title={
-            <>
-              You crossed six borders this year.
-              <br />
-              <em>How many days was that?</em>
+            <>{content.taxResidencyPage.text}<br />
+              <em>{content.taxResidencyPage.em}</em>
             </>
           }
-          sub="Reconstructing a year from boarding passes and calendar entries is how people get residency wrong. Dawarich counts the days per country from the GPS history you already collect — one square per day, coloured by country — flags anything past 183, and leaves the gaps visible where your tracking lapsed instead of papering over them."
+          sub={content.hero.sub}
           artifact={<ResidencyCalendarShot />}
         />
 
         <ProofStrip />
 
         <ValueRows
-          title="The answer, with its working shown"
-          sub="Days per country lives on the Insights page and follows the year you pick at the top."
+          title={content.taxResidencyPage.title2}
+          sub={content.taxResidencyPage.sub2}
           rows={rows}
         />
 
-        <Objections title="Read this before you rely on it" items={objections} />
+        <Objections title={content.taxResidencyPage.title3} items={objections} />
 
         <CloseCTA
           campaign="tax-residency"
-          title="Start counting now, not next April"
+          title={content.taxResidencyPage.title4}
           sub={
-            <>
-              Track from today and next year&apos;s answer is already counted. The full counting
-              rules are in the{' '}
-              <EnOnlyLink to="/docs/features/tax-residency">Days per Country documentation</EnOnlyLink>.
-            </>
+            <>{content.taxResidencyPage.text2}{' '}
+              <EnOnlyLink to="/docs/features/tax-residency">{content.taxResidencyPage.EnOnlyLink}</EnOnlyLink>{content.taxResidencyPage.text3}</>
           }
         />
       </PitchPage>
