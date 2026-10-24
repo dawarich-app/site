@@ -1,0 +1,130 @@
+{
+  "timelineItems": [
+    {
+      "title": "Un dia que pots llegir",
+      "description": "Cada dia s’obre amb una capçalera d’una línia i indicadors de distància per mitjà de transport: quant has caminat, pedalat i conduït, d’un cop d’ull. Tria un dia al calendari i el mapa el seguirà."
+    },
+    {
+      "title": "Edita un tram directament",
+      "description": "Els trajectes es despleguen en una franja que només mostra els trams rellevants i el mitjà de transport. N’hi ha un d’incorrecte? Fes clic al nom del mitjà i canvia’l allà mateix. La llista completa queda darrere de «Tots els segments» fins que la necessitis."
+    },
+    {
+      "title": "Els buits, ben visibles",
+      "description": "Quan el seguiment s’ha aturat de debò, la línia de temps ho indica en lloc de dibuixar una recta a través de les hores que falten. Les visites detectades tenen un índex de confiança, així una estada segura i una suposició feble mai no semblen iguals."
+    }
+  ],
+  "showcaseItems": [
+    {
+      "title": "Punts",
+      "description": "Mira cada punt d’ubicació amb marques de temps precises i detalls. Fes clic en un punt per veure’n les coordenades, l’hora i més informació.",
+      "imageAlt": "Mapa amb punts d’ubicació individuals"
+    },
+    {
+      "title": "Polilínies",
+      "description": "Mira les rutes completes que connecten tots els punts d’ubicació. Visualitza els recorreguts com a camins continus pel mapa.",
+      "imageAlt": "Mapa amb rutes de polilínies"
+    },
+    {
+      "title": "Mapa de calor",
+      "description": "Descobreix on passes més temps amb un mapa de calor basat en la intensitat que mostra les àrees més visitades.",
+      "imageAlt": "Visualització del mapa de calor"
+    },
+    {
+      "title": "Boira de guerra",
+      "description": "Descobreix el món a mesura que l’explores. Les àrees que has visitat es destapen i les regions desconegudes continuen cobertes.",
+      "imageAlt": "Visualització de la boira de guerra"
+    },
+    {
+      "title": "Mapa per descobrir",
+      "description": "Mira com s’il·luminen els països a mesura que els visites. Ideal per als amants dels viatges que segueixen les seves aventures pel món.",
+      "imageAlt": "Mapa per descobrir amb els països visitats"
+    },
+    {
+      "title": "Àrees",
+      "description": "Dibuixa àrees personalitzades al mapa per marcar ubicacions importants, barris o regions d’interès.",
+      "imageAlt": "Àrees personalitzades al mapa"
+    },
+    {
+      "title": "Fotos",
+      "description": "Mira les fotos d’Immich o PhotoPrism directament al mapa, al lloc exacte on les vas fer. (De moment, només disponible amb allotjament propi.)",
+      "imageAlt": "Fotos mostrades al mapa"
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Registra la ubicació",
+      "description": "Fes servir qualsevol aplicació de seguiment compatible per registrar automàticament la ubicació durant el dia.",
+      "details": [
+        "Aplicació de Dawarich per a iOS",
+        "Overland",
+        "OwnTracks",
+        "GPSLogger",
+        "PhoneTrack"
+      ]
+    },
+    {
+      "title": "Tria la vista",
+      "description": "Tria entre diversos estils de mapa i activa o desactiva capes per personalitzar la visualització.",
+      "details": [
+        "Activa o desactiva punts, rutes o mapa de calor",
+        "Activa la boira de guerra o el mapa per descobrir",
+        "Mostra o amaga fotos i àrees"
+      ]
+    },
+    {
+      "title": "Filtra per temps",
+      "description": "Tria qualsevol interval de temps per veure l’historial d’ubicacions de períodes concrets.",
+      "details": [
+        "Navega per any i mes",
+        "Consulta estadístiques de visites a països i ciutats",
+        "Cerca llocs concrets"
+      ]
+    },
+    {
+      "title": "Crea i desa",
+      "description": "Crea llocs i visites manualment per omplir buits o corregir l’historial d’ubicacions.",
+      "details": [
+        "Desa les ubicacions preferides",
+        "Afegeix les visites que falten manualment",
+        "Dibuixa àrees personalitzades al mapa"
+      ]
+    },
+    {
+      "title": "Cerca per ubicació",
+      "description": "Introdueix un lloc o una adreça per trobar ràpidament quan hi vas ser i durant quant de temps.",
+      "details": [
+        "Cerca pel nom del lloc o l’adreça",
+        "Localitza ràpidament visites i punts d’interès",
+        "Crea visites a partir dels resultats de cerca"
+      ]
+    }
+  ],
+  "meta": {
+    "title": "Visualització en un mapa interactiu",
+    "description": "Explora el teu historial d’ubicacions en un mapa interactiu amb capes de punts, rutes, mapa de calor, boira de guerra i més.",
+    "ogTitle": "Mapa de Dawarich — Visualització interactiva d’ubicacions",
+    "ogDescription": "Explora el teu historial d’ubicacions amb diverses capes: punts, rutes, mapa de calor, boira de guerra, mapa per descobrir i integració de fotos."
+  },
+  "hero": {
+    "badge": "Visualització interactiva",
+    "title": "Explora on has estat,",
+    "titleHighlight": "no oblidis cap lloc",
+    "subtitle": "El teu historial d’ubicacions pren vida en un mapa interactiu amb diverses capes de visualització. Des de punts detallats fins a mapes de calor, mira el recorregut de la teva vida amb tot detall.",
+    "imageAlt": "Mapa interactiu de Dawarich"
+  },
+  "mapPage": {
+    "title3": "La línia de temps",
+    "subtitle2": "El mapa et mostra on. La línia de temps del costat et mostra què va passar, un dia cada vegada i amb paraules entenedores.",
+    "title4": "Diverses capes de visualització",
+    "subtitle3": "Canvia entre les capes del mapa per veure les dades d’ubicació de diferents maneres. Cada capa revela informació sobre els teus viatges i hàbits.",
+    "title5": "Com funciona",
+    "subtitle4": "Comença a visualitzar l’historial d’ubicacions en minuts amb la nostra interfície de mapa intuïtiva.",
+    "span": "Les teves dades continuen sent privades",
+    "p": "Totes les dades d’ubicació es desen de manera segura amb xifrat en repòs i en trànsit. Allotjades a Europa i plenament conformes amb el RGPD. També pots allotjar-les tu per tenir-ne tot el control.",
+    "heading": "Vols visualitzar el teu recorregut?",
+    "p2": "Comença avui a registrar el teu historial d’ubicacions amb una prova gratuïta de 7 dies. Cancel·la quan vulguis.",
+    "Link": "Prova’l gratis durant 7 dies",
+    "EnOnlyLink": "Allotja’l gratis",
+    "p3": "Prova gratuïta de 7 dies · Reemborsament sense risc durant 14 dies · Cancel·la quan vulguis"
+  }
+}

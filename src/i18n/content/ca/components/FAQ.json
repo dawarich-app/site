@@ -1,0 +1,42 @@
+{
+  "faqData": [
+    {
+      "question": "Per què hauria de pagar si Google Timeline és gratis?",
+      "answer": "Google Timeline és «gratis» perquè les teves dades d’ubicació financen el seu negoci publicitari de $300B. Amb Dawarich pagues una petita quota i les teves dades continuen sent privades: sense anuncis, seguiment ni venda de dades. Per menys de {price}/dia amb Lite, recuperes la teva privacitat."
+    },
+    {
+      "question": "Com importo les meves dades de Google Timeline?",
+      "answer": "Exporta el teu historial d’ubicacions des de Google Takeout i importa’l directament a Dawarich. El procés només triga uns minuts i anys de dades històriques apareixeran de seguida al mapa interactiu."
+    },
+    {
+      "question": "Dawarich desapareixerà com altres empreses emergents?",
+      "answer": "Dawarich és de codi obert i té MÉS DE 9,000 estrelles a GitHub. Encara que l’empresa tanqués demà, la teva instància pròpia continuaria funcionant i podries exportar les dades en formats estàndard (GPX, GeoJSON). Mai no en dependràs."
+    },
+    {
+      "question": "Les meves dades són realment privades?",
+      "answer": "Al nostre servei al núvol, les dades es xifren en trànsit i en repòs i es desen en centres de dades europeus amb ple compliment del RGPD. Vols no haver de confiar en ningú? Allotja’l tu: les dades no passen mai pels nostres servidors. En qualsevol cas, mai no venem dades ni mostrem anuncis."
+    },
+    {
+      "question": "I si Google canvia el format d’exportació?",
+      "answer": "Mantenim activament els importadors dels formats de dades de Google. Quan canvien (i ho fan), els actualitzem en qüestió de dies. La nostra comunitat de codi obert, amb milers de desenvolupadors, ajuda a detectar ràpidament els canvis de format."
+    },
+    {
+      "question": "Quines aplicacions mòbils s’admeten?",
+      "answer": "Dawarich té aplicacions oficials per a iOS i Android amb seguiment d’ubicació en segon pla i un impacte mínim en la bateria. També pots fer servir OwnTracks, GPSLogger, Overland i altres aplicacions de seguiment compatibles."
+    },
+    {
+      "question": "El seguiment d’ubicació funciona sense connexió a Internet?",
+      "answer": "Sí. Les aplicacions oficials per a iOS i Android registren la ubicació al mateix dispositiu, de manera que el seguiment continua sense cobertura: en un avió, sota terra, en una excursió sense xarxa o a l’estranger sense dades. Els punts es desen de manera segura al telèfon i es pugen automàticament a la teva instància de Dawarich quan tornes a tenir connexió. Mai no perds dades dels trajectes per un tall de connexió."
+    },
+    {
+      "question": "Puc exportar les meves dades?",
+      "answer": "Sí, pots exportar totes les teves dades d’ubicació en qualsevol moment i en diversos formats (GPX, GeoJSON). Fins i tot amb el pla Lite, les exportacions inclouen tot l’historial, no només els 12 mesos que pots visualitzar. Mai no en dependràs."
+    },
+    {
+      "question": "Hi ha una prova gratuïta?",
+      "answer": "Sí! Dawarich Cloud ofereix una prova gratuïta de 7 dies. Importa les teves dades de Google, explora els mapes i comprova si és per a tu. Cancel·la quan vulguis des de la configuració de la subscripció. També el pots allotjar gratuïtament amb totes les funcions incloses."
+    }
+  ],
+  "title": "Preguntes freqüents",
+  "subtitle": "Tot el que necessites saber sobre Dawarich."
+}

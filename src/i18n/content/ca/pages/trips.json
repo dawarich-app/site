@@ -1,0 +1,97 @@
+{
+  "showcaseItems": [
+    {
+      "title": "Mapa interactiu del viatge",
+      "description": "Cada pàgina de viatge inclou un mapa interactiu amb la ruta completa i tots els punts que has visitat pel camí."
+    },
+    {
+      "title": "Estadístiques completes",
+      "description": "Consulta estadístiques detallades de cada viatge: distància total, durada, països visitats i més funcions que arribaran aviat."
+    },
+    {
+      "title": "Diari amb text enriquit",
+      "description": "Documenta les aventures amb descripcions i notes amb format. Conserva els records i les històries dels teus viatges."
+    },
+    {
+      "title": "Integració de fotos",
+      "description": "Les fotos de la teva instància d’Immich o PhotoPrism apareixen automàticament al mapa del viatge als llocs on les vas fer."
+    },
+    {
+      "title": "Gestió de la llista de viatges",
+      "description": "Organitza tots els viatges en un sol lloc. Repassa les aventures passades i crea’n de noves quan vulguis."
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Registra els teus moviments",
+      "description": "Deixa que Dawarich registri automàticament la ubicació mentre viatges amb qualsevol aplicació de seguiment compatible.",
+      "details": [
+        "Aplicació de Dawarich per a iOS per a un seguiment fàcil",
+        "Aplicacions de tercers com Overland, OwnTracks i GPSLogger",
+        "Les dades se sincronitzen automàticament amb el teu compte"
+      ]
+    },
+    {
+      "title": "Crea el viatge",
+      "description": "Quan tornis, crea un viatge amb un nom i un interval de dates.",
+      "details": [
+        "Tria les dates d’inici i final",
+        "Dona al viatge un nom que recordis",
+        "Dawarich agrupa automàticament les dades d’ubicació"
+      ]
+    },
+    {
+      "title": "Afegeix-hi la teva història",
+      "description": "Enriqueix el viatge amb notes, descripcions i entrades de diari amb l’editor de text enriquit.",
+      "details": [
+        "Escriu sobre les teves experiències",
+        "Dona context a les ubicacions",
+        "Crea un relat del viatge"
+      ]
+    },
+    {
+      "title": "Explora i comparteix",
+      "description": "Mira el viatge al mapa interactiu, repassa les estadístiques i reviu l’aventura (aviat podràs compartir viatges)",
+      "details": [
+        "Mira la ruta completa al mapa",
+        "Repassa la distància, la durada i els llocs visitats",
+        "Les fotos apareixen automàticament al mapa"
+      ]
+    }
+  ],
+  "meta": {
+    "title": "Viatges i diari de viatge",
+    "description": "Documenta els viatges amb mapes interactius, estadístiques, un diari amb text enriquit i integració de fotos.",
+    "ogTitle": "Viatges de Dawarich — Documenta les teves aventures",
+    "ogDescription": "Crea diaris de viatge complets amb mapes interactius, estadístiques detallades, descripcions amb format i integració automàtica de fotos."
+  },
+  "hero": {
+    "badge": "Diari de viatge",
+    "title": "Converteix els teus viatges en",
+    "titleHighlight": "històries per recordar",
+    "subtitle": "Captura els moviments automàticament i transforma’ls en diaris de viatge complets. Cada viatge inclou un mapa interactiu, estadístiques detallades, descripcions amb format i fotos, tot en un sol lloc.",
+    "imageAlt": "Detalls del viatge amb mapa i estadístiques"
+  },
+  "tripsPage": {
+    "heading": "Per què són importants els viatges",
+    "title3": "Conserva els records",
+    "description2": "No oblidis mai els detalls de les teves aventures. Cada viatge es desa permanentment amb totes les dades d’ubicació i les teves notes personals.",
+    "description3": "Combina les dades d’ubicació amb els teus pensaments i històries. Crea un diari de viatge multimèdia que vagi més enllà d’unes simples notes.",
+    "title4": "Reviu les aventures",
+    "description4": "Torna als viatges passats quan vulguis. Mira exactament on vas anar, quant de temps vas viatjar i redescobreix els llocs visitats.",
+    "title5": "Tot el que necessites en un viatge",
+    "subtitle2": "Cada viatge inclou automàticament diversos elements per explicar tota la història del recorregut.",
+    "title6": "Com funciona",
+    "subtitle3": "Crear i gestionar viatges és senzill i intuïtiu: uns quants clics transformen les dades d’ubicació en històries.",
+    "heading2": "Creació flexible de viatges",
+    "title7": "Agrupació automàtica",
+    "description5": "Només has de definir les dates i Dawarich recull automàticament tots els punts d’ubicació d’aquell període. Ideal per obtenir resultats ràpids.",
+    "title8": "Detalls manuals",
+    "description6": "Crea viatges per explicar històries o documentar aventures concretes. Afegeix el teu relat i notes per enriquir l’experiència.",
+    "heading3": "Comença a documentar els teus viatges",
+    "p": "Comença avui a crear diaris de viatge amb una prova gratuïta de 7 dies. Cancel·la quan vulguis.",
+    "Link": "Prova’l gratis durant 7 dies",
+    "EnOnlyLink": "Allotja’l gratis",
+    "p2": "Prova gratuïta de 7 dies · Reemborsament sense risc durant 14 dies · Cancel·la quan vulguis"
+  }
+}

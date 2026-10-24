@@ -1,0 +1,59 @@
+{
+  "rows": [
+    {
+      "title": "Comparteix amb desconnexió automàtica",
+      "body": "Comparteix la ubicació en directe durant una hora, sis, dotze, vint-i-quatre o sempre, si és el que vols. El temporitzador s’atura tot sol: «només mentre torno a casa en cotxe» s’acaba quan arribes, en lloc de continuar tres anys més.",
+      "note": "Tu tries la durada, cada vegada"
+    },
+    {
+      "title": "Ningú no ho pot activar per tu",
+      "body": "Cinc persones, cinc controls independents. Qui paga el pla no té més poder sobre el que comparteixes que qualsevol altre. Pots deixar de compartir encara que la subscripció caduqui, perquè és una acció de privacitat i mai una funció de pagament."
+    },
+    {
+      "title": "Demanar és millor que rastrejar",
+      "body": "Quan necessitis saber on és algú, envia-li una sol·licitud d’ubicació. Veurà qui la demana i decidirà si l’accepta o la rebutja. No es pot obtenir la posició d’un familiar sense que hi doni el consentiment en aquell moment.",
+      "note": "El consentiment és el mecanisme, no una opció"
+    }
+  ],
+  "objections": [
+    {
+      "q": "És Life360 amb una altra marca?",
+      "a": "No. Aquí no es comparteix res per defecte. Cada membre controla el seu propi interruptor, la ubicació en directe pot caducar amb un temporitzador, l’historial és una decisió independent i preguntar on és algú vol dir enviar-li una sol·licitud que pot rebutjar."
+    },
+    {
+      "q": "El meu fill adolescent pot veure que el rastrejo?",
+      "a": "No hi ha res ocult per descobrir. Cadascú activa el que vol compartir i la pàgina de família mostra exactament qui comparteix la ubicació i qui no. El seguiment encobert no és una funció que oferim."
+    },
+    {
+      "q": "Què rep cada persona?",
+      "a": "Un compte de Dawarich complet: el seu propi mapa, línia de temps, viatges, estadístiques i anàlisi. Família permet compartir la ubicació entre cinc comptes independents, no que cinc persones entrin al mateix compte."
+    },
+    {
+      "q": "Què passa si caduca la subscripció del titular del pla?",
+      "a": "La família es conserva. Quan caduca la subscripció, els membres tornen als seus plans i, en renovar-la, es restaura. Ningú no perd l’accés al seu historial."
+    },
+    {
+      "q": "Cal pagar?",
+      "a": "No si l’allotges tu. Família funciona a la teva instància sense cost, perquè totes les funcions del producte Cloud de pagament s’executen al teu maquinari."
+    }
+  ],
+  "meta": {
+    "title": "Ubicació en família — Privada i amb consentiment",
+    "description": "Comparteix la ubicació amb fins a cinc familiars: control individual, temporitzadors, historial independent i sol·licituds. {price} o allotjament propi gratis.",
+    "ogTitle": "Ubicació en família sense vigilància",
+    "ogDescription": "Cinc persones, cinc controls independents. Ubicació en directe amb temporitzador, historial per separat i sol·licituds que cal acceptar. Res no es comparteix per defecte."
+  },
+  "familyPage": {
+    "text": "Comparteix la ubicació en família",
+    "em": "amb el consentiment de tothom.",
+    "title2": "Dissenyat perquè ningú no sigui vigilat per defecte",
+    "sub2": "Fins a cinc persones en un pla, cadascuna amb un compte complet de Dawarich i tot el control del que comparteix.",
+    "title3": "Què ens pregunten pares i parelles",
+    "title4": "Comparteix amb els de casa, sense intermediaris de dades",
+    "sub3": "{price} a l’any cobreix cinc persones a Dawarich Cloud. O executa el mateix al teu maquinari sense pagar res.",
+    "primaryLabel": "Comença un pla familiar"
+  },
+  "hero": {
+    "sub": "Les aplicacions de seguiment familiar donen per fet que cal vigilar tothom sempre. Dawarich parteix del contrari: no es comparteix res fins que la mateixa persona ho activa, es pot posar un límit de temps i, per saber on és algú, cal preguntar-li."
+  }
+}

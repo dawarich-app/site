@@ -1,0 +1,19 @@
+{
+  "primaryLabel": "Prova’l gratis durant 7 dies",
+  "selfHost": "Allotja’l gratis per sempre",
+  "reassurance": "Prova sense targeta · Reemborsament durant els 14 dies següents · Exporta-ho tot, quan vulguis",
+  "proofLabel": "En parlen a",
+  "publishers": {
+    "xda": "XDA Developers",
+    "makeUseOf": "MakeUseOf",
+    "ct": "c't Magazine",
+    "itsFoss": "It's FOSS"
+  },
+  "pricing": "Consulta els preus",
+  "guarantee": {
+    "trial": "7 dies gratis, sense targeta",
+    "refund": "Reemborsament durant 14 dies",
+    "export": "Exporta-ho tot, quan vulguis",
+    "selfHost": "O allotja’l tu gratis"
+  }
+}

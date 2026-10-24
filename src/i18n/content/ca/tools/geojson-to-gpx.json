@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "GeoJSON a GPX gratis — Dades geogràfiques en línia",
+    "description": "Converteix GeoJSON a GPX a l’instant. Convertidor gratuït i privat de dades geogràfiques que funciona al navegador, sense pujar fitxers.",
+    "keywords": "GeoJSON a GPX, convertidor GeoJSON, convertidor GPX, convertidor de dades geogràfiques, convertidor GPS",
+    "appName": "Convertidor de GeoJSON a GPX"
+  },
+  "h1": "Convertidor de GeoJSON a GPX",
+  "intro": "Converteix els fitxers GeoJSON a GPX a l’instant. Tot es processa al navegador: les dades no surten mai del dispositiu.",
+  "cards": [
+    {
+      "title": "Sobre el format GeoJSON",
+      "body": "GeoJSON és un format basat en JSON per codificar estructures de dades geogràfiques, molt utilitzat en aplicacions de mapes web."
+    },
+    {
+      "title": "Sobre el format GPX",
+      "body": "GPX (GPS Exchange Format) és el format XML estàndard de dades GPS, admès per la majoria de dispositius GPS i monitors d’activitat física."
+    },
+    {
+      "title": "Per què convertir GeoJSON a GPX?",
+      "items": [
+        "Importa dades de mapes web a dispositius GPS",
+        "Fes-lo servir amb aplicacions i dispositius d’activitat física",
+        "Compatible amb Garmin, Suunto i altres dispositius GPS",
+        "Format estàndard per a navegació a l’aire lliure"
+      ]
+    }
+  ],
+  "privacyBody": "Tota la conversió es fa al navegador. Les dades no surten mai del dispositiu."
+}

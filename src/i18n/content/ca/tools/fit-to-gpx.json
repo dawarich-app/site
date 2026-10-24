@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "FIT a GPX gratis — Activitats Garmin en línia",
+    "description": "Converteix Garmin FIT a GPX a l’instant. Convertidor gratuït i privat per a ciclisme, curses i activitats físiques, al navegador i sense pujar fitxers.",
+    "keywords": "FIT a GPX, convertidor FIT, convertidor Garmin, Garmin FIT a GPX, convertidor de fitxers esportius, GPX de ciclisme, GPX de curses, convertidor d’activitats, convertidor de rellotges Garmin, convertidor Garmin Edge",
+    "appName": "Convertidor de FIT a GPX"
+  },
+  "h1": "Convertidor de FIT a GPX",
+  "intro": "Converteix els fitxers d’activitat FIT de Garmin a GPX a l’instant. Tot es processa al navegador: les dades esportives no surten mai del dispositiu.",
+  "cards": [
+    {
+      "title": "Sobre el format FIT",
+      "body": "FIT (Flexible and Interoperable Data Transfer) és el format binari propietari de Garmin per desar dades d’activitat física. El fan servir rellotges Garmin, ciclocomputadors i altres dispositius esportius per desar entrenaments, rutes, freqüència cardíaca, potència i altres mètriques."
+    },
+    {
+      "title": "Sobre el format GPX",
+      "body": "GPX (GPS Exchange Format) és un estàndard XML obert de dades GPS. Té un ampli suport en plataformes esportives (Strava, Komoot), programari de mapes (Google Earth, QGIS) i aplicacions de navegació."
+    },
+    {
+      "title": "Per què convertir FIT a GPX?",
+      "items": [
+        "Importa activitats a plataformes que no admeten fitxers FIT",
+        "Comparteix rutes amb usuaris d’altres plataformes",
+        "Mira les dades en programari de mapes com Google Earth",
+        "Crea còpies de seguretat en un format obert i llegible per a persones",
+        "Edita o combina activitats amb eines compatibles amb GPX"
+      ]
+    },
+    {
+      "title": "Dispositius compatibles",
+      "body": "Aquest convertidor funciona amb fitxers FIT de:",
+      "items": [
+        "Rellotges Garmin (Forerunner, Fenix, Venu, Instinct, Enduro)",
+        "Ciclocomputadors Garmin (sèrie Edge)",
+        "Dispositius Wahoo (ELEMNT, TICKR)",
+        "Exportacions de Zwift",
+        "Ciclocomputadors Bryton",
+        "Dispositius Suunto (mitjançant exportació FIT)",
+        "Qualsevol dispositiu que exporti fitxers FIT estàndard"
+      ]
+    },
+    {
+      "title": "Quines dades es conserven?",
+      "body": "El convertidor conserva:",
+      "items": [
+        "Coordenades GPS (latitud, longitud)",
+        "Marques de temps",
+        "Dades d’elevació",
+        "Marcadors de volta (com a punts de pas)",
+        "Metadades d’activitat (tipus d’esport, distància, etc.)"
+      ]
+    }
+  ],
+  "privacyBody": "Tota la conversió es fa al navegador. Les dades d’activitat física no surten mai del dispositiu ni s’envien a cap servidor.",
+  "noGpsData": "No s’han trobat dades GPS al fitxer FIT. Pot estar malmès o contenir només dades de sensors sense coordenades GPS."
+}

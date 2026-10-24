@@ -1,0 +1,11 @@
+{
+  "buttonLabel": "Apunta-m’hi",
+  "note": "Sense correu brossa: només l’avís de llançament.",
+  "invalidEmail": "Introdueix una adreça electrònica vàlida.",
+  "requestError": "Alguna cosa ha fallat. Torna-ho a provar més tard.",
+  "success": "Ja ets a la llista! T’enviarem un correu quan es llanci Família.",
+  "networkError": "Error de xarxa. Comprova la connexió i torna-ho a provar.",
+  "joining": "S’està afegint…",
+  "emailPlaceholder": "you@example.com",
+  "emailLabel": "Adreça electrònica"
+}

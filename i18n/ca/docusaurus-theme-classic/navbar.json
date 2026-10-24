@@ -4,27 +4,27 @@
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "Dawarich Logo",
+    "message": "Logotip de Dawarich",
     "description": "The alt text of navbar logo"
   },
   "item.label.Features": {
-    "message": "Features",
+    "message": "Funcions",
     "description": "Navbar item with label Features"
   },
   "item.label.Pricing": {
-    "message": "Pricing",
+    "message": "Preus",
     "description": "Navbar item with label Pricing"
   },
   "item.label.Self-Hosted": {
-    "message": "Self-Hosted",
+    "message": "Allotjament propi",
     "description": "Navbar item with label Self-Hosted"
   },
   "item.label.Tools": {
-    "message": "Tools",
+    "message": "Eines",
     "description": "Navbar item with label Tools"
   },
   "item.label.Roadmap": {
-    "message": "Roadmap",
+    "message": "Full de ruta",
     "description": "Navbar item with label Roadmap"
   },
   "item.label.Blog": {
@@ -32,63 +32,63 @@
     "description": "Navbar item with label Blog"
   },
   "item.label.Mobile Apps": {
-    "message": "Mobile Apps",
+    "message": "Aplicacions mòbils",
     "description": "Navbar item with label Mobile Apps"
   },
   "item.label.Community": {
-    "message": "Community",
+    "message": "Comunitat",
     "description": "Navbar item with label Community"
   },
   "item.label.Sign in": {
-    "message": "Sign in",
+    "message": "Inicia la sessió",
     "description": "Navbar item with label Sign in"
   },
   "item.label.Interactive Map": {
-    "message": "Interactive Map",
+    "message": "Mapa interactiu",
     "description": "Navbar item with label Interactive Map"
   },
   "item.label.Trips & Journaling": {
-    "message": "Trips & Journaling",
+    "message": "Viatges i diari",
     "description": "Navbar item with label Trips & Journaling"
   },
   "item.label.Statistics & Analytics": {
-    "message": "Statistics & Analytics",
+    "message": "Estadístiques i anàlisi",
     "description": "Navbar item with label Statistics & Analytics"
   },
   "item.label.Location Tracking": {
-    "message": "Location Tracking",
+    "message": "Seguiment d’ubicació",
     "description": "Navbar item with label Location Tracking"
   },
   "item.label.Import & Export": {
-    "message": "Import & Export",
+    "message": "Importació i exportació",
     "description": "Navbar item with label Import & Export"
   },
   "item.label.Photo Integrations": {
-    "message": "Photo Integrations",
+    "message": "Integracions de fotos",
     "description": "Navbar item with label Photo Integrations"
   },
   "item.label.Location Sharing": {
-    "message": "Location Sharing",
+    "message": "Comparteix la ubicació",
     "description": "Navbar item with label Location Sharing"
   },
   "item.label.Family Location Sharing": {
-    "message": "Family Location Sharing",
+    "message": "Ubicació en família",
     "description": "Navbar item with label Family Location Sharing"
   },
   "item.label.Tax Residency Day Counter": {
-    "message": "Tax Residency Day Counter",
+    "message": "Comptador de dies de residència fiscal",
     "description": "Navbar item with label Tax Residency Day Counter"
   },
   "item.label.Map Poster Studio": {
-    "message": "Map Poster Studio",
+    "message": "Estudi de pòsters de mapes",
     "description": "Navbar item with label Map Poster Studio"
   },
   "item.label.Dawarich for iOS": {
-    "message": "Dawarich for iOS",
+    "message": "Dawarich per a iOS",
     "description": "Navbar item with label Dawarich for iOS"
   },
   "item.label.Dawarich for Android": {
-    "message": "Dawarich for Android",
+    "message": "Dawarich per a Android",
     "description": "Navbar item with label Dawarich for Android"
   }
 }

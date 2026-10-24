@@ -1,0 +1,110 @@
+{
+  "showcaseItems": [
+    {
+      "title": "Anàlisi mensual i anual",
+      "description": "Rep resums automàtics de les dades d’ubicació per mes i any. Descobreix tendències, patrons i moments destacats de cada període."
+    },
+    {
+      "title": "Ciutats i països visitats",
+      "description": "Registra tots els països on has estat amb recompte i visualització automàtics. Ideal per als amants dels viatges que col·leccionen segells al passaport."
+    },
+    {
+      "title": "Distància total",
+      "description": "Calcula la distància total recorreguda a partir de totes les dades d’ubicació registrades. Mira fins on has arribat al llarg del temps."
+    },
+    {
+      "title": "Resums per correu",
+      "description": "Rep correus de resum mensuals i anuals automàtics amb els teus assoliments i estadístiques de viatge."
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Registre automàtic",
+      "description": "Les estadístiques es calculen automàticament en segon pla cada hora mentre registres la ubicació.",
+      "details": [
+        "No cal introduir dades manualment",
+        "S’actualitza automàticament",
+        "Les dades històriques es processen contínuament"
+      ]
+    },
+    {
+      "title": "Consulta les estadístiques",
+      "description": "Ves a la pàgina d’Estadístiques per veure l’anàlisi completa de la teva ubicació.",
+      "details": [
+        "Resum general a dalt",
+        "Fes clic en un any per veure’n les estadístiques detallades",
+        "Fes clic en un mes per veure’l al mapa"
+      ]
+    },
+    {
+      "title": "Explora al mapa",
+      "description": "Fes servir els enllaços [Mapa] per visualitzar les estadístiques geogràficament.",
+      "details": [
+        "Fes clic a [Mapa] al costat d’un any",
+        "Consulta les dades mensuals al mapa interactiu",
+        "Mira totes les rutes i els punts"
+      ]
+    },
+    {
+      "title": "Actualitzacions manuals",
+      "description": "Força una actualització immediata quan vulguis amb el botó «Actualitza les estadístiques».",
+      "details": [
+        "Fes clic a «Actualitza les estadístiques» per actualitzar-les ara",
+        "Normalment es completa en uns minuts",
+        "Útil després d’importar conjunts de dades grans"
+      ]
+    }
+  ],
+  "shareFeatures": [
+    {
+      "title": "Enllaços per compartir",
+      "description": "Genera enllaços públics per compartir els resums anuals amb amics i família, mantenint privades la resta de dades."
+    },
+    {
+      "title": "Respecte per la privacitat",
+      "description": "Tu decideixes què comparteixes. Només són visibles les estadístiques compartides; tota la resta continua sent privada."
+    }
+  ],
+  "meta": {
+    "title": "Estadístiques i anàlisi d’ubicació",
+    "description": "La teva vida en xifres amb estadístiques d’ubicació completes. Països, ciutats, distàncies i resums mensuals i anuals per correu.",
+    "ogTitle": "Estadístiques de Dawarich — La teva vida en xifres",
+    "ogDescription": "Estadístiques d’ubicació completes: països visitats, distància total, registre del temps i resums mensuals i anuals automàtics per correu."
+  },
+  "hero": {
+    "badge": "Dades i anàlisi",
+    "title": "La teva vida en",
+    "titleHighlight": "xifres",
+    "subtitle": "Transforma les dades d’ubicació en informació útil. Descobreix patrons, segueix els assoliments i celebra fites amb estadístiques completes que s’actualitzen automàticament cada hora.",
+    "imageAlt": "Tauler d’estadístiques completes"
+  },
+  "statsPage": {
+    "heading": "Què pots registrar",
+    "h3": "Estadístiques globals",
+    "li": "Països visitats",
+    "li2": "Ciutats explorades",
+    "li3": "Distància total recorreguda",
+    "h32": "Estadístiques per període",
+    "li4": "Resums anuals",
+    "li5": "Desglossaments mensuals",
+    "li6": "Períodes més actius",
+    "title3": "Anàlisi completa",
+    "subtitle2": "Tot el que necessites per entendre el teu historial d’ubicacions d’un cop d’ull.",
+    "heading2": "Comparteix els teus assoliments",
+    "p": "Celebra les fites dels viatges compartint resums anuals sense revelar les dades detallades.",
+    "title4": "Com funciona",
+    "subtitle3": "Les estadístiques es calculen automàticament, sense feina manual.",
+    "heading3": "Per què són importants les estadístiques",
+    "h33": "Motivació",
+    "p2": "Veure els assoliments dels viatges en xifres et motiva a explorar més i fixar nous objectius.",
+    "h34": "Entén els teus hàbits",
+    "p3": "Descobreix patrons en els teus moviments i entén com reparteixes el temps entre ubicacions.",
+    "h35": "Resum anual de records",
+    "p4": "Rep resums anuals que t’ajuden a recordar i celebrar les aventures i experiències.",
+    "heading4": "Comença a registrar les teves estadístiques",
+    "p5": "Comença avui a crear les teves estadístiques d’ubicació amb una prova gratuïta de 7 dies. Cancel·la quan vulguis.",
+    "Link": "Prova’l gratis durant 7 dies",
+    "EnOnlyLink": "Allotja’l gratis",
+    "p6": "Prova gratuïta de 7 dies · Reemborsament sense risc durant 14 dies · Cancel·la quan vulguis"
+  }
+}

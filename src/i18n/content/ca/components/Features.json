@@ -1,0 +1,32 @@
+{
+  "features": [
+    {
+      "title": "Reviu qualsevol dia, minut a minut",
+      "description": "Tria una data. Cada parada, cada ruta, cada minut, tot d’un cop d’ull. La vista detallada de la línia de temps que Google va eliminar discretament."
+    },
+    {
+      "title": "Respon «On era?» a l’instant",
+      "description": "Escriu una data. Mira exactament on eres, quina ruta vas fer i quant de temps t’hi vas quedar. Cada viatge, desplaçament quotidià i desviament, consultable per sempre."
+    },
+    {
+      "title": "Reviu qualsevol viatge amb detall",
+      "description": "Tria un interval de dates. Dawarich crea el mapa, calcula la distància i dibuixa la ruta. Afegeix-hi fotos i es converteix en un diari de viatge."
+    },
+    {
+      "title": "La teva vida en xifres",
+      "description": "Quants països. Quants quilòmetres. La ciutat més visitada. Patrons mensuals que no havies detectat. Comparteix les estadístiques amb un sol enllaç."
+    },
+    {
+      "title": "Segueix el teu progrés pel món",
+      "description": "Mira com s’il·luminen els països a mesura que els visites. Descobreix què et falta. Planifica el següent destí."
+    },
+    {
+      "title": "Entén els teus hàbits",
+      "description": "Viatges menys que l’any passat? Passes més temps en una ciutat? Dawarich detecta tendències que no descobriries pel teu compte."
+    }
+  ],
+  "title": "Tot el que Google Timeline hauria d’haver estat",
+  "subtitle": "Totes les funcions que t’agradaven, sense renunciar a la privacitat.",
+  "ariaLabel": "Tanca la imatge",
+  "viewFullSize": "Mostra {title} a mida completa"
+}

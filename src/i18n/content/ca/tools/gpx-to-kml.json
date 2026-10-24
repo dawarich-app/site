@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "title": "GPX a KML gratis — Trajectes GPS en línia",
+    "description": "Converteix GPX a KML a l’instant. Convertidor gratuït i privat de trajectes, punts de pas i rutes GPS al navegador, sense pujar fitxers.",
+    "keywords": "GPX a KML, convertidor GPX, convertidor KML, convertidor de fitxers GPS, convertidor Google Earth, convertidor de trajectes",
+    "appName": "Convertidor de GPX a KML"
+  },
+  "h1": "Convertidor de GPX a KML",
+  "intro": "Converteix els fitxers GPX a KML a l’instant. Tot es processa al navegador: les dades no surten mai del dispositiu.",
+  "cards": [],
+  "privacyBody": "Tota la conversió es fa al navegador. Les dades GPS no surten mai del dispositiu."
+}

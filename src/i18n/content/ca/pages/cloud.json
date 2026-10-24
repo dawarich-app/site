@@ -1,0 +1,105 @@
+{
+  "howItWorksSteps": [
+    {
+      "title": "Registra’t",
+      "description": "Correu, contrasenya i llestos. 90 segons. Prova gratuïta de 7 dies amb totes les funcions."
+    },
+    {
+      "title": "Importa el teu passat",
+      "description": "Arrossega el zip de Google Takeout, registres d’OwnTracks, fitxers GPX o qualsevol dels més de 15 formats. Mira com es reconstrueix el teu historial en un mapa."
+    },
+    {
+      "title": "Continua registrant",
+      "description": "Instal·la l’aplicació per a iOS o Android. El seguiment en segon pla comença automàticament. Els viatges, els mapes de calor i les estadístiques s’actualitzen en temps real."
+    }
+  ],
+  "painSection": {
+    "heading": "Les teves dades d’ubicació són en un d’aquests tres llocs.",
+    "p": "Cap no et dona el control.",
+    "div": "A Google",
+    "p2": "Una dècada alimentant la publicitat dirigida. Ara Timeline ha quedat aïllat al telèfon, sense còpies de seguretat al núvol d’ara endavant.",
+    "div2": "A Life360",
+    "p3": "Venudes als anunciants com a «anàlisi agregada». Llegeix [la investigació de The Markup](https://themarkup.org/privacy/2022/01/27/life360-said-it-stopped-selling-precise-location-data-but-the-data-still-flows) si en dubtes.",
+    "div3": "Enlloc",
+    "p4": "Perquè totes les alternatives respectuoses amb la privacitat et demanaven aprendre Docker abans de començar. I no vas arribar a fer-ho."
+  },
+  "differentiators": {
+    "heading": "Què fa que Dawarich sigui diferent",
+    "p": "L’allotjament i les còpies de seguretat són el mínim. Això va més enllà.",
+    "h3": "Dades residents a la UE",
+    "p2": "Allotjat a Hetzner, a Alemanya. Sense transferències als EUA. Sense PRISM, sense Patriot Act ni notes al peu que diguin «cooperem amb les autoritats dels EUA».",
+    "h32": "Una sortida de codi obert",
+    "p3": "Tot el motor de Dawarich és a [GitHub](https://github.com/Freika/dawarich), amb MÉS DE 9,000 estrelles. Si mai tanquem, pots allotjar el mateix programari amb una sola ordre i importar-hi les dades que has exportat.",
+    "h33": "Més de 15 formats d’importació",
+    "p4": "La majoria de competidors només importen les seves pròpies dades. Nosaltres les de tothom: Google, Strava, Garmin, Apple Health, OwnTracks i una dotzena més.",
+    "h34": "L’historial de tota una vida, més enllà de l’esport",
+    "p5": "Strava coneix les teves curses. Polarsteps coneix els teus viatges. Nosaltres coneixem tots els llocs on has estat.",
+    "h35": "Un producte de visualització de debò",
+    "p6": "Mapes de calor, boira de guerra, vista del globus, detecció automàtica de viatges i resum anual. Molt més que un punt al mapa.",
+    "h36": "Integració de fotos",
+    "p7": "Connecta Immich o PhotoPrism: les fotos apareixen al mapa al costat del lloc on les vas fer."
+  },
+  "competitorReframe": {
+    "heading": "Per què pagar pel que Google «regalava»?",
+    "p": "Gratis no volia dir sense cost. Pagaves amb dades: cada cafeteria, cada excursió de diumenge, cada trajecte nocturn alimentava el perfil que Google feia de tu.",
+    "p2": "Aquestes són les opcions reals:",
+    "th": "Servei",
+    "th2": "Cost anual",
+    "th3": "Què fa",
+    "th4": "Què fan amb les teves dades",
+    "td": "Google Timeline",
+    "td2": "«Gratis»",
+    "td3": "Eliminat del web, només al telèfon",
+    "td4": "Una dècada entrenant la publicitat dirigida",
+    "td5": "Life360 Gold",
+    "td6": "Només ubicació familiar en directe",
+    "td7": "Venda de dades d’ubicació agregades",
+    "td8": "Strava Premium",
+    "td9": "Només entrenaments, sense historial de tota una vida",
+    "td10": "Activitats públiques per defecte",
+    "td11": "Dawarich Cloud Pro",
+    "td12": "Historial complet, mapes de calor, viatges i estadístiques",
+    "td13": "Res. Mai.",
+    "text": "Cobrem menys del que Life360 cobra per ",
+    "em": "vendre",
+    "text2": " les teves dades."
+  },
+  "promises": {
+    "heading": "La promesa que no hi perds",
+    "p": "«Confia’ns les teves dades d’ubicació» és demanar molt. Per això et prometem:",
+    "h3": "Prova gratuïta de 7 dies",
+    "p2": "Totes les funcions durant una setmana. Si no és per a tu, cancel·la des de la configuració de la subscripció: les exportacions continuen sent teves.",
+    "h32": "Cancel·la quan vulguis",
+    "p3": "Sense penalitzacions per permanència anual, comissions de sortida ni correus de «n’estàs segur?».",
+    "h33": "Exporta quan vulguis",
+    "p4": "Cada byte de les teves dades, exportable en GPX, GeoJSON, KML o JSON en brut, amb qualsevol pla, per sempre.",
+    "p5": "Si Dawarich Cloud mai tanca, pots allotjar el mateix programari i importar-hi les dades exportades. **Literalment no podem retenir les teves dades.**"
+  },
+  "cloudFinalCTA": {
+    "heading": "Deixa de llogar els teus records a empreses que no se’n preocupen.",
+    "p": "El teu historial d’ubicacions és el mapa de la teva vida. Els llocs on et vas enamorar. El viatge de l’any que la teva mare es va posar malalta. La ruta que feies en bici a la primera feina.",
+    "text": "Comença la prova gratuïta de 7 dies",
+    "span": "Prova gratuïta de 7 dies · Cancel·la quan vulguis · O [allotja la versió de codi obert](https://github.com/Freika/dawarich) si ho prefereixes. Donem suport a totes dues opcions. Sempre ho farem."
+  },
+  "cloudPage": {
+    "text": "Consulta els preus"
+  },
+  "meta": {
+    "title": "Dawarich Cloud — El teu historial d’ubicacions privat",
+    "description": "Google Takeout, Strava, Garmin i 12 més; mapes de calor, viatges i estadístiques. Dades privades a Alemanya, sense vendre-les. Des de {price}. 7 dies gratis.",
+    "ogDescription": "Historial d’ubicacions privat allotjat a Alemanya. Mapes de calor, viatges i estadístiques, sense vendre les dades. Des de {price}. Prova gratuïta de 7 dies.",
+    "twitterDescription": "Historial d’ubicacions privat allotjat a Alemanya. Mapes de calor, viatges i estadístiques, sense vendre les teves dades."
+  },
+  "hero": {
+    "badge": "Historial d’ubicacions amb privacitat",
+    "title": "El teu historial d’ubicacions.",
+    "titleHighlight": "Privat. Permanent.",
+    "subtitle": "Mapes de calor, viatges i estadístiques de tots els llocs on has estat, sense alimentar la maquinària publicitària de Google, els intermediaris de dades de Life360 ni el teu Raspberry Pi.",
+    "disclaimer": "Prova gratuïta de 7 dies · Cancel·la quan vulguis · Les dades continuen sent teves, en formats estàndard",
+    "imageAlt": "Vista de la línia de temps de Dawarich amb una dècada d’historial d’ubicacions"
+  },
+  "howItWorks": {
+    "title": "Com funciona",
+    "subtitle": "Tres passos. No n’hi ha cap quart."
+  }
+}

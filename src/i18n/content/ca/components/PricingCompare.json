@@ -1,0 +1,23 @@
+{
+  "cols": [
+    {
+      "name": "Lite"
+    },
+    {
+      "name": "Pro"
+    },
+    {
+      "name": "Família"
+    }
+  ],
+  "title": "Compara totes les funcions",
+  "subtitle": "Desplega una secció per veure’n els detalls o mostra només les diferències entre plans.",
+  "collapseAll": "Plega-ho tot",
+  "expandAll": "Desplega-ho tot",
+  "headerFeatures": "Funcions",
+  "footerLabel": "Tot a punt quan tu vulguis",
+  "chooseLite": "Tria Lite",
+  "startFree": "Comença gratis",
+  "yearAbbreviation": "/any",
+  "highlightDifferences": "Destaca les diferències"
+}

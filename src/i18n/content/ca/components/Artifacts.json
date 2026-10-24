@@ -1,0 +1,88 @@
+{
+  "posterThemes": {
+    "arialabel": "Amplia el pòster {name}",
+    "alt": "Pòster de la ruta de Berlín amb el tema {name}"
+  },
+  "posterStudioShot": {
+    "alt": "Poster Studio amb una ruta i controls de composició, tema i text"
+  },
+  "exportFormats": {
+    "groups": [
+      {
+        "label": "Impressió · 12",
+        "items": [
+          "A5",
+          "A4",
+          "A3",
+          "A2",
+          "A1",
+          "A0",
+          "30 × 40 cm",
+          "50 × 70 cm",
+          "70 × 100 cm",
+          "Carta (EUA)",
+          "A4 horitzontal",
+          "A3 horitzontal"
+        ]
+      },
+      {
+        "label": "Xarxes socials · 5",
+        "items": [
+          "Quadrat d’Instagram",
+          "Retrat d’Instagram",
+          "Història (9:16)",
+          "Capçalera d’X",
+          "Miniatura de YouTube"
+        ]
+      },
+      {
+        "label": "Fons de pantalla · 5",
+        "items": [
+          "Escriptori Full HD",
+          "Escriptori 4K",
+          "Escriptori ultrapanoràmic",
+          "Telèfon",
+          "Tauleta"
+        ]
+      }
+    ]
+  },
+  "shareTargets": {
+    "items": [
+      "Un interval de dates",
+      "Ubicació en directe",
+      "Un trajecte",
+      "Un viatge",
+      "Un mes d’estadístiques",
+      "Un resum anual"
+    ],
+    "p": "Sis elements, sis enllaços independents"
+  },
+  "familySharingShot": {
+    "alt": "Controls per compartir en família: ubicació en directe activada durant sis hores amb el temps restant, i historial d’ubicacions amb un control independent configurat per als darrers 7 dies"
+  },
+  "familyMembersShot": {
+    "alt": "Llista de membres de la família amb dues persones que comparteixen la ubicació i dues que no, cadascuna amb un botó de sol·licitud"
+  },
+  "familyPageShot": {
+    "alt": "La pàgina de família de Dawarich: un mapa compartit al costat dels controls per compartir, la llista de membres i les invitacions"
+  },
+  "familyRequestShot": {
+    "alt": "Dos membres de la família amb l’estat No comparteix i un botó de sol·licitud al costat"
+  },
+  "residencyCountriesShot": {
+    "alt": "Targeta de països amb els dies per país de 2023: Alemanya, 353 dies i un 96.7%, amb un avís de llindar, seguida de Bèlgica, Grècia, Suïssa, Dinamarca, França i Polònia"
+  },
+  "residencyStaysShot": {
+    "alt": "Alemanya desplegada amb vuit períodes d’estada consecutius durant 2023, cadascun amb les dates i la durada"
+  },
+  "residencyCalendarShot": {
+    "alt": "Mapa de calor en forma de calendari anual amb un color per país i una llegenda amb els noms"
+  },
+  "shareHubShot": {
+    "alt": "Centre de compartició: un enllaç públic i la seva frase màgica, dotze visualitzacions i botons per regenerar l’URL, regenerar la frase o revocar l’enllaç"
+  },
+  "shareFormShot": {
+    "alt": "Creació d’un enllaç per compartir: dates d’inici i final, una frase màgica opcional, caducitat d’una setmana per defecte i el control Mostra les fotos desactivat"
+  }
+}

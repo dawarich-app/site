@@ -1,0 +1,155 @@
+{
+  "howItWorksSteps": [
+    {
+      "title": "Exporta des de Google",
+      "description": "Ves a [takeout.google.com](https://takeout.google.com), tria «Historial d’ubicacions (Timeline)» i demana l’exportació. Google t’envia un zip per correu, normalment en una hora."
+    },
+    {
+      "title": "Registra’t a Dawarich Cloud",
+      "description": "Correu i contrasenya. Prova gratuïta de 7 dies amb totes les funcions."
+    },
+    {
+      "title": "Arrossega i deixa anar el zip",
+      "description": "Puja’l. Mira com es reconstrueix la teva línia de temps: punt a punt, viatge a viatge, any a any, en un mapa que no pertany a Google."
+    }
+  ],
+  "migrationFAQ": [
+    {
+      "question": "Funciona amb el nou format de Google Takeout?",
+      "answer": "Sí. Admetem el nou format de Timeline (posterior a 2024), l’antic i l’alternativa heretada records.json."
+    },
+    {
+      "question": "I si el zip de Takeout és enorme?",
+      "answer": "La importació el pot gestionar. Hem importat sense problemes arxius de Takeout de 2 GB amb 15 anys i 6.8 milions de punts."
+    },
+    {
+      "question": "Funciona si Google ha esborrat algunes dades?",
+      "answer": "Tot el que puguis exportar, ho podem importar. No podem recuperar dades que Google ja ha esborrat, però podem desar allò a què encara tens accés."
+    },
+    {
+      "question": "Puc continuar fent servir Google Maps després de migrar?",
+      "answer": "Sí. Fes servir Google Maps per navegar i Dawarich per conservar el registre d’on has estat. Són productes diferents."
+    },
+    {
+      "question": "Dawarich em farà un seguiment tan bo com Google?",
+      "answer": "Sincerament? Millor. Aplicacions natives per a iOS i Android amb seguiment en segon pla i intervals que estalvien bateria. Les dades van per HTTPS al teu compte de Dawarich, mai a Google ni a tercers."
+    },
+    {
+      "question": "I si més endavant vull deixar Dawarich?",
+      "answer": "Exporta-ho tot a GPX, GeoJSON o KML amb qualsevol pla, fins i tot Lite. Allotja la versió de codi obert. O simplement elimina el compte: les dades marxen amb tu, mai no es venen ni es retenen."
+    },
+    {
+      "question": "La prova és realment gratuïta?",
+      "answer": "Sí. Prova gratuïta de 7 dies amb totes les funcions. Cancel·la quan vulguis des de la configuració de la subscripció: les exportacions continuen sent teves."
+    },
+    {
+      "question": "Veneu dades d’ubicació?",
+      "answer": "No. Som una petita empresa de la UE que guanya diners amb subscripcions. Vendre dades d’ubicació és il·legal segons el RGPD i preferim tenir un negoci de debò."
+    }
+  ],
+  "freeWasntFree": {
+    "heading": "«Però Google Timeline era gratis.»",
+    "p": "**Gratis no volia dir sense cost.** Pagaves amb dades.",
+    "p2": "Durant una dècada, cada lloc on anaves es registrava, s’analitzava, alimentava la publicitat dirigida de Google i entrenava els seus models. Cada cafeteria. Cada excursió de diumenge. Cada trajecte de nit a casa d’un amic. Aquest era el preu.",
+    "p3": "Ara Google ja n’ha extret el que volia. Timeline ha passat al telèfon, la versió al núvol ha desaparegut i el producte pel qual «no pagaves» s’està retirant perquè ja no dona beneficis.",
+    "p4": "No deus res a Google. I no cal que substitueixis un producte de vigilància finançat amb anuncis per un altre (sí, Life360, parlem de tu)."
+  },
+  "phoneIsNotABackup": {
+    "heading": "Ara la teva línia de temps pot desaparèixer amb una avaria",
+    "p": "Les dades de Timeline només són al dispositiu. Això vol dir:",
+    "div": "Dades dels telèfons antics",
+    "p2": "L’historial que no es va transferir? **Ha desaparegut.**",
+    "div2": "Telèfon actual, espatllat",
+    "p3": "Perdut, robat, al fons d’un llac o restablert de fàbrica? **Ha desaparegut.**",
+    "div3": "Consulta entre dispositius",
+    "p4": "Veure la línia de temps des d’una tauleta o portàtil? **S’ha acabat.**",
+    "div4": "Còpia de seguretat al núvol",
+    "p5": "De la teva línia de temps d’ara endavant? **S’ha acabat: ara és local.**",
+    "div5": "Historial al núvol (abans de la migració)",
+    "p6": "El que Google va desar durant anys per als usuaris que no van descarregar Takeout a temps? **Ja s’ha esborrat.**",
+    "div6": "El resultat",
+    "p7": "Tens una sola còpia de la línia de temps. Viu en una placa de vidre que es trenca si cau. **Això no és una estratègia de còpies de seguretat.**"
+  },
+  "differentiators": {
+    "heading": "Per què Dawarich és la llar adequada per a les teves dades de Timeline",
+    "p": "La majoria d’«alternatives a Google Timeline» són registres d’entrenament, diaris de viatge manuals, aplicacions de seguiment familiar que venen dades o solucions d’allotjament propi que requereixen un cap de setmana de Docker. Dawarich va per un altre camí.",
+    "h3": "Allotjat a la UE",
+    "p2": "Hetzner, Alemanya. Sense transferències als EUA. RGPD real, més enllà d’una nota al peu que diu «complim la normativa».",
+    "h32": "Codi obert",
+    "p3": "Tot el motor és a [GitHub](https://github.com/Freika/dawarich), amb MÉS DE 9,000 estrelles. Cloud hi afegeix comoditat: el producte de sota te’l pots endur i executar per sempre.",
+    "h33": "Fet per a qui deixa Timeline",
+    "text3": "Format nou, format antic i l’alternativa heretada ",
+    "code": "records.json",
+    "text4": ". Hem importat 15 anys de dades de Timeline, 6.8 milions de punts i un Takeout de 2 GB, sense cap problema.",
+    "h34": "Un producte de visualització, més enllà d’una base de dades",
+    "p4": "Mapes de calor. Boira de guerra. Vista del globus. Detecció de viatges. Resum anual. Allò que Timeline feia bé, i algunes coses que no.",
+    "h35": "Exportació permanent, sense dependències",
+    "p5": "GPX, GeoJSON, KML i JSON en brut. Les dades sempre marxen amb tu, amb qualsevol pla, fins i tot Lite.",
+    "h36": "Aplicacions de seguiment per a iOS i Android",
+    "p6": "Aplicacions natives amb seguiment en segon pla i intervals que estalvien bateria. Les dades van al teu compte de Dawarich, mai a Google ni a tercers."
+  },
+  "competitorReframe": {
+    "heading": "Entre què tries",
+    "th": "Opció",
+    "th2": "Cost anual",
+    "th3": "Recupera el teu Google Timeline?",
+    "th4": "Ven les teves dades?",
+    "td": "No fer res",
+    "td2": "«Gratis»",
+    "td3": "No: només al telèfon, a una caiguda de perdre’s",
+    "td4": "No s’aplica",
+    "td5": "Life360 Gold",
+    "td6": "No: seguiment familiar en directe, sense historial",
+    "td7": "Sí (agregades)",
+    "td8": "Strava Premium",
+    "td9": "No: només entrenaments",
+    "td10": "Activitats públiques",
+    "td11": "Dawarich Cloud Pro",
+    "td12": "Sí: importació completa de Takeout, mapes de calor i viatges",
+    "td13": "No. Mai."
+  },
+  "promises": {
+    "heading": "Dues promeses, cap risc",
+    "h3": "Cancel·la quan vulguis",
+    "p": "Prova gratuïta de 7 dies amb totes les funcions. Cancel·la quan vulguis des de la configuració de la subscripció: sense permanència anual, comissions de sortida ni complicacions. Les exportacions continuen sent teves amb qualsevol pla, fins i tot després de cancel·lar.",
+    "h32": "Una sortida de codi obert",
+    "p2": "Si Dawarich Cloud mai tanca, exporta les dades i allotja el mateix programari amb una sola ordre. Tot el motor és a [GitHub](https://github.com/Freika/dawarich), amb MÉS DE 9,000 estrelles. **És físicament impossible perdre la teva línia de temps pel fet de passar-te a nosaltres.**"
+  },
+  "urgency": {
+    "heading": "No és una urgència inventada. Els telèfons es trenquen.",
+    "p": "La teva línia de temps és en un dispositiu. **Un sol dispositiu.**",
+    "p2": "Els telèfons cauen, es roben, es perden, es mullen i es restableixen de fàbrica. Es canvien per models nous i les dades de Timeline no sempre es transfereixen bé. El termini d’exportació de Takeout depèn de l’activitat del compte de Google: els comptes inactius perden l’accés abans.",
+    "p3": "Cada setmana d’espera són dades que potser no recuperaràs. La migració triga 15 minuts. **Cap «més endavant» no és millor que «aquest vespre».**",
+    "text3": "Importa el teu Takeout aquest vespre"
+  },
+  "timelineFinalCTA": {
+    "heading": "La teva línia de temps no pertany a Google.",
+    "p": "Et pertany a tu. Als llocs on has viscut. A les persones que has visitat. Als viatges que vas fer abans que els telèfons sabessin recordar-los per tu.",
+    "text": "Desa la teva línia de temps avui",
+    "span": "Prova gratuïta de 7 dies · Cancel·la quan vulguis · Ja tens allotjament propi? [Importa el mateix Takeout a la teva instància](https://github.com/Freika/dawarich)."
+  },
+  "googleTimelineAlternativePage": {
+    "text": "Comença la prova gratuïta de 7 dies",
+    "text2": "Consulta els preus"
+  },
+  "meta": {
+    "title": "Alternativa a Google Timeline — Desa l’historial abans de perdre’l",
+    "description": "Importa Google Takeout a Dawarich Cloud en minuts. Mapes de calor, viatges i dades privades a Alemanya. Des de {price}. Prova de 7 dies.",
+    "ogDescription": "Google ha eliminat Timeline i ha deixat les dades només al dispositiu. Desa tot l’historial en minuts amb Dawarich Cloud: privat, allotjat a la UE i conforme amb el RGPD. Prova de 7 dies.",
+    "twitterTitle": "Alternativa a Google Timeline — Desa l’historial d’ubicacions",
+    "twitterDescription": "Google ha eliminat Timeline. Desa l’historial de manera privada amb Dawarich Cloud. Allotjat a la UE i conforme amb el RGPD. Prova gratuïta de 7 dies."
+  },
+  "hero": {
+    "badge": "Alternativa a Google Timeline",
+    "title": "Google ha eliminat Timeline.",
+    "titleHighlight": "No hi perdis tota una dècada.",
+    "subtitle": "Desa tot l’historial d’ubicacions de Google en minuts i continua registrant, en una infraestructura que Google no pot retirar, vendre ni fer servir per a models publicitaris. Allotjada a la UE. Xifrada en trànsit i en repòs. Conforme amb el RGPD.",
+    "disclaimer": "Prova gratuïta de 7 dies · Hem importat Takeouts de 15 anys i 6.8 milions de punts sense cap problema",
+    "imageAlt": "Vista de la línia de temps de Dawarich que substitueix Google Timeline"
+  },
+  "howItWorks": {
+    "title": "Com funciona la migració",
+    "subtitle": "Tres passos. Uns 15 minuts en total."
+  },
+  "migrationFAQTitle": "Preguntes habituals"
+}

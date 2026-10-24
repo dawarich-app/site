@@ -1,0 +1,158 @@
+{
+  "importFormats": [
+    {
+      "title": "Google Takeout",
+      "description": "Importa tot l’historial d’ubicacions de Google Maps Timeline. Porta anys de dades a Dawarich amb una sola pujada."
+    },
+    {
+      "title": "Apple Health i Fitness",
+      "description": "Importa fitxers GPX exportats d’Apple Health o Apple Fitness. Ideal per a usuaris d’iPhone."
+    },
+    {
+      "title": "Fitxers GPX",
+      "description": "Fitxers estàndard GPS Exchange Format de qualsevol font. El format universal per a dades d’ubicació."
+    },
+    {
+      "title": "Fitxers CSV",
+      "description": "Importa dades d’ubicació de fulls de càlcul o exportacions personalitzades en CSV amb assignació flexible de columnes."
+    },
+    {
+      "title": "Fitxers KML",
+      "description": "Importa fitxers Keyhole Markup Language de diverses aplicacions de mapes i dispositius GPS."
+    },
+    {
+      "title": "Metadades de fotos",
+      "description": "Extreu i importa les dades d’ubicació de les metadades EXIF de les teves col·leccions de fotos."
+    }
+  ],
+  "exportFormats": [
+    {
+      "title": "Exportació GPX",
+      "description": "Exporta les dades d’ubicació com a fitxers GPX compatibles amb qualsevol programari GPS o aplicació de mapes."
+    },
+    {
+      "title": "Exportació GeoJSON",
+      "description": "Obtén les dades en format GeoJSON per integrar-les fàcilment amb eines SIG i solucions de mapes personalitzades."
+    },
+    {
+      "title": "Exportació completa del compte",
+      "description": "Descarrega-ho tot: punts, visites, viatges, estadístiques i configuració. Portabilitat total de les dades."
+    }
+  ],
+  "importSteps": [
+    {
+      "title": "Puja el fitxer",
+      "description": "Ves a la pàgina d’Importacions de Dawarich i tria el fitxer.",
+      "details": [
+        "Fes clic al botó «Importació nova»",
+        "Tria els fitxers que vols pujar",
+        "Confirma per començar el processament",
+        "El format de les dades es reconeixerà automàticament"
+      ]
+    },
+    {
+      "title": "Processament",
+      "description": "Dawarich processa la importació en segon pla. Els fitxers grans poden trigar uns minuts.",
+      "details": [
+        "Es comprova que els punts siguin únics",
+        "No es creen entrades duplicades",
+        "La geocodificació inversa s’executa automàticament",
+        "Rebràs una notificació quan acabi la importació"
+      ]
+    },
+    {
+      "title": "Dades disponibles",
+      "description": "Un cop acabada, totes les dades importades apareixen al mapa i a les estadístiques.",
+      "details": [
+        "Mira els punts al mapa interactiu",
+        "Les estadístiques s’actualitzen automàticament",
+        "Crea viatges amb les dades importades",
+        "Cerca i filtra les ubicacions importades"
+      ]
+    }
+  ],
+  "exportSteps": [
+    {
+      "title": "Ves a Punts",
+      "description": "Ves a la pàgina de Punts del tauler de Dawarich."
+    },
+    {
+      "title": "Tria l’interval de dates",
+      "description": "Tria l’interval de dates de les dades que vols exportar i prem Cerca.",
+      "details": [
+        "Tria les dates d’inici i final",
+        "Fes clic a «Cerca» per filtrar els punts",
+        "Comprova que es vegin totes les dades que vols"
+      ]
+    },
+    {
+      "title": "Tria el format",
+      "description": "Fes clic al botó Exporta",
+      "details": [
+        "Tria entre GPX o GeoJSON",
+        "Exportació completa per a una còpia de seguretat total"
+      ]
+    },
+    {
+      "description": "Dawarich genera el fitxer d’exportació en segon pla.",
+      "details": [
+        "Les exportacions petites acaben a l’instant",
+        "Les exportacions grans poden trigar uns minuts",
+        "Pots continuar fent servir Dawarich"
+      ]
+    },
+    {
+      "title": "Descarrega",
+      "description": "Quan estigui a punt, descarrega el fitxer d’exportació.",
+      "details": [
+        "L’enllaç de descàrrega apareix a la pàgina d’Exportacions",
+        "Els fitxers es desen de manera segura",
+        "Torna’ls a descarregar quan vulguis"
+      ]
+    }
+  ],
+  "meta": {
+    "title": "Importa i exporta dades",
+    "description": "Les dades són teves. Importa de Google Takeout, GPX, CSV i KML. Exporta a GPX, CSV o tot el compte. Sense dependències.",
+    "ogTitle": "Importació i exportació de Dawarich — Les dades sota el teu control",
+    "ogDescription": "Importa de Google Maps, Apple Health, GPX, GeoJSON i KML. Exporta a qualsevol format. Portabilitat total de les dades sense dependències."
+  },
+  "hero": {
+    "badge": "Portabilitat de dades",
+    "title": "Les teves dades",
+    "titleHighlight": "et pertanyen",
+    "subtitle": "Importa l’historial d’ubicacions des de qualsevol lloc. Exporta’l quan vulguis, en qualsevol format. Dawarich defensa la portabilitat total sense dependències: tu tens sempre el control.",
+    "imageAlt": "Interfície d’importació i exportació"
+  },
+  "importExportPage": {
+    "heading": "La nostra filosofia de dades",
+    "h3": "Sense dependències",
+    "p": "Exporta totes les dades quan vulguis. Mai no hi estàs atrapat: canvia de servei o conserva la teva còpia de seguretat.",
+    "h32": "Migració fàcil",
+    "p2": "Vens de Google Maps Timeline o d’un altre servei de seguiment? Importa-ho tot fàcilment i continua on ho vas deixar.",
+    "h33": "Control total",
+    "p3": "Descarrega-ho tot: punts, visites, viatges, estadístiques i configuració. Tot el teu historial digital d’ubicacions et pertany.",
+    "title3": "Formats d’importació admesos",
+    "subtitle2": "Porta les dades d’ubicació de pràcticament qualsevol font a Dawarich.",
+    "title4": "Com funciona la importació",
+    "subtitle3": "Porta les dades històriques d’ubicació a Dawarich en uns passos senzills.",
+    "h34": "Eliminació intel·ligent de duplicats",
+    "p4": "Dawarich evita automàticament els punts duplicats. Tant si importes el mateix fitxer dues vegades com si l’aplicació envia la mateixa ubicació, cada punt únic només es desa un cop.",
+    "title5": "Formats d’exportació admesos",
+    "subtitle4": "Emporta’t les dades on vulguis, quan vulguis i en el format que necessitis.",
+    "title6": "Com funciona l’exportació",
+    "subtitle5": "Descarrega les dades d’ubicació de manera ràpida i segura.",
+    "heading2": "Per què és important importar i exportar",
+    "h35": "Canvi de servei",
+    "p5": "Migra fàcilment tot l’historial d’ubicacions de Google Maps Timeline o de qualsevol altre servei a Dawarich.",
+    "h36": "Còpies de seguretat periòdiques",
+    "p6": "Exporta les dades periòdicament per fer còpies de seguretat. Conserva còpies locals de tot l’historial d’ubicacions.",
+    "h37": "Multiplataforma",
+    "p7": "Fes servir les exportacions GPX en altres programes GPS, aplicacions de mapes o importa-les a altres plataformes.",
+    "heading3": "Les teves dades d’ubicació, a les teves mans",
+    "p8": "Comença amb un compte gratuït i importa avui l’historial d’ubicacions que ja tens.",
+    "Link": "Prova’l gratis durant 7 dies",
+    "EnOnlyLink": "Allotja’l gratis",
+    "p9": "Prova gratuïta de 7 dies · Reemborsament sense risc durant 14 dies · Cancel·la quan vulguis"
+  }
+}

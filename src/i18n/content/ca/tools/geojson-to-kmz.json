@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "GeoJSON a KMZ gratis — Dades geogràfiques en línia",
+    "description": "Converteix GeoJSON a KMZ a l’instant. Convertidor gratuït i privat que funciona al navegador, sense pujar fitxers.",
+    "keywords": "GeoJSON a KMZ, convertidor GeoJSON, convertidor KMZ, convertidor de dades geogràfiques, KML comprimit",
+    "appName": "Convertidor de GeoJSON a KMZ"
+  },
+  "h1": "Convertidor de GeoJSON a KMZ",
+  "intro": "Converteix els fitxers GeoJSON al format comprimit KMZ a l’instant. Tot es processa al navegador.",
+  "cards": [
+    {
+      "title": "Sobre el format GeoJSON",
+      "body": "GeoJSON és un format basat en JSON per a dades geogràfiques, habitual en aplicacions de mapes web i API."
+    },
+    {
+      "title": "Sobre el format KMZ",
+      "body": "KMZ és una versió comprimida de KML que en redueix la mida per facilitar-ne la compartició i accelerar-ne la càrrega a Google Earth."
+    },
+    {
+      "title": "Per què convertir GeoJSON a KMZ?",
+      "items": [
+        "Fitxers més petits per compartir més fàcilment",
+        "Suport natiu a Google Earth i Google Maps",
+        "Càrrega més ràpida en aplicacions de mapes",
+        "Pot incloure imatges i altres recursos"
+      ]
+    }
+  ],
+  "privacyBody": "Tota la conversió es fa al navegador. Les dades no surten mai del dispositiu."
+}

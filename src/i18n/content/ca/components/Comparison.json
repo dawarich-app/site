@@ -1,0 +1,84 @@
+{
+  "versusRows": [
+    {
+      "feature": "Accés des del navegador",
+      "g": {
+        "text": "Eliminat (només al mòbil)"
+      },
+      "d": {
+        "text": "Aplicació web completa"
+      }
+    },
+    {
+      "feature": "Conservació de dades",
+      "g": {
+        "text": "Limitada (s’esborren automàticament)"
+      },
+      "d": {
+        "text": "Per sempre (Pro)"
+      }
+    },
+    {
+      "feature": "Ús de les teves dades per a anuncis",
+      "g": {
+        "text": "Sí"
+      },
+      "d": {
+        "text": "Mai"
+      }
+    },
+    {
+      "feature": "Venda de dades a tercers",
+      "g": {
+        "text": "Sí (xarxa publicitària)"
+      },
+      "d": {
+        "text": "Mai"
+      }
+    },
+    {
+      "feature": "Exporta les teves dades",
+      "g": {
+        "text": "Parcial i complexa"
+      },
+      "d": {
+        "text": "Amb un clic, en qualsevol format"
+      }
+    },
+    {
+      "feature": "Opció d’allotjament propi",
+      "g": {
+        "text": "No"
+      },
+      "d": {
+        "text": "Sí — control total"
+      }
+    },
+    {
+      "feature": "Codi obert",
+      "g": {
+        "text": "No"
+      },
+      "d": {
+        "text": "Sí — examina cada línia"
+      }
+    },
+    {
+      "feature": "Funciona si l’empresa retira el producte",
+      "g": {
+        "text": "No"
+      },
+      "d": {
+        "text": "Sí (la instància pròpia continua)"
+      }
+    }
+  ],
+  "switchPill": " Fes el canvi",
+  "title": "Google Timeline i Dawarich",
+  "subtitle": "Descobreix què hi guanyes quan fas el canvi.",
+  "dawarichName": "DAWARICH",
+  "footNote": "Són les teves dades. Que continuïn sent teves.",
+  "footCta": "Passa’t a Dawarich",
+  "featureHeader": "Funció",
+  "googleTimelineHeader": "Google Timeline"
+}

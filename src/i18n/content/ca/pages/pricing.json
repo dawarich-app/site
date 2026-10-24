@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "Preus — Dawarich",
+    "description": "Dawarich Cloud: Lite {price}/any, Pro {price2}/mes, Família {price3}/any (≤5). 7 dies gratis i 14 de reemborsament. Cancel·la quan vulguis o allotja’l gratis.",
+    "socialDescription": "Lite {price}/any, Pro {price2}/mes o Família {price3}/any per a un màxim de 5 persones. Prova gratuïta de 7 dies i reemborsament durant 14 dies sense risc. O allotja’l gratis."
+  },
+  "schema": {
+    "name": "Dawarich Cloud",
+    "description": "Alternativa a Google Timeline centrada en la privacitat. Allotjat a Europa. Allotjament propi i codi obert.",
+    "brand": "Dawarich",
+    "liteAnnual": "Lite (anual)",
+    "proMonthly": "Pro (mensual)",
+    "proAnnual": "Pro (anual)",
+    "familyAnnual": "Família (anual)",
+    "familyDescription": "Una subscripció anual per a un màxim de 5 membres, cadascun amb accés Pro complet.",
+    "selfHosted": "Allotjament propi"
+  }
+}
