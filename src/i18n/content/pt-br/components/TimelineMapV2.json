@@ -1,0 +1,10 @@
+{
+  "unavailableTitle": "Mapa indisponível",
+  "unavailableBody": "Seu navegador não oferece suporte a WebGL, necessário para exibir o mapa.",
+  "webglLink": "[Saiba mais sobre WebGL](https://get.webgl.org)",
+  "exitFullscreen": "Sair da tela cheia",
+  "enterFullscreen": "Entrar em tela cheia",
+  "exitHint": "Sair da tela cheia (Esc)",
+  "toggleHint": "Alternar tela cheia (F)",
+  "demoLabel": "Dados de demonstração — solte seus arquivos acima"
+}

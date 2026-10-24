@@ -1,0 +1,261 @@
+{
+  "meta": {
+    "title": "Google Timeline — una históricos de localização",
+    "description": "Una exportações do Google Timeline com privacidade e remoção inteligente de duplicatas. Combine Records.json, Semantic History e exportações do celular.",
+    "keywords": "unir exportações google timeline, combinar arquivos de histórico de localização, recuperar dados google timeline, unir Records.json, combinar localização Google Takeout, unir semantic location history, unificador Google Timeline, remoção de duplicatas do histórico de localização, unir dados GPS",
+    "featureList": [
+      "Unir várias exportações do Google Timeline em um arquivo",
+      "Remoção inteligente de pontos de dados duplicados em períodos sobrepostos",
+      "Suporte a Records.json, Semantic Location History e exportações do celular",
+      "Limites ajustáveis de distância e tempo para remover duplicatas",
+      "Relatório visual de sobreposição da linha do tempo",
+      "Exportar como JSON ou GPX",
+      "Privacidade em primeiro lugar — processamento no navegador",
+      "Nenhum dado enviado a servidores"
+    ]
+  },
+  "howTo": {
+    "name": "Como unir exportações do Google Timeline",
+    "description": "Combine vários arquivos exportados do Google Timeline em um único conjunto de dados com remoção inteligente de duplicatas.",
+    "steps": [
+      {
+        "name": "Exporte seus dados do Google Timeline",
+        "text": "Use o Google Takeout, Android ou iOS para exportar seus dados do Google Timeline. Se possível, exporte usando vários métodos para garantir que você tenha todos os seus dados."
+      },
+      {
+        "name": "Carregue seus arquivos JSON",
+        "text": "Arraste e solte todos os seus arquivos JSON exportados do Google Timeline no unificador. A ferramenta detecta automaticamente os formatos Records.json, Semantic Location History e de exportação pelo celular."
+      },
+      {
+        "name": "Confira o resumo dos arquivos e as sobreposições",
+        "text": "Confira a tabela de resumo dos arquivos e a visualização da linha do tempo para ver onde seus arquivos se sobrepõem. A ferramenta mostra os períodos, a quantidade de pontos e os formatos detectados de cada arquivo."
+      },
+      {
+        "name": "Ajuste a remoção de duplicatas",
+        "text": "Defina o limite de distância (10-500 metros) e o limite de tempo (10-300 segundos) para remover duplicatas. Pontos que estejam dentro dos dois limites são considerados duplicados."
+      },
+      {
+        "name": "Una e exporte",
+        "text": "Clique em Unir arquivos para combinar todos os dados com remoção de duplicatas. Baixe o resultado como JSON (preserva todos os metadados) ou GPX (compatível com aplicativos de mapas)."
+      }
+    ],
+    "tool": "Unificador de dados do Google Timeline do Dawarich"
+  },
+  "h1": "Unificador de dados do Google Timeline",
+  "intro": "Una várias exportações do Google Timeline em um único arquivo. A remoção inteligente de duplicatas elimina pontos repetidos em períodos sobrepostos e preserva todos os registros únicos de localização. Grátis, com privacidade e inteiramente no navegador.",
+  "preCta": "Quer visualizar seus dados da linha do tempo primeiro? Experimente nosso [Visualizador do Google Timeline](/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) para explorar seu histórico de localização em um mapa interativo. Precisa de uma alternativa de longo prazo para a linha do tempo? O [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) dá a você controle total sobre seus dados.",
+  "faqTitle": "Perguntas frequentes",
+  "homeLabel": "Início",
+  "toolsLabel": "Ferramentas gratuitas",
+  "privacyTitle": "Privacidade em primeiro lugar",
+  "privacyBody": "Toda a união e a remoção de duplicatas acontecem no seu navegador. Seus dados de localização nunca saem do seu dispositivo e não são enviados a nenhum servidor.",
+  "benefitsTitle": "Por que unir exportações da linha do tempo?",
+  "benefitsIntro": "O Google oferece várias maneiras de exportar dados da linha do tempo, cada uma capturando informações diferentes. Combiná-las oferece o histórico de localização mais completo possível.",
+  "benefits": [
+    {
+      "title": "Vários métodos de exportação:",
+      "body": "O Google Takeout, a exportação pelo celular e o Semantic Location History contêm dados diferentes. Uni-los reúne tudo de cada fonte."
+    },
+    {
+      "title": "Recuperação de dados:",
+      "body": "Após a migração da linha do tempo do Google em 2024, muitos usuários têm exportações parciais de datas diferentes. Una-as para reconstruir o máximo possível do histórico."
+    },
+    {
+      "title": "Combine exportações antigas e novas:",
+      "body": "Exportou sua linha do tempo em 2022 e novamente em 2024? Una as duas exportações para ter cobertura contínua, sem registros duplicados."
+    }
+  ],
+  "settings": {
+    "title": "Configurações de remoção de duplicatas",
+    "intro": "Ajuste o rigor da detecção de pontos duplicados. Dois pontos são considerados duplicados quando a distância e o tempo entre eles estão dentro dos dois limites definidos. O ponto com metadados mais completos é mantido.",
+    "distanceLabel": "Limite de distância",
+    "distanceHint": "Pontos mais próximos do que esta distância podem ser duplicados (10m = rigoroso, 500m = agressivo)",
+    "timeLabel": "Limite de tempo",
+    "timeHint": "Pontos registrados dentro deste intervalo podem ser duplicados (10s = rigoroso, 300s = agressivo)"
+  },
+  "results": {
+    "file": "Arquivo",
+    "format": "Formato",
+    "points": "Pontos",
+    "paths": "Percursos",
+    "dateRange": "Período",
+    "dateCoverage": "Cobertura de datas",
+    "overlap": "Sobreposição",
+    "title": "Resultados da união",
+    "inputPoints": "Pontos de entrada",
+    "outputPoints": "Pontos de saída",
+    "duplicatesRemoved": "Duplicatas removidas",
+    "filesMerged": "Arquivos unidos",
+    "overlapDetails": "Detalhes da sobreposição",
+    "parsing": "Lendo arquivos carregados...",
+    "unknown": "desconhecido",
+    "noTimestamps": "Sem data e hora",
+    "none": "Nenhuma",
+    "downloadJson": "Baixar como JSON",
+    "downloadGpx": "Baixar como GPX",
+    "noDate": "N/D",
+    "merging": "Unindo...",
+    "uploadedFiles": "Arquivos carregados ({count})",
+    "distanceValue": "{distance}m",
+    "timeValue": "{seconds}s",
+    "filePair": "**{fileA}** e **{fileB}**",
+    "overlapRange": " se sobrepõem de {startDate} a {endDate}",
+    "overlapWith": "Sobreposição com {fileName}",
+    "mergeButton": "Unir {count} arquivo|Unir {count} arquivos|Unir {count} arquivos",
+    "dayCount": "{count} dia|{count} dias|{count} dias",
+    "parseError": "Erro ao ler {fileName}: {message}",
+    "processingError": "Erro ao processar arquivos: {message}",
+    "mergeError": "Erro ao unir arquivos: {message}"
+  },
+  "cta": {
+    "fallback": "Quer manter seus dados de localização unidos, seguros e sempre acessíveis? O Dawarich armazena seu histórico completo de localização com segurança.",
+    "postTitle": "Não corra mais o risco de perder seus dados de localização",
+    "postBody": "O Dawarich armazena tudo em centros de dados na União Europeia, com criptografia em trânsito (SSL/TLS) e em repouso (LUKS), backups completos e um mapa interativo. Importe seus dados unidos da linha do tempo e continue registrando automaticamente.",
+    "bottomTitle": "Procurando uma alternativa de longo prazo ao Google Timeline?",
+    "bottomBody": "O Dawarich é uma plataforma de código aberto para registro de localização que dá a você controle total sobre seus dados. Importe sua exportação unificada do Google Timeline, continue registrando sua localização pelo celular e visualize anos de histórico de deslocamentos — em hospedagem própria ou na nuvem.",
+    "button": "Teste o Dawarich grátis por 7 dias",
+    "headline": "Você combinou **{count}** arquivos com **{points}** pontos em um só. O Dawarich faz isso automaticamente com todas as suas fontes de GPS.",
+    "statLabels": {
+      "files": "arquivos",
+      "points": "pontos",
+      "duplicates": "duplicatas removidas"
+    }
+  },
+  "faq": [
+    {
+      "q": "É seguro carregar meus dados do Google Timeline?",
+      "a": "Sim. Todo o processamento acontece no seu navegador usando JavaScript. Seus arquivos de histórico de localização nunca são enviados a nenhum servidor. Eles são lidos localmente, processados, unidos e exportados sem nenhuma solicitação de rede. Ao fechar a aba, os dados são descartados. A ferramenta também tem código aberto, então você pode verificar o código."
+    },
+    {
+      "q": "Como funciona a remoção de duplicatas?",
+      "a": "O algoritmo de remoção de duplicatas ordena todos os pontos por data e hora e compara cada ponto com o anterior. Se dois pontos consecutivos estiverem dentro do limite de distância (padrão de 50 metros) e do limite de tempo (padrão de 60 segundos), a duplicata é removida. Quando uma duplicata é encontrada, o ponto com mais metadados (como nomes de lugares ou tipos de atividade) é mantido. Você pode ajustar os dois limites usando os controles deslizantes antes de unir."
+    },
+    {
+      "q": "Posso unir tipos de formato diferentes?",
+      "a": "Sim. O unificador aceita todos os formatos de exportação do Google Timeline: Records.json do Google Takeout, arquivos mensais Semantic Location History (como 2022_APRIL.json) e as exportações mais recentes da linha do tempo pelo celular com semanticSegments. Você pode usar qualquer combinação desses formatos. O leitor detecta automaticamente o formato de cada arquivo e normaliza os dados antes de unir."
+    },
+    {
+      "q": "O que acontece com os dados sobrepostos?",
+      "a": "Os dados sobrepostos são tratados na etapa de remoção de duplicatas. Quando dois arquivos cobrem o mesmo período, é provável que haja pontos de localização duplicados, registrados no mesmo lugar e horário. O unificador identifica essas duplicatas pela proximidade no espaço e no tempo e mantém apenas uma cópia de cada ponto (preferindo a cópia com metadados mais completos). O relatório de sobreposição mostra exatamente quais arquivos se sobrepõem e por quantos dias."
+    },
+    {
+      "q": "Vou perder algum dado ao unir os arquivos?",
+      "a": "Nenhum dado relevante é perdido. A remoção de duplicatas elimina apenas duplicatas reais: pontos que representam essencialmente o mesmo lugar, registrado no mesmo horário em várias fontes de exportação. Todos os pontos únicos, visitas a lugares, segmentos de atividade e percursos de cada arquivo são preservados na saída unificada. Para maior segurança, você pode definir o limite de distância como 0 para desativar completamente a remoção de duplicatas."
+    },
+    {
+      "q": "Quais formatos de exportação estão disponíveis?",
+      "a": "Você pode exportar os dados unidos como JSON (um array de todos os pontos de localização sem duplicatas, com metadados completos) ou como GPX (um formato GPS padrão compatível com a maioria dos aplicativos de mapas, monitores de atividade física e ferramentas GIS). A exportação JSON preserva todos os metadados originais, como nomes de lugares, endereços e tipos de atividade. A exportação GPX converte visitas a lugares em pontos de referência e registros de localização em pontos de trajeto."
+    },
+    {
+      "q": "Quantos arquivos posso unir de uma vez?",
+      "a": "Não há um limite fixo de arquivos. A ferramenta foi testada com mais de 10 arquivos ao mesmo tempo, incluindo arquivos Records.json grandes com centenas de milhares de pontos. O tempo de processamento depende do total de pontos de todos os arquivos e da capacidade de processamento do seu dispositivo. Uma união típica de 3-5 arquivos com 500,000 pontos no total leva de 10-30 segundos em um computador moderno."
+    }
+  ],
+  "cards": [
+    {
+      "title": "O que é o Unificador de dados da linha do tempo?",
+      "paragraphs": [
+        "O Unificador de dados da linha do tempo é uma ferramenta gratuita que funciona no navegador e combina vários arquivos exportados do Google Timeline em um único conjunto de dados. Ao exportar seu histórico de localização do Google usando métodos diferentes (Google Takeout, exportação pelo celular, Semantic History), você costuma acabar com arquivos de períodos sobrepostos que contêm pontos duplicados. Esta ferramenta os une de forma inteligente, removendo duplicatas e preservando cada registro único de localização.",
+        "Todo o processamento acontece localmente no seu navegador. Seus dados de localização nunca são transmitidos a nenhum servidor, tornando o uso seguro mesmo com anos de histórico pessoal de localização sensível."
+      ]
+    },
+    {
+      "title": "Como funciona a remoção de duplicatas",
+      "paragraphs": [
+        "O algoritmo usa dois fatores para identificar pontos de localização duplicados:"
+      ],
+      "items": [
+        {
+          "body": "**Proximidade espacial** -- Pontos dentro do limite de distância (padrão de 50 metros) são candidatos à remoção de duplicatas"
+        },
+        {
+          "body": "**Proximidade temporal** -- Os pontos também precisam estar dentro do limite de tempo (padrão de 60 segundos) para serem considerados duplicados"
+        },
+        {
+          "body": "**As duas condições são necessárias** -- Um ponto só é removido como duplicata se atender aos limites de distância E tempo"
+        },
+        {
+          "body": "**Preservação de metadados** -- Quando duplicatas são encontradas, a versão com mais metadados (nomes de lugares, endereços, tipos de atividade) é mantida"
+        }
+      ],
+      "footer": [
+        "Os pontos são ordenados cronologicamente antes da remoção de duplicatas, garantindo resultados consistentes independentemente da ordem de carregamento."
+      ]
+    },
+    {
+      "title": "Por que unir exportações da linha do tempo?",
+      "paragraphs": [
+        "Há várias situações comuns em que unir dados do Google Timeline é essencial:"
+      ],
+      "items": [
+        {
+          "body": "**Várias fontes de exportação** -- O Google Takeout, a exportação do Android e a do iOS capturam partes diferentes dos seus dados"
+        },
+        {
+          "body": "**Recuperação após a migração do Google em 2024** -- Quando o Google passou a armazenar a linha do tempo no próprio dispositivo, muitos usuários fizeram várias exportações parciais. Uni-las recupera o histórico mais completo possível"
+        },
+        {
+          "body": "**Backups periódicos** -- Se você exportou em 2021 e novamente em 2024, a união cria um conjunto contínuo de dados que abrange os dois períodos"
+        },
+        {
+          "body": "**Trocas de dispositivo** -- Trocou de celular? Una as exportações dos seus dispositivos antigo e novo"
+        }
+      ]
+    },
+    {
+      "title": "O que aconteceu com o Google Maps Timeline?",
+      "paragraphs": [
+        "No fim de 2024, o Google encerrou a versão web do Google Maps Timeline e passou a armazenar todos os dados de localização no próprio dispositivo. Apenas os últimos 90 dias de dados foram transferidos automaticamente para os celulares dos usuários. O histórico de localização mais antigo foi excluído permanentemente, a menos que os usuários o tivessem exportado manualmente antes do prazo.",
+        "Isso deixou milhões de usuários com dados fragmentados: exportações parciais do Takeout, exportações do celular com dados recentes e arquivos Semantic Location History de períodos diferentes. O Unificador de dados da linha do tempo ajuda a reunir esses fragmentos em um histórico de localização completo.",
+        "Para continuar registrando sua localização com controle total sobre seus dados, considere o [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-merger) como alternativa em hospedagem própria ou na nuvem."
+      ]
+    },
+    {
+      "title": "Formatos aceitos",
+      "paragraphs": [
+        "O unificador detecta e processa automaticamente todos os formatos de exportação do Google Timeline:"
+      ],
+      "items": [
+        {
+          "body": "**Records.json** -- Registros brutos de GPS do Google Takeout com coordenadas no formato E7. Esses arquivos costumam ser os maiores e contêm cada registro de localização"
+        },
+        {
+          "body": "**Semantic Location History** -- Arquivos mensais (por exemplo, 2022_APRIL.json) com visitas estruturadas a lugares, endereços e segmentos de atividade"
+        },
+        {
+          "body": "**Exportação da linha do tempo pelo celular** -- Formato mais recente do Google Maps no Android/iOS com semanticSegments e percursos da linha do tempo"
+        },
+        {
+          "body": "**Configurações e TimelineEdits** -- Arquivos adicionais de metadados das exportações do Google Takeout"
+        }
+      ],
+      "footer": [
+        "Você pode usar qualquer combinação desses formatos em uma única união."
+      ]
+    },
+    {
+      "title": "Ferramentas relacionadas",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Visualizador do Google Timeline](/tools/timeline-visualizer) -- Veja seu histórico de localização em um mapa interativo"
+        },
+        {
+          "body": "[Gerador de mapas de calor GPS](/tools/heatmap-generator) -- Crie mapas de calor com GPX, FIT, TCX e outros arquivos GPS"
+        },
+        {
+          "body": "[Unificador de trajetos GPX](/tools/gpx-merger) -- Una vários arquivos GPX em um só"
+        },
+        {
+          "body": "[Extração de geodados de fotos](/tools/photo-geotagging) -- Extraia coordenadas GPS das suas fotos"
+        },
+        {
+          "body": "[Conversor de GeoJSON para GPX](/tools/geojson-to-gpx) -- Converta dados de localização para o formato GPX"
+        }
+      ],
+      "footer": [
+        "Saiba mais: [Migrando do histórico de localização do Google](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}
