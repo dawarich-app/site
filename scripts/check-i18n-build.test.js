@@ -55,6 +55,11 @@ describe('checkLocalizedPage', () => {
     expect(checkLocalizedPage(page({ robots: 'noindex, follow' }), ctx)).toEqual(['localized page is noindex']);
   });
 
+  it('should allow JSON-LD links to English-only docs and legal pages', () => {
+    const jsonld = { url: 'https://dawarich.app/de/tools/x/', mainEntity: { url: 'https://dawarich.app/docs/self-hosting/introduction' } };
+    expect(checkLocalizedPage(page({ jsonld }), ctx)).toEqual([]);
+  });
+
   it('should report hreflang targets that were not built', () => {
     const errors = checkLocalizedPage(page(), { ...ctx, exists: (url) => !url.includes('/pt-br/') });
     expect(errors).toEqual(['hreflang pt-BR target missing: https://dawarich.app/pt-br/tools/x/']);

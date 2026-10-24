@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { DEFAULT_LOCALE, LOCALES, LOCALE_CONFIGS } from '../src/i18n/locales.js';
 import { LOCALIZED_ROUTES } from '../src/i18n/localizedRoutes.js';
 import { localizedUrl, SITE_URL } from '../src/i18n/localizedUrl.js';
+import { isEnOnlyPath } from '../src/i18n/enOnlyLinkProps.js';
 
 const attr = (tag, name) => tag.match(new RegExp(`${name}="([^"]*)"`))?.[1];
 const tags = (html, pattern) => html.match(new RegExp(pattern, 'g')) ?? [];
@@ -45,7 +46,8 @@ export function checkLocalizedPage(html, { route, locale, locales, htmlLang, eng
   if (locale !== DEFAULT_LOCALE && readTitle(html) === englishTitle) errors.push('title not translated');
   if (locale !== DEFAULT_LOCALE) {
     for (const url of jsonLdUrls(html)) {
-      if (!url.startsWith(`${SITE_URL}/${locale}/`)) errors.push(`JSON-LD url not localized: ${url}`);
+      if (url.startsWith(`${SITE_URL}/${locale}/`) || isEnOnlyPath(url.slice(SITE_URL.length))) continue;
+      errors.push(`JSON-LD url not localized: ${url}`);
     }
   }
   if (isNoindex(html)) errors.push('localized page is noindex');
