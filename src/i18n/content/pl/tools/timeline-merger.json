@@ -1,0 +1,261 @@
+{
+  "meta": {
+    "title": "Łączenie Google Timeline — scal historię lokalizacji",
+    "description": "Połącz eksporty Google Timeline w jeden plik z usuwaniem duplikatów. Obsługa Records.json, Semantic History i eksportów z telefonu. Prywatnie, w przeglądarce.",
+    "keywords": "łączenie eksportów Google Timeline, łączenie plików historii lokalizacji, odzyskiwanie danych Google Timeline, łączenie Records.json, łączenie lokalizacji Google Takeout, łączenie semantic location history, łączenie Google Timeline, usuwanie duplikatów historii lokalizacji, łączenie danych GPS",
+    "featureList": [
+      "Łączenie wielu eksportów Google Timeline w jeden plik",
+      "Inteligentne usuwanie powtarzających się punktów danych",
+      "Obsługa Records.json, Semantic Location History i eksportów z telefonu",
+      "Regulowane progi odległości i czasu przy usuwaniu duplikatów",
+      "Wizualny raport nakładania się danych osi czasu",
+      "Eksport jako JSON lub GPX",
+      "Prywatność przede wszystkim — wszystko w przeglądarce",
+      "Bez wysyłania danych na serwer"
+    ]
+  },
+  "howTo": {
+    "name": "Jak połączyć eksporty Google Timeline",
+    "description": "Połącz wiele plików eksportu Google Timeline w jeden spójny zbiór danych z inteligentnym usuwaniem duplikatów.",
+    "steps": [
+      {
+        "name": "Wyeksportuj dane Google Timeline",
+        "text": "Użyj Google Takeout, Android lub iOS, aby wyeksportować dane Google Timeline. Jeśli możesz, skorzystaj z kilku metod, aby zebrać wszystkie swoje dane."
+      },
+      {
+        "name": "Dodaj pliki JSON",
+        "text": "Przeciągnij i upuść wszystkie wyeksportowane pliki JSON Google Timeline w narzędziu do łączenia. Automatycznie wykrywa ono Records.json, Semantic Location History i formaty eksportu z telefonu."
+      },
+      {
+        "name": "Sprawdź podsumowanie plików i nakładające się dane",
+        "text": "Sprawdź tabelę podsumowania i wizualizację osi czasu, aby zobaczyć, jak dane z plików się nakładają. Narzędzie pokazuje zakresy dat, liczbę punktów i wykryty format każdego pliku."
+      },
+      {
+        "name": "Dostosuj ustawienia usuwania duplikatów",
+        "text": "Ustaw próg odległości (10-500 metrów) i czasu (10-300 sekund) dla usuwania duplikatów. Punkty mieszczące się w obu progach są uznawane za duplikaty."
+      },
+      {
+        "name": "Połącz i wyeksportuj",
+        "text": "Kliknij „Połącz pliki”, aby scalić wszystkie dane i usunąć duplikaty. Pobierz wynik jako JSON (zachowuje wszystkie metadane) lub GPX (zgodny z aplikacjami mapowymi)."
+      }
+    ],
+    "tool": "Łączenie danych Google Timeline od Dawarich"
+  },
+  "h1": "Łączenie danych Google Timeline",
+  "intro": "Połącz wiele eksportów Google Timeline w jeden spójny plik. Inteligentne usuwanie duplikatów eliminuje powtarzające się punkty, zachowując wszystkie unikalne zapisy lokalizacji. Za darmo, prywatnie i w całości w Twojej przeglądarce.",
+  "preCta": "Chcesz najpierw zobaczyć dane osi czasu? Wypróbuj [wizualizację Google Timeline](/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger), aby przeglądać historię lokalizacji na interaktywnej mapie. Szukasz zamiennika osi czasu na dłużej? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) daje Ci pełną własność danych.",
+  "faqTitle": "Najczęściej zadawane pytania",
+  "homeLabel": "Strona główna",
+  "toolsLabel": "Darmowe narzędzia",
+  "privacyTitle": "Prywatność przede wszystkim",
+  "privacyBody": "Całe łączenie i usuwanie duplikatów odbywa się w Twojej przeglądarce. Twoje dane lokalizacji nigdy nie opuszczają urządzenia i nie są wysyłane na żaden serwer.",
+  "benefitsTitle": "Dlaczego warto łączyć eksporty osi czasu?",
+  "benefitsIntro": "Google udostępnia kilka sposobów eksportu danych osi czasu, a każdy obejmuje inne informacje. Ich połączenie daje możliwie najpełniejszą historię lokalizacji.",
+  "benefits": [
+    {
+      "title": "Wiele metod eksportu:",
+      "body": "Google Takeout, eksport z telefonu i Semantic Location History zawierają różne dane. Łączenie pozwala zebrać wszystko z każdego źródła."
+    },
+    {
+      "title": "Odzyskiwanie danych:",
+      "body": "Po migracji osi czasu Google w 2024 wielu użytkowników ma częściowe eksporty z różnych dat. Połącz je, aby odtworzyć jak najwięcej historii."
+    },
+    {
+      "title": "Łączenie starych i nowych eksportów:",
+      "body": "Masz eksport osi czasu z 2022 i kolejny z 2024? Połącz oba, aby uzyskać ciągłą historię bez powtarzających się wpisów."
+    }
+  ],
+  "settings": {
+    "title": "Ustawienia usuwania duplikatów",
+    "intro": "Dostosuj, jak szeroko wykrywane są powtarzające się punkty. Dwa punkty są uznawane za duplikaty, jeśli mieszczą się jednocześnie w progach odległości i czasu. Zachowywany jest punkt z bogatszymi metadanymi.",
+    "distanceLabel": "Próg odległości",
+    "distanceHint": "Punkty bliższe niż ta odległość mogą być duplikatami (10m = ścisłe kryteria, 500m = szerokie kryteria)",
+    "timeLabel": "Próg czasu",
+    "timeHint": "Punkty zapisane w tym przedziale czasu mogą być duplikatami (10s = ścisłe kryteria, 300s = szerokie kryteria)"
+  },
+  "results": {
+    "file": "Plik",
+    "format": "Format",
+    "points": "Punkty",
+    "paths": "Ścieżki",
+    "dateRange": "Zakres dat",
+    "dateCoverage": "Okres objęty danymi",
+    "overlap": "Nakładanie się danych",
+    "title": "Wyniki łączenia",
+    "inputPoints": "Punkty wejściowe",
+    "outputPoints": "Punkty wynikowe",
+    "duplicatesRemoved": "Usunięte duplikaty",
+    "filesMerged": "Połączone pliki",
+    "overlapDetails": "Szczegóły nakładania się danych",
+    "parsing": "Odczytywanie dodanych plików...",
+    "unknown": "nieznany",
+    "noTimestamps": "Brak znaczników czasu",
+    "none": "Brak",
+    "downloadJson": "Pobierz jako JSON",
+    "downloadGpx": "Pobierz jako GPX",
+    "noDate": "Brak danych",
+    "merging": "Łączenie...",
+    "uploadedFiles": "Dodane pliki ({count})",
+    "distanceValue": "{distance}m",
+    "timeValue": "{seconds}s",
+    "filePair": "**{fileA}** i **{fileB}**",
+    "overlapRange": " nakładają się od {startDate} do {endDate}",
+    "overlapWith": "Nakładanie się z {fileName}",
+    "mergeButton": "Połącz {count} plik|Połącz {count} pliki|Połącz {count} plików|Połącz {count} pliku",
+    "dayCount": "{count} dzień|{count} dni|{count} dni|{count} dnia",
+    "parseError": "Błąd odczytu {fileName}: {message}",
+    "processingError": "Błąd przetwarzania plików: {message}",
+    "mergeError": "Błąd łączenia plików: {message}"
+  },
+  "cta": {
+    "fallback": "Chcesz bezpiecznie przechowywać połączone dane lokalizacji i mieć do nich stały dostęp? Dawarich bezpiecznie przechowuje całą Twoją historię lokalizacji.",
+    "postTitle": "Nie ryzykuj już utraty danych lokalizacji",
+    "postBody": "Dawarich przechowuje wszystko w centrach danych w UE, z szyfrowaniem podczas przesyłania (SSL/TLS) i przechowywania (LUKS), pełnymi kopiami zapasowymi oraz interaktywną mapą. Zaimportuj połączone dane osi czasu i kontynuuj automatyczne śledzenie.",
+    "bottomTitle": "Szukasz zamiennika Google Timeline na dłużej?",
+    "bottomBody": "Dawarich to platforma śledzenia lokalizacji z otwartym kodem źródłowym, która daje Ci pełną kontrolę nad danymi. Zaimportuj połączony eksport Google Timeline, rejestruj bieżącą lokalizację z telefonu i przeglądaj lata historii przemieszczania się — na własnym serwerze lub w chmurze.",
+    "button": "Wypróbuj Dawarich za darmo przez 7 dni",
+    "headline": "Liczba plików połączonych w jeden: **{count}**. Liczba punktów: **{points}**. Dawarich robi to automatycznie ze wszystkimi Twoimi źródłami GPS.",
+    "statLabels": {
+      "files": "pliki",
+      "points": "punkty",
+      "duplicates": "usunięte duplikaty"
+    }
+  },
+  "faq": [
+    {
+      "q": "Czy dodawanie moich danych Google Timeline jest bezpieczne?",
+      "a": "Tak. Całe przetwarzanie danych odbywa się w Twojej przeglądarce przy użyciu JavaScript. Pliki historii lokalizacji nigdy nie są wysyłane na serwer. Są lokalnie odczytywane, analizowane, łączone i eksportowane bez żądań sieciowych. Po zamknięciu karty dane znikają. Narzędzie ma też otwarty kod źródłowy, więc możesz sprawdzić kod."
+    },
+    {
+      "q": "Jak działa usuwanie duplikatów?",
+      "a": "Algorytm sortuje wszystkie punkty według znacznika czasu, a następnie porównuje każdy z poprzednim. Jeśli dwa kolejne punkty mieszczą się jednocześnie w progu odległości (domyślnie 50 metrów) i czasu (domyślnie 60 sekund), duplikat jest usuwany. Zachowywany jest punkt z większą ilością metadanych, takich jak nazwy miejsc czy typy aktywności. Przed łączeniem możesz dostosować oba progi suwakami."
+    },
+    {
+      "q": "Czy mogę łączyć różne formaty?",
+      "a": "Tak. Narzędzie obsługuje wszystkie formaty eksportu Google Timeline: Records.json z Google Takeout, miesięczne pliki Semantic Location History (np. 2022_APRIL.json) oraz nowsze eksporty osi czasu z telefonu z semanticSegments. Możesz łączyć te formaty w dowolnych kombinacjach. Parser automatycznie wykrywa format każdego pliku i ujednolica dane przed połączeniem."
+    },
+    {
+      "q": "Co dzieje się z nakładającymi się danymi?",
+      "a": "Nakładające się dane są obsługiwane na etapie usuwania duplikatów. Gdy dwa pliki obejmują ten sam okres, prawdopodobnie zawierają powtarzające się punkty lokalizacji zapisane w tym samym czasie i miejscu. Narzędzie rozpoznaje je na podstawie bliskości w przestrzeni i czasie, a następnie zachowuje tylko jedną kopię każdego punktu, preferując bogatsze metadane. Raport pokazuje dokładnie, które pliki się nakładają i przez ile dni."
+    },
+    {
+      "q": "Czy podczas łączenia stracę jakieś dane?",
+      "a": "Nie są tracone żadne istotne dane. Usuwane są tylko rzeczywiste duplikaty — punkty opisujące zasadniczo tę samą lokalizację zapisaną w tym samym czasie w kilku źródłach eksportu. Wszystkie unikalne punkty, wizyty w miejscach, odcinki aktywności i ścieżki z każdego pliku są zachowywane w wyniku. Dla pewności możesz ustawić próg odległości na 0, aby całkowicie wyłączyć usuwanie duplikatów."
+    },
+    {
+      "q": "Jakie formaty eksportu są dostępne?",
+      "a": "Połączone dane możesz wyeksportować jako JSON (tablica wszystkich punktów lokalizacji po usunięciu duplikatów, z pełnymi metadanymi) lub GPX (standardowy format GPS zgodny z większością aplikacji mapowych, urządzeń sportowych i narzędzi GIS). Eksport JSON zachowuje wszystkie oryginalne metadane, takie jak nazwy miejsc, adresy i typy aktywności. Eksport GPX zamienia wizyty w miejscach na punkty trasy, a zapisy lokalizacji na punkty śladu."
+    },
+    {
+      "q": "Ile plików mogę połączyć jednocześnie?",
+      "a": "Nie ma sztywnego limitu liczby plików. Narzędzie przetestowano z ponad 10 plikami jednocześnie, w tym dużymi plikami Records.json z setkami tysięcy punktów. Czas przetwarzania zależy od łącznej liczby punktów we wszystkich plikach i mocy urządzenia. Typowe łączenie 3-5 plików z łącznie 500,000 punktów trwa 10-30 sekund na nowoczesnym komputerze."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Czym jest narzędzie do łączenia danych osi czasu?",
+      "paragraphs": [
+        "To darmowe narzędzie przeglądarkowe, które łączy wiele eksportów Google Timeline w jeden spójny zbiór danych. Eksportując historię lokalizacji Google różnymi metodami (Google Takeout, eksport z telefonu, Semantic History), często otrzymujesz nakładające się pliki z powtarzającymi się punktami. Narzędzie inteligentnie je łączy, usuwając duplikaty i zachowując każdy unikalny zapis lokalizacji.",
+        "Całe przetwarzanie odbywa się lokalnie w Twojej przeglądarce. Dane lokalizacji nigdy nie są przesyłane na serwer, więc możesz bezpiecznie korzystać z narzędzia nawet przy wrażliwej, wieloletniej historii lokalizacji."
+      ]
+    },
+    {
+      "title": "Jak działa usuwanie duplikatów",
+      "paragraphs": [
+        "Algorytm wykorzystuje dwa kryteria do rozpoznawania powtarzających się punktów lokalizacji:"
+      ],
+      "items": [
+        {
+          "body": "**Bliskość w przestrzeni** — Punkty mieszczące się w progu odległości (domyślnie 50 metrów) są kandydatami do usunięcia jako duplikaty"
+        },
+        {
+          "body": "**Bliskość w czasie** — Punkty muszą też mieścić się w progu czasu (domyślnie 60 sekund), aby uznać je za duplikaty"
+        },
+        {
+          "body": "**Wymagane oba warunki** — Punkt jest usuwany jako duplikat tylko wtedy, gdy spełnia kryterium odległości ORAZ czasu"
+        },
+        {
+          "body": "**Zachowanie metadanych** — Gdy wykryto duplikaty, zachowywana jest wersja z większą ilością metadanych (nazwy miejsc, adresy, typy aktywności)"
+        }
+      ],
+      "footer": [
+        "Przed usuwaniem duplikatów punkty są sortowane chronologicznie, co zapewnia spójne wyniki niezależnie od kolejności dodawania plików."
+      ]
+    },
+    {
+      "title": "Dlaczego warto łączyć eksporty osi czasu?",
+      "paragraphs": [
+        "W kilku częstych sytuacjach łączenie danych Google Timeline jest niezbędne:"
+      ],
+      "items": [
+        {
+          "body": "**Wiele źródeł eksportu** — Google Takeout, eksport Android i eksport iOS obejmują różne podzbiory Twoich danych"
+        },
+        {
+          "body": "**Odzyskiwanie po migracji Google z 2024** — Gdy Google przeniosło oś czasu na urządzenia, wielu użytkowników wykonało kilka częściowych eksportów. Łączenie pozwala odzyskać możliwie najpełniejszą historię"
+        },
+        {
+          "body": "**Okresowe kopie zapasowe** — Eksport z 2021 połączony z eksportem z 2024 tworzy ciągły zbiór danych obejmujący oba okresy"
+        },
+        {
+          "body": "**Zmiana urządzenia** — Masz nowy telefon? Połącz eksporty ze starego i nowego urządzenia"
+        }
+      ]
+    },
+    {
+      "title": "Co się stało z Google Maps Timeline?",
+      "paragraphs": [
+        "Pod koniec 2024 Google wyłączyło internetową wersję Google Maps Timeline i przeniosło wszystkie dane lokalizacji do pamięci urządzeń. Na telefony użytkowników automatycznie przeniesiono tylko dane z ostatnich 90 dni. Starsza historia lokalizacji została trwale usunięta, chyba że użytkownicy ręcznie wyeksportowali ją przed terminem.",
+        "Miliony użytkowników zostały z fragmentarycznymi danymi: częściowymi eksportami Takeout, eksportami ostatnich danych z telefonu i plikami Semantic Location History z różnych okresów. Narzędzie do łączenia danych osi czasu pomaga złożyć te fragmenty w pełną historię lokalizacji.",
+        "Do bieżącego śledzenia lokalizacji z pełną własnością danych rozważ [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-merger) jako zamiennik na własnym serwerze lub w chmurze."
+      ]
+    },
+    {
+      "title": "Obsługiwane formaty",
+      "paragraphs": [
+        "Narzędzie automatycznie wykrywa i przetwarza wszystkie formaty eksportu Google Timeline:"
+      ],
+      "items": [
+        {
+          "body": "**Records.json** — Surowe zapisy GPS z Google Takeout ze współrzędnymi w formacie E7. Zwykle są to największe pliki, zawierające każdy odczyt lokalizacji"
+        },
+        {
+          "body": "**Semantic Location History** — Miesięczne pliki (np. 2022_APRIL.json) ze uporządkowanymi wizytami w miejscach, adresami i odcinkami aktywności"
+        },
+        {
+          "body": "**Eksport osi czasu z telefonu** — Nowszy format z Google Maps na Android/iOS z semanticSegments i przebiegiem tras osi czasu"
+        },
+        {
+          "body": "**Ustawienia i TimelineEdits** — Dodatkowe pliki metadanych z eksportów Google Takeout"
+        }
+      ],
+      "footer": [
+        "W jednym łączeniu możesz użyć dowolnej kombinacji tych formatów."
+      ]
+    },
+    {
+      "title": "Powiązane narzędzia",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Wizualizacja Google Timeline](/tools/timeline-visualizer) — Zobacz historię lokalizacji na interaktywnej mapie"
+        },
+        {
+          "body": "[Generator mapy cieplnej GPS](/tools/heatmap-generator) — Twórz mapy cieplne z GPX, FIT, TCX i innych plików GPS"
+        },
+        {
+          "body": "[Łączenie tras GPX](/tools/gpx-merger) — Połącz wiele plików GPX w jeden"
+        },
+        {
+          "body": "[Odczyt geodanych ze zdjęć](/tools/photo-geotagging) — Odczytaj współrzędne GPS ze swoich zdjęć"
+        },
+        {
+          "body": "[Konwerter GeoJSON na GPX](/tools/geojson-to-gpx) — Konwertuj dane lokalizacji na format GPX"
+        }
+      ],
+      "footer": [
+        "Czytaj dalej: [Migracja z historii lokalizacji Google](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "yearLabel": "Rok",
+  "emptyLabel": "Brak danych",
+  "searchLabel": "Szukaj",
+  "searchPlaceholder": "Szukaj wizyt…",
+  "searchAriaLabel": "Szukaj wizyt",
+  "previousMonth": "Poprzedni miesiąc",
+  "nextMonth": "Następny miesiąc",
+  "yearDays": "{year} (dni: {count})",
+  "otherMonth": "{date} (inny miesiąc)",
+  "noData": "{date} — brak danych",
+  "hoursTracked": "{date} — zarejestrowane godziny: {hours}",
+  "weekdays": [
+    { "label": "Pn" },
+    { "label": "Wt" },
+    { "label": "Śr" },
+    { "label": "Cz" },
+    { "label": "Pt" },
+    { "label": "So" },
+    { "label": "Nd" }
+  ]
+}
