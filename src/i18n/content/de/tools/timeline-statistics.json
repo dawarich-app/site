@@ -4,13 +4,13 @@
   "appName": "Google-Timeline-Statistikanalyse",
   "privacyTitle": "Datenschutz an erster Stelle",
   "privacyBody": "Die gesamte Datenverarbeitung erfolgt direkt in deinem Browser. Deine Standortdaten verlassen dein Gerät nie und werden an keinen Server gesendet.",
-  "preCta": "Gefallen dir diese Einblicke? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-statistics) erstellt Reisestatistiken automatisch aus deinen laufenden Standortdaten: Gesamtentfernung, Länder, Städte und Aktivitätsübersichten, in Echtzeit aktualisiert. [Erfahre, wie du umsteigst](/blog/migrating-from-google-location-history-to-dawarich).",
+  "preCta": "Gefallen dir diese Einblicke? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-statistics) erstellt Reisestatistiken automatisch aus deinen laufenden Standortdaten: Gesamtentfernung, Länder, Städte und Aktivitätsverteilungen, in Echtzeit aktualisiert. [Erfahre, wie du umsteigst](/blog/migrating-from-google-location-history-to-dawarich).",
   "faqTitle": "Häufig gestellte Fragen",
   "homeLabel": "Startseite",
   "toolsLabel": "Kostenlose Werkzeuge",
   "meta": {
     "title": "Google-Timeline-Statistiken – Einblicke in deinen Verlauf",
-    "description": "Analysiere Google-Timeline-Daten kostenlos: Gesamtentfernung, besuchte Länder, häufigste Orte, Aktivitäten und Jahrestrends. Privat, direkt im Browser.",
+    "description": "Google-Timeline-Daten gratis analysieren: Gesamtentfernung, besuchte Länder, häufigste Orte, Aktivitätsverteilung, Jahrestrends. Alles privat im Browser.",
     "keywords": "Google-Timeline-Statistiken, Standortverlaufsstatistik, wie weit bin ich gereist, Google-Maps-Timeline-Einblicke, Google-Timeline-Analyse, Reisestatistiken, Standortdatenanalyse, Google-Takeout-Statistiken, zurückgelegte Entfernung berechnen, besuchte Orte zählen",
     "featureList": [
       "Zurückgelegte Gesamtentfernung aus Google-Timeline-Daten berechnen",
@@ -25,7 +25,7 @@
   },
   "howTo": {
     "name": "So analysierst du deine Google-Timeline-Statistiken",
-    "description": "Exportiere deine Google-Timeline-Daten und erhalte detaillierte Reisestatistiken zu Entfernung, Ländern, Orten und Aktivitäten.",
+    "description": "Exportiere deine Google-Timeline-Daten und erhalte detaillierte Reisestatistiken zu Entfernung, Ländern, Orten und der Aktivitätsverteilung.",
     "steps": [
       {
         "name": "Google-Timeline-Daten exportieren",
@@ -113,7 +113,7 @@
   "cta": {
     "fallback": "Gefallen dir diese Einblicke? Dawarich erstellt sie automatisch aus deinen laufenden Standortdaten.",
     "title": "Suchst du einen Ersatz für Google Timeline?",
-    "body": "Dawarich ist eine quelloffene Plattform zur Standortaufzeichnung, die dir volle Kontrolle über deine Daten gibt. Importiere deinen Google-Timeline-Export, zeichne deinen Standort laufend mit dem Smartphone auf und erhalte aktuelle Reisestatistiken mit Karten, Entfernungsaufzeichnung und Jahresübersichten – selbst gehostet oder in der Cloud.",
+    "body": "Dawarich ist eine quelloffene Plattform zur Standortaufzeichnung, die dir volle Kontrolle über deine Daten gibt. Importiere deinen Google-Timeline-Export, zeichne deinen Standort laufend mit dem Smartphone auf und erhalte in Echtzeit aktualisierte Reisestatistiken mit Karten, Entfernungsaufzeichnung und Jahresübersichten – selbst gehostet oder in der Cloud.",
     "button": "Dawarich 7 Tage kostenlos testen",
     "headline": "Du bist in **{years}** Jahren **{distance} km**{countries} gereist. Mach aus dieser Momentaufnahme ein Dashboard, das mit dir wächst.",
     "countries": " durch **{count}** Länder",
@@ -196,7 +196,7 @@
         { "body": "**Records.json** — GPS-Rohkoordinaten und Zeitstempel. Jede von Google erfasste Standortmessung, meist im Abstand von Sekunden bis Minuten. Diese Dateien können Hunderte Megabyte groß sein. Sie liefern präzise Koordinaten, aber keine Ortsnamen, Adressen oder Aktivitätstypen." },
         { "body": "**Semantic Location History** — Monatsdateien (z. B. 2022_APRIL.json) mit strukturierten Daten: benannte Aufenthalte an Orten mit Adressen, Aktivitätsabschnitte mit klassifizierten Verkehrsmitteln und Angaben zur Dauer. Die Dateien sind kleiner, enthalten aber umfangreichere, aussagekräftigere Daten." }
       ],
-      "footer": ["Lade für die besten Statistiken deine Semantic-Location-History-Dateien hoch. Records.json liefert Entfernung und Datenpunkte. Länder, Städte, Ortsnamen und Aktivitätsübersichten fehlen dabei jedoch."]
+      "footer": ["Lade für die besten Statistiken deine Semantic-Location-History-Dateien hoch. Records.json liefert Entfernung und Datenpunkte. Länder, Städte, Ortsnamen und Aktivitätsverteilungen fehlen dabei jedoch."]
     },
     {
       "title": "Weitere Werkzeuge",
