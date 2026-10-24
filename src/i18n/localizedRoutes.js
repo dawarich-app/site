@@ -4,6 +4,8 @@ export const LOCALIZED_ROUTES = [
   '/tools/',
   '/tools/gpx-merger/',
   '/tools/photo-geotagging/',
+  '/tools/heatmap-generator/',
+  '/tools/map-poster-maker/',
   '/tools/google-timeline-converter/',
   '/tools/fit-to-geojson/',
   '/tools/fit-to-gpx/',

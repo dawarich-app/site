@@ -6,11 +6,15 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 import { parseFile, pointsToGeoJSON, calculateBounds, calculateStats, exportMapAsImage } from '@site/src/utils/heatmapUtils';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import RelatedTools from '@site/src/components/RelatedTools';
+import { interpolate } from '@docusaurus/Interpolate';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import RichText from '@site/src/i18n/RichText';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
+import content from '@locale-content/tools/heatmap-generator.json';
 import styles from './heatmap-generator.module.css';
 
-const pageTitle = "Free GPS Heatmap Generator - Create Activity Heatmaps Online";
-const pageDescription = "Create beautiful heatmaps from your GPS data. Upload GPX, FIT, TCX, GeoJSON, KML, or Google Timeline JSON files to visualize your running, cycling, and activity patterns. Free, privacy-first - works entirely in your browser.";
-const pageUrl = "https://dawarich.app/tools/heatmap-generator/";
+const pageTitle = content.meta.title;
+const pageDescription = content.meta.description;
 const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 function HeatmapMap({ points, heatmapSettings }) {
@@ -230,7 +234,7 @@ function HeatmapMap({ points, heatmapSettings }) {
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
-          Export as PNG
+          {content.exportButton}
         </button>
       )}
     </div>
@@ -305,6 +309,10 @@ function getColorRamp(scheme) {
 }
 
 export default function HeatmapGenerator() {
+  const { i18n } = useDocusaurusContext();
+  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const pageUrl = useLocalizedUrl('/tools/heatmap-generator/');
+  const formatDecimal = (value) => value.toLocaleString(htmlLang, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
   const [files, setFiles] = useState([]);
   const [points, setPoints] = useState([]);
   const [stats, setStats] = useState(null);
@@ -363,7 +371,7 @@ export default function HeatmapGenerator() {
           });
         } catch (err) {
           console.error(`Error parsing ${file.name}:`, err);
-          setError(`Error parsing ${file.name}: ${err.message}`);
+          setError(interpolate(content.parseError, { fileName: file.name, message: err.message }));
         }
       }
 
@@ -405,8 +413,7 @@ export default function HeatmapGenerator() {
       <Head>
         <meta name="title" content={pageTitle} />
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="GPS heatmap, heatmap generator, running heatmap, cycling heatmap, Strava heatmap alternative, GPX heatmap, activity heatmap, fitness heatmap, free heatmap, Google Timeline heatmap, Google location history heatmap, Records.json heatmap" />
-        <link rel="canonical" href={pageUrl} />
+        <meta name="keywords" content={content.meta.keywords} />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content={pageUrl} />
@@ -424,7 +431,7 @@ export default function HeatmapGenerator() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "GPS Heatmap Generator",
+            "name": content.h1,
             "url": pageUrl,
             "description": pageDescription,
             "applicationCategory": "UtilityApplication",
@@ -441,14 +448,14 @@ export default function HeatmapGenerator() {
 
       <div className={styles.container}>
         <div className={styles.header}>
-          <h1>GPS Heatmap Generator</h1>
-          <p>Create beautiful heatmaps from your GPS activities. Upload multiple files to see your running, cycling, and activity patterns visualized on a map.</p>
+          <h1>{content.h1}</h1>
+          <p>{content.intro}</p>
         </div>
 
         <div className={styles.mainContent}>
           <div className={styles.sidebar}>
             <div className={styles.uploadSection}>
-              <h2>Upload Files</h2>
+              <h2>{content.uploadTitle}</h2>
               <div
                 className={`${styles.dropZone} ${dragActive ? styles.dragActive : ''}`}
                 onDragEnter={handleDrag}
@@ -459,10 +466,10 @@ export default function HeatmapGenerator() {
                 <svg className={styles.uploadIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                 </svg>
-                <p>Drag & drop files here</p>
-                <span className={styles.supportedFormats}>GPX, FIT, TCX, GeoJSON, KML, KMZ, Google Timeline JSON</span>
+                <p>{content.dropFiles}</p>
+                <span className={styles.supportedFormats}>{content.formats}</span>
                 <input
-                  aria-label="Choose files to process"
+                  aria-label={content.inputLabel}
                   type="file"
                   className={styles.fileInput}
                   accept=".gpx,.fit,.tcx,.geojson,.json,.kml,.kmz"
@@ -474,7 +481,7 @@ export default function HeatmapGenerator() {
               {isLoading && (
                 <div className={styles.loadingIndicator}>
                   <div className={styles.spinner}></div>
-                  Processing files...
+                  {content.processing}
                 </div>
               )}
 
@@ -487,13 +494,13 @@ export default function HeatmapGenerator() {
               {files.length > 0 && (
                 <div className={styles.fileList}>
                   <div className={styles.fileListHeader}>
-                    <span>Loaded Files ({files.length})</span>
-                    <button onClick={handleClear} className={styles.clearButton}>Clear All</button>
+                    <span>{interpolate(content.loadedFiles, { count: files.length.toLocaleString(htmlLang) })}</span>
+                    <button onClick={handleClear} className={styles.clearButton}>{content.clearButton}</button>
                   </div>
                   {files.map((file, index) => (
                     <div key={index} className={styles.fileItem}>
                       <span className={styles.fileName}>{file.name}</span>
-                      <span className={styles.pointCount}>{file.pointCount.toLocaleString()} pts</span>
+                      <span className={styles.pointCount}>{interpolate(content.pointCount, { points: file.pointCount.toLocaleString(htmlLang) })}</span>
                     </div>
                   ))}
                 </div>
@@ -502,7 +509,7 @@ export default function HeatmapGenerator() {
               {files.length > 0 && (
                 <div className={styles.saveToAccountSection}>
                   <p className={styles.saveToAccountIntro}>
-                    Want this in your Dawarich account too? We'll import it during signup — no second upload needed.
+                    {content.saveIntro}
                   </p>
                   <SaveToAccountButton
                     toolName="heatmap-generator"
@@ -515,19 +522,19 @@ export default function HeatmapGenerator() {
 
               {stats && (
                 <div className={styles.statsPanel}>
-                  <h4>Statistics</h4>
+                  <h4>{content.statsTitle}</h4>
                   <div className={styles.statItem}>
-                    <span>Total Points</span>
-                    <strong>{stats.totalPoints.toLocaleString()}</strong>
+                    <span>{content.pointsLabel}</span>
+                    <strong>{stats.totalPoints.toLocaleString(htmlLang)}</strong>
                   </div>
                   <div className={styles.statItem}>
-                    <span>Total Distance</span>
-                    <strong>{stats.totalDistance.toFixed(1)} km</strong>
+                    <span>{content.distanceLabel}</span>
+                    <strong>{interpolate(content.distanceValue, { distance: formatDecimal(stats.totalDistance) })}</strong>
                   </div>
                   {stats.timeRange && (
                     <div className={styles.statItem}>
-                      <span>Date Range</span>
-                      <strong>{stats.timeRange.start.toLocaleDateString()} - {stats.timeRange.end.toLocaleDateString()}</strong>
+                      <span>{content.dateRangeLabel}</span>
+                      <strong>{stats.timeRange.start.toLocaleDateString(htmlLang)} - {stats.timeRange.end.toLocaleDateString(htmlLang)}</strong>
                     </div>
                   )}
                 </div>
@@ -535,25 +542,25 @@ export default function HeatmapGenerator() {
             </div>
 
             <div className={styles.settingsSection}>
-              <h2>Heatmap Settings</h2>
+              <h2>{content.settingsTitle}</h2>
 
               <div className={styles.settingItem}>
-                <label htmlFor="heatmap-color-scheme">Color Scheme</label>
+                <label htmlFor="heatmap-color-scheme">{content.schemeLabel}</label>
                 <select
                   id="heatmap-color-scheme"
                   value={heatmapSettings.colorScheme}
                   onChange={(e) => updateSetting('colorScheme', e.target.value)}
                 >
-                  <option value="fire">Fire (Red/Orange)</option>
-                  <option value="strava">Strava (Orange)</option>
-                  <option value="plasma">Plasma (Purple/Yellow)</option>
-                  <option value="ocean">Ocean (Blue)</option>
-                  <option value="green">Forest (Green)</option>
+                  <option value="fire">{content.schemes[0].label}</option>
+                  <option value="strava">{content.schemes[1].label}</option>
+                  <option value="plasma">{content.schemes[2].label}</option>
+                  <option value="ocean">{content.schemes[3].label}</option>
+                  <option value="green">{content.schemes[4].label}</option>
                 </select>
               </div>
 
               <div className={styles.settingItem}>
-                <label htmlFor="heatmap-intensity">Intensity: {heatmapSettings.intensity.toFixed(1)}</label>
+                <label htmlFor="heatmap-intensity">{interpolate(content.intensityLabel, { intensity: formatDecimal(heatmapSettings.intensity) })}</label>
                 <input
                   id="heatmap-intensity"
                   type="range"
@@ -566,7 +573,7 @@ export default function HeatmapGenerator() {
               </div>
 
               <div className={styles.settingItem}>
-                <label htmlFor="heatmap-radius">Radius: {heatmapSettings.radius}</label>
+                <label htmlFor="heatmap-radius">{interpolate(content.radiusLabel, { radius: heatmapSettings.radius.toLocaleString(htmlLang) })}</label>
                 <input
                   id="heatmap-radius"
                   type="range"
@@ -579,7 +586,7 @@ export default function HeatmapGenerator() {
               </div>
 
               <div className={styles.settingItem}>
-                <label htmlFor="heatmap-opacity">Opacity: {heatmapSettings.opacity.toFixed(1)}</label>
+                <label htmlFor="heatmap-opacity">{interpolate(content.opacityLabel, { opacity: formatDecimal(heatmapSettings.opacity) })}</label>
                 <input
                   id="heatmap-opacity"
                   type="range"
@@ -596,12 +603,12 @@ export default function HeatmapGenerator() {
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
-              <span>Rendering happens in your browser. Nothing is uploaded unless you choose “Save to my Dawarich account.”</span>
+              <span>{content.privacy}</span>
             </div>
           </div>
 
           <div className={styles.mapSection}>
-            <BrowserOnly fallback={<div className={styles.mapPlaceholder}>Loading map...</div>}>
+            <BrowserOnly fallback={<div className={styles.mapPlaceholder}>{content.loadingMap}</div>}>
               {() => <HeatmapMap points={points} heatmapSettings={heatmapSettings} />}
             </BrowserOnly>
           </div>
@@ -609,48 +616,34 @@ export default function HeatmapGenerator() {
 
         <div className={styles.infoSection}>
           <div className={styles.infoGrid}>
-            <div className={styles.infoCard}>
-              <h2>What is a GPS Heatmap?</h2>
-              <p>A GPS heatmap visualizes the density of your location data on a map. Areas you've visited more frequently appear brighter and more intense, creating a visual representation of your activity patterns over time.</p>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>Supported File Formats</h2>
-              <ul>
-                <li><strong>GPX</strong> - GPS Exchange Format (most GPS apps)</li>
-                <li><strong>FIT</strong> - Garmin activity files</li>
-                <li><strong>GeoJSON</strong> - Web mapping format</li>
-                <li><strong>KML/KMZ</strong> - Google Earth format</li>
-                <li><strong>Google Timeline JSON</strong> - Records.json and Semantic Location History files from Google Takeout</li>
-              </ul>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>How to Export Your Data</h2>
-              <ul>
-                <li><strong>Strava:</strong> Settings &gt; My Account &gt; Download your data</li>
-                <li><strong>Garmin:</strong> Copy .FIT files from device or use Garmin Connect export</li>
-                <li><strong>Apple Fitness:</strong> Use third-party apps to export workouts as GPX</li>
-                <li><strong>Google Maps:</strong> Use Google Takeout to export location history — Records.json and Semantic Location History files are directly supported</li>
-              </ul>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>Free Alternative to Strava Heatmap</h2>
-              <p>Strava's heatmap feature requires a paid subscription. This free tool lets you create similar heatmaps from your exported data without any subscription or account required.</p>
-            </div>
+            {content.cards.map((card, index) => (
+              <div className={styles.infoCard} key={index}>
+                <h2>{card.title}</h2>
+                {card.paragraphs.map((text, index) => (
+                  <p key={index}><RichText text={text} /></p>
+                ))}
+                {card.items && <ul>
+                  {card.items.map((item, index) => (
+                    <li key={index}><RichText text={item.body} /></li>
+                  ))}
+                </ul>}
+              </div>
+            ))}
           </div>
         </div>
 
         <PersonalizedCTA
           toolName="heatmap-generator"
           headline={stats
-            ? `Your heatmap covers <strong>${stats.totalPoints.toLocaleString()}</strong> GPS points across <strong>${stats.totalDistance.toFixed(1)} km</strong>. This is a snapshot — Dawarich builds your heatmap continuously.`
-            : 'Want to visualize years of location history? Dawarich builds your heatmap continuously from all your GPS sources.'}
+            ? <RichText text={interpolate(content.ctaHeadline, {
+              points: stats.totalPoints.toLocaleString(htmlLang), distance: formatDecimal(stats.totalDistance),
+            })} />
+            : content.ctaFallback}
           stats={stats ? [
-            { label: 'points', value: stats.totalPoints.toLocaleString() },
-            { label: 'distance', value: `${stats.totalDistance.toFixed(1)} km` },
-            ...(stats.timeRange ? [{ label: 'date range', value: `${stats.timeRange.start.toLocaleDateString()} – ${stats.timeRange.end.toLocaleDateString()}` }] : []),
+            { label: content.statLabels.points, value: stats.totalPoints.toLocaleString(htmlLang) },
+            { label: content.statLabels.distance, value: interpolate(content.distanceValue, { distance: formatDecimal(stats.totalDistance) }) },
+            ...(stats.timeRange ? [{ label: content.statLabels.dateRange,
+              value: `${stats.timeRange.start.toLocaleDateString(htmlLang)} – ${stats.timeRange.end.toLocaleDateString(htmlLang)}` }] : []),
           ] : undefined}
         />
       </div>

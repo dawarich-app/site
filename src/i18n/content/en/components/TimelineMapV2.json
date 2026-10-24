@@ -1,0 +1,10 @@
+{
+  "unavailableTitle": "Map unavailable",
+  "unavailableBody": "Your browser doesn't support WebGL, which is required for the map.",
+  "webglLink": "[Learn more about WebGL](https://get.webgl.org)",
+  "exitFullscreen": "Exit fullscreen",
+  "enterFullscreen": "Enter fullscreen",
+  "exitHint": "Exit fullscreen (Esc)",
+  "toggleHint": "Toggle fullscreen (F)",
+  "demoLabel": "Demo data — drop your files above"
+}

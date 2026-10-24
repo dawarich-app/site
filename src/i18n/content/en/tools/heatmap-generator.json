@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "Free GPS Heatmap Generator - Create Activity Heatmaps Online",
+    "description": "Create beautiful heatmaps from your GPS data. Upload GPX, FIT, TCX, GeoJSON, KML, or Google Timeline JSON files to visualize your running, cycling, and activity patterns. Free, privacy-first - works entirely in your browser.",
+    "keywords": "GPS heatmap, heatmap generator, running heatmap, cycling heatmap, Strava heatmap alternative, GPX heatmap, activity heatmap, fitness heatmap, free heatmap, Google Timeline heatmap, Google location history heatmap, Records.json heatmap"
+  },
+  "h1": "GPS Heatmap Generator",
+  "intro": "Create beautiful heatmaps from your GPS activities. Upload multiple files to see your running, cycling, and activity patterns visualized on a map.",
+  "uploadTitle": "Upload Files",
+  "dropFiles": "Drag & drop files here",
+  "formats": "GPX, FIT, TCX, GeoJSON, KML, KMZ, Google Timeline JSON",
+  "clearButton": "Clear All",
+  "saveIntro": "Want this in your Dawarich account too? We'll import it during signup — no second upload needed.",
+  "statsTitle": "Statistics",
+  "pointsLabel": "Total Points",
+  "distanceLabel": "Total Distance",
+  "dateRangeLabel": "Date Range",
+  "settingsTitle": "Heatmap Settings",
+  "schemeLabel": "Color Scheme",
+  "privacy": "Rendering happens in your browser. Nothing is uploaded unless you choose “Save to my Dawarich account.”",
+  "exportButton": "Export as PNG",
+  "inputLabel": "Choose files to process",
+  "processing": "Processing files...",
+  "loadingMap": "Loading map...",
+  "ctaFallback": "Want to visualize years of location history? Dawarich builds your heatmap continuously from all your GPS sources.",
+  "schemes": [
+    {
+      "label": "Fire (Red/Orange)"
+    },
+    {
+      "label": "Strava (Orange)"
+    },
+    {
+      "label": "Plasma (Purple/Yellow)"
+    },
+    {
+      "label": "Ocean (Blue)"
+    },
+    {
+      "label": "Forest (Green)"
+    }
+  ],
+  "loadedFiles": "Loaded Files ({count})",
+  "pointCount": "{points} pts",
+  "intensityLabel": "Intensity: {intensity}",
+  "radiusLabel": "Radius: {radius}",
+  "opacityLabel": "Opacity: {opacity}",
+  "parseError": "Error parsing {fileName}: {message}",
+  "ctaHeadline": "Your heatmap covers **{points}** GPS points across **{distance} km**. This is a snapshot — Dawarich builds your heatmap continuously.",
+  "distanceValue": "{distance} km",
+  "statLabels": {
+    "points": "points",
+    "distance": "distance",
+    "dateRange": "date range"
+  },
+  "cards": [
+    {
+      "title": "What is a GPS Heatmap?",
+      "paragraphs": [
+        "A GPS heatmap visualizes the density of your location data on a map. Areas you've visited more frequently appear brighter and more intense, creating a visual representation of your activity patterns over time."
+      ]
+    },
+    {
+      "title": "Supported File Formats",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**GPX** - GPS Exchange Format (most GPS apps)"
+        },
+        {
+          "body": "**FIT** - Garmin activity files"
+        },
+        {
+          "body": "**GeoJSON** - Web mapping format"
+        },
+        {
+          "body": "**KML/KMZ** - Google Earth format"
+        },
+        {
+          "body": "**Google Timeline JSON** - Records.json and Semantic Location History files from Google Takeout"
+        }
+      ]
+    },
+    {
+      "title": "How to Export Your Data",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Strava:** Settings > My Account > Download your data"
+        },
+        {
+          "body": "**Garmin:** Copy .FIT files from device or use Garmin Connect export"
+        },
+        {
+          "body": "**Apple Fitness:** Use third-party apps to export workouts as GPX"
+        },
+        {
+          "body": "**Google Maps:** Use Google Takeout to export location history — Records.json and Semantic Location History files are directly supported"
+        }
+      ]
+    },
+    {
+      "title": "Free Alternative to Strava Heatmap",
+      "paragraphs": [
+        "Strava's heatmap feature requires a paid subscription. This free tool lets you create similar heatmaps from your exported data without any subscription or account required."
+      ]
+    }
+  ]
+}
