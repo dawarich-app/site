@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "title": "Kostenlose GPS-Werkzeuge & Formatkonverter | Dawarich",
+    "description": "Private Online-Werkzeuge zum Visualisieren, Analysieren, Zusammenführen und Konvertieren von GPS- und Standortdaten. Alles läuft lokal in deinem Browser."
+  },
+  "h1": "Kostenlose GPS- & Standortwerkzeuge",
+  "intro": "Datenschutzfreundliche Helfer für GPS-Dateien und Standortverläufe. Alles läuft in deinem Browser. Deine Daten verlassen dein Gerät nie.",
+  "toolsHeading": "Kostenlose Werkzeuge",
+  "toolsIntro": "Visualisiere, analysiere, kombiniere und teile deinen Standortverlauf auf – ohne Uploads, ohne Konto.",
+  "convertersHeading": "Formatkonverter",
+  "convertersIntro": "Wandle GPS- und Kartendaten zwischen Formaten um. Die gesamte Verarbeitung erfolgt lokal in deinem Browser.",
+  "ctaTitle": "Möchtest du den vollen Funktionsumfang von Dawarich?",
+  "ctaBody": "Diese Werkzeuge erledigen einzelne Aufgaben. Dawarich ist die vollständige Plattform für deinen Standortverlauf: interaktive Karten, Reisen, Statistiken, Foto-Integrationen und Datenschutz mit Hosting in der EU.",
+  "ctaButton": "Dawarich ansehen",
+  "pricingButton": "Preise",
+  "tools": [
+    {
+      "title": "Google-Timeline-Visualisierung",
+      "description": "Sieh deine exportierten Google-Timeline-Daten auf einer interaktiven Karte an. Unterstützt alle Exportformate."
+    },
+    {
+      "title": "Google-Timeline-Konverter",
+      "description": "Wandle Google-Timeline-Exporte zwischen Formaten um. Verarbeitet Records.json und Semantic Location History."
+    },
+    {
+      "title": "Timeline-Statistikanalyse",
+      "description": "Gewinne Einblicke in deinen Standortverlauf: Gesamtentfernung, Länder, Städte, Aufenthalte und mehr."
+    },
+    {
+      "title": "Timeline-Kilometerrechner",
+      "description": "Berechne die gesamte Fahr- und Reiseentfernung aus deinen Google-Timeline-Daten."
+    },
+    {
+      "title": "Timeline-Daten zusammenführen",
+      "description": "Kombiniere mehrere Google-Timeline-Exporte zu einem Datensatz ohne Duplikate."
+    },
+    {
+      "title": "Google-Timeline-Dateien aufteilen",
+      "description": "Teile eine große Google-Timeline-Datei nach Jahr oder Monat in kleinere Teile auf."
+    },
+    {
+      "title": "GPS-Dateien aufteilen",
+      "description": "Zerlege große GPX-, KML- und GeoJSON-Dateien in kleinere, leichter handhabbare Teile."
+    },
+    {
+      "title": "Timeline-Formaterkennung",
+      "description": "Erkenne das Google-Timeline-Exportformat deiner Datei, damit du weißt, wie du sie verarbeiten kannst."
+    },
+    {
+      "title": "GPS-Heatmap-Generator",
+      "description": "Verwandle deinen Standortverlauf in eine Heatmap, die zeigt, wo du die meiste Zeit verbringst."
+    },
+    {
+      "title": "Kartenposter erstellen",
+      "description": "Gestalte ein Kartenposter aus einer beliebigen GPS-Datei: 17 Stile, PNG-/PDF-Export, optionale Drucke."
+    },
+    {
+      "title": "GPX-Tracks zusammenführen",
+      "description": "Kombiniere mehrere GPX-Dateien zu einem Track. Nützlich für mehrtägige Reisen oder Importe."
+    },
+    {
+      "title": "Foto-Geodaten auslesen",
+      "description": "Lies GPS-Koordinaten und Standortmetadaten aus deinen Fotos aus (EXIF-Daten)."
+    }
+  ],
+  "converters": [
+    {
+      "description": "Garmin-Aktivitätsdateien",
+      "source": "FIT",
+      "targets": [
+        { "label": "FIT → GPX" },
+        { "label": "FIT → GeoJSON" },
+        { "label": "FIT → KML" }
+      ]
+    },
+    {
+      "description": "Training Center XML",
+      "source": "TCX",
+      "targets": [
+        { "label": "TCX → GPX" },
+        { "label": "TCX → GeoJSON" },
+        { "label": "TCX → KML" }
+      ]
+    },
+    {
+      "description": "GPS-Austauschformat",
+      "source": "GPX",
+      "targets": [
+        { "label": "GPX → GeoJSON" },
+        { "label": "GPX → KML" },
+        { "label": "GPX → KMZ" }
+      ]
+    },
+    {
+      "description": "GPS-Format nach Webstandard",
+      "source": "GeoJSON",
+      "targets": [
+        { "label": "GeoJSON → GPX" },
+        { "label": "GeoJSON → KML" },
+        { "label": "GeoJSON → KMZ" }
+      ]
+    },
+    {
+      "description": "Google-Earth-Format",
+      "source": "KML",
+      "targets": [
+        { "label": "KML → GPX" },
+        { "label": "KML → GeoJSON" },
+        { "label": "KML → KMZ" }
+      ]
+    },
+    {
+      "description": "Komprimiertes Google-Earth-Format",
+      "source": "KMZ",
+      "targets": [
+        { "label": "KMZ → GPX" },
+        { "label": "KMZ → GeoJSON" },
+        { "label": "KMZ → KML" }
+      ]
+    }
+  ]
+}

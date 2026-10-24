@@ -17,12 +17,12 @@
   "geojson-to-gpx": [
     {"href":"/tools/gpx-to-geojson/","label":"GPX in GeoJSON","note":"Umgekehrte Richtung"},
     {"href":"/tools/geojson-to-kml/","label":"GeoJSON in KML","note":"Gleiche Quelle, Ausgabe für Google Earth"},
-    {"href":"/tools/geojson-to-kmz/","label":"GeoJSON in KMZ","note":"Komprimiertes Google Earth-Format"}
+    {"href":"/tools/geojson-to-kmz/","label":"GeoJSON in KMZ","note":"Komprimiertes Google-Earth-Format"}
   ],
   "geojson-to-kml": [
     {"href":"/tools/kml-to-geojson/","label":"KML in GeoJSON","note":"Umgekehrte Richtung"},
     {"href":"/tools/geojson-to-gpx/","label":"GeoJSON in GPX","note":"Gleiche Quelle, Ausgabe für GPS-Geräte"},
-    {"href":"/tools/geojson-to-kmz/","label":"GeoJSON in KMZ","note":"Komprimiertes Google Earth-Format"}
+    {"href":"/tools/geojson-to-kmz/","label":"GeoJSON in KMZ","note":"Komprimiertes Google-Earth-Format"}
   ],
   "kml-to-geojson": [
     {"href":"/tools/geojson-to-kml/","label":"GeoJSON in KML","note":"Umgekehrte Richtung"},
@@ -131,7 +131,7 @@
   ],
   "gps-file-splitter": [
     {"href":"/tools/gpx-merger/","label":"GPX-Dateien zusammenführen","note":"Umgekehrte Richtung"},
-    {"href":"/tools/google-timeline-splitter/","label":"Timeline-Dateien aufteilen","note":"Google Takeout-Exporte aufteilen"},
+    {"href":"/tools/google-timeline-splitter/","label":"Timeline-Dateien aufteilen","note":"Google-Takeout-Exporte aufteilen"},
     {"href":"/tools/timeline-format-detector/","label":"Format erkennen","note":"Eine Datei vor dem Aufteilen erkennen"}
   ],
   "heatmap-generator": [

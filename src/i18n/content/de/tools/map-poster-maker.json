@@ -1,0 +1,83 @@
+{
+  "h1": "Ein Kartenposter von Berlin kann jeder aufhängen. Nur du hast deine Route.",
+  "intro": "Das Poster unten zeigt die Demo: einen Monat unterwegs in Berlin. Lege eine GPX-, Google-Timeline-, KML-, FIT- oder TCX-Datei ab und daraus wird eine Karte, die niemand sonst aufhängen kann – deine Radtouren, deine Läufe, deine Roadtrips. Etwa zwei Minuten, ohne Konto.",
+  "saveIntro": "Möchtest du diese Daten auch in deinem Dawarich-Konto haben? Wir importieren sie bei der Registrierung, ohne erneutes Hochladen.",
+  "appName": "Kartenposter erstellen",
+  "homeLabel": "Startseite",
+  "toolsLabel": "Kostenlose Werkzeuge",
+  "loadingStudio": "Studio wird geladen…",
+  "valueStrip": "17 Kartenstile · 22 Formate, A5 bis A0 und 4K · PNG & PDF mit 300 DPI · {price} · ohne Wasserzeichen",
+  "meta": {
+    "title": "Kartenposter kostenlos erstellen – Routen aus GPS-Dateien",
+    "description": "Erstelle Kartenposter aus GPX, Google Timeline, KML, FIT oder TCX im Browser. 17 Stile, 22 Layouts, kostenloser PNG- und PDF-Export, optionale Drucke.",
+    "keywords": "Kartenposter erstellen, Routenposter, GPX-Poster, Stadtplanposter, Google-Timeline-Poster, Laufstreckenposter, individueller Kartendruck, Kartenwandbild, GPS-Kunst"
+  },
+  "howTo": {
+    "name": "So erstellst du ein Kartenposter aus deinen GPS-Daten",
+    "description": "Verwandle einen GPS-Track oder deinen Google-Timeline-Verlauf in ein druckbares Kartenposter, kostenlos im Browser.",
+    "steps": [
+      {
+        "name": "Standortdatei hochladen",
+        "text": "Das Studio öffnet sich mit einer Demo-Route durch Berlin. Ziehe eine GPX-, Google-Timeline-JSON-, GeoJSON-, KML-, KMZ-, FIT- oder TCX-Datei hinein, um sie durch deinen eigenen Track zu ersetzen."
+      },
+      {
+        "name": "Poster gestalten",
+        "text": "Wähle einen von 17 Kartenstilen und 22 Layouts, füge Titel und Untertitel hinzu, wähle eine Schrift und passe Farbe, Deckkraft und Breite des Tracks an. Verschiebe und zoome die Vorschau, um deine Route ins Bild zu setzen."
+      },
+      {
+        "name": "Exportieren oder Druck bestellen",
+        "text": "Lade das Poster als PNG oder druckfertiges PDF mit bis zu 300 DPI herunter oder bestelle einen Druck in 30×40, 50×70 oder 70×100 cm."
+      }
+    ],
+    "tool": "Kartenposter-Werkzeug von Dawarich"
+  },
+  "faq": [
+    {
+      "q": "Wie erstelle ich ein Poster aus meinen GPS-Daten?",
+      "a": "Das Studio öffnet sich mit einer Demo-Route durch Berlin, damit du alles sofort ausprobieren kannst. Lege deine eigene GPX-, Google-Timeline-JSON-, GeoJSON-, KML-, KMZ-, FIT- oder TCX-Datei im Upload-Bereich ab, um sie zu ersetzen. Wähle einen von 17 Kartenstilen und 22 Layouts, füge einen Titel hinzu und lade das fertige Poster als PNG oder druckfertiges PDF herunter."
+    },
+    {
+      "q": "Bleiben meine Standortdaten privat?",
+      "a": "Deine Datei wird vollständig in deinem Browser eingelesen und nie auf einen Server hochgeladen. Zum Zeichnen der Karte werden Kartenkacheln für das Gebiet deiner Daten von Dawarichs Kartenserver angefordert. Dadurch wird der grobe geografische Ausschnitt sichtbar, den du ansiehst, wie bei jeder Onlinekarte. Zwei optionale Aktionen laden Daten hoch: Beim Bestellen eines Drucks wird das fertige Poster-PDF an Dawarichs Druckservice gesendet. „In meinem Konto speichern“ lädt deine Datei bei der Registrierung hoch."
+    },
+    {
+      "q": "Ist es kostenlos? Brauche ich ein Konto?",
+      "a": "Ja, kostenlos – ohne Konto, Registrierung oder Wasserzeichen. PNG- und PDF-Downloads sind unbegrenzt. Nur ein bestellter Druck kostet Geld. Ein Dawarich-Konto zu erstellen ist optional."
+    },
+    {
+      "q": "Welche Auflösung haben die exportierten Poster?",
+      "a": "Drucklayouts werden mit bis zu 300 DPI exportiert. Die physische Größe ist im PNG (pHYs) oder auf der PDF-Seite hinterlegt. Layouts für soziale Medien und Hintergrundbilder werden mit ihren exakten Pixelmaßen exportiert, z. B. 1080 × 1920 für eine Story oder 3840 × 2160 für ein 4K-Hintergrundbild. Sehr große Formate werden automatisch auf eine Größe reduziert, die der Grafikspeicher deines Geräts darstellen kann. Ein Hinweis informiert dich darüber."
+    },
+    {
+      "q": "Kann ich mein Poster als Druck bestellen?",
+      "a": "Ja. Wähle eine von drei Druckgrößen (30 × 40, 50 × 70 oder 70 × 100 cm). Das Studio erstellt ein PDF mit 300 DPI und lädt es zu Dawarichs Druckservice hoch. Die Zahlung läuft über Stripe. Die Drucke werden auf mattem Papier mit 200 gsm und kostenlosem EU-Versand geliefert. Der endgültige Preis wird beim Bezahlen bestätigt."
+    },
+    {
+      "q": "Welche Dateien funktionieren mit dem Kartenposter-Werkzeug?",
+      "a": "GPX-Tracks, Google-Timeline-Exporte (Records.json, Semantic Location History und Takeout-Formate vom Smartphone), GeoJSON, KML, KMZ, FIT und TCX. Du kannst mehrere Dateien gleichzeitig ablegen. Sie werden zu einem Track kombiniert, der an jeder Lücke von mehr als einer Stunde geteilt wird."
+    }
+  ],
+  "toolbar": {
+    "startOver": "Neu beginnen",
+    "demoLabel": "Demodaten anzeigen",
+    "fileSummary": "{count} Datei · {points} Punkte|{count} Dateien · {points} Punkte"
+  },
+  "upload": {
+    "formats": "GPX, FIT, TCX, GeoJSON, KML, KMZ, Google-Timeline-JSON",
+    "processing": "Dateien werden verarbeitet…",
+    "addFiles": "Weitere Dateien hinzufügen",
+    "dropFiles": "Standortdatei hier ablegen oder zum Auswählen klicken",
+    "inputLabel": "Dateien für ein Poster auswählen"
+  },
+  "errors": {
+    "emptyError": "In den hochgeladenen Dateien wurden keine darstellbaren Punkte gefunden. Prüfe, ob sie Standortdaten enthalten.",
+    "demoError": "Die Demo-Route konnte nicht geladen werden. Lege deine eigene Datei ab, um mit der Gestaltung zu beginnen.",
+    "sizeError": "{fileName} ist größer als 100 MB. Teile die Datei zuerst auf, zum Beispiel mit dem Werkzeug „GPS-Dateien aufteilen“.",
+    "parseError": "Fehler beim Einlesen von {fileName}: {message}"
+  },
+  "cta": {
+    "headline": "Dein Poster besteht aus **{points}** GPS-Punkten aus einer Datei. Dawarich zeichnet jede Route automatisch auf. Jeder Monat deines Verlaufs wird zum Poster. 7 Tage kostenlos testen, 14 Tage Rückerstattung, jederzeit kündbar.",
+    "fallback": "Eine Datei ergibt ein Poster. Dawarich zeichnet jede Route automatisch auf. Jeder Monat deines Verlaufs wird zum Poster. 7 Tage kostenlos testen, 14 Tage Rückerstattung, jederzeit kündbar."
+  },
+  "faqTitle": "Häufig gestellte Fragen"
+}

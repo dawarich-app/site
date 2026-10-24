@@ -1,0 +1,22 @@
+{
+  "movingLabel": "unterwegs",
+  "stationaryLabel": "an einem Ort",
+  "visitsLabel": "Aufenthalte",
+  "tracksLabel": "Tracks",
+  "distanceLabel": "Entfernung",
+  "movingTitle": "Unterwegs",
+  "emptyDay": "An diesem Tag wurden keine Aufenthalte erfasst.",
+  "previousDay": "Vorheriger Tag",
+  "nextDay": "Nächster Tag",
+  "selectDay": "Wähle einen Tag aus, um deine Zeitleiste zu sehen.",
+  "rawHint": "Diese Datei enthält nur GPS-Rohdaten, keine Aufenthalte an Orten oder Aktivitätsabschnitte. Nutze Semantic Location History oder Exportdateien vom Smartphone für die vollständige Zeitleistenansicht.",
+  "places": "{count} Orte",
+  "movingDuration": "{duration} unterwegs",
+  "duration": {
+    "zero": "0m",
+    "hoursMinutes": "{hours}h {minutes}m",
+    "hours": "{hours}h",
+    "minutes": "{minutes}m"
+  },
+  "visitCount": "{count} Aufenthalt|{count} Aufenthalte"
+}

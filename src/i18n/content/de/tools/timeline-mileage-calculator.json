@@ -1,0 +1,195 @@
+{
+  "h1": "Google-Timeline-Kilometerrechner",
+  "intro": "Berechne gefahrene Kilometer aus deinen Google-Timeline-Daten. Erstelle herunterladbare Streckenprotokolle mit Details zu jeder Fahrt sowie Tages- und Monatsübersichten. Alles wird in deinem Browser verarbeitet. Deine Daten bleiben auf deinem Gerät, bis du „In meinem Dawarich-Konto speichern“ wählst.",
+  "privacyTitle": "Datenschutz an erster Stelle",
+  "privacyBody": "Alle Streckenberechnungen erfolgen direkt in deinem Browser. Deine Standortdaten bleiben auf deinem Gerät, bis du „In meinem Dawarich-Konto speichern“ wählst.",
+  "preCta": "Möchtest du deine Fahrstrecken laufend erfassen? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-mileage-calculator) zeichnet deine Reisen automatisch auf. Deine Daten gehören dir und bleiben privat. Keine manuellen Exporte mehr, sondern kontinuierliche, genaue Aufzeichnung.",
+  "saveIntro": "Möchtest du diese Daten auch in deinem Dawarich-Konto haben? Wir importieren sie bei der Registrierung, ohne erneutes Hochladen.",
+  "faqTitle": "Häufig gestellte Fragen",
+  "homeLabel": "Startseite",
+  "toolsLabel": "Kostenlose Werkzeuge",
+  "meta": {
+    "title": "Google-Timeline-Kilometerrechner – Fahrstrecken kostenlos",
+    "description": "Berechne Fahrstrecken aus Google-Timeline-Daten. Erstelle Streckenprotokolle und CSV-Berichte für steuerliche Nachweise. Kostenlos und privat im Browser.",
+    "keywords": "Google-Timeline-Kilometer, Kilometerrechner aus Standortverlauf, Fahrstrecke aus Google Maps, Streckenprotokoll Google Timeline, Kilometerrechner Steuer, Google-Maps-Kilometeraufzeichnung, IRS-Streckenprotokoll, Fahrstreckenrechner, Google-Timeline-Fahrstrecke, Fahrtkostenerstattung berechnen",
+    "featureList": [
+      "Gefahrene Kilometer aus Google-Timeline-Daten berechnen",
+      "Reisen nach Zeitraum filtern",
+      "Zwischen Kilometern und Meilen wechseln",
+      "Herunterladbares CSV-Streckenprotokoll erstellen",
+      "Tages- und Monatsübersichten der Reisen",
+      "Datenschutz an erster Stelle – gesamte Verarbeitung im Browser",
+      "Keine Daten werden an einen Server gesendet"
+    ]
+  },
+  "howTo": {
+    "name": "So berechnest du Fahrstrecken aus Google-Timeline-Daten",
+    "description": "Exportiere deine Google-Timeline-Daten und berechne Fahrstrecken mit diesem kostenlosen, datenschutzfreundlichen Rechner.",
+    "steps": [
+      {
+        "name": "Google-Timeline-Daten exportieren",
+        "text": "Besuche takeout.google.com, wähle Standortverlauf (Timeline) und exportiere die Daten. Alternativ unter Android: Google Maps > Einstellungen > Standort > Timeline > Exportieren. Unter iOS: Google Maps > Einstellungen > Persönliche Inhalte > Timeline-Daten exportieren."
+      },
+      {
+        "name": "JSON-Dateien hochladen",
+        "text": "Ziehe deine exportierten Google-Timeline-JSON-Dateien in den Kilometerrechner. Das Werkzeug erkennt das Format automatisch und extrahiert Fahrabschnitte."
+      },
+      {
+        "name": "Zeitraum und Einheit festlegen",
+        "text": "Wähle ein Start- und Enddatum, um dein Streckenprotokoll zu filtern, und entscheide dich für Kilometer oder Meilen."
+      },
+      {
+        "name": "Streckenprotokoll prüfen und herunterladen",
+        "text": "Prüfe das Reiseprotokoll, die Monatsübersichten und die Gesamtstrecke. Lade das vollständige Streckenprotokoll als CSV-Datei für deine Unterlagen herunter."
+      }
+    ],
+    "tool": "Google-Timeline-Kilometerrechner von Dawarich"
+  },
+  "exportData": {
+    "title": "So erhältst du deine Timeline-Daten",
+    "intro": "Exportiere deinen Google-Timeline-Standortverlauf mit einer dieser Methoden. Falls eine nicht funktioniert, versuche eine andere.",
+    "note": "Für möglichst genaue Streckendaten eignen sich Semantic-Location-History-Dateien am besten (monatliche JSON-Dateien wie 2023_JANUARY.json). Sie enthalten gekennzeichnete Aktivitätsabschnitte mit Fahrklassifizierungen.",
+    "methods": [
+      { "title": "Google Takeout:", "body": "Besuche [takeout.google.com](https://takeout.google.com/) → Wähle Standortverlauf (Timeline) → Als JSON exportieren" },
+      { "title": "Unter Android:", "body": "Google Maps öffnen → Einstellungen → Standort → Standortdienste → Timeline → Timeline exportieren" },
+      { "title": "Unter iOS:", "body": "Google Maps öffnen → Einstellungen → Persönliche Inhalte → Timeline-Daten exportieren" }
+    ]
+  },
+  "units": { "km": "km", "miles": "Meilen" },
+  "activities": {
+    "driving": "Autofahren",
+    "bus": "Bus",
+    "train": "Zug",
+    "subway": "U-Bahn",
+    "motorcycle": "Motorrad"
+  },
+  "duration": { "minutes": "{minutes}m", "hoursMinutes": "{hours}h {minutes}m" },
+  "results": {
+    "startDate": "Startdatum",
+    "endDate": "Enddatum",
+    "disclaimer": "Die Entfernungen werden anhand von GPS-Koordinaten berechnet (Haversine-Formel) und sind Luftliniennäherungen zwischen erfassten Punkten. Tatsächliche Straßenentfernungen können höher sein. Dieses Werkzeug dient zur Schätzung.",
+    "monthlyTitle": "Monatsübersicht",
+    "month": "Monat",
+    "tripCount": "Anzahl der Reisen",
+    "tripLogTitle": "Reiseprotokoll",
+    "trip": "Reise Nr.",
+    "date": "Datum",
+    "activity": "Aktivitätstyp",
+    "duration": "Dauer",
+    "emptyTitle": "Keine Fahrten gefunden",
+    "emptyIntro": "In deinen Daten wurden für den gewählten Zeitraum keine Fahrabschnitte erkannt. Mögliche Gründe:",
+    "calculateButton": "Berechnen",
+    "distanceTitle": "Gesamte Fahrstrecke",
+    "distanceHint": "Alle Fahrabschnitte zusammen",
+    "tripsTitle": "Reisen insgesamt",
+    "tripsHint": "Erkannte Fahrabschnitte",
+    "averageTitle": "Durchschnittliche Reiseentfernung",
+    "averageHint": "Pro Fahrabschnitt",
+    "downloadButton": "Streckenprotokoll herunterladen (CSV)",
+    "processing": "Wird verarbeitet...",
+    "distanceHeading": "Entfernung ({unit})",
+    "emptyReasons": [
+      { "body": "Dein Export enthält nur GPS-Rohpunkte (Records.json) ohne Aktivitätsklassifizierung" },
+      { "body": "Der Zeitraum überschneidet sich nicht mit deinen Daten" },
+      { "body": "Deine Daten enthalten keine Fahrabschnitte. Versuche für beste Ergebnisse Semantic-Location-History-Dateien" }
+    ],
+    "showMore": "Mehr anzeigen ({count} verbleibend)",
+    "distanceValue": "{distance} {unit}"
+  },
+  "cta": {
+    "fallback": "Möchtest du Fahrstrecken laufend erfassen, ohne manuelle Exporte? Dawarich zeichnet deine Reisen automatisch auf.",
+    "postTitle": "Genug vom manuellen Exportieren und Berechnen der Fahrstrecken?",
+    "postBody": "Dawarich zeichnet jede Fahrt automatisch auf, berechnet Entfernungen anhand tatsächlicher GPS-Daten und lässt dich jederzeit Streckenberichte exportieren. Selbst gehostet oder Cloud – deine Daten, deine Wahl.",
+    "title": "Suchst du einen Google-Timeline-Ersatz mit integrierter Streckenaufzeichnung?",
+    "body": "Dawarich ist eine quelloffene Plattform zur Standortaufzeichnung, die jede Reise automatisch protokolliert, Fahrstrecken berechnet und dir volle Kontrolle über deine Daten gibt. Importiere deinen Google-Timeline-Export, erfasse laufend Strecken mit deinem Smartphone und erstelle jederzeit Berichte – selbst gehostet oder in der Cloud.",
+    "button": "Dawarich 7 Tage kostenlos testen",
+    "headline": "Du hast **{count}** Reisen über **{distance} {unit}** protokolliert. Dawarich zeichnet das automatisch auf, ohne manuelle Exporte.",
+    "tripsLabel": "Reisen"
+  },
+  "faq": [
+    {
+      "q": "Ist es sicher, meine Google-Timeline-Daten hochzuladen?",
+      "a": "Ja. Der Rechner läuft zu 100% in deinem Browser mit clientseitigem JavaScript. Deine Dateien bleiben auf deinem Gerät und werden beim Schließen oder Neuladen der Seite verworfen. Deine Standortdaten werden nicht getrackt. Die einzige Ausnahme ist die optionale Schaltfläche „In meinem Dawarich-Konto speichern“. Sie lädt deine Datei zu Dawarich Cloud hoch, damit sie in dein neues Konto importiert werden kann. Das Werkzeug gehört zum quelloffenen Dawarich-Ökosystem. Du kannst den Quellcode also selbst prüfen."
+    },
+    {
+      "q": "Wie genau ist die Streckenberechnung?",
+      "a": "Die Entfernungen werden mit der Haversine-Formel berechnet, die den Großkreisabstand zwischen GPS-Koordinaten bestimmt. Daraus ergeben sich Luftliniennäherungen zwischen erfassten Punkten. Je nach Routenverlauf unterschätzen sie die tatsächliche Straßenentfernung typischerweise um 10-30%. Auf Autobahnen sind die Ergebnisse genauer als auf kurvigen Stadtstraßen. Für Kilometerabzüge bei der US-Steuerbehörde IRS werden üblicherweise Kilometerzählerstände oder spezielle Streckenaufzeichnungs-Apps für präzise Angaben genutzt. Dieses Werkzeug liefert jedoch eine solide Schätzung für Planung und Prüfung."
+    },
+    {
+      "q": "Kann ich das für steuerliche Abzüge nutzen?",
+      "a": "Dieses Werkzeug erstellt ein Streckenprotokoll, das als ergänzender steuerlicher Nachweis dienen kann. Die US-Steuerbehörde IRS verlangt jedoch zeitnah geführte Aufzeichnungen. Strecken sollten also idealerweise bei jeder Fahrt erfasst und nicht später rekonstruiert werden. Google-Timeline-Daten können deine Unterlagen ergänzen, reichen als einzige Quelle aber möglicherweise nicht aus. Lass dich für deine konkrete Situation steuerlich beraten. Wenn du Datum und Entfernung lieber direkt während der Reisen erfassen möchtest, statt sie Monate später zu rekonstruieren, protokolliert Dawarich sie automatisch."
+    },
+    {
+      "q": "Welche Fahraktivitäten werden erfasst?",
+      "a": "Der Rechner erkennt fahrbezogene Aktivitätstypen aus Googles Klassifizierungssystem: IN_PASSENGER_VEHICLE (Autofahrten), DRIVING, IN_BUS, IN_TRAIN, IN_SUBWAY und MOTORCYCLING. Google ordnet diese Typen anhand von Geschwindigkeit, Bewegungsmustern und Sensordaten zu. Die Genauigkeit hängt davon ab, wie gut Google deine Aktivitäten klassifiziert hat. Gelegentlich wird Gehen oder Radfahren fälschlich als Autofahren erkannt oder umgekehrt."
+    },
+    {
+      "q": "Kann ich nach Zeitraum filtern?",
+      "a": "Ja. Nach dem Hochladen kannst du ein Start- und Enddatum festlegen, um dein Streckenprotokoll auf einen bestimmten Zeitraum zu begrenzen. Das hilft bei Quartals- oder Jahresberichten, beim Eingrenzen von Geschäftsreisezeiträumen oder beim Vergleichen von Strecken über verschiedene Zeiträume. Auch die Monats- und Tagesübersichten berücksichtigen nur den gefilterten Zeitraum."
+    },
+    {
+      "q": "Welches Format hat der CSV-Export?",
+      "a": "Die CSV-Datei enthält Spalten für Reisenummer, Datum, Startzeit, Endzeit, Aktivitätstyp, Entfernung (in deiner gewählten Einheit) und Dauer. Jede Zeile entspricht einem in deinen Timeline-Daten erkannten Fahrabschnitt. Am Ende steht eine Summenzeile mit Gesamtentfernung und Anzahl der Reisen. Du kannst die CSV für weitere Analysen in Excel, Google Sheets oder einer anderen Tabellenkalkulation öffnen."
+    },
+    {
+      "q": "Warum fehlen manche Reisen?",
+      "a": "Dafür gibt es mehrere mögliche Gründe: (1) Google Timeline zeichnet nur auf, wenn der Standortverlauf auf deinem Gerät aktiviert ist. Für deaktivierte Zeiträume fehlen Daten. (2) Kurze Fahrten oder Fahrten mit schlechtem GPS-Signal liefern möglicherweise zu wenige Datenpunkte. (3) Google hat bestimmte Bewegungen eventuell nicht als Autofahren eingestuft, besonders bei niedrigen Geschwindigkeiten. (4) Bei der neueren Smartphone-Exportmethode hast du aufgrund von Googles Richtlinienänderung von 2024 möglicherweise nur die Daten der letzten 90 Tage. (5) Manche Exportformate enthalten weniger Details als andere."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Was ist der Timeline-Kilometerrechner?",
+      "paragraphs": [
+        "Der Timeline-Kilometerrechner ist ein kostenloses Browserwerkzeug, das Fahrtdaten aus deinen Google-Timeline-Exportdateien extrahiert und die zurückgelegte Gesamtentfernung berechnet. Es erkennt fahrbezogene Aktivitätsabschnitte, darunter Auto-, Bus-, Zug- und Motorradfahrten, und erstellt ein strukturiertes Streckenprotokoll mit Details zu jeder Reise.",
+        "Alle Berechnungen erfolgen in deinem Browser. Beim Erstellen deines Streckenprotokolls werden deine Standortdaten also nirgendwohin gesendet. Du erhältst sofortige Ergebnisse bei voller Privatsphäre. Das erzeugte CSV-Streckenprotokoll eignet sich für Spesenabrechnungen, Steuerunterlagen oder persönliche Aufzeichnungen. (Wenn du „In meinem Dawarich-Konto speichern“ nutzt, lädt nur diese Aktion deine Datei zu Dawarich Cloud hoch, um den Import einzurichten. Ansonsten wird nichts gesendet.)"
+      ]
+    },
+    {
+      "title": "So werden Fahrstrecken berechnet",
+      "paragraphs": [
+        "Der Rechner nutzt die Haversine-Formel, um Großkreisabstände zwischen aufeinanderfolgenden GPS-Koordinaten jedes Fahrabschnitts zu berechnen. Das ist die Standardmethode zur Entfernungsberechnung zwischen zwei Punkten auf einer Kugel (der Erde).",
+        "Für jeden erkannten Fahrabschnitt deiner Google-Timeline-Daten summiert das Werkzeug die Abstände zwischen allen erfassten Wegpunkten dieses Abschnitts. Das Ergebnis ist eine Luftliniennäherung. Die tatsächliche Straßenentfernung liegt typischerweise 10-30% höher, bedingt durch Kurven, Höhenunterschiede und Umwege, die zwischen den GPS-Punkten nicht erfasst werden.",
+        "Sprünge von mehr als 500 km zwischen aufeinanderfolgenden Punkten werden automatisch ausgeschlossen, damit GPS-Fehler oder Teleportationsartefakte in den Daten nicht mitgezählt werden."
+      ]
+    },
+    {
+      "title": "Streckenprotokolle für steuerliche Abzüge nutzen",
+      "paragraphs": [
+        "In den USA erlaubt die Steuerbehörde IRS einen pauschalen Meilenabzug für die geschäftliche Nutzung eines Privatfahrzeugs. Der Satz ändert sich jährlich. Prüfe daher vor der Steuererklärung den aktuellen Satz. Dafür benötigst du ein Streckenprotokoll mit Datum, Ziel, geschäftlichem Zweck und Entfernung jeder Reise.",
+        "Google-Timeline-Daten können Datum und Entfernung jedes Fahrabschnitts liefern, unterscheiden aber nicht zwischen geschäftlichen und privaten Reisen. Du musst die exportierte CSV daher um geschäftlichen Zweck und Ziel ergänzen. Die IRS verlangt außerdem zeitnahe Aufzeichnungen, also während oder kurz nach jeder Fahrt. Ein rückblickendes Google-Timeline-Protokoll eignet sich deshalb am besten als ergänzender Nachweis und nicht als einzige Aufzeichnung.",
+        "Um Reisen direkt während ihres Verlaufs aufzuzeichnen, statt sie später zu rekonstruieren, kannst du [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-mileage-calculator) nutzen. Den geschäftlichen Zweck ergänzt du weiterhin selbst."
+      ]
+    },
+    {
+      "title": "Was ist mit Google Maps Timeline passiert?",
+      "paragraphs": [
+        "Ende 2024 stellte Google die Webversion von Google Maps Timeline ein und verlagerte alle Standortdaten in den lokalen Speicher der Smartphones. Nur die Daten der letzten 90 Tage wurden übertragen. Alle älteren Standortverläufe wurden dauerhaft gelöscht, sofern Nutzer sie nicht vor Ablauf der Frist manuell gesichert hatten.",
+        "Viele Nutzer verloren dadurch den Zugriff auf jahrelange Standortverläufe, auf die sie für Streckenaufzeichnung, Reiseerinnerungen und Spesennachweise angewiesen waren. Falls du deine Daten vor der Umstellung über Google Takeout oder die Timeline-Exportfunktion sichern konntest, hilft dir dieser Rechner, Streckeninformationen aus diesen Dateien zu gewinnen.",
+        "Weitere Details findest du in unserer [Anleitung zum Umstieg vom Google-Standortverlauf](/blog/migrating-from-google-location-history-to-dawarich)."
+      ]
+    },
+    {
+      "title": "Genauigkeit und Grenzen",
+      "paragraphs": [],
+      "items": [
+        { "body": "**GPS-Präzision** — Google Timeline erfasst Standorte je nach Geräteaktivität typischerweise im Abstand von wenigen Sekunden bis Minuten. Wegen der Lücken werden einige Reiseabschnitte interpoliert statt präzise gemessen" },
+        { "body": "**Aktivitätsklassifizierung** — Google nutzt maschinelles Lernen zum Erkennen von Aktivitätstypen. Fehlzuordnungen kommen vor: Langsames Fahren im Stau kann als Radfahren gelten, eine Busfahrt als Autofahrt" },
+        { "body": "**Luftlinienentfernungen** — Die Haversine-Formel liefert die kürzeste Verbindung zwischen zwei Punkten auf der Erdoberfläche. Echte Straßen sind wegen Kurven, Hügeln und Routenführung länger" },
+        { "body": "**Fehlende Daten** — Für Zeiträume, in denen dein Smartphone ausgeschaltet, im Flugmodus oder der Standortverlauf deaktiviert war, fehlen Daten" },
+        { "body": "**Das Exportformat zählt** — Semantic-Location-History-Dateien enthalten die detailliertesten Fahrtdaten. In rohen Records.json-Dateien fehlen möglicherweise Aktivitätstypen" }
+      ]
+    },
+    {
+      "title": "Weitere Werkzeuge",
+      "paragraphs": [],
+      "items": [
+        { "body": "[Google-Timeline-Visualisierung](/tools/timeline-visualizer) — Deinen vollständigen Standortverlauf auf einer interaktiven Karte ansehen" },
+        { "body": "[GPS-Heatmap-Generator](/tools/heatmap-generator) — Heatmaps aus GPX, FIT, TCX und anderen GPS-Dateien erstellen" },
+        { "body": "[GPX-Tracks zusammenführen](/tools/gpx-merger) — Mehrere GPX-Dateien zu einer kombinieren" },
+        { "body": "[Foto-Geodaten auslesen](/tools/photo-geotagging) — GPS-Koordinaten aus deinen Fotos extrahieren" },
+        { "body": "[GeoJSON-zu-GPX-Konverter](/tools/geojson-to-gpx) — Deine Standortdaten in das GPX-Format umwandeln" }
+      ],
+      "footer": ["Mehr dazu: [Umstieg vom Google-Standortverlauf](/blog/migrating-from-google-location-history-to-dawarich)"]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "KMZ in KML – Google Earth-Dateien online gratis entpacken",
+    "title": "KMZ in KML – Google-Earth-Dateien online gratis entpacken",
     "description": "KMZ sofort in KML umwandeln. Kostenloser, datenschutzfreundlicher Online-Konverter zum Entpacken von KMZ-Dateien. Direkt im Browser, ohne Upload.",
     "keywords": "KMZ in KML, KMZ entpacken, KML-Konverter, KMZ dekomprimieren, KMZ entzippen, Google Earth entpacken",
     "appName": "KMZ-zu-KML-Konverter"
@@ -22,7 +22,7 @@
         "Geografische Daten im Texteditor bearbeiten",
         "Eingebettete Ressourcen und Bilder extrahieren",
         "KML-Struktur prüfen und anpassen",
-        "Fehler in Google Earth-Dateien finden und beheben"
+        "Fehler in Google-Earth-Dateien finden und beheben"
       ]
     }
   ],

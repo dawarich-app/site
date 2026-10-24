@@ -47,7 +47,7 @@
       "details": [
         "iOS: offizielle Dawarich-App oder Overland",
         "Android: offizielle Dawarich-App, GPSLogger oder PhoneTrack",
-        "Beide: OwnTracks oder Home Assistant-Integration"
+        "Beide: OwnTracks oder Home-Assistant-Integration"
       ]
     },
     {
@@ -197,7 +197,7 @@
     "p": "Schritt-für-Schritt-Anleitungen für jede unterstützte Tracking-App.",
     "h4": "Funktionen:",
     "h42": "Einrichtungsschritte:",
-    "text": "Eine vollständige Anleitung einschließlich Home Assistant-Integration findest du in unserem",
+    "text": "Eine vollständige Anleitung einschließlich Home-Assistant-Integration findest du in unserem",
     "EnOnlyLink": "ausführlichen Tracking-Tutorial",
     "text2": ".",
     "heading2": "API-Endpunkte",

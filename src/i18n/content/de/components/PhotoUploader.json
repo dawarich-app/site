@@ -1,0 +1,13 @@
+{
+  "waiting": "Bitte warten...",
+  "addPhotos": "Klicke oder ziehe weitere Fotos hierher",
+  "dropPhotos": "Fotos hier ablegen",
+  "browse": "oder zum Auswählen klicken",
+  "formats": "Unterstützt: JPEG, PNG, HEIC und weitere Bildformate",
+  "clearButton": "Alle Fotos entfernen",
+  "noImages": "Keine Bilddateien gefunden. Bitte lade Fotos hoch (JPEG, PNG, HEIC usw.)",
+  "inputLabel": "Dateien zur Verarbeitung auswählen",
+  "loaded": "**{count}** Foto geladen|**{count}** Fotos geladen",
+  "processing": "{count} Foto wird verarbeitet...|{count} Fotos werden verarbeitet...",
+  "loadError": "Fehler beim Laden der Fotos: {message}"
+}

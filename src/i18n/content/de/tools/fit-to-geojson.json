@@ -6,7 +6,7 @@
     "appName": "FIT-zu-GeoJSON-Konverter"
   },
   "h1": "FIT in GeoJSON umwandeln",
-  "intro": "Wandle deine Garmin FIT-Dateien für Webkarten-Anwendungen in GeoJSON um. Die gesamte Verarbeitung läuft in deinem Browser.",
+  "intro": "Wandle deine Garmin-FIT-Dateien für Webkarten-Anwendungen in GeoJSON um. Die gesamte Verarbeitung läuft in deinem Browser.",
   "cards": [
     {
       "title": "Über das GeoJSON-Format",

@@ -1,0 +1,211 @@
+{
+  "meta": {
+    "title": "Google-Timeline-Daten zusammenführen – Exporte kombinieren",
+    "description": "Kombiniere Google-Timeline-Exporte kostenlos. Entferne doppelte Punkte aus Records.json, Semantic History und Smartphone-Exporten. Privat im Browser.",
+    "keywords": "Google-Timeline-Exporte zusammenführen, Standortverlaufsdateien kombinieren, Google-Timeline-Daten wiederherstellen, Records.json zusammenführen, Google-Takeout-Standortdaten kombinieren, Semantic Location History zusammenführen, Google Timeline kombinieren, Standortverlaufsduplikate entfernen, GPS-Daten zusammenführen",
+    "featureList": [
+      "Mehrere Google-Timeline-Exporte zu einer Datei zusammenführen",
+      "Intelligente Duplikaterkennung entfernt überlappende Datenpunkte",
+      "Unterstützung für Records.json, Semantic Location History und Smartphone-Exporte",
+      "Anpassbare Entfernungs- und Zeitschwellen zur Duplikaterkennung",
+      "Visueller Bericht zu zeitlichen Überschneidungen",
+      "Als JSON oder GPX exportieren",
+      "Datenschutz an erster Stelle – gesamte Verarbeitung im Browser",
+      "Keine Daten werden an einen Server gesendet"
+    ]
+  },
+  "howTo": {
+    "name": "So führst du Google-Timeline-Exporte zusammen",
+    "description": "Kombiniere mehrere Google-Timeline-Exportdateien zu einem gemeinsamen Datensatz mit intelligenter Duplikatentfernung.",
+    "steps": [
+      {
+        "name": "Google-Timeline-Daten exportieren",
+        "text": "Exportiere deine Google-Timeline-Daten über Google Takeout, Android oder iOS. Nutze nach Möglichkeit mehrere Exportmethoden, um alle deine Daten zu erfassen."
+      },
+      {
+        "name": "JSON-Dateien hochladen",
+        "text": "Ziehe alle deine exportierten Google-Timeline-JSON-Dateien in das Werkzeug zum Zusammenführen. Es erkennt Records.json, Semantic Location History und Smartphone-Exportformate automatisch."
+      },
+      {
+        "name": "Dateiübersicht und Überschneidungen prüfen",
+        "text": "Prüfe in der Dateiübersicht und der Zeitleistenvisualisierung, wie sich deine Dateien überschneiden. Das Werkzeug zeigt für jede Datei Zeitraum, Punktzahl und erkanntes Format an."
+      },
+      {
+        "name": "Duplikaterkennung einstellen",
+        "text": "Lege die Entfernungsschwelle (10-500 Meter) und Zeitschwelle (10-300 Sekunden) für die Duplikaterkennung fest. Punkte innerhalb beider Schwellen gelten als Duplikate."
+      },
+      {
+        "name": "Zusammenführen und exportieren",
+        "text": "Klicke auf „Dateien zusammenführen“, um alle Daten zu kombinieren und Duplikate zu entfernen. Lade das Ergebnis als JSON (behält alle Metadaten) oder GPX (kompatibel mit Kartenanwendungen) herunter."
+      }
+    ],
+    "tool": "Google-Timeline-Daten zusammenführen mit Dawarich"
+  },
+  "h1": "Google-Timeline-Daten zusammenführen",
+  "intro": "Führe mehrere Google-Timeline-Exporte zu einer gemeinsamen Datei zusammen. Die intelligente Duplikaterkennung entfernt überlappende Datenpunkte und bewahrt alle einzigartigen Standortdatensätze. Kostenlos, datenschutzfreundlich und vollständig in deinem Browser.",
+  "preCta": "Möchtest du deine Timeline-Daten zuerst visualisieren? Erkunde deinen Standortverlauf auf einer interaktiven Karte mit unserer [Google-Timeline-Visualisierung](/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger). Suchst du einen langfristigen Timeline-Ersatz? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) gibt dir volle Kontrolle über deine Daten.",
+  "faqTitle": "Häufig gestellte Fragen",
+  "homeLabel": "Startseite",
+  "toolsLabel": "Kostenlose Werkzeuge",
+  "privacyTitle": "Datenschutz an erster Stelle",
+  "privacyBody": "Das Zusammenführen und Entfernen von Duplikaten erfolgt direkt in deinem Browser. Deine Standortdaten verlassen dein Gerät nie und werden an keinen Server gesendet.",
+  "benefitsTitle": "Warum Timeline-Exporte zusammenführen?",
+  "benefitsIntro": "Google bietet mehrere Exportmethoden für Timeline-Daten, die jeweils unterschiedliche Informationen erfassen. Durch das Kombinieren erhältst du einen möglichst vollständigen Standortverlauf.",
+  "benefits": [
+    {
+      "title": "Mehrere Exportmethoden:",
+      "body": "Google Takeout, Smartphone-Exporte und Semantic Location History enthalten jeweils unterschiedliche Daten. Beim Zusammenführen wird alles aus jeder Quelle erfasst."
+    },
+    {
+      "title": "Datenwiederherstellung:",
+      "body": "Nach Googles Timeline-Umstellung von 2024 haben viele Nutzer Teilexporte von verschiedenen Zeitpunkten. Führe sie zusammen, um möglichst viel Verlauf wiederherzustellen."
+    },
+    {
+      "title": "Alte und neue Exporte kombinieren:",
+      "body": "Du hast deine Timeline 2022 und erneut 2024 exportiert? Führe beide Exporte zusammen, um eine durchgehende Abdeckung ohne doppelte Einträge zu erhalten."
+    }
+  ],
+  "settings": {
+    "title": "Einstellungen zur Duplikaterkennung",
+    "intro": "Passe an, wie großzügig doppelte Punkte erkannt werden. Zwei Punkte gelten als Duplikate, wenn ihr Abstand sowohl innerhalb der Entfernungs- als auch der Zeitschwelle liegt. Der Punkt mit umfangreicheren Metadaten bleibt erhalten.",
+    "distanceLabel": "Entfernungsschwelle",
+    "distanceHint": "Punkte mit geringerem Abstand können Duplikate sein (10m = streng, 500m = großzügig)",
+    "timeLabel": "Zeitschwelle",
+    "timeHint": "Innerhalb dieses Zeitfensters erfasste Punkte können Duplikate sein (10s = streng, 300s = großzügig)"
+  },
+  "results": {
+    "file": "Datei",
+    "format": "Format",
+    "points": "Punkte",
+    "paths": "Pfade",
+    "dateRange": "Zeitraum",
+    "dateCoverage": "Zeitliche Abdeckung",
+    "overlap": "Überschneidung",
+    "title": "Ergebnisse der Zusammenführung",
+    "inputPoints": "Eingabepunkte",
+    "outputPoints": "Ausgabepunkte",
+    "duplicatesRemoved": "Entfernte Duplikate",
+    "filesMerged": "Zusammengeführte Dateien",
+    "overlapDetails": "Details zu Überschneidungen",
+    "parsing": "Hochgeladene Dateien werden eingelesen...",
+    "unknown": "unbekannt",
+    "noTimestamps": "Keine Zeitstempel",
+    "none": "Keine",
+    "downloadJson": "Als JSON herunterladen",
+    "downloadGpx": "Als GPX herunterladen",
+    "noDate": "Nicht verfügbar",
+    "merging": "Dateien werden zusammengeführt...",
+    "uploadedFiles": "Hochgeladene Dateien ({count})",
+    "distanceValue": "{distance}m",
+    "timeValue": "{seconds}s",
+    "filePair": "**{fileA}** und **{fileB}**",
+    "overlapRange": " überschneiden sich von {startDate} bis {endDate}",
+    "overlapWith": "Überschneidung mit {fileName}",
+    "mergeButton": "{count} Datei zusammenführen|{count} Dateien zusammenführen",
+    "dayCount": "{count} Tag|{count} Tage",
+    "parseError": "Fehler beim Einlesen von {fileName}: {message}",
+    "processingError": "Fehler beim Verarbeiten der Dateien: {message}",
+    "mergeError": "Fehler beim Zusammenführen der Dateien: {message}"
+  },
+  "cta": {
+    "fallback": "Möchtest du deine zusammengeführten Standortdaten sicher und jederzeit zugänglich aufbewahren? Dawarich speichert deinen vollständigen Standortverlauf sicher.",
+    "postTitle": "Riskiere nie wieder den Verlust deiner Standortdaten",
+    "postBody": "Dawarich speichert alles in EU-Rechenzentren, verschlüsselt bei der Übertragung (SSL/TLS) und Speicherung (LUKS), mit vollständigen Backups und einer interaktiven Karte. Importiere deine zusammengeführten Timeline-Daten und zeichne deinen Standort weiter automatisch auf.",
+    "bottomTitle": "Suchst du einen langfristigen Ersatz für Google Timeline?",
+    "bottomBody": "Dawarich ist eine quelloffene Plattform zur Standortaufzeichnung, die dir volle Kontrolle über deine Daten gibt. Importiere deinen zusammengeführten Google-Timeline-Export, zeichne deinen Standort laufend mit dem Smartphone auf und visualisiere jahrelange Bewegungsdaten – selbst gehostet oder in der Cloud.",
+    "button": "Dawarich 7 Tage kostenlos testen",
+    "headline": "Du hast **{count}** Dateien mit **{points}** Punkten zu einer zusammengeführt. Dawarich erledigt das automatisch mit all deinen GPS-Quellen.",
+    "statLabels": { "files": "Dateien", "points": "Punkte", "duplicates": "entfernte Duplikate" }
+  },
+  "faq": [
+    {
+      "q": "Ist es sicher, meine Google-Timeline-Daten hochzuladen?",
+      "a": "Ja. Die gesamte Verarbeitung erfolgt mit JavaScript direkt in deinem Browser. Deine Standortverlaufsdateien werden nie auf einen Server hochgeladen. Sie werden lokal gelesen, eingelesen, zusammengeführt und exportiert, ohne Netzwerkanfragen. Wenn du den Tab schließt, sind die Daten weg. Das Werkzeug ist außerdem quelloffen, sodass du den Code prüfen kannst."
+    },
+    {
+      "q": "Wie funktioniert die Duplikatentfernung?",
+      "a": "Der Algorithmus sortiert alle Punkte nach Zeitstempel und vergleicht dann jeden Punkt mit dem vorherigen. Liegen zwei aufeinanderfolgende Punkte sowohl innerhalb der Entfernungsschwelle (standardmäßig 50 Meter) als auch der Zeitschwelle (standardmäßig 60 Sekunden), wird das Duplikat entfernt. Dabei bleibt der Punkt mit mehr Metadaten (etwa Ortsnamen oder Aktivitätstypen) erhalten. Du kannst beide Schwellen vor dem Zusammenführen mit den Schiebereglern anpassen."
+    },
+    {
+      "q": "Kann ich verschiedene Formate zusammenführen?",
+      "a": "Ja. Das Werkzeug unterstützt alle Google-Timeline-Exportformate: Records.json aus Google Takeout, monatliche Semantic-Location-History-Dateien (etwa 2022_APRIL.json) und die neueren Smartphone-Timeline-Exporte mit semanticSegments. Du kannst diese Formate beliebig kombinieren. Der Parser erkennt jedes Dateiformat automatisch und vereinheitlicht die Daten vor dem Zusammenführen."
+    },
+    {
+      "q": "Was passiert mit überlappenden Daten?",
+      "a": "Überlappende Daten werden bei der Duplikatentfernung behandelt. Wenn zwei Dateien denselben Zeitraum abdecken, enthalten sie wahrscheinlich doppelte Standortpunkte, die zur selben Zeit am selben Ort erfasst wurden. Das Werkzeug erkennt diese anhand räumlicher und zeitlicher Nähe und behält nur eine Kopie jedes Punkts, bevorzugt die mit umfangreicheren Metadaten. Der Überschneidungsbericht zeigt genau, welche Dateien sich um wie viele Tage überschneiden."
+    },
+    {
+      "q": "Gehen beim Zusammenführen Daten verloren?",
+      "a": "Es gehen keine inhaltlich relevanten Daten verloren. Entfernt werden nur echte Duplikate: Punkte, die im Wesentlichen denselben Standort zur selben Zeit aus mehreren Exportquellen erfassen. Alle einzigartigen Punkte, Aufenthalte an Orten, Aktivitätsabschnitte und Pfade jeder Datei bleiben in der zusammengeführten Ausgabe erhalten. Wenn du sichergehen möchtest, kannst du die Entfernungsschwelle auf 0 setzen, um die Duplikatentfernung vollständig auszuschalten."
+    },
+    {
+      "q": "Welche Exportformate sind verfügbar?",
+      "a": "Du kannst die zusammengeführten Daten als JSON (ein Array aller Standortpunkte ohne Duplikate mit vollständigen Metadaten) oder als GPX exportieren (ein GPS-Standardformat, das mit den meisten Kartenanwendungen, Fitnesstrackern und GIS-Werkzeugen kompatibel ist). Der JSON-Export bewahrt alle ursprünglichen Metadaten wie Ortsnamen, Adressen und Aktivitätstypen. Der GPX-Export wandelt Aufenthalte an Orten in Wegpunkte und Standortdatensätze in Trackpunkte um."
+    },
+    {
+      "q": "Wie viele Dateien kann ich gleichzeitig zusammenführen?",
+      "a": "Es gibt keine feste Obergrenze für die Anzahl der Dateien. Das Werkzeug wurde mit über 10 Dateien gleichzeitig getestet, darunter große Records.json-Dateien mit Hunderttausenden Punkten. Die Verarbeitungszeit hängt von der Gesamtpunktzahl aller Dateien und der Rechenleistung deines Geräts ab. Eine typische Zusammenführung von 3-5 Dateien mit insgesamt 500,000 Punkten dauert auf einem modernen Computer 10-30 Sekunden."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Was macht das Werkzeug zum Zusammenführen von Timeline-Daten?",
+      "paragraphs": [
+        "Dieses kostenlose Browserwerkzeug kombiniert mehrere Google-Timeline-Exportdateien zu einem gemeinsamen Datensatz. Wenn du deinen Google-Standortverlauf mit verschiedenen Methoden exportierst (Google Takeout, Smartphone-Export, Semantic History), erhältst du oft überlappende Dateien mit doppelten Datenpunkten. Das Werkzeug führt sie intelligent zusammen, entfernt Duplikate und bewahrt jeden einzigartigen Standortdatensatz.",
+        "Die gesamte Verarbeitung erfolgt lokal in deinem Browser. Deine Standortdaten werden nie an einen Server übertragen. So lässt sich das Werkzeug auch mit sensiblen persönlichen Standortverläufen über viele Jahre sicher nutzen."
+      ]
+    },
+    {
+      "title": "So funktioniert die Duplikatentfernung",
+      "paragraphs": ["Der Algorithmus nutzt zwei Faktoren, um doppelte Standortpunkte zu erkennen:"],
+      "items": [
+        { "body": "**Räumliche Nähe** -- Punkte innerhalb der Entfernungsschwelle (standardmäßig 50 Meter) kommen für die Duplikatentfernung infrage" },
+        { "body": "**Zeitliche Nähe** -- Punkte müssen auch innerhalb der Zeitschwelle liegen (standardmäßig 60 Sekunden), um als Duplikate zu gelten" },
+        { "body": "**Beide Bedingungen erforderlich** -- Ein Punkt wird nur als Duplikat entfernt, wenn sowohl Entfernung ALS AUCH Zeit übereinstimmen" },
+        { "body": "**Metadaten bleiben erhalten** -- Bei Duplikaten wird die Version mit mehr Metadaten (Ortsnamen, Adressen, Aktivitätstypen) beibehalten" }
+      ],
+      "footer": ["Die Punkte werden vor der Duplikatentfernung chronologisch sortiert. Das sorgt unabhängig von der Upload-Reihenfolge für einheitliche Ergebnisse."]
+    },
+    {
+      "title": "Warum Timeline-Exporte zusammenführen?",
+      "paragraphs": ["In einigen häufigen Situationen ist das Zusammenführen von Google-Timeline-Daten unverzichtbar:"],
+      "items": [
+        { "body": "**Mehrere Exportquellen** -- Google Takeout, Android- und iOS-Exporte erfassen jeweils unterschiedliche Teile deiner Daten" },
+        { "body": "**Wiederherstellung nach Googles Umstellung von 2024** -- Als Google Timeline auf lokalen Gerätespeicher umstellte, erstellten viele Nutzer mehrere Teilexporte. Zusammenführen stellt einen möglichst vollständigen Verlauf wieder her" },
+        { "body": "**Regelmäßige Backups** -- Hast du 2021 und erneut 2024 exportiert, entsteht beim Zusammenführen ein durchgehender Datensatz über beide Zeiträume" },
+        { "body": "**Gerätewechsel** -- Neues Smartphone? Führe die Exporte deiner alten und neuen Geräte zusammen" }
+      ]
+    },
+    {
+      "title": "Was ist mit Google Maps Timeline passiert?",
+      "paragraphs": [
+        "Ende 2024 stellte Google die Webversion von Google Maps Timeline ein und verlagerte alle Standortdaten in den lokalen Gerätespeicher. Nur die Daten der letzten 90 Tage wurden automatisch auf die Smartphones der Nutzer übertragen. Ältere Standortverläufe wurden dauerhaft gelöscht, sofern Nutzer sie nicht vor Ablauf der Frist manuell exportiert hatten.",
+        "Millionen Nutzer hatten dadurch verstreute Daten: unvollständige Takeout-Exporte, Smartphone-Exporte neuerer Daten und Semantic-Location-History-Dateien aus verschiedenen Zeiträumen. Das Werkzeug zum Zusammenführen hilft, diese Fragmente wieder zu einem vollständigen Standortverlauf zusammenzusetzen.",
+        "Für laufende Standortaufzeichnung mit voller Kontrolle über deine Daten bietet sich [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-merger) als selbst gehosteter oder cloudbasierter Ersatz an."
+      ]
+    },
+    {
+      "title": "Unterstützte Formate",
+      "paragraphs": ["Das Werkzeug erkennt und verarbeitet alle Google-Timeline-Exportformate automatisch:"],
+      "items": [
+        { "body": "**Records.json** -- GPS-Rohdaten aus Google Takeout im E7-Koordinatenformat. Meist die größten Dateien, die jede Standortmessung enthalten" },
+        { "body": "**Semantic Location History** -- Monatsdateien (z. B. 2022_APRIL.json) mit strukturierten Aufenthalten an Orten, Adressen und Aktivitätsabschnitten" },
+        { "body": "**Timeline-Export vom Smartphone** -- Neueres Format aus Google Maps unter Android/iOS mit semanticSegments und Timeline-Pfaden" },
+        { "body": "**Einstellungen & TimelineEdits** -- Zusätzliche Metadatendateien aus Google-Takeout-Exporten" }
+      ],
+      "footer": ["Du kannst diese Formate in einem Vorgang beliebig kombinieren."]
+    },
+    {
+      "title": "Weitere Werkzeuge",
+      "paragraphs": [],
+      "items": [
+        { "body": "[Google-Timeline-Visualisierung](/tools/timeline-visualizer) -- Deinen Standortverlauf auf einer interaktiven Karte ansehen" },
+        { "body": "[GPS-Heatmap-Generator](/tools/heatmap-generator) -- Heatmaps aus GPX, FIT, TCX und anderen GPS-Dateien erstellen" },
+        { "body": "[GPX-Tracks zusammenführen](/tools/gpx-merger) -- Mehrere GPX-Dateien zu einer kombinieren" },
+        { "body": "[Foto-Geodaten auslesen](/tools/photo-geotagging) -- GPS-Koordinaten aus deinen Fotos extrahieren" },
+        { "body": "[GeoJSON-zu-GPX-Konverter](/tools/geojson-to-gpx) -- Standortdaten in das GPX-Format umwandeln" }
+      ],
+      "footer": ["Mehr dazu: [Umstieg vom Google-Standortverlauf](/blog/migrating-from-google-location-history-to-dawarich)"]
+    }
+  ]
+}

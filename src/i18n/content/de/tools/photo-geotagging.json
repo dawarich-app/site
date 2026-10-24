@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "Foto-Geodaten auslesen – GPS-Daten aus Fotos extrahieren",
+    "description": "Lies GPS-Koordinaten aus deinen Fotos aus und exportiere sie als GPX. Kostenlos und privat: Die Verarbeitung erfolgt im Browser, ohne Daten an Server zu senden.",
+    "keywords": "Foto-Geodaten auslesen, GPS, EXIF, Geolokalisierung, GPX-Export, Fotostandort, Datenschutz, Bildmetadaten",
+    "featureList": [
+      "GPS-Daten aus Fotos auslesen",
+      "Interaktive Karte mit Fotomarkierungen",
+      "Datenschutz an erster Stelle – gesamte Verarbeitung im Browser",
+      "Standorte als GPX-Dateien exportieren",
+      "Keine Daten werden an Server gesendet"
+    ]
+  },
+  "h1": "Foto-Geodaten auslesen",
+  "intro": "Lade deine Fotos hoch, um GPS-Koordinaten aus den EXIF-Metadaten auszulesen, auf einer Karte darzustellen und als GPX-Dateien zu exportieren.",
+  "exportButton": "Als GPX exportieren",
+  "emptyExport": "Keine Fotos mit GPS-Daten zum Exportieren vorhanden",
+  "gpsPhotosLabel": "Fotos mit GPS",
+  "photosLabel": "Fotos",
+  "howTo": {
+    "title": "So funktioniert es",
+    "intro": "Dieses Werkzeug liest EXIF-Metadaten aus deinen Fotos, um GPS-Koordinaten zu extrahieren. Die meisten Smartphones betten Standortdaten automatisch in Fotos ein.",
+    "features": [
+      {
+        "title": "Unterstützte Formate:",
+        "body": "JPEG, PNG, HEIC und weitere Bildformate mit EXIF-Daten"
+      },
+      {
+        "title": "Das erhältst du:",
+        "body": "Eine interaktive Karte mit Fotostandorten, detaillierte GPS-Daten und GPX-Export für GPS-Geräte"
+      },
+      {
+        "title": "Hinweis:",
+        "body": "Nur Fotos mit GPS-Daten erscheinen auf der Karte. Bildschirmfotos und bearbeitete Fotos enthalten möglicherweise keine Standortdaten."
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Datenschutz an erster Stelle",
+    "body": "Die gesamte Fotoverarbeitung erfolgt direkt in deinem Browser. Deine Fotos und Standortdaten verlassen dein Gerät nie und werden an keinen Server gesendet."
+  },
+  "results": {
+    "gpsPhotos": "Fotos mit GPS-Daten: {count}",
+    "extracted": "Du hast GPS-Daten aus **{count}** Fotos ausgelesen. Dawarich stellt all deine Standortdaten auf einer Karte dar: Fotos, Tracks und tägliche Bewegungen.",
+    "uploaded": "Du hast **{count}** Fotos hochgeladen. Dawarich stellt all deine Standortdaten auf einer Karte dar: Fotos, Tracks und tägliche Bewegungen."
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "h1": "Google-Timeline-Statistiken",
+  "intro": "Dein Spotify Wrapped für den Standortverlauf. Lade deine Google-Timeline-Daten hoch und sieh, wie weit du gereist bist, welche Länder du besucht hast, wo du am häufigsten warst und wie du deine Zeit unterwegs verbringst.",
+  "appName": "Google-Timeline-Statistikanalyse",
+  "privacyTitle": "Datenschutz an erster Stelle",
+  "privacyBody": "Die gesamte Datenverarbeitung erfolgt direkt in deinem Browser. Deine Standortdaten verlassen dein Gerät nie und werden an keinen Server gesendet.",
+  "preCta": "Gefallen dir diese Einblicke? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-statistics) erstellt Reisestatistiken automatisch aus deinen laufenden Standortdaten: Gesamtentfernung, Länder, Städte und Aktivitätsübersichten, in Echtzeit aktualisiert. [Erfahre, wie du umsteigst](/blog/migrating-from-google-location-history-to-dawarich).",
+  "faqTitle": "Häufig gestellte Fragen",
+  "homeLabel": "Startseite",
+  "toolsLabel": "Kostenlose Werkzeuge",
+  "meta": {
+    "title": "Google-Timeline-Statistiken – Einblicke in deinen Verlauf",
+    "description": "Analysiere Google-Timeline-Daten kostenlos: Gesamtentfernung, besuchte Länder, häufigste Orte, Aktivitäten und Jahrestrends. Privat, direkt im Browser.",
+    "keywords": "Google-Timeline-Statistiken, Standortverlaufsstatistik, wie weit bin ich gereist, Google-Maps-Timeline-Einblicke, Google-Timeline-Analyse, Reisestatistiken, Standortdatenanalyse, Google-Takeout-Statistiken, zurückgelegte Entfernung berechnen, besuchte Orte zählen",
+    "featureList": [
+      "Zurückgelegte Gesamtentfernung aus Google-Timeline-Daten berechnen",
+      "Besuchte Länder und Städte ansehen",
+      "Rangliste der meistbesuchten Orte",
+      "Aufschlüsselung nach Aktivitätstyp (Gehen, Autofahren, Radfahren, öffentliche Verkehrsmittel)",
+      "Jährliche und monatliche Datentrends",
+      "Statistikkarte zum Herunterladen und Teilen",
+      "Datenschutz an erster Stelle – gesamte Verarbeitung im Browser",
+      "Unterstützt alle Google-Timeline-Exportformate"
+    ]
+  },
+  "howTo": {
+    "name": "So analysierst du deine Google-Timeline-Statistiken",
+    "description": "Exportiere deine Google-Timeline-Daten und erhalte detaillierte Reisestatistiken zu Entfernung, Ländern, Orten und Aktivitäten.",
+    "steps": [
+      {
+        "name": "Google-Timeline-Daten exportieren",
+        "text": "Besuche takeout.google.com, wähle Standortverlauf (Timeline) und exportiere die Daten. Alternativ unter Android: Google Maps → Einstellungen → Standort → Timeline → Exportieren. Unter iOS: Google Maps → Einstellungen → Persönliche Inhalte → Timeline-Daten exportieren."
+      },
+      {
+        "name": "JSON-Dateien hochladen",
+        "text": "Ziehe deine exportierten Google-Timeline-JSON-Dateien in das Analysewerkzeug. Es erkennt das Format (Records.json, Semantic Timeline, Location History usw.) automatisch und liest deine Daten ein."
+      },
+      {
+        "name": "Reisestatistiken ansehen",
+        "text": "Sieh dir Gesamtentfernung, besuchte Länder, häufigste Orte, Aktivitätsverteilung, Jahrestrends und mehr an. Lade eine Statistikkarte als Bild herunter, um deine Reisehöhepunkte zu teilen."
+      }
+    ],
+    "tool": "Google-Timeline-Statistikanalyse von Dawarich"
+  },
+  "exportData": {
+    "title": "So erhältst du deine Timeline-Daten",
+    "intro": "Exportiere deine Google-Timeline-Daten mit einer der folgenden Methoden. Für die umfangreichsten Statistiken (Länder, Städte, Ortsnamen) nutze den Semantic-Location-History-Export.",
+    "methods": [
+      {
+        "title": "Google Takeout (empfohlen):",
+        "body": "Besuche [takeout.google.com](https://takeout.google.com/) → Wähle Standortverlauf (Timeline) → Als JSON exportieren. So erhältst du sowohl Records.json als auch Semantic-Location-History-Dateien."
+      },
+      { "title": "Unter Android:", "body": "Google Maps öffnen → Einstellungen → Standort → Standortdienste → Timeline → Timeline exportieren" },
+      { "title": "Unter iOS:", "body": "Google Maps öffnen → Einstellungen → Persönliche Inhalte → Timeline-Daten exportieren" },
+      {
+        "title": "Tipp:",
+        "body": "Lade alle deine monatlichen Semantic-Location-History-Dateien hoch (z. B. 2022_JANUARY.json, 2022_FEBRUARY.json), um möglichst vollständige Statistiken zu erhalten. Du kannst mehrere Dateien gleichzeitig auswählen."
+      }
+    ]
+  },
+  "results": {
+    "processing": "Deine Timeline-Daten werden verarbeitet... Bei großen Dateien kann das einen Moment dauern.",
+    "rawDataHint": "Deine Datei enthält rohe Standortdatensätze (Records.json-Format). Länder- und Städtenamen sowie Aufenthaltsdaten sind nur in Semantic-Location-History-Exporten verfügbar: den monatlichen Dateien mit Namen wie 2022_APRIL.json. Lade diese für umfangreichere Statistiken zu besuchten Orten, Ländern und Städten hoch.",
+    "placesTitle": "Meistbesuchte Orte",
+    "place": "Ort",
+    "visits": "Aufenthalte",
+    "address": "Adresse",
+    "timeTitle": "Zeitverteilung",
+    "activityTitle": "Aktivitätsverteilung",
+    "yearlyTitle": "Jahresübersicht",
+    "shareTitle": "Teile deine Statistiken",
+    "distance": "Gesamtentfernung",
+    "points": "Datenpunkte",
+    "places": "Besuchte Orte",
+    "uniqueLocations": "verschiedene Standorte",
+    "semanticHint": "aus semantischen Daten",
+    "dateRange": "Zeitraum",
+    "unnamed": "Ohne Namen",
+    "countries": "Länder ({count})",
+    "cities": "Städte ({count})",
+    "traveling": "Unterwegs: {duration}",
+    "stationary": "An einem Ort: {duration}",
+    "segments": "{count} Abschn.",
+    "pointCount": "{points} Pkt.{distance}",
+    "distanceSuffix": " / {distance} km",
+    "kilometers": "{distance} km",
+    "miles": "{distance} Meilen",
+    "pathCount": "{count} Pfade",
+    "yearCount": "{count} Jahre",
+    "noDate": "Nicht verfügbar"
+  },
+  "duration": {
+    "years": "{count} Jahr|{count} Jahre",
+    "months": "{count} Monat|{count} Monate",
+    "days": "{count} Tag|{count} Tage",
+    "hours": "{count} Stunde|{count} Stunden"
+  },
+  "numbers": { "million": "{count} Mio.", "thousand": "{count} Tsd." },
+  "activities": {
+    "driving": "Autofahren",
+    "walking": "Gehen",
+    "running": "Laufen",
+    "cycling": "Radfahren",
+    "bus": "Bus",
+    "train": "Zug",
+    "subway": "U-Bahn",
+    "flying": "Fliegen",
+    "motorcycle": "Motorrad",
+    "skiing": "Skifahren",
+    "sailing": "Segeln",
+    "unknown": "Unbekannt"
+  },
+  "cta": {
+    "fallback": "Gefallen dir diese Einblicke? Dawarich erstellt sie automatisch aus deinen laufenden Standortdaten.",
+    "title": "Suchst du einen Ersatz für Google Timeline?",
+    "body": "Dawarich ist eine quelloffene Plattform zur Standortaufzeichnung, die dir volle Kontrolle über deine Daten gibt. Importiere deinen Google-Timeline-Export, zeichne deinen Standort laufend mit dem Smartphone auf und erhalte aktuelle Reisestatistiken mit Karten, Entfernungsaufzeichnung und Jahresübersichten – selbst gehostet oder in der Cloud.",
+    "button": "Dawarich 7 Tage kostenlos testen",
+    "headline": "Du bist in **{years}** Jahren **{distance} km**{countries} gereist. Mach aus dieser Momentaufnahme ein Dashboard, das mit dir wächst.",
+    "countries": " durch **{count}** Länder",
+    "statLabels": { "points": "Punkte", "countries": "Länder", "cities": "Städte", "distance": "Entfernung", "years": "Jahre" }
+  },
+  "faq": [
+    {
+      "q": "Ist es sicher, meine Google-Timeline-Daten hochzuladen?",
+      "a": "Ja. Die gesamte Verarbeitung erfolgt mit JavaScript direkt in deinem Browser. Deine Standortverlaufsdateien werden nie auf einen Server hochgeladen, sondern bleiben auf deinem Gerät. Wenn du den Tab schließt, sind die Daten weg. Das Werkzeug ist außerdem quelloffen, sodass du genau prüfen kannst, was der Code tut. Ohne Konto, Cookies oder Tracking deiner Standortdaten."
+    },
+    {
+      "q": "Welche Statistiken berechnet dieses Werkzeug?",
+      "a": "Die Analyse berechnet die zurückgelegte Gesamtentfernung (in Kilometern und Meilen), die Anzahl der Datenpunkte, verschiedene besuchte Orte, Länder und Städte (aus Semantic Location History), die meistbesuchten Orte nach Häufigkeit, die Zeit unterwegs gegenüber der Zeit an einem Ort, die Verteilung der Aktivitätstypen (Gehen, Autofahren, Radfahren, öffentliche Verkehrsmittel, Fliegen usw.) sowie Jahresübersichten mit Monatsdetails. Außerdem wird eine Statistikkarte zum Herunterladen und Teilen erstellt."
+    },
+    {
+      "q": "Warum sehe ich keine Länder- oder Städtedaten?",
+      "a": "Länder- und Städtenamen sind nur in Semantic-Location-History-Exporten verfügbar: den monatlichen Dateien mit Namen wie 2022_APRIL.json, die strukturierte Aufenthalte an Orten mit Adressen enthalten. Eine Records.json-Datei enthält GPS-Rohkoordinaten ohne Ortsnamen oder Adressen. Für vollständige Statistiken einschließlich Ländern und Städten exportiere deine Semantic Location History über Google Takeout oder die Google-Maps-Timeline-Einstellungen deines Smartphones."
+    },
+    {
+      "q": "Wie genau ist die Entfernungsberechnung?",
+      "a": "Die Entfernung wird mit der Haversine-Formel berechnet. Sie bestimmt den Großkreisabstand zwischen aufeinanderfolgenden GPS-Punkten und berücksichtigt die Erdkrümmung. Das Werkzeug filtert unplausible Sprünge (mehr als 500 km zwischen aufeinanderfolgenden Punkten), damit GPS-Fehler die Summe nicht erhöhen. Bei Semantic Location History werden, sofern verfügbar, Entfernungen aus Aktivitätsabschnitten genutzt. Diese sind meist genauer als reine Punkt-zu-Punkt-Berechnungen. Die Gesamtgenauigkeit hängt davon ab, wie häufig Google deinen Standort erfasst hat."
+    },
+    {
+      "q": "Kann ich mehrere Dateien gleichzeitig analysieren?",
+      "a": "Ja. Du kannst mehrere JSON-Dateien gleichzeitig hochladen, zum Beispiel alle monatlichen Semantic-Location-History-Dateien oder eine Records.json zusammen mit Semantic-Dateien. Das Werkzeug führt vor der Statistikberechnung alle Datenpunkte und Pfade jeder Datei zusammen. So erhältst du eine gemeinsame Übersicht deines gesamten Standortverlaufs. Lade so viele Dateien hoch, wie du möchtest."
+    },
+    {
+      "q": "Was sind Aktivitätstypen?",
+      "a": "Aktivitätstypen sind Bewegungskategorien, die Google deinen Standortdaten zuordnet. Dazu gehören WALKING, RUNNING, CYCLING, IN_PASSENGER_VEHICLE (Autofahren), IN_BUS, IN_TRAIN, IN_SUBWAY, FLYING, MOTORCYCLING, SKIING und SAILING. Google erkennt sie automatisch anhand deiner Smartphone-Sensoren (Beschleunigungssensor, GPS-Geschwindigkeit, Höhenänderungen). Die Genauigkeit variiert. Google ordnet Aktivitäten manchmal falsch zu, besonders bei ähnlichen Fortbewegungsarten wie Bus- und Autofahren."
+    },
+    {
+      "q": "Kann ich meine Statistiken teilen?",
+      "a": "Ja. Nach der Analyse erstellt das Werkzeug eine Statistikkarte, die du als PNG-Bild herunterladen kannst. Sie enthält Gesamtentfernung, Anzahl der Datenpunkte, besuchte Orte und Anzahl der Länder samt Zeitraum. Das Bild wird vollständig in deinem Browser mit einem Canvas-Element erstellt. Es werden keine Daten gesendet. Du kannst das heruntergeladene Bild in sozialen Medien, Messenger-Apps oder überall sonst teilen."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Was ist die Timeline-Statistikanalyse?",
+      "paragraphs": [
+        "Die Timeline-Statistikanalyse ist ein kostenloses Browserwerkzeug, das deinen rohen Google-Timeline-Export in aussagekräftige Reisestatistiken verwandelt. Statt riesige JSON-Dateien voller Koordinaten zu betrachten, erhältst du eine klare Übersicht: zurückgelegte Gesamtentfernung, besuchte Länder und Städte, meistbesuchte Orte, die Zeitverteilung zwischen Verkehrsmitteln und die Veränderung deiner Bewegungsmuster von Jahr zu Jahr.",
+        "Stell es dir wie Spotify Wrapped vor, nur für deinen Standortverlauf. Die gesamte Verarbeitung erfolgt direkt in deinem Browser. Deine Daten verlassen dein Gerät nie, und das Werkzeug ist komplett kostenlos und ohne Registrierung nutzbar."
+      ]
+    },
+    {
+      "title": "Welche Statistiken kannst du sehen?",
+      "paragraphs": [],
+      "items": [
+        { "body": "**Gesamtentfernung** — Wie weit du in Kilometern und Meilen gereist bist, berechnet aus GPS-Punkten und Aktivitätsabschnitten" },
+        { "body": "**Länder und Städte** — Jedes Land und jede Stadt aus den Adressen deiner Semantic Location History" },
+        { "body": "**Häufigste Orte** — Deine meistbesuchten Standorte nach Anzahl der Aufenthalte" },
+        { "body": "**Zeitverteilung** — Ein visueller Vergleich der Zeit unterwegs und der Zeit an einem Ort" },
+        { "body": "**Aktivitätstypen** — Verteilung auf Gehen, Autofahren, Radfahren, öffentliche Verkehrsmittel, Fliegen und mehr" },
+        { "body": "**Jahrestrends** — Datenpunkte und Entfernung pro Jahr, um Veränderungen deiner Gewohnheiten zu erkennen" },
+        { "body": "**Karte zum Teilen** — Ein herunterladbares Bild mit deinen wichtigsten Statistiken" }
+      ]
+    },
+    {
+      "title": "Deine Aktivitätstypen verstehen",
+      "paragraphs": ["Googles Standortaufzeichnung nutzt deine Smartphone-Sensoren, um deine Fortbewegungsart zu erkennen. Die wichtigsten Aktivitätstypen in deinen Daten sind:"],
+      "items": [
+        { "body": "**Gehen / Laufen** — Erkannt anhand von Schrittzahl und Geschwindigkeit aus dem Beschleunigungssensor" },
+        { "body": "**Radfahren** — Mittlere Geschwindigkeit mit charakteristischen Beschleunigungsmustern" },
+        { "body": "**Autofahren** — Höhere Geschwindigkeit mit gleichmäßigen Beschleunigungsmustern, gekennzeichnet als IN_PASSENGER_VEHICLE" },
+        { "body": "**Bus / Zug / U-Bahn** — Öffentliche Verkehrsmittel, erkannt anhand von Geschwindigkeit, Routenmustern und teils Daten nahe gelegener Haltestellen" },
+        { "body": "**Fliegen** — Erkannt anhand schneller Höhenänderungen und sehr hoher Geschwindigkeiten" }
+      ],
+      "footer": ["Diese Zuordnungen sind nicht immer perfekt. Google verwechselt gelegentlich Bus- mit Autofahrten oder erkennt langsames Autofahren als Radfahren. Die Statistiken geben dir ein gutes Gesamtbild, einzelne Abschnitte können aber falsch klassifiziert sein."]
+    },
+    {
+      "title": "Was ist mit Google Maps Timeline passiert?",
+      "paragraphs": [
+        "Ende 2024 stellte Google die Webversion von Google Maps Timeline ein und verlagerte alle Standortdaten in den lokalen Gerätespeicher. Nur die letzten 90 Tage wurden übertragen. Ältere Daten wurden gelöscht, sofern Nutzer sie nicht vor Ablauf der Frist manuell gesichert hatten. Viele Menschen [verloren bei der Umstellung Jahre ihres Standortverlaufs](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/).",
+        "Falls du deine Daten vor oder während der Umstellung exportieren konntest, kannst du hier aussagekräftige Statistiken daraus gewinnen. Als langfristigen Ersatz, der deinen Standort weiter aufzeichnet und dir volle Kontrolle über deine Daten gibt, sieh dir [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-statistics) an."
+      ]
+    },
+    {
+      "title": "Records.json und Semantic Location History im Vergleich",
+      "paragraphs": ["Google exportiert deine Standortdaten in zwei Hauptformaten mit sehr unterschiedlichen Informationen:"],
+      "items": [
+        { "body": "**Records.json** — GPS-Rohkoordinaten und Zeitstempel. Jede von Google erfasste Standortmessung, meist im Abstand von Sekunden bis Minuten. Diese Dateien können Hunderte Megabyte groß sein. Sie liefern präzise Koordinaten, aber keine Ortsnamen, Adressen oder Aktivitätstypen." },
+        { "body": "**Semantic Location History** — Monatsdateien (z. B. 2022_APRIL.json) mit strukturierten Daten: benannte Aufenthalte an Orten mit Adressen, Aktivitätsabschnitte mit klassifizierten Verkehrsmitteln und Angaben zur Dauer. Die Dateien sind kleiner, enthalten aber umfangreichere, aussagekräftigere Daten." }
+      ],
+      "footer": ["Lade für die besten Statistiken deine Semantic-Location-History-Dateien hoch. Records.json liefert Entfernung und Datenpunkte. Länder, Städte, Ortsnamen und Aktivitätsübersichten fehlen dabei jedoch."]
+    },
+    {
+      "title": "Weitere Werkzeuge",
+      "paragraphs": [],
+      "items": [
+        { "body": "[Google-Timeline-Visualisierung](/tools/timeline-visualizer) — Deinen Standortverlauf auf einer interaktiven Karte ansehen" },
+        { "body": "[GPS-Heatmap-Generator](/tools/heatmap-generator) — Heatmaps aus GPX, FIT, TCX und anderen GPS-Dateien erstellen" },
+        { "body": "[GPX-Tracks zusammenführen](/tools/gpx-merger) — Mehrere GPX-Dateien zu einer kombinieren" },
+        { "body": "[Foto-Geodaten auslesen](/tools/photo-geotagging) — GPS-Koordinaten aus deinen Fotos extrahieren" },
+        { "body": "[GeoJSON-zu-GPX-Konverter](/tools/geojson-to-gpx) — Deine Standortdaten in das GPX-Format umwandeln" }
+      ],
+      "footer": ["Mehr dazu: [So haben wir die Timeline-Visualisierung entwickelt](/blog/building-a-privacy-first-google-timeline-visualizer) | [Umstieg vom Google-Standortverlauf](/blog/migrating-from-google-location-history-to-dawarich)"]
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "FIT in KML: Garmin-Dateien online gratis für Google Earth",
-    "description": "Garmin FIT-Dateien sofort in KML umwandeln. Kostenloser, datenschutzfreundlicher Online-Konverter für Fitnessaktivitäten in Google Earth. Direkt im Browser.",
+    "description": "Garmin-FIT-Dateien sofort in KML umwandeln. Kostenloser, datenschutzfreundlicher Online-Konverter für Fitnessaktivitäten in Google Earth. Direkt im Browser.",
     "keywords": "FIT in KML, Garmin zu Google Earth, FIT-Konverter, Google Earth, KML-Konverter, Fitness-Dateikonverter, Garmin in Google Earth ansehen",
     "appName": "FIT-zu-KML-Konverter"
   },
   "h1": "FIT in KML umwandeln",
-  "intro": "Wandle deine Garmin FIT-Dateien in KML um, um sie in Google Earth anzusehen. Die gesamte Verarbeitung läuft in deinem Browser.",
+  "intro": "Wandle deine Garmin-FIT-Dateien in KML um, um sie in Google Earth anzusehen. Die gesamte Verarbeitung läuft in deinem Browser.",
   "cards": [
     {
       "title": "Über das KML-Format",
