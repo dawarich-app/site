@@ -1,3 +1,6 @@
+import { interpolate } from '@docusaurus/Interpolate';
+import content from '@locale-content/pages/pricing.json';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import React, { useEffect } from "react";
 import Head from "@docusaurus/Head";
 import Layout from "@theme/Layout";
@@ -7,6 +10,7 @@ import PricingCompare from "@site/src/components/PricingCompare";
 import FAQ from "@site/src/components/FAQ";
 
 export default function PricingPage() {
+	const pageUrl = useLocalizedUrl('/pricing/');
 	useEffect(() => {
 		initializePaddle({
 			token: "live_8593fad779b610288ad3ca40789",
@@ -15,79 +19,79 @@ export default function PricingPage() {
 
 	return (
 		<Layout
-			title="Pricing — Dawarich"
-			description="Simple pricing for Dawarich Cloud. Lite €59.99/yr, Pro €17.99/mo, or Family €299.99/yr for up to 5 people. 7-day free trial, 14-day risk-free refund, cancel anytime. Or self-host for free."
+			title={content.meta.title}
+			description={interpolate(content.meta.description, { price: "€59.99", price2: "€17.99", price3: "€299.99" })}
 		>
 			<Head>
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://dawarich.app/pricing/" />
-				<meta property="og:title" content="Pricing — Dawarich" />
+				<meta property="og:url" content={pageUrl} />
+				<meta property="og:title" content={content.meta.title} />
 				<meta
 					property="og:description"
-					content="Lite €59.99/yr, Pro €17.99/mo, or Family €299.99/yr for up to 5 people. 7-day free trial, 14-day risk-free refund. Or self-host for free."
+					content={interpolate(content.meta.socialDescription, { price: "€59.99", price2: "€17.99", price3: "€299.99" })}
 				/>
 				<meta
 					property="og:image"
 					content="https://dawarich.app/img/meta-image.png"
 				/>
 				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:title" content="Pricing — Dawarich" />
+				<meta name="twitter:url" content={pageUrl} />
+				<meta name="twitter:title" content={content.meta.title} />
 				<meta
 					name="twitter:description"
-					content="Lite €59.99/yr, Pro €17.99/mo, or Family €299.99/yr for up to 5 people. 7-day free trial, 14-day risk-free refund. Or self-host for free."
+					content={interpolate(content.meta.socialDescription, { price: "€59.99", price2: "€17.99", price3: "€299.99" })}
 				/>
 				<meta
 					name="twitter:image"
 					content="https://dawarich.app/img/meta-image.png"
 				/>
-				<link rel="canonical" href="https://dawarich.app/pricing/" />
 
 				<script type="application/ld+json">
 					{JSON.stringify({
 						"@context": "https://schema.org",
 						"@type": "Product",
-						name: "Dawarich Cloud",
+						name: content.schema.name,
 						description:
-							"Privacy-first alternative to Google Timeline. Hosted in Europe. Self-hostable, open source.",
-						brand: { "@type": "Brand", name: "Dawarich" },
+							content.schema.description,
+						brand: { "@type": "Brand", name: content.schema.brand },
 						offers: [
 							{
 								"@type": "Offer",
-								name: "Lite (annual)",
+								name: content.schema.liteAnnual,
 								price: "59.99",
 								priceCurrency: "EUR",
 								availability: "https://schema.org/InStock",
-								url: "https://dawarich.app/pricing/",
+								url: pageUrl,
 							},
 							{
 								"@type": "Offer",
-								name: "Pro (monthly)",
+								name: content.schema.proMonthly,
 								price: "17.99",
 								priceCurrency: "EUR",
 								availability: "https://schema.org/InStock",
-								url: "https://dawarich.app/pricing/",
+								url: pageUrl,
 							},
 							{
 								"@type": "Offer",
-								name: "Pro (annual)",
+								name: content.schema.proAnnual,
 								price: "149.99",
 								priceCurrency: "EUR",
 								availability: "https://schema.org/InStock",
-								url: "https://dawarich.app/pricing/",
+								url: pageUrl,
 							},
 							{
 								"@type": "Offer",
-								name: "Family (annual)",
+								name: content.schema.familyAnnual,
 								description:
-									"One annual subscription covering up to 5 members, each with full Pro access.",
+									content.schema.familyDescription,
 								price: "299.99",
 								priceCurrency: "EUR",
 								availability: "https://schema.org/InStock",
-								url: "https://dawarich.app/pricing/",
+								url: pageUrl,
 							},
 							{
 								"@type": "Offer",
-								name: "Self-hosted",
+								name: content.schema.selfHosted,
 								price: "0",
 								priceCurrency: "EUR",
 								availability: "https://schema.org/InStock",
