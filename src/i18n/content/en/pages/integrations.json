@@ -1,0 +1,134 @@
+{
+  "integrationsShowcase": [
+    {
+      "title": "Immich",
+      "description": "Self-hosted photo and video backup solution. Connect your Immich instance to display your photos on the map at the exact locations they were taken.",
+      "imageAlt": "Photos on map from Immich"
+    },
+    {
+      "title": "PhotoPrism",
+      "description": "AI-powered photo management app. Integrate PhotoPrism to see your entire photo library on your location timeline.",
+      "imageAlt": "Trip with PhotoPrism photos"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Photos on Map",
+      "description": "See all your photos plotted on the interactive map at their exact GPS coordinates. Rediscover where each memory was made."
+    },
+    {
+      "title": "Photos in Trips",
+      "description": "Trip pages automatically show photos taken during that trip. Your travel journal becomes a rich multimedia experience."
+    },
+    {
+      "title": "Photo Timeline",
+      "description": "Browse your photos chronologically alongside your location data. See the complete story of each day."
+    },
+    {
+      "title": "Privacy Preserved",
+      "description": "Dawarich never stores your photos. It only reads location data from your self-hosted photo apps via their APIs."
+    }
+  ],
+  "setupSteps": [
+    {
+      "title": "Get API Keys",
+      "description": "Generate API keys from your Immich or PhotoPrism instance.",
+      "details": [
+        "Immich: Create key with asset.read and asset.view scopes (asset.update for Enrich Photos)",
+        "PhotoPrism: Generate key in Apps and Devices settings",
+        "Keep your keys secure"
+      ]
+    },
+    {
+      "title": "Configure in Dawarich",
+      "description": "Enter your photo service details in Dawarich settings.",
+      "details": [
+        "Navigate to Settings page",
+        "Find Photo Integration section",
+        "Enter your service URL",
+        "Paste your API key",
+        "Click Save"
+      ]
+    },
+    {
+      "title": "Sync Complete",
+      "description": "Dawarich connects to your photo service and indexes location data.",
+      "details": [
+        "Photos are indexed by location",
+        "EXIF GPS data is extracted",
+        "No photos are copied or stored",
+        "Only metadata is used"
+      ]
+    },
+    {
+      "title": "View Photos",
+      "description": "Photos now appear on your map and in your trips.",
+      "details": [
+        "Enable Photos layer on the map",
+        "Click photo markers to view",
+        "See photos automatically in trips",
+        "Browse by location and date"
+      ]
+    }
+  ],
+  "futureIntegrations": [
+    {
+      "title": "Fitness Apps",
+      "description": "Integration with fitness tracking apps to combine workout routes with your location history."
+    },
+    {
+      "title": "Note-Taking Apps",
+      "description": "Connect your notes to locations automatically. See what you wrote and where you wrote it."
+    },
+    {
+      "title": "Music Services",
+      "description": "Track what you were listening to at different locations throughout your day."
+    },
+    {
+      "title": "Cloud Services",
+      "description": "Deeper integrations with various cloud storage and productivity services."
+    }
+  ],
+  "meta": {
+    "title": "Photo Integrations",
+    "description": "Connect your Immich or PhotoPrism instance to see photos on your map and in trips. Your map becomes a rich multimedia experience.",
+    "ogTitle": "Dawarich Integrations — Connect Your Digital Life",
+    "ogDescription": "Integrate Immich and PhotoPrism photo libraries with your location history. See photos on the map and in trips automatically."
+  },
+  "hero": {
+    "badge": "Connected Experience",
+    "title": "Connect Your",
+    "titleHighlight": "Digital Life",
+    "subtitle": "Bring your photos into your location timeline. Dawarich integrates with Immich and PhotoPrism to display your photos on the map and in trips—turning your location history into a rich, visual experience.",
+    "imageAlt": "Photos displayed on map"
+  },
+  "integrationsPage": {
+    "heading": "Why Photo Integration?",
+    "p": "Your location data becomes more meaningful when combined with the photos you took. Rediscover memories by seeing exactly where each photo was taken.",
+    "title3": "Supported Photo Services",
+    "subtitle2": "Dawarich works seamlessly with popular self-hosted photo management solutions.",
+    "title4": "How to Set Up",
+    "subtitle3": "Connect your photo library to Dawarich in just a few steps.",
+    "h3": "Your Photos Stay Private",
+    "p2": "Dawarich **does not store or copy your photos**. It only reads location metadata from your self-hosted photo service via its API. Your photos remain safely in your Immich or PhotoPrism instance, under your complete control.",
+    "heading2": "Technical Details",
+    "text3": " Immich Setup",
+    "text4": "Requires an API key with ",
+    "code": "asset.read",
+    "text5": " and ",
+    "code2": "asset.view",
+    "text6": " scopes. Add ",
+    "code3": "asset.update",
+    "text7": " if you also want to use the Enrich Photos feature. Dawarich queries the Immich API to read photo metadata including GPS coordinates from EXIF data.",
+    "Link": "How to obtain Immich API key →",
+    "text8": " PhotoPrism Setup",
+    "p3": "Generate an API key in PhotoPrism's \"Apps and Devices\" settings. Dawarich uses this to access your photo library and extract location information.",
+    "Link2": "How to obtain PhotoPrism API key →",
+    "p4": "Have an integration idea? [Share it on our community forum!](https://discourse.dawarich.app/).",
+    "heading3": "Connect Your Photo Library Today",
+    "p5": "Start seeing your photos on the map with a free Dawarich account.",
+    "Link4": "Try 7 Days for Free",
+    "EnOnlyLink": "Self-Host for Free",
+    "p6": "7-day free trial · 14-day risk-free refund · Cancel anytime"
+  }
+}

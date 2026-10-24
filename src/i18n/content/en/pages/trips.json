@@ -1,0 +1,97 @@
+{
+  "showcaseItems": [
+    {
+      "title": "Interactive Trip Map",
+      "description": "Every trip page comes with a beautiful interactive map showing your complete route with all the points you visited along the way."
+    },
+    {
+      "title": "Comprehensive Statistics",
+      "description": "See detailed stats for each trip including total distance traveled, duration, countries visited, and more features coming soon."
+    },
+    {
+      "title": "Rich Text Journaling",
+      "description": "Document your adventures with rich text descriptions and notes. Preserve memories and stories from your travels."
+    },
+    {
+      "title": "Photo Integration",
+      "description": "Photos from your Immich or PhotoPrism instance automatically appear on your trip map at the locations they were taken."
+    },
+    {
+      "title": "Trip List Management",
+      "description": "Organize all your trips in one place. Browse through past adventures and create new ones anytime."
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Track Your Movement",
+      "description": "Let Dawarich automatically record your location while you travel using any supported tracking app.",
+      "details": [
+        "Dawarich iOS app for seamless tracking",
+        "Third-party apps like Overland, OwnTracks, GPSLogger",
+        "Data syncs automatically to your account"
+      ]
+    },
+    {
+      "title": "Create Your Trip",
+      "description": "When you're back, create a new trip by setting the name and date range.",
+      "details": [
+        "Choose start and end dates",
+        "Give your trip a memorable name",
+        "Dawarich automatically groups your location data"
+      ]
+    },
+    {
+      "title": "Add Your Story",
+      "description": "Enhance your trip with notes, descriptions, and journal entries using the rich text editor.",
+      "details": [
+        "Write about your experiences",
+        "Add context to your locations",
+        "Create a narrative of your journey"
+      ]
+    },
+    {
+      "title": "Explore and Share",
+      "description": "View your trip on the interactive map, review statistics, and relive your adventure (Trips sharing coming soon)",
+      "details": [
+        "See your complete route on the map",
+        "Review distance, duration, and places visited",
+        "Photos automatically appear on the map"
+      ]
+    }
+  ],
+  "meta": {
+    "title": "Travel Trips & Journaling",
+    "description": "Turn your travels into beautifully documented trips with interactive maps, statistics, rich text journaling, and photo integration.",
+    "ogTitle": "Dawarich Trips — Document Your Travel Adventures",
+    "ogDescription": "Create comprehensive travel journals with interactive maps, detailed statistics, rich text descriptions, and automatic photo integration."
+  },
+  "hero": {
+    "badge": "Travel Journaling",
+    "title": "Turn Your Travels Into",
+    "titleHighlight": "Beautiful Trip Stories",
+    "subtitle": "Automatically capture your movements and transform them into comprehensive travel journals. Each trip includes an interactive map, detailed statistics, rich text descriptions, and photos — all in one place.",
+    "imageAlt": "Trip details with map and statistics"
+  },
+  "tripsPage": {
+    "heading": "Why Trips Matter",
+    "title3": "Memory Preservation",
+    "description2": "Never forget the details of your adventures. Every trip is permanently saved with complete location data and your personal notes.",
+    "description3": "Combine location data with your thoughts and stories. Create a rich, multimedia travel journal that goes beyond simple notes.",
+    "title4": "Relive Adventures",
+    "description4": "Look back at past trips anytime. See exactly where you went, how long you traveled, and rediscover places you visited.",
+    "title5": "Everything You Need in One Trip",
+    "subtitle2": "Each trip automatically includes multiple components to tell the complete story of your journey.",
+    "title6": "How It Works",
+    "subtitle3": "Creating and managing trips is simple and intuitive—just a few clicks to turn your location data into stories.",
+    "heading2": "Flexible Trip Creation",
+    "title7": "Automatic Grouping",
+    "description5": "Simply set your trip dates and Dawarich automatically collects all your location points from that period. Perfect for when you want quick results.",
+    "title8": "Manual Details",
+    "description6": "Create trips for storytelling purposes or to document specific adventures. Add your own narrative and notes to enrich the experience.",
+    "heading3": "Start Documenting Your Travels",
+    "p": "Begin creating beautiful trip journals today with a 7-day free trial. Cancel anytime.",
+    "Link": "Try 7 Days for Free",
+    "EnOnlyLink": "Self-Host for Free",
+    "p2": "7-day free trial · 14-day risk-free refund · Cancel anytime"
+  }
+}

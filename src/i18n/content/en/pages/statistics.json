@@ -1,0 +1,110 @@
+{
+  "showcaseItems": [
+    {
+      "title": "Monthly & Yearly Insights",
+      "description": "Get automatic summaries of your location data broken down by month and year. See trends, patterns, and highlights from each period."
+    },
+    {
+      "title": "Cities & Countries Visited",
+      "description": "Track every country you've been to with automatic counting and visualization. Perfect for travel enthusiasts collecting passport stamps."
+    },
+    {
+      "title": "Total Distance",
+      "description": "Calculate the total distance you've traveled across all your recorded location data. See how far you've gone over time."
+    },
+    {
+      "title": "Email Digests",
+      "description": "Receive automatic monthly and yearly summary emails highlighting your travel achievements and statistics."
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Track Automatically",
+      "description": "Your stats are automatically calculated in the background every hour as you track your location.",
+      "details": [
+        "No manual input required",
+        "Updates happen automatically",
+        "Historical data processed continuously"
+      ]
+    },
+    {
+      "title": "View Your Stats",
+      "description": "Navigate to the Stats page to see your comprehensive location analytics.",
+      "details": [
+        "Overall summary at the top",
+        "Click on any year to see detailed stats",
+        "Click on any month to see it on the map"
+      ]
+    },
+    {
+      "title": "Explore on Map",
+      "description": "Use the [Map] links to visualize your stats geographically.",
+      "details": [
+        "Click [Map] next to any year",
+        "View monthly data on interactive map",
+        "See your complete routes and points"
+      ]
+    },
+    {
+      "title": "Manual Updates",
+      "description": "Force an immediate stats update anytime with the \"Update stats\" button.",
+      "details": [
+        "Click \"Update stats\" for instant refresh",
+        "Usually completes in a few minutes",
+        "Useful after importing large datasets"
+      ]
+    }
+  ],
+  "shareFeatures": [
+    {
+      "title": "Shareable Links",
+      "description": "Generate public links to share your yearly summaries with friends and family while keeping the rest of your data private."
+    },
+    {
+      "title": "Privacy Friendly",
+      "description": "You control what to share. Only shared stats are visible—everything else remains private to you."
+    }
+  ],
+  "meta": {
+    "title": "Location Statistics & Insights",
+    "description": "See your life in numbers with comprehensive location statistics. Track countries, cities, distances, and get monthly & yearly email digests.",
+    "ogTitle": "Dawarich Stats — See Your Life in Numbers",
+    "ogDescription": "Comprehensive location statistics including countries visited, total distance, time tracking, and automatic monthly & yearly email digests."
+  },
+  "hero": {
+    "badge": "Analytics & Insights",
+    "title": "See Your Life in",
+    "titleHighlight": "Numbers",
+    "subtitle": "Turn your location data into meaningful insights. Discover patterns, track achievements, and celebrate milestones with comprehensive statistics updated automatically every hour.",
+    "imageAlt": "Comprehensive statistics dashboard"
+  },
+  "statsPage": {
+    "heading": "What You Can Track",
+    "h3": "Global Stats",
+    "li": "Countries visited",
+    "li2": "Cities explored",
+    "li3": "Total distance traveled",
+    "h32": "Time-Based Stats",
+    "li4": "Yearly summaries",
+    "li5": "Monthly breakdowns",
+    "li6": "Most active periods",
+    "title3": "Comprehensive Analytics",
+    "subtitle2": "Everything you need to understand your location history at a glance.",
+    "heading2": "Share Your Achievements",
+    "p": "Celebrate your travel milestones by sharing your yearly summaries while keeping your detailed data private.",
+    "title4": "How It Works",
+    "subtitle3": "Your statistics are calculated automatically — no manual work required.",
+    "heading3": "Why Stats Matter",
+    "h33": "Motivation",
+    "p2": "Seeing your travel achievements in numbers motivates you to explore more and set new goals.",
+    "h34": "Understanding Habits",
+    "p3": "Discover patterns in your movement and understand how you spend your time across different locations.",
+    "h35": "Annual Memory Recap",
+    "p4": "Get beautiful yearly summaries that help you remember and celebrate your adventures and experiences.",
+    "heading4": "Start Tracking Your Stats",
+    "p5": "Begin building your location statistics today with a 7-day free trial. Cancel anytime.",
+    "Link": "Try 7 Days for Free",
+    "EnOnlyLink": "Self-Host for Free",
+    "p6": "7-day free trial · 14-day risk-free refund · Cancel anytime"
+  }
+}

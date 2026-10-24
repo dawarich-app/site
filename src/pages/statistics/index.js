@@ -1,3 +1,6 @@
+import { SmartLink } from '@site/src/i18n/RichText';
+import content from '@locale-content/pages/statistics.json';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import React from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
@@ -19,108 +22,94 @@ import {
   SearchIcon,
   PartyIcon,
 } from '@site/src/components/LucideIcons';
-import Link from '@docusaurus/Link';
 import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import styles from './stats.module.css';
 
 const showcaseItems = [
   {
     icon: <BarChartIcon />,
-    title: 'Monthly & Yearly Insights',
-    description: 'Get automatic summaries of your location data broken down by month and year. See trends, patterns, and highlights from each period.',
+    title: content.showcaseItems[0].title,
+    description: content.showcaseItems[0].description,
   },
   {
     icon: <GlobeIcon />,
-    title: 'Cities & Countries Visited',
-    description: 'Track every country you\'ve been to with automatic counting and visualization. Perfect for travel enthusiasts collecting passport stamps.',
+    title: content.showcaseItems[1].title,
+    description: content.showcaseItems[1].description,
   },
   {
     icon: <RouteIcon />,
-    title: 'Total Distance',
-    description: 'Calculate the total distance you\'ve traveled across all your recorded location data. See how far you\'ve gone over time.',
+    title: content.showcaseItems[2].title,
+    description: content.showcaseItems[2].description,
   },
   {
     icon: <MailIcon />,
-    title: 'Email Digests',
-    description: 'Receive automatic monthly and yearly summary emails highlighting your travel achievements and statistics.',
+    title: content.showcaseItems[3].title,
+    description: content.showcaseItems[3].description,
   }
 ];
 
 const howItWorksSteps = [
   {
     icon: <SmartphoneIcon size={32} />,
-    title: 'Track Automatically',
-    description: 'Your stats are automatically calculated in the background every hour as you track your location.',
-    details: [
-      'No manual input required',
-      'Updates happen automatically',
-      'Historical data processed continuously'
-    ]
+    title: content.howItWorksSteps[0].title,
+    description: content.howItWorksSteps[0].description,
+    details: content.howItWorksSteps[0].details
   },
   {
     icon: <BarChartIcon size={32} />,
-    title: 'View Your Stats',
-    description: 'Navigate to the Stats page to see your comprehensive location analytics.',
-    details: [
-      'Overall summary at the top',
-      'Click on any year to see detailed stats',
-      'Click on any month to see it on the map'
-    ]
+    title: content.howItWorksSteps[1].title,
+    description: content.howItWorksSteps[1].description,
+    details: content.howItWorksSteps[1].details
   },
   {
     icon: <MapIcon size={32} />,
-    title: 'Explore on Map',
-    description: 'Use the [Map] links to visualize your stats geographically.',
-    details: [
-      'Click [Map] next to any year',
-      'View monthly data on interactive map',
-      'See your complete routes and points'
-    ]
+    title: content.howItWorksSteps[2].title,
+    description: content.howItWorksSteps[2].description,
+    details: content.howItWorksSteps[2].details
   },
   {
     icon: <RefreshIcon size={32} />,
-    title: 'Manual Updates',
-    description: 'Force an immediate stats update anytime with the "Update stats" button.',
-    details: [
-      'Click "Update stats" for instant refresh',
-      'Usually completes in a few minutes',
-      'Useful after importing large datasets'
-    ]
+    title: content.howItWorksSteps[3].title,
+    description: content.howItWorksSteps[3].description,
+    details: content.howItWorksSteps[3].details
   }
 ];
 
 const shareFeatures = [
   {
     icon: <LinkIcon size={48} />,
-    title: 'Shareable Links',
-    description: 'Generate public links to share your yearly summaries with friends and family while keeping the rest of your data private.'
+    title: content.shareFeatures[0].title,
+    description: content.shareFeatures[0].description
   },
   {
     icon: <LockIcon size={48} />,
-    title: 'Privacy Friendly',
-    description: 'You control what to share. Only shared stats are visible—everything else remains private to you.'
+    title: content.shareFeatures[1].title,
+    description: content.shareFeatures[1].description
   }
 ];
 
 export default function StatsPage() {
+  const pageUrl = useLocalizedUrl('/statistics/');
   return (
     <Layout
-      title="Location Statistics & Insights"
-      description="See your life in numbers with comprehensive location statistics. Track countries, cities, distances, and get monthly & yearly email digests.">
+      title={content.meta.title}
+      description={content.meta.description}>
       <Head>
-        <meta property="og:title" content="Dawarich Stats — See Your Life in Numbers" />
-        <meta property="og:description" content="Comprehensive location statistics including countries visited, total distance, time tracking, and automatic monthly & yearly email digests." />
+        <meta name="twitter:url" content={pageUrl} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={content.meta.ogTitle} />
+        <meta property="og:description" content={content.meta.ogDescription} />
         <meta property="og:image" content="https://dawarich.app/img/meta-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <FeatureHero
-        badge="Analytics & Insights"
-        title="See Your Life in"
-        titleHighlight="Numbers"
-        subtitle="Turn your location data into meaningful insights. Discover patterns, track achievements, and celebrate milestones with comprehensive statistics updated automatically every hour."
+        badge={content.hero.badge}
+        title={content.hero.title}
+        titleHighlight={content.hero.titleHighlight}
+        subtitle={content.hero.subtitle}
         image="/img/features-stats.png"
-        imageAlt="Comprehensive statistics dashboard"
+        imageAlt={content.hero.imageAlt}
         ctaLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-hero&utm_campaign=stats"
         showSecondary={true}
       />
@@ -128,24 +117,24 @@ export default function StatsPage() {
       <main>
         <section className={styles.statsTypes}>
           <div className={styles.container}>
-            <h2 className={styles.sectionTitle}>What You Can Track</h2>
+            <h2 className={styles.sectionTitle}>{content.statsPage.heading}</h2>
             <div className={styles.statsGrid}>
               <div className={styles.statCard}>
                 <div className={styles.statIcon}><GlobeIcon /></div>
-                <h3 className={styles.statTitle}>Global Stats</h3>
+                <h3 className={styles.statTitle}>{content.statsPage.h3}</h3>
                 <ul className={styles.statList}>
-                  <li>Countries visited</li>
-                  <li>Cities explored</li>
-                  <li>Total distance traveled</li>
+                  <li>{content.statsPage.li}</li>
+                  <li>{content.statsPage.li2}</li>
+                  <li>{content.statsPage.li3}</li>
                 </ul>
               </div>
               <div className={styles.statCard}>
                 <div className={styles.statIcon}><CalendarIcon /></div>
-                <h3 className={styles.statTitle}>Time-Based Stats</h3>
+                <h3 className={styles.statTitle}>{content.statsPage.h32}</h3>
                 <ul className={styles.statList}>
-                  <li>Yearly summaries</li>
-                  <li>Monthly breakdowns</li>
-                  <li>Most active periods</li>
+                  <li>{content.statsPage.li4}</li>
+                  <li>{content.statsPage.li5}</li>
+                  <li>{content.statsPage.li6}</li>
                 </ul>
               </div>
             </div>
@@ -153,17 +142,15 @@ export default function StatsPage() {
         </section>
 
         <FeatureShowcase
-          title="Comprehensive Analytics"
-          subtitle="Everything you need to understand your location history at a glance."
+          title={content.statsPage.title3}
+          subtitle={content.statsPage.subtitle2}
           items={showcaseItems}
         />
 
         <section className={styles.sharingSection}>
           <div className={styles.container}>
-            <h2 className={styles.sectionTitle}>Share Your Achievements</h2>
-            <p className={styles.sectionSubtitle}>
-              Celebrate your travel milestones by sharing your yearly summaries while keeping your detailed data private.
-            </p>
+            <h2 className={styles.sectionTitle}>{content.statsPage.heading2}</h2>
+            <p className={styles.sectionSubtitle}>{content.statsPage.p}</p>
             <div className={styles.sharingGrid}>
               {shareFeatures.map((feature, index) => (
                 <div key={index} className={styles.sharingCard}>
@@ -177,35 +164,29 @@ export default function StatsPage() {
         </section>
 
         <HowItWorks
-          title="How It Works"
-          subtitle="Your statistics are calculated automatically — no manual work required."
+          title={content.statsPage.title4}
+          subtitle={content.statsPage.subtitle3}
           steps={howItWorksSteps}
         />
 
         <section className={styles.whyItMatters}>
           <div className={styles.container}>
-            <h2 className={styles.sectionTitle}>Why Stats Matter</h2>
+            <h2 className={styles.sectionTitle}>{content.statsPage.heading3}</h2>
             <div className={styles.reasonsGrid}>
               <div className={styles.reason}>
                 <div className={styles.reasonIcon}><DumbbellIcon size={48} /></div>
-                <h3 className={styles.reasonTitle}>Motivation</h3>
-                <p className={styles.reasonText}>
-                  Seeing your travel achievements in numbers motivates you to explore more and set new goals.
-                </p>
+                <h3 className={styles.reasonTitle}>{content.statsPage.h33}</h3>
+                <p className={styles.reasonText}>{content.statsPage.p2}</p>
               </div>
               <div className={styles.reason}>
                 <div className={styles.reasonIcon}><SearchIcon size={48} /></div>
-                <h3 className={styles.reasonTitle}>Understanding Habits</h3>
-                <p className={styles.reasonText}>
-                  Discover patterns in your movement and understand how you spend your time across different locations.
-                </p>
+                <h3 className={styles.reasonTitle}>{content.statsPage.h34}</h3>
+                <p className={styles.reasonText}>{content.statsPage.p3}</p>
               </div>
               <div className={styles.reason}>
                 <div className={styles.reasonIcon}><PartyIcon size={48} /></div>
-                <h3 className={styles.reasonTitle}>Annual Memory Recap</h3>
-                <p className={styles.reasonText}>
-                  Get beautiful yearly summaries that help you remember and celebrate your adventures and experiences.
-                </p>
+                <h3 className={styles.reasonTitle}>{content.statsPage.h35}</h3>
+                <p className={styles.reasonText}>{content.statsPage.p4}</p>
               </div>
             </div>
           </div>
@@ -213,25 +194,17 @@ export default function StatsPage() {
 
         <section className={styles.ctaSection}>
           <div className={styles.container}>
-            <h2 className={styles.ctaTitle}>Start Tracking Your Stats</h2>
-            <p className={styles.ctaSubtitle}>
-              Begin building your location statistics today with a 7-day free trial. Cancel anytime.
-            </p>
+            <h2 className={styles.ctaTitle}>{content.statsPage.heading4}</h2>
+            <p className={styles.ctaSubtitle}>{content.statsPage.p5}</p>
             <div className={styles.ctaButtons}>
-              <Link
+              <SmartLink
                 className={styles.primaryCta}
-                href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-cta&utm_campaign=stats">
-                Try 7 Days for Free
-              </Link>
+                href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-cta&utm_campaign=stats">{content.statsPage.Link}</SmartLink>
               <EnOnlyLink
                 className={styles.secondaryCta}
-                to="/docs/self-hosting/installation/docker">
-                Self-Host for Free
-              </EnOnlyLink>
+                to="/docs/self-hosting/installation/docker">{content.statsPage.EnOnlyLink}</EnOnlyLink>
             </div>
-            <p className="feature-cta-reassurance">
-              7-day free trial · 14-day risk-free refund · Cancel anytime
-            </p>
+            <p className="feature-cta-reassurance">{content.statsPage.p6}</p>
           </div>
         </section>
       </main>

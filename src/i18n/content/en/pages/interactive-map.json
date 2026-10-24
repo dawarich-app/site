@@ -1,0 +1,130 @@
+{
+  "timelineItems": [
+    {
+      "title": "A Day You Can Read",
+      "description": "Each day opens with a single-line header and per-mode distance chips — how far you walked, cycled and drove, at a glance. Pick any day from the calendar and the map follows it."
+    },
+    {
+      "title": "Edit a Leg in Place",
+      "description": "Tracks expand into a mode ribbon showing only the legs that matter. Got one wrong? Click the leg's mode name and change it right there. The full segment list stays tucked behind \"All segments\" until you ask for it."
+    },
+    {
+      "title": "Honest About Gaps",
+      "description": "When tracking genuinely stopped, the timeline says so instead of drawing a straight line through the missing hours. Detected visits carry a confidence score, so a firm stay and a weak guess never look identical."
+    }
+  ],
+  "showcaseItems": [
+    {
+      "title": "Points",
+      "description": "View every location point captured with precise timestamps and details. Click any point to see its information including coordinates, time, and more.",
+      "imageAlt": "Map showing individual location points"
+    },
+    {
+      "title": "Polylines",
+      "description": "See your complete routes connecting all your location points. Visualize your journeys as continuous paths across the map.",
+      "imageAlt": "Map with polyline routes"
+    },
+    {
+      "title": "Heatmap",
+      "description": "Discover where you spend most of your time with an intensity-based heatmap visualization showing your most visited areas.",
+      "imageAlt": "Heatmap visualization"
+    },
+    {
+      "title": "Fog of War",
+      "description": "Reveal the world as you explore it. Areas you've visited are cleared while unexplored regions remain covered.",
+      "imageAlt": "Fog of war visualization"
+    },
+    {
+      "title": "Scratch Map",
+      "description": "Watch countries light up as you visit them. Perfect for travel enthusiasts tracking their global adventures.",
+      "imageAlt": "Scratch map showing visited countries"
+    },
+    {
+      "title": "Areas",
+      "description": "Draw custom areas on your map to mark important locations, neighborhoods, or regions of interest.",
+      "imageAlt": "Custom areas on map"
+    },
+    {
+      "title": "Photos",
+      "description": "See your photos from Immich or PhotoPrism directly on the map at the exact locations they were taken. (fow now, only available with self-hosting)",
+      "imageAlt": "Photos displayed on map"
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Track Your Location",
+      "description": "Use any supported tracking app to automatically record your location throughout the day.",
+      "details": [
+        "Dawarich iOS app",
+        "Overland",
+        "OwnTracks",
+        "GPSLogger",
+        "PhoneTrack"
+      ]
+    },
+    {
+      "title": "Select Your View",
+      "description": "Choose from multiple different map styles and toggle various layers to customize your visualization.",
+      "details": [
+        "Toggle points, routes, or heatmap",
+        "Enable fog of war or scratch map",
+        "Show or hide photos and areas"
+      ]
+    },
+    {
+      "title": "Filter by Time",
+      "description": "Select any time range to view your location history for specific periods.",
+      "details": [
+        "Navigate by year and month",
+        "View country and city visit statistics",
+        "Search for specific places"
+      ]
+    },
+    {
+      "title": "Create and Save",
+      "description": "Manually create places and visits to fill in gaps or correct your location history.",
+      "details": [
+        "Save favorite locations",
+        "Add missing visits manually",
+        "Draw custom areas on the map"
+      ]
+    },
+    {
+      "title": "Search by location",
+      "description": "Enter place or address to quickly find when you were there and for how long.",
+      "details": [
+        "Search by place name or address",
+        "Quickly locate visits and points of interest",
+        "Create visits from your search results"
+      ]
+    }
+  ],
+  "meta": {
+    "title": "Interactive Map Visualization",
+    "description": "Explore your location history on an interactive map with multiple layers including points, routes, heatmap, fog of war, and more.",
+    "ogTitle": "Dawarich Map — Interactive Location Visualization",
+    "ogDescription": "Explore your location history with multiple visualization layers: points, routes, heatmap, fog of war, scratch map, and photo integration."
+  },
+  "hero": {
+    "badge": "Interactive Visualization",
+    "title": "Explore Where You've Been,",
+    "titleHighlight": "Never Forget a Place",
+    "subtitle": "Your location history comes alive on an interactive map with multiple visualization layers. From detailed points to beautiful heatmaps, see your life's journey in stunning detail.",
+    "imageAlt": "Dawarich interactive map"
+  },
+  "mapPage": {
+    "title3": "The Timeline",
+    "subtitle2": "The map shows you where. The timeline, right beside it, shows you what happened — one day at a time, in plain language.",
+    "title4": "Multiple Visualization Layers",
+    "subtitle3": "Toggle between different map layers to see your location data in various ways. Each layer reveals unique insights about your travels and habits.",
+    "title5": "How It Works",
+    "subtitle4": "Start visualizing your location history in minutes with our intuitive map interface.",
+    "span": "Your Data Stays Private",
+    "p": "All your location data is stored securely with encryption at rest and in transit. Hosted in Europe and fully GDPR compliant. You can also self-host for complete control.",
+    "heading": "Ready to Visualize Your Journey?",
+    "p2": "Start tracking your location history today with a 7-day free trial. Cancel anytime.",
+    "Link": "Try 7 Days for Free",
+    "EnOnlyLink": "Self-Host for Free",
+    "p3": "7-day free trial · 14-day risk-free refund · Cancel anytime"
+  }
+}
