@@ -308,8 +308,8 @@
   "google-timeline-converter": [
     {
       "href": "/tools/route-video-maker/",
-      "label": "Route Video Maker",
-      "note": "Turn your Timeline into a travel video"
+      "label": "Creador de vídeos de rutes",
+      "note": "Converteix la teva línia de temps en un vídeo de viatge"
     },
     {
       "href": "/tools/google-timeline-splitter/",
@@ -381,8 +381,8 @@
   "timeline-visualizer": [
     {
       "href": "/tools/route-video-maker/",
-      "label": "Route Video Maker",
-      "note": "Turn the same file into a video"
+      "label": "Creador de vídeos de rutes",
+      "note": "Converteix el mateix fitxer en un vídeo"
     },
     {
       "href": "/interactive-map/",
@@ -493,8 +493,8 @@
     },
     {
       "href": "/tools/route-video-maker/",
-      "label": "Route Video Maker",
-      "note": "Same file, animated video"
+      "label": "Creador de vídeos de rutes",
+      "note": "Mateix fitxer, vídeo animat"
     },
     {
       "href": "/tools/heatmap-generator/",
@@ -505,6 +505,23 @@
       "href": "/tools/gpx-merger/",
       "label": "Fusió de fitxers GPX",
       "note": "Combina trajectes en un sol pòster"
+    }
+  ],
+  "route-video-maker": [
+    {
+      "href": "/tools/map-poster-maker/",
+      "label": "Creador de pòsters de mapes",
+      "note": "Mateix fitxer, pòster imprimible"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "Generador de mapes de calor",
+      "note": "Vista de densitat del mateix fitxer"
+    },
+    {
+      "href": "/tools/gpx-merger/",
+      "label": "Fusió de fitxers GPX",
+      "note": "Combina trajectes en un sol vídeo"
     }
   ],
   "photo-geotagging": [

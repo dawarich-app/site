@@ -61,6 +61,10 @@
     {
       "title": "Extração de geodados de fotos",
       "description": "Extraia coordenadas GPS e metadados de localização das suas fotos (dados EXIF)."
+    },
+    {
+      "title": "Criador de vídeos de trajetos",
+      "description": "Anime qualquer trajeto GPS em um MP4 para compartilhar — a rota se desenha sobre um mapa estilizado."
     }
   ],
   "converters": [

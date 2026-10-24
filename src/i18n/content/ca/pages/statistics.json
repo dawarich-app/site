@@ -29,11 +29,11 @@
     },
     {
       "title": "Consulta les estadístiques",
-      "description": "Ves a la pàgina d’Estadístiques per veure l’anàlisi completa de la teva ubicació.",
+      "description": "Obre la pàgina d’Anàlisi per consultar una anàlisi completa de les teves ubicacions.",
       "details": [
-        "Resum general a dalt",
-        "Fes clic en un any per veure’n les estadístiques detallades",
-        "Fes clic en un mes per veure’l al mapa"
+        "Resum de tot l’historial amb una targeta i un mapa de rutes per any",
+        "Tria qualsevol any per veure’n els mesos, el calendari i les comparacions",
+        "Fes clic en qualsevol mes per veure’n les estadístiques i el mapa"
       ]
     },
     {

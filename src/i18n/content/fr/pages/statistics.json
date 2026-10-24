@@ -29,11 +29,11 @@
     },
     {
       "title": "Consultez vos statistiques",
-      "description": "Ouvrez la page Statistiques pour une analyse complète de vos localisations.",
+      "description": "Ouvrez la page Vos analyses pour une analyse complète de vos localisations.",
       "details": [
-        "Résumé global en haut de page",
-        "Cliquez sur une année pour voir ses statistiques détaillées",
-        "Cliquez sur un mois pour l’afficher sur la carte"
+        "Résumé de tout l’historique avec une fiche et une carte des parcours pour chaque année",
+        "Choisissez une année pour voir ses mois, son calendrier et ses comparaisons",
+        "Cliquez sur un mois pour voir ses statistiques et sa carte"
       ]
     },
     {

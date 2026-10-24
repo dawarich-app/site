@@ -308,8 +308,8 @@
   "google-timeline-converter": [
     {
       "href": "/tools/route-video-maker/",
-      "label": "Route Video Maker",
-      "note": "Turn your Timeline into a travel video"
+      "label": "Créateur de vidéos de parcours",
+      "note": "Transformez votre chronologie en vidéo de voyage"
     },
     {
       "href": "/tools/google-timeline-splitter/",
@@ -381,8 +381,8 @@
   "timeline-visualizer": [
     {
       "href": "/tools/route-video-maker/",
-      "label": "Route Video Maker",
-      "note": "Turn the same file into a video"
+      "label": "Créateur de vidéos de parcours",
+      "note": "Transformez le même fichier en vidéo"
     },
     {
       "href": "/interactive-map/",
@@ -493,8 +493,8 @@
     },
     {
       "href": "/tools/route-video-maker/",
-      "label": "Route Video Maker",
-      "note": "Same file, animated video"
+      "label": "Créateur de vidéos de parcours",
+      "note": "Même fichier, vidéo animée"
     },
     {
       "href": "/tools/heatmap-generator/",
@@ -505,6 +505,23 @@
       "href": "/tools/gpx-merger/",
       "label": "Fusion de fichiers GPX",
       "note": "Réunissez des trajets sur une affiche"
+    }
+  ],
+  "route-video-maker": [
+    {
+      "href": "/tools/map-poster-maker/",
+      "label": "Créateur d’affiches cartographiques",
+      "note": "Même fichier, affiche imprimable"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "Générateur de cartes de chaleur",
+      "note": "Vue de densité du même fichier"
+    },
+    {
+      "href": "/tools/gpx-merger/",
+      "label": "Fusion de fichiers GPX",
+      "note": "Réunissez des trajets dans une seule vidéo"
     }
   ],
   "photo-geotagging": [

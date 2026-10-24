@@ -7,6 +7,10 @@
     "message": "About Us",
     "description": "The label of footer link with label=About Us linking to /about"
   },
+  "link.item.label.Affiliate Program": {
+    "message": "Affiliate Program",
+    "description": "The label of footer link with label=Affiliate Program linking to /affiliate"
+  },
   "link.item.label.All 29 tools →": {
     "message": "All 29 tools →",
     "description": "The label of footer link with label=All 29 tools → linking to /tools"
@@ -26,6 +30,10 @@
   "link.item.label.Contact": {
     "message": "Contact",
     "description": "The label of footer link with label=Contact linking to /contact"
+  },
+  "link.item.label.Cookie Settings": {
+    "message": "Cookie Settings",
+    "description": "The label of footer link with label=Cookie Settings linking to /privacy-policy#cookies"
   },
   "link.item.label.Credits": {
     "message": "Credits",
@@ -150,6 +158,10 @@
   "link.item.label.Photo Integrations": {
     "message": "Photo Integrations",
     "description": "The label of footer link with label=Photo Integrations linking to /integrations"
+  },
+  "link.item.label.Press Kit": {
+    "message": "Press Kit",
+    "description": "The label of footer link with label=Press Kit linking to /press-kit"
   },
   "link.item.label.Pricing": {
     "message": "Pricing",

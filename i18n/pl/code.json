@@ -347,7 +347,7 @@
     "message": "Odrzuć pliki cookie"
   },
   "shared.cookieConsent.body": {
-    "message": "Korzystamy z analityki bez plików cookie (Simple Analytics), która nie wymaga zgody. Możesz opcjonalnie zaakceptować pliki cookie do śledzenia konwersji Google Ads, analityki e-maili Brevo i naliczania prowizji za polecenia — ładują się dopiero po kliknięciu „Akceptuję”."
+    "message": "Opcjonalne narzędzia do analityki witryny oraz śledzenia reklam, e-maili i poleceń uruchamiają się dopiero po wyrażeniu przez Ciebie zgody. Odrzucenie zgody pozostawia je wyłączone i blokuje przekazywanie danych kampanii."
   },
   "shared.cookieConsent.learnMore": {
     "message": "Dowiedz się więcej"

@@ -25,7 +25,7 @@
     },
     {
       "q": "Kann ich sehen, ob jemand den Link geöffnet hat?",
-      "a": "Ja. Alle von dir erstellten Links stehen an einem Ort, jeweils mit der Anzahl der Aufrufe und dem Zeitpunkt des letzten Zugriffs."
+      "a": "Ja. Links für Live-Standorte, Zeiträume, Reisen und Tracks zeigen, wie oft sie geöffnet und wann sie zuletzt aufgerufen wurden. Alle diese Links sind gemeinsam an einem Ort aufgelistet."
     },
     {
       "q": "Was passiert mit meinen Links, wenn mein Abo abläuft?",
@@ -36,7 +36,7 @@
     "title": "Standort teilen – deinen Standortverlauf per Link freigeben",
     "description": "Live-Standort oder Verlauf per privatem Link teilen: Passphrase, Ablaufdatum, widerrufbar, nur dein gewählter Umfang. 7 Tage gratis oder gratis selbst hosten.",
     "ogTitle": "Standortverlauf über einen privaten Link teilen",
-    "ogDescription": "Ein Link für einen Zeitraum, Live-Standort, Track, eine Reise, Monatsstatistiken oder einen Jahresrückblick. Mit Passphrase, Ablaufdatum und sofortigem Widerruf."
+    "ogDescription": "Verschicke einen Link für genau eine Sache: einen Zeitraum, Live-Standort, Track, eine Reise, Monatsstatistiken oder einen Jahresrückblick. Jeder Link läuft ab oder lässt sich widerrufen, und die meisten lassen sich mit einer Passphrase schützen."
   },
   "locationSharingPage": {
     "text": "Teile, wo du bist.",

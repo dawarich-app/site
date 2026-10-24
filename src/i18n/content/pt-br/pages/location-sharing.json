@@ -25,7 +25,7 @@
     },
     {
       "q": "Consigo ver se alguém abriu?",
-      "a": "Sim. Todos os links que você criou ficam em um só lugar, com o número de aberturas e a data do último acesso."
+      "a": "Sim. Os links de localização em tempo real, períodos, viagens e trajetos mostram quantas vezes foram abertos e quando foram vistos pela última vez. Todos ficam reunidos em um só lugar."
     },
     {
       "q": "O que acontece com meus links se a assinatura expirar?",
@@ -36,7 +36,7 @@
     "title": "Compartilhe seu histórico de localização por link",
     "description": "Compartilhe localização ao vivo ou histórico por link privado: frase secreta, validade, revogação e escopo à sua escolha. Teste grátis: 7 dias ou hospedagem própria grátis.",
     "ogTitle": "Compartilhe seu histórico de localização por link privado",
-    "ogDescription": "Envie um link que mostra uma escolha: datas, localização ao vivo, trajeto, viagem, estatísticas mensais ou resumo anual. Frase secreta, validade e revogação instantânea em cada link."
+    "ogDescription": "Envie um link que mostra uma única coisa: um período, localização em tempo real, um trajeto, uma viagem, um mês de estatísticas ou um resumo anual. Todo link expira ou pode ser revogado, e a maioria pode ser protegida por uma frase secreta."
   },
   "locationSharingPage": {
     "text": "Compartilhe onde você está.",

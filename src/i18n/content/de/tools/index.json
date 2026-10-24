@@ -61,6 +61,10 @@
     {
       "title": "Foto-Geodaten auslesen",
       "description": "Lies GPS-Koordinaten und Standortmetadaten aus deinen Fotos aus (EXIF-Daten)."
+    },
+    {
+      "title": "Routenvideo erstellen",
+      "description": "Verwandle jeden GPS-Track in ein MP4-Video zum Teilen – die Route zeichnet sich auf einer gestalteten Karte nach und nach selbst."
     }
   ],
   "converters": [

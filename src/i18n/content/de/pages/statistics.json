@@ -29,11 +29,11 @@
     },
     {
       "title": "Deine Statistiken ansehen",
-      "description": "Öffne die Statistikseite für umfassende Auswertungen deiner Standortdaten.",
+      "description": "Öffne die Seite „Einblicke“, um deinen Standortverlauf umfassend auszuwerten.",
       "details": [
-        "Gesamtübersicht ganz oben",
-        "Klicke auf ein Jahr für detaillierte Statistiken",
-        "Klicke auf einen Monat, um ihn auf der Karte zu sehen"
+        "Übersicht über den gesamten Zeitraum mit einer Infokarte und einer Routenkarte pro Jahr",
+        "Wähle ein beliebiges Jahr aus, um seine Monate, den Kalender und Vergleiche zu sehen",
+        "Klicke auf einen beliebigen Monat, um seine Statistiken und die Karte zu sehen"
       ]
     },
     {

@@ -308,8 +308,8 @@
   "google-timeline-converter": [
     {
       "href": "/tools/route-video-maker/",
-      "label": "Route Video Maker",
-      "note": "Turn your Timeline into a travel video"
+      "label": "路线视频制作工具",
+      "note": "将您的时间线制作成旅行视频"
     },
     {
       "href": "/tools/google-timeline-splitter/",
@@ -381,8 +381,8 @@
   "timeline-visualizer": [
     {
       "href": "/tools/route-video-maker/",
-      "label": "Route Video Maker",
-      "note": "Turn the same file into a video"
+      "label": "路线视频制作工具",
+      "note": "用同一文件制作视频"
     },
     {
       "href": "/interactive-map/",
@@ -493,8 +493,8 @@
     },
     {
       "href": "/tools/route-video-maker/",
-      "label": "Route Video Maker",
-      "note": "Same file, animated video"
+      "label": "路线视频制作工具",
+      "note": "用同一文件制作路线动画视频"
     },
     {
       "href": "/tools/heatmap-generator/",
@@ -505,6 +505,23 @@
       "href": "/tools/gpx-merger/",
       "label": "GPX 合并工具",
       "note": "将多条轨迹合成一张海报"
+    }
+  ],
+  "route-video-maker": [
+    {
+      "href": "/tools/map-poster-maker/",
+      "label": "地图海报制作工具",
+      "note": "用同一文件制作可打印的海报"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "热力图生成器",
+      "note": "查看同一文件的密度分布"
+    },
+    {
+      "href": "/tools/gpx-merger/",
+      "label": "GPX 合并工具",
+      "note": "合并多条轨迹，制作一个视频"
     }
   ],
   "photo-geotagging": [

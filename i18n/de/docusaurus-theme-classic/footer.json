@@ -258,5 +258,17 @@
   "link.item.label.Refund Policy": {
     "message": "Erstattungsbedingungen",
     "description": "The label of footer link with label=Refund Policy linking to pathname:///refund-policy/"
+  },
+  "link.item.label.Affiliate Program": {
+    "message": "Partnerprogramm",
+    "description": "The label of footer link with label=Affiliate Program linking to /affiliate"
+  },
+  "link.item.label.Press Kit": {
+    "message": "Pressemappe",
+    "description": "The label of footer link with label=Press Kit linking to /press-kit"
+  },
+  "link.item.label.Cookie Settings": {
+    "message": "Cookie-Einstellungen",
+    "description": "The label of footer link with label=Cookie Settings linking to pathname:///privacy-policy/#cookies"
   }
 }

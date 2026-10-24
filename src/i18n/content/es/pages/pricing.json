@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Precios — Dawarich",
-    "description": "Dawarich Cloud: Lite {price}/año, Pro {price2}/mes, Familia {price3}/año hasta 5 personas. Prueba gratis: 7 días; reembolso sin riesgo: 14 días. Cancela cuando quieras o aloja gratis."
+    "title": "Precios y planes de Cloud",
+    "description": "Compara planes de Dawarich Cloud: Lite, Pro y Familia para hasta 5 personas. Pruébalo 7 días gratis o alójalo con todas las funciones Pro sin pagar."
   },
   "schema": {
     "name": "Dawarich Cloud",
@@ -13,5 +13,7 @@
     "familyAnnual": "Familia (anual)",
     "familyDescription": "Una suscripción anual para hasta 5 miembros, cada uno con acceso completo a Pro.",
     "selfHosted": "Alojamiento propio"
-  }
+  },
+  "heading": "Precios de Dawarich Cloud",
+  "affiliate": "¿Escribes sobre Dawarich? [Gana el {percent}% del primer año](/affiliate) por cada suscriptor que recomiendes."
 }

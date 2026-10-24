@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Preus — Dawarich",
-    "description": "Dawarich Cloud: Lite {price}/any, Pro {price2}/mes, Família {price3}/any (≤5). 7 dies gratis, reemborsament 14 dies, cancel·la quan vulguis o allotja'l gratis."
+    "title": "Preus i plans de Cloud",
+    "description": "Compara els plans de Dawarich Cloud: Lite, Pro i Família per a fins a 5 persones. Prova’ls gratis 7 dies o allotja’l tu amb totes les funcions Pro sense cost."
   },
   "schema": {
     "name": "Dawarich Cloud",
@@ -13,5 +13,7 @@
     "familyAnnual": "Família (anual)",
     "familyDescription": "Una subscripció anual per a un màxim de 5 membres, cadascun amb accés Pro complet.",
     "selfHosted": "Allotjament propi"
-  }
+  },
+  "heading": "Preus de Dawarich Cloud",
+  "affiliate": "Escrius sobre Dawarich? [Guanya el {percent}% del primer any](/affiliate) per cada subscriptor que recomanis."
 }

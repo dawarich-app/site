@@ -347,7 +347,7 @@
     "message": "Cookies ablehnen"
   },
   "shared.cookieConsent.body": {
-    "message": "Wir nutzen einen Analysedienst ohne Cookies (Simple Analytics), der keine Einwilligung benötigt. Optional kannst du Cookies für Google Ads-Conversion-Tracking, Brevo-E-Mail-Analysen und die Zuordnung von Affiliate-Empfehlungen akzeptieren. Diese werden erst geladen, wenn du auf „Akzeptieren“ klickst."
+    "message": "Optionale Tracker für Website-Analysen, Werbung, E-Mails und Affiliate-Marketing werden erst nach deiner Zustimmung aktiviert. Wenn du ablehnst, bleiben sie deaktiviert und Kampagnendaten werden nicht weitergegeben."
   },
   "shared.cookieConsent.learnMore": {
     "message": "Mehr erfahren"

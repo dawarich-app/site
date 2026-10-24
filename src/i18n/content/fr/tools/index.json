@@ -25,7 +25,8 @@
     { "title": "Générateur de cartes de chaleur GPS", "description": "Transformez votre historique de localisation en carte de chaleur pour voir où vous passez le plus de temps." },
     { "title": "Créateur d’affiches cartographiques", "description": "Composez une affiche à partir de tout fichier GPS : 17 thèmes, export PNG/PDF, impressions en option." },
     { "title": "Fusion de trajets GPX", "description": "Regroupez plusieurs fichiers GPX en un seul trajet. Utile pour les voyages de plusieurs jours ou les importations." },
-    { "title": "Extraction des géodonnées de photos", "description": "Extrayez les coordonnées GPS et les métadonnées de localisation de vos photos (données EXIF)." }
+    { "title": "Extraction des géodonnées de photos", "description": "Extrayez les coordonnées GPS et les métadonnées de localisation de vos photos (données EXIF)." },
+    { "title": "Créateur de vidéos de parcours", "description": "Animez n’importe quel trajet GPS en MP4 à partager : le parcours se dessine sur une carte au style soigné." }
   ],
   "converters": [
     {

@@ -7,7 +7,7 @@
     },
     {
       "title": "Nikt nie może włączyć tego za Ciebie",
-      "body": "Pięć osób, pięć niezależnych przełączników. Osoba opłacająca plan nie ma większej kontroli nad Twoim udostępnianiem niż ktokolwiek inny. Wyłączanie własnego udostępniania działa nawet po wygaśnięciu subskrypcji, bo to działanie służące prywatności i nigdy nie jest płatne."
+      "body": "Pięć osób, pięć niezależnych przełączników. Rozpoczęcie planu Rodzina w chmurze włącza udostępnianie lokalizacji właściciela planu, który może je od razu wyłączyć. Zaproszeni członkowie rodziny zaczynają z wyłączonym udostępnianiem. Właściciel planu nie może go włączyć za nikogo innego, a Ty możesz wyłączyć własne udostępnianie nawet po wygaśnięciu subskrypcji."
     },
     {
       "title": "Lepiej poprosić niż śledzić",
@@ -18,11 +18,11 @@
   "objections": [
     {
       "q": "Czy to po prostu Life360 pod inną marką?",
-      "a": "Nie. Domyślnie nic nie jest udostępniane. Każdy członek rodziny sam steruje swoim przełącznikiem, udostępnianie na żywo może wygasać po czasie, historia lokalizacji jest osobną decyzją, a pytanie o czyjąś lokalizację oznacza wysłanie prośby, którą można odrzucić."
+      "a": "Nie. Zaproszeni członkowie rodziny zaczynają z wyłączonym udostępnianiem, a każda osoba sama steruje swoim przełącznikiem. Właściciel planu w chmurze zaczyna z włączonym udostępnianiem, ale może je wyłączyć. Udostępnianie na żywo może wygasać po ustalonym czasie, udostępnianie historii to osobny wybór, a prośbę o lokalizację można odrzucić."
     },
     {
       "q": "Czy moje nastoletnie dziecko widzi, że je śledzę?",
-      "a": "Nic nie jest ukryte. Każda osoba sama włącza udostępnianie, a strona rodziny dokładnie pokazuje, kto aktualnie udostępnia lokalizację, a kto nie. Nie oferujemy ukrytego śledzenia."
+      "a": "Nic nie jest ukryte. Zaproszeni członkowie rodziny sami decydują, czy udostępniać lokalizację, a strona rodziny dokładnie pokazuje, kto aktualnie ją udostępnia, a kto nie. Nie oferujemy ukrytego śledzenia."
     },
     {
       "q": "Co właściwie otrzymuje każda osoba?",
@@ -30,11 +30,11 @@
     },
     {
       "q": "Co się stanie po wygaśnięciu subskrypcji właściciela planu?",
-      "a": "Rodzina zostaje zachowana. Po wygaśnięciu subskrypcji członkowie wracają do własnych planów, a jej odnowienie przywraca dostęp. Nikt nie traci dostępu do własnej historii."
+      "a": "Rodzina zostaje zachowana i nic nie jest usuwane. Dostęp trwa do końca opłaconego okresu. Potem członkowie bez własnego planu wracają do Lite, a śledzenie ich lokalizacji zostaje wstrzymane do czasu ponownej aktywacji planu. Ich historia pozostaje na koncie i można ją wyeksportować. Odnowienie subskrypcji przywraca dostęp wszystkim naraz."
     },
     {
-      "q": "Does it work on our phones?",
-      "a": "Yes. The Dawarich apps for iOS and Android show your family on the map. From the app you can turn your own sharing on or off, choose what history to share, and send or answer location requests."
+      "q": "Czy to działa na naszych telefonach?",
+      "a": "Tak. Aplikacje Dawarich na iOS i Android pokazują Twoją rodzinę na mapie. W aplikacji możesz włączyć lub wyłączyć własne udostępnianie, wybrać udostępnianą historię oraz wysyłać prośby o lokalizację i na nie odpowiadać."
     },
     {
       "q": "Czy w ogóle muszę płacić?",
@@ -42,22 +42,34 @@
     }
   ],
   "meta": {
-    "title": "Rodzina: dziel się pozycją prywatnie, za zgodą, bez śledzenia",
-    "description": "Udostępniaj lokalizację na żywo maks. pięciu osobom z rodziny: osobne ustawienia, limity czasu i zakresy historii, prośby o lokalizację wymagające zgody. {price} lub własny serwer gratis.",
+    "title": "Udostępnianie lokalizacji rodzinie: apka na iPhone i Android",
+    "description": "Dawarich iOS/Android: zaproś do 5 osób z rodziny. Każdy kontroluje udostępnianie na żywo, historię i prośby o lokalizację. {price} lub własny serwer gratis.",
     "ogTitle": "Udostępnianie lokalizacji rodzinie bez inwigilacji",
-    "ogDescription": "Pięć osób, pięć niezależnych przełączników. Udostępnianie lokalizacji na żywo na określony czas, historia jako osobny wybór i prośby o lokalizację wymagające akceptacji. Domyślnie nic nie udostępniasz."
+    "ogDescription": "Pięć osób, pięć niezależnych przełączników. Udostępnianie na żywo z limitem czasu, historia jako osobny wybór i prośby o lokalizację wymagające akceptacji."
   },
   "familyPage": {
-    "text": "Lokalizacja rodziny",
+    "text": "Aplikacja do udostępniania lokalizacji rodzinie",
     "em": "za zgodą każdego.",
-    "title2": "Nikt nie jest obserwowany domyślnie",
-    "sub2": "Do pięciu osób w jednym planie, każda z pełnym kontem Dawarich i całkowitą kontrolą nad tym, co udostępnia.",
+    "title2": "Każdy sam decyduje",
+    "sub2": "Do pięciu osób w jednym planie, każda z pełnym kontem Dawarich i kontrolą nad tym, co udostępnia.",
     "title3": "O co pytają rodzice i partnerzy",
     "title4": "Udostępniaj domownikom, nie brokerowi danych",
-    "sub3": "{price} rocznie obejmuje pięć osób w Dawarich Cloud. Możesz też uruchomić te same funkcje bezpłatnie na własnym sprzęcie.",
+    "sub3": "{price} rocznie obejmuje pięć osób w Dawarich Cloud, z 7-dniowym bezpłatnym okresem próbnym. Możesz też uruchomić te same funkcje bezpłatnie na własnym sprzęcie.",
     "primaryLabel": "Rozpocznij plan rodzinny"
   },
   "hero": {
-    "sub": "Aplikacje do śledzenia rodziny zakładają, że należy obserwować wszystkich przez cały czas. Dawarich zakłada odwrotnie: nic nie jest udostępniane, dopóki dana osoba sama tego nie włączy, udostępnianie może wygasać po czasie, a ustalenie czyjejś lokalizacji wymaga zapytania."
+    "sub": "Zobacz domowników na iPhone i Androidzie. Zaproszeni członkowie rodziny wybierają, kiedy udostępniać lokalizację, udostępnianie na żywo może wygasać po ustalonym czasie, a poznanie czyjejś lokalizacji wymaga wysłania prośby. Właściciel planu w chmurze zaczyna z włączonym udostępnianiem i może je w każdej chwili wyłączyć."
+  },
+  "setup": {
+    "title": "Skonfiguruj Dawarich dla rodziny na iPhone i Androidzie",
+    "body": "Plan Rodzina obejmuje do pięciu osobnych kont. Każdy korzysta z własnego telefonu i decyduje, co udostępniać.",
+    "steps": [
+      "**Rozpocznij plan Rodzina.** Dawarich utworzy dla Ciebie rodzinę w chmurze. Możesz też utworzyć ją we własnej instancji na swoim serwerze.",
+      "**Zaproś domowników.** Wyślij zaproszenia ze strony Rodzina w przeglądarce. Każda osoba przyjmuje zaproszenie, używając adresu e-mail, na który je wysłano.",
+      "**Zainstaluj aplikację i zaloguj się.** Otwórz aplikację Dawarich na każdym telefonie, a następnie w panelu Rodzina na mapie wybierz ustawienia udostępniania na żywo i historii."
+    ],
+    "ios": "Pobierz aplikację na iOS",
+    "android": "Pobierz aplikację na Androida",
+    "guide": "Przeczytaj instrukcję konfiguracji"
   }
 }

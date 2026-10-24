@@ -308,8 +308,8 @@
   "google-timeline-converter": [
     {
       "href": "/tools/route-video-maker/",
-      "label": "Route Video Maker",
-      "note": "Turn your Timeline into a travel video"
+      "label": "Kreator filmów z trasą",
+      "note": "Zamień swoją oś czasu w film z podróży"
     },
     {
       "href": "/tools/google-timeline-splitter/",
@@ -381,8 +381,8 @@
   "timeline-visualizer": [
     {
       "href": "/tools/route-video-maker/",
-      "label": "Route Video Maker",
-      "note": "Turn the same file into a video"
+      "label": "Kreator filmów z trasą",
+      "note": "Zamień ten sam plik w film"
     },
     {
       "href": "/interactive-map/",
@@ -493,8 +493,8 @@
     },
     {
       "href": "/tools/route-video-maker/",
-      "label": "Route Video Maker",
-      "note": "Same file, animated video"
+      "label": "Kreator filmów z trasą",
+      "note": "Ten sam plik, animowany film"
     },
     {
       "href": "/tools/heatmap-generator/",
@@ -505,6 +505,23 @@
       "href": "/tools/gpx-merger/",
       "label": "Łączenie plików GPX",
       "note": "Połącz trasy na jednym plakacie"
+    }
+  ],
+  "route-video-maker": [
+    {
+      "href": "/tools/map-poster-maker/",
+      "label": "Kreator plakatów z mapą",
+      "note": "Ten sam plik, plakat do druku"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "Generator mapy cieplnej",
+      "note": "Widok zagęszczenia z tego samego pliku"
+    },
+    {
+      "href": "/tools/gpx-merger/",
+      "label": "Łączenie plików GPX",
+      "note": "Połącz trasy w jednym filmie"
     }
   ],
   "photo-geotagging": [

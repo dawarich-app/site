@@ -347,7 +347,7 @@
     "message": "拒绝 Cookie"
   },
   "shared.cookieConsent.body": {
-    "message": "我们使用无需 Cookie 的分析服务（Simple Analytics），无需征得同意。您可以选择接受用于 Google Ads 转化跟踪、Brevo 邮件分析和联盟推荐归因的 Cookie；这些功能仅在您点击“接受”后才会加载。"
+    "message": "可选的网站分析、广告、邮件和联盟推广追踪工具仅在您接受后才会运行。拒绝后，这些工具会保持关闭，也不会传递营销活动信息。"
   },
   "shared.cookieConsent.learnMore": {
     "message": "了解更多"

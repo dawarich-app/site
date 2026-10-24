@@ -61,6 +61,10 @@
     {
       "title": "照片地理数据提取工具",
       "description": "从照片中提取 GPS 坐标和位置元数据（EXIF 数据）。"
+    },
+    {
+      "title": "路线视频制作工具",
+      "description": "将任意 GPS 轨迹制作为可分享的 MP4 动画视频，让路线在风格化地图上逐步绘出。"
     }
   ],
   "converters": [

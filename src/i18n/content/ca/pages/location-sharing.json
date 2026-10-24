@@ -25,7 +25,7 @@
     },
     {
       "q": "Puc saber si algú l’ha obert?",
-      "a": "Sí. Tots els enllaços que has creat apareixen en un sol lloc, amb el nombre d’obertures i la data del darrer accés."
+      "a": "Sí. Els enllaços d’ubicació en directe, d’intervals de dates, de viatges i de trajectes mostren quantes vegades s’han obert i quan s’han consultat per últim cop. Tots apareixen junts en un sol lloc."
     },
     {
       "q": "Què passa amb els enllaços si caduca la meva subscripció?",
@@ -36,7 +36,7 @@
     "title": "Comparteix el teu historial d’ubicacions amb un enllaç",
     "description": "Comparteix ubicació en directe o historial per enllaç privat: frase de pas, caducitat i revocació. Només el que triïs. Prova: 7 dies gratis o allotja’l gratis.",
     "ogTitle": "Comparteix el teu historial d’ubicacions amb un enllaç privat",
-    "ogDescription": "Envia un enllaç que mostri un sol element: dates, ubicació en directe, trajecte, viatge, estadístiques mensuals o resum anual. Amb frase de pas, caducitat i revocació immediata."
+    "ogDescription": "Envia un enllaç que mostri un sol element: un interval de dates, la ubicació en directe, un trajecte, un viatge, les estadístiques d’un mes o un resum anual. Tots els enllaços caduquen o es poden revocar, i la majoria es poden protegir amb una frase de pas."
   },
   "locationSharingPage": {
     "text": "Comparteix on ets.",

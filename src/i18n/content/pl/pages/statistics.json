@@ -29,11 +29,11 @@
     },
     {
       "title": "Zobacz statystyki",
-      "description": "Przejdź na stronę Statystyki, aby zobaczyć pełną analizę lokalizacji.",
+      "description": "Otwórz stronę Podsumowanie, aby zobaczyć pełną analizę danych lokalizacji.",
       "details": [
-        "Ogólne podsumowanie u góry",
-        "Kliknij dowolny rok, aby zobaczyć szczegółowe statystyki",
-        "Kliknij dowolny miesiąc, aby zobaczyć go na mapie"
+        "Podsumowanie całej historii z kartą i mapą tras dla każdego roku",
+        "Wybierz dowolny rok, aby zobaczyć jego miesiące, kalendarz i porównania",
+        "Kliknij dowolny miesiąc, aby zobaczyć jego statystyki i mapę"
       ]
     },
     {

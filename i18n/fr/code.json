@@ -347,7 +347,7 @@
     "message": "Refuser les cookies"
   },
   "shared.cookieConsent.body": {
-    "message": "Nous utilisons un service d’analyse sans cookies (Simple Analytics) qui ne nécessite aucun consentement. Vous pouvez accepter les cookies de suivi des conversions Google Ads, d’analyse des e-mails Brevo et d’attribution des recommandations d’affiliation. Ils ne sont chargés que si vous cliquez sur « Accepter »."
+    "message": "Les traceurs facultatifs d’analyse du site, de publicité, de suivi des e-mails et d’affiliation ne s’activent qu’après votre accord. En cas de refus, ils restent désactivés et les informations de campagne ne sont pas transmises."
   },
   "shared.cookieConsent.learnMore": {
     "message": "En savoir plus"

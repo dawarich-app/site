@@ -308,8 +308,8 @@
   "google-timeline-converter": [
     {
       "href": "/tools/route-video-maker/",
-      "label": "Route Video Maker",
-      "note": "Turn your Timeline into a travel video"
+      "label": "Routenvideo erstellen",
+      "note": "Verwandle deine Timeline in ein Reisevideo"
     },
     {
       "href": "/tools/google-timeline-splitter/",
@@ -381,8 +381,8 @@
   "timeline-visualizer": [
     {
       "href": "/tools/route-video-maker/",
-      "label": "Route Video Maker",
-      "note": "Turn the same file into a video"
+      "label": "Routenvideo erstellen",
+      "note": "Verwandle dieselbe Datei in ein Video"
     },
     {
       "href": "/interactive-map/",
@@ -493,8 +493,8 @@
     },
     {
       "href": "/tools/route-video-maker/",
-      "label": "Route Video Maker",
-      "note": "Same file, animated video"
+      "label": "Routenvideo erstellen",
+      "note": "Dieselbe Datei als animiertes Video"
     },
     {
       "href": "/tools/heatmap-generator/",
@@ -505,6 +505,23 @@
       "href": "/tools/gpx-merger/",
       "label": "GPX-Dateien zusammenführen",
       "note": "Tracks in einem Poster kombinieren"
+    }
+  ],
+  "route-video-maker": [
+    {
+      "href": "/tools/map-poster-maker/",
+      "label": "Kartenposter erstellen",
+      "note": "Dieselbe Datei als druckbares Poster"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "Heatmap erstellen",
+      "note": "Dichteansicht derselben Datei"
+    },
+    {
+      "href": "/tools/gpx-merger/",
+      "label": "GPX-Dateien zusammenführen",
+      "note": "Tracks in einem Video kombinieren"
     }
   ],
   "photo-geotagging": [

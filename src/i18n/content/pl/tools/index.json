@@ -61,6 +61,10 @@
     {
       "title": "Odczyt geodanych ze zdjęć",
       "description": "Odczytaj współrzędne GPS i metadane lokalizacji ze swoich zdjęć (dane EXIF)."
+    },
+    {
+      "title": "Kreator filmów z trasą",
+      "description": "Zamień dowolną trasę GPS w animowany film MP4, który możesz udostępnić — trasa stopniowo pojawia się na mapie o wybranym stylu."
     }
   ],
   "converters": [

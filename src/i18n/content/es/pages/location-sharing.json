@@ -25,7 +25,7 @@
     },
     {
       "q": "¿Puedo saber si alguien lo ha abierto?",
-      "a": "Sí. Todos los enlaces que has creado aparecen en un mismo lugar, con el número de veces que se han abierto y la fecha del último acceso."
+      "a": "Sí. Los enlaces de ubicación en directo, intervalos de fechas, viajes y trayectos muestran cuántas veces se han abierto y cuándo se vieron por última vez. Todos aparecen juntos en un mismo lugar."
     },
     {
       "q": "¿Qué pasa con mis enlaces si caduca mi suscripción?",
@@ -36,7 +36,7 @@
     "title": "Comparte tu historial de ubicaciones por enlace",
     "description": "Comparte ubicación en vivo o historial por enlace privado: frase de acceso, caducidad, revocación y alcance exacto elegido. Prueba gratis de 7 días o gratis en tu servidor.",
     "ogTitle": "Comparte tu historial de ubicaciones por enlace privado",
-    "ogDescription": "Envía un enlace que muestre una sola cosa: fechas, ubicación en directo, trayecto, viaje, estadísticas mensuales o resumen anual. Cada enlace tiene frase de acceso, caducidad y revocación inmediata."
+    "ogDescription": "Envía un enlace que muestre una sola cosa: un intervalo de fechas, ubicación en directo, un trayecto, un viaje, estadísticas de un mes o un resumen anual. Todos caducan o se pueden revocar, y la mayoría se pueden proteger con una frase de acceso."
   },
   "locationSharingPage": {
     "text": "Comparte dónde estás.",

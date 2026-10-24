@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "价格 — Dawarich",
-    "description": "Dawarich Cloud，价格简单明了。Lite 每年 {price}，Pro 每月 {price2}，家庭方案每年 {price3}，最多 5 人。7 天免费试用，14 天无忧退款，随时可取消。也可免费自托管。"
+    "title": "Cloud 价格与方案",
+    "description": "比较 Dawarich Cloud 的 Lite、Pro 和最多支持 5 人的家庭方案。免费试用 7 天，或免费自托管，享用全部 Pro 功能。"
   },
   "schema": {
     "name": "Dawarich Cloud",
@@ -13,5 +13,7 @@
     "familyAnnual": "家庭（年付）",
     "familyDescription": "一份年度订阅最多供 5 位成员使用，每人均享有完整 Pro 权限。",
     "selfHosted": "自托管"
-  }
+  },
+  "heading": "Dawarich Cloud 价格",
+  "affiliate": "正在撰写 Dawarich 相关内容？每推荐一位订阅用户，即可[获得首年订阅费的 {percent}%](/affiliate)。"
 }

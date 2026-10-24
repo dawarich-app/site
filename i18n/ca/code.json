@@ -347,7 +347,7 @@
     "message": "Rebutja les galetes"
   },
   "shared.cookieConsent.body": {
-    "message": "Fem servir un servei d’analítica sense galetes (Simple Analytics) que no requereix consentiment. Opcionalment, pots acceptar galetes per al seguiment de conversions de Google Ads, l’analítica de correu de Brevo i l’atribució de referències d’afiliats: només es carreguen si fas clic a «Accepta»."
+    "message": "Els rastrejadors opcionals d’analítica del lloc, publicitat, correu electrònic i afiliació només s’activen si els acceptes. Rebutjar-los els manté desactivats i desactiva el traspàs de campanya."
   },
   "shared.cookieConsent.learnMore": {
     "message": "Més informació"

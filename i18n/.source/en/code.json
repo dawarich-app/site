@@ -24,7 +24,7 @@
     "message": "Accept cookies"
   },
   "shared.cookieConsent.body": {
-    "message": "We use a cookieless analytics service (Simple Analytics) that requires no consent. You can optionally accept cookies for Google Ads conversion tracking, Brevo email analytics and affiliate referral credit — these only load if you click \"Accept\"."
+    "message": "Optional site analytics, advertising, email and affiliate trackers run only after you accept. Rejecting keeps them off and disables campaign handoff."
   },
   "shared.cookieConsent.learnMore": {
     "message": "Learn more"

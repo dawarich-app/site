@@ -3,6 +3,10 @@
     "message": "Areas",
     "description": "The label for category Areas in sidebar apiSidebar"
   },
+  "sidebar.apiSidebar.category.Auth": {
+    "message": "Auth",
+    "description": "The label for category Auth in sidebar apiSidebar"
+  },
   "sidebar.apiSidebar.category.Batches": {
     "message": "Batches",
     "description": "The label for category Batches in sidebar apiSidebar"
@@ -10,6 +14,10 @@
   "sidebar.apiSidebar.category.Countries": {
     "message": "Countries",
     "description": "The label for category Countries in sidebar apiSidebar"
+  },
+  "sidebar.apiSidebar.category.Demo Data": {
+    "message": "Demo Data",
+    "description": "The label for category Demo Data in sidebar apiSidebar"
   },
   "sidebar.apiSidebar.category.Digests": {
     "message": "Digests",
@@ -23,6 +31,14 @@
     "message": "Health",
     "description": "The label for category Health in sidebar apiSidebar"
   },
+  "sidebar.apiSidebar.category.Immich": {
+    "message": "Immich",
+    "description": "The label for category Immich in sidebar apiSidebar"
+  },
+  "sidebar.apiSidebar.category.Imports": {
+    "message": "Imports",
+    "description": "The label for category Imports in sidebar apiSidebar"
+  },
   "sidebar.apiSidebar.category.Insights": {
     "message": "Insights",
     "description": "The label for category Insights in sidebar apiSidebar"
@@ -35,6 +51,10 @@
     "message": "Maps",
     "description": "The label for category Maps in sidebar apiSidebar"
   },
+  "sidebar.apiSidebar.category.Notes": {
+    "message": "Notes",
+    "description": "The label for category Notes in sidebar apiSidebar"
+  },
   "sidebar.apiSidebar.category.Photos": {
     "message": "Photos",
     "description": "The label for category Photos in sidebar apiSidebar"
@@ -43,9 +63,21 @@
     "message": "Places",
     "description": "The label for category Places in sidebar apiSidebar"
   },
+  "sidebar.apiSidebar.category.Plan": {
+    "message": "Plan",
+    "description": "The label for category Plan in sidebar apiSidebar"
+  },
   "sidebar.apiSidebar.category.Points": {
     "message": "Points",
     "description": "The label for category Points in sidebar apiSidebar"
+  },
+  "sidebar.apiSidebar.category.Recalculations": {
+    "message": "Recalculations",
+    "description": "The label for category Recalculations in sidebar apiSidebar"
+  },
+  "sidebar.apiSidebar.category.Residency": {
+    "message": "Residency",
+    "description": "The label for category Residency in sidebar apiSidebar"
   },
   "sidebar.apiSidebar.category.Settings": {
     "message": "Settings",
@@ -79,6 +111,14 @@
     "message": "Visits",
     "description": "The label for category Visits in sidebar apiSidebar"
   },
+  "sidebar.apiSidebar.doc.Accepts a location sharing request": {
+    "message": "Accepts a location sharing request",
+    "description": "The label for the doc item Accepts a location sharing request in sidebar apiSidebar, linking to the doc api/accepts-a-location-sharing-request"
+  },
+  "sidebar.apiSidebar.doc.Begins TOTP enrollment": {
+    "message": "Begins TOTP enrollment",
+    "description": "The label for the doc item Begins TOTP enrollment in sidebar apiSidebar, linking to the doc api/begins-totp-enrollment"
+  },
   "sidebar.apiSidebar.doc.Bulk deletes points": {
     "message": "Bulk deletes points",
     "description": "The label for the doc item Bulk deletes points in sidebar apiSidebar, linking to the doc api/bulk-deletes-points"
@@ -87,13 +127,37 @@
     "message": "Bulk update visits",
     "description": "The label for the doc item Bulk update visits in sidebar apiSidebar, linking to the doc api/bulk-update-visits"
   },
+  "sidebar.apiSidebar.doc.Checks whether demo data exists": {
+    "message": "Checks whether demo data exists",
+    "description": "The label for the doc item Checks whether demo data exists in sidebar apiSidebar, linking to the doc api/checks-whether-demo-data-exists"
+  },
+  "sidebar.apiSidebar.doc.Checks which user IDs exist in Dawarich": {
+    "message": "Checks which user IDs exist in Dawarich",
+    "description": "The label for the doc item Checks which user IDs exist in Dawarich in sidebar apiSidebar, linking to the doc api/checks-which-user-i-ds-exist-in-dawarich"
+  },
+  "sidebar.apiSidebar.doc.Confirms TOTP enrollment": {
+    "message": "Confirms TOTP enrollment",
+    "description": "The label for the doc item Confirms TOTP enrollment in sidebar apiSidebar, linking to the doc api/confirms-totp-enrollment"
+  },
+  "sidebar.apiSidebar.doc.Create note": {
+    "message": "Create note",
+    "description": "The label for the doc item Create note in sidebar apiSidebar, linking to the doc api/create-note"
+  },
   "sidebar.apiSidebar.doc.Create visit": {
     "message": "Create visit",
     "description": "The label for the doc item Create visit in sidebar apiSidebar, linking to the doc api/create-visit"
   },
+  "sidebar.apiSidebar.doc.Create visits in batch": {
+    "message": "Create visits in batch",
+    "description": "The label for the doc item Create visits in batch in sidebar apiSidebar, linking to the doc api/create-visits-in-batch"
+  },
   "sidebar.apiSidebar.doc.Creates a batch of points": {
     "message": "Creates a batch of points",
     "description": "The label for the doc item Creates a batch of points in sidebar apiSidebar, linking to the doc api/creates-a-batch-of-points"
+  },
+  "sidebar.apiSidebar.doc.Creates a location sharing request for a family member": {
+    "message": "Creates a location sharing request for a family member",
+    "description": "The label for the doc item Creates a location sharing request for a family member in sidebar apiSidebar, linking to the doc api/creates-a-location-sharing-request-for-a-family-member"
   },
   "sidebar.apiSidebar.doc.Creates a place": {
     "message": "Creates a place",
@@ -106,6 +170,18 @@
   "sidebar.apiSidebar.doc.Creates an area": {
     "message": "Creates an area",
     "description": "The label for the doc item Creates an area in sidebar apiSidebar, linking to the doc api/creates-an-area"
+  },
+  "sidebar.apiSidebar.doc.Creates an import": {
+    "message": "Creates an import",
+    "description": "The label for the doc item Creates an import in sidebar apiSidebar, linking to the doc api/creates-an-import"
+  },
+  "sidebar.apiSidebar.doc.Declines a location sharing request": {
+    "message": "Declines a location sharing request",
+    "description": "The label for the doc item Declines a location sharing request in sidebar apiSidebar, linking to the doc api/declines-a-location-sharing-request"
+  },
+  "sidebar.apiSidebar.doc.Delete note": {
+    "message": "Delete note",
+    "description": "The label for the doc item Delete note in sidebar apiSidebar, linking to the doc api/delete-note"
   },
   "sidebar.apiSidebar.doc.Delete visit": {
     "message": "Delete visit",
@@ -127,6 +203,10 @@
     "message": "Deletes an area",
     "description": "The label for the doc item Deletes an area in sidebar apiSidebar, linking to the doc api/deletes-an-area"
   },
+  "sidebar.apiSidebar.doc.Disables two-factor authentication": {
+    "message": "Disables two-factor authentication",
+    "description": "The label for the doc item Disables two-factor authentication in sidebar apiSidebar, linking to the doc api/disables-two-factor-authentication"
+  },
   "sidebar.apiSidebar.doc.Generates a yearly digest": {
     "message": "Generates a yearly digest",
     "description": "The label for the doc item Generates a yearly digest in sidebar apiSidebar, linking to the doc api/generates-a-yearly-digest"
@@ -143,6 +223,10 @@
     "message": "Get visited cities by date range",
     "description": "The label for the doc item Get visited cities by date range in sidebar apiSidebar, linking to the doc api/get-visited-cities-by-date-range"
   },
+  "sidebar.apiSidebar.doc.List notes": {
+    "message": "List notes",
+    "description": "The label for the doc item List notes in sidebar apiSidebar, linking to the doc api/list-notes"
+  },
   "sidebar.apiSidebar.doc.List visits": {
     "message": "List visits",
     "description": "The label for the doc item List visits in sidebar apiSidebar, linking to the doc api/list-visits"
@@ -151,17 +235,57 @@
     "message": "Lists all yearly digests",
     "description": "The label for the doc item Lists all yearly digests in sidebar apiSidebar, linking to the doc api/lists-all-yearly-digests"
   },
+  "sidebar.apiSidebar.doc.Lists imports": {
+    "message": "Lists imports",
+    "description": "The label for the doc item Lists imports in sidebar apiSidebar, linking to the doc api/lists-imports"
+  },
   "sidebar.apiSidebar.doc.Lists photos": {
     "message": "Lists photos",
     "description": "The label for the doc item Lists photos in sidebar apiSidebar, linking to the doc api/lists-photos"
+  },
+  "sidebar.apiSidebar.doc.Loads demo data": {
+    "message": "Loads demo data",
+    "description": "The label for the doc item Loads demo data in sidebar apiSidebar, linking to the doc api/loads-demo-data"
+  },
+  "sidebar.apiSidebar.doc.Logs in a user": {
+    "message": "Logs in a user",
+    "description": "The label for the doc item Logs in a user in sidebar apiSidebar, linking to the doc api/logs-in-a-user"
   },
   "sidebar.apiSidebar.doc.Merge visits": {
     "message": "Merge visits",
     "description": "The label for the doc item Merge visits in sidebar apiSidebar, linking to the doc api/merge-visits"
   },
+  "sidebar.apiSidebar.doc.Moves a point and synchronously recalculates its track": {
+    "message": "Moves a point and synchronously recalculates its track",
+    "description": "The label for the doc item Moves a point and synchronously recalculates its track in sidebar apiSidebar, linking to the doc api/moves-a-point-and-synchronously-recalculates-its-track"
+  },
   "sidebar.apiSidebar.doc.Processes a subscription callback": {
     "message": "Processes a subscription callback",
     "description": "The label for the doc item Processes a subscription callback in sidebar apiSidebar, linking to the doc api/processes-a-subscription-callback"
+  },
+  "sidebar.apiSidebar.doc.Queues a full recalculation of the user's data": {
+    "message": "Queues a full recalculation of the user's data",
+    "description": "The label for the doc item Queues a full recalculation of the user's data in sidebar apiSidebar, linking to the doc api/queues-a-full-recalculation-of-the-users-data"
+  },
+  "sidebar.apiSidebar.doc.Re-evaluates anomaly flags for all of the user's points": {
+    "message": "Re-evaluates anomaly flags for all of the user's points",
+    "description": "The label for the doc item Re-evaluates anomaly flags for all of the user's points in sidebar apiSidebar, linking to the doc api/re-evaluates-anomaly-flags-for-all-of-the-users-points"
+  },
+  "sidebar.apiSidebar.doc.Regenerates two-factor backup codes": {
+    "message": "Regenerates two-factor backup codes",
+    "description": "The label for the doc item Regenerates two-factor backup codes in sidebar apiSidebar, linking to the doc api/regenerates-two-factor-backup-codes"
+  },
+  "sidebar.apiSidebar.doc.Registers a new user": {
+    "message": "Registers a new user",
+    "description": "The label for the doc item Registers a new user in sidebar apiSidebar, linking to the doc api/registers-a-new-user"
+  },
+  "sidebar.apiSidebar.doc.Removes demo data": {
+    "message": "Removes demo data",
+    "description": "The label for the doc item Removes demo data in sidebar apiSidebar, linking to the doc api/removes-demo-data"
+  },
+  "sidebar.apiSidebar.doc.Requests deletion of the current user account": {
+    "message": "Requests deletion of the current user account",
+    "description": "The label for the doc item Requests deletion of the current user account in sidebar apiSidebar, linking to the doc api/requests-deletion-of-the-current-user-account"
   },
   "sidebar.apiSidebar.doc.Retrieves a photo thumbnail": {
     "message": "Retrieves a photo thumbnail",
@@ -199,6 +323,10 @@
     "message": "Retrieves all stats",
     "description": "The label for the doc item Retrieves all stats in sidebar apiSidebar, linking to the doc api/retrieves-all-stats"
   },
+  "sidebar.apiSidebar.doc.Retrieves an import": {
+    "message": "Retrieves an import",
+    "description": "The label for the doc item Retrieves an import in sidebar apiSidebar, linking to the doc api/retrieves-an-import"
+  },
   "sidebar.apiSidebar.doc.Retrieves application status": {
     "message": "Retrieves application status",
     "description": "The label for the doc item Retrieves application status in sidebar apiSidebar, linking to the doc api/retrieves-application-status"
@@ -211,9 +339,17 @@
     "message": "Retrieves detailed insights with comparisons and travel patterns",
     "description": "The label for the doc item Retrieves detailed insights with comparisons and travel patterns in sidebar apiSidebar, linking to the doc api/retrieves-detailed-insights-with-comparisons-and-travel-patterns"
   },
+  "sidebar.apiSidebar.doc.Retrieves family members' location history for a time range": {
+    "message": "Retrieves family members' location history for a time range",
+    "description": "The label for the doc item Retrieves family members' location history for a time range in sidebar apiSidebar, linking to the doc api/retrieves-family-members-location-history-for-a-time-range"
+  },
   "sidebar.apiSidebar.doc.Retrieves family members' locations": {
     "message": "Retrieves family members' locations",
     "description": "The label for the doc item Retrieves family members' locations in sidebar apiSidebar, linking to the doc api/retrieves-family-members-locations"
+  },
+  "sidebar.apiSidebar.doc.Retrieves fog of war hexagon cell ids": {
+    "message": "Retrieves fog of war hexagon cell ids",
+    "description": "The label for the doc item Retrieves fog of war hexagon cell ids in sidebar apiSidebar, linking to the doc api/retrieves-fog-of-war-hexagon-cell-ids"
   },
   "sidebar.apiSidebar.doc.Retrieves geographic bounds for hexagon data": {
     "message": "Retrieves geographic bounds for hexagon data",
@@ -227,6 +363,10 @@
     "message": "Retrieves insights overview for a year",
     "description": "The label for the doc item Retrieves insights overview for a year in sidebar apiSidebar, linking to the doc api/retrieves-insights-overview-for-a-year"
   },
+  "sidebar.apiSidebar.doc.Retrieves mobile app settings": {
+    "message": "Retrieves mobile app settings",
+    "description": "The label for the doc item Retrieves mobile app settings in sidebar apiSidebar, linking to the doc api/retrieves-mobile-app-settings"
+  },
   "sidebar.apiSidebar.doc.Retrieves points for a track": {
     "message": "Retrieves points for a track",
     "description": "The label for the doc item Retrieves points for a track in sidebar apiSidebar, linking to the doc api/retrieves-points-for-a-track"
@@ -234,6 +374,10 @@
   "sidebar.apiSidebar.doc.Retrieves privacy zone tags": {
     "message": "Retrieves privacy zone tags",
     "description": "The label for the doc item Retrieves privacy zone tags in sidebar apiSidebar, linking to the doc api/retrieves-privacy-zone-tags"
+  },
+  "sidebar.apiSidebar.doc.Retrieves the current user's family overview": {
+    "message": "Retrieves the current user's family overview",
+    "description": "The label for the doc item Retrieves the current user's family overview in sidebar apiSidebar, linking to the doc api/retrieves-the-current-users-family-overview"
   },
   "sidebar.apiSidebar.doc.Retrieves timeline data for a date range": {
     "message": "Retrieves timeline data for a date range",
@@ -255,9 +399,25 @@
     "message": "Returns list of tracked years and months",
     "description": "The label for the doc item Returns list of tracked years and months in sidebar apiSidebar, linking to the doc api/returns-list-of-tracked-years-and-months"
   },
+  "sidebar.apiSidebar.doc.Returns per-country day counts for tax residency calculations": {
+    "message": "Returns per-country day counts for tax residency calculations",
+    "description": "The label for the doc item Returns per-country day counts for tax residency calculations in sidebar apiSidebar, linking to the doc api/returns-per-country-day-counts-for-tax-residency-calculations"
+  },
   "sidebar.apiSidebar.doc.Returns the current user": {
     "message": "Returns the current user",
     "description": "The label for the doc item Returns the current user in sidebar apiSidebar, linking to the doc api/returns-the-current-user"
+  },
+  "sidebar.apiSidebar.doc.Returns the current user's plan and feature flags": {
+    "message": "Returns the current user's plan and feature flags",
+    "description": "The label for the doc item Returns the current user's plan and feature flags in sidebar apiSidebar, linking to the doc api/returns-the-current-users-plan-and-feature-flags"
+  },
+  "sidebar.apiSidebar.doc.Returns visited countries for a history scope": {
+    "message": "Returns visited countries for a history scope",
+    "description": "The label for the doc item Returns visited countries for a history scope in sidebar apiSidebar, linking to the doc api/returns-visited-countries-for-a-history-scope"
+  },
+  "sidebar.apiSidebar.doc.Scans Immich for photos missing geodata": {
+    "message": "Scans Immich for photos missing geodata",
+    "description": "The label for the doc item Scans Immich for photos missing geodata in sidebar apiSidebar, linking to the doc api/scans-immich-for-photos-missing-geodata"
   },
   "sidebar.apiSidebar.doc.Searches for location history near coordinates": {
     "message": "Searches for location history near coordinates",
@@ -266,6 +426,22 @@
   "sidebar.apiSidebar.doc.Searches for nearby places using Photon geocoding API": {
     "message": "Searches for nearby places using Photon geocoding API",
     "description": "The label for the doc item Searches for nearby places using Photon geocoding API in sidebar apiSidebar, linking to the doc api/searches-for-nearby-places-using-photon-geocoding-api"
+  },
+  "sidebar.apiSidebar.doc.Show note": {
+    "message": "Show note",
+    "description": "The label for the doc item Show note in sidebar apiSidebar, linking to the doc api/show-note"
+  },
+  "sidebar.apiSidebar.doc.Sign in with Apple": {
+    "message": "Sign in with Apple",
+    "description": "The label for the doc item Sign in with Apple in sidebar apiSidebar, linking to the doc api/sign-in-with-apple"
+  },
+  "sidebar.apiSidebar.doc.Sign in with Google": {
+    "message": "Sign in with Google",
+    "description": "The label for the doc item Sign in with Google in sidebar apiSidebar, linking to the doc api/sign-in-with-google"
+  },
+  "sidebar.apiSidebar.doc.Update note": {
+    "message": "Update note",
+    "description": "The label for the doc item Update note in sidebar apiSidebar, linking to the doc api/update-note"
   },
   "sidebar.apiSidebar.doc.Update visit": {
     "message": "Update visit",
@@ -283,9 +459,25 @@
     "message": "Updates an area",
     "description": "The label for the doc item Updates an area in sidebar apiSidebar, linking to the doc api/updates-an-area"
   },
+  "sidebar.apiSidebar.doc.Updates mobile app settings": {
+    "message": "Updates mobile app settings",
+    "description": "The label for the doc item Updates mobile app settings in sidebar apiSidebar, linking to the doc api/updates-mobile-app-settings"
+  },
+  "sidebar.apiSidebar.doc.Updates the current user's family location sharing": {
+    "message": "Updates the current user's family location sharing",
+    "description": "The label for the doc item Updates the current user's family location sharing in sidebar apiSidebar, linking to the doc api/updates-the-current-users-family-location-sharing"
+  },
   "sidebar.apiSidebar.doc.Updates user settings": {
     "message": "Updates user settings",
     "description": "The label for the doc item Updates user settings in sidebar apiSidebar, linking to the doc api/updates-user-settings"
+  },
+  "sidebar.apiSidebar.doc.Verifies a two-factor challenge": {
+    "message": "Verifies a two-factor challenge",
+    "description": "The label for the doc item Verifies a two-factor challenge in sidebar apiSidebar, linking to the doc api/verifies-a-two-factor-challenge"
+  },
+  "sidebar.apiSidebar.doc.Writes location data back to Immich photos": {
+    "message": "Writes location data back to Immich photos",
+    "description": "The label for the doc item Writes location data back to Immich photos in sidebar apiSidebar, linking to the doc api/writes-location-data-back-to-immich-photos"
   },
   "sidebar.tutorialSidebar.category.Comparisons": {
     "message": "Comparisons",

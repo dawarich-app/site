@@ -25,7 +25,7 @@
     },
     {
       "q": "Puis-je savoir si quelqu’un a ouvert le lien ?",
-      "a": "Oui. Tous vos liens sont regroupés au même endroit, avec le nombre d’ouvertures et la date du dernier accès."
+      "a": "Oui. Les liens de partage de position en direct, de plages de dates, de déplacements et de trajets indiquent leur nombre d’ouvertures et la date de leur dernière consultation. Ils sont tous regroupés au même endroit."
     },
     {
       "q": "Que deviennent mes liens si mon abonnement expire ?",
@@ -36,7 +36,7 @@
     "title": "Partagez votre historique de localisation par lien",
     "description": "Position en direct ou historique : lien privé limité à votre choix, phrase secrète, expiration, révocation. Essai gratuit 7 j ou auto-hébergement gratuit.",
     "ogTitle": "Partagez votre historique de localisation par lien privé",
-    "ogDescription": "Un lien, un contenu : plage de dates, position en direct, trajet, déplacement, mois de statistiques ou bilan annuel. Phrase secrète, expiration et révocation immédiate."
+    "ogDescription": "Un lien : période, position en direct, trajet, déplacement, stats mensuelles ou bilan annuel. Expire ou révocable ; phrase secrète possible pour la plupart."
   },
   "locationSharingPage": {
     "text": "Partagez votre position.",

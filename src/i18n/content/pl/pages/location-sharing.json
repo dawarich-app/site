@@ -25,7 +25,7 @@
     },
     {
       "q": "Czy mogę sprawdzić, czy ktoś go otworzył?",
-      "a": "Tak. Wszystkie utworzone przez Ciebie linki są zebrane w jednym miejscu z liczbą otwarć i czasem ostatniego dostępu."
+      "a": "Tak. Linki do lokalizacji na żywo, zakresów dat, podróży i tras pokazują liczbę otwarć oraz czas ostatniego wyświetlenia. Wszystkie te linki są zebrane w jednym miejscu."
     },
     {
       "q": "Co się stanie z linkami po wygaśnięciu subskrypcji?",
@@ -36,7 +36,7 @@
     "title": "Udostępnianie lokalizacji — historia przez link",
     "description": "Udostępniaj pozycję na żywo lub historię lokalizacji prywatnym linkiem: ochrona frazą, termin ważności, unieważnienie, wybrany zakres. 7 dni próby gratis lub własny serwer za darmo.",
     "ogTitle": "Udostępniaj historię lokalizacji prywatnym linkiem",
-    "ogDescription": "Wyślij jeden link do jednej rzeczy: zakresu dat, lokalizacji na żywo, trasy, podróży, miesiąca statystyk lub rocznego podsumowania. Każdy link ma frazę, termin ważności i opcję natychmiastowego unieważnienia."
+    "ogDescription": "Jeden link: zakres dat, pozycja na żywo, trasa, podróż, statystyki miesiąca, podsumowanie roku. Wygasa lub da się cofnąć; większość można chronić frazą hasłową."
   },
   "locationSharingPage": {
     "text": "Udostępniaj, gdzie jesteś.",

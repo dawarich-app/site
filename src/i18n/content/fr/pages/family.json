@@ -7,7 +7,7 @@
     },
     {
       "title": "Personne ne peut l’activer à votre place",
-      "body": "Cinq personnes, cinq réglages indépendants. La personne qui paie l’abonnement n’a pas plus de pouvoir que les autres sur votre partage. Vous pouvez toujours désactiver votre partage, même si l’abonnement expire : c’est une action de confidentialité, jamais une fonction payante."
+      "body": "Cinq personnes, cinq réglages indépendants. Souscrire une offre Famille sur le Cloud active le partage du titulaire, qui peut le désactiver immédiatement. Pour les membres invités, le partage est désactivé au départ. Le titulaire ne peut l’activer pour personne d’autre, et chacun peut toujours désactiver son propre partage, même si l’abonnement expire."
     },
     {
       "title": "Demander plutôt que surveiller",
@@ -18,11 +18,11 @@
   "objections": [
     {
       "q": "Est-ce simplement Life360 sous un autre nom ?",
-      "a": "Non. Par défaut, rien n’est partagé. Chaque membre contrôle son partage, la position en direct peut expirer avec un minuteur, l’historique se partage séparément, et demander où se trouve quelqu’un passe par une demande qu’il peut refuser."
+      "a": "Non. Pour les membres invités, le partage est désactivé au départ et chacun contrôle son propre réglage. Le titulaire de l’offre Cloud commence avec le partage activé, mais peut le désactiver. Le partage en direct peut s’arrêter à l’aide d’un minuteur, l’historique fait l’objet d’un choix distinct et une demande de localisation peut être refusée."
     },
     {
       "q": "Mon adolescent peut-il voir que je le suis ?",
-      "a": "Il n’y a rien de caché. Chaque personne active elle-même son partage et la page Famille indique exactement qui partage ou non sa position. Le suivi à l’insu des personnes ne fait pas partie de nos fonctionnalités."
+      "a": "Il n’y a rien de caché. Les membres invités décident de partager ou non leur position, et la page Famille indique exactement qui la partage actuellement et qui ne la partage pas. Le suivi à l’insu des personnes ne fait pas partie de nos fonctionnalités."
     },
     {
       "q": "Que reçoit chaque personne ?",
@@ -30,11 +30,11 @@
     },
     {
       "q": "Que se passe-t-il si l’abonnement du titulaire expire ?",
-      "a": "La famille est conservée. À l’expiration, chaque membre retrouve sa propre offre et le réabonnement rétablit l’offre familiale. Personne ne perd l’accès à son historique."
+      "a": "La famille est conservée et rien n’est supprimé. L’accès reste actif jusqu’à la fin de la période déjà payée. Ensuite, les membres sans abonnement personnel repassent à Lite et leur suivi est suspendu jusqu’à ce qu’un abonnement soit de nouveau actif. Leur historique reste dans leur compte et peut être exporté. Le renouvellement rétablit l’accès pour tout le monde en même temps."
     },
     {
-      "q": "Does it work on our phones?",
-      "a": "Yes. The Dawarich apps for iOS and Android show your family on the map. From the app you can turn your own sharing on or off, choose what history to share, and send or answer location requests."
+      "q": "Cela fonctionne-t-il sur nos téléphones ?",
+      "a": "Oui. Les applications Dawarich pour iOS et Android affichent votre famille sur la carte. Depuis l’application, vous pouvez activer ou désactiver votre propre partage, choisir l’historique à partager, envoyer des demandes de localisation et y répondre."
     },
     {
       "q": "Dois-je forcément payer ?",
@@ -42,22 +42,34 @@
     }
   ],
   "meta": {
-    "title": "Partage familial de localisation privé, consenti, sans suivi",
-    "description": "Jusqu’à 5 proches : position en direct, contrôle individuel, minuteurs, plages d’historique séparées, demandes à accepter. {price} ou auto-hébergement gratuit.",
+    "title": "Appli de partage de position en famille, iPhone et Android",
+    "description": "Applis Dawarich iOS/Android : invitez jusqu’à 5 proches. Chacun gère partage en direct, historique, demandes de position. {price} ou auto-hébergement gratuit.",
     "ogTitle": "Le partage de localisation en famille, sans surveillance",
-    "ogDescription": "Cinq personnes, cinq réglages indépendants. Partage en direct avec minuteur, historique au choix et demandes à accepter. Rien n’est partagé par défaut."
+    "ogDescription": "Cinq personnes, cinq réglages indépendants. Partage en direct avec minuteur, historique à choisir séparément et demandes de localisation à accepter."
   },
   "familyPage": {
-    "text": "Le partage de localisation en famille",
+    "text": "L’application de partage de localisation en famille",
     "em": "avec l’accord de chacun.",
-    "title2": "Conçu pour ne surveiller personne par défaut",
+    "title2": "Conçu autour du choix de chacun",
     "sub2": "Jusqu’à cinq personnes sur un abonnement, chacune avec un compte Dawarich complet et le contrôle de ce qu’elle partage.",
     "title3": "Les questions des parents et des couples",
     "title4": "Partagez avec votre foyer, pas avec un courtier en données",
-    "sub3": "{price} par an pour cinq personnes sur Dawarich Cloud. Ou utilisez le même service gratuitement sur votre propre matériel.",
+    "sub3": "{price} par an pour cinq personnes sur Dawarich Cloud, avec un essai gratuit de 7 jours. Ou utilisez le même service gratuitement sur votre propre matériel.",
     "primaryLabel": "Souscrire une offre Famille"
   },
   "hero": {
-    "sub": "Les applications de suivi familial partent du principe qu’il faut surveiller tout le monde en permanence. Dawarich fait le choix inverse : rien n’est partagé sans que la personne l’active elle-même, un minuteur peut arrêter le partage et connaître la position de quelqu’un exige de la lui demander."
+    "sub": "Retrouvez votre foyer sur iPhone et Android. Les membres invités choisissent quand partager leur position, un minuteur peut arrêter le partage en direct, et pour savoir où se trouve quelqu’un, il faut le lui demander. Le titulaire de l’offre Cloud commence avec le partage activé et peut le désactiver à tout moment."
+  },
+  "setup": {
+    "title": "Configurez le partage familial sur iPhone et Android",
+    "body": "L’offre Famille couvre jusqu’à cinq comptes distincts. Chacun utilise son propre téléphone et décide de ce qu’il partage.",
+    "steps": [
+      "**Souscrivez une offre Famille.** Dawarich crée votre famille sur le Cloud, ou vous pouvez en créer une sur votre instance auto-hébergée.",
+      "**Invitez les membres de votre foyer.** Envoyez les invitations depuis la page Famille sur le web. Chaque personne accepte avec l’adresse e-mail à laquelle l’invitation a été envoyée.",
+      "**Installez l’application et connectez-vous.** Ouvrez l’application Dawarich sur chaque téléphone, puis utilisez le panneau Famille sur la carte pour régler le partage en direct et l’historique."
+    ],
+    "ios": "Télécharger l’application iOS",
+    "android": "Télécharger l’application Android",
+    "guide": "Lire le guide de configuration"
   }
 }

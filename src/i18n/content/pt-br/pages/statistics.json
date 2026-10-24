@@ -29,11 +29,11 @@
     },
     {
       "title": "Veja suas estatísticas",
-      "description": "Acesse a página Estatísticas para ver uma análise completa da sua localização.",
+      "description": "Acesse a página Insights para ver uma análise completa dos seus dados de localização.",
       "details": [
-        "Resumo geral no topo",
-        "Clique em qualquer ano para ver estatísticas detalhadas",
-        "Clique em qualquer mês para vê-lo no mapa"
+        "Resumo de todo o período com um cartão e um mapa de trajetos por ano",
+        "Escolha qualquer ano para ver seus meses, calendário e comparações",
+        "Clique em qualquer mês para ver suas estatísticas e o mapa"
       ]
     },
     {

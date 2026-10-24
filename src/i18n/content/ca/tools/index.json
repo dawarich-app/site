@@ -61,6 +61,10 @@
     {
       "title": "Extracció de geodades de fotos",
       "description": "Extreu les coordenades GPS i les metadades d'ubicació de les teves fotos (dades EXIF)."
+    },
+    {
+      "title": "Creador de vídeos de rutes",
+      "description": "Anima qualsevol trajecte GPS en un MP4 per compartir: la ruta es dibuixa sola sobre un mapa amb estil."
     }
   ],
   "converters": [

@@ -29,11 +29,11 @@
     },
     {
       "title": "Ve tus estadísticas",
-      "description": "Ve a la página Estadísticas para consultar el análisis completo de tus ubicaciones.",
+      "description": "Abre la página Análisis para consultar las estadísticas completas de tus ubicaciones.",
       "details": [
-        "Resumen general en la parte superior",
-        "Haz clic en cualquier año para ver las estadísticas detalladas",
-        "Haz clic en cualquier mes para verlo en el mapa"
+        "Resumen de todo tu historial con una tarjeta y un mapa de rutas por año",
+        "Elige cualquier año para ver sus meses, calendario y comparaciones",
+        "Haz clic en cualquier mes para ver sus estadísticas y su mapa"
       ]
     },
     {
