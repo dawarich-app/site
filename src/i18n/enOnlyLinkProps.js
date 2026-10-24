@@ -12,6 +12,9 @@ export const EN_ONLY_PREFIXES = [
   '/roadmap',
   '/techlore',
   '/credits',
+  '/press-kit',
+  '/affiliate',
+  '/itsfoss',
 ];
 
 export function isEnOnlyPath(path) {

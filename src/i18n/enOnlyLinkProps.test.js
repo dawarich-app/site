@@ -33,6 +33,12 @@ describe('isEnOnlyPath', () => {
     expect(isEnOnlyPath('/ios/privacy-policy/')).toBe(true);
   });
 
+  it('should match the English-only press, affiliate and sponsor pages', () => {
+    expect(isEnOnlyPath('/press-kit/')).toBe(true);
+    expect(isEnOnlyPath('/affiliate')).toBe(true);
+    expect(isEnOnlyPath('/itsfoss/')).toBe(true);
+  });
+
   it('should not match localized routes or external URLs', () => {
     expect(isEnOnlyPath('/tools/gpx-to-kml/')).toBe(false);
     expect(isEnOnlyPath('/pricing')).toBe(false);
