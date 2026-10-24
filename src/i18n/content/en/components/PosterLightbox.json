@@ -54,7 +54,7 @@
       }
     ]
   },
-  "position": "{name} poster, {value2} of {value3}",
+  "position": "{name} poster, {position} of {total}",
   "close": "Close",
   "previous": "Previous poster",
   "next": "Next poster",

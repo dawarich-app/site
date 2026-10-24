@@ -83,7 +83,7 @@ export function usePosterLightbox(items) {
             ref={dialogRef}
             role="dialog"
             aria-modal="true"
-            aria-label={interpolate(content.position, { name: active.name, value2: index + 1, value3: count })}
+            aria-label={interpolate(content.position, { name: active.name, position: index + 1, total: count })}
             onClick={close}>
             <button
               type="button"

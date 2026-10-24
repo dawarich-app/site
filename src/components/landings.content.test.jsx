@@ -70,7 +70,7 @@ describe('Landing component content', () => {
   });
   it('FeatureShowcase renders its image action and close label from content', () => {
     render(<FeatureShowcase items={[{ title: 'Map', image: '/map.webp' }]} />);
-    fireEvent.click(screen.getByRole('button', { name: interpolate(showcase.viewImage, { value1: 'Map' }) }));
+    fireEvent.click(screen.getByRole('button', { name: interpolate(showcase.viewImage, { image: 'Map' }) }));
     expect(screen.getByRole('button', { name: showcase.closeImage })).toBeInTheDocument();
   });
   it('PitchHero renders its default CTA from content', () => {

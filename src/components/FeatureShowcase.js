@@ -48,7 +48,7 @@ export default function FeatureShowcase({ title, subtitle, items }) {
                       type="button"
                       className={styles.imageButton}
                       onClick={() => openModal(item.image, item.imageAlt || item.title)}
-                      aria-label={interpolate(content.viewImage, { value1: item.imageAlt || item.title })}
+                      aria-label={interpolate(content.viewImage, { image: item.imageAlt || item.title })}
                     >
                       <img
                         src={item.image}
