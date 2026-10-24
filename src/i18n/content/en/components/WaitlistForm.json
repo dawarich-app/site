@@ -1,0 +1,11 @@
+{
+  "buttonLabel": "Join the waitlist",
+  "note": "No spam — just the launch email.",
+  "invalidEmail": "Please enter a valid email address.",
+  "requestError": "Something went wrong. Please try again later.",
+  "success": "You're on the list! We'll email you when Family launches.",
+  "networkError": "Network error. Please check your connection and try again.",
+  "joining": "Joining…",
+  "emailPlaceholder": "you@example.com",
+  "emailLabel": "Email address"
+}

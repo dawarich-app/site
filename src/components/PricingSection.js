@@ -1,3 +1,6 @@
+import { interpolate } from '@docusaurus/Interpolate';
+import content from '@locale-content/components/PricingSection.json';
+import RichText from '@site/src/i18n/RichText';
 import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import React from "react";
 import { PLANS } from "@site/src/data/pricingPlans";
@@ -9,14 +12,13 @@ export default function PricingSection() {
 		<section id="pricing" className={styles.section}>
 			<div className={styles.container}>
 				<div className={styles.badge}>
-					7-day free trial — 14-day money-back guarantee
+					{content.badge}
 				</div>
 
-				<h2 className={styles.title}>Own Your Location History</h2>
+				<h2 className={styles.title}>{content.title}</h2>
 
 				<p className={styles.subtitle}>
-					From €5 a month to keep a lifetime of memories. Your data is always
-					yours — export everything, anytime, on any plan.
+					{interpolate(content.subtitle, { price: "€5" })}
 				</p>
 
 				<div className={styles.cardContainer}>
@@ -32,11 +34,9 @@ export default function PricingSection() {
 				</div>
 
 				<div className={styles.bonus}>
-					<div className={styles.bonusBadge}>Free Bonus · €99 value</div>
+					<div className={styles.bonusBadge}>{interpolate(content.bonusBadge, { price: "€99" })}</div>
 					<div className={styles.bonusText}>
-						<strong>White-Glove Import Service.</strong> Send us your Google
-						Takeout and we import your entire location history for you —
-						usually within 24 hours. Included free with every plan.
+						<RichText text={content.bonusDescription} />
 					</div>
 				</div>
 
@@ -57,12 +57,9 @@ export default function PricingSection() {
 						</svg>
 					</div>
 					<div className={styles.guaranteeText}>
-						<strong>The Import Guarantee:</strong> if your Google Takeout
-						doesn't import cleanly, we fix it personally — or refund every
-						cent. Plus a 14-day no-questions money-back guarantee on every
-						plan.{" "}
+						<RichText text={content.guaranteeDescription} />{" "}
 						<EnOnlyLink to="/refund-policy" className={styles.guaranteeLink}>
-							Refund policy →
+							{content.guaranteeLink}
 						</EnOnlyLink>
 					</div>
 				</div>
@@ -70,8 +67,7 @@ export default function PricingSection() {
 
 			<div className={styles.selfHostContainer}>
 				<EnOnlyLink to="/docs/self-hosting/introduction" className={styles.selfHostButton}>
-					Don't trust anyone with your data? Self-host for free — every Pro
-					feature, your server, zero cost
+					{content.selfHostButton}
 				</EnOnlyLink>
 			</div>
 		</section>

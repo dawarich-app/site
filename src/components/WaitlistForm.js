@@ -1,3 +1,4 @@
+import content from '@locale-content/components/WaitlistForm.json';
 import React, { useState } from "react";
 import styles from "./WaitlistForm.module.css";
 
@@ -19,8 +20,8 @@ export default function WaitlistForm({
 	listId,
 	heading = null,
 	subtext = null,
-	buttonLabel = "Join the waitlist",
-	note = "No spam — just the launch email.",
+	buttonLabel = content.buttonLabel,
+	note = content.note,
 }) {
 	const [email, setEmail] = useState("");
 	const [status, setStatus] = useState(STATUS.idle);
@@ -34,7 +35,7 @@ export default function WaitlistForm({
 		const trimmedEmail = email.trim();
 		if (!EMAIL_PATTERN.test(trimmedEmail)) {
 			setStatus(STATUS.error);
-			setMessage("Please enter a valid email address.");
+			setMessage(content.invalidEmail);
 			return;
 		}
 
@@ -61,16 +62,16 @@ export default function WaitlistForm({
 
 			if (!response.ok || payload.success !== true) {
 				setStatus(STATUS.error);
-				setMessage(payload.error || "Something went wrong. Please try again later.");
+				setMessage(payload.error || content.requestError);
 				return;
 			}
 
 			setStatus(STATUS.success);
-			setMessage("You're on the list! We'll email you when Family launches.");
+			setMessage(content.success);
 			setEmail("");
 		} catch {
 			setStatus(STATUS.error);
-			setMessage("Network error. Please check your connection and try again.");
+			setMessage(content.networkError);
 		}
 	}
 
@@ -108,12 +109,12 @@ export default function WaitlistForm({
 				type="email"
 				name="email"
 				autoComplete="email"
-				placeholder="you@example.com"
+				placeholder={content.emailPlaceholder}
 				required
 				value={email}
 				onChange={(e) => setEmail(e.target.value)}
 				disabled={isLoading}
-				aria-label="Email address"
+				aria-label={content.emailLabel}
 				aria-invalid={status === STATUS.error}
 			/>
 
@@ -127,7 +128,7 @@ export default function WaitlistForm({
 				{isLoading ? (
 					<>
 						<span className={styles.spinner} aria-hidden="true" />
-						Joining…
+						{content.joining}
 					</>
 				) : (
 					buttonLabel

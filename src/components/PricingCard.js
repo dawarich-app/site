@@ -1,4 +1,5 @@
-import Link from "@docusaurus/Link";
+import content from '@locale-content/components/PricingCard.json';
+import { SmartLink } from '@site/src/i18n/RichText';
 import React, { useState } from "react";
 import { DwIcon } from "@site/src/data/pricingPlans";
 import WaitlistForm from "./WaitlistForm";
@@ -26,10 +27,10 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 
 			{popular && (
 				<div className={styles.ribbon}>
-					<DwIcon name="sparkles" size={12} stroke={2.4} /> MOST POPULAR
+					<DwIcon name="sparkles" size={12} stroke={2.4} />{content.ribbon}
 				</div>
 			)}
-			{deemph && <div className={styles.comingSoon}>COMING SOON</div>}
+			{deemph && <div className={styles.comingSoon}>{content.comingSoon}</div>}
 
 			<div className={styles.header}>
 				<span className={styles.planIcon}>
@@ -56,7 +57,7 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 						<span className={styles.period}>{bigPeriod}</span>
 					</div>
 					<div className={styles.perMonth}>
-						{monthly ? "billed monthly" : plan.perMonth}
+						{monthly ? content.billedMonthly : plan.perMonth}
 					</div>
 				</div>
 			)}
@@ -71,7 +72,7 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 								className={`${styles.toggleBtn} ${billing === opt ? styles.toggleActive : ""}`}
 								onClick={() => setBilling(opt)}
 							>
-								{opt}
+								{content.billing[opt]}
 							</button>
 						))}
 					</div>
@@ -121,14 +122,14 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 					{plan.valueStack.items.map((item, i) => (
 						<div key={i} className={styles.valueRow}>
 							<span className={item.bonus ? styles.valueBonus : ""}>
-								{item.bonus ? "BONUS: " : ""}
+								{item.bonus ? content.bonusPrefix : ""}
 								{item.label}
 							</span>
 							<span className={styles.valueAmount}>&euro;{item.value}</span>
 						</div>
 					))}
 					<div className={styles.valueTotalRow}>
-						<span>Total value</span>
+						<span>{content.totalValue}</span>
 						<span className={styles.valueTotal}>
 							&euro;{plan.valueStack.total}
 						</span>
@@ -140,24 +141,23 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 			{plan.waitlistListId ? (
 				<WaitlistForm
 					listId={plan.waitlistListId}
-					heading="Join the Family waitlist"
-					subtext="Be first to know the moment it launches — annual only, every Pro feature."
-					buttonLabel="Join the waitlist"
-					note="No spam, just the launch email."
+					heading={content.heading}
+					subtext={content.subtext}
+					buttonLabel={content.buttonLabel}
+					note={content.note}
 				/>
 			) : (
 				<>
 					<div className={styles.guarantee}>
-						<DwIcon name="shield-check" size={15} stroke={2} /> The Import
-						Guarantee &middot; 14-day money-back
+						<DwIcon name="shield-check" size={15} stroke={2} />{content.guarantee}
 					</div>
 
-					<Link
-						to={plan.href}
+					<SmartLink
+						href={plan.href}
 						className={`${styles.cta} ${plan.ctaStyle === "primary" ? styles.ctaPrimary : styles.ctaOutline}`}
 					>
 						{plan.cta}
-					</Link>
+					</SmartLink>
 
 					<div className={styles.footnote}>{plan.footnote}</div>
 				</>
