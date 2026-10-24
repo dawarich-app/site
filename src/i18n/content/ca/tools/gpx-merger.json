@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Uneix fitxers GPX gratis: combina trajectes GPS en línia",
-    "description": "Uneix diversos fitxers GPX en un de sol. Eina gratuïta per combinar trajectes GPS, punts d'interès i rutes. Tot es fa al navegador, amb privacitat.",
+    "description": "Uneix diversos fitxers GPX en un de sol. Eina gratuïta per combinar trajectes GPS, punts de pas i rutes. Tot es fa al navegador, amb privacitat.",
     "keywords": "unir GPX, unir fitxers GPX, combinar trajectes GPS, combinar GPX, ajuntar fitxers GPX, unir fitxers GPS, ajuntar GPX, combinar trajectes"
   },
   "h1": "Eina per unir trajectes GPX",
@@ -26,7 +26,7 @@
       "paragraphs": [],
       "items": [
         { "body": "**Trajectes** - Tots els segments de trajecte GPS amb marques de temps i altitud" },
-        { "body": "**Punts d'interès** - Punts amb nom i marcadors" },
+        { "body": "**Punts de pas** - Punts d'interès amb nom i marcadors" },
         { "body": "**Rutes** - Rutes de navegació planificades" },
         { "body": "**Metadades** - Es combinen en una nova descripció del fitxer resultant" }
       ]
@@ -64,7 +64,7 @@
     "filesLabel": "Fitxers",
     "tracksLabel": "Trajectes",
     "pointsLabel": "Punts",
-    "waypointsLabel": "Punts d'interès",
+    "waypointsLabel": "Punts de pas",
     "removeFileTitle": "Elimina el fitxer",
     "filesToMergeHeading": "Fitxers per unir ({count})",
     "fileSummary": "{tracks} | {points} punts",

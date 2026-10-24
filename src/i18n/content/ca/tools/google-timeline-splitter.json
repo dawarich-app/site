@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Divisor de Google Timeline: divideix fitxers JSON grans",
-    "description": "Divideix JSON de Google Timeline: Records.json, Semantic Location History, Semantic Segments i més. Tria la mida. Gratis, privat i al navegador.",
+    "description": "JSON gran de Google Timeline en parts vàlides a mida. Tots els formats: Records.json, Semantic Location History, Semantic Segments. Gratis i privat al navegador",
     "keywords": "dividir JSON de Google Timeline, dividir Records.json, dividir historial d'ubicacions de Google, divisor de Google Timeline, dividir ubicacions de Google Takeout, dividir JSON de la línia de temps, fitxer de Google Timeline massa gran",
     "featureList": [
       "Divideix fitxers JSON grans de Google Timeline en parts més petites",
@@ -35,7 +35,7 @@
   "intro": "Divideix exportacions JSON grans de Google Timeline en parts més petites i vàlides. Cada part conserva el format original perquè la puguis importar a qualsevol eina. Tria la mida dels fitxers i descarrega un ZIP.",
   "benefitsTitle": "Per què dividir els fitxers de la línia de temps?",
   "privacyBody": "Tot el processament de les dades es fa al navegador. Els teus fitxers no surten mai del dispositiu.",
-  "preCta": "Treballes amb exportacions grans de Google Timeline? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-splitter) gestiona automàticament importacions de qualsevol mida, amb control total de les teves dades i privacitat.",
+  "preCta": "Treballes amb exportacions grans de Google Timeline? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-splitter) gestiona automàticament importacions de qualsevol mida, amb plena propietat de les teves dades i privacitat.",
   "faqTitle": "Preguntes freqüents",
   "homeLabel": "Inici",
   "toolsLabel": "Eines gratuïtes",

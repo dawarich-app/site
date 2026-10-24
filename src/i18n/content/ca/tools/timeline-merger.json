@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Uneix dades de Google Timeline i historials d'ubicacions",
-    "description": "Uneix exportacions de Google Timeline en un fitxer i elimina punts duplicats. Combina Records.json, Semantic History i dades del telèfon amb privacitat.",
+    "title": "Google Timeline: uneix exportacions d'historial d'ubicacions",
+    "description": "Uneix gratis exportacions de Google Timeline en un fitxer amb deduplicació intel·ligent i privacitat: Records.json, Semantic History i fitxers del telèfon.",
     "keywords": "unir exportacions de Google Timeline, combinar fitxers d'historial d'ubicacions, recuperar dades de Google Timeline, unir Records.json, combinar ubicacions de Google Takeout, unir Semantic Location History, unir Google Timeline, eliminar duplicats de l'historial d'ubicacions, unir dades GPS",
     "featureList": [
       "Uneix diverses exportacions de Google Timeline en un sol fitxer",
@@ -43,7 +43,7 @@
   },
   "h1": "Eina per unir dades de Google Timeline",
   "intro": "Uneix diverses exportacions de Google Timeline en un únic fitxer. L'eliminació intel·ligent de duplicats treu els punts superposats i conserva tots els registres d'ubicació únics. Gratis, amb privacitat i íntegrament al navegador.",
-  "preCta": "Vols visualitzar primer les teves dades de la línia de temps? Prova el nostre [visualitzador de Google Timeline](/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) per explorar el teu historial d'ubicacions en un mapa interactiu. Necessites un substitut a llarg termini de la línia de temps? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) et dona el control total de les teves dades.",
+  "preCta": "Vols visualitzar primer les teves dades de la línia de temps? Prova el nostre [visualitzador de Google Timeline](/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) per explorar el teu historial d'ubicacions en un mapa interactiu. Necessites un substitut a llarg termini de la línia de temps? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) et dona la plena propietat de les teves dades.",
   "faqTitle": "Preguntes freqüents",
   "homeLabel": "Inici",
   "toolsLabel": "Eines gratuïtes",
@@ -144,7 +144,7 @@
     },
     {
       "q": "Quins formats d'exportació hi ha disponibles?",
-      "a": "Pots exportar les dades unides en JSON (una matriu de tots els punts d'ubicació sense duplicats i amb totes les metadades) o en GPX (un format GPS estàndard compatible amb la majoria d'aplicacions de cartografia, dispositius de seguiment esportiu i eines SIG). L'exportació JSON conserva totes les metadades originals, com ara noms de llocs, adreces i tipus d'activitat. L'exportació GPX converteix les visites a llocs en punts d'interès i els registres d'ubicació en punts de trajecte."
+      "a": "Pots exportar les dades unides en JSON (una matriu de tots els punts d'ubicació sense duplicats i amb totes les metadades) o en GPX (un format GPS estàndard compatible amb la majoria d'aplicacions de cartografia, dispositius de seguiment esportiu i eines SIG). L'exportació JSON conserva totes les metadades originals, com ara noms de llocs, adreces i tipus d'activitat. L'exportació GPX converteix les visites a llocs en punts de pas i els registres d'ubicació en punts de trajecte."
     },
     {
       "q": "Quants fitxers puc unir alhora?",
@@ -191,7 +191,7 @@
       "paragraphs": [
         "A finals de 2024, Google va retirar la versió web de Google Maps Timeline i va traslladar totes les dades d'ubicació a l'emmagatzematge al dispositiu. Només les dades dels darrers 90 dies es van transferir automàticament als telèfons dels usuaris. L'historial d'ubicacions més antic es va eliminar de manera permanent, tret que els usuaris l'haguessin exportat manualment abans de la data límit.",
         "Això va deixar milions d'usuaris amb dades fragmentades: exportacions parcials de Takeout, exportacions del telèfon amb dades recents i fitxers de Semantic Location History de períodes diferents. L'eina d'unió ajuda a tornar a ajuntar aquests fragments en un historial d'ubicacions complet.",
-        "Per continuar registrant la ubicació amb el control total de les dades, considera [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-merger) com a substitut en un servidor propi o al núvol."
+        "Per continuar registrant la ubicació amb plena propietat de les teves dades, considera [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-merger) com a substitut en un servidor propi o al núvol."
       ]
     },
     {

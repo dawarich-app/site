@@ -3,7 +3,7 @@
   "intro": "Calcula el quilometratge conduït a partir de les dades de Google Timeline. Genera registres de quilometratge descarregables amb detalls de cada viatge i resums diaris i mensuals. Tot es processa al navegador: les dades es queden al dispositiu tret que triïs «Desa al meu compte de Dawarich».",
   "privacyTitle": "La privacitat, primer",
   "privacyBody": "Tots els càlculs de quilometratge es fan íntegrament al navegador: les teves dades d'ubicació es queden al dispositiu tret que triïs «Desa al meu compte de Dawarich».",
-  "preCta": "Necessites un seguiment continu del quilometratge? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-mileage-calculator) registra els teus viatges automàticament, amb el control total de les dades i privacitat. Sense més exportacions manuals: només un seguiment continu i precís.",
+  "preCta": "Necessites un seguiment continu del quilometratge? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-mileage-calculator) registra els teus viatges automàticament, amb plena propietat de les teves dades i privacitat. Sense més exportacions manuals: només un seguiment continu i precís.",
   "saveIntro": "També ho vols al teu compte de Dawarich? Ho importarem quan t'hi registris, sense haver de tornar a carregar el fitxer.",
   "faqTitle": "Preguntes freqüents",
   "homeLabel": "Inici",
@@ -163,7 +163,7 @@
       "title": "Com es calcula el quilometratge",
       "paragraphs": [
         "La calculadora fa servir la fórmula de Haversine per calcular distàncies de cercle màxim entre coordenades GPS consecutives de cada segment de conducció. És el mètode estàndard per calcular la distància entre dos punts d'una esfera (la Terra).",
-        "Per a cada segment de conducció identificat a les dades de Google Timeline, l'eina suma les distàncies entre tots els punts registrats al llarg del segment. El resultat és una aproximació en línia recta: la distància real per carretera sol ser un 10-30% més gran a causa de les corbes, els canvis d'altitud i els desviaments que no es recullen entre els punts GPS.",
+        "Per a cada segment de conducció identificat a les dades de Google Timeline, l'eina suma les distàncies entre tots els punts de pas registrats al llarg del segment. El resultat és una aproximació en línia recta: la distància real per carretera sol ser un 10-30% més gran a causa de les corbes, els canvis d'altitud i els desviaments que no es recullen entre els punts GPS.",
         "Els salts de més de 500 km entre punts consecutius s'exclouen automàticament per evitar comptar errors GPS o salts de posició impossibles a les dades."
       ]
     },

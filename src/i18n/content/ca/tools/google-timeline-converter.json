@@ -49,7 +49,7 @@
     "title": "La privacitat primer",
     "body": "Tota la conversió es fa al navegador: les dades d’ubicació es queden al dispositiu tret que triïs «Desa al meu compte de Dawarich»."
   },
-  "preCta": "Busques una alternativa a Google Timeline a llarg termini? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-converter) registra l’historial d’ubicacions automàticament, amb propietat total de les dades i privacitat. [Descobreix com migrar-hi](/blog/migrating-from-google-location-history-to-dawarich).",
+  "preCta": "Busques una alternativa a Google Timeline a llarg termini? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-converter) registra l’historial d’ubicacions automàticament, amb plena propietat de les teves dades i privacitat. [Descobreix com migrar-hi](/blog/migrating-from-google-location-history-to-dawarich).",
   "results": {
     "title": "Fitxers carregats",
     "file": "Fitxer",
@@ -126,7 +126,7 @@
         "**Conservació a llarg termini** — Els formats estàndard es podran llegir d’aquí a dècades, independentment de les decisions futures de Google",
         "**Anàlisi** — Importa CSV a fulls de càlcul per analitzar estadísticament els patrons de moviment",
         "**Visualització** — Mira l’historial a Google Earth, QGIS o eines de mapes web",
-        "**Migració** — Importa a alternatives amb allotjament propi com [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=google-timeline-converter) per continuar el seguiment d’ubicació amb propietat total de les dades"
+        "**Migració** — Importa a alternatives amb allotjament propi com [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=google-timeline-converter) per continuar el seguiment d’ubicació amb plena propietat de les teves dades"
       ]
     },
     {

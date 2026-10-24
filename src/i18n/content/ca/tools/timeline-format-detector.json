@@ -3,13 +3,13 @@
   "intro": "Carrega qualsevol fitxer d'exportació de Google Timeline per identificar-ne el format a l'instant, veure estadístiques de les dades i rebre recomanacions sobre què fer després. Tot es processa al navegador.",
   "privacyTitle": "La privacitat, primer",
   "privacyBody": "Tot el processament de les dades es fa íntegrament al navegador. Les teves dades d'ubicació no surten mai del dispositiu ni s'envien a cap servidor.",
-  "preCta": "No saps què fer amb les teves dades de Google Timeline? Carrega el fitxer a sobre per descobrir-ho, o explora [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-format-detector) per registrar la ubicació automàticament amb el control total de les teves dades.",
+  "preCta": "No saps què fer amb les teves dades de Google Timeline? Carrega el fitxer a sobre per descobrir-ho, o explora [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-format-detector) per registrar la ubicació automàticament amb plena propietat de les teves dades.",
   "faqTitle": "Preguntes freqüents",
   "homeLabel": "Inici",
   "toolsLabel": "Eines gratuïtes",
   "meta": {
     "title": "Detector de formats de Google Timeline: identifica el fitxer",
-    "description": "Detecta gratis el format d'exportació de Google Timeline. Carrega un fitxer de Google Takeout i consulta punts, dates, mida i qualitat al navegador.",
+    "description": "Detecta gratis Google Timeline a l'instant. Carrega un fitxer de Google Takeout: format, nombre de punts, interval de dates, mida i qualitat. Tot al navegador.",
     "keywords": "format de Google Timeline, format de la meva exportació de Google, tipus de fitxer d'ubicacions de Google Takeout, format d'historial d'ubicacions de Google, detector de fitxers de Google Timeline, format d'exportació de Google Maps Timeline, format JSON de Google Takeout, tipus de fitxer d'historial d'ubicacions, format de dades de Google Timeline, identificar fitxer d'exportació de Google",
     "featureList": [
       "Detecta a l'instant el format d'exportació de Google Timeline",
@@ -228,7 +228,7 @@
       "title": "Què va passar amb Google Maps Timeline?",
       "paragraphs": [
         "A finals de 2024, Google va tancar la versió web de Google Maps Timeline i va traslladar totes les dades d'ubicació a l'emmagatzematge al dispositiu. Només es van migrar els darrers 90 dies: les dades més antigues es van eliminar tret que els usuaris n'haguessin fet una còpia manualment. Molta gent va [perdre anys d'historial d'ubicacions](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/) durant la transició.",
-        "Si tens fitxers exportats, aquest detector t'ajuda a entendre què tens. Com a substitut a llarg termini, [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-format-detector) ofereix seguiment d'ubicacions en un servidor propi o al núvol, amb el control total de les teves dades."
+        "Si tens fitxers exportats, aquest detector t'ajuda a entendre què tens. Com a substitut a llarg termini, [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-format-detector) ofereix seguiment d'ubicacions en un servidor propi o al núvol, amb plena propietat de les teves dades."
       ]
     },
     {

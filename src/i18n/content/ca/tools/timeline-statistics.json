@@ -10,7 +10,7 @@
   "toolsLabel": "Eines gratuïtes",
   "meta": {
     "title": "Estadístiques de Google Timeline: analitza el teu historial",
-    "description": "Analitza gratis Google Timeline al navegador, amb privacitat. Consulta distància, països, llocs més visitats, activitats i tendències anuals.",
+    "description": "Analitza Google Timeline gratis al navegador: distància total recorreguda, països visitats, llocs més visitats, activitats per tipus i tendències anuals. Privat",
     "keywords": "estadístiques de Google Timeline, estadístiques de l'historial d'ubicacions, quina distància he recorregut, anàlisi de Google Maps Timeline, analitzador de Google Timeline, estadístiques de viatge, anàlisi de dades d'ubicació, estadístiques de Google Takeout, calculadora de distància recorreguda, comptador de llocs visitats",
     "featureList": [
       "Calcula la distància total recorreguda amb dades de Google Timeline",
@@ -116,7 +116,7 @@
     "flying": "Amb avió",
     "motorcycle": "Moto",
     "skiing": "Esquí",
-    "sailing": "Navegació",
+    "sailing": "Navegació a vela",
     "unknown": "Desconegut"
   },
   "cta": {
@@ -205,7 +205,7 @@
       "title": "Què va passar amb Google Maps Timeline?",
       "paragraphs": [
         "A finals de 2024, Google va retirar la versió web de Google Maps Timeline i va traslladar totes les dades d'ubicació a l'emmagatzematge al dispositiu. Només es van migrar els darrers 90 dies: les dades més antigues es van eliminar tret que els usuaris n'haguessin fet una còpia manualment abans de la data límit. Molta gent va [perdre anys d'historial d'ubicacions](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/) durant la transició.",
-        "Si vas aconseguir exportar les dades abans de la transició o durant el procés, aquest analitzador et permet extreure'n estadístiques útils. Per a un substitut a llarg termini que continuï registrant la teva ubicació amb el control total de les dades, descobreix [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-statistics)."
+        "Si vas aconseguir exportar les dades abans de la transició o durant el procés, aquest analitzador et permet extreure'n estadístiques útils. Per a un substitut a llarg termini que continuï registrant la teva ubicació amb plena propietat de les teves dades, descobreix [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-statistics)."
       ]
     },
     {
