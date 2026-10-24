@@ -1,10 +1,9 @@
-import { SmartLink } from '@site/src/i18n/RichText';
+import RichText, { SmartLink } from '@site/src/i18n/RichText';
 import content from '@locale-content/pages/about.json';
 import { interpolate } from '@docusaurus/Interpolate';
 import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import React from "react";
 import Head from "@docusaurus/Head";
-import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import Layout from "@theme/Layout";
 import styles from "./about.module.css";
 
@@ -115,9 +114,7 @@ export default function AboutPage() {
           </div>
         </section>
         <section className={styles.company}>
-          <p>{content.aboutPage.text3}{" "}
-            <EnOnlyLink to="/impressum">{content.aboutPage.EnOnlyLink}</EnOnlyLink>{content.aboutPage.text4}{" "}
-            <SmartLink href="/contact">{content.aboutPage.Link}</SmartLink>{content.aboutPage.text5}</p>
+          <p><RichText text={content.aboutPage.company} /></p>
         </section>
       </main>
     </Layout>

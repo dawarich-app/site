@@ -45,10 +45,6 @@
     "li4": "Otwarty kod źródłowy. Rozwój odbywa się publicznie na GitHubie, łącznie z błędami.",
     "heading4": "Kim jesteśmy",
     "alt": "Portret: {name}",
-    "text3": "Dawarich tworzy ZeitFlow UG (haftungsbeschränkt), mała firma zarejestrowana w Berlinie w Niemczech. Dane prawne znajdziesz w sekcji",
-    "EnOnlyLink": "Informacje prawne",
-    "text4": ". Chcesz się przywitać?",
-    "Link": "Napisz do nas",
-    "text5": ". Czytamy każdą wiadomość."
+    "company": "Dawarich tworzy ZeitFlow UG (haftungsbeschränkt), mała firma zarejestrowana w Berlinie w Niemczech. Dane prawne znajdziesz w sekcji [Informacje prawne](/impressum). Chcesz się przywitać? [Napisz do nas](/contact). Czytamy każdą wiadomość."
   }
 }

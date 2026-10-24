@@ -197,9 +197,6 @@
     "p": "Schritt-für-Schritt-Anleitungen für jede unterstützte Tracking-App.",
     "h4": "Funktionen:",
     "h42": "Einrichtungsschritte:",
-    "text": "Eine vollständige Anleitung einschließlich Home-Assistant-Integration findest du in unserem",
-    "EnOnlyLink": "ausführlichen Tracking-Tutorial",
-    "text2": ".",
     "heading2": "API-Endpunkte",
     "p2": "Dawarich bietet mehrere API-Endpunkte für unterschiedliche Aufzeichnungsformate.",
     "h3": "Overland-Endpunkt",
@@ -208,12 +205,12 @@
     "h32": "OwnTracks-Endpunkt",
     "code2": "/api/v1/owntracks/points?api_key=YOUR_KEY",
     "p4": "Für OwnTracks, GPSLogger und PhoneTrack",
-    "text3": "Die vollständige API-Dokumentation findest du in",
-    "EnOnlyLink2": "unserer API-Referenz",
     "heading3": "Bereit für die Aufzeichnung?",
     "p5": "Erstelle heute dein Dawarich-Konto und beginne, deinen Standortverlauf automatisch aufzuzeichnen.",
     "Link": "7 Tage kostenlos testen",
     "EnOnlyLink3": "Kostenlos selbst hosten",
-    "p6": "7 Tage kostenlos testen · 14 Tage Geld-zurück-Garantie · Jederzeit kündbar"
+    "p6": "7 Tage kostenlos testen · 14 Tage Geld-zurück-Garantie · Jederzeit kündbar",
+    "docsNote": "Eine vollständige Anleitung einschließlich Home-Assistant-Integration findest du in unserem [ausführlichen Tracking-Tutorial](/docs/getting-started/track-your-location).",
+    "apiNote": "Die vollständige API-Dokumentation findest du in [unserer API-Referenz](/docs/api/dawarich-api)."
   }
 }

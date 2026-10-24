@@ -197,9 +197,6 @@
     "p": "Instrucciones paso a paso para cada aplicación de registro compatible.",
     "h4": "Funciones:",
     "h42": "Pasos de configuración:",
-    "text": "Encontrarás las instrucciones completas de configuración, incluida la integración con Home Assistant, en nuestro",
-    "EnOnlyLink": "tutorial detallado de registro",
-    "text2": ".",
     "heading2": "Puntos de acceso de la API",
     "p2": "Dawarich ofrece varios puntos de acceso de la API para distintos formatos de registro.",
     "h3": "Punto de acceso de Overland",
@@ -208,12 +205,12 @@
     "h32": "Punto de acceso de OwnTracks",
     "code2": "/api/v1/owntracks/points?api_key=YOUR_KEY",
     "p4": "Para OwnTracks, GPSLogger y PhoneTrack",
-    "text3": "La documentación completa de la API está disponible en",
-    "EnOnlyLink2": "nuestra referencia de la API",
     "heading3": "¿Quieres empezar a registrar tu ubicación?",
     "p5": "Crea hoy tu cuenta de Dawarich y empieza a guardar automáticamente tu historial de ubicaciones.",
     "Link": "Prueba 7 días gratis",
     "EnOnlyLink3": "Instálalo gratis en tu servidor",
-    "p6": "Prueba gratuita de 7 días · Reembolso sin riesgo de 14 días · Cancela cuando quieras"
+    "p6": "Prueba gratuita de 7 días · Reembolso sin riesgo de 14 días · Cancela cuando quieras",
+    "docsNote": "Encontrarás las instrucciones completas de configuración, incluida la integración con Home Assistant, en nuestro [tutorial detallado de registro](/docs/getting-started/track-your-location).",
+    "apiNote": "La documentación completa de la API está disponible en [nuestra referencia de la API](/docs/api/dawarich-api)."
   }
 }

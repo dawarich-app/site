@@ -19,6 +19,11 @@ describe('validateTranslations', () => {
     expect(run({ a: '**Fast** tool' }, { a: 'Schnelles Tool' })).toEqual(['a: bold']);
   });
 
+  it('should flag changed inline code', () => {
+    expect(run({ a: 'Set `API_KEY` in .env' }, { a: 'Setze `API_SCHLUESSEL` in .env' })).toEqual(['a: code']);
+    expect(run({ a: 'Set `API_KEY` in .env' }, { a: 'Setze `API_KEY` in .env' })).toEqual([]);
+  });
+
   it('should flag dropped HTML tags', () => {
     expect(run({ a: 'Your <strong>3</strong> points' }, { a: 'Deine 3 Punkte' })).toEqual(['a: tags']);
   });

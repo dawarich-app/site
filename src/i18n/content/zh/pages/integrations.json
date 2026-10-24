@@ -113,13 +113,6 @@
     "p2": "Dawarich **不会存储或复制您的照片**，只通过 API 从自托管照片服务中读取位置元数据。照片始终安全地保留在您的 Immich 或 PhotoPrism 实例中，完全由您掌控。",
     "heading2": "技术详情",
     "text3": " Immich 设置",
-    "text4": "需要 API 密钥具备 ",
-    "code": "asset.read",
-    "text5": " 和 ",
-    "code2": "asset.view",
-    "text6": " 权限。如果还想使用丰富照片功能，请添加 ",
-    "code3": "asset.update",
-    "text7": " 权限。Dawarich 调用 Immich API 读取照片元数据，包括 EXIF 数据中的 GPS 坐标。",
     "Link": "如何获取 Immich API 密钥 →",
     "text8": " PhotoPrism 设置",
     "p3": "在 PhotoPrism 的“应用与设备”设置中生成 API 密钥。Dawarich 使用它访问照片库并提取位置信息。",
@@ -129,6 +122,7 @@
     "p5": "创建免费 Dawarich 账户，开始在地图上查看照片。",
     "Link4": "免费试用 7 天",
     "EnOnlyLink": "免费自托管",
-    "p6": "7 天免费试用 · 14 天无忧退款 · 随时可取消"
+    "p6": "7 天免费试用 · 14 天无忧退款 · 随时可取消",
+    "immichScopes": "需要 API 密钥具备 `asset.read` 和 `asset.view` 权限。如果还想使用丰富照片功能，请添加 `asset.update` 权限。Dawarich 调用 Immich API 读取照片元数据，包括 EXIF 数据中的 GPS 坐标。"
   }
 }

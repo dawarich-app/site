@@ -113,13 +113,6 @@
     "p2": "Dawarich **nie przechowuje ani nie kopiuje Twoich zdjęć**. Odczytuje tylko metadane lokalizacji z usługi zdjęciowej na Twoim serwerze przez jej API. Zdjęcia pozostają bezpieczne w Twojej instancji Immich lub PhotoPrism, pod Twoją pełną kontrolą.",
     "heading2": "Szczegóły techniczne",
     "text3": " Konfiguracja Immich",
-    "text4": "Wymaga klucza API z uprawnieniami ",
-    "code": "asset.read",
-    "text5": " i ",
-    "code2": "asset.view",
-    "text6": ". Dodaj ",
-    "code3": "asset.update",
-    "text7": ", jeśli chcesz też korzystać z funkcji Wzbogać zdjęcia. Dawarich odpytuje API Immich, aby odczytać metadane zdjęć, w tym współrzędne GPS z danych EXIF.",
     "Link": "Jak uzyskać klucz API Immich →",
     "text8": " Konfiguracja PhotoPrism",
     "p3": "Wygeneruj klucz API w ustawieniach aplikacji i urządzeń PhotoPrism. Dawarich użyje go, aby uzyskać dostęp do biblioteki zdjęć i odczytać informacje o lokalizacji.",
@@ -129,6 +122,7 @@
     "p5": "Zacznij oglądać zdjęcia na mapie dzięki darmowemu kontu Dawarich.",
     "Link4": "Wypróbuj za darmo przez 7 dni",
     "EnOnlyLink": "Uruchom za darmo na własnym serwerze",
-    "p6": "7-dniowy bezpłatny okres próbny · Zwrot bez ryzyka przez 14 dni · Zrezygnuj w dowolnej chwili"
+    "p6": "7-dniowy bezpłatny okres próbny · Zwrot bez ryzyka przez 14 dni · Zrezygnuj w dowolnej chwili",
+    "immichScopes": "Wymaga klucza API z uprawnieniami `asset.read` i `asset.view`. Dodaj `asset.update`, jeśli chcesz też korzystać z funkcji Wzbogać zdjęcia. Dawarich odpytuje API Immich, aby odczytać metadane zdjęć, w tym współrzędne GPS z danych EXIF."
   }
 }

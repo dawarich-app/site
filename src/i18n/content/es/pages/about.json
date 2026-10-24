@@ -45,10 +45,6 @@
     "li4": "Código abierto. El desarrollo se hace en público, en GitHub, con errores y todo.",
     "heading4": "Quiénes somos",
     "alt": "Retrato de {name}",
-    "text3": "Dawarich es un producto de ZeitFlow UG (haftungsbeschränkt), una pequeña empresa registrada en Berlín, Alemania. Los datos legales están en el",
-    "EnOnlyLink": "aviso legal",
-    "text4": ". ¿Quieres saludarnos?",
-    "Link": "Contacta con nosotros",
-    "text5": ". Leemos todos los mensajes."
+    "company": "Dawarich es un producto de ZeitFlow UG (haftungsbeschränkt), una pequeña empresa registrada en Berlín, Alemania. Los datos legales están en el [aviso legal](/impressum). ¿Quieres saludarnos? [Contacta con nosotros](/contact). Leemos todos los mensajes."
   }
 }

@@ -197,9 +197,6 @@
     "p": "Les instructions pas à pas pour chaque application de suivi compatible.",
     "h4": "Fonctionnalités :",
     "h42": "Étapes de configuration :",
-    "text": "Pour les instructions complètes, dont l’intégration Home Assistant, consultez notre",
-    "EnOnlyLink": "tutoriel de suivi détaillé",
-    "text2": ".",
     "heading2": "Points d’accès API",
     "p2": "Dawarich propose plusieurs points d’accès API selon le format de suivi.",
     "h3": "Point d’accès Overland",
@@ -208,12 +205,12 @@
     "h32": "Point d’accès OwnTracks",
     "code2": "/api/v1/owntracks/points?api_key=YOUR_KEY",
     "p4": "Pour OwnTracks, GPSLogger et PhoneTrack",
-    "text3": "La documentation API complète est disponible dans",
-    "EnOnlyLink2": "notre référence API",
     "heading3": "Prêt à commencer le suivi ?",
     "p5": "Créez votre compte Dawarich dès aujourd’hui et commencez à enregistrer automatiquement votre historique de localisation.",
     "Link": "Essayer gratuitement pendant 7 jours",
     "EnOnlyLink3": "Auto-héberger gratuitement",
-    "p6": "Essai gratuit de 7 jours · Remboursement sous 14 jours, sans risque · Résiliez à tout moment"
+    "p6": "Essai gratuit de 7 jours · Remboursement sous 14 jours, sans risque · Résiliez à tout moment",
+    "docsNote": "Pour les instructions complètes, dont l’intégration Home Assistant, consultez notre [tutoriel de suivi détaillé](/docs/getting-started/track-your-location).",
+    "apiNote": "La documentation API complète est disponible dans [notre référence API](/docs/api/dawarich-api)."
   }
 }

@@ -45,10 +45,6 @@
     "li4": "Código aberto. O desenvolvimento acontece publicamente no GitHub, com bugs e tudo.",
     "heading4": "Quem somos",
     "alt": "Retrato de {name}",
-    "text3": "O Dawarich é feito pela ZeitFlow UG (haftungsbeschränkt), uma pequena empresa registrada em Berlim, Alemanha. Os dados legais estão nas",
-    "EnOnlyLink": "Informações legais",
-    "text4": ". Quer dar um oi?",
-    "Link": "Fale conosco",
-    "text5": ". Lemos todas as mensagens."
+    "company": "O Dawarich é feito pela ZeitFlow UG (haftungsbeschränkt), uma pequena empresa registrada em Berlim, Alemanha. Os dados legais estão nas [Informações legais](/impressum). Quer dar um oi? [Fale conosco](/contact). Lemos todas as mensagens."
   }
 }

@@ -113,13 +113,6 @@
     "p2": "Dawarich **ne stocke ni ne copie vos photos**. Il lit uniquement les métadonnées de localisation de votre service photo auto-hébergé via son API. Vos photos restent dans votre instance Immich ou PhotoPrism, en sécurité et sous votre contrôle.",
     "heading2": "Détails techniques",
     "text3": " Configuration Immich",
-    "text4": "Nécessite une clé API avec les droits ",
-    "code": "asset.read",
-    "text5": " et ",
-    "code2": "asset.view",
-    "text6": ". Ajoutez ",
-    "code3": "asset.update",
-    "text7": " pour utiliser aussi la fonction Enrichir les photos. Dawarich interroge l’API Immich pour lire les métadonnées photo, dont les coordonnées GPS issues des données EXIF.",
     "Link": "Comment obtenir une clé API Immich →",
     "text8": " Configuration PhotoPrism",
     "p3": "Générez une clé API dans les paramètres « Applications et appareils » de PhotoPrism. Dawarich l’utilise pour accéder à votre photothèque et extraire les informations de localisation.",
@@ -129,6 +122,7 @@
     "p5": "Retrouvez vos photos sur la carte avec un compte Dawarich gratuit.",
     "Link4": "Essayer gratuitement pendant 7 jours",
     "EnOnlyLink": "Auto-héberger gratuitement",
-    "p6": "Essai gratuit de 7 jours · Remboursement sous 14 jours, sans risque · Résiliez à tout moment"
+    "p6": "Essai gratuit de 7 jours · Remboursement sous 14 jours, sans risque · Résiliez à tout moment",
+    "immichScopes": "Nécessite une clé API avec les droits `asset.read` et `asset.view`. Ajoutez `asset.update` pour utiliser aussi la fonction Enrichir les photos. Dawarich interroge l’API Immich pour lire les métadonnées photo, dont les coordonnées GPS issues des données EXIF."
   }
 }

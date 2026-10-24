@@ -113,13 +113,6 @@
     "p2": "Dawarich **no desa ni copia les teves fotos**. Només llegeix les metadades d’ubicació del teu servei de fotos amb allotjament propi a través de la seva API. Les fotos continuen segures a la teva instància d’Immich o PhotoPrism, sota el teu control.",
     "heading2": "Detalls tècnics",
     "text3": " Configuració d’Immich",
-    "text4": "Cal una clau d’API amb els permisos ",
-    "code": "asset.read",
-    "text5": " i ",
-    "code2": "asset.view",
-    "text6": ". Afegeix ",
-    "code3": "asset.update",
-    "text7": " si també vols fer servir la funció d’enriquir fotos. Dawarich consulta l’API d’Immich per llegir les metadades, incloses les coordenades GPS de les dades EXIF.",
     "Link": "Com obtenir una clau d’API d’Immich →",
     "text8": " Configuració de PhotoPrism",
     "p3": "Genera una clau d’API a la configuració «Aplicacions i dispositius» de PhotoPrism. Dawarich la fa servir per accedir a la fototeca i extreure’n la informació d’ubicació.",
@@ -129,6 +122,7 @@
     "p5": "Comença a veure les fotos al mapa amb un compte gratuït de Dawarich.",
     "Link4": "Prova’l gratis durant 7 dies",
     "EnOnlyLink": "Allotja’l gratis",
-    "p6": "Prova gratuïta de 7 dies · Reemborsament sense risc durant 14 dies · Cancel·la quan vulguis"
+    "p6": "Prova gratuïta de 7 dies · Reemborsament sense risc durant 14 dies · Cancel·la quan vulguis",
+    "immichScopes": "Cal una clau d’API amb els permisos `asset.read` i `asset.view`. Afegeix `asset.update` si també vols fer servir la funció d’enriquir fotos. Dawarich consulta l’API d’Immich per llegir les metadades, incloses les coordenades GPS de les dades EXIF."
   }
 }

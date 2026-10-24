@@ -197,9 +197,6 @@
     "p": "Instruções passo a passo para cada aplicativo de rastreamento compatível.",
     "h4": "Recursos:",
     "h42": "Etapas de configuração:",
-    "text": "Para instruções completas, incluindo a integração com Home Assistant, acesse nosso",
-    "EnOnlyLink": "tutorial detalhado de rastreamento",
-    "text2": ".",
     "heading2": "Endpoints da API",
     "p2": "O Dawarich oferece vários endpoints de API para diferentes formatos de rastreamento.",
     "h3": "Endpoint Overland",
@@ -208,12 +205,12 @@
     "h32": "Endpoint OwnTracks",
     "code2": "/api/v1/owntracks/points?api_key=YOUR_KEY",
     "p4": "Para OwnTracks, GPSLogger e PhoneTrack",
-    "text3": "A documentação completa da API está na",
-    "EnOnlyLink2": "nossa referência da API",
     "heading3": "Pronto para começar a registrar?",
     "p5": "Crie sua conta Dawarich hoje e comece a registrar seu histórico de localização automaticamente.",
     "Link": "Experimente grátis por 7 dias",
     "EnOnlyLink3": "Hospede grátis no seu servidor",
-    "p6": "7 dias de teste grátis · Reembolso em até 14 dias, sem risco · Cancele quando quiser"
+    "p6": "7 dias de teste grátis · Reembolso em até 14 dias, sem risco · Cancele quando quiser",
+    "docsNote": "Para instruções completas, incluindo a integração com Home Assistant, acesse nosso [tutorial detalhado de rastreamento](/docs/getting-started/track-your-location).",
+    "apiNote": "A documentação completa da API está na [nossa referência da API](/docs/api/dawarich-api)."
   }
 }

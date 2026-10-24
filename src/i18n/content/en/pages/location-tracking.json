@@ -197,9 +197,6 @@
     "p": "Step-by-step instructions for each supported tracking application.",
     "h4": "Features:",
     "h42": "Setup Steps:",
-    "text": "For complete setup instructions including Home Assistant integration, visit our",
-    "EnOnlyLink": "detailed tracking tutorial",
-    "text2": ".",
     "heading2": "API Endpoints",
     "p2": "Dawarich provides multiple API endpoints for different tracking formats.",
     "h3": "Overland Endpoint",
@@ -208,12 +205,12 @@
     "h32": "OwnTracks Endpoint",
     "code2": "/api/v1/owntracks/points?api_key=YOUR_KEY",
     "p4": "For OwnTracks, GPSLogger, and PhoneTrack",
-    "text3": "Full API documentation is available at",
-    "EnOnlyLink2": "our API reference",
     "heading3": "Ready to Start Tracking?",
     "p5": "Get your Dawarich account today and start automatically recording your location history.",
     "Link": "Try 7 Days for Free",
     "EnOnlyLink3": "Self-Host for Free",
-    "p6": "7-day free trial · 14-day risk-free refund · Cancel anytime"
+    "p6": "7-day free trial · 14-day risk-free refund · Cancel anytime",
+    "docsNote": "For complete setup instructions including Home Assistant integration, visit our [detailed tracking tutorial](/docs/getting-started/track-your-location).",
+    "apiNote": "Full API documentation is available at [our API reference](/docs/api/dawarich-api)."
   }
 }

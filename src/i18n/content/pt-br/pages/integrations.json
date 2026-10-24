@@ -113,13 +113,6 @@
     "p2": "O Dawarich **não armazena nem copia suas fotos**. Ele só lê os metadados de localização do seu serviço de fotos em servidor próprio, pela API. Suas fotos continuam seguras na sua instalação do Immich ou PhotoPrism, sob seu controle total.",
     "heading2": "Detalhes técnicos",
     "text3": " Configuração do Immich",
-    "text4": "Exige uma chave de API com os escopos ",
-    "code": "asset.read",
-    "text5": " e ",
-    "code2": "asset.view",
-    "text6": ". Adicione ",
-    "code3": "asset.update",
-    "text7": " se também quiser usar o recurso Enriquecer fotos. O Dawarich consulta a API do Immich para ler metadados das fotos, incluindo as coordenadas GPS dos dados EXIF.",
     "Link": "Como obter uma chave de API do Immich →",
     "text8": " Configuração do PhotoPrism",
     "p3": "Gere uma chave de API nas configurações de \"Aplicativos e dispositivos\" do PhotoPrism. O Dawarich usa essa chave para acessar sua biblioteca de fotos e extrair informações de localização.",
@@ -129,6 +122,7 @@
     "p5": "Comece a ver suas fotos no mapa com uma conta grátis do Dawarich.",
     "Link4": "Experimente grátis por 7 dias",
     "EnOnlyLink": "Hospede grátis no seu servidor",
-    "p6": "7 dias de teste grátis · Reembolso em até 14 dias, sem risco · Cancele quando quiser"
+    "p6": "7 dias de teste grátis · Reembolso em até 14 dias, sem risco · Cancele quando quiser",
+    "immichScopes": "Exige uma chave de API com os escopos `asset.read` e `asset.view`. Adicione `asset.update` se também quiser usar o recurso Enriquecer fotos. O Dawarich consulta a API do Immich para ler metadados das fotos, incluindo as coordenadas GPS dos dados EXIF."
   }
 }

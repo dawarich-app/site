@@ -1,4 +1,4 @@
-import { SmartLink } from '@site/src/i18n/RichText';
+import RichText, { SmartLink } from '@site/src/i18n/RichText';
 import content from '@locale-content/pages/location-tracking.json';
 import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import React from 'react';
@@ -165,8 +165,7 @@ export default function TrackingPage() {
             </div>
 
             <div className={styles.docsLink}>
-              <p>{content.trackingPage.text}{' '}
-                <EnOnlyLink to="/docs/getting-started/track-your-location">{content.trackingPage.EnOnlyLink}</EnOnlyLink>{content.trackingPage.text2}</p>
+              <p><RichText text={content.trackingPage.docsNote} /></p>
             </div>
           </div>
         </section>
@@ -187,8 +186,7 @@ export default function TrackingPage() {
                 <p className={styles.endpointDesc}>{content.trackingPage.p4}</p>
               </div>
             </div>
-            <p className={styles.apiNote}>{content.trackingPage.text3}{' '}
-              <EnOnlyLink to="/docs/api/dawarich-api">{content.trackingPage.EnOnlyLink2}</EnOnlyLink>{content.trackingPage.text2}</p>
+            <p className={styles.apiNote}><RichText text={content.trackingPage.apiNote} /></p>
           </div>
         </section>
 

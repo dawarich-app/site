@@ -14,6 +14,14 @@ describe('parseRichText', () => {
     ]);
   });
 
+  it('should parse inline code spans', () => {
+    expect(parseRichText('Set `API_KEY` now')).toEqual([
+      { type: 'text', value: 'Set ' },
+      { type: 'code', value: 'API_KEY' },
+      { type: 'text', value: ' now' },
+    ]);
+  });
+
   it('should return a single text token for plain strings', () => {
     expect(parseRichText('plain')).toEqual([{ type: 'text', value: 'plain' }]);
   });
@@ -58,5 +66,10 @@ describe('RichText', () => {
   it('should keep mailto links', () => {
     render(<RichText text="[mail](mailto:hi@example.com)" />);
     expect(screen.getByRole('link', { name: 'mail' })).toHaveAttribute('href', 'mailto:hi@example.com');
+  });
+
+  it('should render inline code', () => {
+    render(<RichText text="Set `API_KEY` now" />);
+    expect(screen.getByText('API_KEY').tagName).toBe('CODE');
   });
 });

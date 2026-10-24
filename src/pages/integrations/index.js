@@ -192,7 +192,7 @@ export default function IntegrationsPage() {
               <div className={styles.detailCard}>
                 <h3 className={styles.detailTitle}>
                   <SettingsIcon size={20} />{content.integrationsPage.text3}</h3>
-                <p className={styles.detailText}>{content.integrationsPage.text4}<code>{content.integrationsPage.code}</code>{content.integrationsPage.text5}<code>{content.integrationsPage.code2}</code>{content.integrationsPage.text6}<code>{content.integrationsPage.code3}</code>{content.integrationsPage.text7}</p>
+                <p className={styles.detailText}><RichText text={content.integrationsPage.immichScopes} /></p>
                 <SmartLink href="https://immich.app/docs/features/command-line-interface#obtain-the-api-key" className={styles.detailLink}>{content.integrationsPage.Link}</SmartLink>
               </div>
               <div className={styles.detailCard}>

@@ -197,9 +197,6 @@
     "p": "Instrukcje krok po kroku dla każdej obsługiwanej aplikacji śledzącej.",
     "h4": "Funkcje:",
     "h42": "Kroki konfiguracji:",
-    "text": "Pełne instrukcje konfiguracji, w tym integracji z Home Assistant, znajdziesz w naszym",
-    "EnOnlyLink": "szczegółowym poradniku śledzenia",
-    "text2": ".",
     "heading2": "Punkty końcowe API",
     "p2": "Dawarich udostępnia różne punkty końcowe API dla różnych formatów śledzenia.",
     "h3": "Punkt końcowy Overland",
@@ -208,12 +205,12 @@
     "h32": "Punkt końcowy OwnTracks",
     "code2": "/api/v1/owntracks/points?api_key=YOUR_KEY",
     "p4": "Dla OwnTracks, GPSLogger i PhoneTrack",
-    "text3": "Pełna dokumentacja API jest dostępna w",
-    "EnOnlyLink2": "naszej dokumentacji API",
     "heading3": "Chcesz rozpocząć śledzenie?",
     "p5": "Załóż konto Dawarich już dziś i zacznij automatycznie rejestrować historię lokalizacji.",
     "Link": "Wypróbuj za darmo przez 7 dni",
     "EnOnlyLink3": "Uruchom za darmo na własnym serwerze",
-    "p6": "7-dniowy bezpłatny okres próbny · Zwrot bez ryzyka przez 14 dni · Zrezygnuj w dowolnej chwili"
+    "p6": "7-dniowy bezpłatny okres próbny · Zwrot bez ryzyka przez 14 dni · Zrezygnuj w dowolnej chwili",
+    "docsNote": "Pełne instrukcje konfiguracji, w tym integracji z Home Assistant, znajdziesz w naszym [szczegółowym poradniku śledzenia](/docs/getting-started/track-your-location).",
+    "apiNote": "Pełna dokumentacja API jest dostępna w [naszej dokumentacji API](/docs/api/dawarich-api)."
   }
 }

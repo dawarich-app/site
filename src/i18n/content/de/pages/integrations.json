@@ -113,13 +113,6 @@
     "p2": "Dawarich **speichert oder kopiert deine Fotos nicht**. Es liest nur Standortmetadaten über die API deines selbst gehosteten Fotodienstes. Deine Fotos bleiben sicher in deiner Immich- oder PhotoPrism-Instanz und unter deiner vollständigen Kontrolle.",
     "heading2": "Technische Details",
     "text3": " Immich einrichten",
-    "text4": "Erfordert einen API-Schlüssel mit den Berechtigungen ",
-    "code": "asset.read",
-    "text5": " und ",
-    "code2": "asset.view",
-    "text6": ". Ergänze ",
-    "code3": "asset.update",
-    "text7": ", wenn du auch die Funktion „Fotos anreichern“ nutzen möchtest. Dawarich fragt die Immich-API ab, um Fotometadaten einschließlich GPS-Koordinaten aus den EXIF-Daten zu lesen.",
     "Link": "So erhältst du einen Immich-API-Schlüssel →",
     "text8": " PhotoPrism einrichten",
     "p3": "Erstelle einen API-Schlüssel in den PhotoPrism-Einstellungen unter „Apps und Geräte“. Dawarich nutzt ihn, um auf deine Fotobibliothek zuzugreifen und Standortinformationen auszulesen.",
@@ -129,6 +122,7 @@
     "p5": "Sieh deine Fotos auf der Karte – mit einem kostenlosen Dawarich-Konto.",
     "Link4": "7 Tage kostenlos testen",
     "EnOnlyLink": "Kostenlos selbst hosten",
-    "p6": "7 Tage kostenlos testen · 14 Tage Geld-zurück-Garantie · Jederzeit kündbar"
+    "p6": "7 Tage kostenlos testen · 14 Tage Geld-zurück-Garantie · Jederzeit kündbar",
+    "immichScopes": "Erfordert einen API-Schlüssel mit den Berechtigungen `asset.read` und `asset.view`. Ergänze `asset.update`, wenn du auch die Funktion „Fotos anreichern“ nutzen möchtest. Dawarich fragt die Immich-API ab, um Fotometadaten einschließlich GPS-Koordinaten aus den EXIF-Daten zu lesen."
   }
 }

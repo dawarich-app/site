@@ -197,9 +197,6 @@
     "p": "Instruccions pas a pas per a cada aplicació de seguiment compatible.",
     "h4": "Funcions:",
     "h42": "Passos de configuració:",
-    "text": "Per veure les instruccions completes, inclosa la integració de Home Assistant, consulta el nostre",
-    "EnOnlyLink": "tutorial detallat de seguiment",
-    "text2": ".",
     "heading2": "Punts d’accés de l’API",
     "p2": "Dawarich ofereix diversos punts d’accés d’API per a diferents formats de seguiment.",
     "h3": "Punt d’accés d’Overland",
@@ -208,12 +205,12 @@
     "h32": "Punt d’accés d’OwnTracks",
     "code2": "/api/v1/owntracks/points?api_key=YOUR_KEY",
     "p4": "Per a OwnTracks, GPSLogger i PhoneTrack",
-    "text3": "Trobaràs la documentació completa de l’API a",
-    "EnOnlyLink2": "la nostra referència de l’API",
     "heading3": "Vols començar el seguiment?",
     "p5": "Crea avui el teu compte de Dawarich i comença a registrar automàticament l’historial d’ubicacions.",
     "Link": "Prova’l gratis durant 7 dies",
     "EnOnlyLink3": "Allotja’l gratis",
-    "p6": "Prova gratuïta de 7 dies · Reemborsament sense risc durant 14 dies · Cancel·la quan vulguis"
+    "p6": "Prova gratuïta de 7 dies · Reemborsament sense risc durant 14 dies · Cancel·la quan vulguis",
+    "docsNote": "Per veure les instruccions completes, inclosa la integració de Home Assistant, consulta el nostre [tutorial detallat de seguiment](/docs/getting-started/track-your-location).",
+    "apiNote": "Trobaràs la documentació completa de l’API a [la nostra referència de l’API](/docs/api/dawarich-api)."
   }
 }

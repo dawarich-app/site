@@ -45,10 +45,6 @@
     "li4": "Open source. Development happens in public, on GitHub, bugs and all.",
     "heading4": "Who we are",
     "alt": "Portrait of {name}",
-    "text3": "Dawarich is made by ZeitFlow UG (haftungsbeschränkt), a small company registered in Berlin, Germany. Legal details live in the",
-    "EnOnlyLink": "Impressum",
-    "text4": ". Want to say hi?",
-    "Link": "Contact us",
-    "text5": ". We read every message."
+    "company": "Dawarich is made by ZeitFlow UG (haftungsbeschränkt), a small company registered in Berlin, Germany. Legal details live in the [Impressum](/impressum). Want to say hi? [Contact us](/contact). We read every message."
   }
 }

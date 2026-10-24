@@ -197,9 +197,6 @@
     "p": "每款受支持的位置记录应用都有逐步操作说明。",
     "h4": "功能：",
     "h42": "设置步骤：",
-    "text": "完整设置说明（包括 Home Assistant 集成）请参阅我们的",
-    "EnOnlyLink": "详细位置记录教程",
-    "text2": "。",
     "heading2": "API 端点",
     "p2": "Dawarich 为不同的位置记录格式提供多个 API 端点。",
     "h3": "Overland 端点",
@@ -208,12 +205,12 @@
     "h32": "OwnTracks 端点",
     "code2": "/api/v1/owntracks/points?api_key=YOUR_KEY",
     "p4": "适用于 OwnTracks、GPSLogger 和 PhoneTrack",
-    "text3": "完整 API 文档请参阅",
-    "EnOnlyLink2": "我们的 API 参考文档",
     "heading3": "准备好开始记录了吗？",
     "p5": "今天就创建 Dawarich 账户，开始自动记录您的位置历史。",
     "Link": "免费试用 7 天",
     "EnOnlyLink3": "免费自托管",
-    "p6": "7 天免费试用 · 14 天无忧退款 · 随时可取消"
+    "p6": "7 天免费试用 · 14 天无忧退款 · 随时可取消",
+    "docsNote": "完整设置说明（包括 Home Assistant 集成）请参阅我们的[详细位置记录教程](/docs/getting-started/track-your-location)。",
+    "apiNote": "完整 API 文档请参阅[我们的 API 参考文档](/docs/api/dawarich-api)。"
   }
 }

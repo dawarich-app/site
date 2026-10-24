@@ -13,6 +13,7 @@ const same = (a, b) => JSON.stringify(sorted(a)) === JSON.stringify(sorted(b));
 const placeholders = (text) => [...new Set([...text.matchAll(/\{(\w+)\}/g)].map((m) => m[1]))];
 const links = (text) => [...text.matchAll(/\[[^\]]+\]\(([^)\s]+)\)/g)].map((m) => m[1]);
 const boldCount = (text) => [...text.matchAll(/\*\*[^*]+\*\*/g)].length;
+const codeSpans = (text) => [...text.matchAll(/`([^`]+)`/g)].map((m) => m[1]);
 const tags = (text) => [...text.matchAll(/<\/?([a-zA-Z][\w-]*)/g)].map((m) => m[0].toLowerCase());
 
 function isPlural(text) {
@@ -51,6 +52,7 @@ export function validateTranslations({ english, localized, locale, glossary }) {
       fail(key, 'bold');
     }
     if (!same(tags(source), tags(translation))) fail(key, 'tags');
+    if (!same(codeSpans(source), codeSpans(translation))) fail(key, 'code');
     const spaced = translation.replace(/-/g, ' ');
     if (glossary.doNotTranslate.some((term) => source.includes(term) && !spaced.includes(term.replace(/-/g, ' ')))) {
       fail(key, 'glossary');

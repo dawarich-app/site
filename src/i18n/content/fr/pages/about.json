@@ -45,10 +45,6 @@
     "li4": "Un code source ouvert. Le développement se fait publiquement sur GitHub, avec ses bugs aussi.",
     "heading4": "Qui sommes-nous ?",
     "alt": "Portrait de {name}",
-    "text3": "Dawarich est développé par ZeitFlow UG (haftungsbeschränkt), une petite entreprise enregistrée à Berlin, en Allemagne. Vous trouverez les informations juridiques dans les",
-    "EnOnlyLink": "mentions légales",
-    "text4": ". Envie de nous dire bonjour ?",
-    "Link": "Contactez-nous",
-    "text5": ". Nous lisons chaque message."
+    "company": "Dawarich est développé par ZeitFlow UG (haftungsbeschränkt), une petite entreprise enregistrée à Berlin, en Allemagne. Vous trouverez les informations juridiques dans les [mentions légales](/impressum). Envie de nous dire bonjour ? [Contactez-nous](/contact). Nous lisons chaque message."
   }
 }
