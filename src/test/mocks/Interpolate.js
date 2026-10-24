@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { isValidElement } from 'react';
 
-export function interpolate(text, values = {}) {
-  const parts = String(text).split(/(\{\w+\})/);
-  const filled = parts.map((part) => {
-    const key = part.match(/^\{(\w+)\}$/)?.[1];
-    return key && Object.prototype.hasOwnProperty.call(values, key) ? values[key] : part;
+export function interpolate(text, values) {
+  const segments = text.split(/(\{\w+\})/).map((seg, index) => {
+    if (index % 2 === 1) {
+      const value = values?.[seg.slice(1, -1)];
+      if (value !== undefined) return value;
+    }
+    return seg;
   });
-  if (filled.every((part) => typeof part !== 'object')) return filled.join('');
-  return filled.map((part, index) => (typeof part === 'object' ? React.cloneElement(part, { key: index }) : part));
+  if (segments.some((seg) => isValidElement(seg))) {
+    return segments
+      .map((seg, index) => (isValidElement(seg) ? React.cloneElement(seg, { key: index }) : seg))
+      .filter((seg) => seg !== '');
+  }
+  return segments.join('');
 }
 
 export default function Interpolate({ children, values }) {

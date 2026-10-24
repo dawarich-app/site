@@ -21,7 +21,7 @@ module.exports = function localeContentPlugin(context) {
               use: [
                 {
                   loader: path.join(__dirname, 'loader.js'),
-                  options: { locale: context.i18n.currentLocale, contentDir },
+                  options: { locale: context.i18n.currentLocale, defaultLocale: context.i18n.defaultLocale, contentDir },
                 },
               ],
             },

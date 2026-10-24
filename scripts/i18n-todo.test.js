@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { buildTodo, recordHashes } from './i18n-todo.mjs';
+import { buildTodo, recordHashes, freshTodoKeys } from './i18n-todo.mjs';
 import { hashMessage } from './i18n-lib.mjs';
 
 describe('buildTodo', () => {
@@ -51,5 +51,12 @@ describe('recordHashes', () => {
       a: hashMessage('Save'),
       c: 'old',
     });
+  });
+});
+
+describe('freshTodoKeys', () => {
+  it('should ignore todo items whose English changed after the list was written', () => {
+    const todo = [{ key: 'a', english: 'Same' }, { key: 'b', english: 'Old' }];
+    expect(freshTodoKeys(todo, { a: 'Same', b: 'New' })).toEqual(['a']);
   });
 });
