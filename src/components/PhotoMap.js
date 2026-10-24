@@ -1,12 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { interpolate } from '@docusaurus/Interpolate';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import copy from '@locale-content/components/PhotoMap.json';
 import styles from './TimelineMap.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
 export default function PhotoMap({ points, onPointClick, selectedPointId }) {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   const formatCoordinate = (value) => value.toLocaleString(htmlLang, { useGrouping: false, minimumFractionDigits: 6, maximumFractionDigits: 6 });
   const mapRef = useRef(null);
   const mapInstanceRef = useRef(null);

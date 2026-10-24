@@ -1,8 +1,8 @@
 import React from 'react';
 import { interpolate } from '@docusaurus/Interpolate';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import content from '@locale-content/components/CalendarRail.json';
 import styles from './CalendarRail.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
 const WEEKDAY_LABELS = content.weekdays;
 
@@ -46,8 +46,7 @@ export default function CalendarRail({
   onPrevMonth,
   onNextMonth,
 }) {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   const years = [...yearStats.keys()].sort((a, b) => b - a);
 
   return (

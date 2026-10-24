@@ -9,7 +9,14 @@ function load(locale) {
   return fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : {};
 }
 
+const HTML_ESCAPES = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+
+export function escapeHtml(text) {
+  return text.replace(/[&<>"']/g, (char) => HTML_ESCAPES[char]);
+}
+
 export function configString(locale, key, values = {}) {
   const message = load(locale)[key] ?? load(DEFAULT_LOCALE)[key];
+  if (message === undefined) throw new Error(`Missing config string "${key}" in src/i18n/content/${DEFAULT_LOCALE}/shared/config.json`);
   return message.replace(/\{(\w+)\}/g, (match, name) => (name in values ? String(values[name]) : match));
 }

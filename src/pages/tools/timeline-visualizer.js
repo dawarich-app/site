@@ -10,11 +10,11 @@ import { parseTimeline } from '@site/src/utils/timelineParser';
 import { SAMPLE_DAY } from '@site/src/utils/sampleBerlinData';
 import { buildDayIndex, buildYearStats, buildMonthGrid } from '@site/src/utils/timelineDays';
 import { interpolate } from '@docusaurus/Interpolate';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import RichText, { SmartLink, toPlainText } from '@site/src/i18n/RichText';
 import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import content from '@locale-content/tools/timeline-visualizer.json';
 import styles from './timeline-visualizer.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
 const TimelineMapV2 = lazy(() => import('@site/src/components/TimelineMapV2'));
 
@@ -39,8 +39,7 @@ function nextMonthKey(monthKey, direction) {
 }
 
 export default function TimelineVisualizer() {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   const pageUrl = useLocalizedUrl('/tools/timeline-visualizer/');
   const homeUrl = useLocalizedUrl('/');
   const toolsUrl = useLocalizedUrl('/tools/');

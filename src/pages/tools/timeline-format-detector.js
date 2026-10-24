@@ -7,11 +7,11 @@ import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import RelatedTools from '@site/src/components/RelatedTools';
 import { interpolate } from '@docusaurus/Interpolate';
 import { usePluralForm } from '@docusaurus/theme-common';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import RichText, { SmartLink, toPlainText } from '@site/src/i18n/RichText';
 import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import content from '@locale-content/tools/timeline-format-detector.json';
 import styles from './timeline-format-detector.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
 const pageTitle = content.meta.title;
 const pageDescription = content.meta.description;
@@ -128,8 +128,7 @@ function formatDate(dateStr, htmlLang) {
 }
 
 export default function TimelineFormatDetector() {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   const { selectMessage } = usePluralForm();
   const pageUrl = useLocalizedUrl('/tools/timeline-format-detector/');
   const homeUrl = useLocalizedUrl('/');

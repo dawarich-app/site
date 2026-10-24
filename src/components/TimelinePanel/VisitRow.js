@@ -1,8 +1,8 @@
 import React from 'react';
 import { interpolate } from '@docusaurus/Interpolate';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import content from '@locale-content/components/VisitRow.json';
 import styles from './entries.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
 const ALL_DAY_THRESHOLD_MIN = 23 * 60;
 
@@ -23,8 +23,7 @@ function formatDwell(minutes, htmlLang) {
 }
 
 export default function VisitRow({ entry, onSelect, onHover, onUnhover, isSelected }) {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   const isAllDay = entry.duration >= ALL_DAY_THRESHOLD_MIN;
   const className = `${styles.visitRow} ${isSelected ? styles.visitRowSelected : ''}`.trim();
 

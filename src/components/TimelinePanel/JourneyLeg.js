@@ -1,9 +1,9 @@
 import React from 'react';
 import { interpolate } from '@docusaurus/Interpolate';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import content from '@locale-content/components/JourneyLeg.json';
 import { seekToFraction } from '../../utils/trackReplay';
 import styles from './entries.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
 const MODE_CONFIG = {
   walking: { emoji: '🚶', verb: content.verbs.walking },
@@ -52,8 +52,7 @@ function ChevronIcon({ expanded }) {
 }
 
 function ReplayControls({ entry, replayState, onReplayChange }) {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   const total = entry.coordinates?.length || 0;
   const isThisTrack = replayState?.trackId === entry.trackId;
   const playing = isThisTrack && replayState.playing;
@@ -102,8 +101,7 @@ function ReplayControls({ entry, replayState, onReplayChange }) {
 }
 
 function TrackInfoCard({ entry, replayState, onReplayChange }) {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   return (
     <div className={styles.trackInfoCard}>
       <div className={styles.trackInfoId}>{interpolate(content.trackLabel, { trackId: entry.trackId })}</div>
@@ -121,8 +119,7 @@ function TrackInfoCard({ entry, replayState, onReplayChange }) {
 }
 
 export default function JourneyLeg({ entry, isExpanded, onToggleExpand, onHover, onUnhover, replayState, onReplayChange }) {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   const config = MODE_CONFIG[entry.dominantMode] || MODE_CONFIG.unknown;
 
   return (

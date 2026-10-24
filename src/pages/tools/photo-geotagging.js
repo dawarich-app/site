@@ -9,19 +9,18 @@ import { generateGPX } from '@site/src/utils/gpxGenerator';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import RelatedTools from '@site/src/components/RelatedTools';
 import { interpolate } from '@docusaurus/Interpolate';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import RichText from '@site/src/i18n/RichText';
 import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import content from '@locale-content/tools/photo-geotagging.json';
 import styles from './photo-geotagging.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
 const pageTitle = content.meta.title;
 const pageDescription = content.meta.description;
 const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 export default function PhotoGeotagging() {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   const pageUrl = useLocalizedUrl('/tools/photo-geotagging/');
   const [uploadedPhotos, setUploadedPhotos] = useState([]);
   const [selectedPhoto, setSelectedPhoto] = useState(null);

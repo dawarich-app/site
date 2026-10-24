@@ -10,11 +10,11 @@ import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import RelatedTools from '@site/src/components/RelatedTools';
 import { interpolate } from '@docusaurus/Interpolate';
 import { usePluralForm } from '@docusaurus/theme-common';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import RichText, { SmartLink, toPlainText } from '@site/src/i18n/RichText';
 import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import content from '@locale-content/tools/timeline-statistics.json';
 import styles from './timeline-statistics.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
 const pageTitle = content.meta.title;
 const pageDescription = content.meta.description;
@@ -70,8 +70,7 @@ function formatHours(hours, htmlLang, selectMessage) {
 }
 
 export default function TimelineStatistics() {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   const { selectMessage } = usePluralForm();
   const pageUrl = useLocalizedUrl('/tools/timeline-statistics/');
   const homeUrl = useLocalizedUrl('/');

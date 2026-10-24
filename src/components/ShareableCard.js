@@ -1,12 +1,11 @@
 import React, { useRef, useCallback } from 'react';
 import { interpolate } from '@docusaurus/Interpolate';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import content from '@locale-content/components/ShareableCard.json';
 import styles from './ShareableCard.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
 export default function ShareableCard({ stats }) {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   const cardRef = useRef(null);
 
   const handleDownload = useCallback(() => {

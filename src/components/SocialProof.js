@@ -1,8 +1,8 @@
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { interpolate } from '@docusaurus/Interpolate';
 import content from '@locale-content/components/SocialProof.json';
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './SocialProof.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
 const StarIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -66,8 +66,7 @@ const integrations = [
 ];
 
 function useCountUp(target, duration, shouldStart) {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   const [display, setDisplay] = useState('0');
   const rafRef = useRef(null);
 

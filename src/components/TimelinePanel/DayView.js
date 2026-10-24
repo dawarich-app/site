@@ -1,12 +1,12 @@
 import React from 'react';
 import { interpolate } from '@docusaurus/Interpolate';
 import { usePluralForm } from '@docusaurus/theme-common';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import content from '@locale-content/components/DayView.json';
 import VisitRow from './VisitRow';
 import JourneyLeg from './JourneyLeg';
 import styles from './DayView.module.css';
 import entryStyles from './entries.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
 function formatDayLabel(dateStr, htmlLang) {
   const [y, m, d] = dateStr.split('-').map(Number);
@@ -41,8 +41,7 @@ function ChevronRight() {
 }
 
 function DaySummary({ summary }) {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   const moving = summary.timeMovingMinutes;
   const stationary = summary.timeStationaryMinutes;
   const total = moving + stationary;
@@ -83,8 +82,7 @@ function DaySummary({ summary }) {
 }
 
 function DayFooter({ summary, totalVisits, totalTracks, onPrev, onNext }) {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   return (
     <footer className={styles.footer}>
       <button type="button" className={styles.navButton} onClick={onPrev} aria-label={content.previousDay}>
@@ -122,8 +120,7 @@ export default function DayView({
   replayState,
   onReplayChange,
 }) {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   const { selectMessage } = usePluralForm();
   if (!day) {
     return <div className={styles.empty}>{content.selectDay}</div>;

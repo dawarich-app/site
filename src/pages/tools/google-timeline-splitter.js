@@ -7,11 +7,11 @@ import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import RelatedTools from '@site/src/components/RelatedTools';
 import { interpolate } from '@docusaurus/Interpolate';
 import { usePluralForm } from '@docusaurus/theme-common';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import RichText, { SmartLink, toPlainText } from '@site/src/i18n/RichText';
 import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import content from '@locale-content/tools/google-timeline-splitter.json';
 import styles from './google-timeline-splitter.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
 const pageTitle = content.meta.title;
 const pageDescription = content.meta.description;
@@ -32,8 +32,7 @@ const FORMAT_LABELS = {
 const faqItems = content.faq;
 
 export default function GoogleTimelineSplitter() {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   const { selectMessage } = usePluralForm();
   const pageUrl = useLocalizedUrl('/tools/google-timeline-splitter/');
   const homeUrl = useLocalizedUrl('/');

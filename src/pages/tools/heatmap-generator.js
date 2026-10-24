@@ -7,11 +7,11 @@ import { parseFile, pointsToGeoJSON, calculateBounds, calculateStats, exportMapA
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import RelatedTools from '@site/src/components/RelatedTools';
 import { interpolate } from '@docusaurus/Interpolate';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import RichText from '@site/src/i18n/RichText';
 import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import content from '@locale-content/tools/heatmap-generator.json';
 import styles from './heatmap-generator.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
 const pageTitle = content.meta.title;
 const pageDescription = content.meta.description;
@@ -309,8 +309,7 @@ function getColorRamp(scheme) {
 }
 
 export default function HeatmapGenerator() {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   const pageUrl = useLocalizedUrl('/tools/heatmap-generator/');
   const formatDecimal = (value) => value.toLocaleString(htmlLang, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
   const [files, setFiles] = useState([]);

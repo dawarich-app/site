@@ -1,14 +1,13 @@
 import React, { useCallback, useState } from 'react';
 import { interpolate } from '@docusaurus/Interpolate';
 import { usePluralForm } from '@docusaurus/theme-common';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import RichText from '@site/src/i18n/RichText';
 import content from '@locale-content/components/PhotoUploader.json';
 import styles from './FileUploader.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
 export default function PhotoUploader({ onPhotosLoaded, onClear }) {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   const { selectMessage } = usePluralForm();
   const [isDragging, setIsDragging] = useState(false);
   const [fileCount, setFileCount] = useState(0);

@@ -4,7 +4,6 @@ import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import { translate } from '@docusaurus/Translate';
 import { interpolate } from '@docusaurus/Interpolate';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import FileUploader from '@site/src/components/FileUploader';
 import { parseTimeline, detectFormat } from '@site/src/utils/timelineParser';
 import { timelineToConverterPoints, timelineToCSV } from '@site/src/utils/timelineToFormat';
@@ -17,6 +16,7 @@ import RichText, { toPlainText } from '@site/src/i18n/RichText';
 import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import content from '@locale-content/tools/google-timeline-converter.json';
 import styles from './google-timeline-converter.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
 const imageUrl = "https://dawarich.app/img/meta-image.png";
 const OUTPUT_FORMATS = ['gpx', 'kml', 'geojson', 'kmz', 'csv'];
@@ -58,8 +58,7 @@ function formatDateRange(points, paths, htmlLang) {
 }
 
 export default function GoogleTimelineConverter() {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   const pageUrl = useLocalizedUrl('/tools/google-timeline-converter/');
   const toolsUrl = useLocalizedUrl('/tools/');
   const homeUrl = useLocalizedUrl('/');

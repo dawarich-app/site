@@ -1,13 +1,12 @@
 import React, { useMemo, useState } from 'react';
 import { interpolate } from '@docusaurus/Interpolate';
 import { usePluralForm } from '@docusaurus/theme-common';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import content from '@locale-content/components/PhotoList.json';
 import styles from './PointsList.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
 export default function PhotoList({ photos, onPhotoSelect, selectedPhotoId }) {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   const { selectMessage } = usePluralForm();
   const formatCoordinate = (value) => value.toLocaleString(htmlLang, { useGrouping: false, minimumFractionDigits: 6, maximumFractionDigits: 6 });
   const photoCount = (count) => interpolate(selectMessage(count, content.photoCount), { count: count.toLocaleString(htmlLang) });

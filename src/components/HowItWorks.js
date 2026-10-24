@@ -1,8 +1,8 @@
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import content from '@locale-content/components/HowItWorks.json';
 import { interpolate } from '@docusaurus/Interpolate';
 import { useEffect, useState } from 'react';
 import styles from './HowItWorks.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
 const ROUTE_PINS = [
   { left: '16.63%', top: '50%' },
@@ -20,8 +20,7 @@ function Pin({ icon, num, accent, className }) {
 }
 
 function RouteHowItWorks({ title, subtitle, steps }) {
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   const [animate, setAnimate] = useState(true);
 
   useEffect(() => {

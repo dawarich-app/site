@@ -6,20 +6,19 @@ import RichText from '@site/src/i18n/RichText';
 import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import content from '@locale-content/tools/fit-to-kml.json';
 import shared from '@locale-content/shared/converter.json';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import FormatConverter from '@site/src/components/FormatConverter';
 import { parseFIT, getFITMetadata } from '@site/src/utils/fitParser';
 import { toKML } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './converter.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
 const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 export default function FITToKML() {
   const pageUrl = useLocalizedUrl('/tools/fit-to-kml/');
-  const { i18n } = useDocusaurusContext();
-  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const htmlLang = useHtmlLang();
   const [isConverting, setIsConverting] = useState(false);
   const [converted, setConverted] = useState(false);
   const [stats, setStats] = useState(null);

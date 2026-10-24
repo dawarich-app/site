@@ -14,6 +14,7 @@ export function stripNulBytes(buildDir) {
   const fixed = [];
   for (const file of htmlFiles(buildDir)) {
     const data = fs.readFileSync(file);
+    if (data.indexOf(0) === -1) continue;
     const count = data.reduce((n, byte) => n + (byte === 0 ? 1 : 0), 0);
     if (count === 0) continue;
     fs.writeFileSync(file, data.filter((byte) => byte !== 0));
