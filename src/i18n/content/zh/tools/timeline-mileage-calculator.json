@@ -1,0 +1,238 @@
+{
+  "h1": "Google Timeline 里程计算器",
+  "intro": "根据您的 Google Timeline 数据计算驾车里程。生成可下载的里程日志，包含每次行程详情、每日和每月汇总。所有处理均在您的浏览器中完成，只有选择“保存到我的 Dawarich 账号”时，数据才会离开您的设备。",
+  "privacyTitle": "隐私优先",
+  "privacyBody": "所有里程计算均在您的浏览器中完成，只有选择“保存到我的 Dawarich 账号”时，位置数据才会离开您的设备。",
+  "preCta": "需要持续记录里程？[Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-mileage-calculator) 可自动记录您的行程，同时保障完整的数据所有权和隐私。无需再手动导出，即可持续、准确地记录。",
+  "saveIntro": "也想将这些数据存入您的 Dawarich 账号？我们会在注册时导入，无需再次上传。",
+  "faqTitle": "常见问题",
+  "homeLabel": "首页",
+  "toolsLabel": "免费工具",
+  "meta": {
+    "title": "Google Timeline 里程计算器 - 免费记录驾车距离",
+    "description": "使用 Google Timeline 数据的免费里程计算器。计算驾车距离、生成里程日志，并导出 CSV 报告用于税款抵扣。隐私优先，在您的浏览器中运行。",
+    "keywords": "Google Timeline 里程, 位置历史里程计算器, 根据 Google Maps 计算驾车距离, Google Timeline 里程日志, 税务里程计算器, Google Maps 里程追踪器, IRS 里程日志, 驾车距离计算器, Google Timeline 驾车距离, 里程报销计算器",
+    "featureList": [
+      "根据 Google Timeline 数据计算驾车里程",
+      "按日期范围筛选行程",
+      "切换公里和英里",
+      "生成可下载的 CSV 里程日志",
+      "每日和每月行程汇总",
+      "隐私优先，所有处理均在浏览器中完成",
+      "不向任何服务器发送数据"
+    ]
+  },
+  "howTo": {
+    "name": "如何根据 Google Timeline 数据计算里程",
+    "description": "导出您的 Google Timeline 数据，使用此免费且注重隐私的计算器计算驾车里程。",
+    "steps": [
+      {
+        "name": "导出您的 Google Timeline 数据",
+        "text": "访问 takeout.google.com，选择位置历史（时间线）并导出。也可以在 Android 上操作：Google Maps > 设置 > 位置 > 时间线 > 导出。在 iOS 上：Google Maps > 设置 > 个人内容 > 导出时间线数据。"
+      },
+      {
+        "name": "上传您的 JSON 文件",
+        "text": "将您导出的 Google Timeline JSON 文件拖放到里程计算器中。工具会自动检测格式并提取驾车片段。"
+      },
+      {
+        "name": "设置日期范围和偏好的单位",
+        "text": "选择开始和结束日期以筛选里程日志，并选择使用公里或英里。"
+      },
+      {
+        "name": "查看并下载您的里程日志",
+        "text": "查看行程日志、月度汇总和总里程。将完整里程日志下载为 CSV 文件，供您留存。"
+      }
+    ],
+    "tool": "Dawarich Google Timeline 里程计算器"
+  },
+  "exportData": {
+    "title": "如何获取您的时间线数据",
+    "intro": "通过以下任一方法导出您的 Google Timeline 位置历史。如果其中一种不适用，请尝试其他方法。",
+    "note": "要获得最准确的里程数据，建议使用 Semantic Location History 文件（如 2023_JANUARY.json 这样的月度 JSON 文件），因为它们包含标注为驾车的活动片段。",
+    "methods": [
+      {
+        "title": "Google Takeout：",
+        "body": "访问 [takeout.google.com](https://takeout.google.com/) → 选择位置历史（时间线）→ 导出为 JSON"
+      },
+      {
+        "title": "在 Android 上：",
+        "body": "打开 Google Maps → 设置 → 位置 → 位置服务 → 时间线 → 导出时间线"
+      },
+      {
+        "title": "在 iOS 上：",
+        "body": "打开 Google Maps → 设置 → 个人内容 → 导出时间线数据"
+      }
+    ]
+  },
+  "units": {
+    "km": "公里",
+    "miles": "英里"
+  },
+  "activities": {
+    "driving": "驾车",
+    "bus": "公交车",
+    "train": "火车",
+    "subway": "地铁",
+    "motorcycle": "摩托车"
+  },
+  "duration": {
+    "minutes": "{minutes} 分钟",
+    "hoursMinutes": "{hours} 小时 {minutes} 分钟"
+  },
+  "results": {
+    "startDate": "开始日期",
+    "endDate": "结束日期",
+    "disclaimer": "距离根据 GPS 坐标使用 Haversine 公式计算，是记录点之间的直线距离估算值。实际道路距离可能更长。此工具仅用于估算。",
+    "monthlyTitle": "月度汇总",
+    "month": "月份",
+    "tripCount": "行程次数",
+    "tripLogTitle": "行程日志",
+    "trip": "行程编号",
+    "date": "日期",
+    "activity": "活动类型",
+    "duration": "时长",
+    "emptyTitle": "未找到驾车行程",
+    "emptyIntro": "在所选日期范围内，您的数据中未检测到驾车活动片段。可能的原因包括：",
+    "calculateButton": "计算",
+    "distanceTitle": "驾车总距离",
+    "distanceHint": "所有驾车片段的总和",
+    "tripsTitle": "行程总次数",
+    "tripsHint": "检测到的驾车片段",
+    "averageTitle": "平均行程距离",
+    "averageHint": "每个驾车片段的平均距离",
+    "downloadButton": "下载里程日志（CSV）",
+    "processing": "正在处理…",
+    "distanceHeading": "距离（{unit}）",
+    "emptyReasons": [
+      {
+        "body": "您的导出文件仅包含原始 GPS 轨迹点（Records.json），没有活动分类"
+      },
+      {
+        "body": "日期范围与您的数据不重叠"
+      },
+      {
+        "body": "您的数据不含驾车片段，建议尝试 Semantic Location History 文件以获得最佳结果"
+      }
+    ],
+    "showMore": "显示更多（剩余 {count} 条）",
+    "distanceValue": "{distance} {unit}"
+  },
+  "cta": {
+    "fallback": "需要持续记录里程，又不想手动导出？Dawarich 可自动记录您的行程。",
+    "postTitle": "厌倦了手动导出和计算里程？",
+    "postBody": "Dawarich 可自动追踪每次驾车出行，根据实际 GPS 数据计算距离，并让您随时导出里程报告。自托管或云端，由您决定如何掌控自己的数据。",
+    "title": "正在寻找内置里程记录功能的 Google Timeline 替代方案？",
+    "body": "Dawarich 是一个开源位置追踪平台，可自动记录每次行程、计算驾车距离，并让您完全掌控数据。导入您的 Google Timeline 导出文件，持续通过手机记录里程，随时生成报告。支持自托管或云端使用。",
+    "button": "免费试用 Dawarich 7 天",
+    "headline": "您已记录 **{count}** 次行程，总距离为 **{distance} {unit}**。Dawarich 可自动记录这些数据，无需再手动导出。",
+    "tripsLabel": "行程"
+  },
+  "faq": [
+    {
+      "q": "在这里上传我的 Google Timeline 数据安全吗？",
+      "a": "完全安全。计算器使用客户端 JavaScript，100% 在您的浏览器中运行，文件保留在您的设备上，关闭或刷新页面后数据即被清除，不会跟踪您的位置数据。唯一例外是可选的“保存到我的 Dawarich 账号”按钮，它会将文件上传至 Dawarich Cloud，以便导入您的新账号。此工具是 Dawarich 开源生态系统的一部分，您可以自行查看源代码。"
+    },
+    {
+      "q": "里程计算有多准确？",
+      "a": "距离通过 Haversine 公式计算，即求出 GPS 坐标之间的大圆距离。这是记录点之间的直线距离估算，通常会比实际道路距离低 10-30%，具体取决于路线的复杂程度。高速公路的计算结果通常比曲折的城市街道更准确。对于 IRS 里程抵扣，通常应使用里程表读数或专门的里程追踪应用来获取精确数值，但此工具能为规划和回顾提供可靠的估算。"
+    },
+    {
+      "q": "可以用于税款抵扣吗？",
+      "a": "此工具生成的里程日志可作为税务用途的辅助记录。不过，IRS 要求同期记录，即最好在每次行程发生时记录里程，而不是事后重建。Google Timeline 数据可以支持您的记录，但可能不足以作为唯一依据。请咨询税务专业人士，获取适合您具体情况的建议。如果您更希望在行程发生时记录日期和距离，而不是数月后重建，Dawarich 可以自动记录。"
+    },
+    {
+      "q": "它会记录哪些驾车相关活动？",
+      "a": "计算器会识别 Google 分类系统中与驾车相关的活动类型：IN_PASSENGER_VEHICLE（汽车行程）、DRIVING、IN_BUS、IN_TRAIN、IN_SUBWAY 和 MOTORCYCLING。Google 根据速度、移动规律和传感器数据分配这些活动类型。准确性取决于 Google 的分类质量，有时步行或骑行可能被误判为驾车，反之亦然。"
+    },
+    {
+      "q": "可以按日期范围筛选吗？",
+      "a": "可以。上传文件后，您可以设置开始日期和结束日期，将里程日志筛选到特定时间段。这适合生成季度或年度里程报告、单独查看公务出行时段，或比较不同时期的里程。每月和每日汇总也只会反映筛选日期范围内的数据。"
+    },
+    {
+      "q": "CSV 导出文件是什么格式？",
+      "a": "CSV 文件包含以下列：行程编号、日期、开始时间、结束时间、活动类型、距离（使用您选择的单位）和时长。每一行代表从时间线数据中识别出的一个驾车片段。文件末尾有一行总计，汇总总距离和行程次数。您可以在 Excel、Google Sheets 或任何电子表格应用中打开 CSV，进一步分析。"
+    },
+    {
+      "q": "为什么有些行程缺失？",
+      "a": "多种因素都可能导致行程缺失：(1) 只有设备启用位置历史时，Google Timeline 才会记录数据，关闭期间不会有数据。(2) 短途行程或 GPS 信号较差的行程可能无法生成足够的轨迹点。(3) Google 可能未将某些移动识别为驾车，尤其是在低速时。(4) 如果您使用较新的手机导出方式，由于 Google 2024 年的政策变更，可能只有最近 90 天的数据。(5) 某些导出格式的细节少于其他格式。"
+    }
+  ],
+  "cards": [
+    {
+      "title": "什么是时间线里程计算器？",
+      "paragraphs": [
+        "时间线里程计算器是一个免费的浏览器工具，可从您的 Google Timeline 导出文件中提取驾车行程数据，并计算出行总距离。它会识别与驾车相关的活动片段，包括汽车、公交车、火车和摩托车出行，并生成包含每次行程详情的结构化里程日志。",
+        "与基于服务器的工具不同，所有计算均在您的浏览器中完成，因此生成里程日志时不会将位置数据发送到任何地方。您可以即时获得结果并享有完整隐私，生成的 CSV 里程日志可用于费用报销、税务资料或个人记录。（如果您使用“保存到我的 Dawarich 账号”，该操作会将文件上传至 Dawarich Cloud 以准备导入；除此之外不会发送任何数据。）"
+      ]
+    },
+    {
+      "title": "里程如何计算",
+      "paragraphs": [
+        "计算器使用 Haversine 公式，计算每个驾车片段中连续 GPS 坐标之间的大圆距离。这是在球体（地球）表面计算两点距离的标准方法。",
+        "对于 Google Timeline 数据中识别出的每个驾车片段，工具会累加该片段沿途所有记录航点之间的距离。结果是直线距离估算，实际道路距离通常会高出 10-30%，因为 GPS 轨迹点之间的间距未能反映道路弯曲、海拔变化和绕行。",
+        "连续轨迹点之间超过 500 km 的跳跃会被自动排除，避免将 GPS 异常或数据中的瞬移假象计入总距离。"
+      ]
+    },
+    {
+      "title": "使用里程日志申请税款抵扣",
+      "paragraphs": [
+        "在美国，IRS 允许对私人车辆的商务用途采用标准里程抵扣。费率每年都会变化，请在申报前查询当年的费率。申请此项抵扣时，您需要一份里程日志，记录每次行程的日期、目的地、商务用途和距离。",
+        "Google Timeline 数据可以提供每个驾车片段的日期和距离，但不会区分商务与个人行程。您需要在导出的 CSV 中补充商务用途和目的地信息。IRS 还要求同期保存记录，即在每次行程发生时或前后不久记录。因此，根据 Google Timeline 事后生成的日志更适合作为辅助文件，而非唯一记录。",
+        "如果希望在行程发生时记录，而不是事后重建，可考虑使用 [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-mileage-calculator)。商务用途仍需您自行补充。"
+      ]
+    },
+    {
+      "title": "Google Maps Timeline 发生了什么变化？",
+      "paragraphs": [
+        "2024 年底，Google 停止提供网页版 Google Maps Timeline，并将所有位置数据迁移至用户手机本地存储。只有最近 90 天的数据被迁移，更早的所有位置历史若未在截止日期前手动备份，则被永久删除。",
+        "这一变化使许多用户无法访问多年位置历史，而他们曾依靠这些数据记录里程、回顾旅行和整理费用资料。如果您在迁移前成功通过 Google Takeout 或时间线导出功能导出了数据，此计算器可以帮助您从这些文件中提取里程信息。",
+        "更多详情，请参阅我们的[从 Google 位置历史迁移指南](/blog/migrating-from-google-location-history-to-dawarich)。"
+      ]
+    },
+    {
+      "title": "准确性与限制",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**GPS 精度** — Google Timeline 通常每隔几秒到几分钟记录一次位置，具体取决于设备活动。读数之间的间隔意味着部分行程片段是通过插值估算的，而非精确测量"
+        },
+        {
+          "body": "**活动分类** — Google 使用机器学习对活动类型进行分类。误判可能发生，例如堵车时缓慢驾车可能被标为骑行，公交车行程可能被标为汽车行程"
+        },
+        {
+          "body": "**直线距离** — Haversine 公式给出地球表面两点之间的最短路径。实际道路会因弯道、坡道和路线走向而更长"
+        },
+        {
+          "body": "**缺失数据** — 手机关机、处于飞行模式或关闭位置历史期间不会有数据"
+        },
+        {
+          "body": "**导出格式很重要** — Semantic Location History 文件包含最详细的驾车数据。原始 Records.json 文件可能缺少活动类型标签"
+        }
+      ]
+    },
+    {
+      "title": "相关工具",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Google Timeline 可视化工具](/tools/timeline-visualizer) — 在交互式地图上查看您的完整位置历史"
+        },
+        {
+          "body": "[GPS 热力图生成器](/tools/heatmap-generator) — 使用 GPX、FIT、TCX 及其他 GPS 文件生成热力图"
+        },
+        {
+          "body": "[GPX 轨迹合并工具](/tools/gpx-merger) — 将多个 GPX 文件合并为一个"
+        },
+        {
+          "body": "[照片地理数据提取工具](/tools/photo-geotagging) — 从照片中提取 GPS 坐标"
+        },
+        {
+          "body": "[GeoJSON 转 GPX 转换器](/tools/geojson-to-gpx) — 将位置数据转换为 GPX 格式"
+        }
+      ],
+      "footer": [
+        "延伸阅读：[从 Google 位置历史迁移](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}

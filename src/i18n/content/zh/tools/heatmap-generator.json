@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "title": "免费 GPS 热力图生成器 - 在线生成活动热力图",
+    "description": "使用 GPS 数据生成精美热力图。上传 GPX、FIT、TCX、GeoJSON、KML 或 Google Timeline JSON 文件，以可视化方式查看您的跑步、骑行和活动规律。免费、隐私优先，完全在您的浏览器中运行。",
+    "keywords": "GPS 热力图, 热力图生成器, 跑步热力图, 骑行热力图, Strava 热力图替代方案, GPX 热力图, 活动热力图, 健身热力图, 免费热力图, Google Timeline 热力图, Google 位置历史热力图, Records.json 热力图"
+  },
+  "h1": "GPS 热力图生成器",
+  "intro": "使用您的 GPS 活动数据生成精美热力图。上传多个文件，即可在地图上直观查看您的跑步、骑行和活动规律。",
+  "saveIntro": "也想将这些数据存入您的 Dawarich 账号？我们会在注册时导入，无需再次上传。",
+  "privacy": "渲染在您的浏览器中完成。只有选择“保存到我的 Dawarich 账号”时，数据才会上传。",
+  "exportButton": "导出为 PNG",
+  "loadingMap": "正在加载地图…",
+  "parseError": "解析 {fileName} 时出错：{message}",
+  "cards": [
+    {
+      "title": "什么是 GPS 热力图？",
+      "paragraphs": [
+        "GPS 热力图在地图上展示您位置数据的密度。您到访越频繁的区域，显示得越亮、颜色越强烈，让您直观看到活动规律随时间的变化。"
+      ]
+    },
+    {
+      "title": "支持的文件格式",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**GPX** - GPS 交换格式（大多数 GPS 应用使用）"
+        },
+        {
+          "body": "**FIT** - Garmin 活动文件"
+        },
+        {
+          "body": "**GeoJSON** - 网页地图格式"
+        },
+        {
+          "body": "**KML/KMZ** - Google Earth 格式"
+        },
+        {
+          "body": "**Google Timeline JSON** - Google Takeout 导出的 Records.json 和 Semantic Location History 文件"
+        }
+      ]
+    },
+    {
+      "title": "如何导出您的数据",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Strava：**设置 > 我的账号 > 下载您的数据"
+        },
+        {
+          "body": "**Garmin：**从设备复制 .FIT 文件，或使用 Garmin Connect 导出"
+        },
+        {
+          "body": "**Apple Fitness：**使用第三方应用将训练记录导出为 GPX"
+        },
+        {
+          "body": "**Google Maps：**使用 Google Takeout 导出位置历史，直接支持 Records.json 和 Semantic Location History 文件"
+        }
+      ]
+    },
+    {
+      "title": "Strava 热力图的免费替代方案",
+      "paragraphs": [
+        "Strava 的热力图功能需要付费订阅。此免费工具可使用您导出的数据生成类似的热力图，无需订阅或账号。"
+      ]
+    }
+  ],
+  "upload": {
+    "uploadTitle": "上传文件",
+    "dropFiles": "将文件拖放到此处",
+    "formats": "GPX, FIT, TCX, GeoJSON, KML, KMZ, Google Timeline JSON",
+    "clearButton": "全部清空",
+    "inputLabel": "选择要处理的文件",
+    "processing": "正在处理文件…"
+  },
+  "results": {
+    "statsTitle": "统计数据",
+    "pointsLabel": "轨迹点总数",
+    "distanceLabel": "总距离",
+    "dateRangeLabel": "日期范围",
+    "loadedFiles": "已加载的文件（{count}）",
+    "pointCount": "{points} 个轨迹点",
+    "distanceValue": "{distance} 公里"
+  },
+  "settings": {
+    "settingsTitle": "热力图设置",
+    "schemeLabel": "配色方案",
+    "schemes": [
+      {
+        "label": "火焰（红/橙）"
+      },
+      {
+        "label": "Strava（橙）"
+      },
+      {
+        "label": "等离子（紫/黄）"
+      },
+      {
+        "label": "海洋（蓝）"
+      },
+      {
+        "label": "森林（绿）"
+      }
+    ],
+    "intensityLabel": "强度：{intensity}",
+    "radiusLabel": "半径：{radius}",
+    "opacityLabel": "不透明度：{opacity}"
+  },
+  "cta": {
+    "headline": "您的热力图涵盖 **{points}** 个 GPS 轨迹点，总距离为 **{distance} 公里**。这只是一个快照，Dawarich 可持续为您生成热力图。",
+    "fallback": "想以可视化方式查看多年的位置历史？Dawarich 可汇总您的所有 GPS 数据源，持续生成热力图。",
+    "statLabels": {
+      "points": "轨迹点",
+      "distance": "距离",
+      "dateRange": "日期范围"
+    }
+  }
+}

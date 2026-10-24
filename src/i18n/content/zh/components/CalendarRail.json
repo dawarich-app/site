@@ -1,0 +1,36 @@
+{
+  "yearLabel": "年份",
+  "emptyLabel": "暂无数据",
+  "searchLabel": "搜索",
+  "searchPlaceholder": "搜索到访记录…",
+  "searchAriaLabel": "搜索到访记录",
+  "previousMonth": "上个月",
+  "nextMonth": "下个月",
+  "yearDays": "{year}（{count} 天）",
+  "otherMonth": "{date}（其他月份）",
+  "noData": "{date} — 暂无数据",
+  "hoursTracked": "{date} — 已记录 {hours} 小时",
+  "weekdays": [
+    {
+      "label": "一"
+    },
+    {
+      "label": "二"
+    },
+    {
+      "label": "三"
+    },
+    {
+      "label": "四"
+    },
+    {
+      "label": "五"
+    },
+    {
+      "label": "六"
+    },
+    {
+      "label": "日"
+    }
+  ]
+}

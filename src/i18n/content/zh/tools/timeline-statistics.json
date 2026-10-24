@@ -1,0 +1,277 @@
+{
+  "h1": "Google Timeline 统计数据",
+  "intro": "专属于您位置历史的 Spotify Wrapped。上传您的 Google Timeline 数据，了解您走过多远、去过哪些国家、最常到访哪些地点，以及您如何分配在世界各处移动的时间。",
+  "appName": "Google Timeline 统计分析工具",
+  "privacyTitle": "隐私优先",
+  "privacyBody": "所有数据处理均在您的浏览器中完成。您的位置数据不会离开设备，也不会发送到任何服务器。",
+  "preCta": "喜欢这些洞察？[Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-statistics) 可根据持续记录的位置数据自动生成出行统计，实时更新总距离、国家、城市和活动分类。[了解如何迁移](/blog/migrating-from-google-location-history-to-dawarich)。",
+  "faqTitle": "常见问题",
+  "homeLabel": "首页",
+  "toolsLabel": "免费工具",
+  "meta": {
+    "title": "Google Timeline 统计分析工具 - 洞察您的位置历史",
+    "description": "免费且注重隐私的 Google Timeline 数据分析工具。查看出行总距离、到访国家、常去地点、活动分类和年度趋势。所有处理均在您的浏览器中完成。",
+    "keywords": "Google Timeline 统计数据, 位置历史统计, 我走过多远, Google Maps Timeline 洞察, Google Timeline 分析工具, 出行统计数据, 位置数据分析, Google Takeout 统计, 出行距离计算器, 到访地点计数器",
+    "featureList": [
+      "根据 Google Timeline 数据计算出行总距离",
+      "查看到访过的国家和城市",
+      "常去地点排行榜",
+      "活动类型分类（步行、驾车、骑行、公共交通）",
+      "年度和月度数据趋势",
+      "可下载并分享的统计卡片",
+      "隐私优先，所有处理均在浏览器中完成",
+      "支持所有 Google Timeline 导出格式"
+    ]
+  },
+  "howTo": {
+    "name": "如何分析您的 Google Timeline 统计数据",
+    "description": "导出您的 Google Timeline 数据，获取详细出行统计，包括距离、国家、地点和活动分类。",
+    "steps": [
+      {
+        "name": "导出您的 Google Timeline 数据",
+        "text": "访问 takeout.google.com，选择位置历史（时间线）并导出。也可以在 Android 上操作：Google Maps → 设置 → 位置 → 时间线 → 导出。在 iOS 上：Google Maps → 设置 → 个人内容 → 导出时间线数据。"
+      },
+      {
+        "name": "上传您的 JSON 文件",
+        "text": "将您导出的 Google Timeline JSON 文件拖放到分析工具中。工具会自动检测格式（Records.json、Semantic Timeline、Location History 等）并解析数据。"
+      },
+      {
+        "name": "查看您的出行统计数据",
+        "text": "查看您的总距离、到访国家、常去地点、活动分类、年度趋势等。下载可分享的统计卡片图片，分享您的出行亮点。"
+      }
+    ],
+    "tool": "Dawarich Google Timeline 统计分析工具"
+  },
+  "exportData": {
+    "title": "如何获取您的时间线数据",
+    "intro": "通过以下任一方法导出您的 Google Timeline 数据。要获得最丰富的统计信息（国家、城市、地点名称），请使用 Semantic Location History 导出文件。",
+    "methods": [
+      {
+        "title": "Google Takeout（推荐）：",
+        "body": "访问 [takeout.google.com](https://takeout.google.com/) → 选择位置历史（时间线）→ 导出为 JSON。您将获得 Records.json 和 Semantic Location History 文件。"
+      },
+      {
+        "title": "在 Android 上：",
+        "body": "打开 Google Maps → 设置 → 位置 → 位置服务 → 时间线 → 导出时间线"
+      },
+      {
+        "title": "在 iOS 上：",
+        "body": "打开 Google Maps → 设置 → 个人内容 → 导出时间线数据"
+      },
+      {
+        "title": "提示：",
+        "body": "上传您的所有 Semantic Location History 月度文件（如 2022_JANUARY.json、2022_FEBRUARY.json），以获取最完整的统计数据。您可以一次选择多个文件。"
+      }
+    ]
+  },
+  "results": {
+    "processing": "正在处理您的时间线数据…大文件可能需要一些时间。",
+    "rawDataHint": "您的文件包含原始位置记录（Records.json 格式）。国家/城市名称和地点到访数据仅在 Semantic Location History 导出文件中提供，即文件名类似 2022_APRIL.json 的月度文件。上传这些文件，即可获得包含到访地点、国家和城市的更丰富统计数据。",
+    "placesTitle": "常去地点",
+    "place": "地点",
+    "visits": "到访记录",
+    "address": "地址",
+    "timeTitle": "时间分配",
+    "activityTitle": "活动分布",
+    "yearlyTitle": "年度明细",
+    "shareTitle": "分享您的统计数据",
+    "distance": "总距离",
+    "points": "轨迹点",
+    "places": "到访地点",
+    "uniqueLocations": "个不同位置",
+    "semanticHint": "来自语义数据",
+    "dateRange": "日期范围",
+    "unnamed": "未命名",
+    "countries": "国家（{count}）",
+    "cities": "城市（{count}）",
+    "traveling": "出行：{duration}",
+    "stationary": "停留：{duration}",
+    "segments": "{count} 个片段",
+    "pointCount": "{points} 个轨迹点{distance}",
+    "distanceSuffix": " / {distance} 公里",
+    "kilometers": "{distance} 公里",
+    "miles": "{distance} 英里",
+    "pathCount": "{count} 条路径",
+    "yearCount": "{count} 年",
+    "noDate": "不适用"
+  },
+  "duration": {
+    "years": "{count} 年",
+    "months": "{count} 个月",
+    "days": "{count} 天",
+    "hours": "{count} 小时"
+  },
+  "numbers": {
+    "million": "{count} 百万",
+    "thousand": "{count} 千"
+  },
+  "activities": {
+    "driving": "驾车",
+    "walking": "步行",
+    "running": "跑步",
+    "cycling": "骑行",
+    "bus": "公交车",
+    "train": "火车",
+    "subway": "地铁",
+    "flying": "飞机",
+    "motorcycle": "摩托车",
+    "skiing": "滑雪",
+    "sailing": "帆船",
+    "unknown": "未知"
+  },
+  "cta": {
+    "fallback": "喜欢这些洞察？Dawarich 可根据您持续记录的位置数据自动生成。",
+    "title": "正在寻找 Google Timeline 的替代方案？",
+    "body": "Dawarich 是一个开源位置追踪平台，让您完全掌控自己的数据。导入您的 Google Timeline 导出文件，持续通过手机记录位置，获取实时出行统计，包括地图、距离追踪和年度汇总。支持自托管或云端使用。",
+    "button": "免费试用 Dawarich 7 天",
+    "headline": "在 **{years}** 年里，您已走过 **{distance} 公里**{countries}。将这张快照变成持续更新的数据面板。",
+    "countries": "，足迹遍布 **{count}** 个国家",
+    "statLabels": {
+      "points": "轨迹点",
+      "countries": "国家",
+      "cities": "城市",
+      "distance": "距离",
+      "years": "年"
+    }
+  },
+  "faq": [
+    {
+      "q": "在这里上传我的 Google Timeline 数据安全吗？",
+      "a": "安全。所有数据处理均通过 JavaScript 在您的浏览器中完成。您的位置历史文件不会上传到任何服务器，始终保留在您的设备上。关闭标签页后，数据即被清除。此工具也已开源，您可以核查代码的具体行为。无需账号、不使用 Cookie，也不会跟踪您的位置数据。"
+    },
+    {
+      "q": "此工具会计算哪些统计数据？",
+      "a": "分析工具会计算出行总距离（公里和英里）、轨迹点数量、到访过的不同地点、国家和城市（来自 Semantic Location History）、按频率排列的常去地点、出行与停留时间、活动类型分布（步行、驾车、骑行、公共交通、飞机等），以及含月度详情的年度明细。它还会生成可下载并分享的统计卡片。"
+    },
+    {
+      "q": "为什么看不到国家或城市数据？",
+      "a": "国家和城市名称仅在 Semantic Location History 导出文件中提供，即文件名类似 2022_APRIL.json、包含带地址的结构化地点到访记录的月度文件。如果您上传的是 Records.json，它只包含原始 GPS 坐标，没有地点名称或地址。要获得包含国家和城市的完整统计数据，请通过 Google Takeout 或手机上的 Google Maps Timeline 设置导出 Semantic Location History。"
+    },
+    {
+      "q": "距离计算有多准确？",
+      "a": "距离通过 Haversine 公式计算，即求出连续 GPS 轨迹点之间的大圆距离，并考虑地球曲率。工具会过滤不合理的跳跃（连续轨迹点之间超过 500 km），避免 GPS 异常使总距离虚高。对于 Semantic Location History，如果活动片段提供距离，就会使用该距离，通常比原始逐点计算更准确。整体准确性取决于 Google 记录您位置的频率。"
+    },
+    {
+      "q": "可以一次分析多个文件吗？",
+      "a": "可以。您可以同时上传多个 JSON 文件，例如一次上传所有月度 Semantic Location History 文件，或同时上传 Records.json 和 Semantic 文件。工具会先合并每个文件中的所有轨迹点和路径，再计算统计数据，让您全面查看整个位置历史。上传文件的数量不限。"
+    },
+    {
+      "q": "什么是活动类型？",
+      "a": "活动类型是 Google 为您的位置数据分配的移动类别，包括 WALKING、RUNNING、CYCLING、IN_PASSENGER_VEHICLE（驾车）、IN_BUS、IN_TRAIN、IN_SUBWAY、FLYING、MOTORCYCLING、SKIING 和 SAILING。Google 使用手机传感器（加速度计、GPS 速度、海拔变化）自动检测这些类型。准确性会有差异，Google 有时会误判活动，尤其是公交车和驾车等相似方式。"
+    },
+    {
+      "q": "可以分享我的统计数据吗？",
+      "a": "可以。分析数据后，工具会生成可分享的统计卡片，您可以下载为 PNG 图片。卡片包含您的总距离、轨迹点数量、到访地点和国家数量，以及日期范围。图片完全在您的浏览器中通过 canvas 元素生成，不会向任何地方发送数据。您可以在社交媒体、聊天应用或任何其他平台分享下载的图片。"
+    }
+  ],
+  "cards": [
+    {
+      "title": "什么是时间线统计分析工具？",
+      "paragraphs": [
+        "时间线统计分析工具是一个免费的浏览器工具，可将原始 Google Timeline 导出文件转换为有意义的出行统计。您无需再面对充满坐标的庞大 JSON 文件，就能清晰了解出行总距离、到过的国家和城市、最常到访的地点、不同交通方式的时间分配，以及移动规律如何逐年变化。",
+        "您可以将它视为位置历史版的 Spotify Wrapped。所有处理均在您的浏览器中完成，数据不会离开设备，工具完全免费，无需注册。"
+      ]
+    },
+    {
+      "title": "可以查看哪些统计数据？",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**总距离** — 根据 GPS 轨迹点和活动片段计算您走过的距离，以公里和英里表示"
+        },
+        {
+          "body": "**国家和城市** — 从您的 Semantic Location History 地址中提取的每个国家和城市"
+        },
+        {
+          "body": "**常去地点** — 按到访次数排列您最常去的地点"
+        },
+        {
+          "body": "**时间分配** — 直观展示出行与停留时间的比例"
+        },
+        {
+          "body": "**活动类型** — 步行、驾车、骑行、公共交通、飞机等活动的分布"
+        },
+        {
+          "body": "**年度趋势** — 每年的轨迹点数量和距离，展示您的习惯如何变化"
+        },
+        {
+          "body": "**可分享的卡片** — 可下载的图片，汇总您的关键统计数据"
+        }
+      ]
+    },
+    {
+      "title": "了解您的活动类型",
+      "paragraphs": [
+        "Google 的位置追踪通过手机传感器判断您的移动方式。数据中常见的主要活动类型包括："
+      ],
+      "items": [
+        {
+          "body": "**步行 / 跑步** — 通过加速度计反映的步数和速度检测"
+        },
+        {
+          "body": "**骑行** — 中等速度，具有特定的加速度计变化模式"
+        },
+        {
+          "body": "**驾车** — 速度较高、加速平稳，标为 IN_PASSENGER_VEHICLE"
+        },
+        {
+          "body": "**公交车 / 火车 / 地铁** — 根据速度、路线规律，有时结合附近站点数据检测的公共交通方式"
+        },
+        {
+          "body": "**飞机** — 根据快速海拔变化和极高速度检测"
+        }
+      ],
+      "footer": [
+        "这些分类并非总是准确。Google 有时会混淆公交车与汽车行程，或将缓慢驾车标为骑行。统计数据能提供良好的整体概况，但个别片段可能被误判。"
+      ]
+    },
+    {
+      "title": "Google Maps Timeline 发生了什么变化？",
+      "paragraphs": [
+        "2024 年底，Google 停止提供网页版 Google Maps Timeline，并将所有位置数据迁移至设备本地存储。只有最近 90 天的数据被迁移，更早的数据若未在截止日期前手动备份则被删除。许多人在迁移过程中[丢失了多年的位置历史](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/)。",
+        "如果您在迁移之前或期间成功导出了数据，此分析工具可以帮助您从中提取有意义的统计信息。如需长期替代方案，持续记录位置并拥有完整的数据所有权，请了解 [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-statistics)。"
+      ]
+    },
+    {
+      "title": "Records.json 与 Semantic Location History",
+      "paragraphs": [
+        "Google 主要以两种格式导出您的位置数据，两者包含的信息差别很大："
+      ],
+      "items": [
+        {
+          "body": "**Records.json** — 原始 GPS 坐标和时间戳，包含 Google 记录的每一次位置采样，通常每隔几秒到几分钟记录一次。这类文件可能有数百兆字节，提供精确坐标，但不含地点名称、地址或活动类型。"
+        },
+        {
+          "body": "**Semantic Location History** — 按月保存的文件（如 2022_APRIL.json），含结构化数据：带名称和地址的地点到访记录、已分类交通方式的活动片段，以及时长信息。这类文件较小，但数据更丰富、更有意义。"
+        }
+      ],
+      "footer": [
+        "要获得最佳统计结果，请上传 Semantic Location History 文件。Records.json 可提供距离和轨迹点，但无法提供国家、城市、地点名称和活动分类。"
+      ]
+    },
+    {
+      "title": "相关工具",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Google Timeline 可视化工具](/tools/timeline-visualizer) — 在交互式地图上查看您的位置历史"
+        },
+        {
+          "body": "[GPS 热力图生成器](/tools/heatmap-generator) — 使用 GPX、FIT、TCX 及其他 GPS 文件生成热力图"
+        },
+        {
+          "body": "[GPX 轨迹合并工具](/tools/gpx-merger) — 将多个 GPX 文件合并为一个"
+        },
+        {
+          "body": "[照片地理数据提取工具](/tools/photo-geotagging) — 从照片中提取 GPS 坐标"
+        },
+        {
+          "body": "[GeoJSON 转 GPX 转换器](/tools/geojson-to-gpx) — 将位置数据转换为 GPX 格式"
+        }
+      ],
+      "footer": [
+        "延伸阅读：[我们如何构建时间线可视化工具](/blog/building-a-privacy-first-google-timeline-visualizer) | [从 Google 位置历史迁移](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}

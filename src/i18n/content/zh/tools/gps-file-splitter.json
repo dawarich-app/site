@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "title": "GPS 文件拆分工具 - 拆分大型 GPX、GeoJSON、KML 和 JSON 文件",
+    "description": "免费将大型 GPS 和位置文件拆分为小文件。支持按大小、轨迹点数量或日期拆分 GPX、GeoJSON、KML、KMZ 和 Google Timeline JSON，打包为 ZIP 下载。隐私优先，在您的浏览器中运行。",
+    "keywords": "拆分大型 GPX 文件, 拆分 GeoJSON, 拆分 KML 文件, 减小 GPS 文件大小, 拆分大型 JSON 位置文件, GPS 文件拆分工具, 拆分 Google Timeline",
+    "featureList": [
+      "将大型 GPS 文件拆分为较小的文件",
+      "支持 GPX、GeoJSON、KML、KMZ 和 Google Timeline JSON",
+      "按文件大小、轨迹点数量或日期拆分",
+      "下载为 ZIP 压缩包",
+      "隐私优先，所有处理均在浏览器中完成",
+      "不向任何服务器发送数据"
+    ]
+  },
+  "howTo": {
+    "name": "如何拆分大型 GPS 文件",
+    "description": "上传您的 GPS 文件，将其拆分为更小、更易处理的文件。",
+    "steps": [
+      {
+        "name": "上传您的 GPS 文件",
+        "text": "将 GPX、GeoJSON、KML、KMZ 或 Google Timeline JSON 文件拖放到拆分工具中。"
+      },
+      {
+        "name": "选择拆分方式",
+        "text": "选择拆分方式：按目标文件大小（默认 10MB）、按轨迹点数量或按日期（年或月）。"
+      },
+      {
+        "name": "下载您的文件",
+        "text": "点击“拆分并下载 ZIP”，将所有分块打包为一个 ZIP 文件下载。"
+      }
+    ]
+  },
+  "h1": "GPS 文件拆分工具",
+  "intro": "将大型 GPS 和位置文件拆分为更小、更易处理的文件。支持 GPX、GeoJSON、KML、KMZ 和 Google Timeline JSON。所有部分打包为一个 ZIP 文件下载。",
+  "benefitsTitle": "为什么要拆分 GPS 文件？",
+  "privacyBody": "所有数据处理均在您的浏览器中完成。您的文件不会离开设备。",
+  "preCta": "正在处理大型位置文件？[Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=gps-file-splitter) 可自动处理任意大小的导入文件，同时保障完整的数据所有权和隐私。",
+  "faqTitle": "常见问题",
+  "homeLabel": "首页",
+  "toolsLabel": "免费工具",
+  "privacyTitle": "隐私优先",
+  "benefits": [
+    {
+      "title": "应对导入大小限制：",
+      "body": "许多 GPS 应用和地图工具都有文件大小上限（10MB、50MB 等）。拆分后，您可以分批导入大型数据集。"
+    },
+    {
+      "title": "分享指定部分：",
+      "body": "只将大型轨迹中需要的片段发送给他人，或按年/月拆分以整理您的位置历史。"
+    },
+    {
+      "title": "提升性能：",
+      "body": "大型 GPS 文件可能使地图应用变慢。使用较小的分块可以保持流畅响应。"
+    },
+    {
+      "title": "Google Timeline 导出文件：",
+      "body": "Google Timeline 的 Records.json 文件可能有数百兆字节。将其拆分为易于处理的小文件，即可导入其他工具。"
+    }
+  ],
+  "faq": [
+    {
+      "q": "在这里上传我的 GPS 文件安全吗？",
+      "a": "安全。所有数据处理均通过 JavaScript 在您的浏览器中完成。您的 GPS 文件不会上传到任何服务器，始终保留在您的设备上。关闭标签页后，数据即被清除。此工具开源，您可以核查代码的具体行为。"
+    },
+    {
+      "q": "可以拆分哪些文件格式？",
+      "a": "此工具支持 GPX、GeoJSON、KML、KMZ 和 JSON（Google Timeline）文件。KMZ 是包含 KML 的 ZIP 压缩包，因此会先自动解压。支持全部六种 Google Timeline JSON 导出格式，包括 Records.json、Semantic Location History、手机导出格式等。"
+    },
+    {
+      "q": "按大小拆分的原理是什么？",
+      "a": "选择“按大小”时，工具会根据输出格式估算每个分块能容纳多少个轨迹点。例如，GPX 每个轨迹点约占 180 字节，因此目标大小为 10MB 时，每个分块约可容纳 55,000 个轨迹点。工具会均匀划分数据，以接近目标大小。"
+    },
+    {
+      "q": "拆分会损坏我的数据吗？",
+      "a": "不会。原始文件中的每个轨迹点都只会出现在一个输出分块中，不会丢失、重复或修改任何数据。每个分块都是有效、独立的文件，具有所选格式要求的文件头和结构。"
+    },
+    {
+      "q": "可以拆分 Google Timeline JSON 文件吗？",
+      "a": "可以。上传任意 Google Timeline JSON 文件，包括 Records.json、Semantic Location History 或较新的手机导出文件。工具会自动检测格式、解析位置数据，并将其拆分为小文件。您可以选择输出格式，打包为 ZIP 文件下载。"
+    },
+    {
+      "q": "为什么需要拆分 GPS 文件？",
+      "a": "大型 GPS 文件可能不易处理。许多 GPS 应用和地图工具都有导入大小限制（通常为 10MB 或 50MB）。拆分也便于向他人分享部分轨迹、按时间段整理数据，或减小电子邮件附件的大小。"
+    }
+  ],
+  "cards": [
+    {
+      "title": "什么是 GPS 文件拆分工具？",
+      "paragraphs": [
+        "GPS 文件拆分工具将大型位置数据文件划分为更小、更易处理的部分。每个部分都是有效、独立的文件，可以单独打开、导入或分享。",
+        "此工具在您的浏览器中完成所有处理，因此您的敏感位置数据不会离开设备。它支持所有主流 GPS 格式，包括 Google Timeline 导出文件。"
+      ]
+    },
+    {
+      "title": "支持的输入格式",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**GPX** — GPS 交换格式，最常见的 GPS 轨迹和航点格式"
+        },
+        {
+          "body": "**GeoJSON** — 用于网页地图的轻量级地理数据格式"
+        },
+        {
+          "body": "**KML/KMZ** — 用于 Google Earth 和地图的 Keyhole 标记语言"
+        },
+        {
+          "body": "**JSON (Google Timeline)** — 全部六种 Google Timeline 导出格式，包括 Records.json 和 Semantic Location History"
+        }
+      ]
+    },
+    {
+      "title": "拆分方式说明",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**按大小** — 为每个分块指定目标文件大小（默认 10MB）。工具会估算每个轨迹点的输出大小，并据此划分。"
+        },
+        {
+          "body": "**按轨迹点数量** — 每 N 个轨迹点拆分为一个文件，适用于已知目标应用轨迹点数量上限的情况。"
+        },
+        {
+          "body": "**按日期** — 按年或月整理数据，每个时间段单独生成一个文件。"
+        }
+      ]
+    },
+    {
+      "title": "为什么要拆分位置文件？",
+      "paragraphs": [
+        "GPS 追踪应用和地图工具通常有导入大小限制。Google Timeline 的 Records.json 文件可能有数百兆字节，超出大多数工具的处理范围。拆分后，您就可以逐个处理这些数据。",
+        "按日期拆分特别适合将多年的位置历史整理成年度或月度归档，方便单独查看。"
+      ]
+    },
+    {
+      "title": "输出格式选项",
+      "paragraphs": [
+        "默认情况下，输出分块与输入文件的格式相同。您也可以在拆分时转换格式，例如将 Google Timeline JSON 拆分为按月保存的 GPX 文件。",
+        "支持的输出格式：GPX、GeoJSON、KML、CSV 和 JSON。所有分块会打包成一个 ZIP 文件，方便下载。"
+      ]
+    },
+    {
+      "title": "相关工具",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Google Timeline 可视化工具](/tools/timeline-visualizer) — 在地图上查看您的位置历史"
+        },
+        {
+          "body": "[Google Timeline 转换器](/tools/google-timeline-converter) — 将时间线数据转换为 GPX、KML、CSV"
+        },
+        {
+          "body": "[时间线统计分析工具](/tools/timeline-statistics) — 从位置数据中获取洞察"
+        },
+        {
+          "body": "[时间线数据合并工具](/tools/timeline-merger) — 合并多个时间线导出文件"
+        },
+        {
+          "body": "[GPX 轨迹合并工具](/tools/gpx-merger) — 将多个 GPX 文件合并为一个"
+        },
+        {
+          "body": "[时间线格式检测工具](/tools/timeline-format-detector) — 识别您的导出文件类型"
+        }
+      ]
+    }
+  ],
+  "upload": {
+    "parsing": "正在解析文件…",
+    "dropFile": "将 GPS 文件拖放到此处",
+    "browse": "或点击选择",
+    "formats": "支持：GPX、GeoJSON、KML、KMZ、JSON（Google Timeline）",
+    "clearButton": "清空文件",
+    "inputLabel": "选择要处理的文件"
+  },
+  "results": {
+    "fileNameLabel": "文件名",
+    "fileSizeLabel": "文件大小",
+    "formatLabel": "格式",
+    "pointsLabel": "轨迹点",
+    "pointsLoaded": "已加载 {points} 个轨迹点",
+    "sizeValue": "{size} MB"
+  },
+  "options": {
+    "strategyTitle": "拆分方式",
+    "bySize": "按大小",
+    "byCount": "按轨迹点数量",
+    "byDate": "按日期",
+    "targetSizeLabel": "目标分块大小",
+    "pointsPerChunkLabel": "每个分块的轨迹点数量",
+    "outputLabel": "输出格式：",
+    "sameFormat": "与输入相同",
+    "targetSizeAriaLabel": "目标分块大小（兆字节）",
+    "yearLabel": "按年拆分",
+    "monthLabel": "按月拆分",
+    "splitButton": "拆分并下载 ZIP",
+    "splitting": "正在拆分…",
+    "chunkPreview": "将把 {points} 个轨迹点拆分为 **{count}** 个文件",
+    "formats": {
+      "gpx": "GPX",
+      "geojson": "GeoJSON",
+      "kml": "KML",
+      "csv": "CSV",
+      "json": "JSON"
+    }
+  },
+  "errors": {
+    "missingKmlError": "KMZ 压缩包中未找到 KML 文件",
+    "parseError": "解析文件时出错：{message}",
+    "splitError": "拆分文件时出错：{message}",
+    "unsupportedFormatError": "不支持的文件格式：.{format}"
+  },
+  "cta": {
+    "title": "正在寻找 Google Timeline 的替代方案？",
+    "body": "Dawarich 是一个开源位置追踪平台，让您完全掌控自己的数据。导入您的 Google Timeline 导出文件，持续通过手机记录位置，并以可视化方式查看多年的移动历史。支持自托管或云端使用。",
+    "button": "免费试用 Dawarich 7 天",
+    "headline": "您的文件包含 **{points}** 个轨迹点。Dawarich 可自动处理任意大小的导入文件，无需拆分。",
+    "statLabels": {
+      "points": "轨迹点"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "waiting": "请稍候…",
+  "addPhotos": "点击或拖入以添加更多照片",
+  "dropPhotos": "将照片拖放到此处",
+  "browse": "或点击选择",
+  "formats": "支持：JPEG、PNG、HEIC 及其他图片格式",
+  "clearButton": "清空所有照片",
+  "noImages": "未找到图片文件。请上传照片（JPEG、PNG、HEIC 等）",
+  "inputLabel": "选择要处理的文件",
+  "loaded": "已加载 **{count}** 张照片",
+  "processing": "正在处理 {count} 张照片…",
+  "loadError": "加载照片时出错：{message}"
+}

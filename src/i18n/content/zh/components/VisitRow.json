@@ -1,0 +1,10 @@
+{
+  "allDay": "全天",
+  "summary": "{duration} · {points} 个轨迹点",
+  "duration": {
+    "zero": "0 分钟",
+    "hoursMinutes": "{hours} 小时 {minutes} 分钟",
+    "hours": "{hours} 小时",
+    "minutes": "{minutes} 分钟"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "movingLabel": "移动中",
+  "stationaryLabel": "停留中",
+  "visitsLabel": "到访记录",
+  "tracksLabel": "轨迹",
+  "distanceLabel": "距离",
+  "movingTitle": "移动",
+  "emptyDay": "这一天没有到访记录。",
+  "previousDay": "前一天",
+  "nextDay": "后一天",
+  "selectDay": "请选择一天，查看您的时间线。",
+  "rawHint": "此文件仅包含原始 GPS 记录，没有地点到访记录或活动片段。请改用 Semantic Location History 或手机导出的文件，查看完整时间线。",
+  "places": "{count} 个地点",
+  "movingDuration": "移动 {duration}",
+  "duration": {
+    "zero": "0 分钟",
+    "hoursMinutes": "{hours} 小时 {minutes} 分钟",
+    "hours": "{hours} 小时",
+    "minutes": "{minutes} 分钟"
+  },
+  "visitCount": "{count} 次到访"
+}

@@ -1,0 +1,291 @@
+{
+  "h1": "Google Timeline 格式检测工具",
+  "intro": "上传任意 Google Timeline 导出文件，即可快速识别格式、查看数据统计，并获取后续处理建议。所有处理均在您的浏览器中完成。",
+  "privacyTitle": "隐私优先",
+  "privacyBody": "所有数据处理均在您的浏览器中完成。您的位置数据不会离开设备，也不会发送到任何服务器。",
+  "preCta": "不确定如何处理您的 Google Timeline 数据？在上方上传文件即可了解，或探索 [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-format-detector)，自动记录位置并拥有完整的数据所有权。",
+  "faqTitle": "常见问题",
+  "homeLabel": "首页",
+  "toolsLabel": "免费工具",
+  "meta": {
+    "title": "Google Timeline 格式检测工具 - 识别您的位置导出文件类型",
+    "description": "免费检测 Google Timeline 导出格式。上传任意 Google Takeout 位置文件，即可查看格式名称、轨迹点数量、日期范围、文件大小和数据质量。所有处理均在您的浏览器中完成。",
+    "keywords": "Google Timeline 格式, 我的 Google 导出文件是什么格式, Google Takeout 位置文件类型, Google 位置历史格式, Google Timeline 文件检测工具, Google Maps Timeline 导出格式, Google Takeout JSON 格式, 位置历史文件类型, Google Timeline 数据格式, 识别 Google 导出文件",
+    "featureList": [
+      "快速检测 Google Timeline 导出格式",
+      "支持全部 6 种 Google Timeline 格式",
+      "显示轨迹点数量、路径数量和日期范围",
+      "数据质量指标",
+      "隐私优先，所有处理均在浏览器中完成",
+      "不向任何服务器发送数据"
+    ]
+  },
+  "howTo": {
+    "name": "如何识别您的 Google Timeline 导出格式",
+    "description": "上传您的 Google Timeline 导出文件，即可快速检测格式、查看统计数据，并获取后续处理建议。",
+    "steps": [
+      {
+        "name": "导出您的 Google Timeline 数据",
+        "text": "访问 takeout.google.com，选择位置历史（时间线）并导出。也可以在 Android 上操作：Google Maps > 设置 > 位置 > 时间线 > 导出。在 iOS 上：Google Maps > 设置 > 个人内容 > 导出时间线数据。"
+      },
+      {
+        "name": "上传您的 JSON 文件",
+        "text": "将您导出的 Google Timeline JSON 文件拖放到检测工具中。工具会在几秒内自动识别格式。"
+      },
+      {
+        "name": "查看您的检测结果",
+        "text": "查看检测出的格式、轨迹点数量、路径数量、日期范围、文件大小和数据质量指标，然后根据您的格式，前往推荐工具链接。"
+      }
+    ],
+    "tool": "Dawarich Google Timeline 格式检测工具"
+  },
+  "exportData": {
+    "title": "如何获取您的时间线数据",
+    "intro": "您可以通过以下任一方法导出 Google Timeline 数据。如果其中一种不适用，请尝试其他方法。",
+    "warning": "遗憾的是，由于 Google 在迁移至新位置存储政策时的处理方式，部分用户可能无法导出位置数据。",
+    "methods": [
+      {
+        "title": "Google Takeout：",
+        "steps": [
+          "访问 [takeout.google.com](https://takeout.google.com/) → 选择位置历史（时间线）→ 导出",
+          "由于 Google 更改了位置数据的存储和导出方式，此方法可能不适用于所有人。更多详情请参阅我们的[博客](https://dawarich.app/blog/migrating-from-google-location-history-to-dawarich)。"
+        ]
+      },
+      {
+        "title": "在 Android 上：",
+        "steps": [
+          "打开 Google Maps → 设置 → 位置 → 位置服务 → 时间线 → 导出时间线"
+        ]
+      },
+      {
+        "title": "在 iOS 上：",
+        "steps": [
+          "打开 Google Maps → 设置 → 个人内容 → 导出时间线数据"
+        ]
+      }
+    ]
+  },
+  "formats": {
+    "records": {
+      "title": "Records.json（原始 GPS 数据）",
+      "description": "这是经典的 Google Takeout 导出格式，包含 E7 格式的原始 GPS 坐标。它包含 Google 记录的每一次位置采样，以及精度、海拔、速度和设备元数据。此类文件可能很大（多年数据可达 100+ MB）。"
+    },
+    "semantic": {
+      "title": "Semantic Location History",
+      "description": "此格式包含按月整理的结构化位置数据，包括地点到访记录（含地址和商家名称）以及活动片段（步行、驾车、骑行）。文件名类似 2022_APRIL.json。"
+    },
+    "settings": {
+      "title": "Settings.json（设备信息）",
+      "description": "此文件包含 Google Timeline 导出中的设备配置信息，列出曾提供位置数据的设备，但不含 GPS 坐标。"
+    },
+    "timelineEdits": {
+      "title": "Timeline Edits",
+      "description": "此格式包含对时间线数据所做的编辑和更正，包括地点汇总和原始信号。其中可能包含用户修改产生的部分轨迹点。"
+    },
+    "semanticSegments": {
+      "title": "Semantic Segments",
+      "description": "这是经过解析的位置历史版本，包含带时间线路径的语义片段。它包含字符串格式的地理坐标，以及每个片段的时间范围。"
+    },
+    "locationHistory": {
+      "title": "位置历史（新格式）",
+      "description": "这是从 Android/iOS 手机导出的较新 Google Timeline 格式，包含到访和活动数据，以及字符串格式的地理坐标、时间线路径和概率分数。"
+    },
+    "unknown": {
+      "title": "未知格式",
+      "description": "无法识别此文件的格式。它可能不是 Google Timeline 导出文件，也可能是尚不支持的格式变体。"
+    }
+  },
+  "relatedTools": [
+    {
+      "title": "Google Timeline 转换器",
+      "description": "将您的时间线数据转换为 GPX、GeoJSON 或 KML"
+    },
+    {
+      "title": "时间线可视化工具",
+      "description": "在交互式地图上查看您的位置历史"
+    },
+    {
+      "title": "统计分析工具",
+      "description": "获取位置数据的详细统计"
+    },
+    {
+      "title": "文件拆分工具",
+      "description": "将大型时间线文件拆分为较小的文件"
+    },
+    {
+      "title": "数据合并工具",
+      "description": "将多个时间线文件合并为一个"
+    },
+    {
+      "title": "里程计算器",
+      "description": "根据您的数据计算出行总距离"
+    }
+  ],
+  "results": {
+    "title": "检测结果",
+    "points": "轨迹点",
+    "paths": "路径",
+    "fileSize": "文件大小",
+    "dateRange": "日期范围",
+    "qualityTitle": "数据质量",
+    "toolsTitle": "推荐工具",
+    "noDates": "未找到日期",
+    "noTimestamps": "没有时间戳数据",
+    "noAccuracy": "没有精度数据",
+    "parseErrorTitle": "解析错误",
+    "filesAnalyzed": "已分析 {count} 个文件",
+    "totalPoints": "共 {points} 个轨迹点",
+    "totalPaths": "共 {paths} 条路径",
+    "parseError": "无法解析此文件：{message}",
+    "timestampCoverage": "{percent}% 包含时间戳",
+    "accuracyCoverage": "{percent}% 包含精度信息"
+  },
+  "fileSize": {
+    "empty": "0 B",
+    "units": [
+      "B",
+      "KB",
+      "MB",
+      "GB"
+    ],
+    "value": "{size} {unit}"
+  },
+  "cta": {
+    "title": "正在寻找 Google Timeline 的替代方案？",
+    "body": "Dawarich 是一个开源位置追踪平台，让您完全掌控自己的数据。导入您的 Google Timeline 导出文件，持续通过手机记录位置，并以可视化方式查看多年的移动历史。支持自托管或云端使用。",
+    "button": "免费试用 Dawarich 7 天",
+    "headline": "您已分析 {files}，检测到 {formats}。Dawarich 支持这些格式，可立即导入并可视化展示您的位置历史。",
+    "fileCount": "**{count}** 个文件",
+    "formatCount": "**{count}** 种格式",
+    "statLabels": {
+      "files": "文件",
+      "formats": "格式",
+      "points": "轨迹点"
+    }
+  },
+  "faq": [
+    {
+      "q": "此工具可以检测哪些 Google Timeline 格式？",
+      "a": "此工具可检测全部六种已知的 Google Timeline 导出格式：Records.json（Google Takeout 导出的原始 GPS 数据）、Semantic Location History（含地点到访记录和活动片段的月度文件）、Settings.json（设备信息）、Timeline Edits（用户更正）、Semantic Segments（经过解析、含时间线路径的位置历史），以及 Location History（来自 Android 和 iOS 的较新手机导出格式）。上传文件后，工具会立即自动识别格式。"
+    },
+    {
+      "q": "在这里上传数据安全吗？",
+      "a": "安全。所有数据处理均通过 JavaScript 在您的浏览器中完成。您的 Google Timeline 文件不会上传到任何服务器，全程保留在您的设备上。关闭标签页后，数据即被清除。此工具开源，您可以核查代码的具体行为。无需账号、无需注册、没有跟踪。"
+    },
+    {
+      "q": "Google Maps Timeline 发生了什么变化？",
+      "a": "2024 年底，Google 停止提供网页版 Google Maps Timeline，并将所有位置数据迁移至手机本地存储。用户只有有限的时间可以导出数据，只有最近 90 天的数据自动迁移，更早的数据若未通过 Google Takeout 手动备份则被删除。许多用户丢失了多年的位置历史。此工具可帮助您了解导出文件的格式，以便使用合适的工具处理。"
+    },
+    {
+      "q": "如何导出我的 Google Timeline 数据？",
+      "a": "有三种方法：(1) 访问 takeout.google.com 的 Google Takeout，选择位置历史并以 JSON 格式导出，会生成 Records.json、Semantic Location History 文件、Settings.json 和 Timeline Edits。(2) 在 Android 上：Google Maps > 设置 > 位置 > 位置服务 > 时间线 > 导出时间线，会生成较新的 Location History 格式。(3) 在 iOS 上：Google Maps > 设置 > 个人内容 > 导出时间线数据。我们建议尝试所有方法，并保留所有导出文件。"
+    },
+    {
+      "q": "Records.json 和 Semantic Location History 有什么区别？",
+      "a": "Records.json 包含原始 GPS 坐标，即 Google 记录的每一次位置采样，以及时间戳、精度值、海拔和速度。这类文件很大，包含最细粒度的数据。Semantic Location History 文件（如 2022_APRIL.json）结构更清晰，包含带商家名称和地址的地点到访记录、带路线的活动片段（步行、驾车、骑行）和时长信息。Records.json 更适合获取精确位置数据；Semantic 文件更适合了解您去过哪里以及如何到达。"
+    },
+    {
+      "q": "检测出格式后应该使用哪个工具？",
+      "a": "这取决于您想做什么。要在地图上查看数据，请使用时间线可视化工具；要转换为 GPX/GeoJSON/KML 供其他应用使用，请使用 Google Timeline 转换器；要了解出行规律和统计数据，请使用统计分析工具。如果文件太大，文件拆分工具可将其拆分为较小的部分；如果有多个导出文件，数据合并工具可将其合并；要计算距离，请使用里程计算器。"
+    },
+    {
+      "q": "为什么工具无法检测我的文件格式？",
+      "a": "如果工具显示“未知格式”，您的文件可能不是 Google Timeline 导出文件。常见原因包括：上传了非 JSON 文件（工具仅接受 .json 文件）、上传了其他服务（如 YouTube 或 Chrome）的 Google Takeout 文件，或上传了损坏或不完整的文件。请确认您上传的文件来自 Google Takeout 导出中的位置历史部分。"
+    },
+    {
+      "q": "可以一次检测多个文件的格式吗？",
+      "a": "可以。您可以同时上传多个 JSON 文件。工具会分别分析每个文件，并显示各自检测出的格式、轨迹点数量、路径数量、日期范围和数据质量。当您拥有包含多个文件（Records.json、Semantic 文件、Settings.json 等）的完整 Google Takeout 导出时，此功能很有帮助。"
+    }
+  ],
+  "cards": [
+    {
+      "title": "什么是 Google Timeline 格式检测工具？",
+      "paragraphs": [
+        "通过 Google Takeout 或手机导出 Google Timeline 数据时，您可能会获得几种不同格式的 JSON 文件。每种格式的结构、数据字段以及适用工具都不同。此检测工具会读取文件、识别格式，并明确说明文件内容，让您知道该选择哪个转换工具、可视化工具或分析方法。",
+        "检测会在您的浏览器中即时完成，数据不会离开您的设备。"
+      ]
+    },
+    {
+      "title": "Google Timeline 导出格式说明",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Records.json** — 使用 E7 坐标格式的原始 GPS 数据，包含时间戳、精度、海拔和速度，是体积最大、内容最详细的格式"
+        },
+        {
+          "body": "**Semantic Location History** — 按月保存的文件，含地点到访记录（地址、名称）和活动片段（步行、驾车）"
+        },
+        {
+          "body": "**位置历史（新格式）** — 手机导出格式，包含到访记录、活动和字符串格式的地理坐标"
+        },
+        {
+          "body": "**Semantic Segments** — 包含地理坐标和时间范围的时间线路径"
+        },
+        {
+          "body": "**Settings.json** — 设备元数据，不含 GPS 坐标"
+        },
+        {
+          "body": "**Timeline Edits** — 用户更正和地点汇总"
+        }
+      ]
+    },
+    {
+      "title": "为什么格式很重要？",
+      "paragraphs": [
+        "不同格式包含不同类型的数据。Records.json 提供最精确的位置坐标，但没有地点名称。Semantic Location History 包含地址和活动类型，但原始 GPS 轨迹点较少。较新的手机导出格式结合了两者，但使用不同的坐标编码。",
+        "了解格式有助于选择合适的工具：转换器需要知道输入格式，可视化工具会处理不同字段，而统计分析工具会根据格式提取不同指标。"
+      ]
+    },
+    {
+      "title": "Google Maps Timeline 发生了什么变化？",
+      "paragraphs": [
+        "2024 年底，Google 关闭网页版 Google Maps Timeline，并将所有位置数据迁移至设备本地存储。只有最近 90 天的数据被迁移，更早的数据若未手动备份则被删除。许多人在迁移过程中[丢失了多年的位置历史](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/)。",
+        "如果您有导出文件，此检测工具可以帮助您了解文件内容。如需长期替代方案，[Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-format-detector) 提供自托管和云端位置追踪，让您拥有完整的数据所有权。"
+      ]
+    },
+    {
+      "title": "数据质量指标",
+      "paragraphs": [
+        "检测工具显示两项关键数据质量指标："
+      ],
+      "items": [
+        {
+          "body": "**时间戳覆盖率** — 包含时间戳的轨迹点所占百分比。覆盖率高意味着您可以按日期筛选、计算出行时间并构建时间线"
+        },
+        {
+          "body": "**精度覆盖率** — 包含 GPS 精度值的轨迹点所占百分比。这有助于评估位置数据的精确程度（精度数值越低，GPS 读数越精确）"
+        }
+      ],
+      "footer": [
+        "Records.json 通常具有最高的质量评分，而 Semantic Location History 更注重结构化数据，而非原始 GPS 精度。"
+      ]
+    },
+    {
+      "title": "相关工具",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[时间线可视化工具](/tools/timeline-visualizer) — 在交互式地图上查看您的位置历史"
+        },
+        {
+          "body": "[Google Timeline 转换器](/tools/google-timeline-converter) — 转换为 GPX、GeoJSON 或 KML"
+        },
+        {
+          "body": "[统计分析工具](/tools/timeline-statistics) — 获取数据的详细统计"
+        },
+        {
+          "body": "[文件拆分工具](/tools/gps-file-splitter) — 将大文件拆分为较小的文件"
+        },
+        {
+          "body": "[数据合并工具](/tools/timeline-merger) — 合并多个时间线文件"
+        },
+        {
+          "body": "[里程计算器](/tools/timeline-mileage-calculator) — 计算出行总距离"
+        }
+      ],
+      "footer": [
+        "延伸阅读：[从 Google 位置历史迁移](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}

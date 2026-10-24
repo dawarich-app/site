@@ -1,0 +1,10 @@
+{
+  "unavailableTitle": "地图不可用",
+  "unavailableBody": "您的浏览器不支持地图所需的 WebGL。",
+  "webglLink": "[了解 WebGL](https://get.webgl.org)",
+  "exitFullscreen": "退出全屏",
+  "enterFullscreen": "进入全屏",
+  "exitHint": "退出全屏（Esc）",
+  "toggleHint": "切换全屏（F）",
+  "demoLabel": "演示数据 — 请在上方拖入您的文件"
+}

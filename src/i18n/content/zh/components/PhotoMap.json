@@ -1,0 +1,8 @@
+{
+  "loading": "正在加载地图…",
+  "photoLabel": "照片",
+  "coordinates": "坐标：",
+  "altitude": "海拔：",
+  "taken": "拍摄时间：",
+  "altitudeValue": "{altitude} 米"
+}

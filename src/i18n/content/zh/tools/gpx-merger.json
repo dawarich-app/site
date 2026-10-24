@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "title": "免费 GPX 合并工具 - 在线合并多个 GPS 轨迹文件",
+    "description": "将多个 GPX 文件合并为一个。免费且注重隐私的在线工具，可合并 GPS 轨迹、航点和路线，完全在您的浏览器中运行。",
+    "keywords": "GPX 合并工具, 合并 GPX 文件, 合并 GPS 轨迹, GPX 文件合并, 拼接 GPX 文件, 合并 GPS 文件, GPX 拼接工具, 合并轨迹"
+  },
+  "h1": "GPX 轨迹合并工具",
+  "intro": "将多个 GPX 文件合并为一个文件。把来自不同活动、日期或设备的轨迹汇总到同一个 GPS 文件中。",
+  "saveIntro": "也可以跳过下载，在注册时由我们合并文件并导入您的 Dawarich 账号。",
+  "privacy": "合并在您的浏览器中完成。只有选择“保存到我的 Dawarich 账号”时，数据才会上传。",
+  "appName": "GPX 合并工具",
+  "cards": [
+    {
+      "title": "为什么要合并 GPX 文件？",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "将多日徒步或骑行行程合并到一个文件中"
+        },
+        {
+          "body": "合并来自不同 GPS 设备的轨迹"
+        },
+        {
+          "body": "将分散的片段拼成完整路线"
+        },
+        {
+          "body": "汇总活动，方便分享"
+        },
+        {
+          "body": "整合完整轨迹，便于可视化展示"
+        }
+      ]
+    },
+    {
+      "title": "哪些内容会被合并？",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**轨迹** - 所有带时间戳和海拔的 GPS 轨迹片段"
+        },
+        {
+          "body": "**航点** - 已命名的兴趣点和标记"
+        },
+        {
+          "body": "**路线** - 规划好的导航路线"
+        },
+        {
+          "body": "**元数据** - 汇总为新的合并文件描述"
+        }
+      ]
+    },
+    {
+      "title": "合并选项说明",
+      "paragraphs": [
+        "**保持轨迹独立：**每个输入文件中的轨迹在输出文件中仍作为独立轨迹保留，适合保留各次活动的边界。",
+        "**合并为单条轨迹：**将所有轨迹点合并为一条连续轨迹，适合统一展示路线。"
+      ]
+    },
+    {
+      "title": "兼容的应用",
+      "paragraphs": [
+        "合并后的 GPX 文件可用于："
+      ],
+      "items": [
+        {
+          "body": "Garmin Connect, Strava, Komoot"
+        },
+        {
+          "body": "Google Earth, QGIS, CalTopo"
+        },
+        {
+          "body": "Gaia GPS, AllTrails, ViewRanger"
+        },
+        {
+          "body": "任何支持 GPX 1.1 的应用"
+        }
+      ]
+    }
+  ],
+  "upload": {
+    "dropFiles": "将 GPX 文件拖放到此处",
+    "browse": "或点击选择",
+    "clearButton": "全部清空",
+    "inputLabel": "选择要处理的文件",
+    "processing": "正在处理文件…"
+  },
+  "results": {
+    "orderHint": "拖动或使用箭头调整顺序，文件将按此顺序合并。",
+    "summaryHeading": "合并摘要",
+    "filesLabel": "文件",
+    "tracksLabel": "轨迹",
+    "pointsLabel": "轨迹点",
+    "waypointsLabel": "航点",
+    "removeFileTitle": "移除文件",
+    "filesToMergeHeading": "待合并的文件（{count}）",
+    "fileSummary": "{tracks} | {points} 个轨迹点",
+    "trackCount": "{count} 条轨迹"
+  },
+  "options": {
+    "heading": "合并选项",
+    "outputName": "输出名称",
+    "singleTrack": "将所有轨迹合并为单条轨迹",
+    "singleTrackHint": "将所有轨迹片段合并为一条连续轨迹",
+    "sortByTime": "按时间戳对轨迹点排序",
+    "sortByTimeHint": "仅在合并为单条轨迹时可用",
+    "outputPlaceholder": "输出文件名",
+    "mergeButton": "合并并下载 GPX"
+  },
+  "errors": {
+    "gpxOnly": "请仅选择 GPX 文件。",
+    "minimumFiles": "请至少添加 2 个 GPX 文件进行合并。",
+    "parse": "解析 {fileName} 时出错：{message}",
+    "merge": "合并文件时出错：{message}"
+  },
+  "cta": {
+    "fallback": "需要管理多年的 GPS 数据？Dawarich 可在一处自动整理并可视化展示您的所有 GPS 活动。",
+    "headline": "您已将 **{count}** 个文件中的 **{points}** 个轨迹点合并到一个文件中。Dawarich 可自动为您的所有 GPS 数据源完成这项工作。",
+    "statLabels": {
+      "files": "文件",
+      "tracks": "轨迹",
+      "points": "轨迹点"
+    }
+  }
+}
