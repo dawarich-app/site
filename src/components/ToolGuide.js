@@ -1,23 +1,28 @@
 import React from 'react';
 import Head from '@docusaurus/Head';
+import { translate } from '@docusaurus/Translate';
+import { SmartLink } from '@site/src/i18n/RichText';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import styles from './ToolGuide.module.css';
 
 // Renders the unique editorial content + FAQPage + BreadcrumbList JSON-LD
-// for a converter tool page. Content shape is defined in src/data/tool-guides/<slug>.js.
+// for a converter tool page. Content shape is defined in the tool's guide data file.
 //
 // Props:
 //   slug:    tool slug (used in BreadcrumbList)
 //   title:   page H1, also used as breadcrumb leaf
 //   content: { whenToConvert, preservation, apps, example, reference, faqs }
 export default function ToolGuide({ slug, title, content }) {
+  const homeUrl = useLocalizedUrl('/');
+  const toolsUrl = useLocalizedUrl('/tools/');
+  const pageUrl = useLocalizedUrl(`/tools/${slug}/`);
   if (!content) return null;
-  const pageUrl = `https://dawarich.app/tools/${slug}/`;
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://dawarich.app/" },
-      { "@type": "ListItem", position: 2, name: "Free Tools", item: "https://dawarich.app/tools/" },
+      { "@type": "ListItem", position: 1, name: translate({ id: 'shared.breadcrumb.home', message: 'Home' }), item: homeUrl },
+      { "@type": "ListItem", position: 2, name: translate({ id: 'shared.breadcrumb.tools', message: 'Free Tools' }), item: toolsUrl },
       { "@type": "ListItem", position: 3, name: title, item: pageUrl },
     ],
   };
@@ -40,22 +45,27 @@ export default function ToolGuide({ slug, title, content }) {
       <div className={styles.guide}>
         {content.whenToConvert && (
           <section>
-            <h2>When you'd convert {content.whenToConvert.subject}</h2>
+            <h2>
+              {translate(
+                { id: 'shared.toolGuide.whenToConvert', message: "When you'd convert {subject}" },
+                { subject: content.whenToConvert.subject },
+              )}
+            </h2>
             {content.whenToConvert.body.map((p, i) => <p key={i}>{p}</p>)}
           </section>
         )}
 
         {content.preservation && (
           <section>
-            <h2>What gets preserved (and what doesn't)</h2>
+            <h2>{translate({ id: 'shared.toolGuide.preserved', message: "What gets preserved (and what doesn't)" })}</h2>
             <p>{content.preservation.intro}</p>
             <div className={styles.tableWrap}>
               <table className={styles.table}>
                 <thead>
                   <tr>
-                    <th>Field</th>
-                    <th>Preserved?</th>
-                    <th>Notes</th>
+                    <th>{translate({ id: 'shared.toolGuide.field', message: 'Field' })}</th>
+                    <th>{translate({ id: 'shared.toolGuide.preservedColumn', message: 'Preserved?' })}</th>
+                    <th>{translate({ id: 'shared.toolGuide.notes', message: 'Notes' })}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -74,12 +84,12 @@ export default function ToolGuide({ slug, title, content }) {
 
         {content.apps && (
           <section>
-            <h2>Apps that read your converted file</h2>
+            <h2>{translate({ id: 'shared.toolGuide.apps', message: 'Apps that read your converted file' })}</h2>
             <p>{content.apps.intro}</p>
             <ul className={styles.appList}>
               {content.apps.items.map((app, i) => (
                 <li key={i}>
-                  <strong>{app.url ? <a href={app.url} target="_blank" rel="noopener">{app.name}</a> : app.name}</strong>
+                  <strong>{app.url ? <SmartLink href={app.url}>{app.name}</SmartLink> : app.name}</strong>
                   {' — '}{app.note}
                 </li>
               ))}
@@ -89,15 +99,15 @@ export default function ToolGuide({ slug, title, content }) {
 
         {content.example && (
           <section>
-            <h2>Worked example</h2>
+            <h2>{translate({ id: 'shared.toolGuide.example', message: 'Worked example' })}</h2>
             <p>{content.example.intro}</p>
             <div className={styles.exampleGrid}>
               <div>
-                <h3>Input ({content.example.fromLabel})</h3>
+                <h3>{translate({ id: 'shared.toolGuide.input', message: 'Input ({format})' }, { format: content.example.fromLabel })}</h3>
                 <pre className={styles.code}><code>{content.example.input}</code></pre>
               </div>
               <div>
-                <h3>Output ({content.example.toLabel})</h3>
+                <h3>{translate({ id: 'shared.toolGuide.output', message: 'Output ({format})' }, { format: content.example.toLabel })}</h3>
                 <pre className={styles.code}><code>{content.example.output}</code></pre>
               </div>
             </div>
@@ -113,7 +123,7 @@ export default function ToolGuide({ slug, title, content }) {
 
         {content.faqs && content.faqs.length > 0 && (
           <section>
-            <h2>Frequently asked questions</h2>
+            <h2>{translate({ id: 'shared.toolGuide.faq', message: 'Frequently asked questions' })}</h2>
             <dl className={styles.faqList}>
               {content.faqs.map(({ q, a }, i) => (
                 <React.Fragment key={i}>

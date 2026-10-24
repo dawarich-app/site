@@ -23,17 +23,17 @@ export function toPlainText(text) {
   return parseRichText(text).map((token) => token.value).join('');
 }
 
-function RichLink({ href, children }) {
+export function SmartLink({ href, className, children }) {
   const path = href.startsWith(SITE_URL) ? href.slice(SITE_URL.length) || '/' : href;
   if (!path.startsWith('/')) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer">
+      <a href={href} className={className} target="_blank" rel="noopener noreferrer">
         {children}
       </a>
     );
   }
-  if (isEnOnlyPath(path)) return <EnOnlyLink to={path}>{children}</EnOnlyLink>;
-  return <Link to={path}>{children}</Link>;
+  if (isEnOnlyPath(path)) return <EnOnlyLink to={path} className={className}>{children}</EnOnlyLink>;
+  return <Link to={path} className={className}>{children}</Link>;
 }
 
 export default function RichText({ text }) {
@@ -41,7 +41,7 @@ export default function RichText({ text }) {
     <>
       {parseRichText(text).map((token, index) => {
         if (token.type === 'bold') return <strong key={index}>{token.value}</strong>;
-        if (token.type === 'link') return <RichLink key={index} href={token.href}>{token.value}</RichLink>;
+        if (token.type === 'link') return <SmartLink key={index} href={token.href}>{token.value}</SmartLink>;
         return <React.Fragment key={index}>{token.value}</React.Fragment>;
       })}
     </>

@@ -31,6 +31,11 @@ describe('comparePages', () => {
     expect(comparePages(page(), branch)).toEqual([]);
   });
 
+  it('should treat React text separators as invisible', () => {
+    const baseline = page({ main: '<h3>Input (<!-- -->GPX<!-- -->)</h3>' });
+    expect(comparePages(baseline, page({ main: '<h3>Input (GPX)</h3>' }))).toEqual([]);
+  });
+
   it('should report changed visible text', () => {
     const diffs = comparePages(page(), page({ main: '<p>Hallo world</p>' }));
     expect(diffs.map((d) => d.field)).toEqual(['main']);

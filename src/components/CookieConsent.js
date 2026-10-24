@@ -1,5 +1,6 @@
 import React from 'react';
 import CookieConsent from 'react-cookie-consent';
+import { translate } from '@docusaurus/Translate';
 
 export default function CustomCookieConsent() {
   const handleAccept = () => {
@@ -75,9 +76,11 @@ export default function CustomCookieConsent() {
   return (
     <CookieConsent
       location="bottom"
-      buttonText="Accept"
-      declineButtonText="Reject"
+      buttonText={translate({ id: 'shared.cookieConsent.accept', message: 'Accept' })}
+      declineButtonText={translate({ id: 'shared.cookieConsent.reject', message: 'Reject' })}
       enableDeclineButton
+      ariaAcceptLabel={translate({ id: 'shared.cookieConsent.acceptAria', message: 'Accept cookies' })}
+      ariaDeclineLabel={translate({ id: 'shared.cookieConsent.rejectAria', message: 'Decline cookies' })}
       cookieName="dawarichCookieConsent"
       domain=".dawarich.app"
       style={{
@@ -91,9 +94,11 @@ export default function CustomCookieConsent() {
       expires={150}
       onAccept={handleAccept}
     >
-      We use a cookieless analytics service (Simple Analytics) that requires no consent.
-      You can optionally accept cookies for Google Ads conversion tracking, Brevo email
-      analytics and affiliate referral credit — these only load if you click "Accept".
+      {translate({
+        id: 'shared.cookieConsent.body',
+        message:
+          'We use a cookieless analytics service (Simple Analytics) that requires no consent. You can optionally accept cookies for Google Ads conversion tracking, Brevo email analytics and affiliate referral credit — these only load if you click "Accept".',
+      })}
       <a
         href="/privacy-policy#cookies"
         style={{
@@ -102,7 +107,7 @@ export default function CustomCookieConsent() {
           marginLeft: "5px",
         }}
       >
-        Learn more
+        {translate({ id: 'shared.cookieConsent.learnMore', message: 'Learn more' })}
       </a>
     </CookieConsent>
   );

@@ -21,6 +21,7 @@ export function extractComparable(html) {
   const description = html.match(/<meta[^>]*name="description"[^>]*content="([^"]*)"/)?.[1] ?? '';
   const mainHtml = html.match(/<main[^>]*>([\s\S]*)<\/main>/)?.[1] ?? '';
   const main = mainHtml
+    .replace(/<!--[\s\S]*?-->/g, '')
     .replace(/<script[\s\S]*?<\/script>/g, ' ')
     .replace(/<style[\s\S]*?<\/style>/g, ' ')
     .replace(/<[^>]+>/g, ' ');

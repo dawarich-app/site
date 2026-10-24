@@ -1,4 +1,85 @@
 {
+  "shared.cookieConsent.accept": {
+    "message": "Accept"
+  },
+  "shared.cookieConsent.reject": {
+    "message": "Reject"
+  },
+  "shared.cookieConsent.acceptAria": {
+    "message": "Accept cookies"
+  },
+  "shared.cookieConsent.rejectAria": {
+    "message": "Decline cookies"
+  },
+  "shared.cookieConsent.body": {
+    "message": "We use a cookieless analytics service (Simple Analytics) that requires no consent. You can optionally accept cookies for Google Ads conversion tracking, Brevo email analytics and affiliate referral credit — these only load if you click \"Accept\"."
+  },
+  "shared.cookieConsent.learnMore": {
+    "message": "Learn more"
+  },
+  "shared.uploader.noJson": {
+    "message": "No JSON files found. Please upload Google Timeline JSON files."
+  },
+  "shared.uploader.reading": {
+    "message": "Reading file {current}/{total}: {name}"
+  },
+  "shared.uploader.parsing": {
+    "message": "Parsing file {current}/{total}: {name}"
+  },
+  "shared.uploader.processing": {
+    "message": "Processing timeline data..."
+  },
+  "shared.uploader.loadError": {
+    "message": "Error loading files: {message}"
+  },
+  "shared.uploader.chooseFiles": {
+    "message": "Choose files to process"
+  },
+  "shared.uploader.wait": {
+    "message": "Please wait..."
+  },
+  "shared.uploader.loaded": {
+    "message": "**{count}** file loaded|**{count}** files loaded"
+  },
+  "shared.uploader.addMore": {
+    "message": "Click or drag to add more files"
+  },
+  "shared.uploader.dropPrompt": {
+    "message": "Drop Google Timeline JSON files here"
+  },
+  "shared.uploader.browse": {
+    "message": "or click to browse"
+  },
+  "shared.uploader.supports": {
+    "message": "Supports: {formats}"
+  },
+  "shared.uploader.clearAll": {
+    "message": "Clear All Files"
+  },
+  "shared.converter.dropPrompt": {
+    "message": "Drag and drop your {format} file here, or click to browse"
+  },
+  "shared.converter.removeFile": {
+    "message": "Remove file"
+  },
+  "shared.converter.converting": {
+    "message": "Converting..."
+  },
+  "shared.converter.convertTo": {
+    "message": "Convert to {format}"
+  },
+  "shared.personalizedCta.body": {
+    "message": "Self-hosted or cloud. Cancel anytime."
+  },
+  "shared.personalizedCta.button": {
+    "message": "Start Your Free Trial"
+  },
+  "shared.relatedTools.ariaLabel": {
+    "message": "Related tools and pages"
+  },
+  "shared.relatedTools.heading": {
+    "message": "Related tools & pages"
+  },
   "shared.saveToAccount.tooLarge": {
     "message": "Your file is too large for instant import. Sign up first, then upload from your dashboard."
   },
@@ -23,6 +104,36 @@
   "shared.breadcrumb.tools": {
     "message": "Free Tools"
   },
+  "shared.toolGuide.whenToConvert": {
+    "message": "When you'd convert {subject}"
+  },
+  "shared.toolGuide.preserved": {
+    "message": "What gets preserved (and what doesn't)"
+  },
+  "shared.toolGuide.field": {
+    "message": "Field"
+  },
+  "shared.toolGuide.preservedColumn": {
+    "message": "Preserved?"
+  },
+  "shared.toolGuide.notes": {
+    "message": "Notes"
+  },
+  "shared.toolGuide.apps": {
+    "message": "Apps that read your converted file"
+  },
+  "shared.toolGuide.example": {
+    "message": "Worked example"
+  },
+  "shared.toolGuide.input": {
+    "message": "Input ({format})"
+  },
+  "shared.toolGuide.output": {
+    "message": "Output ({format})"
+  },
+  "shared.toolGuide.faq": {
+    "message": "Frequently asked questions"
+  },
   "theme.docs.DocCard.categoryDescription.plurals": {
     "message": "1 item|{count} items",
     "description": "The default description for a category card in the generated index about how many items this category includes"
@@ -34,14 +145,6 @@
   "theme.BackToTopButton.buttonAriaLabel": {
     "message": "Scroll back to top",
     "description": "The ARIA label for the back to top button"
-  },
-  "theme.blog.archive.title": {
-    "message": "Archive",
-    "description": "The page & hero title of the blog archive page"
-  },
-  "theme.blog.archive.description": {
-    "message": "Archive",
-    "description": "The page & hero description of the blog archive page"
   },
   "theme.blog.paginator.navAriaLabel": {
     "message": "Blog list page navigation",
@@ -55,6 +158,14 @@
     "message": "Older entries",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
+  "theme.blog.archive.title": {
+    "message": "Archive",
+    "description": "The page & hero title of the blog archive page"
+  },
+  "theme.blog.archive.description": {
+    "message": "Archive",
+    "description": "The page & hero description of the blog archive page"
+  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "Blog post page navigation",
     "description": "The ARIA label for the blog posts pagination"
@@ -67,10 +178,6 @@
     "message": "Older post",
     "description": "The blog post button label to navigate to the older/next post"
   },
-  "theme.tags.tagsPageLink": {
-    "message": "View all tags",
-    "description": "The label of the link targeting the tag list page"
-  },
   "theme.colorToggle.ariaLabel": {
     "message": "Switch between dark and light mode (currently {mode})",
     "description": "The ARIA label for the navbar color mode toggle"
@@ -82,6 +189,10 @@
   "theme.colorToggle.ariaLabel.mode.light": {
     "message": "light mode",
     "description": "The name for the light color mode"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "View all tags",
+    "description": "The label of the link targeting the tag list page"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "Breadcrumbs",
@@ -158,10 +269,6 @@
     "message": "Tags:",
     "description": "The label alongside a tag list"
   },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Close",
-    "description": "The ARIA label for close button of announcement bar"
-  },
   "theme.admonition.caution": {
     "message": "caution",
     "description": "The default label used for the Caution admonition (:::caution)"
@@ -186,9 +293,13 @@
     "message": "warning",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
-  "theme.blog.sidebar.navAriaLabel": {
-    "message": "Blog recent posts navigation",
-    "description": "The ARIA label for recent posts in the blog sidebar"
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "Close",
+    "description": "The ARIA label for close button of announcement bar"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Toggle word wrap",
+    "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.CodeBlock.copied": {
     "message": "Copied",
@@ -202,9 +313,9 @@
     "message": "Copy",
     "description": "The copy button label on code blocks"
   },
-  "theme.CodeBlock.wordWrapToggle": {
-    "message": "Toggle word wrap",
-    "description": "The title attribute for toggle word wrapping button of code block lines"
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "Blog recent posts navigation",
+    "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "Expand sidebar category '{label}'",
@@ -226,21 +337,13 @@
     "message": "Please contact the owner of the site that linked you to the original URL and let them know their link is broken.",
     "description": "The 2nd paragraph of the 404 page"
   },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Languages",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "On this page",
     "description": "The label used by the button on the collapsible TOC component"
   },
-  "theme.blog.post.readingTime.plurals": {
-    "message": "One min read|{readingTime} min read",
-    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
-  },
-  "theme.docs.breadcrumbs.home": {
-    "message": "Home page",
-    "description": "The ARIA label for the home page in the breadcrumbs"
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Languages",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.blog.post.readMore": {
     "message": "Read more",
@@ -250,9 +353,13 @@
     "message": "Read more about {title}",
     "description": "The ARIA label for the link to full blog posts from excerpts"
   },
-  "theme.docs.sidebar.navAriaLabel": {
-    "message": "Docs sidebar",
-    "description": "The ARIA label for the sidebar navigation"
+  "theme.blog.post.readingTime.plurals": {
+    "message": "One min read|{readingTime} min read",
+    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.docs.breadcrumbs.home": {
+    "message": "Home page",
+    "description": "The ARIA label for the home page in the breadcrumbs"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
     "message": "Collapse sidebar",
@@ -262,17 +369,21 @@
     "message": "Collapse sidebar",
     "description": "The title attribute for collapse button of doc sidebar"
   },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Docs sidebar",
+    "description": "The ARIA label for the sidebar navigation"
+  },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
     "message": "Close navigation bar",
     "description": "The ARIA label for close button of mobile sidebar"
   },
-  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
-    "message": "← Back to main menu",
-    "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
-  },
   "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
     "message": "Toggle navigation bar",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "← Back to main menu",
+    "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
   },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "Expand sidebar",
@@ -281,6 +392,22 @@
   "theme.docs.sidebar.expandButtonAriaLabel": {
     "message": "Expand sidebar",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "No results"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "See all results outside \"{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "See all results within \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "See all results"
+  },
+  "theme.SearchBar.label": {
+    "message": "Search",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Search results for \"{query}\"",
@@ -300,22 +427,6 @@
   "theme.SearchPage.noResultsText": {
     "message": "No documents were found",
     "description": "The paragraph for empty search result"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "No results"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "See all results outside \"{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "See all results within \"{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "See all results"
-  },
-  "theme.SearchBar.label": {
-    "message": "Search",
-    "description": "The ARIA label and placeholder for search button"
   },
   "theme.blog.post.plurals": {
     "message": "One post|{count} posts",

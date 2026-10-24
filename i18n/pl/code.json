@@ -333,5 +333,116 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tagi",
     "description": "The title of the tag list page"
+  },
+  "shared.cookieConsent.accept": {
+    "message": "Accept"
+  },
+  "shared.cookieConsent.reject": {
+    "message": "Reject"
+  },
+  "shared.cookieConsent.acceptAria": {
+    "message": "Accept cookies"
+  },
+  "shared.cookieConsent.rejectAria": {
+    "message": "Decline cookies"
+  },
+  "shared.cookieConsent.body": {
+    "message": "We use a cookieless analytics service (Simple Analytics) that requires no consent. You can optionally accept cookies for Google Ads conversion tracking, Brevo email analytics and affiliate referral credit — these only load if you click \"Accept\"."
+  },
+  "shared.cookieConsent.learnMore": {
+    "message": "Learn more"
+  },
+  "shared.uploader.noJson": {
+    "message": "No JSON files found. Please upload Google Timeline JSON files."
+  },
+  "shared.uploader.reading": {
+    "message": "Reading file {current}/{total}: {name}"
+  },
+  "shared.uploader.parsing": {
+    "message": "Parsing file {current}/{total}: {name}"
+  },
+  "shared.uploader.processing": {
+    "message": "Processing timeline data..."
+  },
+  "shared.uploader.loadError": {
+    "message": "Error loading files: {message}"
+  },
+  "shared.uploader.chooseFiles": {
+    "message": "Choose files to process"
+  },
+  "shared.uploader.wait": {
+    "message": "Please wait..."
+  },
+  "shared.uploader.loaded": {
+    "message": "**{count}** file loaded|**{count}** files loaded"
+  },
+  "shared.uploader.addMore": {
+    "message": "Click or drag to add more files"
+  },
+  "shared.uploader.dropPrompt": {
+    "message": "Drop Google Timeline JSON files here"
+  },
+  "shared.uploader.browse": {
+    "message": "or click to browse"
+  },
+  "shared.uploader.supports": {
+    "message": "Supports: {formats}"
+  },
+  "shared.uploader.clearAll": {
+    "message": "Clear All Files"
+  },
+  "shared.converter.dropPrompt": {
+    "message": "Drag and drop your {format} file here, or click to browse"
+  },
+  "shared.converter.removeFile": {
+    "message": "Remove file"
+  },
+  "shared.converter.converting": {
+    "message": "Converting..."
+  },
+  "shared.converter.convertTo": {
+    "message": "Convert to {format}"
+  },
+  "shared.personalizedCta.body": {
+    "message": "Self-hosted or cloud. Cancel anytime."
+  },
+  "shared.personalizedCta.button": {
+    "message": "Start Your Free Trial"
+  },
+  "shared.relatedTools.ariaLabel": {
+    "message": "Related tools and pages"
+  },
+  "shared.relatedTools.heading": {
+    "message": "Related tools & pages"
+  },
+  "shared.toolGuide.whenToConvert": {
+    "message": "When you'd convert {subject}"
+  },
+  "shared.toolGuide.preserved": {
+    "message": "What gets preserved (and what doesn't)"
+  },
+  "shared.toolGuide.field": {
+    "message": "Field"
+  },
+  "shared.toolGuide.preservedColumn": {
+    "message": "Preserved?"
+  },
+  "shared.toolGuide.notes": {
+    "message": "Notes"
+  },
+  "shared.toolGuide.apps": {
+    "message": "Apps that read your converted file"
+  },
+  "shared.toolGuide.example": {
+    "message": "Worked example"
+  },
+  "shared.toolGuide.input": {
+    "message": "Input ({format})"
+  },
+  "shared.toolGuide.output": {
+    "message": "Output ({format})"
+  },
+  "shared.toolGuide.faq": {
+    "message": "Frequently asked questions"
   }
 }

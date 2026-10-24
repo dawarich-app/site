@@ -1,4 +1,5 @@
 import React from 'react';
+import { translate } from '@docusaurus/Translate';
 import styles from './PersonalizedCTA.module.css';
 
 const SIGNUP_BASE_URL = 'https://my.dawarich.app/users/sign_up';
@@ -32,7 +33,7 @@ export default function PersonalizedCTA({ toolName, headline, stats }) {
         )}
 
         <p className={styles.body}>
-          Self-hosted or cloud. Cancel anytime.
+          {translate({ id: 'shared.personalizedCta.body', message: 'Self-hosted or cloud. Cancel anytime.' })}
         </p>
 
         <a
@@ -41,7 +42,7 @@ export default function PersonalizedCTA({ toolName, headline, stats }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Start Your Free Trial
+          {translate({ id: 'shared.personalizedCta.button', message: 'Start Your Free Trial' })}
         </a>
       </div>
     </div>
