@@ -27,6 +27,16 @@ describe('buildTodo for markdown pages', () => {
 });
 
 describe('recordHashes', () => {
+  it('should keep stale keys stale unless they were handed to a translator', () => {
+    const english = { a: 'New text', b: 'Other new text' };
+    const localized = { a: 'Alter Text', b: 'Neuer anderer Text' };
+    const previous = { a: hashMessage('Old text'), b: hashMessage('Old other') };
+    expect(recordHashes({ english, localized, errors: [], previous, todoKeys: ['b'] })).toEqual({
+      a: hashMessage('Old text'),
+      b: hashMessage('Other new text'),
+    });
+  });
+
   it('should not stamp strings left identical to English unless they are declared intentional', () => {
     const english = { a: 'Format', b: 'Upload' };
     const localized = { a: 'Format', b: 'Upload' };
