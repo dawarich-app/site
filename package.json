@@ -21,7 +21,8 @@
     "i18n:status": "node scripts/i18n-status.mjs",
     "i18n:validate": "node scripts/i18n-validate.mjs",
     "i18n:todo": "node scripts/i18n-todo.mjs",
-    "i18n:record": "node scripts/i18n-todo.mjs record"
+    "i18n:record": "node scripts/i18n-todo.mjs record",
+    "i18n:check-build": "node scripts/check-i18n-build.mjs"
   },
   "dependencies": {
     "@docusaurus/core": "3.6.3",
