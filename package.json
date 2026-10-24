@@ -5,7 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "docusaurus gen-api-docs all --all-versions && docusaurus build && node scripts/noindex-api.mjs",
+    "build": "docusaurus gen-api-docs all --all-versions && docusaurus build && node scripts/noindex-api.mjs && node scripts/prune-locale-static.mjs",
     "gen-api-docs": "docusaurus gen-api-docs all --all-versions",
     "clean-api-docs": "docusaurus clean-api-docs all --all-versions",
     "swizzle": "docusaurus swizzle",

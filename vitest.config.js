@@ -12,6 +12,17 @@ export default defineConfig({
       '@docusaurus/BrowserOnly': fileURLToPath(
         new URL('./src/test/mocks/BrowserOnly.js', import.meta.url),
       ),
+      '@docusaurus/Translate': fileURLToPath(new URL('./src/test/mocks/Translate.js', import.meta.url)),
+      '@docusaurus/Interpolate': fileURLToPath(
+        new URL('./src/test/mocks/Interpolate.js', import.meta.url),
+      ),
+      '@docusaurus/Link': fileURLToPath(new URL('./src/test/mocks/Link.js', import.meta.url)),
+      '@docusaurus/useDocusaurusContext': fileURLToPath(
+        new URL('./src/test/mocks/useDocusaurusContext.js', import.meta.url),
+      ),
+      '@docusaurus/theme-common': fileURLToPath(
+        new URL('./src/test/mocks/themeCommon.js', import.meta.url),
+      ),
     },
   },
   esbuild: {
@@ -29,6 +40,6 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.js'],
     css: { modules: { classNameStrategy: 'non-scoped' } },
-    include: ['src/**/*.{test,spec}.{js,jsx,ts,tsx}'],
+    include: ['src/**/*.{test,spec}.{js,jsx,ts,tsx}', 'scripts/**/*.{test,spec}.{js,mjs}'],
   },
 });

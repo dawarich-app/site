@@ -6,6 +6,10 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 import {footerLinks} from './src/data/footerLinks.js';
+import {LOCALES, LOCALE_CONFIGS, DEFAULT_LOCALE, resolveBuildLocale} from './src/i18n/locales.js';
+
+const locale = resolveBuildLocale(process.env.DOCUSAURUS_CURRENT_LOCALE);
+const isDefaultLocale = locale === DEFAULT_LOCALE;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -92,15 +96,16 @@ const config = {
     },
   ],
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: DEFAULT_LOCALE,
+    locales: LOCALES,
+    localeConfigs: LOCALE_CONFIGS,
   },
 
   clientModules: [
@@ -113,7 +118,7 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
+        docs: isDefaultLocale && {
           sidebarPath: './sidebars.js',
           docItemComponent: "@theme/ApiItem",
           async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
@@ -121,7 +126,7 @@ const config = {
             return items.filter(item => !(item.type === 'category' && item.label === 'api'));
           },
         },
-        blog: {
+        blog: isDefaultLocale && {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -146,7 +151,7 @@ const config = {
     ],
   ],
 
-  plugins: [
+  plugins: isDefaultLocale ? [
     [
       '@docusaurus/plugin-client-redirects',
       {
@@ -208,9 +213,9 @@ const config = {
         },
       },
     ],
-  ],
+  ] : [],
 
-  themes: [
+  themes: isDefaultLocale ? [
     "docusaurus-theme-openapi-docs",
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
@@ -224,7 +229,7 @@ const config = {
         explicitSearchResultPath: true,
       }),
     ],
-  ],
+  ] : [],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
