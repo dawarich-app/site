@@ -1,0 +1,22 @@
+{
+  "privacyTitle": "Privacidad ante todo",
+  "success": "¡Archivo convertido correctamente! La descarga debería empezar automáticamente.",
+  "successShort": "¡Archivo convertido correctamente!",
+  "ctaHeadline": "Tu archivo está convertido. Dawarich gestiona todos los formatos automáticamente: importa desde Google, Strava, Garmin y más. Sin conversiones manuales.",
+  "invalidFile": "Error al convertir el archivo. Comprueba que sea un archivo {format} válido.",
+  "conversionError": "Error al convertir el archivo: {message}",
+  "stats": {
+    "activity": "Actividad: {sport}",
+    "points": " | {points} puntos",
+    "gpsPoints": " | {points} puntos GPS",
+    "distance": " | {distance} km",
+    "elevation": " | {elevation}m de desnivel positivo",
+    "duration": " | {duration}",
+    "avgHR": " | FC media: {avgHR} bpm"
+  },
+  "duration": {
+    "hours": "{hours}h {minutes}m {seconds}s",
+    "minutes": "{minutes}m {seconds}s",
+    "seconds": "{seconds}s"
+  }
+}

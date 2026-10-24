@@ -1,0 +1,130 @@
+{
+  "timelineItems": [
+    {
+      "title": "Un día que puedes leer",
+      "description": "Cada día empieza con una cabecera de una sola línea e indicadores de distancia por medio de transporte: cuánto caminaste, pedaleaste y condujiste, de un vistazo. Elige cualquier día del calendario y el mapa lo sigue."
+    },
+    {
+      "title": "Edita una etapa al momento",
+      "description": "Los trayectos se despliegan en una franja de medios de transporte que muestra solo las etapas relevantes. ¿Una está mal? Haz clic en el nombre de su medio de transporte y cámbialo ahí mismo. La lista completa queda oculta tras «Todos los segmentos» hasta que la necesites."
+    },
+    {
+      "title": "Los huecos se muestran tal cual",
+      "description": "Cuando el registro se detiene de verdad, la cronología lo indica en vez de dibujar una línea recta por las horas que faltan. Las visitas detectadas tienen una puntuación de confianza, así que una estancia confirmada y una estimación dudosa nunca parecen lo mismo."
+    }
+  ],
+  "showcaseItems": [
+    {
+      "title": "Puntos",
+      "description": "Ve cada punto de ubicación registrado con su hora exacta y sus detalles. Haz clic en cualquier punto para ver sus coordenadas, hora y más información.",
+      "imageAlt": "Mapa con puntos de ubicación individuales"
+    },
+    {
+      "title": "Polilíneas",
+      "description": "Ve tus rutas completas conectando todos tus puntos de ubicación. Visualiza tus recorridos como trazados continuos en el mapa.",
+      "imageAlt": "Mapa con rutas de polilíneas"
+    },
+    {
+      "title": "Mapa de calor",
+      "description": "Descubre dónde pasas más tiempo con un mapa de calor que muestra tus áreas más visitadas según su intensidad.",
+      "imageAlt": "Visualización de mapa de calor"
+    },
+    {
+      "title": "Niebla de guerra",
+      "description": "Descubre el mundo a medida que lo exploras. Las áreas que has visitado se despejan y las regiones inexploradas siguen cubiertas.",
+      "imageAlt": "Visualización de niebla de guerra"
+    },
+    {
+      "title": "Mapa para descubrir el mundo",
+      "description": "Mira cómo se iluminan los países a medida que los visitas. Ideal para amantes de los viajes que siguen sus aventuras por el mundo.",
+      "imageAlt": "Mapa con los países visitados"
+    },
+    {
+      "title": "Áreas",
+      "description": "Dibuja áreas personalizadas en tu mapa para marcar ubicaciones importantes, barrios o regiones de interés.",
+      "imageAlt": "Áreas personalizadas en el mapa"
+    },
+    {
+      "title": "Fotos",
+      "description": "Ve tus fotos de Immich o PhotoPrism directamente en el mapa, justo donde las tomaste. (Por ahora, solo disponible en instalaciones en tu propio servidor)",
+      "imageAlt": "Fotos en el mapa"
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Registra tu ubicación",
+      "description": "Usa cualquier aplicación de registro compatible para guardar automáticamente tu ubicación a lo largo del día.",
+      "details": [
+        "Aplicación Dawarich para iOS",
+        "Overland",
+        "OwnTracks",
+        "GPSLogger",
+        "PhoneTrack"
+      ]
+    },
+    {
+      "title": "Elige tu vista",
+      "description": "Elige entre varios estilos de mapa y activa distintas capas para personalizar la visualización.",
+      "details": [
+        "Activa puntos, rutas o mapa de calor",
+        "Activa la niebla de guerra o el mapa para descubrir el mundo",
+        "Muestra u oculta fotos y áreas"
+      ]
+    },
+    {
+      "title": "Filtra por tiempo",
+      "description": "Selecciona cualquier intervalo para ver tu historial de ubicaciones de periodos concretos.",
+      "details": [
+        "Navega por año y mes",
+        "Consulta las estadísticas de visitas a países y ciudades",
+        "Busca lugares concretos"
+      ]
+    },
+    {
+      "title": "Crea y guarda",
+      "description": "Crea lugares y visitas manualmente para rellenar huecos o corregir tu historial de ubicaciones.",
+      "details": [
+        "Guarda tus ubicaciones favoritas",
+        "Añade manualmente las visitas que falten",
+        "Dibuja áreas personalizadas en el mapa"
+      ]
+    },
+    {
+      "title": "Busca por ubicación",
+      "description": "Introduce un lugar o una dirección para saber rápidamente cuándo estuviste allí y durante cuánto tiempo.",
+      "details": [
+        "Busca por nombre de lugar o dirección",
+        "Localiza rápidamente visitas y puntos de interés",
+        "Crea visitas a partir de tus resultados de búsqueda"
+      ]
+    }
+  ],
+  "meta": {
+    "title": "Visualización en mapa interactivo",
+    "description": "Explora tu historial de ubicaciones en un mapa interactivo con varias capas: puntos, rutas, mapa de calor, niebla de guerra y más.",
+    "ogTitle": "Mapa de Dawarich — Visualización interactiva de ubicaciones",
+    "ogDescription": "Explora tu historial de ubicaciones con varias capas: puntos, rutas, mapa de calor, niebla de guerra, mapa para descubrir el mundo e integración de fotos."
+  },
+  "hero": {
+    "badge": "Visualización interactiva",
+    "title": "Explora dónde has estado,",
+    "titleHighlight": "no olvides ningún lugar",
+    "subtitle": "Tu historial de ubicaciones cobra vida en un mapa interactivo con varias capas de visualización. Desde puntos detallados hasta bonitos mapas de calor, descubre el recorrido de tu vida con todo detalle.",
+    "imageAlt": "Mapa interactivo de Dawarich"
+  },
+  "mapPage": {
+    "title3": "La cronología",
+    "subtitle2": "El mapa te muestra dónde. La cronología, justo al lado, te cuenta qué pasó: día a día y con palabras claras.",
+    "title4": "Varias capas de visualización",
+    "subtitle3": "Alterna entre distintas capas del mapa para ver tus datos de ubicación de diferentes formas. Cada capa revela información única sobre tus viajes y hábitos.",
+    "title5": "Cómo funciona",
+    "subtitle4": "Empieza a visualizar tu historial de ubicaciones en minutos con nuestra intuitiva interfaz de mapa.",
+    "span": "Tus datos siguen siendo privados",
+    "p": "Todos tus datos de ubicación se almacenan de forma segura, cifrados en reposo y en tránsito. Alojados en Europa y plenamente conformes al RGPD. También puedes alojarlos en tu servidor para tener el control total.",
+    "heading": "¿Quieres visualizar tu recorrido?",
+    "p2": "Empieza a registrar tu historial de ubicaciones hoy con una prueba gratuita de 7 días. Cancela cuando quieras.",
+    "Link": "Prueba 7 días gratis",
+    "EnOnlyLink": "Instálalo gratis en tu servidor",
+    "p3": "Prueba gratuita de 7 días · Reembolso sin riesgo de 14 días · Cancela cuando quieras"
+  }
+}

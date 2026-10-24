@@ -1,0 +1,134 @@
+{
+  "integrationsShowcase": [
+    {
+      "title": "Immich",
+      "description": "Solución de copia de seguridad de fotos y vídeos para tu propio servidor. Conecta tu instancia de Immich para mostrar tus fotos en el mapa, justo donde las tomaste.",
+      "imageAlt": "Fotos de Immich en el mapa"
+    },
+    {
+      "title": "PhotoPrism",
+      "description": "Aplicación de gestión de fotos con IA. Integra PhotoPrism para ver toda tu fototeca en la cronología de tus ubicaciones.",
+      "imageAlt": "Viaje con fotos de PhotoPrism"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Fotos en el mapa",
+      "description": "Ve todas tus fotos en el mapa interactivo, en sus coordenadas GPS exactas. Redescubre dónde nació cada recuerdo."
+    },
+    {
+      "title": "Fotos en los viajes",
+      "description": "Las páginas de viaje muestran automáticamente las fotos tomadas durante ese viaje. Tu diario de viaje se convierte en una experiencia multimedia completa."
+    },
+    {
+      "title": "Cronología de fotos",
+      "description": "Explora tus fotos en orden cronológico junto a tus datos de ubicación. Descubre la historia completa de cada día."
+    },
+    {
+      "title": "Privacidad intacta",
+      "description": "Dawarich nunca almacena tus fotos. Solo lee datos de ubicación de tus aplicaciones de fotos alojadas en tu servidor a través de sus API."
+    }
+  ],
+  "setupSteps": [
+    {
+      "title": "Obtén las claves API",
+      "description": "Genera claves API en tu instancia de Immich o PhotoPrism.",
+      "details": [
+        "Immich: crea una clave con los permisos asset.read y asset.view (asset.update para Enriquecer fotos)",
+        "PhotoPrism: genera una clave en los ajustes de Aplicaciones y dispositivos",
+        "Guarda tus claves de forma segura"
+      ]
+    },
+    {
+      "title": "Configura Dawarich",
+      "description": "Introduce los datos de tu servicio de fotos en los ajustes de Dawarich.",
+      "details": [
+        "Ve a la página Ajustes",
+        "Busca la sección Integración de fotos",
+        "Introduce la URL de tu servicio",
+        "Pega tu clave API",
+        "Haz clic en Guardar"
+      ]
+    },
+    {
+      "title": "Sincronización completada",
+      "description": "Dawarich se conecta a tu servicio de fotos e indexa los datos de ubicación.",
+      "details": [
+        "Las fotos se indexan por ubicación",
+        "Se extraen los datos GPS de EXIF",
+        "No se copian ni almacenan fotos",
+        "Solo se usan los metadatos"
+      ]
+    },
+    {
+      "title": "Ve tus fotos",
+      "description": "Tus fotos ya aparecen en el mapa y en tus viajes.",
+      "details": [
+        "Activa la capa Fotos en el mapa",
+        "Haz clic en los marcadores de fotos para verlas",
+        "Ve las fotos automáticamente en los viajes",
+        "Explora por ubicación y fecha"
+      ]
+    }
+  ],
+  "futureIntegrations": [
+    {
+      "title": "Aplicaciones de deporte",
+      "description": "Integración con aplicaciones de registro deportivo para combinar rutas de entrenamiento con tu historial de ubicaciones."
+    },
+    {
+      "title": "Aplicaciones de notas",
+      "description": "Conecta tus notas con ubicaciones automáticamente. Mira qué escribiste y dónde lo hiciste."
+    },
+    {
+      "title": "Servicios de música",
+      "description": "Registra qué escuchabas en distintos lugares a lo largo del día."
+    },
+    {
+      "title": "Servicios en la nube",
+      "description": "Integraciones más completas con distintos servicios de almacenamiento en la nube y productividad."
+    }
+  ],
+  "meta": {
+    "title": "Integraciones de fotos",
+    "description": "Conecta tu instancia de Immich o PhotoPrism para ver fotos en el mapa y en tus viajes. Tu mapa se convierte en una experiencia multimedia completa.",
+    "ogTitle": "Integraciones de Dawarich — Conecta tu vida digital",
+    "ogDescription": "Integra las fototecas de Immich y PhotoPrism con tu historial de ubicaciones. Ve fotos automáticamente en el mapa y en tus viajes."
+  },
+  "hero": {
+    "badge": "Una experiencia conectada",
+    "title": "Conecta tu",
+    "titleHighlight": "vida digital",
+    "subtitle": "Lleva tus fotos a la cronología de tus ubicaciones. Dawarich se integra con Immich y PhotoPrism para mostrar tus fotos en el mapa y en tus viajes, convirtiendo tu historial de ubicaciones en una experiencia visual completa.",
+    "imageAlt": "Fotos en el mapa"
+  },
+  "integrationsPage": {
+    "heading": "¿Por qué integrar tus fotos?",
+    "p": "Tus datos de ubicación cobran más sentido junto a las fotos que tomaste. Redescubre recuerdos viendo exactamente dónde se tomó cada foto.",
+    "title3": "Servicios de fotos compatibles",
+    "subtitle2": "Dawarich funciona a la perfección con populares soluciones de gestión de fotos alojadas en tu propio servidor.",
+    "title4": "Cómo configurarlo",
+    "subtitle3": "Conecta tu fototeca a Dawarich en unos pocos pasos.",
+    "h3": "Tus fotos siguen siendo privadas",
+    "p2": "Dawarich **no almacena ni copia tus fotos**. Solo lee metadatos de ubicación de tu servicio de fotos alojado en tu servidor a través de su API. Tus fotos siguen seguras en tu instancia de Immich o PhotoPrism, bajo tu control total.",
+    "heading2": "Detalles técnicos",
+    "text3": " Configuración de Immich",
+    "text4": "Requiere una clave API con los permisos ",
+    "code": "asset.read",
+    "text5": " y ",
+    "code2": "asset.view",
+    "text6": ". Añade ",
+    "code3": "asset.update",
+    "text7": " si también quieres usar la función Enriquecer fotos. Dawarich consulta la API de Immich para leer metadatos de las fotos, incluidas las coordenadas GPS de los datos EXIF.",
+    "Link": "Cómo obtener una clave API de Immich →",
+    "text8": " Configuración de PhotoPrism",
+    "p3": "Genera una clave API en los ajustes de «Aplicaciones y dispositivos» de PhotoPrism. Dawarich la usa para acceder a tu fototeca y extraer información de ubicación.",
+    "Link2": "Cómo obtener una clave API de PhotoPrism →",
+    "p4": "¿Tienes una idea de integración? [¡Compártela en nuestro foro!](https://discourse.dawarich.app/).",
+    "heading3": "Conecta tu fototeca hoy",
+    "p5": "Empieza a ver tus fotos en el mapa con una cuenta gratuita de Dawarich.",
+    "Link4": "Prueba 7 días gratis",
+    "EnOnlyLink": "Instálalo gratis en tu servidor",
+    "p6": "Prueba gratuita de 7 días · Reembolso sin riesgo de 14 días · Cancela cuando quieras"
+  }
+}

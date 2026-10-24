@@ -1,0 +1,57 @@
+{
+  "rows": [
+    {
+      "title": "Un póster es solo una de las veintidós opciones",
+      "body": "La impresión es la opción evidente: de A5 a A0, 30 × 40, 50 × 70 y 70 × 100 cm, carta de EE. UU., en vertical u horizontal. Pero el mismo mapa también se exporta como fondo de teléfono o escritorio, hasta 4K y ultrapanorámico, y como publicación de Instagram, historia, cabecera de X o miniatura de YouTube. Los diseños de impresión usan tamaños reales de papel y DPI; los de pantalla, dimensiones exactas en píxeles.",
+      "note": "La misma composición, veintidós formas de exportarla"
+    },
+    {
+      "title": "El encuadre que ves es el que obtienes",
+      "body": "Elige un diseño antes de componer y la vista previa se adaptará a él, para que el recorte de una historia nunca te sorprenda. El estudio muestra las dimensiones finales mientras trabajas: un A3 vertical a 300 DPI exporta 3508 × 4961 píxeles. Si una vista es demasiado amplia para el área del póster más grande, te avisa en vez de ampliar el mapa sin decírtelo."
+    }
+  ],
+  "objections": [
+    {
+      "q": "¿En qué se diferencia de los pósteres de mapas que vende todo el mundo?",
+      "a": "Esos son un plano de una ciudad que cualquiera puede comprar, con un nombre debajo. Este es el trazado real que recorriste a pie, en bicicleta o en coche, dibujado con los puntos GPS de tu propia cuenta."
+    },
+    {
+      "q": "¿El póster impreso coincidirá con lo que diseñé?",
+      "a": "El encuadre que compones es el que se imprime: el estudio usa el mismo encuadre que el motor de renderizado y te avisa si una vista es demasiado amplia para el tamaño de póster más grande, en vez de ampliarla sin decírtelo."
+    },
+    {
+      "q": "¿Qué calidad tiene la impresión?",
+      "a": "Papel mate prémium de 200 gsm, sin reflejos, para que la línea de la ruta se vea nítida con la luz de la habitación. El envío dentro de la UE está incluido en el precio y el pago se procesa con Stripe, así que tus datos de tarjeta nunca pasan por Dawarich."
+    },
+    {
+      "q": "¿Tengo que pedir una impresión para usar el estudio?",
+      "a": "No. Descarga el PNG o PDF y llévalo a la imprenta que quieras, conserva el archivo o prescinde del papel: mucha gente exporta un fondo de escritorio 4K o de teléfono y se queda ahí. Pedir una impresión es una opción, no la finalidad de la función."
+    },
+    {
+      "q": "¿Puedo usarlo en una instancia alojada en mi servidor?",
+      "a": "Sí, el estudio forma parte de la aplicación de código abierto. Los pedidos de impresión están activados por defecto y puedes desactivarlos por completo en tu propia instancia."
+    }
+  ],
+  "meta": {
+    "title": "Estudio de pósteres — Tus rutas GPS en pósteres y fondos",
+    "description": "Tus rutas en pósteres, fondos 4K, de móvil o redes. 17 temas, 22 diseños, color por capa, PNG/PDF a 300 DPI e impresión mate 200 gsm con envío gratis en la UE.",
+    "ogTitle": "Poster Studio — Tus rutas GPS en pósteres y fondos de pantalla",
+    "ogDescription": "Compón un mapa con las rutas que realmente recorriste y expórtalo de 22 formas: tamaños A5 a A0, fondos 4K y ultrapanorámicos, fondos de teléfono y formatos para redes."
+  },
+  "posterStudioPage": {
+    "text": "Cualquiera puede comprar un mapa de Berlín.",
+    "em": "Solo tú tienes esta ruta.",
+    "title2": "Diecisiete temas y todos los colores a tu alcance",
+    "body": "Todos los pósteres de abajo muestran los mismos dos años en Berlín, del 15 de julio de 2024 al 15 de julio de 2026, exportados del estudio cambiando solo el tema. Si ninguno de los diecisiete te convence del todo, abre el editor de color y ajusta el agua, los parques, las vías de tren, los límites, los edificios y cada clase de carretera. Dale al trayecto su propio color, opacidad y anchura, del 50% al 300%, para que la línea se siga viendo tanto en A0 como en una pantalla de teléfono.",
+    "title3": "Una herramienta de diseño, no un botón de generar",
+    "sub2": "Estudio a pantalla completa. Arrastra para moverte, desplázate para ampliar, compón el encuadre y expórtalo al tamaño que necesites.",
+    "title4": "Antes de exportar",
+    "title5": "Pon tu propia ruta en la pared o en la pantalla de bloqueo",
+    "text2": "Importa una ruta que ya tengas o registra una nueva; después abre el estudio y empieza a componer. ¿Aún no tienes cuenta?",
+    "a": "Prueba la versión gratuita del navegador con cualquier archivo GPS",
+    "text3": "."
+  },
+  "hero": {
+    "sub": "La ruta para la que entrenaste, el año que ibas andando a todas partes, el viaje por carretera del que aún hablas: ya están en tu historial de ubicaciones como una línea que nadie más tiene. Poster Studio la convierte en algo que puedes enmarcar, poner de fondo de pantalla o publicar."
+  }
+}

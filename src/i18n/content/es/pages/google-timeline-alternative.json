@@ -1,0 +1,155 @@
+{
+  "howItWorksSteps": [
+    {
+      "title": "Exporta desde Google",
+      "description": "Ve a [takeout.google.com](https://takeout.google.com), selecciona «Historial de ubicaciones (Timeline)» y solicita la exportación. Google te envía un zip por correo, normalmente en una hora."
+    },
+    {
+      "title": "Regístrate en Dawarich Cloud",
+      "description": "Correo y contraseña. Prueba gratuita de 7 días con todas las funciones."
+    },
+    {
+      "title": "Arrastra y suelta el zip",
+      "description": "Súbelo. Mira cómo tu cronología se reconstruye: punto a punto, viaje a viaje, año a año, en un mapa que no pertenece a Google."
+    }
+  ],
+  "migrationFAQ": [
+    {
+      "question": "¿Funciona el nuevo formato de Google Takeout?",
+      "answer": "Sí. Admitimos el nuevo formato de Timeline (posterior a 2024), el formato antiguo y la alternativa del archivo heredado records.json."
+    },
+    {
+      "question": "¿Y si mi zip de Takeout es enorme?",
+      "answer": "Nuestro importador puede con él. Hemos importado sin problemas archivos Takeout de 2 GB con 15 años de datos y 6.8 millones de puntos."
+    },
+    {
+      "question": "¿Funciona si Google ha borrado parte de mis datos?",
+      "answer": "Podemos importar todo lo que puedas exportar. No podemos recuperar datos que Google ya haya borrado, pero sí guardar aquellos a los que aún tienes acceso."
+    },
+    {
+      "question": "¿Puedo seguir usando Google Maps después de migrar?",
+      "answer": "Sí. Usa Google Maps para navegar y Dawarich para guardar dónde has estado. Son productos distintos."
+    },
+    {
+      "question": "¿Dawarich registrará mi ubicación tan bien como Google?",
+      "answer": "¿Sinceramente? Mejor. Aplicaciones nativas para iOS y Android con registro en segundo plano e intervalos que cuidan la batería. Tus datos se envían por HTTPS a tu cuenta de Dawarich, nunca a Google ni a terceros."
+    },
+    {
+      "question": "¿Y si quiero dejar Dawarich más adelante?",
+      "answer": "Exporta todo a GPX, GeoJSON o KML con cualquier plan, incluso Lite. Instala la versión de código abierto en tu servidor. O simplemente elimina tu cuenta: tus datos se van contigo, nunca se venden ni se conservan."
+    },
+    {
+      "question": "¿De verdad hay una prueba gratuita?",
+      "answer": "Sí. Una prueba gratuita de 7 días con todas las funciones. Cancela cuando quieras desde los ajustes de suscripción: tus exportaciones siguen siendo tuyas."
+    },
+    {
+      "question": "¿Vendéis datos de ubicación?",
+      "answer": "No. Somos una pequeña empresa de la UE que vive de las suscripciones. Vender datos de ubicación es ilegal según el RGPD, y preferimos tener un negocio de verdad."
+    }
+  ],
+  "freeWasntFree": {
+    "heading": "«Pero Google Timeline era gratis».",
+    "p": "**Lo gratis no era gratis.** Pagabas con datos.",
+    "p2": "Durante una década, cada lugar al que ibas se registraba, se analizaba, alimentaba la publicidad dirigida de Google y se usaba para entrenar sus modelos. Cada cafetería. Cada excursión del domingo. Cada trayecto nocturno a casa de un amigo. Ese era el precio.",
+    "p3": "Ahora Google ya ha obtenido lo que quería. Timeline se ha trasladado a tu teléfono, la versión en la nube ha desaparecido y el producto por el que «no pagabas» está siendo retirado porque ya no genera ingresos.",
+    "p4": "No le debes nada a Google. Y no tienes por qué sustituir un producto de vigilancia financiado por anuncios por otro (sí, hablamos de Life360)."
+  },
+  "phoneIsNotABackup": {
+    "heading": "Tu cronología puede desaparecer con un solo fallo del dispositivo",
+    "p": "Los datos de Timeline están solo en el dispositivo. Eso significa:",
+    "div": "Datos de teléfonos antiguos",
+    "p2": "¿El historial que no se transfirió? **Desaparecido.**",
+    "div2": "Teléfono actual averiado",
+    "p3": "¿Perdido, robado, caído al lago o restablecido de fábrica? **Desaparecido.**",
+    "div3": "Consulta desde varios dispositivos",
+    "p4": "¿Ver tu cronología desde una tableta o un portátil? **Se acabó.**",
+    "div4": "Copia de seguridad en la nube",
+    "p5": "¿De tu cronología a partir de ahora? **Se acabó: ahora es local.**",
+    "div5": "Historial en la nube (antes de migrar)",
+    "p6": "¿El que Google guardó durante años para quienes no descargaron un Takeout a tiempo? **Ya se ha borrado.**",
+    "div6": "La realidad",
+    "p7": "Tienes una sola copia de tu cronología. Vive en una placa de cristal que se rompe si se cae. **Eso no es una estrategia de copias de seguridad.**"
+  },
+  "differentiators": {
+    "heading": "Por qué Dawarich es el lugar adecuado para tu Timeline",
+    "p": "La mayoría de las «alternativas a Google Timeline» son aplicaciones de deporte, registros manuales de viajes, aplicaciones de rastreo familiar que venden datos o sistemas que requieren un fin de semana aprendiendo Docker. Dawarich no es nada de eso.",
+    "h3": "Alojado en la UE",
+    "p2": "Hetzner, Alemania. Sin transferencias a EE. UU. RGPD de verdad, no una nota al pie de «cumplimos la normativa».",
+    "h32": "Código abierto",
+    "p3": "El motor completo está en [GitHub](https://github.com/Freika/dawarich) con MÁS DE 9,000 estrellas. Cloud añade comodidad: el producto que hay debajo es tuyo para llevártelo y ejecutarlo siempre.",
+    "h33": "Creado para quienes dejan Timeline",
+    "text3": "Formato nuevo, formato antiguo, alternativa del archivo heredado ",
+    "code": "records.json",
+    "text4": ". Hemos importado 15 años de datos de Timeline: 6.8 millones de puntos, 2 GB de Takeout, sin esfuerzo.",
+    "h34": "Una herramienta de visualización, no una base de datos",
+    "p4": "Mapas de calor. Niebla de guerra. Vista del globo. Detección de viajes. Resumen anual. Lo que Timeline hacía bien y algunas cosas que no hacía.",
+    "h35": "Exportación permanente, sin dependencia",
+    "p5": "GPX, GeoJSON, KML, JSON sin procesar. Tus datos siempre se van contigo, con cualquier plan, incluso Lite.",
+    "h36": "Aplicaciones de registro para iOS y Android",
+    "p6": "Aplicaciones nativas con registro en segundo plano e intervalos que cuidan la batería. Tus datos van a tu cuenta de Dawarich, nunca a Google ni a terceros."
+  },
+  "competitorReframe": {
+    "heading": "Entre qué opciones eliges",
+    "th": "Opción",
+    "th2": "Coste anual",
+    "th3": "¿Recupera tu Google Timeline?",
+    "th4": "¿Vende tus datos?",
+    "td": "No hacer nada",
+    "td2": "«Gratis»",
+    "td3": "No: solo en el teléfono, una caída y adiós",
+    "td4": "No procede",
+    "td5": "Life360 Gold",
+    "td6": "No: ubicación familiar en directo, sin historial",
+    "td7": "Sí (agregados)",
+    "td8": "Strava Premium",
+    "td9": "No: solo entrenamientos",
+    "td10": "Actividades públicas",
+    "td11": "Dawarich Cloud Pro",
+    "td12": "Sí: importación completa de Takeout, mapas de calor y viajes",
+    "td13": "No. Nunca."
+  },
+  "promises": {
+    "heading": "Dos promesas, ningún riesgo",
+    "h3": "Cancela cuando quieras",
+    "p": "Prueba gratuita de 7 días con todas las funciones. Cancela cuando quieras desde los ajustes de suscripción: sin permanencia anual, gastos de cancelación ni trabas. Tus exportaciones siguen siendo tuyas, con cualquier plan, incluso después de cancelar.",
+    "h32": "Una salida de código abierto",
+    "p2": "Si Dawarich Cloud cierra algún día, exportas tus datos e instalas el mismo software en tu servidor con un comando. El motor completo está en [GitHub](https://github.com/Freika/dawarich) con MÁS DE 9,000 estrellas. **Es físicamente imposible que pierdas tu cronología por cambiarte a nosotros.**"
+  },
+  "urgency": {
+    "heading": "La urgencia es real. Los teléfonos se rompen.",
+    "p": "Tu cronología está en un dispositivo. **Un solo dispositivo.**",
+    "p2": "Los teléfonos se caen, se roban, se pierden, se mojan y se restablecen de fábrica. Se cambian por otros nuevos, y los datos de Timeline no siempre se transfieren bien. El plazo para exportar Takeout depende de la actividad de tu cuenta de Google: las cuentas inactivas pierden acceso antes.",
+    "p3": "Cada semana que esperas son datos que quizá no recuperes. La migración lleva 15 minutos. **No hay ningún «más tarde» mejor que «esta noche».**",
+    "text3": "Importa tu Takeout esta tarde"
+  },
+  "timelineFinalCTA": {
+    "heading": "Tu cronología no pertenece a Google.",
+    "p": "Te pertenece a ti. A los lugares donde has vivido. A las personas que has visitado. A los viajes que hiciste antes de que los teléfonos supieran recordarlos por ti.",
+    "text": "Guarda tu cronología hoy",
+    "span": "Prueba gratuita de 7 días · Cancela cuando quieras · ¿Ya tienes tu propio servidor? [Importa el mismo Takeout en tu instancia](https://github.com/Freika/dawarich)."
+  },
+  "googleTimelineAlternativePage": {
+    "text": "Empieza tu prueba gratuita de 7 días",
+    "text2": "Ver precios"
+  },
+  "meta": {
+    "title": "Alternativa a Google Timeline — Guarda tu historial",
+    "description": "Google dejó Timeline en el móvil. Dawarich Cloud importa Google Takeout: mapas de calor, viajes, datos privados en Alemania. Desde {price}. 7 días gratis.",
+    "ogDescription": "Google eliminó Timeline de la nube y dejó los datos solo en tu dispositivo. Guarda todo tu historial en minutos con Dawarich Cloud: privado, alojado en la UE y conforme al RGPD. Prueba gratuita de 7 días.",
+    "twitterTitle": "Alternativa a Google Timeline — Guarda tu historial",
+    "twitterDescription": "Google eliminó Timeline. Guarda tu historial de forma privada con Dawarich Cloud. Alojado en la UE, conforme al RGPD. Prueba gratuita de 7 días."
+  },
+  "hero": {
+    "badge": "Alternativa a Google Timeline",
+    "title": "Google eliminó Timeline.",
+    "titleHighlight": "Que tu década no desaparezca con él.",
+    "subtitle": "Guarda todo tu historial de ubicaciones de Google en minutos y sigue registrando en una infraestructura que Google no puede retirar, vender ni usar para alimentar modelos publicitarios. Alojada en la UE. Cifrada en tránsito y en reposo. Conforme al RGPD.",
+    "disclaimer": "Prueba gratuita de 7 días · Hemos importado Takeouts de 15 años y 6.8 millones de puntos sin esfuerzo",
+    "imageAlt": "Vista de la cronología de Dawarich como alternativa a Google Timeline"
+  },
+  "howItWorks": {
+    "title": "Cómo funciona la migración",
+    "subtitle": "Tres pasos. Unos 15 minutos en total."
+  },
+  "migrationFAQTitle": "Preguntas habituales"
+}

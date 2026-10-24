@@ -1,0 +1,55 @@
+{
+  "rows": [
+    {
+      "title": "Los días de cada país, con el umbral de 183 señalado",
+      "body": "Elige un año y consulta cuántos días distintos pasaste en cada país, ordenados de mayor a menor. Se marca cualquier país donde alcances 183 días o más: el umbral de muchas normas de residencia y una cifra que conviene anticipar, en vez de descubrirla en abril."
+    },
+    {
+      "title": "Los periodos que forman el total, no solo el total",
+      "body": "Un total de 353 días dice menos que los ocho periodos que lo componen: uno de 133 días, otro de 104 y varios cortos en diciembre. Cada estancia muestra su fecha de inicio, fecha de fin y duración, lo que necesitas cuando una norma tiene en cuenta la presencia ininterrumpida en vez de la suma anual.",
+      "note": "Datos que puedes exportar, no solo una cifra en un panel"
+    }
+  ],
+  "objections": [
+    {
+      "q": "¿Es asesoramiento fiscal?",
+      "a": "No, ni pretende serlo. Dawarich muestra lo que dice tu historial de ubicaciones. No interpreta la legislación fiscal de ningún país, y cada jurisdicción cuenta los días de forma distinta: algunas cuentan días parciales, otras excluyen los de viaje y otras promedian varios años. Son datos para llevar a un profesional, no una conclusión en la que basar decisiones."
+    },
+    {
+      "q": "¿Cómo se cuenta exactamente un día?",
+      "a": "Un día cuenta para un país si tienes al menos un punto registrado allí ese día. Si vuelas de Alemania a Francia un martes, ese martes cuenta para ambos países, por lo que la suma de días por país puede superar tus días registrados. Los días se delimitan en UTC, lo que puede desplazar un día cerca de medianoche y de una frontera."
+    },
+    {
+      "q": "¿Qué pasa con los días sin registro?",
+      "a": "No cuentan y nunca se atribuyen al último país conocido. El informe también muestra tu total de días registrados para que sepas qué parte del año cubren realmente tus cifras: lo primero que preguntará un asesor."
+    },
+    {
+      "q": "Tengo años de historial en Google Timeline. ¿Sirven?",
+      "a": "Sí. Importa tu archivo de Google Takeout y los días se incorporan con él. Los puntos importados necesitan geocodificación inversa para atribuirlos a un país; Dawarich se encarga de ello por ti."
+    },
+    {
+      "q": "¿Tengo que confiaros años de datos de ubicación?",
+      "a": "No tienes que confiar en nadie. Toda la aplicación es de código abierto y todas sus funciones se ejecutan en tu propio equipo. Instálala en tu servidor y los datos nunca saldrán de tu máquina."
+    }
+  ],
+  "meta": {
+    "title": "Residencia fiscal — Cuenta la regla de los 183 días",
+    "description": "Días por país del historial GPS, estancias consecutivas y aviso de 183 días. Para nómadas digitales, trabajadores transfronterizos y viajeros de larga estancia.",
+    "ogTitle": "Residencia fiscal — La regla de los 183 días en tu historial GPS",
+    "ogDescription": "Recuento de días por país a partir de tu historial de ubicaciones, con periodos de estancia consecutivos y aviso de 183 días. Datos para dudas de residencia, no asesoramiento fiscal."
+  },
+  "taxResidencyPage": {
+    "text": "Este año cruzaste seis fronteras.",
+    "em": "¿Cuántos días fueron?",
+    "title2": "La respuesta, con los cálculos a la vista",
+    "sub2": "Días por país está en la página Análisis y usa el año que eliges en la parte superior.",
+    "title3": "Lee esto antes de basarte en los datos",
+    "title4": "Empieza a contar ahora, no el próximo abril",
+    "text2": "Registra desde hoy y la respuesta del próximo año ya estará calculada. Las reglas completas del recuento están en la",
+    "EnOnlyLink": "documentación de Días por país",
+    "text3": "."
+  },
+  "hero": {
+    "sub": "Reconstruir un año a partir de tarjetas de embarque y entradas del calendario es una forma de equivocarse con la residencia. Dawarich cuenta los días por país con el historial GPS que ya registras: un cuadrado por día, con un color por país. Marca todo lo que supere 183 y deja visibles los huecos sin registro en lugar de disimularlos."
+  }
+}

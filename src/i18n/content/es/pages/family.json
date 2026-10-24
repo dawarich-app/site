@@ -1,0 +1,59 @@
+{
+  "rows": [
+    {
+      "title": "Compartir con apagado automático",
+      "body": "Comparte tu ubicación en directo durante una hora, seis, doce, veinticuatro o siempre, si eso es lo que quieres. El temporizador avanza por sí solo, así que «solo mientras conduzco a casa» termina de verdad al llegar, en vez de seguir los próximos tres años.",
+      "note": "Tú eliges la duración, cada vez"
+    },
+    {
+      "title": "Nadie puede activarlo por ti",
+      "body": "Cinco personas, cinco controles independientes. Quien paga el plan no tiene más poder sobre lo que compartes que cualquier otro miembro. Puedes dejar de compartir aunque la suscripción caduque, porque es una acción de privacidad y nunca de pago."
+    },
+    {
+      "title": "Pedir es mejor que rastrear",
+      "body": "Cuando necesites saber dónde está alguien, envía una solicitud de ubicación. Esa persona ve quién pregunta y decide si acepta o rechaza. No puedes obtener la posición de un familiar sin que lo autorice en ese momento.",
+      "note": "El consentimiento es el mecanismo, no un ajuste"
+    }
+  ],
+  "objections": [
+    {
+      "q": "¿Es Life360 con otra marca?",
+      "a": "No. Aquí, por defecto no se comparte nada. Cada miembro tiene su propio control, la ubicación en directo puede caducar con un temporizador, el historial de ubicaciones es una decisión aparte y preguntar dónde está alguien significa enviar una solicitud que puede rechazar."
+    },
+    {
+      "q": "¿Mi hijo adolescente puede ver que lo estoy rastreando?",
+      "a": "No hay nada oculto que descubrir. Cada persona activa por sí misma lo que comparte, y la página de familia muestra exactamente quién comparte su ubicación y quién no. El rastreo encubierto no es una de nuestras funciones."
+    },
+    {
+      "q": "¿Qué obtiene cada persona?",
+      "a": "Una cuenta completa de Dawarich: su propio mapa, cronología, viajes, estadísticas y análisis. Familia permite compartir ubicación entre cinco cuentas independientes, no que cinco personas entren en una sola."
+    },
+    {
+      "q": "¿Qué pasa si caduca la suscripción del titular del plan?",
+      "a": "La familia se conserva. Al caducar la suscripción, cada miembro vuelve a su propio plan; al suscribirse de nuevo, se restaura. Nadie pierde el acceso a su propio historial."
+    },
+    {
+      "q": "¿Tengo que pagar?",
+      "a": "No si lo alojas tú. Familia funciona gratis en tu propia instancia, porque todas las funciones del producto Cloud de pago también se ejecutan en tu propio equipo."
+    }
+  ],
+  "meta": {
+    "title": "Ubicación en familia — Privada y con consentimiento",
+    "description": "Ubicación en directo para cinco familiares: control individual, temporizadores, historial aparte y solicitudes con aceptación. {price} o gratis en tu servidor.",
+    "ogTitle": "Comparte ubicación en familia sin vigilancia",
+    "ogDescription": "Cinco personas, cinco controles independientes. Ubicación en directo con temporizador, historial opcional y solicitudes que hay que aceptar. Nada se comparte por defecto."
+  },
+  "familyPage": {
+    "text": "Compartir ubicación en familia",
+    "em": "con el acuerdo de todos.",
+    "title2": "Diseñado para que nadie sea vigilado por defecto",
+    "sub2": "Hasta cinco personas en un plan, cada una con una cuenta completa de Dawarich y el control total de lo que comparte.",
+    "title3": "Lo que nos preguntan padres y parejas",
+    "title4": "Comparte con tu familia, no con un intermediario de datos",
+    "sub3": "{price} al año para cinco personas en Dawarich Cloud. O ejecuta lo mismo en tu propio equipo sin pagar nada.",
+    "primaryLabel": "Empezar un plan Familia"
+  },
+  "hero": {
+    "sub": "Las aplicaciones de rastreo familiar dan por hecho que hay que vigilar a todos todo el tiempo. Dawarich parte de lo contrario: no se comparte nada hasta que cada persona lo activa, se puede dejar de compartir automáticamente y saber dónde está alguien significa preguntárselo."
+  }
+}

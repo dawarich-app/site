@@ -1,0 +1,53 @@
+{
+  "rows": [
+    {
+      "title": "Un enlace, una cosa",
+      "body": "Cada enlace muestra exactamente lo que has elegido: un intervalo de fechas, tu posición en directo, un trayecto, un viaje, un mes de estadísticas o un resumen anual. Compartir la ruta del fin de semana pasado no revela nada sobre tu martes anterior."
+    },
+    {
+      "title": "Decides todo lo que hace el enlace antes de enviarlo",
+      "body": "Se genera una frase para ti, que puedes borrar si prefieres no usarla. La caducidad predeterminada es de una semana y puedes dejarla en blanco para que el enlace no caduque nunca. Las fotos empiezan desactivadas, así que nunca enviarás una página para descubrir después que mostraba más de lo que querías.",
+      "note": "Desactivado por defecto, activado por decisión"
+    }
+  ],
+  "objections": [
+    {
+      "q": "¿Compartir un enlace expone todo mi historial?",
+      "a": "No. Un enlace lleva al único recurso para el que se creó. Un enlace de cronología está limitado a las fechas elegidas; un enlace de trayecto muestra ese trayecto. No hay forma de acceder desde la página compartida al resto de tu cuenta."
+    },
+    {
+      "q": "¿Y si lo envío a la persona equivocada?",
+      "a": "Revócalo. El enlace deja de funcionar al instante. Si habías establecido una frase de acceso, puedes regenerar solo la frase: eso invalida todos los accesos ya desbloqueados y mantiene el enlace activo."
+    },
+    {
+      "q": "¿Las personas con las que comparto necesitan una cuenta?",
+      "a": "No. Una página compartida se abre en cualquier navegador. Si estableces una frase de acceso, solo tienen que introducirla."
+    },
+    {
+      "q": "¿Puedo saber si alguien lo ha abierto?",
+      "a": "Sí. Todos los enlaces que has creado aparecen en un mismo lugar, con el número de veces que se han abierto y la fecha del último acceso."
+    },
+    {
+      "q": "¿Qué pasa con mis enlaces si caduca mi suscripción?",
+      "a": "Puedes exportarlo todo en cualquier momento y toda la aplicación es de código abierto: puedes ejecutar las mismas funciones en tu propio equipo gratis y para siempre."
+    }
+  ],
+  "meta": {
+    "title": "Comparte tu historial de ubicaciones por enlace",
+    "description": "Ubicación en directo o historial por enlace privado: frase de acceso, caducidad, revocación y alcance elegido. 7 días gratis o gratis en tu servidor.",
+    "ogTitle": "Comparte tu historial de ubicaciones por enlace privado",
+    "ogDescription": "Envía un enlace que muestre una sola cosa: fechas, ubicación en directo, trayecto, viaje, estadísticas mensuales o resumen anual. Cada enlace tiene frase de acceso, caducidad y revocación inmediata."
+  },
+  "locationSharingPage": {
+    "text": "Comparte dónde estás.",
+    "em": "No todos los lugares donde has estado.",
+    "title2": "Comparte con límites claros",
+    "sub2": "Seis opciones para compartir, cada una con su propio enlace, sus ajustes y su caducidad.",
+    "title3": "Lo que conviene preguntar antes",
+    "title4": "Envía un enlace, no todo tu historial",
+    "sub3": "Empieza en Dawarich Cloud con una prueba de 7 días o ejecuta las mismas funciones en tu equipo sin pagar nada."
+  },
+  "hero": {
+    "sub": "La mayoría de las formas de compartir ubicación son un interruptor: lo activas y alguien te sigue indefinidamente. Dawarich te da un enlace a una sola cosa, protegido por una frase de acceso, que caduca en la fecha que eliges y que puedes revocar en cuanto cambies de opinión."
+  }
+}

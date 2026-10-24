@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "title": "Conversor gratis de GPX a KML — Trayectos GPS",
+    "description": "Convierte GPX a KML al instante. Conversor gratuito y privado para trayectos, puntos de referencia y rutas GPS. Todo en tu navegador, sin subir archivos.",
+    "keywords": "GPX a KML, conversor GPX, conversor KML, conversor de archivos GPS, conversor Google Earth, conversor de trayectos",
+    "appName": "Conversor de GPX a KML"
+  },
+  "h1": "Conversor de GPX a KML",
+  "intro": "Convierte tus archivos GPX a KML al instante. Todo se procesa en tu navegador: tus datos nunca salen de tu dispositivo.",
+  "cards": [],
+  "privacyBody": "Toda la conversión se realiza en tu navegador. Tus datos GPS nunca salen de tu dispositivo."
+}

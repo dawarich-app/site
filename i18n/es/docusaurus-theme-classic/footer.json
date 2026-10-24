@@ -4,67 +4,67 @@
     "description": "The title of the footer links column with title=Dawarich in the footer"
   },
   "link.title.Product": {
-    "message": "Product",
+    "message": "Producto",
     "description": "The title of the footer links column with title=Product in the footer"
   },
   "link.title.Tools": {
-    "message": "Tools",
+    "message": "Herramientas",
     "description": "The title of the footer links column with title=Tools in the footer"
   },
   "link.title.Compare": {
-    "message": "Compare",
+    "message": "Comparar",
     "description": "The title of the footer links column with title=Compare in the footer"
   },
   "link.title.Docs": {
-    "message": "Docs",
+    "message": "Documentación",
     "description": "The title of the footer links column with title=Docs in the footer"
   },
   "link.title.Company": {
-    "message": "Company",
+    "message": "Empresa",
     "description": "The title of the footer links column with title=Company in the footer"
   },
   "link.item.label.Interactive Map": {
-    "message": "Interactive Map",
+    "message": "Mapa interactivo",
     "description": "The label of footer link with label=Interactive Map linking to /interactive-map"
   },
   "link.item.label.Trips & Journaling": {
-    "message": "Trips & Journaling",
+    "message": "Viajes y diario",
     "description": "The label of footer link with label=Trips & Journaling linking to /trips"
   },
   "link.item.label.Statistics": {
-    "message": "Statistics",
+    "message": "Estadísticas",
     "description": "The label of footer link with label=Statistics linking to /statistics"
   },
   "link.item.label.Location Tracking": {
-    "message": "Location Tracking",
+    "message": "Registro de ubicación",
     "description": "The label of footer link with label=Location Tracking linking to /location-tracking"
   },
   "link.item.label.Import & Export": {
-    "message": "Import & Export",
+    "message": "Importación y exportación",
     "description": "The label of footer link with label=Import & Export linking to /import-export"
   },
   "link.item.label.Photo Integrations": {
-    "message": "Photo Integrations",
+    "message": "Integraciones de fotos",
     "description": "The label of footer link with label=Photo Integrations linking to /integrations"
   },
   "link.item.label.Location Sharing": {
-    "message": "Location Sharing",
+    "message": "Compartir ubicación",
     "description": "The label of footer link with label=Location Sharing linking to /location-sharing"
   },
   "link.item.label.Family Location Sharing": {
-    "message": "Family Location Sharing",
+    "message": "Compartir ubicación en familia",
     "description": "The label of footer link with label=Family Location Sharing linking to /family"
   },
   "link.item.label.Tax Residency Day Counter": {
-    "message": "Tax Residency Day Counter",
+    "message": "Contador de días de residencia fiscal",
     "description": "The label of footer link with label=Tax Residency Day Counter linking to /tax-residency"
   },
   "link.item.label.Map Poster Studio": {
-    "message": "Map Poster Studio",
+    "message": "Estudio de pósteres de mapas",
     "description": "The label of footer link with label=Map Poster Studio linking to /poster-studio"
   },
   "link.item.label.Pricing": {
-    "message": "Pricing",
+    "message": "Precios",
     "description": "The label of footer link with label=Pricing linking to /pricing"
   },
   "link.item.label.Dawarich Cloud": {
@@ -72,167 +72,167 @@
     "description": "The label of footer link with label=Dawarich Cloud linking to /cloud"
   },
   "link.item.label.Roadmap": {
-    "message": "Roadmap",
+    "message": "Hoja de ruta",
     "description": "The label of footer link with label=Roadmap linking to pathname:///roadmap/"
   },
   "link.item.label.Changelog": {
-    "message": "Changelog",
+    "message": "Historial de cambios",
     "description": "The label of footer link with label=Changelog linking to pathname:///docs/changelog/"
   },
   "link.item.label.Google Timeline Visualizer": {
-    "message": "Google Timeline Visualizer",
+    "message": "Visualizador de Google Timeline",
     "description": "The label of footer link with label=Google Timeline Visualizer linking to /tools/timeline-visualizer"
   },
   "link.item.label.KML to KMZ Converter": {
-    "message": "KML to KMZ Converter",
+    "message": "Conversor de KML a KMZ",
     "description": "The label of footer link with label=KML to KMZ Converter linking to /tools/kml-to-kmz"
   },
   "link.item.label.Extract GPS From Photo": {
-    "message": "Extract GPS From Photo",
+    "message": "Extraer GPS de una foto",
     "description": "The label of footer link with label=Extract GPS From Photo linking to /tools/photo-geotagging"
   },
   "link.item.label.Google Timeline Converter": {
-    "message": "Google Timeline Converter",
+    "message": "Conversor de Google Timeline",
     "description": "The label of footer link with label=Google Timeline Converter linking to /tools/google-timeline-converter"
   },
   "link.item.label.KMZ to KML Converter": {
-    "message": "KMZ to KML Converter",
+    "message": "Conversor de KMZ a KML",
     "description": "The label of footer link with label=KMZ to KML Converter linking to /tools/kmz-to-kml"
   },
   "link.item.label.Mileage Calculator": {
-    "message": "Mileage Calculator",
+    "message": "Calculadora de kilometraje",
     "description": "The label of footer link with label=Mileage Calculator linking to /tools/timeline-mileage-calculator"
   },
   "link.item.label.GeoJSON to KML Converter": {
-    "message": "GeoJSON to KML Converter",
+    "message": "Conversor de GeoJSON a KML",
     "description": "The label of footer link with label=GeoJSON to KML Converter linking to /tools/geojson-to-kml"
   },
   "link.item.label.GPX Merger": {
-    "message": "GPX Merger",
+    "message": "Combinar GPX",
     "description": "The label of footer link with label=GPX Merger linking to /tools/gpx-merger"
   },
   "link.item.label.TCX to GPX Converter": {
-    "message": "TCX to GPX Converter",
+    "message": "Conversor de TCX a GPX",
     "description": "The label of footer link with label=TCX to GPX Converter linking to /tools/tcx-to-gpx"
   },
   "link.item.label.GPS Heatmap Generator": {
-    "message": "GPS Heatmap Generator",
+    "message": "Generador de mapas de calor GPS",
     "description": "The label of footer link with label=GPS Heatmap Generator linking to /tools/heatmap-generator"
   },
   "link.item.label.KMZ to GPX Converter": {
-    "message": "KMZ to GPX Converter",
+    "message": "Conversor de KMZ a GPX",
     "description": "The label of footer link with label=KMZ to GPX Converter linking to /tools/kmz-to-gpx"
   },
   "link.item.label.GPS File Splitter": {
-    "message": "GPS File Splitter",
+    "message": "Divisor de archivos GPS",
     "description": "The label of footer link with label=GPS File Splitter linking to /tools/gps-file-splitter"
   },
   "link.item.label.GPX to KMZ Converter": {
-    "message": "GPX to KMZ Converter",
+    "message": "Conversor de GPX a KMZ",
     "description": "The label of footer link with label=GPX to KMZ Converter linking to /tools/gpx-to-kmz"
   },
   "link.item.label.Timeline Statistics": {
-    "message": "Timeline Statistics",
+    "message": "Estadísticas de la cronología",
     "description": "The label of footer link with label=Timeline Statistics linking to /tools/timeline-statistics"
   },
   "link.item.label.Timeline Merger": {
-    "message": "Timeline Merger",
+    "message": "Combinar cronologías",
     "description": "The label of footer link with label=Timeline Merger linking to /tools/timeline-merger"
   },
   "link.item.label.KML to GPX Converter": {
-    "message": "KML to GPX Converter",
+    "message": "Conversor de KML a GPX",
     "description": "The label of footer link with label=KML to GPX Converter linking to /tools/kml-to-gpx"
   },
   "link.item.label.FIT to GPX Converter": {
-    "message": "FIT to GPX Converter",
+    "message": "Conversor de FIT a GPX",
     "description": "The label of footer link with label=FIT to GPX Converter linking to /tools/fit-to-gpx"
   },
   "link.item.label.All 29 tools →": {
-    "message": "All 29 tools →",
+    "message": "Las 29 herramientas →",
     "description": "The label of footer link with label=All 29 tools → linking to /tools"
   },
   "link.item.label.Google Timeline Alternative": {
-    "message": "Google Timeline Alternative",
+    "message": "Alternativa a Google Timeline",
     "description": "The label of footer link with label=Google Timeline Alternative linking to /google-timeline-alternative"
   },
   "link.item.label.vs OwnTracks": {
-    "message": "vs OwnTracks",
+    "message": "Frente a OwnTracks",
     "description": "The label of footer link with label=vs OwnTracks linking to pathname:///docs/comparisons/vs-owntracks/"
   },
   "link.item.label.vs Traccar": {
-    "message": "vs Traccar",
+    "message": "Frente a Traccar",
     "description": "The label of footer link with label=vs Traccar linking to pathname:///docs/comparisons/vs-traccar/"
   },
   "link.item.label.vs Google Timeline": {
-    "message": "vs Google Timeline",
+    "message": "Frente a Google Timeline",
     "description": "The label of footer link with label=vs Google Timeline linking to pathname:///docs/comparisons/vs-google-timeline/"
   },
   "link.item.label.vs Strava": {
-    "message": "vs Strava",
+    "message": "Frente a Strava",
     "description": "The label of footer link with label=vs Strava linking to pathname:///docs/comparisons/vs-strava/"
   },
   "link.item.label.vs Polarsteps": {
-    "message": "vs Polarsteps",
+    "message": "Frente a Polarsteps",
     "description": "The label of footer link with label=vs Polarsteps linking to pathname:///docs/comparisons/vs-polarsteps/"
   },
   "link.item.label.vs Life360": {
-    "message": "vs Life360",
+    "message": "Frente a Life360",
     "description": "The label of footer link with label=vs Life360 linking to pathname:///docs/comparisons/vs-life360/"
   },
   "link.item.label.vs Arc": {
-    "message": "vs Arc",
+    "message": "Frente a Arc",
     "description": "The label of footer link with label=vs Arc linking to pathname:///docs/comparisons/vs-arc/"
   },
   "link.item.label.vs GeoPulse": {
-    "message": "vs GeoPulse",
+    "message": "Frente a GeoPulse",
     "description": "The label of footer link with label=vs GeoPulse linking to pathname:///docs/comparisons/vs-geopulse/"
   },
   "link.item.label.vs Reitti": {
-    "message": "vs Reitti",
+    "message": "Frente a Reitti",
     "description": "The label of footer link with label=vs Reitti linking to pathname:///docs/comparisons/vs-reitti/"
   },
   "link.item.label.Documentation": {
-    "message": "Documentation",
+    "message": "Documentación",
     "description": "The label of footer link with label=Documentation linking to pathname:///docs/intro/"
   },
   "link.item.label.Self-Hosting Guide": {
-    "message": "Self-Hosting Guide",
+    "message": "Guía de alojamiento propio",
     "description": "The label of footer link with label=Self-Hosting Guide linking to pathname:///docs/self-hosting/introduction/"
   },
   "link.item.label.Importing existing data": {
-    "message": "Importing existing data",
+    "message": "Importar datos existentes",
     "description": "The label of footer link with label=Importing existing data linking to pathname:///docs/getting-started/import-existing-data/"
   },
   "link.item.label.Exporting data": {
-    "message": "Exporting data",
+    "message": "Exportar datos",
     "description": "The label of footer link with label=Exporting data linking to pathname:///docs/getting-started/export-your-data/"
   },
   "link.item.label.API Docs": {
-    "message": "API Docs",
+    "message": "Documentación de la API",
     "description": "The label of footer link with label=API Docs linking to pathname:///docs/api/dawarich-api/"
   },
   "link.item.label.FAQ": {
-    "message": "FAQ",
+    "message": "Preguntas frecuentes",
     "description": "The label of footer link with label=FAQ linking to pathname:///docs/FAQ/"
   },
   "link.item.label.Dawarich for iOS": {
-    "message": "Dawarich for iOS",
+    "message": "Dawarich para iOS",
     "description": "The label of footer link with label=Dawarich for iOS linking to pathname:///docs/dawarich-for-ios/"
   },
   "link.item.label.Dawarich for Android": {
-    "message": "Dawarich for Android",
+    "message": "Dawarich para Android",
     "description": "The label of footer link with label=Dawarich for Android linking to pathname:///docs/dawarich-for-android/"
   },
   "link.item.label.Community": {
-    "message": "Community",
+    "message": "Comunidad",
     "description": "The label of footer link with label=Community linking to https://discourse.dawarich.app/"
   },
   "link.item.label.About Us": {
-    "message": "About Us",
+    "message": "Sobre nosotros",
     "description": "The label of footer link with label=About Us linking to /about"
   },
   "link.item.label.Contact": {
-    "message": "Contact",
+    "message": "Contacto",
     "description": "The label of footer link with label=Contact linking to /contact"
   },
   "link.item.label.Blog": {
@@ -240,23 +240,23 @@
     "description": "The label of footer link with label=Blog linking to pathname:///blog/"
   },
   "link.item.label.Credits": {
-    "message": "Credits",
+    "message": "Créditos",
     "description": "The label of footer link with label=Credits linking to pathname:///credits/"
   },
   "link.item.label.Impressum": {
-    "message": "Impressum",
+    "message": "Aviso legal",
     "description": "The label of footer link with label=Impressum linking to pathname:///impressum/"
   },
   "link.item.label.Privacy Policy": {
-    "message": "Privacy Policy",
+    "message": "Política de privacidad",
     "description": "The label of footer link with label=Privacy Policy linking to pathname:///privacy-policy/"
   },
   "link.item.label.Terms and Conditions": {
-    "message": "Terms and Conditions",
+    "message": "Términos y condiciones",
     "description": "The label of footer link with label=Terms and Conditions linking to pathname:///terms-and-conditions/"
   },
   "link.item.label.Refund Policy": {
-    "message": "Refund Policy",
+    "message": "Política de reembolso",
     "description": "The label of footer link with label=Refund Policy linking to pathname:///refund-policy/"
   }
 }

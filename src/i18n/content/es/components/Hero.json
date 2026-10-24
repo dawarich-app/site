@@ -1,0 +1,25 @@
+{
+  "trustBadges": [
+    {
+      "label": "Funciona sin conexión"
+    },
+    {
+      "label": "Código abierto"
+    },
+    {
+      "label": "Alojado en la UE y cifrado"
+    }
+  ],
+  "title": "Tu cronología, ",
+  "highlight": "para siempre",
+  "subtitle": "Google eliminó Timeline del navegador y está limitando la conservación de datos. Importa todo tu historial de ubicaciones en Dawarich en minutos: privado, cifrado y tuyo. Sin anuncios. Sin venta de datos.",
+  "primaryButton": "Importar mis datos de Google",
+  "secondaryButton": "Explorar funciones",
+  "orDivider": "o",
+  "noCredit": "Prueba gratuita de 7 días · Reembolso sin riesgo de 14 días · Cancela cuando quieras",
+  "badgeLabel": "La alternativa privada a Google Timeline",
+  "googleSignIn": "Iniciar sesión con Google",
+  "playTour": "Reproducir la visita guiada de Dawarich",
+  "tourLabel": "Visita guiada de Dawarich",
+  "closeVideo": "Cerrar vídeo"
+}

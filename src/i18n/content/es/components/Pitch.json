@@ -1,0 +1,19 @@
+{
+  "primaryLabel": "Prueba 7 días gratis",
+  "selfHost": "Gratis para siempre en tu servidor",
+  "reassurance": "Prueba sin tarjeta · Después, reembolso de 14 días · Exporta todo cuando quieras",
+  "proofLabel": "Han hablado de nosotros",
+  "publishers": {
+    "xda": "XDA Developers",
+    "makeUseOf": "MakeUseOf",
+    "ct": "c't Magazine",
+    "itsFoss": "It's FOSS"
+  },
+  "pricing": "Ver precios",
+  "guarantee": {
+    "trial": "7 días gratis, sin tarjeta",
+    "refund": "Reembolso de 14 días",
+    "export": "Exporta todo cuando quieras",
+    "selfHost": "O instálalo gratis en tu servidor"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Privacidad en cada capa, frente al modelo de Google",
+  "subtitle": "Google usa tu ubicación para vender anuncios. Nosotros te cobramos una cuota. Ese es todo nuestro modelo de negocio.",
+  "cardTitle": "Sin anuncios. Sin venta de datos. Nunca.",
+  "cardDescription": "Tus datos financian el negocio publicitario de $300B de Google. En Dawarich, tus datos de ubicación son el producto que tú compras, no el que nosotros vendemos.",
+  "cardTitle2": "Alojamiento propio: sin tener que confiar en nadie",
+  "cardDescription2": "¿No confías tus datos a nadie? Ejecuta Dawarich en tu propio servidor. Tus datos nunca pasan por nuestra infraestructura. Literalmente no podemos verlos.",
+  "cardTitle3": "Cifrado y alojado en la UE",
+  "cardDescription3": "Todos los datos se cifran en tránsito (SSL/TLS) y en reposo (LUKS). Se almacenan en centros de datos europeos bajo las estrictas normas del RGPD. Tienes el control total de tus datos.",
+  "cardTitle4": "Código abierto: revisa cada línea",
+  "cardDescription4": "¿No te fías de nosotros? Lee el código. MÁS DE 9,000 estrellas en GitHub. Miles de desarrolladores lo han revisado. Sin rastreo oculto. Sin sorpresas.",
+  "policyLink": "Lee nuestra política de privacidad completa →"
+}

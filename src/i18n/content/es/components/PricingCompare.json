@@ -1,0 +1,23 @@
+{
+  "cols": [
+    {
+      "name": "Lite"
+    },
+    {
+      "name": "Pro"
+    },
+    {
+      "name": "Familia"
+    }
+  ],
+  "title": "Compara todas las funciones",
+  "subtitle": "Despliega una sección para ver los detalles, o muestra solo lo que cambia entre planes.",
+  "collapseAll": "Contraer todo",
+  "expandAll": "Desplegar todo",
+  "headerFeatures": "Funciones",
+  "footerLabel": "Empieza cuando quieras",
+  "chooseLite": "Elegir Lite",
+  "startFree": "Empezar gratis",
+  "yearAbbreviation": "/año",
+  "highlightDifferences": "Resaltar diferencias"
+}
