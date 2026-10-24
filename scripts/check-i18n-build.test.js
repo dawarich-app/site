@@ -6,6 +6,7 @@ import {
   checkSitemap,
   findLocaleDocsLinks,
   findGlobalOgUrl,
+  readPage,
 } from './check-i18n-build.mjs';
 
 const LOCALES = ['en', 'de', 'pt-br'];
@@ -124,5 +125,20 @@ describe('findLocaleDocsLinks', () => {
   it('should find links into docs or blog under a locale prefix', () => {
     const html = '<a href="/de/docs/intro/">x</a><a href="/docs/intro/">y</a><a href="/pt-br/blog/">z</a>';
     expect(findLocaleDocsLinks(html, LOCALES)).toEqual(['/de/docs/intro/', '/pt-br/blog/']);
+  });
+});
+
+describe('readPage', () => {
+  it('should report a missing file instead of throwing', () => {
+    const problems = [];
+    expect(readPage('/nope/index.html', 'de /x/', problems)).toBeNull();
+    expect(problems).toEqual(['de /x/: missing /nope/index.html']);
+  });
+});
+
+describe('checkLocalizedPage with broken JSON-LD', () => {
+  it('should report invalid structured data instead of throwing', () => {
+    const html = page().replace(/<script data-rh="true" type="application\/ld\+json">.*?<\/script>/, '<script data-rh="true" type="application/ld+json">{oops</script>');
+    expect(checkLocalizedPage(html, ctx)).toEqual(['invalid JSON-LD']);
   });
 });

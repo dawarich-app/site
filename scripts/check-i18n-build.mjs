@@ -18,7 +18,13 @@ function readTitle(html) {
 function jsonLdUrls(html) {
   const urls = [];
   for (const block of html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) {
-    JSON.stringify(JSON.parse(block[1]), (key, value) => {
+    let data;
+    try {
+      data = JSON.parse(block[1]);
+    } catch {
+      return null;
+    }
+    JSON.stringify(data, (key, value) => {
       if ((key === 'url' || key === 'item') && typeof value === 'string' && value.startsWith(SITE_URL)) urls.push(value);
       return value;
     });
@@ -47,8 +53,10 @@ export function checkLocalizedPage(html, { route, locale, locales, htmlLang, eng
   if (locale !== DEFAULT_LOCALE && readTitle(html) === englishTitle && extractComparable(html).main === englishMain) {
     errors.push('page not translated');
   }
-  if (locale !== DEFAULT_LOCALE) {
-    for (const url of jsonLdUrls(html)) {
+  const urls = jsonLdUrls(html);
+  if (urls === null) errors.push('invalid JSON-LD');
+  else if (locale !== DEFAULT_LOCALE) {
+    for (const url of urls) {
       if (url.startsWith(`${SITE_URL}/${locale}/`) || isEnOnlyPath(url.slice(SITE_URL.length))) continue;
       errors.push(`JSON-LD url not localized: ${url}`);
     }
@@ -62,6 +70,14 @@ export function checkNonLocalizedPage(html) {
   if (!isNoindex(html)) errors.push('missing noindex');
   if (alternates(html).length > 0) errors.push('has hreflang alternates');
   return errors;
+}
+
+export function readPage(file, where, problems) {
+  if (!fs.existsSync(file)) {
+    problems.push(`${where}: missing ${file}`);
+    return null;
+  }
+  return fs.readFileSync(file, 'utf8');
 }
 
 export function checkEnglishOnlyPage(html) {
@@ -108,24 +124,29 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const problems = [];
   const report = (where, errors) => errors.forEach((e) => problems.push(`${where}: ${e}`));
   for (const route of LOCALIZED_ROUTES) {
-    const englishHtml = fs.readFileSync(fileFor(route, DEFAULT_LOCALE), 'utf8');
+    const englishHtml = readPage(fileFor(route, DEFAULT_LOCALE), `en ${route}`, problems);
+    if (englishHtml === null) continue;
     const englishTitle = readTitle(englishHtml);
     const englishMain = extractComparable(englishHtml).main;
     for (const locale of LOCALES) {
-      const html = fs.readFileSync(fileFor(route, locale), 'utf8');
+      const html = readPage(fileFor(route, locale), `${locale} ${route}`, problems);
+      if (html === null) continue;
       report(`${locale} ${route}`, checkLocalizedPage(html, { route, locale, locales: LOCALES, htmlLang, englishTitle, englishMain, exists }));
     }
   }
   for (const route of ['/roadmap/', '/privacy-policy/']) {
-    report(`en ${route}`, checkEnglishOnlyPage(fs.readFileSync(fileFor(route, DEFAULT_LOCALE), 'utf8')));
+    const html = readPage(fileFor(route, DEFAULT_LOCALE), `en ${route}`, problems);
+    if (html !== null) report(`en ${route}`, checkEnglishOnlyPage(html));
   }
   for (const locale of LOCALES.filter((l) => l !== DEFAULT_LOCALE)) {
     for (const route of ['/roadmap/', '/privacy-policy/', '/techlore/']) {
-      report(`${locale} ${route}`, checkNonLocalizedPage(fs.readFileSync(fileFor(route, locale), 'utf8')));
+      const html = readPage(fileFor(route, locale), `${locale} ${route}`, problems);
+      if (html !== null) report(`${locale} ${route}`, checkNonLocalizedPage(html));
     }
-    report(`${locale} sitemap`, checkSitemap(fs.readFileSync(path.join(build, locale, 'sitemap.xml'), 'utf8'), { locale, routes: LOCALIZED_ROUTES }));
+    const sitemap = readPage(path.join(build, locale, 'sitemap.xml'), `${locale} sitemap`, problems);
+    if (sitemap !== null) report(`${locale} sitemap`, checkSitemap(sitemap, { locale, routes: LOCALIZED_ROUTES }));
   }
-  const robots = fs.readFileSync(path.join(build, 'robots.txt'), 'utf8');
+  const robots = readPage(path.join(build, 'robots.txt'), 'robots.txt', problems) ?? '';
   for (const locale of LOCALES) {
     const sitemap = locale === DEFAULT_LOCALE ? `${SITE_URL}/sitemap.xml` : `${SITE_URL}/${locale}/sitemap.xml`;
     if (!robots.includes(`Sitemap: ${sitemap}`)) problems.push(`robots.txt misses ${sitemap}`);
