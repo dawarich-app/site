@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Free GPX to KMZ Converter - Convert GPS Track Files Online",
+    "description": "Convert GPX files to KMZ format instantly. Free, privacy-first online converter for GPS tracks. Works entirely in your browser - no upload required.",
+    "keywords": "GPX to KMZ, GPX converter, KMZ converter, GPS file converter, Google Earth converter, compressed KML",
+    "appName": "GPX to KMZ Converter"
+  },
+  "h1": "GPX to KMZ Converter",
+  "intro": "Convert your GPX files to compressed KMZ format instantly. All processing happens in your browser.",
+  "cards": [
+    {
+      "title": "About GPX Format",
+      "body": "GPX is an XML-based format for GPS data, widely used by GPS devices and fitness tracking applications."
+    },
+    {
+      "title": "About KMZ Format",
+      "body": "KMZ is a compressed version of KML (Keyhole Markup Language), reducing file size for easier sharing and faster loading in Google Earth."
+    },
+    {
+      "title": "Why Convert GPX to KMZ?",
+      "items": [
+        "Smaller file size compared to GPX and KML",
+        "Native support in Google Earth and Google Maps",
+        "Can include images and other resources in one file",
+        "Faster loading and easier to share"
+      ]
+    }
+  ],
+  "privacyBody": "All conversion happens entirely in your browser. Your GPS data never leaves your device."
+}

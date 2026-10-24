@@ -1,6 +1,26 @@
 import { DEFAULT_LOCALE, LOCALES } from './locales.js';
 
-export const LOCALIZED_ROUTES = ['/tools/google-timeline-converter/'];
+export const LOCALIZED_ROUTES = [
+  '/tools/google-timeline-converter/',
+  '/tools/fit-to-geojson/',
+  '/tools/fit-to-gpx/',
+  '/tools/fit-to-kml/',
+  '/tools/geojson-to-gpx/',
+  '/tools/geojson-to-kml/',
+  '/tools/geojson-to-kmz/',
+  '/tools/gpx-to-geojson/',
+  '/tools/gpx-to-kml/',
+  '/tools/gpx-to-kmz/',
+  '/tools/kml-to-geojson/',
+  '/tools/kml-to-gpx/',
+  '/tools/kml-to-kmz/',
+  '/tools/kmz-to-geojson/',
+  '/tools/kmz-to-gpx/',
+  '/tools/kmz-to-kml/',
+  '/tools/tcx-to-geojson/',
+  '/tools/tcx-to-gpx/',
+  '/tools/tcx-to-kml/',
+];
 
 function normalize(path) {
   const pathname = path.replace(/[?#].*$/, '');

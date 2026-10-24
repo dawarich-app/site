@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Free KMZ to GeoJSON Converter - Extract and Convert Google Earth Files",
+    "description": "Convert KMZ files to GeoJSON format instantly. Free, privacy-first online converter. Works entirely in your browser - no upload required.",
+    "keywords": "KMZ to GeoJSON, KMZ converter, GeoJSON converter, Google Earth to web, extract KMZ",
+    "appName": "KMZ to GeoJSON Converter"
+  },
+  "h1": "KMZ to GeoJSON Converter",
+  "intro": "Convert your KMZ files to GeoJSON format instantly. All processing happens in your browser.",
+  "cards": [
+    {
+      "title": "About KMZ Format",
+      "body": "KMZ is a compressed version of KML files, used by Google Earth to package geographic data efficiently."
+    },
+    {
+      "title": "About GeoJSON Format",
+      "body": "GeoJSON is a JSON-based format widely supported by web mapping libraries and modern GIS applications."
+    },
+    {
+      "title": "Why Convert KMZ to GeoJSON?",
+      "items": [
+        "Better support in web mapping libraries (Leaflet, Mapbox)",
+        "Easier to parse in JavaScript applications",
+        "Use Google Earth data in web applications",
+        "Native JSON structure for modern web APIs"
+      ]
+    }
+  ],
+  "privacyBody": "All conversion happens entirely in your browser. Your data never leaves your device."
+}

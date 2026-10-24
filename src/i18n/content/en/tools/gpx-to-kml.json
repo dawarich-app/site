@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "title": "Free GPX to KML Converter - Convert GPS Track Files Online",
+    "description": "Convert GPX files to KML format instantly. Free, privacy-first online converter for GPS tracks, waypoints, and routes. Works entirely in your browser - no upload required.",
+    "keywords": "GPX to KML, GPX converter, KML converter, GPS file converter, Google Earth converter, track converter",
+    "appName": "GPX to KML Converter"
+  },
+  "h1": "GPX to KML Converter",
+  "intro": "Convert your GPX files to KML format instantly. All processing happens in your browser - your data never leaves your device.",
+  "cards": [],
+  "privacyBody": "All conversion happens entirely in your browser. Your GPS data never leaves your device."
+}

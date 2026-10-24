@@ -1,18 +1,21 @@
 import React, { useState, useCallback } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
+import { interpolate } from '@docusaurus/Interpolate';
+import RichText from '@site/src/i18n/RichText';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
+import content from '@locale-content/tools/kmz-to-kml.json';
+import shared from '@locale-content/shared/converter.json';
 import FormatConverter from '@site/src/components/FormatConverter';
 import { parseKMZ } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './converter.module.css';
 
-const pageTitle = "Free KMZ to KML Converter - Extract Google Earth Files Online";
-const pageDescription = "Convert KMZ files to KML format instantly. Free, privacy-first online converter to extract and decompress KMZ files. Works entirely in your browser - no upload required.";
-const pageUrl = "https://dawarich.app/tools/kmz-to-kml/";
 const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 export default function KMZToKML() {
+  const pageUrl = useLocalizedUrl('/tools/kmz-to-kml/');
   const [isConverting, setIsConverting] = useState(false);
   const [converted, setConverted] = useState(false);
 
@@ -36,31 +39,31 @@ export default function KMZToKML() {
       setConverted(true);
     } catch (error) {
       console.error('Conversion error:', error);
-      alert('Error converting file. Please ensure it is a valid KMZ file.');
+      alert(interpolate(shared.invalidFile, { format: 'KMZ' }));
     } finally {
       setIsConverting(false);
     }
   }, []);
 
   return (
-    <Layout title={pageTitle} description={pageDescription}>
+    <Layout title={content.meta.title} description={content.meta.description}>
       <Head>
-        <meta name="title" content={pageTitle} />
-        <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="KMZ to KML, KMZ extractor, KML converter, decompress KMZ, unzip KMZ, Google Earth extract" />
-        <link rel="canonical" href={pageUrl} />
+        <meta name="title" content={content.meta.title} />
+        <meta name="description" content={content.meta.description} />
+        <meta name="keywords" content={content.meta.keywords} />
+
         <meta property="og:type" content="website" />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
+        <meta property="og:title" content={content.meta.title} />
+        <meta property="og:description" content={content.meta.description} />
         <meta property="og:image" content={imageUrl} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "KMZ to KML Converter",
+            "name": content.meta.appName,
             "url": pageUrl,
-            "description": pageDescription,
+            "description": content.meta.description,
             "applicationCategory": "UtilityApplication",
             "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
           })}
@@ -70,8 +73,8 @@ export default function KMZToKML() {
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           <div className={styles.header}>
-            <h1>KMZ to KML Converter</h1>
-            <p>Extract and convert your KMZ files to KML format instantly. All processing happens in your browser.</p>
+            <h1>{content.h1}</h1>
+            <p><RichText text={content.intro} /></p>
           </div>
           <div className={styles.mainContent}>
             <div className={styles.converterSection}>
@@ -81,26 +84,26 @@ export default function KMZToKML() {
                   <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <p>File converted successfully! Your download should start automatically.</p>
+                  <p><RichText text={shared.success} /></p>
                 </div>
               )}
             </div>
             <div className={styles.infoSection}>
               <div className={styles.infoCard}>
-                <h2>About KMZ Format</h2>
-                <p>KMZ is a compressed (zipped) version of KML files, reducing file size for easier sharing and faster loading.</p>
+                <h2>{content.cards[0].title}</h2>
+                <p><RichText text={content.cards[0].body} /></p>
               </div>
               <div className={styles.infoCard}>
-                <h2>About KML Format</h2>
-                <p>KML (Keyhole Markup Language) is an XML format used by Google Earth and Google Maps for geographic data visualization.</p>
+                <h2>{content.cards[1].title}</h2>
+                <p><RichText text={content.cards[1].body} /></p>
               </div>
               <div className={styles.infoCard}>
-                <h2>Why Convert KMZ to KML?</h2>
+                <h2>{content.cards[2].title}</h2>
                 <ul>
-                  <li>Edit geographic data in text editors</li>
-                  <li>Extract embedded resources and images</li>
-                  <li>Inspect and modify KML structure</li>
-                  <li>Debug and troubleshoot Google Earth files</li>
+                  <li><RichText text={content.cards[2].items[0]} /></li>
+                  <li><RichText text={content.cards[2].items[1]} /></li>
+                  <li><RichText text={content.cards[2].items[2]} /></li>
+                  <li><RichText text={content.cards[2].items[3]} /></li>
                 </ul>
               </div>
               <div className={styles.privacyCard}>
@@ -108,15 +111,15 @@ export default function KMZToKML() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
                 <div>
-                  <strong>Privacy First</strong>
-                  <p>All conversion happens entirely in your browser. Your data never leaves your device.</p>
+                  <strong>{shared.privacyTitle}</strong>
+                  <p><RichText text={content.privacyBody} /></p>
                 </div>
               </div>
             </div>
           </div>
           <PersonalizedCTA
             toolName="kmz-to-kml"
-            headline="Your file is converted. Dawarich handles all formats automatically — import from Google, Strava, Garmin, and more. No manual conversions needed."
+            headline={shared.ctaHeadline}
           />
         </div>
       </div>
