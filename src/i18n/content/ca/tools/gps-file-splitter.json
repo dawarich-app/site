@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "title": "Divisor de fitxers GPS: divideix GPX, GeoJSON, KML i JSON",
+    "description": "Divideix fitxers GPS: GPX, GeoJSON, KML, KMZ i Google Timeline JSON per mida, punts o data. Descarrega'ls en ZIP. Gratis al navegador, amb privacitat.",
+    "keywords": "dividir fitxer GPX gran, dividir GeoJSON en parts, dividir fitxer KML, reduir mida de fitxer GPS, dividir fitxer JSON d'ubicacions gran, divisor de fitxers GPS, dividir Google Timeline",
+    "featureList": [
+      "Divideix fitxers GPS grans en parts més petites",
+      "Admet GPX, GeoJSON, KML, KMZ i Google Timeline JSON",
+      "Divideix per mida de fitxer, nombre de punts o data",
+      "Descarrega en un arxiu ZIP",
+      "Prioritza la privacitat: tot es processa al navegador",
+      "No s'envien dades a cap servidor"
+    ]
+  },
+  "howTo": {
+    "name": "Com dividir un fitxer GPS gran",
+    "description": "Carrega el teu fitxer GPS i divideix-lo en parts més petites i fàcils de gestionar.",
+    "steps": [
+      {
+        "name": "Carrega el teu fitxer GPS",
+        "text": "Arrossega i deixa anar el teu fitxer GPX, GeoJSON, KML, KMZ o Google Timeline JSON al divisor."
+      },
+      {
+        "name": "Tria com vols dividir-lo",
+        "text": "Selecciona com el vols dividir: per mida desitjada del fitxer (10MB per defecte), per nombre de punts o per data (any o mes)."
+      },
+      {
+        "name": "Descarrega els fitxers",
+        "text": "Fes clic a Divideix i descarrega el ZIP per obtenir totes les parts en un sol fitxer ZIP."
+      }
+    ]
+  },
+  "h1": "Divisor de fitxers GPS",
+  "intro": "Divideix fitxers GPS i d'ubicacions grans en parts més petites i fàcils de gestionar. Admet GPX, GeoJSON, KML, KMZ i Google Timeline JSON. Descarrega totes les parts en un sol fitxer ZIP.",
+  "benefitsTitle": "Per què dividir fitxers GPS?",
+  "privacyBody": "Tot el processament de les dades es fa al navegador. Els teus fitxers no surten mai del dispositiu.",
+  "preCta": "Treballes amb fitxers d'ubicacions grans? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=gps-file-splitter) gestiona automàticament importacions de qualsevol mida, amb control total de les teves dades i privacitat.",
+  "faqTitle": "Preguntes freqüents",
+  "homeLabel": "Inici",
+  "toolsLabel": "Eines gratuïtes",
+  "privacyTitle": "La privacitat, primer",
+  "benefits": [
+    {
+      "title": "Límits de mida d'importació:",
+      "body": "Moltes aplicacions GPS i eines de cartografia limiten la mida màxima dels fitxers (10MB, 50MB, etc.). Dividir-los et permet importar conjunts de dades grans per parts."
+    },
+    {
+      "title": "Comparteix parts concretes:",
+      "body": "Envia només la secció rellevant d'un trajecte llarg a una altra persona, o divideix-lo per any o mes per organitzar el teu historial d'ubicacions."
+    },
+    {
+      "title": "Millora el rendiment:",
+      "body": "Els fitxers GPS grans poden alentir les aplicacions de cartografia. Treballar amb parts més petites manté una resposta àgil."
+    },
+    {
+      "title": "Exportacions de Google Timeline:",
+      "body": "Els fitxers Records.json de Google Timeline poden ocupar centenars de megabytes. Divideix-los en parts fàcils de gestionar per importar-los a altres eines."
+    }
+  ],
+  "faq": [
+    {
+      "q": "És segur carregar els meus fitxers GPS aquí?",
+      "a": "Sí. Tot el processament de les dades es fa íntegrament al navegador amb JavaScript. Els teus fitxers GPS no s'envien mai a cap servidor: es queden al dispositiu. Quan tanques la pestanya, les dades desapareixen. L'eina és de codi obert perquè puguis comprovar exactament què fa el codi."
+    },
+    {
+      "q": "Quins formats de fitxer puc dividir?",
+      "a": "Aquesta eina admet fitxers GPX, GeoJSON, KML, KMZ i JSON (Google Timeline). Els fitxers KMZ es descomprimeixen automàticament primer, ja que són arxius ZIP que contenen KML. S'admeten els sis formats d'exportació JSON de Google Timeline: Records.json, Semantic Location History, exportacions del telèfon i més."
+    },
+    {
+      "q": "Com funciona la divisió per mida?",
+      "a": "Quan tries l'opció «Per mida», l'eina estima quants punts de dades caben a cada part segons el format de sortida. Per exemple, GPX fa servir uns 180 bytes per punt, de manera que una mida de 10MB permetria uns 55,000 punts per part. L'eina divideix les dades de manera uniforme per arribar a la mida triada."
+    },
+    {
+      "q": "La divisió pot malmetre les meves dades?",
+      "a": "No. Cada punt de dades del fitxer original apareixerà exactament en una de les parts resultants. No es perden, dupliquen ni modifiquen dades. Cada part és un fitxer vàlid i independent amb les capçaleres i l'estructura adequades al format triat."
+    },
+    {
+      "q": "Puc dividir fitxers JSON de Google Timeline?",
+      "a": "Sí. Carrega qualsevol fitxer JSON de Google Timeline: Records.json, Semantic Location History o l'exportació més recent des del telèfon. L'eina detecta el format automàticament, analitza les dades d'ubicació i les divideix en parts que pots descarregar com a fitxer ZIP en el format de sortida que prefereixis."
+    },
+    {
+      "q": "Per què podria necessitar dividir un fitxer GPS?",
+      "a": "Pot ser difícil treballar amb fitxers GPS grans. Moltes aplicacions GPS i eines de cartografia tenen límits de mida d'importació (sovint 10MB o 50MB). Dividir-los també ajuda a compartir parts d'un trajecte, organitzar les dades per períodes o reduir la mida dels fitxers adjunts de correu electrònic."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Què és un divisor de fitxers GPS?",
+      "paragraphs": [
+        "Un divisor de fitxers GPS agafa un fitxer de dades d'ubicació gran i el divideix en parts més petites i fàcils de gestionar. Cada part és un fitxer vàlid i independent que es pot obrir, importar o compartir per separat.",
+        "Aquesta eina ho processa tot al navegador, de manera que les teves dades d'ubicació sensibles no surten mai del dispositiu. Admet els principals formats GPS, incloses les exportacions de Google Timeline."
+      ]
+    },
+    {
+      "title": "Formats d'entrada compatibles",
+      "paragraphs": [],
+      "items": [
+        { "body": "**GPX** — Format d'intercanvi GPS, el més habitual per a trajectes GPS i punts d'interès" },
+        { "body": "**GeoJSON** — Format lleuger de dades geogràfiques utilitzat en cartografia web" },
+        { "body": "**KML/KMZ** — Keyhole Markup Language per a Google Earth i Maps" },
+        { "body": "**JSON (Google Timeline)** — Els sis formats d'exportació de Google Timeline, inclosos Records.json i Semantic Location History" }
+      ]
+    },
+    {
+      "title": "Les opcions de divisió, explicades",
+      "paragraphs": [],
+      "items": [
+        { "body": "**Per mida** — Tria una mida de fitxer concreta per a cada part (10MB per defecte). L'eina estima la mida de sortida per punt i divideix les dades en conseqüència." },
+        { "body": "**Per nombre de punts** — Divideix cada N punts de dades. Útil si coneixes el límit de punts de l'aplicació de destinació." },
+        { "body": "**Per data** — Organitza les dades per any o mes. Cada període es converteix en un fitxer independent." }
+      ]
+    },
+    {
+      "title": "Per què dividir fitxers d'ubicacions?",
+      "paragraphs": [
+        "Les aplicacions de seguiment GPS i les eines de cartografia sovint limiten la mida d'importació. Un fitxer Records.json de Google Timeline pot ocupar centenars de megabytes, massa per a la majoria d'eines. Dividir-lo et permet treballar amb aquestes dades per parts.",
+        "Dividir per data és especialment útil per organitzar anys d'historial d'ubicacions en arxius anuals o mensuals que pots consultar individualment."
+      ]
+    },
+    {
+      "title": "Opcions de format de sortida",
+      "paragraphs": [
+        "Per defecte, les parts resultants fan servir el mateix format que el fitxer d'entrada. També pots convertir-les durant la divisió: per exemple, dividir un JSON de Google Timeline en fitxers GPX mensuals.",
+        "Formats de sortida compatibles: GPX, GeoJSON, KML, CSV i JSON. Totes les parts s'empaqueten en un sol fitxer ZIP per descarregar-les fàcilment."
+      ]
+    },
+    {
+      "title": "Eines relacionades",
+      "paragraphs": [],
+      "items": [
+        { "body": "[Visualitzador de Google Timeline](/tools/timeline-visualizer) — Consulta el teu historial d'ubicacions en un mapa" },
+        { "body": "[Conversor de Google Timeline](/tools/google-timeline-converter) — Converteix dades de la línia de temps en GPX, KML o CSV" },
+        { "body": "[Analitzador d'estadístiques de la línia de temps](/tools/timeline-statistics) — Analitza les teves dades d'ubicació" },
+        { "body": "[Eina per unir dades de la línia de temps](/tools/timeline-merger) — Combina diverses exportacions de la línia de temps" },
+        { "body": "[Eina per unir trajectes GPX](/tools/gpx-merger) — Uneix diversos fitxers GPX en un de sol" },
+        { "body": "[Detector de formats de la línia de temps](/tools/timeline-format-detector) — Identifica el tipus de fitxer exportat" }
+      ]
+    }
+  ],
+  "upload": {
+    "parsing": "S'està analitzant el fitxer...",
+    "dropFile": "Deixa anar un fitxer GPS aquí",
+    "browse": "o fes clic per triar-lo",
+    "formats": "Admet: GPX, GeoJSON, KML, KMZ, JSON (Google Timeline)",
+    "clearButton": "Esborra el fitxer",
+    "inputLabel": "Tria els fitxers que vols processar"
+  },
+  "results": {
+    "fileNameLabel": "Nom del fitxer",
+    "fileSizeLabel": "Mida del fitxer",
+    "formatLabel": "Format",
+    "pointsLabel": "Punts de dades",
+    "pointsLoaded": "{points} punts carregats",
+    "sizeValue": "{size} MB"
+  },
+  "options": {
+    "strategyTitle": "Opcions de divisió",
+    "bySize": "Per mida",
+    "byCount": "Per nombre de punts",
+    "byDate": "Per data",
+    "targetSizeLabel": "Mida desitjada de les parts",
+    "pointsPerChunkLabel": "Punts per part",
+    "outputLabel": "Format de sortida:",
+    "sameFormat": "El mateix que l'entrada",
+    "targetSizeAriaLabel": "Mida desitjada de les parts en megabytes",
+    "yearLabel": "Divideix per any",
+    "monthLabel": "Divideix per mes",
+    "splitButton": "Divideix i descarrega el ZIP",
+    "splitting": "S'està dividint...",
+    "chunkPreview": "Es crearà **{count}** part a partir de {points} punts|Es crearan **{count}** parts a partir de {points} punts|Es crearan **{count}** parts a partir de {points} punts",
+    "formats": {
+      "gpx": "GPX",
+      "geojson": "GeoJSON",
+      "kml": "KML",
+      "csv": "CSV",
+      "json": "JSON"
+    }
+  },
+  "errors": {
+    "missingKmlError": "No s'ha trobat cap fitxer KML a l'arxiu KMZ",
+    "parseError": "Error en analitzar el fitxer: {message}",
+    "splitError": "Error en dividir el fitxer: {message}",
+    "unsupportedFormatError": "Format de fitxer no compatible: .{format}"
+  },
+  "cta": {
+    "title": "Busques un substitut de Google Timeline?",
+    "body": "Dawarich és una plataforma de seguiment d'ubicacions de codi obert que et dona el control total de les teves dades. Importa la teva exportació de Google Timeline, registra la ubicació des del telèfon i visualitza anys d'historial de desplaçaments, tot en un servidor propi o al núvol.",
+    "button": "Prova Dawarich gratis durant 7 dies",
+    "headline": "El teu fitxer té **{points}** punts. Dawarich gestiona automàticament importacions de qualsevol mida, sense haver de dividir els fitxers.",
+    "statLabels": {
+      "points": "punts"
+    }
+  }
+}

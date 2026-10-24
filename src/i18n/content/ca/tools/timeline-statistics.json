@@ -1,0 +1,239 @@
+{
+  "h1": "Estadístiques de Google Timeline",
+  "intro": "El teu Spotify Wrapped de l'historial d'ubicacions. Carrega les dades de Google Timeline per veure quina distància has recorregut, quins països has visitat, quins llocs freqüentes més i com reparteixes el temps mentre et mous pel món.",
+  "appName": "Analitzador d'estadístiques de Google Timeline",
+  "privacyTitle": "La privacitat, primer",
+  "privacyBody": "Tot el processament de les dades es fa íntegrament al navegador. Les teves dades d'ubicació no surten mai del dispositiu ni s'envien a cap servidor.",
+  "preCta": "T'agrada aquesta anàlisi? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-statistics) genera estadístiques de viatge automàticament a partir de les dades d'ubicació que vas registrant: distància total, països, ciutats i desglossaments d'activitat actualitzats en temps real. [Descobreix com migrar-hi](/blog/migrating-from-google-location-history-to-dawarich).",
+  "faqTitle": "Preguntes freqüents",
+  "homeLabel": "Inici",
+  "toolsLabel": "Eines gratuïtes",
+  "meta": {
+    "title": "Estadístiques de Google Timeline: analitza el teu historial",
+    "description": "Analitza gratis Google Timeline al navegador, amb privacitat. Consulta distància, països, llocs més visitats, activitats i tendències anuals.",
+    "keywords": "estadístiques de Google Timeline, estadístiques de l'historial d'ubicacions, quina distància he recorregut, anàlisi de Google Maps Timeline, analitzador de Google Timeline, estadístiques de viatge, anàlisi de dades d'ubicació, estadístiques de Google Takeout, calculadora de distància recorreguda, comptador de llocs visitats",
+    "featureList": [
+      "Calcula la distància total recorreguda amb dades de Google Timeline",
+      "Consulta els països i les ciutats visitats",
+      "Classificació dels llocs més visitats",
+      "Desglossament per tipus d'activitat (a peu, amb cotxe, amb bicicleta, transport públic)",
+      "Tendències anuals i mensuals de les dades",
+      "Targeta d'estadístiques descarregable per compartir",
+      "Prioritza la privacitat: tot es processa al navegador",
+      "Admet tots els formats d'exportació de Google Timeline"
+    ]
+  },
+  "howTo": {
+    "name": "Com analitzar les teves estadístiques de Google Timeline",
+    "description": "Exporta les dades de Google Timeline i obtén estadístiques de viatge detallades amb distàncies, països, llocs i desglossament d'activitats.",
+    "steps": [
+      {
+        "name": "Exporta les teves dades de Google Timeline",
+        "text": "Ves a takeout.google.com, selecciona Historial d'ubicacions (línia de temps) i exporta'l. També ho pots fer a Android: Google Maps → Configuració → Ubicació → Línia de temps → Exporta. A iOS: Google Maps → Configuració → Contingut personal → Exporta les dades de la línia de temps."
+      },
+      {
+        "name": "Carrega els teus fitxers JSON",
+        "text": "Arrossega i deixa anar els fitxers JSON exportats de Google Timeline a l'analitzador. L'eina detecta automàticament el format (Records.json, Semantic Timeline, Location History, etc.) i analitza les dades."
+      },
+      {
+        "name": "Consulta les teves estadístiques de viatge",
+        "text": "Consulta la distància total, els països visitats, els llocs més freqüentats, el desglossament d'activitats, les tendències anuals i molt més. Descarrega una imatge de la targeta d'estadístiques per compartir els moments destacats dels teus viatges."
+      }
+    ],
+    "tool": "Analitzador d'estadístiques de Google Timeline de Dawarich"
+  },
+  "exportData": {
+    "title": "Com obtenir les dades de la teva línia de temps",
+    "intro": "Exporta les dades de Google Timeline amb un dels mètodes següents. Per obtenir les estadístiques més completes (països, ciutats, noms de llocs), fes servir l'exportació de Semantic Location History.",
+    "methods": [
+      {
+        "title": "Google Takeout (recomanat):",
+        "body": "Ves a [takeout.google.com](https://takeout.google.com/) → Selecciona Historial d'ubicacions (línia de temps) → Exporta en JSON. Així obtindràs tant Records.json com fitxers de Semantic Location History."
+      },
+      {
+        "title": "A Android:",
+        "body": "Obre Google Maps → Configuració → Ubicació → Serveis d'ubicació → Línia de temps → Exporta la línia de temps"
+      },
+      {
+        "title": "A iOS:",
+        "body": "Obre Google Maps → Configuració → Contingut personal → Exporta les dades de la línia de temps"
+      },
+      {
+        "title": "Consell:",
+        "body": "Carrega tots els fitxers mensuals de Semantic Location History (p. ex. 2022_JANUARY.json, 2022_FEBRUARY.json) per obtenir les estadístiques més completes. Pots seleccionar diversos fitxers alhora."
+      }
+    ]
+  },
+  "results": {
+    "processing": "S'estan processant les dades de la línia de temps... Pot trigar una mica si els fitxers són grans.",
+    "rawDataHint": "El teu fitxer conté registres d'ubicació en brut (format Records.json). Els noms de països i ciutats i les dades de visites a llocs només estan disponibles a les exportacions de Semantic Location History: els fitxers mensuals amb noms com ara 2022_APRIL.json. Carrega aquests fitxers per obtenir estadístiques més completes amb llocs, països i ciutats visitats.",
+    "placesTitle": "Llocs més visitats",
+    "place": "Lloc",
+    "visits": "Visites",
+    "address": "Adreça",
+    "timeTitle": "Distribució del temps",
+    "activityTitle": "Distribució d'activitats",
+    "yearlyTitle": "Desglossament anual",
+    "shareTitle": "Comparteix les teves estadístiques",
+    "distance": "Distància total",
+    "points": "Punts de dades",
+    "places": "Llocs visitats",
+    "uniqueLocations": "ubicacions úniques",
+    "semanticHint": "a partir de dades semàntiques",
+    "dateRange": "Interval de dates",
+    "unnamed": "Sense nom",
+    "countries": "Països ({count})",
+    "cities": "Ciutats ({count})",
+    "traveling": "En moviment: {duration}",
+    "stationary": "Sense moviment: {duration}",
+    "segments": "{count} seg.",
+    "pointCount": "{points} pts{distance}",
+    "distanceSuffix": " / {distance} km",
+    "kilometers": "{distance} km",
+    "miles": "{distance} milles",
+    "pathCount": "{count} recorreguts",
+    "yearCount": "{count} anys",
+    "noDate": "No disponible"
+  },
+  "duration": {
+    "years": "{count} any|{count} anys|{count} anys",
+    "months": "{count} mes|{count} mesos|{count} mesos",
+    "days": "{count} dia|{count} dies|{count} dies",
+    "hours": "{count} hora|{count} hores|{count} hores"
+  },
+  "numbers": {
+    "million": "{count}M",
+    "thousand": "{count}K"
+  },
+  "activities": {
+    "driving": "Amb cotxe",
+    "walking": "A peu",
+    "running": "Corrent",
+    "cycling": "Amb bicicleta",
+    "bus": "Autobús",
+    "train": "Tren",
+    "subway": "Metro",
+    "flying": "Amb avió",
+    "motorcycle": "Moto",
+    "skiing": "Esquí",
+    "sailing": "Navegació",
+    "unknown": "Desconegut"
+  },
+  "cta": {
+    "fallback": "T'agrada aquesta anàlisi? Dawarich la genera automàticament a partir de les dades d'ubicació que vas registrant.",
+    "title": "Busques un substitut de Google Timeline?",
+    "body": "Dawarich és una plataforma de seguiment d'ubicacions de codi obert que et dona el control total de les teves dades. Importa la teva exportació de Google Timeline, registra la ubicació des del telèfon i obtén estadístiques de viatge en directe amb mapes, seguiment de distàncies i resums anuals, tot en un servidor propi o al núvol.",
+    "button": "Prova Dawarich gratis durant 7 dies",
+    "headline": "Has recorregut **{distance} km**{countries} en **{years}** anys. Converteix aquesta instantània en un tauler que s'actualitza contínuament.",
+    "countries": " per **{count}** països",
+    "statLabels": {
+      "points": "punts",
+      "countries": "països",
+      "cities": "ciutats",
+      "distance": "distància",
+      "years": "anys"
+    }
+  },
+  "faq": [
+    {
+      "q": "És segur carregar les meves dades de Google Timeline?",
+      "a": "Sí. Tot el processament de les dades es fa íntegrament al navegador amb JavaScript. Els fitxers del teu historial d'ubicacions no s'envien mai a cap servidor: es queden al dispositiu. Quan tanques la pestanya, les dades desapareixen. L'eina també és de codi obert perquè puguis comprovar exactament què fa el codi. Sense comptes, sense galetes i sense seguiment de les teves dades d'ubicació."
+    },
+    {
+      "q": "Quines estadístiques calcula aquesta eina?",
+      "a": "L'analitzador calcula la distància total recorreguda (en quilòmetres i milles), el nombre de punts de dades, els llocs únics visitats, els països i les ciutats (a partir de Semantic Location History), els llocs més visitats ordenats per freqüència, el temps en moviment i sense moviment, la distribució per tipus d'activitat (a peu, amb cotxe, amb bicicleta, transport públic, avió, etc.) i desglossaments anuals amb detall mensual. També genera una targeta d'estadístiques descarregable que pots compartir."
+    },
+    {
+      "q": "Per què no puc veure dades de països o ciutats?",
+      "a": "Els noms de països i ciutats només estan disponibles a les exportacions de Semantic Location History: els fitxers mensuals amb noms com ara 2022_APRIL.json que contenen visites a llocs estructurades amb adreces. Si has carregat un fitxer Records.json, conté coordenades GPS en brut sense noms de llocs ni adreces. Per obtenir totes les estadístiques, inclosos països i ciutats, exporta Semantic Location History des de Google Takeout o la configuració de Google Maps Timeline del telèfon."
+    },
+    {
+      "q": "Quina precisió té el càlcul de distància?",
+      "a": "La distància es calcula amb la fórmula de Haversine, que calcula la distància de cercle màxim entre punts GPS consecutius. Té en compte la curvatura de la Terra. L'eina filtra els salts poc raonables (més de 500 km entre punts consecutius) per evitar que els errors GPS inflin el total. Per a Semantic Location History, es fan servir les distàncies dels segments d'activitat quan estan disponibles, que solen ser més precises que els càlculs entre punts en brut. La precisió global depèn de la freqüència amb què Google va registrar la teva ubicació."
+    },
+    {
+      "q": "Puc analitzar diversos fitxers alhora?",
+      "a": "Sí. Pots carregar diversos fitxers JSON alhora: per exemple, tots els fitxers mensuals de Semantic Location History, o un Records.json juntament amb fitxers Semantic. L'eina uneix tots els punts i recorreguts de cada fitxer abans de calcular les estadístiques i et dona una visió conjunta de tot el teu historial d'ubicacions. Carrega tants fitxers com vulguis."
+    },
+    {
+      "q": "Què són els tipus d'activitat?",
+      "a": "Els tipus d'activitat són categories de moviment que Google assigna a les teves dades d'ubicació. Inclouen WALKING, RUNNING, CYCLING, IN_PASSENGER_VEHICLE (amb cotxe), IN_BUS, IN_TRAIN, IN_SUBWAY, FLYING, MOTORCYCLING, SKIING i SAILING. Google les detecta automàticament amb els sensors del telèfon (acceleròmetre, velocitat GPS, canvis d'altitud). La precisió varia: Google de vegades classifica malament les activitats, especialment entre modes semblants com l'autobús i el cotxe."
+    },
+    {
+      "q": "Puc compartir les meves estadístiques?",
+      "a": "Sí. Després d'analitzar les dades, l'eina genera una targeta d'estadístiques que pots descarregar com a imatge PNG per compartir. La targeta inclou la distància total, el nombre de punts de dades, els llocs visitats i el nombre de països, juntament amb l'interval de dates. La imatge es genera íntegrament al navegador amb un element canvas. No s'envien dades enlloc. Pots compartir la imatge descarregada a xarxes socials, aplicacions de missatgeria o on vulguis."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Què és l'analitzador d'estadístiques de la línia de temps?",
+      "paragraphs": [
+        "És una eina gratuïta al navegador que transforma la teva exportació en brut de Google Timeline en estadístiques de viatge útils. En lloc de mirar fitxers JSON enormes plens de coordenades, obtens un resum clar de la distància total recorreguda, els països i les ciutats on has estat, els llocs més visitats, com reparteixes el temps entre diferents modes de transport i com han canviat els teus patrons de desplaçament any rere any.",
+        "Pensa-hi com un Spotify Wrapped del teu historial d'ubicacions. Tot el processament es fa íntegrament al navegador: les dades no surten mai del dispositiu i l'eina és completament gratuïta, sense necessitat de registrar-t'hi."
+      ]
+    },
+    {
+      "title": "Quines estadístiques pots veure?",
+      "paragraphs": [],
+      "items": [
+        { "body": "**Distància total** — La distància que has recorregut en quilòmetres i milles, calculada a partir de punts GPS i segments d'activitat" },
+        { "body": "**Països i ciutats** — Cada país i ciutat extrets de les adreces de Semantic Location History" },
+        { "body": "**Llocs més visitats** — Les ubicacions que més freqüentes, ordenades pel nombre de visites" },
+        { "body": "**Distribució del temps** — Una representació visual del temps en moviment i sense moviment" },
+        { "body": "**Tipus d'activitat** — Distribució entre anar a peu, amb cotxe, amb bicicleta, transport públic, avió i més" },
+        { "body": "**Tendències anuals** — Punts de dades i distància per any per veure com han canviat els teus hàbits" },
+        { "body": "**Targeta per compartir** — Una imatge descarregable que resumeix les teves estadístiques principals" }
+      ]
+    },
+    {
+      "title": "Entén els teus tipus d'activitat",
+      "paragraphs": [
+        "El seguiment d'ubicacions de Google fa servir els sensors del telèfon per classificar com et mous. Els principals tipus d'activitat que veuràs a les dades són:"
+      ],
+      "items": [
+        { "body": "**A peu / Corrent** — Detectat amb el recompte de passos i la velocitat de l'acceleròmetre" },
+        { "body": "**Amb bicicleta** — Velocitat moderada amb patrons característics a l'acceleròmetre" },
+        { "body": "**Amb cotxe** — Velocitat més alta amb patrons d'acceleració suaus, etiquetat com a IN_PASSENGER_VEHICLE" },
+        { "body": "**Autobús / Tren / Metro** — Modes de transport públic detectats per la velocitat, els patrons de ruta i, de vegades, dades de parades properes" },
+        { "body": "**Amb avió** — Detectat pels canvis ràpids d'altitud i les velocitats molt altes" }
+      ],
+      "footer": [
+        "Aquestes classificacions no sempre són perfectes. Google de vegades confon trajectes amb autobús amb viatges amb cotxe, o etiqueta la conducció lenta com a ciclisme. Les estadístiques et donen una bona visió global, però alguns segments poden estar mal classificats."
+      ]
+    },
+    {
+      "title": "Què va passar amb Google Maps Timeline?",
+      "paragraphs": [
+        "A finals de 2024, Google va retirar la versió web de Google Maps Timeline i va traslladar totes les dades d'ubicació a l'emmagatzematge al dispositiu. Només es van migrar els darrers 90 dies: les dades més antigues es van eliminar tret que els usuaris n'haguessin fet una còpia manualment abans de la data límit. Molta gent va [perdre anys d'historial d'ubicacions](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/) durant la transició.",
+        "Si vas aconseguir exportar les dades abans de la transició o durant el procés, aquest analitzador et permet extreure'n estadístiques útils. Per a un substitut a llarg termini que continuï registrant la teva ubicació amb el control total de les dades, descobreix [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-statistics)."
+      ]
+    },
+    {
+      "title": "Records.json i Semantic Location History",
+      "paragraphs": [
+        "Google exporta les dades d'ubicació en dos formats principals, que contenen informació molt diferent:"
+      ],
+      "items": [
+        { "body": "**Records.json** — Coordenades GPS en brut i marques de temps. Cada lectura d'ubicació registrada per Google, normalment cada pocs segons o minuts. Aquests fitxers poden ocupar centenars de megabytes. Ofereixen coordenades precises, però no noms de llocs, adreces ni tipus d'activitat." },
+        { "body": "**Semantic Location History** — Fitxers mensuals (p. ex. 2022_APRIL.json) amb dades estructurades: visites a llocs amb nom i adreces, segments d'activitat amb modes de transport classificats i informació de durada. Són fitxers més petits, però contenen dades més riques i útils." }
+      ],
+      "footer": [
+        "Per obtenir les millors estadístiques, carrega els fitxers de Semantic Location History. Records.json et donarà distàncies i punts de dades, però hi faltaran països, ciutats, noms de llocs i desglossaments d'activitats."
+      ]
+    },
+    {
+      "title": "Eines relacionades",
+      "paragraphs": [],
+      "items": [
+        { "body": "[Visualitzador de Google Timeline](/tools/timeline-visualizer) — Consulta el teu historial d'ubicacions en un mapa interactiu" },
+        { "body": "[Generador de mapes de calor GPS](/tools/heatmap-generator) — Crea mapes de calor amb fitxers GPX, FIT, TCX i altres fitxers GPS" },
+        { "body": "[Eina per unir trajectes GPX](/tools/gpx-merger) — Combina diversos fitxers GPX en un de sol" },
+        { "body": "[Extracció de geodades de fotos](/tools/photo-geotagging) — Extreu coordenades GPS de les teves fotos" },
+        { "body": "[Conversor de GeoJSON a GPX](/tools/geojson-to-gpx) — Converteix les teves dades d'ubicació en format GPX" }
+      ],
+      "footer": [
+        "Més informació: [Com vam crear el visualitzador de la línia de temps](/blog/building-a-privacy-first-google-timeline-visualizer) | [Migració des de l'historial d'ubicacions de Google](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}

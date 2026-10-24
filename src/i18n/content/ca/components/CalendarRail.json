@@ -1,0 +1,22 @@
+{
+  "yearLabel": "Any",
+  "emptyLabel": "Sense dades",
+  "searchLabel": "Cerca",
+  "searchPlaceholder": "Cerca visites…",
+  "searchAriaLabel": "Cerca visites",
+  "previousMonth": "Mes anterior",
+  "nextMonth": "Mes següent",
+  "yearDays": "{year} ({count} dies)",
+  "otherMonth": "{date} (un altre mes)",
+  "noData": "{date} — sense dades",
+  "hoursTracked": "{date} — {hours} hores registrades",
+  "weekdays": [
+    { "label": "Dl" },
+    { "label": "Dt" },
+    { "label": "Dc" },
+    { "label": "Dj" },
+    { "label": "Dv" },
+    { "label": "Ds" },
+    { "label": "Dg" }
+  ]
+}

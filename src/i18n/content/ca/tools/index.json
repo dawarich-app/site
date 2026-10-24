@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "title": "Eines GPS i conversors de formats gratuïts | Dawarich",
+    "description": "Eines per veure, analitzar, unir i convertir fitxers GPS i historials d'ubicacions. Tot es processa al navegador: les dades no surten del teu dispositiu."
+  },
+  "h1": "Eines gratuïtes de GPS i ubicació",
+  "intro": "Utilitats que prioritzen la privacitat per treballar amb fitxers GPS i historials d'ubicacions. Tot funciona al navegador: les teves dades no surten mai del dispositiu.",
+  "toolsHeading": "Eines gratuïtes",
+  "toolsIntro": "Visualitza, analitza, uneix i divideix el teu historial d'ubicacions, sense enviar fitxers ni crear comptes.",
+  "convertersHeading": "Conversors de formats",
+  "convertersIntro": "Converteix dades GPS i de mapes entre formats. Tot el processament es fa localment al navegador.",
+  "ctaTitle": "Vols gaudir de tot el que ofereix Dawarich?",
+  "ctaBody": "Aquestes eines resolen tasques puntuals. Dawarich és la plataforma completa d'historial d'ubicacions: mapes interactius, viatges, estadístiques, integracions de fotos i privacitat amb dades allotjades a la UE.",
+  "ctaButton": "Descobreix Dawarich",
+  "pricingButton": "Preus",
+  "tools": [
+    {
+      "title": "Visualitzador de Google Timeline",
+      "description": "Consulta les dades exportades de Google Timeline en un mapa interactiu. Admet tots els formats d'exportació."
+    },
+    {
+      "title": "Conversor de Google Timeline",
+      "description": "Converteix exportacions de Google Timeline entre formats. Admet Records.json i Semantic Location History."
+    },
+    {
+      "title": "Analitzador d'estadístiques de la línia de temps",
+      "description": "Analitza el teu historial d'ubicacions: distància total, països, ciutats, visites i molt més."
+    },
+    {
+      "title": "Calculadora de quilometratge de la línia de temps",
+      "description": "Calcula la distància total conduïda i recorreguda a partir de les dades de Google Timeline."
+    },
+    {
+      "title": "Eina per unir dades de la línia de temps",
+      "description": "Combina diverses exportacions de Google Timeline en un únic conjunt de dades sense duplicats."
+    },
+    {
+      "title": "Divisor de Google Timeline",
+      "description": "Divideix un fitxer gran de Google Timeline en parts més petites per any o mes."
+    },
+    {
+      "title": "Divisor de fitxers GPS",
+      "description": "Divideix fitxers GPX, KML i GeoJSON grans en parts més petites per gestionar-los fàcilment."
+    },
+    {
+      "title": "Detector de formats de la línia de temps",
+      "description": "Identifica el format d'exportació de Google Timeline del teu fitxer per saber com processar-lo."
+    },
+    {
+      "title": "Generador de mapes de calor GPS",
+      "description": "Transforma el teu historial d'ubicacions en un mapa de calor que mostra on passes més temps."
+    },
+    {
+      "title": "Creador de pòsters de mapes",
+      "description": "Crea un pòster de mapa amb qualsevol fitxer GPS: 17 temes, exportació PNG/PDF i impressions opcionals."
+    },
+    {
+      "title": "Eina per unir trajectes GPX",
+      "description": "Combina diversos fitxers GPX en un sol trajecte. Útil per a viatges de diversos dies o importacions."
+    },
+    {
+      "title": "Extracció de geodades de fotos",
+      "description": "Extreu les coordenades GPS i les metadades d'ubicació de les teves fotos (dades EXIF)."
+    }
+  ],
+  "converters": [
+    {
+      "description": "Fitxers d'activitat de Garmin",
+      "source": "FIT",
+      "targets": [
+        { "label": "FIT → GPX" },
+        { "label": "FIT → GeoJSON" },
+        { "label": "FIT → KML" }
+      ]
+    },
+    {
+      "description": "Training Center XML",
+      "source": "TCX",
+      "targets": [
+        { "label": "TCX → GPX" },
+        { "label": "TCX → GeoJSON" },
+        { "label": "TCX → KML" }
+      ]
+    },
+    {
+      "description": "Format d'intercanvi GPS",
+      "source": "GPX",
+      "targets": [
+        { "label": "GPX → GeoJSON" },
+        { "label": "GPX → KML" },
+        { "label": "GPX → KMZ" }
+      ]
+    },
+    {
+      "description": "Format GPS estàndard del web",
+      "source": "GeoJSON",
+      "targets": [
+        { "label": "GeoJSON → GPX" },
+        { "label": "GeoJSON → KML" },
+        { "label": "GeoJSON → KMZ" }
+      ]
+    },
+    {
+      "description": "Format de Google Earth",
+      "source": "KML",
+      "targets": [
+        { "label": "KML → GPX" },
+        { "label": "KML → GeoJSON" },
+        { "label": "KML → KMZ" }
+      ]
+    },
+    {
+      "description": "Format comprimit de Google Earth",
+      "source": "KMZ",
+      "targets": [
+        { "label": "KMZ → GPX" },
+        { "label": "KMZ → GeoJSON" },
+        { "label": "KMZ → KML" }
+      ]
+    }
+  ]
+}

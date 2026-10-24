@@ -1,0 +1,212 @@
+{
+  "h1": "Calculadora de quilometratge de Google Timeline",
+  "intro": "Calcula el quilometratge conduït a partir de les dades de Google Timeline. Genera registres de quilometratge descarregables amb detalls de cada viatge i resums diaris i mensuals. Tot es processa al navegador: les dades es queden al dispositiu tret que triïs «Desa al meu compte de Dawarich».",
+  "privacyTitle": "La privacitat, primer",
+  "privacyBody": "Tots els càlculs de quilometratge es fan íntegrament al navegador: les teves dades d'ubicació es queden al dispositiu tret que triïs «Desa al meu compte de Dawarich».",
+  "preCta": "Necessites un seguiment continu del quilometratge? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-mileage-calculator) registra els teus viatges automàticament, amb el control total de les dades i privacitat. Sense més exportacions manuals: només un seguiment continu i precís.",
+  "saveIntro": "També ho vols al teu compte de Dawarich? Ho importarem quan t'hi registris, sense haver de tornar a carregar el fitxer.",
+  "faqTitle": "Preguntes freqüents",
+  "homeLabel": "Inici",
+  "toolsLabel": "Eines gratuïtes",
+  "meta": {
+    "title": "Quilometratge de Google Timeline: calcula distàncies gratis",
+    "description": "Calcula gratis el quilometratge amb Google Timeline. Obtén distàncies i registres, i exporta informes CSV per a deduccions fiscals. Privat i al navegador.",
+    "keywords": "quilometratge de Google Timeline, calculadora de quilometratge de l'historial d'ubicacions, distància conduïda de Google Maps, registre de quilometratge de Google Timeline, calculadora de quilometratge fiscal, seguiment de quilometratge de Google Maps, registre de quilometratge IRS, calculadora de distància conduïda, distància conduïda de Google Timeline, calculadora de reemborsament de quilometratge",
+    "featureList": [
+      "Calcula el quilometratge conduït a partir de dades de Google Timeline",
+      "Filtra els viatges per interval de dates",
+      "Alterna entre quilòmetres i milles",
+      "Genera un registre de quilometratge CSV descarregable",
+      "Resums diaris i mensuals dels viatges",
+      "Prioritza la privacitat: tot es processa al navegador",
+      "No s'envien dades a cap servidor"
+    ]
+  },
+  "howTo": {
+    "name": "Com calcular el quilometratge amb dades de Google Timeline",
+    "description": "Exporta les dades de Google Timeline i calcula el quilometratge conduït amb aquesta calculadora gratuïta que prioritza la privacitat.",
+    "steps": [
+      {
+        "name": "Exporta les teves dades de Google Timeline",
+        "text": "Ves a takeout.google.com, selecciona Historial d'ubicacions (línia de temps) i exporta'l. També ho pots fer a Android: Google Maps > Configuració > Ubicació > Línia de temps > Exporta. A iOS: Google Maps > Configuració > Contingut personal > Exporta les dades de la línia de temps."
+      },
+      {
+        "name": "Carrega els teus fitxers JSON",
+        "text": "Arrossega i deixa anar els fitxers JSON exportats de Google Timeline a la calculadora de quilometratge. L'eina detecta el format automàticament i n'extreu els segments de conducció."
+      },
+      {
+        "name": "Defineix l'interval de dates i la unitat",
+        "text": "Selecciona una data d'inici i de fi per filtrar el registre de quilometratge, i tria entre quilòmetres i milles."
+      },
+      {
+        "name": "Revisa i descarrega el registre de quilometratge",
+        "text": "Revisa el registre de viatges, els resums mensuals i el quilometratge total. Descarrega el registre complet com a fitxer CSV per conservar-lo."
+      }
+    ],
+    "tool": "Calculadora de quilometratge de Google Timeline de Dawarich"
+  },
+  "exportData": {
+    "title": "Com obtenir les dades de la teva línia de temps",
+    "intro": "Exporta el teu historial d'ubicacions de Google Timeline amb un d'aquests mètodes. Si un no funciona, prova'n un altre.",
+    "note": "Per obtenir les dades de quilometratge més precises, els fitxers de Semantic Location History (fitxers JSON mensuals com ara 2023_JANUARY.json) són els més adequats, perquè contenen segments d'activitat etiquetats amb classificacions de conducció.",
+    "methods": [
+      {
+        "title": "Google Takeout:",
+        "body": "Ves a [takeout.google.com](https://takeout.google.com/) → Tria Historial d'ubicacions (línia de temps) → Exporta en JSON"
+      },
+      {
+        "title": "A Android:",
+        "body": "Obre Google Maps → Configuració → Ubicació → Serveis d'ubicació → Línia de temps → Exporta la línia de temps"
+      },
+      {
+        "title": "A iOS:",
+        "body": "Obre Google Maps → Configuració → Contingut personal → Exporta les dades de la línia de temps"
+      }
+    ]
+  },
+  "units": {
+    "km": "km",
+    "miles": "milles"
+  },
+  "activities": {
+    "driving": "Amb cotxe",
+    "bus": "Autobús",
+    "train": "Tren",
+    "subway": "Metro",
+    "motorcycle": "Moto"
+  },
+  "duration": {
+    "minutes": "{minutes}m",
+    "hoursMinutes": "{hours}h {minutes}m"
+  },
+  "results": {
+    "startDate": "Data d'inici",
+    "endDate": "Data de fi",
+    "disclaimer": "Les distàncies es calculen amb coordenades GPS (fórmula de Haversine) i són aproximacions en línia recta entre els punts registrats. Les distàncies reals per carretera poden ser més grans. Aquesta eina serveix per fer estimacions.",
+    "monthlyTitle": "Resum mensual",
+    "month": "Mes",
+    "tripCount": "Nombre de viatges",
+    "tripLogTitle": "Registre de viatges",
+    "trip": "Viatge #",
+    "date": "Data",
+    "activity": "Tipus d'activitat",
+    "duration": "Durada",
+    "emptyTitle": "No s'han trobat viatges amb vehicle",
+    "emptyIntro": "No s'han detectat segments d'activitat de conducció a les dades per a l'interval de dates seleccionat. Això pot passar si:",
+    "calculateButton": "Calcula",
+    "distanceTitle": "Distància total conduïda",
+    "distanceHint": "Tots els segments de conducció combinats",
+    "tripsTitle": "Total de viatges",
+    "tripsHint": "Segments de conducció detectats",
+    "averageTitle": "Distància mitjana per viatge",
+    "averageHint": "Per segment de conducció",
+    "downloadButton": "Descarrega el registre de quilometratge (CSV)",
+    "processing": "S'està processant...",
+    "distanceHeading": "Distància ({unit})",
+    "emptyReasons": [
+      { "body": "L'exportació només conté punts GPS en brut (Records.json) sense classificació d'activitat" },
+      { "body": "L'interval de dates no coincideix amb les dates de les teves dades" },
+      { "body": "Les dades no contenen segments de conducció: prova fitxers de Semantic Location History per obtenir millors resultats" }
+    ],
+    "showMore": "Mostra'n més (en queden {count})",
+    "distanceValue": "{distance} {unit}"
+  },
+  "cta": {
+    "fallback": "Necessites un seguiment continu del quilometratge sense exportacions manuals? Dawarich registra els teus viatges automàticament.",
+    "postTitle": "Et canses d'exportar i calcular el quilometratge manualment?",
+    "postBody": "Dawarich registra automàticament cada desplaçament amb cotxe, calcula les distàncies amb dades GPS reals i et permet exportar informes de quilometratge quan vulguis. En un servidor propi o al núvol: les teves dades, la teva elecció.",
+    "title": "Busques un substitut de Google Timeline amb seguiment de quilometratge integrat?",
+    "body": "Dawarich és una plataforma de seguiment d'ubicacions de codi obert que registra automàticament cada viatge, calcula la distància conduïda i et dona el control total de les dades. Importa la teva exportació de Google Timeline, registra el quilometratge des del telèfon i genera informes quan vulguis, tot en un servidor propi o al núvol.",
+    "button": "Prova Dawarich gratis durant 7 dies",
+    "headline": "Has registrat **{count}** viatges amb un total de **{distance} {unit}**. Dawarich ho registra automàticament, sense més exportacions manuals.",
+    "tripsLabel": "viatges"
+  },
+  "faq": [
+    {
+      "q": "És segur carregar les meves dades de Google Timeline?",
+      "a": "Sí, del tot. La calculadora funciona al 100% al navegador amb JavaScript del costat del client: els fitxers es queden al dispositiu i es descarten quan tanques o actualitzes la pàgina, sense fer seguiment de les teves dades d'ubicació. L'única excepció és el botó opcional «Desa al meu compte de Dawarich», que envia el fitxer a Dawarich Cloud per importar-lo al teu nou compte. L'eina forma part de l'ecosistema de codi obert de Dawarich, de manera que pots inspeccionar-ne el codi font."
+    },
+    {
+      "q": "Quina precisió té el càlcul de quilometratge?",
+      "a": "Les distàncies es calculen amb la fórmula de Haversine, que calcula la distància de cercle màxim entre coordenades GPS. Això dona aproximacions en línia recta entre els punts registrats, que normalment subestimen la distància real per carretera entre un 10-30%, segons la complexitat de la ruta. El resultat serà més precís en autopistes que en carrers sinuosos de ciutat. Per a les deduccions de quilometratge de l'IRS, la pràctica habitual és fer servir lectures del comptaquilòmetres o una aplicació específica de seguiment per obtenir xifres precises, però aquesta eina ofereix una bona estimació per planificar i revisar."
+    },
+    {
+      "q": "Ho puc fer servir per a deduccions fiscals?",
+      "a": "Aquesta eina genera un registre de quilometratge que pot servir com a documentació complementària amb finalitats fiscals. Ara bé, l'IRS exigeix registres contemporanis: idealment, el quilometratge s'ha de registrar en el moment de cada viatge, no reconstruir-lo després. Les dades de Google Timeline poden donar suport als teus registres, però potser no són suficients com a única font. Consulta un professional fiscal per rebre orientació adaptada a la teva situació. Si prefereixes registrar la data i la distància a mesura que fas els viatges en lloc de reconstruir-les mesos després, Dawarich ho fa automàticament."
+    },
+    {
+      "q": "Quines activitats amb vehicle registra?",
+      "a": "La calculadora identifica els tipus d'activitat relacionats amb la conducció del sistema de classificació de Google: IN_PASSENGER_VEHICLE (viatges amb cotxe), DRIVING, IN_BUS, IN_TRAIN, IN_SUBWAY i MOTORCYCLING. Google assigna aquests tipus d'activitat segons la velocitat, els patrons de moviment i les dades dels sensors. La precisió depèn de com hagi classificat Google les teves activitats: de vegades, caminar o anar amb bicicleta es pot classificar erròniament com a conducció, o a l'inrevés."
+    },
+    {
+      "q": "Puc filtrar per interval de dates?",
+      "a": "Sí. Després de carregar els fitxers, pots establir una data d'inici i de fi per filtrar el registre de quilometratge a un període concret. Això és útil per generar informes trimestrals o anuals, aïllar períodes de viatges de feina o comparar el quilometratge entre períodes diferents. Els resums mensuals i diaris també reflectiran només l'interval de dates filtrat."
+    },
+    {
+      "q": "Quin format té l'exportació CSV?",
+      "a": "El fitxer CSV inclou columnes de número de viatge, data, hora d'inici, hora de fi, tipus d'activitat, distància (en la unitat triada) i durada. Cada fila representa un segment de conducció identificat a les dades de la teva línia de temps. El fitxer acaba amb una fila de totals que resumeix la distància global i el nombre de viatges. El CSV es pot obrir a Excel, Google Sheets o qualsevol aplicació de fulls de càlcul per continuar l'anàlisi."
+    },
+    {
+      "q": "Per què falten alguns viatges?",
+      "a": "Hi ha diversos factors que poden fer que faltin viatges: (1) Google Timeline només registra dades quan l'historial d'ubicacions està activat al dispositiu: no hi haurà dades dels períodes en què estava desactivat. (2) Els viatges curts o amb mala cobertura GPS poden no generar prou punts. (3) Potser Google no ha classificat certs moviments com a conducció, especialment a velocitats baixes. (4) Si has exportat amb el mètode més recent del telèfon, potser només tens dades dels darrers 90 dies pel canvi de política de Google de 2024. (5) Alguns formats d'exportació contenen menys detalls que d'altres."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Què és la calculadora de quilometratge de la línia de temps?",
+      "paragraphs": [
+        "És una eina gratuïta al navegador que extreu dades de viatges amb vehicle dels fitxers exportats de Google Timeline i calcula la distància total recorreguda. Identifica segments d'activitat relacionats amb la conducció, inclosos viatges amb cotxe, autobús, tren i moto, i genera un registre de quilometratge estructurat amb detalls de cada viatge.",
+        "A diferència de les eines que funcionen en servidors, tots els càlculs es fan al navegador, de manera que generar el registre de quilometratge no envia les dades d'ubicació enlloc. Obtens resultats immediats amb privacitat total, i el registre CSV generat es pot fer servir per a informes de despeses, documentació fiscal o registres personals. (Si fas servir «Desa al meu compte de Dawarich», aquesta acció envia el fitxer a Dawarich Cloud per preparar la importació; altrament, no s'envia res.)"
+      ]
+    },
+    {
+      "title": "Com es calcula el quilometratge",
+      "paragraphs": [
+        "La calculadora fa servir la fórmula de Haversine per calcular distàncies de cercle màxim entre coordenades GPS consecutives de cada segment de conducció. És el mètode estàndard per calcular la distància entre dos punts d'una esfera (la Terra).",
+        "Per a cada segment de conducció identificat a les dades de Google Timeline, l'eina suma les distàncies entre tots els punts registrats al llarg del segment. El resultat és una aproximació en línia recta: la distància real per carretera sol ser un 10-30% més gran a causa de les corbes, els canvis d'altitud i els desviaments que no es recullen entre els punts GPS.",
+        "Els salts de més de 500 km entre punts consecutius s'exclouen automàticament per evitar comptar errors GPS o salts de posició impossibles a les dades."
+      ]
+    },
+    {
+      "title": "Ús dels registres de quilometratge per a deduccions fiscals",
+      "paragraphs": [
+        "Als Estats Units, l'IRS permet una deducció estàndard de quilometratge per l'ús professional d'un vehicle particular. La tarifa canvia cada any, així que comprova la vigent abans de presentar la declaració. Per sol·licitar aquesta deducció, necessites un registre de quilometratge amb la data, la destinació, el motiu professional i la distància de cada viatge.",
+        "Tot i que les dades de Google Timeline poden aportar la data i la distància de cada segment de conducció, no distingeixen entre viatges professionals i personals. Hauries d'afegir el motiu professional i la destinació al CSV exportat. L'IRS també exigeix que els registres es facin de manera contemporània, és a dir, en el moment de cada viatge o poc després, de manera que un registre retrospectiu de Google Timeline és més adequat com a document de suport que com a únic registre.",
+        "Per registrar els viatges a mesura que els fas en lloc de reconstruir-los després, considera fer servir [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-mileage-calculator): hauràs de continuar afegint tu el motiu professional."
+      ]
+    },
+    {
+      "title": "Què va passar amb Google Maps Timeline?",
+      "paragraphs": [
+        "A finals de 2024, Google va retirar la versió web de Google Maps Timeline i va traslladar totes les dades d'ubicació a l'emmagatzematge dels telèfons dels usuaris. Només es van migrar les dades dels darrers 90 dies: tot l'historial més antic es va eliminar de manera permanent tret que els usuaris n'haguessin fet una còpia manualment abans de la data límit.",
+        "Aquest canvi va deixar molts usuaris sense accés a anys d'historial d'ubicacions que feien servir per registrar el quilometratge, recordar viatges i documentar despeses. Si vas aconseguir exportar les dades amb Google Takeout o amb la funció d'exportació de la línia de temps abans de la transició, aquesta calculadora et pot ajudar a extreure la informació de quilometratge d'aquests fitxers.",
+        "Per a més detalls, consulta la nostra [guia per migrar des de l'historial d'ubicacions de Google](/blog/migrating-from-google-location-history-to-dawarich)."
+      ]
+    },
+    {
+      "title": "Precisió i limitacions",
+      "paragraphs": [],
+      "items": [
+        { "body": "**Precisió GPS** — Google Timeline sol registrar ubicacions cada pocs segons o minuts, segons l'activitat del dispositiu. Els buits entre lectures fan que alguns segments del viatge s'interpolin en lloc de mesurar-se amb precisió" },
+        { "body": "**Classificació d'activitats** — Google fa servir aprenentatge automàtic per classificar els tipus d'activitat. Hi pot haver errors: conduir lentament en un embús es pot etiquetar com a ciclisme, o un trajecte amb autobús com a viatge amb cotxe" },
+        { "body": "**Distàncies en línia recta** — La fórmula de Haversine dona el camí més curt entre dos punts de la superfície terrestre. Les carreteres reals són més llargues a causa de les corbes, els desnivells i el traçat" },
+        { "body": "**Dades que falten** — No hi haurà dades dels períodes en què el telèfon estava apagat, en mode avió o amb l'historial d'ubicacions desactivat" },
+        { "body": "**El format d'exportació importa** — Els fitxers de Semantic Location History contenen les dades de conducció més detallades. Els fitxers Records.json en brut poden no tenir etiquetes de tipus d'activitat" }
+      ]
+    },
+    {
+      "title": "Eines relacionades",
+      "paragraphs": [],
+      "items": [
+        { "body": "[Visualitzador de Google Timeline](/tools/timeline-visualizer) — Consulta tot el teu historial d'ubicacions en un mapa interactiu" },
+        { "body": "[Generador de mapes de calor GPS](/tools/heatmap-generator) — Crea mapes de calor amb fitxers GPX, FIT, TCX i altres fitxers GPS" },
+        { "body": "[Eina per unir trajectes GPX](/tools/gpx-merger) — Combina diversos fitxers GPX en un de sol" },
+        { "body": "[Extracció de geodades de fotos](/tools/photo-geotagging) — Extreu coordenades GPS de les teves fotos" },
+        { "body": "[Conversor de GeoJSON a GPX](/tools/geojson-to-gpx) — Converteix les teves dades d'ubicació en format GPX" }
+      ],
+      "footer": [
+        "Més informació: [Migració des de l'historial d'ubicacions de Google](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}

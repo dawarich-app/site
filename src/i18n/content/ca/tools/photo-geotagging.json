@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "Extracció de geodades: extreu dades GPS de les fotos",
+    "description": "Extreu coordenades GPS de les teves fotos i exporta-les en GPX amb aquesta eina gratuïta. Tot es processa al navegador, sense enviar dades a cap servidor.",
+    "keywords": "extracció de geodades de fotos, GPS, EXIF, geolocalització, exportació GPX, ubicació de fotos, privacitat, metadades d'imatges",
+    "featureList": [
+      "Extreu dades GPS de les fotos",
+      "Mapa interactiu amb marcadors de fotos",
+      "Prioritza la privacitat: tot es processa al navegador",
+      "Exporta ubicacions com a fitxers GPX",
+      "No s'envien dades a cap servidor"
+    ]
+  },
+  "h1": "Extracció de geodades de fotos",
+  "intro": "Carrega les teves fotos per extreure les coordenades GPS de les metadades EXIF, veure-les en un mapa i exportar-les com a fitxers GPX.",
+  "exportButton": "Exporta en GPX",
+  "emptyExport": "No hi ha fotos amb dades GPS per exportar",
+  "gpsPhotosLabel": "fotos amb GPS",
+  "photosLabel": "fotos",
+  "howTo": {
+    "title": "Com funciona",
+    "intro": "Aquesta eina llegeix les metadades EXIF de les teves fotos per extreure'n les coordenades GPS. La majoria de telèfons intel·ligents incorporen automàticament dades d'ubicació a les fotos.",
+    "features": [
+      {
+        "title": "Formats compatibles:",
+        "body": "JPEG, PNG, HEIC i altres formats d'imatge amb dades EXIF"
+      },
+      {
+        "title": "Què obtindràs:",
+        "body": "Un mapa interactiu amb les ubicacions de les fotos, dades GPS detallades i exportació en GPX per a dispositius GPS"
+      },
+      {
+        "title": "Nota:",
+        "body": "Només les fotos amb dades GPS apareixeran al mapa. Les captures de pantalla i les fotos editades poden no contenir dades d'ubicació."
+      }
+    ]
+  },
+  "privacy": {
+    "title": "La privacitat, primer",
+    "body": "Tot el processament de les fotos es fa íntegrament al navegador. Les fotos i les dades d'ubicació no surten mai del teu dispositiu ni s'envien a cap servidor."
+  },
+  "results": {
+    "gpsPhotos": "Fotos amb dades GPS: {count}",
+    "extracted": "Has extret dades GPS de **{count}** fotos. Dawarich mostra al mapa totes les teves dades d'ubicació: fotos, trajectes i desplaçaments diaris.",
+    "uploaded": "Has carregat **{count}** fotos. Dawarich mostra al mapa totes les teves dades d'ubicació: fotos, trajectes i desplaçaments diaris."
+  }
+}

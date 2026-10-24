@@ -1,0 +1,187 @@
+{
+  "h1": "Visualitzador de Google Timeline",
+  "intro": "Google va tancar la línia de temps al web: aquesta eina gratuïta que prioritza la privacitat te la torna a mostrar. Explora l'historial d'ubicacions exportat dia a dia amb un calendari de calor, una llista de visites i la reproducció de les activitats.",
+  "saveIntro": "També ho vols al teu compte de Dawarich? Ho importarem quan t'hi registris, sense haver de tornar a carregar el fitxer.",
+  "privacy": "Tot es processa al navegador. Les teves dades es queden al dispositiu tret que triïs «Desa al meu compte de Dawarich».",
+  "faqTitle": "Preguntes freqüents",
+  "homeLabel": "Inici",
+  "toolsLabel": "Eines gratuïtes",
+  "loadingMap": "S'està carregant el mapa…",
+  "meta": {
+    "title": "Visualitzador de Google Timeline: torna a veure'l al web",
+    "description": "Google va retirar la línia de temps del web. Recupera'n la vista gratis: carrega l'exportació de Takeout i consulta l'historial en un mapa al navegador.",
+    "keywords": "visualitzador de Google Timeline, Google Timeline desaparegut, on és el meu Google Timeline, veure Google Timeline al web, historial de Google Timeline, visor de l'historial d'ubicacions de Google, visor d'ubicacions de Google Takeout, veure historial d'ubicacions en un mapa, substitut de Google Maps Timeline, alternativa al tancament de Google Timeline, mapa d'historial d'ubicacions, visor d'exportacions de Google Timeline, visualitzador d'ubicacions amb privacitat",
+    "featureList": [
+      "Visualitza dades de Google Timeline en un mapa interactiu",
+      "Prioritza la privacitat: tot es processa al navegador",
+      "Admet Records.json, Semantic Location History i exportacions del telèfon",
+      "Filtratge per any per a conjunts de dades grans",
+      "No s'envien dades a cap servidor",
+      "Codi obert i transparent"
+    ]
+  },
+  "howTo": {
+    "name": "Com visualitzar el teu historial d'ubicacions de Google Timeline",
+    "description": "Exporta les dades de Google Timeline i visualitza-les en un mapa interactiu amb aquesta eina gratuïta que prioritza la privacitat.",
+    "steps": [
+      {
+        "name": "Exporta les teves dades de Google Timeline",
+        "text": "Ves a takeout.google.com, selecciona Historial d'ubicacions (línia de temps) i exporta'l. També ho pots fer a Android: Google Maps → Configuració → Ubicació → Línia de temps → Exporta. A iOS: Google Maps → Configuració → Contingut personal → Exporta les dades de la línia de temps."
+      },
+      {
+        "name": "Carrega els teus fitxers JSON",
+        "text": "Arrossega i deixa anar els fitxers JSON exportats de Google Timeline al visualitzador. L'eina detecta el format automàticament (Records.json, Semantic Timeline, Location History, etc.)."
+      },
+      {
+        "name": "Explora el teu historial d'ubicacions",
+        "text": "Les teves dades d'ubicació apareixen en un mapa interactiu. Fes servir el filtre d'any per centrar-te en períodes concrets, fes clic als punts per veure'n els detalls i explora tot el teu historial d'ubicacions."
+      }
+    ],
+    "tool": "Visualitzador de Google Timeline de Dawarich"
+  },
+  "exportData": {
+    "title": "Encara no tens les dades? T'expliquem com exportar-les",
+    "intro": "Pots exportar les dades de Google Timeline amb un dels mètodes següents. Si un no et funciona, prova'n un altre.",
+    "warning": "Malauradament, alguns usuaris potser no podran exportar les seves dades d'ubicació a causa de com Google ha fet la transició a les noves polítiques d'emmagatzematge d'ubicacions.",
+    "converterHint": "Ja tens l'exportació? També la pots convertir en GPX, KML o GeoJSON amb el [conversor de Google Timeline](/tools/google-timeline-converter/) gratuït.",
+    "methods": [
+      {
+        "title": "Google Takeout:",
+        "steps": [
+          "Ves a [takeout.google.com](https://takeout.google.com/) → Tria Historial d'ubicacions (línia de temps) → Exporta",
+          "Aquest mètode pot no funcionar per a tothom perquè Google ha canviat com s'emmagatzemen i s'exporten les dades d'ubicació. Més detalls al nostre [blog](https://dawarich.app/blog/migrating-from-google-location-history-to-dawarich)."
+        ]
+      },
+      {
+        "title": "A Android:",
+        "steps": [
+          "Obre Google Maps → Configuració → Ubicació → Serveis d'ubicació → Línia de temps → Exporta la línia de temps"
+        ]
+      },
+      {
+        "title": "A iOS:",
+        "steps": [
+          "Obre Google Maps → Configuració → Contingut personal → Exporta les dades de la línia de temps"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Busques un substitut de Google Timeline?",
+    "body": "Dawarich és una plataforma de seguiment d'ubicacions de codi obert que et dona el control total de les teves dades. Importa la teva exportació de Google Timeline, registra la ubicació des del telèfon i visualitza anys d'historial de desplaçaments, tot en un servidor propi o al núvol.",
+    "button": "Prova Dawarich gratis durant 7 dies",
+    "trialButton": "Comença la prova gratuïta de 7 dies →",
+    "dismissLabel": "Tanca",
+    "headline": "Acabes de visualitzar **{points}** punts d'ubicació{dateRange}. Aquesta vista desapareix quan tanques la pestanya. Conserva el teu historial d'ubicacions per sempre i amplia'l automàticament.",
+    "dateRange": " del **{startYear}** al **{endYear}**"
+  },
+  "faq": [
+    {
+      "q": "És segur carregar les meves dades de Google Timeline aquí?",
+      "a": "Sí. Tota la visualització es fa íntegrament al navegador amb JavaScript: els fitxers es queden al dispositiu i desapareixen quan tanques la pestanya. L'única excepció és el botó opcional «Desa al meu compte de Dawarich», que envia el fitxer a Dawarich Cloud per importar-lo al teu nou compte. L'eina és de codi obert perquè puguis comprovar exactament què fa el codi."
+    },
+    {
+      "q": "Quins formats de fitxer admet aquest visualitzador?",
+      "a": "El visualitzador admet tots els formats d'exportació de Google Timeline: Records.json (registres d'ubicació GPS en brut), Semantic Location History (fitxers mensuals YYYY_MONTH.json amb visites a llocs i segments d'activitat), Location History exportat des del telèfon (el format més recent amb semanticSegments) i fitxers Settings/TimelineEdits. Detecta el format automàticament quan els carregues."
+    },
+    {
+      "q": "Per què Google va tancar la línia de temps al web?",
+      "a": "A finals de 2024, Google va retirar la versió web de Google Maps Timeline i va traslladar totes les dades d'ubicació a l'emmagatzematge al dispositiu. Les dades dels darrers 90 dies es van transferir al telèfon, però les dades més antigues es van eliminar tret que se n'hagués fet una còpia manual. Molts usuaris van perdre anys d'historial d'ubicacions durant la transició. Aquest visualitzador t'ajuda a veure i explorar les dades de Google Timeline que hagis aconseguit exportar."
+    },
+    {
+      "q": "On ha anat a parar el meu Google Timeline?",
+      "a": "Si la línia de temps ha desaparegut de Google Maps al navegador, no et passa només a tu: Google va retirar la versió web i va traslladar la línia de temps al dispositiu. Ara l'historial és a l'aplicació Google Maps del telèfon (toca la foto de perfil → Línia de temps). Si tampoc hi és, busca un arxiu antic de Google Takeout o una còpia de seguretat de la línia de temps: pots carregar aquí qualsevol exportació que conservis per tornar a veure tot l'historial."
+    },
+    {
+      "q": "Com puc tornar a veure el meu Google Timeline al web?",
+      "a": "Exporta les dades de la línia de temps des del telèfon (Google Maps → Configuració → Ubicació → Línia de temps → Exporta les dades de la línia de temps) o des de Google Takeout, i carrega els fitxers JSON en aquest visualitzador. Tornaràs a tenir una línia de temps al web, amb calendari, mapa i detalls dia a dia, sense necessitat de cap compte de Google. Per mantenir una línia de temps permanent i sempre actualitzada, pots importar els mateixos fitxers a Dawarich."
+    },
+    {
+      "q": "Com puc exportar les meves dades de Google Timeline?",
+      "a": "Hi ha tres mètodes: (1) Google Takeout a takeout.google.com: selecciona Historial d'ubicacions i exporta'l, tot i que ja no funciona per a tothom. (2) A Android: Google Maps → Configuració → Ubicació → Serveis d'ubicació → Línia de temps → Exporta la línia de temps. (3) A iOS: Google Maps → Configuració → Contingut personal → Exporta les dades de la línia de temps. Et recomanem provar tots els mètodes i exportar les dades tan aviat com puguis."
+    },
+    {
+      "q": "Puc visualitzar anys de dades d'ubicació alhora?",
+      "a": "Sí. El visualitzador s'ha provat amb fitxers que contenen més de 630,000 punts d'ubicació al llarg de 15+ anys. Processa les dades per lots per mantenir el navegador àgil i inclou un filtre d'any per centrar-te en períodes concrets. Un fitxer de 170 MB sol trigar entre 20-30 segons a processar-se en un ordinador modern."
+    },
+    {
+      "q": "Quina diferència hi ha entre Records.json i Semantic Location History?",
+      "a": "Records.json conté coordenades GPS en brut i marques de temps: cada lectura d'ubicació registrada per Google. Aquests fitxers solen ser molt grans. Els fitxers de Semantic Location History (amb noms com ara 2022_APRIL.json) són més estructurats i contenen visites a llocs amb adreces, segments d'activitat (a peu, amb cotxe, amb bicicleta) i informació de durada. Aquest visualitzador admet tots dos formats."
+    },
+    {
+      "q": "Puc veure el meu Google Timeline sense Google Maps?",
+      "a": "Sí: això és exactament el que fa aquesta eina. Després d'exportar les dades de Google Timeline, carrega els fitxers JSON aquí per veure-ho tot en un mapa interactiu basat en OpenStreetMap. No cal cap compte de Google ni l'aplicació Google Maps. Pots filtrar per any, fer clic a punts individuals per veure'n els detalls i explorar tot el teu historial d'ubicacions independentment de Google."
+    },
+    {
+      "q": "En què es diferencia d'altres visors de Google Timeline?",
+      "a": "Aquest visualitzador s'ha creat amb la privacitat com a prioritat màxima: no surt cap dada del navegador. Admet tots els formats d'exportació de Google (incloses les exportacions més recents del telèfon que moltes eines no gestionen), processa els fitxers progressivament perquè els conjunts de dades grans no bloquegin el navegador i es manté com a part de l'ecosistema de codi obert de Dawarich. També és completament gratuït, sense necessitat de comptes ni registres."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Què és un visualitzador de Google Timeline?",
+      "paragraphs": [
+        "Un visualitzador de Google Timeline agafa els fitxers JSON en brut de l'exportació de l'historial d'ubicacions de Google i els transforma en un mapa interactiu que pots explorar. En lloc de desplaçar-te per milers de línies de coordenades i marques de temps, veus els teus desplaçaments reals dibuixats en un mapa: cada viatge, trajecte a la feina i passejada que has fet mentre Google registrava la teva ubicació.",
+        "Aquesta eina ho visualitza tot al navegador, de manera que explorar l'historial no envia les dades d'ubicació enlloc. És una manera d'explorar anys d'historial d'ubicacions que prioritza la privacitat. (Si fas servir «Desa al meu compte de Dawarich», aquesta acció envia el fitxer a Dawarich Cloud per preparar la importació; altrament, no s'envia res.)"
+      ]
+    },
+    {
+      "title": "Què pots descobrir a les teves dades?",
+      "paragraphs": [],
+      "items": [
+        { "body": "**Patrons de viatge** — Consulta cada viatge que has fet, des dels trajectes diaris a la feina fins als viatges internacionals" },
+        { "body": "**Visites a llocs** — Descobreix quines ubicacions has visitat més, amb les hores d'arribada i sortida" },
+        { "body": "**Tipus d'activitat** — Consulta segments a peu, amb cotxe, amb bicicleta i amb transport públic de Semantic Location History" },
+        { "body": "**Canvis any rere any** — Filtra per any per veure com han evolucionat els teus patrons de desplaçament" },
+        { "body": "**Records oblidats** — Redescobreix aquell restaurant, parc o barri que vas visitar fa anys" }
+      ]
+    },
+    {
+      "title": "Formats d'exportació de Google compatibles",
+      "paragraphs": [],
+      "items": [
+        { "body": "**Records.json** — Registres GPS en brut amb coordenades en format E7. El fitxer més gran, amb cada lectura d'ubicació" },
+        { "body": "**Semantic Location History** — Fitxers mensuals (p. ex. 2022_APRIL.json) amb visites a llocs, adreces i segments d'activitat" },
+        { "body": "**Exportació de la línia de temps del telèfon** — Format més recent de Google Maps a Android/iOS amb semanticSegments i recorreguts de la línia de temps" },
+        { "body": "**Settings i TimelineEdits** — Fitxers de metadades addicionals de les exportacions de Google Takeout" }
+      ],
+      "footer": [
+        "El visualitzador detecta el format automàticament. Pots carregar diversos fitxers alhora per combinar dades de diferents mètodes d'exportació."
+      ]
+    },
+    {
+      "title": "Què va passar amb Google Maps Timeline?",
+      "paragraphs": [
+        "A finals de 2024, Google va retirar la versió web de Google Maps Timeline i va traslladar totes les dades d'ubicació a l'emmagatzematge al dispositiu. Només es van migrar els darrers 90 dies: les dades més antigues es van eliminar tret que els usuaris n'haguessin fet una còpia manualment. Molta gent va [perdre anys d'historial d'ubicacions](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/) durant la transició.",
+        "Si vas exportar les dades abans de la transició o durant el procés, aquest visualitzador et permet veure-les. Com a substitut a llarg termini, [Dawarich](https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-visualizer) ofereix seguiment d'ubicacions en un servidor propi o al núvol, amb el control total de les teves dades."
+      ]
+    },
+    {
+      "title": "Comparació amb altres visualitzadors",
+      "paragraphs": [
+        "Hi ha diverses eines per veure dades d'ubicació de Google. Així es diferencia aquesta:"
+      ],
+      "items": [
+        { "body": "**Comparat amb LocationHistoryVisualizer.com** — Se centra només en mapes de calor. Aquesta eina mostra punts individuals, recorreguts, visites a llocs i segments d'activitat amb filtres detallats" },
+        { "body": "**Comparat amb Google Maps Timeline** — La línia de temps web de Google es va tancar. Aquesta és una alternativa independent que prioritza la privacitat i funciona amb les teves dades exportades" },
+        { "body": "**Comparat amb projectes de GitHub** — La majoria de visors de codi obert només admeten formats d'exportació antics. Aquesta eina gestiona tots els formats de Google, incloses les exportacions més recents del telèfon" }
+      ],
+      "footer": [
+        "Necessites un mapa de calor? Prova el nostre [generador de mapes de calor GPS](/tools/heatmap-generator)."
+      ]
+    },
+    {
+      "title": "Eines relacionades",
+      "paragraphs": [],
+      "items": [
+        { "body": "[Generador de mapes de calor GPS](/tools/heatmap-generator) — Crea mapes de calor amb fitxers GPX, FIT, TCX i altres fitxers GPS" },
+        { "body": "[Eina per unir trajectes GPX](/tools/gpx-merger) — Combina diversos fitxers GPX en un de sol" },
+        { "body": "[Extracció de geodades de fotos](/tools/photo-geotagging) — Extreu coordenades GPS de les teves fotos" },
+        { "body": "[Conversor de GeoJSON a GPX](/tools/geojson-to-gpx) — Converteix les teves dades d'ubicació en format GPX" }
+      ],
+      "footer": [
+        "Més informació: [Com vam crear aquest visualitzador](/blog/building-a-privacy-first-google-timeline-visualizer) | [Migració des de l'historial d'ubicacions de Google](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "distanceLabel": "Dist.",
+  "averageLabel": "Mitjana",
+  "timeLabel": "Temps",
+  "pauseReplay": "Pausa la reproducció",
+  "playReplay": "Reprodueix el trajecte",
+  "restart": "Torna a començar",
+  "replayProgress": "Progrés de la reproducció",
+  "trackLabel": "Trajecte #{trackId}",
+  "throughTrack": "{percent}% del trajecte",
+  "verbs": {
+    "walking": "a peu",
+    "running": "corrent",
+    "cycling": "amb bicicleta",
+    "driving": "amb cotxe",
+    "bus": "amb autobús",
+    "train": "amb tren",
+    "flying": "amb avió",
+    "boat": "amb vaixell",
+    "motorcycle": "amb moto",
+    "unknown": "de viatge"
+  },
+  "modeLabels": {
+    "walking": "a peu",
+    "running": "corrent",
+    "cycling": "amb bicicleta",
+    "driving": "amb cotxe",
+    "bus": "autobús",
+    "train": "tren",
+    "flying": "amb avió",
+    "boat": "vaixell",
+    "motorcycle": "moto",
+    "unknown": "desconegut"
+  },
+  "duration": {
+    "seconds": "{seconds}s",
+    "minutes": "{minutes}m",
+    "hoursMinutes": "{hours}h {minutes}m",
+    "hours": "{hours}h"
+  }
+}
