@@ -1,6 +1,9 @@
 import { DEFAULT_LOCALE, LOCALES } from './locales.js';
 
 export const LOCALIZED_ROUTES = [
+  '/tools/',
+  '/tools/gpx-merger/',
+  '/tools/photo-geotagging/',
   '/tools/google-timeline-converter/',
   '/tools/fit-to-geojson/',
   '/tools/fit-to-gpx/',

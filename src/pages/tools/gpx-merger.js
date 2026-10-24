@@ -5,14 +5,23 @@ import Head from '@docusaurus/Head';
 import { parseGPXDetailed, mergeGPXFiles, calculateMergeStats } from '@site/src/utils/gpxMerger';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import RelatedTools from '@site/src/components/RelatedTools';
+import { interpolate } from '@docusaurus/Interpolate';
+import { usePluralForm } from '@docusaurus/theme-common';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import RichText from '@site/src/i18n/RichText';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
+import content from '@locale-content/tools/gpx-merger.json';
 import styles from './gpx-merger.module.css';
 
-const pageTitle = "Free GPX Merger - Combine Multiple GPS Track Files Online";
-const pageDescription = "Merge multiple GPX files into one. Free, privacy-first online tool to combine GPS tracks, waypoints, and routes. Works entirely in your browser.";
-const pageUrl = "https://dawarich.app/tools/gpx-merger/";
+const pageTitle = content.meta.title;
+const pageDescription = content.meta.description;
 const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 export default function GPXMerger() {
+  const { i18n } = useDocusaurusContext();
+  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const { selectMessage } = usePluralForm();
+  const pageUrl = useLocalizedUrl('/tools/gpx-merger/');
   const [files, setFiles] = useState([]);
   const [parsedFiles, setParsedFiles] = useState([]);
   const [stats, setStats] = useState(null);
@@ -59,7 +68,7 @@ export default function GPXMerger() {
       const gpxFiles = newFiles.filter(f => f.name.toLowerCase().endsWith('.gpx'));
 
       if (gpxFiles.length === 0) {
-        setError('Please select GPX files only.');
+        setError(content.gpxOnlyError);
         setIsProcessing(false);
         return;
       }
@@ -72,7 +81,7 @@ export default function GPXMerger() {
           parsed.push(gpxData);
         } catch (err) {
           console.error(`Error parsing ${file.name}:`, err);
-          setError(`Error parsing ${file.name}: ${err.message}`);
+          setError(interpolate(content.parseError, { fileName: file.name, message: err.message }));
         }
       }
 
@@ -104,7 +113,7 @@ export default function GPXMerger() {
 
   const handleMerge = () => {
     if (parsedFiles.length < 2) {
-      setError('Please add at least 2 GPX files to merge.');
+      setError(content.minimumFilesError);
       return;
     }
 
@@ -122,7 +131,7 @@ export default function GPXMerger() {
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
     } catch (err) {
-      setError(`Error merging files: ${err.message}`);
+      setError(interpolate(content.mergeError, { message: err.message }));
     }
   };
 
@@ -154,8 +163,7 @@ export default function GPXMerger() {
       <Head>
         <meta name="title" content={pageTitle} />
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="GPX merger, merge GPX files, combine GPS tracks, GPX combiner, join GPX files, merge GPS files, GPX joiner, combine tracks" />
-        <link rel="canonical" href={pageUrl} />
+        <meta name="keywords" content={content.meta.keywords} />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content={pageUrl} />
@@ -173,7 +181,7 @@ export default function GPXMerger() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "GPX Merger",
+            "name": content.appName,
             "url": pageUrl,
             "description": pageDescription,
             "applicationCategory": "UtilityApplication",
@@ -190,8 +198,8 @@ export default function GPXMerger() {
 
       <div className={styles.container}>
         <div className={styles.header}>
-          <h1>GPX Track Merger</h1>
-          <p>Combine multiple GPX files into a single file. Merge tracks from different activities, days, or devices into one unified GPS file.</p>
+          <h1>{content.h1}</h1>
+          <p>{content.intro}</p>
         </div>
 
         <div className={styles.mainContent}>
@@ -206,10 +214,10 @@ export default function GPXMerger() {
               <svg className={styles.uploadIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
               </svg>
-              <p>Drag & drop GPX files here</p>
-              <span className={styles.hint}>or click to browse</span>
+              <p>{content.dropFiles}</p>
+              <span className={styles.hint}>{content.browse}</span>
               <input
-                aria-label="Choose files to process"
+                aria-label={content.inputLabel}
                 type="file"
                 className={styles.fileInput}
                 accept=".gpx"
@@ -221,7 +229,7 @@ export default function GPXMerger() {
             {isProcessing && (
               <div className={styles.processingIndicator}>
                 <div className={styles.spinner}></div>
-                Processing files...
+                {content.processing}
               </div>
             )}
 
@@ -235,11 +243,11 @@ export default function GPXMerger() {
           {files.length > 0 && (
             <div className={styles.filesPanel}>
               <div className={styles.filesPanelHeader}>
-                <h3>Files to Merge ({files.length})</h3>
-                <button onClick={handleClear} className={styles.clearButton}>Clear All</button>
+                <h3>{interpolate(content.filesToMergeHeading, { count: files.length.toLocaleString(htmlLang) })}</h3>
+                <button onClick={handleClear} className={styles.clearButton}>{content.clearButton}</button>
               </div>
 
-              <p className={styles.orderHint}>Drag to reorder or use arrows. Files will be merged in this order.</p>
+              <p className={styles.orderHint}>{content.orderHint}</p>
 
               <div className={styles.fileList}>
                 {files.map((fileName, index) => {
@@ -274,13 +282,15 @@ export default function GPXMerger() {
                       <div className={styles.fileInfo}>
                         <span className={styles.fileName}>{fileName}</span>
                         <span className={styles.fileMeta}>
-                          {trackCount} track{trackCount !== 1 ? 's' : ''} | {pointCount.toLocaleString()} points
+                          {interpolate(selectMessage(trackCount, content.fileSummary), {
+                            trackCount: trackCount.toLocaleString(htmlLang), points: pointCount.toLocaleString(htmlLang),
+                          })}
                         </span>
                       </div>
                       <button
                         onClick={() => handleRemoveFile(index)}
                         className={styles.removeButton}
-                        title="Remove file"
+                        title={content.removeFileTitle}
                       >
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -293,30 +303,30 @@ export default function GPXMerger() {
 
               {stats && (
                 <div className={styles.statsPanel}>
-                  <h4>Merge Summary</h4>
+                  <h4>{content.summaryHeading}</h4>
                   <div className={styles.statsGrid}>
                     <div className={styles.statItem}>
-                      <span className={styles.statValue}>{stats.files}</span>
-                      <span className={styles.statLabel}>Files</span>
+                      <span className={styles.statValue}>{stats.files.toLocaleString(htmlLang)}</span>
+                      <span className={styles.statLabel}>{content.filesLabel}</span>
                     </div>
                     <div className={styles.statItem}>
-                      <span className={styles.statValue}>{stats.tracks}</span>
-                      <span className={styles.statLabel}>Tracks</span>
+                      <span className={styles.statValue}>{stats.tracks.toLocaleString(htmlLang)}</span>
+                      <span className={styles.statLabel}>{content.tracksLabel}</span>
                     </div>
                     <div className={styles.statItem}>
-                      <span className={styles.statValue}>{stats.trackPoints.toLocaleString()}</span>
-                      <span className={styles.statLabel}>Points</span>
+                      <span className={styles.statValue}>{stats.trackPoints.toLocaleString(htmlLang)}</span>
+                      <span className={styles.statLabel}>{content.pointsLabel}</span>
                     </div>
                     <div className={styles.statItem}>
-                      <span className={styles.statValue}>{stats.waypoints}</span>
-                      <span className={styles.statLabel}>Waypoints</span>
+                      <span className={styles.statValue}>{stats.waypoints.toLocaleString(htmlLang)}</span>
+                      <span className={styles.statLabel}>{content.waypointsLabel}</span>
                     </div>
                   </div>
                 </div>
               )}
 
               <div className={styles.optionsPanel}>
-                <h4>Merge Options</h4>
+                <h4>{content.optionsHeading}</h4>
 
                 <div className={styles.optionItem}>
                   <label>
@@ -324,9 +334,9 @@ export default function GPXMerger() {
                       type="text"
                       value={options.outputName}
                       onChange={(e) => setOptions({ ...options, outputName: e.target.value })}
-                      placeholder="Output file name"
+                      placeholder={content.outputPlaceholder}
                     />
-                    <span className={styles.optionLabel}>Output Name</span>
+                    <span className={styles.optionLabel}>{content.outputName}</span>
                   </label>
                 </div>
 
@@ -337,9 +347,9 @@ export default function GPXMerger() {
                       checked={options.mergeTracksIntoOne}
                       onChange={(e) => setOptions({ ...options, mergeTracksIntoOne: e.target.checked })}
                     />
-                    <span>Merge all tracks into a single track</span>
+                    <span>{content.singleTrack}</span>
                   </label>
-                  <p className={styles.optionHint}>Combines all track segments into one continuous track</p>
+                  <p className={styles.optionHint}>{content.singleTrackHint}</p>
                 </div>
 
                 <div className={styles.optionItem}>
@@ -350,9 +360,9 @@ export default function GPXMerger() {
                       onChange={(e) => setOptions({ ...options, sortByTime: e.target.checked })}
                       disabled={!options.mergeTracksIntoOne}
                     />
-                    <span>Sort points by timestamp</span>
+                    <span>{content.sortByTime}</span>
                   </label>
-                  <p className={styles.optionHint}>Only available when merging into single track</p>
+                  <p className={styles.optionHint}>{content.sortByTimeHint}</p>
                 </div>
               </div>
 
@@ -364,12 +374,12 @@ export default function GPXMerger() {
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
-                Merge & Download GPX
+                {content.mergeButton}
               </button>
 
               <div className={styles.saveToAccountSection}>
                 <p className={styles.saveToAccountIntro}>
-                  Or skip the download — we'll merge and import it into your Dawarich account during signup.
+                  {content.saveIntro}
                 </p>
                 <SaveToAccountButton
                   toolName="gpx-merger"
@@ -385,61 +395,39 @@ export default function GPXMerger() {
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
             </svg>
-            <span>Merging happens in your browser. Nothing is uploaded unless you choose “Save to my Dawarich account.”</span>
+            <span>{content.privacy}</span>
           </div>
         </div>
 
         <div className={styles.infoSection}>
           <div className={styles.infoGrid}>
-            <div className={styles.infoCard}>
-              <h2>Why Merge GPX Files?</h2>
-              <ul>
-                <li>Combine multi-day hikes or bike trips into one file</li>
-                <li>Merge tracks from different GPS devices</li>
-                <li>Create a complete route from separate segments</li>
-                <li>Consolidate activities for easier sharing</li>
-                <li>Build a comprehensive track for visualization</li>
-              </ul>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>What Gets Merged?</h2>
-              <ul>
-                <li><strong>Tracks</strong> - All GPS track segments with timestamps and elevation</li>
-                <li><strong>Waypoints</strong> - Named points of interest, markers</li>
-                <li><strong>Routes</strong> - Planned navigation routes</li>
-                <li><strong>Metadata</strong> - Combined into a new merged file description</li>
-              </ul>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>Merge Options Explained</h2>
-              <p><strong>Keep tracks separate:</strong> Each input file's tracks remain as individual tracks in the output. Good for maintaining activity boundaries.</p>
-              <p><strong>Merge into single track:</strong> All track points are combined into one continuous track. Useful for creating a unified route visualization.</p>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>Compatible Applications</h2>
-              <p>The merged GPX file works with:</p>
-              <ul>
-                <li>Garmin Connect, Strava, Komoot</li>
-                <li>Google Earth, QGIS, CalTopo</li>
-                <li>Gaia GPS, AllTrails, ViewRanger</li>
-                <li>Any application that supports GPX 1.1</li>
-              </ul>
-            </div>
+            {content.cards.map((card, index) => (
+              <div className={styles.infoCard} key={index}>
+                <h2>{card.title}</h2>
+                {card.paragraphs.map((text, index) => (
+                  <p key={index}><RichText text={text} /></p>
+                ))}
+                {card.items && <ul>
+                  {card.items.map((item, index) => (
+                    <li key={index}><RichText text={item.body} /></li>
+                  ))}
+                </ul>}
+              </div>
+            ))}
           </div>
         </div>
 
         <PersonalizedCTA
           toolName="gpx-merger"
           headline={stats
-            ? `You combined <strong>${stats.files}</strong> files with <strong>${stats.trackPoints.toLocaleString()}</strong> points into one. Dawarich does this automatically with all your GPS sources.`
-            : 'Need to manage years of GPS data? Dawarich automatically organizes and visualizes all your GPS activities in one place.'}
+            ? <RichText text={interpolate(content.ctaHeadline, {
+              count: stats.files.toLocaleString(htmlLang), points: stats.trackPoints.toLocaleString(htmlLang),
+            })} />
+            : content.ctaFallback}
           stats={stats ? [
-            { label: 'files', value: stats.files.toString() },
-            { label: 'tracks', value: stats.tracks.toString() },
-            { label: 'points', value: stats.trackPoints.toLocaleString() },
+            { label: content.filesLabel.toLowerCase(), value: stats.files.toLocaleString(htmlLang) },
+            { label: content.tracksLabel.toLowerCase(), value: stats.tracks.toLocaleString(htmlLang) },
+            { label: content.pointsLabel.toLowerCase(), value: stats.trackPoints.toLocaleString(htmlLang) },
           ] : undefined}
         />
       </div>

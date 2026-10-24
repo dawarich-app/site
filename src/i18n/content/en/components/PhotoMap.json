@@ -1,0 +1,8 @@
+{
+  "loading": "Loading map...",
+  "photoLabel": "Photo",
+  "coordinates": "Coordinates:",
+  "altitude": "Altitude:",
+  "taken": "Taken:",
+  "altitudeValue": "{altitude}m"
+}

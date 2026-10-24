@@ -8,14 +8,21 @@ import { extractPhotoGeodata } from '@site/src/utils/exifParser';
 import { generateGPX } from '@site/src/utils/gpxGenerator';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import RelatedTools from '@site/src/components/RelatedTools';
+import { interpolate } from '@docusaurus/Interpolate';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import RichText from '@site/src/i18n/RichText';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
+import content from '@locale-content/tools/photo-geotagging.json';
 import styles from './photo-geotagging.module.css';
 
-const pageTitle = "Photo Geodata Extraction - Extract GPS Data from Photos";
-const pageDescription = "Free, privacy-first tool to extract GPS coordinates from your photos and export them as GPX files. All data processing happens in your browser - no data is sent to any server.";
-const pageUrl = "https://dawarich.app/tools/photo-geotagging/";
+const pageTitle = content.meta.title;
+const pageDescription = content.meta.description;
 const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 export default function PhotoGeotagging() {
+  const { i18n } = useDocusaurusContext();
+  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const pageUrl = useLocalizedUrl('/tools/photo-geotagging/');
   const [uploadedPhotos, setUploadedPhotos] = useState([]);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
   const [points, setPoints] = useState([]);
@@ -74,7 +81,7 @@ export default function PhotoGeotagging() {
 
   const handleExportGPX = useCallback(() => {
     if (points.length === 0) {
-      alert('No photos with GPS data to export');
+      alert(content.emptyExport);
       return;
     }
 
@@ -99,8 +106,7 @@ export default function PhotoGeotagging() {
         {/* Primary Meta Tags */}
         <meta name="title" content={pageTitle} />
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="photo geodata extraction, GPS, EXIF, geolocation, GPX export, photo location, privacy-first, image metadata" />
-        <link rel="canonical" href={pageUrl} />
+        <meta name="keywords" content={content.meta.keywords} />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
@@ -119,7 +125,7 @@ export default function PhotoGeotagging() {
 
         {/* Additional Meta Tags */}
         <meta name="author" content="Dawarich" />
-        <meta name="language" content="English" />
+        <meta name="language" content={htmlLang} />
         <meta name="revisit-after" content="7 days" />
 
         {/* JSON-LD Structured Data */}
@@ -127,7 +133,7 @@ export default function PhotoGeotagging() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "Photo Geodata Extraction",
+            "name": content.h1,
             "url": pageUrl,
             "description": pageDescription,
             "applicationCategory": "UtilityApplication",
@@ -137,13 +143,7 @@ export default function PhotoGeotagging() {
               "price": "0",
               "priceCurrency": "USD"
             },
-            "featureList": [
-              "Extract GPS data from photos",
-              "Interactive map with photo markers",
-              "Privacy-first - all processing in browser",
-              "Export locations as GPX files",
-              "No data sent to servers"
-            ]
+            "featureList": content.meta.featureList
           })}
         </script>
       </Head>
@@ -151,28 +151,28 @@ export default function PhotoGeotagging() {
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           <div className={styles.header}>
-            <h1>Photo Geodata Extraction</h1>
-            <p>Upload your photos to extract GPS coordinates from EXIF metadata, visualize them on a map, and export as GPX files.</p>
+            <h1>{content.h1}</h1>
+            <p>{content.intro}</p>
           </div>
 
           <div className={styles.topSection}>
             <div className={styles.instructions}>
-              <h2>How It Works</h2>
+              <h2>{content.howTo.title}</h2>
               <p>
-                This tool reads EXIF metadata from your photos to extract GPS coordinates. Most smartphones automatically embed location data in photos.
+                {content.howTo.intro}
               </p>
               <div className={styles.instructionsList}>
                 <div className={styles.instructionItem}>
-                  <strong>Supported formats:</strong>
-                  <p>JPEG, PNG, HEIC, and other image formats with EXIF data</p>
+                  <strong>{content.howTo.features[0].title}</strong>
+                  <p>{content.howTo.features[0].body}</p>
                 </div>
                 <div className={styles.instructionItem}>
-                  <strong>What you'll get:</strong>
-                  <p>Interactive map showing photo locations, detailed GPS data, and GPX export for GPS devices</p>
+                  <strong>{content.howTo.features[1].title}</strong>
+                  <p>{content.howTo.features[1].body}</p>
                 </div>
                 <div className={styles.instructionItem}>
-                  <strong>Note:</strong>
-                  <p>Only photos with GPS data will appear on the map. Screenshots and edited photos may not contain location data.</p>
+                  <strong>{content.howTo.features[2].title}</strong>
+                  <p>{content.howTo.features[2].body}</p>
                 </div>
               </div>
             </div>
@@ -186,9 +186,9 @@ export default function PhotoGeotagging() {
                     <svg className={styles.privacyIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
-                    Privacy First
+                    {content.privacy.title}
                   </strong>
-                  <p>All photo processing happens entirely in your browser. Your photos and location data never leave your device and are not sent to any server.</p>
+                  <p>{content.privacy.body}</p>
                 </div>
               </div>
             </div>
@@ -198,12 +198,12 @@ export default function PhotoGeotagging() {
             <PersonalizedCTA
               toolName="photo-geotagging"
               headline={points.length > 0
-                ? `You extracted GPS data from <strong>${points.length}</strong> photos. Dawarich maps all your location data — photos, tracks, and daily movements.`
-                : `You uploaded <strong>${uploadedPhotos.length}</strong> photos. Dawarich maps all your location data — photos, tracks, and daily movements.`}
+                ? <RichText text={interpolate(content.results.extracted, { count: points.length.toLocaleString(htmlLang) })} />
+                : <RichText text={interpolate(content.results.uploaded, { count: uploadedPhotos.length.toLocaleString(htmlLang) })} />}
               stats={points.length > 0 ? [
-                { label: 'photos with GPS', value: points.length.toString() },
+                { label: content.gpsPhotosLabel, value: points.length.toLocaleString(htmlLang) },
               ] : [
-                { label: 'photos', value: uploadedPhotos.length.toString() },
+                { label: content.photosLabel, value: uploadedPhotos.length.toLocaleString(htmlLang) },
               ]}
             />
           )}
@@ -213,14 +213,14 @@ export default function PhotoGeotagging() {
           {points.length > 0 && (
             <div className={styles.filterSection}>
               <span className={styles.filterLabel}>
-                Photos with GPS data: {points.length}
+                {interpolate(content.results.gpsPhotos, { count: points.length.toLocaleString(htmlLang) })}
               </span>
               <button
                 onClick={handleExportGPX}
                 className={styles.ctaButton}
                 style={{ marginLeft: 'auto', padding: '0.5rem 1.5rem' }}
               >
-                Export as GPX
+                {content.exportButton}
               </button>
             </div>
           )}

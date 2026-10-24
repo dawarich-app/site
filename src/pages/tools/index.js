@@ -2,92 +2,93 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
+import content from '@locale-content/tools/index.json';
 import styles from './index.module.css';
 
-const pageTitle = 'Free GPS Tools & Format Converters | Dawarich';
-const pageDescription = 'Privacy-first online tools for visualizing, analyzing, merging, and converting GPS and location history files. Everything runs in your browser — no data leaves your device.';
-const pageUrl = 'https://dawarich.app/tools';
+const pageTitle = content.meta.title;
+const pageDescription = content.meta.description;
 const imageUrl = 'https://dawarich.app/img/meta-image.png';
 
 const freeTools = [
   {
     to: '/tools/timeline-visualizer',
     icon: '🗺️',
-    title: 'Google Timeline Visualizer',
-    description: 'View your exported Google Timeline data on an interactive map. Supports all export formats.',
+    title: content.tools[0].title,
+    description: content.tools[0].description,
   },
   {
     to: '/tools/google-timeline-converter',
     icon: '🔄',
-    title: 'Google Timeline Converter',
-    description: 'Convert Google Timeline exports between formats. Handles Records.json and Semantic Location History.',
+    title: content.tools[1].title,
+    description: content.tools[1].description,
   },
   {
     to: '/tools/timeline-statistics',
     icon: '📊',
-    title: 'Timeline Statistics Analyzer',
-    description: 'Get insights into your location history: total distance, countries, cities, visits, and more.',
+    title: content.tools[2].title,
+    description: content.tools[2].description,
   },
   {
     to: '/tools/timeline-mileage-calculator',
     icon: '🚗',
-    title: 'Timeline Mileage Calculator',
-    description: 'Calculate total driving and travel distance from your Google Timeline data.',
+    title: content.tools[3].title,
+    description: content.tools[3].description,
   },
   {
     to: '/tools/timeline-merger',
     icon: '🔗',
-    title: 'Timeline Data Merger',
-    description: 'Combine multiple Google Timeline exports into a single dataset without duplicates.',
+    title: content.tools[4].title,
+    description: content.tools[4].description,
   },
   {
     to: '/tools/google-timeline-splitter',
     icon: '✂️',
-    title: 'Google Timeline Splitter',
-    description: 'Split a large Google Timeline file into smaller chunks by year or month.',
+    title: content.tools[5].title,
+    description: content.tools[5].description,
   },
   {
     to: '/tools/gps-file-splitter',
     icon: '✂️',
-    title: 'GPS File Splitter',
-    description: 'Break large GPX, KML, and GeoJSON files into smaller pieces for easier handling.',
+    title: content.tools[6].title,
+    description: content.tools[6].description,
   },
   {
     to: '/tools/timeline-format-detector',
     icon: '🔍',
-    title: 'Timeline Format Detector',
-    description: 'Identify which Google Timeline export format your file uses so you know how to process it.',
+    title: content.tools[7].title,
+    description: content.tools[7].description,
   },
   {
     to: '/tools/heatmap-generator',
     icon: '🔥',
-    title: 'GPS Heatmap Generator',
-    description: 'Turn location history into a heatmap showing where you spend the most time.',
+    title: content.tools[8].title,
+    description: content.tools[8].description,
   },
   {
     to: '/tools/map-poster-maker',
     icon: '🖼️',
-    title: 'Map Poster Maker',
-    description: 'Compose a map poster from any GPS file — 17 themes, PNG/PDF export, optional prints.',
+    title: content.tools[9].title,
+    description: content.tools[9].description,
   },
   {
     to: '/tools/gpx-merger',
     icon: '🔗',
-    title: 'GPX Track Merger',
-    description: 'Combine multiple GPX files into a single track. Useful for multi-day trips or imports.',
+    title: content.tools[10].title,
+    description: content.tools[10].description,
   },
   {
     to: '/tools/photo-geotagging',
     icon: '📸',
-    title: 'Photo Geodata Extraction',
-    description: 'Extract GPS coordinates and location metadata from your photos (EXIF data).',
+    title: content.tools[11].title,
+    description: content.tools[11].description,
   },
 ];
 
 const converterGroups = [
   {
     source: 'FIT',
-    description: 'Garmin activity files',
+    description: content.converters[0].description,
     targets: [
       { to: '/tools/fit-to-gpx', label: 'FIT → GPX' },
       { to: '/tools/fit-to-geojson', label: 'FIT → GeoJSON' },
@@ -96,7 +97,7 @@ const converterGroups = [
   },
   {
     source: 'TCX',
-    description: 'Training Center XML',
+    description: content.converters[1].description,
     targets: [
       { to: '/tools/tcx-to-gpx', label: 'TCX → GPX' },
       { to: '/tools/tcx-to-geojson', label: 'TCX → GeoJSON' },
@@ -105,7 +106,7 @@ const converterGroups = [
   },
   {
     source: 'GPX',
-    description: 'GPS exchange format',
+    description: content.converters[2].description,
     targets: [
       { to: '/tools/gpx-to-geojson', label: 'GPX → GeoJSON' },
       { to: '/tools/gpx-to-kml', label: 'GPX → KML' },
@@ -114,7 +115,7 @@ const converterGroups = [
   },
   {
     source: 'GeoJSON',
-    description: 'Web-standard GPS format',
+    description: content.converters[3].description,
     targets: [
       { to: '/tools/geojson-to-gpx', label: 'GeoJSON → GPX' },
       { to: '/tools/geojson-to-kml', label: 'GeoJSON → KML' },
@@ -123,7 +124,7 @@ const converterGroups = [
   },
   {
     source: 'KML',
-    description: 'Google Earth format',
+    description: content.converters[4].description,
     targets: [
       { to: '/tools/kml-to-gpx', label: 'KML → GPX' },
       { to: '/tools/kml-to-geojson', label: 'KML → GeoJSON' },
@@ -132,7 +133,7 @@ const converterGroups = [
   },
   {
     source: 'KMZ',
-    description: 'Compressed Google Earth format',
+    description: content.converters[5].description,
     targets: [
       { to: '/tools/kmz-to-gpx', label: 'KMZ → GPX' },
       { to: '/tools/kmz-to-geojson', label: 'KMZ → GeoJSON' },
@@ -142,12 +143,12 @@ const converterGroups = [
 ];
 
 export default function ToolsHub() {
+  const pageUrl = useLocalizedUrl('/tools/');
   return (
     <Layout title={pageTitle} description={pageDescription}>
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        <link rel="canonical" href={pageUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:url" content={pageUrl} />
@@ -162,23 +163,22 @@ export default function ToolsHub() {
 
       <header className={styles.hero}>
         <div className={styles.container}>
-          <h1 className={styles.heroTitle}>Free GPS & Location Tools</h1>
+          <h1 className={styles.heroTitle}>{content.h1}</h1>
           <p className={styles.heroSubtitle}>
-            Privacy-first utilities for working with GPS and location history files.
-            Everything runs in your browser — your data never leaves your device.
+            {content.intro}
           </p>
           <div className={styles.heroNav}>
-            <a href="#free-tools" className={styles.heroNavLink}>Free Tools</a>
-            <a href="#converters" className={styles.heroNavLink}>Format Converters</a>
+            <Link to="#free-tools" className={styles.heroNavLink}>{content.toolsHeading}</Link>
+            <Link to="#converters" className={styles.heroNavLink}>{content.convertersHeading}</Link>
           </div>
         </div>
       </header>
 
       <section id="free-tools" className={styles.section}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Free Tools</h2>
+          <h2 className={styles.sectionTitle}>{content.toolsHeading}</h2>
           <p className={styles.sectionSubtitle}>
-            Visualize, analyze, merge, and split your location history — no uploads, no accounts.
+            {content.toolsIntro}
           </p>
           <div className={styles.toolsGrid}>
             {freeTools.map((tool) => (
@@ -194,9 +194,9 @@ export default function ToolsHub() {
 
       <section id="converters" className={styles.section}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Format Converters</h2>
+          <h2 className={styles.sectionTitle}>{content.convertersHeading}</h2>
           <p className={styles.sectionSubtitle}>
-            Convert GPS and map data between formats. All processing happens locally in your browser.
+            {content.convertersIntro}
           </p>
           <div className={styles.converterGroups}>
             {converterGroups.map((group) => (
@@ -222,14 +222,13 @@ export default function ToolsHub() {
 
       <section className={styles.ctaSection}>
         <div className={styles.container}>
-          <h2 className={styles.ctaTitle}>Want the full Dawarich experience?</h2>
+          <h2 className={styles.ctaTitle}>{content.ctaTitle}</h2>
           <p className={styles.ctaSubtitle}>
-            These tools handle one-off tasks. Dawarich is the complete location history platform —
-            interactive maps, trips, statistics, photo integrations, and EU-hosted data privacy.
+            {content.ctaBody}
           </p>
           <div className={styles.ctaButtons}>
-            <Link to="/" className={styles.ctaPrimary}>See Dawarich</Link>
-            <Link to="/#pricing" className={styles.ctaSecondary}>Pricing</Link>
+            <Link to="/" className={styles.ctaPrimary}>{content.ctaButton}</Link>
+            <Link to="/#pricing" className={styles.ctaSecondary}>{content.pricingButton}</Link>
           </div>
         </div>
       </section>

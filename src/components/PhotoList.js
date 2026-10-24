@@ -1,7 +1,15 @@
 import React, { useMemo, useState } from 'react';
+import { interpolate } from '@docusaurus/Interpolate';
+import { usePluralForm } from '@docusaurus/theme-common';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import content from '@locale-content/components/PhotoList.json';
 import styles from './PointsList.module.css';
 
 export default function PhotoList({ photos, onPhotoSelect, selectedPhotoId }) {
+  const { i18n } = useDocusaurusContext();
+  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const { selectMessage } = usePluralForm();
+  const photoCount = (count) => interpolate(selectMessage(count, content.photoCount), { count: count.toLocaleString(htmlLang) });
   const [sortBy, setSortBy] = useState('time-desc'); // time-desc, time-asc, name
 
   // Sort photos
@@ -52,10 +60,10 @@ export default function PhotoList({ photos, onPhotoSelect, selectedPhotoId }) {
 
   const formatDayHeader = (dayKey) => {
     if (dayKey === 'all') return null;
-    if (dayKey === 'unknown') return 'Unknown Date';
+    if (dayKey === 'unknown') return content.unknownDate;
     const [year, month, day] = dayKey.split('-');
     const date = new Date(year, month - 1, day);
-    return date.toLocaleDateString('en-US', {
+    return date.toLocaleDateString(htmlLang, {
       weekday: 'long',
       year: 'numeric',
       month: 'long',
@@ -64,9 +72,9 @@ export default function PhotoList({ photos, onPhotoSelect, selectedPhotoId }) {
   };
 
   const formatTime = (timestamp) => {
-    if (!timestamp) return 'Unknown time';
+    if (!timestamp) return content.unknownTime;
     const date = new Date(timestamp);
-    return date.toLocaleTimeString('en-US', {
+    return date.toLocaleTimeString(htmlLang, {
       hour: '2-digit',
       minute: '2-digit',
       second: '2-digit',
@@ -81,15 +89,15 @@ export default function PhotoList({ photos, onPhotoSelect, selectedPhotoId }) {
     return (
       <div className={styles.container}>
         <div className={styles.header}>
-          <h3 className={styles.title}>Photos</h3>
-          <span className={styles.count}>0 photos</span>
+          <h3 className={styles.title}>{content.title}</h3>
+          <span className={styles.count}>{photoCount(0)}</span>
         </div>
         <div className={styles.emptyState}>
           <svg className={styles.emptyIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
-          <p>No photos with GPS data</p>
-          <p className={styles.emptyHint}>Upload photos to extract location data</p>
+          <p>{content.emptyTitle}</p>
+          <p className={styles.emptyHint}>{content.emptyHint}</p>
         </div>
       </div>
     );
@@ -99,18 +107,18 @@ export default function PhotoList({ photos, onPhotoSelect, selectedPhotoId }) {
     <div className={styles.container}>
       <div className={styles.header}>
         <div>
-          <h3 className={styles.title}>Photos</h3>
-          <span className={styles.count}>{photos.length} photo{photos.length !== 1 ? 's' : ''}</span>
+          <h3 className={styles.title}>{content.title}</h3>
+          <span className={styles.count}>{photoCount(photos.length)}</span>
         </div>
         <select
           value={sortBy}
           onChange={(e) => setSortBy(e.target.value)}
           className={styles.sortSelect}
-          aria-label="Sort photos"
+          aria-label={content.sortLabel}
         >
-          <option value="time-desc">Newest first</option>
-          <option value="time-asc">Oldest first</option>
-          <option value="name">By name</option>
+          <option value="time-desc">{content.newestFirst}</option>
+          <option value="time-asc">{content.oldestFirst}</option>
+          <option value="name">{content.byName}</option>
         </select>
       </div>
 
@@ -120,7 +128,7 @@ export default function PhotoList({ photos, onPhotoSelect, selectedPhotoId }) {
             {dayKey !== 'all' && (
               <div className={styles.dayHeader}>
                 <h4 className={styles.dayTitle}>{formatDayHeader(dayKey)}</h4>
-                <span className={styles.dayCount}>{dayPhotos.length} photo{dayPhotos.length !== 1 ? 's' : ''}</span>
+                <span className={styles.dayCount}>{photoCount(dayPhotos.length)}</span>
               </div>
             )}
 
@@ -135,7 +143,7 @@ export default function PhotoList({ photos, onPhotoSelect, selectedPhotoId }) {
                     className={styles.colorDot}
                     style={{ backgroundColor: '#ef4444' }}
                   ></div>
-                  <span className={styles.itemType}>Photo</span>
+                  <span className={styles.itemType}>{content.photoLabel}</span>
                   {photo.timestamp && (
                     <span className={styles.itemTime}>{formatTime(photo.timestamp)}</span>
                   )}
@@ -149,7 +157,7 @@ export default function PhotoList({ photos, onPhotoSelect, selectedPhotoId }) {
 
                 {photo.altitude && (
                   <div className={styles.itemDuration}>
-                    Altitude: {photo.altitude.toFixed(1)}m
+                    {interpolate(content.altitude, { altitude: photo.altitude.toLocaleString(htmlLang, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) })}
                   </div>
                 )}
               </div>

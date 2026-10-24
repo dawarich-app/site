@@ -1,7 +1,15 @@
 import React, { useCallback, useState } from 'react';
+import { interpolate } from '@docusaurus/Interpolate';
+import { usePluralForm } from '@docusaurus/theme-common';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import RichText from '@site/src/i18n/RichText';
+import content from '@locale-content/components/PhotoUploader.json';
 import styles from './FileUploader.module.css';
 
 export default function PhotoUploader({ onPhotosLoaded, onClear }) {
+  const { i18n } = useDocusaurusContext();
+  const htmlLang = i18n.localeConfigs[i18n.currentLocale].htmlLang;
+  const { selectMessage } = usePluralForm();
   const [isDragging, setIsDragging] = useState(false);
   const [fileCount, setFileCount] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
@@ -18,12 +26,12 @@ export default function PhotoUploader({ onPhotosLoaded, onClear }) {
     });
 
     if (imageFiles.length === 0) {
-      alert('No image files found. Please upload photos (JPEG, PNG, HEIC, etc.)');
+      alert(content.noImages);
       return;
     }
 
     setIsLoading(true);
-    setLoadingMessage(`Processing ${imageFiles.length} photo${imageFiles.length !== 1 ? 's' : ''}...`);
+    setLoadingMessage(interpolate(selectMessage(imageFiles.length, content.processing), { count: imageFiles.length.toLocaleString(htmlLang) }));
 
     try {
       setFileCount(imageFiles.length);
@@ -38,11 +46,11 @@ export default function PhotoUploader({ onPhotosLoaded, onClear }) {
       setIsLoading(false);
     } catch (e) {
       console.error('[PhotoUploader] Error loading photos:', e);
-      alert(`Error loading photos: ${e.message}`);
+      alert(interpolate(content.loadError, { message: e.message }));
       setIsLoading(false);
       setLoadingMessage('');
     }
-  }, [onPhotosLoaded]);
+  }, [onPhotosLoaded, htmlLang, selectMessage]);
 
   const handleDragEnter = useCallback((e) => {
     e.preventDefault();
@@ -94,7 +102,7 @@ export default function PhotoUploader({ onPhotosLoaded, onClear }) {
         onDrop={handleDrop}
       >
         <input
-          aria-label="Choose files to process"
+          aria-label={content.inputLabel}
           type="file"
           id="photoInput"
           multiple
@@ -108,24 +116,24 @@ export default function PhotoUploader({ onPhotosLoaded, onClear }) {
             <>
               <div className={styles.spinner}></div>
               <p><strong>{loadingMessage}</strong></p>
-              <p className={styles.hint}>Please wait...</p>
+              <p className={styles.hint}>{content.waiting}</p>
             </>
           ) : fileCount > 0 ? (
             <>
               <svg className={styles.icon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
-              <p><strong>{fileCount}</strong> photo{fileCount !== 1 ? 's' : ''} loaded</p>
-              <p className={styles.hint}>Click or drag to add more photos</p>
+              <p><RichText text={interpolate(selectMessage(fileCount, content.loaded), { count: fileCount.toLocaleString(htmlLang) })} /></p>
+              <p className={styles.hint}>{content.addPhotos}</p>
             </>
           ) : (
             <>
               <svg className={styles.icon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              <p>Drop photos here</p>
-              <p className={styles.hint}>or click to browse</p>
-              <p className={styles.formats}>Supports: JPEG, PNG, HEIC, and other image formats</p>
+              <p>{content.dropPhotos}</p>
+              <p className={styles.hint}>{content.browse}</p>
+              <p className={styles.formats}>{content.formats}</p>
             </>
           )}
         </label>
@@ -133,7 +141,7 @@ export default function PhotoUploader({ onPhotosLoaded, onClear }) {
 
       {fileCount > 0 && (
         <button onClick={handleClear} className={styles.clearButton}>
-          Clear All Photos
+          {content.clearButton}
         </button>
       )}
     </div>
