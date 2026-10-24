@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Conversor grátis de KML para GeoJSON — Google Earth online",
+    "description": "Converta arquivos KML para GeoJSON na hora. Conversor online grátis e privado. Tudo no navegador, sem enviar arquivos.",
+    "keywords": "KML para GeoJSON, conversor KML, conversor GeoJSON, Google Earth para web, conversor de dados geográficos",
+    "appName": "Conversor de KML para GeoJSON"
+  },
+  "h1": "Conversor de KML para GeoJSON",
+  "intro": "Converta seus arquivos KML para GeoJSON na hora. Todo o processamento acontece no navegador.",
+  "cards": [
+    {
+      "title": "Sobre o formato KML",
+      "body": "KML é um formato XML usado pelo Google Earth para visualizar dados geográficos e fazer anotações."
+    },
+    {
+      "title": "Sobre o formato GeoJSON",
+      "body": "GeoJSON é um formato baseado em JSON, amplamente usado em aplicativos de mapas na web e softwares GIS modernos."
+    },
+    {
+      "title": "Por que converter KML para GeoJSON?",
+      "items": [
+        "Melhor suporte em bibliotecas de mapas na web (Leaflet, Mapbox)",
+        "Mais fácil de analisar em aplicativos JavaScript",
+        "Formato mais compacto e eficiente",
+        "Estrutura JSON nativa para APIs web"
+      ]
+    }
+  ],
+  "privacyBody": "Toda a conversão acontece inteiramente no navegador. Seus dados nunca saem do dispositivo."
+}

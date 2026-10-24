@@ -1,0 +1,10 @@
+{
+  "bonusDescription": "**Serviço de importação personalizada.** Envie seu Google Takeout e nós importamos todo o seu histórico de localização — geralmente em até 24 horas. Incluído gratuitamente em todos os planos.",
+  "guaranteeDescription": "**Garantia de importação:** se a importação do seu Google Takeout tiver problemas, nós corrigimos pessoalmente — ou devolvemos cada centavo. Todos os planos também têm garantia de reembolso em até 14 dias, sem perguntas.",
+  "badge": "7 dias de teste grátis — Garantia de reembolso em até 14 dias",
+  "title": "Tenha controle do seu histórico de localização",
+  "subtitle": "A partir de {price} por mês para guardar uma vida de memórias. Seus dados são sempre seus — exporte tudo, quando quiser, em qualquer plano.",
+  "bonusBadge": "Bônus grátis · Valor de {price}",
+  "guaranteeLink": "Política de reembolso →",
+  "selfHostButton": "Não quer confiar seus dados a ninguém? Hospede grátis no seu servidor — todos os recursos Pro, custo zero"
+}

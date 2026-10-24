@@ -1,0 +1,59 @@
+{
+  "rows": [
+    {
+      "title": "Compartilhamento que desliga sozinho",
+      "body": "Compartilhe sua localização em tempo real por uma hora, seis, doze, vinte e quatro — ou sempre, se quiser. O tempo acaba sozinho, para que \"só enquanto volto para casa\" termine mesmo ao chegar, em vez de continuar pelos próximos três anos.",
+      "note": "Você escolhe a duração, sempre"
+    },
+    {
+      "title": "Ninguém pode ativar por você",
+      "body": "Cinco pessoas, cinco controles independentes. Quem paga o plano não tem mais poder sobre seu compartilhamento do que qualquer outra pessoa. Você pode desativar o próprio compartilhamento mesmo se a assinatura expirar, porque essa é uma ação de privacidade, nunca um recurso pago."
+    },
+    {
+      "title": "Pedir é melhor que rastrear",
+      "body": "Quando precisar saber onde alguém está, envie uma solicitação de localização. A pessoa vê quem pediu e decide se aceita ou recusa. Não há como obter a posição de um familiar sem que ele concorde naquele momento.",
+      "note": "O consentimento faz parte do funcionamento, não é uma configuração"
+    }
+  ],
+  "objections": [
+    {
+      "q": "É só o Life360 com outra marca?",
+      "a": "Não. Aqui, nada é compartilhado por padrão. Cada membro controla seu próprio compartilhamento, a localização em tempo real pode ter prazo, o histórico de localização é uma decisão separada, e perguntar onde alguém está significa enviar uma solicitação que a pessoa pode recusar."
+    },
+    {
+      "q": "Meu filho adolescente consegue ver que estou rastreando ele?",
+      "a": "Não há nada oculto para descobrir. Cada pessoa ativa o próprio compartilhamento, e a página da família mostra exatamente quem está compartilhando e quem não está. Não oferecemos rastreamento escondido."
+    },
+    {
+      "q": "O que cada pessoa recebe?",
+      "a": "Uma conta completa do Dawarich — com seu próprio mapa, linha do tempo, viagens, estatísticas e insights. O Família compartilha localização entre cinco contas separadas, não coloca cinco pessoas na mesma conta."
+    },
+    {
+      "q": "O que acontece se a assinatura de quem paga o plano expirar?",
+      "a": "A família é mantida. Quando a assinatura expira, os membros voltam aos seus próprios planos, e uma nova assinatura restaura os benefícios. Ninguém perde acesso ao próprio histórico."
+    },
+    {
+      "q": "Preciso pagar?",
+      "a": "Não se você hospedar no seu servidor. O Família funciona gratuitamente na sua instalação, porque todos os recursos pagos do Cloud também funcionam no seu próprio equipamento."
+    }
+  ],
+  "meta": {
+    "title": "Localização em família — Privacidade e consentimento",
+    "description": "Localização com até cinco familiares: controle individual, prazo, histórico separado e solicitações com aceite. {price} ou hospede grátis no seu servidor.",
+    "ogTitle": "Compartilhamento de localização em família sem vigilância",
+    "ogDescription": "Cinco pessoas, cinco controles independentes. Compartilhamento em tempo real com prazo, histórico como escolha separada e solicitações de localização que exigem aceite. Nada é compartilhado por padrão."
+  },
+  "familyPage": {
+    "text": "Compartilhamento de localização em família",
+    "em": "com a concordância de todos.",
+    "title2": "Feito para que ninguém seja monitorado por padrão",
+    "sub2": "Até cinco pessoas em um plano, cada uma com uma conta completa do Dawarich e controle total do que compartilha.",
+    "title3": "O que pais e parceiros nos perguntam",
+    "title4": "Compartilhe com sua família, não com corretores de dados",
+    "sub3": "{price} por ano para cinco pessoas no Dawarich Cloud. Ou use o mesmo software no seu equipamento sem pagar nada.",
+    "primaryLabel": "Começar um plano Família"
+  },
+  "hero": {
+    "sub": "Aplicativos de rastreamento familiar partem da ideia de monitorar todos o tempo todo. O Dawarich faz o contrário: nada é compartilhado até que a própria pessoa ative, o compartilhamento pode expirar, e saber onde alguém está significa perguntar."
+  }
+}

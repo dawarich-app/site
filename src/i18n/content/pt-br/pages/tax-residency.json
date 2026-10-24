@@ -1,0 +1,55 @@
+{
+  "rows": [
+    {
+      "title": "Todos os países contados, com o limite de 183 dias à vista",
+      "body": "Escolha um ano e veja quantos dias distintos você passou em cada país, em ordem decrescente. Qualquer país em que você alcance 183 dias ou mais recebe um alerta — o limite usado em muitas regras de residência e o número que é melhor acompanhar com antecedência do que descobrir em abril."
+    },
+    {
+      "title": "Os períodos por trás do total, não só o total",
+      "body": "Um total de 353 dias diz menos do que os oito períodos que o compõem — um de 133 dias, outro de 104 dias e vários curtos em dezembro. Cada estadia mostra início, fim e duração, que é o que você precisa quando uma regra considera presença contínua em vez de soma anual.",
+      "note": "Registros exportáveis, além do número no painel"
+    }
+  ],
+  "objections": [
+    {
+      "q": "Isso é orientação tributária?",
+      "a": "Não, nem pretende ser. O Dawarich informa o que seu histórico de localização mostra. Ele não interpreta a legislação tributária de nenhum país, e cada jurisdição conta dias de um jeito — algumas contam dias parciais, outras excluem dias de viagem, outras fazem médias de vários anos. São registros para levar a um profissional, não uma conclusão para orientar decisões."
+    },
+    {
+      "q": "Como um dia é contado exatamente?",
+      "a": "Um dia conta para um país se você tiver pelo menos um ponto registrado lá naquele dia. Se voar da Alemanha para a França numa terça-feira, ela conta para os dois países, então a soma por país pode superar seus dias registrados. Os dias seguem UTC, o que pode mudar a contagem perto da meia-noite e das fronteiras."
+    },
+    {
+      "q": "E os dias em que não registrei localização?",
+      "a": "Eles não contam para nenhum país e nunca são atribuídos ao último país conhecido. O relatório também mostra o total de dias registrados, para você ver quanto do ano os números realmente cobrem — a primeira coisa que um contador vai perguntar."
+    },
+    {
+      "q": "Tenho anos de histórico no Google Timeline. Funciona?",
+      "a": "Sim. Importe seu arquivo do Google Takeout e os dias vêm junto. Os pontos importados precisam de geocodificação reversa para serem atribuídos a um país, e o Dawarich cuida disso para você."
+    },
+    {
+      "q": "Preciso confiar anos de dados de localização a vocês?",
+      "a": "Você não precisa confiar em ninguém. Todo o aplicativo tem código aberto e todos os recursos funcionam no seu equipamento. Hospede no seu servidor e os dados nunca saem da sua máquina."
+    }
+  ],
+  "meta": {
+    "title": "Residência fiscal — Contagem automática da regra de 183 dias",
+    "description": "Dias por país pelo GPS, estadias consecutivas e alerta de 183 dias. Para nômades digitais, trabalhadores transfronteiriços e viajantes de longa duração.",
+    "ogTitle": "Residência fiscal — Acompanhe a regra de 183 dias pelo seu histórico GPS",
+    "ogDescription": "Contagem de dias por país com o histórico de localização que você já registra, períodos de estadia consecutivos e alerta de 183 dias. Registros para avaliar residência, não orientação tributária."
+  },
+  "taxResidencyPage": {
+    "text": "Você cruzou seis fronteiras neste ano.",
+    "em": "Quantos dias passou em cada país?",
+    "title2": "A resposta, com o cálculo à vista",
+    "sub2": "A contagem de dias por país fica na página Insights e acompanha o ano que você escolhe no topo.",
+    "title3": "Leia antes de usar os resultados",
+    "title4": "Comece a contar agora, não em abril que vem",
+    "text2": "Registre a partir de hoje e a resposta do próximo ano já estará contada. As regras completas estão na",
+    "EnOnlyLink": "documentação de Dias por país",
+    "text3": "."
+  },
+  "hero": {
+    "sub": "Reconstruir um ano com cartões de embarque e agenda pode levar a erros de residência fiscal. O Dawarich conta os dias por país com o histórico GPS que você já registra — um quadrado por dia, colorido por país —, sinaliza quando passa de 183 e mostra as lacunas do rastreamento em vez de ocultá-las."
+  }
+}

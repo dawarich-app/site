@@ -1,0 +1,105 @@
+{
+  "howItWorksSteps": [
+    {
+      "title": "Cadastre-se",
+      "description": "E-mail, senha, pronto. 90 segundos. 7 dias de teste grátis com todos os recursos."
+    },
+    {
+      "title": "Importe seu passado",
+      "description": "Arraste seu zip do Google Takeout, registros do OwnTracks, arquivos GPX ou qualquer um dos mais de 15 formatos. Veja seu histórico se reconstruir no mapa."
+    },
+    {
+      "title": "Continue registrando",
+      "description": "Instale o aplicativo para iOS ou Android. O rastreamento em segundo plano começa automaticamente. Viagens, mapas de calor e estatísticas se atualizam em tempo real."
+    }
+  ],
+  "painSection": {
+    "heading": "Seus dados de localização estão em um destes três lugares agora.",
+    "p": "Nenhum deles coloca você no controle.",
+    "div": "No Google",
+    "p2": "Alimentando anúncios direcionados há uma década. Agora, o Timeline ficou preso no seu celular, sem novos backups na nuvem.",
+    "div2": "No Life360",
+    "p3": "Vendidos como “insights agregados” a anunciantes. Se tiver dúvidas, leia a [reportagem do The Markup](https://themarkup.org/privacy/2022/01/27/life360-said-it-stopped-selling-precise-location-data-but-the-data-still-flows).",
+    "div3": "Em lugar nenhum",
+    "p4": "Porque todas as alternativas que respeitam a privacidade exigiam aprender Docker primeiro. Então você nunca começou."
+  },
+  "differentiators": {
+    "heading": "O que realmente torna o Dawarich diferente",
+    "p": "Hospedagem e backups são o básico. Veja o que vai além.",
+    "h3": "Dados armazenados na UE",
+    "p2": "Hospedado na Hetzner, na Alemanha. Sem transferências para os EUA. Sem PRISM, sem Patriot Act, sem nota de rodapé dizendo “cooperamos com as autoridades dos EUA”.",
+    "h32": "Saída garantida com código aberto",
+    "p3": "Todo o código do Dawarich está no [GitHub](https://github.com/Freika/dawarich), com MAIS de 9,000 estrelas. Se encerrarmos as atividades, você hospeda o mesmo software com um comando e importa os dados que exportou.",
+    "h33": "Mais de 15 formatos de importação",
+    "p4": "A maioria dos concorrentes só aceita os próprios dados. Nós aceitamos os de todos — Google, Strava, Garmin, Apple Health, OwnTracks e mais uma dúzia.",
+    "h34": "O histórico de uma vida, além dos treinos",
+    "p5": "O Strava conhece suas corridas. O Polarsteps conhece suas viagens. Nós conhecemos todos os lugares por onde você passou.",
+    "h35": "Visualizações de verdade",
+    "p6": "Mapas de calor, névoa de exploração, vista do globo, detecção automática de viagens e retrospectiva do ano. Muito além de um ponto no mapa.",
+    "h36": "Integração de fotos",
+    "p7": "Conecte o Immich ou o PhotoPrism — suas fotos aparecem no mapa perto de onde foram tiradas."
+  },
+  "competitorReframe": {
+    "heading": "Por que pagar pelo que o Google “dava” de graça?",
+    "p": "O grátis não era grátis. Você pagava com dados — cada cafeteria, cada trilha de domingo, cada passeio de carro à noite — que alimentavam o perfil que o Google criou de você.",
+    "p2": "Esta é a escolha de verdade:",
+    "th": "Serviço",
+    "th2": "Custo anual",
+    "th3": "O que faz",
+    "th4": "O que fazem com seus dados",
+    "td": "Google Timeline",
+    "td2": "“Grátis”",
+    "td3": "Encerrado, passou a funcionar só no celular",
+    "td4": "Alimentou anúncios direcionados por uma década",
+    "td5": "Life360 Gold",
+    "td6": "Só localização da família em tempo real",
+    "td7": "Vendeu dados de localização agregados",
+    "td8": "Strava Premium",
+    "td9": "Só treinos — sem o histórico de uma vida",
+    "td10": "Atividades públicas por padrão",
+    "td11": "Dawarich Cloud Pro",
+    "td12": "Histórico completo, mapas de calor, viagens, estatísticas",
+    "td13": "Nada. Nunca.",
+    "text": "Cobramos menos do que o Life360 cobra para ",
+    "em": "vender",
+    "text2": " seus dados."
+  },
+  "promises": {
+    "heading": "A promessa de que você não sai perdendo",
+    "p": "“Confie seus dados de localização a nós” é pedir muito. Então esta é nossa contrapartida:",
+    "h3": "7 dias de teste grátis",
+    "p2": "Todos os recursos por uma semana. Se não for para você, cancele nas configurações da assinatura — suas exportações continuam suas.",
+    "h32": "Cancele quando quiser",
+    "p3": "Sem multa por sair do plano anual, sem taxa de cancelamento, sem e-mails de “tem certeza?”.",
+    "h33": "Exporte quando quiser",
+    "p4": "Cada byte dos seus dados, exportável em GPX, GeoJSON, KML ou JSON bruto, em qualquer plano, para sempre.",
+    "p5": "Se o Dawarich Cloud encerrar as atividades, você hospeda o mesmo software no seu servidor e importa seus dados exportados. **Nós literalmente não conseguimos reter seus dados.**"
+  },
+  "cloudFinalCTA": {
+    "heading": "Pare de alugar suas memórias de empresas que não se importam.",
+    "p": "Seu histórico de localização é o mapa da sua vida. Os lugares onde você se apaixonou. A viagem no ano em que sua mãe ficou doente. O caminho de bicicleta até seu primeiro emprego.",
+    "text": "Comece seu teste grátis de 7 dias",
+    "span": "7 dias de teste grátis · Cancele quando quiser · Ou [hospede a versão de código aberto](https://github.com/Freika/dawarich), se preferir. Apoiamos as duas opções. E sempre vamos apoiar."
+  },
+  "cloudPage": {
+    "text": "Ver preços"
+  },
+  "meta": {
+    "title": "Dawarich Cloud — Seu histórico de localização privado",
+    "description": "Histórico privado na Alemanha. Mapas de calor, viagens e estatísticas, sem vender dados. Importe Google Takeout, Strava, Garmin e +12. {price}. 7 dias grátis.",
+    "ogDescription": "Histórico de localização com foco em privacidade, hospedado na Alemanha. Mapas de calor, viagens e estatísticas — sem vender seus dados. A partir de {price}. 7 dias de teste grátis.",
+    "twitterDescription": "Histórico de localização com foco em privacidade, hospedado na Alemanha. Mapas de calor, viagens e estatísticas — sem vender seus dados."
+  },
+  "hero": {
+    "badge": "Histórico de localização com privacidade",
+    "title": "Seu histórico de localização.",
+    "titleHighlight": "Privado. Permanente.",
+    "subtitle": "Mapas de calor, viagens e estatísticas de todos os lugares por onde você passou — sem alimentar os anúncios do Google, os corretores de dados do Life360 ou seu próprio Raspberry Pi.",
+    "disclaimer": "7 dias de teste grátis · Cancele quando quiser · Seus dados continuam seus, em formatos padrão",
+    "imageAlt": "Linha do tempo do Dawarich exibindo uma década de histórico de localização"
+  },
+  "howItWorks": {
+    "title": "Como funciona",
+    "subtitle": "Três etapas. Não existe uma quarta."
+  }
+}

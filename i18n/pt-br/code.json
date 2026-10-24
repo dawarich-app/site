@@ -1,30 +1,30 @@
 {
   "shared.saveToAccount.tooLarge": {
-    "message": "Your file is too large for instant import. Sign up first, then upload from your dashboard."
+    "message": "Seu arquivo é grande demais para importação instantânea. Cadastre-se primeiro e depois envie pelo seu painel."
   },
   "shared.saveToAccount.rateLimited": {
-    "message": "Too many uploads from your network. Please try again in an hour."
+    "message": "Muitos envios da sua rede. Tente novamente em uma hora."
   },
   "shared.saveToAccount.failed": {
-    "message": "Upload failed. Please try again."
+    "message": "Falha no envio. Tente novamente."
   },
   "shared.saveToAccount.noFiles": {
-    "message": "No files to save. Upload a file first."
+    "message": "Nenhum arquivo para salvar. Envie um arquivo primeiro."
   },
   "shared.saveToAccount.uploading": {
-    "message": "Uploading…"
+    "message": "Enviando…"
   },
   "shared.saveToAccount.save": {
-    "message": "Save to my Dawarich account"
+    "message": "Salvar na minha conta Dawarich"
   },
   "shared.breadcrumb.home": {
-    "message": "Home"
+    "message": "Início"
   },
   "shared.breadcrumb.tools": {
-    "message": "Free Tools"
+    "message": "Ferramentas gratuitas"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
-    "message": "1 item|{count} items",
+    "message": "{count} item|{count} itens|{count} itens",
     "description": "The default description for a category card in the generated index about how many items this category includes"
   },
   "theme.ErrorPageContent.title": {
@@ -84,7 +84,7 @@
     "description": "The name for the light color mode"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
-    "message": "Breadcrumbs",
+    "message": "Navegação estrutural",
     "description": "The ARIA label for the breadcrumbs"
   },
   "theme.docs.paginator.navAriaLabel": {
@@ -171,7 +171,7 @@
     "description": "The default label used for the Danger admonition (:::danger)"
   },
   "theme.admonition.info": {
-    "message": "info",
+    "message": "informação",
     "description": "The default label used for the Info admonition (:::info)"
   },
   "theme.admonition.note": {
@@ -187,7 +187,7 @@
     "description": "The default label used for the Warning admonition (:::warning)"
   },
   "theme.blog.sidebar.navAriaLabel": {
-    "message": "Blog recent posts navigation",
+    "message": "Navegação pelas publicações recentes do blog",
     "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.CodeBlock.copied": {
@@ -215,7 +215,7 @@
     "description": "The ARIA label to collapse the sidebar category"
   },
   "theme.NavBar.navAriaLabel": {
-    "message": "Main",
+    "message": "Principal",
     "description": "The ARIA label for the main navigation"
   },
   "theme.NotFound.p1": {
@@ -259,7 +259,7 @@
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.navAriaLabel": {
-    "message": "Docs sidebar",
+    "message": "Barra lateral da documentação",
     "description": "The ARIA label for the sidebar navigation"
   },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
@@ -295,7 +295,7 @@
     "description": "The title of the page for a blog author"
   },
   "theme.blog.authorsList.pageTitle": {
-    "message": "Authors",
+    "message": "Autores",
     "description": "The title of the authors page"
   },
   "theme.blog.authorsList.viewAll": {
@@ -303,7 +303,7 @@
     "description": "The label of the link targeting the blog authors page"
   },
   "theme.blog.author.noPosts": {
-    "message": "This author has not written any posts yet.",
+    "message": "Este autor ainda não escreveu nenhuma publicação.",
     "description": "The text for authors with 0 blog post"
   },
   "theme.contentVisibility.unlistedBanner.title": {
@@ -315,11 +315,11 @@
     "description": "The unlisted content banner message"
   },
   "theme.contentVisibility.draftBanner.title": {
-    "message": "Draft page",
+    "message": "Página de rascunho",
     "description": "The draft content banner title"
   },
   "theme.contentVisibility.draftBanner.message": {
-    "message": "This page is a draft. It will only be visible in dev and be excluded from the production build.",
+    "message": "Esta página é um rascunho. Ela só aparece no ambiente de desenvolvimento e fica fora da versão de produção.",
     "description": "The draft content banner message"
   },
   "theme.ErrorPageContent.tryAgain": {
@@ -335,114 +335,114 @@
     "description": "The title of the tag list page"
   },
   "shared.cookieConsent.accept": {
-    "message": "Accept"
+    "message": "Aceitar"
   },
   "shared.cookieConsent.reject": {
-    "message": "Reject"
+    "message": "Recusar"
   },
   "shared.cookieConsent.acceptAria": {
-    "message": "Accept cookies"
+    "message": "Aceitar cookies"
   },
   "shared.cookieConsent.rejectAria": {
-    "message": "Decline cookies"
+    "message": "Recusar cookies"
   },
   "shared.cookieConsent.body": {
-    "message": "We use a cookieless analytics service (Simple Analytics) that requires no consent. You can optionally accept cookies for Google Ads conversion tracking, Brevo email analytics and affiliate referral credit — these only load if you click \"Accept\"."
+    "message": "Usamos um serviço de análise sem cookies (Simple Analytics), que dispensa consentimento. Você pode aceitar cookies opcionais para acompanhar conversões do Google Ads, analisar e-mails no Brevo e atribuir indicações de afiliados — eles só são carregados se você clicar em \"Aceitar\"."
   },
   "shared.cookieConsent.learnMore": {
-    "message": "Learn more"
+    "message": "Saiba mais"
   },
   "shared.uploader.noJson": {
-    "message": "No JSON files found. Please upload Google Timeline JSON files."
+    "message": "Nenhum arquivo JSON encontrado. Envie arquivos JSON do Google Timeline."
   },
   "shared.uploader.reading": {
-    "message": "Reading file {current}/{total}: {name}"
+    "message": "Lendo arquivo {current}/{total}: {name}"
   },
   "shared.uploader.parsing": {
-    "message": "Parsing file {current}/{total}: {name}"
+    "message": "Analisando arquivo {current}/{total}: {name}"
   },
   "shared.uploader.processing": {
-    "message": "Processing timeline data..."
+    "message": "Processando dados da linha do tempo..."
   },
   "shared.uploader.loadError": {
-    "message": "Error loading files: {message}"
+    "message": "Erro ao carregar arquivos: {message}"
   },
   "shared.uploader.chooseFiles": {
-    "message": "Choose files to process"
+    "message": "Escolher arquivos para processar"
   },
   "shared.uploader.wait": {
-    "message": "Please wait..."
+    "message": "Aguarde..."
   },
   "shared.uploader.loaded": {
-    "message": "**{count}** file loaded|**{count}** files loaded"
+    "message": "**{count}** arquivo carregado|{count} arquivos carregados|**{count}** arquivos carregados"
   },
   "shared.uploader.addMore": {
-    "message": "Click or drag to add more files"
+    "message": "Clique ou arraste para adicionar mais arquivos"
   },
   "shared.uploader.dropPrompt": {
-    "message": "Drop Google Timeline JSON files here"
+    "message": "Solte arquivos JSON do Google Timeline aqui"
   },
   "shared.uploader.browse": {
-    "message": "or click to browse"
+    "message": "ou clique para procurar"
   },
   "shared.uploader.supports": {
-    "message": "Supports: {formats}"
+    "message": "Formatos aceitos: {formats}"
   },
   "shared.uploader.clearAll": {
-    "message": "Clear All Files"
+    "message": "Limpar todos os arquivos"
   },
   "shared.converter.dropPrompt": {
-    "message": "Drag and drop your {format} file here, or click to browse"
+    "message": "Arraste e solte seu arquivo {format} aqui ou clique para procurar"
   },
   "shared.converter.removeFile": {
-    "message": "Remove file"
+    "message": "Remover arquivo"
   },
   "shared.converter.converting": {
-    "message": "Converting..."
+    "message": "Convertendo..."
   },
   "shared.converter.convertTo": {
-    "message": "Convert to {format}"
+    "message": "Converter para {format}"
   },
   "shared.personalizedCta.body": {
-    "message": "Self-hosted or cloud. Cancel anytime."
+    "message": "No seu servidor ou na nuvem. Cancele quando quiser."
   },
   "shared.personalizedCta.button": {
-    "message": "Start Your Free Trial"
+    "message": "Começar meu teste grátis"
   },
   "shared.relatedTools.ariaLabel": {
-    "message": "Related tools and pages"
+    "message": "Ferramentas e páginas relacionadas"
   },
   "shared.relatedTools.heading": {
-    "message": "Related tools & pages"
+    "message": "Ferramentas e páginas relacionadas"
   },
   "shared.toolGuide.whenToConvert": {
-    "message": "When you'd convert {subject}"
+    "message": "Quando converter {subject}"
   },
   "shared.toolGuide.preserved": {
-    "message": "What gets preserved (and what doesn't)"
+    "message": "O que é preservado (e o que não é)"
   },
   "shared.toolGuide.field": {
-    "message": "Field"
+    "message": "Campo"
   },
   "shared.toolGuide.preservedColumn": {
-    "message": "Preserved?"
+    "message": "Preservado?"
   },
   "shared.toolGuide.notes": {
-    "message": "Notes"
+    "message": "Observações"
   },
   "shared.toolGuide.apps": {
-    "message": "Apps that read your converted file"
+    "message": "Aplicativos que leem o arquivo convertido"
   },
   "shared.toolGuide.example": {
-    "message": "Worked example"
+    "message": "Exemplo prático"
   },
   "shared.toolGuide.input": {
-    "message": "Input ({format})"
+    "message": "Entrada ({format})"
   },
   "shared.toolGuide.output": {
-    "message": "Output ({format})"
+    "message": "Saída ({format})"
   },
   "shared.toolGuide.faq": {
-    "message": "Frequently asked questions"
+    "message": "Perguntas frequentes"
   }
 }

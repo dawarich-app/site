@@ -1,0 +1,84 @@
+{
+  "versusRows": [
+    {
+      "feature": "Acesso pelo navegador",
+      "g": {
+        "text": "Encerrado (só no celular)"
+      },
+      "d": {
+        "text": "Aplicativo web completo"
+      }
+    },
+    {
+      "feature": "Retenção de dados",
+      "g": {
+        "text": "Limitada (exclusão automática)"
+      },
+      "d": {
+        "text": "Para sempre (Pro)"
+      }
+    },
+    {
+      "feature": "Seus dados usados em anúncios",
+      "g": {
+        "text": "Sim"
+      },
+      "d": {
+        "text": "Nunca"
+      }
+    },
+    {
+      "feature": "Dados vendidos a terceiros",
+      "g": {
+        "text": "Sim (rede de anúncios)"
+      },
+      "d": {
+        "text": "Nunca"
+      }
+    },
+    {
+      "feature": "Exportar seus dados",
+      "g": {
+        "text": "Parcial, complicado"
+      },
+      "d": {
+        "text": "Um clique, qualquer formato"
+      }
+    },
+    {
+      "feature": "Opção de hospedagem própria",
+      "g": {
+        "text": "Não"
+      },
+      "d": {
+        "text": "Sim — controle total"
+      }
+    },
+    {
+      "feature": "Código aberto",
+      "g": {
+        "text": "Não"
+      },
+      "d": {
+        "text": "Sim — confira cada linha"
+      }
+    },
+    {
+      "feature": "Funciona se a empresa encerrar o produto",
+      "g": {
+        "text": "Não"
+      },
+      "d": {
+        "text": "Sim (a hospedagem própria continua)"
+      }
+    }
+  ],
+  "switchPill": " Faça a mudança",
+  "title": "Google Timeline vs Dawarich",
+  "subtitle": "Veja o que você ganha ao fazer a mudança.",
+  "dawarichName": "DAWARICH",
+  "footNote": "Os dados são seus. Mantenha assim.",
+  "footCta": "Mude para o Dawarich",
+  "featureHeader": "Recurso",
+  "googleTimelineHeader": "Google Timeline"
+}

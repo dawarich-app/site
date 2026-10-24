@@ -1,0 +1,97 @@
+{
+  "showcaseItems": [
+    {
+      "title": "Mapa interativo da viagem",
+      "description": "Cada página de viagem tem um belo mapa interativo com o trajeto completo e todos os pontos que você visitou pelo caminho."
+    },
+    {
+      "title": "Estatísticas completas",
+      "description": "Veja estatísticas detalhadas de cada viagem: distância total percorrida, duração, países visitados e mais recursos em breve."
+    },
+    {
+      "title": "Diário com formatação de texto",
+      "description": "Documente suas aventuras com descrições e notas formatadas. Preserve memórias e histórias das suas viagens."
+    },
+    {
+      "title": "Integração de fotos",
+      "description": "Fotos da sua instalação do Immich ou PhotoPrism aparecem automaticamente no mapa da viagem nos locais onde foram tiradas."
+    },
+    {
+      "title": "Gerenciamento da lista de viagens",
+      "description": "Organize todas as suas viagens em um só lugar. Reviva aventuras passadas e crie novas quando quiser."
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Registre seus deslocamentos",
+      "description": "Deixe o Dawarich registrar sua localização automaticamente durante a viagem usando qualquer aplicativo de rastreamento compatível.",
+      "details": [
+        "Aplicativo Dawarich para iOS para registrar com facilidade",
+        "Aplicativos de terceiros como Overland, OwnTracks e GPSLogger",
+        "Os dados são sincronizados automaticamente com sua conta"
+      ]
+    },
+    {
+      "title": "Crie sua viagem",
+      "description": "Ao voltar, crie uma viagem definindo o nome e o intervalo de datas.",
+      "details": [
+        "Escolha as datas de início e fim",
+        "Dê um nome memorável à sua viagem",
+        "O Dawarich agrupa seus dados de localização automaticamente"
+      ]
+    },
+    {
+      "title": "Adicione sua história",
+      "description": "Enriqueça sua viagem com notas, descrições e relatos usando o editor de texto com formatação.",
+      "details": [
+        "Escreva sobre suas experiências",
+        "Adicione contexto aos seus locais",
+        "Crie uma narrativa da sua jornada"
+      ]
+    },
+    {
+      "title": "Explore e compartilhe",
+      "description": "Veja sua viagem no mapa interativo, confira as estatísticas e reviva sua aventura (compartilhamento de viagens em breve)",
+      "details": [
+        "Veja seu trajeto completo no mapa",
+        "Confira distância, duração e lugares visitados",
+        "As fotos aparecem automaticamente no mapa"
+      ]
+    }
+  ],
+  "meta": {
+    "title": "Viagens e diário de viagem",
+    "description": "Transforme suas viagens em registros completos com mapas interativos, estatísticas, diário com texto formatado e integração de fotos.",
+    "ogTitle": "Viagens no Dawarich — Documente suas aventuras",
+    "ogDescription": "Crie diários de viagem completos com mapas interativos, estatísticas detalhadas, descrições com texto formatado e integração automática de fotos."
+  },
+  "hero": {
+    "badge": "Diário de viagem",
+    "title": "Transforme suas viagens em",
+    "titleHighlight": "belas histórias",
+    "subtitle": "Registre seus deslocamentos automaticamente e transforme-os em diários de viagem completos. Cada viagem inclui mapa interativo, estatísticas detalhadas, descrições com texto formatado e fotos — tudo em um só lugar.",
+    "imageAlt": "Detalhes da viagem com mapa e estatísticas"
+  },
+  "tripsPage": {
+    "heading": "Por que registrar viagens importa",
+    "title3": "Preserve memórias",
+    "description2": "Nunca esqueça os detalhes das suas aventuras. Cada viagem fica salva permanentemente com dados completos de localização e suas notas pessoais.",
+    "description3": "Combine dados de localização com suas ideias e histórias. Crie um diário de viagem multimídia completo, que vai além de simples notas.",
+    "title4": "Reviva aventuras",
+    "description4": "Reveja viagens passadas quando quiser. Veja exatamente aonde foi, por quanto tempo viajou e redescubra os lugares que visitou.",
+    "title5": "Tudo o que você precisa em uma viagem",
+    "subtitle2": "Cada viagem inclui automaticamente vários elementos para contar a história completa da sua jornada.",
+    "title6": "Como funciona",
+    "subtitle3": "Criar e gerenciar viagens é simples e intuitivo — bastam alguns cliques para transformar seus dados de localização em histórias.",
+    "heading2": "Criação flexível de viagens",
+    "title7": "Agrupamento automático",
+    "description5": "Basta definir as datas da viagem e o Dawarich reúne automaticamente todos os pontos de localização do período. Ideal para resultados rápidos.",
+    "title8": "Detalhes manuais",
+    "description6": "Crie viagens para contar histórias ou documentar aventuras específicas. Adicione sua narrativa e notas para enriquecer a experiência.",
+    "heading3": "Comece a documentar suas viagens",
+    "p": "Comece a criar belos diários de viagem hoje com 7 dias de teste grátis. Cancele quando quiser.",
+    "Link": "Experimente grátis por 7 dias",
+    "EnOnlyLink": "Hospede grátis no seu servidor",
+    "p2": "7 dias de teste grátis · Reembolso em até 14 dias, sem risco · Cancele quando quiser"
+  }
+}

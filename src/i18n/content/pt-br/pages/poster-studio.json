@@ -1,0 +1,57 @@
+{
+  "rows": [
+    {
+      "title": "Um pôster é só uma das vinte e duas opções",
+      "body": "Impressão é a escolha óbvia — de A5 a A0, 30 × 40, 50 × 70 e 70 × 100 cm, Carta US, em retrato ou paisagem. Mas o mesmo mapa também pode virar papel de parede para celular ou computador, até 4K e ultrawide, ou uma publicação no Instagram, um story, um cabeçalho do X ou uma miniatura do YouTube. Os layouts de impressão usam tamanhos reais de papel e DPI; os de tela têm medidas exatas em pixels.",
+      "note": "Uma composição, vinte e duas saídas"
+    },
+    {
+      "title": "O enquadramento que você vê é o que você recebe",
+      "body": "Escolha um layout antes de compor e a prévia se adapta a ele, para o recorte de um story nunca ser surpresa. O estúdio mostra as dimensões finais enquanto você trabalha — um A3 em retrato a 300 DPI exporta 3508 × 4961 pixels — e avisa quando a vista é ampla demais para a maior área de pôster, em vez de ampliar sem avisar."
+    }
+  ],
+  "objections": [
+    {
+      "q": "Qual é a diferença para os pôsteres de mapas vendidos por aí?",
+      "a": "Eles mostram o contorno de uma cidade que qualquer pessoa pode comprar com um nome embaixo. Este mostra o caminho que você realmente percorreu a pé, de bicicleta ou de carro, traçado a partir dos pontos GPS da sua conta."
+    },
+    {
+      "q": "O pôster impresso vai ficar igual ao que criei?",
+      "a": "O enquadramento que você monta é o que sai na impressão — o estúdio usa o mesmo enquadramento do renderizador e avisa quando a vista é ampla demais para o maior tamanho de pôster, em vez de ampliar sem avisar."
+    },
+    {
+      "q": "Qual é a qualidade da impressão?",
+      "a": "Papel fosco premium de 200 gsm, sem reflexo, para manter a linha do trajeto nítida sob a luz do ambiente. O frete na UE está incluído no preço, e o pagamento é feito pelo Stripe, então os dados do seu cartão nunca passam pelo Dawarich."
+    },
+    {
+      "q": "Preciso pedir uma impressão para usar o estúdio?",
+      "a": "Não. Baixe o PNG ou PDF e leve à gráfica que preferir, guarde o arquivo ou nem use papel — muita gente exporta um papel de parede 4K para o computador ou um fundo para o celular e para por aí. Pedir a impressão é uma opção, não o objetivo do recurso."
+    },
+    {
+      "q": "Posso usar em uma instalação própria?",
+      "a": "Sim, o estúdio faz parte do aplicativo de código aberto. Os pedidos de impressão vêm ativados por padrão e podem ser totalmente desativados na sua instalação."
+    }
+  ],
+  "meta": {
+    "title": "Estúdio de mapas — Trajetos GPS em pôsteres e fundos",
+    "description": "Trajetos em pôsteres, fundos 4K/celular e posts. 17 temas, 22 layouts, cores por camada, PNG/PDF 300 DPI. Papel fosco 200 gsm e frete grátis na UE.",
+    "ogTitle": "Estúdio de pôsteres — Seus trajetos GPS em pôsteres e papéis de parede",
+    "ogDescription": "Monte um mapa com os trajetos que você percorreu e exporte de 22 formas: impressões de A5 a A0, papéis de parede 4K e ultrawide, fundos para celular e formatos sociais."
+  },
+  "posterStudioPage": {
+    "text": "Qualquer pessoa pode comprar um mapa de Berlim.",
+    "em": "Só você tem este trajeto.",
+    "title2": "Dezessete temas e todas as cores por trás deles",
+    "body": "Todos os pôsteres abaixo mostram os mesmos dois anos em Berlim — de 15 de julho de 2024 a 15 de julho de 2026 — exportados do estúdio mudando apenas o tema. Se nenhum dos dezessete for exatamente o que você quer, abra o editor de cores e ajuste água, parques, ferrovias, limites, prédios e cada categoria de rua — e defina a cor, a opacidade e a largura do trajeto, de 50% a 300%, para a linha continuar legível em A0 ou na tela do celular.",
+    "title3": "Uma ferramenta de design, não só um botão para gerar",
+    "sub2": "Estúdio em tela cheia. Arraste para mover, role para ampliar, componha o enquadramento e exporte no tamanho de que precisar.",
+    "title4": "Antes de exportar",
+    "title5": "Coloque seu trajeto na parede — ou na tela de bloqueio",
+    "text2": "Importe um trajeto que você já tem ou registre um novo, abra o estúdio e comece a criar. Ainda não tem conta?",
+    "a": "Experimente a versão grátis no navegador com qualquer arquivo GPS",
+    "text3": "."
+  },
+  "hero": {
+    "sub": "O pedal para o qual você treinou, o ano em que foi a pé para todo lugar, a viagem de carro de que você ainda fala — tudo já está no seu histórico de localização, em uma linha que ninguém mais tem. O estúdio de pôsteres transforma isso em algo para emoldurar, usar como papel de parede ou publicar."
+  }
+}

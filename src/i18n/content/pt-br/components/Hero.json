@@ -1,0 +1,25 @@
+{
+  "trustBadges": [
+    {
+      "label": "Funciona offline"
+    },
+    {
+      "label": "Código aberto"
+    },
+    {
+      "label": "Hospedado na UE e criptografado"
+    }
+  ],
+  "title": "Sua linha do tempo, ",
+  "highlight": "Para sempre",
+  "subtitle": "O Google encerrou o Timeline no navegador e está limitando a retenção de dados. Importe todo o seu histórico de localização para o Dawarich em minutos — privado, criptografado e seu. Sem anúncios. Sem venda de dados.",
+  "primaryButton": "Importar meus dados do Google",
+  "secondaryButton": "Explorar recursos",
+  "orDivider": "ou",
+  "noCredit": "7 dias de teste grátis · Reembolso em até 14 dias, sem risco · Cancele quando quiser",
+  "badgeLabel": "A alternativa privada ao Google Timeline",
+  "googleSignIn": "Entrar com o Google",
+  "playTour": "Reproduzir a apresentação do Dawarich",
+  "tourLabel": "Apresentação do Dawarich",
+  "closeVideo": "Fechar vídeo"
+}

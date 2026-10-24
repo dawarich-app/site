@@ -1,0 +1,11 @@
+{
+  "buttonLabel": "Entrar na lista de espera",
+  "note": "Sem spam — só o e-mail de lançamento.",
+  "invalidEmail": "Digite um endereço de e-mail válido.",
+  "requestError": "Algo deu errado. Tente novamente mais tarde.",
+  "success": "Você está na lista! Enviaremos um e-mail quando o Família for lançado.",
+  "networkError": "Erro de rede. Verifique sua conexão e tente novamente.",
+  "joining": "Entrando…",
+  "emailPlaceholder": "you@example.com",
+  "emailLabel": "Endereço de e-mail"
+}
