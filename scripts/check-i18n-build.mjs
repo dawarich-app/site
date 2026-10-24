@@ -5,6 +5,7 @@ import { DEFAULT_LOCALE, LOCALES, LOCALE_CONFIGS } from '../src/i18n/locales.js'
 import { LOCALIZED_ROUTES } from '../src/i18n/localizedRoutes.js';
 import { localizedUrl, SITE_URL } from '../src/i18n/localizedUrl.js';
 import { isEnOnlyPath } from '../src/i18n/enOnlyLinkProps.js';
+import { extractComparable } from './en-regression.mjs';
 
 const attr = (tag, name) => tag.match(new RegExp(`${name}="([^"]*)"`))?.[1];
 const tags = (html, pattern) => html.match(new RegExp(pattern, 'g')) ?? [];
@@ -28,7 +29,7 @@ function jsonLdUrls(html) {
 const isNoindex = (html) => tags(html, '<meta[^>]*name="robots"[^>]*>').some((t) => /noindex/.test(attr(t, 'content') ?? ''));
 const alternates = (html) => tags(html, '<link[^>]*rel="alternate"[^>]*hreflang="[^"]*"[^>]*>');
 
-export function checkLocalizedPage(html, { route, locale, locales, htmlLang, englishTitle, exists }) {
+export function checkLocalizedPage(html, { route, locale, locales, htmlLang, englishTitle, englishMain, exists }) {
   const errors = [];
   const expected = localizedUrl(route, locale);
   const lang = html.match(/<html[^>]*lang="([^"]+)"/)?.[1];
@@ -43,7 +44,9 @@ export function checkLocalizedPage(html, { route, locale, locales, htmlLang, eng
   else for (const link of links) if (!exists(link.href)) errors.push(`hreflang ${link.hreflang} target missing: ${link.href}`);
   const ogUrl = tags(html, '<meta[^>]*property="og:url"[^>]*>').map((t) => attr(t, 'content')).pop();
   if (ogUrl !== expected) errors.push(`og:url ${ogUrl} != canonical`);
-  if (locale !== DEFAULT_LOCALE && readTitle(html) === englishTitle) errors.push('title not translated');
+  if (locale !== DEFAULT_LOCALE && readTitle(html) === englishTitle && extractComparable(html).main === englishMain) {
+    errors.push('page not translated');
+  }
   if (locale !== DEFAULT_LOCALE) {
     for (const url of jsonLdUrls(html)) {
       if (url.startsWith(`${SITE_URL}/${locale}/`) || isEnOnlyPath(url.slice(SITE_URL.length))) continue;
@@ -59,6 +62,17 @@ export function checkNonLocalizedPage(html) {
   if (!isNoindex(html)) errors.push('missing noindex');
   if (alternates(html).length > 0) errors.push('has hreflang alternates');
   return errors;
+}
+
+export function checkEnglishOnlyPage(html) {
+  const errors = [];
+  if (isNoindex(html)) errors.push('english page is noindex');
+  if (alternates(html).length > 0) errors.push('has hreflang alternates');
+  return errors;
+}
+
+export function findGlobalOgUrl(html) {
+  return /<meta[^>]*name="og:url"/.test(html);
 }
 
 export function checkSitemap(xml, { locale, routes }) {
@@ -94,11 +108,16 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const problems = [];
   const report = (where, errors) => errors.forEach((e) => problems.push(`${where}: ${e}`));
   for (const route of LOCALIZED_ROUTES) {
-    const englishTitle = readTitle(fs.readFileSync(fileFor(route, DEFAULT_LOCALE), 'utf8'));
+    const englishHtml = fs.readFileSync(fileFor(route, DEFAULT_LOCALE), 'utf8');
+    const englishTitle = readTitle(englishHtml);
+    const englishMain = extractComparable(englishHtml).main;
     for (const locale of LOCALES) {
       const html = fs.readFileSync(fileFor(route, locale), 'utf8');
-      report(`${locale} ${route}`, checkLocalizedPage(html, { route, locale, locales: LOCALES, htmlLang, englishTitle, exists }));
+      report(`${locale} ${route}`, checkLocalizedPage(html, { route, locale, locales: LOCALES, htmlLang, englishTitle, englishMain, exists }));
     }
+  }
+  for (const route of ['/roadmap/', '/privacy-policy/']) {
+    report(`en ${route}`, checkEnglishOnlyPage(fs.readFileSync(fileFor(route, DEFAULT_LOCALE), 'utf8')));
   }
   for (const locale of LOCALES.filter((l) => l !== DEFAULT_LOCALE)) {
     for (const route of ['/roadmap/', '/privacy-policy/', '/techlore/']) {
@@ -112,7 +131,9 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     if (!robots.includes(`Sitemap: ${sitemap}`)) problems.push(`robots.txt misses ${sitemap}`);
   }
   for (const file of htmlFiles(build)) {
-    const links = findLocaleDocsLinks(fs.readFileSync(file, 'utf8'), LOCALES);
+    const html = fs.readFileSync(file, 'utf8');
+    if (findGlobalOgUrl(html)) problems.push(`${path.relative(build, file)}: global name="og:url" meta`);
+    const links = findLocaleDocsLinks(html, LOCALES);
     if (links.length) problems.push(`${path.relative(build, file)}: links into locale docs/blog ${links[0]}`);
   }
   if (fs.existsSync(path.resolve('i18n/en'))) problems.push('i18n/en exists (would freeze English text)');

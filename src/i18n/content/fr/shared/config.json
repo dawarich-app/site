@@ -1,4 +1,9 @@
 {
   "googleSignIn": "Se connecter avec Google",
-  "copyright": "Copyright © {year} Dawarich"
+  "copyright": "Copyright © {year} Dawarich",
+  "madeInEurope": "Conçu et hébergé en Europe",
+  "location": "Berlin, Allemagne",
+  "startTracking": "Commencer le suivi →",
+  "communityLinks": "Liens de la communauté",
+  "trendshiftAlt": "Dawarich sur Trendshift"
 }

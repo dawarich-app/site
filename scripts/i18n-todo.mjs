@@ -11,6 +11,9 @@ function target(key, locale) {
     const [, file, leaf] = key.match(/^content:([^:]+):(.+)$/);
     return { file: `src/i18n/content/${locale}/${file}`, path: leaf };
   }
+  if (key.startsWith('page:')) {
+    return { file: `i18n/${locale}/docusaurus-plugin-content-pages/${key.slice('page:'.length)}`, path: '' };
+  }
   const [, tier, leaf] = key.match(/^(\w+):(.+)$/);
   return { file: `i18n/${locale}/${TIER1_FILES[tier]}`, path: leaf };
 }

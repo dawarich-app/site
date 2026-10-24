@@ -29,6 +29,10 @@ describe('collectLocaleStatus', () => {
     write(root, 'src/i18n/content/en/tools/x.json', { h1: 'Converter', faq: [{ q: 'Why?' }] });
     write(root, 'src/i18n/content/de/tools/x.json', { h1: 'Konverter' });
     write(root, 'i18n/glossary.json', { doNotTranslate: ['GPX'] });
+    fs.mkdirSync(path.join(root, 'src/pages'), { recursive: true });
+    fs.writeFileSync(path.join(root, 'src/pages/contact.md'), '# Contact\n');
+    fs.mkdirSync(path.join(root, 'i18n/de/docusaurus-plugin-content-pages'), { recursive: true });
+    fs.writeFileSync(path.join(root, 'i18n/de/docusaurus-plugin-content-pages/contact.md'), '# Kontakt\n');
     write(root, 'i18n/source-hashes.json', { de: { 'content:tools/x.json:h1': hashMessage('Old converter') } });
   });
 
@@ -41,11 +45,13 @@ describe('collectLocaleStatus', () => {
       'navbar:item.label.Pricing': 'untranslated',
       'content:tools/x.json:h1': 'stale',
       'content:tools/x.json:faq.0.q': 'missing',
+      'page:contact.md': 'ok',
     });
   });
 
   it('should report every content key missing when a locale has no content files', () => {
     const status = collectLocaleStatus({ root, locale: 'fr' });
     expect(status['content:tools/x.json:h1']).toBe('missing');
+    expect(status['page:contact.md']).toBe('missing');
   });
 });

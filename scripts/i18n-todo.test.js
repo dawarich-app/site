@@ -19,6 +19,13 @@ describe('buildTodo', () => {
   });
 });
 
+describe('buildTodo for markdown pages', () => {
+  it('should point page keys at the locale page file', () => {
+    const todo = buildTodo({ english: { 'page:contact.md': '# Contact' }, status: { 'page:contact.md': 'missing' }, locale: 'fr' });
+    expect(todo[0]).toMatchObject({ file: 'i18n/fr/docusaurus-plugin-content-pages/contact.md', path: '' });
+  });
+});
+
 describe('recordHashes', () => {
   it('should not stamp strings left identical to English unless they are declared intentional', () => {
     const english = { a: 'Format', b: 'Upload' };

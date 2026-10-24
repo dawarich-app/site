@@ -4,6 +4,8 @@ import { fileURLToPath } from 'node:url';
 import { computeStatus, flattenContent, summarize } from './i18n-lib.mjs';
 import { DEFAULT_LOCALE, LOCALES } from '../src/i18n/locales.js';
 
+export const LOCALIZED_MD_PAGES = ['contact.md'];
+
 export const TIER1_FILES = {
   code: 'code.json',
   navbar: 'docusaurus-theme-classic/navbar.json',
@@ -49,6 +51,13 @@ export function loadSources({ root, locale }) {
     const target = flattenContent(readJson(path.join(contentRoot, locale, file), {}));
     Object.assign(english, prefixed(`content:${file}`, source));
     Object.assign(localized, prefixed(`content:${file}`, target));
+  }
+  for (const page of LOCALIZED_MD_PAGES) {
+    const source = path.join(root, 'src/pages', page);
+    if (!fs.existsSync(source)) continue;
+    english[`page:${page}`] = fs.readFileSync(source, 'utf8');
+    const target = path.join(root, 'i18n', locale, 'docusaurus-plugin-content-pages', page);
+    if (fs.existsSync(target)) localized[`page:${page}`] = fs.readFileSync(target, 'utf8');
   }
   return { english, localized };
 }

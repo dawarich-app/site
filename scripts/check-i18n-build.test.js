@@ -1,5 +1,12 @@
 import { describe, it, expect } from 'vitest';
-import { checkLocalizedPage, checkNonLocalizedPage, checkSitemap, findLocaleDocsLinks } from './check-i18n-build.mjs';
+import {
+  checkLocalizedPage,
+  checkNonLocalizedPage,
+  checkEnglishOnlyPage,
+  checkSitemap,
+  findLocaleDocsLinks,
+  findGlobalOgUrl,
+} from './check-i18n-build.mjs';
 
 const LOCALES = ['en', 'de', 'pt-br'];
 const HTML_LANG = { en: 'en', de: 'de', 'pt-br': 'pt-BR' };
@@ -27,7 +34,7 @@ function page({
 }
 
 const exists = () => true;
-const ctx = { route: '/tools/x/', locale: 'de', locales: LOCALES, htmlLang: HTML_LANG, englishTitle: 'Converter', exists };
+const ctx = { route: '/tools/x/', locale: 'de', locales: LOCALES, htmlLang: HTML_LANG, englishTitle: 'Converter', englishMain: 'English body', exists };
 
 describe('checkLocalizedPage', () => {
   it('should pass a correctly localized page', () => {
@@ -48,7 +55,7 @@ describe('checkLocalizedPage', () => {
     expect(checkLocalizedPage(page({ ogUrl: 'https://dawarich.app/tools/x/' }), ctx)).toEqual([
       'og:url https://dawarich.app/tools/x/ != canonical',
     ]);
-    expect(checkLocalizedPage(page({ title: 'Converter' }), ctx)).toEqual(['title not translated']);
+    expect(checkLocalizedPage(page({ title: 'Converter' }), { ...ctx, englishMain: 'x' })).toEqual(['page not translated']);
     expect(checkLocalizedPage(page({ jsonld: { url: 'https://dawarich.app/tools/x/' } }), ctx)).toEqual([
       'JSON-LD url not localized: https://dawarich.app/tools/x/',
     ]);
@@ -58,6 +65,10 @@ describe('checkLocalizedPage', () => {
   it('should allow JSON-LD links to English-only docs and legal pages', () => {
     const jsonld = { url: 'https://dawarich.app/de/tools/x/', mainEntity: { url: 'https://dawarich.app/docs/self-hosting/introduction' } };
     expect(checkLocalizedPage(page({ jsonld }), ctx)).toEqual([]);
+  });
+
+  it('should accept a title that is legitimately the same as English when the body is translated', () => {
+    expect(checkLocalizedPage(page({ title: 'Converter' }), ctx)).toEqual([]);
   });
 
   it('should report hreflang targets that were not built', () => {
@@ -74,6 +85,20 @@ describe('checkLocalizedPage', () => {
       jsonld: { url: 'https://dawarich.app/tools/x/' },
     });
     expect(checkLocalizedPage(english, { ...ctx, locale: 'en' })).toEqual([]);
+  });
+});
+
+describe('checkEnglishOnlyPage', () => {
+  it('should forbid noindex and hreflang on English pages that are not localized', () => {
+    expect(checkEnglishOnlyPage(page({ alternates: {}, robots: null }))).toEqual([]);
+    expect(checkEnglishOnlyPage(page({ robots: 'noindex, follow' }))).toEqual(['english page is noindex', 'has hreflang alternates']);
+  });
+});
+
+describe('findGlobalOgUrl', () => {
+  it('should detect the legacy name="og:url" meta tag', () => {
+    expect(findGlobalOgUrl('<meta name="og:url" content="https://dawarich.app">')).toBe(true);
+    expect(findGlobalOgUrl('<meta property="og:url" content="https://dawarich.app/">')).toBe(false);
   });
 });
 

@@ -115,3 +115,20 @@ describe('buildFooterLinks', () => {
     expect(find(links, 'Community')).toEqual({ label: 'Community', href: 'https://discourse.dawarich.app/' });
   });
 });
+
+describe('buildFooterLinks brand column', () => {
+  const brand = (locale) => buildFooterLinks(locale)[0].items[0].html;
+
+  it('renders the English brand text by default', () => {
+    expect(brand('en')).toContain('<span>Made and hosted in Europe</span>');
+    expect(brand('en')).toContain('<p>Berlin, Germany</p>');
+    expect(brand('en')).toContain('>Start tracking →</a>');
+  });
+
+  it('uses the locale config strings for the brand text', () => {
+    expect(brand('de')).toContain('<span>In Europa entwickelt und gehostet</span>');
+    expect(brand('de')).toContain('<p>Berlin, Deutschland</p>');
+    expect(brand('de')).toContain('>Jetzt mit dem Tracking starten →</a>');
+    expect(brand('de')).toContain('ZeitFlow UG (haftungsbeschränkt)');
+  });
+});

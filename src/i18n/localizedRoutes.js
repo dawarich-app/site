@@ -47,6 +47,7 @@ export const LOCALIZED_ROUTES = [
   '/cloud/',
   '/about/',
   '/google-timeline-alternative/',
+  '/contact/',
 ];
 
 function normalize(path) {
