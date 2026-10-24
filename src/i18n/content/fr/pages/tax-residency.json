@@ -1,0 +1,55 @@
+{
+  "rows": [
+    {
+      "title": "Chaque pays compté, avec le seuil des 183 jours",
+      "body": "Choisissez une année pour voir le nombre de jours distincts passés dans chaque pays, par ordre décroissant. Tout pays atteignant 183 jours est signalé : c’est le seuil de nombreuses règles de résidence, un chiffre à anticiper plutôt qu’à découvrir en avril."
+    },
+    {
+      "title": "Les séjours derrière le total",
+      "body": "Un total de 353 jours en dit moins que les huit séjours qui le composent : 133 jours, puis 104, puis quelques courts séjours en décembre. Chaque séjour indique sa date de début, sa date de fin et sa durée. C’est ce qu’il vous faut lorsqu’une règle porte sur la présence continue plutôt que sur le cumul annuel.",
+      "note": "Des éléments exportables, au-delà d’un chiffre"
+    }
+  ],
+  "objections": [
+    {
+      "q": "Est-ce un conseil fiscal ?",
+      "a": "Non, et cela ne prétend pas l’être. Dawarich rapporte ce que dit votre historique de localisation, sans interpréter les lois fiscales. Les règles de décompte varient : journées partielles, jours de voyage exclus, moyennes sur plusieurs années. Ce sont des éléments à présenter à un professionnel, sans conclusion fiscale automatique."
+    },
+    {
+      "q": "Comment un jour est-il compté ?",
+      "a": "Un jour compte pour un pays si au moins un point y est enregistré ce jour-là. Si vous prenez l’avion de l’Allemagne vers la France un mardi, ce mardi compte pour les deux pays. Le cumul par pays peut donc dépasser les jours suivis. Les journées sont délimitées en UTC : près de minuit ou d’une frontière, cela peut décaler un jour."
+    },
+    {
+      "q": "Qu’en est-il des jours sans suivi ?",
+      "a": "Ils ne comptent pour aucun pays et ne sont jamais attribués au dernier pays connu. Le rapport affiche aussi le total des jours suivis : vous voyez ainsi quelle part de l’année les chiffres couvrent, première question que posera un comptable."
+    },
+    {
+      "q": "J’ai des années d’historique Google Timeline. Sont-elles utilisables ?",
+      "a": "Oui. Importez votre archive Google Takeout pour retrouver ces jours. Les points importés doivent passer par un géocodage inverse pour être attribués à un pays. Dawarich s’en charge."
+    },
+    {
+      "q": "Dois-je vous confier des années de données de localisation ?",
+      "a": "Vous n’avez à faire confiance à personne. L’application entière est libre et toutes ses fonctionnalités fonctionnent sur votre matériel. Auto-hébergez-la : les données ne quittent jamais votre machine."
+    }
+  ],
+  "meta": {
+    "title": "Résidence fiscale — Compteur de jours et seuil des 183 jours",
+    "description": "Comptez vos jours par pays depuis votre historique GPS : séjours consécutifs et seuil de 183 jours. Pour nomades numériques, frontaliers et grands voyageurs.",
+    "ogTitle": "Résidence fiscale — Le seuil des 183 jours depuis votre GPS",
+    "ogDescription": "Vos jours par pays depuis votre historique de localisation, avec séjours consécutifs et seuil de 183 jours. Des éléments pour étudier votre résidence, sans conseil fiscal."
+  },
+  "taxResidencyPage": {
+    "text": "Vous avez franchi six frontières cette année.",
+    "em": "Combien de jours dans chaque pays ?",
+    "title2": "La réponse, avec le détail du calcul",
+    "sub2": "Les jours par pays se trouvent dans Vos analyses et suivent l’année choisie en haut de la page.",
+    "title3": "À lire avant de vous y fier",
+    "title4": "Commencez à compter maintenant, pas en avril prochain",
+    "text2": "Suivez vos parcours dès aujourd’hui : le décompte de l’an prochain sera déjà prêt. Retrouvez les règles complètes dans la",
+    "EnOnlyLink": "documentation des jours par pays",
+    "text3": "."
+  },
+  "hero": {
+    "sub": "Reconstituer une année à partir de cartes d’embarquement et d’un agenda peut fausser le calcul de résidence. Dawarich compte les jours par pays à partir de votre historique GPS : un carré par jour, coloré par pays, une alerte au-delà de 183 jours et des lacunes visibles quand le suivi s’est interrompu."
+  }
+}

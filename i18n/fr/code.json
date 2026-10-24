@@ -1,30 +1,30 @@
 {
   "shared.saveToAccount.tooLarge": {
-    "message": "Your file is too large for instant import. Sign up first, then upload from your dashboard."
+    "message": "Votre fichier est trop volumineux pour une importation immédiate. Inscrivez-vous d’abord, puis importez-le depuis votre tableau de bord."
   },
   "shared.saveToAccount.rateLimited": {
-    "message": "Too many uploads from your network. Please try again in an hour."
+    "message": "Trop d’envois depuis votre réseau. Veuillez réessayer dans une heure."
   },
   "shared.saveToAccount.failed": {
-    "message": "Upload failed. Please try again."
+    "message": "L’envoi a échoué. Veuillez réessayer."
   },
   "shared.saveToAccount.noFiles": {
-    "message": "No files to save. Upload a file first."
+    "message": "Aucun fichier à enregistrer. Importez d’abord un fichier."
   },
   "shared.saveToAccount.uploading": {
-    "message": "Uploading…"
+    "message": "Envoi en cours…"
   },
   "shared.saveToAccount.save": {
-    "message": "Save to my Dawarich account"
+    "message": "Enregistrer dans mon compte Dawarich"
   },
   "shared.breadcrumb.home": {
-    "message": "Home"
+    "message": "Accueil"
   },
   "shared.breadcrumb.tools": {
-    "message": "Free Tools"
+    "message": "Outils gratuits"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
-    "message": "1 élément|{count} éléments",
+    "message": "1 élément|{count} éléments|{count} éléments",
     "description": "The default description for a category card in the generated index about how many items this category includes"
   },
   "theme.ErrorPageContent.title": {
@@ -116,10 +116,10 @@
     "description": "The label used for the latest version suggestion link label"
   },
   "theme.docs.versionBadge.label": {
-    "message": "Version: {versionLabel}"
+    "message": "Version : {versionLabel}"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
-    "message": "Un document tagué|{count} documents tagués",
+    "message": "Un document tagué|{count} documents tagués|{count} documents tagués",
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.tagDocListPageTitle": {
@@ -215,7 +215,7 @@
     "description": "The ARIA label to collapse the sidebar category"
   },
   "theme.NavBar.navAriaLabel": {
-    "message": "Main",
+    "message": "Navigation principale",
     "description": "The ARIA label for the main navigation"
   },
   "theme.NotFound.p1": {
@@ -259,7 +259,7 @@
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.navAriaLabel": {
-    "message": "Docs sidebar",
+    "message": "Barre latérale de la documentation",
     "description": "The ARIA label for the sidebar navigation"
   },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
@@ -295,15 +295,15 @@
     "description": "The title of the page for a blog author"
   },
   "theme.blog.authorsList.pageTitle": {
-    "message": "Authors",
+    "message": "Auteurs",
     "description": "The title of the authors page"
   },
   "theme.blog.authorsList.viewAll": {
-    "message": "View All Authors",
+    "message": "Voir tous les auteurs",
     "description": "The label of the link targeting the blog authors page"
   },
   "theme.blog.author.noPosts": {
-    "message": "This author has not written any posts yet.",
+    "message": "Cet auteur n’a pas encore publié d’article.",
     "description": "The text for authors with 0 blog post"
   },
   "theme.contentVisibility.unlistedBanner.title": {
@@ -315,11 +315,11 @@
     "description": "The unlisted content banner message"
   },
   "theme.contentVisibility.draftBanner.title": {
-    "message": "Draft page",
+    "message": "Page à l’état de brouillon",
     "description": "The draft content banner title"
   },
   "theme.contentVisibility.draftBanner.message": {
-    "message": "This page is a draft. It will only be visible in dev and be excluded from the production build.",
+    "message": "Cette page est un brouillon. Elle est uniquement visible en développement et sera exclue de la version de production.",
     "description": "The draft content banner message"
   },
   "theme.ErrorPageContent.tryAgain": {
@@ -335,114 +335,114 @@
     "description": "The title of the tag list page"
   },
   "shared.cookieConsent.accept": {
-    "message": "Accept"
+    "message": "Accepter"
   },
   "shared.cookieConsent.reject": {
-    "message": "Reject"
+    "message": "Refuser"
   },
   "shared.cookieConsent.acceptAria": {
-    "message": "Accept cookies"
+    "message": "Accepter les cookies"
   },
   "shared.cookieConsent.rejectAria": {
-    "message": "Decline cookies"
+    "message": "Refuser les cookies"
   },
   "shared.cookieConsent.body": {
-    "message": "We use a cookieless analytics service (Simple Analytics) that requires no consent. You can optionally accept cookies for Google Ads conversion tracking, Brevo email analytics and affiliate referral credit — these only load if you click \"Accept\"."
+    "message": "Nous utilisons un service d’analyse sans cookies (Simple Analytics) qui ne nécessite aucun consentement. Vous pouvez accepter les cookies de suivi des conversions Google Ads, d’analyse des e-mails Brevo et d’attribution des recommandations d’affiliation. Ils ne sont chargés que si vous cliquez sur « Accepter »."
   },
   "shared.cookieConsent.learnMore": {
-    "message": "Learn more"
+    "message": "En savoir plus"
   },
   "shared.uploader.noJson": {
-    "message": "No JSON files found. Please upload Google Timeline JSON files."
+    "message": "Aucun fichier JSON trouvé. Veuillez importer des fichiers JSON Google Timeline."
   },
   "shared.uploader.reading": {
-    "message": "Reading file {current}/{total}: {name}"
+    "message": "Lecture du fichier {current}/{total} : {name}"
   },
   "shared.uploader.parsing": {
-    "message": "Parsing file {current}/{total}: {name}"
+    "message": "Analyse du fichier {current}/{total} : {name}"
   },
   "shared.uploader.processing": {
-    "message": "Processing timeline data..."
+    "message": "Traitement des données de chronologie..."
   },
   "shared.uploader.loadError": {
-    "message": "Error loading files: {message}"
+    "message": "Erreur lors du chargement des fichiers : {message}"
   },
   "shared.uploader.chooseFiles": {
-    "message": "Choose files to process"
+    "message": "Choisir les fichiers à traiter"
   },
   "shared.uploader.wait": {
-    "message": "Please wait..."
+    "message": "Veuillez patienter..."
   },
   "shared.uploader.loaded": {
-    "message": "**{count}** file loaded|**{count}** files loaded"
+    "message": "**{count}** fichier chargé|{count} fichiers chargés|**{count}** fichiers chargés"
   },
   "shared.uploader.addMore": {
-    "message": "Click or drag to add more files"
+    "message": "Cliquez ou faites glisser d’autres fichiers"
   },
   "shared.uploader.dropPrompt": {
-    "message": "Drop Google Timeline JSON files here"
+    "message": "Déposez vos fichiers JSON Google Timeline ici"
   },
   "shared.uploader.browse": {
-    "message": "or click to browse"
+    "message": "ou cliquez pour parcourir vos fichiers"
   },
   "shared.uploader.supports": {
-    "message": "Supports: {formats}"
+    "message": "Formats acceptés : {formats}"
   },
   "shared.uploader.clearAll": {
-    "message": "Clear All Files"
+    "message": "Supprimer tous les fichiers"
   },
   "shared.converter.dropPrompt": {
-    "message": "Drag and drop your {format} file here, or click to browse"
+    "message": "Glissez-déposez votre fichier {format} ici, ou cliquez pour parcourir vos fichiers"
   },
   "shared.converter.removeFile": {
-    "message": "Remove file"
+    "message": "Supprimer le fichier"
   },
   "shared.converter.converting": {
-    "message": "Converting..."
+    "message": "Conversion en cours..."
   },
   "shared.converter.convertTo": {
-    "message": "Convert to {format}"
+    "message": "Convertir en {format}"
   },
   "shared.personalizedCta.body": {
-    "message": "Self-hosted or cloud. Cancel anytime."
+    "message": "En auto-hébergement ou dans le cloud. Résiliez à tout moment."
   },
   "shared.personalizedCta.button": {
-    "message": "Start Your Free Trial"
+    "message": "Commencer votre essai gratuit"
   },
   "shared.relatedTools.ariaLabel": {
-    "message": "Related tools and pages"
+    "message": "Outils et pages associés"
   },
   "shared.relatedTools.heading": {
-    "message": "Related tools & pages"
+    "message": "Outils et pages associés"
   },
   "shared.toolGuide.whenToConvert": {
-    "message": "When you'd convert {subject}"
+    "message": "Quand convertir {subject}"
   },
   "shared.toolGuide.preserved": {
-    "message": "What gets preserved (and what doesn't)"
+    "message": "Ce qui est conservé (et ce qui ne l’est pas)"
   },
   "shared.toolGuide.field": {
-    "message": "Field"
+    "message": "Champ"
   },
   "shared.toolGuide.preservedColumn": {
-    "message": "Preserved?"
+    "message": "Conservé ?"
   },
   "shared.toolGuide.notes": {
     "message": "Notes"
   },
   "shared.toolGuide.apps": {
-    "message": "Apps that read your converted file"
+    "message": "Applications compatibles avec votre fichier converti"
   },
   "shared.toolGuide.example": {
-    "message": "Worked example"
+    "message": "Exemple détaillé"
   },
   "shared.toolGuide.input": {
-    "message": "Input ({format})"
+    "message": "Entrée ({format})"
   },
   "shared.toolGuide.output": {
-    "message": "Output ({format})"
+    "message": "Sortie ({format})"
   },
   "shared.toolGuide.faq": {
-    "message": "Frequently asked questions"
+    "message": "Questions fréquentes"
   }
 }

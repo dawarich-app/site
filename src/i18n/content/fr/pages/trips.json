@@ -1,0 +1,97 @@
+{
+  "showcaseItems": [
+    {
+      "title": "Carte interactive du déplacement",
+      "description": "Chaque page de déplacement comprend une carte interactive affichant votre parcours complet et tous les points visités en chemin."
+    },
+    {
+      "title": "Statistiques complètes",
+      "description": "Consultez les statistiques détaillées de chaque déplacement : distance totale, durée, pays visités et d’autres fonctionnalités à venir."
+    },
+    {
+      "title": "Journal en texte enrichi",
+      "description": "Racontez vos aventures avec des descriptions et des notes en texte enrichi. Conservez les souvenirs et les histoires de vos voyages."
+    },
+    {
+      "title": "Intégration photo",
+      "description": "Les photos de votre instance Immich ou PhotoPrism apparaissent automatiquement sur la carte du déplacement, à l’endroit de leur prise de vue."
+    },
+    {
+      "title": "Gestion de vos déplacements",
+      "description": "Organisez tous vos déplacements au même endroit. Parcourez vos aventures passées et créez-en de nouvelles à tout moment."
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Enregistrez vos parcours",
+      "description": "Laissez Dawarich enregistrer automatiquement vos positions pendant vos voyages avec une application de suivi compatible.",
+      "details": [
+        "Application Dawarich pour iOS pour un suivi simple",
+        "Applications tierces comme Overland, OwnTracks, GPSLogger",
+        "Synchronisation automatique des données avec votre compte"
+      ]
+    },
+    {
+      "title": "Créez votre déplacement",
+      "description": "À votre retour, créez un déplacement en définissant son nom et sa plage de dates.",
+      "details": [
+        "Choisissez les dates de début et de fin",
+        "Donnez un nom mémorable à votre déplacement",
+        "Dawarich regroupe automatiquement vos données de localisation"
+      ]
+    },
+    {
+      "title": "Racontez votre histoire",
+      "description": "Enrichissez votre déplacement de notes, de descriptions et d’entrées de journal avec l’éditeur de texte enrichi.",
+      "details": [
+        "Racontez vos expériences",
+        "Donnez du contexte aux lieux",
+        "Créez le récit de votre voyage"
+      ]
+    },
+    {
+      "title": "Explorez et partagez",
+      "description": "Consultez votre déplacement sur la carte interactive, examinez les statistiques et revivez votre aventure (partage des déplacements bientôt disponible)",
+      "details": [
+        "Retrouvez votre parcours complet sur la carte",
+        "Consultez la distance, la durée et les lieux visités",
+        "Les photos apparaissent automatiquement sur la carte"
+      ]
+    }
+  ],
+  "meta": {
+    "title": "Vos déplacements et votre carnet de voyage",
+    "description": "Transformez vos voyages en récits détaillés : cartes interactives, statistiques, journal en texte enrichi et intégration photo.",
+    "ogTitle": "Vos déplacements Dawarich — Racontez vos aventures",
+    "ogDescription": "Créez des carnets de voyage complets avec cartes interactives, statistiques détaillées, descriptions en texte enrichi et intégration photo automatique."
+  },
+  "hero": {
+    "badge": "Carnet de voyage",
+    "title": "Transformez vos voyages en",
+    "titleHighlight": "récits mémorables",
+    "subtitle": "Enregistrez automatiquement vos parcours et transformez-les en carnets de voyage complets. Chaque déplacement rassemble une carte interactive, des statistiques détaillées, des descriptions en texte enrichi et des photos.",
+    "imageAlt": "Détails d’un déplacement avec carte et statistiques"
+  },
+  "tripsPage": {
+    "heading": "Pourquoi conserver vos déplacements",
+    "title3": "Préserver vos souvenirs",
+    "description2": "N’oubliez aucun détail de vos aventures. Chaque déplacement est conservé durablement avec toutes les données de localisation et vos notes personnelles.",
+    "description3": "Associez vos données de localisation à vos pensées et à vos récits. Créez un carnet de voyage multimédia qui va au-delà de simples notes.",
+    "title4": "Revivez vos aventures",
+    "description4": "Replongez dans vos voyages passés à tout moment. Retrouvez précisément vos parcours, leur durée et les lieux visités.",
+    "title5": "Tout votre voyage au même endroit",
+    "subtitle2": "Chaque déplacement inclut automatiquement plusieurs éléments pour raconter l’intégralité de votre voyage.",
+    "title6": "Comment ça marche",
+    "subtitle3": "Créer et gérer des déplacements est simple et intuitif : quelques clics transforment vos données de localisation en récits.",
+    "heading2": "Une création de déplacements flexible",
+    "title7": "Regroupement automatique",
+    "description5": "Définissez simplement vos dates : Dawarich rassemble automatiquement tous les points de la période. Idéal pour obtenir rapidement un résultat.",
+    "title8": "Détails manuels",
+    "description6": "Créez des déplacements pour raconter vos histoires ou documenter des aventures précises. Ajoutez votre récit et vos notes pour enrichir l’expérience.",
+    "heading3": "Commencez à raconter vos voyages",
+    "p": "Créez vos carnets de voyage dès aujourd’hui avec un essai gratuit de 7 jours. Résiliez à tout moment.",
+    "Link": "Essayer gratuitement pendant 7 jours",
+    "EnOnlyLink": "Auto-héberger gratuitement",
+    "p2": "Essai gratuit de 7 jours · Remboursement sous 14 jours, sans risque · Résiliez à tout moment"
+  }
+}

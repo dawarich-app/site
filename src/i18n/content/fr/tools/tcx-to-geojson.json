@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "title": "Convertisseur TCX vers GeoJSON gratuit en ligne",
+    "description": "Convertissez vos activités sportives TCX en GeoJSON pour la cartographie web. Outil gratuit et privé, entièrement dans votre navigateur.",
+    "keywords": "TCX vers GeoJSON, Training Center XML vers GeoJSON, convertisseur TCX, convertisseur GeoJSON, convertisseur de fichiers sportifs, cartographie web, Leaflet, Mapbox",
+    "appName": "Convertisseur TCX vers GeoJSON"
+  },
+  "h1": "Convertisseur TCX vers GeoJSON",
+  "intro": "Convertissez vos fichiers TCX (Training Center XML) au format GeoJSON pour les utiliser dans des applications cartographiques web. Tout le traitement s’effectue dans votre navigateur.",
+  "cards": [
+    {
+      "title": "À propos de cette conversion",
+      "body": "TCX (Training Center XML) est utilisé par Garmin Connect, Wahoo, Polar et Strava. GeoJSON est le standard des bibliothèques cartographiques web comme Leaflet et Mapbox GL."
+    },
+    {
+      "title": "Pourquoi convertir TCX en GeoJSON ?",
+      "items": [
+        "Affichez vos activités dans des applications cartographiques web",
+        "Utilisez vos données avec Leaflet, Mapbox ou OpenLayers",
+        "Traitez les données GPS avec JavaScript",
+        "Importez vos données dans un logiciel SIG comme QGIS",
+        "Créez des visualisations personnalisées"
+      ]
+    }
+  ],
+  "privacyBody": "Toute la conversion s’effectue dans votre navigateur. Vos données ne quittent jamais votre appareil.",
+  "noGpsData": "Aucune donnée GPS trouvée dans le fichier TCX."
+}

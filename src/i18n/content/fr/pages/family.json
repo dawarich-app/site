@@ -1,0 +1,59 @@
+{
+  "rows": [
+    {
+      "title": "Un partage qui s’arrête tout seul",
+      "body": "Partagez votre position en direct pendant une heure, six, douze, vingt-quatre, ou en permanence si vous le souhaitez. Le minuteur s’écoule seul : « juste le temps de rentrer » se termine vraiment à votre arrivée, sans durer trois ans.",
+      "note": "Vous choisissez la durée, à chaque fois"
+    },
+    {
+      "title": "Personne ne peut l’activer à votre place",
+      "body": "Cinq personnes, cinq réglages indépendants. La personne qui paie l’abonnement n’a pas plus de pouvoir que les autres sur votre partage. Vous pouvez toujours désactiver votre partage, même si l’abonnement expire : c’est une action de confidentialité, jamais une fonction payante."
+    },
+    {
+      "title": "Demander plutôt que surveiller",
+      "body": "Pour savoir où se trouve quelqu’un, envoyez une demande de localisation. La personne voit qui la sollicite et accepte ou refuse. Il est impossible d’obtenir la position d’un membre sans son accord à cet instant.",
+      "note": "Le consentement est au cœur du fonctionnement"
+    }
+  ],
+  "objections": [
+    {
+      "q": "Est-ce simplement Life360 sous un autre nom ?",
+      "a": "Non. Par défaut, rien n’est partagé. Chaque membre contrôle son partage, la position en direct peut expirer avec un minuteur, l’historique se partage séparément, et demander où se trouve quelqu’un passe par une demande qu’il peut refuser."
+    },
+    {
+      "q": "Mon adolescent peut-il voir que je le suis ?",
+      "a": "Il n’y a rien de caché. Chaque personne active elle-même son partage et la page Famille indique exactement qui partage ou non sa position. Le suivi à l’insu des personnes ne fait pas partie de nos fonctionnalités."
+    },
+    {
+      "q": "Que reçoit chaque personne ?",
+      "a": "Un compte Dawarich complet, avec sa propre carte, sa chronologie, ses déplacements, ses statistiques et ses analyses. Famille permet le partage de localisation entre cinq comptes distincts, sans partager un seul compte."
+    },
+    {
+      "q": "Que se passe-t-il si l’abonnement du titulaire expire ?",
+      "a": "La famille est conservée. À l’expiration, chaque membre retrouve sa propre offre et le réabonnement rétablit l’offre familiale. Personne ne perd l’accès à son historique."
+    },
+    {
+      "q": "Dois-je forcément payer ?",
+      "a": "Non, si vous auto-hébergez Dawarich. Famille fonctionne gratuitement sur votre instance : toutes les fonctionnalités du produit Cloud payant sont disponibles sur votre propre matériel."
+    }
+  ],
+  "meta": {
+    "title": "Localisation en famille — Partage privé et consenti",
+    "description": "Jusqu’à cinq membres : partage en direct contrôlé par chacun, minuteur, historique distinct et demandes à accepter. {price} ou auto-hébergement gratuit.",
+    "ogTitle": "Le partage de localisation en famille, sans surveillance",
+    "ogDescription": "Cinq personnes, cinq réglages indépendants. Partage en direct avec minuteur, historique au choix et demandes à accepter. Rien n’est partagé par défaut."
+  },
+  "familyPage": {
+    "text": "Le partage de localisation en famille",
+    "em": "avec l’accord de chacun.",
+    "title2": "Conçu pour ne surveiller personne par défaut",
+    "sub2": "Jusqu’à cinq personnes sur un abonnement, chacune avec un compte Dawarich complet et le contrôle de ce qu’elle partage.",
+    "title3": "Les questions des parents et des couples",
+    "title4": "Partagez avec votre foyer, pas avec un courtier en données",
+    "sub3": "{price} par an pour cinq personnes sur Dawarich Cloud. Ou utilisez le même service gratuitement sur votre propre matériel.",
+    "primaryLabel": "Souscrire une offre Famille"
+  },
+  "hero": {
+    "sub": "Les applications de suivi familial partent du principe qu’il faut surveiller tout le monde en permanence. Dawarich fait le choix inverse : rien n’est partagé sans que la personne l’active elle-même, un minuteur peut arrêter le partage et connaître la position de quelqu’un exige de la lui demander."
+  }
+}

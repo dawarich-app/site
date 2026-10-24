@@ -1,0 +1,219 @@
+{
+  "appShowcase": [
+    {
+      "title": "Application Dawarich pour iOS",
+      "description": "Notre application officielle iOS enregistre facilement votre position vers votre instance Dawarich. Elle fonctionne hors ligne et envoie les données automatiquement au retour de la connexion. Disponible sur l’App Store.",
+      "imageAlt": "Télécharger Dawarich sur l’App Store"
+    },
+    {
+      "title": "Application Dawarich pour Android",
+      "description": "Notre application officielle Android assure le même suivi simple en arrière-plan vers votre instance Dawarich. Elle fonctionne hors ligne et envoie automatiquement les données au retour de la connexion. Disponible sur Google Play.",
+      "imageAlt": "Télécharger Dawarich sur Google Play"
+    },
+    {
+      "title": "Overland",
+      "description": "Application libre de suivi de localisation avec envoi par lots. Fonctionne sur iOS avec une précision et une fréquence configurables."
+    },
+    {
+      "title": "OwnTracks",
+      "description": "Solution populaire de suivi de localisation, avec de nombreuses options de personnalisation et une faible consommation de batterie."
+    },
+    {
+      "title": "GPSLogger",
+      "description": "Application Android légère qui préserve la batterie, avec des intervalles d’enregistrement et des formats de données personnalisables."
+    },
+    {
+      "title": "PhoneTrack",
+      "description": "Application intégrée à NextCloud prenant en charge des tâches d’enregistrement personnalisées. Idéale si vous utilisez déjà l’écosystème NextCloud."
+    },
+    {
+      "title": "Home Assistant",
+      "description": "Pour les amateurs de domotique : intégrez directement vos données de géolocalisation Home Assistant à Dawarich."
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Obtenez votre clé API",
+      "description": "Retrouvez votre clé API unique dans la section Compte du tableau de bord Dawarich.",
+      "details": [
+        "Connectez-vous à votre instance Dawarich",
+        "Ouvrez les paramètres du compte",
+        "Copiez votre clé API en sécurité"
+      ]
+    },
+    {
+      "title": "Choisissez votre application",
+      "description": "Choisissez une application de suivi compatible adaptée à vos besoins et à votre appareil.",
+      "details": [
+        "iOS : application officielle Dawarich ou Overland",
+        "Android : application officielle Dawarich, GPSLogger ou PhoneTrack",
+        "Les deux : OwnTracks ou intégration Home Assistant"
+      ]
+    },
+    {
+      "title": "Configurez l’application",
+      "description": "Saisissez l’URL de votre instance Dawarich et votre clé API dans les paramètres de l’application choisie.",
+      "details": [
+        "Définissez l’URL du point de réception",
+        "Ajoutez votre clé API à l’URL",
+        "Configurez la fréquence de suivi (facultatif)",
+        "Testez la connexion"
+      ]
+    },
+    {
+      "title": "Commencez le suivi",
+      "description": "Une fois la configuration terminée, vos données de localisation se synchronisent automatiquement avec votre compte Dawarich privé.",
+      "details": [
+        "Positions envoyées en temps réel ou par lots",
+        "Suivi hors ligne et envoi au retour de la connexion",
+        "Synchronisation automatique en arrière-plan",
+        "Consultez votre historique de localisation sur la carte"
+      ]
+    }
+  ],
+  "appDetails": [
+    {
+      "description": "Application iOS native conçue pour Dawarich",
+      "features": [
+        "Configuration simple",
+        "Faible consommation de batterie",
+        "Suivi en arrière-plan",
+        "Suivi hors ligne avec envoi automatique",
+        "Disponible sur l’App Store"
+      ],
+      "setupSteps": [
+        "Installez-la depuis l’App Store",
+        "Ouvrez l’application et ses paramètres",
+        "Saisissez votre clé API",
+        "Appuyez sur Enregistrer et commencez le suivi"
+      ],
+      "name": "Application Dawarich pour iOS"
+    },
+    {
+      "description": "Application Android native conçue pour Dawarich",
+      "features": [
+        "Configuration simple",
+        "Faible consommation de batterie",
+        "Suivi en arrière-plan",
+        "Suivi hors ligne avec envoi automatique",
+        "Disponible sur Google Play"
+      ],
+      "setupSteps": [
+        "Installez-la depuis Google Play",
+        "Ouvrez l’application et ses paramètres",
+        "Saisissez votre clé API",
+        "Appuyez sur Enregistrer et commencez le suivi"
+      ],
+      "name": "Application Dawarich pour Android"
+    },
+    {
+      "description": "Application de suivi multiplateforme flexible avec envoi par lots",
+      "features": [
+        "Compatible iOS",
+        "Traitement par lots",
+        "Précision configurable",
+        "Code source ouvert"
+      ],
+      "setupSteps": [
+        "Installez Overland sur votre appareil",
+        "Ouvrez les paramètres et faites glisser pour déverrouiller",
+        "Définissez Receiver Endpoint URL : http://your-instance/api/v1/overland/batches?api_key=YOUR_KEY",
+        "Facultatif : définissez un Device ID",
+        "Appuyez sur Enregistrer"
+      ],
+      "name": "Overland"
+    },
+    {
+      "description": "Application de suivi de localisation compatible avec le mode HTTP",
+      "features": [
+        "Faible consommation de batterie",
+        "Très personnalisable",
+        "Modes HTTP et MQTT",
+        "Multiplateforme"
+      ],
+      "setupSteps": [
+        "Installez l’application OwnTracks",
+        "Appuyez sur l’icône « i » en haut à gauche",
+        "Sélectionnez le mode HTTP",
+        "Saisissez l’URL : http://your-instance/api/v1/owntracks/points?api_key=YOUR_KEY",
+        "Appuyez sur Retour pour enregistrer"
+      ],
+      "name": "OwnTracks"
+    },
+    {
+      "description": "Solution d’enregistrement Android économe en batterie",
+      "features": [
+        "Économe en batterie",
+        "Intervalles d’enregistrement personnalisés",
+        "Compatible avec le format JSON",
+        "Légère"
+      ],
+      "setupSteps": [
+        "Installez GPSLogger pour Android",
+        "Configurez une URL personnalisée avec le point de réception OwnTracks",
+        "Définissez le corps HTTP au format JSON requis",
+        "Ajoutez l’en-tête Content-Type: application/json",
+        "Utilisez la méthode POST"
+      ],
+      "name": "GPSLogger"
+    },
+    {
+      "description": "Intégration NextCloud avec tâches d’enregistrement personnalisées",
+      "features": [
+        "Intégration NextCloud",
+        "Tâches d’enregistrement personnalisées",
+        "Paramètres dans la chaîne de requête",
+        "Configuration flexible"
+      ],
+      "setupSteps": [
+        "Installez PhoneTrack depuis F-Droid",
+        "Créez une tâche d’enregistrement personnalisée",
+        "Utilisez le point de réception OwnTracks avec les paramètres de requête",
+        "Activez la méthode POST",
+        "Désactivez l’option de charge utile JSON"
+      ],
+      "name": "PhoneTrack"
+    }
+  ],
+  "meta": {
+    "title": "Configurer le suivi de localisation",
+    "description": "Suivi automatique avec les applications Dawarich iOS et Android, Overland, OwnTracks, GPSLogger, PhoneTrack et Home Assistant.",
+    "ogTitle": "Suivi de localisation Dawarich — Plusieurs applications",
+    "ogDescription": "Configurez le suivi automatique avec Dawarich pour iOS ou Android, Overland, OwnTracks, GPSLogger, PhoneTrack ou l’intégration Home Assistant."
+  },
+  "hero": {
+    "badge": "Suivi automatique",
+    "title": "Enregistrez votre position",
+    "titleHighlight": "sans effort",
+    "subtitle": "Choisissez parmi plusieurs applications pour enregistrer automatiquement votre position. Applications officielles iOS et Android ou alternatives libres populaires : Dawarich s’adapte à vos préférences.",
+    "imageAlt": "Visualisation du suivi de localisation"
+  },
+  "trackingPage": {
+    "title3": "Applications de suivi compatibles",
+    "subtitle2": "Choisissez l’application qui convient à votre appareil et à vos habitudes. Toutes fonctionnent avec Dawarich.",
+    "title4": "Comment commencer",
+    "subtitle3": "Configurez le suivi de localisation en quelques minutes avec une application compatible.",
+    "heading": "Guides de configuration détaillés",
+    "p": "Les instructions pas à pas pour chaque application de suivi compatible.",
+    "h4": "Fonctionnalités :",
+    "h42": "Étapes de configuration :",
+    "text": "Pour les instructions complètes, dont l’intégration Home Assistant, consultez notre",
+    "EnOnlyLink": "tutoriel de suivi détaillé",
+    "text2": ".",
+    "heading2": "Points d’accès API",
+    "p2": "Dawarich propose plusieurs points d’accès API selon le format de suivi.",
+    "h3": "Point d’accès Overland",
+    "code": "/api/v1/overland/batches?api_key=YOUR_KEY",
+    "p3": "Pour les envois par lots de l’application Overland",
+    "h32": "Point d’accès OwnTracks",
+    "code2": "/api/v1/owntracks/points?api_key=YOUR_KEY",
+    "p4": "Pour OwnTracks, GPSLogger et PhoneTrack",
+    "text3": "La documentation API complète est disponible dans",
+    "EnOnlyLink2": "notre référence API",
+    "heading3": "Prêt à commencer le suivi ?",
+    "p5": "Créez votre compte Dawarich dès aujourd’hui et commencez à enregistrer automatiquement votre historique de localisation.",
+    "Link": "Essayer gratuitement pendant 7 jours",
+    "EnOnlyLink3": "Auto-héberger gratuitement",
+    "p6": "Essai gratuit de 7 jours · Remboursement sous 14 jours, sans risque · Résiliez à tout moment"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "features": [
+    {
+      "title": "Revivez chaque journée, minute par minute",
+      "description": "Choisissez une date. Chaque arrêt, chaque parcours, chaque minute s’affichent en un coup d’œil. Retrouvez la chronologie détaillée que Google a discrètement supprimée."
+    },
+    {
+      "title": "Retrouvez instantanément où vous étiez",
+      "description": "Saisissez une date. Voyez exactement où vous étiez, quel parcours vous avez suivi et combien de temps vous êtes resté. Voyages, trajets quotidiens et détours restent consultables pour toujours."
+    },
+    {
+      "title": "Revivez chaque déplacement en détail",
+      "description": "Choisissez une plage de dates. Dawarich crée la carte, calcule la distance et retrace le parcours. Ajoutez des photos pour en faire un carnet de voyage."
+    },
+    {
+      "title": "Votre vie en chiffres",
+      "description": "Combien de pays ? Combien de kilomètres ? Quelle ville avez-vous le plus visitée ? Découvrez vos habitudes mensuelles et partagez vos statistiques avec un simple lien."
+    },
+    {
+      "title": "Suivez votre découverte du monde",
+      "description": "Voyez les pays s’illuminer au fil de vos visites. Repérez ceux qui restent à découvrir. Préparez la suite."
+    },
+    {
+      "title": "Comprenez vos habitudes",
+      "description": "Voyagez-vous moins que l’an dernier ? Passez-vous plus de temps dans une ville ? Dawarich révèle des tendances que vous n’auriez pas remarquées."
+    }
+  ],
+  "title": "Tout ce que Google Timeline aurait dû être",
+  "subtitle": "Toutes les fonctionnalités que vous aimiez, dans le respect de votre vie privée.",
+  "ariaLabel": "Fermer l’image",
+  "viewFullSize": "Afficher {title} en grand format"
+}

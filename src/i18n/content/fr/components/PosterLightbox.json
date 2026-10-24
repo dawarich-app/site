@@ -1,0 +1,62 @@
+{
+  "poster": {
+    "themes": [
+      {
+        "name": "Automne"
+      },
+      {
+        "name": "Plan technique"
+      },
+      {
+        "name": "Zones contrastées"
+      },
+      {
+        "name": "Patine cuivrée"
+      },
+      {
+        "name": "Cité d’émeraude"
+      },
+      {
+        "name": "Forêt"
+      },
+      {
+        "name": "Routes en dégradé"
+      },
+      {
+        "name": "Encre japonaise"
+      },
+      {
+        "name": "Bleu nuit"
+      },
+      {
+        "name": "Bleu monochrome"
+      },
+      {
+        "name": "Néon cyberpunk"
+      },
+      {
+        "name": "Noir"
+      },
+      {
+        "name": "Océan"
+      },
+      {
+        "name": "Rêve pastel"
+      },
+      {
+        "name": "Coucher de soleil"
+      },
+      {
+        "name": "Terre cuite"
+      },
+      {
+        "name": "Beige chaud"
+      }
+    ]
+  },
+  "position": "Affiche {name}, {position} sur {total}",
+  "close": "Fermer",
+  "previous": "Affiche précédente",
+  "next": "Affiche suivante",
+  "posterAlt": "Affiche agrandie du parcours à Berlin dans le thème {name}"
+}

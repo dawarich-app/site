@@ -1,0 +1,130 @@
+{
+  "timelineItems": [
+    {
+      "title": "Une journée lisible d’un coup d’œil",
+      "description": "Chaque journée commence par un en-tête sur une ligne et des indicateurs de distance par mode : marche, vélo et voiture. Choisissez un jour dans le calendrier et la carte s’y adapte."
+    },
+    {
+      "title": "Modifiez une étape sur place",
+      "description": "Les trajets se déplient en un ruban des modes affichant les étapes utiles. Un mode est incorrect ? Cliquez sur son nom pour le changer directement. La liste complète reste sous « Tous les segments » jusqu’à ce que vous l’ouvriez."
+    },
+    {
+      "title": "Les lacunes restent visibles",
+      "description": "Lorsque le suivi s’est vraiment arrêté, la chronologie le signale au lieu de tracer une ligne droite sur les heures manquantes. Les visites détectées ont un indice de confiance pour distinguer un séjour certain d’une estimation fragile."
+    }
+  ],
+  "showcaseItems": [
+    {
+      "title": "Points",
+      "description": "Consultez chaque point de localisation avec son horodatage précis et ses détails. Cliquez sur un point pour afficher ses coordonnées, l’heure et d’autres informations.",
+      "imageAlt": "Carte affichant les points de localisation individuels"
+    },
+    {
+      "title": "Polylignes",
+      "description": "Retrouvez vos parcours complets reliant tous vos points de localisation. Visualisez vos déplacements sous forme de lignes continues sur la carte.",
+      "imageAlt": "Carte avec des parcours en polylignes"
+    },
+    {
+      "title": "Carte de chaleur",
+      "description": "Découvrez où vous passez le plus de temps grâce à une carte de chaleur dont l’intensité indique les zones les plus visitées.",
+      "imageAlt": "Visualisation en carte de chaleur"
+    },
+    {
+      "title": "Brouillard de guerre",
+      "description": "Dévoilez le monde au fil de vos explorations. Les zones visitées se découvrent tandis que les régions inexplorées restent masquées.",
+      "imageAlt": "Visualisation du brouillard de guerre"
+    },
+    {
+      "title": "Carte à gratter",
+      "description": "Voyez les pays s’illuminer au fil de vos visites. Idéal pour les voyageurs qui suivent leurs aventures à travers le monde.",
+      "imageAlt": "Carte à gratter affichant les pays visités"
+    },
+    {
+      "title": "Zones",
+      "description": "Dessinez des zones personnalisées sur votre carte pour marquer des lieux importants, des quartiers ou des régions d’intérêt.",
+      "imageAlt": "Zones personnalisées sur la carte"
+    },
+    {
+      "title": "Photos",
+      "description": "Retrouvez vos photos Immich ou PhotoPrism sur la carte, à l’endroit exact de leur prise de vue. (Pour le moment, uniquement en auto-hébergement.)",
+      "imageAlt": "Photos affichées sur la carte"
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Enregistrez votre position",
+      "description": "Utilisez une application de suivi compatible pour enregistrer automatiquement votre position tout au long de la journée.",
+      "details": [
+        "Application Dawarich pour iOS",
+        "Overland",
+        "OwnTracks",
+        "GPSLogger",
+        "PhoneTrack"
+      ]
+    },
+    {
+      "title": "Choisissez votre vue",
+      "description": "Choisissez parmi plusieurs styles de carte et activez les calques qui vous intéressent pour personnaliser l’affichage.",
+      "details": [
+        "Activez les points, parcours ou cartes de chaleur",
+        "Activez le brouillard de guerre ou la carte à gratter",
+        "Affichez ou masquez les photos et les zones"
+      ]
+    },
+    {
+      "title": "Filtrez par période",
+      "description": "Choisissez une plage de dates pour consulter votre historique sur une période précise.",
+      "details": [
+        "Naviguez par année et par mois",
+        "Consultez les statistiques de visites par pays et par ville",
+        "Recherchez des lieux précis"
+      ]
+    },
+    {
+      "title": "Créez et enregistrez",
+      "description": "Créez manuellement des lieux et des visites pour combler les lacunes ou corriger votre historique de localisation.",
+      "details": [
+        "Enregistrez vos lieux favoris",
+        "Ajoutez manuellement les visites manquantes",
+        "Dessinez des zones personnalisées sur la carte"
+      ]
+    },
+    {
+      "title": "Recherchez par lieu",
+      "description": "Saisissez un lieu ou une adresse pour retrouver rapidement quand vous y étiez et combien de temps.",
+      "details": [
+        "Recherchez par nom de lieu ou adresse",
+        "Retrouvez rapidement visites et points d’intérêt",
+        "Créez des visites à partir des résultats de recherche"
+      ]
+    }
+  ],
+  "meta": {
+    "title": "Visualisation sur carte interactive",
+    "description": "Explorez votre historique de localisation sur une carte interactive : points, parcours, cartes de chaleur, brouillard de guerre et bien plus.",
+    "ogTitle": "Carte Dawarich — Visualisation interactive de vos positions",
+    "ogDescription": "Explorez votre historique de localisation avec différents calques : points, parcours, cartes de chaleur, brouillard de guerre, carte à gratter et photos."
+  },
+  "hero": {
+    "badge": "Visualisation interactive",
+    "title": "Explorez vos parcours,",
+    "titleHighlight": "n’oubliez aucun lieu",
+    "subtitle": "Votre historique de localisation prend vie sur une carte interactive aux multiples calques. Des points détaillés aux cartes de chaleur, retrouvez le parcours de votre vie avec précision.",
+    "imageAlt": "Carte interactive Dawarich"
+  },
+  "mapPage": {
+    "title3": "La Chronologie",
+    "subtitle2": "La carte vous montre où. La chronologie, juste à côté, vous raconte ce qui s’est passé, jour après jour, en langage clair.",
+    "title4": "Plusieurs calques de visualisation",
+    "subtitle3": "Passez d’un calque à l’autre pour voir vos données sous différents angles. Chacun révèle des informations sur vos déplacements et vos habitudes.",
+    "title5": "Comment ça marche",
+    "subtitle4": "Visualisez votre historique de localisation en quelques minutes grâce à notre carte intuitive.",
+    "span": "Vos données restent privées",
+    "p": "Toutes vos données de localisation sont stockées en sécurité, chiffrées au repos et en transit. Hébergées en Europe, elles respectent le RGPD. Vous pouvez aussi auto-héberger Dawarich pour un contrôle total.",
+    "heading": "Prêt à visualiser vos parcours ?",
+    "p2": "Commencez à enregistrer votre historique dès aujourd’hui avec un essai gratuit de 7 jours. Résiliez à tout moment.",
+    "Link": "Essayer gratuitement pendant 7 jours",
+    "EnOnlyLink": "Auto-héberger gratuitement",
+    "p3": "Essai gratuit de 7 jours · Remboursement sous 14 jours, sans risque · Résiliez à tout moment"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "trustBadges": [
+    {
+      "label": "Fonctionne hors ligne"
+    },
+    {
+      "label": "Code source ouvert"
+    },
+    {
+      "label": "Hébergé dans l’UE et chiffré"
+    }
+  ],
+  "title": "Votre chronologie, ",
+  "highlight": "pour toujours",
+  "subtitle": "Google a supprimé Timeline du navigateur et limite la conservation des données. Importez tout votre historique de localisation dans Dawarich en quelques minutes : privé, chiffré, à vous. Aucune publicité. Aucune vente de données.",
+  "primaryButton": "Importer mes données Google",
+  "secondaryButton": "Découvrir les fonctionnalités",
+  "orDivider": "ou",
+  "noCredit": "Essai gratuit de 7 jours · Remboursement sous 14 jours, sans risque · Résiliez à tout moment",
+  "badgeLabel": "L’alternative privée à Google Timeline",
+  "googleSignIn": "Se connecter avec Google",
+  "playTour": "Lancer la présentation de Dawarich",
+  "tourLabel": "Présentation de Dawarich",
+  "closeVideo": "Fermer la vidéo"
+}
