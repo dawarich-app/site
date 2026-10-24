@@ -30,39 +30,23 @@ Deleting an import will **delete all points** that were imported from that file.
 
 ## Supported File Formats
 
-Dawarich supports importing from various sources:
+The format of each file is detected automatically when you upload it. For where to find the export in each app, see [Get your data out of other apps](/docs/getting-started/import-sources).
 
-### Google Timeline
+| Format | Typical source |
+| --- | --- |
+| Google Timeline JSON | Google Maps app export (`Timeline.json`), Google Takeout (`Records.json`, Semantic Location History) |
+| Google Photos JSON | Per-photo metadata files from a Google Photos Takeout |
+| GPX | Recorded tracks (`<trkpt>`) and waypoints (`<wpt>`); planned routes (`<rte>`) are ignored |
+| FIT | Garmin, Strava and most sports watches and bike computers |
+| TCX | Garmin Training Center exports |
+| KML / KMZ | Google Earth and GPS loggers; only placemarks and tracks with a time are imported |
+| CSV | Any table with latitude, longitude and time columns |
+| GeoJSON | `FeatureCollection` files |
+| OwnTracks | `.rec` files from the OwnTracks Recorder (JSON is not supported) |
+| Polarsteps | `locations.json` from each trip in a Polarsteps data export |
+| ZIP | An archive of any of the above |
 
-- **Records.json** - The newer format from Google Takeout
-- **Location History.json** - The older format from Google Takeout
-- **Semantic Location History** - Activity and place visit data
-
-### GPS Exchange Format
-
-- **GPX** - Standard GPS exchange format
-- Supports tracks, routes, and waypoints
-
-### GeoJSON
-
-- **GeoJSON** - Geographic data in JSON format
-- Supports Point, LineString, and FeatureCollection
-
-### KML/KMZ (Google Earth)
-
-- **KML** - Keyhole Markup Language files
-- **KMZ** - Compressed KML archives
-- Commonly exported from Google Earth and other mapping applications
-
-### OwnTracks
-
-- **OwnTracks .rec** - Export from OwnTracks mobile app (.rec format only, JSON is not supported)
-- Includes location history with metadata
-
-### Strava
-
-- **Strava exports** - Activity data from Strava
-- Supports both GPX and original format exports
+Gzipped files (`.gz`) are not supported — decompress them before uploading.
 
 ### Immich/Photoprism
 
