@@ -34,7 +34,7 @@
     "text2": ", co oznacza",
     "em2": "„Byłem tam”.",
     "heading2": "Jak to się zaczęło",
-    "p": "Dawarich powstał w marcu 2024 roku jako weekendowy projekt. Po latach przekazywania danych lokalizacyjnych do Google Timeline i otrzymywania niewiele w zamian Evgenii zbudował mały punkt odbioru na własnym serwerze, aby zbierać sygnały lokalizacyjne ze swojego iPhone’a. Nie planował produktu ani firmy — chciał po prostu mieć własne dane.",
+    "p": "Dawarich powstał w marcu 2024 roku jako weekendowy projekt. Po latach przekazywania danych lokalizacyjnych do Google Timeline i otrzymywania niewiele w zamian Evgenii zbudował mały punkt odbioru na własnym serwerze, aby zbierać sygnały lokalizacyjne ze swojego iPhone’a. Nie miał firmy ani planów stworzenia produktu — chciał po prostu mieć własne dane.",
     "p2": "Kod trafił na GitHub i okazało się, że wiele osób chce tego samego. W ciągu roku Dawarich stał się jedną z bardziej znanych alternatyw dla Google Timeline z otwartym kodem, a dziś działa na tysiącach domowych serwerów na całym świecie.",
     "p3": "W lipcu 2025 roku uruchomiliśmy Dawarich Cloud dla wszystkich, którzy wolą pominąć Docker, odwrotne proxy i kopie zapasowe. Dziś we dwóch rozwijamy Dawarich jako małą, niezależną firmę: Konstantin tworzy aplikacje mobilne, a Evgenii wszystko inne.",
     "p4": "Wersja na własny serwer jest darmowa i taka pozostanie.",

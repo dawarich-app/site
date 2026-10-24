@@ -34,9 +34,9 @@
   ],
   "meta": {
     "title": "Udostępnianie lokalizacji — historia przez link",
-    "description": "Udostępniaj lokalizację lub historię prywatnym linkiem: z frazą, datą wygaśnięcia i unieważnieniem, w wybranym zakresie. 7 dni próby lub własny serwer za darmo.",
+    "description": "Udostępniaj lokalizację na żywo lub historię prywatnym linkiem: chronionym frazą, wygasającym, odwoływalnym, z wybranym zakresem. 7 dni próby gratis lub własny serwer za darmo.",
     "ogTitle": "Udostępniaj historię lokalizacji prywatnym linkiem",
-    "ogDescription": "Wyślij jeden link do jednej rzeczy: zakresu dat, lokalizacji na żywo, trasy, podróży, miesiąca statystyk lub roku. Fraza, termin ważności i natychmiastowe unieważnienie."
+    "ogDescription": "Wyślij jeden link do jednej rzeczy: zakresu dat, lokalizacji na żywo, trasy, podróży, miesiąca statystyk lub rocznego podsumowania. Każdy link ma frazę, termin ważności i opcję natychmiastowego unieważnienia."
   },
   "locationSharingPage": {
     "text": "Udostępniaj, gdzie jesteś.",

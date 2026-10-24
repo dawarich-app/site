@@ -38,10 +38,10 @@
     }
   ],
   "meta": {
-    "title": "Lokalizacja rodziny — prywatnie i za zgodą każdego",
-    "description": "Lokalizacja rodziny do pięciu osób: własne ustawienia, limity czasu, osobna historia i prośby wymagające zgody. {price} lub własny serwer za darmo.",
+    "title": "Rodzina: dziel się pozycją prywatnie, za zgodą, bez śledzenia",
+    "description": "Udostępniaj rodzinie lokalizację na żywo: do pięciu osób, każdy steruje sam, limity czasu, osobne zakresy historii, prośby o lokalizację wymagające zgody. {price} lub własny serwer za darmo.",
     "ogTitle": "Udostępnianie lokalizacji rodzinie bez inwigilacji",
-    "ogDescription": "Pięć osób, pięć niezależnych przełączników. Udostępnianie na czas, historia jako osobny wybór i prośby wymagające akceptacji. Domyślnie nic nie udostępniasz."
+    "ogDescription": "Pięć osób, pięć niezależnych przełączników. Udostępnianie lokalizacji na żywo na określony czas, historia jako osobny wybór i prośby o lokalizację wymagające akceptacji. Domyślnie nic nie udostępniasz."
   },
   "familyPage": {
     "text": "Lokalizacja rodziny",

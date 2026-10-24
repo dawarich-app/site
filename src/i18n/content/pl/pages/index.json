@@ -21,7 +21,7 @@
   },
   "howItWorksTitle": "Jak to działa",
   "schema": {
-    "description": "Alternatywa dla Google Timeline dbająca o prywatność. Importuj historię lokalizacji na zawsze. Własny serwer, otwarty kod, bez reklam i sprzedaży danych.",
+    "description": "Alternatywa dla Google Timeline dbająca o prywatność. Importuj historię lokalizacji i zachowaj ją na zawsze. Własny serwer, otwarty kod, bez reklam i sprzedaży danych.",
     "name": "Dawarich",
     "liteAnnual": "Dawarich Cloud — Lite (rocznie)",
     "proMonthly": "Dawarich Cloud — Pro (miesięcznie)",

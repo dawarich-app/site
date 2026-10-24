@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Darmowy konwerter GPX na GeoJSON — trasy GPS online",
-    "description": "Szybko konwertuj GPX na GeoJSON. Darmowy, prywatny konwerter śladów, punktów i tras GPS. W przeglądarce, bez przesyłania plików.",
-    "keywords": "GPX na GeoJSON, konwerter GPX, konwerter GeoJSON, konwerter plików GPS, konwerter śladów, konwerter punktów, konwerter tras, parser GPX",
+    "description": "GPX na GeoJSON od ręki: darmowy, prywatny konwerter tras zarejestrowanych, punktów orientacyjnych i tras planowanych GPS. Tylko w przeglądarce, bez wysyłania plików.",
+    "keywords": "GPX na GeoJSON, konwerter GPX, konwerter GeoJSON, konwerter plików GPS, konwerter tras zarejestrowanych, konwerter punktów orientacyjnych, konwerter tras planowanych, parser GPX",
     "appName": "Konwerter GPX na GeoJSON"
   },
   "h1": "Konwerter GPX na GeoJSON",
@@ -10,7 +10,7 @@
   "cards": [
     {
       "title": "O formacie GPX",
-      "body": "GPX (GPS Exchange Format) to format XML dla danych GPS. Jest powszechnie używany przez urządzenia GPS, rejestratory aktywności i aplikacje nawigacyjne do zapisu punktów orientacyjnych, śladów i tras."
+      "body": "GPX (GPS Exchange Format) to format XML dla danych GPS. Jest powszechnie używany przez urządzenia GPS, rejestratory aktywności i aplikacje nawigacyjne do zapisu punktów orientacyjnych, tras zarejestrowanych i tras planowanych."
     },
     {
       "title": "O formacie GeoJSON",

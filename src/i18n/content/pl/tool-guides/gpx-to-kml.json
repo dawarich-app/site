@@ -3,7 +3,7 @@
     "subject": "GPX na KML",
     "body": [
       "GPX to format generowany przez urządzenie GPS, zegarek sportowy lub aplikację rejestrującą. KML to format wejściowy dla Google Earth, Google My Maps i większości desktopowych narzędzi GIS. Konwertujesz GPX na KML, gdy chcesz zobaczyć trasy w aplikacji mapowej, a nie tylko je przechowywać.",
-      "Typowe powody odwiedzenia tej strony: eksport ze Strava do otwarcia w Google Earth, przejazd z zegarka Garmin do udostępnienia przez Google My Maps, piesza trasa GPX z AllTrails lub OsmAnd do wizualnego opisania albo zapis ze starego urządzenia GPS przenoszony do wieloletniego archiwum map.",
+      "Typowe powody odwiedzenia tej strony: eksport ze Strava do otwarcia w Google Earth, przejazd z zegarka Garmin do udostępnienia przez Google My Maps, piesza trasa GPX z AllTrails lub OsmAnd do wizualnego opisania albo trasa ze starego urządzenia GPS przenoszona do wieloletniego archiwum map.",
       "Oba formaty są oparte na XML i dobrze zdefiniowane, więc konwersja jest bezstratna dla wspólnych pól danych. Ciekawsze pytanie — omówione poniżej — dotyczy pól, których nie mają wspólnych."
     ]
   },
@@ -38,7 +38,7 @@
       {
         "field": "Trasy planowane",
         "preserved": "✅ Tak",
-        "notes": "GPX <rte> jest odwzorowane jako osobny KML <LineString>, niezależnie od śladów."
+        "notes": "GPX <rte> jest odwzorowane jako osobny KML <LineString>, odrębny od tras zarejestrowanych."
       },
       {
         "field": "Nazwy i opisy tras oraz punktów orientacyjnych",
@@ -112,9 +112,9 @@
   "reference": {
     "heading": "GPX a KML w skrócie",
     "body": [
-      "GPX (GPS Exchange Format) został opublikowany przez Topografix w 2002 roku specjalnie dla urządzeń GPS: zawiera ślady, trasy planowane, punkty orientacyjne i podstawowe metadane punktów. Niemal każde urządzenie GPS, zegarek sportowy i aplikacja terenowa odczytuje go i zapisuje. To niewielki, wyspecjalizowany format — ślad można w praktyce zapisać tylko na jeden sposób.",
+      "GPX (GPS Exchange Format) został opublikowany przez Topografix w 2002 roku specjalnie dla urządzeń GPS: zawiera trasy zarejestrowane, trasy planowane, punkty orientacyjne i podstawowe metadane punktów. Niemal każde urządzenie GPS, zegarek sportowy i aplikacja terenowa odczytuje go i zapisuje. To niewielki, wyspecjalizowany format — trasę zarejestrowaną można w praktyce zapisać tylko w jeden sposób.",
       "KML (Keyhole Markup Language) stworzyła firma Keyhole, kupiona przez Google do stworzenia Google Earth. Jest znacznie szerszy — zawiera geometrię, style, animacje w czasie, modele 3D, linki sieciowe i nakładki. KML służy do prezentacji. GPX służy do wymiany danych.",
-      "Jeśli chcesz udostępnić lub zwizualizować trasę, oprogramowanie odbiorcy zwykle oczekuje KML. Jeśli chcesz wgrać ją do innego urządzenia GPS lub analizować w oprogramowaniu fitness, zachowaj GPX."
+      "Jeśli chcesz udostępnić lub zwizualizować trasę, oprogramowanie odbiorcy oczekuje KML. Jeśli chcesz wgrać ją do innego urządzenia GPS lub analizować w oprogramowaniu fitness, zachowaj GPX."
     ]
   },
   "faqs": [
