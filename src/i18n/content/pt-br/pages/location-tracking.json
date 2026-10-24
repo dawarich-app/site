@@ -177,7 +177,7 @@
   ],
   "meta": {
     "title": "Configuração do rastreamento de localização",
-    "description": "Rastreie sua localização com os apps oficiais Dawarich para iOS e Android, Overland, OwnTracks, GPSLogger, PhoneTrack e Home Assistant.",
+    "description": "Rastreie sua localização automaticamente com os apps oficiais Dawarich para iOS e Android, Overland, OwnTracks, GPSLogger, PhoneTrack e Home Assistant.",
     "ogTitle": "Rastreamento de localização no Dawarich — Vários aplicativos compatíveis",
     "ogDescription": "Configure o rastreamento automático com o aplicativo oficial Dawarich para iOS ou Android, Overland, OwnTracks, GPSLogger, PhoneTrack ou a integração Home Assistant."
   },

@@ -2,7 +2,7 @@
   "faqData": [
     {
       "question": "Por que pagar se o Google Timeline é grátis?",
-      "answer": "O Google Timeline é \"grátis\" porque seus dados de localização financiam um negócio de anúncios de $300B. Com o Dawarich, você paga uma pequena taxa e seus dados ficam privados — sem anúncios, sem rastreamento publicitário, sem venda de dados. Por menos de {price}/dia no Lite, você recupera sua privacidade."
+      "answer": "O Google Timeline é \"grátis\" porque seus dados de localização financiam um negócio de anúncios de $300B. Com o Dawarich, você paga uma pequena taxa e seus dados ficam privados — sem anúncios, sem rastreamento, sem venda de dados. Por menos de {price}/dia no Lite, você recupera sua privacidade."
     },
     {
       "question": "Como importo meus dados do Google Timeline?",

@@ -158,7 +158,7 @@
   "faq": [
     {
       "q": "É seguro carregar meus dados do Google Timeline?",
-      "a": "Sim. Toda a conversão acontece no navegador com JavaScript — seus arquivos ficam no dispositivo e desaparecem ao fechar a aba. Não há cookies rastreando seus arquivos nem análise dos seus dados de localização. A única exceção é o botão opcional “Salvar na minha conta Dawarich”, que envia o arquivo ao Dawarich Cloud para importá-lo na nova conta. A ferramenta tem código aberto, então você pode conferir o código."
+      "a": "Sim. Toda a conversão acontece no navegador com JavaScript — seus arquivos ficam no dispositivo e desaparecem ao fechar a aba. Não há cookies rastreando seus arquivos nem coleta de métricas sobre seus dados de localização. A única exceção é o botão opcional “Salvar na minha conta Dawarich”, que envia o arquivo ao Dawarich Cloud para importá-lo na nova conta. A ferramenta tem código aberto, então você pode conferir o código."
     },
     {
       "q": "Quais formatos do Google Timeline posso converter?",

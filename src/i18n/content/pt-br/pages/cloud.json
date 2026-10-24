@@ -58,7 +58,7 @@
     "td9": "Só treinos — sem o histórico de uma vida",
     "td10": "Atividades públicas por padrão",
     "td11": "Dawarich Cloud Pro",
-    "td12": "Histórico completo, mapas de calor, viagens, estatísticas",
+    "td12": "Histórico completo de toda a vida, mapas de calor, viagens, estatísticas",
     "td13": "Nada. Nunca.",
     "text": "Cobramos menos do que o Life360 cobra para ",
     "em": "vender",
@@ -73,7 +73,7 @@
     "p3": "Sem multa por sair do plano anual, sem taxa de cancelamento, sem e-mails de “tem certeza?”.",
     "h33": "Exporte quando quiser",
     "p4": "Cada byte dos seus dados, exportável em GPX, GeoJSON, KML ou JSON bruto, em qualquer plano, para sempre.",
-    "p5": "Se o Dawarich Cloud encerrar as atividades, você hospeda o mesmo software no seu servidor e importa seus dados exportados. **Nós literalmente não conseguimos reter seus dados.**"
+    "p5": "Se o Dawarich Cloud encerrar as atividades, você hospeda o mesmo software no seu servidor e importa seus dados exportados. **Nós literalmente não conseguimos manter seus dados reféns.**"
   },
   "cloudFinalCTA": {
     "heading": "Pare de alugar suas memórias de empresas que não se importam.",
@@ -85,8 +85,8 @@
     "text": "Ver preços"
   },
   "meta": {
-    "title": "Dawarich Cloud — Seu histórico de localização privado",
-    "description": "Histórico privado na Alemanha. Mapas de calor, viagens e estatísticas, sem vender dados. Importe Google Takeout, Strava, Garmin e +12. {price}. 7 dias grátis.",
+    "title": "Dawarich Cloud — Histórico de localização privado que é seu",
+    "description": "Histórico de localização privado na Alemanha, sem venda de dados. Mapas de calor, viagens, estatísticas. Importe Google Takeout, Strava, Garmin e +12. A partir de {price}. Teste grátis: 7 dias.",
     "ogDescription": "Histórico de localização com foco em privacidade, hospedado na Alemanha. Mapas de calor, viagens e estatísticas — sem vender seus dados. A partir de {price}. 7 dias de teste grátis.",
     "twitterDescription": "Histórico de localização com foco em privacidade, hospedado na Alemanha. Mapas de calor, viagens e estatísticas — sem vender seus dados."
   },

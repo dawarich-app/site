@@ -35,9 +35,9 @@
       "imageAlt": "Visualização da névoa de exploração"
     },
     {
-      "title": "Mapa de países visitados",
+      "title": "Mapa de raspar",
       "description": "Veja os países ganharem destaque conforme você os visita. Ideal para quem adora viajar e acompanhar suas aventuras pelo mundo.",
-      "imageAlt": "Mapa com países visitados"
+      "imageAlt": "Mapa de raspar com países visitados"
     },
     {
       "title": "Áreas",
@@ -67,7 +67,7 @@
       "description": "Escolha entre vários estilos de mapa e ative diferentes camadas para personalizar sua visualização.",
       "details": [
         "Ative pontos, trajetos ou mapa de calor",
-        "Ative a névoa de exploração ou o mapa de países visitados",
+        "Ative a névoa de exploração ou o mapa de raspar",
         "Mostre ou oculte fotos e áreas"
       ]
     },
@@ -103,7 +103,7 @@
     "title": "Visualização em mapa interativo",
     "description": "Explore seu histórico de localização em um mapa interativo com várias camadas: pontos, trajetos, mapa de calor, névoa de exploração e muito mais.",
     "ogTitle": "Mapa do Dawarich — Visualização interativa de localização",
-    "ogDescription": "Explore seu histórico de localização em várias camadas: pontos, trajetos, mapa de calor, névoa de exploração, países visitados e integração de fotos."
+    "ogDescription": "Explore seu histórico de localização em várias camadas: pontos, trajetos, mapa de calor, névoa de exploração, mapa de raspar e integração de fotos."
   },
   "hero": {
     "badge": "Visualização interativa",
