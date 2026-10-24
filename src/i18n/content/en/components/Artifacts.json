@@ -1,0 +1,88 @@
+{
+  "posterThemes": {
+    "arialabel": "Enlarge the {name} poster",
+    "alt": "Berlin route poster in the {name} theme"
+  },
+  "posterStudioShot": {
+    "alt": "Poster Studio composing a route, with layout, theme and text controls"
+  },
+  "exportFormats": {
+    "groups": [
+      {
+        "label": "Print · 12",
+        "items": [
+          "A5",
+          "A4",
+          "A3",
+          "A2",
+          "A1",
+          "A0",
+          "30 × 40 cm",
+          "50 × 70 cm",
+          "70 × 100 cm",
+          "Letter (US)",
+          "A4 Landscape",
+          "A3 Landscape"
+        ]
+      },
+      {
+        "label": "Social · 5",
+        "items": [
+          "Instagram Square",
+          "Instagram Portrait",
+          "Story (9:16)",
+          "X Header",
+          "YouTube Thumbnail"
+        ]
+      },
+      {
+        "label": "Wallpaper · 5",
+        "items": [
+          "Desktop Full HD",
+          "Desktop 4K",
+          "Desktop Ultrawide",
+          "Phone",
+          "Tablet"
+        ]
+      }
+    ]
+  },
+  "shareTargets": {
+    "items": [
+      "A date range",
+      "Live location",
+      "One track",
+      "A trip",
+      "A month of stats",
+      "A yearly digest"
+    ],
+    "p": "Six things, six separate links"
+  },
+  "familySharingShot": {
+    "alt": "Family sharing controls: live location on for six hours with the time remaining, and location history as a separate toggle set to the last 7 days"
+  },
+  "familyMembersShot": {
+    "alt": "Family member list showing two people sharing, two not sharing, each with a Request button"
+  },
+  "familyPageShot": {
+    "alt": "The Dawarich family page: a shared map beside the sharing controls, member list and invitations"
+  },
+  "familyRequestShot": {
+    "alt": "Two family members marked Not sharing, each with a Request button beside them"
+  },
+  "residencyCountriesShot": {
+    "alt": "Countries card listing days per country for 2023 — Germany 353 days at 96.7% carrying a threshold warning, then Belgium, Greece, Switzerland, Denmark, France and Poland"
+  },
+  "residencyStaysShot": {
+    "alt": "Germany expanded to show eight consecutive stay periods through 2023, each with its dates and length"
+  },
+  "residencyCalendarShot": {
+    "alt": "A year-long calendar heatmap with one colour per country and a legend naming each"
+  },
+  "shareHubShot": {
+    "alt": "The share hub: a public link and its magic phrase, twelve views, and buttons to regenerate the URL, regenerate the phrase or revoke the link"
+  },
+  "shareFormShot": {
+    "alt": "Creating a share link: a start and end date, an optional magic phrase, an expiry defaulting to one week, and a Show photos toggle switched off"
+  }
+}

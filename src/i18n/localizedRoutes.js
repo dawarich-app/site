@@ -22,6 +22,19 @@ export const LOCALIZED_ROUTES = [
   '/tools/tcx-to-kml/',
   '/',
   '/pricing/',
+  '/interactive-map/',
+  '/trips/',
+  '/statistics/',
+  '/location-tracking/',
+  '/import-export/',
+  '/integrations/',
+  '/location-sharing/',
+  '/family/',
+  '/tax-residency/',
+  '/poster-studio/',
+  '/cloud/',
+  '/about/',
+  '/google-timeline-alternative/',
 ];
 
 function normalize(path) {

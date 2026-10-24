@@ -1,3 +1,5 @@
+import content from '@locale-content/components/Artifacts.json';
+import { interpolate } from '@docusaurus/Interpolate';
 import React from 'react';
 import { POSTER_THEMES, usePosterLightbox } from './PosterLightbox';
 import s from './Artifacts.module.css';
@@ -20,11 +22,11 @@ export function PosterThemes() {
           type="button"
           className={s.posterButton}
           onClick={() => openAt(i)}
-          aria-label={`Enlarge the ${t.name} poster`}>
+          aria-label={interpolate(content.posterThemes.arialabel, { name: t.name })}>
           <img
             className={s.poster}
             src={`/img/posters/${t.slug}.webp`}
-            alt={`Berlin route poster in the ${t.name} theme`}
+            alt={interpolate(content.posterThemes.alt, { name: t.name })}
             loading="lazy"
             width="600"
             height="849"
@@ -44,7 +46,7 @@ export function PosterStudioShot() {
       <img
         className={s.shot}
         src="/img/poster-studio.webp"
-        alt="Poster Studio composing a route, with layout, theme and text controls"
+        alt={content.posterStudioShot.alt}
         loading="lazy"
         width="1600"
         height="1000"
@@ -57,16 +59,16 @@ export function PosterStudioShot() {
 export function ExportFormats() {
   const groups = [
     {
-      label: 'Print · 12',
-      items: ['A5', 'A4', 'A3', 'A2', 'A1', 'A0', '30 × 40 cm', '50 × 70 cm', '70 × 100 cm', 'Letter (US)', 'A4 Landscape', 'A3 Landscape'],
+      label: content.exportFormats.groups[0].label,
+      items: content.exportFormats.groups[0].items,
     },
     {
-      label: 'Social · 5',
-      items: ['Instagram Square', 'Instagram Portrait', 'Story (9:16)', 'X Header', 'YouTube Thumbnail'],
+      label: content.exportFormats.groups[1].label,
+      items: content.exportFormats.groups[1].items,
     },
     {
-      label: 'Wallpaper · 5',
-      items: ['Desktop Full HD', 'Desktop 4K', 'Desktop Ultrawide', 'Phone', 'Tablet'],
+      label: content.exportFormats.groups[2].label,
+      items: content.exportFormats.groups[2].items,
     },
   ];
   return (
@@ -89,10 +91,10 @@ export function ExportFormats() {
 
 /** What a share link can point at. */
 export function ShareTargets() {
-  const targets = ['A date range', 'Live location', 'One track', 'A trip', 'A month of stats', 'A yearly digest'];
+  const targets = content.shareTargets.items;
   return (
     <div className={s.stack}>
-      <p className={s.label}>Six things, six separate links</p>
+      <p className={s.label}>{content.shareTargets.p}</p>
       <div className={s.choices}>
         {targets.map((t) => (
           <span key={t} className={s.choice}>
@@ -111,7 +113,7 @@ export function FamilySharingShot() {
       <img
         className={s.shot}
         src="/img/family-sharing.webp"
-        alt="Family sharing controls: live location on for six hours with the time remaining, and location history as a separate toggle set to the last 7 days"
+        alt={content.familySharingShot.alt}
         loading="lazy"
         width="1506"
         height="738"
@@ -127,7 +129,7 @@ export function FamilyMembersShot() {
       <img
         className={s.shot}
         src="/img/family-members.webp"
-        alt="Family member list showing two people sharing, two not sharing, each with a Request button"
+        alt={content.familyMembersShot.alt}
         loading="lazy"
         width="1506"
         height="954"
@@ -143,7 +145,7 @@ export function FamilyPageShot() {
       <img
         className={s.shot}
         src="/img/family-page.webp"
-        alt="The Dawarich family page: a shared map beside the sharing controls, member list and invitations"
+        alt={content.familyPageShot.alt}
         loading="lazy"
         width="2800"
         height="1886"
@@ -159,7 +161,7 @@ export function FamilyRequestShot() {
       <img
         className={s.shot}
         src="/img/family-request.webp"
-        alt="Two family members marked Not sharing, each with a Request button beside them"
+        alt={content.familyRequestShot.alt}
         loading="lazy"
         width="1506"
         height="408"
@@ -175,7 +177,7 @@ export function ResidencyCountriesShot() {
       <img
         className={s.shot}
         src="/img/residency-countries.webp"
-        alt="Countries card listing days per country for 2023 — Germany 353 days at 96.7% carrying a threshold warning, then Belgium, Greece, Switzerland, Denmark, France and Poland"
+        alt={content.residencyCountriesShot.alt}
         loading="lazy"
         width="912"
         height="1212"
@@ -191,7 +193,7 @@ export function ResidencyStaysShot() {
       <img
         className={s.shot}
         src="/img/residency-stays.webp"
-        alt="Germany expanded to show eight consecutive stay periods through 2023, each with its dates and length"
+        alt={content.residencyStaysShot.alt}
         loading="lazy"
         width="840"
         height="840"
@@ -207,7 +209,7 @@ export function ResidencyCalendarShot() {
       <img
         className={s.shot}
         src="/img/residency-calendar.webp"
-        alt="A year-long calendar heatmap with one colour per country and a legend naming each"
+        alt={content.residencyCalendarShot.alt}
         loading="lazy"
         width="2742"
         height="706"
@@ -223,7 +225,7 @@ export function ShareHubShot() {
       <img
         className={s.shot}
         src="/img/share-hub.webp"
-        alt="The share hub: a public link and its magic phrase, twelve views, and buttons to regenerate the URL, regenerate the phrase or revoke the link"
+        alt={content.shareHubShot.alt}
         loading="lazy"
         width="1800"
         height="1620"
@@ -239,7 +241,7 @@ export function ShareFormShot() {
       <img
         className={s.shot}
         src="/img/share-form.webp"
-        alt="Creating a share link: a start and end date, an optional magic phrase, an expiry defaulting to one week, and a Show photos toggle switched off"
+        alt={content.shareFormShot.alt}
         loading="lazy"
         width="1884"
         height="1920"

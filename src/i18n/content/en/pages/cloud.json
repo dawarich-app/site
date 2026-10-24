@@ -1,0 +1,105 @@
+{
+  "howItWorksSteps": [
+    {
+      "title": "Sign up",
+      "description": "Email, password, done. 90 seconds. 7-day free trial with full features."
+    },
+    {
+      "title": "Import your past",
+      "description": "Drag-and-drop your Google Takeout zip, OwnTracks records, GPX files, or any of 15+ formats. Watch your history reconstruct itself on a map."
+    },
+    {
+      "title": "Track forward",
+      "description": "Install the iOS or Android app. Background tracking starts automatically. Trips, heatmaps, and stats update in real time."
+    }
+  ],
+  "painSection": {
+    "heading": "Your location data is in one of three places right now.",
+    "p": "None of them put you in charge.",
+    "div": "Inside Google",
+    "p2": "Feeding ad targeting for a decade. Timeline now stranded on your phone, with no cloud backup going forward.",
+    "div2": "Inside Life360",
+    "p3": "Sold as “aggregated insights” to advertisers. Read [The Markup’s reporting](https://themarkup.org/privacy/2022/01/27/life360-said-it-stopped-selling-precise-location-data-but-the-data-still-flows) if you doubt it.",
+    "div3": "Nowhere at all",
+    "p4": "Because every privacy-respecting alternative wanted you to learn Docker first. So you never started."
+  },
+  "differentiators": {
+    "heading": "What actually makes Dawarich different",
+    "p": "Hosting and backups are table stakes. Here’s what isn’t.",
+    "h3": "EU data residency",
+    "p2": "Hosted on Hetzner in Germany. No US transfers. No PRISM, no Patriot Act, no “we cooperate with US authorities” footnote.",
+    "h32": "Open-source escape hatch",
+    "p3": "The full Dawarich engine is on [GitHub](https://github.com/Freika/dawarich) with OVER 9,000 stars. If we ever shut down, you self-host the same software with one command and import your exported data.",
+    "h33": "15+ import formats",
+    "p4": "Most competitors only ingest their own data. We ingest everyone’s — Google, Strava, Garmin, Apple Health, OwnTracks, and a dozen more.",
+    "h34": "Lifetime history, not workouts",
+    "p5": "Strava knows your runs. Polarsteps knows your trips. We know everywhere you’ve been.",
+    "h35": "Real visualization product",
+    "p6": "Heatmaps, Fog of War, Globe view, automatic trip detection, year-in-review. Not just a dot on a map.",
+    "h36": "Photo integration",
+    "p7": "Connect Immich or PhotoPrism — your photos appear on the map next to where you took them."
+  },
+  "competitorReframe": {
+    "heading": "Why pay for what Google “gave away” for free?",
+    "p": "Free wasn’t free. You paid in data — every coffee shop, every Sunday hike, every late-night drive — fed into Google’s profile of you.",
+    "p2": "What you’re actually choosing between:",
+    "th": "Service",
+    "th2": "Annual cost",
+    "th3": "What it does",
+    "th4": "What they do with your data",
+    "td": "Google Timeline",
+    "td2": "“Free”",
+    "td3": "Killed it, moved to phone-only",
+    "td4": "Trained ad targeting for a decade",
+    "td5": "Life360 Gold",
+    "td6": "Live family location only",
+    "td7": "Sold aggregated location data",
+    "td8": "Strava Premium",
+    "td9": "Workouts only — not lifetime history",
+    "td10": "Public-by-default activity feeds",
+    "td11": "Dawarich Cloud Pro",
+    "td12": "Full lifetime history, heatmaps, trips, stats",
+    "td13": "Nothing. Ever.",
+    "text": "We charge less than Life360 charges to ",
+    "em": "sell",
+    "text2": " your data."
+  },
+  "promises": {
+    "heading": "The “you can’t lose” promise",
+    "p": "“Trust us with your location data” is a big ask. So here’s ours:",
+    "h3": "7-day free trial",
+    "p2": "Full features for a week. Cancel from Subscription Settings if it’s not for you — your exports stay yours.",
+    "h32": "Cancel anytime",
+    "p3": "No annual lock-in penalty, no exit fees, no “are you sure?” emails.",
+    "h33": "Export-anytime",
+    "p4": "Every byte of your data, exportable in GPX, GeoJSON, KML, or raw JSON, on any plan, forever.",
+    "p5": "If Dawarich Cloud ever shuts down, you self-host the same software and import your exported data. **We literally cannot hold your data hostage.**"
+  },
+  "cloudFinalCTA": {
+    "heading": "Stop renting your memories from companies that don’t care.",
+    "p": "Your location history is the map of your life. The places you fell in love. The trip you took the year your mom got sick. The route you used to bike to your first job.",
+    "text": "Start your 7-day free trial",
+    "span": "7-day free trial · Cancel anytime · Or [self-host the open-source version](https://github.com/Freika/dawarich) if you’d rather. We support both. We always will."
+  },
+  "cloudPage": {
+    "text": "See pricing"
+  },
+  "meta": {
+    "title": "Dawarich Cloud — Private Location History You Actually Own",
+    "description": "Privacy-first location history hosted in Germany. Heatmaps, trips, statistics — without selling your data. Imports from Google Takeout, Strava, Garmin, and 12 more. From {price}. 7-day free trial.",
+    "ogDescription": "Privacy-first location history hosted in Germany. Heatmaps, trips, statistics — without selling your data. From {price}. 7-day free trial.",
+    "twitterDescription": "Privacy-first location history hosted in Germany. Heatmaps, trips, statistics — without selling your data."
+  },
+  "hero": {
+    "badge": "Privacy-first location history",
+    "title": "Your location history.",
+    "titleHighlight": "Privately. Permanently.",
+    "subtitle": "Heatmaps, trips, and statistics for everywhere you've been — without feeding Google's ad machine, Life360's data brokers, or your own Raspberry Pi.",
+    "disclaimer": "7-day free trial · Cancel anytime · Your data stays yours, in standard formats",
+    "imageAlt": "Dawarich timeline view showing a decade of location history"
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "subtitle": "Three steps. There is no step four."
+  }
+}
