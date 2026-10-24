@@ -8,8 +8,8 @@
   "homeLabel": "Accueil",
   "toolsLabel": "Outils gratuits",
   "meta": {
-    "title": "Détecteur Google Timeline : identifiez vos exports",
-    "description": "Identifiez le format de vos exports Google Timeline et Google Takeout : points, parcours, période, taille et qualité. Gratuit, dans votre navigateur.",
+    "title": "Détecteur de format Google Timeline : identifiez vos exports",
+    "description": "Détectez aussitôt le format Google Timeline/Google Takeout : nombre de points, période, taille, qualité des données. Gratuit, tout dans votre navigateur.",
     "keywords": "format Google Timeline, format export Google, type fichier localisation Google Takeout, format historique de localisation Google, détecteur fichier Google Timeline, format export Google Maps Timeline, format JSON Google Takeout, identifier fichier export Google",
     "featureList": [
       "Détection immédiate du format d’export Google Timeline",
@@ -42,7 +42,7 @@
   "exportData": {
     "title": "Comment récupérer vos données de chronologie",
     "intro": "Vous pouvez exporter vos données Google Timeline avec l’une des méthodes suivantes. Si l’une ne fonctionne pas, essayez-en une autre.",
-    "warning": "Malheureusement, certains utilisateurs ne peuvent plus exporter leurs données de localisation en raison de la manière dont Google a mené la transition vers ses nouvelles règles de stockage.",
+    "warning": "Malheureusement, il se peut que certains utilisateurs ne puissent pas exporter leurs données de localisation en raison de la manière dont Google a mené la transition vers ses nouvelles règles de stockage.",
     "methods": [
       {
         "title": "Google Takeout :",

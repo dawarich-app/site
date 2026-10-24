@@ -42,7 +42,7 @@
   "exportData": {
     "title": "Vous n’avez pas encore vos données ? Voici comment les exporter",
     "intro": "Vous pouvez exporter vos données Google Timeline avec l’une des méthodes suivantes. Si l’une ne fonctionne pas, essayez-en une autre.",
-    "warning": "Malheureusement, certains utilisateurs ne peuvent plus exporter leurs données de localisation en raison de la manière dont Google a mené la transition vers ses nouvelles règles de stockage.",
+    "warning": "Malheureusement, il se peut que certains utilisateurs ne puissent pas exporter leurs données de localisation en raison de la manière dont Google a mené la transition vers ses nouvelles règles de stockage.",
     "converterHint": "Vous avez déjà votre export ? Vous pouvez aussi le convertir en GPX, KML ou GeoJSON avec le [convertisseur Google Timeline](/tools/google-timeline-converter/) gratuit.",
     "methods": [
       {
@@ -154,7 +154,7 @@
       "title": "Comparaison avec les autres visualiseurs",
       "paragraphs": [ "Plusieurs outils permettent de consulter les données de localisation Google. Voici les différences :" ],
       "items": [
-        { "body": "**Face à LocationHistoryVisualizer.com** — Celui-ci se concentre sur les cartes de chaleur. Cet outil affiche les points individuels, les parcours, les visites de lieux et les segments d’activité avec des filtres détaillés" },
+        { "body": "**Face à LocationHistoryVisualizer.com** — Celui-ci se limite aux cartes de chaleur. Cet outil affiche les points individuels, les parcours, les visites de lieux et les segments d’activité avec des filtres détaillés" },
         { "body": "**Face à Google Maps Timeline** — La chronologie web de Google a fermé. Cet outil est une alternative indépendante et respectueuse de votre vie privée, qui fonctionne avec vos données exportées" },
         { "body": "**Face aux projets GitHub** — La plupart des visualiseurs open source ne prennent en charge que les anciens formats d’export. Cet outil traite tous les formats Google, y compris les plus récents issus du téléphone" }
       ],

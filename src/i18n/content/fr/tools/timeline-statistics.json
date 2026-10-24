@@ -10,7 +10,7 @@
   "toolsLabel": "Outils gratuits",
   "meta": {
     "title": "Statistiques Google Timeline : analysez votre historique",
-    "description": "Analysez gratuitement vos données Google Timeline : distance, pays, lieux favoris, activités et tendances annuelles. Tout s’effectue dans votre navigateur.",
+    "description": "Google Timeline : distance totale, pays visités, lieux les plus visités, répartition des activités, tendances annuelles. Gratuit, privé, dans votre navigateur.",
     "keywords": "statistiques Google Timeline, statistiques historique de localisation, distance parcourue, analyses Google Maps Timeline, analyseur Google Timeline, statistiques de voyage, analyse données de localisation, statistiques Google Takeout, calcul distance parcourue, compteur lieux visités",
     "featureList": [
       "Calcul de la distance totale parcourue à partir de Google Timeline",
@@ -113,7 +113,7 @@
     "flying": "Avion",
     "motorcycle": "Moto",
     "skiing": "Ski",
-    "sailing": "Navigation",
+    "sailing": "Voile",
     "unknown": "Inconnu"
   },
   "cta": {
