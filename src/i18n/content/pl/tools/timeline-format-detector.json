@@ -9,7 +9,7 @@
   "toolsLabel": "Darmowe narzędzia",
   "meta": {
     "title": "Wykrywanie formatu Google Timeline — rozpoznaj plik eksportu",
-    "description": "Rozpoznaj format eksportu Google Timeline. Dodaj plik Google Takeout i sprawdź liczbę punktów, daty, rozmiar oraz jakość danych. Wszystko w przeglądarce.",
+    "description": "Darmowe wykrywanie formatu eksportu Google Timeline. Dodaj dowolny plik lokalizacji Google Takeout i od razu sprawdź nazwę formatu, liczbę punktów, zakres dat, rozmiar pliku i jakość danych. Wszystko w przeglądarce.",
     "keywords": "format Google Timeline, jaki format ma eksport Google, typ pliku lokalizacji Google Takeout, format historii lokalizacji Google, wykrywanie pliku Google Timeline, format eksportu Google Maps Timeline, format JSON Google Takeout, typ pliku historii lokalizacji, format danych Google Timeline, rozpoznawanie eksportu Google",
     "featureList": [
       "Natychmiastowe wykrywanie formatu eksportu Google Timeline",

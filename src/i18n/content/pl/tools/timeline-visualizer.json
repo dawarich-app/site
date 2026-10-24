@@ -114,7 +114,7 @@
     },
     {
       "q": "Czym różni się to narzędzie od innych przeglądarek Google Timeline?",
-      "a": "Prywatność jest tu najważniejsza — żadne dane nie opuszczają przeglądarki. Narzędzie obsługuje wszystkie formaty eksportu Google (w tym nowsze eksporty z telefonu, z którymi wiele narzędzi sobie nie radzi), przetwarza pliki stopniowo, aby duże zbiory nie zawieszały przeglądarki, i jest utrzymywane jako część ekosystemu Dawarich z otwartym kodem źródłowym. Jest też całkowicie darmowe, bez konta i rejestracji."
+      "a": "Prywatność jest tu najważniejsza — żadne dane nie opuszczają przeglądarki. Narzędzie obsługuje wszystkie formaty eksportu Google (w tym nowsze eksporty z telefonu, z którymi wiele narzędzi sobie nie radzi), przetwarza pliki stopniowo, aby duże zbiory danych nie powodowały awarii przeglądarki, i jest utrzymywane jako część ekosystemu Dawarich z otwartym kodem źródłowym. Jest też całkowicie darmowe, bez konta i rejestracji."
     }
   ],
   "cards": [

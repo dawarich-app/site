@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Darmowy konwerter GeoJSON na KMZ — dane geograficzne",
-    "description": "Szybko konwertuj GeoJSON na KMZ. Darmowy, prywatny konwerter. Działa w przeglądarce, bez przesyłania plików.",
+    "description": "Konwertuj GeoJSON na KMZ od ręki. Darmowy, prywatny konwerter online. W całości w przeglądarce, bez wysyłania plików.",
     "keywords": "GeoJSON na KMZ, konwerter GeoJSON, konwerter KMZ, konwerter danych geograficznych, skompresowany KML",
     "appName": "Konwerter GeoJSON na KMZ"
   },

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Dzielenie Google Timeline — podziel duże pliki JSON",
-    "description": "Podziel JSON Google Timeline: Records.json, Semantic Location History, Semantic Segments i inne. Wybierz rozmiar części. Prywatnie, w przeglądarce.",
+    "description": "Za darmo dziel duże pliki JSON Google Timeline na mniejsze, poprawne części. Wszystkie formaty eksportu: Records.json, Semantic Location History, Semantic Segments i inne. Wybierz docelowy rozmiar części. Prywatnie, w przeglądarce.",
     "keywords": "dzielenie JSON Google Timeline, dzielenie records.json, podział dużej historii lokalizacji Google, dzielenie Google Timeline, podział lokalizacji Google Takeout, dzielenie JSON osi czasu, za duży plik Google Timeline",
     "featureList": [
       "Dzielenie dużych plików JSON Google Timeline na mniejsze części",

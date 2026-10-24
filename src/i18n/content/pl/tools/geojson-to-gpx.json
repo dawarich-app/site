@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Darmowy konwerter GeoJSON na GPX — dane geograficzne",
-    "description": "Szybko konwertuj GeoJSON na GPX. Darmowy, prywatny konwerter danych geograficznych. Działa w przeglądarce, bez przesyłania plików.",
+    "description": "Konwertuj GeoJSON na GPX od ręki. Darmowy, prywatny konwerter online danych geograficznych. W całości w przeglądarce, bez wysyłania plików.",
     "keywords": "GeoJSON na GPX, konwerter GeoJSON, konwerter GPX, konwerter danych geograficznych, konwerter GPS",
     "appName": "Konwerter GeoJSON na GPX"
   },

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Łączenie Google Timeline — scal historię lokalizacji",
-    "description": "Połącz eksporty Google Timeline w jeden plik z usuwaniem duplikatów. Obsługa Records.json, Semantic History i eksportów z telefonu. Prywatnie, w przeglądarce.",
+    "description": "Za darmo łącz eksporty Google Timeline w jeden plik. Inteligentne usuwanie nakładających się punktów danych. Records.json, Semantic History i eksporty z telefonu. Prywatnie.",
     "keywords": "łączenie eksportów Google Timeline, łączenie plików historii lokalizacji, odzyskiwanie danych Google Timeline, łączenie Records.json, łączenie lokalizacji Google Takeout, łączenie semantic location history, łączenie Google Timeline, usuwanie duplikatów historii lokalizacji, łączenie danych GPS",
     "featureList": [
       "Łączenie wielu eksportów Google Timeline w jeden plik",

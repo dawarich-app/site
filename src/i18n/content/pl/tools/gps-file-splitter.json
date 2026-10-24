@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Dzielenie plików GPS — podziel GPX, GeoJSON, KML i JSON",
-    "description": "Podziel duże pliki GPS według rozmiaru, liczby punktów lub daty. Obsługa GPX, GeoJSON, KML, KMZ i JSON Google Timeline. Pobierz ZIP. Prywatnie, w przeglądarce.",
+    "description": "Dziel za darmo duże pliki GPS i lokalizacji na mniejsze części: GPX, GeoJSON, KML, KMZ i JSON Google Timeline. Według rozmiaru, liczby punktów lub daty. Pobierz ZIP. Prywatnie, w przeglądarce.",
     "keywords": "dzielenie dużego pliku GPX, podział GeoJSON na części, dzielenie pliku KML, zmniejszanie pliku GPS, dzielenie dużego JSON lokalizacji, dzielenie plików GPS, dzielenie Google Timeline",
     "featureList": [
       "Dzielenie dużych plików GPS na mniejsze części",
