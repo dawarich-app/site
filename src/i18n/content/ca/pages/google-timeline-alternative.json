@@ -83,7 +83,7 @@
     "text4": ". Hem importat 15 anys de dades de Timeline, 6.8 milions de punts i un Takeout de 2 GB, sense cap problema.",
     "h34": "Un producte de visualització, més enllà d’una base de dades",
     "p4": "Mapes de calor. Boira de guerra. Vista del globus. Detecció de viatges. Resum anual. Allò que Timeline feia bé, i algunes coses que no.",
-    "h35": "Exportació permanent, sense dependències",
+    "h35": "Exportació permanent, sense quedar lligat al proveïdor",
     "p5": "GPX, GeoJSON, KML i JSON en brut. Les dades sempre marxen amb tu, amb qualsevol pla, fins i tot Lite.",
     "h36": "Aplicacions de seguiment per a iOS i Android",
     "p6": "Aplicacions natives amb seguiment en segon pla i intervals que estalvien bateria. Les dades van al teu compte de Dawarich, mai a Google ni a tercers."
@@ -134,8 +134,8 @@
   },
   "meta": {
     "title": "Alternativa a Google Timeline — Desa l’historial abans de perdre’l",
-    "description": "Importa Google Takeout a Dawarich Cloud en minuts. Mapes de calor, viatges i dades privades a Alemanya. Des de {price}. Prova de 7 dies.",
-    "ogDescription": "Google ha eliminat Timeline i ha deixat les dades només al dispositiu. Desa tot l’historial en minuts amb Dawarich Cloud: privat, allotjat a la UE i conforme amb el RGPD. Prova de 7 dies.",
+    "description": "Google ha eliminat Timeline: dades només al dispositiu. Dawarich Cloud importa Google Takeout en minuts: mapes de calor, detecció de viatges i dades privades a Alemanya. Des de {price}. Prova: 7 dies gratis.",
+    "ogDescription": "Google ha eliminat Timeline i ha deixat les dades només al dispositiu. Desa tot l’historial en minuts amb Dawarich Cloud: privat, allotjat a la UE i conforme amb el RGPD. Prova gratuïta de 7 dies.",
     "twitterTitle": "Alternativa a Google Timeline — Desa l’historial d’ubicacions",
     "twitterDescription": "Google ha eliminat Timeline. Desa l’historial de manera privada amb Dawarich Cloud. Allotjat a la UE i conforme amb el RGPD. Prova gratuïta de 7 dies."
   },

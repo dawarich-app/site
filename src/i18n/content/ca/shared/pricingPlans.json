@@ -14,7 +14,7 @@
             "label": "Aplicacions de seguiment per a iOS i Android"
           },
           {
-            "label": "12 mesos d’historial consultable"
+            "label": "12 mesos d’historial amb cerca"
           },
           {
             "label": "Importacions i exportacions il·limitades"
@@ -36,7 +36,7 @@
           "label": "Seguiment d’ubicació en segon pla"
         },
         {
-          "label": "12 mesos d’historial consultable"
+          "label": "12 mesos d’historial amb cerca"
         },
         {
           "label": "Importacions i exportacions il·limitades"
@@ -183,7 +183,7 @@
       "name": "Historial i dades",
       "rows": [
         {
-          "label": "Historial consultable",
+          "label": "Historial amb cerca",
           "lite": "12 mesos",
           "pro": "Il·limitat",
           "family": "Il·limitat"

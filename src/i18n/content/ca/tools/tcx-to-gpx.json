@@ -14,7 +14,7 @@
     },
     {
       "title": "Sobre el format GPX",
-      "body": "GPX (GPS Exchange Format) és un estàndard XML obert per a dades GPS. És compatible amb plataformes esportives, programari de mapes i aplicacions de navegació, cosa que el fa el format més portàtil per a trajectes GPS."
+      "body": "GPX (GPS Exchange Format) és un estàndard XML obert per a dades GPS. Té compatibilitat universal amb plataformes esportives, programari de mapes i aplicacions de navegació, cosa que el fa el format més portàtil per a trajectes GPS."
     },
     {
       "title": "Per què convertir TCX a GPX?",
@@ -22,7 +22,7 @@
         "Importa activitats a plataformes que no admeten TCX",
         "Comparteix rutes amb usuaris d’altres plataformes esportives",
         "Mira trajectes a Google Earth, QGIS o altres eines de mapes",
-        "Crea còpies de seguretat en un format àmpliament compatible",
+        "Crea còpies de seguretat en un format amb compatibilitat universal",
         "Combina o edita trajectes amb eines compatibles amb GPX"
       ]
     },

@@ -10,7 +10,7 @@
     },
     {
       "question": "Dawarich desapareixerà com altres empreses emergents?",
-      "answer": "Dawarich és de codi obert i té MÉS DE 9,000 estrelles a GitHub. Encara que l’empresa tanqués demà, la teva instància pròpia continuaria funcionant i podries exportar les dades en formats estàndard (GPX, GeoJSON). Mai no en dependràs."
+      "answer": "Dawarich és de codi obert i té MÉS DE 9,000 estrelles a GitHub. Encara que l’empresa tanqués demà, la teva instància pròpia continuaria funcionant i podries exportar les dades en formats estàndard (GPX, GeoJSON). Sempre podràs canviar de servei i endur-te les dades."
     },
     {
       "question": "Les meves dades són realment privades?",
@@ -30,7 +30,7 @@
     },
     {
       "question": "Puc exportar les meves dades?",
-      "answer": "Sí, pots exportar totes les teves dades d’ubicació en qualsevol moment i en diversos formats (GPX, GeoJSON). Fins i tot amb el pla Lite, les exportacions inclouen tot l’historial, no només els 12 mesos que pots visualitzar. Mai no en dependràs."
+      "answer": "Sí, pots exportar totes les teves dades d’ubicació en qualsevol moment i en diversos formats (GPX, GeoJSON). Fins i tot amb el pla Lite, les exportacions inclouen tot l’historial, no només els 12 mesos que pots visualitzar. Sempre podràs canviar de servei i endur-te les dades."
     },
     {
       "question": "Hi ha una prova gratuïta?",

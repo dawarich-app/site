@@ -73,7 +73,7 @@
     "p3": "Sense penalitzacions per permanència anual, comissions de sortida ni correus de «n’estàs segur?».",
     "h33": "Exporta quan vulguis",
     "p4": "Cada byte de les teves dades, exportable en GPX, GeoJSON, KML o JSON en brut, amb qualsevol pla, per sempre.",
-    "p5": "Si Dawarich Cloud mai tanca, pots allotjar el mateix programari i importar-hi les dades exportades. **Literalment no podem retenir les teves dades.**"
+    "p5": "Si Dawarich Cloud mai tanca, pots allotjar el mateix programari i importar-hi les dades exportades. **Literalment no podem impedir que t’enduguis les teves dades.**"
   },
   "cloudFinalCTA": {
     "heading": "Deixa de llogar els teus records a empreses que no se’n preocupen.",
@@ -85,7 +85,7 @@
     "text": "Consulta els preus"
   },
   "meta": {
-    "title": "Dawarich Cloud — El teu historial d’ubicacions privat",
+    "title": "Dawarich Cloud — Historial d’ubicacions privat i ben teu",
     "description": "Google Takeout, Strava, Garmin i 12 més; mapes de calor, viatges i estadístiques. Dades privades a Alemanya, sense vendre-les. Des de {price}. 7 dies gratis.",
     "ogDescription": "Historial d’ubicacions privat allotjat a Alemanya. Mapes de calor, viatges i estadístiques, sense vendre les dades. Des de {price}. Prova gratuïta de 7 dies.",
     "twitterDescription": "Historial d’ubicacions privat allotjat a Alemanya. Mapes de calor, viatges i estadístiques, sense vendre les teves dades."

@@ -38,9 +38,9 @@
     }
   ],
   "meta": {
-    "title": "Ubicació en família — Privada i amb consentiment",
-    "description": "Comparteix la ubicació amb fins a cinc familiars: control individual, temporitzadors, historial independent i sol·licituds. {price} o allotjament propi gratis.",
-    "ogTitle": "Ubicació en família sense vigilància",
+    "title": "Compartir ubicació familiar: privat, acordat, sense rastreig",
+    "description": "Comparteix ubicació en directe amb fins a cinc familiars: control individual, temporitzadors, períodes d’historial separats i peticions d’ubicació que cal acceptar. {price} o allotja’l gratis.",
+    "ogTitle": "Comparteix la ubicació en família sense vigilància",
     "ogDescription": "Cinc persones, cinc controls independents. Ubicació en directe amb temporitzador, historial per separat i sol·licituds que cal acceptar. Res no es comparteix per defecte."
   },
   "familyPage": {

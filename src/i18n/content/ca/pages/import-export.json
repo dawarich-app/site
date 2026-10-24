@@ -113,20 +113,20 @@
   ],
   "meta": {
     "title": "Importa i exporta dades",
-    "description": "Les dades són teves. Importa de Google Takeout, GPX, CSV i KML. Exporta a GPX, CSV o tot el compte. Sense dependències.",
+    "description": "Les dades són teves. Importa de Google Takeout, GPX, CSV i KML. Exporta a GPX, CSV o tot el compte. Sense quedar lligat al proveïdor.",
     "ogTitle": "Importació i exportació de Dawarich — Les dades sota el teu control",
-    "ogDescription": "Importa de Google Maps, Apple Health, GPX, GeoJSON i KML. Exporta a qualsevol format. Portabilitat total de les dades sense dependències."
+    "ogDescription": "Importa de Google Maps, Apple Health, GPX, GeoJSON i KML. Exporta a qualsevol format. Portabilitat total de les dades sense quedar lligat al proveïdor."
   },
   "hero": {
     "badge": "Portabilitat de dades",
     "title": "Les teves dades",
     "titleHighlight": "et pertanyen",
-    "subtitle": "Importa l’historial d’ubicacions des de qualsevol lloc. Exporta’l quan vulguis, en qualsevol format. Dawarich defensa la portabilitat total sense dependències: tu tens sempre el control.",
+    "subtitle": "Importa l’historial d’ubicacions des de qualsevol lloc. Exporta’l quan vulguis, en qualsevol format. Dawarich defensa la portabilitat total sense quedar lligat al proveïdor: tu tens sempre el control.",
     "imageAlt": "Interfície d’importació i exportació"
   },
   "importExportPage": {
     "heading": "La nostra filosofia de dades",
-    "h3": "Sense dependències",
+    "h3": "Sense quedar lligat al proveïdor",
     "p": "Exporta totes les dades quan vulguis. Mai no hi estàs atrapat: canvia de servei o conserva la teva còpia de seguretat.",
     "h32": "Migració fàcil",
     "p2": "Vens de Google Maps Timeline o d’un altre servei de seguiment? Importa-ho tot fàcilment i continua on ho vas deixar.",

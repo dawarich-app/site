@@ -52,7 +52,7 @@
     "description": "The label of footer link with label=Location Sharing linking to /location-sharing"
   },
   "link.item.label.Family Location Sharing": {
-    "message": "Ubicació en família",
+    "message": "Comparteix la ubicació en família",
     "description": "The label of footer link with label=Family Location Sharing linking to /family"
   },
   "link.item.label.Tax Residency Day Counter": {
