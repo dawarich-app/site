@@ -14,7 +14,7 @@
             "label": "Aplicaciones de registro para iOS y Android"
           },
           {
-            "label": "12 meses de historial consultable"
+            "label": "12 meses de historial con búsqueda"
           },
           {
             "label": "Importaciones y exportaciones ilimitadas"
@@ -36,7 +36,7 @@
           "label": "Registro de ubicación en segundo plano"
         },
         {
-          "label": "12 meses de historial consultable"
+          "label": "12 meses de historial con búsqueda"
         },
         {
           "label": "Importaciones y exportaciones ilimitadas"
@@ -183,7 +183,7 @@
       "name": "Historial y datos",
       "rows": [
         {
-          "label": "Historial consultable",
+          "label": "Historial con búsqueda",
           "lite": "12 meses",
           "pro": "Ilimitado",
           "family": "Ilimitado"
