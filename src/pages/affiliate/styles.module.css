@@ -1,0 +1,115 @@
+.stats {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.statValue {
+  margin: 0 0 0.25rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.statLabel {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.earnings {
+  padding: 3rem 0;
+}
+
+.earningsTitle {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+}
+
+.earningsSub {
+  margin: 0 0 1.5rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  vertical-align: top;
+}
+
+.table th {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.rowNote {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.82rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.amount {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.how {
+  padding: 3rem 0;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.howGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  padding: 1.25rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+}
+
+.cardTitle {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.cardBody {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.cardNote {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ifm-color-emphasis-600);
+}

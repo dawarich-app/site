@@ -71,26 +71,38 @@ describe('footerLinks', () => {
     for (const i of linkItems()) expect(i.label.trim().length).toBeGreaterThan(0);
   });
 
-  it('keeps the Tools column in measured-click order', () => {
-    const tools = footerLinks.find((c) => c.title === 'Tools').items.map((i) => i.to);
-    expect(tools).toEqual([
-      ...TOP_TOOLS,
-      '/tools',
-    ]);
+  it('groups long columns by the task a visitor wants to do', () => {
+    const headings = (title) => footerLinks
+      .find((c) => c.title === title)
+      .items.filter((i) => i.html)
+      .map((i) => i.html.match(/>([^<]+)<\/div>/)?.[1]);
+
+    expect(headings('Product')).toEqual(['Explore', 'Share & create', 'Get started']);
+    expect(headings('Tools')).toEqual(['Explore your data', 'Convert files', 'Edit & extract']);
+    expect(headings('Company')).toEqual(['About', 'Legal']);
+    expect(internalTargets()).toContain('/press-kit');
   });
 
   it('keeps the Compare column in correct order', () => {
-    const compare = footerLinks.find((c) => c.title === 'Compare').items.map((i) => i.to);
+    const compare = footerLinks.find((c) => c.title === 'Compare').items.filter((i) => i.to).map((i) => i.to);
     expect(compare).toEqual(COMPARISONS);
   });
 
   it('links the About page at the top of the Company column', () => {
-    const company = footerLinks.find((c) => c.title === 'Company').items.map((i) => i.to);
+    const company = footerLinks.find((c) => c.title === 'Company').items.filter((i) => i.to).map((i) => i.to);
     expect(company[0]).toBe('/about');
   });
 
   it('pins FOOTER_LINK_CAP to its specified value', () => {
-    expect(FOOTER_LINK_CAP).toBe(60);
+    expect(FOOTER_LINK_CAP).toBe(62);
+  });
+
+  // Withdrawing consent has to be as easy as giving it, and the banner that
+  // gives it in one click from any page is gone for good once answered. The
+  // footer is the only element that persists everywhere afterwards.
+  it('reaches the cookie controls from every page', () => {
+    const company = footerLinks.find((c) => c.title === 'Company').items.map((i) => i.to);
+    expect(company).toContain('/privacy-policy#cookies');
   });
 });
 
@@ -113,6 +125,20 @@ describe('buildFooterLinks', () => {
     const links = buildFooterLinks('de');
     expect(find(links, 'Pricing')).toEqual({ label: 'Pricing', to: '/pricing' });
     expect(find(links, 'Community')).toEqual({ label: 'Community', href: 'https://discourse.dawarich.app/' });
+  });
+});
+
+describe('buildFooterLinks section headings', () => {
+  const headings = (locale, column) => buildFooterLinks(locale)
+    .find((c) => c.title === column)
+    .items.filter((i) => i.html)
+    .map((i) => i.html);
+
+  it('localizes the section headings instead of replacing them with the brand block', () => {
+    const product = headings('de', 'Product');
+    expect(product).toHaveLength(3);
+    expect(product[0]).toBe('<div class="dawarich-footer-subtitle">Entdecken</div>');
+    expect(product.join('')).not.toContain('ZeitFlow');
   });
 });
 

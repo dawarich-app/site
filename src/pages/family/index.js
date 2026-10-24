@@ -9,6 +9,7 @@ import {
   PitchHero,
   ProofStrip,
   ValueRows,
+  WideBlock,
   Objections,
   CloseCTA,
 } from '@site/src/components/pitch';
@@ -18,6 +19,9 @@ import {
   FamilyRequestShot,
   FamilyPageShot,
 } from '@site/src/components/pitch/Artifacts';
+import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
+import RichText from '@site/src/i18n/RichText';
+import styles from './FamilyPage.module.css';
 
 const rows = [
   {
@@ -39,35 +43,12 @@ const rows = [
   },
 ];
 
-const objections = [
-  {
-    q: content.objections[0].q,
-    a: content.objections[0].a,
-  },
-  {
-    q: content.objections[1].q,
-    a: content.objections[1].a,
-  },
-  {
-    q: content.objections[2].q,
-    a: content.objections[2].a,
-  },
-  {
-    q: content.objections[3].q,
-    a: content.objections[3].a,
-  },
-  {
-    q: content.objections[4].q,
-    a: content.objections[4].a,
-  },
-];
-
 export default function FamilyPage() {
   const pageUrl = useLocalizedUrl('/family/');
   return (
     <Layout
       title={content.meta.title}
-      description={interpolate(content.meta.description, { price: "€299.99/year" })}>
+      description={interpolate(content.meta.description, { price: "€239.99/year" })}>
       <Head>
         <meta name="twitter:url" content={pageUrl} />
         <meta property="og:url" content={pageUrl} />
@@ -104,12 +85,25 @@ export default function FamilyPage() {
           rows={rows}
         />
 
-        <Objections title={content.familyPage.title3} items={objections} />
+        <WideBlock title={content.setup.title} body={content.setup.body}>
+          <ol className={styles.setupSteps}>
+            {content.setup.steps.map((step) => (
+              <li key={step}><RichText text={step} /></li>
+            ))}
+          </ol>
+          <div className={styles.appLinks}>
+            <a href="https://apps.apple.com/app/apple-store/id6739544999?pt=128010810&ct=family-page&mt=8">{content.setup.ios}</a>
+            <a href="https://play.google.com/store/apps/details?id=app.dawarich.Dawarich">{content.setup.android}</a>
+            <EnOnlyLink to="/docs/features/family">{content.setup.guide}</EnOnlyLink>
+          </div>
+        </WideBlock>
+
+        <Objections title={content.familyPage.title3} items={content.objections} />
 
         <CloseCTA
           campaign="family"
           title={content.familyPage.title4}
-          sub={interpolate(content.familyPage.sub3, { price: "€299.99" })}
+          sub={interpolate(content.familyPage.sub3, { price: "€239.99" })}
           primaryLabel={content.familyPage.primaryLabel}
         />
       </PitchPage>

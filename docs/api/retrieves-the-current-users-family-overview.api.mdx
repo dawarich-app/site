@@ -1,0 +1,69 @@
+---
+id: retrieves-the-current-users-family-overview
+title: "Retrieves the current user's family overview"
+description: "Returns the family, all members with sharing state, the current user's sharing settings, and active location requests. Requires family membership. A member whose entitlement has lapsed still gets 200, with `lapsed: true` and a reduced payload carrying only the family name and the user's role — `members` and `location_requests` are omitted. A user who is neither entitled nor in a family gets 403."
+sidebar_label: "Retrieves the current user's family overview"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVs1uG0cMfhViLr0sLCX2aVEUcNE2DXIJ0vRkGDK9S2lpz86sOVwpqiCgD9En7JMUnF3ZVmTFLpoCPVQXYXY4JL+PvxunuEiuvHA/YcueKbnLwtWUKuFOOQZXug+kvYQE2hDMTWpdAHoPLbXXJAlWrA2kBoXDApKiUpFlq16EgkKfSL5JDxKkymGRCsBQA1bKSwIfKzRzIHTXU9J0Ah/ormehNNrcmWu4O4Hz8QSrJiYCCsrqqTVrDSbw2CWqISl7DwvSBK+n02Jw9Gq4LEGlp6vBBxCq+4pq6HDtI9ZQocjanI3Brx8Bh4At5Tf2bQQm0RP8+fsfcDW6OGi92mGa7TBdAQpBbFmVagNhCgwCcIJArA3JDksNIQpwANyZzjjOpqcnrnAdCrakJBa6jTOvXOnOe22i8G/ZqiscW/QawprEFU4GPmtXGvLPg/w9oZDAt+fv38I7Wn/nCpeqhlp05cbpujP9SS2Abru9NG2piyFRsvvX06n97Wsc3Y5LkiXTyhWuikEpqIli13ke6JncJJPfHNqL1zdUqcGV2JEoD9aGAD6Su47REwa3LUajz+sYGDtEti3c3sWR5xa4GT/2gYPSgsR8iKtA8rR7Yw08b4ACXvtjIOtehhAfAChc6L23p0OUt4WjT51V0Qz1ReJJUZTqF4s3KDRrOGmU9dPejpezFYc6rl6gdTuGIdfSI3kUwbWltVKb/mGMqEX2TyTAeDPjwMr4tMTz8Z19MXw3kcMRhgfoB43jebAcqtjuZ9bfpOsYU6MPe4i/JuMGOPWLhdmoZ18ttbeFq4TwWCoPRMdeF/FfYU1RFqSzLzLynH/jr3Bn09PD9ppnxwvmhssKzo4oCFH3hXPlaRNrV7oFZcCojSvdBDueLF9N5uOeMGk5kE0JkuVuDvXibeKoduVksqlpjr3Xn2PSrSvcEoUtfGlw5f7u0dGVOfd9E5OWp9Pp1Hi4NBtVL6zrX2xCDAqw49ktPW452PE7stCN03AnMc7Bu57EDvsk2Li7pTV0mGxjwAQIWRLuR6wReJ2n4wx7o+LeogHdzclc41nqwMY4WjXeUgBTYaEaKjzzzWEes1aLnyvdD7hC4aqB8/dvjTeSNChavnrS/3kU2L0pYB17gTkuo7ASoFeSgHnH0ghvYlx4go/ckudAJ/Be4pJrSkCh7iIHTVldiwEXtv/c72U1KhaggtVtKmDJiTUVedvjpFyN21wbhU6MsC4mbTE8jFrbIoVpSemp3fBwV9iDuXlYHf7fRv972+hYDkqfdNJ55Dzlci/YjN3jwqrRctkyeNdBXOFyD7ksXJP7wIXbbK4x0a/it1v7PNRseXH50D3sZEvFsNVa08ldwJ1XFXWa24zvh/L/bMO0RnLf2t78+NFtt38BkB6SWg==
+sidebar_class_name: "get api-method"
+info_path: docs/api/dawarich-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Retrieves the current user's family overview"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/v1/families/mine"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the family, all members with sharing state, the current user's sharing settings, and active location requests. Requires family membership. A member whose entitlement has lapsed still gets 200, with `lapsed: true` and a reduced payload carrying only the family name and the user's role — `members` and `location_requests` are omitted. A user who is neither entitled nor in a family gets 403.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./retrieves-the-current-users-family-overview.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./retrieves-the-current-users-family-overview.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./retrieves-the-current-users-family-overview.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

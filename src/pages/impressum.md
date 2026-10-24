@@ -21,6 +21,10 @@ Germany
 **Contact:**
 Email: hi@dawarich.app
 
+## Trade mark
+
+Dawarich® is a registered European Union word trade mark (EUTM No. [019374922](https://euipo.europa.eu/eSearch/#details/trademarks/019374922)) owned by ZeitFlow UG (haftungsbeschränkt).
+
 ## Responsible for Content pursuant to § 55 (2) RStV
 
 Evgenii Burmakin

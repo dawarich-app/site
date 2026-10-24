@@ -1,0 +1,69 @@
+---
+id: removes-demo-data
+title: "Removes demo data"
+description: "Removes all demo data (points, visits, places, tags, tracks and the demo trip) for the authenticated user. Real user data is not touched. Returns status 'no_demo_data' when there is nothing to remove."
+sidebar_label: "Removes demo data"
+hide_title: true
+hide_table_of_contents: true
+api: eJzdVMFu3DgM/RWBpxYwMpPtnnxLkaBb7B6CtD1Ng4CxOGM1sqSKtLtTw/9eUJ7JeDPBfkBPtiTykXzk4wiCO4Z6A9fURXONgnBfgSVuskviYoAa7qiLA7FB741VM4uC5k2KLghXZnDs9Js8NsSVUcTKSMbmiQ0Ga6Sl2U+yS2/NNuZyhb20FMQ1KGRNz5QvzB2hL79zDMcmRDES+6Ylq8/S58CGBaVn8xVCfFDkB7X+CuZHS0GxMx1cWxd2RqLJpYQLqCBhxo6EslY9QsCOoAZM7uGJ9lCB04q/95T1kOl77zJZqCX39JKXq9uP5u/ixE1LHUI9guyT4rFkF3YwTfcKwikGJtb3P9Zr/fwX6ETqnKeFCpoYhIKoMabklSUXw+obq8d4HjE+fqNGtMAcE2Vxc7yZqfPMKqDQd9p4Syw57kvQJZ2vzQH3XkzclvaVVNHDNC152hwj3k+Tvvy5vjyvtw/a+5jdT7LFvyNpoy1MeBIqbZIWalhhcqvhcnXKqgKmPBzb12cPNbQiqV6tRktb7L38FVkmqGDA7PDRz0Qs3hZHqMHHBn0bWep36/UaptIzpqbPTvaflOYZ4DgiJyoxubn9/z9E50PzRHuTkJmsQTZoiqV5nkyYKngkzJQflKdFRC30OG56nq3OYrwv10biE4WlzPRV6XZhGwuqE68w1/gDs2tac3X7UXmjzDPQcPlq/qrgo09l9rHPZotDzE7IoBfKAcUNpML7EOPOk/nsOvIu0IW5zXFwlthQsPMGKXAdBtypWLUdGqro4bhGTktGp8uxuIarslu6mOlCCUuRpcOijUM7jmvrWV0vaxlPIvu9dtxhWoT+lVXy6IISVKQyHoS10WHVVs8NXki+LQLZwDg+ItOX7KdJr+dhVslZxyoqC/UWPb9ciktO39wd1sJbc1qVr+ZWdLXQz4C+VytQLR5lDPXmfqqgJbSUSyqz21XTUJKF19m+VJTnFXN988/N5xuYpl9xTWx7
+sidebar_class_name: "delete api-method"
+info_path: docs/api/dawarich-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Removes demo data"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/v1/demo_data"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes all demo data (points, visits, places, tags, tracks and the demo trip) for the authenticated user. Real user data is not touched. Returns status "no_demo_data" when there is nothing to remove.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./removes-demo-data.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./removes-demo-data.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./removes-demo-data.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

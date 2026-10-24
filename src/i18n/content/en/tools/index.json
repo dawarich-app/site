@@ -61,6 +61,10 @@
     {
       "title": "Photo Geodata Extraction",
       "description": "Extract GPS coordinates and location metadata from your photos (EXIF data)."
+    },
+    {
+      "title": "Route Video Maker",
+      "description": "Animate any GPS track into a shareable MP4 — the route draws itself across a styled map."
     }
   ],
   "converters": [

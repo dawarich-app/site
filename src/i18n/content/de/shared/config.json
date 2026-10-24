@@ -5,5 +5,18 @@
   "location": "Berlin, Deutschland",
   "startTracking": "Jetzt mit dem Tracking starten →",
   "communityLinks": "Community-Links",
-  "trendshiftAlt": "Dawarich auf Trendshift"
+  "trendshiftAlt": "Dawarich auf Trendshift",
+  "trademark": "Dawarich® ist eine eingetragene Unionsmarke der ZeitFlow UG (haftungsbeschränkt)",
+  "trademarkNumber": "Nr. {number}",
+  "footerSection.Explore": "Entdecken",
+  "footerSection.Share & create": "Teilen & gestalten",
+  "footerSection.Get started": "Erste Schritte",
+  "footerSection.Explore your data": "Daten erkunden",
+  "footerSection.Convert files": "Dateien konvertieren",
+  "footerSection.Edit & extract": "Bearbeiten & extrahieren",
+  "footerSection.Alternatives": "Alternativen",
+  "footerSection.Dawarich vs": "Dawarich vs.",
+  "footerSection.Help & reference": "Hilfe & Referenz",
+  "footerSection.About": "Über uns",
+  "footerSection.Legal": "Rechtliches"
 }

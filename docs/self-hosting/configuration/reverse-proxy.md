@@ -23,16 +23,7 @@ dawarich_app:
       APPLICATION_HOSTS: "yourhost.com,www.yourhost.com,127.0.0.1" <-- Edit this
 ```
 
-```yaml
-dawarich_sidekiq:
-    image: freikin/dawarich:latest
-    container_name: dawarich_sidekiq
-    ...
-    environment:
-      ...
-      APPLICATION_HOSTS: "yourhost.com,www.yourhost.com,127.0.0.1" <-- Edit this
-      ...
-```
+If you run a [separate worker](/docs/self-hosting/configuration/background-jobs#running-a-separate-worker), set the same value on `dawarich_sidekiq`.
 
 For a Synology install, refer to **[Synology Install Tutorial](/docs/self-hosting/installation/synology)**. In this page, it is explained how to set the APPLICATION_HOSTS environment variable.
 

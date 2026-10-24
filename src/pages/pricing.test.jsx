@@ -13,6 +13,6 @@ import Subject from './pricing';
 describe('pricing locale content', () => {
   it('renders its heading or label from English content', () => {
     render(<Subject />);
-    expect(document.querySelector('meta[property="og:title"]')).toHaveAttribute('content', content.meta.title.trim());
+    expect(document.querySelector('meta[property="og:title"]')).toHaveAttribute('content', `${content.meta.title.trim()} | Dawarich`);
   });
 });

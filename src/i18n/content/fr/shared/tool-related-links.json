@@ -1,32 +1,527 @@
 {
-  "gpx-to-kml": [{"href":"/tools/kml-to-gpx/","label":"KML vers GPX","note":"Conversion inverse"},{"href":"/tools/gpx-to-geojson/","label":"GPX vers GeoJSON","note":"Même source, pour la cartographie web"},{"href":"/tools/gpx-merger/","label":"Fusion de fichiers GPX","note":"Fusionnez d’abord plusieurs fichiers GPX"}],
-  "kml-to-gpx": [{"href":"/tools/gpx-to-kml/","label":"GPX vers KML","note":"Conversion inverse"},{"href":"/tools/kml-to-geojson/","label":"KML vers GeoJSON","note":"Même source, pour la cartographie web"},{"href":"/tools/kmz-to-gpx/","label":"KMZ vers GPX","note":"Version KML compressée"}],
-  "gpx-to-geojson": [{"href":"/tools/geojson-to-gpx/","label":"GeoJSON vers GPX","note":"Conversion inverse"},{"href":"/tools/gpx-to-kml/","label":"GPX vers KML","note":"Même source, pour Google Earth"},{"href":"/interactive-map/","label":"Carte interactive","note":"Visualisez le GeoJSON dans Dawarich"}],
-  "geojson-to-gpx": [{"href":"/tools/gpx-to-geojson/","label":"GPX vers GeoJSON","note":"Conversion inverse"},{"href":"/tools/geojson-to-kml/","label":"GeoJSON vers KML","note":"Même source, pour Google Earth"},{"href":"/tools/geojson-to-kmz/","label":"GeoJSON vers KMZ","note":"Format Google Earth compressé"}],
-  "geojson-to-kml": [{"href":"/tools/kml-to-geojson/","label":"KML vers GeoJSON","note":"Conversion inverse"},{"href":"/tools/geojson-to-gpx/","label":"GeoJSON vers GPX","note":"Même source, pour les appareils GPS"},{"href":"/tools/geojson-to-kmz/","label":"GeoJSON vers KMZ","note":"Format Google Earth compressé"}],
-  "kml-to-geojson": [{"href":"/tools/geojson-to-kml/","label":"GeoJSON vers KML","note":"Conversion inverse"},{"href":"/tools/kml-to-gpx/","label":"KML vers GPX","note":"Même source, pour les appareils GPS"},{"href":"/tools/kmz-to-geojson/","label":"KMZ vers GeoJSON","note":"Version KML compressée"}],
-  "gpx-to-kmz": [{"href":"/tools/kmz-to-gpx/","label":"KMZ vers GPX","note":"Conversion inverse"},{"href":"/tools/gpx-to-kml/","label":"GPX vers KML","note":"Équivalent non compressé"},{"href":"/tools/gpx-merger/","label":"Fusion de fichiers GPX","note":"Fusionnez d’abord les fichiers GPX"}],
-  "kmz-to-gpx": [{"href":"/tools/gpx-to-kmz/","label":"GPX vers KMZ","note":"Conversion inverse"},{"href":"/tools/kml-to-gpx/","label":"KML vers GPX","note":"Équivalent non compressé"},{"href":"/tools/kmz-to-kml/","label":"KMZ vers KML","note":"Décompressez pour modifier"}],
-  "kml-to-kmz": [{"href":"/tools/kmz-to-kml/","label":"KMZ vers KML","note":"Conversion inverse (décompression)"},{"href":"/tools/kml-to-gpx/","label":"KML vers GPX","note":"Même source, pour les appareils GPS"},{"href":"/tools/kml-to-geojson/","label":"KML vers GeoJSON","note":"Même source, pour la cartographie web"}],
-  "kmz-to-kml": [{"href":"/tools/kml-to-kmz/","label":"KML vers KMZ","note":"Conversion inverse (compression)"},{"href":"/tools/kmz-to-gpx/","label":"KMZ vers GPX","note":"Même source, pour les appareils GPS"},{"href":"/tools/kmz-to-geojson/","label":"KMZ vers GeoJSON","note":"Même source, pour la cartographie web"}],
-  "kmz-to-geojson": [{"href":"/tools/geojson-to-kmz/","label":"GeoJSON vers KMZ","note":"Conversion inverse"},{"href":"/tools/kml-to-geojson/","label":"KML vers GeoJSON","note":"Équivalent non compressé"},{"href":"/tools/kmz-to-kml/","label":"KMZ vers KML","note":"Décompressez pour modifier"}],
-  "geojson-to-kmz": [{"href":"/tools/kmz-to-geojson/","label":"KMZ vers GeoJSON","note":"Conversion inverse"},{"href":"/tools/geojson-to-kml/","label":"GeoJSON vers KML","note":"Équivalent non compressé"},{"href":"/tools/geojson-to-gpx/","label":"GeoJSON vers GPX","note":"Même source, pour les appareils GPS"}],
-  "fit-to-gpx": [{"href":"/tools/fit-to-kml/","label":"FIT vers KML","note":"Même source, pour Google Earth"},{"href":"/tools/fit-to-geojson/","label":"FIT vers GeoJSON","note":"Même source, pour la cartographie web"},{"href":"/docs/comparisons/vs-strava/","label":"Dawarich face à Strava","note":"Où conserver vos activités"}],
-  "fit-to-kml": [{"href":"/tools/fit-to-gpx/","label":"FIT vers GPX","note":"Le format GPS le plus compatible"},{"href":"/tools/fit-to-geojson/","label":"FIT vers GeoJSON","note":"Pour la cartographie web"},{"href":"/tools/heatmap-generator/","label":"Générateur de cartes de chaleur","note":"Visualisez les activités FIT"}],
-  "fit-to-geojson": [{"href":"/tools/fit-to-gpx/","label":"FIT vers GPX","note":"Le format GPS le plus compatible"},{"href":"/tools/fit-to-kml/","label":"FIT vers KML","note":"Pour Google Earth"},{"href":"/tools/heatmap-generator/","label":"Générateur de cartes de chaleur","note":"Visualisez les activités FIT"}],
-  "tcx-to-gpx": [{"href":"/tools/tcx-to-kml/","label":"TCX vers KML","note":"Même source, pour Google Earth"},{"href":"/tools/tcx-to-geojson/","label":"TCX vers GeoJSON","note":"Pour la cartographie web"},{"href":"/tools/fit-to-gpx/","label":"FIT vers GPX","note":"Format Garmin plus récent"}],
-  "tcx-to-kml": [{"href":"/tools/tcx-to-gpx/","label":"TCX vers GPX","note":"Le format GPS le plus compatible"},{"href":"/tools/tcx-to-geojson/","label":"TCX vers GeoJSON","note":"Pour la cartographie web"},{"href":"/tools/heatmap-generator/","label":"Générateur de cartes de chaleur","note":"Visualisez les activités TCX"}],
-  "tcx-to-geojson": [{"href":"/tools/tcx-to-gpx/","label":"TCX vers GPX","note":"Le format GPS le plus compatible"},{"href":"/tools/tcx-to-kml/","label":"TCX vers KML","note":"Pour Google Earth"},{"href":"/tools/fit-to-geojson/","label":"FIT vers GeoJSON","note":"Format Garmin plus récent"}],
-  "google-timeline-converter": [{"href":"/tools/google-timeline-splitter/","label":"Découpage de chronologie","note":"Découpez un export Takeout volumineux"},{"href":"/tools/timeline-merger/","label":"Fusion de chronologies","note":"Fusionnez plusieurs exports"},{"href":"/blog/migrating-from-google-location-history-to-dawarich/","label":"Guide de migration","note":"Migrez vers Dawarich pas à pas"}],
-  "google-timeline-splitter": [{"href":"/tools/google-timeline-converter/","label":"Convertisseur de chronologie","note":"Convertissez les fichiers découpés en GPX/KML/CSV"},{"href":"/tools/timeline-format-detector/","label":"Détecteur de format","note":"Identifiez le type de votre export"},{"href":"/blog/whats-inside-your-google-timeline-export/","label":"Le contenu d’un export Timeline","note":"Comprenez les formats"}],
-  "timeline-merger": [{"href":"/tools/google-timeline-converter/","label":"Convertisseur de chronologie","note":"Convertissez le fichier fusionné en GPX/KML/CSV"},{"href":"/tools/timeline-statistics/","label":"Statistiques de chronologie","note":"Analysez votre historique fusionné"},{"href":"/tools/google-timeline-splitter/","label":"Découpage de chronologie","note":"Conversion inverse"}],
-  "timeline-format-detector": [{"href":"/tools/google-timeline-converter/","label":"Convertisseur de chronologie","note":"Convertissez une fois le format identifié"},{"href":"/tools/google-timeline-splitter/","label":"Découpage de chronologie","note":"Découpez les exports volumineux"},{"href":"/blog/whats-inside-your-google-timeline-export/","label":"Le contenu d’un export Timeline","note":"Référence des formats"}],
-  "timeline-visualizer": [{"href":"/interactive-map/","label":"Carte interactive","note":"Visualisation complète dans Dawarich"},{"href":"/tools/map-poster-maker/","label":"Créateur d’affiches cartographiques","note":"Transformez le même fichier en affiche"},{"href":"/tools/timeline-statistics/","label":"Statistiques de chronologie","note":"Les chiffres derrière la carte"}],
-  "timeline-statistics": [{"href":"/tools/timeline-mileage-calculator/","label":"Calculateur de distance","note":"Consultez rapidement la distance"},{"href":"/tools/timeline-visualizer/","label":"Visualiseur de chronologie","note":"Retrouvez les mêmes données sur une carte"},{"href":"/statistics/","label":"Statistiques Dawarich","note":"Tableaux de bord permanents"}],
-  "timeline-mileage-calculator": [{"href":"/tools/timeline-statistics/","label":"Statistiques de chronologie","note":"Détail complet des statistiques"},{"href":"/tools/timeline-visualizer/","label":"Visualiseur de chronologie","note":"Vue cartographique des mêmes données"},{"href":"/statistics/","label":"Statistiques Dawarich","note":"Suivez les distances au fil du temps"}],
-  "gpx-merger": [{"href":"/tools/gps-file-splitter/","label":"Découpage de fichiers GPS","note":"Conversion inverse"},{"href":"/tools/map-poster-maker/","label":"Créateur d’affiches cartographiques","note":"Imprimez le trajet fusionné"},{"href":"/import-export/","label":"Importations et exports","note":"Importez les données fusionnées dans Dawarich"}],
-  "gps-file-splitter": [{"href":"/tools/gpx-merger/","label":"Fusion de fichiers GPX","note":"Conversion inverse"},{"href":"/tools/google-timeline-splitter/","label":"Découpage de chronologie","note":"Découpez les exports Google Takeout"},{"href":"/tools/timeline-format-detector/","label":"Détecteur de format","note":"Identifiez un fichier avant de le découper"}],
-  "heatmap-generator": [{"href":"/interactive-map/","label":"Carte interactive","note":"Calque de chaleur, trajets et visites"},{"href":"/tools/timeline-visualizer/","label":"Visualiseur de chronologie","note":"Vue par trajet"},{"href":"/tools/map-poster-maker/","label":"Créateur d’affiches cartographiques","note":"Même fichier, affiche imprimable"}],
-  "map-poster-maker": [{"href":"/poster-studio/","label":"Atelier d’affiches dans Dawarich","note":"Imprimez un mois de votre historique"},{"href":"/tools/heatmap-generator/","label":"Générateur de cartes de chaleur","note":"Vue de densité du même fichier"},{"href":"/tools/gpx-merger/","label":"Fusion de fichiers GPX","note":"Réunissez des trajets sur une affiche"}],
-  "photo-geotagging": [{"href":"/integrations/","label":"Intégrations photo","note":"Importation des données géographiques Immich et PhotoPrism"},{"href":"/docs/features/photos/","label":"Photos dans Dawarich","note":"Le fonctionnement des photos dans l’application"},{"href":"/docs/tools/phototagger/","label":"PhotoTagger en ligne de commande","note":"Géolocalisation par lots en ligne de commande"}]
+  "gpx-to-kml": [
+    {
+      "href": "/tools/kml-to-gpx/",
+      "label": "KML vers GPX",
+      "note": "Conversion inverse"
+    },
+    {
+      "href": "/tools/gpx-to-geojson/",
+      "label": "GPX vers GeoJSON",
+      "note": "Même source, pour la cartographie web"
+    },
+    {
+      "href": "/tools/gpx-merger/",
+      "label": "Fusion de fichiers GPX",
+      "note": "Fusionnez d’abord plusieurs fichiers GPX"
+    }
+  ],
+  "kml-to-gpx": [
+    {
+      "href": "/tools/gpx-to-kml/",
+      "label": "GPX vers KML",
+      "note": "Conversion inverse"
+    },
+    {
+      "href": "/tools/kml-to-geojson/",
+      "label": "KML vers GeoJSON",
+      "note": "Même source, pour la cartographie web"
+    },
+    {
+      "href": "/tools/kmz-to-gpx/",
+      "label": "KMZ vers GPX",
+      "note": "Version KML compressée"
+    }
+  ],
+  "gpx-to-geojson": [
+    {
+      "href": "/tools/geojson-to-gpx/",
+      "label": "GeoJSON vers GPX",
+      "note": "Conversion inverse"
+    },
+    {
+      "href": "/tools/gpx-to-kml/",
+      "label": "GPX vers KML",
+      "note": "Même source, pour Google Earth"
+    },
+    {
+      "href": "/interactive-map/",
+      "label": "Carte interactive",
+      "note": "Visualisez le GeoJSON dans Dawarich"
+    }
+  ],
+  "geojson-to-gpx": [
+    {
+      "href": "/tools/gpx-to-geojson/",
+      "label": "GPX vers GeoJSON",
+      "note": "Conversion inverse"
+    },
+    {
+      "href": "/tools/geojson-to-kml/",
+      "label": "GeoJSON vers KML",
+      "note": "Même source, pour Google Earth"
+    },
+    {
+      "href": "/tools/geojson-to-kmz/",
+      "label": "GeoJSON vers KMZ",
+      "note": "Format Google Earth compressé"
+    }
+  ],
+  "geojson-to-kml": [
+    {
+      "href": "/tools/kml-to-geojson/",
+      "label": "KML vers GeoJSON",
+      "note": "Conversion inverse"
+    },
+    {
+      "href": "/tools/geojson-to-gpx/",
+      "label": "GeoJSON vers GPX",
+      "note": "Même source, pour les appareils GPS"
+    },
+    {
+      "href": "/tools/geojson-to-kmz/",
+      "label": "GeoJSON vers KMZ",
+      "note": "Format Google Earth compressé"
+    }
+  ],
+  "kml-to-geojson": [
+    {
+      "href": "/tools/geojson-to-kml/",
+      "label": "GeoJSON vers KML",
+      "note": "Conversion inverse"
+    },
+    {
+      "href": "/tools/kml-to-gpx/",
+      "label": "KML vers GPX",
+      "note": "Même source, pour les appareils GPS"
+    },
+    {
+      "href": "/tools/kmz-to-geojson/",
+      "label": "KMZ vers GeoJSON",
+      "note": "Version KML compressée"
+    }
+  ],
+  "gpx-to-kmz": [
+    {
+      "href": "/tools/kmz-to-gpx/",
+      "label": "KMZ vers GPX",
+      "note": "Conversion inverse"
+    },
+    {
+      "href": "/tools/gpx-to-kml/",
+      "label": "GPX vers KML",
+      "note": "Équivalent non compressé"
+    },
+    {
+      "href": "/tools/gpx-merger/",
+      "label": "Fusion de fichiers GPX",
+      "note": "Fusionnez d’abord les fichiers GPX"
+    }
+  ],
+  "kmz-to-gpx": [
+    {
+      "href": "/tools/gpx-to-kmz/",
+      "label": "GPX vers KMZ",
+      "note": "Conversion inverse"
+    },
+    {
+      "href": "/tools/kml-to-gpx/",
+      "label": "KML vers GPX",
+      "note": "Équivalent non compressé"
+    },
+    {
+      "href": "/tools/kmz-to-kml/",
+      "label": "KMZ vers KML",
+      "note": "Décompressez pour modifier"
+    }
+  ],
+  "kml-to-kmz": [
+    {
+      "href": "/tools/kmz-to-kml/",
+      "label": "KMZ vers KML",
+      "note": "Conversion inverse (décompression)"
+    },
+    {
+      "href": "/tools/kml-to-gpx/",
+      "label": "KML vers GPX",
+      "note": "Même source, pour les appareils GPS"
+    },
+    {
+      "href": "/tools/kml-to-geojson/",
+      "label": "KML vers GeoJSON",
+      "note": "Même source, pour la cartographie web"
+    }
+  ],
+  "kmz-to-kml": [
+    {
+      "href": "/tools/kml-to-kmz/",
+      "label": "KML vers KMZ",
+      "note": "Conversion inverse (compression)"
+    },
+    {
+      "href": "/tools/kmz-to-gpx/",
+      "label": "KMZ vers GPX",
+      "note": "Même source, pour les appareils GPS"
+    },
+    {
+      "href": "/tools/kmz-to-geojson/",
+      "label": "KMZ vers GeoJSON",
+      "note": "Même source, pour la cartographie web"
+    }
+  ],
+  "kmz-to-geojson": [
+    {
+      "href": "/tools/geojson-to-kmz/",
+      "label": "GeoJSON vers KMZ",
+      "note": "Conversion inverse"
+    },
+    {
+      "href": "/tools/kml-to-geojson/",
+      "label": "KML vers GeoJSON",
+      "note": "Équivalent non compressé"
+    },
+    {
+      "href": "/tools/kmz-to-kml/",
+      "label": "KMZ vers KML",
+      "note": "Décompressez pour modifier"
+    }
+  ],
+  "geojson-to-kmz": [
+    {
+      "href": "/tools/kmz-to-geojson/",
+      "label": "KMZ vers GeoJSON",
+      "note": "Conversion inverse"
+    },
+    {
+      "href": "/tools/geojson-to-kml/",
+      "label": "GeoJSON vers KML",
+      "note": "Équivalent non compressé"
+    },
+    {
+      "href": "/tools/geojson-to-gpx/",
+      "label": "GeoJSON vers GPX",
+      "note": "Même source, pour les appareils GPS"
+    }
+  ],
+  "fit-to-gpx": [
+    {
+      "href": "/tools/fit-to-kml/",
+      "label": "FIT vers KML",
+      "note": "Même source, pour Google Earth"
+    },
+    {
+      "href": "/tools/fit-to-geojson/",
+      "label": "FIT vers GeoJSON",
+      "note": "Même source, pour la cartographie web"
+    },
+    {
+      "href": "/docs/comparisons/vs-strava/",
+      "label": "Dawarich face à Strava",
+      "note": "Où conserver vos activités"
+    }
+  ],
+  "fit-to-kml": [
+    {
+      "href": "/tools/fit-to-gpx/",
+      "label": "FIT vers GPX",
+      "note": "Le format GPS le plus compatible"
+    },
+    {
+      "href": "/tools/fit-to-geojson/",
+      "label": "FIT vers GeoJSON",
+      "note": "Pour la cartographie web"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "Générateur de cartes de chaleur",
+      "note": "Visualisez les activités FIT"
+    }
+  ],
+  "fit-to-geojson": [
+    {
+      "href": "/tools/fit-to-gpx/",
+      "label": "FIT vers GPX",
+      "note": "Le format GPS le plus compatible"
+    },
+    {
+      "href": "/tools/fit-to-kml/",
+      "label": "FIT vers KML",
+      "note": "Pour Google Earth"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "Générateur de cartes de chaleur",
+      "note": "Visualisez les activités FIT"
+    }
+  ],
+  "tcx-to-gpx": [
+    {
+      "href": "/tools/tcx-to-kml/",
+      "label": "TCX vers KML",
+      "note": "Même source, pour Google Earth"
+    },
+    {
+      "href": "/tools/tcx-to-geojson/",
+      "label": "TCX vers GeoJSON",
+      "note": "Pour la cartographie web"
+    },
+    {
+      "href": "/tools/fit-to-gpx/",
+      "label": "FIT vers GPX",
+      "note": "Format Garmin plus récent"
+    }
+  ],
+  "tcx-to-kml": [
+    {
+      "href": "/tools/tcx-to-gpx/",
+      "label": "TCX vers GPX",
+      "note": "Le format GPS le plus compatible"
+    },
+    {
+      "href": "/tools/tcx-to-geojson/",
+      "label": "TCX vers GeoJSON",
+      "note": "Pour la cartographie web"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "Générateur de cartes de chaleur",
+      "note": "Visualisez les activités TCX"
+    }
+  ],
+  "tcx-to-geojson": [
+    {
+      "href": "/tools/tcx-to-gpx/",
+      "label": "TCX vers GPX",
+      "note": "Le format GPS le plus compatible"
+    },
+    {
+      "href": "/tools/tcx-to-kml/",
+      "label": "TCX vers KML",
+      "note": "Pour Google Earth"
+    },
+    {
+      "href": "/tools/fit-to-geojson/",
+      "label": "FIT vers GeoJSON",
+      "note": "Format Garmin plus récent"
+    }
+  ],
+  "google-timeline-converter": [
+    {
+      "href": "/tools/route-video-maker/",
+      "label": "Route Video Maker",
+      "note": "Turn your Timeline into a travel video"
+    },
+    {
+      "href": "/tools/google-timeline-splitter/",
+      "label": "Découpage de chronologie",
+      "note": "Découpez un export Takeout volumineux"
+    },
+    {
+      "href": "/tools/timeline-merger/",
+      "label": "Fusion de chronologies",
+      "note": "Fusionnez plusieurs exports"
+    },
+    {
+      "href": "/blog/migrating-from-google-location-history-to-dawarich/",
+      "label": "Guide de migration",
+      "note": "Migrez vers Dawarich pas à pas"
+    }
+  ],
+  "google-timeline-splitter": [
+    {
+      "href": "/tools/google-timeline-converter/",
+      "label": "Convertisseur de chronologie",
+      "note": "Convertissez les fichiers découpés en GPX/KML/CSV"
+    },
+    {
+      "href": "/tools/timeline-format-detector/",
+      "label": "Détecteur de format",
+      "note": "Identifiez le type de votre export"
+    },
+    {
+      "href": "/blog/whats-inside-your-google-timeline-export/",
+      "label": "Le contenu d’un export Timeline",
+      "note": "Comprenez les formats"
+    }
+  ],
+  "timeline-merger": [
+    {
+      "href": "/tools/google-timeline-converter/",
+      "label": "Convertisseur de chronologie",
+      "note": "Convertissez le fichier fusionné en GPX/KML/CSV"
+    },
+    {
+      "href": "/tools/timeline-statistics/",
+      "label": "Statistiques de chronologie",
+      "note": "Analysez votre historique fusionné"
+    },
+    {
+      "href": "/tools/google-timeline-splitter/",
+      "label": "Découpage de chronologie",
+      "note": "Conversion inverse"
+    }
+  ],
+  "timeline-format-detector": [
+    {
+      "href": "/tools/google-timeline-converter/",
+      "label": "Convertisseur de chronologie",
+      "note": "Convertissez une fois le format identifié"
+    },
+    {
+      "href": "/tools/google-timeline-splitter/",
+      "label": "Découpage de chronologie",
+      "note": "Découpez les exports volumineux"
+    },
+    {
+      "href": "/blog/whats-inside-your-google-timeline-export/",
+      "label": "Le contenu d’un export Timeline",
+      "note": "Référence des formats"
+    }
+  ],
+  "timeline-visualizer": [
+    {
+      "href": "/tools/route-video-maker/",
+      "label": "Route Video Maker",
+      "note": "Turn the same file into a video"
+    },
+    {
+      "href": "/interactive-map/",
+      "label": "Carte interactive",
+      "note": "Visualisation complète dans Dawarich"
+    },
+    {
+      "href": "/tools/map-poster-maker/",
+      "label": "Créateur d’affiches cartographiques",
+      "note": "Transformez le même fichier en affiche"
+    },
+    {
+      "href": "/tools/timeline-statistics/",
+      "label": "Statistiques de chronologie",
+      "note": "Les chiffres derrière la carte"
+    }
+  ],
+  "timeline-statistics": [
+    {
+      "href": "/tools/timeline-mileage-calculator/",
+      "label": "Calculateur de distance",
+      "note": "Consultez rapidement la distance"
+    },
+    {
+      "href": "/tools/timeline-visualizer/",
+      "label": "Visualiseur de chronologie",
+      "note": "Retrouvez les mêmes données sur une carte"
+    },
+    {
+      "href": "/statistics/",
+      "label": "Statistiques Dawarich",
+      "note": "Tableaux de bord permanents"
+    }
+  ],
+  "timeline-mileage-calculator": [
+    {
+      "href": "/tools/timeline-statistics/",
+      "label": "Statistiques de chronologie",
+      "note": "Détail complet des statistiques"
+    },
+    {
+      "href": "/tools/timeline-visualizer/",
+      "label": "Visualiseur de chronologie",
+      "note": "Vue cartographique des mêmes données"
+    },
+    {
+      "href": "/statistics/",
+      "label": "Statistiques Dawarich",
+      "note": "Suivez les distances au fil du temps"
+    }
+  ],
+  "gpx-merger": [
+    {
+      "href": "/tools/gps-file-splitter/",
+      "label": "Découpage de fichiers GPS",
+      "note": "Conversion inverse"
+    },
+    {
+      "href": "/tools/map-poster-maker/",
+      "label": "Créateur d’affiches cartographiques",
+      "note": "Imprimez le trajet fusionné"
+    },
+    {
+      "href": "/import-export/",
+      "label": "Importations et exports",
+      "note": "Importez les données fusionnées dans Dawarich"
+    }
+  ],
+  "gps-file-splitter": [
+    {
+      "href": "/tools/gpx-merger/",
+      "label": "Fusion de fichiers GPX",
+      "note": "Conversion inverse"
+    },
+    {
+      "href": "/tools/google-timeline-splitter/",
+      "label": "Découpage de chronologie",
+      "note": "Découpez les exports Google Takeout"
+    },
+    {
+      "href": "/tools/timeline-format-detector/",
+      "label": "Détecteur de format",
+      "note": "Identifiez un fichier avant de le découper"
+    }
+  ],
+  "heatmap-generator": [
+    {
+      "href": "/interactive-map/",
+      "label": "Carte interactive",
+      "note": "Calque de chaleur, trajets et visites"
+    },
+    {
+      "href": "/tools/timeline-visualizer/",
+      "label": "Visualiseur de chronologie",
+      "note": "Vue par trajet"
+    },
+    {
+      "href": "/tools/map-poster-maker/",
+      "label": "Créateur d’affiches cartographiques",
+      "note": "Même fichier, affiche imprimable"
+    }
+  ],
+  "map-poster-maker": [
+    {
+      "href": "/poster-studio/",
+      "label": "Atelier d’affiches dans Dawarich",
+      "note": "Imprimez un mois de votre historique"
+    },
+    {
+      "href": "/tools/route-video-maker/",
+      "label": "Route Video Maker",
+      "note": "Same file, animated video"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "Générateur de cartes de chaleur",
+      "note": "Vue de densité du même fichier"
+    },
+    {
+      "href": "/tools/gpx-merger/",
+      "label": "Fusion de fichiers GPX",
+      "note": "Réunissez des trajets sur une affiche"
+    }
+  ],
+  "photo-geotagging": [
+    {
+      "href": "/integrations/",
+      "label": "Intégrations photo",
+      "note": "Importation des données géographiques Immich et PhotoPrism"
+    },
+    {
+      "href": "/docs/features/photos/",
+      "label": "Photos dans Dawarich",
+      "note": "Le fonctionnement des photos dans l’application"
+    },
+    {
+      "href": "/docs/tools/phototagger/",
+      "label": "PhotoTagger en ligne de commande",
+      "note": "Géolocalisation par lots en ligne de commande"
+    }
+  ]
 }

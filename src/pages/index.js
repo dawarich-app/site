@@ -4,7 +4,6 @@ import RichText from '@site/src/i18n/RichText';
 import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import Head from "@docusaurus/Head";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import { initializePaddle } from "@paddle/paddle-js";
 import Comparison from "@site/src/components/Comparison";
 import CTABanner from "@site/src/components/CTABanner";
 import FAQ from "@site/src/components/FAQ";
@@ -17,7 +16,7 @@ import PrivacySection from "@site/src/components/PrivacySection";
 import SocialProof from "@site/src/components/SocialProof";
 import Testimonials from "@site/src/components/Testimonials";
 import Layout from "@theme/Layout";
-import React, { useEffect } from "react";
+import React from "react";
 
 const MapPinSvg = () => (
 	<svg
@@ -96,12 +95,6 @@ function HomepageHeader() {
 export default function Home() {
 	const { i18n } = useDocusaurusContext();
 	const pageUrl = useLocalizedUrl('/');
-
-	useEffect(() => {
-		initializePaddle({
-			token: "live_8593fad779b610288ad3ca40789",
-		});
-	}, []);
 
 	return (
 		<Layout
@@ -198,7 +191,7 @@ export default function Home() {
 									{
 										"@type": "Offer",
 										name: content.schema.proAnnual,
-										price: "149.99",
+										price: "119.99",
 										priceCurrency: "EUR",
 										url: `${pageUrl}#pricing`,
 									},

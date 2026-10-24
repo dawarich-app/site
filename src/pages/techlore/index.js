@@ -1,6 +1,5 @@
 import Head from "@docusaurus/Head";
 import Link from "@docusaurus/Link";
-import { initializePaddle } from "@paddle/paddle-js";
 import HowItWorks from "@site/src/components/HowItWorks";
 import LandingHero from "@site/src/components/LandingHero";
 import sections from "@site/src/components/LandingSections.module.css";
@@ -190,9 +189,10 @@ const privacyPillars = [
 		body: (
 			<>
 				No Google Analytics. No Meta SDK. No Mixpanel, no Segment, no
-				retargeting pixels in the product. The marketing site uses cookieless
-				Simple Analytics by default; consent-based ad-conversion pixels only
-				fire if you accept them. We make money from subscriptions, full stop.
+				retargeting pixels in the product. The marketing site uses self-hosted
+				Rybbit for traffic statistics; the Google Ads conversion tag runs there
+				with storage switched off and writes nothing to your device unless you
+				accept. We make money from subscriptions, full stop.
 			</>
 		),
 	},
@@ -244,7 +244,7 @@ const techloreFaq = [
 	{
 		question: "Do you sell data or run ads?",
 		answer:
-			"No. We're a small EU company funded by subscriptions — selling location data is illegal under GDPR, and we'd rather have a real business than be the next data broker. The product has no third-party trackers, no analytics SDKs, no Meta or Google pixels. The marketing site uses cookieless Simple Analytics by default; the only ad pixel is a Google Ads conversion tag that fires only if you accept the cookie banner.",
+			"No. We're a small EU company funded by subscriptions — selling location data is illegal under GDPR, and we'd rather have a real business than be the next data broker. The product has no third-party trackers, no analytics SDKs, no Meta or Google pixels. The marketing site uses self-hosted Rybbit for traffic statistics; the only ad pixel is a Google Ads conversion tag, and it runs with storage switched off — it writes nothing to your device unless you accept the cookie banner.",
 	},
 	{
 		question: "Where exactly is my data stored?",
@@ -357,10 +357,6 @@ function TechLoreFinalCTA() {
 
 export default function TechLorePage() {
 	useEffect(() => {
-		initializePaddle({
-			token: "live_8593fad779b610288ad3ca40789",
-		});
-
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {

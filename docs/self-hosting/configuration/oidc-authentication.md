@@ -26,7 +26,7 @@ Before configuring OIDC, you'll need:
 
 ## Environment Variables
 
-Configure the following environment variables in your `docker-compose.yml` file for both `dawarich_app` and `dawarich_sidekiq` services:
+Configure the following environment variables in your `docker-compose.yml` file on the `dawarich_app` service. If you run a [separate worker](/docs/self-hosting/configuration/background-jobs#running-a-separate-worker), set them on `dawarich_sidekiq` too:
 
 ### Required Variables
 
@@ -80,19 +80,6 @@ services:
       ALLOW_EMAIL_PASSWORD_LOGIN: "false"
     # ... rest of configuration ...
 
-  dawarich_sidekiq:
-    image: freikin/dawarich:latest
-    environment:
-      # Same OIDC environment variables
-      OIDC_CLIENT_ID: your-client-id
-      OIDC_CLIENT_SECRET: your-client-secret
-      OIDC_ISSUER: https://auth.yourdomain.com
-      OIDC_REDIRECT_URI: https://dawarich.yourdomain.com/users/auth/openid_connect/callback
-      OIDC_PROVIDER_NAME: "Sign in with Authentik"
-      OIDC_AUTO_REGISTER: "true"
-      ALLOW_EMAIL_PASSWORD_REGISTRATION: "false"
-      ALLOW_EMAIL_PASSWORD_LOGIN: "false"
-    # ... rest of configuration ...
 ```
 
 ## Provider Setup Examples

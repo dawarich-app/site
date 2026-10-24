@@ -1,8 +1,7 @@
 {
   "meta": {
     "title": "Preise – Dawarich",
-    "description": "Dawarich Cloud: Lite {price}/J., Pro {price2}/M., Familie {price3}/J. bis 5 Personen. 7 Tage gratis, 14 Tage Erstattung, jederzeit kündbar. Selbsthosten gratis.",
-    "socialDescription": "Lite {price}/Jahr, Pro {price2}/Monat oder Familie {price3}/Jahr für bis zu 5 Personen. 7 Tage gratis, 14 Tage Erstattungsrecht. Oder kostenlos selbst hosten."
+    "description": "Dawarich Cloud: Lite {price}/J., Pro {price2}/M., Familie {price3}/J. bis 5 Personen. 7 Tage gratis, 14 Tage Erstattung, jederzeit kündbar. Selbsthosten gratis."
   },
   "schema": {
     "name": "Dawarich Cloud",

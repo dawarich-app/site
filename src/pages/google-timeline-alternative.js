@@ -1,9 +1,7 @@
-import { interpolate } from '@docusaurus/Interpolate';
 import content from '@locale-content/pages/google-timeline-alternative.json';
 import RichText, { SmartLink } from '@site/src/i18n/RichText';
 import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import Head from "@docusaurus/Head";
-import { initializePaddle } from "@paddle/paddle-js";
 import HowItWorks from "@site/src/components/HowItWorks";
 import LandingHero from "@site/src/components/LandingHero";
 import sections from "@site/src/components/LandingSections.module.css";
@@ -158,7 +156,7 @@ function CompetitorReframe() {
 							</tr>
 							<tr className={sections.highlight}>
 								<td>{content.competitorReframe.td11}</td>
-								<td>&euro;149.99/yr</td>
+								<td>&euro;119.99/yr</td>
 								<td>{content.competitorReframe.td12}</td>
 								<td>{content.competitorReframe.td13}</td>
 							</tr>
@@ -237,9 +235,6 @@ function TimelineFinalCTA() {
 export default function GoogleTimelineAlternativePage() {
   const pageUrl = useLocalizedUrl('/google-timeline-alternative/');
 	useEffect(() => {
-		initializePaddle({
-			token: "live_8593fad779b610288ad3ca40789",
-		});
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
@@ -269,17 +264,17 @@ export default function GoogleTimelineAlternativePage() {
 		<TimelineFinalCTA key="final" />,
 	];
 	return (
-		<Layout title={content.meta.title} description={interpolate(content.meta.description, { price: "€149.99/year" })}>
+		<Layout title={content.meta.title} description={content.meta.description}>
 			<Head>
 				<meta property="og:type" content="website" />
 				<meta property="og:url" content={pageUrl} />
 				<meta property="og:title" content={content.meta.title} />
-				<meta property="og:description" content={content.meta.ogDescription} />
+				<meta property="og:description" content={content.meta.description} />
 				<meta property="og:image" content="https://dawarich.app/img/meta-image.png" />
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:url" content={pageUrl} />
-				<meta name="twitter:title" content={content.meta.twitterTitle} />
-				<meta name="twitter:description" content={content.meta.twitterDescription} />
+				<meta name="twitter:title" content={content.meta.title} />
+				<meta name="twitter:description" content={content.meta.description} />
 				<meta name="twitter:image" content="https://dawarich.app/img/meta-image.png" />
 			</Head>
 			<LandingHero badge={content.hero.badge} title={content.hero.title} titleHighlight={content.hero.titleHighlight} subtitle={content.hero.subtitle} primaryCta={{ text: content.googleTimelineAlternativePage.text, href: SIGNUP_URL }} secondaryCta={{ text: content.googleTimelineAlternativePage.text2, href: "#pricing" }} disclaimer={content.hero.disclaimer} imageSrc="/img/timeline.webp" imageAlt={content.hero.imageAlt} />

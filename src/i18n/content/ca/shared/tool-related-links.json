@@ -1,152 +1,527 @@
 {
   "gpx-to-kml": [
-    {"href":"/tools/kml-to-gpx/","label":"KML a GPX","note":"Direcció inversa"},
-    {"href":"/tools/gpx-to-geojson/","label":"GPX a GeoJSON","note":"Mateixa font, destinació per a mapes web"},
-    {"href":"/tools/gpx-merger/","label":"Fusió de fitxers GPX","note":"Combina diversos fitxers GPX primer"}
+    {
+      "href": "/tools/kml-to-gpx/",
+      "label": "KML a GPX",
+      "note": "Direcció inversa"
+    },
+    {
+      "href": "/tools/gpx-to-geojson/",
+      "label": "GPX a GeoJSON",
+      "note": "Mateixa font, destinació per a mapes web"
+    },
+    {
+      "href": "/tools/gpx-merger/",
+      "label": "Fusió de fitxers GPX",
+      "note": "Combina diversos fitxers GPX primer"
+    }
   ],
   "kml-to-gpx": [
-    {"href":"/tools/gpx-to-kml/","label":"GPX a KML","note":"Direcció inversa"},
-    {"href":"/tools/kml-to-geojson/","label":"KML a GeoJSON","note":"Mateixa font, destinació per a mapes web"},
-    {"href":"/tools/kmz-to-gpx/","label":"KMZ a GPX","note":"Versió comprimida de KML"}
+    {
+      "href": "/tools/gpx-to-kml/",
+      "label": "GPX a KML",
+      "note": "Direcció inversa"
+    },
+    {
+      "href": "/tools/kml-to-geojson/",
+      "label": "KML a GeoJSON",
+      "note": "Mateixa font, destinació per a mapes web"
+    },
+    {
+      "href": "/tools/kmz-to-gpx/",
+      "label": "KMZ a GPX",
+      "note": "Versió comprimida de KML"
+    }
   ],
   "gpx-to-geojson": [
-    {"href":"/tools/geojson-to-gpx/","label":"GeoJSON a GPX","note":"Direcció inversa"},
-    {"href":"/tools/gpx-to-kml/","label":"GPX a KML","note":"Mateixa font, destinació Google Earth"},
-    {"href":"/interactive-map/","label":"Mapa interactiu","note":"Visualitza GeoJSON a Dawarich"}
+    {
+      "href": "/tools/geojson-to-gpx/",
+      "label": "GeoJSON a GPX",
+      "note": "Direcció inversa"
+    },
+    {
+      "href": "/tools/gpx-to-kml/",
+      "label": "GPX a KML",
+      "note": "Mateixa font, destinació Google Earth"
+    },
+    {
+      "href": "/interactive-map/",
+      "label": "Mapa interactiu",
+      "note": "Visualitza GeoJSON a Dawarich"
+    }
   ],
   "geojson-to-gpx": [
-    {"href":"/tools/gpx-to-geojson/","label":"GPX a GeoJSON","note":"Direcció inversa"},
-    {"href":"/tools/geojson-to-kml/","label":"GeoJSON a KML","note":"Mateixa font, destinació Google Earth"},
-    {"href":"/tools/geojson-to-kmz/","label":"GeoJSON a KMZ","note":"Format comprimit de Google Earth"}
+    {
+      "href": "/tools/gpx-to-geojson/",
+      "label": "GPX a GeoJSON",
+      "note": "Direcció inversa"
+    },
+    {
+      "href": "/tools/geojson-to-kml/",
+      "label": "GeoJSON a KML",
+      "note": "Mateixa font, destinació Google Earth"
+    },
+    {
+      "href": "/tools/geojson-to-kmz/",
+      "label": "GeoJSON a KMZ",
+      "note": "Format comprimit de Google Earth"
+    }
   ],
   "geojson-to-kml": [
-    {"href":"/tools/kml-to-geojson/","label":"KML a GeoJSON","note":"Direcció inversa"},
-    {"href":"/tools/geojson-to-gpx/","label":"GeoJSON a GPX","note":"Mateixa font, destinació per a dispositius GPS"},
-    {"href":"/tools/geojson-to-kmz/","label":"GeoJSON a KMZ","note":"Format comprimit de Google Earth"}
+    {
+      "href": "/tools/kml-to-geojson/",
+      "label": "KML a GeoJSON",
+      "note": "Direcció inversa"
+    },
+    {
+      "href": "/tools/geojson-to-gpx/",
+      "label": "GeoJSON a GPX",
+      "note": "Mateixa font, destinació per a dispositius GPS"
+    },
+    {
+      "href": "/tools/geojson-to-kmz/",
+      "label": "GeoJSON a KMZ",
+      "note": "Format comprimit de Google Earth"
+    }
   ],
   "kml-to-geojson": [
-    {"href":"/tools/geojson-to-kml/","label":"GeoJSON a KML","note":"Direcció inversa"},
-    {"href":"/tools/kml-to-gpx/","label":"KML a GPX","note":"Mateixa font, destinació per a dispositius GPS"},
-    {"href":"/tools/kmz-to-geojson/","label":"KMZ a GeoJSON","note":"Versió comprimida de KML"}
+    {
+      "href": "/tools/geojson-to-kml/",
+      "label": "GeoJSON a KML",
+      "note": "Direcció inversa"
+    },
+    {
+      "href": "/tools/kml-to-gpx/",
+      "label": "KML a GPX",
+      "note": "Mateixa font, destinació per a dispositius GPS"
+    },
+    {
+      "href": "/tools/kmz-to-geojson/",
+      "label": "KMZ a GeoJSON",
+      "note": "Versió comprimida de KML"
+    }
   ],
   "gpx-to-kmz": [
-    {"href":"/tools/kmz-to-gpx/","label":"KMZ a GPX","note":"Direcció inversa"},
-    {"href":"/tools/gpx-to-kml/","label":"GPX a KML","note":"Equivalent sense comprimir"},
-    {"href":"/tools/gpx-merger/","label":"Fusió de fitxers GPX","note":"Combina fitxers GPX primer"}
+    {
+      "href": "/tools/kmz-to-gpx/",
+      "label": "KMZ a GPX",
+      "note": "Direcció inversa"
+    },
+    {
+      "href": "/tools/gpx-to-kml/",
+      "label": "GPX a KML",
+      "note": "Equivalent sense comprimir"
+    },
+    {
+      "href": "/tools/gpx-merger/",
+      "label": "Fusió de fitxers GPX",
+      "note": "Combina fitxers GPX primer"
+    }
   ],
   "kmz-to-gpx": [
-    {"href":"/tools/gpx-to-kmz/","label":"GPX a KMZ","note":"Direcció inversa"},
-    {"href":"/tools/kml-to-gpx/","label":"KML a GPX","note":"Equivalent sense comprimir"},
-    {"href":"/tools/kmz-to-kml/","label":"KMZ a KML","note":"Descomprimeix per editar"}
+    {
+      "href": "/tools/gpx-to-kmz/",
+      "label": "GPX a KMZ",
+      "note": "Direcció inversa"
+    },
+    {
+      "href": "/tools/kml-to-gpx/",
+      "label": "KML a GPX",
+      "note": "Equivalent sense comprimir"
+    },
+    {
+      "href": "/tools/kmz-to-kml/",
+      "label": "KMZ a KML",
+      "note": "Descomprimeix per editar"
+    }
   ],
   "kml-to-kmz": [
-    {"href":"/tools/kmz-to-kml/","label":"KMZ a KML","note":"Direcció inversa (descomprimeix)"},
-    {"href":"/tools/kml-to-gpx/","label":"KML a GPX","note":"Mateixa font, destinació per a dispositius GPS"},
-    {"href":"/tools/kml-to-geojson/","label":"KML a GeoJSON","note":"Mateixa font, destinació per a mapes web"}
+    {
+      "href": "/tools/kmz-to-kml/",
+      "label": "KMZ a KML",
+      "note": "Direcció inversa (descomprimeix)"
+    },
+    {
+      "href": "/tools/kml-to-gpx/",
+      "label": "KML a GPX",
+      "note": "Mateixa font, destinació per a dispositius GPS"
+    },
+    {
+      "href": "/tools/kml-to-geojson/",
+      "label": "KML a GeoJSON",
+      "note": "Mateixa font, destinació per a mapes web"
+    }
   ],
   "kmz-to-kml": [
-    {"href":"/tools/kml-to-kmz/","label":"KML a KMZ","note":"Direcció inversa (comprimeix)"},
-    {"href":"/tools/kmz-to-gpx/","label":"KMZ a GPX","note":"Mateixa font, destinació per a dispositius GPS"},
-    {"href":"/tools/kmz-to-geojson/","label":"KMZ a GeoJSON","note":"Mateixa font, destinació per a mapes web"}
+    {
+      "href": "/tools/kml-to-kmz/",
+      "label": "KML a KMZ",
+      "note": "Direcció inversa (comprimeix)"
+    },
+    {
+      "href": "/tools/kmz-to-gpx/",
+      "label": "KMZ a GPX",
+      "note": "Mateixa font, destinació per a dispositius GPS"
+    },
+    {
+      "href": "/tools/kmz-to-geojson/",
+      "label": "KMZ a GeoJSON",
+      "note": "Mateixa font, destinació per a mapes web"
+    }
   ],
   "kmz-to-geojson": [
-    {"href":"/tools/geojson-to-kmz/","label":"GeoJSON a KMZ","note":"Direcció inversa"},
-    {"href":"/tools/kml-to-geojson/","label":"KML a GeoJSON","note":"Equivalent sense comprimir"},
-    {"href":"/tools/kmz-to-kml/","label":"KMZ a KML","note":"Descomprimeix per editar"}
+    {
+      "href": "/tools/geojson-to-kmz/",
+      "label": "GeoJSON a KMZ",
+      "note": "Direcció inversa"
+    },
+    {
+      "href": "/tools/kml-to-geojson/",
+      "label": "KML a GeoJSON",
+      "note": "Equivalent sense comprimir"
+    },
+    {
+      "href": "/tools/kmz-to-kml/",
+      "label": "KMZ a KML",
+      "note": "Descomprimeix per editar"
+    }
   ],
   "geojson-to-kmz": [
-    {"href":"/tools/kmz-to-geojson/","label":"KMZ a GeoJSON","note":"Direcció inversa"},
-    {"href":"/tools/geojson-to-kml/","label":"GeoJSON a KML","note":"Equivalent sense comprimir"},
-    {"href":"/tools/geojson-to-gpx/","label":"GeoJSON a GPX","note":"Mateixa font, destinació per a dispositius GPS"}
+    {
+      "href": "/tools/kmz-to-geojson/",
+      "label": "KMZ a GeoJSON",
+      "note": "Direcció inversa"
+    },
+    {
+      "href": "/tools/geojson-to-kml/",
+      "label": "GeoJSON a KML",
+      "note": "Equivalent sense comprimir"
+    },
+    {
+      "href": "/tools/geojson-to-gpx/",
+      "label": "GeoJSON a GPX",
+      "note": "Mateixa font, destinació per a dispositius GPS"
+    }
   ],
   "fit-to-gpx": [
-    {"href":"/tools/fit-to-kml/","label":"FIT a KML","note":"Mateixa font, destinació Google Earth"},
-    {"href":"/tools/fit-to-geojson/","label":"FIT a GeoJSON","note":"Mateixa font, destinació per a mapes web"},
-    {"href":"/docs/comparisons/vs-strava/","label":"Dawarich comparat amb Strava","note":"On conservar les activitats"}
+    {
+      "href": "/tools/fit-to-kml/",
+      "label": "FIT a KML",
+      "note": "Mateixa font, destinació Google Earth"
+    },
+    {
+      "href": "/tools/fit-to-geojson/",
+      "label": "FIT a GeoJSON",
+      "note": "Mateixa font, destinació per a mapes web"
+    },
+    {
+      "href": "/docs/comparisons/vs-strava/",
+      "label": "Dawarich comparat amb Strava",
+      "note": "On conservar les activitats"
+    }
   ],
   "fit-to-kml": [
-    {"href":"/tools/fit-to-gpx/","label":"FIT a GPX","note":"El format GPS més compatible"},
-    {"href":"/tools/fit-to-geojson/","label":"FIT a GeoJSON","note":"Destinació per a mapes web"},
-    {"href":"/tools/heatmap-generator/","label":"Generador de mapes de calor","note":"Visualitza activitats FIT"}
+    {
+      "href": "/tools/fit-to-gpx/",
+      "label": "FIT a GPX",
+      "note": "El format GPS més compatible"
+    },
+    {
+      "href": "/tools/fit-to-geojson/",
+      "label": "FIT a GeoJSON",
+      "note": "Destinació per a mapes web"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "Generador de mapes de calor",
+      "note": "Visualitza activitats FIT"
+    }
   ],
   "fit-to-geojson": [
-    {"href":"/tools/fit-to-gpx/","label":"FIT a GPX","note":"El format GPS més compatible"},
-    {"href":"/tools/fit-to-kml/","label":"FIT a KML","note":"Destinació Google Earth"},
-    {"href":"/tools/heatmap-generator/","label":"Generador de mapes de calor","note":"Visualitza activitats FIT"}
+    {
+      "href": "/tools/fit-to-gpx/",
+      "label": "FIT a GPX",
+      "note": "El format GPS més compatible"
+    },
+    {
+      "href": "/tools/fit-to-kml/",
+      "label": "FIT a KML",
+      "note": "Destinació Google Earth"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "Generador de mapes de calor",
+      "note": "Visualitza activitats FIT"
+    }
   ],
   "tcx-to-gpx": [
-    {"href":"/tools/tcx-to-kml/","label":"TCX a KML","note":"Mateixa font, destinació Google Earth"},
-    {"href":"/tools/tcx-to-geojson/","label":"TCX a GeoJSON","note":"Destinació per a mapes web"},
-    {"href":"/tools/fit-to-gpx/","label":"FIT a GPX","note":"Format més recent de Garmin"}
+    {
+      "href": "/tools/tcx-to-kml/",
+      "label": "TCX a KML",
+      "note": "Mateixa font, destinació Google Earth"
+    },
+    {
+      "href": "/tools/tcx-to-geojson/",
+      "label": "TCX a GeoJSON",
+      "note": "Destinació per a mapes web"
+    },
+    {
+      "href": "/tools/fit-to-gpx/",
+      "label": "FIT a GPX",
+      "note": "Format més recent de Garmin"
+    }
   ],
   "tcx-to-kml": [
-    {"href":"/tools/tcx-to-gpx/","label":"TCX a GPX","note":"El format GPS més compatible"},
-    {"href":"/tools/tcx-to-geojson/","label":"TCX a GeoJSON","note":"Destinació per a mapes web"},
-    {"href":"/tools/heatmap-generator/","label":"Generador de mapes de calor","note":"Visualitza activitats TCX"}
+    {
+      "href": "/tools/tcx-to-gpx/",
+      "label": "TCX a GPX",
+      "note": "El format GPS més compatible"
+    },
+    {
+      "href": "/tools/tcx-to-geojson/",
+      "label": "TCX a GeoJSON",
+      "note": "Destinació per a mapes web"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "Generador de mapes de calor",
+      "note": "Visualitza activitats TCX"
+    }
   ],
   "tcx-to-geojson": [
-    {"href":"/tools/tcx-to-gpx/","label":"TCX a GPX","note":"El format GPS més compatible"},
-    {"href":"/tools/tcx-to-kml/","label":"TCX a KML","note":"Destinació Google Earth"},
-    {"href":"/tools/fit-to-geojson/","label":"FIT a GeoJSON","note":"Format més recent de Garmin"}
+    {
+      "href": "/tools/tcx-to-gpx/",
+      "label": "TCX a GPX",
+      "note": "El format GPS més compatible"
+    },
+    {
+      "href": "/tools/tcx-to-kml/",
+      "label": "TCX a KML",
+      "note": "Destinació Google Earth"
+    },
+    {
+      "href": "/tools/fit-to-geojson/",
+      "label": "FIT a GeoJSON",
+      "note": "Format més recent de Garmin"
+    }
   ],
   "google-timeline-converter": [
-    {"href":"/tools/google-timeline-splitter/","label":"Divisor de línies de temps","note":"Divideix una exportació enorme de Takeout"},
-    {"href":"/tools/timeline-merger/","label":"Fusió de línies de temps","note":"Combina diverses exportacions"},
-    {"href":"/blog/migrating-from-google-location-history-to-dawarich/","label":"Guia de migració","note":"Passa’t a Dawarich pas a pas"}
+    {
+      "href": "/tools/route-video-maker/",
+      "label": "Route Video Maker",
+      "note": "Turn your Timeline into a travel video"
+    },
+    {
+      "href": "/tools/google-timeline-splitter/",
+      "label": "Divisor de línies de temps",
+      "note": "Divideix una exportació enorme de Takeout"
+    },
+    {
+      "href": "/tools/timeline-merger/",
+      "label": "Fusió de línies de temps",
+      "note": "Combina diverses exportacions"
+    },
+    {
+      "href": "/blog/migrating-from-google-location-history-to-dawarich/",
+      "label": "Guia de migració",
+      "note": "Passa’t a Dawarich pas a pas"
+    }
   ],
   "google-timeline-splitter": [
-    {"href":"/tools/google-timeline-converter/","label":"Convertidor de línies de temps","note":"Converteix els fitxers dividits a GPX/KML/CSV"},
-    {"href":"/tools/timeline-format-detector/","label":"Detector de formats","note":"Identifica quin tipus d’exportació tens"},
-    {"href":"/blog/whats-inside-your-google-timeline-export/","label":"Què conté una exportació de Timeline","note":"Entén els formats"}
+    {
+      "href": "/tools/google-timeline-converter/",
+      "label": "Convertidor de línies de temps",
+      "note": "Converteix els fitxers dividits a GPX/KML/CSV"
+    },
+    {
+      "href": "/tools/timeline-format-detector/",
+      "label": "Detector de formats",
+      "note": "Identifica quin tipus d’exportació tens"
+    },
+    {
+      "href": "/blog/whats-inside-your-google-timeline-export/",
+      "label": "Què conté una exportació de Timeline",
+      "note": "Entén els formats"
+    }
   ],
   "timeline-merger": [
-    {"href":"/tools/google-timeline-converter/","label":"Convertidor de línies de temps","note":"Converteix el fitxer fusionat a GPX/KML/CSV"},
-    {"href":"/tools/timeline-statistics/","label":"Estadístiques de la línia de temps","note":"Analitza l’historial fusionat"},
-    {"href":"/tools/google-timeline-splitter/","label":"Divisor de línies de temps","note":"Direcció inversa"}
+    {
+      "href": "/tools/google-timeline-converter/",
+      "label": "Convertidor de línies de temps",
+      "note": "Converteix el fitxer fusionat a GPX/KML/CSV"
+    },
+    {
+      "href": "/tools/timeline-statistics/",
+      "label": "Estadístiques de la línia de temps",
+      "note": "Analitza l’historial fusionat"
+    },
+    {
+      "href": "/tools/google-timeline-splitter/",
+      "label": "Divisor de línies de temps",
+      "note": "Direcció inversa"
+    }
   ],
   "timeline-format-detector": [
-    {"href":"/tools/google-timeline-converter/","label":"Convertidor de línies de temps","note":"Converteix quan coneguis el format"},
-    {"href":"/tools/google-timeline-splitter/","label":"Divisor de línies de temps","note":"Divideix exportacions grans"},
-    {"href":"/blog/whats-inside-your-google-timeline-export/","label":"Què conté una exportació de Timeline","note":"Referència de formats"}
+    {
+      "href": "/tools/google-timeline-converter/",
+      "label": "Convertidor de línies de temps",
+      "note": "Converteix quan coneguis el format"
+    },
+    {
+      "href": "/tools/google-timeline-splitter/",
+      "label": "Divisor de línies de temps",
+      "note": "Divideix exportacions grans"
+    },
+    {
+      "href": "/blog/whats-inside-your-google-timeline-export/",
+      "label": "Què conté una exportació de Timeline",
+      "note": "Referència de formats"
+    }
   ],
   "timeline-visualizer": [
-    {"href":"/interactive-map/","label":"Mapa interactiu","note":"Visualització completa a Dawarich"},
-    {"href":"/tools/map-poster-maker/","label":"Creador de pòsters de mapes","note":"Converteix el mateix fitxer en art per a la paret"},
-    {"href":"/tools/timeline-statistics/","label":"Estadístiques de la línia de temps","note":"Les xifres darrere del mapa"}
+    {
+      "href": "/tools/route-video-maker/",
+      "label": "Route Video Maker",
+      "note": "Turn the same file into a video"
+    },
+    {
+      "href": "/interactive-map/",
+      "label": "Mapa interactiu",
+      "note": "Visualització completa a Dawarich"
+    },
+    {
+      "href": "/tools/map-poster-maker/",
+      "label": "Creador de pòsters de mapes",
+      "note": "Converteix el mateix fitxer en art per a la paret"
+    },
+    {
+      "href": "/tools/timeline-statistics/",
+      "label": "Estadístiques de la línia de temps",
+      "note": "Les xifres darrere del mapa"
+    }
   ],
   "timeline-statistics": [
-    {"href":"/tools/timeline-mileage-calculator/","label":"Calculadora de quilometratge","note":"Consulta ràpida només de distància"},
-    {"href":"/tools/timeline-visualizer/","label":"Visualitzador de línies de temps","note":"Mira les mateixes dades en un mapa"},
-    {"href":"/statistics/","label":"Estadístiques de Dawarich","note":"Taulers persistents"}
+    {
+      "href": "/tools/timeline-mileage-calculator/",
+      "label": "Calculadora de quilometratge",
+      "note": "Consulta ràpida només de distància"
+    },
+    {
+      "href": "/tools/timeline-visualizer/",
+      "label": "Visualitzador de línies de temps",
+      "note": "Mira les mateixes dades en un mapa"
+    },
+    {
+      "href": "/statistics/",
+      "label": "Estadístiques de Dawarich",
+      "note": "Taulers persistents"
+    }
   ],
   "timeline-mileage-calculator": [
-    {"href":"/tools/timeline-statistics/","label":"Estadístiques de la línia de temps","note":"Desglossament complet d’estadístiques"},
-    {"href":"/tools/timeline-visualizer/","label":"Visualitzador de línies de temps","note":"Vista de mapa de les mateixes dades"},
-    {"href":"/statistics/","label":"Estadístiques de Dawarich","note":"Segueix el quilometratge al llarg del temps"}
+    {
+      "href": "/tools/timeline-statistics/",
+      "label": "Estadístiques de la línia de temps",
+      "note": "Desglossament complet d’estadístiques"
+    },
+    {
+      "href": "/tools/timeline-visualizer/",
+      "label": "Visualitzador de línies de temps",
+      "note": "Vista de mapa de les mateixes dades"
+    },
+    {
+      "href": "/statistics/",
+      "label": "Estadístiques de Dawarich",
+      "note": "Segueix el quilometratge al llarg del temps"
+    }
   ],
   "gpx-merger": [
-    {"href":"/tools/gps-file-splitter/","label":"Divisor de fitxers GPS","note":"Direcció inversa"},
-    {"href":"/tools/map-poster-maker/","label":"Creador de pòsters de mapes","note":"Imprimeix el trajecte fusionat"},
-    {"href":"/import-export/","label":"Importació i exportació","note":"Porta les dades fusionades a Dawarich"}
+    {
+      "href": "/tools/gps-file-splitter/",
+      "label": "Divisor de fitxers GPS",
+      "note": "Direcció inversa"
+    },
+    {
+      "href": "/tools/map-poster-maker/",
+      "label": "Creador de pòsters de mapes",
+      "note": "Imprimeix el trajecte fusionat"
+    },
+    {
+      "href": "/import-export/",
+      "label": "Importació i exportació",
+      "note": "Porta les dades fusionades a Dawarich"
+    }
   ],
   "gps-file-splitter": [
-    {"href":"/tools/gpx-merger/","label":"Fusió de fitxers GPX","note":"Direcció inversa"},
-    {"href":"/tools/google-timeline-splitter/","label":"Divisor de línies de temps","note":"Divideix exportacions de Google Takeout"},
-    {"href":"/tools/timeline-format-detector/","label":"Detector de formats","note":"Identifica un fitxer abans de dividir-lo"}
+    {
+      "href": "/tools/gpx-merger/",
+      "label": "Fusió de fitxers GPX",
+      "note": "Direcció inversa"
+    },
+    {
+      "href": "/tools/google-timeline-splitter/",
+      "label": "Divisor de línies de temps",
+      "note": "Divideix exportacions de Google Takeout"
+    },
+    {
+      "href": "/tools/timeline-format-detector/",
+      "label": "Detector de formats",
+      "note": "Identifica un fitxer abans de dividir-lo"
+    }
   ],
   "heatmap-generator": [
-    {"href":"/interactive-map/","label":"Mapa interactiu","note":"Capa de mapa de calor + trajectes + visites"},
-    {"href":"/tools/timeline-visualizer/","label":"Visualitzador de línies de temps","note":"Vista per trajecte"},
-    {"href":"/tools/map-poster-maker/","label":"Creador de pòsters de mapes","note":"Mateix fitxer, pòster imprimible"}
+    {
+      "href": "/interactive-map/",
+      "label": "Mapa interactiu",
+      "note": "Capa de mapa de calor + trajectes + visites"
+    },
+    {
+      "href": "/tools/timeline-visualizer/",
+      "label": "Visualitzador de línies de temps",
+      "note": "Vista per trajecte"
+    },
+    {
+      "href": "/tools/map-poster-maker/",
+      "label": "Creador de pòsters de mapes",
+      "note": "Mateix fitxer, pòster imprimible"
+    }
   ],
   "map-poster-maker": [
-    {"href":"/poster-studio/","label":"Poster Studio a Dawarich","note":"Imprimeix qualsevol mes de l’historial"},
-    {"href":"/tools/heatmap-generator/","label":"Generador de mapes de calor","note":"Vista de densitat del mateix fitxer"},
-    {"href":"/tools/gpx-merger/","label":"Fusió de fitxers GPX","note":"Combina trajectes en un sol pòster"}
+    {
+      "href": "/poster-studio/",
+      "label": "Poster Studio a Dawarich",
+      "note": "Imprimeix qualsevol mes de l’historial"
+    },
+    {
+      "href": "/tools/route-video-maker/",
+      "label": "Route Video Maker",
+      "note": "Same file, animated video"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "Generador de mapes de calor",
+      "note": "Vista de densitat del mateix fitxer"
+    },
+    {
+      "href": "/tools/gpx-merger/",
+      "label": "Fusió de fitxers GPX",
+      "note": "Combina trajectes en un sol pòster"
+    }
   ],
   "photo-geotagging": [
-    {"href":"/integrations/","label":"Integracions de fotos","note":"Importació de geodades d’Immich i PhotoPrism"},
-    {"href":"/docs/features/photos/","label":"Fotos a Dawarich","note":"Com funcionen les fotos a l’aplicació"},
-    {"href":"/docs/tools/phototagger/","label":"PhotoTagger CLI","note":"Geoetiquetatge massiu des de la línia d’ordres"}
+    {
+      "href": "/integrations/",
+      "label": "Integracions de fotos",
+      "note": "Importació de geodades d’Immich i PhotoPrism"
+    },
+    {
+      "href": "/docs/features/photos/",
+      "label": "Fotos a Dawarich",
+      "note": "Com funcionen les fotos a l’aplicació"
+    },
+    {
+      "href": "/docs/tools/phototagger/",
+      "label": "PhotoTagger CLI",
+      "note": "Geoetiquetatge massiu des de la línia d’ordres"
+    }
   ]
 }

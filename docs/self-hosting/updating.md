@@ -10,6 +10,53 @@ Dawarich is a rapidly evolving project, and some changes may break compatibility
 
 After each update, please make sure there is no jobs running in the Sidekiq interface (/sidekiq). If there are, please wait for them to finish. Once all jobs are finished, you can proceed with the update.
 
+## 1.17.0
+
+### One container for the app and background jobs
+
+The default `docker-compose.yml` no longer has a `dawarich_sidekiq` service: background jobs run inside `dawarich_app`. Before you replace the Compose file, stop and remove the old worker with the **old** file still in place:
+
+```bash
+docker compose stop -t 60 dawarich_sidekiq
+docker compose rm -f dawarich_sidekiq
+```
+
+Then take the new `docker-compose.yml`, keep your Redis, database and volume settings, and start the stack as usual. Queued jobs stay in Redis and are picked up by `dawarich_app`. If your `.env` sets `BACKGROUND_PROCESSING_CONCURRENCY=10`, remove it or set it to `2`.
+
+To keep a separate worker instead, see [Background jobs](./configuration/background-jobs.md#running-a-separate-worker).
+
+### Reverse geocoding threads
+
+`REVERSE_GEOCODING_CONCURRENCY` now counts threads across all workers, and defaults to the provider's rate limit (`REVERSE_GEOCODING_RPS`) instead of a third of all threads. If you use Geoapify, LocationIQ or the public Nominatim, set `REVERSE_GEOCODING_RPS` to your plan's limit.
+
+### Database migrations
+
+The migrations add small tables and triggers that track which months of points and tracks changed. They briefly lock the `points` and `tracks` tables and retry if those are busy; no existing rows are rewritten.
+
+## 1.16.0
+
+### `/` now redirects to sign-in
+
+The landing page is removed: opening `/` while signed out now redirects to the sign-in page instead of answering `200 OK`. If an uptime monitor, reverse-proxy health check or container health check probes `/`, point it at `/api/v1/health`, which the bundled `docker-compose.yml` already uses. Old `/stats` and `/stats/:year` bookmarks redirect to `/insights`.
+
+### Background jobs after the upgrade
+
+The migrations load new boundary data and then queue background work:
+
+- Bundled country boundaries are reloaded, and existing points whose country changed are reassigned. Statistics and achievements for the affected days are refreshed.
+- Disputed areas are loaded, and achievements are recalculated once for every user so that time spent in disputed territories no longer counts towards a country. Achievements already earned are kept.
+
+On large instances this can take a while; let the `data_migrations` and `achievements` queues finish in Sidekiq (`/sidekiq`). Make sure Redis is reachable when the migrations run. If it is not, the migrations still complete but log that a job could not be queued; in that case open a Rails console (`docker exec -it dawarich_app bin/rails console`) and run:
+
+```ruby
+DataMigrations::ReassignBoundaryPointsJob.perform_later
+DataMigrations::BackfillAchievementsJob.perform_later
+```
+
+### Upgrading from a version before the `lonlat` backfill
+
+Instances that still keep coordinates in the legacy `latitude` and `longitude` columns now merge duplicate points before the coordinate backfill. On large databases this step can take several minutes; let it finish and do not restart the container while it runs.
+
 ## 1.7.7
 
 :::warning

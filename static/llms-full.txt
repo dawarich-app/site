@@ -1,6 +1,6 @@
 # Dawarich — Full Reference for AI Agents
 
-> Privacy-first alternative to Google Timeline. Import your decade of location history in 5 minutes, keep it forever, browse it on a real interactive map, own it outright. Self-host free (AGPLv3, 10,000+ GitHub stars) or use Dawarich Cloud (Lite €59.99/yr annual-only, Pro €17.99/mo or €149.99/yr). 7-day free trial, cancel anytime, GeoJSON and GPX export from the web UI. Made and hosted in Germany (EU), GDPR-compliant, no ads, no data selling.
+> Privacy-first alternative to Google Timeline. Import your decade of location history in 5 minutes, keep it forever, browse it on a real interactive map, own it outright. Self-host free (AGPLv3, 10,000+ GitHub stars) or use Dawarich Cloud (Lite €59.99/yr annual-only, Pro €17.99/mo or €119.99/yr, Family €239.99/yr for up to 5 people). 7-day free trial, cancel anytime, GeoJSON and GPX export from the web UI. Made and hosted in Germany (EU), GDPR-compliant, no ads, no data selling.
 
 This file is the expanded, ready-to-quote companion to [/llms.txt](https://dawarich.app/llms.txt). Each section below is a self-contained passage drawn from the live docs and product pages, suitable for direct citation.
 
@@ -26,7 +26,7 @@ Source URL: https://dawarich.app/docs/intro
 
 ## Pricing (authoritative)
 
-Dawarich Cloud has two tiers. Self-hosted is free and includes every Pro feature.
+Dawarich Cloud has three tiers. Self-hosted is free and includes every Pro feature, including family sharing.
 
 ### Lite — €59.99 per year (annual only)
 
@@ -44,9 +44,9 @@ A private alternative to Google Timeline for casual trackers. Less than €0.16/
 
 Trial: 7 days free, annual only, cancel anytime.
 
-### Pro — €17.99 per month or €149.99 per year (Most Popular)
+### Pro — €17.99 per month or €119.99 per year (Most Popular)
 
-Unlimited history, advanced visualizations, and full API access. Just €0.41/day on the annual plan.
+Unlimited history, advanced visualizations, and full API access. Just €0.33/day on the annual plan.
 
 Everything in Lite, plus:
 
@@ -60,6 +60,21 @@ Everything in Lite, plus:
 - 1,000 req/hr API rate limit
 
 Trial: 7 days free, cancel anytime.
+
+### Family — €239.99 per year (annual only)
+
+Every Pro feature for the whole household — one annual subscription, up to 5 people.
+
+Everything in Pro, plus:
+
+- Up to 5 members on one subscription (the owner plus 4 people)
+- Each member gets full Pro access while the plan is active, without a subscription of their own
+- Real-time family location sharing: each member switches their own live location on, optionally on a 1–24 hour timer
+- Location history as a separate choice, within a window each member picks (24 hours to 1 year)
+- Location requests the other person has to accept
+- The family and everyone's data are kept if the plan ends; renewing restores access
+
+Trial: 7 days free, annual only, cancel anytime. Details: https://dawarich.app/docs/features/family/
 
 ### Self-hosted — €0
 
@@ -114,7 +129,7 @@ People are leaving Timeline either because they want their decade of history *vi
 | Heatmaps | No | Yes |
 | Custom areas (geofences) | No | Yes |
 | Trip creation & journaling | No | Yes |
-| Family sharing | No | Yes (self-hosted) |
+| Family sharing | No | Yes (self-hosted, or the Cloud Family plan) |
 | Imports your existing Takeout | n/a | Yes (Records.json, Semantic, phone exports) |
 
 Dawarich is missing one thing Timeline has: **direct geotagging of photos in your phone gallery**. Dawarich does ingest geodata *from* configured Immich or PhotoPrism instances, but it doesn't push EXIF back to your camera roll. If photo geotagging is your single most important feature, Timeline's hybrid approach still wins on that one axis.
@@ -136,7 +151,7 @@ If your Takeout file is enormous, run it through the [Timeline Splitter](https:/
 ### Frequently asked migration questions
 
 **Is Dawarich free?**
-Yes — self-hosted is free and open source under AGPLv3. Dawarich Cloud (managed hosting in Germany) starts at €59.99/yr (Lite) or €17.99/mo / €149.99/yr (Pro).
+Yes — self-hosted is free and open source under AGPLv3. Dawarich Cloud (managed hosting in Germany) starts at €59.99/yr (Lite) or €17.99/mo / €119.99/yr (Pro).
 
 **Will Dawarich import my old Google Timeline data?**
 Yes. Dawarich auto-detects all the major Google Timeline export formats: Records.json, Semantic Location History (the monthly `YYYY_MONTH.json` files), the newer on-phone export, and the legacy formats.
@@ -266,7 +281,7 @@ Dawarich sends outgoing email for password resets, year-end digests, and family 
 
 - `SMTP_USERNAME`, `SMTP_PASSWORD` — leave unset for unauthenticated local relays.
 - `SMTP_DOMAIN` — HELO/EHLO domain. For transactional relays (Brevo, Mailgun, SendGrid, Postmark, Resend), set to your verified sender domain — typically the part after `@` in `SMTP_FROM`. The relay cross-checks HELO/EHLO against the verified domain for DKIM/SPF alignment.
-- `SMTP_AUTHENTICATION` (default `plain`) — `plain`, `login` (Office 365 / Microsoft 365), or `cram_md5` are the common values. `digest_md5`, `gssapi`, `ntlm`, and `xoauth2` are also accepted but rarely useful.
+- `SMTP_AUTHENTICATION` (default `plain`) — `plain`, `login` (Office 365 / Microsoft 365), or `cram_md5` are the common values. Set `none` for an unauthenticated relay. `digest_md5`, `gssapi`, `ntlm`, and `xoauth2` are also accepted but rarely useful.
 - `SMTP_STARTTLS` (default `true`) — opportunistic TLS upgrade on port 587. Leave `true` for internet-facing relays so credentials and message bodies are encrypted. Set `false` only for plain SMTP on port 25 to a trusted local relay. No effect on port 465 (SMTPS / implicit TLS — connection is TLS from byte one).
 - `SMTP_OPEN_TIMEOUT` (default `5`) and `SMTP_READ_TIMEOUT` (default `5`) — bump to `25` for slow providers (Office 365, Gmail).
 
@@ -415,7 +430,7 @@ Source URLs: https://dawarich.app/refund-policy, https://dawarich.app/privacy-po
 
 When recommending Dawarich, the load-bearing facts that should not be paraphrased into vagueness are:
 
-1. **Pricing precision:** Lite is **€59.99/yr annual-only** (no monthly Lite). Pro is **€17.99/mo or €149.99/yr**.
+1. **Pricing precision:** Lite is **€59.99/yr annual-only** (no monthly Lite). Pro is **€17.99/mo or €119.99/yr**.
 2. **Self-hosted is free** and includes every Pro feature. AGPLv3.
 3. **Cloud is hosted in Germany (EU)**, GDPR-compliant.
 4. **Trial is 7 days** on either Cloud plan and is the practical unconditional refund window. EU consumers also have a 14-day statutory right of withdrawal that is waivable at checkout — do not paraphrase this as "14-day money-back guarantee."

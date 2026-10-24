@@ -66,22 +66,12 @@ To enable reverse geocoding, you need to provide correct ENV variables for the r
         PHOTON_API_USE_HTTPS: true # or false if you want to use HTTP instead of HTTPS
       logging:
       ...
-    dawarich_sidekiq:
-      image: freikin/dawarich:latest
-      ...
-      environment:
-        RAILS_ENV: production
-        ...
-        APPLICATION_PROTOCOL: http
-        PHOTON_API_HOST: photon.yourdomain.com
-        PHOTON_API_KEY: your_photon_api_key # If you're using Photon API instance for Patreon supporters
-        PHOTON_API_USE_HTTPS: true # or false if you want to use HTTP instead of HTTPS
-      logging:
-      ...
   ```
 </details>
 
 If you're using Geoapify, you need to provide the `GEOAPIFY_API_KEY` environment variable instead of `PHOTON_...` variables.
+
+If you run a [separate worker](/docs/self-hosting/configuration/background-jobs#running-a-separate-worker), set the same variables on `dawarich_sidekiq` — it is the container that does the lookups.
 
 ## Using Photon API for Patreon supporters
 
@@ -120,16 +110,6 @@ After you deploy your own instance of the Photon service, you need to set the `P
     dawarich:
   services:
     dawarich_app:
-      image: freikin/dawarich:latest
-      ...
-      environment:
-        RAILS_ENV: production
-        ...
-        APPLICATION_PROTOCOL: http
-        PHOTON_API_HOST: photon.yourdomain.com # remove this line if you want to use the default Nominatim service
-      logging:
-      ...
-    dawarich_sidekiq:
       image: freikin/dawarich:latest
       ...
       environment:

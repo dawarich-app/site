@@ -7,7 +7,7 @@
     },
     {
       "title": "Nobody can switch it on for you",
-      "body": "Five people, five independent switches. The person who pays for the plan has no more power over your sharing than anyone else does. Turning your own sharing off keeps working even if the subscription expires, because that is a privacy action and never a paid one."
+      "body": "Five people, five independent switches. Starting a Cloud Family plan turns on the owner's sharing, which they can turn off immediately. Invited members start with sharing off. The plan owner cannot switch it on for anyone else, and turning your own sharing off still works if the subscription expires."
     },
     {
       "title": "Asking beats tracking",
@@ -18,11 +18,11 @@
   "objections": [
     {
       "q": "Is this just Life360 with different branding?",
-      "a": "No. The default here is that nothing is shared. Every member controls their own switch, live sharing can expire on a timer, location history is a separate decision from live position, and asking where somebody is means sending a request they can decline."
+      "a": "No. Invited members start with sharing off, and every member controls their own switch. The Cloud plan owner starts with sharing on but can turn it off. Live sharing can expire on a timer, history is a separate choice, and a location request can be declined."
     },
     {
       "q": "Can my teenager see that I am tracking them?",
-      "a": "There is nothing hidden to see. Sharing is something each person turns on for themselves, and the family page shows exactly who is currently sharing and who is not. Covert tracking is not a feature we have."
+      "a": "There is nothing hidden to see. Invited members decide whether to share, and the family page shows exactly who is currently sharing and who is not. Covert tracking is not a feature we have."
     },
     {
       "q": "What does each person actually get?",
@@ -30,7 +30,11 @@
     },
     {
       "q": "What happens if the plan owner's subscription expires?",
-      "a": "The family is kept. Members fall back to their own plans once the subscription expires, and resubscribing restores it. Nobody is locked out of their own history."
+      "a": "The family is kept and nothing is deleted. Access runs until the end of the period that was already paid for. After that, members without a plan of their own fall back to Lite and their tracking pauses until a plan is active again, while their history stays in their account and can be exported. Renewing restores everyone at once."
+    },
+    {
+      "q": "Does it work on our phones?",
+      "a": "Yes. The Dawarich apps for iOS and Android show your family on the map. From the app you can turn your own sharing on or off, choose what history to share, and send or answer location requests."
     },
     {
       "q": "Do I have to pay at all?",
@@ -38,22 +42,34 @@
     }
   ],
   "meta": {
-    "title": "Family Location Sharing — Private, Consent-Based, No Tracking",
-    "description": "Share live location with up to five family members on your terms: per-person control, sharing timers, separate history windows, and location requests that must be accepted. {price} or self-host free.",
+    "title": "Family Location Sharing App for iPhone and Android",
+    "description": "Share family locations in the Dawarich iOS and Android apps. Invite up to five people; each controls live sharing, history and location requests. {price} or self-host free.",
     "ogTitle": "Family Location Sharing Without the Surveillance",
-    "ogDescription": "Five people, five independent switches. Live sharing on a timer, history as a separate choice, and location requests that have to be accepted. Nothing is shared by default."
+    "ogDescription": "Five people, five independent switches. Live sharing on a timer, history as a separate choice, and location requests that have to be accepted."
   },
   "familyPage": {
-    "text": "Family location sharing",
+    "text": "Family location sharing app",
     "em": "that everyone agrees to.",
-    "title2": "Built so nobody is watched by default",
-    "sub2": "Up to five people on one plan, each with a full Dawarich account and complete control of what they share.",
+    "title2": "Built around each person's choice",
+    "sub2": "Up to five people on one plan, each with a full Dawarich account and control of what they share.",
     "title3": "What parents and partners ask us",
     "title4": "Share with your household, not with a data broker",
-    "sub3": "{price} a year covers five people on Dawarich Cloud. Or run the same thing on your own hardware for nothing.",
+    "sub3": "{price} a year covers five people on Dawarich Cloud, with a 7-day free trial. Or run the same thing on your own hardware for nothing.",
     "primaryLabel": "Start a family plan"
   },
   "hero": {
-    "sub": "Family tracking apps assume the answer is watching everybody all the time. Dawarich assumes the opposite: nothing is shared until a person switches it on themselves, sharing can expire on a timer, and finding out where someone is means asking them."
+    "sub": "See your household on iPhone and Android. Invited members choose when to share, live sharing can expire on a timer, and finding out where someone is means asking them. The Cloud plan owner starts with sharing on and can turn it off at any time."
+  },
+  "setup": {
+    "title": "Get your family set up on iPhone and Android",
+    "body": "The Family plan covers up to five separate accounts. Everyone uses their own phone and decides what to share.",
+    "steps": [
+      "**Start a Family plan.** Dawarich creates the Cloud family for you, or you can create one on your self-hosted instance.",
+      "**Invite your household.** Send invitations from the Family page on the web. Each person accepts using the invited email address.",
+      "**Install and sign in.** Open the Dawarich app on each phone, then use the Family panel on the map to choose live sharing and history settings."
+    ],
+    "ios": "Download the iOS app",
+    "android": "Get the Android app",
+    "guide": "Read the setup guide"
   }
 }

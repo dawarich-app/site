@@ -3,7 +3,6 @@ import content from '@locale-content/pages/cloud.json';
 import RichText, { SmartLink } from '@site/src/i18n/RichText';
 import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import Head from "@docusaurus/Head";
-import { initializePaddle } from "@paddle/paddle-js";
 import FAQ from "@site/src/components/FAQ";
 import HowItWorks from "@site/src/components/HowItWorks";
 import LandingHero from "@site/src/components/LandingHero";
@@ -157,7 +156,7 @@ function CompetitorReframe() {
 							</tr>
 							<tr className={sections.highlight}>
 								<td>{content.competitorReframe.td11}</td>
-								<td>&euro;149.99/yr</td>
+								<td>&euro;119.99/yr</td>
 								<td>{content.competitorReframe.td12}</td>
 								<td>{content.competitorReframe.td13}</td>
 							</tr>
@@ -213,9 +212,6 @@ function CloudFinalCTA() {
 export default function CloudPage() {
   const pageUrl = useLocalizedUrl('/cloud/');
 	useEffect(() => {
-		initializePaddle({
-			token: "live_8593fad779b610288ad3ca40789",
-		});
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {

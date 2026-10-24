@@ -18,6 +18,6 @@ import Subject from './pricing';
 describe('pricing content source', () => {
   it('renders whatever the locale content module provides', () => {
     render(<Subject />);
-    expect(document.querySelector('meta[property="og:title"]')).toHaveAttribute('content', 'Lokalisierter pricing');
+    expect(document.querySelector('meta[property="og:title"]')).toHaveAttribute('content', 'Lokalisierter pricing | Dawarich');
   });
 });

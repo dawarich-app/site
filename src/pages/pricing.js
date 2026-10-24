@@ -1,34 +1,30 @@
 import { interpolate } from '@docusaurus/Interpolate';
 import content from '@locale-content/pages/pricing.json';
+import RichText from '@site/src/i18n/RichText';
 import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
-import React, { useEffect } from "react";
+import React from "react";
 import Head from "@docusaurus/Head";
 import Layout from "@theme/Layout";
-import { initializePaddle } from "@paddle/paddle-js";
+import { COMMISSION_PERCENT } from "@site/src/data/affiliateProgram";
 import PricingSection from "@site/src/components/PricingSection";
 import PricingCompare from "@site/src/components/PricingCompare";
 import FAQ from "@site/src/components/FAQ";
 
+
 export default function PricingPage() {
 	const pageUrl = useLocalizedUrl('/pricing/');
-	useEffect(() => {
-		initializePaddle({
-			token: "live_8593fad779b610288ad3ca40789",
-		});
-	}, []);
-
 	return (
 		<Layout
 			title={content.meta.title}
-			description={interpolate(content.meta.description, { price: "€59.99", price2: "€17.99", price3: "€299.99" })}
+			description={content.meta.description}
 		>
 			<Head>
 				<meta property="og:type" content="website" />
 				<meta property="og:url" content={pageUrl} />
-				<meta property="og:title" content={content.meta.title} />
+				<meta property="og:title" content={`${content.meta.title} | Dawarich`} />
 				<meta
 					property="og:description"
-					content={interpolate(content.meta.socialDescription, { price: "€59.99", price2: "€17.99", price3: "€299.99" })}
+					content={content.meta.description}
 				/>
 				<meta
 					property="og:image"
@@ -36,10 +32,10 @@ export default function PricingPage() {
 				/>
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:url" content={pageUrl} />
-				<meta name="twitter:title" content={content.meta.title} />
+				<meta name="twitter:title" content={`${content.meta.title} | Dawarich`} />
 				<meta
 					name="twitter:description"
-					content={interpolate(content.meta.socialDescription, { price: "€59.99", price2: "€17.99", price3: "€299.99" })}
+					content={content.meta.description}
 				/>
 				<meta
 					name="twitter:image"
@@ -74,7 +70,7 @@ export default function PricingPage() {
 							{
 								"@type": "Offer",
 								name: content.schema.proAnnual,
-								price: "149.99",
+								price: "119.99",
 								priceCurrency: "EUR",
 								availability: "https://schema.org/InStock",
 								url: pageUrl,
@@ -84,7 +80,7 @@ export default function PricingPage() {
 								name: content.schema.familyAnnual,
 								description:
 									content.schema.familyDescription,
-								price: "299.99",
+								price: "239.99",
 								priceCurrency: "EUR",
 								availability: "https://schema.org/InStock",
 								url: pageUrl,
@@ -103,8 +99,14 @@ export default function PricingPage() {
 			</Head>
 
 			<main>
-				<PricingSection />
+				<PricingSection
+					heading={content.heading}
+					headingLevel="h1"
+				/>
 				<PricingCompare />
+				<p className="margin-top--lg text--center">
+					<RichText text={interpolate(content.affiliate, { percent: COMMISSION_PERCENT })} />
+				</p>
 				<FAQ />
 			</main>
 		</Layout>

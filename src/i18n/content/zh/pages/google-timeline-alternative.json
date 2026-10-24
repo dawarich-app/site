@@ -134,10 +134,7 @@
   },
   "meta": {
     "title": "Google Timeline 替代方案 — 在丢失前保存您的位置历史记录",
-    "description": "Google 取消了原有 Timeline，将数据改为仅存设备。Dawarich Cloud 几分钟即可导入 Google Takeout，提供热力图和行程检测，并在德国私密存储。{price} 起，免费试用 7 天。",
-    "ogDescription": "Google 取消了原有 Timeline，将数据改为仅存设备。用 Dawarich Cloud，几分钟内保存全部历史记录，私密存储于欧盟，遵循 GDPR。免费试用 7 天。",
-    "twitterTitle": "Google Timeline 替代方案 — 保存您的位置历史记录",
-    "twitterDescription": "Google 取消了原有 Timeline。使用 Dawarich Cloud 私密保存历史记录，欧盟托管，遵循 GDPR，免费试用 7 天。"
+    "description": "Google 取消了原有 Timeline，将数据改为仅存设备。Dawarich Cloud 几分钟即可导入 Google Takeout，提供热力图和行程检测，并在德国私密存储。{price} 起，免费试用 7 天。"
   },
   "hero": {
     "badge": "Google Timeline 替代方案",

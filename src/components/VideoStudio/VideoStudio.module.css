@@ -1,0 +1,470 @@
+/* The studio is a deliberately dark, self-contained editor surface — video
+   tools are judged against dark chrome, and the map themes are built for it.
+   Its palette is scoped here and does not follow the site theme. */
+
+.studio {
+  --st-bg: #101318;
+  --st-panel: #171b22;
+  --st-inset: #0b0d11;
+  --st-border: rgba(236, 238, 242, 0.09);
+  --st-text: #eceef2;
+  --st-muted: rgba(236, 238, 242, 0.6);
+  --st-accent: #3d7ff2;
+  --st-accent-strong: #2f6ede;
+  --st-danger: #ff6b60;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    'stage'
+    'rail'
+    'bar';
+  overflow: hidden;
+  border: 1px solid var(--st-border);
+  border-radius: 18px;
+  background: var(--st-bg);
+  color: var(--st-text);
+  box-shadow: 0 24px 48px -24px rgba(8, 10, 14, 0.5), 0 2px 8px rgba(8, 10, 14, 0.18);
+}
+
+@media (min-width: 997px) {
+  .studio {
+    grid-template-columns: minmax(0, 1fr) 312px;
+    grid-template-areas:
+      'stage rail'
+      'bar bar';
+  }
+}
+
+/* ---------- Stage ---------- */
+
+.stage {
+  grid-area: stage;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  min-width: 0;
+  padding: 1.25rem 1rem 1.5rem;
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(61, 127, 242, 0.07), transparent 60%),
+    var(--st-inset);
+}
+
+@media (min-width: 997px) {
+  .stage {
+    padding: 2.25rem 2rem;
+  }
+}
+
+.frame {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--st-border);
+  border-radius: 14px;
+  background: #000;
+  box-shadow: 0 16px 40px -16px rgba(0, 0, 0, 0.65), 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.framePortrait {
+  height: min(68vh, 680px);
+  aspect-ratio: 9 / 16;
+}
+
+.frameLandscape {
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 16 / 9;
+}
+
+.frameSquare {
+  width: min(100%, 460px);
+  aspect-ratio: 1 / 1;
+}
+
+.mapContainer {
+  position: absolute;
+  inset: 0;
+}
+
+.recenterButton {
+  position: absolute;
+  right: 0.6rem;
+  bottom: 0.6rem;
+  z-index: 2;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  border: 1px solid rgba(236, 238, 242, 0.18);
+  border-radius: 8px;
+  background: rgba(11, 13, 17, 0.72);
+  color: var(--st-text);
+  cursor: pointer;
+}
+
+.recenterButton:hover {
+  background: rgba(11, 13, 17, 0.92);
+  border-color: rgba(236, 238, 242, 0.32);
+}
+
+.resultVideo {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  object-fit: cover;
+  animation: resultIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes resultIn {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resultVideo {
+    animation: none;
+  }
+  .progressFill {
+    transition: none;
+  }
+}
+
+.stageCaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  column-gap: 0.6rem;
+  row-gap: 0.15rem;
+  margin: 0;
+  font-size: 0.88rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--st-muted);
+}
+
+.stageCaption strong {
+  font-weight: 600;
+  color: var(--st-text);
+}
+
+.captionDivider {
+  color: rgba(236, 238, 242, 0.28);
+}
+
+/* ---------- Rail ---------- */
+
+.rail {
+  grid-area: rail;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
+  padding: 1.4rem 1.25rem 1.6rem;
+  border-top: 1px solid var(--st-border);
+  background: var(--st-bg);
+}
+
+@media (min-width: 997px) {
+  .rail {
+    border-top: 0;
+    border-left: 1px solid var(--st-border);
+  }
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-inline-size: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  min-width: 0;
+}
+
+.controls:disabled .group {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.groupLegend {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--st-muted);
+}
+
+.controlRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.controlRow input[type='range'] {
+  width: 100%;
+  accent-color: var(--st-accent);
+}
+
+.controlLabel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.4rem;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--st-text);
+}
+
+.controlValue {
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  color: var(--st-muted);
+}
+
+/* Theme swatches: real rendered thumbnails, 17 of them */
+
+.themeGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.45rem;
+}
+
+.themeChip {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  padding: 0;
+  border: 1px solid var(--st-border);
+  border-radius: 7px;
+  background-color: var(--st-panel);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.themeChip:hover {
+  border-color: rgba(236, 238, 242, 0.35);
+}
+
+.themeChipSelected,
+.themeChipSelected:hover {
+  border-color: var(--st-accent);
+  box-shadow: 0 0 0 2px var(--st-accent);
+}
+
+.segmented {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.segment {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 2.25rem;
+  padding: 0.35rem 0.55rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid var(--st-border);
+  border-radius: 8px;
+  background: var(--st-panel);
+  color: var(--st-text);
+  cursor: pointer;
+}
+
+.segment:hover {
+  border-color: rgba(236, 238, 242, 0.3);
+}
+
+.segmentActive,
+.segmentActive:hover {
+  border-color: var(--st-accent);
+  background: var(--st-accent);
+  color: #fff;
+}
+
+.colorRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.colorRow input[type='color'] {
+  width: 2.9rem;
+  height: 2.1rem;
+  padding: 0.15rem;
+  border: 1px solid var(--st-border);
+  border-radius: 8px;
+  background: var(--st-panel);
+  cursor: pointer;
+}
+
+.linkButton {
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--st-accent);
+  cursor: pointer;
+}
+
+.linkButton:hover {
+  text-decoration: underline;
+}
+
+.railError {
+  margin: 0;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid rgba(255, 107, 96, 0.35);
+  border-radius: 8px;
+  background: rgba(255, 107, 96, 0.1);
+  color: var(--st-danger);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+/* ---------- Action bar ---------- */
+
+.actionBar {
+  grid-area: bar;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem 1rem;
+  min-height: 4rem;
+  padding: 0.85rem 1.25rem;
+  border-top: 1px solid var(--st-border);
+  background: var(--st-panel);
+}
+
+@media (min-width: 997px) {
+  .actionBar {
+    padding: 0.85rem 2rem;
+  }
+}
+
+.barStatus {
+  flex: 1 1 16rem;
+  min-width: 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--st-muted);
+}
+
+.barStatus strong {
+  font-weight: 600;
+  color: var(--st-text);
+}
+
+.barActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.renderButton {
+  min-height: 2.75rem;
+  padding: 0.55rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  background: var(--st-accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+.renderButton:hover:not(:disabled) {
+  background: var(--st-accent-strong);
+}
+
+.renderButton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.ghostButton {
+  min-height: 2.75rem;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid var(--st-border);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--st-text);
+  cursor: pointer;
+}
+
+.ghostButton:hover {
+  border-color: rgba(236, 238, 242, 0.35);
+}
+
+.downloadButton {
+  display: inline-block;
+  min-height: 2.75rem;
+  padding: 0.62rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 10px;
+  background: var(--st-accent);
+  color: #fff;
+}
+
+.downloadButton:hover {
+  background: var(--st-accent-strong);
+  color: #fff;
+  text-decoration: none;
+}
+
+.progressTrack {
+  position: relative;
+  flex: 1 1 14rem;
+  height: 0.55rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(236, 238, 242, 0.12);
+}
+
+.progressFill {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: var(--st-accent);
+  transform-origin: left center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Shared focus treatment on the dark canvas */
+
+.studio :is(button, a, input, [role='radio']):focus-visible {
+  outline: 2px solid var(--st-accent);
+  outline-offset: 2px;
+}
+
+.loadingNote {
+  margin: 0;
+  color: var(--st-muted);
+}

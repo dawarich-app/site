@@ -55,7 +55,7 @@ TUNNEL_TOKEN=CLOUDFLARE_TUNNEL_TOKEN
 
 Now - we are ready to modify our docker-compose file.
 
-In both the `dawarich_app` and `dawarich_sidekiq` service definitions, find the `APPLICATION_HOSTS` environment variable and set it to include your CloudFlare tunnel subdomain:
+In the `dawarich_app` service definition (and in `dawarich_sidekiq` if you run a [separate worker](/docs/self-hosting/configuration/background-jobs#running-a-separate-worker)), find the `APPLICATION_HOSTS` environment variable and set it to include your CloudFlare tunnel subdomain:
 
 ```
       APPLICATION_HOSTS: subdomain.your.tld

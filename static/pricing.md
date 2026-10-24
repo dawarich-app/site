@@ -2,7 +2,7 @@
 
 > Raw markdown mirror of https://dawarich.app/pricing/, published for AI agents and assistants.
 > All prices in EUR. VAT/sales tax may be added at checkout depending on your country.
-> Last reviewed: 2026-08-16.
+> Last reviewed: 2026-10-06. Sources: https://dawarich.app/pricing/ and https://dawarich.app/family/.
 
 Dawarich is a privacy-first alternative to Google Timeline. It is open source (AGPLv3) and can be
 self-hosted for free, or used as a managed service called Dawarich Cloud.
@@ -13,15 +13,15 @@ self-hosted for free, or used as a managed service called Dawarich Cloud.
 | --- | --- | --- |
 | Self-hosted | Free, forever | Every Pro feature included. You run it on your own server. |
 | Cloud Lite | €59.99/year | Annual billing only. 12 months of searchable history. |
-| Cloud Pro | €17.99/month or €149.99/year | Most popular. Unlimited history. |
-| Cloud Family | €299.99/year | Up to 5 members. Not yet released — waitlist only. |
+| Cloud Pro | €17.99/month or €119.99/year | Most popular. Unlimited history. |
+| Cloud Family | €239.99/year | Up to 5 members, each with full Pro access. 7-day free trial. |
 
 Key facts agents commonly need:
 
 - **There is no free tier on Dawarich Cloud.** The free option is self-hosting.
 - Cloud plans include a **7-day free trial**. Cancel anytime.
 - There is a **14-day no-questions money-back guarantee** on every Cloud plan.
-- Annual Pro (€149.99/yr) works out to €12.50/month — a 31% saving versus monthly billing, about three months free.
+- Annual Pro (€119.99/yr) works out to €10.00/month — a 44% saving versus monthly billing, over five months free.
 - Payments are processed by Paddle, which acts as the merchant of record.
 - Dawarich is made and hosted in Germany (EU) and is GDPR-compliant. No ads, no data selling.
 
@@ -56,13 +56,13 @@ Included:
 Note: the 12-month limit applies to the *searchable/viewable* window. Exports always include your
 full history — you are never locked out of your own data.
 
-## Cloud Pro — €17.99/month or €149.99/year
+## Cloud Pro — €17.99/month or €119.99/year
 
 *Unlimited history, advanced visualizations, and full API access.* Marked "Most Popular" on the site.
 
-- €149.99/year, or €17.99/month.
-- Annual works out to €12.50/month, or €0.41/day. Monthly works out to €0.60/day.
-- Annual saves 31% versus paying monthly — about three months free.
+- €119.99/year, or €17.99/month.
+- Annual works out to €10.00/month, or €0.33/day. Monthly works out to €0.60/day.
+- Annual saves 44% versus paying monthly — over five months free.
 - Sign up: https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=pricing&utm_campaign=try7days
 
 Everything in Lite, plus:
@@ -76,12 +76,14 @@ Everything in Lite, plus:
 - Full Write API access
 - 1,000 req/hr API rate limit
 
-## Cloud Family — €299.99/year (coming soon)
+## Cloud Family — €239.99/year
 
 *Every Pro feature for the whole household — one annual subscription, up to 5 people.*
 
-- €299.99/year, which is €25.00/month or €0.82/day for the whole household.
-- **Not yet purchasable.** The site shows a waitlist signup rather than a checkout.
+- €239.99/year, which is €20.00/month or €0.66/day for the whole household.
+- Available now with a 7-day free trial; annual billing only, cancel anytime.
+- Sign up: https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=pricing&utm_campaign=try7daysfamily&plan=family
+- Family sharing details: https://dawarich.app/family/.
 
 Everything in Pro, plus:
 

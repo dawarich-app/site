@@ -1,8 +1,7 @@
 {
   "meta": {
     "title": "Preços — Dawarich",
-    "description": "Dawarich Cloud: Lite {price}/ano, Pro {price2}/mês, Família {price3}/ano (até 5 pessoas). Teste grátis: 7 dias; reembolso sem risco: 14 dias. Cancele quando quiser ou hospede grátis.",
-    "socialDescription": "Lite {price}/ano, Pro {price2}/mês ou Família {price3}/ano para até 5 pessoas. 7 dias de teste grátis, reembolso em até 14 dias, sem risco. Ou hospede grátis no seu servidor."
+    "description": "Dawarich Cloud: Lite {price}/ano, Pro {price2}/mês, Família {price3}/ano (até 5 pessoas). Teste grátis: 7 dias; reembolso sem risco: 14 dias. Cancele quando quiser ou hospede grátis."
   },
   "schema": {
     "name": "Dawarich Cloud",

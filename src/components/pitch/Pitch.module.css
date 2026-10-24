@@ -45,7 +45,8 @@
   text-wrap: balance;
 }
 
-.heroTitle em {
+.heroTitle em,
+.heroTitle .accent {
   font-style: normal;
   color: var(--pitch-accent);
 }

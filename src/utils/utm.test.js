@@ -1,6 +1,9 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import {
+  hasTrackingConsent,
   buildOutboundUrl,
+  refreshOutboundLinks,
+  initializeUtmPreservation,
   saveOriginalUtmParams,
   clearOriginalUtmParams,
   saveReferralKey,
@@ -10,6 +13,21 @@ import {
 
 const SIGNUP = 'https://my.dawarich.app/users/sign_up';
 
+
+const CONSENT_COOKIE = 'dawarichCookieConsent';
+
+function grantConsent() {
+  document.cookie = `${CONSENT_COOKIE}=true; path=/`;
+}
+
+function declineConsent() {
+  document.cookie = `${CONSENT_COOKIE}=false; path=/`;
+}
+
+function clearConsent() {
+  document.cookie = `${CONSENT_COOKIE}=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+}
+
 function visit(search) {
   window.history.replaceState({}, '', `/${search}`);
 }
@@ -17,6 +35,7 @@ function visit(search) {
 describe('referral (via) preservation', () => {
   beforeEach(() => {
     localStorage.clear();
+    grantConsent();
     clearOriginalUtmParams();
     clearReferralKey();
     visit('');
@@ -127,5 +146,161 @@ describe('referral (via) preservation', () => {
     localStorage.setItem('partnero_referral', JSON.stringify(stored));
 
     expect(getReferralKey()).toBeNull();
+  });
+});
+
+describe('ad campaign handoff', () => {
+  beforeEach(() => {
+    localStorage.clear();
+    grantConsent();
+    visit('');
+  });
+
+  it('forwards a saved Google Ads campaign on a signup link without UTM params', () => {
+    visit('?utm_source=google&utm_medium=cpc&utm_campaign=123456789');
+    saveOriginalUtmParams();
+    initializeUtmPreservation();
+
+    const link = document.createElement('a');
+    link.href = SIGNUP;
+    link.addEventListener('click', (event) => event.preventDefault());
+    document.body.appendChild(link);
+    link.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+
+    const destination = new URL(link.href);
+    expect(destination.searchParams.get('utm_source')).toBe('google');
+    expect(destination.searchParams.get('utm_medium')).toBe('cpc');
+    expect(destination.searchParams.get('utm_campaign')).toBe('123456789');
+    link.remove();
+  });
+
+  it('updates the visible signup URL after consent for copied or new-tab links', () => {
+    visit('?utm_source=google&utm_medium=cpc&utm_campaign=123456789');
+    saveOriginalUtmParams();
+
+    const link = document.createElement('a');
+    link.href = SIGNUP;
+    document.body.appendChild(link);
+    refreshOutboundLinks();
+
+    expect(new URL(link.href).searchParams.get('utm_campaign')).toBe('123456789');
+    link.remove();
+  });
+
+  it('does not append a saved campaign to an unrelated external link', () => {
+    visit('?utm_source=google&utm_medium=cpc&utm_campaign=123456789');
+    saveOriginalUtmParams();
+    initializeUtmPreservation();
+
+    const link = document.createElement('a');
+    link.href = 'https://example.com/help';
+    link.addEventListener('click', (event) => event.preventDefault());
+    document.body.appendChild(link);
+    link.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+
+    expect(link.href).toBe('https://example.com/help');
+    link.remove();
+  });
+});
+
+describe('campaign storage consent', () => {
+  beforeEach(() => {
+    localStorage.clear();
+    clearConsent();
+    visit('?utm_source=google&utm_medium=cpc&utm_campaign=123456789');
+  });
+
+  it('does not store a campaign before consent or after refusal', () => {
+    saveOriginalUtmParams();
+    expect(localStorage.getItem('original_utm_params')).toBeNull();
+
+    declineConsent();
+    saveOriginalUtmParams();
+    expect(localStorage.getItem('original_utm_params')).toBeNull();
+    expect(buildOutboundUrl(SIGNUP)).toBe(SIGNUP);
+  });
+
+  it('removes tracking parameters from visible signup links until consent', () => {
+    const link = document.createElement('a');
+    link.href = `${SIGNUP}?utm_source=site&utm_campaign=hero&_gl=click`;
+    document.body.appendChild(link);
+
+    refreshOutboundLinks();
+    expect(link.href).toBe(SIGNUP);
+
+    grantConsent();
+    refreshOutboundLinks();
+    expect(link.href).toContain('utm_campaign=hero');
+    link.remove();
+  });
+
+  it('forgets a stored campaign when consent is withdrawn', () => {
+    grantConsent();
+    saveOriginalUtmParams();
+    expect(localStorage.getItem('original_utm_params')).not.toBeNull();
+
+    declineConsent();
+    expect(buildOutboundUrl(SIGNUP)).toBe(SIGNUP);
+    expect(localStorage.getItem('original_utm_params')).toBeNull();
+  });
+});
+
+// The cookie banner and the privacy policy both state that affiliate referral
+// credit requires consent. These pin the code to that promise.
+describe('referral consent gate', () => {
+  beforeEach(() => {
+    localStorage.clear();
+    clearConsent();
+    visit('');
+  });
+
+  it('treats an unanswered banner as no consent', () => {
+    expect(hasTrackingConsent()).toBe(false);
+  });
+
+  it('does not store a referral key before the banner is answered', () => {
+    visit('?aff=PARTNER123');
+    saveReferralKey();
+
+    expect(localStorage.getItem('partnero_referral')).toBeNull();
+    expect(getReferralKey()).toBeNull();
+  });
+
+  it('does not store a referral key when consent is declined', () => {
+    declineConsent();
+    visit('?aff=PARTNER123');
+    saveReferralKey();
+
+    expect(localStorage.getItem('partnero_referral')).toBeNull();
+  });
+
+  it('stores the key once consent is granted', () => {
+    grantConsent();
+    visit('?aff=PARTNER123');
+    saveReferralKey();
+
+    expect(getReferralKey()).toBe('PARTNER123');
+  });
+
+  it('forgets a key already stored if consent is later declined', () => {
+    grantConsent();
+    visit('?aff=PARTNER123');
+    saveReferralKey();
+    expect(getReferralKey()).toBe('PARTNER123');
+
+    declineConsent();
+
+    expect(getReferralKey()).toBeNull();
+    expect(localStorage.getItem('partnero_referral')).toBeNull();
+  });
+
+  it('does not append a referral param to outbound links without consent', () => {
+    grantConsent();
+    visit('?aff=PARTNER123');
+    saveReferralKey();
+
+    declineConsent();
+
+    expect(buildOutboundUrl(SIGNUP)).toBe(SIGNUP);
   });
 });

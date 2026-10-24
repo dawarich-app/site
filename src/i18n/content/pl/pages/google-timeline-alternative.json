@@ -134,10 +134,7 @@
   },
   "meta": {
     "title": "Zamiast Google Timeline — ocal historię lokalizacji, zanim ją stracisz",
-    "description": "Google wycofało Timeline; dane są tylko na urządzeniu. Dawarich Cloud importuje Google Takeout w kilka minut, przywraca mapy cieplne i wykrywanie podróży. Prywatny hosting w Niemczech. Od {price}. 7 dni próby gratis.",
-    "ogDescription": "Google wycofało Timeline i przeniosło dane wyłącznie na urządzenie. Zachowaj całą historię w kilka minut z Dawarich Cloud — prywatnie, na serwerach w UE, zgodnie z RODO. 7 dni próby gratis.",
-    "twitterTitle": "Alternatywa dla Google Timeline — zachowaj historię lokalizacji",
-    "twitterDescription": "Google wycofało Timeline. Zachowaj historię prywatnie w Dawarich Cloud. Hosting w UE, zgodność z RODO. 7-dniowy bezpłatny okres próbny."
+    "description": "Google wycofało Timeline; dane są tylko na urządzeniu. Dawarich Cloud importuje Google Takeout w kilka minut, przywraca mapy cieplne i wykrywanie podróży. Prywatny hosting w Niemczech. Od {price}. 7 dni próby gratis."
   },
   "hero": {
     "badge": "Alternatywa dla Google Timeline",

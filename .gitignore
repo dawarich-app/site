@@ -31,3 +31,7 @@ yarn-error.log*
 
 # generated translation work lists
 i18n/todo/
+
+# Private SEO working data and locally configured agent skill
+/seo/
+/.agents/skills/seo-autopilot

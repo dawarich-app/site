@@ -1,8 +1,7 @@
 {
   "meta": {
     "title": "Cennik — Dawarich",
-    "description": "Prosty cennik Dawarich Cloud: Lite {price}/rok, Pro {price2}/mies., Rodzina {price3}/rok do 5 osób. 7 dni próby gratis, zwrot bez ryzyka w 14 dni, rezygnacja zawsze. Własny serwer gratis.",
-    "socialDescription": "Lite {price}/rok, Pro {price2}/mies. lub Rodzina {price3}/rok do 5 osób. 7 dni próby gratis, 14 dni na zwrot bez ryzyka. Lub własny serwer za darmo."
+    "description": "Prosty cennik Dawarich Cloud: Lite {price}/rok, Pro {price2}/mies., Rodzina {price3}/rok do 5 osób. 7 dni próby gratis, zwrot bez ryzyka w 14 dni, rezygnacja zawsze. Własny serwer gratis."
   },
   "schema": {
     "name": "Dawarich Cloud",

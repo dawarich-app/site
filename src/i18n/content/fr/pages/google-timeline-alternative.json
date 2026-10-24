@@ -134,10 +134,7 @@
   },
   "meta": {
     "title": "Alternative à Google Timeline — Sauvegardez votre historique",
-    "description": "Google a supprimé Timeline : données sur appareil uniquement. Dawarich Cloud importe Google Takeout en quelques minutes : cartes de chaleur, détection des déplacements, stockage privé en Allemagne. Dès {price}. Essai gratuit 7 j.",
-    "ogDescription": "Google limite Timeline au téléphone. Sauvegardez tout votre historique en quelques minutes avec Dawarich Cloud : privé, hébergé dans l’UE, conforme au RGPD. Essai gratuit de 7 jours.",
-    "twitterTitle": "Alternative à Google Timeline — Sauvez votre historique",
-    "twitterDescription": "Google a supprimé Timeline. Sauvegardez votre historique en privé avec Dawarich Cloud. Hébergé dans l’UE, conforme au RGPD. Essai gratuit de 7 jours."
+    "description": "Google a supprimé Timeline : données sur appareil uniquement. Dawarich Cloud importe Google Takeout en quelques minutes : cartes de chaleur, détection des déplacements, stockage privé en Allemagne. Dès {price}. Essai gratuit 7 j."
   },
   "hero": {
     "badge": "Alternative à Google Timeline",

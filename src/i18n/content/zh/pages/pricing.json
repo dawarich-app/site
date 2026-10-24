@@ -1,8 +1,7 @@
 {
   "meta": {
     "title": "价格 — Dawarich",
-    "description": "Dawarich Cloud，价格简单明了。Lite 每年 {price}，Pro 每月 {price2}，家庭方案每年 {price3}，最多 5 人。7 天免费试用，14 天无忧退款，随时可取消。也可免费自托管。",
-    "socialDescription": "Lite 每年 {price}，Pro 每月 {price2}，家庭方案每年 {price3}，最多 5 人。7 天免费试用，14 天无忧退款。也可免费自托管。"
+    "description": "Dawarich Cloud，价格简单明了。Lite 每年 {price}，Pro 每月 {price2}，家庭方案每年 {price3}，最多 5 人。7 天免费试用，14 天无忧退款，随时可取消。也可免费自托管。"
   },
   "schema": {
     "name": "Dawarich Cloud",

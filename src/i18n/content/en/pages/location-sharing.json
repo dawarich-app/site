@@ -25,7 +25,7 @@
     },
     {
       "q": "Can I see whether anyone opened it?",
-      "a": "Yes. Every link you have made is listed in one place with how many times it has been opened and when it was last accessed."
+      "a": "Yes. Live location, date-range, trip and track links show how many times they have been opened and when they were last viewed, and all of them are listed together in one place."
     },
     {
       "q": "What happens to my links if my subscription expires?",
@@ -36,7 +36,7 @@
     "title": "Location Sharing — Share Your Location History by Link",
     "description": "Share your live location or location history with a private link. Passphrase-protected, expiring, revocable, and scoped to exactly what you choose. Free 7-day trial or self-host free.",
     "ogTitle": "Location Sharing — Share Your Location History by Private Link",
-    "ogDescription": "Send one link that shows one thing: a date range, live location, a track, a trip, a month of stats or a yearly digest. Passphrase, expiry and instant revoke on every link."
+    "ogDescription": "Send one link that shows one thing: a date range, live location, a track, a trip, a month of stats or a yearly digest. Every link expires or can be revoked, and most can be locked with a passphrase."
   },
   "locationSharingPage": {
     "text": "Share where you are.",

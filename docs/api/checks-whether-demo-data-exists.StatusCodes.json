@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"demo data status","content":{"application/json":{"schema":{"type":"object","properties":{"exists":{"type":"boolean","description":"Whether a demo import exists for the user"}},"required":["exists"]}}}},"401":{"description":"unauthorized"}}}

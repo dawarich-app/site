@@ -1,8 +1,7 @@
 {
   "meta": {
-    "title": "Pricing — Dawarich",
-    "description": "Simple pricing for Dawarich Cloud. Lite {price}/yr, Pro {price2}/mo, or Family {price3}/yr for up to 5 people. 7-day free trial, 14-day risk-free refund, cancel anytime. Or self-host for free.",
-    "socialDescription": "Lite {price}/yr, Pro {price2}/mo, or Family {price3}/yr for up to 5 people. 7-day free trial, 14-day risk-free refund. Or self-host for free."
+    "title": "Cloud Pricing & Plans",
+    "description": "Compare Dawarich Cloud plans: Lite, Pro and Family for up to 5 people. Try free for 7 days, or self-host with every Pro feature at no cost."
   },
   "schema": {
     "name": "Dawarich Cloud",
@@ -14,5 +13,7 @@
     "familyAnnual": "Family (annual)",
     "familyDescription": "One annual subscription covering up to 5 members, each with full Pro access.",
     "selfHosted": "Self-hosted"
-  }
+  },
+  "heading": "Dawarich Cloud pricing",
+  "affiliate": "Writing about Dawarich? [Earn {percent}% of the first year](/affiliate) for every subscriber you refer."
 }

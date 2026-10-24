@@ -52,8 +52,8 @@ function formatNumber(num, htmlLang) {
 
 const metrics = [
   { target: 9000, prefix: content.metrics[0].prefix, suffix: '', label: content.metrics[0].label, icon: <StarIcon /> },
-  { target: 1_000_000, suffix: content.metrics[1].suffix, label: content.metrics[1].label, icon: <DownloadIcon /> },
-  { target: 2000, suffix: content.metrics[2].suffix, label: content.metrics[2].label, icon: <PeopleIcon /> },
+  { target: 8_000_000, suffix: content.metrics[1].suffix, label: content.metrics[1].label, icon: <DownloadIcon /> },
+  { target: 5000, suffix: content.metrics[2].suffix, label: content.metrics[2].label, icon: <PeopleIcon /> },
   { target: 1_000_000_000, suffix: content.metrics[3].suffix, label: content.metrics[3].label, icon: <MapPinIcon /> },
 ];
 
@@ -63,6 +63,8 @@ const integrations = [
   'Immich',
   'PhotoPrism',
   'GPSLogger',
+  'AirTrail',
+  'TeslaMate API',
 ];
 
 function useCountUp(target, duration, shouldStart) {

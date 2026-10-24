@@ -104,52 +104,17 @@ description: Frequently asked questions about Dawarich, including setup, configu
 <details>
   <summary>Show me!</summary>
 
-  If you have a large import file, you might want to speed up the import process. You can do this by increasing the number of Sidekiq workers. To do this, you can update your `docker-compose.yml` file to include multiple instances of the `sidekiq` service, basically, having copies of an original one under different names. Here's an example of how you can do this:
+  Since 1.17.0 background jobs, including imports, run inside `dawarich_app` with 2 threads. To import faster, raise `BACKGROUND_PROCESSING_CONCURRENCY` on `dawarich_app` for the duration of the import, then set it back:
 
   ```yaml
   services:
     dawarich_app:
-      ...
-    dawarich_sidekiq:
-      ...
-    // highlight-start
-    dawarich_sidekiq_1:
-    image: freikin/dawarich:latest
-    container_name: dawarich_sidekiq
-    volumes:
-      - gem_cache:/usr/local/bundle/gems
-      - public:/var/app/public
-      ...
-    depends_on:
-      - dawarich_db
-      - dawarich_redis
-      - dawarich_app
-    dawarich_sidekiq_2:
-    image: freikin/dawarich:latest
-    container_name: dawarich_sidekiq
-    volumes:
-      - gem_cache:/usr/local/bundle/gems
-      - public:/var/app/public
-      ...
-    depends_on:
-      - dawarich_db
-      - dawarich_redis
-      - dawarich_app
-    dawarich_sidekiq_N:
-    image: freikin/dawarich:latest
-    container_name: dawarich_sidekiq
-    volumes:
-      - gem_cache:/usr/local/bundle/gems
-      - public:/var/app/public
-      ...
-    depends_on:
-      - dawarich_db
-      - dawarich_redis
-      - dawarich_app
-    // highlight-end
+      environment:
+        // highlight-next-line
+        BACKGROUND_PROCESSING_CONCURRENCY: 5
   ```
 
-  Note, that additional Sidekiq containers are named `dawarich_sidekiq_2`, `dawarich_sidekiq_N`, etc. You can have as many as you need. You can scale them down when your import is completed. It's imortant to remember that the more workers you have, the more resources they will consume, and connecting to the database might become a bottleneck.
+  More threads use more memory and database connections; keep `RAILS_MAX_THREADS` unset or raise it with them. For frequent large imports, run jobs in a [separate worker](/docs/self-hosting/configuration/background-jobs#running-a-separate-worker) so they don't slow down the web interface.
 
 </details>
 
@@ -158,30 +123,22 @@ description: Frequently asked questions about Dawarich, including setup, configu
 <details>
   <summary>Show me!</summary>
 
-  The `Records.json` file you getting with you Google Takeout is usually a big one, and importing it might take a while. If you're getting an error that ends with `Killed`, it means that the process was killed by the system because it consumed too much memory. The solution would be to allocate more memory to the Docker container. You can do this by updating the `docker-compose.yml`:
+  The `Records.json` file from Google Takeout is usually a big one, and importing it might take a while. Since 1.17.0 Dawarich reads it in a stream, so memory no longer grows with the file size: a 300 MB file needs about 60 MiB on top of the idle process.
+
+  If the import still ends with `Killed`, the container ran out of memory. Raise the memory limit of `dawarich_app` (or of `dawarich_sidekiq` if you run a separate worker) in `docker-compose.yml`:
 
   ```yaml
   services:
     dawarich_app:
       ...
-    dawarich_sidekiq:
-      ...
-    dawarich_db:
-      ...
-    dawarich_redis:
-      ...
-    // highlight-start
-    dawarich_app:
-      ...
-      resources:
-        limits:
-          cpus: '0.001'
-          memory: 5G
-      ...
-    // highlight-end
+      deploy:
+        resources:
+          limits:
+            // highlight-next-line
+            memory: 5G
   ```
 
-  Also, you can try splitting your `Records.json` file into smaller parts and importing them one by one. This way, you can avoid the memory issue. Here you can find a [script](https://github.com/Freika/dawarich/issues/142#issuecomment-2268865499) that can help you with splitting the file.
+  You can also split `Records.json` into smaller parts and import them one by one. Here you can find a [script](https://github.com/Freika/dawarich/issues/142#issuecomment-2268865499) that can help you with splitting the file.
 
 </details>
 
@@ -193,10 +150,10 @@ description: Frequently asked questions about Dawarich, including setup, configu
   If your import process finished successfully, you have nothing to worry about. Failed jobs in Sidekiq are usually the a failed attempt of Reverse Geocoding, so you can safely ignore them. This happens when API limit is reached.
 </details>
 
-## Why I have some points "without data" on Stats page?
+## Why I have some points "without data" on the Insights page?
 
 <details>
   <summary>Show me!</summary>
 
-  Some points are being recorded in places, that Photon have no info in its database. For example, it can be a river, a lake, or a forest. These points are not being processed by the reverse geocoding service, so Photon returns an empty (but still valid) response for them. Dawarich counts these points as "without data". It's perfectly normal to have some points without data, and you can safely ignore them. Usually, it's about 1-1,5% of your total points.
+  Some points are being recorded in places, that Photon have no info in its database. For example, it can be a river, a lake, or a forest. These points are not being processed by the reverse geocoding service, so Photon returns an empty (but still valid) response for them. Dawarich counts these points as "without data". It's perfectly normal to have some points without data, and you can safely ignore them. Usually, it's about 1-1,5% of your total points. The count is shown in the tracking summary when you select **All Time** on the Insights page.
 </details>

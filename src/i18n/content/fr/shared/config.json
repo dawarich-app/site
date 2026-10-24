@@ -5,5 +5,18 @@
   "location": "Berlin, Allemagne",
   "startTracking": "Commencer le suivi →",
   "communityLinks": "Liens de la communauté",
-  "trendshiftAlt": "Dawarich sur Trendshift"
+  "trendshiftAlt": "Dawarich sur Trendshift",
+  "trademark": "Dawarich® est une marque de l’Union européenne enregistrée par ZeitFlow UG (haftungsbeschränkt)",
+  "trademarkNumber": "N° {number}",
+  "footerSection.Explore": "Explorer",
+  "footerSection.Share & create": "Partager et créer",
+  "footerSection.Get started": "Bien démarrer",
+  "footerSection.Explore your data": "Explorer vos données",
+  "footerSection.Convert files": "Convertir des fichiers",
+  "footerSection.Edit & extract": "Modifier et extraire",
+  "footerSection.Alternatives": "Alternatives",
+  "footerSection.Dawarich vs": "Dawarich face à",
+  "footerSection.Help & reference": "Aide et référence",
+  "footerSection.About": "À propos",
+  "footerSection.Legal": "Mentions légales"
 }

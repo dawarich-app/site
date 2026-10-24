@@ -307,6 +307,11 @@
   ],
   "google-timeline-converter": [
     {
+      "href": "/tools/route-video-maker/",
+      "label": "Route Video Maker",
+      "note": "Turn your Timeline into a travel video"
+    },
+    {
       "href": "/tools/google-timeline-splitter/",
       "label": "Divisor de cronologías",
       "note": "Divide una exportación enorme de Takeout"
@@ -374,6 +379,11 @@
     }
   ],
   "timeline-visualizer": [
+    {
+      "href": "/tools/route-video-maker/",
+      "label": "Route Video Maker",
+      "note": "Turn the same file into a video"
+    },
     {
       "href": "/interactive-map/",
       "label": "Mapa interactivo",
@@ -480,6 +490,11 @@
       "href": "/poster-studio/",
       "label": "Poster Studio en Dawarich",
       "note": "Imprime cualquier mes de tu historial"
+    },
+    {
+      "href": "/tools/route-video-maker/",
+      "label": "Route Video Maker",
+      "note": "Same file, animated video"
     },
     {
       "href": "/tools/heatmap-generator/",

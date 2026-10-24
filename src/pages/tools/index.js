@@ -72,6 +72,12 @@ const freeTools = [
     description: content.tools[9].description,
   },
   {
+    to: '/tools/route-video-maker',
+    icon: '🎬',
+    title: content.tools[12].title,
+    description: content.tools[12].description,
+  },
+  {
     to: '/tools/gpx-merger',
     icon: '🔗',
     title: content.tools[10].title,

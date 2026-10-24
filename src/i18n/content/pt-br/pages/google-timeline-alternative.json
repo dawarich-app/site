@@ -134,10 +134,7 @@
   },
   "meta": {
     "title": "Alternativa ao Google Timeline: salve o histórico de locais antes da perda",
-    "description": "O Google encerrou o Timeline: dados só no dispositivo. Dawarich Cloud importa Google Takeout em minutos: mapas de calor e detecção de viagens, tudo privado na Alemanha. A partir de {price}. Teste grátis: 7 dias.",
-    "ogDescription": "O Google encerrou o Timeline e deixou seus dados só no dispositivo. Salve todo o histórico em minutos no Dawarich Cloud — privado, hospedado na UE, em conformidade com o GDPR. 7 dias de teste grátis.",
-    "twitterTitle": "Alternativa ao Google Timeline — Salve seu histórico de localização",
-    "twitterDescription": "O Google encerrou o Timeline. Salve seu histórico com privacidade no Dawarich Cloud. Hospedado na UE, em conformidade com o GDPR. 7 dias de teste grátis."
+    "description": "O Google encerrou o Timeline: dados só no dispositivo. Dawarich Cloud importa Google Takeout em minutos: mapas de calor e detecção de viagens, tudo privado na Alemanha. A partir de {price}. Teste grátis: 7 dias."
   },
   "hero": {
     "badge": "Alternativa ao Google Timeline",

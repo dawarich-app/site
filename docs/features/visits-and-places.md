@@ -28,7 +28,7 @@ A background job runs every night, searching for places you visited the previous
 
 In the drawer panel:
 1. View visits for the selected time period
-2. Click a visit card to center the map on that location
+2. Click a visit card to center the map on that location. When the visit's place has an address, the card shows it under the visit name
 3. Confirm or decline each suggested visit
 4. Click visit circles on the map for detailed popups
 
@@ -41,6 +41,8 @@ In the visit popup, you can:
 ## Places
 
 Places are saved locations that can be associated with visits. When you confirm a visit, the location is saved as a place.
+
+Places can also come from a file you import. Waypoints in a GPX file — for example the favourites exported by OsmAnd+ as `favourites.gpx` — are imported as places rather than as timeline points, and their category becomes a tag. See [Waypoints and favourites](/docs/getting-started/import-existing-data#waypoints-and-favourites) for details.
 
 ### Managing Places
 
@@ -110,6 +112,8 @@ Or from the drawer panel:
 1. Select an area on the map
 2. View points in that area
 3. Create a visit from the displayed points
+
+When you create a visit at a new place without giving an address, Dawarich looks up the place's address and city in the background, as long as [reverse geocoding](/docs/self-hosting/configuration/reverse-geocoding) is enabled. The name you gave the visit is kept. Apps can also send the address themselves: `POST /api/v1/visits` accepts an optional `address` (street, house number, postcode, city and country), and visit responses include the place's formatted address. See the [API reference](/docs/api/create-visit).
 
 ## Bulk Visit Suggestion
 
