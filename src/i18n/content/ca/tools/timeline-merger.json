@@ -98,7 +98,7 @@
     "uploadedFiles": "Fitxers carregats ({count})",
     "distanceValue": "{distance}m",
     "timeValue": "{seconds}s",
-    "filePair": "**{fileA}** i **{fileB}**",
+    "filePair": "{fileA} i {fileB}",
     "overlapRange": " se solapen del {startDate} al {endDate}",
     "overlapWith": "Solapament amb {fileName}",
     "mergeButton": "Uneix {count} fitxer|Uneix {count} fitxers|Uneix {count} fitxers",
@@ -165,10 +165,18 @@
         "L'algorisme fa servir dos factors per identificar punts d'ubicació duplicats:"
       ],
       "items": [
-        { "body": "**Proximitat espacial** -- Els punts dins del llindar de distància (50 metres per defecte) són candidats a ser duplicats" },
-        { "body": "**Proximitat temporal** -- Els punts també han de ser dins del llindar de temps (60 segons per defecte) per considerar-se duplicats" },
-        { "body": "**Calen totes dues condicions** -- Un punt només s'elimina com a duplicat si compleix tant el criteri de distància COM el de temps" },
-        { "body": "**Conservació de metadades** -- Quan es troben duplicats, es conserva la versió amb més metadades (noms de llocs, adreces, tipus d'activitat)" }
+        {
+          "body": "**Proximitat espacial** -- Els punts dins del llindar de distància (50 metres per defecte) són candidats a ser duplicats"
+        },
+        {
+          "body": "**Proximitat temporal** -- Els punts també han de ser dins del llindar de temps (60 segons per defecte) per considerar-se duplicats"
+        },
+        {
+          "body": "**Calen totes dues condicions** -- Un punt només s'elimina com a duplicat si compleix tant el criteri de distància COM el de temps"
+        },
+        {
+          "body": "**Conservació de metadades** -- Quan es troben duplicats, es conserva la versió amb més metadades (noms de llocs, adreces, tipus d'activitat)"
+        }
       ],
       "footer": [
         "Els punts s'ordenen cronològicament abans d'eliminar els duplicats, per garantir resultats coherents independentment de l'ordre de càrrega."
@@ -180,10 +188,18 @@
         "Hi ha diverses situacions habituals en què unir dades de Google Timeline és essencial:"
       ],
       "items": [
-        { "body": "**Diverses fonts d'exportació** -- Google Takeout i les exportacions d'Android i iOS recullen subconjunts diferents de les teves dades" },
-        { "body": "**Recuperació després de la migració de Google de 2024** -- Quan Google va traslladar la línia de temps a l'emmagatzematge al dispositiu, molts usuaris van fer diverses exportacions parcials. Unir-les recupera l'historial més complet" },
-        { "body": "**Còpies de seguretat periòdiques** -- Si vas exportar les dades el 2021 i un altre cop el 2024, unir-les crea un conjunt de dades continu que cobreix tots dos períodes" },
-        { "body": "**Canvis de dispositiu** -- Has canviat de telèfon? Uneix les exportacions del dispositiu antic i del nou" }
+        {
+          "body": "**Diverses fonts d'exportació** -- Google Takeout i les exportacions d'Android i iOS recullen subconjunts diferents de les teves dades"
+        },
+        {
+          "body": "**Recuperació després de la migració de Google de 2024** -- Quan Google va traslladar la línia de temps a l'emmagatzematge al dispositiu, molts usuaris van fer diverses exportacions parcials. Unir-les recupera l'historial més complet"
+        },
+        {
+          "body": "**Còpies de seguretat periòdiques** -- Si vas exportar les dades el 2021 i un altre cop el 2024, unir-les crea un conjunt de dades continu que cobreix tots dos períodes"
+        },
+        {
+          "body": "**Canvis de dispositiu** -- Has canviat de telèfon? Uneix les exportacions del dispositiu antic i del nou"
+        }
       ]
     },
     {
@@ -200,10 +216,18 @@
         "L'eina detecta i processa automàticament tots els formats d'exportació de Google Timeline:"
       ],
       "items": [
-        { "body": "**Records.json** -- Registres GPS en brut de Google Takeout amb coordenades en format E7. Aquests fitxers solen ser els més grans i contenen cada lectura d'ubicació" },
-        { "body": "**Semantic Location History** -- Fitxers mensuals (p. ex. 2022_APRIL.json) amb visites a llocs estructurades, adreces i segments d'activitat" },
-        { "body": "**Exportació de la línia de temps del telèfon** -- Format més recent de Google Maps a Android/iOS amb semanticSegments i recorreguts de la línia de temps" },
-        { "body": "**Settings i TimelineEdits** -- Fitxers de metadades addicionals de les exportacions de Google Takeout" }
+        {
+          "body": "**Records.json** -- Registres GPS en brut de Google Takeout amb coordenades en format E7. Aquests fitxers solen ser els més grans i contenen cada lectura d'ubicació"
+        },
+        {
+          "body": "**Semantic Location History** -- Fitxers mensuals (p. ex. 2022_APRIL.json) amb visites a llocs estructurades, adreces i segments d'activitat"
+        },
+        {
+          "body": "**Exportació de la línia de temps del telèfon** -- Format més recent de Google Maps a Android/iOS amb semanticSegments i recorreguts de la línia de temps"
+        },
+        {
+          "body": "**Settings i TimelineEdits** -- Fitxers de metadades addicionals de les exportacions de Google Takeout"
+        }
       ],
       "footer": [
         "Pots combinar aquests formats com vulguis en una sola operació d'unió."
@@ -213,11 +237,21 @@
       "title": "Eines relacionades",
       "paragraphs": [],
       "items": [
-        { "body": "[Visualitzador de Google Timeline](/tools/timeline-visualizer) -- Consulta el teu historial d'ubicacions en un mapa interactiu" },
-        { "body": "[Generador de mapes de calor GPS](/tools/heatmap-generator) -- Crea mapes de calor amb fitxers GPX, FIT, TCX i altres fitxers GPS" },
-        { "body": "[Eina per unir trajectes GPX](/tools/gpx-merger) -- Combina diversos fitxers GPX en un de sol" },
-        { "body": "[Extracció de geodades de fotos](/tools/photo-geotagging) -- Extreu coordenades GPS de les teves fotos" },
-        { "body": "[Conversor de GeoJSON a GPX](/tools/geojson-to-gpx) -- Converteix dades d'ubicació en format GPX" }
+        {
+          "body": "[Visualitzador de Google Timeline](/tools/timeline-visualizer) -- Consulta el teu historial d'ubicacions en un mapa interactiu"
+        },
+        {
+          "body": "[Generador de mapes de calor GPS](/tools/heatmap-generator) -- Crea mapes de calor amb fitxers GPX, FIT, TCX i altres fitxers GPS"
+        },
+        {
+          "body": "[Eina per unir trajectes GPX](/tools/gpx-merger) -- Combina diversos fitxers GPX en un de sol"
+        },
+        {
+          "body": "[Extracció de geodades de fotos](/tools/photo-geotagging) -- Extreu coordenades GPS de les teves fotos"
+        },
+        {
+          "body": "[Conversor de GeoJSON a GPX](/tools/geojson-to-gpx) -- Converteix dades d'ubicació en format GPX"
+        }
       ],
       "footer": [
         "Més informació: [Migració des de l'historial d'ubicacions de Google](/blog/migrating-from-google-location-history-to-dawarich)"

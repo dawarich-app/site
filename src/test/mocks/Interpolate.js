@@ -1,9 +1,13 @@
 import React from 'react';
 
 export function interpolate(text, values = {}) {
-  return String(text).replace(/\{(\w+)\}/g, (match, key) =>
-    Object.prototype.hasOwnProperty.call(values, key) ? String(values[key]) : match,
-  );
+  const parts = String(text).split(/(\{\w+\})/);
+  const filled = parts.map((part) => {
+    const key = part.match(/^\{(\w+)\}$/)?.[1];
+    return key && Object.prototype.hasOwnProperty.call(values, key) ? values[key] : part;
+  });
+  if (filled.every((part) => typeof part !== 'object')) return filled.join('');
+  return filled.map((part, index) => (typeof part === 'object' ? React.cloneElement(part, { key: index }) : part));
 }
 
 export default function Interpolate({ children, values }) {

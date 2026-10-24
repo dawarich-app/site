@@ -98,7 +98,7 @@
     "uploadedFiles": "Arquivos carregados ({count})",
     "distanceValue": "{distance}m",
     "timeValue": "{seconds}s",
-    "filePair": "**{fileA}** e **{fileB}**",
+    "filePair": "{fileA} e {fileB}",
     "overlapRange": " se sobrepõem de {startDate} a {endDate}",
     "overlapWith": "Sobreposição com {fileName}",
     "mergeButton": "Unir {count} arquivo|Unir {count} arquivos|Unir {count} arquivos",

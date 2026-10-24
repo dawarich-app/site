@@ -48,4 +48,15 @@ describe('RichText', () => {
     render(<RichText text="[blog](https://dawarich.app/blog/x)" />);
     expect(screen.getByRole('link', { name: 'blog' })).toHaveAttribute('href', '/blog/x');
   });
+
+  it('should render links with unsafe schemes as plain text', () => {
+    render(<RichText text="[click](javascript:alert(1)) and [data](data:text/html,x)" />);
+    expect(screen.queryByRole('link')).toBeNull();
+    expect(document.body.textContent).toContain('click');
+  });
+
+  it('should keep mailto links', () => {
+    render(<RichText text="[mail](mailto:hi@example.com)" />);
+    expect(screen.getByRole('link', { name: 'mail' })).toHaveAttribute('href', 'mailto:hi@example.com');
+  });
 });

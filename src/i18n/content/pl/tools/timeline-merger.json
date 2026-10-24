@@ -98,7 +98,7 @@
     "uploadedFiles": "Dodane pliki ({count})",
     "distanceValue": "{distance}m",
     "timeValue": "{seconds}s",
-    "filePair": "**{fileA}** i **{fileB}**",
+    "filePair": "{fileA} i {fileB}",
     "overlapRange": " nakładają się od {startDate} do {endDate}",
     "overlapWith": "Nakładanie się z {fileName}",
     "mergeButton": "Połącz {count} plik|Połącz {count} pliki|Połącz {count} plików|Połącz {count} pliku",

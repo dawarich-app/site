@@ -98,7 +98,7 @@
     "uploadedFiles": "Uploaded Files ({count})",
     "distanceValue": "{distance}m",
     "timeValue": "{seconds}s",
-    "filePair": "**{fileA}** and **{fileB}**",
+    "filePair": "{fileA} and {fileB}",
     "overlapRange": " overlap from {startDate} to {endDate}",
     "overlapWith": "Overlap with {fileName}",
     "mergeButton": "Merge {count} File|Merge {count} Files",

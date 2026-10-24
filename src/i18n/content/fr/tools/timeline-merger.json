@@ -98,7 +98,7 @@
     "uploadedFiles": "Fichiers ajoutés ({count})",
     "distanceValue": "{distance}m",
     "timeValue": "{seconds}s",
-    "filePair": "**{fileA}** et **{fileB}**",
+    "filePair": "{fileA} et {fileB}",
     "overlapRange": " se chevauchent du {startDate} au {endDate}",
     "overlapWith": "Chevauchement avec {fileName}",
     "mergeButton": "Fusionner {count} fichier|Fusionner {count} fichiers|Fusionner {count} fichiers",
@@ -115,7 +115,11 @@
     "bottomBody": "Dawarich est une plateforme open source de suivi de localisation qui vous donne le contrôle total de vos données. Importez votre export Google Timeline fusionné, continuez à enregistrer votre position depuis votre téléphone et visualisez des années de déplacements, en auto-hébergement ou dans le cloud.",
     "button": "Essayez Dawarich gratuitement pendant 7 jours",
     "headline": "Vous avez regroupé **{count}** fichiers contenant **{points}** points en un seul. Dawarich le fait automatiquement avec toutes vos sources GPS.",
-    "statLabels": { "files": "fichiers", "points": "points", "duplicates": "doublons supprimés" }
+    "statLabels": {
+      "files": "fichiers",
+      "points": "points",
+      "duplicates": "doublons supprimés"
+    }
   },
   "faq": [
     {
@@ -157,23 +161,45 @@
     },
     {
       "title": "Comment fonctionne la déduplication",
-      "paragraphs": [ "L’algorithme utilise deux critères pour identifier les points de localisation en double :" ],
-      "items": [
-        { "body": "**Proximité spatiale** — Les points compris dans le seuil de distance (50 mètres par défaut) sont candidats à la déduplication" },
-        { "body": "**Proximité temporelle** — Les points doivent aussi être compris dans le seuil de temps (60 secondes par défaut) pour être considérés comme des doublons" },
-        { "body": "**Deux conditions obligatoires** — Un point n’est supprimé comme doublon que s’il satisfait les critères de distance ET de temps" },
-        { "body": "**Préservation des métadonnées** — En cas de doublon, la version contenant le plus de métadonnées (noms de lieux, adresses, types d’activité) est conservée" }
+      "paragraphs": [
+        "L’algorithme utilise deux critères pour identifier les points de localisation en double :"
       ],
-      "footer": [ "Les points sont triés chronologiquement avant la déduplication pour obtenir des résultats cohérents quel que soit l’ordre d’ajout." ]
+      "items": [
+        {
+          "body": "**Proximité spatiale** — Les points compris dans le seuil de distance (50 mètres par défaut) sont candidats à la déduplication"
+        },
+        {
+          "body": "**Proximité temporelle** — Les points doivent aussi être compris dans le seuil de temps (60 secondes par défaut) pour être considérés comme des doublons"
+        },
+        {
+          "body": "**Deux conditions obligatoires** — Un point n’est supprimé comme doublon que s’il satisfait les critères de distance ET de temps"
+        },
+        {
+          "body": "**Préservation des métadonnées** — En cas de doublon, la version contenant le plus de métadonnées (noms de lieux, adresses, types d’activité) est conservée"
+        }
+      ],
+      "footer": [
+        "Les points sont triés chronologiquement avant la déduplication pour obtenir des résultats cohérents quel que soit l’ordre d’ajout."
+      ]
     },
     {
       "title": "Pourquoi fusionner des exports de chronologie ?",
-      "paragraphs": [ "Plusieurs situations courantes rendent la fusion de données Google Timeline essentielle :" ],
+      "paragraphs": [
+        "Plusieurs situations courantes rendent la fusion de données Google Timeline essentielle :"
+      ],
       "items": [
-        { "body": "**Plusieurs sources d’export** — Google Takeout, les exports Android et iOS récupèrent chacun des sous-ensembles différents de vos données" },
-        { "body": "**Récupération après la migration Google de 2024** — Lorsque Google a déplacé la chronologie sur l’appareil, de nombreux utilisateurs ont effectué plusieurs exports partiels. La fusion reconstitue l’historique le plus complet possible" },
-        { "body": "**Sauvegardes périodiques** — Si vous avez exporté en 2021, puis en 2024, la fusion crée un jeu de données continu couvrant les deux périodes" },
-        { "body": "**Changement d’appareil** — Vous avez changé de téléphone ? Fusionnez les exports de l’ancien et du nouveau" }
+        {
+          "body": "**Plusieurs sources d’export** — Google Takeout, les exports Android et iOS récupèrent chacun des sous-ensembles différents de vos données"
+        },
+        {
+          "body": "**Récupération après la migration Google de 2024** — Lorsque Google a déplacé la chronologie sur l’appareil, de nombreux utilisateurs ont effectué plusieurs exports partiels. La fusion reconstitue l’historique le plus complet possible"
+        },
+        {
+          "body": "**Sauvegardes périodiques** — Si vous avez exporté en 2021, puis en 2024, la fusion crée un jeu de données continu couvrant les deux périodes"
+        },
+        {
+          "body": "**Changement d’appareil** — Vous avez changé de téléphone ? Fusionnez les exports de l’ancien et du nouveau"
+        }
       ]
     },
     {
@@ -186,26 +212,50 @@
     },
     {
       "title": "Formats pris en charge",
-      "paragraphs": [ "L’outil détecte et traite automatiquement tous les formats d’export Google Timeline :" ],
-      "items": [
-        { "body": "**Records.json** — Relevés GPS bruts de Google Takeout au format de coordonnées E7. Ces fichiers sont généralement les plus volumineux, car ils contiennent chaque relevé de position" },
-        { "body": "**Semantic Location History** — Fichiers mensuels (par exemple 2022_APRIL.json) avec visites de lieux structurées, adresses et segments d’activité" },
-        { "body": "**Export de chronologie du téléphone** — Format récent de Google Maps sur Android/iOS avec semanticSegments et parcours de chronologie" },
-        { "body": "**Paramètres et TimelineEdits** — Fichiers de métadonnées supplémentaires des exports Google Takeout" }
+      "paragraphs": [
+        "L’outil détecte et traite automatiquement tous les formats d’export Google Timeline :"
       ],
-      "footer": [ "Vous pouvez combiner librement ces formats dans une seule opération de fusion." ]
+      "items": [
+        {
+          "body": "**Records.json** — Relevés GPS bruts de Google Takeout au format de coordonnées E7. Ces fichiers sont généralement les plus volumineux, car ils contiennent chaque relevé de position"
+        },
+        {
+          "body": "**Semantic Location History** — Fichiers mensuels (par exemple 2022_APRIL.json) avec visites de lieux structurées, adresses et segments d’activité"
+        },
+        {
+          "body": "**Export de chronologie du téléphone** — Format récent de Google Maps sur Android/iOS avec semanticSegments et parcours de chronologie"
+        },
+        {
+          "body": "**Paramètres et TimelineEdits** — Fichiers de métadonnées supplémentaires des exports Google Takeout"
+        }
+      ],
+      "footer": [
+        "Vous pouvez combiner librement ces formats dans une seule opération de fusion."
+      ]
     },
     {
       "title": "Outils associés",
       "paragraphs": [],
       "items": [
-        { "body": "[Visualiseur Google Timeline](/tools/timeline-visualizer) — Affichez votre historique de localisation sur une carte interactive" },
-        { "body": "[Générateur de cartes de chaleur GPS](/tools/heatmap-generator) — Créez des cartes de chaleur à partir de fichiers GPX, FIT, TCX et autres formats GPS" },
-        { "body": "[Fusion de trajets GPX](/tools/gpx-merger) — Regroupez plusieurs fichiers GPX en un seul" },
-        { "body": "[Extraction des géodonnées de photos](/tools/photo-geotagging) — Extrayez les coordonnées GPS de vos photos" },
-        { "body": "[Convertisseur GeoJSON vers GPX](/tools/geojson-to-gpx) — Convertissez les données de localisation au format GPX" }
+        {
+          "body": "[Visualiseur Google Timeline](/tools/timeline-visualizer) — Affichez votre historique de localisation sur une carte interactive"
+        },
+        {
+          "body": "[Générateur de cartes de chaleur GPS](/tools/heatmap-generator) — Créez des cartes de chaleur à partir de fichiers GPX, FIT, TCX et autres formats GPS"
+        },
+        {
+          "body": "[Fusion de trajets GPX](/tools/gpx-merger) — Regroupez plusieurs fichiers GPX en un seul"
+        },
+        {
+          "body": "[Extraction des géodonnées de photos](/tools/photo-geotagging) — Extrayez les coordonnées GPS de vos photos"
+        },
+        {
+          "body": "[Convertisseur GeoJSON vers GPX](/tools/geojson-to-gpx) — Convertissez les données de localisation au format GPX"
+        }
       ],
-      "footer": [ "Pour en savoir plus : [Migrer depuis l’historique de localisation Google](/blog/migrating-from-google-location-history-to-dawarich)" ]
+      "footer": [
+        "Pour en savoir plus : [Migrer depuis l’historique de localisation Google](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
     }
   ]
 }

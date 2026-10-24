@@ -4,6 +4,7 @@ import EnOnlyLink from './EnOnlyLink';
 import { isEnOnlyPath } from './enOnlyLinkProps';
 import { SITE_URL } from './localizedUrl';
 
+const SAFE_SCHEME = /^(https?:|mailto:)/i;
 const TOKEN = /\*\*([^*]+)\*\*|\[([^\]]+)\]\(([^)\s]+)\)/g;
 
 export function parseRichText(text) {
@@ -25,6 +26,7 @@ export function toPlainText(text) {
 
 export function SmartLink({ href, className, children }) {
   const path = href.startsWith(SITE_URL) ? href.slice(SITE_URL.length) || '/' : href;
+  if (!path.startsWith('/') && !SAFE_SCHEME.test(path)) return <span className={className}>{children}</span>;
   if (!path.startsWith('/')) {
     return (
       <a href={href} className={className} target="_blank" rel="noopener noreferrer">

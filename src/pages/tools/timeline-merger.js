@@ -627,7 +627,7 @@ export default function TimelineMerger() {
                             }) : content.results.none}
                           </span>
                           <span>
-                            <RichText text={interpolate(content.results.filePair, { fileA: report.fileA, fileB: report.fileB })} />
+                            {interpolate(content.results.filePair, { fileA: <strong>{report.fileA}</strong>, fileB: <strong>{report.fileB}</strong> })}
                             {report.overlap.hasOverlap && (
                               <>{interpolate(content.results.overlapRange, {
                                 startDate: formatDate(report.overlap.start, htmlLang), endDate: formatDate(report.overlap.end, htmlLang),

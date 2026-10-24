@@ -98,7 +98,7 @@
     "uploadedFiles": "Hochgeladene Dateien ({count})",
     "distanceValue": "{distance}m",
     "timeValue": "{seconds}s",
-    "filePair": "**{fileA}** und **{fileB}**",
+    "filePair": "{fileA} und {fileB}",
     "overlapRange": " überschneiden sich von {startDate} bis {endDate}",
     "overlapWith": "Überschneidung mit {fileName}",
     "mergeButton": "{count} Datei zusammenführen|{count} Dateien zusammenführen",
@@ -115,7 +115,11 @@
     "bottomBody": "Dawarich ist eine quelloffene Plattform zur Standortaufzeichnung, die dir volle Kontrolle über deine Daten gibt. Importiere deinen zusammengeführten Google-Timeline-Export, zeichne deinen Standort laufend mit dem Smartphone auf und visualisiere jahrelange Bewegungsdaten – selbst gehostet oder in der Cloud.",
     "button": "Dawarich 7 Tage kostenlos testen",
     "headline": "Du hast **{count}** Dateien mit **{points}** Punkten zu einer zusammengeführt. Dawarich erledigt das automatisch mit all deinen GPS-Quellen.",
-    "statLabels": { "files": "Dateien", "points": "Punkte", "duplicates": "entfernte Duplikate" }
+    "statLabels": {
+      "files": "Dateien",
+      "points": "Punkte",
+      "duplicates": "entfernte Duplikate"
+    }
   },
   "faq": [
     {
@@ -157,23 +161,45 @@
     },
     {
       "title": "So funktioniert die Duplikatentfernung",
-      "paragraphs": ["Der Algorithmus nutzt zwei Faktoren, um doppelte Standortpunkte zu erkennen:"],
-      "items": [
-        { "body": "**Räumliche Nähe** -- Punkte innerhalb der Entfernungsschwelle (standardmäßig 50 Meter) kommen für die Duplikatentfernung infrage" },
-        { "body": "**Zeitliche Nähe** -- Punkte müssen auch innerhalb der Zeitschwelle liegen (standardmäßig 60 Sekunden), um als Duplikate zu gelten" },
-        { "body": "**Beide Bedingungen erforderlich** -- Ein Punkt wird nur als Duplikat entfernt, wenn sowohl Entfernung ALS AUCH Zeit übereinstimmen" },
-        { "body": "**Metadaten bleiben erhalten** -- Bei Duplikaten wird die Version mit mehr Metadaten (Ortsnamen, Adressen, Aktivitätstypen) beibehalten" }
+      "paragraphs": [
+        "Der Algorithmus nutzt zwei Faktoren, um doppelte Standortpunkte zu erkennen:"
       ],
-      "footer": ["Die Punkte werden vor der Duplikatentfernung chronologisch sortiert. Das sorgt unabhängig von der Upload-Reihenfolge für einheitliche Ergebnisse."]
+      "items": [
+        {
+          "body": "**Räumliche Nähe** -- Punkte innerhalb der Entfernungsschwelle (standardmäßig 50 Meter) kommen für die Duplikatentfernung infrage"
+        },
+        {
+          "body": "**Zeitliche Nähe** -- Punkte müssen auch innerhalb der Zeitschwelle liegen (standardmäßig 60 Sekunden), um als Duplikate zu gelten"
+        },
+        {
+          "body": "**Beide Bedingungen erforderlich** -- Ein Punkt wird nur als Duplikat entfernt, wenn sowohl Entfernung ALS AUCH Zeit übereinstimmen"
+        },
+        {
+          "body": "**Metadaten bleiben erhalten** -- Bei Duplikaten wird die Version mit mehr Metadaten (Ortsnamen, Adressen, Aktivitätstypen) beibehalten"
+        }
+      ],
+      "footer": [
+        "Die Punkte werden vor der Duplikatentfernung chronologisch sortiert. Das sorgt unabhängig von der Upload-Reihenfolge für einheitliche Ergebnisse."
+      ]
     },
     {
       "title": "Warum Timeline-Exporte zusammenführen?",
-      "paragraphs": ["In einigen häufigen Situationen ist das Zusammenführen von Google-Timeline-Daten unverzichtbar:"],
+      "paragraphs": [
+        "In einigen häufigen Situationen ist das Zusammenführen von Google-Timeline-Daten unverzichtbar:"
+      ],
       "items": [
-        { "body": "**Mehrere Exportquellen** -- Google Takeout, Android- und iOS-Exporte erfassen jeweils unterschiedliche Teile deiner Daten" },
-        { "body": "**Wiederherstellung nach Googles Umstellung von 2024** -- Als Google Timeline auf lokalen Gerätespeicher umstellte, erstellten viele Nutzer mehrere Teilexporte. Zusammenführen stellt einen möglichst vollständigen Verlauf wieder her" },
-        { "body": "**Regelmäßige Backups** -- Hast du 2021 und erneut 2024 exportiert, entsteht beim Zusammenführen ein durchgehender Datensatz über beide Zeiträume" },
-        { "body": "**Gerätewechsel** -- Neues Smartphone? Führe die Exporte deiner alten und neuen Geräte zusammen" }
+        {
+          "body": "**Mehrere Exportquellen** -- Google Takeout, Android- und iOS-Exporte erfassen jeweils unterschiedliche Teile deiner Daten"
+        },
+        {
+          "body": "**Wiederherstellung nach Googles Umstellung von 2024** -- Als Google Timeline auf lokalen Gerätespeicher umstellte, erstellten viele Nutzer mehrere Teilexporte. Zusammenführen stellt einen möglichst vollständigen Verlauf wieder her"
+        },
+        {
+          "body": "**Regelmäßige Backups** -- Hast du 2021 und erneut 2024 exportiert, entsteht beim Zusammenführen ein durchgehender Datensatz über beide Zeiträume"
+        },
+        {
+          "body": "**Gerätewechsel** -- Neues Smartphone? Führe die Exporte deiner alten und neuen Geräte zusammen"
+        }
       ]
     },
     {
@@ -186,26 +212,50 @@
     },
     {
       "title": "Unterstützte Formate",
-      "paragraphs": ["Das Werkzeug erkennt und verarbeitet alle Google-Timeline-Exportformate automatisch:"],
-      "items": [
-        { "body": "**Records.json** -- GPS-Rohdaten aus Google Takeout im E7-Koordinatenformat. Meist die größten Dateien, die jede Standortmessung enthalten" },
-        { "body": "**Semantic Location History** -- Monatsdateien (z. B. 2022_APRIL.json) mit strukturierten Aufenthalten an Orten, Adressen und Aktivitätsabschnitten" },
-        { "body": "**Timeline-Export vom Smartphone** -- Neueres Format aus Google Maps unter Android/iOS mit semanticSegments und Timeline-Pfaden" },
-        { "body": "**Einstellungen & TimelineEdits** -- Zusätzliche Metadatendateien aus Google-Takeout-Exporten" }
+      "paragraphs": [
+        "Das Werkzeug erkennt und verarbeitet alle Google-Timeline-Exportformate automatisch:"
       ],
-      "footer": ["Du kannst diese Formate in einem Vorgang beliebig kombinieren."]
+      "items": [
+        {
+          "body": "**Records.json** -- GPS-Rohdaten aus Google Takeout im E7-Koordinatenformat. Meist die größten Dateien, die jede Standortmessung enthalten"
+        },
+        {
+          "body": "**Semantic Location History** -- Monatsdateien (z. B. 2022_APRIL.json) mit strukturierten Aufenthalten an Orten, Adressen und Aktivitätsabschnitten"
+        },
+        {
+          "body": "**Timeline-Export vom Smartphone** -- Neueres Format aus Google Maps unter Android/iOS mit semanticSegments und Timeline-Pfaden"
+        },
+        {
+          "body": "**Einstellungen & TimelineEdits** -- Zusätzliche Metadatendateien aus Google-Takeout-Exporten"
+        }
+      ],
+      "footer": [
+        "Du kannst diese Formate in einem Vorgang beliebig kombinieren."
+      ]
     },
     {
       "title": "Weitere Werkzeuge",
       "paragraphs": [],
       "items": [
-        { "body": "[Google-Timeline-Visualisierung](/tools/timeline-visualizer) -- Deinen Standortverlauf auf einer interaktiven Karte ansehen" },
-        { "body": "[GPS-Heatmap-Generator](/tools/heatmap-generator) -- Heatmaps aus GPX, FIT, TCX und anderen GPS-Dateien erstellen" },
-        { "body": "[GPX-Tracks zusammenführen](/tools/gpx-merger) -- Mehrere GPX-Dateien zu einer kombinieren" },
-        { "body": "[Foto-Geodaten auslesen](/tools/photo-geotagging) -- GPS-Koordinaten aus deinen Fotos extrahieren" },
-        { "body": "[GeoJSON-zu-GPX-Konverter](/tools/geojson-to-gpx) -- Standortdaten in das GPX-Format umwandeln" }
+        {
+          "body": "[Google-Timeline-Visualisierung](/tools/timeline-visualizer) -- Deinen Standortverlauf auf einer interaktiven Karte ansehen"
+        },
+        {
+          "body": "[GPS-Heatmap-Generator](/tools/heatmap-generator) -- Heatmaps aus GPX, FIT, TCX und anderen GPS-Dateien erstellen"
+        },
+        {
+          "body": "[GPX-Tracks zusammenführen](/tools/gpx-merger) -- Mehrere GPX-Dateien zu einer kombinieren"
+        },
+        {
+          "body": "[Foto-Geodaten auslesen](/tools/photo-geotagging) -- GPS-Koordinaten aus deinen Fotos extrahieren"
+        },
+        {
+          "body": "[GeoJSON-zu-GPX-Konverter](/tools/geojson-to-gpx) -- Standortdaten in das GPX-Format umwandeln"
+        }
       ],
-      "footer": ["Mehr dazu: [Umstieg vom Google-Standortverlauf](/blog/migrating-from-google-location-history-to-dawarich)"]
+      "footer": [
+        "Mehr dazu: [Umstieg vom Google-Standortverlauf](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
     }
   ]
 }

@@ -98,7 +98,7 @@
     "uploadedFiles": "已上传的文件（{count}）",
     "distanceValue": "{distance} 米",
     "timeValue": "{seconds} 秒",
-    "filePair": "**{fileA}** 与 **{fileB}**",
+    "filePair": "{fileA} 与 {fileB}",
     "overlapRange": "在 {startDate} 至 {endDate} 期间重叠",
     "overlapWith": "与 {fileName} 重叠",
     "mergeButton": "合并 {count} 个文件",
