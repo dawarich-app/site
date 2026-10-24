@@ -28,3 +28,6 @@ yarn-error.log*
 
 # Worktrees
 .worktrees/
+
+# generated translation work lists
+i18n/todo/

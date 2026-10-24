@@ -18,7 +18,10 @@
     "test:watch": "vitest",
     "check:poster-drift": "node scripts/check-poster-drift.mjs",
     "i18n:extract": "node scripts/i18n-extract.mjs",
-    "i18n:status": "node scripts/i18n-status.mjs"
+    "i18n:status": "node scripts/i18n-status.mjs",
+    "i18n:validate": "node scripts/i18n-validate.mjs",
+    "i18n:todo": "node scripts/i18n-todo.mjs",
+    "i18n:record": "node scripts/i18n-todo.mjs record"
   },
   "dependencies": {
     "@docusaurus/core": "3.6.3",
