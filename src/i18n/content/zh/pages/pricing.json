@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "价格 — Dawarich",
+    "description": "Dawarich Cloud，价格简单明了。Lite 每年 {price}，Pro 每月 {price2}，家庭方案每年 {price3}，最多 5 人。7 天免费试用，14 天无忧退款，随时可取消。也可免费自托管。",
+    "socialDescription": "Lite 每年 {price}，Pro 每月 {price2}，家庭方案每年 {price3}，最多 5 人。7 天免费试用，14 天无忧退款。也可免费自托管。"
+  },
+  "schema": {
+    "name": "Dawarich Cloud",
+    "description": "隐私优先的 Google Timeline 替代方案，托管于欧洲，支持自托管，代码开源。",
+    "brand": "Dawarich",
+    "liteAnnual": "Lite（年付）",
+    "proMonthly": "Pro（月付）",
+    "proAnnual": "Pro（年付）",
+    "familyAnnual": "家庭（年付）",
+    "familyDescription": "一份年度订阅最多供 5 位成员使用，每人均享有完整 Pro 权限。",
+    "selfHosted": "自托管"
+  }
+}

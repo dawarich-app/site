@@ -1,0 +1,11 @@
+{
+  "buttonLabel": "加入候补名单",
+  "note": "无垃圾邮件，仅发送上线通知。",
+  "invalidEmail": "请输入有效的电子邮箱地址。",
+  "requestError": "出了点问题，请稍后重试。",
+  "success": "已加入候补名单！家庭方案上线时，我们会通过电子邮件通知您。",
+  "networkError": "网络错误，请检查连接后重试。",
+  "joining": "正在加入…",
+  "emailPlaceholder": "you@example.com",
+  "emailLabel": "电子邮箱地址"
+}

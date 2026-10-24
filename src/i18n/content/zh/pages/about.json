@@ -1,0 +1,54 @@
+{
+  "founders": [
+    {
+      "name": "Evgenii Burmakin",
+      "role": "联合创始人兼全能负责人",
+      "bio": "负责移动应用之外的一切：产品、云服务、网站，以及您正在阅读的这个页面。",
+      "links": [
+        {
+          "label": "GitHub"
+        },
+        {
+          "label": "X"
+        },
+        {
+          "label": "Mastodon"
+        }
+      ]
+    },
+    {
+      "name": "Konstantin Priemchenko",
+      "role": "联合创始人，负责移动应用",
+      "bio": "开发 Dawarich 的 iOS 和 Android 应用。"
+    }
+  ],
+  "meta": {
+    "title": "关于我们 — Dawarich",
+    "description": "认识 Dawarich 背后的人：一个诞生于柏林的周末项目，如何成为隐私优先的 Google Timeline 替代方案。",
+    "ogDescription": "一个诞生于柏林的周末项目，如何成为隐私优先的 Google Timeline 替代方案。"
+  },
+  "aboutPage": {
+    "heading": "关于我们",
+    "text": "Dawarich 的名字来自德语 ",
+    "em": "„Da war ich“",
+    "text2": "，意思是",
+    "em2": "“我来过这里。”",
+    "heading2": "起点",
+    "p": "Dawarich 始于 2024 年 3 月的一个周末项目。多年来，Evgenii 将位置数据交给 Google Timeline，却很少得到有用的回馈，于是他搭建了一个小型自托管接口，用来接收自己 iPhone 发来的位置更新。当时没有产品规划，也没有公司，只是想掌控自己的数据。",
+    "p2": "代码发布到 GitHub 后，他发现许多人也有同样的想法。不到一年，Dawarich 就成长为较为知名的 Google Timeline 开源替代方案之一。如今，它已在世界各地数千个家庭实验室中运行。",
+    "p3": "2025 年 7 月，我们推出了 Dawarich Cloud，让不想折腾 Docker、反向代理和备份的用户也能轻松使用。如今，我们两人以一家独立小公司的形式开发 Dawarich：Konstantin 负责移动应用，Evgenii 负责其他一切。",
+    "p4": "自托管版本免费，而且会一直免费。",
+    "heading3": "我们的理念",
+    "li": "您的位置历史记录属于您。您随时都能以开放格式导出全部数据。",
+    "li2": "隐私就是产品。我们的收入来自订阅，而非广告或出售数据。",
+    "li3": "在欧洲开发，并托管于欧洲。",
+    "li4": "开源。开发过程在 GitHub 上公开进行，包括其中的缺陷。",
+    "heading4": "我们是谁",
+    "alt": "{name}的肖像",
+    "text3": "Dawarich 由 ZeitFlow UG (haftungsbeschränkt) 开发，这是一家在德国柏林注册的小公司。法律信息请参阅",
+    "EnOnlyLink": "法律声明",
+    "text4": "。想和我们打个招呼？",
+    "Link": "联系我们",
+    "text5": "。每一条消息我们都会阅读。"
+  }
+}

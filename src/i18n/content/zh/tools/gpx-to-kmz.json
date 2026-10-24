@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "免费 GPX 转 KMZ 转换器 — 在线转换 GPS 轨迹文件",
+    "description": "立即将 GPX 文件转换为 KMZ 格式。免费、隐私优先的在线 GPS 轨迹转换器，完全在浏览器中运行，无需上传。",
+    "keywords": "GPX 转 KMZ, GPX 转换器, KMZ 转换器, GPS 文件转换器, Google Earth 转换器, 压缩 KML",
+    "appName": "GPX 转 KMZ 转换器"
+  },
+  "h1": "GPX 转 KMZ 转换器",
+  "intro": "立即将您的 GPX 文件转换为压缩的 KMZ 格式。所有处理都在浏览器中完成。",
+  "cards": [
+    {
+      "title": "关于 GPX 格式",
+      "body": "GPX 是基于 XML 的 GPS 数据格式，广泛用于 GPS 设备和运动记录应用。"
+    },
+    {
+      "title": "关于 KMZ 格式",
+      "body": "KMZ 是 KML（Keyhole 标记语言）的压缩版本，减小文件体积，便于分享，并加快 Google Earth 中的加载速度。"
+    },
+    {
+      "title": "为什么要将 GPX 转换为 KMZ？",
+      "items": [
+        "文件体积比 GPX 和 KML 更小",
+        "Google Earth 和 Google Maps 原生支持",
+        "可将图片和其他资源打包在一个文件中",
+        "加载更快，分享更方便"
+      ]
+    }
+  ],
+  "privacyBody": "所有转换都完全在浏览器中完成，您的 GPS 数据不会离开设备。"
+}

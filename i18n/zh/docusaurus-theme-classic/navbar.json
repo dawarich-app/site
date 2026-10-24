@@ -4,91 +4,91 @@
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "Dawarich Logo",
+    "message": "Dawarich 标志",
     "description": "The alt text of navbar logo"
   },
   "item.label.Features": {
-    "message": "Features",
+    "message": "功能",
     "description": "Navbar item with label Features"
   },
   "item.label.Pricing": {
-    "message": "Pricing",
+    "message": "价格",
     "description": "Navbar item with label Pricing"
   },
   "item.label.Self-Hosted": {
-    "message": "Self-Hosted",
+    "message": "自托管",
     "description": "Navbar item with label Self-Hosted"
   },
   "item.label.Tools": {
-    "message": "Tools",
+    "message": "工具",
     "description": "Navbar item with label Tools"
   },
   "item.label.Roadmap": {
-    "message": "Roadmap",
+    "message": "路线图",
     "description": "Navbar item with label Roadmap"
   },
   "item.label.Blog": {
-    "message": "Blog",
+    "message": "博客",
     "description": "Navbar item with label Blog"
   },
   "item.label.Mobile Apps": {
-    "message": "Mobile Apps",
+    "message": "移动应用",
     "description": "Navbar item with label Mobile Apps"
   },
   "item.label.Community": {
-    "message": "Community",
+    "message": "社区",
     "description": "Navbar item with label Community"
   },
   "item.label.Sign in": {
-    "message": "Sign in",
+    "message": "登录",
     "description": "Navbar item with label Sign in"
   },
   "item.label.Interactive Map": {
-    "message": "Interactive Map",
+    "message": "交互式地图",
     "description": "Navbar item with label Interactive Map"
   },
   "item.label.Trips & Journaling": {
-    "message": "Trips & Journaling",
+    "message": "行程与游记",
     "description": "Navbar item with label Trips & Journaling"
   },
   "item.label.Statistics & Analytics": {
-    "message": "Statistics & Analytics",
+    "message": "统计数据与分析",
     "description": "Navbar item with label Statistics & Analytics"
   },
   "item.label.Location Tracking": {
-    "message": "Location Tracking",
+    "message": "位置记录",
     "description": "Navbar item with label Location Tracking"
   },
   "item.label.Import & Export": {
-    "message": "Import & Export",
+    "message": "导入与导出",
     "description": "Navbar item with label Import & Export"
   },
   "item.label.Photo Integrations": {
-    "message": "Photo Integrations",
+    "message": "照片集成",
     "description": "Navbar item with label Photo Integrations"
   },
   "item.label.Location Sharing": {
-    "message": "Location Sharing",
+    "message": "位置共享",
     "description": "Navbar item with label Location Sharing"
   },
   "item.label.Family Location Sharing": {
-    "message": "Family Location Sharing",
+    "message": "家庭位置共享",
     "description": "Navbar item with label Family Location Sharing"
   },
   "item.label.Tax Residency Day Counter": {
-    "message": "Tax Residency Day Counter",
+    "message": "税务居民停留天数统计",
     "description": "Navbar item with label Tax Residency Day Counter"
   },
   "item.label.Map Poster Studio": {
-    "message": "Map Poster Studio",
+    "message": "地图海报工作室",
     "description": "Navbar item with label Map Poster Studio"
   },
   "item.label.Dawarich for iOS": {
-    "message": "Dawarich for iOS",
+    "message": "iOS 版 Dawarich",
     "description": "Navbar item with label Dawarich for iOS"
   },
   "item.label.Dawarich for Android": {
-    "message": "Dawarich for Android",
+    "message": "Android 版 Dawarich",
     "description": "Navbar item with label Dawarich for Android"
   }
 }

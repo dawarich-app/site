@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "title": "免费 FIT 转 KML 转换器 — 在线转换 Garmin 文件，用于 Google Earth",
+    "description": "立即将 Garmin FIT 文件转换为 KML 格式。免费、隐私优先的在线转换器，可在 Google Earth 中查看运动活动，完全在浏览器中运行。",
+    "keywords": "FIT 转 KML, Garmin 转 Google Earth, FIT 转换器, Google Earth, KML 转换器, 健身文件转换器, 在 Google Earth 中查看 Garmin",
+    "appName": "FIT 转 KML 转换器"
+  },
+  "h1": "FIT 转 KML 转换器",
+  "intro": "将 Garmin FIT 文件转换为 KML 格式，以便在 Google Earth 中查看。所有处理都在浏览器中完成。",
+  "cards": [
+    {
+      "title": "关于 KML 格式",
+      "body": "KML（Keyhole 标记语言）是 Google 的地理数据 XML 格式，供 Google Earth、Google Maps 及许多其他地图应用展示点、路径和多边形。"
+    },
+    {
+      "title": "为什么要将 FIT 转换为 KML？",
+      "items": [
+        "在 Google Earth 中查看活动",
+        "在 3D 地形视图中探索路线",
+        "分享可直接在 Google Earth 中打开的轨迹",
+        "导入 Google My Maps",
+        "用于其他兼容 KML 的应用"
+      ]
+    }
+  ],
+  "privacyBody": "所有转换都在浏览器中完成，数据不会离开您的设备。",
+  "noGpsData": "FIT 文件中未找到 GPS 数据。"
+}

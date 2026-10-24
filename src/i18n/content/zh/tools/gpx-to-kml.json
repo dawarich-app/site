@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "title": "免费 GPX 转 KML 转换器 — 在线转换 GPS 轨迹文件",
+    "description": "立即将 GPX 文件转换为 KML 格式。免费、隐私优先的在线 GPS 轨迹、航点和路线转换器，完全在浏览器中运行，无需上传。",
+    "keywords": "GPX 转 KML, GPX 转换器, KML 转换器, GPS 文件转换器, Google Earth 转换器, 轨迹转换器",
+    "appName": "GPX 转 KML 转换器"
+  },
+  "h1": "GPX 转 KML 转换器",
+  "intro": "立即将您的 GPX 文件转换为 KML 格式。所有处理都在浏览器中完成，数据不会离开您的设备。",
+  "cards": [],
+  "privacyBody": "所有转换都完全在浏览器中完成，您的 GPS 数据不会离开设备。"
+}

@@ -1,0 +1,19 @@
+{
+  "primaryLabel": "免费试用 7 天",
+  "selfHost": "永久免费自托管",
+  "reassurance": "试用无需信用卡 · 之后享有 14 天退款保障 · 随时导出全部数据",
+  "proofLabel": "媒体报道",
+  "publishers": {
+    "xda": "XDA Developers",
+    "makeUseOf": "MakeUseOf",
+    "ct": "c't Magazine",
+    "itsFoss": "It's FOSS"
+  },
+  "pricing": "查看价格",
+  "guarantee": {
+    "trial": "免费试用 7 天，无需信用卡",
+    "refund": "14 天退款保障",
+    "export": "随时导出全部数据",
+    "selfHost": "也可免费自托管"
+  }
+}

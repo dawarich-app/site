@@ -1,0 +1,84 @@
+{
+  "versusRows": [
+    {
+      "feature": "浏览器访问",
+      "g": {
+        "text": "已取消（仅限移动端）"
+      },
+      "d": {
+        "text": "完整网页应用"
+      }
+    },
+    {
+      "feature": "数据保留",
+      "g": {
+        "text": "有限（自动删除）"
+      },
+      "d": {
+        "text": "永久（Pro）"
+      }
+    },
+    {
+      "feature": "使用您的数据投放广告",
+      "g": {
+        "text": "是"
+      },
+      "d": {
+        "text": "绝不"
+      }
+    },
+    {
+      "feature": "向第三方出售数据",
+      "g": {
+        "text": "是（广告网络）"
+      },
+      "d": {
+        "text": "绝不"
+      }
+    },
+    {
+      "feature": "导出您的数据",
+      "g": {
+        "text": "不完整，步骤繁琐"
+      },
+      "d": {
+        "text": "一键导出，多种格式"
+      }
+    },
+    {
+      "feature": "自托管选项",
+      "g": {
+        "text": "无"
+      },
+      "d": {
+        "text": "有，完全由您掌控"
+      }
+    },
+    {
+      "feature": "开源",
+      "g": {
+        "text": "否"
+      },
+      "d": {
+        "text": "是，每一行代码都可审查"
+      }
+    },
+    {
+      "feature": "公司停用产品后仍可使用",
+      "g": {
+        "text": "否"
+      },
+      "d": {
+        "text": "是（自托管可继续运行）"
+      }
+    }
+  ],
+  "switchPill": " 立即迁移",
+  "title": "Google Timeline 与 Dawarich 对比",
+  "subtitle": "看看迁移后您能获得什么。",
+  "dawarichName": "DAWARICH",
+  "footNote": "您的数据，始终由您掌控。",
+  "footCta": "迁移到 Dawarich",
+  "featureHeader": "功能",
+  "googleTimelineHeader": "Google Timeline"
+}

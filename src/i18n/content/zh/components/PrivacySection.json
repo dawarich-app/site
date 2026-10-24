@@ -1,0 +1,13 @@
+{
+  "title": "与 Google 不同的隐私保护方式",
+  "subtitle": "Google 用您的位置投放广告。我们则向您收取费用。这就是我们全部的商业模式。",
+  "cardTitle": "没有广告，不出售数据，永远如此。",
+  "cardDescription": "您的数据支撑着 Google 的 $300B 广告业务。在 Dawarich，位置数据是您付费保存的内容，而不是我们出售的商品。",
+  "cardTitle2": "自托管：无需信任第三方",
+  "cardDescription2": "不愿把数据交给任何人？在您自己的服务器上运行 Dawarich。数据完全不会经过我们的基础设施，我们根本无法查看。",
+  "cardTitle3": "加密存储，托管于欧盟",
+  "cardDescription3": "所有数据在传输时使用 SSL/TLS 加密，在存储时使用 LUKS 加密。数据保存在欧洲数据中心，遵循严格的 GDPR 要求。您完全掌控自己的数据。",
+  "cardTitle4": "开源：每一行代码都可审查",
+  "cardDescription4": "不信任我们？您可以阅读代码。GitHub 上超过 9,000 颗星，数千名开发者已审阅代码。没有隐藏跟踪，没有意外。",
+  "policyLink": "阅读完整隐私政策 →"
+}

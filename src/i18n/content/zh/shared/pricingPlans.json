@@ -1,0 +1,266 @@
+{
+  "plans": {
+    "lite": {
+      "name": "Lite",
+      "tagline": "适合日常记录者的私密 Google Timeline 替代方案。",
+      "period": "/年",
+      "perMonth": "{price}/月",
+      "perDay": "{price}/天",
+      "cta": "免费试用 Lite",
+      "footnote": "仅限年付 · 随时可取消",
+      "valueStack": {
+        "items": [
+          {
+            "label": "iOS 与 Android 位置记录应用"
+          },
+          {
+            "label": "12 个月可搜索历史记录"
+          },
+          {
+            "label": "不限次数导入与导出"
+          },
+          {
+            "label": "统计数据与月度明细"
+          },
+          {
+            "label": "专人导入服务"
+          }
+        ],
+        "payLine": "每年 {price}，即刻拥有"
+      },
+      "features": [
+        {
+          "label": "iOS 与 Android 原生应用"
+        },
+        {
+          "label": "后台位置记录"
+        },
+        {
+          "label": "12 个月可搜索历史记录"
+        },
+        {
+          "label": "不限次数导入与导出"
+        },
+        {
+          "label": "包含路线的交互式地图"
+        },
+        {
+          "label": "按速度着色的路线与每日回放"
+        },
+        {
+          "label": "行程与地点管理"
+        },
+        {
+          "label": "基础统计数据与月度明细"
+        },
+        {
+          "label": "API 速率上限：每小时 200 次请求"
+        }
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "tagline": "无限历史记录、进阶可视化和完整 API 访问权限。",
+      "period": "/年",
+      "periodMonthly": "/月",
+      "perMonth": "{price}/月",
+      "perDay": "{price}/天",
+      "perDayMonthly": "{price}/天",
+      "save": "免费 3 个月",
+      "saveHint": "获赠 3 个月",
+      "badge": "最受欢迎",
+      "cta": "免费试用 Pro 7 天",
+      "footnote": "随时可取消",
+      "valueStack": {
+        "items": [
+          {
+            "label": "包含 Lite 的全部功能"
+          },
+          {
+            "label": "无限历史记录，永久保存"
+          },
+          {
+            "label": "热力图、探索迷雾与 3D 地球"
+          },
+          {
+            "label": "照片与 Immich/PhotoPrism 集成"
+          },
+          {
+            "label": "完整的写入 API 访问权限"
+          }
+        ],
+        "payLine": "每年 {price}，即刻拥有"
+      },
+      "featuresHeading": "包含 Lite 的全部功能，另加：",
+      "features": [
+        {
+          "label": "无限数据历史记录，永久保存"
+        },
+        {
+          "label": "热力图与探索迷雾图层"
+        },
+        {
+          "label": "地球视图（3D）"
+        },
+        {
+          "label": "行程照片集成"
+        },
+        {
+          "label": "Immich / PhotoPrism 集成"
+        },
+        {
+          "label": "完整年度回顾与公开分享"
+        },
+        {
+          "label": "完整的写入 API 访问权限"
+        },
+        {
+          "label": "API 速率上限：每小时 1,000 次请求"
+        }
+      ]
+    },
+    "family": {
+      "name": "家庭",
+      "tagline": "全家共享全部 Pro 功能，一份年度订阅，最多 5 人。",
+      "period": "/年",
+      "perMonth": "{price}/月",
+      "perDay": "{price}/天",
+      "cta": "免费试用家庭方案 7 天",
+      "footnote": "仅限年付 · 最多 5 位成员 · 随时可取消",
+      "valueStack": {
+        "items": [
+          {
+            "label": "付费者享有 Pro 权限"
+          },
+          {
+            "label": "额外 4 个 Pro 席位"
+          },
+          {
+            "label": "家庭实时位置共享"
+          },
+          {
+            "label": "专人导入服务"
+          }
+        ],
+        "payLine": "每年 {price}，即刻拥有"
+      },
+      "featuresHeading": "包含 Pro 的全部功能，另加：",
+      "features": [
+        {
+          "label": "一份订阅最多供 5 位成员使用"
+        },
+        {
+          "label": "每位成员均享有完整 Pro 权限"
+        },
+        {
+          "label": "随时邀请或移除成员"
+        },
+        {
+          "label": "成员留在家庭中即可享有权益"
+        },
+        {
+          "label": "家庭实时位置共享"
+        }
+      ]
+    }
+  },
+  "compareGroups": [
+    {
+      "name": "位置记录与应用",
+      "rows": [
+        {
+          "label": "iOS 与 Android 原生应用"
+        },
+        {
+          "label": "后台位置记录"
+        },
+        {
+          "label": "家庭实时位置共享"
+        }
+      ]
+    },
+    {
+      "name": "历史记录与数据",
+      "rows": [
+        {
+          "label": "可搜索历史记录",
+          "lite": "12 个月",
+          "pro": "无限",
+          "family": "无限"
+        },
+        {
+          "label": "不限次数导入与导出"
+        },
+        {
+          "label": "数据始终属于您（随时可导出）"
+        }
+      ]
+    },
+    {
+      "name": "地图与可视化",
+      "rows": [
+        {
+          "label": "包含路线的交互式地图"
+        },
+        {
+          "label": "按速度着色的路线与每日回放"
+        },
+        {
+          "label": "热力图与探索迷雾图层"
+        },
+        {
+          "label": "地球视图（3D）"
+        },
+        {
+          "label": "行程照片集成"
+        },
+        {
+          "label": "Immich / PhotoPrism 集成"
+        }
+      ]
+    },
+    {
+      "name": "洞察与分享",
+      "rows": [
+        {
+          "label": "基础统计数据与月度明细"
+        },
+        {
+          "label": "完整年度回顾与公开分享"
+        },
+        {
+          "label": "行程与地点管理"
+        }
+      ]
+    },
+    {
+      "name": "API 与限额",
+      "rows": [
+        {
+          "label": "API 速率上限",
+          "lite": "每小时 200 次请求",
+          "pro": "每小时 1,000 次请求",
+          "family": "每小时 1,000 次请求"
+        },
+        {
+          "label": "完整的写入 API 访问权限"
+        }
+      ]
+    },
+    {
+      "name": "成员与计费",
+      "rows": [
+        {
+          "label": "一份订阅的成员人数",
+          "family": "最多 5 人"
+        },
+        {
+          "label": "每位成员均享有完整 Pro 权限"
+        },
+        {
+          "label": "14 天退款保证"
+        }
+      ]
+    }
+  ]
+}

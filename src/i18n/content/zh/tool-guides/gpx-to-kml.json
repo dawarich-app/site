@@ -1,0 +1,146 @@
+{
+  "whenToConvert": {
+    "subject": "GPX 转 KML",
+    "body": [
+      "GPX 是 GPS 设备、运动手表或记录应用生成的格式。Google Earth、Google My Maps 和大多数桌面 GIS 工具则需要 KML 作为输入。如果您想在地图应用中直观查看轨迹，而不只是保存文件，就需要将 GPX 转换为 KML。",
+      "来到这个页面的常见原因包括：想把 Strava 导出文件放进 Google Earth，想通过 Google My Maps 分享 Garmin 手表记录的骑行，想为 AllTrails 或 OsmAnd 的徒步 GPX 添加可视化注释，或想把旧 GPS 设备中的轨迹迁入长期地图存档。",
+      "两种格式都基于 XML，且定义明确，因此共同字段可以无损转换。真正需要关注的是哪些字段无法对应，下面会详细说明。"
+    ]
+  },
+  "preservation": {
+    "intro": "GPX → KML 转换后，具体会保留哪些内容、舍弃哪些内容：",
+    "rows": [
+      {
+        "field": "GPS 坐标（纬度／经度）",
+        "preserved": "✅ 是",
+        "notes": "两种格式都采用 WGS-84 十进制度数，精度相同。"
+      },
+      {
+        "field": "海拔",
+        "preserved": "✅ 是",
+        "notes": "GPX 的 <ele> 对应 KML <coordinates> 中的第三个坐标值，两者均以米为单位。"
+      },
+      {
+        "field": "时间戳",
+        "preserved": "✅ 是",
+        "notes": "GPX 的 <time> 会转换为每个 KML 地标上的 <TimeStamp>，两者均使用 ISO-8601 UTC。"
+      },
+      {
+        "field": "轨迹结构（轨迹 → 分段 → 轨迹点）",
+        "preserved": "✅ 是",
+        "notes": "GPX 的 <trk>/<trkseg> 会呈现为采用 <LineString> 几何类型的 KML <Placemark>。"
+      },
+      {
+        "field": "航点",
+        "preserved": "✅ 是",
+        "notes": "GPX 的 <wpt> 会转换为采用 <Point> 几何类型的 KML <Placemark>，并保留航点名称。"
+      },
+      {
+        "field": "路线",
+        "preserved": "✅ 是",
+        "notes": "GPX 的 <rte> 会呈现为独立的 KML <LineString>，与轨迹分开。"
+      },
+      {
+        "field": "轨迹／航点名称与描述",
+        "preserved": "✅ 是",
+        "notes": "对应 KML 的 <name> 和 <description>。"
+      },
+      {
+        "field": "心率、步频或踏频、功率（TrackPointExtension）",
+        "preserved": "⚠️ 否",
+        "notes": "KML 没有运动数据命名空间。如果需要心率、步频或踏频、功率数据，请转换为 TCX，或保留 GPX。"
+      },
+      {
+        "field": "GPX <extensions> 块（自定义数据）",
+        "preserved": "⚠️ 部分保留",
+        "notes": "通用扩展会被舍弃。如果需要携带任意属性，请使用 GeoJSON。"
+      },
+      {
+        "field": "样式（线条颜色、宽度、图标）",
+        "preserved": "➕ 应用默认样式",
+        "notes": "GPX 不包含样式，此转换器会应用合理的默认 KML <Style>。您可以在 Google Earth Pro 中编辑。"
+      }
+    ]
+  },
+  "apps": {
+    "intro": "生成 .kml 文件后，可以用以下应用打开：",
+    "items": [
+      {
+        "name": "Google Earth（网页版与 Pro 版）",
+        "url": "https://earth.google.com/",
+        "note": "在浏览器版中直接拖入 .kml，或在 Earth Pro 中选择“文件 → 导入”。适合 3D 可视化。"
+      },
+      {
+        "name": "Google My Maps",
+        "url": "https://mymaps.google.com/",
+        "note": "创建新地图，再“导入”KML，即可与任何人分享带注释的地图。"
+      },
+      {
+        "name": "QGIS",
+        "url": "https://qgis.org/",
+        "note": "开源桌面 GIS。将文件添加为矢量图层，并结合其他地理数据进行深入分析。"
+      },
+      {
+        "name": "Marble",
+        "url": "https://marble.kde.org/",
+        "note": "开源虚拟地球仪，跨平台使用，无需 Google 账户。"
+      },
+      {
+        "name": "Locus Map（Android）",
+        "url": "https://www.locusmap.app/",
+        "note": "导入 KML，用于离线导航和路线回放。"
+      },
+      {
+        "name": "Caltopo",
+        "url": "https://caltopo.com/",
+        "note": "野外地图工具。导入 KML，结合地形叠加层规划行程。"
+      },
+      {
+        "name": "Dawarich",
+        "url": "/import-export/",
+        "note": "您也可以直接将 KML 和其他数据一起导入 Dawarich 时间线。"
+      }
+    ]
+  },
+  "example": {
+    "intro": "输入精简的 GPX，输出精简的 KML，直观展示字段如何映射：",
+    "fromLabel": "GPX",
+    "toLabel": "KML",
+    "input": "<?xml version=\"1.0\"?>\n<gpx version=\"1.1\" creator=\"Garmin\">\n  <trk>\n    <name>Morning Run</name>\n    <trkseg>\n      <trkpt lat=\"52.5200\" lon=\"13.4050\">\n        <ele>34</ele>\n        <time>2026-04-27T07:14:00Z</time>\n      </trkpt>\n      <trkpt lat=\"52.5210\" lon=\"13.4060\">\n        <ele>36</ele>\n        <time>2026-04-27T07:14:30Z</time>\n      </trkpt>\n    </trkseg>\n  </trk>\n</gpx>",
+    "output": "<?xml version=\"1.0\"?>\n<kml xmlns=\"http://www.opengis.net/kml/2.2\">\n  <Document>\n    <name>Morning Run</name>\n    <Placemark>\n      <name>Morning Run</name>\n      <LineString>\n        <coordinates>\n          13.4050,52.5200,34\n          13.4060,52.5210,36\n        </coordinates>\n      </LineString>\n      <TimeSpan>\n        <begin>2026-04-27T07:14:00Z</begin>\n        <end>2026-04-27T07:14:30Z</end>\n      </TimeSpan>\n    </Placemark>\n  </Document>\n</kml>"
+  },
+  "reference": {
+    "heading": "GPX 与 KML 简要对比",
+    "body": [
+      "GPX（GPS 交换格式）由 Topografix 于 2002 年专为 GPS 设备发布，包含轨迹、路线、航点及每个轨迹点的基本元数据。几乎所有 GPS 设备、运动手表和户外应用都能读写它。它是一种精简、用途明确的格式，表达轨迹基本只有一种方式。",
+      "KML（Keyhole 标记语言）由 Keyhole 创建，Google 收购这家公司后开发了 Google Earth。它的用途更广，支持几何图形、样式、时间动画、3D 模型、网络链接和叠加层。KML 是展示格式，GPX 是交换格式。",
+      "如果您想分享或可视化轨迹，接收软件通常需要 KML。如果想将轨迹传回其他 GPS 设备，或在运动软件中分析，请保留 GPX。"
+    ]
+  },
+  "faqs": [
+    {
+      "q": "此转换器会把我的 GPX 文件上传到服务器吗？",
+      "a": "不会。转换完全通过 JavaScript 在浏览器中完成。文件不会离开您的设备，也不会对文件内容进行分析统计。您可以自行验证：Dawarich 是开源的，转换器代码位于同一个公开代码仓库中。"
+    },
+    {
+      "q": "可以一次转换多个 GPX 文件吗？",
+      "a": "此转换器一次处理一个文件。如果需要将多个 GPX 文件合并成一个 KML，请先使用 GPX 合并工具，再转换合并后的文件。"
+    },
+    {
+      "q": "心率和步频或踏频数据会保留吗？",
+      "a": "不会。KML 没有为运动传感器数据定义扩展。如果需要保留心率、步频或踏频、功率，请保留原始 GPX（大多数运动应用更适合使用它），或转换为专为运动活动设计的 TCX。"
+    },
+    {
+      "q": "如何在 Google Earth 中打开转换后的 KML？",
+      "a": "在网页版中，将 .kml 文件拖到 Earth 界面上。在桌面 Google Earth Pro 中，选择“文件 → 打开”并选择文件。轨迹会出现在左侧的“临时地点”树中，右键点击即可永久保存。"
+    },
+    {
+      "q": "为什么轨迹在 Google Earth 中看起来是一条平坦的线？",
+      "a": "默认情况下，KML LineStrings 会贴合地面。要查看实际海拔变化，请在 Google Earth Pro 中右键点击导入的轨迹，将高度模式设为“绝对”或“相对地面”。"
+    },
+    {
+      "q": "有文件大小限制吗？",
+      "a": "转换器在浏览器中运行，因此实际限制取决于浏览器内存。在现代笔记本电脑上，几百兆字节以内的文件通常都能正常处理。对于非常大的 GPX 导出文件（例如多年存档），请先使用 GPS 文件拆分工具。"
+    }
+  ]
+}

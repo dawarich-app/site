@@ -1,0 +1,25 @@
+{
+  "trustBadges": [
+    {
+      "label": "支持离线使用"
+    },
+    {
+      "label": "开源"
+    },
+    {
+      "label": "欧洲托管与加密"
+    }
+  ],
+  "title": "您的时间线，",
+  "highlight": "永久珍藏",
+  "subtitle": "Google 已取消浏览器版 Timeline，并正在缩短数据保留期限。只需几分钟，就能将全部位置历史记录导入 Dawarich，私密、加密，完全属于您。没有广告，也不出售数据。",
+  "primaryButton": "导入我的 Google 数据",
+  "secondaryButton": "探索功能",
+  "orDivider": "或",
+  "noCredit": "7 天免费试用 · 14 天无忧退款 · 随时可取消",
+  "badgeLabel": "注重隐私的 Google Timeline 替代方案",
+  "googleSignIn": "使用 Google 登录",
+  "playTour": "播放 Dawarich 产品导览",
+  "tourLabel": "Dawarich 产品导览",
+  "closeVideo": "关闭视频"
+}

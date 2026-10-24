@@ -1,27 +1,27 @@
 {
   "shared.saveToAccount.tooLarge": {
-    "message": "Your file is too large for instant import. Sign up first, then upload from your dashboard."
+    "message": "您的文件过大，无法立即导入。请先注册，再从控制面板上传。"
   },
   "shared.saveToAccount.rateLimited": {
-    "message": "Too many uploads from your network. Please try again in an hour."
+    "message": "您所在网络的上传次数过多。请在一小时后重试。"
   },
   "shared.saveToAccount.failed": {
-    "message": "Upload failed. Please try again."
+    "message": "上传失败，请重试。"
   },
   "shared.saveToAccount.noFiles": {
-    "message": "No files to save. Upload a file first."
+    "message": "没有可保存的文件，请先上传文件。"
   },
   "shared.saveToAccount.uploading": {
-    "message": "Uploading…"
+    "message": "正在上传…"
   },
   "shared.saveToAccount.save": {
-    "message": "Save to my Dawarich account"
+    "message": "保存到我的 Dawarich 账户"
   },
   "shared.breadcrumb.home": {
-    "message": "Home"
+    "message": "首页"
   },
   "shared.breadcrumb.tools": {
-    "message": "Free Tools"
+    "message": "免费工具"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
     "message": "{count} 个项目",
@@ -295,15 +295,15 @@
     "description": "The title of the page for a blog author"
   },
   "theme.blog.authorsList.pageTitle": {
-    "message": "Authors",
+    "message": "作者",
     "description": "The title of the authors page"
   },
   "theme.blog.authorsList.viewAll": {
-    "message": "View All Authors",
+    "message": "查看所有作者",
     "description": "The label of the link targeting the blog authors page"
   },
   "theme.blog.author.noPosts": {
-    "message": "This author has not written any posts yet.",
+    "message": "这位作者尚未发表博文。",
     "description": "The text for authors with 0 blog post"
   },
   "theme.contentVisibility.unlistedBanner.title": {
@@ -315,11 +315,11 @@
     "description": "The unlisted content banner message"
   },
   "theme.contentVisibility.draftBanner.title": {
-    "message": "Draft page",
+    "message": "草稿页面",
     "description": "The draft content banner title"
   },
   "theme.contentVisibility.draftBanner.message": {
-    "message": "This page is a draft. It will only be visible in dev and be excluded from the production build.",
+    "message": "此页面为草稿，仅在开发环境中可见，不会包含在生产构建中。",
     "description": "The draft content banner message"
   },
   "theme.ErrorPageContent.tryAgain": {
@@ -335,114 +335,114 @@
     "description": "The title of the tag list page"
   },
   "shared.cookieConsent.accept": {
-    "message": "Accept"
+    "message": "接受"
   },
   "shared.cookieConsent.reject": {
-    "message": "Reject"
+    "message": "拒绝"
   },
   "shared.cookieConsent.acceptAria": {
-    "message": "Accept cookies"
+    "message": "接受 Cookie"
   },
   "shared.cookieConsent.rejectAria": {
-    "message": "Decline cookies"
+    "message": "拒绝 Cookie"
   },
   "shared.cookieConsent.body": {
-    "message": "We use a cookieless analytics service (Simple Analytics) that requires no consent. You can optionally accept cookies for Google Ads conversion tracking, Brevo email analytics and affiliate referral credit — these only load if you click \"Accept\"."
+    "message": "我们使用无需 Cookie 的分析服务（Simple Analytics），无需征得同意。您可以选择接受用于 Google Ads 转化跟踪、Brevo 邮件分析和联盟推荐归因的 Cookie；这些功能仅在您点击“接受”后才会加载。"
   },
   "shared.cookieConsent.learnMore": {
-    "message": "Learn more"
+    "message": "了解更多"
   },
   "shared.uploader.noJson": {
-    "message": "No JSON files found. Please upload Google Timeline JSON files."
+    "message": "未找到 JSON 文件。请上传 Google Timeline JSON 文件。"
   },
   "shared.uploader.reading": {
-    "message": "Reading file {current}/{total}: {name}"
+    "message": "正在读取文件 {current}/{total}：{name}"
   },
   "shared.uploader.parsing": {
-    "message": "Parsing file {current}/{total}: {name}"
+    "message": "正在解析文件 {current}/{total}：{name}"
   },
   "shared.uploader.processing": {
-    "message": "Processing timeline data..."
+    "message": "正在处理时间线数据…"
   },
   "shared.uploader.loadError": {
-    "message": "Error loading files: {message}"
+    "message": "加载文件时出错：{message}"
   },
   "shared.uploader.chooseFiles": {
-    "message": "Choose files to process"
+    "message": "选择要处理的文件"
   },
   "shared.uploader.wait": {
-    "message": "Please wait..."
+    "message": "请稍候…"
   },
   "shared.uploader.loaded": {
-    "message": "**{count}** file loaded|**{count}** files loaded"
+    "message": "已加载 **{count}** 个**文件**"
   },
   "shared.uploader.addMore": {
-    "message": "Click or drag to add more files"
+    "message": "点击或拖放以添加更多文件"
   },
   "shared.uploader.dropPrompt": {
-    "message": "Drop Google Timeline JSON files here"
+    "message": "将 Google Timeline JSON 文件拖放到此处"
   },
   "shared.uploader.browse": {
-    "message": "or click to browse"
+    "message": "或点击浏览文件"
   },
   "shared.uploader.supports": {
-    "message": "Supports: {formats}"
+    "message": "支持：{formats}"
   },
   "shared.uploader.clearAll": {
-    "message": "Clear All Files"
+    "message": "清除所有文件"
   },
   "shared.converter.dropPrompt": {
-    "message": "Drag and drop your {format} file here, or click to browse"
+    "message": "将您的 {format} 文件拖放到此处，或点击浏览文件"
   },
   "shared.converter.removeFile": {
-    "message": "Remove file"
+    "message": "移除文件"
   },
   "shared.converter.converting": {
-    "message": "Converting..."
+    "message": "正在转换…"
   },
   "shared.converter.convertTo": {
-    "message": "Convert to {format}"
+    "message": "转换为 {format}"
   },
   "shared.personalizedCta.body": {
-    "message": "Self-hosted or cloud. Cancel anytime."
+    "message": "自托管或云端，随时可取消。"
   },
   "shared.personalizedCta.button": {
-    "message": "Start Your Free Trial"
+    "message": "开始免费试用"
   },
   "shared.relatedTools.ariaLabel": {
-    "message": "Related tools and pages"
+    "message": "相关工具和页面"
   },
   "shared.relatedTools.heading": {
-    "message": "Related tools & pages"
+    "message": "相关工具和页面"
   },
   "shared.toolGuide.whenToConvert": {
-    "message": "When you'd convert {subject}"
+    "message": "何时需要转换{subject}"
   },
   "shared.toolGuide.preserved": {
-    "message": "What gets preserved (and what doesn't)"
+    "message": "哪些数据会保留，哪些不会"
   },
   "shared.toolGuide.field": {
-    "message": "Field"
+    "message": "字段"
   },
   "shared.toolGuide.preservedColumn": {
-    "message": "Preserved?"
+    "message": "是否保留？"
   },
   "shared.toolGuide.notes": {
-    "message": "Notes"
+    "message": "说明"
   },
   "shared.toolGuide.apps": {
-    "message": "Apps that read your converted file"
+    "message": "支持读取转换后文件的应用"
   },
   "shared.toolGuide.example": {
-    "message": "Worked example"
+    "message": "转换示例"
   },
   "shared.toolGuide.input": {
-    "message": "Input ({format})"
+    "message": "输入（{format}）"
   },
   "shared.toolGuide.output": {
-    "message": "Output ({format})"
+    "message": "输出（{format}）"
   },
   "shared.toolGuide.faq": {
-    "message": "Frequently asked questions"
+    "message": "常见问题"
   }
 }

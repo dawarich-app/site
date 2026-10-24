@@ -1,0 +1,16 @@
+{
+  "ribbon": " 最受欢迎",
+  "comingSoon": "即将推出",
+  "billedMonthly": "按月计费",
+  "heading": "加入家庭方案候补名单",
+  "subtext": "上线即刻获知：仅限年付，包含全部 Pro 功能。",
+  "buttonLabel": "加入候补名单",
+  "note": "无垃圾邮件，仅发送上线通知。",
+  "guarantee": " 导入保障 · 14 天退款保证",
+  "billing": {
+    "monthly": "按月",
+    "annual": "按年"
+  },
+  "totalValue": "总价值",
+  "bonusPrefix": "赠送："
+}

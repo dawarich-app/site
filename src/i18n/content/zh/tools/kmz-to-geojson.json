@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "免费 KMZ 转 GeoJSON 转换器 — 提取并转换 Google Earth 文件",
+    "description": "立即将 KMZ 文件转换为 GeoJSON 格式。免费、隐私优先的在线转换器，完全在浏览器中运行，无需上传。",
+    "keywords": "KMZ 转 GeoJSON, KMZ 转换器, GeoJSON 转换器, Google Earth 转网页格式, 提取 KMZ",
+    "appName": "KMZ 转 GeoJSON 转换器"
+  },
+  "h1": "KMZ 转 GeoJSON 转换器",
+  "intro": "立即将您的 KMZ 文件转换为 GeoJSON 格式。所有处理都在浏览器中完成。",
+  "cards": [
+    {
+      "title": "关于 KMZ 格式",
+      "body": "KMZ 是 KML 文件的压缩版本，供 Google Earth 高效打包地理数据。"
+    },
+    {
+      "title": "关于 GeoJSON 格式",
+      "body": "GeoJSON 是基于 JSON 的格式，广泛受到网页地图库和现代 GIS 应用的支持。"
+    },
+    {
+      "title": "为什么要将 KMZ 转换为 GeoJSON？",
+      "items": [
+        "网页地图库（Leaflet、Mapbox）支持更好",
+        "在 JavaScript 应用中更易解析",
+        "在网页应用中使用 Google Earth 数据",
+        "用于现代网页 API 的原生 JSON 结构"
+      ]
+    }
+  ],
+  "privacyBody": "所有转换都完全在浏览器中完成，数据不会离开您的设备。"
+}

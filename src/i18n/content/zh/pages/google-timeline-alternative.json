@@ -1,0 +1,155 @@
+{
+  "howItWorksSteps": [
+    {
+      "title": "从 Google 导出",
+      "description": "前往 [takeout.google.com](https://takeout.google.com)，选择“位置记录（Timeline）”，申请导出。Google 会通过邮件发送 zip 压缩包，通常一小时内即可收到。"
+    },
+    {
+      "title": "注册 Dawarich Cloud",
+      "description": "电子邮箱加密码即可。免费试用 7 天，使用全部功能。"
+    },
+    {
+      "title": "拖放 zip 压缩包",
+      "description": "上传文件，看着时间线在地图上重新呈现：一个地点、一段行程、一年又一年。而这张地图不属于 Google。"
+    }
+  ],
+  "migrationFAQ": [
+    {
+      "question": "新版 Google Takeout 格式能用吗？",
+      "answer": "可以。我们支持新版 Timeline 格式（2024 年之后）、旧格式，以及用于兼容的早期 records.json 格式。"
+    },
+    {
+      "question": "如果 Takeout zip 压缩包很大怎么办？",
+      "answer": "我们的导入功能可以处理。我们已成功导入过跨越 15 年、包含 6.8 百万个轨迹点、大小为 2 GB 的 Takeout 文件，运行顺利。"
+    },
+    {
+      "question": "如果 Google 已删除部分数据，还能用吗？",
+      "answer": "您能导出的数据，我们都能导入。我们无法恢复 Google 已经删除的数据，但可以保存您目前仍能访问的内容。"
+    },
+    {
+      "question": "迁移后还能继续使用 Google Maps 吗？",
+      "answer": "可以。用 Google Maps 导航，用 Dawarich 记录您去过哪里。它们提供不同的功能。"
+    },
+    {
+      "question": "Dawarich 记录位置能像 Google 一样好吗？",
+      "answer": "坦白说，更好。原生 iOS 和 Android 应用支持后台位置记录，并提供节省电量的记录间隔。数据通过 HTTPS 发送到您的 Dawarich 账户，绝不会发给 Google 或任何第三方。"
+    },
+    {
+      "question": "如果以后想离开 Dawarich 呢？",
+      "answer": "任何方案，包括 Lite，都能将全部数据导出为 GPX、GeoJSON 或 KML。您可以自托管开源版本，也可以直接删除账户。数据始终由您带走，我们不会出售或保留。"
+    },
+    {
+      "question": "真的可以免费试用吗？",
+      "answer": "可以。免费试用 7 天，使用全部功能。随时可在订阅设置中取消，导出的数据仍属于您。"
+    },
+    {
+      "question": "Dawarich 会出售位置数据吗？",
+      "answer": "不会。我们是一家欧盟小公司，收入来自订阅。GDPR 禁止出售位置数据，我们也更希望经营一门实实在在的生意。"
+    }
+  ],
+  "freeWasntFree": {
+    "heading": "“可是 Google Timeline 是免费的。”",
+    "p": "**所谓免费，并非没有代价。** 您付出的是数据。",
+    "p2": "十年来，您的每一次到访都被记录、分析，用于 Google 的广告定向投放和模型训练。每间咖啡馆、每次周日徒步、每次深夜开车去朋友家，都是您付出的代价。",
+    "p3": "如今，Google 已经获得了想要的东西。Timeline 被迁到手机，云端版本消失，而这个您“没有付费”的产品，因为不再带来收益，正在被逐步弃用。",
+    "p4": "您不欠 Google 什么，也无需用另一个依靠广告、出售数据的监视产品来替代它（比如 Life360）。"
+  },
+  "phoneIsNotABackup": {
+    "heading": "设备一旦出问题，时间线就可能消失",
+    "p": "Timeline 数据只保存在设备上。这意味着：",
+    "div": "旧手机上的数据",
+    "p2": "没有转移过来的历史记录？**没了。**",
+    "div2": "当前手机损坏",
+    "p3": "丢失、被盗、掉进湖里、恢复出厂设置？**没了。**",
+    "div3": "跨设备查看",
+    "p4": "想在平板或笔记本电脑上查看时间线？**没了。**",
+    "div4": "云端备份",
+    "p5": "今后的时间线云端备份？**没了，现在只存本地。**",
+    "div5": "云端历史记录（迁移前）",
+    "p6": "没有及时获取 Takeout 的用户，过去多年存放在 Google 的历史记录？**已经删除。**",
+    "div6": "这意味着",
+    "p7": "您只有一份时间线副本，存在一块摔一下就可能损坏的玻璃屏幕设备上。**这算不上备份方案。**"
+  },
+  "differentiators": {
+    "heading": "为什么 Dawarich 适合保存您的 Timeline",
+    "p": "多数“Google Timeline 替代方案”是运动记录工具、手动旅行日志、出售数据的家庭追踪应用，或者需要花一个周末研究 Docker 的自托管系统。Dawarich 与这些都不同。",
+    "h3": "欧洲托管",
+    "p2": "德国 Hetzner。不向美国传输数据。真正落实 GDPR，而不是只写一句“我们遵守规定”。",
+    "h32": "开源",
+    "p3": "完整引擎已在 [GitHub](https://github.com/Freika/dawarich) 上开源，拥有超过 9,000 颗星。Cloud 提供的是便利，底层产品您随时可以带走，永久自行运行。",
+    "h33": "专为 Timeline 迁移而生",
+    "text3": "新格式、旧格式，以及用于兼容的早期 ",
+    "code": "records.json",
+    "text4": " 格式。我们曾顺利导入 15 年的 Timeline 数据，包含 6.8 百万个轨迹点，Takeout 大小为 2 GB。",
+    "h34": "可视化产品，而不只是数据库",
+    "p4": "热力图、探索迷雾、地球视图、行程检测、年度回顾。保留 Timeline 的长处，也补上它欠缺的功能。",
+    "h35": "始终可导出，自由迁移",
+    "p5": "GPX、GeoJSON、KML、原始 JSON。任何方案，包括 Lite，数据始终可以随您离开。",
+    "h36": "iOS 与 Android 位置记录应用",
+    "p6": "原生应用支持后台位置记录，并提供节省电量的记录间隔。数据只发送到您的 Dawarich 账户，绝不发送给 Google 或任何第三方。"
+  },
+  "competitorReframe": {
+    "heading": "比较您的选择",
+    "th": "选项",
+    "th2": "年度费用",
+    "th3": "能恢复您的 Google Timeline 吗？",
+    "th4": "出售您的数据吗？",
+    "td": "什么都不做",
+    "td2": "“免费”",
+    "td3": "不能，仅限手机，一次跌落就可能丢失",
+    "td4": "不适用",
+    "td5": "Life360 Gold",
+    "td6": "不能，仅限家庭实时追踪，没有历史记录",
+    "td7": "是（汇总数据）",
+    "td8": "Strava Premium",
+    "td9": "不能，仅限运动记录",
+    "td10": "公开动态",
+    "td11": "Dawarich Cloud Pro",
+    "td12": "能，完整 Takeout 导入、热力图和行程",
+    "td13": "绝不会。"
+  },
+  "promises": {
+    "heading": "两项承诺，安心尝试",
+    "h3": "随时可取消",
+    "p": "免费试用 7 天，使用全部功能。随时可在订阅设置中取消，没有年约绑定，没有退出费，也没有繁琐流程。任何方案，即使取消后，导出的数据仍属于您。",
+    "h32": "开源，随时可以迁出",
+    "p2": "如果 Dawarich Cloud 停止运营，您可以导出数据，用一条命令自托管相同软件。完整引擎已在 [GitHub](https://github.com/Freika/dawarich) 上开源，拥有超过 9,000 颗星。**迁移到我们这里，不会让您失去时间线。**"
+  },
+  "urgency": {
+    "heading": "这并非故作紧迫，手机确实会坏。",
+    "p": "您的时间线只在一台设备上。**只有一台。**",
+    "p2": "手机会摔坏、被盗、丢失、进水，也会被恢复出厂设置。换新手机时，Timeline 数据不一定能完整转移。Takeout 的导出窗口取决于 Google 账户活跃度，不活跃账户会更快失去访问权限。",
+    "p3": "每多等一周，就多一份数据无法找回的可能。迁移只需 15 分钟。**与其说“以后再说”，不如今晚就做。**",
+    "text3": "今晚就导入您的 Takeout"
+  },
+  "timelineFinalCTA": {
+    "heading": "您的时间线不属于 Google。",
+    "p": "它属于您，属于您生活过的地方、拜访过的人，也属于那些在手机还不擅长替您记录时就已踏上的旅途。",
+    "text": "今天就保存您的时间线",
+    "span": "7 天免费试用 · 随时可取消 · 已在自托管？[将同一份 Takeout 导入您自己的实例](https://github.com/Freika/dawarich)。"
+  },
+  "googleTimelineAlternativePage": {
+    "text": "开始 7 天免费试用",
+    "text2": "查看价格"
+  },
+  "meta": {
+    "title": "Google Timeline 替代方案 — 在丢失前保存您的位置历史记录",
+    "description": "Google 取消了原有 Timeline，将数据改为仅存设备。Dawarich Cloud 几分钟即可导入 Google Takeout，提供热力图和行程检测，并在德国私密存储。{price} 起，免费试用 7 天。",
+    "ogDescription": "Google 取消了原有 Timeline，将数据改为仅存设备。用 Dawarich Cloud，几分钟内保存全部历史记录，私密存储于欧洲，遵循 GDPR。免费试用 7 天。",
+    "twitterTitle": "Google Timeline 替代方案 — 保存您的位置历史记录",
+    "twitterDescription": "Google 取消了原有 Timeline。使用 Dawarich Cloud 私密保存历史记录，欧洲托管，遵循 GDPR，免费试用 7 天。"
+  },
+  "hero": {
+    "badge": "Google Timeline 替代方案",
+    "title": "Google 取消了原有 Timeline。",
+    "titleHighlight": "别让十年的足迹随之消失。",
+    "subtitle": "几分钟内保存您的全部 Google 位置历史记录，并继续记录新的足迹。基础设施不由 Google 掌控，不会被其弃用、出售或用于广告模型。托管于欧洲，传输和存储均加密，遵循 GDPR。",
+    "disclaimer": "7 天免费试用 · 我们已顺利导入跨越 15 年、包含 6.8 百万个轨迹点的 Takeout 文件",
+    "imageAlt": "替代 Google Timeline 的 Dawarich 时间线视图"
+  },
+  "howItWorks": {
+    "title": "如何迁移",
+    "subtitle": "三个步骤，总共约 15 分钟。"
+  },
+  "migrationFAQTitle": "常见问题"
+}
