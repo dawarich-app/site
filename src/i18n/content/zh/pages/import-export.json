@@ -28,7 +28,7 @@
   "exportFormats": [
     {
       "title": "GPX 导出",
-      "description": "将位置数据导出为 GPX 文件，兼容各种 GPS 软件和地图应用。"
+      "description": "将位置数据导出为 GPX 文件，兼容任意 GPS 软件或地图应用。"
     },
     {
       "title": "GeoJSON 导出",
@@ -115,7 +115,7 @@
     "title": "数据导入与导出",
     "description": "您的数据属于您。支持从 Google Takeout、GPX、CSV、KML 导入，导出为 GPX、CSV，或导出完整账户。自由迁移，无拘无束。",
     "ogTitle": "Dawarich 导入与导出 — 您的数据，由您掌控",
-    "ogDescription": "从 Google Maps、Apple Health、GPX、GeoJSON、KML 导入，导出为各种格式。数据全面可迁移，不受平台限制。"
+    "ogDescription": "从 Google Maps、Apple Health、GPX、GeoJSON、KML 导入，导出为任意格式。数据全面可迁移，不受平台限制。"
   },
   "hero": {
     "badge": "数据可迁移",

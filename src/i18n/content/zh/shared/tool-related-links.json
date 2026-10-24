@@ -62,7 +62,7 @@
   "fit-to-gpx": [
     {"href":"/tools/fit-to-kml/","label":"FIT 转 KML","note":"相同源格式，转换为 Google Earth 格式"},
     {"href":"/tools/fit-to-geojson/","label":"FIT 转 GeoJSON","note":"相同源格式，转换为网页地图格式"},
-    {"href":"/docs/comparisons/vs-strava/","label":"Dawarich 与 Strava 对比","note":"如何保存您的活动记录"}
+    {"href":"/docs/comparisons/vs-strava/","label":"Dawarich 与 Strava 对比","note":"在哪里保存您的活动记录"}
   ],
   "fit-to-kml": [
     {"href":"/tools/fit-to-gpx/","label":"FIT 转 GPX","note":"兼容性最广的 GPS 格式"},
@@ -115,7 +115,7 @@
     {"href":"/tools/timeline-statistics/","label":"时间线统计数据","note":"地图背后的数字"}
   ],
   "timeline-statistics": [
-    {"href":"/tools/timeline-mileage-calculator/","label":"里程计算器","note":"快速统计距离"},
+    {"href":"/tools/timeline-mileage-calculator/","label":"里程计算器","note":"快速统计，仅含距离"},
     {"href":"/tools/timeline-visualizer/","label":"时间线可视化工具","note":"在地图上查看同一份数据"},
     {"href":"/statistics/","label":"Dawarich 统计数据","note":"持续保留的统计面板"}
   ],

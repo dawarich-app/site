@@ -52,7 +52,7 @@
     "p": "**所谓免费，并非没有代价。** 您付出的是数据。",
     "p2": "十年来，您的每一次到访都被记录、分析，用于 Google 的广告定向投放和模型训练。每间咖啡馆、每次周日徒步、每次深夜开车去朋友家，都是您付出的代价。",
     "p3": "如今，Google 已经获得了想要的东西。Timeline 被迁到手机，云端版本消失，而这个您“没有付费”的产品，因为不再带来收益，正在被逐步弃用。",
-    "p4": "您不欠 Google 什么，也无需用另一个依靠广告、出售数据的监视产品来替代它（比如 Life360）。"
+    "p4": "您不欠 Google 什么，也无需用另一个依靠广告的监视产品来替代它（比如 Life360）。"
   },
   "phoneIsNotABackup": {
     "heading": "设备一旦出问题，时间线就可能消失",
@@ -73,7 +73,7 @@
   "differentiators": {
     "heading": "为什么 Dawarich 适合保存您的 Timeline",
     "p": "多数“Google Timeline 替代方案”是运动记录工具、手动旅行日志、出售数据的家庭追踪应用，或者需要花一个周末研究 Docker 的自托管系统。Dawarich 与这些都不同。",
-    "h3": "欧洲托管",
+    "h3": "欧盟托管",
     "p2": "德国 Hetzner。不向美国传输数据。真正落实 GDPR，而不是只写一句“我们遵守规定”。",
     "h32": "开源",
     "p3": "完整引擎已在 [GitHub](https://github.com/Freika/dawarich) 上开源，拥有超过 9,000 颗星。Cloud 提供的是便利，底层产品您随时可以带走，永久自行运行。",
@@ -109,7 +109,7 @@
     "td13": "绝不会。"
   },
   "promises": {
-    "heading": "两项承诺，安心尝试",
+    "heading": "两项承诺，零风险",
     "h3": "随时可取消",
     "p": "免费试用 7 天，使用全部功能。随时可在订阅设置中取消，没有年约绑定，没有退出费，也没有繁琐流程。任何方案，即使取消后，导出的数据仍属于您。",
     "h32": "开源，随时可以迁出",
@@ -135,15 +135,15 @@
   "meta": {
     "title": "Google Timeline 替代方案 — 在丢失前保存您的位置历史记录",
     "description": "Google 取消了原有 Timeline，将数据改为仅存设备。Dawarich Cloud 几分钟即可导入 Google Takeout，提供热力图和行程检测，并在德国私密存储。{price} 起，免费试用 7 天。",
-    "ogDescription": "Google 取消了原有 Timeline，将数据改为仅存设备。用 Dawarich Cloud，几分钟内保存全部历史记录，私密存储于欧洲，遵循 GDPR。免费试用 7 天。",
+    "ogDescription": "Google 取消了原有 Timeline，将数据改为仅存设备。用 Dawarich Cloud，几分钟内保存全部历史记录，私密存储于欧盟，遵循 GDPR。免费试用 7 天。",
     "twitterTitle": "Google Timeline 替代方案 — 保存您的位置历史记录",
-    "twitterDescription": "Google 取消了原有 Timeline。使用 Dawarich Cloud 私密保存历史记录，欧洲托管，遵循 GDPR，免费试用 7 天。"
+    "twitterDescription": "Google 取消了原有 Timeline。使用 Dawarich Cloud 私密保存历史记录，欧盟托管，遵循 GDPR，免费试用 7 天。"
   },
   "hero": {
     "badge": "Google Timeline 替代方案",
     "title": "Google 取消了原有 Timeline。",
     "titleHighlight": "别让十年的足迹随之消失。",
-    "subtitle": "几分钟内保存您的全部 Google 位置历史记录，并继续记录新的足迹。基础设施不由 Google 掌控，不会被其弃用、出售或用于广告模型。托管于欧洲，传输和存储均加密，遵循 GDPR。",
+    "subtitle": "几分钟内保存您的全部 Google 位置历史记录，并继续记录新的足迹。基础设施不由 Google 掌控，不会被其弃用、出售或用于广告模型。托管于欧盟，传输和存储均加密，遵循 GDPR。",
     "disclaimer": "7 天免费试用 · 我们已顺利导入跨越 15 年、包含 6.8 百万个轨迹点的 Takeout 文件",
     "imageAlt": "替代 Google Timeline 的 Dawarich 时间线视图"
   },

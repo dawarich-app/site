@@ -68,7 +68,7 @@
       {
         "name": "Google Earth（网页版与 Pro 版）",
         "url": "https://earth.google.com/",
-        "note": "在浏览器版中直接拖入 .kml，或在 Earth Pro 中选择“文件 → 导入”。适合 3D 可视化。"
+        "note": "在浏览器版中直接拖入 .kml，或在 Earth Pro 中选择“文件 → 导入”。3D 可视化效果最佳。"
       },
       {
         "name": "Google My Maps",

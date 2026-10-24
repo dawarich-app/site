@@ -2,7 +2,7 @@
   "plans": {
     "lite": {
       "name": "Lite",
-      "tagline": "适合日常记录者的私密 Google Timeline 替代方案。",
+      "tagline": "适合轻度记录用户的私密 Google Timeline 替代方案。",
       "period": "/年",
       "perMonth": "{price}/月",
       "perDay": "{price}/天",

@@ -95,7 +95,7 @@
     {
       "title": "什么是 Google Timeline 转换器？",
       "paragraphs": [
-        "Google Timeline 转换器会将 Google 位置历史导出的原始 JSON 文件转为标准 GPS 格式，供地图应用、运动追踪器和地理信息系统广泛使用。您不必受限于 Google 的专有 JSON 格式，转换后的文件能在多种工具中打开。",
+        "Google Timeline 转换器会将 Google 位置历史导出的原始 JSON 文件转为标准 GPS 格式，供地图应用、运动追踪器和地理信息系统广泛使用。您不必受限于 Google 的专有 JSON 格式，转换后的文件可随处通用。",
         "此工具在浏览器中完成所有转换，下载转换结果不会把位置数据发送到任何地方。上传文件、选择格式、下载即可。多数导出文件只需几秒，也可处理含有数十万个位置轨迹点的文件。（如果您使用“保存到我的 Dawarich 账户”，这一操作会将文件上传到 Dawarich Cloud，以准备导入；除此之外不会发送任何内容。）"
       ]
     },
@@ -103,10 +103,10 @@
       "title": "输出格式说明",
       "items": [
         "**GPX（GPS 交换格式）** — GPS 数据的通用标准，几乎所有 GPS 应用都支持，包括 Strava、Garmin Connect、AllTrails、OsmAnd 和 QGIS。包含航点、轨迹和时间戳。",
-        "**KML（Keyhole 标记语言）** — 为 Google Earth 开发，适合通过地标、路径和描述呈现地理数据。可直接在 Google Earth 和 Google My Maps 中打开。",
+        "**KML（Keyhole 标记语言）** — 为 Google Earth 开发，非常适合通过地标、路径和描述呈现地理数据。可直接在 Google Earth 和 Google My Maps 中打开。",
         "**GeoJSON** — 网页地图的标准格式，供 Leaflet、Mapbox、OpenLayers 及大多数网页地图框架使用。JSON 格式便于人工阅读，也易于程序处理。",
         "**KMZ（压缩 KML）** — KML 的 zip 压缩版本，文件体积更小，适合通过电子邮件分享，或需要控制文件大小的场景。可在支持 KML 的相同应用中打开。",
-        "**CSV（逗号分隔值）** — 表格格式，可在 Excel、Google Sheets 和 LibreOffice 中打开。包含纬度、经度、时间戳、类型、名称、地址、活动类型、海拔和精度列，适合数据分析和自定义处理。"
+        "**CSV（逗号分隔值）** — 表格格式，可在 Excel、Google Sheets 和 LibreOffice 中打开。包含纬度、经度、时间戳、类型、名称、地址、活动类型、海拔和精度列，最适合数据分析和自定义处理。"
       ]
     },
     {
@@ -166,7 +166,7 @@
     },
     {
       "q": "哪种输出格式最适合我？",
-      "a": "取决于使用场景。GPX 支持最广，几乎兼容所有 GPS 应用、运动追踪器和地图工具。KML 和 KMZ 适合 Google Earth 可视化。GeoJSON 是 Leaflet 和 Mapbox 等网页地图库的标准格式。CSV 适合在 Excel 或 Google Sheets 中进行电子表格分析，或导入数据库。如果不确定，先选 GPX，它的兼容性最广。"
+      "a": "取决于使用场景。GPX 支持最广，几乎兼容所有 GPS 应用、运动追踪器和地图工具。KML 和 KMZ 非常适合 Google Earth 可视化。GeoJSON 是 Leaflet 和 Mapbox 等网页地图库的标准格式。CSV 最适合在 Excel 或 Google Sheets 中进行电子表格分析，或导入数据库。如果不确定，先选 GPX，它的兼容性最广。"
     },
     {
       "q": "转换会丢失数据吗？",
