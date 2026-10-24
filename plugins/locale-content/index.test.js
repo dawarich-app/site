@@ -12,6 +12,6 @@ describe('locale-content plugin', () => {
   it('should run the merge loader on English content files with the current locale', () => {
     const rule = localeContentPlugin(context('de')).configureWebpack().module.rules[0];
     expect(rule.include).toBe('/site/src/i18n/content/en');
-    expect(rule.use[0].options).toEqual({ locale: 'de', contentDir: '/site/src/i18n/content' });
+    expect(rule.use[0].options).toEqual({ locale: 'de', defaultLocale: 'en', contentDir: '/site/src/i18n/content' });
   });
 });

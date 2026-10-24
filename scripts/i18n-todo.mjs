@@ -27,6 +27,10 @@ export function buildTodo({ english, status, locale }) {
   }));
 }
 
+export function freshTodoKeys(todo, english) {
+  return todo.filter((item) => english[item.key] === item.english).map((item) => item.key);
+}
+
 export function recordHashes({ english, localized, errors, previous = {}, identicalOk = [], todoKeys = [] }) {
   const invalid = new Set(errors.map((e) => e.key));
   const intentional = new Set(identicalOk);
@@ -58,7 +62,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     if (mode === 'record') {
       const errors = validateTranslations({ english, localized, locale, glossary });
       const identicalOk = readJson(path.join(root, 'i18n', locale, 'identical.json'), []);
-      const todoKeys = readJson(path.join(root, 'i18n/todo', `${locale}.json`), []).map((item) => item.key);
+      const todoKeys = freshTodoKeys(readJson(path.join(root, 'i18n/todo', `${locale}.json`), []), english);
       allHashes[locale] = recordHashes({ english, localized, errors, previous: allHashes[locale], identicalOk, todoKeys });
       console.log(`${locale}: recorded ${Object.keys(allHashes[locale]).length} hashes (${errors.length} invalid skipped)`);
     } else {

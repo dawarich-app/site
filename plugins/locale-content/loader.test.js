@@ -8,12 +8,18 @@ describe('locale-content loader', () => {
   let dir;
   const run = (locale, file) => {
     const deps = [];
+    const missing = [];
     const source = fs.readFileSync(path.join(dir, 'en', file), 'utf8');
     const out = loader.call(
-      { resourcePath: path.join(dir, 'en', file), getOptions: () => ({ locale, contentDir: dir }), addDependency: (d) => deps.push(d) },
+      {
+        resourcePath: path.join(dir, 'en', file),
+        getOptions: () => ({ locale, contentDir: dir, defaultLocale: 'en' }),
+        addDependency: (d) => deps.push(d),
+        addMissingDependency: (d) => missing.push(d),
+      },
       source,
     );
-    return { data: JSON.parse(out), deps };
+    return { data: JSON.parse(out), deps, missing };
   };
 
   beforeEach(() => {
@@ -30,6 +36,12 @@ describe('locale-content loader', () => {
     const { data, deps } = run('de', 'tools/x.json');
     expect(data).toEqual({ h1: 'Konverter', intro: 'Hello' });
     expect(deps).toEqual([path.join(dir, 'de/tools/x.json')]);
+  });
+
+  it('should watch for a locale file that does not exist yet', () => {
+    const { missing, deps } = run('fr', 'tools/x.json');
+    expect(missing).toEqual([path.join(dir, 'fr/tools/x.json')]);
+    expect(deps).toEqual([]);
   });
 
   it('should return English for the default locale or a locale without the file', () => {
