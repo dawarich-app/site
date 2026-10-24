@@ -2,8 +2,7 @@ const path = require('path');
 
 module.exports = function localeContentPlugin(context) {
   const contentDir = path.join(context.siteDir, 'src/i18n/content');
-  const { currentLocale, defaultLocale } = context.i18n;
-  const locales = currentLocale === defaultLocale ? [defaultLocale] : [currentLocale, defaultLocale];
+  const englishDir = path.join(contentDir, context.i18n.defaultLocale);
 
   return {
     name: 'locale-content',
@@ -11,8 +10,22 @@ module.exports = function localeContentPlugin(context) {
       return {
         resolve: {
           alias: {
-            '@locale-content': locales.map((locale) => path.join(contentDir, locale)),
+            '@locale-content': englishDir,
           },
+        },
+        module: {
+          rules: [
+            {
+              test: /\.json$/,
+              include: englishDir,
+              use: [
+                {
+                  loader: path.join(__dirname, 'loader.js'),
+                  options: { locale: context.i18n.currentLocale, contentDir },
+                },
+              ],
+            },
+          ],
         },
       };
     },
