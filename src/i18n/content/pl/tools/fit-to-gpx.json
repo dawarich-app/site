@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "Darmowy konwerter FIT na GPX — pliki Garmin online",
+    "description": "Szybko konwertuj Garmin FIT na GPX. Darmowy, prywatny konwerter aktywności rowerowych, biegowych i fitness. W przeglądarce, bez wysyłania plików.",
+    "keywords": "FIT na GPX, konwerter FIT, konwerter Garmin, Garmin FIT na GPX, konwerter plików fitness, GPX rower, GPX bieganie, konwerter aktywności, konwerter zegarków Garmin, konwerter Garmin Edge",
+    "appName": "Konwerter FIT na GPX"
+  },
+  "h1": "Konwerter FIT na GPX",
+  "intro": "Szybko konwertuj pliki aktywności Garmin FIT na GPX. Wszystko odbywa się w przeglądarce — Twoje dane treningowe nigdy nie opuszczają urządzenia.",
+  "cards": [
+    {
+      "title": "O formacie FIT",
+      "body": "FIT (Flexible and Interoperable Data Transfer) to własny binarny format Garmin do przechowywania danych fitness i aktywności. Zegarki Garmin, liczniki rowerowe i inne urządzenia fitness zapisują w nim treningi, trasy, tętno, moc i inne pomiary."
+    },
+    {
+      "title": "O formacie GPX",
+      "body": "GPX (GPS Exchange Format) to otwarty standard XML dla danych GPS. Jest szeroko obsługiwany przez platformy fitness (Strava, Komoot), oprogramowanie mapowe (Google Earth, QGIS) i aplikacje nawigacyjne."
+    },
+    {
+      "title": "Po co konwertować FIT na GPX?",
+      "items": [
+        "Importuj aktywności na platformy nieobsługujące plików FIT",
+        "Dziel się trasami z użytkownikami innych platform",
+        "Oglądaj dane w oprogramowaniu mapowym, takim jak Google Earth",
+        "Twórz kopie zapasowe w otwartym formacie czytelnym dla człowieka",
+        "Edytuj i łącz aktywności narzędziami obsługującymi GPX"
+      ]
+    },
+    {
+      "title": "Obsługiwane urządzenia",
+      "body": "Konwerter obsługuje pliki FIT z:",
+      "items": [
+        "Zegarków Garmin (Forerunner, Fenix, Venu, Instinct, Enduro)",
+        "Liczników rowerowych Garmin (seria Edge)",
+        "Urządzeń Wahoo (ELEMNT, TICKR)",
+        "Eksportów Zwift",
+        "Liczników rowerowych Bryton",
+        "Urządzeń Suunto (przez eksport FIT)",
+        "Dowolnego urządzenia eksportującego standardowe pliki FIT"
+      ]
+    },
+    {
+      "title": "Jakie dane są zachowywane?",
+      "body": "Konwerter zachowuje:",
+      "items": [
+        "Współrzędne GPS (szerokość, długość geograficzna)",
+        "Znaczniki czasu",
+        "Dane wysokości",
+        "Znaczniki okrążeń (jako punkty orientacyjne)",
+        "Metadane aktywności (rodzaj sportu, odległość itd.)"
+      ]
+    }
+  ],
+  "privacyBody": "Cała konwersja odbywa się w Twojej przeglądarce. Twoje dane treningowe nigdy nie opuszczają urządzenia i nie są wysyłane na żaden serwer.",
+  "noGpsData": "Nie znaleziono danych GPS w pliku FIT. Plik może być uszkodzony lub zawierać tylko dane z czujników bez współrzędnych GPS."
+}

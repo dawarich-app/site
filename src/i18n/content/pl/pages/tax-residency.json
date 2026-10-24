@@ -1,0 +1,55 @@
+{
+  "rows": [
+    {
+      "title": "Każdy kraj policzony, z zaznaczonym progiem 183 dni",
+      "body": "Wybierz rok i zobacz liczbę różnych dni spędzonych w każdym kraju, od największej. Kraje, w których osiągniesz co najmniej 183 dni, zostaną oznaczone — to próg stosowany w wielu przepisach o rezydencji, do którego lepiej zauważyć zbliżanie się wcześniej, niż odkryć go w kwietniu."
+    },
+    {
+      "title": "Nie tylko suma, ale też okresy, które ją tworzą",
+      "body": "Łączne 353 dni mówią mniej niż osiem osobnych okresów, które złożyły się na tę liczbę — 133 dni, 104 dni, a potem kilka krótkich pobytów w grudniu. Każdy pobyt ma datę początku, końca i długość. To potrzebne, gdy przepis dotyczy ciągłej obecności, a nie sumy rocznej.",
+      "note": "Dane do wyeksportowania, nie tylko liczba w panelu"
+    }
+  ],
+  "objections": [
+    {
+      "q": "Czy to porada podatkowa?",
+      "a": "Nie i nie udaje, że nią jest. Dawarich pokazuje, co wynika z Twojej historii lokalizacji. Nie interpretuje prawa podatkowego żadnego kraju, a przepisy różnie liczą dni — czasem uwzględniają części dni, czasem wyłączają dni podróży lub uśredniają kilka lat. To materiał dla specjalisty, a nie gotowy wniosek do działania."
+    },
+    {
+      "q": "Jak dokładnie liczony jest dzień?",
+      "a": "Dzień jest liczony dla kraju, jeśli masz w nim co najmniej jeden zarejestrowany punkt tego dnia. Jeśli we wtorek lecisz z Niemiec do Francji, wtorek liczy się dla obu krajów, więc suma dni w krajach może przekraczać liczbę dni ze śledzeniem. Granice dni wyznacza UTC, co w okolicach północy i granicy kraju może przesunąć przypisanie dnia."
+    },
+    {
+      "q": "Co z dniami bez śledzenia?",
+      "a": "Nie są nigdzie liczone i nigdy nie przypisujemy ich do ostatniego znanego kraju. Raport pokazuje też łączną liczbę dni ze śledzeniem, więc widzisz, jaką część roku obejmują wyniki — to pierwsze, o co zapyta księgowy."
+    },
+    {
+      "q": "Mam lata historii w Google Timeline. Czy to zadziała?",
+      "a": "Tak. Zaimportuj archiwum Google Takeout, a dni pojawią się razem z nim. Zaimportowane punkty wymagają odwrotnego geokodowania, zanim będzie można przypisać je do kraju — Dawarich zrobi to za Ciebie."
+    },
+    {
+      "q": "Czy muszę powierzać Wam lata danych lokalizacyjnych?",
+      "a": "Nie musisz nikomu ufać. Cała aplikacja ma otwarty kod, a każda funkcja działa na Twoim sprzęcie. Uruchom ją na własnym serwerze, a dane nigdy nie opuszczą Twojego urządzenia."
+    }
+  ],
+  "meta": {
+    "title": "Licznik dni rezydencji podatkowej — reguła 183 dni",
+    "description": "Licz dni w krajach z historii GPS. Okresy ciągłego pobytu i ostrzeżenie o 183 dniach dla cyfrowych nomadów, dojeżdżających przez granicę i podróżników.",
+    "ogTitle": "Licznik dni rezydencji podatkowej — reguła 183 dni z GPS",
+    "ogDescription": "Liczba dni w krajach z historii lokalizacji, okresy ciągłego pobytu i ostrzeżenie o 183 dniach. Dane pomocne w ustalaniu rezydencji, nie porada podatkowa."
+  },
+  "taxResidencyPage": {
+    "text": "W tym roku przekroczyłeś sześć granic.",
+    "em": "Ile to było dni?",
+    "title2": "Odpowiedź wraz z obliczeniami",
+    "sub2": "Liczba dni w krajach jest dostępna na stronie Podsumowanie i dotyczy roku wybranego u góry.",
+    "title3": "Przeczytaj, zanim na tym polegniesz",
+    "title4": "Zacznij liczyć teraz, nie w kwietniu",
+    "text2": "Rejestruj od dziś, a odpowiedź na przyszły rok będzie już policzona. Pełne zasady liczenia znajdziesz w",
+    "EnOnlyLink": "dokumentacji liczby dni w krajach",
+    "text3": "."
+  },
+  "hero": {
+    "sub": "Odtwarzanie roku z kart pokładowych i wpisów w kalendarzu łatwo prowadzi do błędów w ustalaniu rezydencji. Dawarich liczy dni w krajach z historii GPS, którą już zbierasz — jeden kwadrat na dzień, w kolorze kraju — oznacza przekroczenie 183 dni i pokazuje luki w śledzeniu zamiast je maskować."
+  }
+}

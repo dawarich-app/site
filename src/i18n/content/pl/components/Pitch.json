@@ -1,0 +1,19 @@
+{
+  "primaryLabel": "Wypróbuj 7 dni za darmo",
+  "selfHost": "Własny serwer — za darmo na zawsze",
+  "reassurance": "Okres próbny bez karty · Potem 14 dni na zwrot · Eksportuj wszystko w dowolnej chwili",
+  "proofLabel": "Pisali o nas",
+  "publishers": {
+    "xda": "XDA Developers",
+    "makeUseOf": "MakeUseOf",
+    "ct": "c't Magazine",
+    "itsFoss": "It's FOSS"
+  },
+  "pricing": "Zobacz cennik",
+  "guarantee": {
+    "trial": "7 dni za darmo, bez karty",
+    "refund": "14 dni na zwrot",
+    "export": "Eksportuj wszystko w dowolnej chwili",
+    "selfHost": "Lub uruchom za darmo na własnym serwerze"
+  }
+}

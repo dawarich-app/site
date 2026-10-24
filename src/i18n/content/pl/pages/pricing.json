@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "Cennik — Dawarich",
+    "description": "Dawarich Cloud: Lite {price}/rok, Pro {price2}/mies., Rodzina {price3}/rok dla 5 osób. 7 dni próby, 14 dni na zwrot. Zrezygnuj kiedy chcesz lub hostuj za darmo.",
+    "socialDescription": "Lite {price}/rok, Pro {price2}/mies. lub Rodzina {price3}/rok dla maksymalnie 5 osób. 7 dni za darmo, 14 dni na zwrot. Lub własny serwer za darmo."
+  },
+  "schema": {
+    "name": "Dawarich Cloud",
+    "description": "Prywatna alternatywa dla Google Timeline. Hosting w Europie. Możliwość instalacji na własnym serwerze, otwarty kod źródłowy.",
+    "brand": "Dawarich",
+    "liteAnnual": "Lite (rocznie)",
+    "proMonthly": "Pro (miesięcznie)",
+    "proAnnual": "Pro (rocznie)",
+    "familyAnnual": "Rodzina (rocznie)",
+    "familyDescription": "Jedna roczna subskrypcja dla maksymalnie 5 osób, każda z pełnym dostępem Pro.",
+    "selfHosted": "Własny serwer"
+  }
+}

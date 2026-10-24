@@ -1,0 +1,134 @@
+{
+  "integrationsShowcase": [
+    {
+      "title": "Immich",
+      "description": "Rozwiązanie do tworzenia kopii zapasowych zdjęć i filmów na własnym serwerze. Połącz swoją instancję Immich, aby pokazać zdjęcia na mapie dokładnie tam, gdzie je zrobiono.",
+      "imageAlt": "Zdjęcia z Immich na mapie"
+    },
+    {
+      "title": "PhotoPrism",
+      "description": "Aplikacja do zarządzania zdjęciami wspomagana AI. Połącz PhotoPrism, aby zobaczyć całą bibliotekę zdjęć na osi czasu lokalizacji.",
+      "imageAlt": "Podróż ze zdjęciami PhotoPrism"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Zdjęcia na mapie",
+      "description": "Zobacz wszystkie zdjęcia na interaktywnej mapie w ich dokładnych współrzędnych GPS. Odkryj ponownie miejsca związane ze wspomnieniami."
+    },
+    {
+      "title": "Zdjęcia w podróżach",
+      "description": "Strony podróży automatycznie pokazują zdjęcia wykonane podczas danej wyprawy. Twój dziennik podróży staje się bogatym multimedialnym doświadczeniem."
+    },
+    {
+      "title": "Oś czasu zdjęć",
+      "description": "Przeglądaj zdjęcia chronologicznie obok danych lokalizacyjnych. Zobacz pełną historię każdego dnia."
+    },
+    {
+      "title": "Zachowana prywatność",
+      "description": "Dawarich nigdy nie przechowuje Twoich zdjęć. Odczytuje tylko dane lokalizacyjne z aplikacji zdjęciowych na Twoim serwerze przez ich API."
+    }
+  ],
+  "setupSteps": [
+    {
+      "title": "Uzyskaj klucze API",
+      "description": "Wygeneruj klucze API w swojej instancji Immich lub PhotoPrism.",
+      "details": [
+        "Immich: utwórz klucz z uprawnieniami asset.read i asset.view (asset.update dla funkcji Wzbogać zdjęcia)",
+        "PhotoPrism: wygeneruj klucz w ustawieniach aplikacji i urządzeń",
+        "Przechowuj klucze bezpiecznie"
+      ]
+    },
+    {
+      "title": "Skonfiguruj Dawarich",
+      "description": "Wprowadź dane usługi zdjęciowej w ustawieniach Dawarich.",
+      "details": [
+        "Przejdź na stronę Ustawienia",
+        "Znajdź sekcję integracji ze zdjęciami",
+        "Wpisz adres URL usługi",
+        "Wklej klucz API",
+        "Kliknij Zapisz"
+      ]
+    },
+    {
+      "title": "Synchronizacja zakończona",
+      "description": "Dawarich łączy się z usługą zdjęciową i indeksuje dane lokalizacyjne.",
+      "details": [
+        "Zdjęcia są indeksowane według lokalizacji",
+        "Odczytywane są dane GPS z EXIF",
+        "Zdjęcia nie są kopiowane ani przechowywane",
+        "Używane są tylko metadane"
+      ]
+    },
+    {
+      "title": "Zobacz zdjęcia",
+      "description": "Zdjęcia są teraz widoczne na mapie i w podróżach.",
+      "details": [
+        "Włącz warstwę Zdjęcia na mapie",
+        "Kliknij znacznik zdjęcia, aby je zobaczyć",
+        "Oglądaj zdjęcia automatycznie w podróżach",
+        "Przeglądaj według lokalizacji i daty"
+      ]
+    }
+  ],
+  "futureIntegrations": [
+    {
+      "title": "Aplikacje fitness",
+      "description": "Integracja z aplikacjami do rejestrowania aktywności, łącząca trasy treningów z historią lokalizacji."
+    },
+    {
+      "title": "Aplikacje do notatek",
+      "description": "Automatycznie łącz notatki z lokalizacjami. Zobacz, co i gdzie zapisałeś."
+    },
+    {
+      "title": "Serwisy muzyczne",
+      "description": "Rejestruj, czego słuchałeś w różnych miejscach w ciągu dnia."
+    },
+    {
+      "title": "Usługi chmurowe",
+      "description": "Głębsze integracje z usługami przechowywania danych w chmurze i narzędziami do pracy."
+    }
+  ],
+  "meta": {
+    "title": "Integracje ze zdjęciami",
+    "description": "Połącz Immich lub PhotoPrism, aby zobaczyć zdjęcia na mapie i w podróżach. Wzbogać swoją mapę o multimedialne wspomnienia.",
+    "ogTitle": "Integracje Dawarich — połącz swoje cyfrowe życie",
+    "ogDescription": "Połącz biblioteki zdjęć Immich i PhotoPrism z historią lokalizacji. Automatycznie oglądaj zdjęcia na mapie i w podróżach."
+  },
+  "hero": {
+    "badge": "Wszystko połączone",
+    "title": "Połącz swoje",
+    "titleHighlight": "cyfrowe życie",
+    "subtitle": "Dodaj zdjęcia do osi czasu lokalizacji. Dawarich integruje się z Immich i PhotoPrism, pokazując zdjęcia na mapie i w podróżach — Twoja historia lokalizacji zyskuje bogatą, wizualną formę.",
+    "imageAlt": "Zdjęcia na mapie"
+  },
+  "integrationsPage": {
+    "heading": "Po co integracja ze zdjęciami?",
+    "p": "Dane lokalizacyjne nabierają znaczenia w połączeniu ze zrobionymi zdjęciami. Odkrywaj wspomnienia ponownie, widząc dokładne miejsce wykonania każdego zdjęcia.",
+    "title3": "Obsługiwane usługi zdjęciowe",
+    "subtitle2": "Dawarich bezproblemowo współpracuje z popularnymi rozwiązaniami do zarządzania zdjęciami na własnym serwerze.",
+    "title4": "Jak skonfigurować",
+    "subtitle3": "Połącz bibliotekę zdjęć z Dawarich w kilku krokach.",
+    "h3": "Twoje zdjęcia pozostają prywatne",
+    "p2": "Dawarich **nie przechowuje ani nie kopiuje Twoich zdjęć**. Odczytuje tylko metadane lokalizacji z usługi zdjęciowej na Twoim serwerze przez jej API. Zdjęcia pozostają bezpieczne w Twojej instancji Immich lub PhotoPrism, pod Twoją pełną kontrolą.",
+    "heading2": "Szczegóły techniczne",
+    "text3": " Konfiguracja Immich",
+    "text4": "Wymaga klucza API z uprawnieniami ",
+    "code": "asset.read",
+    "text5": " i ",
+    "code2": "asset.view",
+    "text6": ". Dodaj ",
+    "code3": "asset.update",
+    "text7": ", jeśli chcesz też korzystać z funkcji Wzbogać zdjęcia. Dawarich odpytuje API Immich, aby odczytać metadane zdjęć, w tym współrzędne GPS z danych EXIF.",
+    "Link": "Jak uzyskać klucz API Immich →",
+    "text8": " Konfiguracja PhotoPrism",
+    "p3": "Wygeneruj klucz API w ustawieniach aplikacji i urządzeń PhotoPrism. Dawarich użyje go, aby uzyskać dostęp do biblioteki zdjęć i odczytać informacje o lokalizacji.",
+    "Link2": "Jak uzyskać klucz API PhotoPrism →",
+    "p4": "Masz pomysł na integrację? [Podziel się nim na forum społeczności!](https://discourse.dawarich.app/).",
+    "heading3": "Połącz swoją bibliotekę zdjęć już dziś",
+    "p5": "Zacznij oglądać zdjęcia na mapie dzięki darmowemu kontu Dawarich.",
+    "Link4": "Wypróbuj za darmo przez 7 dni",
+    "EnOnlyLink": "Uruchom za darmo na własnym serwerze",
+    "p6": "7-dniowy bezpłatny okres próbny · Zwrot bez ryzyka przez 14 dni · Zrezygnuj w dowolnej chwili"
+  }
+}

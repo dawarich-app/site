@@ -1,0 +1,42 @@
+{
+  "faqData": [
+    {
+      "question": "Dlaczego mam płacić, skoro Google Timeline jest za darmo?",
+      "answer": "Google Timeline jest „darmowe”, bo Twoje dane lokalizacyjne finansują biznes reklamowy wart $300B. W Dawarich płacisz niewielką kwotę, a Twoje dane pozostają prywatne — bez reklam, śledzenia i sprzedaży danych. Za mniej niż {price}/dzień w planie Lite odzyskujesz prywatność."
+    },
+    {
+      "question": "Jak zaimportować dane z Google Timeline?",
+      "answer": "Wyeksportuj historię lokalizacji z Google Takeout i zaimportuj ją bezpośrednio do Dawarich. Zajmie to zaledwie kilka minut, a lata Twoich danych od razu pojawią się na interaktywnej mapie."
+    },
+    {
+      "question": "Czy Dawarich zniknie jak inne startupy?",
+      "answer": "Dawarich ma otwarty kod źródłowy i PONAD 9,000 gwiazdek na GitHubie. Nawet jeśli firma jutro zakończy działalność, Twoja instancja na własnym serwerze będzie działać dalej, a dane wyeksportujesz do standardowych formatów (GPX, GeoJSON). Zawsze możesz odejść."
+    },
+    {
+      "question": "Czy moje dane są naprawdę prywatne?",
+      "answer": "W naszej chmurze dane są szyfrowane podczas przesyłania i przechowywania, w europejskich centrach danych, w pełnej zgodności z RODO. Nie chcesz nikomu ufać? Zainstaluj Dawarich na własnym serwerze — Twoje dane nigdy nie trafią na nasze serwery. W obu przypadkach nigdy nie sprzedajemy danych ani nie wyświetlamy reklam."
+    },
+    {
+      "question": "Co jeśli Google zmieni format eksportu?",
+      "answer": "Aktywnie utrzymujemy importery formatów danych Google. Gdy formaty się zmieniają (a zdarza się to), aktualizujemy je w ciągu kilku dni. Społeczność tysięcy programistów rozwijających otwarty kod pomaga szybko wykrywać zmiany formatów."
+    },
+    {
+      "question": "Jakie aplikacje mobilne są obsługiwane?",
+      "answer": "Dawarich ma oficjalne aplikacje na iOS i Android ze śledzeniem lokalizacji w tle i minimalnym zużyciem baterii. Możesz też używać OwnTracks, GPSLogger, Overland i innych zgodnych aplikacji do śledzenia."
+    },
+    {
+      "question": "Czy śledzenie lokalizacji działa bez internetu?",
+      "answer": "Tak. Oficjalne aplikacje na iOS i Android zapisują lokalizację na urządzeniu, więc śledzenie działa bez zasięgu — w samolocie, pod ziemią, na szlaku z dala od sieci czy za granicą bez transmisji danych. Twoje punkty są bezpiecznie przechowywane w telefonie i automatycznie przesyłane do Twojej instancji Dawarich, gdy odzyskasz połączenie. Zerwane połączenie nie powoduje utraty danych tras."
+    },
+    {
+      "question": "Czy mogę wyeksportować swoje dane?",
+      "answer": "Tak, możesz w dowolnej chwili wyeksportować wszystkie dane lokalizacyjne w wielu formatach (GPX, GeoJSON). Nawet w planie Lite eksport obejmuje całą historię, a nie tylko 12-miesięczny zakres widoku. Zawsze możesz odejść."
+    },
+    {
+      "question": "Czy jest bezpłatny okres próbny?",
+      "answer": "Tak! Dawarich Cloud oferuje 7-dniowy bezpłatny okres próbny. Zaimportuj dane Google, poznaj mapy i sprawdź, czy to coś dla Ciebie. Możesz zrezygnować w dowolnej chwili w Ustawieniach subskrypcji. Możesz też bezpłatnie uruchomić Dawarich na własnym serwerze ze wszystkimi funkcjami."
+    }
+  ],
+  "title": "Najczęściej zadawane pytania",
+  "subtitle": "Wszystko, co warto wiedzieć o Dawarich."
+}

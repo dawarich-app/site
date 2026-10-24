@@ -1,0 +1,11 @@
+{
+  "buttonLabel": "Dołącz do listy oczekujących",
+  "note": "Bez spamu — tylko wiadomość o premierze.",
+  "invalidEmail": "Podaj prawidłowy adres e-mail.",
+  "requestError": "Coś poszło nie tak. Spróbuj ponownie później.",
+  "success": "Jesteś na liście! Napiszemy do Ciebie, gdy wystartuje plan Rodzina.",
+  "networkError": "Błąd sieci. Sprawdź połączenie i spróbuj ponownie.",
+  "joining": "Zapisywanie…",
+  "emailPlaceholder": "you@example.com",
+  "emailLabel": "Adres e-mail"
+}

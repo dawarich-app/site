@@ -1,0 +1,110 @@
+{
+  "showcaseItems": [
+    {
+      "title": "Miesięczne i roczne podsumowanie",
+      "description": "Otrzymuj automatyczne podsumowania danych lokalizacyjnych z podziałem na miesiące i lata. Poznaj trendy, wzorce i najważniejsze wydarzenia z każdego okresu."
+    },
+    {
+      "title": "Odwiedzone miasta i kraje",
+      "description": "Rejestruj każdy odwiedzony kraj dzięki automatycznemu liczeniu i wizualizacji. Idealne dla podróżników kolekcjonujących pieczątki w paszporcie."
+    },
+    {
+      "title": "Łączna odległość",
+      "description": "Oblicz łączną przebytą odległość na podstawie wszystkich zapisanych danych lokalizacyjnych. Zobacz, jak daleko dotarłeś z upływem czasu."
+    },
+    {
+      "title": "Podsumowania e-mail",
+      "description": "Otrzymuj automatyczne miesięczne i roczne e-maile z podsumowaniem osiągnięć podróżniczych i statystyk."
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Automatyczne obliczanie",
+      "description": "Podczas śledzenia lokalizacji statystyki są automatycznie obliczane w tle co godzinę.",
+      "details": [
+        "Bez ręcznego wprowadzania",
+        "Aktualizacje odbywają się automatycznie",
+        "Dane historyczne są przetwarzane na bieżąco"
+      ]
+    },
+    {
+      "title": "Zobacz statystyki",
+      "description": "Przejdź na stronę Statystyki, aby zobaczyć pełną analizę lokalizacji.",
+      "details": [
+        "Ogólne podsumowanie u góry",
+        "Kliknij dowolny rok, aby zobaczyć szczegółowe statystyki",
+        "Kliknij dowolny miesiąc, aby zobaczyć go na mapie"
+      ]
+    },
+    {
+      "title": "Odkrywaj na mapie",
+      "description": "Użyj linków [Mapa], aby zobaczyć statystyki w kontekście geograficznym.",
+      "details": [
+        "Kliknij [Mapa] przy dowolnym roku",
+        "Zobacz dane miesięczne na interaktywnej mapie",
+        "Zobacz pełne trasy i punkty"
+      ]
+    },
+    {
+      "title": "Ręczne aktualizacje",
+      "description": "Wymuś natychmiastową aktualizację statystyk przyciskiem „Aktualizuj statystyki”.",
+      "details": [
+        "Kliknij „Aktualizuj statystyki”, aby od razu odświeżyć dane",
+        "Zwykle trwa to kilka minut",
+        "Przydatne po imporcie dużych zbiorów danych"
+      ]
+    }
+  ],
+  "shareFeatures": [
+    {
+      "title": "Linki do udostępniania",
+      "description": "Generuj publiczne linki, aby dzielić się rocznymi podsumowaniami z rodziną i znajomymi, zachowując prywatność reszty danych."
+    },
+    {
+      "title": "Z poszanowaniem prywatności",
+      "description": "Ty decydujesz, co udostępniasz. Widoczne są tylko udostępnione statystyki — wszystko inne pozostaje prywatne."
+    }
+  ],
+  "meta": {
+    "title": "Statystyki lokalizacji i podsumowanie",
+    "description": "Zobacz swoje życie w liczbach dzięki statystykom lokalizacji. Kraje, miasta, odległości oraz miesięczne i roczne podsumowania e-mail.",
+    "ogTitle": "Statystyki Dawarich — Twoje życie w liczbach",
+    "ogDescription": "Pełne statystyki lokalizacji: odwiedzone kraje, łączna odległość, rejestracja czasu oraz automatyczne miesięczne i roczne podsumowania e-mail."
+  },
+  "hero": {
+    "badge": "Analizy i podsumowanie",
+    "title": "Zobacz swoje życie w",
+    "titleHighlight": "liczbach",
+    "subtitle": "Zamień dane lokalizacyjne w użyteczne podsumowanie. Odkrywaj wzorce, śledź osiągnięcia i świętuj kolejne etapy dzięki pełnym statystykom aktualizowanym automatycznie co godzinę.",
+    "imageAlt": "Panel szczegółowych statystyk"
+  },
+  "statsPage": {
+    "heading": "Co możesz śledzić",
+    "h3": "Statystyki globalne",
+    "li": "Odwiedzone kraje",
+    "li2": "Odkryte miasta",
+    "li3": "Łączna przebyta odległość",
+    "h32": "Statystyki według czasu",
+    "li4": "Podsumowania roczne",
+    "li5": "Zestawienia miesięczne",
+    "li6": "Okresy największej aktywności",
+    "title3": "Pełna analiza",
+    "subtitle2": "Wszystko, czego potrzebujesz, by szybko poznać swoją historię lokalizacji.",
+    "heading2": "Dziel się osiągnięciami",
+    "p": "Świętuj kolejne etapy podróży, udostępniając podsumowania roczne i zachowując prywatność szczegółowych danych.",
+    "title4": "Jak to działa",
+    "subtitle3": "Twoje statystyki są obliczane automatycznie — bez ręcznej pracy.",
+    "heading3": "Dlaczego statystyki są ważne",
+    "h33": "Motywacja",
+    "p2": "Osiągnięcia podróżnicze wyrażone w liczbach motywują do odkrywania kolejnych miejsc i wyznaczania nowych celów.",
+    "h34": "Poznawanie zwyczajów",
+    "p3": "Odkrywaj wzorce przemieszczania się i dowiedz się, jak spędzasz czas w różnych miejscach.",
+    "h35": "Roczne wspomnienia",
+    "p4": "Otrzymuj piękne podsumowania roczne, które pomagają wspominać i świętować przygody oraz doświadczenia.",
+    "heading4": "Zacznij zbierać statystyki",
+    "p5": "Zacznij tworzyć swoje statystyki lokalizacji już dziś z 7-dniowym bezpłatnym okresem próbnym. Zrezygnuj w dowolnej chwili.",
+    "Link": "Wypróbuj za darmo przez 7 dni",
+    "EnOnlyLink": "Uruchom za darmo na własnym serwerze",
+    "p6": "7-dniowy bezpłatny okres próbny · Zwrot bez ryzyka przez 14 dni · Zrezygnuj w dowolnej chwili"
+  }
+}

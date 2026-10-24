@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "title": "Darmowy konwerter TCX na GPX — pliki Training Center XML",
+    "description": "Szybko konwertuj TCX na GPX. Darmowy, prywatny konwerter aktywności Garmin, Wahoo i urządzeń fitness. W przeglądarce, bez przesyłania plików.",
+    "keywords": "TCX na GPX, konwerter TCX, Training Center XML, Garmin TCX, Wahoo TCX, konwerter plików fitness, GPX rower, GPX bieganie, konwerter aktywności",
+    "appName": "Konwerter TCX na GPX"
+  },
+  "h1": "Konwerter TCX na GPX",
+  "intro": "Szybko konwertuj pliki TCX (Training Center XML) na GPX. Wszystko odbywa się w przeglądarce — Twoje dane treningowe nigdy nie opuszczają urządzenia.",
+  "cards": [
+    {
+      "title": "O formacie TCX",
+      "body": "TCX (Training Center XML) to format aktywności fitness Garmin oparty na XML. Garmin Connect, Wahoo, Polar i wiele innych platform fitness używa go do zapisywania treningów z danymi GPS, tętnem, kadencją i mocą."
+    },
+    {
+      "title": "O formacie GPX",
+      "body": "GPX (GPS Exchange Format) to otwarty standard XML dla danych GPS. Jest powszechnie obsługiwany przez platformy fitness, oprogramowanie mapowe i aplikacje nawigacyjne, co czyni go najbardziej przenośnym formatem tras GPS."
+    },
+    {
+      "title": "Po co konwertować TCX na GPX?",
+      "items": [
+        "Importuj aktywności na platformy nieobsługujące TCX",
+        "Udostępniaj trasy użytkownikom innych platform fitness",
+        "Oglądaj trasy w Google Earth, QGIS i innych narzędziach mapowych",
+        "Twórz kopie zapasowe w powszechnie obsługiwanym formacie",
+        "Łącz i edytuj trasy narzędziami obsługującymi GPX"
+      ]
+    },
+    {
+      "title": "Zgodne platformy",
+      "body": "Konwerter obsługuje pliki TCX z tych platform:",
+      "items": [
+        "Eksporty Garmin Connect",
+        "Wahoo ELEMNT i TICKR",
+        "Eksporty Polar Flow",
+        "Eksporty TCX ze Strava",
+        "TrainingPeaks",
+        "Eksporty aktywności Zwift",
+        "Dowolna aplikacja eksportująca standardowy TCX"
+      ]
+    },
+    {
+      "title": "Jakie dane są zachowywane?",
+      "body": "Konwerter zachowuje:",
+      "items": [
+        "Współrzędne GPS (szerokość, długość geograficzna)",
+        "Znaczniki czasu",
+        "Dane wysokości",
+        "Znaczniki okrążeń (jako punkty orientacyjne)",
+        "Metadane aktywności (sport, odległość itd.)"
+      ],
+      "note": "Uwaga: dane tętna, kadencji i mocy są odczytywane, ale nie są dodawane do standardowego pliku GPX, ponieważ wymagają rozszerzeń GPX."
+    }
+  ],
+  "privacyBody": "Cała konwersja odbywa się w Twojej przeglądarce. Twoje dane treningowe nigdy nie opuszczają urządzenia i nie są wysyłane na żaden serwer.",
+  "noGpsData": "Nie znaleziono danych GPS w pliku TCX. Plik może zawierać tylko dane z czujników bez współrzędnych GPS."
+}

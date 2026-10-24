@@ -1,0 +1,57 @@
+{
+  "rows": [
+    {
+      "title": "Plakat to tylko jeden z dwudziestu dwóch formatów",
+      "body": "Druk to oczywisty wybór — od A5 do A0, 30 × 40, 50 × 70 i 70 × 100 cm, US Letter, pionowo lub poziomo. Tę samą mapę wyeksportujesz też jako tapetę na telefon lub komputer, aż do 4K i formatu panoramicznego, a także post na Instagram, relację, nagłówek X czy miniaturę YouTube. Układy do druku mają rzeczywiste wymiary papieru i DPI, a ekranowe — dokładne wymiary w pikselach.",
+      "note": "Ta sama kompozycja, dwadzieścia dwa formaty"
+    },
+    {
+      "title": "Kadr z podglądu to kadr na wydruku",
+      "body": "Wybierz układ przed komponowaniem, a podgląd dopasuje do niego kształt, więc przycięcie relacji Cię nie zaskoczy. Studio pokazuje wymiary wyniku podczas pracy — pionowe A3 przy 300 DPI daje 3508 × 4961 pikseli — i ostrzega, gdy widok jest za szeroki dla największego obszaru plakatu, zamiast samoczynnie go przybliżać."
+    }
+  ],
+  "objections": [
+    {
+      "q": "Czym to się różni od plakatów z mapami, które sprzedają wszyscy?",
+      "a": "Tamte to zarys miasta z nazwą pod spodem, który każdy może kupić. Ten przedstawia rzeczywistą trasę Twojego spaceru, jazdy rowerem lub samochodem, narysowaną z punktów GPS na Twoim koncie."
+    },
+    {
+      "q": "Czy wydruk będzie wyglądał jak mój projekt?",
+      "a": "Kadrujesz dokładnie to, co zostanie wydrukowane — studio stosuje ten sam kadr co moduł renderujący i ostrzega, jeśli widok jest za szeroki dla największego plakatu, zamiast samoczynnie go przybliżać."
+    },
+    {
+      "q": "Jaka jest jakość wydruku?",
+      "a": "Matowy papier premium 200 gsm nie odbija światła, więc linia trasy pozostaje wyraźna w oświetleniu domowym. Wysyłka w UE jest w cenie, a płatność obsługuje Stripe, więc dane Twojej karty nigdy nie trafiają do Dawarich."
+    },
+    {
+      "q": "Czy muszę zamówić wydruk, żeby korzystać ze studia?",
+      "a": "Nie. Pobierz PNG lub PDF i zanieś do dowolnej drukarni, zachowaj plik albo w ogóle nie korzystaj z papieru — wiele osób eksportuje tapetę 4K na komputer lub tło na telefon i na tym kończy. Zamówienie to jedna z opcji, a nie cel tej funkcji."
+    },
+    {
+      "q": "Czy mogę korzystać z tego we własnej instancji?",
+      "a": "Tak, studio jest częścią aplikacji z otwartym kodem. Zamawianie wydruków jest domyślnie włączone, ale w swojej instancji możesz je całkowicie wyłączyć."
+    }
+  ],
+  "meta": {
+    "title": "Studio plakatów z mapą — trasy GPS na plakaty i tapety",
+    "description": "Zamień trasę GPS w plakat, tapetę 4K, tło telefonu lub post. 17 motywów, 22 układy, kolory warstw, PNG/PDF 300 DPI, druk 200 gsm i darmowa wysyłka w UE.",
+    "ogTitle": "Studio plakatów — Twoje trasy GPS na plakatach i tapetach",
+    "ogDescription": "Skomponuj mapę rzeczywiście przebytych tras i eksportuj ją na 22 sposoby: wydruki od A5 do A0, tapety 4K i panoramiczne, tła telefonu oraz formaty społecznościowe."
+  },
+  "posterStudioPage": {
+    "text": "Każdy może kupić mapę Berlina.",
+    "em": "Tylko Ty masz tę trasę.",
+    "title2": "Siedemnaście motywów i pełna kontrola nad kolorami",
+    "body": "Każdy plakat poniżej przedstawia te same dwa lata w Berlinie — od 15 lipca 2024 do 15 lipca 2026 — wyeksportowane ze studia ze zmianą jedynie motywu. Jeśli żaden z siedemnastu nie pasuje, otwórz edytor kolorów i ustaw wodę, parki, koleje, granice, budynki oraz każdą klasę dróg — a trasie nadaj własny kolor, krycie i szerokość od 50% do 300%, by linia pozostała czytelna na A0 i na ekranie telefonu.",
+    "title3": "Narzędzie do projektowania, nie tylko przycisk generowania",
+    "sub2": "Pełnoekranowe studio. Przeciągaj mapę, powiększaj kółkiem, skomponuj kadr, a potem eksportuj w rozmiarze, którego potrzebujesz.",
+    "title4": "Zanim wyeksportujesz",
+    "title5": "Umieść własną trasę na ścianie lub ekranie blokady",
+    "text2": "Zaimportuj gotową trasę lub zarejestruj nową, otwórz studio i zacznij komponować. Nie masz jeszcze konta?",
+    "a": "Wypróbuj darmową wersję w przeglądarce z dowolnym plikiem GPS",
+    "text3": "."
+  },
+  "hero": {
+    "sub": "Przejazd, do którego trenowałeś, rok pieszych wędrówek, podróż samochodem, którą wciąż wspominasz — są już w Twojej historii lokalizacji jako linia, której nie ma nikt inny. Studio plakatów zmienia ją w coś, co możesz oprawić, ustawić jako tapetę lub opublikować."
+  }
+}

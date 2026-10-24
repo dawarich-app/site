@@ -1,0 +1,88 @@
+{
+  "posterThemes": {
+    "arialabel": "Powiększ plakat {name}",
+    "alt": "Plakat trasy przez Berlin w motywie {name}"
+  },
+  "posterStudioShot": {
+    "alt": "Komponowanie trasy w Studiu plakatów z ustawieniami układu, motywu i tekstu"
+  },
+  "exportFormats": {
+    "groups": [
+      {
+        "label": "Druk · 12",
+        "items": [
+          "A5",
+          "A4",
+          "A3",
+          "A2",
+          "A1",
+          "A0",
+          "30 × 40 cm",
+          "50 × 70 cm",
+          "70 × 100 cm",
+          "Letter (US)",
+          "A4 poziomo",
+          "A3 poziomo"
+        ]
+      },
+      {
+        "label": "Media społecznościowe · 5",
+        "items": [
+          "Kwadrat na Instagram",
+          "Portret na Instagram",
+          "Relacja (9:16)",
+          "Nagłówek X",
+          "Miniatura YouTube"
+        ]
+      },
+      {
+        "label": "Tapety · 5",
+        "items": [
+          "Komputer Full HD",
+          "Komputer 4K",
+          "Komputer z ekranem panoramicznym",
+          "Telefon",
+          "Tablet"
+        ]
+      }
+    ]
+  },
+  "shareTargets": {
+    "items": [
+      "Zakres dat",
+      "Lokalizacja na żywo",
+      "Jedna trasa",
+      "Podróż",
+      "Miesięczne statystyki",
+      "Roczne podsumowanie"
+    ],
+    "p": "Sześć rzeczy, sześć osobnych linków"
+  },
+  "familySharingShot": {
+    "alt": "Ustawienia udostępniania rodzinie: lokalizacja na żywo włączona na sześć godzin z pozostałym czasem oraz osobny przełącznik historii lokalizacji ustawiony na ostatnie 7 dni"
+  },
+  "familyMembersShot": {
+    "alt": "Lista członków rodziny: dwie osoby udostępniają lokalizację, dwie nie; przy każdej przycisk prośby"
+  },
+  "familyPageShot": {
+    "alt": "Strona rodziny w Dawarich: wspólna mapa obok ustawień udostępniania, listy członków i zaproszeń"
+  },
+  "familyRequestShot": {
+    "alt": "Dwóch członków rodziny z oznaczeniem „Nie udostępnia” i przyciskiem prośby obok każdej osoby"
+  },
+  "residencyCountriesShot": {
+    "alt": "Karta krajów z liczbą dni w każdym kraju w 2023 roku — Niemcy: 353 dni i 96.7% z ostrzeżeniem o progu, dalej Belgia, Grecja, Szwajcaria, Dania, Francja i Polska"
+  },
+  "residencyStaysShot": {
+    "alt": "Rozwinięte Niemcy z ośmioma kolejnymi okresami pobytu w 2023 roku, ich datami i długością"
+  },
+  "residencyCalendarShot": {
+    "alt": "Roczna mapa cieplna kalendarza z osobnym kolorem dla każdego kraju i legendą z nazwami"
+  },
+  "shareHubShot": {
+    "alt": "Panel udostępniania: publiczny link i jego tajna fraza, dwanaście wyświetleń oraz przyciski generowania nowego adresu URL, nowej frazy i unieważniania linku"
+  },
+  "shareFormShot": {
+    "alt": "Tworzenie linku do udostępniania: data początkowa i końcowa, opcjonalna tajna fraza, termin ważności domyślnie ustawiony na tydzień oraz wyłączony przełącznik „Pokaż zdjęcia”"
+  }
+}

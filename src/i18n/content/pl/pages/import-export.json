@@ -1,0 +1,158 @@
+{
+  "importFormats": [
+    {
+      "title": "Google Takeout",
+      "description": "Zaimportuj całą historię lokalizacji z Google Maps Timeline. Przenieś lata danych do Dawarich, przesyłając jeden plik."
+    },
+    {
+      "title": "Apple Health & Fitness",
+      "description": "Importuj pliki GPX wyeksportowane z aplikacji Apple Health lub Apple Fitness. Idealne dla użytkowników iPhone’a."
+    },
+    {
+      "title": "Pliki GPX",
+      "description": "Standardowe pliki GPS Exchange Format z dowolnego źródła. Uniwersalny format danych lokalizacyjnych."
+    },
+    {
+      "title": "Pliki CSV",
+      "description": "Importuj dane lokalizacyjne z arkuszy lub własnych eksportów CSV z elastycznym przypisywaniem kolumn."
+    },
+    {
+      "title": "Pliki KML",
+      "description": "Importuj pliki Keyhole Markup Language z różnych aplikacji mapowych i urządzeń GPS."
+    },
+    {
+      "title": "Metadane zdjęć",
+      "description": "Wyodrębniaj i importuj dane lokalizacyjne z metadanych EXIF w swoich kolekcjach zdjęć."
+    }
+  ],
+  "exportFormats": [
+    {
+      "title": "Eksport GPX",
+      "description": "Eksportuj dane lokalizacyjne do plików GPX zgodnych z dowolnym oprogramowaniem GPS lub aplikacją mapową."
+    },
+    {
+      "title": "Eksport GeoJSON",
+      "description": "Pobierz dane w formacie GeoJSON, aby łatwo łączyć je z narzędziami GIS i własnymi rozwiązaniami mapowymi."
+    },
+    {
+      "title": "Pełny eksport konta",
+      "description": "Pobierz wszystko: punkty, wizyty, podróże, statystyki i ustawienia. Pełna przenośność danych."
+    }
+  ],
+  "importSteps": [
+    {
+      "title": "Prześlij plik",
+      "description": "Przejdź na stronę Importy w Dawarich i wybierz plik.",
+      "details": [
+        "Kliknij przycisk „Nowy import”",
+        "Wybierz pliki do przesłania",
+        "Potwierdź, aby rozpocząć przetwarzanie",
+        "Format danych zostanie rozpoznany automatycznie"
+      ]
+    },
+    {
+      "title": "Przetwarzanie",
+      "description": "Dawarich przetwarza import w tle. Duże pliki mogą wymagać kilku minut.",
+      "details": [
+        "Sprawdzana jest unikalność punktów",
+        "Nie powstają zduplikowane wpisy",
+        "Odwrotne geokodowanie uruchamia się automatycznie",
+        "Otrzymasz powiadomienie po zakończeniu importu"
+      ]
+    },
+    {
+      "title": "Dane dostępne",
+      "description": "Po zakończeniu wszystkie zaimportowane dane pojawią się na mapie i w statystykach.",
+      "details": [
+        "Zobacz punkty na interaktywnej mapie",
+        "Statystyki aktualizują się automatycznie",
+        "Twórz podróże z zaimportowanych danych",
+        "Wyszukuj i filtruj zaimportowane lokalizacje"
+      ]
+    }
+  ],
+  "exportSteps": [
+    {
+      "title": "Przejdź do punktów",
+      "description": "Przejdź na stronę Punkty w panelu Dawarich."
+    },
+    {
+      "title": "Wybierz zakres dat",
+      "description": "Wybierz zakres dat danych do eksportu i kliknij „Szukaj”.",
+      "details": [
+        "Wybierz datę początku i końca",
+        "Kliknij „Szukaj”, aby przefiltrować punkty",
+        "Upewnij się, że wszystkie potrzebne dane są widoczne"
+      ]
+    },
+    {
+      "title": "Wybierz format",
+      "description": "Kliknij przycisk Eksportuj",
+      "details": [
+        "Wybierz GPX lub GeoJSON",
+        "Pełny eksport jako kompletna kopia zapasowa"
+      ]
+    },
+    {
+      "description": "Dawarich generuje plik eksportu w tle.",
+      "details": [
+        "Małe eksporty są gotowe natychmiast",
+        "Duże eksporty mogą wymagać kilku minut",
+        "Możesz nadal korzystać z Dawarich"
+      ]
+    },
+    {
+      "title": "Pobierz",
+      "description": "Gdy plik eksportu będzie gotowy, pobierz go.",
+      "details": [
+        "Link do pobrania pojawia się na stronie Eksporty",
+        "Pliki są bezpiecznie przechowywane",
+        "Pobierz ponownie w dowolnej chwili"
+      ]
+    }
+  ],
+  "meta": {
+    "title": "Import i eksport danych",
+    "description": "Twoje dane należą do Ciebie. Import z Google Takeout, GPX, CSV, KML. Eksport do GPX, CSV lub pełny eksport konta. Bez uzależnienia od usługi.",
+    "ogTitle": "Import i eksport Dawarich — Twoje dane pod Twoją kontrolą",
+    "ogDescription": "Import z Google Maps, Apple Health, GPX, GeoJSON, KML. Eksport do dowolnego formatu. Pełna przenośność danych bez uzależnienia od usługi."
+  },
+  "hero": {
+    "badge": "Przenośność danych",
+    "title": "Twoje dane",
+    "titleHighlight": "należą do Ciebie",
+    "subtitle": "Importuj historię lokalizacji z dowolnego źródła. Eksportuj ją w dowolnej chwili i formacie. Dawarich stawia na pełną przenośność danych bez uzależnienia od usługi — zawsze zachowujesz kontrolę.",
+    "imageAlt": "Interfejs importu i eksportu"
+  },
+  "importExportPage": {
+    "heading": "Nasza filozofia danych",
+    "h3": "Bez uzależnienia od usługi",
+    "p": "Eksportuj wszystkie dane w dowolnej chwili. Nic Cię nie zatrzymuje — zmień usługę lub zachowaj własną kopię zapasową.",
+    "h32": "Łatwa migracja",
+    "p2": "Przenosisz się z Google Maps Timeline lub innego rejestratora? Łatwo zaimportuj wszystko i kontynuuj od miejsca, w którym skończyłeś.",
+    "h33": "Pełna kontrola",
+    "p3": "Pobierz wszystko: punkty, wizyty, podróże, statystyki, ustawienia. Cała cyfrowa historia Twojej lokalizacji należy do Ciebie.",
+    "title3": "Obsługiwane formaty importu",
+    "subtitle2": "Przenieś dane lokalizacyjne z niemal dowolnego źródła do Dawarich.",
+    "title4": "Jak działa import",
+    "subtitle3": "Przenieś dawne dane lokalizacyjne do Dawarich w kilku prostych krokach.",
+    "h34": "Inteligentne usuwanie duplikatów",
+    "p4": "Dawarich automatycznie zapobiega duplikowaniu punktów. Możesz zaimportować plik dwukrotnie lub otrzymać tę samą lokalizację z aplikacji śledzącej — każdy unikalny punkt zostanie zapisany tylko raz.",
+    "title5": "Obsługiwane formaty eksportu",
+    "subtitle4": "Zabierz dane ze sobą — wszędzie, zawsze i w potrzebnym formacie.",
+    "title6": "Jak działa eksport",
+    "subtitle5": "Pobieraj dane lokalizacyjne szybko i bezpiecznie.",
+    "heading2": "Dlaczego import i eksport są ważne",
+    "h35": "Zmiana usługi",
+    "p5": "Łatwo przenieś całą historię lokalizacji z Google Maps Timeline lub dowolnej innej usługi do Dawarich.",
+    "h36": "Regularne kopie zapasowe",
+    "p6": "Regularnie eksportuj dane, aby tworzyć kopie zapasowe. Przechowuj lokalne kopie całej historii lokalizacji.",
+    "h37": "Wiele platform",
+    "p7": "Używaj eksportów GPX w innym oprogramowaniu GPS i aplikacjach mapowych lub importuj je na inne platformy.",
+    "heading3": "Miej własne dane lokalizacyjne",
+    "p8": "Zacznij od darmowego konta i zaimportuj swoją dotychczasową historię lokalizacji już dziś.",
+    "Link": "Wypróbuj za darmo przez 7 dni",
+    "EnOnlyLink": "Uruchom za darmo na własnym serwerze",
+    "p9": "7-dniowy bezpłatny okres próbny · Zwrot bez ryzyka przez 14 dni · Zrezygnuj w dowolnej chwili"
+  }
+}

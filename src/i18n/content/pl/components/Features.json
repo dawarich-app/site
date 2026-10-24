@@ -1,0 +1,32 @@
+{
+  "features": [
+    {
+      "title": "Odtwórz dowolny dzień minuta po minucie",
+      "description": "Wybierz datę. Każdy postój, każda trasa, każda minuta — wszystko widoczne od razu. Szczegółowy widok osi czasu, który Google po cichu usunęło."
+    },
+    {
+      "title": "Od razu sprawdź, gdzie wtedy byłeś",
+      "description": "Wpisz datę. Zobacz dokładnie, gdzie byłeś, którędy jechałeś i jak długo trwał pobyt. Każdą podróż, dojazd i objazd wyszukasz nawet po latach."
+    },
+    {
+      "title": "Przeżyj każdą podróż jeszcze raz, ze szczegółami",
+      "description": "Wybierz zakres dat. Dawarich tworzy mapę, oblicza odległość i odtwarza trasę. Dodaj zdjęcia, a powstanie dziennik podróży."
+    },
+    {
+      "title": "Zobacz swoje życie w liczbach",
+      "description": "Ile krajów. Ile kilometrów. Twoje najczęściej odwiedzane miasto. Miesięczne wzorce, których wcześniej nie zauważałeś. Udostępniaj statystyki jednym linkiem."
+    },
+    {
+      "title": "Śledź, jak odkrywasz świat",
+      "description": "Patrz, jak kolejne kraje rozświetlają się po odwiedzinach. Zobacz białe plamy. Zaplanuj następny cel."
+    },
+    {
+      "title": "Poznaj swoje zwyczaje",
+      "description": "Podróżujesz mniej niż rok temu? Spędzasz więcej czasu w jednym mieście? Dawarich wychwytuje trendy, których sam byś nie zauważył."
+    }
+  ],
+  "title": "Wszystko, czym powinno być Google Timeline",
+  "subtitle": "Wszystkie ulubione funkcje bez kompromisów w kwestii prywatności.",
+  "ariaLabel": "Zamknij obraz",
+  "viewFullSize": "Zobacz {title} w pełnym rozmiarze"
+}

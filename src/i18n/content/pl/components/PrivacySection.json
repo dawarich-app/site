@@ -1,0 +1,13 @@
+{
+  "title": "Prywatność na przekór Google",
+  "subtitle": "Google wykorzystuje Twoją lokalizację do sprzedaży reklam. My pobieramy opłatę. To cały nasz model biznesowy.",
+  "cardTitle": "Bez reklam. Bez sprzedaży danych. Nigdy.",
+  "cardDescription": "Twoje dane finansują biznes reklamowy Google wart $300B. W Dawarich dane lokalizacyjne są produktem, który kupujesz, a nie produktem, który sprzedajemy.",
+  "cardTitle2": "Własny serwer: nie musisz nikomu ufać",
+  "cardDescription2": "Nie chcesz powierzać nikomu danych? Uruchom Dawarich na własnym serwerze. Twoje dane nigdy nie trafią do naszej infrastruktury. Po prostu nie możemy ich zobaczyć.",
+  "cardTitle3": "Szyfrowanie i hosting w UE",
+  "cardDescription3": "Wszystkie dane są szyfrowane podczas przesyłania (SSL/TLS) i przechowywania (LUKS). Są przechowywane w europejskich centrach danych zgodnie z rygorystycznymi przepisami RODO. Masz pełną kontrolę nad swoimi danymi.",
+  "cardTitle4": "Otwarty kod: sprawdź każdą linię",
+  "cardDescription4": "Nie ufasz nam? Przeczytaj kod. PONAD 9,000 gwiazdek na GitHubie. Tysiące programistów sprawdziło go już przed Tobą. Bez ukrytego śledzenia. Bez niespodzianek.",
+  "policyLink": "Przeczytaj pełną Politykę prywatności →"
+}

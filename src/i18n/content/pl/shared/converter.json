@@ -1,0 +1,22 @@
+{
+  "privacyTitle": "Prywatność przede wszystkim",
+  "success": "Plik został przekonwertowany! Pobieranie powinno rozpocząć się automatycznie.",
+  "successShort": "Plik został przekonwertowany!",
+  "ctaHeadline": "Twój plik jest już przekonwertowany. Dawarich automatycznie obsługuje wszystkie formaty — importuj dane z Google, Strava, Garmin i innych źródeł. Bez ręcznej konwersji.",
+  "invalidFile": "Błąd konwersji pliku. Upewnij się, że to prawidłowy plik {format}.",
+  "conversionError": "Błąd konwersji pliku: {message}",
+  "stats": {
+    "activity": "Aktywność: {sport}",
+    "points": " | {points} punktów",
+    "gpsPoints": " | {points} punktów GPS",
+    "distance": " | {distance} km",
+    "elevation": " | {elevation}m przewyższenia",
+    "duration": " | {duration}",
+    "avgHR": " | Śr. tętno: {avgHR} bpm"
+  },
+  "duration": {
+    "hours": "{hours}h {minutes}m {seconds}s",
+    "minutes": "{minutes}m {seconds}s",
+    "seconds": "{seconds}s"
+  }
+}
