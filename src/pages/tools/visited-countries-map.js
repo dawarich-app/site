@@ -126,7 +126,10 @@ export default function VisitedCountriesMapPage() {
             <div className={heatmapStyles.sidebar}>
               <div className={heatmapStyles.uploadSection}>
                 <h2>{content.upload.title}</h2>
-                <label className={heatmapStyles.dropZone}>
+                <div className={heatmapStyles.dropZone}>
+                  <svg className={heatmapStyles.uploadIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                  </svg>
                   <p>{isLoading ? content.upload.processing : content.upload.dropFiles}</p>
                   <span className={heatmapStyles.supportedFormats}>{content.upload.formats}</span>
                   <input
@@ -138,7 +141,7 @@ export default function VisitedCountriesMapPage() {
                     disabled={isLoading}
                     onChange={(e) => e.target.files?.length && handleFiles(Array.from(e.target.files))}
                   />
-                </label>
+                </div>
                 {files.length > 0 && (
                   <div className={styles.fileRow}>
                     <span>{files.join(', ')}</span>
@@ -170,7 +173,7 @@ export default function VisitedCountriesMapPage() {
                             <span className={styles.countryName}>{countryName(visit)}</span>
                             <span className={styles.countryMeta}>
                               {visit.days > 0 ? plural(visit.days, content.results.days) : plural(visit.points, content.results.points)}
-                              {visit.firstDay && ` · ${interpolate(content.results.dates, { first: formatDay(visit.firstDay), last: formatDay(visit.lastDay) })}`}
+                              {visit.firstDay && ` · ${visit.firstDay === visit.lastDay ? formatDay(visit.firstDay) : interpolate(content.results.dates, { first: formatDay(visit.firstDay), last: formatDay(visit.lastDay) })}`}
                             </span>
                           </li>
                         ))}
@@ -185,7 +188,7 @@ export default function VisitedCountriesMapPage() {
               </div>
             </div>
 
-            <div className={heatmapStyles.mapSection}>
+            <div className={`${heatmapStyles.mapSection} ${styles.mapSection}`}>
               <BrowserOnly fallback={<div className={heatmapStyles.mapPlaceholder}>{content.loadingMap}</div>}>
                 {() => <VisitedCountriesMap countries={countries} loadCountries={loadCountries} onLoad={setCountries} visitedIds={visits.map((v) => v.id)} />}
               </BrowserOnly>

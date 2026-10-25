@@ -36,7 +36,7 @@ describe('visited countries map page', () => {
     await waitFor(() => expect(screen.getByText('2 countries and territories')).toBeInTheDocument());
     const items = screen.getAllByRole('listitem').map((li) => li.textContent);
     expect(items.some((t) => t.startsWith('Germany') && t.includes('2 days'))).toBe(true);
-    expect(items.some((t) => t.startsWith('France') && t.includes('1 day') && !t.includes('1 days'))).toBe(true);
+    expect(items.some((t) => t.startsWith('France') && t.includes('1 day') && !t.includes('1 days') && !t.includes('–'))).toBe(true);
     expect(fetch).toHaveBeenCalledWith('/data/countries-50m.json');
   });
 });
