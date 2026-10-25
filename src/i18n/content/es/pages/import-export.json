@@ -113,12 +113,12 @@
   ],
   "meta": {
     "title": "Importa ubicaciones pasadas: Google Takeout y más",
-    "description": "Importa el historial de Google Timeline y Takeout, y archivos GPX, FIT, KML, CSV, GeoJSON, Polarsteps y OwnTracks. Exporta todo cuando quieras.",
+    "description": "Tus datos son tuyos. Importa historial de ubicación de Google Takeout, GPX, FIT, KML, CSV y más; exporta todo cuando quieras. Sin ataduras.",
     "ogTitle": "Importar y exportar con Dawarich — Tú controlas tus datos",
     "ogDescription": "Importa desde Google Maps, Apple Health, GPX, GeoJSON, KML. Exporta a cualquier formato. Portabilidad de datos completa, sin depender de un proveedor."
   },
   "hero": {
-    "badge": "Importa el historial de ubicaciones de Google Takeout",
+    "badge": "Portabilidad de datos",
     "title": "Tus datos",
     "titleHighlight": "te pertenecen",
     "subtitle": "Importa tu historial de ubicaciones desde cualquier fuente. Expórtalo cuando quieras, en cualquier formato. Dawarich apuesta por la portabilidad total de los datos sin dependencia de un proveedor: tú siempre tienes el control.",

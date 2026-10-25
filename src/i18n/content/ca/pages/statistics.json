@@ -67,12 +67,12 @@
   ],
   "meta": {
     "title": "Mapa de països visitats i estadístiques de viatge",
-    "description": "Mira tots els països i ciutats visitats, distància, dies actius i tendències anuals del teu historial d’ubicacions. Allotja’l tu de franc.",
+    "description": "La teva vida en xifres: cada país i ciutat que has visitat, distàncies, dies actius i tendències anuals, del teu propi historial d’ubicacions.",
     "ogTitle": "Estadístiques de Dawarich — La teva vida en xifres",
     "ogDescription": "Estadístiques d’ubicació completes: països visitats, distància total, registre del temps i resums mensuals i anuals automàtics per correu."
   },
   "hero": {
-    "badge": "Mapa de països visitats i estadístiques de viatge",
+    "badge": "Dades i anàlisi",
     "title": "La teva vida en",
     "titleHighlight": "xifres",
     "subtitle": "Transforma les dades d’ubicació en informació útil. Descobreix patrons, segueix els assoliments i celebra fites amb estadístiques completes que s’actualitzen automàticament cada hora.",

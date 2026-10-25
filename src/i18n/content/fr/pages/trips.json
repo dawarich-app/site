@@ -61,12 +61,12 @@
   ],
   "meta": {
     "title": "Appli de suivi et carnet de voyage",
-    "description": "Suivez vos voyages automatiquement et gardez un carnet pour chacun : carte du parcours, pays, distance, notes et photos. Cloud ou auto-hébergement.",
+    "description": "Vos voyages suivis automatiquement deviennent de beaux carnets : carte du parcours, pays, distance, notes et photos au même endroit.",
     "ogTitle": "Vos déplacements Dawarich — Racontez vos aventures",
     "ogDescription": "Créez des carnets de voyage complets avec cartes interactives, statistiques détaillées, descriptions en texte enrichi et intégration photo automatique."
   },
   "hero": {
-    "badge": "Suivi des voyages et carnet de voyage",
+    "badge": "Carnet de voyage",
     "title": "Transformez vos voyages en",
     "titleHighlight": "récits mémorables",
     "subtitle": "Enregistrez automatiquement vos parcours et transformez-les en carnets de voyage complets. Chaque déplacement rassemble une carte interactive, des statistiques détaillées, des descriptions en texte enrichi et des photos.",

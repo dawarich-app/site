@@ -67,12 +67,12 @@
   ],
   "meta": {
     "title": "Mapa de países visitados y estadísticas de viajes",
-    "description": "Ve cada país y ciudad que has visitado, distancias, días activos y tendencias anuales de tu historial de ubicaciones. Alójalo gratis en tu servidor.",
+    "description": "Tu vida en cifras: cada país y ciudad que has visitado, distancias, días activos y tendencias anuales de tu propio historial de ubicaciones.",
     "ogTitle": "Estadísticas de Dawarich — Tu vida en cifras",
     "ogDescription": "Estadísticas completas de ubicación: países visitados, distancia total, registro de tiempo y resúmenes mensuales y anuales automáticos por correo."
   },
   "hero": {
-    "badge": "Mapa de países visitados y estadísticas de viajes",
+    "badge": "Estadísticas y análisis",
     "title": "Tu vida en",
     "titleHighlight": "cifras",
     "subtitle": "Convierte tus datos de ubicación en información útil. Descubre patrones, sigue tus logros y celebra tus metas con estadísticas completas que se actualizan automáticamente cada hora.",

@@ -61,12 +61,12 @@
   ],
   "meta": {
     "title": "Travel Tracker & Trip Journal App",
-    "description": "Track your travels automatically and keep each trip as a journal: route map, countries and distance, notes and photos. Cloud or self-hosted.",
+    "description": "Turn your travels into beautiful trip journals, tracked automatically: route map, countries and distance, notes and photos in one place.",
     "ogTitle": "Dawarich Trips — Document Your Travel Adventures",
     "ogDescription": "Create comprehensive travel journals with interactive maps, detailed statistics, rich text descriptions, and automatic photo integration."
   },
   "hero": {
-    "badge": "Travel tracker & trip journal",
+    "badge": "Travel Journaling",
     "title": "Turn Your Travels Into",
     "titleHighlight": "Beautiful Trip Stories",
     "subtitle": "Automatically capture your movements and transform them into comprehensive travel journals. Each trip includes an interactive map, detailed statistics, rich text descriptions, and photos — all in one place.",

@@ -61,12 +61,12 @@
   ],
   "meta": {
     "title": "Aplikacja: rejestrator i dziennik podróży",
-    "description": "Rejestruj podróże automatycznie i prowadź dziennik każdej z nich: mapa trasy, kraje i dystans, notatki i zdjęcia. W chmurze lub na własnym serwerze.",
+    "description": "Zmień podróże w piękne dzienniki z automatycznym śledzeniem: mapa trasy, kraje i odległość, notatki i zdjęcia w jednym miejscu.",
     "ogTitle": "Dawarich Podróże — dokumentuj swoje przygody",
     "ogDescription": "Twórz rozbudowane dzienniki podróży z interaktywnymi mapami, szczegółowymi statystykami, formatowanymi opisami i automatyczną integracją ze zdjęciami."
   },
   "hero": {
-    "badge": "Rejestrator podróży i dziennik podróży",
+    "badge": "Dziennik podróży",
     "title": "Zamień swoje podróże w",
     "titleHighlight": "piękne opowieści",
     "subtitle": "Automatycznie zapisuj, jak się przemieszczasz, i twórz z tych danych rozbudowane dzienniki podróży. Każda podróż to interaktywna mapa, szczegółowe statystyki, formatowane opisy i zdjęcia — wszystko w jednym miejscu.",

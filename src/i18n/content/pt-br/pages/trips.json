@@ -61,12 +61,12 @@
   ],
   "meta": {
     "title": "App de registro e diário de viagens",
-    "description": "Registre viagens automaticamente em um diário: mapa do trajeto, países e distância, notas e fotos. Na nuvem ou em hospedagem própria.",
+    "description": "Transforme suas viagens em belos diários com registro automático: mapa da rota, países e distância, notas e fotos em um só lugar.",
     "ogTitle": "Viagens no Dawarich — Documente suas aventuras",
     "ogDescription": "Crie diários de viagem completos com mapas interativos, estatísticas detalhadas, descrições com texto formatado e integração automática de fotos."
   },
   "hero": {
-    "badge": "Registro e diário de viagens",
+    "badge": "Diário de viagem",
     "title": "Transforme suas viagens em",
     "titleHighlight": "belas histórias",
     "subtitle": "Registre seus deslocamentos automaticamente e transforme-os em diários de viagem completos. Cada viagem inclui mapa interativo, estatísticas detalhadas, descrições com texto formatado e fotos — tudo em um só lugar.",

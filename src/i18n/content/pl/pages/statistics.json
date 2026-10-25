@@ -67,12 +67,12 @@
   ],
   "meta": {
     "title": "Mapa odwiedzonych krajów i statystyki podróży",
-    "description": "Wszystkie odwiedzone kraje i miasta, dystans, dni aktywności i roczne trendy z Twojej historii lokalizacji. Korzystaj bezpłatnie na własnym serwerze.",
+    "description": "Zobacz swoje życie w liczbach: każdy odwiedzony kraj i miasto, odległości, aktywne dni i roczne trendy z Twojej historii lokalizacji.",
     "ogTitle": "Statystyki Dawarich — Twoje życie w liczbach",
     "ogDescription": "Pełne statystyki lokalizacji: odwiedzone kraje, łączna odległość, rejestracja czasu oraz automatyczne miesięczne i roczne podsumowania e-mail."
   },
   "hero": {
-    "badge": "Mapa odwiedzonych krajów i statystyki podróży",
+    "badge": "Analizy i podsumowanie",
     "title": "Zobacz swoje życie w",
     "titleHighlight": "liczbach",
     "subtitle": "Zamień dane lokalizacyjne w użyteczne podsumowanie. Odkrywaj wzorce, śledź osiągnięcia i świętuj kolejne etapy dzięki pełnym statystykom aktualizowanym automatycznie co godzinę.",

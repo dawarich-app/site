@@ -61,12 +61,12 @@
   ],
   "meta": {
     "title": "App de seguiment i diari de viatges",
-    "description": "Registra els viatges automàticament i conserva un diari de cadascun: mapa de la ruta, països, distància, notes i fotos. Cloud o autoallotjat.",
+    "description": "Transforma els teus viatges en bonics diaris, registrats automàticament: mapa de la ruta, països, distància, notes i fotos en un sol lloc.",
     "ogTitle": "Viatges de Dawarich — Documenta les teves aventures",
     "ogDescription": "Crea diaris de viatge complets amb mapes interactius, estadístiques detallades, descripcions amb format i integració automàtica de fotos."
   },
   "hero": {
-    "badge": "Seguiment i diari de viatges",
+    "badge": "Diari de viatge",
     "title": "Converteix els teus viatges en",
     "titleHighlight": "històries per recordar",
     "subtitle": "Captura els moviments automàticament i transforma’ls en diaris de viatge complets. Cada viatge inclou un mapa interactiu, estadístiques detallades, descripcions amb format i fotos, tot en un sol lloc.",

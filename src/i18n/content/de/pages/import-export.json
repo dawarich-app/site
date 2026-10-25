@@ -113,12 +113,12 @@
   ],
   "meta": {
     "title": "Google-Takeout-Standortverlauf & mehr importieren",
-    "description": "Import: Google Timeline (Google Maps Zeitachse), Takeout-Standortverlauf, GPX, FIT, KML, CSV, GeoJSON, Polarsteps, OwnTracks. Exportiere jederzeit alles.",
+    "description": "Deine Daten gehören dir. Importiere Standortverlauf aus Google Takeout, GPX, FIT, KML, CSV u. a.; exportiere jederzeit alles. Ohne Anbieterbindung.",
     "ogTitle": "Dawarich Import & Export – deine Daten, deine Kontrolle",
     "ogDescription": "Importiere aus Google Maps, Apple Health, GPX, GeoJSON, KML. Exportiere in jedes Format. Volle Datenportabilität ohne Anbieterbindung."
   },
   "hero": {
-    "badge": "Standortverlauf aus Google Takeout importieren",
+    "badge": "Datenportabilität",
     "title": "Deine Daten",
     "titleHighlight": "gehören dir",
     "subtitle": "Importiere deinen Standortverlauf aus beliebigen Quellen. Exportiere ihn jederzeit in jedem Format. Dawarich steht für vollständige Datenportabilität ohne Anbieterbindung – du behältst immer die Kontrolle.",

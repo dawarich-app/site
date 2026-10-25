@@ -113,12 +113,12 @@
   ],
   "meta": {
     "title": "导入 Google Takeout 位置历史记录及更多数据",
-    "description": "导入 Google Timeline（谷歌地图时间轴）和 Takeout 位置历史记录，以及 GPX、FIT、KML、CSV、GeoJSON、Polarsteps 和 OwnTracks 文件。随时导出全部数据。",
+    "description": "您的数据属于您。导入 Google Takeout 位置历史记录、GPX、FIT、KML、CSV 等数据；随时导出全部数据。不被平台绑定。",
     "ogTitle": "Dawarich 导入与导出 — 您的数据，由您掌控",
     "ogDescription": "从 Google Maps、Apple Health、GPX、GeoJSON、KML 导入，导出为任意格式。数据全面可迁移，不受平台限制。"
   },
   "hero": {
-    "badge": "导入 Google Takeout 位置历史记录",
+    "badge": "数据可迁移",
     "title": "您的数据",
     "titleHighlight": "属于您",
     "subtitle": "从任何来源导入位置历史记录，随时以任意格式导出。Dawarich 坚持数据全面可迁移，让您自由选择，始终掌控自己的数据。",
