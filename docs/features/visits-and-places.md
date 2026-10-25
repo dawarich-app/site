@@ -56,11 +56,12 @@ Places can also come from a file you import. Waypoints in a GPX file — for exa
 
 ### Managing Places
 
-- Places can be viewed and managed in the Places section. **All Places** lists everything; **Unconfirmed** lists places that were found automatically and that you have not confirmed, tagged, annotated or used in a confirmed visit.
+- Places can be viewed and managed in the Places section. **All Places** lists everything; **Unconfirmed** lists places that were found automatically and that you have not tagged, annotated, used in a confirmed visit or set to notify on enter and leave.
 - To rename a place or change its Visit Radius, click it on the map and choose **Edit**.
 - To merge a duplicate, open the place on the Places page and pick the duplicate. Merging moves the duplicate's visits, tags and notes to the place you opened.
 - Deleting a place keeps its visits; they just lose the attached place.
-- An automatically found place is deleted on its own once no visit uses it any more, unless you renamed it or gave it a tag or note. Places you created or imported are never deleted automatically.
+- To be notified when you arrive or leave, turn on **Notify on enter and leave** in the place's details. See [Geofencing](/docs/features/geofencing).
+- An automatically found place is deleted on its own once no visit uses it any more, unless you renamed it, gave it a tag or note, or turned on **Notify on enter and leave**. Places you created or imported are never deleted automatically.
 
 ### Home Location
 
@@ -87,7 +88,7 @@ Tags allow you to categorize places and create privacy zones.
 
 ### Privacy Zones
 
-Privacy zones hide or obscure location data within a specified radius. This is useful for:
+Privacy zones hide the places you tag with them, such as your home, from the map and from everything you share. This is useful for:
 - Protecting your home address
 - Hiding sensitive locations
 - Maintaining privacy when sharing data
@@ -97,10 +98,15 @@ To create a privacy zone:
 2. Set a **Privacy Radius** (in meters, up to 5000m)
 3. Apply the tag to relevant places
 
-When a privacy zone is active:
-- Points within the radius are hidden from exports
-- Shared statistics exclude the zone
-- The exact location isn't revealed in public views
+Inside a privacy zone:
+- Points, tracks, routes, visits, places, photos and live updates disappear from your own [map](/docs/features/map), and fog of war stays over the zone. A track that crosses a zone is cut at its edge instead of being drawn through it.
+- Trip pages, route replay and posters leave the zone out as well.
+- Timeline entries for visits inside the zone keep their name and time but no longer place a pin on the map.
+- Shared links leave out the zone. Shared monthly stats leave out map hexagons that touch it. See [Sharing](/docs/features/sharing#privacy).
+
+The hidden area is not centred on the place. It is up to 1.6 times your radius and shifted off the place by an amount that differs for every place, so the place can't be pinpointed from where your data stops. Everything within the radius you set stays hidden.
+
+Privacy zones only change what is shown. Your data is still recorded inside them, and exports, statistics and the API keep your full data. API clients can ask for masked results by adding `mask_privacy_zones=true` to a request; map tiles and fog of war are always masked.
 
 ### Applying Tags to Places
 

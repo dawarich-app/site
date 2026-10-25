@@ -154,7 +154,7 @@ networks:
   dawarich:
 services:
   dawarich_redis:
-    image: redis:7.0-alpine
+    image: redis:8-alpine
     container_name: dawarich_redis
     command: redis-server
     networks:

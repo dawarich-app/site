@@ -67,7 +67,7 @@ This page compares Dawarich with GeoPulse to help you understand the differences
 
 - **Native iOS and Android apps** with built-in tracking — no third-party tracker apps to configure. Install, sign in, and tracking works, including for non-technical family members.
 - **A managed Cloud option** — if you ever stop wanting to run a server, your data can move to Dawarich Cloud (and back out again; exports are always open formats).
-- **Privacy zones** — hide sensitive areas (home, work) from shared links and exports.
+- **Privacy zones** — hide sensitive areas (home, work) on your own map and on everything you share.
 - **Richer sharing** — share live location, individual trips, tracks, and monthly stats, each with its own expiring, revocable link.
 - **AGPL-3.0 open source** — Dawarich is OSI-approved open source. GeoPulse's BSL 1.1 is free for personal use but is not an open-source license and restricts commercial use.
 - **A larger contributor community** — 56 contributors versus a mostly single-maintainer project, which matters for long-term continuity.

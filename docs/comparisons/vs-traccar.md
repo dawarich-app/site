@@ -29,7 +29,7 @@ Both Dawarich and Traccar are open source and self-hosted, but they serve differ
 | Phone-based tracking | ✅ (iOS, Android) | ✅ (Android, iOS client) |
 | Hardware GPS device support | ❌ | ✅ (2,000+ devices) |
 | Fleet / vehicle tracking | ❌ | ✅ |
-| Geofencing | ✅ (custom areas) | ✅ |
+| Geofencing | ✅ (event log and webhooks) | ✅ |
 | Real-time tracking | ✅ | ✅ |
 | Speed monitoring | ❌ | ✅ |
 | **Data Import/Export** |
@@ -53,7 +53,7 @@ Both Dawarich and Traccar are open source and self-hosted, but they serve differ
 | **Technical Features** |
 | API access | ✅ | ✅ |
 | Multiple tracking protocols | ⚠️ (OwnTracks, Overland, HTTP) | ✅ (2,000+ protocols) |
-| Notifications/alerts | ⚠️ (areas) | ✅ (speed, geofence, maintenance) |
+| Notifications/alerts | ⚠️ (geofence webhooks) | ✅ (speed, geofence, maintenance) |
 | Multi-user / multi-device | ✅ | ✅ |
 | **Setup** |
 | Installation | Docker | Java / Docker |

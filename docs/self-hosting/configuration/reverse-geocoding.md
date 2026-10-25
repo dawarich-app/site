@@ -99,8 +99,10 @@ It is also possible to run your own Photon instance using Docker. If you want to
 
 Alternatively, you can use the [Docker image provided by @rtuszik](https://github.com/rtuszik/photon-docker) which comes batteries included to automatically update the Index used by Photon from time to time. Instructions for installing his image can be found in his GitHub repository. Be aware, that that are different from the instructions provided by Ton Snoei, so please read them carefully.
 
-:::warning Include English in your Photon index
-Dawarich asks Photon for English place names (`lang=en`). If you build your own index and limit its languages, for example with the JSONL import in photon-docker, include `en` in the list. An index without English answers Dawarich's requests with no results, even though manual queries with `lang=default` or your own language work.
+:::warning Photon index languages
+Dawarich asks Photon for English place names (`lang=en`) by default. If you build your own index and limit its languages, for example with the JSONL import in photon-docker, either include `en` in the list or tell Dawarich to ask for a language the index contains: set it under **Admin → Instance settings → Photon → Language**, or with the `PHOTON_API_LANGUAGE` environment variable. Use a two-letter code such as `nl`, or `default` for names in the local language. While the environment variable is set, it pins the value and the setting can't be changed in the web interface.
+
+An index without the requested language answers Dawarich's requests with no results. A change applies only to new lookups, so a city may then appear twice in statistics, under its old and its new name.
 :::
 
 After you deploy your own instance of the Photon service, you need to set the `PHOTON_API_HOST` environment variable to the URL of your Photon service in the `docker-compose.yml` file. Here is an example of how to do it:

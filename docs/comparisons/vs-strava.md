@@ -43,7 +43,7 @@ This page compares Dawarich with Strava to help you understand the differences a
 | Heatmap | ✅ (web) | ❌ |
 | Statistics dashboard | ✅ | ✅ |
 | **Places & Areas** |
-| Custom areas | ✅ (web) | ❌ |
+| Custom places with a radius | ✅ (web) | ❌ |
 | Place detection | ✅ | ❌ |
 | Visit duration tracking | ✅ | ❌ |
 | **Photos** |

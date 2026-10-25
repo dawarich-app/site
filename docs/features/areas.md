@@ -14,3 +14,7 @@ When you upgrade, each Area becomes a Place with the same name, center and radiu
 - To see the circles on the map, turn on **Show place boundaries** in the Places layer options. See [Map layers](/docs/features/map#places).
 
 Deleting a Place keeps its visits; they just lose the attached place.
+
+## API
+
+`/api/v1/areas` and the Visit `area_id` field still work but are deprecated. Use `/api/v1/places` and `place_id` instead. See [Updating to 1.18.0](/docs/self-hosting/updating#1180) for the other Visit API changes.

@@ -67,7 +67,7 @@ This page compares Dawarich with Reitti to help you understand the differences a
 
 - **Native iOS and Android apps** with built-in tracking — no third-party tracker apps to configure. Install, sign in, and tracking works, including for non-technical family members.
 - **A managed Cloud option** — if you ever stop wanting to run a server, your data can move to Dawarich Cloud (and back out again; exports are always open formats).
-- **Privacy zones** — hide sensitive areas (home, work) from shared links and exports.
+- **Privacy zones** — hide sensitive areas (home, work) on your own map and on everything you share.
 - **Richer sharing** — live location, individual trips, tracks, and monthly stats, each with its own expiring, revocable link.
 - **Trips, digests and deeper statistics** — build trips from your points with photos, and get monthly/yearly recaps of your travels.
 - **PhotoPrism support** in addition to Immich.

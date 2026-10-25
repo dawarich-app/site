@@ -29,7 +29,7 @@ This page compares Dawarich with OwnTracks to help you understand the difference
 | Automatic location tracking | ✅ (iOS) | ✅ |
 | Manual location logging | ✅ (iOS) | ❌ |
 | GPS accuracy settings | ✅ (iOS) | ✅ |
-| Geofencing | ❌ | ✅ |
+| Geofencing | ✅ (event log and webhooks) | ✅ |
 | **Data Import/Export** |
 | Google Takeout import | ✅ (web) | ❌ |
 | GPX import | ✅ (web) | ❌ |
@@ -42,7 +42,7 @@ This page compares Dawarich with OwnTracks to help you understand the difference
 | Heatmap | ✅ (web) | ✅ |
 | Statistics dashboard | ✅ | ❌ |
 | **Places & Areas** |
-| Custom areas | ✅ (web) | ✅ |
+| Custom places with a radius | ✅ (web) | ✅ |
 | Place detection | ✅ | ❌ |
 | Visit duration tracking | ✅ | ❌ |
 | **Photos** |

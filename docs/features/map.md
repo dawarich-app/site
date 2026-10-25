@@ -87,7 +87,7 @@ Highlights countries you've visited on a world map overlay.
 
 ### Places
 
-Shows your [places](/docs/features/visits-and-places#places) with their names. The map shows places you created or imported, places with a tag or note, and places with a confirmed visit. Automatically found places without any of these stay on the Places page under **Unconfirmed**.
+Shows your [places](/docs/features/visits-and-places#places) with their names. The map shows places you created or imported, places with a tag or note, places with a confirmed visit, and places that notify on enter and leave. Automatically found places without any of these stay on the Places page under **Unconfirmed**.
 
 In the Places options below the tiles:
 
@@ -107,6 +107,10 @@ When you are in a [family](/docs/features/family), open the **Family** tab (`F`)
 The tab lists every sharing member with their last known address and when they were last seen. Click a member to center the map on them, or use **Manage family** to open the Family page.
 
 ![Family members on the map](images/family-map-v2.webp)
+
+## Privacy Zones
+
+Places tagged with a [privacy zone](/docs/features/visits-and-places#privacy-zones) are hidden on your own map too: points, routes, tracks, visits, places, photos and live updates inside the zone are not drawn, fog of war stays over it, and a track that crosses it is cut at its edge.
 
 ## Tools
 

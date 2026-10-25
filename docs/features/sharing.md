@@ -70,7 +70,7 @@ Trip and track links show the trip or track with the sections you enabled when c
 ## Privacy
 
 - **One link, one thing.** A link only resolves to what it was created for. A time period link is limited to its dates, and there is no way from a shared page to the rest of your account.
-- **Privacy zones apply.** Points inside your privacy zones (places tagged with a tag that has a privacy radius) are left out of shared routes, and a live position inside one is not shown.
+- **Privacy zones apply.** Points inside your [privacy zones](/docs/features/visits-and-places#privacy-zones) (places tagged with a tag that has a privacy radius) are left out of shared routes, and a live position inside one is not shown. The hidden area is shifted off the place by an amount that differs for every place, so the place can't be pinpointed from where the route stops.
 - **Phrase-protected links stay private in previews.** Messengers and social networks don't get a map preview of a phrase-protected link.
 - **You can stop at any time.** Revoking or regenerating a link takes effect immediately.
 
@@ -81,5 +81,6 @@ Monthly statistics and the year-end digest are shared from their own pages, with
 - The address contains a unique ID, and the link expires after 1 hour, 12 hours, 24 hours, 1 week or 1 month.
 - There is no magic phrase and no view counter, and these links do not appear in the **Shared** tab.
 - On Dawarich Cloud, public sharing of monthly statistics requires the Pro plan.
+- Privacy zones apply: map hexagons that touch a zone are left off the shared page, and its map doesn't zoom to points inside a zone.
 
 See [Public Stats Sharing](/docs/features/stats#public-stats-sharing) for the details.
