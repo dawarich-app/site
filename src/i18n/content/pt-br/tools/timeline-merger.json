@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Google Timeline — una históricos de localização",
+    "title": "Linha do tempo do Google/Google Timeline: unir exportações",
     "description": "Una Google Timeline (Linha do tempo do Google Maps) num arquivo. Deduplicação de pontos sobrepostos. Records.json, Semantic History e celular. Grátis e privado.",
     "keywords": "unir exportações google timeline, combinar arquivos de histórico de localização, recuperar dados google timeline, unir Records.json, combinar localização Google Takeout, unir semantic location history, unificador Google Timeline, remoção de duplicatas do histórico de localização, unir dados GPS",
     "featureList": [
@@ -41,7 +41,7 @@
     ],
     "tool": "Unificador de dados do Google Timeline do Dawarich"
   },
-  "h1": "Unificador de dados do Google Timeline",
+  "h1": "Linha do tempo do Google (Google Timeline): unificador de dados",
   "intro": "Una várias exportações do Google Timeline (Linha do tempo do Google Maps) em um único arquivo. A remoção inteligente de duplicatas elimina pontos repetidos em períodos sobrepostos e preserva todos os registros únicos de localização. Grátis, com privacidade e inteiramente no navegador.",
   "preCta": "Quer visualizar seus dados da linha do tempo primeiro? Experimente nosso [Visualizador do Google Timeline](/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) para explorar seu histórico de localização em um mapa interativo. Precisa de uma alternativa de longo prazo para a linha do tempo? O [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) dá a você plena propriedade dos seus dados.",
   "faqTitle": "Perguntas frequentes",

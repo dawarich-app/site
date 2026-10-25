@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Divisor do Google Timeline — divida arquivos JSON grandes",
+    "title": "Linha do tempo do Google/Google Timeline: divida JSON grande",
     "description": "Divida JSON grandes do Google Timeline (Linha do tempo do Google Maps) em partes menores e válidas. Todos os formatos: Records.json, Semantic Location History, Semantic Segments e mais. Escolha o tamanho. Grátis e privado; tudo no navegador.",
     "keywords": "dividir json google timeline, dividir records.json, dividir histórico de localização google grande, divisor google timeline, dividir localização google takeout, separar json da linha do tempo, arquivo google timeline grande demais",
     "featureList": [
@@ -31,7 +31,7 @@
       }
     ]
   },
-  "h1": "Divisor do Google Timeline",
+  "h1": "Linha do tempo do Google (Google Timeline): divisor",
   "intro": "Divida exportações JSON grandes do Google Timeline (Linha do tempo do Google Maps) em partes menores e válidas. Cada parte mantém o formato original para poder ser importada em qualquer lugar. Escolha o tamanho desejado dos arquivos e baixe um ZIP.",
   "benefitsTitle": "Por que dividir arquivos da linha do tempo?",
   "privacyBody": "Todo o processamento acontece no seu navegador. Seus arquivos nunca saem do seu dispositivo.",

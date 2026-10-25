@@ -1,5 +1,5 @@
 {
-  "h1": "Detector de formato do Google Timeline",
+  "h1": "Linha do tempo do Google (Google Timeline): detector de formato",
   "intro": "Carregue qualquer arquivo exportado do Google Timeline (Linha do tempo do Google Maps) para identificar seu formato na hora, ver estatísticas dos dados e receber recomendações do que fazer a seguir. Todo o processamento acontece no seu navegador.",
   "privacyTitle": "Privacidade em primeiro lugar",
   "privacyBody": "Todo o processamento acontece no seu navegador. Seus dados de localização nunca saem do seu dispositivo e não são enviados a nenhum servidor.",
@@ -8,7 +8,7 @@
   "homeLabel": "Início",
   "toolsLabel": "Ferramentas gratuitas",
   "meta": {
-    "title": "Google Timeline — detector de formato de arquivos",
+    "title": "Linha do tempo do Google/Google Timeline: detectar formato de exportação",
     "description": "Google Timeline (Linha do tempo do Google Maps): envie Google Takeout e veja já formato, nº de pontos, período, tamanho e qualidade. Grátis; tudo no navegador.",
     "keywords": "formato google timeline, qual o formato da minha exportação google, tipo de arquivo de localização google takeout, formato do histórico de localização google, detector de arquivo google timeline, formato de exportação google maps timeline, formato json google takeout, tipo de arquivo de histórico de localização, formato de dados google timeline, identificar arquivo de exportação google",
     "featureList": [

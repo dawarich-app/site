@@ -1,5 +1,5 @@
 {
-  "h1": "Statystyki Google Timeline",
+  "h1": "Oś czasu Google (Google Timeline): statystyki",
   "intro": "Twoje Spotify Wrapped dla historii lokalizacji. Dodaj dane Google Timeline (Oś czasu Google Maps) i zobacz pokonany dystans, odwiedzone kraje, najczęstsze miejsca oraz to, jak spędzasz czas, przemieszczając się po świecie.",
   "appName": "Analiza statystyk Google Timeline",
   "privacyTitle": "Prywatność przede wszystkim",
@@ -9,7 +9,7 @@
   "homeLabel": "Strona główna",
   "toolsLabel": "Darmowe narzędzia",
   "meta": {
-    "title": "Statystyki Google Timeline — Twoja historia lokalizacji",
+    "title": "Oś czasu Google (Google Timeline): statystyki historii lokalizacji",
     "description": "Analizuj Google Timeline (Oś czasu Google Maps): łączny dystans, odwiedzone kraje, najczęstsze miejsca, podział aktywności, trendy roczne. Gratis, prywatnie, w całości w przeglądarce.",
     "keywords": "statystyki Google Timeline, statystyki historii lokalizacji, jaki dystans pokonałem, podsumowanie Google Maps Timeline, analiza Google Timeline, statystyki podróży, analiza danych lokalizacji, statystyki Google Takeout, kalkulator pokonanego dystansu, licznik odwiedzonych miejsc",
     "featureList": [

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Google Timeline na GPX/KML/CSV — darmowy konwerter",
+    "title": "Oś czasu Google (Google Timeline): darmowy konwerter na GPX/KML/CSV",
     "description": "Konwertuj historię lokalizacji Google Timeline (Oś czasu Google Maps) na GPX, KML, GeoJSON lub CSV. Za darmo i prywatnie — wszystko w Twojej przeglądarce.",
     "keywords": "konwertuj Google Timeline na GPX, Google Takeout na KML, historia lokalizacji Google na CSV, konwerter osi czasu na GeoJSON, konwerter Google Timeline, eksport Google Maps Timeline, historia lokalizacji na GPX, konwerter lokalizacji Google Takeout, konwerter danych osi czasu",
     "appName": "Konwerter Google Timeline na GPX/KML/CSV",
@@ -15,7 +15,7 @@
       "Bez wysyłania danych na serwer"
     ]
   },
-  "h1": "Konwerter Google Timeline",
+  "h1": "Oś czasu Google (Google Timeline): konwerter",
   "intro": "Darmowe, prywatne narzędzie do konwersji historii lokalizacji Google Timeline (Oś czasu Google Maps) na GPX, KML, GeoJSON, KMZ lub CSV. Wybierz wyeksportowane pliki JSON — wszystko odbywa się w Twojej przeglądarce.",
   "howTo": {
     "title": "Jak pobrać dane Timeline",

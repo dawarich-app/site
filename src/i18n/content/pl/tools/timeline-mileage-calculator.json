@@ -1,5 +1,5 @@
 {
-  "h1": "Kalkulator dystansu Google Timeline",
+  "h1": "Oś czasu Google (Google Timeline): kalkulator dystansu",
   "intro": "Oblicz dystans przejazdów na podstawie danych Google Timeline (Oś czasu Google Maps). Twórz dzienniki przebiegu do pobrania ze szczegółami podróży oraz podsumowaniami dziennymi i miesięcznymi. Wszystko odbywa się w Twojej przeglądarce — dane pozostają na urządzeniu, chyba że wybierzesz „Zapisz na moim koncie Dawarich”.",
   "privacyTitle": "Prywatność przede wszystkim",
   "privacyBody": "Wszystkie obliczenia dystansu odbywają się w Twojej przeglądarce — dane lokalizacji pozostają na urządzeniu, chyba że wybierzesz „Zapisz na moim koncie Dawarich”.",
@@ -9,7 +9,7 @@
   "homeLabel": "Strona główna",
   "toolsLabel": "Darmowe narzędzia",
   "meta": {
-    "title": "Kalkulator Google Timeline — dystans przejazdów za darmo",
+    "title": "Oś czasu Google (Google Timeline): licz dystans jazdy za darmo",
     "description": "Google Timeline (Oś czasu Google Maps): licz dystans jazdy, twórz dzienniki przebiegu, eksportuj CSV do odliczeń podatkowych. Gratis, prywatnie w przeglądarce.",
     "keywords": "dystans Google Timeline, kalkulator dystansu z historii lokalizacji, dystans jazdy z Google Maps, dziennik przebiegu Google Timeline, kalkulator przebiegu do podatków, rejestrator przebiegu Google Maps, dziennik przebiegu IRS, kalkulator dystansu jazdy, dystans przejazdów Google Timeline, kalkulator zwrotu kosztów przejazdu",
     "featureList": [

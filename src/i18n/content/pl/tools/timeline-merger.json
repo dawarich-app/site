@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Łączenie Google Timeline — scal historię lokalizacji",
+    "title": "Oś czasu Google (Google Timeline): scal eksporty lokalizacji",
     "description": "Scal eksporty Google Timeline (Oś czasu Google Maps) w jeden plik: Records.json, Semantic History i eksporty z telefonu. Inteligentne usuwanie nakładających się punktów. Za darmo i prywatnie.",
     "keywords": "łączenie eksportów Google Timeline, łączenie plików historii lokalizacji, odzyskiwanie danych Google Timeline, łączenie Records.json, łączenie lokalizacji Google Takeout, łączenie semantic location history, łączenie Google Timeline, usuwanie duplikatów historii lokalizacji, łączenie danych GPS",
     "featureList": [
@@ -41,7 +41,7 @@
     ],
     "tool": "Łączenie danych Google Timeline od Dawarich"
   },
-  "h1": "Łączenie danych Google Timeline",
+  "h1": "Oś czasu Google (Google Timeline): łączenie danych",
   "intro": "Połącz wiele eksportów Google Timeline (Oś czasu Google Maps) w jeden spójny plik. Inteligentne usuwanie duplikatów eliminuje powtarzające się punkty, zachowując wszystkie unikalne zapisy lokalizacji. Za darmo, prywatnie i w całości w Twojej przeglądarce.",
   "preCta": "Chcesz najpierw zobaczyć dane osi czasu? Wypróbuj [wizualizację Google Timeline](/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger), aby przeglądać historię lokalizacji na interaktywnej mapie. Szukasz zamiennika osi czasu na dłużej? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) daje Ci pełną własność danych.",
   "faqTitle": "Najczęściej zadawane pytania",
