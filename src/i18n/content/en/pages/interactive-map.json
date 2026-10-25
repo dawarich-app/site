@@ -40,9 +40,9 @@
       "imageAlt": "Scratch map showing visited countries"
     },
     {
-      "title": "Areas",
-      "description": "Draw custom areas on your map to mark important locations, neighborhoods, or regions of interest.",
-      "imageAlt": "Custom areas on map"
+      "title": "Places",
+      "description": "Save the places that matter to you, each with its own visit radius. Show their boundaries on the map and record when you arrive or leave.",
+      "imageAlt": "Places with their boundaries on the map"
     },
     {
       "title": "Photos",
@@ -68,7 +68,7 @@
       "details": [
         "Toggle points, routes, or heatmap",
         "Enable fog of war or scratch map",
-        "Show or hide photos and areas"
+        "Show or hide photos and places"
       ]
     },
     {
@@ -86,7 +86,7 @@
       "details": [
         "Save favorite locations",
         "Add missing visits manually",
-        "Draw custom areas on the map"
+        "Set a visit radius around each place"
       ]
     },
     {

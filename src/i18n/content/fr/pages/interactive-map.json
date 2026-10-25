@@ -40,9 +40,9 @@
       "imageAlt": "Carte à gratter affichant les pays visités"
     },
     {
-      "title": "Zones",
-      "description": "Dessinez des zones personnalisées sur votre carte pour marquer des lieux importants, des quartiers ou des régions d’intérêt.",
-      "imageAlt": "Zones personnalisées sur la carte"
+      "title": "Lieux",
+      "description": "Enregistrez les lieux qui comptent pour vous, chacun avec son propre rayon de visite. Affichez leurs limites sur la carte et notez quand vous arrivez ou repartez.",
+      "imageAlt": "Lieux avec leurs limites sur la carte"
     },
     {
       "title": "Photos",
@@ -68,7 +68,7 @@
       "details": [
         "Activez les points, parcours ou cartes de chaleur",
         "Activez le brouillard de guerre ou la carte à gratter",
-        "Affichez ou masquez les photos et les zones"
+        "Affichez ou masquez les photos et les lieux"
       ]
     },
     {
@@ -86,7 +86,7 @@
       "details": [
         "Enregistrez vos lieux favoris",
         "Ajoutez manuellement les visites manquantes",
-        "Dessinez des zones personnalisées sur la carte"
+        "Définissez un rayon de visite autour de chaque lieu"
       ]
     },
     {

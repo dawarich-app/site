@@ -40,9 +40,9 @@
       "imageAlt": "Mapa con los países visitados"
     },
     {
-      "title": "Áreas",
-      "description": "Dibuja áreas personalizadas en tu mapa para marcar ubicaciones importantes, barrios o regiones de interés.",
-      "imageAlt": "Áreas personalizadas en el mapa"
+      "title": "Lugares",
+      "description": "Guarda los lugares que te importan, cada uno con su propio radio de visita. Muestra sus límites en el mapa y registra cuándo llegas o te vas.",
+      "imageAlt": "Lugares con sus límites en el mapa"
     },
     {
       "title": "Fotos",
@@ -68,7 +68,7 @@
       "details": [
         "Activa puntos, rutas o mapa de calor",
         "Activa la niebla de guerra o el mapa para descubrir el mundo",
-        "Muestra u oculta fotos y áreas"
+        "Muestra u oculta fotos y lugares"
       ]
     },
     {
@@ -86,7 +86,7 @@
       "details": [
         "Guarda tus ubicaciones favoritas",
         "Añade manualmente las visitas que falten",
-        "Dibuja áreas personalizadas en el mapa"
+        "Define un radio de visita alrededor de cada lugar"
       ]
     },
     {

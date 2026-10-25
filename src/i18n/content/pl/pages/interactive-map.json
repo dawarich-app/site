@@ -40,9 +40,9 @@
       "imageAlt": "Mapa zdrapka z odwiedzonymi krajami"
     },
     {
-      "title": "Obszary",
-      "description": "Rysuj własne obszary na mapie, aby oznaczać ważne lokalizacje, dzielnice lub interesujące regiony.",
-      "imageAlt": "Własne obszary na mapie"
+      "title": "Miejsca",
+      "description": "Zapisuj ważne dla siebie miejsca, każde z własnym promieniem wizyty. Pokazuj ich granice na mapie i rejestruj, kiedy do nich przybywasz lub je opuszczasz.",
+      "imageAlt": "Miejsca z ich granicami na mapie"
     },
     {
       "title": "Zdjęcia",
@@ -68,7 +68,7 @@
       "details": [
         "Włączaj punkty, trasy lub mapę cieplną",
         "Włącz mgłę wojny lub mapę zdrapkę",
-        "Pokazuj lub ukrywaj zdjęcia i obszary"
+        "Pokazuj lub ukrywaj zdjęcia i miejsca"
       ]
     },
     {
@@ -86,7 +86,7 @@
       "details": [
         "Zapisuj ulubione lokalizacje",
         "Dodawaj brakujące wizyty ręcznie",
-        "Rysuj własne obszary na mapie"
+        "Ustaw promień wizyty wokół każdego miejsca"
       ]
     },
     {
