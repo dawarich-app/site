@@ -1,5 +1,5 @@
 {
-  "h1": "Visualitzador de Google Timeline",
+  "h1": "Visualitzador de Google Timeline (Cronologia de Google Maps)",
   "intro": "Google va tancar la línia de temps al web: aquesta eina gratuïta que prioritza la privacitat te la torna a mostrar. Explora l'historial d'ubicacions exportat dia a dia amb un calendari de calor, una llista de visites i la reproducció de les activitats.",
   "saveIntro": "També ho vols al teu compte de Dawarich? Ho importarem quan t'hi registris, sense haver de tornar a carregar el fitxer.",
   "privacy": "Tot es processa al navegador. Les teves dades es queden al dispositiu tret que triïs «Desa al meu compte de Dawarich».",
@@ -8,7 +8,7 @@
   "toolsLabel": "Eines gratuïtes",
   "loadingMap": "S'està carregant el mapa…",
   "meta": {
-    "title": "Visualitzador de Google Timeline: torna a veure'l al web",
+    "title": "Torna a veure Google Timeline (Cronologia de Google Maps) al web",
     "description": "Google va retirar la línia de temps del web. Recupera'n la vista gratis: carrega l'exportació de Takeout i consulta l'historial en un mapa al navegador.",
     "keywords": "visualitzador de Google Timeline, Google Timeline desaparegut, on és el meu Google Timeline, veure Google Timeline al web, historial de Google Timeline, visor de l'historial d'ubicacions de Google, visor d'ubicacions de Google Takeout, veure historial d'ubicacions en un mapa, substitut de Google Maps Timeline, alternativa al tancament de Google Timeline, mapa d'historial d'ubicacions, visor d'exportacions de Google Timeline, visualitzador d'ubicacions amb privacitat",
     "featureList": [

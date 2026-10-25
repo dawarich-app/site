@@ -62,7 +62,8 @@
     "td13": "Rien. Jamais.",
     "text": "Notre service coûte moins cher que celui de Life360 qui ",
     "em": "vend",
-    "text2": " vos données."
+    "text2": " vos données.",
+    "perYear": "{price}/an"
   },
   "promises": {
     "heading": "La promesse de ne rien perdre",
@@ -86,8 +87,8 @@
   },
   "meta": {
     "title": "Dawarich Cloud — Historique de localisation privé, à vous",
-    "description": "Historique de localisation privé en Allemagne. Cartes de chaleur, déplacements, statistiques, sans vente de données. Importez Google Takeout, Strava, Garmin +12. Dès {price}. Essai gratuit 7 j.",
-    "ogDescription": "Votre historique de localisation privé, hébergé en Allemagne. Cartes de chaleur, déplacements et statistiques, sans vente de données. Dès {price}. Essai gratuit de 7 jours.",
+    "description": "Historique privé en Allemagne, jamais vendu. Cartes de chaleur, déplacements, stats. Import Google Takeout/Strava/Garmin +12. Dès {price}/an. Essai gratuit 7 j.",
+    "ogDescription": "Historique de localisation privé, hébergé en Allemagne. Cartes de chaleur, déplacements, stats. Sans vente de données. Dès {price}/an. Essai gratuit 7 j.",
     "twitterDescription": "Votre historique de localisation privé, hébergé en Allemagne. Cartes de chaleur, déplacements et statistiques, sans vente de données."
   },
   "hero": {

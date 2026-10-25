@@ -106,7 +106,8 @@
     "td10": "Activitats públiques",
     "td11": "Dawarich Cloud Pro",
     "td12": "Sí: importació completa de Takeout, mapes de calor i viatges",
-    "td13": "No. Mai."
+    "td13": "No. Mai.",
+    "perYear": "{price}/any"
   },
   "promises": {
     "heading": "Dues promeses, cap risc",
@@ -134,7 +135,7 @@
   },
   "meta": {
     "title": "Alternativa a Google Timeline: historial privat",
-    "description": "Importa Google Timeline a Dawarich, explora l’historial en un mapa web i registra nous trajectes amb les apps per a iOS i Android. Prova Cloud durant 7 dies."
+    "description": "Importa Google Timeline (Cronologia de Google Maps) a Dawarich: historial en un mapa web i nous trajectes amb apps iOS i Android. Prova Cloud de 7 dies."
   },
   "hero": {
     "badge": "Alternativa a Google Timeline",

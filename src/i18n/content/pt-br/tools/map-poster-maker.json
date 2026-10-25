@@ -1,6 +1,6 @@
 {
   "h1": "Qualquer pessoa pode pendurar um pôster de Berlim. Só você tem o seu percurso.",
-  "intro": "O pôster abaixo é uma demonstração — um mês de deslocamentos por Berlim. Solte qualquer arquivo GPX, Google Timeline, KML, FIT ou TCX para criar um mapa que só você pode pendurar — seus passeios de bicicleta, suas corridas, suas viagens de carro. Cerca de dois minutos, sem conta.",
+  "intro": "O pôster abaixo é uma demonstração — um mês de deslocamentos por Berlim. Solte qualquer arquivo GPX, Google Timeline (Linha do tempo do Google Maps), KML, FIT ou TCX para criar um mapa que só você pode pendurar — seus passeios de bicicleta, suas corridas, suas viagens de carro. Cerca de dois minutos, sem conta.",
   "saveIntro": "Quer ter esses dados na sua conta Dawarich também? Vamos importá-los durante o cadastro — sem precisar carregá-los novamente.",
   "appName": "Criador de pôsteres de mapas",
   "homeLabel": "Início",
@@ -9,7 +9,7 @@
   "valueStrip": "17 temas de mapa · 22 formatos, de A5 a A0 e 4K · PNG e PDF a 300 DPI · {price} · sem marca-d’água",
   "meta": {
     "title": "Criador de pôsteres de mapas grátis — percursos GPS",
-    "description": "Transforme arquivos GPX, Google Timeline, KML, FIT ou TCX em pôsteres no navegador. 17 temas, 22 layouts, exportação PNG/PDF grátis e opção de impressão.",
+    "description": "Pôsteres de GPX, Google Timeline (Linha do tempo do Google Maps), KML, FIT ou TCX no navegador. 17 temas, 22 layouts, PNG/PDF grátis e impressão opcional.",
     "keywords": "criador de pôsteres de mapas, pôster de percurso, pôster GPX, pôster de mapa da cidade, pôster Google Timeline, pôster de corrida, impressão de mapa personalizado, mapa decorativo, arte GPS"
   },
   "howTo": {

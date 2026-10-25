@@ -106,7 +106,8 @@
     "td10": "公开动态",
     "td11": "Dawarich Cloud Pro",
     "td12": "能，完整 Takeout 导入、热力图和行程",
-    "td13": "绝不会。"
+    "td13": "绝不会。",
+    "perYear": "{price}/年"
   },
   "promises": {
     "heading": "两项承诺，零风险",
@@ -133,8 +134,8 @@
     "text2": "查看价格"
   },
   "meta": {
-    "title": "Google Timeline 替代方案：私密保存位置历史记录",
-    "description": "将您的 Google Timeline 导入 Dawarich，在网页地图上探索历史记录，并通过 iOS 和 Android 应用记录新的行程。Cloud 可免费试用 7 天。"
+    "title": "Google Timeline（谷歌地图时间轴）替代方案：私密保存位置历史记录",
+    "description": "将您的 Google Timeline（谷歌地图时间轴）导入 Dawarich，在网页地图上探索历史记录，并通过 iOS 和 Android 应用记录新的行程。Cloud 可试用 7 天。"
   },
   "hero": {
     "badge": "Google Timeline 替代方案",

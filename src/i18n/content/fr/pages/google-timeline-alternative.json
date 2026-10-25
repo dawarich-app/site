@@ -106,7 +106,8 @@
     "td10": "Fils publics",
     "td11": "Dawarich Cloud Pro",
     "td12": "Oui : import Takeout complet, cartes de chaleur, déplacements",
-    "td13": "Non. Jamais."
+    "td13": "Non. Jamais.",
+    "perYear": "{price}/an"
   },
   "promises": {
     "heading": "Deux engagements, aucun risque",
@@ -134,7 +135,7 @@
   },
   "meta": {
     "title": "Alternative à Google Timeline : votre historique privé",
-    "description": "Importez Google Timeline dans Dawarich, explorez l’historique sur carte web et suivez de nouveaux trajets via les applis iOS et Android. Essai Cloud de 7 jours."
+    "description": "Importez Google Timeline (Vos trajets Google Maps) dans Dawarich : historique sur carte web, nouveaux trajets via iOS/Android. Essai Cloud 7 j."
   },
   "hero": {
     "badge": "Alternative à Google Timeline",

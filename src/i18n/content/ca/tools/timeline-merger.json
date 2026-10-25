@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Google Timeline: uneix exportacions d'historial d'ubicacions",
-    "description": "Uneix gratis exportacions de Google Timeline en un fitxer amb deduplicació intel·ligent i privacitat: Records.json, Semantic History i fitxers del telèfon.",
+    "description": "Uneix diverses exportacions de Google Timeline en un fitxer. La deduplicació intel·ligent elimina punts superposats. Records.json, Semantic History i exportacions del telèfon. Gratis i privat.",
     "keywords": "unir exportacions de Google Timeline, combinar fitxers d'historial d'ubicacions, recuperar dades de Google Timeline, unir Records.json, combinar ubicacions de Google Takeout, unir Semantic Location History, unir Google Timeline, eliminar duplicats de l'historial d'ubicacions, unir dades GPS",
     "featureList": [
       "Uneix diverses exportacions de Google Timeline en un sol fitxer",
@@ -42,7 +42,7 @@
     "tool": "Eina de Dawarich per unir dades de Google Timeline"
   },
   "h1": "Eina per unir dades de Google Timeline",
-  "intro": "Uneix diverses exportacions de Google Timeline en un únic fitxer. L'eliminació intel·ligent de duplicats treu els punts superposats i conserva tots els registres d'ubicació únics. Gratis, amb privacitat i íntegrament al navegador.",
+  "intro": "Uneix diverses exportacions de Google Timeline (Cronologia de Google Maps) en un únic fitxer. L'eliminació intel·ligent de duplicats treu els punts superposats i conserva tots els registres d'ubicació únics. Gratis, amb privacitat i íntegrament al navegador.",
   "preCta": "Vols visualitzar primer les teves dades de la línia de temps? Prova el nostre [visualitzador de Google Timeline](/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) per explorar el teu historial d'ubicacions en un mapa interactiu. Necessites un substitut a llarg termini de la línia de temps? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) et dona la plena propietat de les teves dades.",
   "faqTitle": "Preguntes freqüents",
   "homeLabel": "Inici",

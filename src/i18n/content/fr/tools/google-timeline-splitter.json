@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Découpez vos gros fichiers JSON Google Timeline",
+    "title": "JSON XXL Google Timeline (Vos trajets Google Maps) : découpe",
     "description": "Scindez tout export Google Timeline : Records.json/Semantic Location History/Semantic Segments… JSON valide, taille au choix. Gratuit, privé, dans le navigateur",
     "keywords": "découper JSON Google Timeline, découper Records.json, diviser historique de localisation Google, découpage Google Timeline, découper localisation Google Takeout, fichier Google Timeline trop volumineux",
     "featureList": [
@@ -32,7 +32,7 @@
     ]
   },
   "h1": "Découpage Google Timeline",
-  "intro": "Découpez vos gros exports JSON Google Timeline en fichiers valides de plus petite taille. Chaque partie conserve le format d’origine pour pouvoir être importée partout. Choisissez la taille cible et téléchargez un ZIP.",
+  "intro": "Découpez vos gros exports JSON Google Timeline (Vos trajets Google Maps) en fichiers valides de plus petite taille. Chaque partie conserve le format d’origine pour pouvoir être importée partout. Choisissez la taille cible et téléchargez un ZIP.",
   "benefitsTitle": "Pourquoi découper des fichiers de chronologie ?",
   "privacyBody": "Tout le traitement s’effectue dans votre navigateur. Vos fichiers restent sur votre appareil.",
   "preCta": "Vous manipulez de gros exports Google Timeline ? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-splitter) gère automatiquement les importations de toute taille, tout en vous laissant la propriété et le contrôle de vos données privées.",
@@ -105,24 +105,48 @@
       "title": "Formats Google Timeline pris en charge",
       "paragraphs": [],
       "items": [
-        { "body": "**Records.json** — Relevés GPS bruts avec coordonnées E7, horodatages, précision et données d’activité. Souvent le plus gros fichier d’un export Google Takeout." },
-        { "body": "**Semantic Location History** — Fichiers mensuels (YYYY_MONTH.json) contenant des visites de lieux et des segments d’activité, avec noms et adresses." },
-        { "body": "**Semantic Segments** — Format d’export récent depuis un téléphone, avec données de visites et de parcours." },
-        { "body": "**Historique de localisation** — Format tableau avec entrées startTime/endTime et parcours de chronologie." },
-        { "body": "**Paramètres** — Paramètres de l’appareil et données de configuration." },
-        { "body": "**Timeline Edits** — Données agrégées sur les lieux et signaux bruts issus des modifications des utilisateurs." }
+        {
+          "body": "**Records.json** — Relevés GPS bruts avec coordonnées E7, horodatages, précision et données d’activité. Souvent le plus gros fichier d’un export Google Takeout."
+        },
+        {
+          "body": "**Semantic Location History** — Fichiers mensuels (YYYY_MONTH.json) contenant des visites de lieux et des segments d’activité, avec noms et adresses."
+        },
+        {
+          "body": "**Semantic Segments** — Format d’export récent depuis un téléphone, avec données de visites et de parcours."
+        },
+        {
+          "body": "**Historique de localisation** — Format tableau avec entrées startTime/endTime et parcours de chronologie."
+        },
+        {
+          "body": "**Paramètres** — Paramètres de l’appareil et données de configuration."
+        },
+        {
+          "body": "**Timeline Edits** — Données agrégées sur les lieux et signaux bruts issus des modifications des utilisateurs."
+        }
       ]
     },
     {
       "title": "Choisir la bonne taille de partie",
       "paragraphs": [],
       "items": [
-        { "body": "**1 MB** — Un maximum de petits fichiers. Adapté aux outils aux limites d’importation très basses ou au partage de portions individuelles." },
-        { "body": "**5 MB** — De petites parties compatibles avec presque tous les outils d’importation. Un bon choix pour les pièces jointes par e-mail." },
-        { "body": "**10 MB** — Une taille équilibrée compatible avec la plupart des outils. Recommandée pour les importations dans Dawarich." },
-        { "body": "**20 MB** — Moins de fichiers, tout en restant facile à gérer pour la plupart des outils." },
-        { "body": "**50 MB** — De grosses parties pour les outils qui gèrent bien les fichiers volumineux." },
-        { "body": "**100 MB** — Un découpage minimal, pour diviser un très gros fichier en deux ou en quelques parties seulement." }
+        {
+          "body": "**1 MB** — Un maximum de petits fichiers. Adapté aux outils aux limites d’importation très basses ou au partage de portions individuelles."
+        },
+        {
+          "body": "**5 MB** — De petites parties compatibles avec presque tous les outils d’importation. Un bon choix pour les pièces jointes par e-mail."
+        },
+        {
+          "body": "**10 MB** — Une taille équilibrée compatible avec la plupart des outils. Recommandée pour les importations dans Dawarich."
+        },
+        {
+          "body": "**20 MB** — Moins de fichiers, tout en restant facile à gérer pour la plupart des outils."
+        },
+        {
+          "body": "**50 MB** — De grosses parties pour les outils qui gèrent bien les fichiers volumineux."
+        },
+        {
+          "body": "**100 MB** — Un découpage minimal, pour diviser un très gros fichier en deux ou en quelques parties seulement."
+        }
       ]
     },
     {
@@ -143,12 +167,24 @@
       "title": "Outils associés",
       "paragraphs": [],
       "items": [
-        { "body": "[Convertisseur Google Timeline](/tools/google-timeline-converter) — Convertissez les données de chronologie en GPX, KML, CSV ou GeoJSON" },
-        { "body": "[Visualiseur Google Timeline](/tools/timeline-visualizer) — Affichez votre historique de localisation sur une carte interactive" },
-        { "body": "[Analyse des statistiques de chronologie](/tools/timeline-statistics) — Explorez vos données de localisation" },
-        { "body": "[Fusion des données de chronologie](/tools/timeline-merger) — Regroupez plusieurs exports de chronologie" },
-        { "body": "[Découpage de fichiers GPS](/tools/gps-file-splitter) — Découpez vos fichiers GPX, GeoJSON, KML et autres fichiers GPS" },
-        { "body": "[Détection du format de chronologie](/tools/timeline-format-detector) — Identifiez le type de votre fichier d’export" }
+        {
+          "body": "[Convertisseur Google Timeline](/tools/google-timeline-converter) — Convertissez les données de chronologie en GPX, KML, CSV ou GeoJSON"
+        },
+        {
+          "body": "[Visualiseur Google Timeline](/tools/timeline-visualizer) — Affichez votre historique de localisation sur une carte interactive"
+        },
+        {
+          "body": "[Analyse des statistiques de chronologie](/tools/timeline-statistics) — Explorez vos données de localisation"
+        },
+        {
+          "body": "[Fusion des données de chronologie](/tools/timeline-merger) — Regroupez plusieurs exports de chronologie"
+        },
+        {
+          "body": "[Découpage de fichiers GPS](/tools/gps-file-splitter) — Découpez vos fichiers GPX, GeoJSON, KML et autres fichiers GPS"
+        },
+        {
+          "body": "[Détection du format de chronologie](/tools/timeline-format-detector) — Identifiez le type de votre fichier d’export"
+        }
       ]
     }
   ],
@@ -185,6 +221,9 @@
     "body": "Dawarich est une plateforme open source de suivi de localisation qui vous donne le contrôle total de vos données. Importez votre export Google Timeline, continuez à enregistrer votre position depuis votre téléphone et visualisez des années de déplacements, en auto-hébergement ou dans le cloud.",
     "button": "Essayez Dawarich gratuitement pendant 7 jours",
     "headline": "Votre fichier contient **{count}** entrées. Dawarich gère automatiquement les importations de toute taille, sans découpage.",
-    "statLabels": { "entries": "entrées", "fileSize": "taille du fichier" }
+    "statLabels": {
+      "entries": "entrées",
+      "fileSize": "taille du fichier"
+    }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "h1": "Google-Timeline-Visualisierung",
+  "h1": "Google Timeline (Google Maps Zeitachse) visualisieren",
   "intro": "Google hat Timeline im Web abgeschaltet. Dieses kostenlose, datenschutzfreundliche Werkzeug bringt die Ansicht zurück. Erkunde deinen exportierten Standortverlauf Tag für Tag mit Kalender-Heatmap, Aufenthaltsliste und Aktivitätswiedergabe.",
   "saveIntro": "Möchtest du diese Daten auch in deinem Dawarich-Konto haben? Wir importieren sie bei der Registrierung, ohne erneutes Hochladen.",
   "privacy": "Die gesamte Verarbeitung erfolgt in deinem Browser. Deine Daten bleiben auf deinem Gerät, bis du „In meinem Dawarich-Konto speichern“ wählst.",
@@ -8,7 +8,7 @@
   "toolsLabel": "Kostenlose Werkzeuge",
   "loadingMap": "Karte wird geladen…",
   "meta": {
-    "title": "Google-Timeline-Visualisierung – Verlauf wieder im Web sehen",
+    "title": "Google Timeline (Google Maps Zeitachse) wieder im Web ansehen",
     "description": "Google hat Timeline aus dem Web entfernt. Lade deinen Takeout-Export hoch und sieh deinen Standortverlauf wieder auf einer Karte. Kostenlos im Browser.",
     "keywords": "Google-Timeline-Visualisierung, Google Timeline verschwunden, wo ist meine Google Timeline, Google Timeline im Web ansehen, Google-Timeline-Verlauf, Google-Standortverlauf anzeigen, Google-Takeout-Standorte anzeigen, Standortverlauf auf Karte ansehen, Google-Maps-Timeline-Ersatz, Alternative nach Google-Timeline-Abschaltung, Standortverlaufskarte, Google-Timeline-Export anzeigen, private Standortvisualisierung",
     "featureList": [

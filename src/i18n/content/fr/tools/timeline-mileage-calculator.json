@@ -1,6 +1,6 @@
 {
   "h1": "Calcul des distances Google Timeline",
-  "intro": "Calculez les distances parcourues en voiture à partir de vos données Google Timeline. Générez des carnets kilométriques téléchargeables avec le détail des déplacements et des résumés quotidiens et mensuels. Tout le traitement s’effectue dans votre navigateur : vos données restent sur votre appareil, sauf si vous choisissez « Enregistrer dans mon compte Dawarich ».",
+  "intro": "Calculez les distances parcourues en voiture à partir de vos données Google Timeline (Vos trajets Google Maps). Générez des carnets kilométriques téléchargeables avec le détail des déplacements et des résumés quotidiens et mensuels. Tout le traitement s’effectue dans votre navigateur : vos données restent sur votre appareil, sauf si vous choisissez « Enregistrer dans mon compte Dawarich ».",
   "privacyTitle": "La confidentialité avant tout",
   "privacyBody": "Tous les calculs de distance s’effectuent dans votre navigateur : vos données de localisation restent sur votre appareil, sauf si vous choisissez « Enregistrer dans mon compte Dawarich ».",
   "preCta": "Besoin d’un suivi kilométrique continu ? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-mileage-calculator) enregistre automatiquement vos déplacements en préservant votre vie privée et la pleine propriété de vos données. Fini les exports manuels : un suivi continu et précis.",
@@ -10,7 +10,7 @@
   "toolsLabel": "Outils gratuits",
   "meta": {
     "title": "Google Timeline : calcul gratuit des distances en voiture",
-    "description": "Distances en voiture depuis Google Timeline : carnet kilométrique, rapports CSV pour déductions fiscales. Gratuit et privé, dans votre navigateur.",
+    "description": "Google Timeline (Vos trajets Google Maps) : distances en voiture, carnets et rapports CSV pour déductions fiscales. Gratuit, privé, dans votre navigateur.",
     "keywords": "kilométrage Google Timeline, calcul distance historique de localisation, distance voiture Google Maps, carnet kilométrique Google Timeline, calcul kilométrique fiscal, suivi kilométrique Google Maps, carnet IRS, calcul distance voiture, remboursement kilométrique",
     "featureList": [
       "Calcul des distances en voiture à partir de Google Timeline",

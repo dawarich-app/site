@@ -1,6 +1,6 @@
 {
   "h1": "Calculadora de quilometratge de Google Timeline",
-  "intro": "Calcula el quilometratge conduït a partir de les dades de Google Timeline. Genera registres de quilometratge descarregables amb detalls de cada viatge i resums diaris i mensuals. Tot es processa al navegador: les dades es queden al dispositiu tret que triïs «Desa al meu compte de Dawarich».",
+  "intro": "Calcula el quilometratge conduït a partir de les dades de Google Timeline (Cronologia de Google Maps). Genera registres de quilometratge descarregables amb detalls de cada viatge i resums diaris i mensuals. Tot es processa al navegador: les dades es queden al dispositiu tret que triïs «Desa al meu compte de Dawarich».",
   "privacyTitle": "La privacitat, primer",
   "privacyBody": "Tots els càlculs de quilometratge es fan íntegrament al navegador: les teves dades d'ubicació es queden al dispositiu tret que triïs «Desa al meu compte de Dawarich».",
   "preCta": "Necessites un seguiment continu del quilometratge? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-mileage-calculator) registra els teus viatges automàticament, amb plena propietat de les teves dades i privacitat. Sense més exportacions manuals: només un seguiment continu i precís.",
@@ -10,7 +10,7 @@
   "toolsLabel": "Eines gratuïtes",
   "meta": {
     "title": "Quilometratge de Google Timeline: calcula distàncies gratis",
-    "description": "Calcula gratis el quilometratge amb Google Timeline. Obtén distàncies i registres, i exporta informes CSV per a deduccions fiscals. Privat i al navegador.",
+    "description": "Calcula distàncies conduïdes amb Google Timeline (Cronologia de Google Maps), genera registres de quilometratge i exporta CSV per a deduccions fiscals. Gratis i privat, tot al navegador.",
     "keywords": "quilometratge de Google Timeline, calculadora de quilometratge de l'historial d'ubicacions, distància conduïda de Google Maps, registre de quilometratge de Google Timeline, calculadora de quilometratge fiscal, seguiment de quilometratge de Google Maps, registre de quilometratge IRS, calculadora de distància conduïda, distància conduïda de Google Timeline, calculadora de reemborsament de quilometratge",
     "featureList": [
       "Calcula el quilometratge conduït a partir de dades de Google Timeline",

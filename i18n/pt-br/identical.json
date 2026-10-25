@@ -27,7 +27,6 @@
   "content:components/Artifacts.json:exportFormats.groups.2.items.4",
   "content:components/CalendarRail.json:weekdays.1.label",
   "content:components/CalendarRail.json:weekdays.5.label",
-  "content:components/Comparison.json:title",
   "content:components/Comparison.json:dawarichName",
   "content:components/Comparison.json:googleTimelineHeader",
   "content:components/DayView.json:duration.zero",
@@ -295,5 +294,9 @@
   "content:shared/tool-related-links.json:map-poster-maker.1.href",
   "content:shared/tool-related-links.json:route-video-maker.0.href",
   "content:shared/tool-related-links.json:route-video-maker.1.href",
-  "content:shared/tool-related-links.json:route-video-maker.2.href"
+  "content:shared/tool-related-links.json:route-video-maker.2.href",
+  "content:components/Testimonials.json:quotes.0.source",
+  "content:components/Testimonials.json:quotes.1.source",
+  "content:components/Testimonials.json:quotes.6.source",
+  "content:components/Testimonials.json:quotes.8.source"
 ]

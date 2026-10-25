@@ -1,6 +1,6 @@
 {
   "h1": "Calculadora de quilometragem do Google Timeline",
-  "intro": "Calcule a quilometragem percorrida de carro a partir dos seus dados do Google Timeline. Gere registros de quilometragem para baixar, com detalhes de cada viagem e resumos diários e mensais. Todo o processamento acontece no seu navegador — seus dados ficam no seu dispositivo, a menos que você escolha “Salvar na minha conta Dawarich”.",
+  "intro": "Calcule a quilometragem percorrida de carro a partir dos seus dados do Google Timeline (Linha do tempo do Google Maps). Gere registros de quilometragem para baixar, com detalhes de cada viagem e resumos diários e mensais. Todo o processamento acontece no seu navegador — seus dados ficam no seu dispositivo, a menos que você escolha “Salvar na minha conta Dawarich”.",
   "privacyTitle": "Privacidade em primeiro lugar",
   "privacyBody": "Todos os cálculos de quilometragem acontecem no seu navegador — seus dados de localização ficam no seu dispositivo, a menos que você escolha “Salvar na minha conta Dawarich”.",
   "preCta": "Precisa registrar sua quilometragem continuamente? O [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-mileage-calculator) registra suas viagens automaticamente, com plena propriedade dos seus dados e privacidade. Chega de exportações manuais — apenas um registro contínuo e preciso.",
@@ -10,7 +10,7 @@
   "toolsLabel": "Ferramentas gratuitas",
   "meta": {
     "title": "Calculadora de quilometragem do Google Timeline grátis",
-    "description": "Calcule distâncias de carro do Google Timeline, gere registros de quilometragem e exporte CSV para deduções fiscais. Grátis, com privacidade no navegador.",
+    "description": "Quilometragem de carro do Google Timeline (Linha do tempo do Google Maps). Gere registros e exporte CSV para deduções fiscais. Grátis e privado no navegador.",
     "keywords": "quilometragem google timeline, calculadora de quilometragem pelo histórico de localização, distância de carro pelo google maps, registro de quilometragem google timeline, calculadora de quilometragem para impostos, registro de quilometragem google maps, registro de quilometragem IRS, calculadora de distância de carro, distância de carro google timeline, calculadora de reembolso por quilometragem",
     "featureList": [
       "Calcular quilometragem de carro com dados do Google Timeline",

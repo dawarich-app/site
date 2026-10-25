@@ -1,5 +1,5 @@
 {
-  "h1": "Visualizador do Google Timeline",
+  "h1": "Visualizador do Google Timeline (Linha do tempo do Google Maps)",
   "intro": "O Google encerrou a linha do tempo na web — esta ferramenta gratuita, que respeita sua privacidade, traz essa visualização de volta. Explore seu histórico de localização exportado dia a dia, com calendário em mapa de calor, lista de visitas e reprodução de atividades.",
   "saveIntro": "Quer ter isso na sua conta Dawarich também? Vamos importar os dados durante o cadastro — sem precisar carregá-los novamente.",
   "privacy": "Todo o processamento acontece no seu navegador. Seus dados ficam no seu dispositivo, a menos que você escolha “Salvar na minha conta Dawarich”.",
@@ -8,7 +8,7 @@
   "toolsLabel": "Ferramentas gratuitas",
   "loadingMap": "Carregando mapa…",
   "meta": {
-    "title": "Visualizador do Google Timeline — veja seu histórico na web",
+    "title": "Google Timeline (Linha do tempo do Google Maps): reveja na web",
     "description": "O Google retirou a linha do tempo da web. Veja seu histórico no mapa com este visualizador grátis: carregue sua exportação Takeout e explore no navegador.",
     "keywords": "visualizador Google Timeline, Google Timeline sumiu, onde está meu Google Timeline, ver Google Timeline na web, histórico Google Timeline, visualizador de histórico de localização Google, visualizador de localização Google Takeout, ver histórico de localização no mapa, alternativa ao Google Maps Timeline, alternativa após encerramento do Google Timeline, mapa do histórico de localização, visualizador de exportação Google Timeline, visualizador de localização com privacidade",
     "featureList": [

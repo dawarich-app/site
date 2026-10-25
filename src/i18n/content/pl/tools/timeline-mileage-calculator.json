@@ -1,6 +1,6 @@
 {
   "h1": "Kalkulator dystansu Google Timeline",
-  "intro": "Oblicz dystans przejazdów na podstawie danych Google Timeline. Twórz dzienniki przebiegu do pobrania ze szczegółami podróży oraz podsumowaniami dziennymi i miesięcznymi. Wszystko odbywa się w Twojej przeglądarce — dane pozostają na urządzeniu, chyba że wybierzesz „Zapisz na moim koncie Dawarich”.",
+  "intro": "Oblicz dystans przejazdów na podstawie danych Google Timeline (Oś czasu Google Maps). Twórz dzienniki przebiegu do pobrania ze szczegółami podróży oraz podsumowaniami dziennymi i miesięcznymi. Wszystko odbywa się w Twojej przeglądarce — dane pozostają na urządzeniu, chyba że wybierzesz „Zapisz na moim koncie Dawarich”.",
   "privacyTitle": "Prywatność przede wszystkim",
   "privacyBody": "Wszystkie obliczenia dystansu odbywają się w Twojej przeglądarce — dane lokalizacji pozostają na urządzeniu, chyba że wybierzesz „Zapisz na moim koncie Dawarich”.",
   "preCta": "Potrzebujesz bieżącego rejestrowania przebiegu? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-mileage-calculator) automatycznie zapisuje Twoje podróże, zapewniając pełną własność danych i prywatność. Koniec z ręcznymi eksportami — ciągłe, dokładne śledzenie.",
@@ -10,7 +10,7 @@
   "toolsLabel": "Darmowe narzędzia",
   "meta": {
     "title": "Kalkulator Google Timeline — dystans przejazdów za darmo",
-    "description": "Darmowy kalkulator przebiegu z Google Timeline: dystans jazdy, dzienniki przebiegu, eksport raportów CSV do odliczeń podatkowych. Prywatnie, w przeglądarce.",
+    "description": "Google Timeline (Oś czasu Google Maps): licz dystans jazdy, twórz dzienniki przebiegu, eksportuj CSV do odliczeń podatkowych. Gratis, prywatnie w przeglądarce.",
     "keywords": "dystans Google Timeline, kalkulator dystansu z historii lokalizacji, dystans jazdy z Google Maps, dziennik przebiegu Google Timeline, kalkulator przebiegu do podatków, rejestrator przebiegu Google Maps, dziennik przebiegu IRS, kalkulator dystansu jazdy, dystans przejazdów Google Timeline, kalkulator zwrotu kosztów przejazdu",
     "featureList": [
       "Obliczanie dystansu przejazdów z danych Google Timeline",

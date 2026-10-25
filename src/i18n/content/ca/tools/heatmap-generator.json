@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Generador gratuït de mapes de calor GPS en línia",
-    "description": "Crea bonics mapes de calor GPS: patrons de cursa, ciclisme i activitat. GPX, FIT, TCX, GeoJSON, KML o Google Timeline JSON. Gratis i privat, tot al navegador.",
+    "description": "Crea bonics mapes de calor GPS per veure patrons de cursa, ciclisme i activitat. Carrega GPX, FIT, TCX, GeoJSON, KML o JSON de Google Timeline (Cronologia de Google Maps). Gratis i privat, tot al navegador.",
     "keywords": "mapa de calor GPS, generador de mapes de calor, mapa de calor de curses, mapa de calor de ciclisme, alternativa a Strava, mapa de calor GPX, mapa de calor d'activitat, mapa de calor esportiu, mapa de calor gratuït, mapa de calor de Google Timeline, mapa de calor de l'historial d'ubicacions de Google, mapa de calor de Records.json"
   },
   "h1": "Generador de mapes de calor GPS",

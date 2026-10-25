@@ -1,5 +1,44 @@
 {
   "title": "Què en diu la gent",
   "subtitle": "Present a les principals publicacions tecnològiques del món.",
-  "featuredLabel": "En parlen a"
+  "featuredLabel": "En parlen a",
+  "quotes": [
+    {
+      "quote": "He importat el meu Google Timeline a aquesta aplicació autoallotjada, i és molt millor que el que ofereix Google.",
+      "source": "XDA Developers"
+    },
+    {
+      "quote": "Dawarich t’ofereix tot el que fa Google Timeline, i encara més. No hi ha anuncis ni recollida de dades oculta.",
+      "source": "MakeUseOf"
+    },
+    {
+      "quote": "La interfície és clara i fàcil de fer servir. Pràcticament no afecta la bateria.",
+      "source": "Ressenya de l’App Store"
+    },
+    {
+      "quote": "Viatjo per tot el món el 60-70% de l’any i buscava alguna cosa per conservar el meu registre sense donar-lo a Google. Vaig trobar Dawarich.app, vaig configurar l’app de l’iPhone en pocs minuts, vaig importar el meu historial de Timeline i simplement funciona: el seguiment s’inicia sol quan surto de casa. Ja no hi penso. Les meves dades tornen a ser meves i, mentrestant, ja tinc registrats 260k km, 16 països i 378 ciutats.",
+      "source": "Alemanya · Viatger per tot el món · Abans feia servir Google Timeline · Descobert a través de Reddit"
+    },
+    {
+      "quote": "Vaig fer servir Google Timeline durant anys, però mai no em vaig sentir còmode tenint tota la meva vida en servidors dels EUA. Vaig traslladar-ho tot (uns quants anys de dades) a Dawarich en només una tarda. Ara tinc un diari privat i permanent de la meva vida, una cosa que espero deixar als meus nets algun dia. Tinc ganes de veure les millores que vindran, perquè ja han fet una feina remarcable.",
+      "source": "Nova York, EUA · Antic usuari de Google Timeline · Creant un llegat d’ubicacions"
+    },
+    {
+      "quote": "Em vaig traslladar al Kazakhstan sense conèixer gens la ciutat. Google Timeline ja no era una opció i, de tota manera, tampoc no me’n refiava. Vaig configurar Dawarich i ara el mapa és com la boira de guerra per a mi: com més surto, més es va omplint. A més, cada viatge es queda amb mi: puc tornar a mirar-ne qualsevol i compartir-ne la ruta.",
+      "source": "Client de Dawarich · Kazakhstan · Des de mitjan 2025"
+    },
+    {
+      "quote": "És molt millor que OwnTracks, Overland, etc.: és molt més precís.",
+      "source": "GitHub Discussions"
+    },
+    {
+      "quote": "Fins ara l’app m’ha funcionat molt bé i no ha afectat gens la bateria! Una feina increïble fins ara!",
+      "source": "Ressenya de l’App Store"
+    },
+    {
+      "quote": "Crec que és un programari força impressionant.",
+      "source": "Colocataires Blog"
+    }
+  ],
+  "translatedNote": "Traduït de l’anglès"
 }

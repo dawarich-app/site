@@ -1,6 +1,6 @@
 {
   "h1": "Statistiques Google Timeline",
-  "intro": "Votre Spotify Wrapped de l’historique de localisation. Ajoutez vos données Google Timeline pour découvrir les distances parcourues, les pays visités, vos lieux les plus fréquentés et la manière dont vous passez votre temps à vous déplacer dans le monde.",
+  "intro": "Votre Spotify Wrapped de l’historique de localisation. Ajoutez vos données Google Timeline (Vos trajets Google Maps) pour découvrir les distances parcourues, les pays visités, vos lieux les plus fréquentés et la manière dont vous passez votre temps à vous déplacer dans le monde.",
   "appName": "Analyse des statistiques Google Timeline",
   "privacyTitle": "La confidentialité avant tout",
   "privacyBody": "Tout le traitement s’effectue dans votre navigateur. Vos données de localisation restent sur votre appareil et ne sont envoyées à aucun serveur.",
@@ -10,7 +10,7 @@
   "toolsLabel": "Outils gratuits",
   "meta": {
     "title": "Statistiques Google Timeline : analysez votre historique",
-    "description": "Google Timeline : distance totale, pays visités, lieux les plus visités, répartition des activités, tendances annuelles. Gratuit, privé, dans votre navigateur.",
+    "description": "Google Timeline (Vos trajets Google Maps) : distance totale, pays visités, top des lieux, bilan/activité, tendances/an. Gratuit, privé, tout dans le navigateur.",
     "keywords": "statistiques Google Timeline, statistiques historique de localisation, distance parcourue, analyses Google Maps Timeline, analyseur Google Timeline, statistiques de voyage, analyse données de localisation, statistiques Google Takeout, calcul distance parcourue, compteur lieux visités",
     "featureList": [
       "Calcul de la distance totale parcourue à partir de Google Timeline",
@@ -101,7 +101,10 @@
     "days": "{count} jour|{count} jours|{count} jours",
     "hours": "{count} heure|{count} heures|{count} heures"
   },
-  "numbers": { "million": "{count}M", "thousand": "{count}k" },
+  "numbers": {
+    "million": "{count}M",
+    "thousand": "{count}k"
+  },
   "activities": {
     "driving": "Voiture",
     "walking": "Marche",
@@ -123,7 +126,13 @@
     "button": "Essayez Dawarich gratuitement pendant 7 jours",
     "headline": "Vous avez parcouru **{distance} km**{countries} en **{years}** ans. Transformez cet instantané en tableau de bord vivant.",
     "countries": " à travers **{count}** pays",
-    "statLabels": { "points": "points", "countries": "pays", "cities": "villes", "distance": "distance", "years": "années" }
+    "statLabels": {
+      "points": "points",
+      "countries": "pays",
+      "cities": "villes",
+      "distance": "distance",
+      "years": "années"
+    }
   },
   "faq": [
     {
@@ -167,26 +176,54 @@
       "title": "Quelles statistiques pouvez-vous consulter ?",
       "paragraphs": [],
       "items": [
-        { "body": "**Distance totale** — La distance parcourue en kilomètres et en miles, calculée à partir des points GPS et des segments d’activité" },
-        { "body": "**Pays et villes** — Chaque pays et ville extraits des adresses de votre Semantic Location History" },
-        { "body": "**Lieux les plus fréquentés** — Vos lieux classés par nombre de visites" },
-        { "body": "**Répartition du temps** — Une vue du temps passé en déplacement et à l’arrêt" },
-        { "body": "**Types d’activité** — Répartition entre marche, voiture, vélo, transports en commun, avion et plus encore" },
-        { "body": "**Tendances annuelles** — Points de données et distance par année pour voir l’évolution de vos habitudes" },
-        { "body": "**Carte partageable** — Une image téléchargeable résumant vos statistiques clés" }
+        {
+          "body": "**Distance totale** — La distance parcourue en kilomètres et en miles, calculée à partir des points GPS et des segments d’activité"
+        },
+        {
+          "body": "**Pays et villes** — Chaque pays et ville extraits des adresses de votre Semantic Location History"
+        },
+        {
+          "body": "**Lieux les plus fréquentés** — Vos lieux classés par nombre de visites"
+        },
+        {
+          "body": "**Répartition du temps** — Une vue du temps passé en déplacement et à l’arrêt"
+        },
+        {
+          "body": "**Types d’activité** — Répartition entre marche, voiture, vélo, transports en commun, avion et plus encore"
+        },
+        {
+          "body": "**Tendances annuelles** — Points de données et distance par année pour voir l’évolution de vos habitudes"
+        },
+        {
+          "body": "**Carte partageable** — Une image téléchargeable résumant vos statistiques clés"
+        }
       ]
     },
     {
       "title": "Comprendre vos types d’activité",
-      "paragraphs": [ "Le suivi de localisation Google utilise les capteurs de votre téléphone pour classer vos mouvements. Les principaux types d’activité de vos données sont :" ],
-      "items": [
-        { "body": "**Marche / Course à pied** — Détectées à partir du nombre de pas et de la vitesse issus de l’accéléromètre" },
-        { "body": "**Vélo** — Vitesse modérée avec des mouvements caractéristiques mesurés par l’accéléromètre" },
-        { "body": "**Voiture** — Vitesse plus élevée et accélérations régulières, avec l’étiquette IN_PASSENGER_VEHICLE" },
-        { "body": "**Bus / Train / Métro** — Modes de transport détectés à partir de la vitesse, des itinéraires et parfois des données d’arrêts à proximité" },
-        { "body": "**Avion** — Détecté grâce aux changements rapides d’altitude et aux vitesses très élevées" }
+      "paragraphs": [
+        "Le suivi de localisation Google utilise les capteurs de votre téléphone pour classer vos mouvements. Les principaux types d’activité de vos données sont :"
       ],
-      "footer": [ "Ces classifications ne sont pas toujours parfaites. Google confond parfois les déplacements en bus et en voiture, ou classe une conduite lente comme du vélo. Les statistiques donnent une bonne vue d’ensemble, mais certains segments peuvent être mal classés." ]
+      "items": [
+        {
+          "body": "**Marche / Course à pied** — Détectées à partir du nombre de pas et de la vitesse issus de l’accéléromètre"
+        },
+        {
+          "body": "**Vélo** — Vitesse modérée avec des mouvements caractéristiques mesurés par l’accéléromètre"
+        },
+        {
+          "body": "**Voiture** — Vitesse plus élevée et accélérations régulières, avec l’étiquette IN_PASSENGER_VEHICLE"
+        },
+        {
+          "body": "**Bus / Train / Métro** — Modes de transport détectés à partir de la vitesse, des itinéraires et parfois des données d’arrêts à proximité"
+        },
+        {
+          "body": "**Avion** — Détecté grâce aux changements rapides d’altitude et aux vitesses très élevées"
+        }
+      ],
+      "footer": [
+        "Ces classifications ne sont pas toujours parfaites. Google confond parfois les déplacements en bus et en voiture, ou classe une conduite lente comme du vélo. Les statistiques donnent une bonne vue d’ensemble, mais certains segments peuvent être mal classés."
+      ]
     },
     {
       "title": "Qu’est-il arrivé à Google Maps Timeline ?",
@@ -197,24 +234,44 @@
     },
     {
       "title": "Records.json et Semantic Location History",
-      "paragraphs": [ "Google exporte vos données de localisation dans deux formats principaux, qui contiennent des informations très différentes :" ],
-      "items": [
-        { "body": "**Records.json** — Coordonnées GPS et horodatages bruts. Chaque relevé enregistré par Google, généralement toutes les quelques secondes à quelques minutes. Ces fichiers peuvent atteindre des centaines de mégaoctets. Ils donnent des coordonnées précises, mais aucun nom de lieu, adresse ou type d’activité." },
-        { "body": "**Semantic Location History** — Fichiers mensuels (par exemple 2022_APRIL.json) avec données structurées : visites de lieux nommés avec adresses, segments d’activité avec modes de transport classés et durées. Ces fichiers sont plus petits, mais contiennent des données plus riches et plus parlantes." }
+      "paragraphs": [
+        "Google exporte vos données de localisation dans deux formats principaux, qui contiennent des informations très différentes :"
       ],
-      "footer": [ "Pour les meilleures statistiques, ajoutez vos fichiers Semantic Location History. Records.json fournit la distance et les points de données, mais sans pays, villes, noms de lieux ni répartition des activités." ]
+      "items": [
+        {
+          "body": "**Records.json** — Coordonnées GPS et horodatages bruts. Chaque relevé enregistré par Google, généralement toutes les quelques secondes à quelques minutes. Ces fichiers peuvent atteindre des centaines de mégaoctets. Ils donnent des coordonnées précises, mais aucun nom de lieu, adresse ou type d’activité."
+        },
+        {
+          "body": "**Semantic Location History** — Fichiers mensuels (par exemple 2022_APRIL.json) avec données structurées : visites de lieux nommés avec adresses, segments d’activité avec modes de transport classés et durées. Ces fichiers sont plus petits, mais contiennent des données plus riches et plus parlantes."
+        }
+      ],
+      "footer": [
+        "Pour les meilleures statistiques, ajoutez vos fichiers Semantic Location History. Records.json fournit la distance et les points de données, mais sans pays, villes, noms de lieux ni répartition des activités."
+      ]
     },
     {
       "title": "Outils associés",
       "paragraphs": [],
       "items": [
-        { "body": "[Visualiseur Google Timeline](/tools/timeline-visualizer) — Affichez votre historique de localisation sur une carte interactive" },
-        { "body": "[Générateur de cartes de chaleur GPS](/tools/heatmap-generator) — Créez des cartes de chaleur à partir de fichiers GPX, FIT, TCX et autres formats GPS" },
-        { "body": "[Fusion de trajets GPX](/tools/gpx-merger) — Regroupez plusieurs fichiers GPX en un seul" },
-        { "body": "[Extraction des géodonnées de photos](/tools/photo-geotagging) — Extrayez les coordonnées GPS de vos photos" },
-        { "body": "[Convertisseur GeoJSON vers GPX](/tools/geojson-to-gpx) — Convertissez vos données de localisation au format GPX" }
+        {
+          "body": "[Visualiseur Google Timeline](/tools/timeline-visualizer) — Affichez votre historique de localisation sur une carte interactive"
+        },
+        {
+          "body": "[Générateur de cartes de chaleur GPS](/tools/heatmap-generator) — Créez des cartes de chaleur à partir de fichiers GPX, FIT, TCX et autres formats GPS"
+        },
+        {
+          "body": "[Fusion de trajets GPX](/tools/gpx-merger) — Regroupez plusieurs fichiers GPX en un seul"
+        },
+        {
+          "body": "[Extraction des géodonnées de photos](/tools/photo-geotagging) — Extrayez les coordonnées GPS de vos photos"
+        },
+        {
+          "body": "[Convertisseur GeoJSON vers GPX](/tools/geojson-to-gpx) — Convertissez vos données de localisation au format GPX"
+        }
       ],
-      "footer": [ "Pour en savoir plus : [Comment nous avons créé le visualiseur de chronologie](/blog/building-a-privacy-first-google-timeline-visualizer) | [Migrer depuis l’historique de localisation Google](/blog/migrating-from-google-location-history-to-dawarich)" ]
+      "footer": [
+        "Pour en savoir plus : [Comment nous avons créé le visualiseur de chronologie](/blog/building-a-privacy-first-google-timeline-visualizer) | [Migrer depuis l’historique de localisation Google](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
     }
   ]
 }

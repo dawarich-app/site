@@ -1,6 +1,6 @@
 {
   "h1": "Calculadora de distancias de Google Timeline",
-  "intro": "Calcula la distancia recorrida en coche a partir de tus datos de Google Timeline. Genera registros de distancias descargables con detalles por viaje y resúmenes diarios y mensuales. Todo se procesa en tu navegador: tus datos se quedan en tu dispositivo salvo que elijas «Guardar en mi cuenta de Dawarich».",
+  "intro": "Calcula la distancia recorrida en coche a partir de tus datos de Google Timeline (Cronología de Google Maps). Genera registros de distancias descargables con detalles por viaje y resúmenes diarios y mensuales. Todo se procesa en tu navegador: tus datos se quedan en tu dispositivo salvo que elijas «Guardar en mi cuenta de Dawarich».",
   "privacyTitle": "La privacidad es lo primero",
   "privacyBody": "Todos los cálculos de distancia se realizan íntegramente en tu navegador: tus datos de ubicación se quedan en tu dispositivo salvo que elijas «Guardar en mi cuenta de Dawarich».",
   "preCta": "¿Necesitas registrar tus distancias de forma continua? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-mileage-calculator) registra tus viajes automáticamente con plena propiedad y privacidad de tus datos. Olvídate de las exportaciones manuales y disfruta de un registro continuo y preciso.",
@@ -9,8 +9,8 @@
   "homeLabel": "Inicio",
   "toolsLabel": "Herramientas gratuitas",
   "meta": {
-    "title": "Google Timeline: calcula distancias en coche gratis",
-    "description": "Calcula gratis distancias en coche con tus datos de Google Timeline. Genera registros y exporta informes CSV para deducciones fiscales. Privacidad ante todo: funciona en tu navegador.",
+    "title": "Google Timeline (Cronología de Google Maps): km en coche gratis",
+    "description": "Calcula distancias en coche con Google Timeline gratis. Genera registros e informes CSV para deducciones fiscales. Todo en tu navegador, con privacidad.",
     "keywords": "distancias de Google Timeline, calculadora de distancias con historial de ubicaciones, distancia en coche con Google Maps, registro de distancias de Google Timeline, calculadora de kilometraje fiscal, registro de distancias de Google Maps, registro de kilometraje IRS, calculadora de distancias en coche, distancia en coche de Google Timeline, calculadora de reembolso por kilometraje",
     "featureList": [
       "Calcula la distancia recorrida en coche con datos de Google Timeline",

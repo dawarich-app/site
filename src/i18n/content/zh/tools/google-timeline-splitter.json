@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Google Timeline 拆分工具 - 拆分大型时间线 JSON 文件",
-    "description": "免费拆分大型 Google Timeline JSON 文件，生成有效的小文件。支持 Records.json、Semantic Location History、Semantic Segments 等所有导出格式。可选择目标文件大小，注重隐私，在您的浏览器中运行。",
+    "title": "Google Timeline（谷歌地图时间轴）拆分工具 - 拆分大型时间线 JSON 文件",
+    "description": "免费拆分大型 Google Timeline（谷歌地图时间轴） JSON 文件，生成有效的小文件。支持 Records.json、Semantic Location History、Semantic Segments 等所有导出格式。可选择目标文件大小，注重隐私，在您的浏览器中运行。",
     "keywords": "拆分 Google Timeline JSON, 拆分 Records.json, 拆分大型 Google 位置历史文件, Google Timeline 拆分工具, 拆分 Google Takeout 位置数据, 拆分时间线 JSON, Google Timeline 文件过大",
     "featureList": [
       "将大型 Google Timeline JSON 文件拆分为较小的文件",
@@ -31,8 +31,8 @@
       }
     ]
   },
-  "h1": "Google Timeline 拆分工具",
-  "intro": "将大型 Google Timeline JSON 导出文件拆分为较小且有效的文件。每个分块都保留原始格式，便于导入其他工具。选择目标文件大小，即可下载 ZIP 压缩包。",
+  "h1": "Google Timeline（谷歌地图时间轴）拆分工具",
+  "intro": "将大型 Google Timeline（谷歌地图时间轴） JSON 导出文件拆分为较小且有效的文件。每个分块都保留原始格式，便于导入其他工具。选择目标文件大小，即可下载 ZIP 压缩包。",
   "benefitsTitle": "为什么要拆分时间线文件？",
   "privacyBody": "所有数据处理均在您的浏览器中完成。您的文件不会离开设备。",
   "preCta": "正在处理大型 Google Timeline 导出文件？[Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-splitter) 可自动处理任意大小的导入文件，同时保障完整的数据所有权和隐私。",

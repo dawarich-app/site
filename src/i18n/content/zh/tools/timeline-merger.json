@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Google Timeline 数据合并工具 - 合并位置历史导出文件",
-    "description": "免费将多个 Google Timeline 导出文件合并为一个。智能去重可移除重复轨迹点，支持合并 Records.json、Semantic History 和手机导出文件。隐私优先。",
+    "title": "Google Timeline（谷歌地图时间轴）数据合并工具 - 合并位置历史导出文件",
+    "description": "免费将多个 Google Timeline（谷歌地图时间轴）导出文件合并为一个。智能去重可移除重复轨迹点，支持合并 Records.json、Semantic History 和手机导出文件。隐私优先。",
     "keywords": "合并 Google Timeline 导出文件, 合并位置历史文件, Google Timeline 数据恢复, 合并 Records.json, 合并 Google Takeout 位置数据, 合并 Semantic Location History, Google Timeline 合并工具, 位置历史去重, 合并 GPS 数据",
     "featureList": [
       "将多个 Google Timeline 导出文件合并为一个",
@@ -41,8 +41,8 @@
     ],
     "tool": "Dawarich Google Timeline 数据合并工具"
   },
-  "h1": "Google Timeline 数据合并工具",
-  "intro": "将多个 Google Timeline 导出文件合并为一个统一的文件。智能去重可移除重复轨迹点，同时保留所有独有的位置记录。免费、隐私优先，完全在您的浏览器中运行。",
+  "h1": "Google Timeline（谷歌地图时间轴）数据合并工具",
+  "intro": "将多个 Google Timeline（谷歌地图时间轴）导出文件合并为一个统一的文件。智能去重可移除重复轨迹点，同时保留所有独有的位置记录。免费、隐私优先，完全在您的浏览器中运行。",
   "preCta": "想先以可视化方式查看您的时间线数据？试试我们的 [Google Timeline 可视化工具](/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger)，在交互式地图上探索您的位置历史。需要长期的时间线替代方案？[Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) 让您拥有完整的数据所有权。",
   "faqTitle": "常见问题",
   "homeLabel": "首页",

@@ -275,5 +275,9 @@
   "content:shared/tool-related-links.json:map-poster-maker.1.href",
   "content:shared/tool-related-links.json:route-video-maker.0.href",
   "content:shared/tool-related-links.json:route-video-maker.1.href",
-  "content:shared/tool-related-links.json:route-video-maker.2.href"
+  "content:shared/tool-related-links.json:route-video-maker.2.href",
+  "content:components/Testimonials.json:quotes.0.source",
+  "content:components/Testimonials.json:quotes.1.source",
+  "content:components/Testimonials.json:quotes.6.source",
+  "content:components/Testimonials.json:quotes.8.source"
 ]

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Fusion Google Timeline : regroupez vos exports",
-    "description": "Fusionnez gratuitement vos exports Google Timeline, Records.json, Semantic History et téléphone. Suppression des doublons, respect de votre vie privée.",
+    "description": "Fusionnez Google Timeline (Vos trajets Google Maps) : Records.json, Semantic History, exports téléphone. Un fichier, dédoublonnage intelligent. Gratuit, privé.",
     "keywords": "fusionner exports Google Timeline, regrouper fichiers historique de localisation, récupération données Google Timeline, fusion Records.json, regrouper localisation Google Takeout, fusion semantic location history, fusion Google Timeline, déduplication historique, fusion données GPS",
     "featureList": [
       "Fusion de plusieurs exports Google Timeline en un seul fichier",
@@ -42,7 +42,7 @@
     "tool": "Outil de fusion des données Google Timeline de Dawarich"
   },
   "h1": "Fusion des données Google Timeline",
-  "intro": "Fusionnez plusieurs exports Google Timeline en un fichier unifié. La déduplication intelligente supprime les points qui se chevauchent tout en conservant chaque relevé de localisation unique. Gratuit, confidentiel et entièrement dans votre navigateur.",
+  "intro": "Fusionnez plusieurs exports Google Timeline (Vos trajets Google Maps) en un fichier unifié. La déduplication intelligente supprime les points qui se chevauchent tout en conservant chaque relevé de localisation unique. Gratuit, confidentiel et entièrement dans votre navigateur.",
   "preCta": "Vous souhaitez d’abord visualiser vos données de chronologie ? Essayez notre [visualiseur Google Timeline](/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) pour explorer votre historique sur une carte interactive. Besoin d’une alternative durable à la chronologie ? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) vous laisse la pleine propriété de vos données.",
   "faqTitle": "Questions fréquentes",
   "homeLabel": "Accueil",

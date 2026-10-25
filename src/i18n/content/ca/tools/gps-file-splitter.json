@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Divideix fitxers GPS grans: GPX, GeoJSON, KML i JSON",
-    "description": "Divideix grans fitxers GPS i d'ubicacions: GPX, GeoJSON, KML, KMZ i Google Timeline JSON. Parts petites per mida, punts o data. ZIP gratis i privat al navegador",
+    "description": "Divideix fitxers GPS i d’ubicacions grans en parts petites: GPX, GeoJSON, KML, KMZ i JSON de Google Timeline, per mida, nombre de punts o data. Baixa un ZIP. Gratis i privat al navegador.",
     "keywords": "dividir fitxer GPX gran, dividir GeoJSON en parts, dividir fitxer KML, reduir mida de fitxer GPS, dividir fitxer JSON d'ubicacions gran, divisor de fitxers GPS, dividir Google Timeline",
     "featureList": [
       "Divideix fitxers GPS grans en parts més petites",
@@ -31,7 +31,7 @@
     ]
   },
   "h1": "Divisor de fitxers GPS",
-  "intro": "Divideix fitxers GPS i d'ubicacions grans en parts més petites i fàcils de gestionar. Admet GPX, GeoJSON, KML, KMZ i Google Timeline JSON. Descarrega totes les parts en un sol fitxer ZIP.",
+  "intro": "Divideix fitxers GPS i d'ubicacions grans en parts més petites i fàcils de gestionar. Admet GPX, GeoJSON, KML, KMZ i JSON de Google Timeline (Cronologia de Google Maps). Descarrega totes les parts en un sol fitxer ZIP.",
   "benefitsTitle": "Per què dividir fitxers GPS?",
   "privacyBody": "Tot el processament de les dades es fa al navegador. Els teus fitxers no surten mai del dispositiu.",
   "preCta": "Treballes amb fitxers d'ubicacions grans? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=gps-file-splitter) gestiona automàticament importacions de qualsevol mida, amb plena propietat de les teves dades i privacitat.",

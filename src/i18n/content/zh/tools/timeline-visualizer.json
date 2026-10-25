@@ -1,5 +1,5 @@
 {
-  "h1": "Google Timeline 可视化工具",
+  "h1": "Google Timeline（谷歌地图时间轴）可视化工具",
   "intro": "Google 已关闭网页版 Timeline，此免费且注重隐私的工具让您重新在网页上查看时间线。通过日历热力网格、到访列表和活动回放，逐日浏览您导出的位置历史。",
   "saveIntro": "也想将这些数据存入您的 Dawarich 账号？我们会在注册时导入，无需再次上传。",
   "privacy": "所有处理均在您的浏览器中完成。只有选择“保存到我的 Dawarich 账号”时，数据才会离开您的设备。",
@@ -8,7 +8,7 @@
   "toolsLabel": "免费工具",
   "loadingMap": "正在加载地图…",
   "meta": {
-    "title": "Google Timeline 可视化工具 — 重新在网页上查看您的时间线",
+    "title": "Google Timeline（谷歌地图时间轴）可视化工具 — 重新在网页上查看您的时间线",
     "description": "Google 已移除网页版 Timeline。此免费可视化工具让您重新在网页上查看：上传 Takeout 导出文件，即可在浏览器的地图上查看您的位置历史。",
     "keywords": "Google Timeline 可视化工具, Google Timeline 消失, 我的 Google Timeline 去哪了, 在网页上查看 Google Timeline, Google Timeline 历史, Google 位置历史查看器, Google Takeout 位置查看器, 在地图上查看位置历史, Google Maps Timeline 替代方案, Google Timeline 关闭后的替代方案, 位置历史地图, Google Timeline 导出文件查看器, 注重隐私的位置可视化工具",
     "featureList": [

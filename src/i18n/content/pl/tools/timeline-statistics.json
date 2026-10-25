@@ -1,6 +1,6 @@
 {
   "h1": "Statystyki Google Timeline",
-  "intro": "Twoje Spotify Wrapped dla historii lokalizacji. Dodaj dane Google Timeline i zobacz pokonany dystans, odwiedzone kraje, najczęstsze miejsca oraz to, jak spędzasz czas, przemieszczając się po świecie.",
+  "intro": "Twoje Spotify Wrapped dla historii lokalizacji. Dodaj dane Google Timeline (Oś czasu Google Maps) i zobacz pokonany dystans, odwiedzone kraje, najczęstsze miejsca oraz to, jak spędzasz czas, przemieszczając się po świecie.",
   "appName": "Analiza statystyk Google Timeline",
   "privacyTitle": "Prywatność przede wszystkim",
   "privacyBody": "Całe przetwarzanie danych odbywa się w Twojej przeglądarce. Twoje dane lokalizacji nigdy nie opuszczają urządzenia i nie są wysyłane na żaden serwer.",
@@ -10,7 +10,7 @@
   "toolsLabel": "Darmowe narzędzia",
   "meta": {
     "title": "Statystyki Google Timeline — Twoja historia lokalizacji",
-    "description": "Google Timeline: łączny dystans, odwiedzone kraje, najczęstsze miejsca, podział aktywności, trendy roczne. Analizuj za darmo i prywatnie, całość w przeglądarce.",
+    "description": "Analizuj Google Timeline (Oś czasu Google Maps): łączny dystans, odwiedzone kraje, najczęstsze miejsca, podział aktywności, trendy roczne. Gratis, prywatnie, w całości w przeglądarce.",
     "keywords": "statystyki Google Timeline, statystyki historii lokalizacji, jaki dystans pokonałem, podsumowanie Google Maps Timeline, analiza Google Timeline, statystyki podróży, analiza danych lokalizacji, statystyki Google Takeout, kalkulator pokonanego dystansu, licznik odwiedzonych miejsc",
     "featureList": [
       "Obliczanie łącznego dystansu z danych Google Timeline",

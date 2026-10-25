@@ -1,6 +1,6 @@
 {
   "h1": "Détection du format Google Timeline",
-  "intro": "Ajoutez n’importe quel fichier d’export Google Timeline pour identifier immédiatement son format, consulter ses statistiques et découvrir quoi faire ensuite. Tout le traitement s’effectue dans votre navigateur.",
+  "intro": "Ajoutez n’importe quel fichier d’export Google Timeline (Vos trajets Google Maps) pour identifier immédiatement son format, consulter ses statistiques et découvrir quoi faire ensuite. Tout le traitement s’effectue dans votre navigateur.",
   "privacyTitle": "La confidentialité avant tout",
   "privacyBody": "Tout le traitement s’effectue dans votre navigateur. Vos données de localisation restent sur votre appareil et ne sont envoyées à aucun serveur.",
   "preCta": "Vous ne savez pas quoi faire de vos données Google Timeline ? Ajoutez votre fichier ci-dessus pour le découvrir, ou explorez [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-format-detector) pour un suivi automatique de votre position en gardant la pleine propriété de vos données.",
@@ -8,7 +8,7 @@
   "homeLabel": "Accueil",
   "toolsLabel": "Outils gratuits",
   "meta": {
-    "title": "Détecteur de format Google Timeline : identifiez vos exports",
+    "title": "Détecter le format Google Timeline (Vos trajets Google Maps)",
     "description": "Détectez aussitôt le format Google Timeline/Google Takeout : nombre de points, période, taille, qualité des données. Gratuit, tout dans votre navigateur.",
     "keywords": "format Google Timeline, format export Google, type fichier localisation Google Takeout, format historique de localisation Google, détecteur fichier Google Timeline, format export Google Maps Timeline, format JSON Google Takeout, identifier fichier export Google",
     "featureList": [

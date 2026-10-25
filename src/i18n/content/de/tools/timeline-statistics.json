@@ -1,6 +1,6 @@
 {
   "h1": "Google-Timeline-Statistiken",
-  "intro": "Dein Spotify Wrapped für den Standortverlauf. Lade deine Google-Timeline-Daten hoch und sieh, wie weit du gereist bist, welche Länder du besucht hast, wo du am häufigsten warst und wie du deine Zeit unterwegs verbringst.",
+  "intro": "Dein Spotify Wrapped für den Standortverlauf. Lade deine Daten aus Google Timeline (Google Maps Zeitachse) hoch und sieh, wie weit du gereist bist, welche Länder du besucht hast, wo du am häufigsten warst und wie du deine Zeit unterwegs verbringst.",
   "appName": "Google-Timeline-Statistikanalyse",
   "privacyTitle": "Datenschutz an erster Stelle",
   "privacyBody": "Die gesamte Datenverarbeitung erfolgt direkt in deinem Browser. Deine Standortdaten verlassen dein Gerät nie und werden an keinen Server gesendet.",
@@ -9,7 +9,7 @@
   "homeLabel": "Startseite",
   "toolsLabel": "Kostenlose Werkzeuge",
   "meta": {
-    "title": "Google-Timeline-Statistiken – Einblicke in deinen Verlauf",
+    "title": "Google Timeline (Google Maps Zeitachse): Statistiken",
     "description": "Google-Timeline-Daten gratis analysieren: Gesamtentfernung, besuchte Länder, häufigste Orte, Aktivitätsverteilung, Jahrestrends. Alles privat im Browser.",
     "keywords": "Google-Timeline-Statistiken, Standortverlaufsstatistik, wie weit bin ich gereist, Google-Maps-Timeline-Einblicke, Google-Timeline-Analyse, Reisestatistiken, Standortdatenanalyse, Google-Takeout-Statistiken, zurückgelegte Entfernung berechnen, besuchte Orte zählen",
     "featureList": [

@@ -1,6 +1,6 @@
 {
   "h1": "每个人都能挂一张柏林地图海报，但只有您拥有自己的路线。",
-  "intro": "下方海报是演示示例，展示了一个月在柏林的出行记录。拖入任意 GPX、Google Timeline、KML、FIT 或 TCX 文件，就能得到一张独属于您的地图，记录您的骑行、跑步和自驾行程。大约两分钟，无需账号。",
+  "intro": "下方海报是演示示例，展示了一个月在柏林的出行记录。拖入任意 GPX、Google Timeline（谷歌地图时间轴）、KML、FIT 或 TCX 文件，就能得到一张独属于您的地图，记录您的骑行、跑步和自驾行程。大约两分钟，无需账号。",
   "saveIntro": "也想将这些数据存入您的 Dawarich 账号？我们会在注册时导入，无需再次上传。",
   "appName": "地图海报制作工具",
   "homeLabel": "首页",
@@ -9,7 +9,7 @@
   "valueStrip": "17 种地图主题 · 22 种格式，涵盖 A5 至 A0 和 4K · 300 DPI PNG 与 PDF · {price} · 无水印",
   "meta": {
     "title": "免费地图海报制作工具 - 用 GPS 文件制作路线海报",
-    "description": "在浏览器中将 GPX、Google Timeline、KML、FIT 或 TCX 文件制作成专属地图海报。17 种主题、22 种版式，免费导出 PNG 和 PDF，并可选购印刷品。",
+    "description": "在浏览器中将 GPX、Google Timeline（谷歌地图时间轴）、KML、FIT 或 TCX 文件制作成专属地图海报。17 种主题、22 种版式，免费导出 PNG 和 PDF，并可选购印刷品。",
     "keywords": "地图海报制作工具, 路线海报, GPX 海报, 城市地图海报, Google Timeline 海报, 跑步路线海报, 定制地图印刷品, 地图装饰画, GPS 艺术"
   },
   "howTo": {

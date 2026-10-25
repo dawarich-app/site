@@ -1,6 +1,6 @@
 {
   "h1": "Estatísticas do Google Timeline",
-  "intro": "Seu Spotify Wrapped do histórico de localização. Carregue seus dados do Google Timeline para ver a distância que você percorreu, os países que visitou, seus lugares mais frequentes e como você passa seu tempo se deslocando pelo mundo.",
+  "intro": "Seu Spotify Wrapped do histórico de localização. Carregue seus dados do Google Timeline (Linha do tempo do Google Maps) para ver a distância que você percorreu, os países que visitou, seus lugares mais frequentes e como você passa seu tempo se deslocando pelo mundo.",
   "appName": "Analisador de estatísticas do Google Timeline",
   "privacyTitle": "Privacidade em primeiro lugar",
   "privacyBody": "Todo o processamento acontece no seu navegador. Seus dados de localização nunca saem do seu dispositivo e não são enviados a nenhum servidor.",
@@ -10,7 +10,7 @@
   "toolsLabel": "Ferramentas gratuitas",
   "meta": {
     "title": "Estatísticas do Google Timeline — seu histórico em números",
-    "description": "Analise grátis o Google Timeline: distância total, países visitados, principais lugares, distribuição de atividades e tendências anuais. Privado no navegador.",
+    "description": "Google Timeline (Linha do tempo do Google Maps): distância total, países, top lugares, atividades por tipo e tendências anuais. Grátis e privado no navegador.",
     "keywords": "estatísticas google timeline, estatísticas do histórico de localização, qual distância percorri, insights google maps timeline, analisador google timeline, estatísticas de viagem, análise de dados de localização, estatísticas google takeout, calculadora de distância percorrida, contador de lugares visitados",
     "featureList": [
       "Calcular a distância total percorrida com dados do Google Timeline",

@@ -1,6 +1,6 @@
 {
-  "h1": "Google Timeline 里程计算器",
-  "intro": "根据您的 Google Timeline 数据计算驾车里程。生成可下载的里程日志，包含每次行程详情、每日和每月汇总。所有处理均在您的浏览器中完成，只有选择“保存到我的 Dawarich 账号”时，数据才会离开您的设备。",
+  "h1": "Google Timeline（谷歌地图时间轴）里程计算器",
+  "intro": "根据您的 Google Timeline（谷歌地图时间轴）数据计算驾车里程。生成可下载的里程日志，包含每次行程详情、每日和每月汇总。所有处理均在您的浏览器中完成，只有选择“保存到我的 Dawarich 账号”时，数据才会离开您的设备。",
   "privacyTitle": "隐私优先",
   "privacyBody": "所有里程计算均在您的浏览器中完成，只有选择“保存到我的 Dawarich 账号”时，位置数据才会离开您的设备。",
   "preCta": "需要持续记录里程？[Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-mileage-calculator) 可自动记录您的行程，同时保障完整的数据所有权和隐私。无需再手动导出，即可持续、准确地记录。",
@@ -9,8 +9,8 @@
   "homeLabel": "首页",
   "toolsLabel": "免费工具",
   "meta": {
-    "title": "Google Timeline 里程计算器 - 免费记录驾车距离",
-    "description": "使用 Google Timeline 数据的免费里程计算器。计算驾车距离、生成里程日志，并导出 CSV 报告用于税款抵扣。隐私优先，在您的浏览器中运行。",
+    "title": "Google Timeline（谷歌地图时间轴）里程计算器 - 免费记录驾车距离",
+    "description": "使用 Google Timeline（谷歌地图时间轴）数据的免费里程计算器。计算驾车距离、生成里程日志，并导出 CSV 报告用于税款抵扣。隐私优先，在您的浏览器中运行。",
     "keywords": "Google Timeline 里程, 位置历史里程计算器, 根据 Google Maps 计算驾车距离, Google Timeline 里程日志, 税务里程计算器, Google Maps 里程追踪器, IRS 里程日志, 驾车距离计算器, Google Timeline 驾车距离, 里程报销计算器",
     "featureList": [
       "根据 Google Timeline 数据计算驾车里程",

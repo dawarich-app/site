@@ -1,5 +1,5 @@
 {
-  "h1": "Visualiseur Google Timeline",
+  "h1": "Visualiseur Google Timeline (Vos trajets Google Maps)",
   "intro": "Google a fermé la chronologie sur le web. Cet outil gratuit et respectueux de votre vie privée vous permet de la retrouver. Parcourez votre historique de localisation exporté jour après jour, avec un calendrier coloré selon l’activité, une liste de visites et la relecture des activités.",
   "saveIntro": "Vous souhaitez aussi retrouver ces données dans votre compte Dawarich ? Nous les importerons lors de l’inscription, sans nouvel envoi.",
   "privacy": "Tout le traitement s’effectue dans votre navigateur. Vos données restent sur votre appareil, sauf si vous choisissez « Enregistrer dans mon compte Dawarich ».",
@@ -8,7 +8,7 @@
   "toolsLabel": "Outils gratuits",
   "loadingMap": "Chargement de la carte…",
   "meta": {
-    "title": "Visualiseur Google Timeline : retrouvez la chronologie web",
+    "title": "Revoir Google Timeline (Vos trajets Google Maps) sur le web",
     "description": "Google a retiré la chronologie du web. Ajoutez votre export Takeout pour retrouver gratuitement votre historique sur une carte dans votre navigateur.",
     "keywords": "visualiseur Google Timeline, Google Timeline disparu, où est Google Timeline, voir Google Timeline sur le web, historique Google Timeline, visualiseur historique de localisation Google, visualiseur localisation Google Takeout, historique sur carte, alternative Google Maps Timeline, remplacement Google Timeline, carte historique de localisation, visualiseur export Google Timeline, visualiseur confidentiel",
     "featureList": [
@@ -54,11 +54,15 @@
       },
       {
         "title": "Sur Android :",
-        "steps": [ "Ouvrez Google Maps → Paramètres → Localisation → Services de localisation → Chronologie → Exporter la chronologie" ]
+        "steps": [
+          "Ouvrez Google Maps → Paramètres → Localisation → Services de localisation → Chronologie → Exporter la chronologie"
+        ]
       },
       {
         "title": "Sur iOS :",
-        "steps": [ "Ouvrez Google Maps → Paramètres → Contenu personnel → Exporter les données de chronologie" ]
+        "steps": [
+          "Ouvrez Google Maps → Paramètres → Contenu personnel → Exporter les données de chronologie"
+        ]
       }
     ]
   },
@@ -125,23 +129,43 @@
       "title": "Que pouvez-vous découvrir dans vos données ?",
       "paragraphs": [],
       "items": [
-        { "body": "**Habitudes de déplacement** — Retrouvez chaque voyage, des trajets quotidiens aux déplacements internationaux" },
-        { "body": "**Visites de lieux** — Découvrez les endroits les plus fréquentés, avec les heures d’arrivée et de départ" },
-        { "body": "**Types d’activité** — Consultez les segments de marche, voiture, vélo et transports en commun de Semantic Location History" },
-        { "body": "**Évolution annuelle** — Filtrez par année pour voir comment vos habitudes de déplacement ont évolué" },
-        { "body": "**Souvenirs oubliés** — Redécouvrez un restaurant, un parc ou un quartier visité il y a des années" }
+        {
+          "body": "**Habitudes de déplacement** — Retrouvez chaque voyage, des trajets quotidiens aux déplacements internationaux"
+        },
+        {
+          "body": "**Visites de lieux** — Découvrez les endroits les plus fréquentés, avec les heures d’arrivée et de départ"
+        },
+        {
+          "body": "**Types d’activité** — Consultez les segments de marche, voiture, vélo et transports en commun de Semantic Location History"
+        },
+        {
+          "body": "**Évolution annuelle** — Filtrez par année pour voir comment vos habitudes de déplacement ont évolué"
+        },
+        {
+          "body": "**Souvenirs oubliés** — Redécouvrez un restaurant, un parc ou un quartier visité il y a des années"
+        }
       ]
     },
     {
       "title": "Formats d’export Google pris en charge",
       "paragraphs": [],
       "items": [
-        { "body": "**Records.json** — Relevés GPS bruts au format de coordonnées E7. Le fichier le plus volumineux, contenant chaque relevé de position" },
-        { "body": "**Semantic Location History** — Fichiers mensuels (par exemple 2022_APRIL.json) avec visites de lieux, adresses et segments d’activité" },
-        { "body": "**Export de chronologie du téléphone** — Format récent de Google Maps sur Android/iOS avec semanticSegments et parcours de chronologie" },
-        { "body": "**Paramètres et TimelineEdits** — Fichiers de métadonnées supplémentaires des exports Google Takeout" }
+        {
+          "body": "**Records.json** — Relevés GPS bruts au format de coordonnées E7. Le fichier le plus volumineux, contenant chaque relevé de position"
+        },
+        {
+          "body": "**Semantic Location History** — Fichiers mensuels (par exemple 2022_APRIL.json) avec visites de lieux, adresses et segments d’activité"
+        },
+        {
+          "body": "**Export de chronologie du téléphone** — Format récent de Google Maps sur Android/iOS avec semanticSegments et parcours de chronologie"
+        },
+        {
+          "body": "**Paramètres et TimelineEdits** — Fichiers de métadonnées supplémentaires des exports Google Takeout"
+        }
       ],
-      "footer": [ "Le visualiseur détecte automatiquement le format. Vous pouvez ajouter plusieurs fichiers à la fois pour combiner les données de différentes méthodes d’export." ]
+      "footer": [
+        "Le visualiseur détecte automatiquement le format. Vous pouvez ajouter plusieurs fichiers à la fois pour combiner les données de différentes méthodes d’export."
+      ]
     },
     {
       "title": "Qu’est-il arrivé à Google Maps Timeline ?",
@@ -152,24 +176,44 @@
     },
     {
       "title": "Comparaison avec les autres visualiseurs",
-      "paragraphs": [ "Plusieurs outils permettent de consulter les données de localisation Google. Voici les différences :" ],
-      "items": [
-        { "body": "**Face à LocationHistoryVisualizer.com** — Celui-ci se limite aux cartes de chaleur. Cet outil affiche les points individuels, les parcours, les visites de lieux et les segments d’activité avec des filtres détaillés" },
-        { "body": "**Face à Google Maps Timeline** — La chronologie web de Google a fermé. Cet outil est une alternative indépendante et respectueuse de votre vie privée, qui fonctionne avec vos données exportées" },
-        { "body": "**Face aux projets GitHub** — La plupart des visualiseurs open source ne prennent en charge que les anciens formats d’export. Cet outil traite tous les formats Google, y compris les plus récents issus du téléphone" }
+      "paragraphs": [
+        "Plusieurs outils permettent de consulter les données de localisation Google. Voici les différences :"
       ],
-      "footer": [ "Vous préférez une carte de chaleur ? Essayez notre [générateur de cartes de chaleur GPS](/tools/heatmap-generator)." ]
+      "items": [
+        {
+          "body": "**Face à LocationHistoryVisualizer.com** — Celui-ci se limite aux cartes de chaleur. Cet outil affiche les points individuels, les parcours, les visites de lieux et les segments d’activité avec des filtres détaillés"
+        },
+        {
+          "body": "**Face à Google Maps Timeline** — La chronologie web de Google a fermé. Cet outil est une alternative indépendante et respectueuse de votre vie privée, qui fonctionne avec vos données exportées"
+        },
+        {
+          "body": "**Face aux projets GitHub** — La plupart des visualiseurs open source ne prennent en charge que les anciens formats d’export. Cet outil traite tous les formats Google, y compris les plus récents issus du téléphone"
+        }
+      ],
+      "footer": [
+        "Vous préférez une carte de chaleur ? Essayez notre [générateur de cartes de chaleur GPS](/tools/heatmap-generator)."
+      ]
     },
     {
       "title": "Outils associés",
       "paragraphs": [],
       "items": [
-        { "body": "[Générateur de cartes de chaleur GPS](/tools/heatmap-generator) — Créez des cartes de chaleur à partir de fichiers GPX, FIT, TCX et autres formats GPS" },
-        { "body": "[Fusion de trajets GPX](/tools/gpx-merger) — Regroupez plusieurs fichiers GPX en un seul" },
-        { "body": "[Extraction des géodonnées de photos](/tools/photo-geotagging) — Extrayez les coordonnées GPS de vos photos" },
-        { "body": "[Convertisseur GeoJSON vers GPX](/tools/geojson-to-gpx) — Convertissez vos données de localisation au format GPX" }
+        {
+          "body": "[Générateur de cartes de chaleur GPS](/tools/heatmap-generator) — Créez des cartes de chaleur à partir de fichiers GPX, FIT, TCX et autres formats GPS"
+        },
+        {
+          "body": "[Fusion de trajets GPX](/tools/gpx-merger) — Regroupez plusieurs fichiers GPX en un seul"
+        },
+        {
+          "body": "[Extraction des géodonnées de photos](/tools/photo-geotagging) — Extrayez les coordonnées GPS de vos photos"
+        },
+        {
+          "body": "[Convertisseur GeoJSON vers GPX](/tools/geojson-to-gpx) — Convertissez vos données de localisation au format GPX"
+        }
       ],
-      "footer": [ "Pour en savoir plus : [Comment nous avons créé ce visualiseur](/blog/building-a-privacy-first-google-timeline-visualizer) | [Migrer depuis l’historique de localisation Google](/blog/migrating-from-google-location-history-to-dawarich)" ]
+      "footer": [
+        "Pour en savoir plus : [Comment nous avons créé ce visualiseur](/blog/building-a-privacy-first-google-timeline-visualizer) | [Migrer depuis l’historique de localisation Google](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
     }
   ]
 }

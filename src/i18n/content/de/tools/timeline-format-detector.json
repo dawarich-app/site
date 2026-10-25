@@ -1,6 +1,6 @@
 {
   "h1": "Google-Timeline-Formaterkennung",
-  "intro": "Lade eine beliebige Google-Timeline-Exportdatei hoch, um sofort ihr Format zu erkennen, Datenstatistiken zu sehen und Empfehlungen für die nächsten Schritte zu erhalten. Die gesamte Verarbeitung erfolgt in deinem Browser.",
+  "intro": "Lade eine beliebige Exportdatei aus Google Timeline (Google Maps Zeitachse) hoch, um sofort ihr Format zu erkennen, Datenstatistiken zu sehen und Empfehlungen für die nächsten Schritte zu erhalten. Die gesamte Verarbeitung erfolgt in deinem Browser.",
   "privacyTitle": "Datenschutz an erster Stelle",
   "privacyBody": "Die gesamte Datenverarbeitung erfolgt direkt in deinem Browser. Deine Standortdaten verlassen dein Gerät nie und werden an keinen Server gesendet.",
   "preCta": "Du weißt nicht, was du mit deinen Google-Timeline-Daten machen kannst? Lade oben deine Datei hoch, um es herauszufinden. Oder entdecke [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-format-detector) für automatische Standortaufzeichnung mit voller Kontrolle über deine Daten.",
@@ -8,7 +8,7 @@
   "homeLabel": "Startseite",
   "toolsLabel": "Kostenlose Werkzeuge",
   "meta": {
-    "title": "Google-Timeline-Formaterkennung – Exportdateityp bestimmen",
+    "title": "Google Timeline (Google Maps Zeitachse): Format erkennen",
     "description": "Jede Google-Takeout-Standortdatei hochladen: Google-Timeline-Format, Punktzahl, Zeitraum, Dateigröße, Datenqualität sofort sehen. Gratis, alles im Browser.",
     "keywords": "Google-Timeline-Format, welches Format hat mein Google-Export, Google-Takeout-Standortdateityp, Google-Standortverlaufsformat, Google-Timeline-Datei erkennen, Google-Maps-Timeline-Exportformat, Google-Takeout-JSON-Format, Standortverlaufsdateityp, Google-Timeline-Datenformat, Google-Exportdatei identifizieren",
     "featureList": [

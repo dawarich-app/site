@@ -1,6 +1,6 @@
 {
   "h1": "Wykrywanie formatu Google Timeline",
-  "intro": "Dodaj dowolny plik eksportu Google Timeline, aby od razu poznać jego format, zobaczyć statystyki danych i zalecenia dalszych działań. Wszystko jest przetwarzane w Twojej przeglądarce.",
+  "intro": "Dodaj dowolny plik eksportu Google Timeline (Oś czasu Google Maps), aby od razu poznać jego format, zobaczyć statystyki danych i zalecenia dalszych działań. Wszystko jest przetwarzane w Twojej przeglądarce.",
   "privacyTitle": "Prywatność przede wszystkim",
   "privacyBody": "Całe przetwarzanie danych odbywa się w Twojej przeglądarce. Twoje dane lokalizacji nigdy nie opuszczają urządzenia i nie są wysyłane na żaden serwer.",
   "preCta": "Nie wiesz, co zrobić z danymi Google Timeline? Dodaj plik powyżej, aby się dowiedzieć, lub poznaj [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-format-detector) — automatyczne śledzenie lokalizacji z pełną własnością danych.",
@@ -9,7 +9,7 @@
   "toolsLabel": "Darmowe narzędzia",
   "meta": {
     "title": "Wykrywanie formatu Google Timeline — rozpoznaj plik eksportu",
-    "description": "Darmowe wykrywanie formatu eksportu Google Timeline. Dodaj dowolny plik lokalizacji Google Takeout i od razu sprawdź nazwę formatu, liczbę punktów, zakres dat, rozmiar pliku i jakość danych. Wszystko w przeglądarce.",
+    "description": "Dodaj dowolny plik lokalizacji Google Takeout: od razu poznasz nazwę formatu Google Timeline (Oś czasu Google Maps), liczbę punktów, zakres dat, rozmiar pliku i jakość danych. Za darmo. Wszystko w przeglądarce.",
     "keywords": "format Google Timeline, jaki format ma eksport Google, typ pliku lokalizacji Google Takeout, format historii lokalizacji Google, wykrywanie pliku Google Timeline, format eksportu Google Maps Timeline, format JSON Google Takeout, typ pliku historii lokalizacji, format danych Google Timeline, rozpoznawanie eksportu Google",
     "featureList": [
       "Natychmiastowe wykrywanie formatu eksportu Google Timeline",

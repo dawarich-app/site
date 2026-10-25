@@ -62,7 +62,8 @@
     "td13": "Nichts. Niemals.",
     "text": "Wir verlangen weniger als Life360 dafür, deine Daten zu ",
     "em": "verkaufen",
-    "text2": "."
+    "text2": ".",
+    "perYear": "{price}/Jahr"
   },
   "promises": {
     "heading": "Unser Versprechen: Du kannst nur gewinnen",
@@ -86,8 +87,8 @@
   },
   "meta": {
     "title": "Dawarich Cloud – Privater Standortverlauf in deiner Hand",
-    "description": "Privater Standortverlauf, Hosting in Deutschland: Heatmaps/Reisen/Statistiken ohne Datenverkauf. Aus Google Takeout/Strava/Garmin +12. Ab {price}. 7 Tage gratis",
-    "ogDescription": "Privater Standortverlauf, in Deutschland gehostet. Heatmaps, Reisen, Statistiken – ohne Datenverkauf. Ab {price}. 7 Tage kostenlos testen.",
+    "description": "Privater Standortverlauf in Deutschland: Heatmaps/Reisen/Statistiken ohne Datenverkauf. Import: Google Takeout/Strava/Garmin +12. Ab {price}/Jahr, 7 Tage gratis",
+    "ogDescription": "Privater Standortverlauf, in Deutschland gehostet. Heatmaps, Reisen, Statistiken – ohne Datenverkauf. Ab {price}/Jahr. 7 Tage kostenlos testen.",
     "twitterDescription": "Privater Standortverlauf, in Deutschland gehostet. Heatmaps, Reisen, Statistiken – ohne Datenverkauf."
   },
   "hero": {

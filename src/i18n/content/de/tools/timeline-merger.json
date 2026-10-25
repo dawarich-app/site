@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Google-Timeline-Daten zusammenführen – Exporte kombinieren",
+    "title": "Google Timeline (Google Maps Zeitachse): Exporte vereinen",
     "description": "Google-Timeline-Exporte gratis zu einer Datei vereinen: Records.json, Semantic History, Smartphone-Exporte. Überlappende Punkte intelligent entfernen. Privat.",
     "keywords": "Google-Timeline-Exporte zusammenführen, Standortverlaufsdateien kombinieren, Google-Timeline-Daten wiederherstellen, Records.json zusammenführen, Google-Takeout-Standortdaten kombinieren, Semantic Location History zusammenführen, Google Timeline kombinieren, Standortverlaufsduplikate entfernen, GPS-Daten zusammenführen",
     "featureList": [
@@ -42,7 +42,7 @@
     "tool": "Google-Timeline-Daten zusammenführen mit Dawarich"
   },
   "h1": "Google-Timeline-Daten zusammenführen",
-  "intro": "Führe mehrere Google-Timeline-Exporte zu einer gemeinsamen Datei zusammen. Die intelligente Duplikaterkennung entfernt überlappende Datenpunkte und bewahrt alle einzigartigen Standortdatensätze. Kostenlos, datenschutzfreundlich und vollständig in deinem Browser.",
+  "intro": "Führe mehrere Exporte aus Google Timeline (Google Maps Zeitachse) zu einer gemeinsamen Datei zusammen. Die intelligente Duplikaterkennung entfernt überlappende Datenpunkte und bewahrt alle einzigartigen Standortdatensätze. Kostenlos, datenschutzfreundlich und vollständig in deinem Browser.",
   "preCta": "Möchtest du deine Timeline-Daten zuerst visualisieren? Erkunde deinen Standortverlauf auf einer interaktiven Karte mit unserer [Google-Timeline-Visualisierung](/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger). Suchst du einen langfristigen Timeline-Ersatz? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) gibt dir volle Kontrolle über deine Daten.",
   "faqTitle": "Häufig gestellte Fragen",
   "homeLabel": "Startseite",

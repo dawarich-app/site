@@ -62,7 +62,8 @@
     "td13": "Res. Mai.",
     "text": "Cobrem menys del que Life360 cobra per ",
     "em": "vendre",
-    "text2": " les teves dades."
+    "text2": " les teves dades.",
+    "perYear": "{price}/any"
   },
   "promises": {
     "heading": "La promesa que no hi perds",
@@ -86,8 +87,8 @@
   },
   "meta": {
     "title": "Dawarich Cloud — Historial d’ubicacions privat i ben teu",
-    "description": "Google Takeout, Strava, Garmin i 12 més; mapes de calor, viatges i estadístiques. Dades privades a Alemanya, sense vendre-les. Des de {price}. 7 dies gratis.",
-    "ogDescription": "Historial d’ubicacions privat allotjat a Alemanya. Mapes de calor, viatges i estadístiques, sense vendre les dades. Des de {price}. Prova gratuïta de 7 dies.",
+    "description": "Historial privat d’ubicacions a Alemanya. Mapes de calor, viatges i estadístiques. Importa Google Takeout, Strava, Garmin i 12 més. Sense vendre dades. Des de {price}/any. Prova gratis: 7 dies.",
+    "ogDescription": "Historial d’ubicacions privat allotjat a Alemanya. Mapes de calor, viatges i estadístiques, sense vendre dades. Des de {price}/any. Prova gratuïta de 7 dies.",
     "twitterDescription": "Historial d’ubicacions privat allotjat a Alemanya. Mapes de calor, viatges i estadístiques, sense vendre les teves dades."
   },
   "hero": {

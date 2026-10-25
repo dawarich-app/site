@@ -62,7 +62,8 @@
     "td13": "Nada. Nunca.",
     "text": "Cobramos menos de lo que Life360 te cobra por ",
     "em": "vender",
-    "text2": " tus datos."
+    "text2": " tus datos.",
+    "perYear": "{price}/año"
   },
   "promises": {
     "heading": "La promesa de que no tienes nada que perder",
@@ -86,8 +87,8 @@
   },
   "meta": {
     "title": "Dawarich Cloud — Historial de ubicaciones privado y tuyo",
-    "description": "Historial privado de ubicaciones alojado en Alemania. Mapas de calor, viajes y estadísticas sin vender datos. Importa Google Takeout, Strava, Garmin y 12 más. Desde {price}. Prueba gratis: 7 días.",
-    "ogDescription": "Historial privado de ubicaciones alojado en Alemania. Mapas de calor, viajes y estadísticas, sin vender tus datos. Desde {price}. Prueba gratuita de 7 días.",
+    "description": "Historial privado en Alemania: mapas de calor/viajes/estadísticas; sin vender datos. Importa Google Takeout/Strava/Garmin +12. Desde {price}/año. 7 días gratis.",
+    "ogDescription": "Historial privado de ubicaciones alojado en Alemania. Mapas de calor, viajes y estadísticas, sin vender tus datos. Desde {price}/año. Prueba gratuita de 7 días.",
     "twitterDescription": "Historial privado de ubicaciones alojado en Alemania. Mapas de calor, viajes y estadísticas, sin vender tus datos."
   },
   "hero": {

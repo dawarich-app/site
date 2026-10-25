@@ -1,6 +1,6 @@
 {
   "h1": "Tothom pot penjar un pòster d'un mapa de Berlín. Només tu tens la teva ruta.",
-  "intro": "El pòster de sota és una mostra: un mes de desplaçaments per Berlín. Deixa-hi anar qualsevol fitxer GPX, Google Timeline, KML, FIT o TCX i es convertirà en un mapa que ningú més no pot penjar: les teves sortides amb bicicleta, les teves curses, els teus viatges per carretera. Uns dos minuts, sense compte.",
+  "intro": "El pòster de sota és una mostra: un mes de desplaçaments per Berlín. Deixa-hi anar qualsevol fitxer GPX, Google Timeline (Cronologia de Google Maps), KML, FIT o TCX i es convertirà en un mapa que ningú més no pot penjar: les teves sortides amb bicicleta, les teves curses, els teus viatges per carretera. Uns dos minuts, sense compte.",
   "saveIntro": "També vols aquestes dades al teu compte de Dawarich? Les importarem quan t'hi registris, sense haver de tornar a carregar el fitxer.",
   "appName": "Creador de pòsters de mapes",
   "homeLabel": "Inici",
@@ -9,7 +9,7 @@
   "valueStrip": "17 temes de mapa · 22 formats, d'A5 a A0 i 4K · PNG i PDF a 300 DPI · {price} · sense marca d'aigua",
   "meta": {
     "title": "Creador gratuït de pòsters de mapes amb fitxers GPS",
-    "description": "Crea un pòster de mapa amb fitxers GPX, Google Timeline, KML, FIT o TCX al navegador. 17 temes, 22 dissenys, PNG i PDF gratuïts, impressions opcionals.",
+    "description": "Crea pòsters de mapes amb GPX, Google Timeline (Cronologia de Google Maps), KML, FIT o TCX al web. 17 temes, 22 dissenys; PNG/PDF gratis, impressió opcional.",
     "keywords": "creador de pòsters de mapes, pòster de ruta, pòster GPX, pòster de mapa de ciutat, pòster de Google Timeline, pòster de ruta de cursa, mapa imprès personalitzat, mapa decoratiu, art GPS"
   },
   "howTo": {

@@ -69,7 +69,8 @@
     "Use preferred terms below for product concepts.",
     "Prices, currencies, numbers and file names stay as they are.",
     "Meta titles stay short (aim for 60 characters or fewer), meta descriptions 160 characters or fewer.",
-    "Plural messages use '|' between forms in the order Intl.PluralRules gives for the locale."
+    "Plural messages use '|' between forms in the order Intl.PluralRules gives for the locale.",
+    "Search terms: where the English names Google Timeline in a meta title, meta description, H1 or intro, also use the name Google Maps shows in that language (searchTerms below) once, next to 'Google Timeline'. People search for both. Never stuff it into every sentence."
   ],
   "preferred": {
     "Points": {
@@ -211,6 +212,18 @@
       "ca": "Estadístiques",
       "zh": "统计数据",
       "pt-br": "Estatísticas"
+    }
+  },
+  "searchTerms": {
+    "Google Timeline": {
+      "source": "Google autocomplete per language, 2026-10-25",
+      "de": "Google Maps Zeitachse",
+      "es": "Cronología de Google Maps",
+      "fr": "Vos trajets Google Maps",
+      "pl": "Oś czasu Google Maps",
+      "ca": "Cronologia de Google Maps",
+      "zh": "谷歌地图时间轴",
+      "pt-br": "Linha do tempo do Google Maps"
     }
   }
 }

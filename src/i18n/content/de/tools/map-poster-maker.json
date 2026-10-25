@@ -1,6 +1,6 @@
 {
   "h1": "Ein Kartenposter von Berlin kann jeder aufhängen. Nur du hast deine Route.",
-  "intro": "Das Poster unten zeigt die Demo: einen Monat unterwegs in Berlin. Lege eine GPX-, Google-Timeline-, KML-, FIT- oder TCX-Datei ab und daraus wird eine Karte, die niemand sonst aufhängen kann – deine Radtouren, deine Läufe, deine Roadtrips. Etwa zwei Minuten, ohne Konto.",
+  "intro": "Das Poster unten zeigt die Demo: einen Monat unterwegs in Berlin. Lege eine Datei aus Google Timeline (Google Maps Zeitachse) oder eine GPX-, KML-, FIT- oder TCX-Datei ab und daraus wird eine Karte, die niemand sonst aufhängen kann – deine Radtouren, deine Läufe, deine Roadtrips. Etwa zwei Minuten, ohne Konto.",
   "saveIntro": "Möchtest du diese Daten auch in deinem Dawarich-Konto haben? Wir importieren sie bei der Registrierung, ohne erneutes Hochladen.",
   "appName": "Kartenposter erstellen",
   "homeLabel": "Startseite",
@@ -9,7 +9,7 @@
   "valueStrip": "17 Kartenstile · 22 Formate, A5 bis A0 und 4K · PNG & PDF mit 300 DPI · {price} · ohne Wasserzeichen",
   "meta": {
     "title": "Kartenposter kostenlos erstellen – Routen aus GPS-Dateien",
-    "description": "Erstelle Kartenposter aus GPX, Google Timeline, KML, FIT oder TCX im Browser. 17 Stile, 22 Layouts, kostenloser PNG- und PDF-Export, optionale Drucke.",
+    "description": "Kartenposter aus GPX, Google Timeline (Google Maps Zeitachse), KML, FIT, TCX: 17 Stile, 22 Layouts, gratis PNG/PDF im Browser, optionale Drucke.",
     "keywords": "Kartenposter erstellen, Routenposter, GPX-Poster, Stadtplanposter, Google-Timeline-Poster, Laufstreckenposter, individueller Kartendruck, Kartenwandbild, GPS-Kunst"
   },
   "howTo": {

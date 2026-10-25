@@ -1,6 +1,6 @@
 {
   "h1": "Google-Timeline-Kilometerrechner",
-  "intro": "Berechne gefahrene Kilometer aus deinen Google-Timeline-Daten. Erstelle herunterladbare Streckenprotokolle mit Details zu jeder Fahrt sowie Tages- und Monatsübersichten. Alles wird in deinem Browser verarbeitet. Deine Daten bleiben auf deinem Gerät, bis du „In meinem Dawarich-Konto speichern“ wählst.",
+  "intro": "Berechne mit deinen Daten aus Google Timeline (Google Maps Zeitachse) die gefahrenen Kilometer. Erstelle herunterladbare Streckenprotokolle mit Details zu jeder Fahrt sowie Tages- und Monatsübersichten. Alles wird in deinem Browser verarbeitet. Deine Daten bleiben auf deinem Gerät, bis du „In meinem Dawarich-Konto speichern“ wählst.",
   "privacyTitle": "Datenschutz an erster Stelle",
   "privacyBody": "Alle Streckenberechnungen erfolgen direkt in deinem Browser. Deine Standortdaten bleiben auf deinem Gerät, bis du „In meinem Dawarich-Konto speichern“ wählst.",
   "preCta": "Möchtest du deine Fahrstrecken laufend erfassen? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-mileage-calculator) zeichnet deine Reisen automatisch auf. Deine Daten gehören dir und bleiben privat. Keine manuellen Exporte mehr, sondern kontinuierliche, genaue Aufzeichnung.",
@@ -9,7 +9,7 @@
   "homeLabel": "Startseite",
   "toolsLabel": "Kostenlose Werkzeuge",
   "meta": {
-    "title": "Google-Timeline-Kilometerrechner – Fahrstrecken kostenlos",
+    "title": "Google Timeline/Google Maps Zeitachse: Fahr-km gratis berechnen",
     "description": "Google-Timeline-Fahrstrecken gratis berechnen. Streckenprotokolle erstellen und CSV-Berichte für Steuerabzüge exportieren. Privat im Browser.",
     "keywords": "Google-Timeline-Kilometer, Kilometerrechner aus Standortverlauf, Fahrstrecke aus Google Maps, Streckenprotokoll Google Timeline, Kilometerrechner Steuer, Google-Maps-Kilometeraufzeichnung, IRS-Streckenprotokoll, Fahrstreckenrechner, Google-Timeline-Fahrstrecke, Fahrtkostenerstattung berechnen",
     "featureList": [

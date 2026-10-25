@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "免费 GPS 热力图生成器 - 在线生成活动热力图",
-    "description": "使用 GPS 数据生成精美热力图。上传 GPX、FIT、TCX、GeoJSON、KML 或 Google Timeline JSON 文件，以可视化方式查看您的跑步、骑行和活动规律。免费、隐私优先，完全在您的浏览器中运行。",
+    "description": "使用 GPS 数据生成精美热力图。上传 GPX、FIT、TCX、GeoJSON、KML 或 Google Timeline（谷歌地图时间轴） JSON 文件，以可视化方式查看您的跑步、骑行和活动规律。免费、隐私优先，完全在您的浏览器中运行。",
     "keywords": "GPS 热力图, 热力图生成器, 跑步热力图, 骑行热力图, Strava 热力图替代方案, GPX 热力图, 活动热力图, 健身热力图, 免费热力图, Google Timeline 热力图, Google 位置历史热力图, Records.json 热力图"
   },
   "h1": "GPS 热力图生成器",

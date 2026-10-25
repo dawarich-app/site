@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Google Timeline: combina historiales de ubicaciones exportados",
-    "description": "Une gratis varias exportaciones de Google Timeline en un archivo: Records.json, Semantic History y del teléfono. Elimina puntos solapados de forma inteligente. Privacidad ante todo.",
+    "title": "Google Timeline (Cronología de Google Maps): une exportaciones",
+    "description": "Une exportaciones de Google Timeline en un archivo: Records.json, Semantic History y del móvil. Quita puntos solapados de forma inteligente. Gratis y privado.",
     "keywords": "combinar exportaciones de Google Timeline, unir archivos de historial de ubicaciones, recuperar datos de Google Timeline, combinar Records.json, combinar ubicaciones de Google Takeout, combinar Semantic Location History, combinador de Google Timeline, eliminar duplicados del historial de ubicaciones, combinar datos GPS",
     "featureList": [
       "Combina varias exportaciones de Google Timeline en un archivo",
@@ -42,7 +42,7 @@
     "tool": "Combinador de datos de Google Timeline de Dawarich"
   },
   "h1": "Combinador de datos de Google Timeline",
-  "intro": "Combina varias exportaciones de Google Timeline en un único archivo. La eliminación inteligente de duplicados quita los puntos solapados y conserva todos los registros de ubicación únicos. Gratis, con privacidad y todo en tu navegador.",
+  "intro": "Combina varias exportaciones de Google Timeline (Cronología de Google Maps) en un único archivo. La eliminación inteligente de duplicados quita los puntos solapados y conserva todos los registros de ubicación únicos. Gratis, con privacidad y todo en tu navegador.",
   "preCta": "¿Quieres visualizar primero tus datos de cronología? Prueba nuestro [visualizador de Google Timeline](/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) para explorar tu historial de ubicaciones en un mapa interactivo. ¿Necesitas una alternativa a largo plazo? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) te da plena propiedad de tus datos.",
   "faqTitle": "Preguntas frecuentes",
   "homeLabel": "Inicio",

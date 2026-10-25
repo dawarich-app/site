@@ -1,6 +1,6 @@
 {
   "h1": "Detector de formato de Google Timeline",
-  "intro": "Carga cualquier archivo exportado de Google Timeline para identificar su formato al instante, consultar estadísticas de los datos y obtener recomendaciones sobre qué hacer después. Todo se procesa en tu navegador.",
+  "intro": "Carga cualquier archivo exportado de Google Timeline (Cronología de Google Maps) para identificar su formato al instante, consultar estadísticas de los datos y obtener recomendaciones sobre qué hacer después. Todo se procesa en tu navegador.",
   "privacyTitle": "La privacidad es lo primero",
   "privacyBody": "Todos los datos se procesan íntegramente en tu navegador. Tus datos de ubicación nunca salen de tu dispositivo ni se envían a ningún servidor.",
   "preCta": "¿No sabes qué hacer con tus datos de Google Timeline? Carga tu archivo arriba para descubrirlo o explora [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-format-detector) para registrar tu ubicación automáticamente con plena propiedad de tus datos.",
@@ -9,7 +9,7 @@
   "toolsLabel": "Herramientas gratuitas",
   "meta": {
     "title": "Google Timeline: identifica el formato de tu archivo exportado",
-    "description": "Detecta tu formato de Google Timeline gratis. Carga cualquier archivo de ubicaciones de Google Takeout: formato, número de puntos, intervalo de fechas, tamaño y calidad al instante. Todo se procesa en tu navegador.",
+    "description": "Google Timeline (Cronología de Google Maps): sube ubicaciones de Google Takeout. Formato, puntos, fechas, tamaño y calidad al instante. Gratis, en tu navegador.",
     "keywords": "formato de Google Timeline, qué formato tiene mi exportación de Google, tipo de archivo de ubicación de Google Takeout, formato de historial de ubicaciones de Google, detector de archivos de Google Timeline, formato de exportación de Google Maps Timeline, formato JSON de Google Takeout, tipo de archivo de historial de ubicaciones, formato de datos de Google Timeline, identificar archivo exportado de Google",
     "featureList": [
       "Detecta al instante el formato de exportación de Google Timeline",

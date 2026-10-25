@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Divisor de Google Timeline: divide archivos JSON grandes",
-    "description": "Divide gratis JSON grandes de Google Timeline en partes válidas más pequeñas. Todos los formatos: Records.json, Semantic Location History, Semantic Segments y más. Elige el tamaño final. Privacidad ante todo: funciona en tu navegador.",
+    "description": "Divide gratis JSON grandes de Google Timeline (Cronología de Google Maps) en partes pequeñas y válidas. Admite todos los formatos: Records.json, Semantic Location History, Semantic Segments y más. Elige el tamaño. Privado, todo en tu navegador.",
     "keywords": "dividir JSON de Google Timeline, dividir Records.json, dividir historial de ubicaciones de Google grande, divisor de Google Timeline, dividir ubicaciones de Google Takeout, dividir JSON de cronología, archivo de Google Timeline demasiado grande",
     "featureList": [
       "Divide archivos JSON grandes de Google Timeline en partes más pequeñas",
@@ -32,7 +32,7 @@
     ]
   },
   "h1": "Divisor de Google Timeline",
-  "intro": "Divide exportaciones JSON grandes de Google Timeline en partes válidas más pequeñas. Cada parte conserva el formato original para que puedas importarla en cualquier herramienta. Elige el tamaño de archivo y descarga un ZIP.",
+  "intro": "Divide exportaciones JSON grandes de Google Timeline (Cronología de Google Maps) en partes válidas más pequeñas. Cada parte conserva el formato original para que puedas importarla en cualquier herramienta. Elige el tamaño de archivo y descarga un ZIP.",
   "benefitsTitle": "¿Por qué dividir los archivos de cronología?",
   "privacyBody": "Todos los datos se procesan en tu navegador. Tus archivos nunca salen de tu dispositivo.",
   "preCta": "¿Trabajas con exportaciones grandes de Google Timeline? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-splitter) gestiona automáticamente importaciones de cualquier tamaño y te da plena propiedad y privacidad de tus datos.",

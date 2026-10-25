@@ -1,6 +1,6 @@
 {
-  "h1": "Google Timeline 格式检测工具",
-  "intro": "上传任意 Google Timeline 导出文件，即可快速识别格式、查看数据统计，并获取后续处理建议。所有处理均在您的浏览器中完成。",
+  "h1": "Google Timeline（谷歌地图时间轴）格式检测工具",
+  "intro": "上传任意 Google Timeline（谷歌地图时间轴）导出文件，即可快速识别格式、查看数据统计，并获取后续处理建议。所有处理均在您的浏览器中完成。",
   "privacyTitle": "隐私优先",
   "privacyBody": "所有数据处理均在您的浏览器中完成。您的位置数据不会离开设备，也不会发送到任何服务器。",
   "preCta": "不确定如何处理您的 Google Timeline 数据？在上方上传文件即可了解，或探索 [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-format-detector)，自动记录位置并拥有完整的数据所有权。",
@@ -8,8 +8,8 @@
   "homeLabel": "首页",
   "toolsLabel": "免费工具",
   "meta": {
-    "title": "Google Timeline 格式检测工具 - 识别您的位置导出文件类型",
-    "description": "免费检测 Google Timeline 导出格式。上传任意 Google Takeout 位置文件，即可查看格式名称、轨迹点数量、日期范围、文件大小和数据质量。所有处理均在您的浏览器中完成。",
+    "title": "Google Timeline（谷歌地图时间轴）格式检测工具 - 识别您的位置导出文件类型",
+    "description": "免费检测 Google Timeline（谷歌地图时间轴）导出格式。上传任意 Google Takeout 位置文件，即可查看格式名称、轨迹点数量、日期范围、文件大小和数据质量。所有处理均在您的浏览器中完成。",
     "keywords": "Google Timeline 格式, 我的 Google 导出文件是什么格式, Google Takeout 位置文件类型, Google 位置历史格式, Google Timeline 文件检测工具, Google Maps Timeline 导出格式, Google Takeout JSON 格式, 位置历史文件类型, Google Timeline 数据格式, 识别 Google 导出文件",
     "featureList": [
       "快速检测 Google Timeline 导出格式",

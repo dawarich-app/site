@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Google-Timeline-Dateien aufteilen – große JSON-Dateien",
+    "title": "Google Timeline (Google Maps Zeitachse): große JSONs teilen",
     "description": "Große Google-Timeline-JSONs teilen. Alle Formate: Records.json, Semantic Location History, Semantic Segments … Valide Teile nach Maß. Gratis, privat im Browser.",
     "keywords": "Google-Timeline-JSON aufteilen, Records.json teilen, großen Google-Standortverlauf aufteilen, Google-Timeline-Dateien teilen, Google-Takeout-Standortdaten aufteilen, Timeline-JSON teilen, Google-Timeline-Datei zu groß",
     "featureList": [
@@ -32,7 +32,7 @@
     ]
   },
   "h1": "Google-Timeline-Dateien aufteilen",
-  "intro": "Teile große Google-Timeline-JSON-Exporte in kleinere, gültige Dateien auf. Jeder Teil behält das Originalformat und lässt sich so überall importieren. Wähle deine Zielgröße und lade eine ZIP-Datei herunter.",
+  "intro": "Teile große JSON-Exporte aus Google Timeline (Google Maps Zeitachse) in kleinere, gültige Dateien auf. Jeder Teil behält das Originalformat und lässt sich so überall importieren. Wähle deine Zielgröße und lade eine ZIP-Datei herunter.",
   "benefitsTitle": "Warum Timeline-Dateien aufteilen?",
   "privacyBody": "Die gesamte Datenverarbeitung findet in deinem Browser statt. Deine Dateien verlassen dein Gerät nie.",
   "preCta": "Arbeitest du mit großen Google-Timeline-Exporten? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-splitter) verarbeitet Importe jeder Größe automatisch. Deine Daten gehören vollständig dir und bleiben privat.",

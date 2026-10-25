@@ -1,5 +1,44 @@
 {
   "title": "Ce qu’on en dit",
   "subtitle": "Présenté dans les grandes publications technologiques du monde entier.",
-  "featuredLabel": "Ils en parlent"
+  "featuredLabel": "Ils en parlent",
+  "quotes": [
+    {
+      "quote": "J’ai importé mon historique Google Timeline dans cette application auto-hébergée, et c’est tellement mieux que ce que propose Google.",
+      "source": "XDA Developers"
+    },
+    {
+      "quote": "Dawarich vous offre tout ce que fait Google Timeline, et même plus. Il n’y a ni publicité ni collecte de données cachée.",
+      "source": "MakeUseOf"
+    },
+    {
+      "quote": "L’interface est épurée et facile à utiliser. Pratiquement aucun impact sur la batterie.",
+      "source": "Avis sur l’App Store"
+    },
+    {
+      "quote": "Je voyage à travers le monde 60-70% de l’année et je cherchais un moyen de garder une trace de mes déplacements sans la confier à Google. J’ai trouvé Dawarich.app, configuré l’application sur mon iPhone en quelques minutes, importé mon historique Timeline, et ça tourne tout seul — le suivi démarre automatiquement quand je quitte la maison. Je n’y pense plus. Mes données m’appartiennent à nouveau et, depuis, j’ai enregistré 260k km, 16 pays et 378 villes.",
+      "source": "Allemagne · Voyageur international · Ancien utilisateur de Google Timeline · Découvert sur Reddit"
+    },
+    {
+      "quote": "J’ai utilisé Google Timeline pendant des années, mais je n’ai jamais été à l’aise à l’idée que toute ma vie soit stockée sur des serveurs aux États-Unis. J’ai tout transféré dans Dawarich (quelques années de données) en un seul après-midi. J’ai maintenant un journal privé et permanent de ma vie — quelque chose que j’espère transmettre un jour à mes petits-enfants. J’attends avec impatience les prochaines améliorations, car ils ont déjà fait un travail remarquable.",
+      "source": "New York, États-Unis · Ancien utilisateur de Google Timeline · Un historique de localisation à transmettre"
+    },
+    {
+      "quote": "J’ai déménagé au Kazakhstan sans connaître du tout la ville. Google Timeline n’était plus une option et, de toute façon, je ne lui faisais pas confiance. J’ai installé Dawarich et, maintenant, la carte est pour moi comme le brouillard de guerre — plus je sors, plus elle se remplit. En plus, je garde chaque déplacement — je peux revoir n’importe lequel et partager l’itinéraire.",
+      "source": "Client Dawarich · Kazakhstan · Depuis mi-2025"
+    },
+    {
+      "quote": "C’est bien mieux qu’OwnTracks, Overland, etc. — c’est tellement plus précis.",
+      "source": "GitHub Discussions"
+    },
+    {
+      "quote": "Jusqu’ici, l’application fonctionne très bien pour moi et n’a eu aucun effet sur la batterie ! Un travail incroyable jusqu’à présent !",
+      "source": "Avis sur l’App Store"
+    },
+    {
+      "quote": "Je trouve que c’est un logiciel assez impressionnant.",
+      "source": "Colocataires Blog"
+    }
+  ],
+  "translatedNote": "Traduit de l’anglais"
 }

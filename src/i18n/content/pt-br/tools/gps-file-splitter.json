@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Divisor de arquivos GPS — divida GPX, GeoJSON, KML e JSON",
-    "description": "Divida arquivos GPS: GPX, GeoJSON, KML, KMZ e JSON do Google Timeline por tamanho, pontos ou data. Baixe um ZIP. Grátis, com privacidade no navegador.",
+    "description": "GPS: divida GPX, GeoJSON, KML, KMZ e JSON do Google Timeline (Linha do tempo do Google Maps) por tamanho, pontos ou data. ZIP. Grátis e privado no navegador.",
     "keywords": "dividir arquivo GPX grande, dividir geojson em partes, dividir arquivo KML, reduzir tamanho de arquivo GPS, dividir arquivo JSON de localização grande, divisor de arquivos GPS, dividir google timeline",
     "featureList": [
       "Dividir arquivos GPS grandes em partes menores",
@@ -31,7 +31,7 @@
     ]
   },
   "h1": "Divisor de arquivos GPS",
-  "intro": "Divida arquivos grandes de GPS e localização em partes menores e mais fáceis de usar. Aceita GPX, GeoJSON, KML, KMZ e JSON do Google Timeline. Baixe todas as partes em um único arquivo ZIP.",
+  "intro": "Divida arquivos grandes de GPS e localização em partes menores e mais fáceis de usar. Aceita GPX, GeoJSON, KML, KMZ e JSON do Google Timeline (Linha do tempo do Google Maps). Baixe todas as partes em um único arquivo ZIP.",
   "benefitsTitle": "Por que dividir arquivos GPS?",
   "privacyBody": "Todo o processamento acontece no seu navegador. Seus arquivos nunca saem do seu dispositivo.",
   "preCta": "Trabalhando com arquivos grandes de localização? O [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=gps-file-splitter) processa importações de qualquer tamanho automaticamente, com plena propriedade dos seus dados e privacidade.",

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Conversor grátis de Google Timeline para GPX/KML/CSV",
-    "description": "Conversor grátis e privado de dados do Google Timeline. Converta seu histórico de localização para GPX, KML, GeoJSON ou CSV. Tudo no navegador.",
+    "description": "Converta seu histórico de localização do Google Timeline (Linha do tempo do Google Maps) em GPX, KML, GeoJSON ou CSV. Grátis e privado; tudo no navegador.",
     "keywords": "converter Google Timeline para GPX, Google Takeout para KML, histórico de localização do Google para CSV, conversor Timeline para GeoJSON, conversor Google Timeline, exportar Google Maps Timeline, histórico de localização para GPX, conversor de localização Google Takeout, conversor de dados Timeline",
     "appName": "Conversor de Google Timeline para GPX/KML/CSV",
     "featureList": [
@@ -16,7 +16,7 @@
     ]
   },
   "h1": "Conversor do Google Timeline",
-  "intro": "Ferramenta grátis e privada para converter seu histórico de localização do Google Timeline para GPX, KML, GeoJSON, KMZ ou CSV. Carregue seus arquivos JSON exportados — todo o processamento acontece no navegador.",
+  "intro": "Ferramenta grátis e privada para converter seu histórico de localização do Google Timeline (Linha do tempo do Google Maps) para GPX, KML, GeoJSON, KMZ ou CSV. Carregue seus arquivos JSON exportados — todo o processamento acontece no navegador.",
   "howTo": {
     "title": "Como obter seus dados do Timeline",
     "paragraphs": [

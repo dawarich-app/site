@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Générateur gratuit de cartes de chaleur GPS en ligne",
-    "description": "Belles cartes de chaleur GPS : course à pied, vélo, activités. GPX, FIT, TCX, GeoJSON, KML, JSON Google Timeline. Gratuit, privé, tout dans votre navigateur.",
+    "description": "Cartes de chaleur GPS : course/vélo/activités. GPX/FIT/TCX/GeoJSON/KML/JSON Google Timeline (Vos trajets Google Maps). Gratuit, privé, tout dans le navigateur.",
     "keywords": "carte de chaleur GPS, générateur de cartes de chaleur, carte course à pied, carte vélo, alternative Strava, carte de chaleur GPX, carte d’activité, carte fitness, carte gratuite, carte de chaleur Google Timeline, historique de localisation Google, carte Records.json"
   },
   "h1": "Générateur de cartes de chaleur GPS",
@@ -22,21 +22,39 @@
       "title": "Formats de fichiers pris en charge",
       "paragraphs": [],
       "items": [
-        { "body": "**GPX** - GPS Exchange Format (la plupart des applications GPS)" },
-        { "body": "**FIT** - Fichiers d’activité Garmin" },
-        { "body": "**GeoJSON** - Format de cartographie web" },
-        { "body": "**KML/KMZ** - Format Google Earth" },
-        { "body": "**JSON Google Timeline** - Fichiers Records.json et Semantic Location History issus de Google Takeout" }
+        {
+          "body": "**GPX** - GPS Exchange Format (la plupart des applications GPS)"
+        },
+        {
+          "body": "**FIT** - Fichiers d’activité Garmin"
+        },
+        {
+          "body": "**GeoJSON** - Format de cartographie web"
+        },
+        {
+          "body": "**KML/KMZ** - Format Google Earth"
+        },
+        {
+          "body": "**JSON Google Timeline** - Fichiers Records.json et Semantic Location History issus de Google Takeout"
+        }
       ]
     },
     {
       "title": "Comment exporter vos données",
       "paragraphs": [],
       "items": [
-        { "body": "**Strava :** Paramètres > Mon compte > Télécharger vos données" },
-        { "body": "**Garmin :** copiez les fichiers .FIT depuis l’appareil ou utilisez l’export de Garmin Connect" },
-        { "body": "**Apple Fitness :** utilisez des applications tierces pour exporter vos entraînements en GPX" },
-        { "body": "**Google Maps :** utilisez Google Takeout pour exporter l’historique de localisation ; les fichiers Records.json et Semantic Location History sont directement pris en charge" }
+        {
+          "body": "**Strava :** Paramètres > Mon compte > Télécharger vos données"
+        },
+        {
+          "body": "**Garmin :** copiez les fichiers .FIT depuis l’appareil ou utilisez l’export de Garmin Connect"
+        },
+        {
+          "body": "**Apple Fitness :** utilisez des applications tierces pour exporter vos entraînements en GPX"
+        },
+        {
+          "body": "**Google Maps :** utilisez Google Takeout pour exporter l’historique de localisation ; les fichiers Records.json et Semantic Location History sont directement pris en charge"
+        }
       ]
     },
     {
@@ -67,11 +85,21 @@
     "settingsTitle": "Paramètres de la carte de chaleur",
     "schemeLabel": "Palette de couleurs",
     "schemes": [
-      { "label": "Feu (rouge/orange)" },
-      { "label": "Strava (orange)" },
-      { "label": "Plasma (violet/jaune)" },
-      { "label": "Océan (bleu)" },
-      { "label": "Forêt (vert)" }
+      {
+        "label": "Feu (rouge/orange)"
+      },
+      {
+        "label": "Strava (orange)"
+      },
+      {
+        "label": "Plasma (violet/jaune)"
+      },
+      {
+        "label": "Océan (bleu)"
+      },
+      {
+        "label": "Forêt (vert)"
+      }
     ],
     "intensityLabel": "Intensité : {intensity}",
     "radiusLabel": "Rayon : {radius}",
@@ -80,6 +108,10 @@
   "cta": {
     "headline": "Votre carte de chaleur couvre **{points}** points GPS sur **{distance} km**. C’est un instantané ; Dawarich construit votre carte de chaleur en continu.",
     "fallback": "Vous souhaitez visualiser des années d’historique de localisation ? Dawarich construit votre carte de chaleur en continu à partir de toutes vos sources GPS.",
-    "statLabels": { "points": "points", "distance": "distance", "dateRange": "période" }
+    "statLabels": {
+      "points": "points",
+      "distance": "distance",
+      "dateRange": "période"
+    }
   }
 }

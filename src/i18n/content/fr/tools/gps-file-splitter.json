@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Découpage GPS : fichiers GPX, GeoJSON, KML et JSON",
-    "description": "Fichiers GPS : découpez GPX, GeoJSON, KML, KMZ et JSON Google Timeline par taille, nombre de points ou date. Export ZIP. Gratuit, privé, dans votre navigateur.",
+    "description": "GPS : scindez de gros GPX/GeoJSON/KML/KMZ/JSON Google Timeline (Vos trajets Google Maps) par taille/nb. de points/date. ZIP gratuit, privé, dans le navigateur.",
     "keywords": "découper gros fichier GPX, diviser GeoJSON, découper fichier KML, réduire taille fichier GPS, découper gros JSON de localisation, découpage fichier GPS, découper Google Timeline",
     "featureList": [
       "Découpage des gros fichiers GPS en fichiers plus petits",
@@ -31,7 +31,7 @@
     ]
   },
   "h1": "Découpage de fichiers GPS",
-  "intro": "Découpez vos gros fichiers GPS et de localisation en fichiers plus petits et plus faciles à manipuler. Compatible avec GPX, GeoJSON, KML, KMZ et JSON Google Timeline. Téléchargez toutes les parties dans un seul fichier ZIP.",
+  "intro": "Découpez vos gros fichiers GPS et de localisation en fichiers plus petits et plus faciles à manipuler. Compatible avec GPX, GeoJSON, KML, KMZ et JSON Google Timeline (Vos trajets Google Maps). Téléchargez toutes les parties dans un seul fichier ZIP.",
   "benefitsTitle": "Pourquoi découper des fichiers GPS ?",
   "privacyBody": "Tout le traitement s’effectue dans votre navigateur. Vos fichiers restent sur votre appareil.",
   "preCta": "Vous manipulez de gros fichiers de localisation ? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=gps-file-splitter) gère automatiquement les importations de toute taille, tout en vous laissant la propriété et le contrôle de vos données privées.",
@@ -95,19 +95,33 @@
       "title": "Formats d’entrée pris en charge",
       "paragraphs": [],
       "items": [
-        { "body": "**GPX** — GPS Exchange Format, le format le plus courant pour les trajets GPS et les points de passage" },
-        { "body": "**GeoJSON** — Format léger de données géographiques utilisé en cartographie web" },
-        { "body": "**KML/KMZ** — Keyhole Markup Language pour Google Earth et Maps" },
-        { "body": "**JSON (Google Timeline)** — Les six formats d’export Google Timeline, dont Records.json et Semantic Location History" }
+        {
+          "body": "**GPX** — GPS Exchange Format, le format le plus courant pour les trajets GPS et les points de passage"
+        },
+        {
+          "body": "**GeoJSON** — Format léger de données géographiques utilisé en cartographie web"
+        },
+        {
+          "body": "**KML/KMZ** — Keyhole Markup Language pour Google Earth et Maps"
+        },
+        {
+          "body": "**JSON (Google Timeline)** — Les six formats d’export Google Timeline, dont Records.json et Semantic Location History"
+        }
       ]
     },
     {
       "title": "Comprendre les modes de découpage",
       "paragraphs": [],
       "items": [
-        { "body": "**Par taille** — Visez une taille précise par partie (10MB par défaut). L’outil estime la taille de sortie par point et répartit les données en conséquence." },
-        { "body": "**Par nombre de points** — Découpez tous les N points. Utile lorsque vous connaissez la limite de points de l’application cible." },
-        { "body": "**Par date** — Organisez vos données par année ou par mois. Chaque période devient un fichier distinct." }
+        {
+          "body": "**Par taille** — Visez une taille précise par partie (10MB par défaut). L’outil estime la taille de sortie par point et répartit les données en conséquence."
+        },
+        {
+          "body": "**Par nombre de points** — Découpez tous les N points. Utile lorsque vous connaissez la limite de points de l’application cible."
+        },
+        {
+          "body": "**Par date** — Organisez vos données par année ou par mois. Chaque période devient un fichier distinct."
+        }
       ]
     },
     {
@@ -128,12 +142,24 @@
       "title": "Outils associés",
       "paragraphs": [],
       "items": [
-        { "body": "[Visualiseur Google Timeline](/tools/timeline-visualizer) — Affichez votre historique de localisation sur une carte" },
-        { "body": "[Convertisseur Google Timeline](/tools/google-timeline-converter) — Convertissez les données de chronologie en GPX, KML ou CSV" },
-        { "body": "[Analyse des statistiques de chronologie](/tools/timeline-statistics) — Explorez vos données de localisation" },
-        { "body": "[Fusion des données de chronologie](/tools/timeline-merger) — Regroupez plusieurs exports de chronologie" },
-        { "body": "[Fusion de trajets GPX](/tools/gpx-merger) — Fusionnez plusieurs fichiers GPX en un seul" },
-        { "body": "[Détection du format de chronologie](/tools/timeline-format-detector) — Identifiez le type de votre fichier d’export" }
+        {
+          "body": "[Visualiseur Google Timeline](/tools/timeline-visualizer) — Affichez votre historique de localisation sur une carte"
+        },
+        {
+          "body": "[Convertisseur Google Timeline](/tools/google-timeline-converter) — Convertissez les données de chronologie en GPX, KML ou CSV"
+        },
+        {
+          "body": "[Analyse des statistiques de chronologie](/tools/timeline-statistics) — Explorez vos données de localisation"
+        },
+        {
+          "body": "[Fusion des données de chronologie](/tools/timeline-merger) — Regroupez plusieurs exports de chronologie"
+        },
+        {
+          "body": "[Fusion de trajets GPX](/tools/gpx-merger) — Fusionnez plusieurs fichiers GPX en un seul"
+        },
+        {
+          "body": "[Détection du format de chronologie](/tools/timeline-format-detector) — Identifiez le type de votre fichier d’export"
+        }
       ]
     }
   ],
@@ -168,7 +194,13 @@
     "splitButton": "Découper et télécharger le ZIP",
     "splitting": "Découpage...",
     "chunkPreview": "Création de **{count}** partie à partir de {points} points|Création de **{count}** parties à partir de {points} points|Création de **{count}** parties à partir de {points} points",
-    "formats": { "gpx": "GPX", "geojson": "GeoJSON", "kml": "KML", "csv": "CSV", "json": "JSON" }
+    "formats": {
+      "gpx": "GPX",
+      "geojson": "GeoJSON",
+      "kml": "KML",
+      "csv": "CSV",
+      "json": "JSON"
+    }
   },
   "errors": {
     "missingKmlError": "Aucun fichier KML trouvé dans l’archive KMZ",
@@ -181,6 +213,8 @@
     "body": "Dawarich est une plateforme open source de suivi de localisation qui vous donne le contrôle total de vos données. Importez votre export Google Timeline, continuez à enregistrer votre position depuis votre téléphone et visualisez des années de déplacements, en auto-hébergement ou dans le cloud.",
     "button": "Essayez Dawarich gratuitement pendant 7 jours",
     "headline": "Votre fichier contient **{points}** points. Dawarich gère automatiquement les importations de toute taille, sans découpage.",
-    "statLabels": { "points": "points" }
+    "statLabels": {
+      "points": "points"
+    }
   }
 }

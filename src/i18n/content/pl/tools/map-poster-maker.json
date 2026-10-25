@@ -1,6 +1,6 @@
 {
   "h1": "Każdy może powiesić plakat z mapą Berlina. Tylko Ty masz swoją trasę.",
-  "intro": "Plakat poniżej to przykład — miesiąc przemieszczania się po Berlinie. Upuść dowolny plik GPX, Google Timeline, KML, FIT lub TCX, a powstanie mapa, której nie ma nikt inny — Twoje przejazdy, biegi i podróże samochodowe. Około dwóch minut, bez konta.",
+  "intro": "Plakat poniżej to przykład — miesiąc przemieszczania się po Berlinie. Upuść dowolny plik GPX, Google Timeline (Oś czasu Google Maps), KML, FIT lub TCX, a powstanie mapa, której nie ma nikt inny — Twoje przejazdy, biegi i podróże samochodowe. Około dwóch minut, bez konta.",
   "saveIntro": "Chcesz mieć te dane również na swoim koncie Dawarich? Zaimportujemy je podczas rejestracji — bez ponownego dodawania plików.",
   "appName": "Kreator plakatów z mapą",
   "homeLabel": "Strona główna",
@@ -9,7 +9,7 @@
   "valueStrip": "17 motywów map · 22 formaty, od A5 do A0 i 4K · PNG i PDF w 300 DPI · {price} · bez znaku wodnego",
   "meta": {
     "title": "Darmowy kreator plakatów z mapą — trasy z plików GPS",
-    "description": "Zamień GPX, Google Timeline, KML, FIT lub TCX we własny plakat z mapą w przeglądarce. 17 motywów, 22 układy, darmowy eksport PNG i PDF, opcjonalny druk.",
+    "description": "Własny plakat z mapą: GPX, Google Timeline (Oś czasu Google Maps), KML, FIT lub TCX w przeglądarce. 17 motywów, 22 układy, eksport PNG/PDF gratis, opcja druku.",
     "keywords": "kreator plakatów z mapą, plakat z trasą, plakat GPX, plakat z mapą miasta, plakat Google Timeline, plakat z trasą biegu, wydruk własnej mapy, mapa na ścianę, sztuka GPS"
   },
   "howTo": {

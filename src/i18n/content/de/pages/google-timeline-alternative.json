@@ -106,7 +106,8 @@
     "td10": "Öffentliche Feeds",
     "td11": "Dawarich Cloud Pro",
     "td12": "Ja – vollständiger Takeout-Import, Heatmaps, Reisen",
-    "td13": "Nein. Niemals."
+    "td13": "Nein. Niemals.",
+    "perYear": "{price}/Jahr"
   },
   "promises": {
     "heading": "Zwei Versprechen, kein Risiko",
@@ -133,7 +134,7 @@
     "text2": "Preise ansehen"
   },
   "meta": {
-    "title": "Google-Timeline-Alternative: privater Standortverlauf",
+    "title": "Privater Verlauf statt Google Timeline/Google Maps Zeitachse",
     "description": "Importiere deine Google Timeline in Dawarich, erkunde den Verlauf auf der Webkarte und zeichne neue Reisen per iOS- und Android-App auf. Cloud: 7 Tage testen."
   },
   "hero": {

@@ -1,6 +1,6 @@
 {
   "h1": "Tout le monde peut accrocher une carte de Berlin. Votre parcours, lui, n’appartient qu’à vous.",
-  "intro": "L’affiche ci-dessous est une démonstration : un mois de déplacements à Berlin. Déposez un fichier GPX, Google Timeline, KML, FIT ou TCX pour créer une carte que personne d’autre ne peut afficher : vos sorties à vélo, vos courses, vos voyages sur la route. Environ deux minutes, sans compte.",
+  "intro": "L’affiche ci-dessous est une démonstration : un mois de déplacements à Berlin. Déposez un fichier GPX, Google Timeline (Vos trajets Google Maps), KML, FIT ou TCX pour créer une carte que personne d’autre ne peut accrocher : vos sorties à vélo, vos courses, vos voyages sur la route. Environ deux minutes, sans compte.",
   "saveIntro": "Vous souhaitez aussi retrouver ces données dans votre compte Dawarich ? Nous les importerons lors de l’inscription, sans nouvel envoi.",
   "appName": "Créateur d’affiches cartographiques",
   "homeLabel": "Accueil",
@@ -9,7 +9,7 @@
   "valueStrip": "17 thèmes cartographiques · 22 formats, de A5 à A0 et 4K · PNG et PDF à 300 DPI · {price} · sans filigrane",
   "meta": {
     "title": "Affiches cartographiques gratuites à partir de fichiers GPS",
-    "description": "Affiche de carte sur mesure dans votre navigateur : GPX, Google Timeline, KML, FIT, TCX. 17 thèmes, 22 mises en page, PNG/PDF gratuits, impressions en option.",
+    "description": "Affiches sur mesure : GPX/Google Timeline (Vos trajets Google Maps)/KML/FIT/TCX. 17 thèmes, 22 formats, PNG/PDF gratuits, tirages en option. Dans le navigateur.",
     "keywords": "créateur d’affiches cartographiques, affiche de parcours, affiche GPX, affiche de plan de ville, affiche Google Timeline, parcours de course, impression de carte personnalisée, décoration murale, art GPS"
   },
   "howTo": {

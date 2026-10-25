@@ -1,5 +1,5 @@
 {
-  "h1": "Wizualizacja Google Timeline",
+  "h1": "Wizualizacja Google Timeline (Oś czasu Google Maps)",
   "intro": "Google wyłączyło oś czasu w przeglądarce — to darmowe, prywatne narzędzie przywraca ten widok. Przeglądaj wyeksportowaną historię lokalizacji dzień po dniu z kalendarzem natężenia aktywności, listą wizyt i odtwarzaniem aktywności.",
   "saveIntro": "Chcesz mieć te dane również na swoim koncie Dawarich? Zaimportujemy je podczas rejestracji — bez ponownego dodawania plików.",
   "privacy": "Całe przetwarzanie odbywa się w Twojej przeglądarce. Dane pozostają na urządzeniu, chyba że wybierzesz „Zapisz na moim koncie Dawarich”.",
@@ -8,7 +8,7 @@
   "toolsLabel": "Darmowe narzędzia",
   "loadingMap": "Wczytywanie mapy…",
   "meta": {
-    "title": "Wizualizacja Google Timeline — znów w przeglądarce",
+    "title": "Google Timeline (Oś czasu Google Maps) — znów na mapie w sieci",
     "description": "Google usunęło oś czasu z przeglądarki. To darmowe narzędzie przywraca jej widok: dodaj eksport Takeout i zobacz historię lokalizacji na mapie, w przeglądarce.",
     "keywords": "wizualizacja Google Timeline, zniknęło Google Timeline, gdzie jest moje Google Timeline, Google Timeline w przeglądarce, historia Google Timeline, przeglądarka historii lokalizacji Google, przeglądarka lokalizacji Google Takeout, historia lokalizacji na mapie, zamiennik Google Maps Timeline, alternatywa po wyłączeniu Google Timeline, mapa historii lokalizacji, przeglądarka eksportu Google Timeline, prywatna wizualizacja lokalizacji",
     "featureList": [

@@ -1,5 +1,44 @@
 {
   "title": "Lo que se dice de nosotros",
   "subtitle": "Presente en medios de tecnología de referencia de todo el mundo.",
-  "featuredLabel": "Han hablado de nosotros"
+  "featuredLabel": "Han hablado de nosotros",
+  "quotes": [
+    {
+      "quote": "Importé mi historial de Google Timeline en esta aplicación autoalojada y es mucho mejor que lo que ofrece Google.",
+      "source": "XDA Developers"
+    },
+    {
+      "quote": "Dawarich te ofrece todo lo que hace Google Timeline y más. No hay anuncios ni recopilación oculta de datos.",
+      "source": "MakeUseOf"
+    },
+    {
+      "quote": "La interfaz es clara y fácil de usar. Prácticamente no afecta a la batería.",
+      "source": "Reseña en App Store"
+    },
+    {
+      "quote": "Viajo por todo el mundo el 60-70% del año y buscaba algo para guardar mi historial sin entregárselo a Google. Encontré Dawarich.app, configuré la app de mi iPhone en unos minutos, importé mi historial de Timeline y funciona sin más: el seguimiento se activa por sí solo cuando salgo de casa. Ya ni pienso en ello. Mis datos vuelven a ser míos y, entre tanto, ya tengo registrados 260k km, 16 países y 378 ciudades.",
+      "source": "Alemania · Viajero internacional · Antes usaba Google Timeline · Lo encontró en Reddit"
+    },
+    {
+      "quote": "Usé Google Timeline durante años, pero nunca me sentí a gusto con toda mi vida almacenada en servidores de Estados Unidos. Pasé todo a Dawarich (varios años de datos) en solo una tarde. Ahora tengo un diario privado y permanente de mi vida, algo que espero dejarles a mis nietos algún día. Espero con ganas las próximas mejoras, porque ya han hecho un trabajo extraordinario.",
+      "source": "Nueva York, Estados Unidos · Antiguo usuario de Google Timeline · Creando un legado con su historial de ubicaciones"
+    },
+    {
+      "quote": "Me mudé a Kazajistán sin conocer la ciudad en absoluto. Google Timeline ya no era una opción y, de todos modos, tampoco me fiaba. Configuré Dawarich y ahora el mapa es como la niebla de guerra para mí: cuanto más salgo, más se va completando. Además, conservo cada viaje: puedo volver a ver cualquiera de ellos y compartir la ruta.",
+      "source": "Cliente de Dawarich · Kazajistán · Desde mediados de 2025"
+    },
+    {
+      "quote": "Es mucho mejor que OwnTracks, Overland, etc.: es muchísimo más preciso.",
+      "source": "GitHub Discussions"
+    },
+    {
+      "quote": "¡La app me ha funcionado genial hasta ahora y no ha afectado para nada a la batería! ¡Un trabajo increíble hasta el momento!",
+      "source": "Reseña en App Store"
+    },
+    {
+      "quote": "Me parece un software bastante impresionante.",
+      "source": "Colocataires Blog"
+    }
+  ],
+  "translatedNote": "Traducido del inglés"
 }
