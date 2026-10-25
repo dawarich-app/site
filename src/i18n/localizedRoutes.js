@@ -10,6 +10,7 @@ export const LOCALIZED_ROUTES = [
   '/tools/gps-file-splitter/',
   '/tools/timeline-merger/',
   '/tools/timeline-visualizer/',
+  '/tools/visited-countries-map/',
   '/tools/timeline-statistics/',
   '/tools/timeline-mileage-calculator/',
   '/tools/timeline-format-detector/',

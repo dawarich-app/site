@@ -415,6 +415,11 @@
       "href": "/statistics/",
       "label": "Dawarich-Statistiken",
       "note": "Dauerhafte Statistikübersichten"
+    },
+    {
+      "href": "/tools/visited-countries-map/",
+      "label": "Besuchte Länder auf einer Karte",
+      "note": "Alle Länder, die du besucht hast"
     }
   ],
   "timeline-mileage-calculator": [
@@ -483,6 +488,11 @@
       "href": "/tools/map-poster-maker/",
       "label": "Kartenposter erstellen",
       "note": "Dieselbe Datei als druckbares Poster"
+    },
+    {
+      "href": "/tools/visited-countries-map/",
+      "label": "Besuchte Länder auf einer Karte",
+      "note": "Alle Länder, die du besucht hast"
     }
   ],
   "map-poster-maker": [
@@ -522,6 +532,28 @@
       "href": "/tools/gpx-merger/",
       "label": "GPX-Dateien zusammenführen",
       "note": "Tracks in einem Video kombinieren"
+    }
+  ],
+  "visited-countries-map": [
+    {
+      "href": "/tools/timeline-statistics/",
+      "label": "Zeitleisten-Statistiken",
+      "note": "Entfernung, Orte und Jahrestrends"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "Heatmap-Generator",
+      "note": "Wo du deine Zeit verbringst"
+    },
+    {
+      "href": "/tax-residency/",
+      "label": "Tage zählen für die steuerliche Ansässigkeit",
+      "note": "Tage pro Land, 183-Tage-Regel"
+    },
+    {
+      "href": "/statistics/",
+      "label": "Länder in Dawarich",
+      "note": "Deine Karte, immer aktuell"
     }
   ],
   "photo-geotagging": [

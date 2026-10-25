@@ -415,6 +415,11 @@
       "href": "/statistics/",
       "label": "Estadístiques de Dawarich",
       "note": "Taulers persistents"
+    },
+    {
+      "href": "/tools/visited-countries-map/",
+      "label": "Mapa de països visitats",
+      "note": "Tots els països on has estat"
     }
   ],
   "timeline-mileage-calculator": [
@@ -483,6 +488,11 @@
       "href": "/tools/map-poster-maker/",
       "label": "Creador de pòsters de mapes",
       "note": "Mateix fitxer, pòster imprimible"
+    },
+    {
+      "href": "/tools/visited-countries-map/",
+      "label": "Mapa de països visitats",
+      "note": "Tots els països on has estat"
     }
   ],
   "map-poster-maker": [
@@ -539,6 +549,28 @@
       "href": "/docs/tools/phototagger/",
       "label": "PhotoTagger CLI",
       "note": "Geoetiquetatge massiu des de la línia d’ordres"
+    }
+  ],
+  "visited-countries-map": [
+    {
+      "href": "/tools/timeline-statistics/",
+      "label": "Estadístiques de la línia de temps",
+      "note": "Distància, llocs i tendències anuals"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "Generador de mapes de calor",
+      "note": "On passes el temps"
+    },
+    {
+      "href": "/tax-residency/",
+      "label": "Comptador de dies de residència fiscal",
+      "note": "Dies per país, regla dels 183 dies"
+    },
+    {
+      "href": "/statistics/",
+      "label": "Països a Dawarich",
+      "note": "El teu mapa, sempre al dia"
     }
   ]
 }

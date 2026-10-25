@@ -286,5 +286,13 @@
   "content:tool-guides/kml-to-kmz.json:apps.items.0.url",
   "content:tool-guides/kml-to-kmz.json:apps.items.1.url",
   "content:tool-guides/kml-to-kmz.json:apps.items.2.url",
-  "content:tool-guides/kml-to-kmz.json:apps.items.3.url"
+  "content:tool-guides/kml-to-kmz.json:apps.items.3.url",
+  "content:shared/tool-related-links.json:timeline-statistics.3.href",
+  "content:shared/tool-related-links.json:heatmap-generator.3.href",
+  "content:shared/tool-related-links.json:visited-countries-map.0.href",
+  "content:shared/tool-related-links.json:visited-countries-map.1.href",
+  "content:shared/tool-related-links.json:visited-countries-map.2.href",
+  "content:shared/tool-related-links.json:visited-countries-map.3.href",
+  "content:tools/visited-countries-map.json:continents.Asia",
+  "content:tools/visited-countries-map.json:results.dates"
 ]

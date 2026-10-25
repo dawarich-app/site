@@ -73,6 +73,12 @@ const freeTools = [
     description: content.tools[9].description,
   },
   {
+    to: '/tools/visited-countries-map',
+    icon: '🌍',
+    title: content.tools[13].title,
+    description: content.tools[13].description,
+  },
+  {
     to: '/tools/route-video-maker',
     icon: '🎬',
     title: content.tools[12].title,

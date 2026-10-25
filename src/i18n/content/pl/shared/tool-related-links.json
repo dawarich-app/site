@@ -415,6 +415,11 @@
       "href": "/statistics/",
       "label": "Statystyki Dawarich",
       "note": "Trwałe panele statystyk"
+    },
+    {
+      "href": "/tools/visited-countries-map/",
+      "label": "Mapa odwiedzonych krajów",
+      "note": "Wszystkie odwiedzone przez Ciebie kraje"
     }
   ],
   "timeline-mileage-calculator": [
@@ -483,6 +488,33 @@
       "href": "/tools/map-poster-maker/",
       "label": "Kreator plakatów z mapą",
       "note": "Ten sam plik, plakat do druku"
+    },
+    {
+      "href": "/tools/visited-countries-map/",
+      "label": "Mapa odwiedzonych krajów",
+      "note": "Wszystkie odwiedzone przez Ciebie kraje"
+    }
+  ],
+  "visited-countries-map": [
+    {
+      "href": "/tools/timeline-statistics/",
+      "label": "Statystyki osi czasu",
+      "note": "Dystans, miejsca i trendy roczne"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "Generator mapy cieplnej",
+      "note": "Gdzie spędzasz czas"
+    },
+    {
+      "href": "/tax-residency/",
+      "label": "Licznik dni rezydencji podatkowej",
+      "note": "Dni w poszczególnych krajach, reguła 183 dni"
+    },
+    {
+      "href": "/statistics/",
+      "label": "Kraje w Dawarich",
+      "note": "Twoja mapa, zawsze aktualna"
     }
   ],
   "map-poster-maker": [

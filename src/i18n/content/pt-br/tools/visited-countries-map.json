@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "title": "Mapa de países visitados com seu histórico",
+    "description": "Veja todos os países que você visitou num mapa, com dias por país. Use seus arquivos do Google Timeline, GPX ou KML. Grátis e privado, no navegador.",
+    "keywords": "mapa de países visitados, países que visitei, mapa de onde já estive, países do Google Timeline, mapa de viagens, países onde já estive"
+  },
+  "h1": "Mapa de países visitados",
+  "intro": "Arraste seus arquivos do Google Timeline (Linha do tempo do Google) ou de GPS e veja o mundo ganhar cor: cada país que você visitou fica colorido no mapa, com os dias que você passou em cada um.",
+  "upload": {
+    "title": "Carregue seu histórico de localização",
+    "dropFiles": "Solte os arquivos aqui ou clique para escolher",
+    "formats": "Google Timeline JSON, GPX, KML, KMZ, GeoJSON, FIT, TCX",
+    "inputLabel": "Escolha arquivos de histórico de localização",
+    "processing": "Encontrando os países que você visitou…",
+    "clear": "Limpar"
+  },
+  "results": {
+    "count": "{count} país ou território|{count} países e territórios|{count} países e territórios",
+    "empty": "Nenhum país encontrado nestes arquivos. Tente um arquivo com mais pontos ou uma exportação do Google Timeline.",
+    "days": "{count} dia|{count} dias|{count} dias",
+    "points": "{count} ponto|{count} pontos|{count} pontos",
+    "continentsTitle": "Por continente",
+    "listTitle": "Seus países",
+    "dates": "{first} – {last}"
+  },
+  "continents": {
+    "Africa": "África",
+    "Antarctica": "Antártida",
+    "Asia": "Ásia",
+    "Europe": "Europa",
+    "North America": "América do Norte",
+    "Oceania": "Oceania",
+    "South America": "América do Sul",
+    "Seven seas (open ocean)": "Ilhas remotas"
+  },
+  "parseError": "Não foi possível ler {fileName}: {message}",
+  "loadError": "Não foi possível carregar as fronteiras dos países. Verifique sua conexão e tente novamente.",
+  "loadingMap": "Carregando mapa…",
+  "privacy": "Seus arquivos são lidos no seu navegador. Nada é enviado a servidores.",
+  "credit": "Fronteiras dos países: [Natural Earth](https://www.naturalearthdata.com/), domínio público.",
+  "cta": "Você já visitou **{count}** países e territórios. Com o Dawarich, seu mapa continua crescendo automaticamente a cada viagem.",
+  "guide": {
+    "sections": [
+      {
+        "heading": "Como o mapa sabe por onde você passou",
+        "body": [
+          "Cada ponto do seu arquivo é comparado com as fronteiras de 240 países e territórios. Pontos logo além da costa — em um porto, uma praia ou uma balsa — contam para o país mais próximo, para que as viagens à beira-mar não fiquem de fora.",
+          "Se os seus pontos tiverem data e hora, cada país também mostra o número de dias distintos que você passou lá, contados em UTC, além da primeira e da última data."
+        ]
+      },
+      {
+        "heading": "Obtenha seu histórico de localização",
+        "body": [
+          "Do Google: exporte a Linha do tempo pelo aplicativo Google Maps no seu celular ou use um arquivo antigo Records.json ou Semantic Location History do Google Takeout. As duas opções funcionam aqui.",
+          "De outros aplicativos: arquivos GPX do Strava, Garmin, Komoot e da maioria dos aplicativos de rastreamento, KML ou KMZ do Google Earth, FIT e TCX de relógios esportivos e GeoJSON. Você pode arrastar e soltar vários arquivos de uma vez."
+        ]
+      },
+      {
+        "heading": "Países, territórios e fronteiras",
+        "body": [
+          "O mapa inclui territórios como Groenlândia, Porto Rico e Polinésia Francesa, por isso a contagem pode ultrapassar os 195 países usados na maioria das listas.",
+          "As fronteiras vêm do Natural Earth, na escala de 1:50 milhões. A até cerca de um quilômetro de uma fronteira, um ponto pode ser atribuído ao país vizinho, e os menores países, como o Vaticano, podem ser contados como parte do país ao redor."
+        ]
+      },
+      {
+        "heading": "Continue ampliando seu mapa",
+        "body": [
+          "Esta ferramenta mostra o que há nos arquivos que você arrasta e solta. O [Dawarich](/statistics/) faz o mesmo com todo o seu histórico de localização e o mantém atualizado enquanto você viaja: países e cidades por ano, um calendário de onde você esteve a cada dia e as viagens por trás de tudo isso."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Esta ferramenta é gratuita?",
+        "a": "Sim. Ela funciona no seu navegador, não tem limites e não exige uma conta."
+      },
+      {
+        "q": "Meus arquivos são enviados a servidores?",
+        "a": "Não. Seus arquivos são lidos no seu dispositivo e nunca saem dele."
+      },
+      {
+        "q": "Por que um país que visitei não aparece?",
+        "a": "O arquivo pode não conter pontos daquela viagem, por exemplo, se o histórico de localização estava desativado. Paradas muito curtas perto de uma fronteira também podem ser atribuídas ao país vizinho."
+      },
+      {
+        "q": "Por que minha contagem pode passar de 195?",
+        "a": "Territórios como Groenlândia e Porto Rico são contados separadamente, como os viajantes costumam fazer."
+      },
+      {
+        "q": "Como os dias são contados?",
+        "a": "Um dia conta para cada país em que você tem pelo menos um ponto naquele dia do calendário em UTC. Assim, um dia em que você cruza uma fronteira conta para os dois países."
+      }
+    ]
+  }
+}

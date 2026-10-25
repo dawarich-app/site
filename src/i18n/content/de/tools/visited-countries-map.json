@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "title": "Besuchte Länder: Karte aus deinem Standortverlauf",
+    "description": "Alle besuchten Länder auf einer Karte aus Google Timeline (Google Maps Zeitachse), GPX- oder KML-Dateien, mit Tagen je Land. Gratis und privat im Browser.",
+    "keywords": "besuchte Länder Karte, bereiste Länder Weltkarte, wo war ich schon, Google Timeline Länder, Reisekarte, Länder die ich besucht habe"
+  },
+  "h1": "Besuchte Länder auf einer Karte",
+  "intro": "Deine Reisen werden sichtbar: Ziehe deine Dateien aus Google Timeline (Google Maps Zeitachse) oder deine GPS-Dateien hierher und sieh, wie sich die Welt mit Farbe füllt – alle besuchten Länder auf der Karte, mit den Tagen, die du dort verbracht hast.",
+  "upload": {
+    "title": "Deinen Standortverlauf hochladen",
+    "dropFiles": "Dateien hier ablegen oder zum Auswählen klicken",
+    "formats": "Google Timeline JSON, GPX, KML, KMZ, GeoJSON, FIT, TCX",
+    "inputLabel": "Dateien mit deinem Standortverlauf auswählen",
+    "processing": "Deine Länder werden ermittelt…",
+    "clear": "Zurücksetzen"
+  },
+  "results": {
+    "count": "{count} Land oder Gebiet|{count} Länder und Gebiete",
+    "empty": "In diesen Dateien wurden keine Länder gefunden. Versuche es mit einer Datei mit mehr Punkten oder einem Export aus Google Timeline.",
+    "days": "{count} Tag|{count} Tage",
+    "points": "{count} Punkt|{count} Punkte",
+    "continentsTitle": "Nach Kontinent",
+    "listTitle": "Deine Länder",
+    "dates": "{first} – {last}"
+  },
+  "continents": {
+    "Africa": "Afrika",
+    "Antarctica": "Antarktika",
+    "Asia": "Asien",
+    "Europe": "Europa",
+    "North America": "Nordamerika",
+    "Oceania": "Ozeanien",
+    "South America": "Südamerika",
+    "Seven seas (open ocean)": "Abgelegene Inseln"
+  },
+  "parseError": "{fileName} konnte nicht gelesen werden: {message}",
+  "loadError": "Die Ländergrenzen konnten nicht geladen werden. Prüfe deine Verbindung und versuche es erneut.",
+  "loadingMap": "Karte wird geladen…",
+  "privacy": "Deine Dateien werden in deinem Browser gelesen. Nichts wird hochgeladen.",
+  "credit": "Ländergrenzen: [Natural Earth](https://www.naturalearthdata.com/), gemeinfrei.",
+  "cta": "Du hast **{count}** Länder und Gebiete besucht. Mit Dawarich wächst deine Karte auf deinen Reisen ganz automatisch weiter.",
+  "guide": {
+    "sections": [
+      {
+        "heading": "So erkennt die Karte, wo du schon warst",
+        "body": [
+          "Jeder Punkt in deiner Datei wird mit den Grenzen von 240 Ländern und Gebieten abgeglichen. Punkte knapp vor einer Küste – etwa in einem Hafen, am Strand oder auf einer Fähre – werden dem nächstgelegenen Land zugeordnet. So gehen Reisen am Meer nicht verloren.",
+          "Wenn deine Punkte Zeitstempel haben, wird für jedes Land auch die Anzahl der unterschiedlichen Tage angezeigt, an denen du dort warst, gezählt in UTC, sowie das erste und letzte Datum."
+        ]
+      },
+      {
+        "heading": "So erhältst du deinen Standortverlauf",
+        "body": [
+          "Von Google: Exportiere deine Zeitachse aus der Google Maps-App auf deinem Smartphone oder nutze eine ältere Records.json-Datei oder eine ältere Semantic Location History-Datei aus Google Takeout. Beides funktioniert hier.",
+          "Aus anderen Apps: GPX-Dateien aus Strava, Garmin, Komoot und den meisten Tracking-Apps, KML oder KMZ aus Google Earth, FIT und TCX von Sportuhren sowie GeoJSON. Du kannst mehrere Dateien auf einmal hier ablegen."
+        ]
+      },
+      {
+        "heading": "Länder, Gebiete und Grenzen",
+        "body": [
+          "Die Karte umfasst auch Gebiete wie Grönland, Puerto Rico oder Französisch-Polynesien. Deshalb kann die Anzahl über den 195 Ländern liegen, von denen die meisten Listen ausgehen.",
+          "Die Grenzen stammen von Natural Earth im Maßstab 1:50 Millionen. Innerhalb von etwa einem Kilometer um eine Grenze kann ein Punkt im Nachbarland landen. Die kleinsten Staaten, etwa der Vatikan, können dem Land zugerechnet werden, das sie umgibt."
+        ]
+      },
+      {
+        "heading": "Lass deine Karte weiterwachsen",
+        "body": [
+          "Dieses Tool zeigt, was in den Dateien steckt, die du hier ablegst. [Dawarich](/statistics/) macht das Gleiche mit deinem gesamten Standortverlauf und hält deine Karte auf deinen Reisen aktuell: Länder und Städte pro Jahr, ein Kalender, der zeigt, wo du an jedem Tag warst, und die Reisen dahinter."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Ist dieses Tool kostenlos?",
+        "a": "Ja. Es läuft in deinem Browser, hat keine Limits und erfordert kein Konto."
+      },
+      {
+        "q": "Werden meine Dateien hochgeladen?",
+        "a": "Nein. Deine Dateien werden auf deinem Gerät gelesen und verlassen es nie."
+      },
+      {
+        "q": "Warum fehlt ein Land, das ich besucht habe?",
+        "a": "Vielleicht enthält die Datei keine Punkte von dieser Reise, etwa weil der Standortverlauf deaktiviert war. Auch sehr kurze Stopps nahe einer Grenze können im Nachbarland landen."
+      },
+      {
+        "q": "Warum kann meine Anzahl über 195 liegen?",
+        "a": "Gebiete wie Grönland oder Puerto Rico werden separat gezählt, so wie Reisende sie üblicherweise zählen."
+      },
+      {
+        "q": "Wie werden die Tage gezählt?",
+        "a": "Ein Tag zählt für jedes Land, in dem du an diesem UTC-Kalendertag mindestens einen Punkt hast. Ein Tag mit einem Grenzübertritt zählt also für beide Länder."
+      }
+    ]
+  }
+}

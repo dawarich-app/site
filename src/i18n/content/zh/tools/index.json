@@ -65,6 +65,10 @@
     {
       "title": "路线视频制作工具",
       "description": "将任意 GPS 轨迹制作为可分享的 MP4 动画视频，让路线在风格化地图上逐步绘出。"
+    },
+    {
+      "title": "去过的国家地图",
+      "description": "用您的 Google Timeline 或 GPS 文件生成地图，一览您去过的每个国家。"
     }
   ],
   "converters": [

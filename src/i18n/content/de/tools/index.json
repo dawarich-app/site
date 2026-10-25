@@ -65,6 +65,10 @@
     {
       "title": "Routenvideo erstellen",
       "description": "Verwandle jeden GPS-Track in ein MP4-Video zum Teilen – die Route zeichnet sich auf einer gestalteten Karte nach und nach selbst."
+    },
+    {
+      "title": "Besuchte Länder auf einer Karte",
+      "description": "Sieh alle Länder, die du besucht hast, auf einer Karte – erstellt aus deinen Dateien aus Google Timeline (Google Maps Zeitachse) oder deinen GPS-Dateien."
     }
   ],
   "converters": [

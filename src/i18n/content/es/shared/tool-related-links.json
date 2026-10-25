@@ -415,6 +415,11 @@
       "href": "/statistics/",
       "label": "Estadísticas de Dawarich",
       "note": "Paneles persistentes"
+    },
+    {
+      "href": "/tools/visited-countries-map/",
+      "label": "Mapa de países visitados",
+      "note": "Todos los países en los que has estado"
     }
   ],
   "timeline-mileage-calculator": [
@@ -483,6 +488,11 @@
       "href": "/tools/map-poster-maker/",
       "label": "Creador de pósteres de mapas",
       "note": "El mismo archivo, un póster imprimible"
+    },
+    {
+      "href": "/tools/visited-countries-map/",
+      "label": "Mapa de países visitados",
+      "note": "Todos los países en los que has estado"
     }
   ],
   "map-poster-maker": [
@@ -539,6 +549,28 @@
       "href": "/docs/tools/phototagger/",
       "label": "Interfaz de línea de comandos de PhotoTagger",
       "note": "Geotiquetado masivo desde la línea de comandos"
+    }
+  ],
+  "visited-countries-map": [
+    {
+      "href": "/tools/timeline-statistics/",
+      "label": "Estadísticas de la cronología",
+      "note": "Distancia, lugares y tendencias anuales"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "Generador de mapas de calor",
+      "note": "Dónde pasas tu tiempo"
+    },
+    {
+      "href": "/tax-residency/",
+      "label": "Contador de días de residencia fiscal",
+      "note": "Días por país, regla de los 183 días"
+    },
+    {
+      "href": "/statistics/",
+      "label": "Países en Dawarich",
+      "note": "Tu mapa, siempre al día"
     }
   ]
 }

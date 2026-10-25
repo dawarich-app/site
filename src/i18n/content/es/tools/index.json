@@ -65,6 +65,10 @@
     {
       "title": "Creador de videos de rutas",
       "description": "Anima cualquier trayecto GPS y crea un MP4 para compartir: la ruta se dibuja sobre un mapa con estilo."
+    },
+    {
+      "title": "Mapa de países visitados",
+      "description": "Ve todos los países que has visitado en un mapa creado a partir de tus archivos de Google Timeline o GPS."
     }
   ],
   "converters": [

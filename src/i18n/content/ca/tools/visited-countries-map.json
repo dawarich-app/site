@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "title": "Mapa de països visitats: historial d'ubicacions",
+    "description": "Tots els països on has estat en un mapa fet amb fitxers de Google Timeline, GPX o KML, amb dies per país. Gratuït i privat, al navegador.",
+    "keywords": "mapa de països visitats, països on he estat, mapa dels meus viatges, països de Google Timeline, mapa de viatges"
+  },
+  "h1": "Mapa de països visitats",
+  "intro": "Arrossega-hi els teus fitxers de Google Timeline (Cronologia de Google Maps) o GPS i mira com el món pren color: cada país on has estat, pintat al mapa amb els dies que hi has passat.",
+  "upload": {
+    "title": "Carrega el teu historial d'ubicacions",
+    "dropFiles": "Arrossega i deixa anar fitxers aquí o fes clic per triar-los",
+    "formats": "Google Timeline JSON, GPX, KML, KMZ, GeoJSON, FIT, TCX",
+    "inputLabel": "Tria fitxers d'historial d'ubicacions",
+    "processing": "S'estan cercant els teus països…",
+    "clear": "Esborra-ho tot"
+  },
+  "results": {
+    "count": "{count} país o territori|{count} països i territoris|{count} països i territoris",
+    "empty": "No s'han trobat països en aquests fitxers. Prova amb un fitxer amb més punts o una exportació de Google Timeline.",
+    "days": "{count} dia|{count} dies|{count} dies",
+    "points": "{count} punt|{count} punts|{count} punts",
+    "continentsTitle": "Per continent",
+    "listTitle": "Els teus països",
+    "dates": "{first} – {last}"
+  },
+  "continents": {
+    "Africa": "Àfrica",
+    "Antarctica": "Antàrtida",
+    "Asia": "Àsia",
+    "Europe": "Europa",
+    "North America": "Amèrica del Nord",
+    "Oceania": "Oceania",
+    "South America": "Amèrica del Sud",
+    "Seven seas (open ocean)": "Illes remotes"
+  },
+  "parseError": "No s'ha pogut llegir {fileName}: {message}",
+  "loadError": "No s'han pogut carregar les fronteres dels països. Comprova la connexió i torna-ho a provar.",
+  "loadingMap": "S'està carregant el mapa…",
+  "privacy": "Els teus fitxers es llegeixen al navegador. No s'envia res.",
+  "credit": "Fronteres dels països: [Natural Earth](https://www.naturalearthdata.com/), de domini públic.",
+  "cta": "Ja has estat a **{count}** països i territoris. Amb Dawarich, el teu mapa creix automàticament a mesura que viatges.",
+  "guide": {
+    "sections": [
+      {
+        "heading": "Com sap el mapa on has estat",
+        "body": [
+          "Cada punt del teu fitxer es contrasta amb les fronteres de 240 països i territoris. Els punts que cauen just fora de la línia de costa —un port, una platja, un ferri— compten per al país més proper, perquè no es perdin els viatges vora el mar.",
+          "Si els teus punts tenen marques de temps, per a cada país també es mostra el nombre de dies diferents que hi has estat, comptats en UTC, a més de la primera i l'última data."
+        ]
+      },
+      {
+        "heading": "Obtén el teu historial d'ubicacions",
+        "body": [
+          "De Google: exporta Google Timeline des de l'aplicació Google Maps del teu telèfon, o fes servir un fitxer antic Records.json o Semantic Location History de Google Takeout. Totes dues opcions funcionen aquí.",
+          "D'altres aplicacions: fitxers GPX de Strava, Garmin, Komoot i la majoria d'aplicacions de seguiment, KML o KMZ de Google Earth, FIT i TCX de rellotges esportius, i GeoJSON. Pots arrossegar i deixar anar diversos fitxers alhora."
+        ]
+      },
+      {
+        "heading": "Països, territoris i fronteres",
+        "body": [
+          "El mapa inclou territoris com Groenlàndia, Puerto Rico o la Polinèsia Francesa, de manera que el recompte pot superar els 195 països que fan servir la majoria de llistes.",
+          "Les fronteres provenen de Natural Earth a escala 1:50 milions. A menys d'un quilòmetre aproximadament d'una frontera, un punt pot quedar al país veí, i els estats més petits, com el Vaticà, poden comptar com el país que els envolta."
+        ]
+      },
+      {
+        "heading": "Continua fent créixer el teu mapa",
+        "body": [
+          "Aquesta eina mostra el que hi ha als fitxers que hi arrossegues. [Dawarich](/statistics/) fa el mateix amb tot el teu historial d'ubicacions i el manté al dia mentre viatges: països i ciutats per any, un calendari d'on eres cada dia i els viatges que hi ha al darrere."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Aquesta eina és gratuïta?",
+        "a": "Sí. Funciona al navegador, no té límits i no cal tenir cap compte."
+      },
+      {
+        "q": "S'envien els meus fitxers?",
+        "a": "No. Els teus fitxers es llegeixen al teu dispositiu i no en surten mai."
+      },
+      {
+        "q": "Per què falta un país que he visitat?",
+        "a": "Pot ser que el fitxer no contingui punts d'aquell viatge, per exemple si l'historial d'ubicacions estava desactivat. Les parades molt breus a prop d'una frontera també poden quedar al país veí."
+      },
+      {
+        "q": "Per què el meu recompte pot superar els 195?",
+        "a": "Els territoris com Groenlàndia o Puerto Rico es compten per separat, tal com ho solen fer els viatgers."
+      },
+      {
+        "q": "Com es compten els dies?",
+        "a": "Un dia compta per a cada país on tens almenys un punt durant aquell dia del calendari UTC; per tant, un dia en què travesses una frontera compta per a tots dos països."
+      }
+    ]
+  }
+}
