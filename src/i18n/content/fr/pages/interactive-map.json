@@ -100,7 +100,7 @@
     }
   ],
   "meta": {
-    "title": "Visualisation sur carte interactive",
+    "title": "Carte des lieux visités : tout votre historique",
     "description": "Explorez votre historique de localisation sur une carte interactive : points, parcours, cartes de chaleur, brouillard de guerre et bien plus.",
     "ogTitle": "Carte Dawarich — Visualisation interactive de vos positions",
     "ogDescription": "Explorez votre historique de localisation avec différents calques : points, parcours, cartes de chaleur, brouillard de guerre, carte à gratter et photos."
@@ -126,5 +126,51 @@
     "Link": "Essayer gratuitement pendant 7 jours",
     "EnOnlyLink": "Auto-héberger gratuitement",
     "p3": "Essai gratuit de 7 jours · Remboursement sous 14 jours, sans risque · Résiliez à tout moment"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Tout votre historique de localisation sur une carte",
+        "body": [
+          "Choisissez une période, d’une seule journée à l’ensemble de vos enregistrements : la carte l’affiche. Les données importées de Google Timeline côtoient celles que votre téléphone enregistre aujourd’hui, pour réunir des années d’historique en un seul récit."
+        ]
+      },
+      {
+        "heading": "Des calques pour répondre à différentes questions",
+        "body": [
+          "Les points indiquent chaque position enregistrée, les parcours les relient, la carte de chaleur montre où vous passez votre temps, le brouillard de guerre révèle les lieux visités et les photos d’Immich ou de PhotoPrism apparaissent là où elles ont été prises. Activez ou désactivez les calques selon vos besoins."
+        ]
+      },
+      {
+        "heading": "Revivez une journée, retrouvez un lieu",
+        "body": [
+          "La fonction Replay rejoue sur la carte les points des dates sélectionnées. La recherche retrouve des lieux et des visites dans tout votre historique, et le panneau Chronologie répertorie vos journées et les lieux où vous vous êtes arrêté."
+        ]
+      },
+      {
+        "heading": "Conçue pour des années d’historique",
+        "body": [
+          "La carte utilise WebGL pour son affichage, propose un globe 3D et plusieurs styles de carte, et ne charge que la partie de l’historique que vous consultez. Même dix ans de données restent ainsi faciles à explorer."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Puis-je voir mon ancien historique Google Timeline sur cette carte ?",
+        "a": "Oui. Importez votre export Google Timeline ou Takeout : ces années apparaissent sur la carte aux côtés des nouvelles données."
+      },
+      {
+        "q": "Quelles informations un point affiche-t-il ?",
+        "a": "Son heure et ses coordonnées, ainsi que l’altitude, la vitesse et le niveau de batterie lorsque ces informations ont été enregistrées."
+      },
+      {
+        "q": "Jusqu’où la carte peut-elle remonter dans le temps ?",
+        "a": "Aussi loin que vos données. Choisissez n’importe quelle période, y compris votre historique complet."
+      },
+      {
+        "q": "Ma carte est-elle privée ?",
+        "a": "Oui. Vous seul pouvez la voir, sauf si vous créez un lien de partage, et Dawarich ne vend pas de données de localisation."
+      }
+    ]
   }
 }

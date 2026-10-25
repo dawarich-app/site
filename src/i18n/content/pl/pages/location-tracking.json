@@ -177,7 +177,7 @@
   ],
   "meta": {
     "title": "Konfiguracja śledzenia lokalizacji",
-    "description": "Śledź lokalizację automatycznie w Dawarich na iOS i Android lub z Overland, OwnTracks, GPSLogger, PhoneTrack czy Home Assistant.",
+    "description": "Śledź lokalizację automatycznie z oficjalnymi aplikacjami Dawarich na iOS i Android, Overland, OwnTracks, GPSLogger, PhoneTrack lub Home Assistant.",
     "ogTitle": "Śledzenie lokalizacji Dawarich — wiele aplikacji",
     "ogDescription": "Skonfiguruj automatyczne śledzenie z oficjalną aplikacją Dawarich na iOS lub Android, Overland, OwnTracks, GPSLogger, PhoneTrack lub integracją z Home Assistant."
   },

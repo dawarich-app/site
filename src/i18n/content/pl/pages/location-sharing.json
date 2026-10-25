@@ -30,11 +30,15 @@
     {
       "q": "Co się stanie z linkami po wygaśnięciu subskrypcji?",
       "a": "Możesz eksportować wszystko w dowolnej chwili, a cała aplikacja ma otwarty kod — te same funkcje uruchomisz na własnym sprzęcie bezpłatnie i bezterminowo."
+    },
+    {
+      "q": "Czym to się różni od Life360?",
+      "a": "Life360 przez cały czas pokazuje Twój krąg na mapie. Dawarich wysyła jeden link, który pokazuje jedną rzecz przez wybrany przez Ciebie czas, a Twoja historia pozostaje Twoja. Rodziny, które chcą stale udostępniać lokalizację, mogą skorzystać z funkcji [Rodzina](/family/). [Zobacz pełne porównanie z Life360](/docs/comparisons/vs-life360)."
     }
   ],
   "meta": {
     "title": "Udostępnianie lokalizacji — historia przez link",
-    "description": "Udostępniaj lokalizację na żywo lub historię prywatnym linkiem: hasło, termin ważności, unieważnianie i wybrany zakres. 7 dni próby gratis.",
+    "description": "Udostępniaj pozycję na żywo lub historię lokalizacji prywatnym linkiem: ochrona frazą, termin ważności, unieważnienie, wybrany zakres. 7 dni próby gratis lub własny serwer za darmo.",
     "ogTitle": "Udostępniaj historię lokalizacji prywatnym linkiem",
     "ogDescription": "Jeden link: zakres dat, pozycja na żywo, trasa, podróż, statystyki miesiąca, podsumowanie roku. Wygasa lub da się cofnąć; większość można chronić frazą hasłową."
   },

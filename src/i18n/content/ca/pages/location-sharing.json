@@ -30,11 +30,15 @@
     {
       "q": "Què passa amb els enllaços si caduca la meva subscripció?",
       "a": "Pots exportar-ho tot quan vulguis i tota l’aplicació és de codi obert: pots fer servir les mateixes funcions al teu maquinari, gratis i per sempre."
+    },
+    {
+      "q": "En què es diferencia de Life360?",
+      "a": "Life360 mostra el teu cercle en un mapa en tot moment. Dawarich envia un enllaç que mostra un sol element, durant el temps que tu decideixis, i manté l’historial sota el teu control. Per a les famílies que volen compartir de manera continuada, hi ha [Família](/family/). [Consulta la comparativa completa amb Life360](/docs/comparisons/vs-life360)."
     }
   ],
   "meta": {
-    "title": "Comparteix l’historial d’ubicacions per enllaç",
-    "description": "Comparteix ubicació en viu o historial per enllaç privat: amb frase de pas, caducitat, revocable i limitat al que triïs. Prova gratis 7 dies.",
+    "title": "Comparteix el teu historial d’ubicacions amb un enllaç",
+    "description": "Comparteix ubicació en directe o historial per enllaç privat: frase de pas, caducitat i revocació. Només el que triïs. Prova: 7 dies gratis o allotja’l gratis.",
     "ogTitle": "Comparteix el teu historial d’ubicacions amb un enllaç privat",
     "ogDescription": "Envia un enllaç que mostri un sol element: un interval de dates, la ubicació en directe, un trajecte, un viatge, les estadístiques d’un mes o un resum anual. Tots els enllaços caduquen o es poden revocar, i la majoria es poden protegir amb una frase de pas."
   },

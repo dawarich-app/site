@@ -100,7 +100,7 @@
     }
   ],
   "meta": {
-    "title": "Visualização em mapa interativo",
+    "title": "Mapa do histórico de localização: onde você foi",
     "description": "Explore seu histórico de localização em um mapa interativo com várias camadas: pontos, trajetos, mapa de calor, névoa de exploração e muito mais.",
     "ogTitle": "Mapa do Dawarich — Visualização interativa de localização",
     "ogDescription": "Explore seu histórico de localização em várias camadas: pontos, trajetos, mapa de calor, névoa de exploração, mapa de raspar e integração de fotos."
@@ -126,5 +126,51 @@
     "Link": "Experimente grátis por 7 dias",
     "EnOnlyLink": "Hospede grátis no seu servidor",
     "p3": "7 dias de teste grátis · Reembolso em até 14 dias, sem risco · Cancele quando quiser"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Todo o seu histórico de localização em um mapa",
+        "body": [
+          "Escolha qualquer período, de um único dia a tudo o que você já registrou, e o mapa mostra esse histórico. Os dados importados do Google Timeline ficam ao lado do que seu celular registra hoje, formando uma única história ao longo dos anos."
+        ]
+      },
+      {
+        "heading": "Camadas para diferentes perguntas",
+        "body": [
+          "Os pontos mostram cada posição registrada, os trajetos conectam esses pontos, o mapa de calor mostra onde você passa seu tempo, a névoa de exploração revela os lugares por onde você passou e as fotos do Immich ou PhotoPrism aparecem onde foram tiradas. Ative e desative as camadas conforme precisar."
+        ]
+      },
+      {
+        "heading": "Reveja um dia, encontre um lugar",
+        "body": [
+          "O Replay reproduz no mapa os pontos das datas selecionadas. A busca encontra lugares e visitas em todo o seu histórico, e o painel da linha do tempo lista seus dias e os lugares onde você parou."
+        ]
+      },
+      {
+        "heading": "Feito para anos de histórico",
+        "body": [
+          "O mapa usa WebGL para renderização, oferece um globo 3D e vários estilos de mapa e carrega apenas a parte do histórico que você está visualizando, para que até uma década de dados continue fácil de explorar."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Posso ver meu histórico antigo do Google Timeline neste mapa?",
+        "a": "Sim. Importe sua exportação do Google Timeline ou Takeout, e esses anos aparecerão no mapa junto com os novos dados."
+      },
+      {
+        "q": "O que um ponto mostra?",
+        "a": "Seu horário e suas coordenadas, além de altitude, velocidade e nível da bateria, quando esses dados foram registrados."
+      },
+      {
+        "q": "Até quando o mapa pode voltar no tempo?",
+        "a": "Até onde seus dados alcançarem. Escolha qualquer período, incluindo todo o seu histórico."
+      },
+      {
+        "q": "Meu mapa é privado?",
+        "a": "Sim. Só você pode vê-lo, a menos que crie um link de compartilhamento, e o Dawarich não vende dados de localização."
+      }
+    ]
   }
 }

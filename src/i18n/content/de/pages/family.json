@@ -18,7 +18,7 @@
   "objections": [
     {
       "q": "Ist das einfach Life360 unter anderem Namen?",
-      "a": "Nein. Bei eingeladenen Mitgliedern ist die Freigabe anfangs ausgeschaltet, und jedes Mitglied steuert den eigenen Schalter. Wer den Cloud-Tarif besitzt, startet mit eingeschalteter Freigabe, kann sie aber ausschalten. Live-Freigaben können nach einer festgelegten Zeit enden, über die Freigabe des Verlaufs entscheidest du separat, und Standortanfragen können abgelehnt werden."
+      "a": "Nein. Bei eingeladenen Mitgliedern ist die Freigabe anfangs ausgeschaltet, und jedes Mitglied steuert den eigenen Schalter. Wer den Cloud-Tarif besitzt, startet mit eingeschalteter Freigabe, kann sie aber ausschalten. Live-Freigaben können nach einer festgelegten Zeit enden, über die Freigabe des Verlaufs entscheidest du separat, und Standortanfragen können abgelehnt werden. [Zum vollständigen Life360-Vergleich](/docs/comparisons/vs-life360)."
     },
     {
       "q": "Kann mein Teenager sehen, dass ich seinen Standort verfolge?",
@@ -42,8 +42,8 @@
     }
   ],
   "meta": {
-    "title": "Familienstandort teilen: App für iPhone & Android",
-    "description": "Familienstandorte in Dawarich-Apps für iOS und Android teilen. Bis zu fünf Personen, jede steuert ihre Freigabe. {price}/Jahr oder gratis selbst hosten.",
+    "title": "Familienstandort teilen: App für iPhone und Android",
+    "description": "Familienstandorte teilen (Dawarich iOS/Android). Max. 5 einladen: Jeder steuert Live-Freigabe, Verlauf, Standortanfragen. {price}/Jahr oder gratis selbst hosten",
     "ogTitle": "Standort mit der Familie teilen, ohne Überwachung",
     "ogDescription": "Fünf Menschen, fünf unabhängige Schalter. Zeitlich begrenzte Live-Freigaben, der Verlauf als separate Wahl und Standortanfragen, die angenommen werden müssen."
   },

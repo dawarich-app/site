@@ -17,7 +17,7 @@ export default function ToolGuide({ slug, title, content }) {
   const toolsUrl = useLocalizedUrl('/tools/');
   const pageUrl = useLocalizedUrl(`/tools/${slug}/`);
   if (!content) return null;
-  const breadcrumb = {
+  const breadcrumb = slug && {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
@@ -39,7 +39,7 @@ export default function ToolGuide({ slug, title, content }) {
   return (
     <>
       <Head>
-        <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
+        {breadcrumb && <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>}
         {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
       </Head>
       <div className={styles.guide}>

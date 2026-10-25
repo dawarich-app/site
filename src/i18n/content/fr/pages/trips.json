@@ -60,7 +60,7 @@
     }
   ],
   "meta": {
-    "title": "Vos déplacements et votre carnet de voyage",
+    "title": "Appli de suivi et carnet de voyage",
     "description": "Transformez vos voyages en récits détaillés : cartes interactives, statistiques, journal en texte enrichi et intégration photo.",
     "ogTitle": "Vos déplacements Dawarich — Racontez vos aventures",
     "ogDescription": "Créez des carnets de voyage complets avec cartes interactives, statistiques détaillées, descriptions en texte enrichi et intégration photo automatique."
@@ -93,5 +93,56 @@
     "Link": "Essayer gratuitement pendant 7 jours",
     "EnOnlyLink": "Auto-héberger gratuitement",
     "p2": "Essai gratuit de 7 jours · Remboursement sous 14 jours, sans risque · Résiliez à tout moment"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Un suivi de voyage qui se remplit tout seul",
+        "body": [
+          "Avec l’application Dawarich sur votre téléphone, vos mouvements sont enregistrés au fil de vos déplacements. Pour créer un déplacement, il suffit de lui donner un nom et des dates : Dawarich rassemble tous les points de cette période et trace le parcours.",
+          "Vos anciens voyages fonctionnent de la même façon : importez des fichiers Google Timeline, Polarsteps ou GPX et transformez n’importe quelle période passée en déplacement."
+        ]
+      },
+      {
+        "heading": "Tout votre déplacement sur une seule page",
+        "body": [
+          "Chaque déplacement affiche ses dates, une carte du parcours, les pays traversés avec la distance parcourue dans chacun, vos notes et les photos d’une photothèque Immich ou PhotoPrism connectée."
+        ]
+      },
+      {
+        "heading": "Retrouvez n’importe quel déplacement",
+        "body": [
+          "La recherche porte sur les noms des déplacements, leurs descriptions, leurs notes et les pays visités. Triez par date, par nom ou par distance décroissante, et filtrez par année, par mois ou par pays. Les filtres restent dans l’adresse de la page : vous pouvez ainsi ajouter à vos favoris une liste telle que tous vos déplacements au Portugal."
+        ]
+      },
+      {
+        "heading": "Un carnet, pas seulement une carte",
+        "body": [
+          "Les notes acceptent la mise en forme : un déplacement peut donc raconter ce qui s’est passé chaque jour, et pas seulement où vous étiez. Modifier ses dates actualise le parcours sur la carte pendant la modification, et supprimer un déplacement ne supprime jamais votre historique de localisation."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Dois-je démarrer un déplacement avant de partir ?",
+        "a": "Non. Les déplacements sont créés à partir de votre historique de localisation existant : vous pouvez donc en créer un après coup, pour n’importe quelle période."
+      },
+      {
+        "q": "Quelles applications peuvent enregistrer mes voyages ?",
+        "a": "Les applications Dawarich pour iOS et Android, ou OwnTracks, Overland, GPSLogger et d’autres outils de suivi compatibles."
+      },
+      {
+        "q": "Puis-je importer des déplacements de Polarsteps ou de Google Timeline ?",
+        "a": "Oui. Importez l’export Polarsteps ou Google Timeline, puis créez des déplacements pour les dates souhaitées."
+      },
+      {
+        "q": "Puis-je ajouter des photos à un déplacement ?",
+        "a": "Oui, si vous connectez Immich ou PhotoPrism. Les photos prises pendant le déplacement apparaissent automatiquement sur sa page."
+      },
+      {
+        "q": "Puis-je partager un déplacement ?",
+        "a": "Oui. Vous pouvez partager un déplacement par un lien privé, révocable à tout moment."
+      }
+    ]
   }
 }

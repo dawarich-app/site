@@ -60,7 +60,7 @@
     }
   ],
   "meta": {
-    "title": "Travel Trips & Journaling",
+    "title": "Travel Tracker & Trip Journal App",
     "description": "Turn your travels into beautifully documented trips with interactive maps, statistics, rich text journaling, and photo integration.",
     "ogTitle": "Dawarich Trips — Document Your Travel Adventures",
     "ogDescription": "Create comprehensive travel journals with interactive maps, detailed statistics, rich text descriptions, and automatic photo integration."
@@ -93,5 +93,56 @@
     "Link": "Try 7 Days for Free",
     "EnOnlyLink": "Self-Host for Free",
     "p2": "7-day free trial · 14-day risk-free refund · Cancel anytime"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "A travel tracker that fills itself in",
+        "body": [
+          "With the Dawarich app on your phone, your movements are recorded as you go. To create a trip you only give it a name and dates; Dawarich pulls in every point from that range and draws the route.",
+          "Older journeys work the same way: import Google Timeline, Polarsteps or GPX files and turn any past date range into a trip."
+        ]
+      },
+      {
+        "heading": "Everything about a trip on one page",
+        "body": [
+          "Each trip shows its dates, a map of the route, the countries you passed through with the distance covered in each, your notes and photos from a connected Immich or PhotoPrism library."
+        ]
+      },
+      {
+        "heading": "Find any trip again",
+        "body": [
+          "Search matches trip names, descriptions, notes and the countries a trip visited. Sort by date, name or longest distance, and filter by year, month or country. Filters stay in the page address, so you can bookmark a list such as every trip to Portugal."
+        ]
+      },
+      {
+        "heading": "A journal, not just a map",
+        "body": [
+          "Notes support formatting, so a trip can hold what happened each day, not only where you were. Changing a trip's dates updates the route on the map while you edit, and deleting a trip never deletes your location history."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do I have to start a trip before I travel?",
+        "a": "No. Trips are made from your existing location history, so you can create one afterwards from any date range."
+      },
+      {
+        "q": "Which apps can record my travels?",
+        "a": "The Dawarich apps for iOS and Android, or OwnTracks, Overland, GPSLogger and other supported trackers."
+      },
+      {
+        "q": "Can I import trips from Polarsteps or Google Timeline?",
+        "a": "Yes. Import the Polarsteps or Google Timeline export, then create trips for the dates you want."
+      },
+      {
+        "q": "Can I add photos to a trip?",
+        "a": "Yes, if you connect Immich or PhotoPrism. Photos taken during the trip appear on its page automatically."
+      },
+      {
+        "q": "Can I share a trip?",
+        "a": "Yes. A trip can be shared through a private link, which you can revoke at any time."
+      }
+    ]
   }
 }

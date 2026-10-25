@@ -66,7 +66,7 @@
     }
   ],
   "meta": {
-    "title": "Statistiques de localisation et Vos analyses",
+    "title": "Carte des pays visités et statistiques de voyage",
     "description": "Votre vie en chiffres : pays, villes, distances et statistiques de localisation complètes, avec bilans mensuels et annuels automatiques par e-mail.",
     "ogTitle": "Statistiques Dawarich — Votre vie en chiffres",
     "ogDescription": "Des statistiques de localisation complètes : pays visités, distance totale, suivi du temps et bilans mensuels et annuels automatiques par e-mail."
@@ -106,5 +106,57 @@
     "Link": "Essayer gratuitement pendant 7 jours",
     "EnOnlyLink": "Auto-héberger gratuitement",
     "p6": "Essai gratuit de 7 jours · Remboursement sous 14 jours, sans risque · Résiliez à tout moment"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Votre carte des pays visités se construit pour vous",
+        "body": [
+          "Vous n’avez pas à cocher les pays dans une liste. Dawarich lit votre historique de localisation et compte les pays et les villes où vous êtes allé, sur l’ensemble de votre historique, par année et par mois.",
+          "Cliquez sur un nombre de pays ou de villes pour afficher la liste complète des lieux, chacun avec un lien vers la zone correspondante de la carte. Importez des années de données Google Timeline : votre carte des pays visités se remplit aussitôt."
+        ]
+      },
+      {
+        "heading": "Années, mois et journées",
+        "body": [
+          "La vue All Time affiche une fiche par année avec la distance, une carte des parcours, les mois, les pays et les villes. Choisissez une année pour voir les distances mois par mois et un calendrier où chaque jour est coloré selon le pays où vous étiez.",
+          "Une chronologie par pays indique le nombre de jours passés dans chaque pays cette année-là, et une course aux distances compare cette année à la précédente. Les couleurs par pays du calendrier et la chronologie par pays sont incluses dans Pro et dans Dawarich auto-hébergé."
+        ]
+      },
+      {
+        "heading": "D’où viennent les pays affichés ?",
+        "body": [
+          "Les pays et les villes sont déterminés par géocodage inverse : les coordonnées sont converties en noms de lieux. Dawarich Cloud s’en charge pour vous. Sur une instance auto-hébergée, un service de géocodage doit être configuré ; en attendant, les distances et les jours d’activité fonctionnent, mais aucun pays n’est affiché."
+        ]
+      },
+      {
+        "heading": "Partagez un mois",
+        "body": [
+          "Vous pouvez partager n’importe quel mois par un lien public qui expire après une heure, un jour, une semaine ou un mois. Les destinataires voient les statistiques de ce mois sans avoir de compte, et rien d’autre. Sur Dawarich Cloud, le partage de statistiques est inclus dans l’offre Pro."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Comment Dawarich sait-il quels pays j’ai visités ?",
+        "a": "Grâce aux points de votre historique de localisation. Chaque point est associé à un pays et à une ville par géocodage inverse, et chaque lieu est compté une seule fois par période."
+      },
+      {
+        "q": "Puis-je ajouter mes déplacements antérieurs à Dawarich ?",
+        "a": "Oui. Importez votre historique Google Timeline, les données de localisation Google Photos, des fichiers GPX, FIT ou d’autres formats : ces années apparaissent dans vos statistiques et sur votre carte des pays visités."
+      },
+      {
+        "q": "Puis-je compter les jours passés dans chaque pays ?",
+        "a": "Oui. La chronologie annuelle par pays indique les jours par pays, et le [compteur de jours de résidence fiscale](/tax-residency/) ajoute les périodes de séjour et un indicateur à 183 jours."
+      },
+      {
+        "q": "À quelle fréquence les statistiques sont-elles actualisées ?",
+        "a": "En arrière-plan après l’arrivée de nouveaux points ou de nouvelles importations, ainsi que toutes les heures. Vous pouvez aussi les recalculer avec Update stats sur la page Vos analyses."
+      },
+      {
+        "q": "Qui peut voir mes statistiques ?",
+        "a": "Vous seul, sauf si vous partagez un mois par un lien public. Dawarich ne vend ni ne partage vos données de localisation."
+      }
+    ]
   }
 }

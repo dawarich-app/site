@@ -18,7 +18,7 @@
   "objections": [
     {
       "q": "Is this just Life360 with different branding?",
-      "a": "No. Invited members start with sharing off, and every member controls their own switch. The Cloud plan owner starts with sharing on but can turn it off. Live sharing can expire on a timer, history is a separate choice, and a location request can be declined."
+      "a": "No. Invited members start with sharing off, and every member controls their own switch. The Cloud plan owner starts with sharing on but can turn it off. Live sharing can expire on a timer, history is a separate choice, and a location request can be declined. [See the full Life360 comparison](/docs/comparisons/vs-life360)."
     },
     {
       "q": "Can my teenager see that I am tracking them?",
@@ -42,8 +42,8 @@
     }
   ],
   "meta": {
-    "title": "Family Location Sharing App for iPhone & Android",
-    "description": "Share family locations in the Dawarich iOS and Android apps. Up to five people, each controlling their own sharing. {price}/year or self-host free.",
+    "title": "Family Location Sharing App for iPhone and Android",
+    "description": "Share family locations in the Dawarich iOS and Android apps. Invite up to five people; each controls live sharing, history and location requests. {price}/year or self-host free.",
     "ogTitle": "Family Location Sharing Without the Surveillance",
     "ogDescription": "Five people, five independent switches. Live sharing on a timer, history as a separate choice, and location requests that have to be accepted."
   },

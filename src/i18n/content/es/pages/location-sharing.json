@@ -30,11 +30,15 @@
     {
       "q": "¿Qué pasa con mis enlaces si caduca mi suscripción?",
       "a": "Puedes exportarlo todo en cualquier momento y toda la aplicación es de código abierto: puedes ejecutar las mismas funciones en tu propio equipo gratis y para siempre."
+    },
+    {
+      "q": "¿En qué se diferencia de Life360?",
+      "a": "Life360 muestra tu círculo en un mapa en todo momento. Dawarich envía un enlace que muestra una sola cosa, durante el tiempo que tú decidas, y mantiene tu historial bajo tu control. Para las familias que quieren compartir de forma continua, está [Familia](/family/). [Consulta la comparativa completa con Life360](/docs/comparisons/vs-life360)."
     }
   ],
   "meta": {
     "title": "Comparte tu historial de ubicaciones por enlace",
-    "description": "Comparte ubicación en vivo o historial por enlace privado: frase de acceso, caducidad, revocable y con el alcance que elijas. Prueba gratis 7 días.",
+    "description": "Comparte ubicación en vivo o historial por enlace privado: frase de acceso, caducidad, revocación y alcance exacto elegido. Prueba gratis de 7 días o gratis en tu servidor.",
     "ogTitle": "Comparte tu historial de ubicaciones por enlace privado",
     "ogDescription": "Envía un enlace que muestre una sola cosa: un intervalo de fechas, ubicación en directo, un trayecto, un viaje, estadísticas de un mes o un resumen anual. Todos caducan o se pueden revocar, y la mayoría se pueden proteger con una frase de acceso."
   },

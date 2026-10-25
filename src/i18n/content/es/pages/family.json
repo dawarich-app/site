@@ -18,7 +18,7 @@
   "objections": [
     {
       "q": "¿Es Life360 con otra marca?",
-      "a": "No. Los miembros invitados empiezan con la opción de compartir desactivada, y cada miembro tiene su propio control. El titular del plan Cloud empieza compartiendo, pero puede desactivarlo. La ubicación en directo puede dejar de compartirse con un temporizador, el historial es una decisión aparte y las solicitudes de ubicación se pueden rechazar."
+      "a": "No. Los miembros invitados empiezan con la opción de compartir desactivada, y cada miembro tiene su propio control. El titular del plan Cloud empieza compartiendo, pero puede desactivarlo. La ubicación en directo puede dejar de compartirse con un temporizador, el historial es una decisión aparte y las solicitudes de ubicación se pueden rechazar. [Consulta la comparativa completa con Life360](/docs/comparisons/vs-life360)."
     },
     {
       "q": "¿Mi hijo adolescente puede ver que lo estoy rastreando?",
@@ -42,8 +42,8 @@
     }
   ],
   "meta": {
-    "title": "App familiar: comparte ubicación (iPhone/Android)",
-    "description": "Comparte ubicaciones en familia con Dawarich para iOS y Android. Hasta cinco, cada uno controla qué comparte. {price}/año o autoalojamiento gratis.",
+    "title": "App para compartir ubicación familiar en iPhone y Android",
+    "description": "Comparte en familia con Dawarich iOS/Android. Invita hasta cinco: cada uno controla ubicación en vivo, historial y solicitudes. {price}/año o alójalo tú gratis.",
     "ogTitle": "Comparte ubicación en familia sin vigilancia",
     "ogDescription": "Cinco personas, cinco controles independientes. Compartir en directo con temporizador, el historial como una decisión aparte y solicitudes de ubicación que hay que aceptar."
   },

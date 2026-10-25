@@ -30,11 +30,15 @@
     {
       "q": "Was passiert mit meinen Links, wenn mein Abo abläuft?",
       "a": "Du kannst jederzeit alles exportieren. Die gesamte Anwendung ist Open Source – dieselben Funktionen kannst du dauerhaft kostenlos auf deiner eigenen Hardware betreiben."
+    },
+    {
+      "q": "Wie unterscheidet sich das von Life360?",
+      "a": "Life360 zeigt deinen Kreis ständig auf einer Karte. Dawarich verschickt einen Link, der genau eine Sache zeigt – so lange, wie du bestimmst. Dein Verlauf bleibt deiner. Für Familien, die ihren Standort fortlaufend teilen möchten, gibt es die [Familie](/family/). [Zum vollständigen Life360-Vergleich](/docs/comparisons/vs-life360)."
     }
   ],
   "meta": {
-    "title": "Standort teilen — Verlauf per Link freigeben",
-    "description": "Live-Standort oder Verlauf per privatem Link teilen: mit Passphrase, Ablaufdatum, widerrufbar, im gewählten Umfang. 7 Tage gratis testen.",
+    "title": "Standort teilen – deinen Standortverlauf per Link freigeben",
+    "description": "Live-Standort oder Verlauf per privatem Link teilen: Passphrase, Ablaufdatum, widerrufbar, nur dein gewählter Umfang. 7 Tage gratis oder gratis selbst hosten.",
     "ogTitle": "Standortverlauf über einen privaten Link teilen",
     "ogDescription": "Verschicke einen Link für genau eine Sache: einen Zeitraum, Live-Standort, Track, eine Reise, Monatsstatistiken oder einen Jahresrückblick. Jeder Link läuft ab oder lässt sich widerrufen, und die meisten lassen sich mit einer Passphrase schützen."
   },

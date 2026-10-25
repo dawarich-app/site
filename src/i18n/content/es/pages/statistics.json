@@ -66,7 +66,7 @@
     }
   ],
   "meta": {
-    "title": "Estadísticas y análisis de ubicaciones",
+    "title": "Mapa de países visitados y estadísticas de viajes",
     "description": "Tu vida en cifras con estadísticas completas de ubicación. Lleva la cuenta de países, ciudades y distancias, y recibe resúmenes mensuales y anuales por correo.",
     "ogTitle": "Estadísticas de Dawarich — Tu vida en cifras",
     "ogDescription": "Estadísticas completas de ubicación: países visitados, distancia total, registro de tiempo y resúmenes mensuales y anuales automáticos por correo."
@@ -106,5 +106,57 @@
     "Link": "Prueba 7 días gratis",
     "EnOnlyLink": "Instálalo gratis en tu servidor",
     "p6": "Prueba gratuita de 7 días · Reembolso sin riesgo de 14 días · Cancela cuando quieras"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Tu mapa de países visitados, creado para ti",
+        "body": [
+          "No tienes que ir marcando países en una lista. Dawarich lee tu historial de ubicaciones y cuenta los países y las ciudades donde has estado, tanto en todo tu historial como por año y por mes.",
+          "Haz clic en un recuento de países o ciudades para ver la lista completa de lugares, cada uno con un enlace a esa parte del mapa. Importa años de datos de Google Timeline (Cronología de Google Maps) y tu mapa de países visitados se completará al instante."
+        ]
+      },
+      {
+        "heading": "Años, meses y días concretos",
+        "body": [
+          "La vista «Todo el tiempo» muestra una tarjeta por año con su distancia, un mapa de sus rutas, sus meses y sus países y ciudades. Elige un año para ver la distancia mes a mes y un calendario donde cada día tiene el color del país donde estuviste.",
+          "Una cronología por países muestra cuántos días pasaste en cada país ese año, y una carrera de distancias compara este año con el anterior. Los colores de países del calendario y la cronología por países forman parte de Pro y de Dawarich alojado en tu propio servidor."
+        ]
+      },
+      {
+        "heading": "De dónde salen los países",
+        "body": [
+          "Los países y las ciudades se obtienen mediante geocodificación inversa: convertir coordenadas en nombres de lugares. Dawarich Cloud lo hace por ti. Si alojas Dawarich en tu propio servidor, necesitas configurar un servicio de geocodificación; hasta entonces, las distancias y los días activos siguen funcionando, pero los países quedan vacíos."
+        ]
+      },
+      {
+        "heading": "Comparte un mes",
+        "body": [
+          "Puedes compartir cualquier mes con un enlace público que caduca al cabo de una hora, un día, una semana o un mes. Quienes lo reciban verán las estadísticas de ese mes sin necesidad de una cuenta, y nada más. En Dawarich Cloud, compartir estadísticas forma parte del plan Pro."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "¿Cómo sabe Dawarich qué países he visitado?",
+        "a": "A partir de los puntos de tu historial de ubicaciones. La geocodificación inversa asigna un país y una ciudad a cada punto, y cada lugar se cuenta una vez por periodo."
+      },
+      {
+        "q": "¿Puedo añadir los viajes que hice antes de usar Dawarich?",
+        "a": "Sí. Importa tu Google Timeline, los datos de ubicación de Google Photos, GPX, FIT y otros archivos, y esos años aparecerán en tus estadísticas y en tu mapa de países visitados."
+      },
+      {
+        "q": "¿Puedo contar cuántos días pasé en cada país?",
+        "a": "Sí. La cronología anual por países muestra los días por país, y el [contador de días de residencia fiscal](/tax-residency/) añade los periodos de estancia y un indicador de 183 días."
+      },
+      {
+        "q": "¿Con qué frecuencia se actualizan las estadísticas?",
+        "a": "En segundo plano tras recibir puntos o importaciones nuevos, y cada hora. También puedes recalcularlas con «Actualizar estadísticas» en la página Análisis."
+      },
+      {
+        "q": "¿Quién puede ver mis estadísticas?",
+        "a": "Solo tú, salvo que compartas un mes con un enlace público. Dawarich no vende ni comparte tus datos de ubicación."
+      }
+    ]
   }
 }

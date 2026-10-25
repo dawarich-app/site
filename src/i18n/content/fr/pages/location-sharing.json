@@ -30,11 +30,15 @@
     {
       "q": "Que deviennent mes liens si mon abonnement expire ?",
       "a": "Vous pouvez tout exporter à tout moment et l’application entière est libre : vous pouvez utiliser gratuitement les mêmes fonctionnalités sur votre matériel, pour toujours."
+    },
+    {
+      "q": "En quoi est-ce différent de Life360 ?",
+      "a": "Life360 affiche votre cercle sur une carte en permanence. Dawarich envoie un lien qui ne montre qu’un seul contenu, pendant la durée que vous choisissez, et votre historique reste le vôtre. Pour les familles qui souhaitent un partage continu, il existe [Famille](/family/). [Voir le comparatif complet avec Life360](/docs/comparisons/vs-life360)."
     }
   ],
   "meta": {
-    "title": "Partage de position : historique par lien",
-    "description": "Position en direct ou historique par lien privé : phrase secrète, expiration, révocation, périmètre au choix. Essai gratuit de 7 jours.",
+    "title": "Partagez votre historique de localisation par lien",
+    "description": "Position en direct ou historique : lien privé limité à votre choix, phrase secrète, expiration, révocation. Essai gratuit 7 j ou auto-hébergement gratuit.",
     "ogTitle": "Partagez votre historique de localisation par lien privé",
     "ogDescription": "Un lien : période, position en direct, trajet, déplacement, stats mensuelles ou bilan annuel. Expire ou révocable ; phrase secrète possible pour la plupart."
   },

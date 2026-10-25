@@ -112,7 +112,7 @@
     }
   ],
   "meta": {
-    "title": "Import i eksport danych",
+    "title": "Import historii lokalizacji: Google Takeout i in.",
     "description": "Twoje dane należą do Ciebie. Import z Google Takeout, GPX, CSV, KML. Eksport do GPX, CSV lub pełny eksport konta. Bez uzależnienia od usługi.",
     "ogTitle": "Import i eksport Dawarich — Twoje dane pod Twoją kontrolą",
     "ogDescription": "Import z Google Maps, Apple Health, GPX, GeoJSON, KML. Eksport do dowolnego formatu. Pełna przenośność danych bez uzależnienia od usługi."
@@ -154,5 +154,51 @@
     "Link": "Wypróbuj za darmo przez 7 dni",
     "EnOnlyLink": "Uruchom za darmo na własnym serwerze",
     "p9": "7-dniowy bezpłatny okres próbny · Zwrot bez ryzyka przez 14 dni · Zrezygnuj w dowolnej chwili"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Zaimportuj dane Google Timeline",
+        "body": [
+          "Dawarich odczytuje każdą wersję eksportu lokalizacji Google: plik Timeline.json z aplikacji Google Maps oraz Records.json i Semantic Location History z Google Takeout. Prześlij plik bez zmian — format zostanie wykryty automatycznie.",
+          "Obsługiwane są też metadane Google Photos z eksportu Takeout, więc miejsca zrobienia zdjęć mogą uzupełnić luki w Twojej historii."
+        ]
+      },
+      {
+        "heading": "Przenieś dane z innych aplikacji",
+        "body": [
+          "Trasy i punkty trasy GPX, pliki FIT z Garmin, Strava i większości zegarków sportowych, TCX, KML i KMZ, pliki CSV z kolumnami szerokości i długości geograficznej oraz czasu, GeoJSON, pliki .rec z OwnTracks Recorder i locations.json z Polarsteps. Możesz też przesłać archiwum ZIP zawierające dowolne z tych plików.",
+          "Zduplikowane punkty są pomijane, więc import eksportów obejmujących te same okresy nie powiela Twojej historii."
+        ]
+      },
+      {
+        "heading": "Zabierz ze sobą wszystkie dane",
+        "body": [
+          "Wyeksportuj swoje punkty jako GPX lub GeoJSON albo pobierz pełny eksport konta z punktami, wizytami, podróżami, statystykami i ustawieniami. Zawsze możesz przenieść swoje dane — zarówno z chmury, jak i z własnego serwera."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Jakie pliki Google Timeline mogę zaimportować?",
+        "a": "Timeline.json wyeksportowany z aplikacji Google Maps oraz Records.json lub Semantic Location History z Google Takeout."
+      },
+      {
+        "q": "Mój eksport Takeout nie zawiera historii lokalizacji. Co teraz?",
+        "a": "Google przechowuje teraz oś czasu na Twoim telefonie. Wyeksportuj ją z aplikacji Google Maps — zobacz, [jak wyeksportować dane Google Timeline](/docs/getting-started/import-sources)."
+      },
+      {
+        "q": "Czy dwukrotny import tego samego pliku utworzy duplikaty?",
+        "a": "Nie. Punkty, które już istnieją, są pomijane."
+      },
+      {
+        "q": "Czy mogę importować skompresowane pliki?",
+        "a": "Archiwa ZIP są obsługiwane. Pliki skompresowane gzip (.gz) trzeba najpierw rozpakować."
+      },
+      {
+        "q": "Czy mogę zrezygnować z Dawarich i zabrać swoje dane?",
+        "a": "Tak. Możesz wyeksportować historię w dowolnej chwili, a instancja na własnym serwerze przechowuje też wszystko w Twojej własnej bazie danych."
+      }
+    ]
   }
 }

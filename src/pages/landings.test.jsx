@@ -79,6 +79,21 @@ describe('Feature landing pages', () => {
     expect(screen.getByRole('link', { name: content7.setup.ios }).getAttribute('href')).toContain('apps.apple.com');
     for (const item of content7.objections) expect(screen.getByText(item.q)).toBeInTheDocument();
   });
+  it('feature landings render their guide sections and FAQ', () => {
+    for (const [Page, data] of [[Page0, content0], [Page1, content1], [Page2, content2], [Page4, content4]]) {
+      const { unmount } = render(<Page />);
+      expect(screen.getByRole('heading', { level: 2, name: data.guide.sections[0].heading })).toBeInTheDocument();
+      expect(screen.getByText(data.guide.faqs[0].q)).toBeInTheDocument();
+      unmount();
+    }
+  });
+  it('family and location sharing link to the Life360 comparison', () => {
+    for (const Page of [Page7, Page6]) {
+      const { unmount } = render(<Page />);
+      expect(document.querySelector('a[href="/docs/comparisons/vs-life360"], a[href="/docs/comparisons/vs-life360/"]')).not.toBeNull();
+      unmount();
+    }
+  });
   it('tax-residency renders its heading from locale content', () => {
     render(<Page8 />);
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(content8.taxResidencyPage.text);

@@ -60,7 +60,7 @@
     }
   ],
   "meta": {
-    "title": "Viatges i diari de viatge",
+    "title": "App de seguiment i diari de viatges",
     "description": "Documenta els viatges amb mapes interactius, estadístiques, un diari amb text enriquit i integració de fotos.",
     "ogTitle": "Viatges de Dawarich — Documenta les teves aventures",
     "ogDescription": "Crea diaris de viatge complets amb mapes interactius, estadístiques detallades, descripcions amb format i integració automàtica de fotos."
@@ -93,5 +93,56 @@
     "Link": "Prova’l gratis durant 7 dies",
     "EnOnlyLink": "Allotja’l gratis",
     "p2": "Prova gratuïta de 7 dies · Reemborsament sense risc durant 14 dies · Cancel·la quan vulguis"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Un registre de viatges que s’omple sol",
+        "body": [
+          "Amb l’app Dawarich al telèfon, els teus moviments es registren mentre et desplaces. Per crear un viatge només cal donar-li un nom i unes dates; Dawarich recull tots els punts d’aquell interval i dibuixa la ruta.",
+          "Els viatges antics funcionen igual: importa fitxers de Google Timeline, Polarsteps o GPX i converteix qualsevol interval de dates passat en un viatge."
+        ]
+      },
+      {
+        "heading": "Tot sobre un viatge en una sola pàgina",
+        "body": [
+          "Cada viatge mostra les dates, un mapa de la ruta, els països per on has passat amb la distància recorreguda a cadascun, les teves notes i les fotos d’una biblioteca d’Immich o PhotoPrism connectada."
+        ]
+      },
+      {
+        "heading": "Retroba qualsevol viatge",
+        "body": [
+          "La cerca troba coincidències en els noms dels viatges, les descripcions, les notes i els països visitats. Ordena per data, nom o distància més llarga, i filtra per any, mes o país. Els filtres es mantenen a l’adreça de la pàgina, de manera que pots desar als preferits una llista com ara tots els viatges a Portugal."
+        ]
+      },
+      {
+        "heading": "Un diari, més enllà d’un mapa",
+        "body": [
+          "Les notes admeten format, de manera que un viatge pot recollir què va passar cada dia, a més d’on eres. Si canvies les dates d’un viatge, la ruta del mapa s’actualitza mentre l’edites, i eliminar un viatge no elimina mai el teu historial d’ubicacions."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "He d’iniciar un viatge abans de sortir?",
+        "a": "No. Els viatges es creen a partir de l’historial d’ubicacions que ja tens, de manera que en pots crear un després amb qualsevol interval de dates."
+      },
+      {
+        "q": "Quines aplicacions poden registrar els meus viatges?",
+        "a": "Les aplicacions Dawarich per a iOS i Android, o OwnTracks, Overland, GPSLogger i altres aplicacions de seguiment compatibles."
+      },
+      {
+        "q": "Puc importar viatges de Polarsteps o de Google Timeline?",
+        "a": "Sí. Importa l’exportació de Polarsteps o de Google Timeline i després crea viatges per a les dates que vulguis."
+      },
+      {
+        "q": "Puc afegir fotos a un viatge?",
+        "a": "Sí, si connectes Immich o PhotoPrism. Les fotos fetes durant el viatge apareixen automàticament a la seva pàgina."
+      },
+      {
+        "q": "Puc compartir un viatge?",
+        "a": "Sí. Pots compartir un viatge amb un enllaç privat que pots revocar quan vulguis."
+      }
+    ]
   }
 }

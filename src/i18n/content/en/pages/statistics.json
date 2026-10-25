@@ -66,7 +66,7 @@
     }
   ],
   "meta": {
-    "title": "Location Statistics & Insights",
+    "title": "Countries Visited Map & Travel Statistics",
     "description": "See your life in numbers with comprehensive location statistics. Track countries, cities, distances, and get monthly & yearly email digests.",
     "ogTitle": "Dawarich Stats — See Your Life in Numbers",
     "ogDescription": "Comprehensive location statistics including countries visited, total distance, time tracking, and automatic monthly & yearly email digests."
@@ -106,5 +106,57 @@
     "Link": "Try 7 Days for Free",
     "EnOnlyLink": "Self-Host for Free",
     "p6": "7-day free trial · 14-day risk-free refund · Cancel anytime"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Your countries visited map, built for you",
+        "body": [
+          "You do not tick countries off a list. Dawarich reads your location history and counts the countries and cities you were in, for your whole history, for each year and for each month.",
+          "Click a countries or cities count to see the full list of places, each with a link to that part of the map. Import years of Google Timeline data and your map of visited countries fills in at once."
+        ]
+      },
+      {
+        "heading": "Years, months and single days",
+        "body": [
+          "The All Time view shows one card per year, with its distance, a map of its routes, its months and its countries and cities. Pick a year to see distance month by month and a calendar where every day is coloured by the country you were in.",
+          "A country timeline shows how many days you spent in each country that year, and a distance race compares this year with the last one. Calendar country colours and the country timeline are part of Pro and self-hosted Dawarich."
+        ]
+      },
+      {
+        "heading": "Where the countries come from",
+        "body": [
+          "Countries and cities come from reverse geocoding: turning coordinates into place names. Dawarich Cloud does this for you. A self-hosted instance needs a geocoding service configured; until then, distances and active days still work but countries stay empty."
+        ]
+      },
+      {
+        "heading": "Share a month",
+        "body": [
+          "Any month can be shared through a public link that expires after an hour, a day, a week or a month. People you send it to see that month's statistics without an account, and nothing else. On Dawarich Cloud, sharing statistics is part of the Pro plan."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How does Dawarich know which countries I visited?",
+        "a": "From the points in your location history. Each point is matched to a country and city by reverse geocoding, and each place is counted once per period."
+      },
+      {
+        "q": "Can I add the trips I took before using Dawarich?",
+        "a": "Yes. Import your Google Timeline, Google Photos location data, GPX, FIT and other files, and those years appear in your statistics and on your map of visited countries."
+      },
+      {
+        "q": "Can I count how many days I spent in each country?",
+        "a": "Yes. The yearly country timeline shows days per country, and the [Tax Residency Day Counter](/tax-residency/) adds stay periods and a 183-day flag."
+      },
+      {
+        "q": "How often are the statistics updated?",
+        "a": "In the background after new points or imports arrive, and every hour. You can also recalculate them with Update stats on the Insights page."
+      },
+      {
+        "q": "Who can see my statistics?",
+        "a": "Only you, unless you share a month with a public link. Dawarich does not sell or share your location data."
+      }
+    ]
   }
 }

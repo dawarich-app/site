@@ -177,7 +177,7 @@
   ],
   "meta": {
     "title": "位置记录设置",
-    "description": "使用 Dawarich iOS 和 Android 应用，或 Overland、OwnTracks、GPSLogger、PhoneTrack、Home Assistant 自动记录您的位置。",
+    "description": "使用多种受支持的应用自动记录位置，包括 Dawarich 官方 iOS 和 Android 应用、Overland、OwnTracks、GPSLogger、PhoneTrack 和 Home Assistant。",
     "ogTitle": "Dawarich 位置记录 — 支持多种应用",
     "ogDescription": "使用 Dawarich 官方 iOS 或 Android 应用、Overland、OwnTracks、GPSLogger、PhoneTrack 或 Home Assistant 集成，设置自动位置记录。"
   },

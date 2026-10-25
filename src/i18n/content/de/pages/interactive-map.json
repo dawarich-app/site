@@ -100,7 +100,7 @@
     }
   ],
   "meta": {
-    "title": "Interaktive Kartendarstellung",
+    "title": "Standortverlauf-Karte — sieh, wo du überall warst",
     "description": "Erkunde deinen Standortverlauf auf einer interaktiven Karte mit Ebenen für Punkte, Routen, Heatmap, Nebel des Krieges und mehr.",
     "ogTitle": "Dawarich-Karte – interaktive Standortdarstellung",
     "ogDescription": "Erkunde deinen Standortverlauf mit verschiedenen Ebenen: Punkte, Routen, Heatmap, Nebel des Krieges, Rubbelkarte und Foto-Integration."
@@ -126,5 +126,51 @@
     "Link": "7 Tage kostenlos testen",
     "EnOnlyLink": "Kostenlos selbst hosten",
     "p3": "7 Tage kostenlos testen · 14 Tage Geld-zurück-Garantie · Jederzeit kündbar"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Dein gesamter Standortverlauf auf einer Karte",
+        "body": [
+          "Wähle einen beliebigen Zeitraum, von einem einzelnen Tag bis zu allem, was du aufgezeichnet hast, und die Karte zeigt ihn dir. Importierte Daten aus Google Timeline stehen neben dem, was dein Smartphone heute aufzeichnet. So ergeben Jahre deines Verlaufs eine zusammenhängende Geschichte."
+        ]
+      },
+      {
+        "heading": "Ebenen für unterschiedliche Fragen",
+        "body": [
+          "Punkte zeigen jede aufgezeichnete Position, Routen verbinden sie, die Heatmap zeigt, wo du deine Zeit verbringst, und der Nebel des Krieges legt die Orte frei, an denen du warst. Fotos aus Immich oder PhotoPrism erscheinen an ihren Aufnahmeorten. Schalte die Ebenen je nach Bedarf ein und aus."
+        ]
+      },
+      {
+        "heading": "Einen Tag wiedergeben, einen Ort finden",
+        "body": [
+          "Replay spielt die Punkte der ausgewählten Tage auf der Karte ab. Die Suche findet Orte und Aufenthalte in deinem gesamten Verlauf, und der Zeitleistenbereich listet deine Tage und die Orte auf, an denen du angehalten hast."
+        ]
+      },
+      {
+        "heading": "Für viele Jahre Standortverlauf gemacht",
+        "body": [
+          "Die Karte wird mit WebGL dargestellt, bietet einen 3D-Globus und mehrere Kartenstile und lädt nur den Teil deines Verlaufs, den du gerade ansiehst. So lassen sich auch Daten aus einem ganzen Jahrzehnt leicht erkunden."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Kann ich meinen alten Google-Timeline-Verlauf auf dieser Karte sehen?",
+        "a": "Ja. Importiere deinen Export aus Google Timeline oder Takeout, und diese Jahre erscheinen zusammen mit neuen Daten auf der Karte."
+      },
+      {
+        "q": "Was zeigt ein Punkt?",
+        "a": "Zeit und Koordinaten sowie Höhe, Geschwindigkeit und Akkustand, sofern diese aufgezeichnet wurden."
+      },
+      {
+        "q": "Wie weit reicht die Karte zurück?",
+        "a": "So weit wie deine Daten. Wähle einen beliebigen Zeitraum, auch deinen gesamten Verlauf."
+      },
+      {
+        "q": "Ist meine Karte privat?",
+        "a": "Ja. Nur du kannst sie sehen, solange du keinen Freigabelink erstellst. Dawarich verkauft keine Standortdaten."
+      }
+    ]
   }
 }

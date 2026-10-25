@@ -112,7 +112,7 @@
     }
   ],
   "meta": {
-    "title": "Importa i exporta dades",
+    "title": "Importa Google Takeout i més: històric d’ubicació",
     "description": "Les dades són teves. Importa de Google Takeout, GPX, CSV i KML. Exporta a GPX, CSV o tot el compte. Sense quedar lligat al proveïdor.",
     "ogTitle": "Importació i exportació de Dawarich — Les dades sota el teu control",
     "ogDescription": "Importa de Google Maps, Apple Health, GPX, GeoJSON i KML. Exporta a qualsevol format. Portabilitat total de les dades sense quedar lligat al proveïdor."
@@ -154,5 +154,51 @@
     "Link": "Prova’l gratis durant 7 dies",
     "EnOnlyLink": "Allotja’l gratis",
     "p9": "Prova gratuïta de 7 dies · Reemborsament sense risc durant 14 dies · Cancel·la quan vulguis"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Importa el teu Google Timeline",
+        "body": [
+          "Dawarich llegeix totes les versions de l’exportació d’ubicacions de Google: el fitxer Timeline.json de l’app Google Maps, i Records.json i Semantic Location History de Google Takeout. Puja el fitxer tal com és; el format es detecta automàticament.",
+          "També pots importar les metadades de Google Photos d’una exportació de Takeout, de manera que els llocs on vas fer les fotos poden omplir buits de l’historial."
+        ]
+      },
+      {
+        "heading": "Porta dades d’altres aplicacions",
+        "body": [
+          "Trajectes i punts de pas GPX, fitxers FIT de Garmin, Strava i la majoria de rellotges esportius, TCX, KML i KMZ, fitxers CSV amb columnes de latitud, longitud i hora, GeoJSON, fitxers .rec d’OwnTracks Recorder i locations.json de Polarsteps. També pots importar un ZIP de qualsevol d’aquests fitxers.",
+          "Els punts duplicats s’ometen, de manera que importar exportacions que se superposen no duplica l’historial."
+        ]
+      },
+      {
+        "heading": "Emporta-t’ho tot",
+        "body": [
+          "Exporta els teus punts en GPX o GeoJSON, o descarrega una exportació completa del compte amb els punts, les visites, els viatges, les estadístiques i la configuració. Les teves dades no queden mai lligades a la plataforma, ni a Cloud ni si l’allotges tu."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Quins fitxers de Google Timeline puc importar?",
+        "a": "Timeline.json exportat des de l’app Google Maps, i Records.json o Semantic Location History de Google Takeout."
+      },
+      {
+        "q": "El meu Takeout no té historial d’ubicacions. Què faig?",
+        "a": "Ara Google desa Timeline al teu telèfon. Exporta’l des de l’app Google Maps; consulta [com exportar Google Timeline](/docs/getting-started/import-sources)."
+      },
+      {
+        "q": "Importar el mateix fitxer dues vegades crearà duplicats?",
+        "a": "No. Els punts que ja existeixen s’ometen."
+      },
+      {
+        "q": "Puc importar fitxers comprimits?",
+        "a": "Els arxius ZIP es poden importar. Els fitxers comprimits amb gzip (.gz) s’han de descomprimir primer."
+      },
+      {
+        "q": "Puc deixar Dawarich i emportar-me les dades?",
+        "a": "Sí. Exporta l’historial quan vulguis; si l’allotges tu, també es desa tot a la teva pròpia base de dades."
+      }
+    ]
   }
 }

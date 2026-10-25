@@ -60,7 +60,7 @@
     }
   ],
   "meta": {
-    "title": "Reisen & Reisetagebuch",
+    "title": "Reise-Tracker & Reisetagebuch-App",
     "description": "Dokumentiere deine Reisen mit interaktiven Karten, Statistiken, einem Reisetagebuch mit formatiertem Text und Foto-Integration.",
     "ogTitle": "Dawarich-Reisen – halte deine Reiseabenteuer fest",
     "ogDescription": "Erstelle umfassende Reisetagebücher mit interaktiven Karten, detaillierten Statistiken, formatierten Beschreibungen und automatischer Foto-Integration."
@@ -93,5 +93,56 @@
     "Link": "7 Tage kostenlos testen",
     "EnOnlyLink": "Kostenlos selbst hosten",
     "p2": "7 Tage kostenlos testen · 14 Tage Geld-zurück-Garantie · Jederzeit kündbar"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Ein Reise-Tracker, der sich von selbst füllt",
+        "body": [
+          "Mit der Dawarich-App auf deinem Smartphone werden deine Bewegungen unterwegs aufgezeichnet. Um eine Reise zu erstellen, gibst du ihr nur einen Namen und einen Zeitraum. Dawarich übernimmt jeden Punkt aus diesem Zeitraum und zeichnet die Route.",
+          "Bei älteren Reisen funktioniert es genauso: Importiere Dateien aus Google Timeline, Polarsteps oder GPX-Dateien und mache aus jedem vergangenen Zeitraum eine Reise."
+        ]
+      },
+      {
+        "heading": "Alles zu einer Reise auf einer Seite",
+        "body": [
+          "Jede Reise zeigt ihren Zeitraum, eine Karte der Route, die durchquerten Länder mit der jeweils zurückgelegten Strecke, deine Notizen und Fotos aus einer verbundenen Immich- oder PhotoPrism-Bibliothek."
+        ]
+      },
+      {
+        "heading": "Finde jede Reise wieder",
+        "body": [
+          "Die Suche durchsucht Reisenamen, Beschreibungen, Notizen und die besuchten Länder. Sortiere nach Datum, Name oder längster Strecke und filtere nach Jahr, Monat oder Land. Die Filter bleiben in der Seitenadresse erhalten. So kannst du eine Liste wie alle Reisen nach Portugal als Lesezeichen speichern."
+        ]
+      },
+      {
+        "heading": "Ein Tagebuch, nicht nur eine Karte",
+        "body": [
+          "Notizen unterstützen Formatierungen. So kannst du zu einer Reise festhalten, was jeden Tag passiert ist, und nicht nur, wo du warst. Wenn du den Reisezeitraum änderst, wird die Route auf der Karte schon während der Bearbeitung aktualisiert. Wenn du eine Reise löschst, wird dein Standortverlauf niemals gelöscht."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Muss ich eine Reise vor der Abfahrt starten?",
+        "a": "Nein. Reisen entstehen aus deinem vorhandenen Standortverlauf. Du kannst sie also nachträglich für jeden beliebigen Zeitraum erstellen."
+      },
+      {
+        "q": "Welche Apps können meine Reisen aufzeichnen?",
+        "a": "Die Dawarich-Apps für iOS und Android oder OwnTracks, Overland, GPSLogger und andere unterstützte Tracking-Apps."
+      },
+      {
+        "q": "Kann ich Reisen aus Polarsteps oder Google Timeline importieren?",
+        "a": "Ja. Importiere den Export aus Polarsteps oder Google Timeline und erstelle dann Reisen für die gewünschten Zeiträume."
+      },
+      {
+        "q": "Kann ich Fotos zu einer Reise hinzufügen?",
+        "a": "Ja, wenn du Immich oder PhotoPrism verbindest. Während der Reise aufgenommene Fotos erscheinen automatisch auf ihrer Seite."
+      },
+      {
+        "q": "Kann ich eine Reise teilen?",
+        "a": "Ja. Eine Reise lässt sich über einen privaten Link teilen, den du jederzeit widerrufen kannst."
+      }
+    ]
   }
 }

@@ -18,7 +18,7 @@
   "objections": [
     {
       "q": "Est-ce simplement Life360 sous un autre nom ?",
-      "a": "Non. Pour les membres invités, le partage est désactivé au départ et chacun contrôle son propre réglage. Le titulaire de l’offre Cloud commence avec le partage activé, mais peut le désactiver. Le partage en direct peut s’arrêter à l’aide d’un minuteur, l’historique fait l’objet d’un choix distinct et une demande de localisation peut être refusée."
+      "a": "Non. Pour les membres invités, le partage est désactivé au départ et chacun contrôle son propre réglage. Le titulaire de l’offre Cloud commence avec le partage activé, mais peut le désactiver. Le partage en direct peut expirer après un délai choisi, l’historique fait l’objet d’un choix distinct et une demande de localisation peut être refusée. [Voir le comparatif complet avec Life360](/docs/comparisons/vs-life360)."
     },
     {
       "q": "Mon adolescent peut-il voir que je le suis ?",
@@ -42,8 +42,8 @@
     }
   ],
   "meta": {
-    "title": "Appli de partage familial pour iPhone et Android",
-    "description": "Partagez vos positions en famille via Dawarich iOS/Android. 5 personnes max., chacune gère son partage. {price}/an ou auto-hébergement gratuit.",
+    "title": "Appli de partage de position en famille, iPhone et Android",
+    "description": "Partage familial Dawarich iOS/Android : 5 invités max. Chacun gère partage en direct, historique et demandes de position. {price}/an ou auto-hébergement offert.",
     "ogTitle": "Le partage de localisation en famille, sans surveillance",
     "ogDescription": "Cinq personnes, cinq réglages indépendants. Partage en direct avec minuteur, historique à choisir séparément et demandes de localisation à accepter."
   },

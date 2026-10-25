@@ -66,7 +66,7 @@
     }
   ],
   "meta": {
-    "title": "Standortstatistiken & Einblicke",
+    "title": "Besuchte Länder auf der Karte & Reisestatistiken",
     "description": "Dein Leben in Zahlen: umfassende Standortstatistiken zu Ländern, Städten und Entfernungen sowie monatliche und jährliche E-Mail-Zusammenfassungen.",
     "ogTitle": "Dawarich-Statistiken – dein Leben in Zahlen",
     "ogDescription": "Umfassende Standortstatistiken mit besuchten Ländern, Gesamtstrecke, Zeiterfassung sowie automatischen monatlichen und jährlichen E-Mail-Zusammenfassungen."
@@ -106,5 +106,57 @@
     "Link": "7 Tage kostenlos testen",
     "EnOnlyLink": "Kostenlos selbst hosten",
     "p6": "7 Tage kostenlos testen · 14 Tage Geld-zurück-Garantie · Jederzeit kündbar"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Deine Karte besuchter Länder, für dich erstellt",
+        "body": [
+          "Du musst Länder nicht auf einer Liste abhaken. Dawarich liest deinen Standortverlauf und zählt die Länder und Städte, in denen du warst – für deinen gesamten Verlauf, für jedes Jahr und für jeden Monat.",
+          "Klicke auf die Anzahl der Länder oder Städte, um die vollständige Ortsliste zu sehen, jeweils mit einem Link zum entsprechenden Kartenausschnitt. Importiere Google-Timeline-Daten aus mehreren Jahren, und deine Karte besuchter Länder füllt sich sofort."
+        ]
+      },
+      {
+        "heading": "Jahre, Monate und einzelne Tage",
+        "body": [
+          "Die Ansicht All Time zeigt eine Kachel pro Jahr – mit der Strecke, einer Karte der Routen, den Monaten sowie den Ländern und Städten dieses Jahres. Wähle ein Jahr, um die Strecke für jeden Monat und einen Kalender zu sehen, in dem jeder Tag die Farbe des Landes trägt, in dem du warst.",
+          "Eine Länder-Zeitleiste zeigt, wie viele Tage du in diesem Jahr in jedem Land verbracht hast. Ein Streckenrennen vergleicht dieses Jahr mit dem Vorjahr. Länderfarben im Kalender und die Länder-Zeitleiste gehören zu Pro und selbst gehostetem Dawarich."
+        ]
+      },
+      {
+        "heading": "Woher die Länderangaben kommen",
+        "body": [
+          "Länder und Städte werden durch umgekehrte Geokodierung ermittelt: Koordinaten werden in Ortsnamen umgewandelt. Dawarich Cloud erledigt das für dich. Bei einer selbst gehosteten Instanz muss ein Geokodierungsdienst eingerichtet sein. Bis dahin funktionieren Strecken und aktive Tage weiterhin, aber die Länder bleiben leer."
+        ]
+      },
+      {
+        "heading": "Teile einen Monat",
+        "body": [
+          "Jeder Monat lässt sich über einen öffentlichen Link teilen, der nach einer Stunde, einem Tag, einer Woche oder einem Monat abläuft. Die Empfänger sehen ohne Konto nur die Statistiken dieses Monats und sonst nichts. In Dawarich Cloud gehört das Teilen von Statistiken zum Pro-Tarif."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Woher weiß Dawarich, welche Länder ich besucht habe?",
+        "a": "Aus den Punkten in deinem Standortverlauf. Jeder Punkt wird durch umgekehrte Geokodierung einem Land und einer Stadt zugeordnet. Jeder Ort wird pro Zeitraum einmal gezählt."
+      },
+      {
+        "q": "Kann ich Reisen ergänzen, die ich vor Dawarich unternommen habe?",
+        "a": "Ja. Importiere deinen Verlauf aus Google Timeline, Standortdaten aus Google Photos, GPX, FIT und andere Dateien. Diese Jahre erscheinen dann in deinen Statistiken und auf deiner Karte besuchter Länder."
+      },
+      {
+        "q": "Kann ich zählen, wie viele Tage ich in jedem Land verbracht habe?",
+        "a": "Ja. Die jährliche Länder-Zeitleiste zeigt die Tage pro Land. Der [Tageszähler für steuerliche Ansässigkeit](/tax-residency/) ergänzt Aufenthaltszeiträume und eine Markierung für 183 Tage."
+      },
+      {
+        "q": "Wie oft werden die Statistiken aktualisiert?",
+        "a": "Im Hintergrund, nachdem neue Punkte oder Importe eingegangen sind, und jede Stunde. Du kannst sie auch mit Update stats auf der Seite Einblicke neu berechnen."
+      },
+      {
+        "q": "Wer kann meine Statistiken sehen?",
+        "a": "Nur du, solange du keinen Monat über einen öffentlichen Link teilst. Dawarich verkauft deine Standortdaten nicht und gibt sie nicht weiter."
+      }
+    ]
   }
 }

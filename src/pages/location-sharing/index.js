@@ -31,28 +31,7 @@ const rows = [
   },
 ];
 
-const objections = [
-  {
-    q: content.objections[0].q,
-    a: content.objections[0].a,
-  },
-  {
-    q: content.objections[1].q,
-    a: content.objections[1].a,
-  },
-  {
-    q: content.objections[2].q,
-    a: content.objections[2].a,
-  },
-  {
-    q: content.objections[3].q,
-    a: content.objections[3].a,
-  },
-  {
-    q: content.objections[4].q,
-    a: content.objections[4].a,
-  },
-];
+const objections = content.objections;
 
 export default function LocationSharingPage() {
   const pageUrl = useLocalizedUrl('/location-sharing/');

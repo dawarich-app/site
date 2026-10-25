@@ -18,7 +18,7 @@
   "objections": [
     {
       "q": "É só o Life360 com outra marca?",
-      "a": "Não. Os membros convidados começam com o compartilhamento desativado, e cada membro controla o seu. O titular do plano Cloud começa com o compartilhamento ativado, mas pode desativá-lo. O compartilhamento em tempo real pode expirar após um prazo, o histórico é uma escolha separada e as solicitações de localização podem ser recusadas."
+      "a": "Não. Os membros convidados começam com o compartilhamento desativado, e cada pessoa controla seu próprio botão. O titular do plano Cloud começa com o compartilhamento ativado, mas pode desativá-lo. O compartilhamento em tempo real pode expirar após um prazo, o histórico é uma escolha separada e uma solicitação de localização pode ser recusada. [Veja a comparação completa com o Life360](/docs/comparisons/vs-life360)."
     },
     {
       "q": "Meu filho adolescente consegue ver que estou rastreando ele?",
@@ -42,8 +42,8 @@
     }
   ],
   "meta": {
-    "title": "App: compartilhe local em família, iPhone/Android",
-    "description": "Compartilhe localizações em família nos apps Dawarich iOS e Android. Até cinco pessoas, cada uma controla o que compartilha. {price}/ano ou hospede grátis.",
+    "title": "App para compartilhar localização em família: iPhone/Android",
+    "description": "Apps Dawarich iOS/Android: convide até cinco. Cada um controla compartilhamento ao vivo, histórico e pedidos de localização. {price}/ano ou hospede grátis",
     "ogTitle": "Compartilhamento de localização em família sem vigilância",
     "ogDescription": "Cinco pessoas, cinco controles independentes. Compartilhamento em tempo real com prazo, histórico como escolha separada e solicitações de localização que precisam ser aceitas."
   },
