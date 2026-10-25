@@ -45,6 +45,35 @@
     "li4": "Un code source ouvert. Le développement se fait publiquement sur GitHub, avec ses bugs aussi.",
     "heading4": "Qui sommes-nous ?",
     "alt": "Portrait de {name}",
-    "company": "Dawarich est développé par ZeitFlow UG (haftungsbeschränkt), une petite entreprise enregistrée à Berlin, en Allemagne. Vous trouverez les informations juridiques dans les [mentions légales](/impressum). Envie de nous dire bonjour ? [Contactez-nous](/contact). Nous lisons chaque message."
+    "company": "Dawarich est développé par ZeitFlow UG (haftungsbeschränkt), une petite entreprise enregistrée à Berlin, en Allemagne. Vous trouverez les informations juridiques dans les [mentions légales](/impressum). Envie de nous dire bonjour ? [Contactez-nous](/contact). Nous lisons chaque message.",
+    "glanceHeading": "Dawarich en bref",
+    "facts": [
+      {
+        "label": "Débuts",
+        "value": "Mars 2024, comme projet de week-end"
+      },
+      {
+        "label": "Basé à",
+        "value": "Berlin, Allemagne"
+      },
+      {
+        "label": "Créé par",
+        "value": "ZeitFlow UG (haftungsbeschränkt)"
+      },
+      {
+        "label": "Disponible sous forme de",
+        "value": "Logiciel auto-hébergé gratuit et Dawarich Cloud depuis juillet 2025"
+      },
+      {
+        "label": "Applications",
+        "value": "iOS et Android"
+      },
+      {
+        "label": "Code source",
+        "value": "Code source ouvert sur [GitHub](https://github.com/Freika/dawarich)"
+      }
+    ],
+    "pressHeading": "Dans la presse",
+    "pressKit": "Vous écrivez sur Dawarich ? Les logos, captures d’écran et photos des fondateurs se trouvent dans le [dossier de presse](/press-kit/)."
   }
 }

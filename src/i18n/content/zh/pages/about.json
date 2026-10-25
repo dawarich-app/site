@@ -45,6 +45,35 @@
     "li4": "开源。开发过程在 GitHub 上公开进行，包括其中的缺陷。",
     "heading4": "我们是谁",
     "alt": "{name}的肖像",
-    "company": "Dawarich 由 ZeitFlow UG (haftungsbeschränkt) 开发，这是一家在德国柏林注册的小公司。法律信息请参阅[法律声明](/impressum)。想和我们打个招呼？[联系我们](/contact)。每一条消息我们都会阅读。"
+    "company": "Dawarich 由 ZeitFlow UG (haftungsbeschränkt) 开发，这是一家在德国柏林注册的小公司。法律信息请参阅[法律声明](/impressum)。想和我们打个招呼？[联系我们](/contact)。每一条消息我们都会阅读。",
+    "glanceHeading": "Dawarich 概览",
+    "facts": [
+      {
+        "label": "起始时间",
+        "value": "2024 年 3 月，最初是一个周末项目"
+      },
+      {
+        "label": "所在地",
+        "value": "德国柏林"
+      },
+      {
+        "label": "开发方",
+        "value": "ZeitFlow UG (haftungsbeschränkt)"
+      },
+      {
+        "label": "提供形式",
+        "value": "免费自托管软件，以及自 2025 年 7 月起提供的 Dawarich Cloud"
+      },
+      {
+        "label": "应用",
+        "value": "iOS 和 Android"
+      },
+      {
+        "label": "源代码",
+        "value": "在 [GitHub](https://github.com/Freika/dawarich) 上开源"
+      }
+    ],
+    "pressHeading": "媒体报道",
+    "pressKit": "您正在撰写有关 Dawarich 的文章？标志、截图和创始人照片均可在[媒体资料包](/press-kit/)中找到。"
   }
 }

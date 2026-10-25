@@ -45,6 +45,35 @@
     "li4": "Codi obert. El desenvolupament es fa en públic, a GitHub, amb errors i tot.",
     "heading4": "Qui som",
     "alt": "Retrat de {name}",
-    "company": "Dawarich és un producte de ZeitFlow UG (haftungsbeschränkt), una petita empresa registrada a Berlín, Alemanya. Trobaràs les dades legals a l’ [avís legal](/impressum). Ens vols saludar? [Contacta amb nosaltres](/contact). Llegim tots els missatges."
+    "company": "Dawarich és un producte de ZeitFlow UG (haftungsbeschränkt), una petita empresa registrada a Berlín, Alemanya. Trobaràs les dades legals a l’ [avís legal](/impressum). Ens vols saludar? [Contacta amb nosaltres](/contact). Llegim tots els missatges.",
+    "glanceHeading": "Dawarich d’un cop d’ull",
+    "facts": [
+      {
+        "label": "Inici",
+        "value": "març de 2024, com a projecte de cap de setmana"
+      },
+      {
+        "label": "Amb seu a",
+        "value": "Berlín, Alemanya"
+      },
+      {
+        "label": "Creat per",
+        "value": "ZeitFlow UG (haftungsbeschränkt)"
+      },
+      {
+        "label": "Disponible com a",
+        "value": "Programari gratuït per allotjar al teu servidor, i Dawarich Cloud des del juliol de 2025"
+      },
+      {
+        "label": "Aplicacions",
+        "value": "iOS i Android"
+      },
+      {
+        "label": "Codi font",
+        "value": "Codi obert a [GitHub](https://github.com/Freika/dawarich)"
+      }
+    ],
+    "pressHeading": "A la premsa",
+    "pressKit": "Escrius sobre Dawarich? Trobaràs logotips, captures de pantalla i fotos dels fundadors al [dossier de premsa](/press-kit/)."
   }
 }
