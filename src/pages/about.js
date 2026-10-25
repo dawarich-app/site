@@ -7,6 +7,13 @@ import Head from "@docusaurus/Head";
 import Layout from "@theme/Layout";
 import styles from "./about.module.css";
 
+const PRESS = [
+  { outlet: 'heise online', title: 'Dawarich: Open-Source-Alternative zum Google Standortverlauf', href: 'https://www.heise.de/ratgeber/Dawarich-Open-Source-Alternative-zum-Google-Standortverlauf-11453464.html' },
+  { outlet: 'c’t / heise online', title: 'Raspi: Privaten Standortverlauf mit Dawarich lokal aufzeichnen', href: 'https://www.heise.de/ratgeber/Raspi-Privaten-Standortverlauf-mit-Dawarich-lokal-aufzeichnen-10235624.html' },
+  { outlet: 'XDA Developers', href: 'https://www.xda-developers.com/import-google-timeline-dawarich/' },
+  { outlet: 'MakeUseOf', href: 'https://www.makeuseof.com/i-use-free-open-source-app-track-everywhere-ive-been-without-google/' },
+];
+
 const FOUNDERS = [
   {
     name: content.founders[0].name,
@@ -112,6 +119,29 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+        </section>
+        <section className={styles.glance}>
+          <h2>{content.aboutPage.glanceHeading}</h2>
+          <dl className={styles.facts}>
+            {content.aboutPage.facts.map((fact) => (
+              <div key={fact.label}>
+                <dt>{fact.label}</dt>
+                <dd><RichText text={fact.value} /></dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+        <section className={styles.press}>
+          <h2>{content.aboutPage.pressHeading}</h2>
+          <ul>
+            {PRESS.map((item) => (
+              <li key={item.href}>
+                <SmartLink href={item.href}>{item.title || item.outlet}</SmartLink>
+                {item.title && <span className={styles.pressOutlet}> · {item.outlet}</span>}
+              </li>
+            ))}
+          </ul>
+          <p><RichText text={content.aboutPage.pressKit} /></p>
         </section>
         <section className={styles.company}>
           <p><RichText text={content.aboutPage.company} /></p>
