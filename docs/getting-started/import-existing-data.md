@@ -1,12 +1,12 @@
 ---
 sidebar_position: 3
 title: Import Existing Data
-description: Import location history from Google Takeout, OwnTracks, GPX files, and other sources into Dawarich.
+description: Import location history from Google Takeout, OwnTracks, GPX files, Foursquare Swarm, and other sources into Dawarich.
 ---
 
 # Import existing data
 
-Dawarich supports importing data from various sources. You can import data from Google Takeout, OwnTracks, GPX routes, and Dawarich.
+Dawarich supports importing data from various sources. You can import data from Google Takeout, OwnTracks, GPX routes, Foursquare Swarm, and Dawarich.
 
 :::note
 
@@ -112,6 +112,42 @@ Waypoints are matched on re-import by name and position, so importing an updated
 A GPX file that contains only waypoints imports 0 points, which is expected — look for the results under Places rather than on your timeline.
 
 :::
+
+### Foursquare Swarm
+
+Dawarich imports your check-in history from a Foursquare data export. The export covers both Swarm and the old Foursquare City Guide app.
+
+#### Request the export
+
+You need to be able to log in to your Foursquare account. If you can't, reset your password through Foursquare's support center first.
+
+In the Swarm app:
+
+1. Open your profile in the upper left corner.
+2. Tap the gear icon, then **Privacy Settings**.
+3. Scroll down and tap **Initiate Data Download Request**.
+
+On the web:
+
+1. Log in at [foursquare.com](https://foursquare.com) with your Swarm credentials.
+2. Click your name in the upper right corner and open **Settings**.
+3. Click **Privacy Settings**, then **Initiate Data Download Request**.
+
+You'll get an email from `noreply@legal.foursquare.com` confirming the request. When the export is ready, a second email arrives with a download link. Foursquare says this takes up to 7 days. The download is a ZIP archive.
+
+#### Import it
+
+Upload the ZIP archive as it is on the Imports → New Import page; you don't need to unpack it. Dawarich finds the `checkins1.json`, `checkins2.json`, … files inside and creates one import per file. Everything else in the archive (tips, ratings, photos, account details) is skipped. You can also upload the `checkins*.json` files on their own.
+
+What you get:
+
+- **Points.** Every check-in becomes a location point at the spot where you checked in.
+- **Visits and places.** Every check-in at a venue becomes a [visit](/docs/features/visits-and-places) at a place named after that venue. Check-ins at the same venue share one place.
+- **Visit length.** The export only records when you checked in, not when you left. Dawarich ends each visit at your next check-in, and after at most two hours.
+
+Check-ins without a venue (a text-only check-in) become points but not visits. Photos and the passive visits Swarm recorded in the background are not imported.
+
+Importing the same export twice doesn't create duplicates.
 
 ### Immich
 
