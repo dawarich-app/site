@@ -42,7 +42,7 @@ A few rules to know:
 
 ## Unlocking cards
 
-New imports and newly tracked points are checked in the background. When they unlock something, a card deck appears with the cards you just earned (**New discovery**, **Card unlocked**). Step through it with **Next card**, or dismiss the whole deck. You also get a notification for each newly explored region or completed set.
+New imports and newly tracked points are checked in the background. When they unlock something, a card deck appears with the cards you just earned (**New discovery**, **Card unlocked**). Step through it with **Next card**, or dismiss the whole deck. You also get notifications for newly explored regions and completed sets; when an import unlocks many regions at once, they are grouped into a single notification.
 
 When achievements are first enabled on an account, or recalculated after an update, existing history is checked without sending notifications for places you explored long ago.
 

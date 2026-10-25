@@ -64,4 +64,4 @@ Two environment variables limit how much space saved videos take. Set either to 
 | `VIDEO_RETENTION_DAYS` | `30` | Removes video files older than this many days. |
 | `VIDEO_MAX_PER_USER` | `10` | Keeps at most this many video files per user; the oldest are removed first. |
 
-Removed files are cleaned up by a nightly job. As a rough guide, a 15-second vertical video is about 17 MB.
+The age limit is applied by a nightly job. The per-user limit is applied both nightly and when a save takes a user over it. As a rough guide, a 15-second vertical video is about 17 MB.

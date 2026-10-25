@@ -16,7 +16,7 @@ Sharing links are for people outside your Dawarich instance. To share your locat
 |------|--------------------------|----------------------|
 | **Live location** | Map v2 → **Share** → **Live location** | Your current position, updating in real time. Optionally the route travelled since the link was created. |
 | **Time period** | Map v2 → **Share** → **Time period** | Your route between a start and an end date. Photos are optional. |
-| **Trip** | A trip's page → **Share** | The trip, with the sections you pick: route map, stats and countries, day-by-day breakdown, per-day notes, description and photos. |
+| **Trip** | A trip's page → **Share** | The trip, with the sections you pick: route map, stats and countries, day-by-day breakdown, per-day notes, description and photos. A trip can also be shared with your family only; see [Sharing a trip](/docs/features/trips#sharing-a-trip). |
 | **Track** | The **Share** button in a track's details in the Map v2 timeline | That single track, with optional stats and photos. |
 
 You can have one active link of each kind at a time: one live location link, one time period link, one per trip and one per track. Creating a new link replaces the previous one of the same kind, and the old address stops working.
