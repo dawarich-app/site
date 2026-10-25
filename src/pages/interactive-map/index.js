@@ -7,6 +7,7 @@ import Head from '@docusaurus/Head';
 import FeatureHero from '@site/src/components/FeatureHero';
 import FeatureShowcase from '@site/src/components/FeatureShowcase';
 import HowItWorks from '@site/src/components/HowItWorks';
+import ToolGuide from '@site/src/components/ToolGuide';
 import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import styles from './map.module.css';
 const Icon = ({ size = 40, children }) => (
@@ -233,6 +234,7 @@ export default function MapPage() {
             <p className={styles.privacyText}>{content.mapPage.p}</p>
           </div>
         </section>
+        <ToolGuide content={content.guide} />
         <section className={styles.ctaSection}>
           <div className={styles.container}>
             <h2 className={styles.ctaTitle}>{content.mapPage.heading}</h2>

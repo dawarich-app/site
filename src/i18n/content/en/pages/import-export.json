@@ -112,13 +112,13 @@
     }
   ],
   "meta": {
-    "title": "Import & Export Data",
-    "description": "Your data belongs to you. Import from Google Takeout, GPX, CSV, KML. Export to GPX, CSV, or get a full account export. No lock-in.",
+    "title": "Import Google Takeout Location History & More",
+    "description": "Import Google Timeline and Takeout location history, GPX, FIT, KML, CSV, GeoJSON, Polarsteps and OwnTracks files. Export everything any time.",
     "ogTitle": "Dawarich Import & Export — Your Data, Your Control",
     "ogDescription": "Import from Google Maps, Apple Health, GPX, GeoJSON, KML. Export to any format. Full data portability with no lock-in."
   },
   "hero": {
-    "badge": "Data Portability",
+    "badge": "Import Google Takeout location history",
     "title": "Your Data",
     "titleHighlight": "Belongs to You",
     "subtitle": "Import your location history from anywhere. Export it anytime, in any format. Dawarich believes in complete data portability with no lock-in — you're always in control.",
@@ -154,5 +154,51 @@
     "Link": "Try 7 Days for Free",
     "EnOnlyLink": "Self-Host for Free",
     "p9": "7-day free trial · 14-day risk-free refund · Cancel anytime"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Import your Google Timeline",
+        "body": [
+          "Dawarich reads every version of Google's location export: the Timeline.json file from the Google Maps app, and Records.json and Semantic Location History from Google Takeout. Upload the file as it is; the format is detected automatically.",
+          "Google Photos metadata from a Takeout export works too, so the places your photos were taken can fill gaps in your history."
+        ]
+      },
+      {
+        "heading": "Bring data from other apps",
+        "body": [
+          "GPX tracks and waypoints, FIT files from Garmin, Strava and most sports watches, TCX, KML and KMZ, CSV files with latitude, longitude and time columns, GeoJSON, OwnTracks Recorder .rec files and Polarsteps locations.json. A ZIP of any of these works as well.",
+          "Duplicate points are skipped, so importing overlapping exports does not double your history."
+        ]
+      },
+      {
+        "heading": "Take everything with you",
+        "body": [
+          "Export your points as GPX or GeoJSON, or download a full account export with your points, visits, trips, statistics and settings. Your data is never locked in, on Cloud or self-hosted."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Which Google Timeline files can I import?",
+        "a": "Timeline.json exported from the Google Maps app, and Records.json or Semantic Location History from Google Takeout."
+      },
+      {
+        "q": "My Takeout has no location history. What now?",
+        "a": "Google now keeps Timeline on your phone. Export it from the Google Maps app instead; see [how to export Google Timeline](/docs/getting-started/import-sources)."
+      },
+      {
+        "q": "Will importing the same file twice create duplicates?",
+        "a": "No. Points that already exist are skipped."
+      },
+      {
+        "q": "Can I import compressed files?",
+        "a": "ZIP archives work. Gzipped (.gz) files need to be unpacked first."
+      },
+      {
+        "q": "Can I leave Dawarich and take my data?",
+        "a": "Yes. Export your history at any time; a self-hosted instance also keeps everything in your own database."
+      }
+    ]
   }
 }

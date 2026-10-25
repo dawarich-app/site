@@ -53,4 +53,10 @@ describe('ToolGuide', () => {
     expect(screen.getByRole('heading', { level: 2, name: 'Privacy' })).toBeInTheDocument();
     expect(screen.getByText('Second paragraph.').tagName).toBe('P');
   });
+
+  it('should skip the tools breadcrumb when it is not a tool page', () => {
+    render(<ToolGuide content={{ faqs: [{ q: 'Q?', a: 'A.' }] }} />);
+    const types = [...document.querySelectorAll('script[type="application/ld+json"]')].map((s) => JSON.parse(s.textContent)['@type']);
+    expect(types).toEqual(['FAQPage']);
+  });
 });

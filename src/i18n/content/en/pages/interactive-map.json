@@ -100,13 +100,13 @@
     }
   ],
   "meta": {
-    "title": "Interactive Map Visualization",
-    "description": "Explore your location history on an interactive map with multiple layers including points, routes, heatmap, fog of war, and more.",
+    "title": "Location History Map — See Everywhere You've Been",
+    "description": "Explore your whole location history on one map: points, routes, heatmap, fog of war and photos, from a single day to every year you have recorded.",
     "ogTitle": "Dawarich Map — Interactive Location Visualization",
     "ogDescription": "Explore your location history with multiple visualization layers: points, routes, heatmap, fog of war, scratch map, and photo integration."
   },
   "hero": {
-    "badge": "Interactive Visualization",
+    "badge": "Location history map",
     "title": "Explore Where You've Been,",
     "titleHighlight": "Never Forget a Place",
     "subtitle": "Your location history comes alive on an interactive map with multiple visualization layers. From detailed points to beautiful heatmaps, see your life's journey in stunning detail.",
@@ -126,5 +126,51 @@
     "Link": "Try 7 Days for Free",
     "EnOnlyLink": "Self-Host for Free",
     "p3": "7-day free trial · 14-day risk-free refund · Cancel anytime"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Your whole location history on one map",
+        "body": [
+          "Choose any time range, from a single day to everything you have recorded, and the map shows it. Data imported from Google Timeline sits next to what your phone records today, so years of history read as one story."
+        ]
+      },
+      {
+        "heading": "Layers for different questions",
+        "body": [
+          "Points show every recorded position, routes connect them, the heatmap shows where you spend your time, fog of war reveals the places you have been, and photos from Immich or PhotoPrism appear where they were taken. Turn layers on and off as you need them."
+        ]
+      },
+      {
+        "heading": "Replay a day, find a place",
+        "body": [
+          "Replay plays back the points of the selected dates on the map. Search finds places and visits across your history, and the timeline panel lists your days and the places you stopped at."
+        ]
+      },
+      {
+        "heading": "Built for years of history",
+        "body": [
+          "The map renders with WebGL, offers a 3D globe and several map styles, and loads only the part of your history you are looking at, so a decade of data stays easy to explore."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can I see my old Google Timeline on this map?",
+        "a": "Yes. Import your Google Timeline or Takeout export and those years appear on the map alongside new data."
+      },
+      {
+        "q": "What does a point show?",
+        "a": "Its time and coordinates, plus altitude, speed and battery level when they were recorded."
+      },
+      {
+        "q": "How far back can the map go?",
+        "a": "As far as your data goes. Choose any date range, including your entire history."
+      },
+      {
+        "q": "Is my map private?",
+        "a": "Yes. Only you can see it unless you create a sharing link, and Dawarich does not sell location data."
+      }
+    ]
   }
 }

@@ -7,6 +7,7 @@ import Head from '@docusaurus/Head';
 import FeatureHero from '@site/src/components/FeatureHero';
 import FeatureShowcase from '@site/src/components/FeatureShowcase';
 import HowItWorks from '@site/src/components/HowItWorks';
+import ToolGuide from '@site/src/components/ToolGuide';
 import {
   BarChartIcon,
   GlobeIcon,
@@ -192,6 +193,7 @@ export default function StatsPage() {
           </div>
         </section>
 
+        <ToolGuide content={content.guide} />
         <section className={styles.ctaSection}>
           <div className={styles.container}>
             <h2 className={styles.ctaTitle}>{content.statsPage.heading4}</h2>

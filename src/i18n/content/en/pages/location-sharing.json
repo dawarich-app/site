@@ -30,6 +30,10 @@
     {
       "q": "What happens to my links if my subscription expires?",
       "a": "You can export everything at any time, and the whole application is open source — you can run the same features on your own hardware for free, permanently."
+    },
+    {
+      "q": "How is this different from Life360?",
+      "a": "Life360 shows your circle on a map all the time. Dawarich sends one link that shows one thing, for as long as you decide, and keeps your history yours. For families who want ongoing sharing, there is [Family](/family/). [See the full Life360 comparison](/docs/comparisons/vs-life360)."
     }
   ],
   "meta": {

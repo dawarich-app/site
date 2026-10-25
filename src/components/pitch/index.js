@@ -1,4 +1,4 @@
-import { SmartLink } from '@site/src/i18n/RichText';
+import RichText, { SmartLink } from '@site/src/i18n/RichText';
 import content from '@locale-content/components/Pitch.json';
 import React from 'react';
 import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
@@ -127,7 +127,7 @@ export function Objections({ title, items }) {
           {items.map((item) => (
             <div key={item.q} className={styles.objection}>
               <p className={styles.objectionQ}>{item.q}</p>
-              <p className={styles.objectionA}>{item.a}</p>
+              <p className={styles.objectionA}><RichText text={item.a} /></p>
             </div>
           ))}
         </div>
