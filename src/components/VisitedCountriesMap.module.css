@@ -1,0 +1,13 @@
+.map {
+  width: 100%;
+  height: 520px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #dbe7f3;
+}
+
+@media (max-width: 768px) {
+  .map {
+    height: 340px;
+  }
+}

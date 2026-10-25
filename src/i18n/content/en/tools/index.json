@@ -65,6 +65,10 @@
     {
       "title": "Route Video Maker",
       "description": "Animate any GPS track into a shareable MP4 — the route draws itself across a styled map."
+    },
+    {
+      "title": "Visited Countries Map",
+      "description": "See every country you've been to on a map, built from your Google Timeline or GPS files."
     }
   ],
   "converters": [

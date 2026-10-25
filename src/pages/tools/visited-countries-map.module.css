@@ -1,0 +1,75 @@
+.fileRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  overflow-wrap: anywhere;
+}
+
+.fileRow span {
+  min-width: 0;
+}
+
+.error {
+  margin-top: 0.75rem;
+  color: var(--ifm-color-danger);
+}
+
+.results {
+  margin-top: 1.5rem;
+}
+
+.results h2 {
+  font-size: 1rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.count {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.continents {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.continents li {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: var(--ifm-color-emphasis-100);
+  font-size: 0.875rem;
+}
+
+.countries {
+  padding-left: 1.5rem;
+  max-height: 22rem;
+  overflow-y: auto;
+}
+
+.countries li {
+  margin-bottom: 0.4rem;
+}
+
+.countryName {
+  font-weight: 600;
+}
+
+.countryMeta {
+  display: block;
+  font-size: 0.8125rem;
+  opacity: 0.75;
+}
+
+.credit {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}

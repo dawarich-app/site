@@ -147,10 +147,6 @@
     "message": "FIT 转 GPX 转换器",
     "description": "The label of footer link with label=FIT to GPX Converter linking to /tools/fit-to-gpx"
   },
-  "link.item.label.All 29 tools →": {
-    "message": "全部 29 款工具 →",
-    "description": "The label of footer link with label=All 29 tools → linking to /tools"
-  },
   "link.item.label.Google Timeline Alternative": {
     "message": "Google Timeline 替代方案",
     "description": "The label of footer link with label=Google Timeline Alternative linking to /google-timeline-alternative"
@@ -270,5 +266,9 @@
   "link.item.label.Cookie Settings": {
     "message": "Cookie 设置",
     "description": "The label of footer link with label=Cookie Settings linking to pathname:///privacy-policy/#cookies"
+  },
+  "link.item.label.All 32 tools →": {
+    "message": "全部 32 款工具 →",
+    "description": "The label of footer link with label=All 32 tools → linking to /tools"
   }
 }

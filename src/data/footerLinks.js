@@ -69,7 +69,7 @@ export const footerLinks = [
       { label: 'GPX Merger', to: '/tools/gpx-merger' },
       { label: 'GPS File Splitter', to: '/tools/gps-file-splitter' },
       { label: 'Timeline Merger', to: '/tools/timeline-merger' },
-      { label: 'All 29 tools →', to: '/tools' },
+      { label: 'All 32 tools →', to: '/tools' },
     ],
   },
   {
