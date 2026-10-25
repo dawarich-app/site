@@ -62,7 +62,8 @@
     "td13": "Nothing. Ever.",
     "text": "We charge less than Life360 charges to ",
     "em": "sell",
-    "text2": " your data."
+    "text2": " your data.",
+    "perYear": "{price}/yr"
   },
   "promises": {
     "heading": "The “you can’t lose” promise",
@@ -86,8 +87,8 @@
   },
   "meta": {
     "title": "Dawarich Cloud — Private Location History You Actually Own",
-    "description": "Privacy-first location history hosted in Germany. Heatmaps, trips, statistics — without selling your data. Imports from Google Takeout, Strava, Garmin, and 12 more. From {price}. 7-day free trial.",
-    "ogDescription": "Privacy-first location history hosted in Germany. Heatmaps, trips, statistics — without selling your data. From {price}. 7-day free trial.",
+    "description": "Privacy-first location history hosted in Germany. Heatmaps, trips, statistics — without selling your data. Imports from Google Takeout, Strava, Garmin, and 12 more. From {price}/year. 7-day free trial.",
+    "ogDescription": "Privacy-first location history hosted in Germany. Heatmaps, trips, statistics — without selling your data. From {price}/year. 7-day free trial.",
     "twitterDescription": "Privacy-first location history hosted in Germany. Heatmaps, trips, statistics — without selling your data."
   },
   "hero": {

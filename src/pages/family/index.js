@@ -1,5 +1,6 @@
 import { interpolate } from '@docusaurus/Interpolate';
 import content from '@locale-content/pages/family.json';
+import { formatEuro } from '@site/src/i18n/formatEuro';
 import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import React from 'react';
 import Layout from '@theme/Layout';
@@ -48,7 +49,7 @@ export default function FamilyPage() {
   return (
     <Layout
       title={content.meta.title}
-      description={interpolate(content.meta.description, { price: "€239.99/year" })}>
+      description={interpolate(content.meta.description, { price: formatEuro(239.99) })}>
       <Head>
         <meta name="twitter:url" content={pageUrl} />
         <meta property="og:url" content={pageUrl} />
@@ -103,7 +104,7 @@ export default function FamilyPage() {
         <CloseCTA
           campaign="family"
           title={content.familyPage.title4}
-          sub={interpolate(content.familyPage.sub3, { price: "€239.99" })}
+          sub={interpolate(content.familyPage.sub3, { price: formatEuro(239.99) })}
           primaryLabel={content.familyPage.primaryLabel}
         />
       </PitchPage>

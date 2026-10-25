@@ -1,5 +1,6 @@
 import { interpolate } from '@docusaurus/Interpolate';
 import content from '@locale-content/shared/pricingPlans.json';
+import { formatEuro } from '@site/src/i18n/formatEuro';
 import React from "react";
 
 export const DW_ICONS = {
@@ -65,8 +66,8 @@ export const PLANS = {
 		accent: "blue",
 		price: "59.99",
 		period: content.plans.lite.period,
-		perMonth: interpolate(content.plans.lite.perMonth, { price: "€5.00" }),
-		perDay: interpolate(content.plans.lite.perDay, { price: "€0.16" }),
+		perMonth: interpolate(content.plans.lite.perMonth, { price: formatEuro(5, { decimals: 2 }) }),
+		perDay: interpolate(content.plans.lite.perDay, { price: formatEuro(0.16) }),
 		badge: null,
 		cta: content.plans.lite.cta,
 		ctaStyle: "outline",
@@ -82,7 +83,7 @@ export const PLANS = {
 				{ label: content.plans.lite.valueStack.items[4].label, value: 99, bonus: true },
 			],
 			total: 179,
-			payLine: interpolate(content.plans.lite.valueStack.payLine, { price: "€59.99" }),
+			payLine: interpolate(content.plans.lite.valueStack.payLine, { price: formatEuro(59.99) }),
 		},
 		featuresHeading: null,
 		features: [
@@ -107,9 +108,9 @@ export const PLANS = {
 		priceMonthly: "17.99",
 		period: content.plans.pro.period,
 		periodMonthly: content.plans.pro.periodMonthly,
-		perMonth: interpolate(content.plans.pro.perMonth, { price: "€10.00" }),
-		perDay: interpolate(content.plans.pro.perDay, { price: "€0.33" }),
-		perDayMonthly: interpolate(content.plans.pro.perDayMonthly, { price: "€0.60" }),
+		perMonth: interpolate(content.plans.pro.perMonth, { price: formatEuro(10, { decimals: 2 }) }),
+		perDay: interpolate(content.plans.pro.perDay, { price: formatEuro(0.33) }),
+		perDayMonthly: interpolate(content.plans.pro.perDayMonthly, { price: formatEuro(0.60) }),
 		save: content.plans.pro.save,
 		saveHint: content.plans.pro.saveHint,
 		badge: content.plans.pro.badge,
@@ -127,7 +128,7 @@ export const PLANS = {
 				{ label: content.plans.pro.valueStack.items[4].label, value: 25 },
 			],
 			total: 319,
-			payLine: interpolate(content.plans.pro.valueStack.payLine, { price: "€119.99" }),
+			payLine: interpolate(content.plans.pro.valueStack.payLine, { price: formatEuro(119.99) }),
 		},
 		featuresHeading: content.plans.pro.featuresHeading,
 		features: [
@@ -149,8 +150,8 @@ export const PLANS = {
 		accent: "teal",
 		price: "239.99",
 		period: content.plans.family.period,
-		perMonth: interpolate(content.plans.family.perMonth, { price: "€20.00" }),
-		perDay: interpolate(content.plans.family.perDay, { price: "€0.66" }),
+		perMonth: interpolate(content.plans.family.perMonth, { price: formatEuro(20, { decimals: 2 }) }),
+		perDay: interpolate(content.plans.family.perDay, { price: formatEuro(0.66) }),
 		badge: null,
 		cta: content.plans.family.cta,
 		ctaStyle: "outline",
@@ -164,8 +165,8 @@ export const PLANS = {
 				{ label: content.plans.family.valueStack.items[2].label, value: 40 },
 				{ label: content.plans.family.valueStack.items[3].label, value: 99, bonus: true },
 			],
-			total: "1,039",
-			payLine: interpolate(content.plans.family.valueStack.payLine, { price: "€239.99" }),
+			total: 1039,
+			payLine: interpolate(content.plans.family.valueStack.payLine, { price: formatEuro(239.99) }),
 		},
 		featuresHeading: content.plans.family.featuresHeading,
 		features: [

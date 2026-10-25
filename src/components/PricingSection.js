@@ -1,5 +1,6 @@
 import { interpolate } from '@docusaurus/Interpolate';
 import content from '@locale-content/components/PricingSection.json';
+import { formatEuro } from '@site/src/i18n/formatEuro';
 import RichText from '@site/src/i18n/RichText';
 import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import React from "react";
@@ -23,7 +24,7 @@ export default function PricingSection({
 				<Heading className={styles.title}>{heading}</Heading>
 
 				<p className={styles.subtitle}>
-					{interpolate(content.subtitle, { price: "€5" })}
+					{interpolate(content.subtitle, { price: formatEuro(5) })}
 				</p>
 
 				<div className={styles.cardContainer}>
@@ -39,7 +40,7 @@ export default function PricingSection({
 				</div>
 
 				<div className={styles.bonus}>
-					<div className={styles.bonusBadge}>{interpolate(content.bonusBadge, { price: "€99" })}</div>
+					<div className={styles.bonusBadge}>{interpolate(content.bonusBadge, { price: formatEuro(99) })}</div>
 					<div className={styles.bonusText}>
 						<RichText text={content.bonusDescription} />
 					</div>

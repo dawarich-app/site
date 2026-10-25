@@ -1,5 +1,6 @@
 import { interpolate } from '@docusaurus/Interpolate';
 import content from '@locale-content/pages/cloud.json';
+import { formatEuro } from '@site/src/i18n/formatEuro';
 import RichText, { SmartLink } from '@site/src/i18n/RichText';
 import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import Head from "@docusaurus/Head";
@@ -144,19 +145,19 @@ function CompetitorReframe() {
 							</tr>
 							<tr>
 								<td>{content.competitorReframe.td5}</td>
-								<td>~&euro;170/yr</td>
+								<td>{interpolate(content.competitorReframe.perYear, { price: '~' + formatEuro(170) })}</td>
 								<td>{content.competitorReframe.td6}</td>
 								<td>{content.competitorReframe.td7}</td>
 							</tr>
 							<tr>
 								<td>{content.competitorReframe.td8}</td>
-								<td>&euro;60/yr</td>
+								<td>{interpolate(content.competitorReframe.perYear, { price: formatEuro(60) })}</td>
 								<td>{content.competitorReframe.td9}</td>
 								<td>{content.competitorReframe.td10}</td>
 							</tr>
 							<tr className={sections.highlight}>
 								<td>{content.competitorReframe.td11}</td>
-								<td>&euro;119.99/yr</td>
+								<td>{interpolate(content.competitorReframe.perYear, { price: formatEuro(119.99) })}</td>
 								<td>{content.competitorReframe.td12}</td>
 								<td>{content.competitorReframe.td13}</td>
 							</tr>
@@ -239,12 +240,12 @@ export default function CloudPage() {
 		<CloudFinalCTA key="final" />,
 	];
 	return (
-		<Layout title={content.meta.title} description={interpolate(content.meta.description, { price: "€59.99/year" })}>
+		<Layout title={content.meta.title} description={interpolate(content.meta.description, { price: formatEuro(59.99) })}>
 			<Head>
 				<meta property="og:type" content="website" />
 				<meta property="og:url" content={pageUrl} />
 				<meta property="og:title" content={content.meta.title} />
-				<meta property="og:description" content={interpolate(content.meta.ogDescription, { price: "€59.99/year" })} />
+				<meta property="og:description" content={interpolate(content.meta.ogDescription, { price: formatEuro(59.99) })} />
 				<meta property="og:image" content="https://dawarich.app/img/meta-image.png" />
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:url" content={pageUrl} />

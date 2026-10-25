@@ -1,4 +1,6 @@
+import { interpolate } from '@docusaurus/Interpolate';
 import content from '@locale-content/pages/google-timeline-alternative.json';
+import { formatEuro } from '@site/src/i18n/formatEuro';
 import RichText, { SmartLink } from '@site/src/i18n/RichText';
 import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import Head from "@docusaurus/Head";
@@ -144,19 +146,19 @@ function CompetitorReframe() {
 							</tr>
 							<tr>
 								<td>{content.competitorReframe.td5}</td>
-								<td>~&euro;170/yr</td>
+								<td>{interpolate(content.competitorReframe.perYear, { price: '~' + formatEuro(170) })}</td>
 								<td>{content.competitorReframe.td6}</td>
 								<td>{content.competitorReframe.td7}</td>
 							</tr>
 							<tr>
 								<td>{content.competitorReframe.td8}</td>
-								<td>&euro;60/yr</td>
+								<td>{interpolate(content.competitorReframe.perYear, { price: formatEuro(60) })}</td>
 								<td>{content.competitorReframe.td9}</td>
 								<td>{content.competitorReframe.td10}</td>
 							</tr>
 							<tr className={sections.highlight}>
 								<td>{content.competitorReframe.td11}</td>
-								<td>&euro;119.99/yr</td>
+								<td>{interpolate(content.competitorReframe.perYear, { price: formatEuro(119.99) })}</td>
 								<td>{content.competitorReframe.td12}</td>
 								<td>{content.competitorReframe.td13}</td>
 							</tr>

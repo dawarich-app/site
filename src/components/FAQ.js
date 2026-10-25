@@ -1,5 +1,6 @@
 import { interpolate } from '@docusaurus/Interpolate';
 import content from '@locale-content/components/FAQ.json';
+import { formatEuro } from '@site/src/i18n/formatEuro';
 import RichText from '@site/src/i18n/RichText';
 import React, { useState } from "react";
 import styles from "./FAQ.module.css";
@@ -8,7 +9,7 @@ const faqData = [
 	{
 		question: content.faqData[0].question,
 		answer:
-			interpolate(content.faqData[0].answer, { price: "€0.16" }),
+			interpolate(content.faqData[0].answer, { price: formatEuro(0.16) }),
 	},
 	{
 		question: content.faqData[1].question,

@@ -1,4 +1,6 @@
 import content from '@locale-content/components/PricingCard.json';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { euroParts, formatEuro } from '@site/src/i18n/formatEuro';
 import { SmartLink } from '@site/src/i18n/RichText';
 import React, { useState } from "react";
 import { DwIcon } from "@site/src/data/pricingPlans";
@@ -11,6 +13,9 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 	const monthly = isPro && billing === "monthly";
 	const bigPrice = monthly ? plan.priceMonthly : plan.price;
 	const bigPeriod = monthly ? plan.periodMonthly : plan.period;
+	const { i18n } = useDocusaurusContext();
+	const euro = (amount) => formatEuro(Number(amount), { locale: i18n.currentLocale });
+	const priceParts = euroParts(Number(bigPrice), { locale: i18n.currentLocale });
 
 	const cardClass = [
 		styles.card,
@@ -43,7 +48,7 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 				<div className={styles.priceBlock}>
 					<div className={styles.priceTopRow}>
 						{plan.oldPrice && !monthly && (
-							<span className={styles.oldPrice}>&euro;{plan.oldPrice}</span>
+							<span className={styles.oldPrice}>{euro(plan.oldPrice)}</span>
 						)}
 						{isPro && plan.save && !monthly && (
 							<span className={styles.saveBadge}>
@@ -52,8 +57,9 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 						)}
 					</div>
 					<div className={styles.priceMainRow}>
-						<span className={styles.currency}>&euro;</span>
-						<span className={styles.bigPrice}>{bigPrice}</span>
+						{priceParts.before && <span className={styles.currency}>{priceParts.before}</span>}
+						<span className={styles.bigPrice}>{priceParts.amount}</span>
+						{priceParts.after && <span className={styles.currency}>{priceParts.after}</span>}
 						<span className={styles.period}>{bigPeriod}</span>
 					</div>
 					<div className={styles.perMonth}>
@@ -125,13 +131,13 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 								{item.bonus ? content.bonusPrefix : ""}
 								{item.label}
 							</span>
-							<span className={styles.valueAmount}>&euro;{item.value}</span>
+							<span className={styles.valueAmount}>{euro(item.value)}</span>
 						</div>
 					))}
 					<div className={styles.valueTotalRow}>
 						<span>{content.totalValue}</span>
 						<span className={styles.valueTotal}>
-							&euro;{plan.valueStack.total}
+							{euro(plan.valueStack.total)}
 						</span>
 					</div>
 					<div className={styles.valuePayLine}>{plan.valueStack.payLine}</div>

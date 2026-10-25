@@ -106,7 +106,8 @@
     "td10": "Public feeds",
     "td11": "Dawarich Cloud Pro",
     "td12": "Yes — full Takeout import, heatmaps, trips",
-    "td13": "No. Ever."
+    "td13": "No. Ever.",
+    "perYear": "{price}/yr"
   },
   "promises": {
     "heading": "Two promises, zero risk",

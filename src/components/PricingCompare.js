@@ -1,13 +1,14 @@
 import { SmartLink } from '@site/src/i18n/RichText';
 import content from '@locale-content/components/PricingCompare.json';
+import { formatEuro } from '@site/src/i18n/formatEuro';
 import React, { useState } from "react";
 import { COMPARE_GROUPS, DwIcon, PLANS } from "@site/src/data/pricingPlans";
 import styles from "./PricingCompare.module.css";
 
 const COLS = [
-	{ key: "lite", name: content.cols[0].name, sub: `€${PLANS.lite.price}${content.yearAbbreviation}`, accent: "blue", popular: false },
-	{ key: "pro", name: content.cols[1].name, sub: `€${PLANS.pro.price}${content.yearAbbreviation}`, accent: "blue", popular: true },
-	{ key: "family", name: content.cols[2].name, sub: `€${PLANS.family.price}${content.yearAbbreviation}`, accent: "teal", popular: false },
+	{ key: "lite", name: content.cols[0].name, sub: `${formatEuro(Number(PLANS.lite.price))}${content.yearAbbreviation}`, accent: "blue", popular: false },
+	{ key: "pro", name: content.cols[1].name, sub: `${formatEuro(Number(PLANS.pro.price))}${content.yearAbbreviation}`, accent: "blue", popular: true },
+	{ key: "family", name: content.cols[2].name, sub: `${formatEuro(Number(PLANS.family.price))}${content.yearAbbreviation}`, accent: "teal", popular: false },
 ];
 
 // Comparison table gets its own UTM tagging, distinct from the pricing cards

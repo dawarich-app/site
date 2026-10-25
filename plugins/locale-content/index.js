@@ -1,4 +1,5 @@
 const path = require('path');
+const { DefinePlugin } = require('webpack');
 
 module.exports = function localeContentPlugin(context) {
   const contentDir = path.join(context.siteDir, 'src/i18n/content');
@@ -8,6 +9,7 @@ module.exports = function localeContentPlugin(context) {
     name: 'locale-content',
     configureWebpack() {
       return {
+        plugins: [new DefinePlugin({ __SITE_LOCALE__: JSON.stringify(context.i18n.currentLocale) })],
         resolve: {
           alias: {
             '@locale-content': englishDir,
