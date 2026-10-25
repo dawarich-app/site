@@ -1,0 +1,22 @@
+{
+  "privacyTitle": "隐私优先",
+  "success": "文件转换成功！下载应会自动开始。",
+  "successShort": "文件转换成功！",
+  "ctaHeadline": "您的文件已转换。Dawarich 可自动处理所有格式，支持从 Google、Strava、Garmin 等来源导入，无需手动转换。",
+  "invalidFile": "转换文件时出错。请确认这是有效的 {format} 文件。",
+  "conversionError": "转换文件时出错：{message}",
+  "stats": {
+    "activity": "活动：{sport}",
+    "points": " | {points} 个轨迹点",
+    "gpsPoints": " | {points} 个 GPS 轨迹点",
+    "distance": " | {distance} km",
+    "elevation": " | 累计爬升 {elevation}m",
+    "duration": " | {duration}",
+    "avgHR": " | 平均心率：{avgHR} bpm"
+  },
+  "duration": {
+    "hours": "{hours}小时 {minutes}分钟 {seconds}秒",
+    "minutes": "{minutes}分钟 {seconds}秒",
+    "seconds": "{seconds}秒"
+  }
+}

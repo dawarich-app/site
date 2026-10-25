@@ -1,0 +1,128 @@
+{
+  "integrationsShowcase": [
+    {
+      "title": "Immich",
+      "description": "Solució de còpia de seguretat de fotos i vídeos per allotjar al teu servidor. Connecta la teva instància d’Immich per mostrar les fotos al mapa al lloc exacte on les vas fer.",
+      "imageAlt": "Fotos d’Immich al mapa"
+    },
+    {
+      "title": "PhotoPrism",
+      "description": "Aplicació de gestió de fotos amb IA. Integra PhotoPrism per veure tota la fototeca a la teva línia de temps d’ubicacions.",
+      "imageAlt": "Viatge amb fotos de PhotoPrism"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Fotos al mapa",
+      "description": "Mira totes les fotos situades al mapa interactiu a les coordenades GPS exactes. Redescobreix on va néixer cada record."
+    },
+    {
+      "title": "Fotos als viatges",
+      "description": "Les pàgines de viatge mostren automàticament les fotos fetes durant aquell viatge. El teu diari es converteix en una experiència multimèdia."
+    },
+    {
+      "title": "Línia de temps de fotos",
+      "description": "Explora les fotos cronològicament al costat de les dades d’ubicació. Mira la història completa de cada dia."
+    },
+    {
+      "title": "Privacitat preservada",
+      "description": "Dawarich mai no desa les teves fotos. Només llegeix les dades d’ubicació de les aplicacions de fotos allotjades al teu servidor a través de les seves API."
+    }
+  ],
+  "setupSteps": [
+    {
+      "title": "Obtén les claus d’API",
+      "description": "Genera claus d’API a la teva instància d’Immich o PhotoPrism.",
+      "details": [
+        "Immich: crea una clau amb els permisos asset.read i asset.view (asset.update per enriquir les fotos)",
+        "PhotoPrism: genera una clau a la configuració d’Aplicacions i dispositius",
+        "Desa les claus de manera segura"
+      ]
+    },
+    {
+      "title": "Configura-ho a Dawarich",
+      "description": "Introdueix les dades del servei de fotos a la configuració de Dawarich.",
+      "details": [
+        "Ves a la pàgina de Configuració",
+        "Busca la secció d’integració de fotos",
+        "Introdueix l’URL del servei",
+        "Enganxa la clau d’API",
+        "Fes clic a Desa"
+      ]
+    },
+    {
+      "title": "Sincronització completada",
+      "description": "Dawarich es connecta al servei de fotos i indexa les dades d’ubicació.",
+      "details": [
+        "Les fotos s’indexen per ubicació",
+        "S’extreuen les dades GPS d’EXIF",
+        "No es copia ni es desa cap foto",
+        "Només es fan servir les metadades"
+      ]
+    },
+    {
+      "title": "Mira les fotos",
+      "description": "Les fotos ja apareixen al mapa i als viatges.",
+      "details": [
+        "Activa la capa de fotos al mapa",
+        "Fes clic als marcadors de fotos per veure-les",
+        "Mira les fotos automàticament als viatges",
+        "Explora per ubicació i data"
+      ]
+    }
+  ],
+  "futureIntegrations": [
+    {
+      "title": "Aplicacions d’activitat física",
+      "description": "Integració amb aplicacions de seguiment d’activitat física per combinar les rutes d’entrenament amb l’historial d’ubicacions."
+    },
+    {
+      "title": "Aplicacions de notes",
+      "description": "Connecta les notes amb les ubicacions automàticament. Mira què vas escriure i on."
+    },
+    {
+      "title": "Serveis de música",
+      "description": "Registra què escoltaves als diferents llocs durant el dia."
+    },
+    {
+      "title": "Serveis al núvol",
+      "description": "Integracions més profundes amb diversos serveis d’emmagatzematge al núvol i productivitat."
+    }
+  ],
+  "meta": {
+    "title": "Integracions de fotos",
+    "description": "Connecta Immich o PhotoPrism per veure fotos al mapa i als viatges. Converteix el mapa en una experiència multimèdia.",
+    "ogTitle": "Integracions de Dawarich — Connecta la teva vida digital",
+    "ogDescription": "Integra les fototeques d’Immich i PhotoPrism amb l’historial d’ubicacions. Mira fotos al mapa i als viatges automàticament."
+  },
+  "hero": {
+    "badge": "Una experiència connectada",
+    "title": "Connecta la teva",
+    "titleHighlight": "vida digital",
+    "subtitle": "Incorpora les fotos a la línia de temps d’ubicacions. Dawarich s’integra amb Immich i PhotoPrism per mostrar-les al mapa i als viatges, i converteix l’historial d’ubicacions en una experiència visual plena de contingut.",
+    "imageAlt": "Fotos mostrades al mapa"
+  },
+  "integrationsPage": {
+    "heading": "Per què integrar les fotos?",
+    "p": "Les dades d’ubicació tenen més sentit quan les combines amb les fotos que vas fer. Redescobreix records mirant exactament on es va fer cada foto.",
+    "title3": "Serveis de fotos compatibles",
+    "subtitle2": "Dawarich funciona amb les solucions populars de gestió de fotos amb allotjament propi.",
+    "title4": "Com es configura",
+    "subtitle3": "Connecta la fototeca amb Dawarich en uns quants passos.",
+    "h3": "Les teves fotos continuen sent privades",
+    "p2": "Dawarich **no desa ni copia les teves fotos**. Només llegeix les metadades d’ubicació del teu servei de fotos amb allotjament propi a través de la seva API. Les fotos continuen segures a la teva instància d’Immich o PhotoPrism, sota el teu control.",
+    "heading2": "Detalls tècnics",
+    "text3": " Configuració d’Immich",
+    "Link": "Com obtenir una clau d’API d’Immich →",
+    "text8": " Configuració de PhotoPrism",
+    "p3": "Genera una clau d’API a la configuració «Aplicacions i dispositius» de PhotoPrism. Dawarich la fa servir per accedir a la fototeca i extreure’n la informació d’ubicació.",
+    "Link2": "Com obtenir una clau d’API de PhotoPrism →",
+    "p4": "Tens una idea d’integració? [Comparteix-la al fòrum de la comunitat!](https://discourse.dawarich.app/).",
+    "heading3": "Connecta la teva fototeca avui",
+    "p5": "Comença a veure les fotos al mapa amb un compte gratuït de Dawarich.",
+    "Link4": "Prova’l gratis durant 7 dies",
+    "EnOnlyLink": "Allotja’l gratis",
+    "p6": "Prova gratuïta de 7 dies · Reemborsament sense risc durant 14 dies · Cancel·la quan vulguis",
+    "immichScopes": "Cal una clau d’API amb els permisos `asset.read` i `asset.view`. Afegeix `asset.update` si també vols fer servir la funció d’enriquir fotos. Dawarich consulta l’API d’Immich per llegir les metadades, incloses les coordenades GPS de les dades EXIF."
+  }
+}

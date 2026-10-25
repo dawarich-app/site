@@ -1,0 +1,448 @@
+{
+  "shared.saveToAccount.tooLarge": {
+    "message": "El fitxer és massa gran per importar-lo a l’instant. Registra’t primer i després puja’l des del tauler."
+  },
+  "shared.saveToAccount.rateLimited": {
+    "message": "Massa pujades des de la teva xarxa. Torna-ho a provar d’aquí a una hora."
+  },
+  "shared.saveToAccount.failed": {
+    "message": "No s’ha pogut pujar el fitxer. Torna-ho a provar."
+  },
+  "shared.saveToAccount.noFiles": {
+    "message": "No hi ha fitxers per desar. Puja’n un primer."
+  },
+  "shared.saveToAccount.uploading": {
+    "message": "S’està pujant…"
+  },
+  "shared.saveToAccount.save": {
+    "message": "Desa al meu compte de Dawarich"
+  },
+  "shared.breadcrumb.home": {
+    "message": "Inici"
+  },
+  "shared.breadcrumb.tools": {
+    "message": "Eines gratuïtes"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "1 element|{count} elements|{count} elements",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
+  },
+  "theme.ErrorPageContent.title": {
+    "message": "Aquesta pàgina ha fallat.",
+    "description": "The title of the fallback page when the page crashed"
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Torna a dalt",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.blog.archive.title": {
+    "message": "Arxiu",
+    "description": "The page & hero title of the blog archive page"
+  },
+  "theme.blog.archive.description": {
+    "message": "Arxiu",
+    "description": "The page & hero description of the blog archive page"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "Navegació per les pàgines del blog",
+    "description": "The ARIA label for the blog pagination"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "Entrades més recents",
+    "description": "The label used to navigate to the newer blog posts page (previous page)"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "Entrades més antigues",
+    "description": "The label used to navigate to the older blog posts page (next page)"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "Navegació per les entrades del blog",
+    "description": "The ARIA label for the blog posts pagination"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "Entrada més recent",
+    "description": "The blog post button label to navigate to the newer/previous post"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "Entrada més antiga",
+    "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Mostra totes les etiquetes",
+    "description": "The label of the link targeting the tag list page"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "Canvia entre el mode fosc i el clar (actualment {mode})",
+    "description": "The ARIA label for the navbar color mode toggle"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "mode fosc",
+    "description": "The name for the dark color mode"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "mode clar",
+    "description": "The name for the light color mode"
+  },
+  "theme.docs.breadcrumbs.navAriaLabel": {
+    "message": "Fil d’Ariadna",
+    "description": "The ARIA label for the breadcrumbs"
+  },
+  "theme.docs.paginator.navAriaLabel": {
+    "message": "Pàgines de documentació",
+    "description": "The ARIA label for the docs pagination"
+  },
+  "theme.docs.paginator.previous": {
+    "message": "Anterior",
+    "description": "The label used to navigate to the previous doc"
+  },
+  "theme.docs.paginator.next": {
+    "message": "Següent",
+    "description": "The label used to navigate to the next doc"
+  },
+  "theme.docs.tagDocListPageTitle.nDocsTagged": {
+    "message": "Un document etiquetat|{count} documents etiquetats|{count} documents etiquetats",
+    "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.docs.tagDocListPageTitle": {
+    "message": "{nDocsTagged} amb «{tagName}»",
+    "description": "The title of the page for a docs tag"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "Versió: {versionLabel}"
+  },
+  "theme.docs.versions.unreleasedVersionLabel": {
+    "message": "Aquesta documentació de la versió {versionLabel} de {siteTitle} encara no s’ha publicat.",
+    "description": "The label used to tell the user that he's browsing an unreleased doc version"
+  },
+  "theme.docs.versions.unmaintainedVersionLabel": {
+    "message": "Aquesta és la documentació de {siteTitle} {versionLabel}, que ja no es manté activament.",
+    "description": "The label used to tell the user that he's browsing an unmaintained doc version"
+  },
+  "theme.docs.versions.latestVersionSuggestionLabel": {
+    "message": "Per consultar la documentació actualitzada, ves a la {latestVersionLink} ({versionLabel}).",
+    "description": "The label used to tell the user to check the latest version"
+  },
+  "theme.docs.versions.latestVersionLinkLabel": {
+    "message": "versió més recent",
+    "description": "The label used for the latest version suggestion link label"
+  },
+  "theme.common.editThisPage": {
+    "message": "Edita aquesta pàgina",
+    "description": "The link label to edit the current page"
+  },
+  "theme.common.headingLinkTitle": {
+    "message": "Enllaç directe a {heading}",
+    "description": "Title for link to heading"
+  },
+  "theme.lastUpdated.atDate": {
+    "message": " el {date}",
+    "description": "The words used to describe on which date a page has been last updated"
+  },
+  "theme.lastUpdated.byUser": {
+    "message": " per {user}",
+    "description": "The words used to describe by who the page has been last updated"
+  },
+  "theme.lastUpdated.lastUpdatedAtBy": {
+    "message": "Darrera actualització{atDate}{byUser}",
+    "description": "The sentence used to display when a page has been last updated, and by who"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Versions",
+    "description": "The label for the navbar versions dropdown on mobile view"
+  },
+  "theme.NotFound.title": {
+    "message": "No s’ha trobat la pàgina",
+    "description": "The title of the 404 page"
+  },
+  "theme.tags.tagsListLabel": {
+    "message": "Etiquetes:",
+    "description": "The label alongside a tag list"
+  },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "Tanca",
+    "description": "The ARIA label for close button of announcement bar"
+  },
+  "theme.admonition.caution": {
+    "message": "precaució",
+    "description": "The default label used for the Caution admonition (:::caution)"
+  },
+  "theme.admonition.danger": {
+    "message": "perill",
+    "description": "The default label used for the Danger admonition (:::danger)"
+  },
+  "theme.admonition.info": {
+    "message": "informació",
+    "description": "The default label used for the Info admonition (:::info)"
+  },
+  "theme.admonition.note": {
+    "message": "nota",
+    "description": "The default label used for the Note admonition (:::note)"
+  },
+  "theme.admonition.tip": {
+    "message": "consell",
+    "description": "The default label used for the Tip admonition (:::tip)"
+  },
+  "theme.admonition.warning": {
+    "message": "avís",
+    "description": "The default label used for the Warning admonition (:::warning)"
+  },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "Navegació per les entrades recents del blog",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "Copiat",
+    "description": "The copied button label on code blocks"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "Copia el codi al porta-retalls",
+    "description": "The ARIA label for copy code blocks button"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "Copia",
+    "description": "The copy button label on code blocks"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Activa o desactiva l’ajust de línia",
+    "description": "The title attribute for toggle word wrapping button of code block lines"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "Desplega la categoria «{label}» de la barra lateral",
+    "description": "The ARIA label to expand the sidebar category"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "Plega la categoria «{label}» de la barra lateral",
+    "description": "The ARIA label to collapse the sidebar category"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Principal",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.NotFound.p1": {
+    "message": "No hem pogut trobar el que buscaves.",
+    "description": "The first paragraph of the 404 page"
+  },
+  "theme.NotFound.p2": {
+    "message": "Contacta amb el propietari del lloc que t’ha enllaçat a l’URL original i fes-li saber que l’enllaç no funciona.",
+    "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Idiomes",
+    "description": "The label for the mobile language switcher dropdown"
+  },
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "En aquesta pàgina",
+    "description": "The label used by the button on the collapsible TOC component"
+  },
+  "theme.blog.post.readMore": {
+    "message": "Llegeix més",
+    "description": "The label used in blog post item excerpts to link to full blog posts"
+  },
+  "theme.blog.post.readMoreLabel": {
+    "message": "Llegeix més sobre {title}",
+    "description": "The ARIA label for the link to full blog posts from excerpts"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "Un minut de lectura|{readingTime} minuts de lectura|{readingTime} minuts de lectura",
+    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "Plega la barra lateral",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "Plega la barra lateral",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.breadcrumbs.home": {
+    "message": "Pàgina d’inici",
+    "description": "The ARIA label for the home page in the breadcrumbs"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Barra lateral de documentació",
+    "description": "The ARIA label for the sidebar navigation"
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "Tanca la barra de navegació",
+    "description": "The ARIA label for close button of mobile sidebar"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "← Torna al menú principal",
+    "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "Mostra o amaga la barra de navegació",
+    "description": "The ARIA label for hamburger menu button of mobile navigation"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "Desplega la barra lateral",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "Desplega la barra lateral",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.blog.post.plurals": {
+    "message": "Una entrada|{count} entrades|{count} entrades",
+    "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.blog.tagTitle": {
+    "message": "{nPosts} amb l’etiqueta «{tagName}»",
+    "description": "The title of the page for a blog tag"
+  },
+  "theme.blog.author.pageTitle": {
+    "message": "{authorName} - {nPosts}",
+    "description": "The title of the page for a blog author"
+  },
+  "theme.blog.authorsList.pageTitle": {
+    "message": "Autors",
+    "description": "The title of the authors page"
+  },
+  "theme.blog.authorsList.viewAll": {
+    "message": "Mostra tots els autors",
+    "description": "The label of the link targeting the blog authors page"
+  },
+  "theme.blog.author.noPosts": {
+    "message": "Aquest autor encara no ha escrit cap entrada.",
+    "description": "The text for authors with 0 blog post"
+  },
+  "theme.contentVisibility.unlistedBanner.title": {
+    "message": "Pàgina no llistada",
+    "description": "The unlisted content banner title"
+  },
+  "theme.contentVisibility.unlistedBanner.message": {
+    "message": "Aquesta pàgina no està llistada. Els cercadors no la indexaran i només hi poden accedir els usuaris que en tinguin l’enllaç directe.",
+    "description": "The unlisted content banner message"
+  },
+  "theme.contentVisibility.draftBanner.title": {
+    "message": "Pàgina en esborrany",
+    "description": "The draft content banner title"
+  },
+  "theme.contentVisibility.draftBanner.message": {
+    "message": "Aquesta pàgina és un esborrany. Només serà visible en desenvolupament i s’exclourà de la compilació de producció.",
+    "description": "The draft content banner message"
+  },
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Torna-ho a provar",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Ves al contingut principal",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Etiquetes",
+    "description": "The title of the tag list page"
+  },
+  "shared.cookieConsent.accept": {
+    "message": "Accepta"
+  },
+  "shared.cookieConsent.reject": {
+    "message": "Rebutja"
+  },
+  "shared.cookieConsent.acceptAria": {
+    "message": "Accepta les galetes"
+  },
+  "shared.cookieConsent.rejectAria": {
+    "message": "Rebutja les galetes"
+  },
+  "shared.cookieConsent.body": {
+    "message": "Els rastrejadors opcionals d’analítica del lloc, publicitat, correu electrònic i afiliació només s’activen si els acceptes. Rebutjar-los els manté desactivats i desactiva el traspàs de campanya."
+  },
+  "shared.cookieConsent.learnMore": {
+    "message": "Més informació"
+  },
+  "shared.uploader.noJson": {
+    "message": "No s’han trobat fitxers JSON. Puja fitxers JSON de Google Timeline."
+  },
+  "shared.uploader.reading": {
+    "message": "S’està llegint el fitxer {current}/{total}: {name}"
+  },
+  "shared.uploader.parsing": {
+    "message": "S’està analitzant el fitxer {current}/{total}: {name}"
+  },
+  "shared.uploader.processing": {
+    "message": "S’estan processant les dades de la línia de temps..."
+  },
+  "shared.uploader.loadError": {
+    "message": "Error en carregar els fitxers: {message}"
+  },
+  "shared.uploader.chooseFiles": {
+    "message": "Tria els fitxers que vols processar"
+  },
+  "shared.uploader.wait": {
+    "message": "Espera, si us plau..."
+  },
+  "shared.uploader.loaded": {
+    "message": "**{count}** fitxer carregat|**{count}** fitxers carregats|**{count}** fitxers carregats"
+  },
+  "shared.uploader.addMore": {
+    "message": "Fes clic o arrossega per afegir més fitxers"
+  },
+  "shared.uploader.dropPrompt": {
+    "message": "Deixa aquí els fitxers JSON de Google Timeline"
+  },
+  "shared.uploader.browse": {
+    "message": "o fes clic per triar-los"
+  },
+  "shared.uploader.supports": {
+    "message": "Formats admesos: {formats}"
+  },
+  "shared.uploader.clearAll": {
+    "message": "Esborra tots els fitxers"
+  },
+  "shared.converter.dropPrompt": {
+    "message": "Arrossega i deixa anar aquí el fitxer {format}, o fes clic per triar-lo"
+  },
+  "shared.converter.removeFile": {
+    "message": "Elimina el fitxer"
+  },
+  "shared.converter.converting": {
+    "message": "S’està convertint..."
+  },
+  "shared.converter.convertTo": {
+    "message": "Converteix a {format}"
+  },
+  "shared.personalizedCta.body": {
+    "message": "Allotjament propi o al núvol. Cancel·la quan vulguis."
+  },
+  "shared.personalizedCta.button": {
+    "message": "Comença la prova gratuïta"
+  },
+  "shared.relatedTools.ariaLabel": {
+    "message": "Eines i pàgines relacionades"
+  },
+  "shared.relatedTools.heading": {
+    "message": "Eines i pàgines relacionades"
+  },
+  "shared.toolGuide.whenToConvert": {
+    "message": "Quan et convé convertir {subject}"
+  },
+  "shared.toolGuide.preserved": {
+    "message": "Què es conserva (i què no)"
+  },
+  "shared.toolGuide.field": {
+    "message": "Camp"
+  },
+  "shared.toolGuide.preservedColumn": {
+    "message": "Es conserva?"
+  },
+  "shared.toolGuide.notes": {
+    "message": "Notes"
+  },
+  "shared.toolGuide.apps": {
+    "message": "Aplicacions que llegeixen el fitxer convertit"
+  },
+  "shared.toolGuide.example": {
+    "message": "Exemple pràctic"
+  },
+  "shared.toolGuide.input": {
+    "message": "Entrada ({format})"
+  },
+  "shared.toolGuide.output": {
+    "message": "Sortida ({format})"
+  },
+  "shared.toolGuide.faq": {
+    "message": "Preguntes freqüents"
+  }
+}

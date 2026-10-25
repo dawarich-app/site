@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "title": "Darmowe łączenie GPX — połącz pliki tras GPS online",
+    "description": "Łącz pliki GPX w jeden. Za darmo, prywatnie, online: trasy zarejestrowane i planowane, punkty orientacyjne GPS. Wszystko w przeglądarce.",
+    "keywords": "łączenie GPX, połącz pliki GPX, łączenie tras GPS, narzędzie do łączenia GPX, scalanie plików GPX, łączenie plików GPS, scalanie GPX, łączenie tras"
+  },
+  "h1": "Łączenie tras GPX",
+  "intro": "Połącz wiele plików GPX w jeden. Scal trasy z różnych aktywności, dni lub urządzeń w jeden wspólny plik GPS.",
+  "saveIntro": "Możesz też pominąć pobieranie — połączymy dane i zaimportujemy je na Twoje konto Dawarich podczas rejestracji.",
+  "privacy": "Łączenie odbywa się w Twojej przeglądarce. Dane są wysyłane tylko wtedy, gdy wybierzesz „Zapisz na moim koncie Dawarich”.",
+  "appName": "Łączenie GPX",
+  "cards": [
+    {
+      "title": "Dlaczego warto łączyć pliki GPX?",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "Połącz wielodniowe wędrówki lub wycieczki rowerowe w jeden plik"
+        },
+        {
+          "body": "Scal trasy z różnych urządzeń GPS"
+        },
+        {
+          "body": "Stwórz pełną trasę z oddzielnych odcinków"
+        },
+        {
+          "body": "Zbierz aktywności w jednym pliku, aby łatwiej je udostępniać"
+        },
+        {
+          "body": "Zbuduj kompletną trasę do wizualizacji"
+        }
+      ]
+    },
+    {
+      "title": "Co jest łączone?",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Trasy** - Wszystkie odcinki tras GPS ze znacznikami czasu i wysokością"
+        },
+        {
+          "body": "**Punkty trasy** - Nazwane interesujące miejsca i znaczniki"
+        },
+        {
+          "body": "**Planowane szlaki** - Zaplanowane trasy nawigacyjne"
+        },
+        {
+          "body": "**Metadane** - Łączone w nowy opis scalonego pliku"
+        }
+      ]
+    },
+    {
+      "title": "Objaśnienie opcji łączenia",
+      "paragraphs": [
+        "**Zachowaj oddzielne trasy:** Trasy z każdego pliku wejściowego pozostają oddzielnymi trasami w wyniku. Pozwala to zachować podział na aktywności.",
+        "**Połącz w jedną trasę:** Wszystkie punkty zostają połączone w jedną ciągłą trasę. Przydatne do wizualizacji wspólnej trasy."
+      ]
+    },
+    {
+      "title": "Zgodne aplikacje",
+      "paragraphs": [
+        "Połączony plik GPX działa z:"
+      ],
+      "items": [
+        {
+          "body": "Garmin Connect, Strava, Komoot"
+        },
+        {
+          "body": "Google Earth, QGIS, CalTopo"
+        },
+        {
+          "body": "Gaia GPS, AllTrails, ViewRanger"
+        },
+        {
+          "body": "Każdą aplikacją obsługującą GPX 1.1"
+        }
+      ]
+    }
+  ],
+  "upload": {
+    "dropFiles": "Przeciągnij i upuść pliki GPX tutaj",
+    "browse": "lub kliknij, aby wybrać",
+    "clearButton": "Wyczyść wszystko",
+    "inputLabel": "Wybierz pliki do przetworzenia",
+    "processing": "Przetwarzanie plików..."
+  },
+  "results": {
+    "orderHint": "Przeciągnij, aby zmienić kolejność, lub użyj strzałek. Pliki zostaną połączone w tej kolejności.",
+    "summaryHeading": "Podsumowanie łączenia",
+    "filesLabel": "Pliki",
+    "tracksLabel": "Trasy",
+    "pointsLabel": "Punkty",
+    "waypointsLabel": "Punkty trasy",
+    "removeFileTitle": "Usuń plik",
+    "filesToMergeHeading": "Pliki do połączenia ({count})",
+    "fileSummary": "{tracks} | Liczba punktów: {points}",
+    "trackCount": "{count} trasa|{count} trasy|{count} tras|{count} trasy"
+  },
+  "options": {
+    "heading": "Opcje łączenia",
+    "outputName": "Nazwa pliku wynikowego",
+    "singleTrack": "Połącz wszystkie trasy w jedną",
+    "singleTrackHint": "Łączy wszystkie odcinki w jedną ciągłą trasę",
+    "sortByTime": "Sortuj punkty według znacznika czasu",
+    "sortByTimeHint": "Dostępne tylko przy łączeniu w jedną trasę",
+    "outputPlaceholder": "Nazwa pliku wynikowego",
+    "mergeButton": "Połącz i pobierz GPX"
+  },
+  "errors": {
+    "gpxOnly": "Wybierz wyłącznie pliki GPX.",
+    "minimumFiles": "Dodaj co najmniej 2 pliki GPX do połączenia.",
+    "parse": "Błąd odczytu {fileName}: {message}",
+    "merge": "Błąd łączenia plików: {message}"
+  },
+  "cta": {
+    "fallback": "Chcesz zarządzać danymi GPS z wielu lat? Dawarich automatycznie porządkuje i wizualizuje wszystkie Twoje aktywności GPS w jednym miejscu.",
+    "headline": "Liczba plików połączonych w jeden: **{count}**. Liczba punktów: **{points}**. Dawarich robi to automatycznie ze wszystkimi Twoimi źródłami GPS.",
+    "statLabels": {
+      "files": "pliki",
+      "tracks": "trasy",
+      "points": "punkty"
+    }
+  }
+}

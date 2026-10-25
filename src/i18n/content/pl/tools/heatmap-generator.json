@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "title": "Twórz mapy cieplne aktywności GPS — darmowy generator online",
+    "description": "Twórz piękne mapy cieplne z GPS. Dodaj GPX, FIT, TCX, GeoJSON, KML lub JSON Google Timeline (Oś czasu Google Maps): zobacz wzorce biegania, jazdy rowerem i innych aktywności. Za darmo, prywatnie, w całości w przeglądarce.",
+    "keywords": "mapa cieplna GPS, generator mapy cieplnej, mapa cieplna biegania, mapa cieplna jazdy rowerem, alternatywa mapy cieplnej Strava, mapa cieplna GPX, mapa cieplna aktywności, mapa cieplna treningów, darmowa mapa cieplna, mapa cieplna Google Timeline, mapa cieplna historii lokalizacji Google, mapa cieplna Records.json"
+  },
+  "h1": "Generator mapy cieplnej GPS",
+  "intro": "Twórz efektowne mapy cieplne ze swoich aktywności GPS. Dodaj wiele plików, aby zobaczyć na mapie wzorce biegania, jazdy rowerem i innych aktywności.",
+  "saveIntro": "Chcesz mieć te dane również na swoim koncie Dawarich? Zaimportujemy je podczas rejestracji — bez ponownego dodawania plików.",
+  "privacy": "Renderowanie odbywa się w Twojej przeglądarce. Dane są wysyłane tylko wtedy, gdy wybierzesz „Zapisz na moim koncie Dawarich”.",
+  "exportButton": "Eksportuj jako PNG",
+  "loadingMap": "Wczytywanie mapy...",
+  "parseError": "Błąd odczytu {fileName}: {message}",
+  "cards": [
+    {
+      "title": "Czym jest mapa cieplna GPS?",
+      "paragraphs": [
+        "Mapa cieplna GPS pokazuje zagęszczenie danych lokalizacji na mapie. Częściej odwiedzane obszary są jaśniejsze i mają intensywniejsze kolory, tworząc wizualny obraz Twoich aktywności na przestrzeni czasu."
+      ]
+    },
+    {
+      "title": "Obsługiwane formaty plików",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**GPX** - GPS Exchange Format (większość aplikacji GPS)"
+        },
+        {
+          "body": "**FIT** - Pliki aktywności Garmin"
+        },
+        {
+          "body": "**GeoJSON** - Format map internetowych"
+        },
+        {
+          "body": "**KML/KMZ** - Format Google Earth"
+        },
+        {
+          "body": "**Google Timeline JSON** - Pliki Records.json i Semantic Location History z Google Takeout"
+        }
+      ]
+    },
+    {
+      "title": "Jak wyeksportować swoje dane",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Strava:** Ustawienia > Moje konto > Pobierz swoje dane"
+        },
+        {
+          "body": "**Garmin:** Skopiuj pliki .FIT z urządzenia lub użyj eksportu Garmin Connect"
+        },
+        {
+          "body": "**Apple Fitness:** Użyj aplikacji innych firm, aby wyeksportować treningi jako GPX"
+        },
+        {
+          "body": "**Google Maps:** Użyj Google Takeout do eksportu historii lokalizacji — pliki Records.json i Semantic Location History są obsługiwane bezpośrednio"
+        }
+      ]
+    },
+    {
+      "title": "Darmowa alternatywa dla mapy cieplnej Strava",
+      "paragraphs": [
+        "Funkcja mapy cieplnej Strava wymaga płatnej subskrypcji. To darmowe narzędzie pozwala tworzyć podobne mapy z wyeksportowanych danych bez subskrypcji i konta."
+      ]
+    }
+  ],
+  "upload": {
+    "uploadTitle": "Dodaj pliki",
+    "dropFiles": "Przeciągnij i upuść pliki tutaj",
+    "formats": "GPX, FIT, TCX, GeoJSON, KML, KMZ, Google Timeline JSON",
+    "clearButton": "Wyczyść wszystko",
+    "inputLabel": "Wybierz pliki do przetworzenia",
+    "processing": "Przetwarzanie plików..."
+  },
+  "results": {
+    "statsTitle": "Statystyki",
+    "pointsLabel": "Łączna liczba punktów",
+    "distanceLabel": "Łączny dystans",
+    "dateRangeLabel": "Zakres dat",
+    "loadedFiles": "Wczytane pliki ({count})",
+    "pointCount": "{points} pkt",
+    "distanceValue": "{distance} km"
+  },
+  "settings": {
+    "settingsTitle": "Ustawienia mapy cieplnej",
+    "schemeLabel": "Paleta kolorów",
+    "schemes": [
+      {
+        "label": "Ogień (czerwony/pomarańczowy)"
+      },
+      {
+        "label": "Strava (pomarańczowy)"
+      },
+      {
+        "label": "Plazma (fioletowy/żółty)"
+      },
+      {
+        "label": "Ocean (niebieski)"
+      },
+      {
+        "label": "Las (zielony)"
+      }
+    ],
+    "intensityLabel": "Intensywność: {intensity}",
+    "radiusLabel": "Promień: {radius}",
+    "opacityLabel": "Krycie: {opacity}"
+  },
+  "cta": {
+    "headline": "Twoja mapa cieplna obejmuje **{points}** punktów GPS na dystansie **{distance} km**. To jednorazowy obraz — Dawarich tworzy Twoją mapę cieplną na bieżąco.",
+    "fallback": "Chcesz zobaczyć historię lokalizacji z wielu lat? Dawarich tworzy Twoją mapę cieplną na bieżąco ze wszystkich Twoich źródeł GPS.",
+    "statLabels": {
+      "points": "punkty",
+      "distance": "dystans",
+      "dateRange": "zakres dat"
+    }
+  }
+}

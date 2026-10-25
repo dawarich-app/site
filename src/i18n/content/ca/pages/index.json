@@ -1,0 +1,31 @@
+{
+  "howItWorksTrack": "Importa les teves dades de Google Timeline en minuts, o comença de zero amb les nostres aplicacions per a [iOS]({iosUrl}) i [Android]({androidUrl}), que també registren sense connexió i pugen les dades automàticament quan tornes a tenir xarxa. També funciona amb OwnTracks, GPSLogger i més.",
+  "howItWorksSteps": [
+    {
+      "title": "Registra"
+    },
+    {
+      "title": "Visualitza",
+      "description": "Descobreix tots els llocs on has estat en un mapa interactiu. Crea viatges, explora un mapa per descobrir i consulta les línies de temps diàries."
+    },
+    {
+      "title": "Recorda",
+      "description": "Consulta estadístiques de distàncies, ciutats i temps. Reviu els viatges amb fotos, notes i records vinculats a cada lloc. Analitza els teus hàbits i patrons de viatge."
+    }
+  ],
+  "subtitle": "Comença en tres passos senzills.",
+  "meta": {
+    "title": "Dawarich — La teva línia de temps privada, per sempre",
+    "description": "Alternativa privada a Google Timeline (Cronologia de Google Maps). Importa i conserva l’historial d’ubicacions per sempre. Sense anuncis ni venda de dades.",
+    "socialDescription": "L’alternativa privada a Google Timeline (Cronologia de Google Maps). Importa el teu historial d’ubicacions i conserva’l per sempre."
+  },
+  "howItWorksTitle": "Com funciona",
+  "schema": {
+    "description": "Alternativa a Google Timeline centrada en la privacitat. Importa el teu historial d’ubicacions i conserva’l per sempre. Allotjament propi, codi obert, sense anuncis ni venda de dades.",
+    "name": "Dawarich",
+    "liteAnnual": "Dawarich Cloud — Lite (anual)",
+    "proMonthly": "Dawarich Cloud — Pro (mensual)",
+    "proAnnual": "Dawarich Cloud — Pro (anual)",
+    "selfHosted": "Allotjament propi"
+  }
+}

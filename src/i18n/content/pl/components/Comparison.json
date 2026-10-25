@@ -1,0 +1,84 @@
+{
+  "versusRows": [
+    {
+      "feature": "Dostęp w przeglądarce",
+      "g": {
+        "text": "Wycofany (tylko aplikacja mobilna)"
+      },
+      "d": {
+        "text": "Pełna aplikacja internetowa"
+      }
+    },
+    {
+      "feature": "Przechowywanie danych",
+      "g": {
+        "text": "Ograniczone (automatyczne usuwanie)"
+      },
+      "d": {
+        "text": "Na zawsze (Pro)"
+      }
+    },
+    {
+      "feature": "Twoje dane używane do reklam",
+      "g": {
+        "text": "Tak"
+      },
+      "d": {
+        "text": "Nigdy"
+      }
+    },
+    {
+      "feature": "Dane sprzedawane podmiotom trzecim",
+      "g": {
+        "text": "Tak (sieć reklamowa)"
+      },
+      "d": {
+        "text": "Nigdy"
+      }
+    },
+    {
+      "feature": "Eksport danych",
+      "g": {
+        "text": "Częściowy, skomplikowany"
+      },
+      "d": {
+        "text": "Jednym kliknięciem, dowolny format"
+      }
+    },
+    {
+      "feature": "Możliwość instalacji na własnym serwerze",
+      "g": {
+        "text": "Nie"
+      },
+      "d": {
+        "text": "Tak — pełna kontrola"
+      }
+    },
+    {
+      "feature": "Otwarty kod źródłowy",
+      "g": {
+        "text": "Nie"
+      },
+      "d": {
+        "text": "Tak — sprawdź każdą linię"
+      }
+    },
+    {
+      "feature": "Działa, gdy firma wycofa produkt",
+      "g": {
+        "text": "Nie"
+      },
+      "d": {
+        "text": "Tak (własna instancja działa dalej)"
+      }
+    }
+  ],
+  "switchPill": " Zmień usługę",
+  "title": "Oś czasu Google (Google Timeline) a Dawarich",
+  "subtitle": "Zobacz, co zyskasz po zmianie.",
+  "dawarichName": "DAWARICH",
+  "footNote": "To Twoje dane. Niech tak zostanie.",
+  "footCta": "Przejdź na Dawarich",
+  "featureHeader": "Funkcja",
+  "googleTimelineHeader": "Google Timeline"
+}

@@ -1,0 +1,84 @@
+{
+  "versusRows": [
+    {
+      "feature": "Accès depuis un navigateur",
+      "g": {
+        "text": "Supprimé (mobile uniquement)"
+      },
+      "d": {
+        "text": "Application web complète"
+      }
+    },
+    {
+      "feature": "Conservation des données",
+      "g": {
+        "text": "Limitée (suppression automatique)"
+      },
+      "d": {
+        "text": "Illimitée (Pro)"
+      }
+    },
+    {
+      "feature": "Vos données utilisées à des fins publicitaires",
+      "g": {
+        "text": "Oui"
+      },
+      "d": {
+        "text": "Jamais"
+      }
+    },
+    {
+      "feature": "Données vendues à des tiers",
+      "g": {
+        "text": "Oui (réseau publicitaire)"
+      },
+      "d": {
+        "text": "Jamais"
+      }
+    },
+    {
+      "feature": "Exporter vos données",
+      "g": {
+        "text": "Partiel et complexe"
+      },
+      "d": {
+        "text": "En un clic, dans tous les formats"
+      }
+    },
+    {
+      "feature": "Option d’auto-hébergement",
+      "g": {
+        "text": "Non"
+      },
+      "d": {
+        "text": "Oui — contrôle total"
+      }
+    },
+    {
+      "feature": "Code source ouvert",
+      "g": {
+        "text": "Non"
+      },
+      "d": {
+        "text": "Oui — vérifiez chaque ligne"
+      }
+    },
+    {
+      "feature": "Fonctionne si l’entreprise abandonne le produit",
+      "g": {
+        "text": "Non"
+      },
+      "d": {
+        "text": "Oui (l’auto-hébergement perdure)"
+      }
+    }
+  ],
+  "switchPill": " Passez à Dawarich",
+  "title": "Google Timeline (Vos trajets Google Maps) face à Dawarich",
+  "subtitle": "Découvrez ce que vous gagnez en passant à Dawarich.",
+  "dawarichName": "DAWARICH",
+  "footNote": "Ce sont vos données. Gardez-en le contrôle.",
+  "footCta": "Passer à Dawarich",
+  "featureHeader": "Fonctionnalité",
+  "googleTimelineHeader": "Google Timeline"
+}

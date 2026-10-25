@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "title": "Une varios trayectos GPS: combinador GPX gratis en línea",
+    "description": "Une varios archivos GPX en uno. Herramienta gratuita y privada en línea para unir trayectos GPS, puntos de referencia y rutas. Todo funciona en tu navegador.",
+    "keywords": "combinador GPX, combinar archivos GPX, combinar trayectos GPS, unir GPX, unir archivos GPX, combinar archivos GPS, unificar GPX, combinar trayectos"
+  },
+  "h1": "Combinador de trayectos GPX",
+  "intro": "Combina varios archivos GPX en uno solo. Une trayectos de distintas actividades, días o dispositivos en un único archivo GPS.",
+  "saveIntro": "O ahórrate la descarga: lo combinaremos y lo importaremos en tu cuenta de Dawarich durante el registro.",
+  "privacy": "La combinación se realiza en tu navegador. No se sube nada a menos que elijas «Guardar en mi cuenta de Dawarich».",
+  "appName": "Combinador GPX",
+  "cards": [
+    {
+      "title": "¿Por qué combinar archivos GPX?",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "Combina caminatas o viajes en bicicleta de varios días en un solo archivo"
+        },
+        {
+          "body": "Une trayectos de distintos dispositivos GPS"
+        },
+        {
+          "body": "Crea una ruta completa a partir de segmentos separados"
+        },
+        {
+          "body": "Agrupa actividades para compartirlas más fácilmente"
+        },
+        {
+          "body": "Crea un trayecto completo para visualizarlo"
+        }
+      ]
+    },
+    {
+      "title": "¿Qué se combina?",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Trayectos**: todos los segmentos de trayectos GPS con marcas de tiempo y elevación"
+        },
+        {
+          "body": "**Puntos de referencia**: puntos de interés con nombre y marcadores"
+        },
+        {
+          "body": "**Rutas**: rutas de navegación planificadas"
+        },
+        {
+          "body": "**Metadatos**: se combinan en una nueva descripción del archivo resultante"
+        }
+      ]
+    },
+    {
+      "title": "Opciones de combinación explicadas",
+      "paragraphs": [
+        "**Mantener los trayectos separados:** los trayectos de cada archivo de entrada se mantienen como trayectos individuales en el resultado. Útil para conservar los límites entre actividades.",
+        "**Combinar en un solo trayecto:** todos los puntos se combinan en un trayecto continuo. Útil para visualizar una ruta unificada."
+      ]
+    },
+    {
+      "title": "Aplicaciones compatibles",
+      "paragraphs": [
+        "El archivo GPX combinado funciona con:"
+      ],
+      "items": [
+        {
+          "body": "Garmin Connect, Strava, Komoot"
+        },
+        {
+          "body": "Google Earth, QGIS, CalTopo"
+        },
+        {
+          "body": "Gaia GPS, AllTrails, ViewRanger"
+        },
+        {
+          "body": "Cualquier aplicación compatible con GPX 1.1"
+        }
+      ]
+    }
+  ],
+  "upload": {
+    "dropFiles": "Arrastra y suelta archivos GPX aquí",
+    "browse": "o haz clic para seleccionar archivos",
+    "clearButton": "Quitar todo",
+    "inputLabel": "Elige los archivos que quieres procesar",
+    "processing": "Procesando archivos..."
+  },
+  "results": {
+    "orderHint": "Arrastra para cambiar el orden o usa las flechas. Los archivos se combinarán en este orden.",
+    "summaryHeading": "Resumen de la combinación",
+    "filesLabel": "Archivos",
+    "tracksLabel": "Trayectos",
+    "pointsLabel": "Puntos",
+    "waypointsLabel": "Puntos de referencia",
+    "removeFileTitle": "Quitar archivo",
+    "filesToMergeHeading": "Archivos para combinar ({count})",
+    "fileSummary": "{tracks} | {points} puntos",
+    "trackCount": "{count} trayecto|{count} trayectos"
+  },
+  "options": {
+    "heading": "Opciones de combinación",
+    "outputName": "Nombre de salida",
+    "singleTrack": "Combinar todos los trayectos en uno solo",
+    "singleTrackHint": "Combina todos los segmentos en un trayecto continuo",
+    "sortByTime": "Ordenar puntos por marca de tiempo",
+    "sortByTimeHint": "Solo disponible al combinar en un solo trayecto",
+    "outputPlaceholder": "Nombre del archivo de salida",
+    "mergeButton": "Combinar y descargar GPX"
+  },
+  "errors": {
+    "gpxOnly": "Selecciona solo archivos GPX.",
+    "minimumFiles": "Añade al menos 2 archivos GPX para combinarlos.",
+    "parse": "Error al analizar {fileName}: {message}",
+    "merge": "Error al combinar los archivos: {message}"
+  },
+  "cta": {
+    "fallback": "¿Necesitas gestionar años de datos GPS? Dawarich organiza y visualiza automáticamente todas tus actividades GPS en un solo lugar.",
+    "headline": "Has combinado **{count}** archivos con **{points}** puntos en uno solo. Dawarich lo hace automáticamente con todas tus fuentes GPS.",
+    "statLabels": {
+      "files": "archivos",
+      "tracks": "trayectos",
+      "points": "puntos"
+    }
+  }
+}

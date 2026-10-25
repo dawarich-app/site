@@ -1,0 +1,261 @@
+{
+  "meta": {
+    "title": "Google Timeline: uneix exportacions d'historial d'ubicacions",
+    "description": "Uneix diverses exportacions de Google Timeline en un fitxer. La deduplicació intel·ligent elimina punts superposats. Records.json, Semantic History i exportacions del telèfon. Gratis i privat.",
+    "keywords": "unir exportacions de Google Timeline, combinar fitxers d'historial d'ubicacions, recuperar dades de Google Timeline, unir Records.json, combinar ubicacions de Google Takeout, unir Semantic Location History, unir Google Timeline, eliminar duplicats de l'historial d'ubicacions, unir dades GPS",
+    "featureList": [
+      "Uneix diverses exportacions de Google Timeline en un sol fitxer",
+      "Eliminació intel·ligent de punts de dades duplicats",
+      "Admet Records.json, Semantic Location History i exportacions del telèfon",
+      "Llindars de distància i temps ajustables per eliminar duplicats",
+      "Informe visual del solapament a la línia de temps",
+      "Exporta en JSON o GPX",
+      "Prioritza la privacitat: tot es processa al navegador",
+      "No s'envien dades a cap servidor"
+    ]
+  },
+  "howTo": {
+    "name": "Com unir exportacions de Google Timeline",
+    "description": "Combina diversos fitxers d'exportació de Google Timeline en un únic conjunt de dades amb eliminació intel·ligent de duplicats.",
+    "steps": [
+      {
+        "name": "Exporta les teves dades de Google Timeline",
+        "text": "Fes servir Google Takeout, Android o iOS per exportar les dades de Google Timeline. Si pots, exporta-les amb diversos mètodes per assegurar-te que les tens totes."
+      },
+      {
+        "name": "Carrega els teus fitxers JSON",
+        "text": "Arrossega i deixa anar tots els fitxers JSON exportats de Google Timeline a l'eina d'unió. L'eina detecta automàticament els formats Records.json, Semantic Location History i les exportacions del telèfon."
+      },
+      {
+        "name": "Revisa el resum dels fitxers i els solapaments",
+        "text": "Consulta la taula de resum dels fitxers i la visualització de la línia de temps per veure com se solapen. L'eina mostra els intervals de dates, el nombre de punts i el format detectat de cada fitxer."
+      },
+      {
+        "name": "Ajusta la configuració d'eliminació de duplicats",
+        "text": "Estableix el llindar de distància (10-500 metres) i de temps (10-300 segons) per eliminar duplicats. Els punts dins de tots dos llindars es consideren duplicats."
+      },
+      {
+        "name": "Uneix i exporta",
+        "text": "Fes clic a Uneix els fitxers per combinar totes les dades i eliminar els duplicats. Descarrega el resultat en JSON (conserva totes les metadades) o GPX (compatible amb aplicacions de cartografia)."
+      }
+    ],
+    "tool": "Eina de Dawarich per unir dades de Google Timeline"
+  },
+  "h1": "Eina per unir dades de Google Timeline",
+  "intro": "Uneix diverses exportacions de Google Timeline (Cronologia de Google Maps) en un únic fitxer. L'eliminació intel·ligent de duplicats treu els punts superposats i conserva tots els registres d'ubicació únics. Gratis, amb privacitat i íntegrament al navegador.",
+  "preCta": "Vols visualitzar primer les teves dades de la línia de temps? Prova el nostre [visualitzador de Google Timeline](/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) per explorar el teu historial d'ubicacions en un mapa interactiu. Necessites un substitut a llarg termini de la línia de temps? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) et dona la plena propietat de les teves dades.",
+  "faqTitle": "Preguntes freqüents",
+  "homeLabel": "Inici",
+  "toolsLabel": "Eines gratuïtes",
+  "privacyTitle": "La privacitat, primer",
+  "privacyBody": "La unió i l'eliminació de duplicats es fan íntegrament al navegador. Les teves dades d'ubicació no surten mai del dispositiu ni s'envien a cap servidor.",
+  "benefitsTitle": "Per què unir exportacions de la línia de temps?",
+  "benefitsIntro": "Google ofereix diverses maneres d'exportar les dades de la línia de temps, i cadascuna recull informació diferent. Combinar-les et dona l'historial d'ubicacions més complet possible.",
+  "benefits": [
+    {
+      "title": "Diversos mètodes d'exportació:",
+      "body": "Google Takeout, l'exportació del telèfon i Semantic Location History contenen dades diferents. Unir-les permet recollir tot el contingut de cada font."
+    },
+    {
+      "title": "Recuperació de dades:",
+      "body": "Després de la migració de la línia de temps de Google de 2024, molts usuaris tenen exportacions parcials de dates diferents. Uneix-les per reconstruir tant d'historial com sigui possible."
+    },
+    {
+      "title": "Combinació d'exportacions antigues i noves:",
+      "body": "Vas exportar la teva línia de temps el 2022 i un altre cop el 2024? Uneix totes dues exportacions per obtenir una cobertura contínua sense entrades duplicades."
+    }
+  ],
+  "settings": {
+    "title": "Configuració d'eliminació de duplicats",
+    "intro": "Ajusta amb quina intensitat es detecten els punts duplicats. Dos punts es consideren duplicats si la distància i el temps entre ells són dins de tots dos llindars. Es conserva el punt amb més metadades.",
+    "distanceLabel": "Llindar de distància",
+    "distanceHint": "Els punts més propers que aquesta distància poden ser duplicats (10m = estricte, 500m = intensiu)",
+    "timeLabel": "Llindar de temps",
+    "timeHint": "Els punts registrats dins d'aquest interval poden ser duplicats (10s = estricte, 300s = intensiu)"
+  },
+  "results": {
+    "file": "Fitxer",
+    "format": "Format",
+    "points": "Punts",
+    "paths": "Recorreguts",
+    "dateRange": "Interval de dates",
+    "dateCoverage": "Cobertura de dates",
+    "overlap": "Solapament",
+    "title": "Resultats de la unió",
+    "inputPoints": "Punts d'entrada",
+    "outputPoints": "Punts de sortida",
+    "duplicatesRemoved": "Duplicats eliminats",
+    "filesMerged": "Fitxers units",
+    "overlapDetails": "Detalls del solapament",
+    "parsing": "S'estan analitzant els fitxers carregats...",
+    "unknown": "desconegut",
+    "noTimestamps": "Sense marques de temps",
+    "none": "Cap",
+    "downloadJson": "Descarrega en JSON",
+    "downloadGpx": "Descarrega en GPX",
+    "noDate": "No disponible",
+    "merging": "S'estan unint...",
+    "uploadedFiles": "Fitxers carregats ({count})",
+    "distanceValue": "{distance}m",
+    "timeValue": "{seconds}s",
+    "filePair": "{fileA} i {fileB}",
+    "overlapRange": " se solapen del {startDate} al {endDate}",
+    "overlapWith": "Solapament amb {fileName}",
+    "mergeButton": "Uneix {count} fitxer|Uneix {count} fitxers|Uneix {count} fitxers",
+    "dayCount": "{count} dia|{count} dies|{count} dies",
+    "parseError": "Error en analitzar {fileName}: {message}",
+    "processingError": "Error en processar els fitxers: {message}",
+    "mergeError": "Error en unir els fitxers: {message}"
+  },
+  "cta": {
+    "fallback": "Vols mantenir les dades d'ubicació unides segures i sempre accessibles? Dawarich desa tot el teu historial d'ubicacions de manera segura.",
+    "postTitle": "No tornis a arriscar-te a perdre les teves dades d'ubicació",
+    "postBody": "Dawarich ho desa tot en centres de dades de la UE, xifrat en trànsit (SSL/TLS) i en repòs (LUKS), amb còpies de seguretat completes i un mapa interactiu. Importa les dades unides de la línia de temps i continua registrant-les automàticament.",
+    "bottomTitle": "Busques un substitut a llarg termini de Google Timeline?",
+    "bottomBody": "Dawarich és una plataforma de seguiment d'ubicacions de codi obert que et dona el control total de les teves dades. Importa la teva exportació unida de Google Timeline, registra la ubicació des del telèfon i visualitza anys d'historial de desplaçaments, tot en un servidor propi o al núvol.",
+    "button": "Prova Dawarich gratis durant 7 dies",
+    "headline": "Has combinat **{count}** fitxers amb **{points}** punts en un de sol. Dawarich ho fa automàticament amb totes les teves fonts GPS.",
+    "statLabels": {
+      "files": "fitxers",
+      "points": "punts",
+      "duplicates": "duplicats eliminats"
+    }
+  },
+  "faq": [
+    {
+      "q": "És segur carregar les meves dades de Google Timeline?",
+      "a": "Sí. Tot el processament de les dades es fa íntegrament al navegador amb JavaScript. Els fitxers del teu historial d'ubicacions no s'envien mai a cap servidor. Els fitxers es llegeixen localment, s'analitzen, s'uneixen i s'exporten sense cap petició de xarxa. Quan tanques la pestanya, les dades desapareixen. L'eina també és de codi obert perquè puguis comprovar-ne el codi."
+    },
+    {
+      "q": "Com funciona l'eliminació de duplicats?",
+      "a": "L'algorisme ordena tots els punts per marca de temps i compara cada punt amb l'anterior. Si dos punts consecutius són dins del llindar de distància (50 metres per defecte) i de temps (60 segons per defecte), s'elimina el duplicat. Quan es troba un duplicat, es conserva el punt amb més metadades (com ara noms de llocs o tipus d'activitat). Pots ajustar tots dos llindars amb els controls lliscants abans d'unir els fitxers."
+    },
+    {
+      "q": "Puc unir formats diferents?",
+      "a": "Sí. L'eina admet tots els formats d'exportació de Google Timeline: Records.json de Google Takeout, fitxers mensuals de Semantic Location History (com ara 2022_APRIL.json) i les exportacions més recents de la línia de temps del telèfon amb semanticSegments. Pots combinar aquests formats com vulguis. L'analitzador detecta automàticament el format de cada fitxer i normalitza les dades abans d'unir-les."
+    },
+    {
+      "q": "Què passa amb les dades solapades?",
+      "a": "Les dades solapades es gestionen en eliminar els duplicats. Quan dos fitxers cobreixen el mateix període, és probable que hi hagi punts d'ubicació duplicats registrats al mateix lloc i moment. L'eina els identifica per proximitat tant en l'espai com en el temps i conserva només una còpia de cada punt (amb preferència per la que té més metadades). L'informe de solapament mostra exactament quins fitxers se solapen i durant quants dies."
+    },
+    {
+      "q": "Es perdrà alguna dada en unir els fitxers?",
+      "a": "No es perd cap dada significativa. L'eliminació de duplicats només treu duplicats reals: punts que són essencialment la mateixa ubicació registrada al mateix moment des de diverses fonts d'exportació. Tots els punts únics, visites a llocs, segments d'activitat i recorreguts de cada fitxer es conserven al resultat. Si vols anar sobre segur, pots posar el llindar de distància a 0 per desactivar completament l'eliminació de duplicats."
+    },
+    {
+      "q": "Quins formats d'exportació hi ha disponibles?",
+      "a": "Pots exportar les dades unides en JSON (una matriu de tots els punts d'ubicació sense duplicats i amb totes les metadades) o en GPX (un format GPS estàndard compatible amb la majoria d'aplicacions de cartografia, dispositius de seguiment esportiu i eines SIG). L'exportació JSON conserva totes les metadades originals, com ara noms de llocs, adreces i tipus d'activitat. L'exportació GPX converteix les visites a llocs en punts de pas i els registres d'ubicació en punts de trajecte."
+    },
+    {
+      "q": "Quants fitxers puc unir alhora?",
+      "a": "No hi ha cap límit fix de fitxers. L'eina s'ha provat amb més de 10 fitxers alhora, inclosos fitxers Records.json grans amb centenars de milers de punts. El temps de processament depèn del nombre total de punts de tots els fitxers i de la potència del dispositiu. Una unió típica de 3-5 fitxers amb un total de 500,000 punts triga entre 10-30 segons en un ordinador modern."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Què és l'eina per unir dades de la línia de temps?",
+      "paragraphs": [
+        "És una eina gratuïta al navegador que combina diversos fitxers d'exportació de Google Timeline en un únic conjunt de dades. Quan exportes l'historial d'ubicacions de Google amb mètodes diferents (Google Takeout, exportació del telèfon, Semantic History), sovint acabes amb fitxers solapats que contenen punts duplicats. Aquesta eina els uneix de manera intel·ligent: elimina duplicats i conserva cada registre d'ubicació únic.",
+        "Tot el processament es fa localment al navegador. Les teves dades d'ubicació no es transmeten mai a cap servidor, de manera que és segur fer-la servir fins i tot amb anys d'historial d'ubicacions personal sensible."
+      ]
+    },
+    {
+      "title": "Com funciona l'eliminació de duplicats",
+      "paragraphs": [
+        "L'algorisme fa servir dos factors per identificar punts d'ubicació duplicats:"
+      ],
+      "items": [
+        {
+          "body": "**Proximitat espacial** -- Els punts dins del llindar de distància (50 metres per defecte) són candidats a ser duplicats"
+        },
+        {
+          "body": "**Proximitat temporal** -- Els punts també han de ser dins del llindar de temps (60 segons per defecte) per considerar-se duplicats"
+        },
+        {
+          "body": "**Calen totes dues condicions** -- Un punt només s'elimina com a duplicat si compleix tant el criteri de distància COM el de temps"
+        },
+        {
+          "body": "**Conservació de metadades** -- Quan es troben duplicats, es conserva la versió amb més metadades (noms de llocs, adreces, tipus d'activitat)"
+        }
+      ],
+      "footer": [
+        "Els punts s'ordenen cronològicament abans d'eliminar els duplicats, per garantir resultats coherents independentment de l'ordre de càrrega."
+      ]
+    },
+    {
+      "title": "Per què unir exportacions de la línia de temps?",
+      "paragraphs": [
+        "Hi ha diverses situacions habituals en què unir dades de Google Timeline és essencial:"
+      ],
+      "items": [
+        {
+          "body": "**Diverses fonts d'exportació** -- Google Takeout i les exportacions d'Android i iOS recullen subconjunts diferents de les teves dades"
+        },
+        {
+          "body": "**Recuperació després de la migració de Google de 2024** -- Quan Google va traslladar la línia de temps a l'emmagatzematge al dispositiu, molts usuaris van fer diverses exportacions parcials. Unir-les recupera l'historial més complet"
+        },
+        {
+          "body": "**Còpies de seguretat periòdiques** -- Si vas exportar les dades el 2021 i un altre cop el 2024, unir-les crea un conjunt de dades continu que cobreix tots dos períodes"
+        },
+        {
+          "body": "**Canvis de dispositiu** -- Has canviat de telèfon? Uneix les exportacions del dispositiu antic i del nou"
+        }
+      ]
+    },
+    {
+      "title": "Què va passar amb Google Maps Timeline?",
+      "paragraphs": [
+        "A finals de 2024, Google va retirar la versió web de Google Maps Timeline i va traslladar totes les dades d'ubicació a l'emmagatzematge al dispositiu. Només les dades dels darrers 90 dies es van transferir automàticament als telèfons dels usuaris. L'historial d'ubicacions més antic es va eliminar de manera permanent, tret que els usuaris l'haguessin exportat manualment abans de la data límit.",
+        "Això va deixar milions d'usuaris amb dades fragmentades: exportacions parcials de Takeout, exportacions del telèfon amb dades recents i fitxers de Semantic Location History de períodes diferents. L'eina d'unió ajuda a tornar a ajuntar aquests fragments en un historial d'ubicacions complet.",
+        "Per continuar registrant la ubicació amb plena propietat de les teves dades, considera [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-merger) com a substitut en un servidor propi o al núvol."
+      ]
+    },
+    {
+      "title": "Formats compatibles",
+      "paragraphs": [
+        "L'eina detecta i processa automàticament tots els formats d'exportació de Google Timeline:"
+      ],
+      "items": [
+        {
+          "body": "**Records.json** -- Registres GPS en brut de Google Takeout amb coordenades en format E7. Aquests fitxers solen ser els més grans i contenen cada lectura d'ubicació"
+        },
+        {
+          "body": "**Semantic Location History** -- Fitxers mensuals (p. ex. 2022_APRIL.json) amb visites a llocs estructurades, adreces i segments d'activitat"
+        },
+        {
+          "body": "**Exportació de la línia de temps del telèfon** -- Format més recent de Google Maps a Android/iOS amb semanticSegments i recorreguts de la línia de temps"
+        },
+        {
+          "body": "**Settings i TimelineEdits** -- Fitxers de metadades addicionals de les exportacions de Google Takeout"
+        }
+      ],
+      "footer": [
+        "Pots combinar aquests formats com vulguis en una sola operació d'unió."
+      ]
+    },
+    {
+      "title": "Eines relacionades",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Visualitzador de Google Timeline](/tools/timeline-visualizer) -- Consulta el teu historial d'ubicacions en un mapa interactiu"
+        },
+        {
+          "body": "[Generador de mapes de calor GPS](/tools/heatmap-generator) -- Crea mapes de calor amb fitxers GPX, FIT, TCX i altres fitxers GPS"
+        },
+        {
+          "body": "[Eina per unir trajectes GPX](/tools/gpx-merger) -- Combina diversos fitxers GPX en un de sol"
+        },
+        {
+          "body": "[Extracció de geodades de fotos](/tools/photo-geotagging) -- Extreu coordenades GPS de les teves fotos"
+        },
+        {
+          "body": "[Conversor de GeoJSON a GPX](/tools/geojson-to-gpx) -- Converteix dades d'ubicació en format GPX"
+        }
+      ],
+      "footer": [
+        "Més informació: [Migració des de l'historial d'ubicacions de Google](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}

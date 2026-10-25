@@ -1,0 +1,16 @@
+{
+  "ribbon": " EL MÉS POPULAR",
+  "comingSoon": "AVIAT",
+  "billedMonthly": "facturació mensual",
+  "heading": "Apunta’t a la llista d’espera de Família",
+  "subtext": "Assabenta-te’n tan bon punt es llanci: només anual, amb totes les funcions Pro.",
+  "buttonLabel": "Apunta-m’hi",
+  "note": "Sense correu brossa, només l’avís de llançament.",
+  "guarantee": " La garantia d’importació · Reemborsament durant 14 dies",
+  "billing": {
+    "monthly": "mensual",
+    "annual": "anual"
+  },
+  "totalValue": "Valor total",
+  "bonusPrefix": "EXTRA: "
+}

@@ -1,0 +1,31 @@
+{
+  "howItWorksTrack": "Zaimportuj dane z Google Timeline w kilka minut lub zacznij od nowa z naszymi aplikacjami na [iOS]({iosUrl}) i [Android]({androidUrl}) — rejestrują lokalizację nawet offline i przesyłają dane automatycznie po odzyskaniu połączenia. Działa też z OwnTracks, GPSLogger i innymi aplikacjami.",
+  "howItWorksSteps": [
+    {
+      "title": "Rejestruj"
+    },
+    {
+      "title": "Wizualizuj",
+      "description": "Zobacz wszystkie odwiedzone miejsca na interaktywnej mapie. Twórz podróże, odkrywaj mapę zdrapkę i przeglądaj dzienne osie czasu."
+    },
+    {
+      "title": "Wspominaj",
+      "description": "Poznaj statystyki odległości, miast i czasu. Przeżyj podróże na nowo dzięki zdjęciom, notatkom i wspomnieniom przypisanym do miejsc. Poznaj swoje zwyczaje i wzorce podróżowania."
+    }
+  ],
+  "subtitle": "Zacznij w trzech prostych krokach.",
+  "meta": {
+    "title": "Dawarich — Twoja prywatna oś czasu na zawsze",
+    "description": "Prywatna alternatywa dla Google Timeline (Oś czasu Google Maps). Importuj historię lokalizacji i zachowaj ją na zawsze. Bez reklam i sprzedaży danych.",
+    "socialDescription": "Prywatna alternatywa dla Google Timeline (Oś czasu Google Maps). Importuj historię lokalizacji i zachowaj ją na zawsze."
+  },
+  "howItWorksTitle": "Jak to działa",
+  "schema": {
+    "description": "Alternatywa dla Google Timeline dbająca o prywatność. Importuj historię lokalizacji i zachowaj ją na zawsze. Własny serwer, otwarty kod, bez reklam i sprzedaży danych.",
+    "name": "Dawarich",
+    "liteAnnual": "Dawarich Cloud — Lite (rocznie)",
+    "proMonthly": "Dawarich Cloud — Pro (miesięcznie)",
+    "proAnnual": "Dawarich Cloud — Pro (rocznie)",
+    "selfHosted": "Własny serwer"
+  }
+}

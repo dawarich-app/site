@@ -1,0 +1,10 @@
+{
+  "unavailableTitle": "Karte nicht verfügbar",
+  "unavailableBody": "Dein Browser unterstützt kein WebGL, das für die Karte erforderlich ist.",
+  "webglLink": "[Mehr über WebGL erfahren](https://get.webgl.org)",
+  "exitFullscreen": "Vollbild verlassen",
+  "enterFullscreen": "Vollbild öffnen",
+  "exitHint": "Vollbild verlassen (Esc)",
+  "toggleHint": "Vollbild umschalten (F)",
+  "demoLabel": "Demodaten — lege deine Dateien oben ab"
+}

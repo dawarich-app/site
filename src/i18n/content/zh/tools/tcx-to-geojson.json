@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "title": "免费 TCX 转 GeoJSON 转换器 — 在线转换训练文件",
+    "description": "立即将 TCX 文件转换为 GeoJSON 格式。免费、隐私优先的在线运动活动转换器，适合网页地图，完全在浏览器中运行。",
+    "keywords": "TCX 转 GeoJSON, Training Center XML 转 GeoJSON, TCX 转换器, GeoJSON 转换器, 健身文件转换器, 网页地图, Leaflet, Mapbox",
+    "appName": "TCX 转 GeoJSON 转换器"
+  },
+  "h1": "TCX 转 GeoJSON 转换器",
+  "intro": "将 TCX（Training Center XML）文件转换为 GeoJSON 格式，以便用于网页地图应用。所有处理都在浏览器中完成。",
+  "cards": [
+    {
+      "title": "关于此转换",
+      "body": "Garmin Connect、Wahoo、Polar 和 Strava 使用 TCX（Training Center XML）。GeoJSON 是 Leaflet 和 Mapbox GL 等网页地图库的标准格式。"
+    },
+    {
+      "title": "为什么要将 TCX 转换为 GeoJSON？",
+      "items": [
+        "在网页地图应用中展示活动",
+        "用于 Leaflet、Mapbox 或 OpenLayers",
+        "使用 JavaScript 处理 GPS 数据",
+        "导入 QGIS 等 GIS 软件",
+        "创建自定义可视化效果"
+      ]
+    }
+  ],
+  "privacyBody": "所有转换都在浏览器中完成，数据不会离开您的设备。",
+  "noGpsData": "TCX 文件中未找到 GPS 数据。"
+}

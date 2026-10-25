@@ -1,0 +1,16 @@
+{
+  "ribbon": " MAIS POPULAR",
+  "comingSoon": "EM BREVE",
+  "billedMonthly": "cobrado mensalmente",
+  "heading": "Entre na lista de espera do Família",
+  "subtext": "Saiba assim que ele for lançado — apenas anual, com todos os recursos Pro.",
+  "buttonLabel": "Entrar na lista de espera",
+  "note": "Sem spam, só o e-mail de lançamento.",
+  "guarantee": " A garantia de importação · Reembolso em até 14 dias",
+  "billing": {
+    "monthly": "mensal",
+    "annual": "anual"
+  },
+  "totalValue": "Valor total",
+  "bonusPrefix": "BÔNUS: "
+}

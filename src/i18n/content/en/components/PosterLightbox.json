@@ -1,0 +1,62 @@
+{
+  "poster": {
+    "themes": [
+      {
+        "name": "Autumn"
+      },
+      {
+        "name": "Blueprint"
+      },
+      {
+        "name": "Contrast Zones"
+      },
+      {
+        "name": "Copper Patina"
+      },
+      {
+        "name": "Emerald City"
+      },
+      {
+        "name": "Forest"
+      },
+      {
+        "name": "Gradient Roads"
+      },
+      {
+        "name": "Japanese Ink"
+      },
+      {
+        "name": "Midnight Blue"
+      },
+      {
+        "name": "Monochrome Blue"
+      },
+      {
+        "name": "Neon Cyberpunk"
+      },
+      {
+        "name": "Noir"
+      },
+      {
+        "name": "Ocean"
+      },
+      {
+        "name": "Pastel Dream"
+      },
+      {
+        "name": "Sunset"
+      },
+      {
+        "name": "Terracotta"
+      },
+      {
+        "name": "Warm Beige"
+      }
+    ]
+  },
+  "position": "{name} poster, {position} of {total}",
+  "close": "Close",
+  "previous": "Previous poster",
+  "next": "Next poster",
+  "posterAlt": "Berlin route poster in the {name} theme, enlarged"
+}

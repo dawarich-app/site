@@ -1,0 +1,23 @@
+{
+  "cols": [
+    {
+      "name": "Lite"
+    },
+    {
+      "name": "Pro"
+    },
+    {
+      "name": "Família"
+    }
+  ],
+  "title": "Compare todos os recursos",
+  "subtitle": "Expanda uma seção para ver os detalhes — ou mostre apenas o que muda entre os planos.",
+  "collapseAll": "Recolher tudo",
+  "expandAll": "Expandir tudo",
+  "headerFeatures": "Recursos",
+  "footerLabel": "Comece quando quiser",
+  "chooseLite": "Escolher Lite",
+  "startFree": "Começar grátis",
+  "yearAbbreviation": "/ano",
+  "highlightDifferences": "Destacar diferenças"
+}

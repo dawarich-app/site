@@ -399,7 +399,6 @@ export default function TechLorePage() {
 			<Head>
 				<meta name="robots" content="noindex,nofollow" />
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://dawarich.app/techlore" />
 				<meta
 					property="og:title"
 					content="Dawarich for TechLore viewers — Privacy-first location tracking"

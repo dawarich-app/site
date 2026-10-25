@@ -1,23 +1,27 @@
 import React from 'react';
+import { interpolate } from '@docusaurus/Interpolate';
+import { usePluralForm } from '@docusaurus/theme-common';
+import content from '@locale-content/components/DayView.json';
 import VisitRow from './VisitRow';
 import JourneyLeg from './JourneyLeg';
 import styles from './DayView.module.css';
 import entryStyles from './entries.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
-function formatDayLabel(dateStr) {
+function formatDayLabel(dateStr, htmlLang) {
   const [y, m, d] = dateStr.split('-').map(Number);
   const date = new Date(y, m - 1, d);
-  return date.toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
+  return date.toLocaleDateString(htmlLang, { weekday: 'long', month: 'long', day: 'numeric' });
 }
 
-function formatDurationShort(minutes) {
+function formatDurationShort(minutes, htmlLang) {
   const m = Math.max(0, Math.round(minutes));
-  if (m <= 0) return '0m';
+  if (m <= 0) return content.duration.zero;
   const h = Math.floor(m / 60);
   const mm = m % 60;
-  if (h && mm) return `${h}h ${mm}m`;
-  if (h) return `${h}h`;
-  return `${m}m`;
+  if (h && mm) return interpolate(content.duration.hoursMinutes, { hours: h.toLocaleString(htmlLang), minutes: mm.toLocaleString(htmlLang) });
+  if (h) return interpolate(content.duration.hours, { hours: h.toLocaleString(htmlLang) });
+  return interpolate(content.duration.minutes, { minutes: m.toLocaleString(htmlLang) });
 }
 
 function ChevronLeft() {
@@ -37,6 +41,7 @@ function ChevronRight() {
 }
 
 function DaySummary({ summary }) {
+  const htmlLang = useHtmlLang();
   const moving = summary.timeMovingMinutes;
   const stationary = summary.timeStationaryMinutes;
   const total = moving + stationary;
@@ -48,15 +53,15 @@ function DaySummary({ summary }) {
       <div className={styles.summaryStats}>
         {summary.totalDistance > 0 && (
           <span className={`${styles.summaryPill} ${styles.summaryPillDistance}`}>
-            {summary.totalDistance} {summary.distanceUnit}
+            {summary.totalDistance.toLocaleString(htmlLang)} {summary.distanceUnit}
           </span>
         )}
         <span className={`${styles.summaryPill} ${styles.summaryPillPlaces}`}>
-          {summary.placesVisited} places
+          {interpolate(content.places, { count: summary.placesVisited.toLocaleString(htmlLang) })}
         </span>
         {moving > 0 && (
           <span className={`${styles.summaryPill} ${styles.summaryPillMoving}`}>
-            {formatDurationShort(moving)} moving
+            {interpolate(content.movingDuration, { duration: formatDurationShort(moving, htmlLang) })}
           </span>
         )}
       </div>
@@ -67,8 +72,8 @@ function DaySummary({ summary }) {
             <div className={styles.summaryBarStationary} style={{ width: `${stationaryPct}%` }} />
           </div>
           <div className={styles.summaryBarLabels}>
-            <span>moving</span>
-            <span>stationary</span>
+            <span>{content.movingLabel}</span>
+            <span>{content.stationaryLabel}</span>
           </div>
         </>
       )}
@@ -77,22 +82,23 @@ function DaySummary({ summary }) {
 }
 
 function DayFooter({ summary, totalVisits, totalTracks, onPrev, onNext }) {
+  const htmlLang = useHtmlLang();
   return (
     <footer className={styles.footer}>
-      <button type="button" className={styles.navButton} onClick={onPrev} aria-label="Previous day">
+      <button type="button" className={styles.navButton} onClick={onPrev} aria-label={content.previousDay}>
         <ChevronLeft />
       </button>
       <dl className={styles.footerRollup}>
-        <div><dt>Visits</dt><dd>{totalVisits}</dd></div>
-        <div><dt>Tracks</dt><dd>{totalTracks}</dd></div>
+        <div><dt>{content.visitsLabel}</dt><dd>{totalVisits.toLocaleString(htmlLang)}</dd></div>
+        <div><dt>{content.tracksLabel}</dt><dd>{totalTracks.toLocaleString(htmlLang)}</dd></div>
         {summary.totalDistance > 0 && (
-          <div><dt>Distance</dt><dd>{summary.totalDistance} {summary.distanceUnit}</dd></div>
+          <div><dt>{content.distanceLabel}</dt><dd>{summary.totalDistance.toLocaleString(htmlLang)} {summary.distanceUnit}</dd></div>
         )}
         {summary.timeMovingMinutes > 0 && (
-          <div><dt>Moving</dt><dd>{formatDurationShort(summary.timeMovingMinutes)}</dd></div>
+          <div><dt>{content.movingTitle}</dt><dd>{formatDurationShort(summary.timeMovingMinutes, htmlLang)}</dd></div>
         )}
       </dl>
-      <button type="button" className={styles.navButton} onClick={onNext} aria-label="Next day">
+      <button type="button" className={styles.navButton} onClick={onNext} aria-label={content.nextDay}>
         <ChevronRight />
       </button>
     </footer>
@@ -114,8 +120,10 @@ export default function DayView({
   replayState,
   onReplayChange,
 }) {
+  const htmlLang = useHtmlLang();
+  const { selectMessage } = usePluralForm();
   if (!day) {
-    return <div className={styles.empty}>Select a day to see your timeline.</div>;
+    return <div className={styles.empty}>{content.selectDay}</div>;
   }
 
   const totalVisits = day.entries.filter(e => e.type === 'visit').length;
@@ -125,16 +133,16 @@ export default function DayView({
     <div className={styles.dayView}>
       <div className={styles.header}>
         <div className={styles.headerNav}>
-          <button type="button" className={styles.navButton} onClick={onPrevDay} aria-label="Previous day">
+          <button type="button" className={styles.navButton} onClick={onPrevDay} aria-label={content.previousDay}>
             <ChevronLeft />
           </button>
-          <div className={styles.headerLabel}>{formatDayLabel(day.date)}</div>
-          <button type="button" className={styles.navButton} onClick={onNextDay} aria-label="Next day">
+          <div className={styles.headerLabel}>{formatDayLabel(day.date, htmlLang)}</div>
+          <button type="button" className={styles.navButton} onClick={onNextDay} aria-label={content.nextDay}>
             <ChevronRight />
           </button>
         </div>
         <div className={styles.headerMeta}>
-          {totalVisits === 1 ? '1 visit' : `${totalVisits} visits`}
+          {interpolate(selectMessage(totalVisits, content.visitCount), { count: totalVisits.toLocaleString(htmlLang) })}
         </div>
       </div>
 
@@ -168,11 +176,10 @@ export default function DayView({
           </ol>
         ) : (
           <>
-            <p className={styles.empty}>No visits tracked this day.</p>
+            <p className={styles.empty}>{content.emptyDay}</p>
             {rawPointCount > 0 && (
               <div className={styles.rawHint}>
-                This file contains raw GPS records only — no place visits or activity segments.
-                Switch to Semantic Location History or phone-export files for the full timeline view.
+                {content.rawHint}
               </div>
             )}
           </>

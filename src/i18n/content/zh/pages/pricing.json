@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Cloud 价格与方案",
+    "description": "比较 Dawarich Cloud 的 Lite、Pro 和最多支持 5 人的家庭方案。免费试用 7 天，或免费自托管，享用全部 Pro 功能。"
+  },
+  "schema": {
+    "name": "Dawarich Cloud",
+    "description": "隐私优先的 Google Timeline 替代方案，托管于欧洲，支持自托管，代码开源。",
+    "brand": "Dawarich",
+    "liteAnnual": "Lite（年付）",
+    "proMonthly": "Pro（月付）",
+    "proAnnual": "Pro（年付）",
+    "familyAnnual": "家庭（年付）",
+    "familyDescription": "一份年度订阅最多供 5 位成员使用，每人均享有完整 Pro 权限。",
+    "selfHosted": "自托管"
+  },
+  "heading": "Dawarich Cloud 价格",
+  "affiliate": "正在撰写 Dawarich 相关内容？每推荐一位订阅用户，即可[获得首年订阅费的 {percent}%](/affiliate)。"
+}

@@ -1,0 +1,14 @@
+{
+  "subscribe": "Inscrever-se",
+  "privacyNote": "Sem spam. Cancele a inscrição quando quiser.",
+  "invalidEmail": "Digite um endereço de e-mail válido.",
+  "requestError": "Algo deu errado. Tente novamente mais tarde.",
+  "success": "Inscrição feita! Confira sua caixa de entrada para confirmar.",
+  "networkError": "Erro de rede. Verifique sua conexão e tente novamente.",
+  "firstNameLabel": "Nome ",
+  "emailLabel": "E-mail ",
+  "optionalLabel": "(opcional)",
+  "firstNamePlaceholder": "Michael",
+  "emailPlaceholder": "you@example.com",
+  "subscribing": "Inscrevendo…"
+}

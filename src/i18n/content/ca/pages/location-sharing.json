@@ -1,0 +1,53 @@
+{
+  "rows": [
+    {
+      "title": "Un enllaç, un element",
+      "body": "Un enllaç apunta exactament al que has triat: un interval de dates, la posició en directe, un trajecte, un viatge, un mes d’estadístiques o un resum anual. Compartir la sortida del cap de setmana passat no revela res del dimarts anterior."
+    },
+    {
+      "title": "Tu decideixes tot el que fa l’enllaç abans d’enviar-lo",
+      "body": "Es genera una frase per a tu que pots esborrar si prefereixes no fer-la servir. La caducitat és d’una setmana per defecte i la pots deixar en blanc perquè l’enllaç no caduqui mai. Les fotos estan desactivades d’entrada, així no descobriràs després d’enviar una pàgina que mostrava més del que volies.",
+      "note": "Desactivat per defecte, activat per decisió"
+    }
+  ],
+  "objections": [
+    {
+      "q": "Compartir un enllaç exposa tot el meu historial?",
+      "a": "No. L’enllaç dona accés només al recurs per al qual es va crear. Un enllaç de línia de temps es limita a les dates triades; un enllaç de trajecte mostra aquell trajecte. No es pot accedir a la resta del compte des d’una pàgina compartida."
+    },
+    {
+      "q": "I si l’envio a la persona equivocada?",
+      "a": "Revoca’l. L’enllaç deixa de funcionar immediatament. Si hi havies posat una frase de pas, pots regenerar només la frase: això invalida tots els desbloqueigs anteriors i manté l’enllaç actiu."
+    },
+    {
+      "q": "Les persones amb qui comparteixo necessiten un compte?",
+      "a": "No. La pàgina compartida s’obre en qualsevol navegador. Si has configurat una frase de pas, només l’han d’introduir."
+    },
+    {
+      "q": "Puc saber si algú l’ha obert?",
+      "a": "Sí. Els enllaços d’ubicació en directe, d’intervals de dates, de viatges i de trajectes mostren quantes vegades s’han obert i quan s’han consultat per últim cop. Tots apareixen junts en un sol lloc."
+    },
+    {
+      "q": "Què passa amb els enllaços si caduca la meva subscripció?",
+      "a": "Pots exportar-ho tot quan vulguis i tota l’aplicació és de codi obert: pots fer servir les mateixes funcions al teu maquinari, gratis i per sempre."
+    }
+  ],
+  "meta": {
+    "title": "Comparteix el teu historial d’ubicacions amb un enllaç",
+    "description": "Comparteix ubicació en directe o historial per enllaç privat: frase de pas, caducitat i revocació. Només el que triïs. Prova: 7 dies gratis o allotja’l gratis.",
+    "ogTitle": "Comparteix el teu historial d’ubicacions amb un enllaç privat",
+    "ogDescription": "Envia un enllaç que mostri un sol element: un interval de dates, la ubicació en directe, un trajecte, un viatge, les estadístiques d’un mes o un resum anual. Tots els enllaços caduquen o es poden revocar, i la majoria es poden protegir amb una frase de pas."
+  },
+  "locationSharingPage": {
+    "text": "Comparteix on ets.",
+    "em": "Sense revelar tot el teu historial.",
+    "title2": "Comparteix amb límits clars",
+    "sub2": "Sis elements per compartir, cadascun amb el seu enllaç, configuració i caducitat.",
+    "title3": "Les preguntes que convé fer primer",
+    "title4": "Envia un enllaç, no tot l’historial",
+    "sub3": "Comença a Dawarich Cloud amb una prova de 7 dies o executa les mateixes funcions al teu maquinari sense cap cost."
+  },
+  "hero": {
+    "sub": "La majoria d’opcions per compartir la ubicació són un interruptor: l’actives i algú et segueix indefinidament. Dawarich et dona un enllaç que apunta a un sol element, protegit amb una frase de pas, amb la caducitat que triïs i que pots revocar tan bon punt canviïs d’opinió."
+  }
+}

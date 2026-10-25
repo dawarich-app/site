@@ -1,0 +1,14 @@
+{
+  "title": "照片",
+  "emptyTitle": "没有含 GPS 数据的照片",
+  "emptyHint": "上传照片以提取位置数据",
+  "newestFirst": "从新到旧",
+  "oldestFirst": "从旧到新",
+  "byName": "按名称",
+  "photoLabel": "照片",
+  "sortLabel": "照片排序",
+  "unknownDate": "日期未知",
+  "unknownTime": "时间未知",
+  "photoCount": "{count} 张照片",
+  "altitude": "海拔：{altitude} 米"
+}

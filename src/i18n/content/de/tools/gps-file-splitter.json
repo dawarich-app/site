@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "title": "Große GPS-Dateien aufteilen – GPX, GeoJSON, KML & JSON",
+    "description": "Große GPS-Dateien gratis teilen: GPX/GeoJSON/KML/KMZ, JSON aus Google Timeline (Google Maps Zeitachse). Nach Größe, Punktzahl, Datum. ZIP, privat im Browser.",
+    "keywords": "große GPX-Datei aufteilen, GeoJSON in Teile zerlegen, KML-Datei teilen, GPS-Dateigröße reduzieren, große JSON-Standortdatei teilen, GPS-Dateien aufteilen, Google Timeline aufteilen",
+    "featureList": [
+      "Große GPS-Dateien in kleinere Teile aufteilen",
+      "Unterstützung für GPX, GeoJSON, KML, KMZ und Google-Timeline-JSON",
+      "Nach Dateigröße, Punktzahl oder Datum aufteilen",
+      "Als ZIP-Archiv herunterladen",
+      "Datenschutz an erster Stelle – gesamte Verarbeitung im Browser",
+      "Keine Daten werden an einen Server gesendet"
+    ]
+  },
+  "howTo": {
+    "name": "So teilst du eine große GPS-Datei auf",
+    "description": "Lade deine GPS-Datei hoch und teile sie in kleinere, handliche Teile auf.",
+    "steps": [
+      {
+        "name": "GPS-Datei hochladen",
+        "text": "Ziehe deine GPX-, GeoJSON-, KML-, KMZ- oder Google-Timeline-JSON-Datei in das Werkzeug."
+      },
+      {
+        "name": "Aufteilungsmethode wählen",
+        "text": "Wähle die Methode: nach Zielgröße (standardmäßig 10MB), nach Punktzahl oder nach Datum (Jahr oder Monat)."
+      },
+      {
+        "name": "Dateien herunterladen",
+        "text": "Klicke auf „Aufteilen & ZIP herunterladen“, um alle Teile in einer ZIP-Datei zu erhalten."
+      }
+    ]
+  },
+  "h1": "GPS-Dateien aufteilen",
+  "intro": "Teile große GPS- und Standortdateien in kleinere, handliche Teile auf. Unterstützt GPX, GeoJSON, KML, KMZ und JSON aus Google Timeline (Google Maps Zeitachse). Lade alle Teile als einzelne ZIP-Datei herunter.",
+  "benefitsTitle": "Warum GPS-Dateien aufteilen?",
+  "privacyBody": "Die gesamte Datenverarbeitung findet in deinem Browser statt. Deine Dateien verlassen dein Gerät nie.",
+  "preCta": "Arbeitest du mit großen Standortdateien? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=gps-file-splitter) verarbeitet Importe jeder Größe automatisch. Deine Daten gehören vollständig dir und bleiben privat.",
+  "faqTitle": "Häufig gestellte Fragen",
+  "homeLabel": "Startseite",
+  "toolsLabel": "Kostenlose Werkzeuge",
+  "privacyTitle": "Datenschutz an erster Stelle",
+  "benefits": [
+    {
+      "title": "Größenlimits beim Import:",
+      "body": "Viele GPS-Apps und Kartenwerkzeuge begrenzen die Dateigröße (10MB, 50MB usw.). Durch Aufteilen kannst du große Datensätze in Teilen importieren."
+    },
+    {
+      "title": "Bestimmte Abschnitte teilen:",
+      "body": "Sende anderen nur den relevanten Abschnitt eines großen Tracks oder teile nach Jahr/Monat auf, um deinen Standortverlauf zu ordnen."
+    },
+    {
+      "title": "Leistung verbessern:",
+      "body": "Große GPS-Dateien können Kartenanwendungen verlangsamen. Mit kleineren Teilen bleiben sie reaktionsschnell."
+    },
+    {
+      "title": "Google-Timeline-Exporte:",
+      "body": "Records.json-Dateien aus Google Timeline können Hunderte Megabyte groß sein. Teile sie für den Import in andere Werkzeuge in handliche Stücke auf."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Ist es sicher, meine GPS-Dateien hier hochzuladen?",
+      "a": "Ja. Die gesamte Verarbeitung erfolgt mit JavaScript direkt in deinem Browser. Deine GPS-Dateien werden nie auf einen Server hochgeladen, sondern bleiben auf deinem Gerät. Wenn du den Tab schließt, sind die Daten weg. Das Werkzeug ist quelloffen, sodass du genau prüfen kannst, was der Code tut."
+    },
+    {
+      "q": "Welche Dateiformate kann ich aufteilen?",
+      "a": "Dieses Werkzeug unterstützt GPX-, GeoJSON-, KML-, KMZ- und JSON-Dateien (Google Timeline). KMZ-Dateien werden zunächst automatisch entpackt, da sie ZIP-Archive mit KML-Inhalt sind. Google-Timeline-JSON-Dateien werden in allen sechs Exportformaten unterstützt: Records.json, Semantic Location History, Smartphone-Exporte und weitere."
+    },
+    {
+      "q": "Wie funktioniert das Aufteilen nach Größe?",
+      "a": "Bei der Methode „Nach Größe“ schätzt das Werkzeug anhand des Ausgabeformats, wie viele Datenpunkte in jeden Teil passen. GPX benötigt beispielsweise etwa 180 Bytes pro Punkt. Bei einer Zielgröße von 10MB wären das ungefähr 55,000 Punkte pro Teil. Das Werkzeug verteilt deine Daten gleichmäßig, um die Zielgröße zu erreichen."
+    },
+    {
+      "q": "Werden meine Daten beim Aufteilen beschädigt?",
+      "a": "Nein. Jeder Datenpunkt deiner Originaldatei erscheint in genau einer Teildatei. Es werden keine Daten verloren, dupliziert oder verändert. Jeder Teil ist eine gültige, eigenständige Datei mit den richtigen Kopfzeilen und der passenden Struktur für das gewählte Format."
+    },
+    {
+      "q": "Kann ich Google-Timeline-JSON-Dateien aufteilen?",
+      "a": "Ja. Lade eine beliebige Google-Timeline-JSON-Datei hoch: Records.json, Semantic Location History oder das neuere Smartphone-Exportformat. Das Werkzeug erkennt das Format automatisch, liest die Standortdaten ein und teilt sie auf. Die Teile kannst du als ZIP-Datei in deinem bevorzugten Ausgabeformat herunterladen."
+    },
+    {
+      "q": "Warum sollte ich eine GPS-Datei aufteilen?",
+      "a": "Große GPS-Dateien können schwer zu verarbeiten sein. Viele GPS-Apps und Kartenwerkzeuge haben Größenlimits beim Import, oft 10MB oder 50MB. Aufteilen hilft auch, wenn du Trackabschnitte mit anderen teilen, Daten nach Zeitraum ordnen oder Dateigrößen für E-Mail-Anhänge reduzieren möchtest."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Was macht ein Werkzeug zum Aufteilen von GPS-Dateien?",
+      "paragraphs": [
+        "Ein GPS-Dateiwerkzeug zerlegt eine große Standortdatei in kleinere, handlichere Teile. Jeder Teil ist eine gültige, eigenständige Datei, die sich separat öffnen, importieren oder teilen lässt.",
+        "Dieses Werkzeug verarbeitet alles in deinem Browser. Deine sensiblen Standortdaten verlassen dein Gerät also nie. Es unterstützt alle wichtigen GPS-Formate einschließlich Google-Timeline-Exporten."
+      ]
+    },
+    {
+      "title": "Unterstützte Eingabeformate",
+      "paragraphs": [],
+      "items": [
+        { "body": "**GPX** — GPS Exchange Format, das gängigste Format für GPS-Tracks und Wegpunkte" },
+        { "body": "**GeoJSON** — Schlankes geografisches Datenformat für Webkarten" },
+        { "body": "**KML/KMZ** — Keyhole Markup Language für Google Earth und Maps" },
+        { "body": "**JSON (Google Timeline)** — Alle sechs Google-Timeline-Exportformate einschließlich Records.json und Semantic Location History" }
+      ]
+    },
+    {
+      "title": "Aufteilungsmethoden erklärt",
+      "paragraphs": [],
+      "items": [
+        { "body": "**Nach Größe** — Eine bestimmte Dateigröße pro Teil anstreben (standardmäßig 10MB). Das Werkzeug schätzt die Ausgabegröße pro Datenpunkt und teilt entsprechend auf." },
+        { "body": "**Nach Punktzahl** — Nach jeweils N Datenpunkten aufteilen. Nützlich, wenn du das Punktelimit deiner Ziel-App kennst." },
+        { "body": "**Nach Datum** — Daten nach Jahr oder Monat ordnen. Jeder Zeitraum wird zu einer eigenen Datei." }
+      ]
+    },
+    {
+      "title": "Warum Standortdateien aufteilen?",
+      "paragraphs": [
+        "GPS-Tracking-Apps und Kartenwerkzeuge haben oft Größenlimits beim Import. Eine Records.json-Datei aus Google Timeline kann Hunderte Megabyte groß sein und damit zu groß für die meisten Werkzeuge. Durch Aufteilen kannst du diese Daten Stück für Stück verarbeiten.",
+        "Das Aufteilen nach Datum ist besonders nützlich, um einen jahrelangen Standortverlauf in Jahres- oder Monatsarchive zu ordnen, die du einzeln ansehen kannst."
+      ]
+    },
+    {
+      "title": "Optionen für das Ausgabeformat",
+      "paragraphs": [
+        "Standardmäßig haben die Teildateien dasselbe Format wie die Eingabedatei. Du kannst beim Aufteilen auch konvertieren, zum Beispiel eine Google-Timeline-JSON-Datei in monatliche GPX-Dateien zerlegen.",
+        "Unterstützte Ausgabeformate: GPX, GeoJSON, KML, CSV und JSON. Alle Teile werden zum einfachen Herunterladen in einer ZIP-Datei gebündelt."
+      ]
+    },
+    {
+      "title": "Weitere Werkzeuge",
+      "paragraphs": [],
+      "items": [
+        { "body": "[Google-Timeline-Visualisierung](/tools/timeline-visualizer) — Deinen Standortverlauf auf einer Karte ansehen" },
+        { "body": "[Google-Timeline-Konverter](/tools/google-timeline-converter) — Timeline-Daten in GPX, KML oder CSV umwandeln" },
+        { "body": "[Timeline-Statistikanalyse](/tools/timeline-statistics) — Einblicke aus deinen Standortdaten gewinnen" },
+        { "body": "[Timeline-Daten zusammenführen](/tools/timeline-merger) — Mehrere Timeline-Exporte kombinieren" },
+        { "body": "[GPX-Tracks zusammenführen](/tools/gpx-merger) — Mehrere GPX-Dateien zu einer zusammenführen" },
+        { "body": "[Timeline-Formaterkennung](/tools/timeline-format-detector) — Den Typ deiner Exportdatei erkennen" }
+      ]
+    }
+  ],
+  "upload": {
+    "parsing": "Datei wird eingelesen...",
+    "dropFile": "GPS-Datei hier ablegen",
+    "browse": "oder zum Auswählen klicken",
+    "formats": "Unterstützt: GPX, GeoJSON, KML, KMZ, JSON (Google Timeline)",
+    "clearButton": "Datei entfernen",
+    "inputLabel": "Dateien zur Verarbeitung auswählen"
+  },
+  "results": {
+    "fileNameLabel": "Dateiname",
+    "fileSizeLabel": "Dateigröße",
+    "formatLabel": "Format",
+    "pointsLabel": "Datenpunkte",
+    "pointsLoaded": "{points} Punkte geladen",
+    "sizeValue": "{size} MB"
+  },
+  "options": {
+    "strategyTitle": "Aufteilungsmethode",
+    "bySize": "Nach Größe",
+    "byCount": "Nach Punktzahl",
+    "byDate": "Nach Datum",
+    "targetSizeLabel": "Zielgröße der Teile",
+    "pointsPerChunkLabel": "Punkte pro Teil",
+    "outputLabel": "Ausgabeformat:",
+    "sameFormat": "Wie Eingabeformat",
+    "targetSizeAriaLabel": "Zielgröße der Teile in Megabyte",
+    "yearLabel": "Nach Jahr aufteilen",
+    "monthLabel": "Nach Monat aufteilen",
+    "splitButton": "Aufteilen & ZIP herunterladen",
+    "splitting": "Datei wird aufgeteilt...",
+    "chunkPreview": "Aus {points} Punkten entsteht **{count}** Teil|Aus {points} Punkten entstehen **{count}** Teile",
+    "formats": {
+      "gpx": "GPX",
+      "geojson": "GeoJSON",
+      "kml": "KML",
+      "csv": "CSV",
+      "json": "JSON"
+    }
+  },
+  "errors": {
+    "missingKmlError": "Keine KML-Datei im KMZ-Archiv gefunden",
+    "parseError": "Fehler beim Einlesen der Datei: {message}",
+    "splitError": "Fehler beim Aufteilen der Datei: {message}",
+    "unsupportedFormatError": "Nicht unterstütztes Dateiformat: .{format}"
+  },
+  "cta": {
+    "title": "Suchst du einen Ersatz für Google Timeline?",
+    "body": "Dawarich ist eine quelloffene Plattform zur Standortaufzeichnung, die dir volle Kontrolle über deine Daten gibt. Importiere deinen Google-Timeline-Export, zeichne deinen Standort laufend mit dem Smartphone auf und visualisiere jahrelange Bewegungsdaten – selbst gehostet oder in der Cloud.",
+    "button": "Dawarich 7 Tage kostenlos testen",
+    "headline": "Deine Datei enthält **{points}** Punkte. Dawarich verarbeitet Importe jeder Größe automatisch, ohne dass du sie aufteilen musst.",
+    "statLabels": {
+      "points": "Punkte"
+    }
+  }
+}

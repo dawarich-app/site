@@ -1,0 +1,263 @@
+{
+  "h1": "Detector de formats de Google Timeline",
+  "intro": "Carrega qualsevol fitxer d'exportació de Google Timeline (Cronologia de Google Maps) per identificar-ne el format a l'instant, veure estadístiques de les dades i rebre recomanacions sobre què fer després. Tot es processa al navegador.",
+  "privacyTitle": "La privacitat, primer",
+  "privacyBody": "Tot el processament de les dades es fa íntegrament al navegador. Les teves dades d'ubicació no surten mai del dispositiu ni s'envien a cap servidor.",
+  "preCta": "No saps què fer amb les teves dades de Google Timeline? Carrega el fitxer a sobre per descobrir-ho, o explora [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-format-detector) per registrar la ubicació automàticament amb plena propietat de les teves dades.",
+  "faqTitle": "Preguntes freqüents",
+  "homeLabel": "Inici",
+  "toolsLabel": "Eines gratuïtes",
+  "meta": {
+    "title": "Detector de formats de Google Timeline: identifica el fitxer",
+    "description": "Carrega qualsevol fitxer d’ubicacions de Google Takeout: detecta a l’instant el format de Google Timeline (Cronologia de Google Maps), nombre de punts, interval de dates, mida i qualitat. Gratis, tot al navegador.",
+    "keywords": "format de Google Timeline, format de la meva exportació de Google, tipus de fitxer d'ubicacions de Google Takeout, format d'historial d'ubicacions de Google, detector de fitxers de Google Timeline, format d'exportació de Google Maps Timeline, format JSON de Google Takeout, tipus de fitxer d'historial d'ubicacions, format de dades de Google Timeline, identificar fitxer d'exportació de Google",
+    "featureList": [
+      "Detecta a l'instant el format d'exportació de Google Timeline",
+      "Admet els 6 formats de Google Timeline",
+      "Mostra el nombre de punts i recorreguts i l'interval de dates",
+      "Indicadors de qualitat de les dades",
+      "Prioritza la privacitat: tot es processa al navegador",
+      "No s'envien dades a cap servidor"
+    ]
+  },
+  "howTo": {
+    "name": "Com identificar el format d'exportació de Google Timeline",
+    "description": "Carrega el fitxer d'exportació de Google Timeline per detectar-ne el format a l'instant, veure estadístiques i rebre recomanacions sobre què fer després.",
+    "steps": [
+      {
+        "name": "Exporta les teves dades de Google Timeline",
+        "text": "Ves a takeout.google.com, selecciona Historial d'ubicacions (línia de temps) i exporta'l. També ho pots fer a Android: Google Maps > Configuració > Ubicació > Línia de temps > Exporta. A iOS: Google Maps > Configuració > Contingut personal > Exporta les dades de la línia de temps."
+      },
+      {
+        "name": "Carrega el teu fitxer JSON",
+        "text": "Arrossega i deixa anar el fitxer JSON exportat de Google Timeline al detector. L'eina identifica el format automàticament en qüestió de segons."
+      },
+      {
+        "name": "Revisa els resultats",
+        "text": "Consulta el format detectat, el nombre de punts i recorreguts, l'interval de dates, la mida del fitxer i els indicadors de qualitat de les dades. Després segueix els enllaços a les eines recomanades segons el format."
+      }
+    ],
+    "tool": "Detector de formats de Google Timeline de Dawarich"
+  },
+  "exportData": {
+    "title": "Com obtenir les dades de la teva línia de temps",
+    "intro": "Pots exportar les dades de Google Timeline amb un dels mètodes següents. Si un no et funciona, prova'n un altre.",
+    "warning": "Malauradament, alguns usuaris potser no podran exportar les seves dades d'ubicació a causa de com Google ha fet la transició a les noves polítiques d'emmagatzematge d'ubicacions.",
+    "methods": [
+      {
+        "title": "Google Takeout:",
+        "steps": [
+          "Ves a [takeout.google.com](https://takeout.google.com/) → Tria Historial d'ubicacions (línia de temps) → Exporta",
+          "Aquest mètode pot no funcionar per a tothom perquè Google ha canviat com s'emmagatzemen i s'exporten les dades d'ubicació. Més detalls al nostre [blog](https://dawarich.app/blog/migrating-from-google-location-history-to-dawarich)."
+        ]
+      },
+      {
+        "title": "A Android:",
+        "steps": [
+          "Obre Google Maps → Configuració → Ubicació → Serveis d'ubicació → Línia de temps → Exporta la línia de temps"
+        ]
+      },
+      {
+        "title": "A iOS:",
+        "steps": [
+          "Obre Google Maps → Configuració → Contingut personal → Exporta les dades de la línia de temps"
+        ]
+      }
+    ]
+  },
+  "formats": {
+    "records": {
+      "title": "Records.json (dades GPS en brut)",
+      "description": "És l'exportació clàssica de Google Takeout amb coordenades GPS en brut en format E7. Inclou cada lectura d'ubicació registrada per Google, amb precisió, altitud, velocitat i metadades del dispositiu. Aquests fitxers poden ser molt grans (100+ MB per a anys de dades)."
+    },
+    "semantic": {
+      "title": "Semantic Location History",
+      "description": "Aquest format conté dades d'ubicació mensuals estructurades amb visites a llocs (incloses adreces i noms de negocis) i segments d'activitat (a peu, amb cotxe, amb bicicleta). Els fitxers tenen noms com ara 2022_APRIL.json."
+    },
+    "settings": {
+      "title": "Settings.json (informació del dispositiu)",
+      "description": "Aquest fitxer conté informació de configuració del dispositiu de la teva exportació de Google Timeline. Enumera els dispositius que han aportat dades d'ubicació, però no conté coordenades GPS."
+    },
+    "timelineEdits": {
+      "title": "Timeline Edits",
+      "description": "Aquest format conté edicions i correccions fetes a les dades de la teva línia de temps, incloses dades agregades de llocs i senyals en brut. Pot contenir alguns punts d'ubicació de les modificacions de l'usuari."
+    },
+    "semanticSegments": {
+      "title": "Semantic Segments",
+      "description": "És una versió analitzada de l'historial d'ubicacions amb segments semàntics que contenen recorreguts de la línia de temps. Inclou coordenades geogràfiques en format de text i intervals de temps per a cada segment."
+    },
+    "locationHistory": {
+      "title": "Location History (format nou)",
+      "description": "És el format d'exportació més recent de Google Timeline des de telèfons Android/iOS. Conté dades de visites i activitats amb coordenades geogràfiques en format de text, recorreguts de la línia de temps i puntuacions de probabilitat."
+    },
+    "unknown": {
+      "title": "Format desconegut",
+      "description": "No s'ha pogut identificar el format d'aquest fitxer. Potser no és una exportació de Google Timeline o és una variant de format encara no compatible."
+    }
+  },
+  "relatedTools": [
+    {
+      "title": "Conversor de Google Timeline",
+      "description": "Converteix les dades de la línia de temps en GPX, GeoJSON o KML"
+    },
+    {
+      "title": "Visualitzador de la línia de temps",
+      "description": "Consulta el teu historial d'ubicacions en un mapa interactiu"
+    },
+    {
+      "title": "Analitzador d'estadístiques",
+      "description": "Obtén estadístiques detallades de les teves dades d'ubicació"
+    },
+    {
+      "title": "Divisor de fitxers",
+      "description": "Divideix fitxers grans de la línia de temps en parts més petites"
+    },
+    {
+      "title": "Eina per unir dades",
+      "description": "Combina diversos fitxers de la línia de temps en un de sol"
+    },
+    {
+      "title": "Calculadora de quilometratge",
+      "description": "Calcula la distància total recorreguda a partir de les teves dades"
+    }
+  ],
+  "results": {
+    "title": "Resultats de la detecció",
+    "points": "Punts",
+    "paths": "Recorreguts",
+    "fileSize": "Mida del fitxer",
+    "dateRange": "Interval de dates",
+    "qualityTitle": "Qualitat de les dades",
+    "toolsTitle": "Eines recomanades",
+    "noDates": "No s'han trobat dates",
+    "noTimestamps": "Sense dades de marques de temps",
+    "noAccuracy": "Sense dades de precisió",
+    "parseErrorTitle": "Error d'anàlisi",
+    "filesAnalyzed": "{count} fitxers analitzats",
+    "totalPoints": "{points} punts en total",
+    "totalPaths": "{paths} recorreguts en total",
+    "parseError": "No s'ha pogut analitzar aquest fitxer: {message}",
+    "timestampCoverage": "El {percent}% té marques de temps",
+    "accuracyCoverage": "El {percent}% té informació de precisió"
+  },
+  "fileSize": {
+    "empty": "0 B",
+    "units": [
+      "B",
+      "KB",
+      "MB",
+      "GB"
+    ],
+    "value": "{size} {unit}"
+  },
+  "cta": {
+    "title": "Busques un substitut de Google Timeline?",
+    "body": "Dawarich és una plataforma de seguiment d'ubicacions de codi obert que et dona el control total de les teves dades. Importa la teva exportació de Google Timeline, registra la ubicació des del telèfon i visualitza anys d'historial de desplaçaments, tot en un servidor propi o al núvol.",
+    "button": "Prova Dawarich gratis durant 7 dies",
+    "headline": "Has analitzat {files} amb {formats}. Dawarich els admet tots: importa i visualitza el teu historial d'ubicacions a l'instant.",
+    "fileCount": "**{count}** fitxer|**{count}** fitxers|**{count}** fitxers",
+    "formatCount": "**{count}** format detectat|**{count}** formats detectats|**{count}** formats detectats",
+    "statLabels": {
+      "files": "fitxers",
+      "formats": "formats",
+      "points": "punts"
+    }
+  },
+  "faq": [
+    {
+      "q": "Quins formats de Google Timeline detecta aquesta eina?",
+      "a": "Aquesta eina detecta els sis formats d'exportació coneguts de Google Timeline: Records.json (dades GPS en brut de Google Takeout), Semantic Location History (fitxers mensuals amb visites a llocs i segments d'activitat), Settings.json (informació del dispositiu), Timeline Edits (correccions de l'usuari), Semantic Segments (historial d'ubicacions analitzat amb recorreguts de la línia de temps) i Location History (el format d'exportació més recent des de telèfons Android i iOS). El format s'identifica automàticament tan bon punt carregues un fitxer."
+    },
+    {
+      "q": "Les meves dades estan segures quan les carrego aquí?",
+      "a": "Sí. Tot el processament de les dades es fa íntegrament al navegador amb JavaScript. Els teus fitxers de Google Timeline no s'envien mai a cap servidor: es queden al dispositiu en tot moment. Quan tanques la pestanya, les dades desapareixen. L'eina és de codi obert perquè puguis comprovar exactament què fa el codi. Sense comptes, sense registres, sense seguiment."
+    },
+    {
+      "q": "Què va passar amb Google Maps Timeline?",
+      "a": "A finals de 2024, Google va retirar la versió web de Google Maps Timeline i va traslladar totes les dades d'ubicació a l'emmagatzematge del telèfon. Els usuaris van tenir un termini limitat per exportar les dades: només es van migrar automàticament els darrers 90 dies, i les dades més antigues es van eliminar tret que se n'hagués fet una còpia manual amb Google Takeout. Molts usuaris van perdre anys d'historial d'ubicacions. Aquesta eina t'ajuda a entendre en quin format són els fitxers exportats perquè els puguis fer servir amb les eines adequades."
+    },
+    {
+      "q": "Com puc exportar les meves dades de Google Timeline?",
+      "a": "Hi ha tres mètodes: (1) Google Takeout a takeout.google.com: selecciona Historial d'ubicacions i exporta'l en JSON. Això genera Records.json, fitxers de Semantic Location History, Settings.json i Timeline Edits. (2) A Android: Google Maps > Configuració > Ubicació > Serveis d'ubicació > Línia de temps > Exporta la línia de temps. Això genera el format més recent de Location History. (3) A iOS: Google Maps > Configuració > Contingut personal > Exporta les dades de la línia de temps. Et recomanem provar tots els mètodes i conservar tots els fitxers exportats."
+    },
+    {
+      "q": "Quina diferència hi ha entre Records.json i Semantic Location History?",
+      "a": "Records.json conté coordenades GPS en brut: cada lectura d'ubicació registrada per Google, amb marques de temps, valors de precisió, altitud i velocitat. Aquests fitxers són molt grans i contenen les dades més detallades. Els fitxers de Semantic Location History (amb noms com ara 2022_APRIL.json) són més estructurats: contenen visites a llocs amb noms de negocis i adreces, segments d'activitat (a peu, amb cotxe, amb bicicleta) amb rutes i informació de durada. Records.json és millor per obtenir dades d'ubicació precises; els fitxers Semantic són millors per entendre on vas anar i com hi vas arribar."
+    },
+    {
+      "q": "Quina eina hauria de fer servir després de detectar el format?",
+      "a": "Depèn de què vulguis fer. Per veure les dades en un mapa, fes servir el visualitzador de la línia de temps. Per convertir-les en GPX/GeoJSON/KML i fer-les servir en altres aplicacions, fes servir el conversor de Google Timeline. Per entendre els teus patrons de viatge i estadístiques, fes servir l'analitzador d'estadístiques. Si el fitxer és massa gran, el divisor de fitxers el pot dividir en parts més petites. Si tens diversos fitxers d'exportació, l'eina per unir dades els pot combinar. Per calcular distàncies, fes servir la calculadora de quilometratge."
+    },
+    {
+      "q": "Per què l'eina no pot detectar el format del meu fitxer?",
+      "a": "Si l'eina mostra «Format desconegut», potser el fitxer no és una exportació de Google Timeline. Els motius habituals són: carregar un fitxer que no és JSON (l'eina només admet fitxers .json), carregar un fitxer de Google Takeout d'un altre servei (com YouTube o Chrome) o carregar un fitxer malmès o truncat. Assegura't de carregar fitxers de la secció Historial d'ubicacions de la teva exportació de Google Takeout."
+    },
+    {
+      "q": "Puc detectar el format de diversos fitxers alhora?",
+      "a": "Sí. Pots carregar diversos fitxers JSON alhora. L'eina analitzarà cada fitxer individualment i mostrarà el format detectat, el nombre de punts i recorreguts, l'interval de dates i la qualitat de les dades de cadascun. És útil quan tens una exportació completa de Google Takeout amb diversos fitxers (Records.json, fitxers Semantic, Settings.json, etc.)."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Què és un detector de formats de Google Timeline?",
+      "paragraphs": [
+        "Quan exportes les dades de Google Timeline amb Google Takeout o el telèfon, obtens fitxers JSON en diversos formats possibles. Cada format té una estructura i uns camps de dades diferents, i és adequat per a eines diferents. Aquest detector llegeix el fitxer, n'identifica el format i et diu exactament amb què estàs treballant, perquè sàpigues quin conversor, visualitzador o mètode d'anàlisi has de fer servir.",
+        "La detecció es fa a l'instant al navegador. Les teves dades no surten mai del dispositiu."
+      ]
+    },
+    {
+      "title": "Els formats d'exportació de Google Timeline, explicats",
+      "paragraphs": [],
+      "items": [
+        { "body": "**Records.json** — Dades GPS en brut amb coordenades E7, marques de temps, precisió, altitud i velocitat. El format més gran i detallat" },
+        { "body": "**Semantic Location History** — Fitxers mensuals amb visites a llocs (adreces, noms) i segments d'activitat (a peu, amb cotxe)" },
+        { "body": "**Location History (nou)** — Exportació del telèfon amb visites, activitats i coordenades geogràfiques en format de text" },
+        { "body": "**Semantic Segments** — Recorreguts de la línia de temps amb coordenades geogràfiques i intervals de temps" },
+        { "body": "**Settings.json** — Metadades del dispositiu, sense coordenades GPS" },
+        { "body": "**Timeline Edits** — Correccions de l'usuari i dades agregades de llocs" }
+      ]
+    },
+    {
+      "title": "Per què importa el format?",
+      "paragraphs": [
+        "Els formats contenen tipus de dades diferents. Records.json té les coordenades d'ubicació més precises, però no té noms de llocs. Semantic Location History té adreces i tipus d'activitat, però menys punts GPS en brut. El format d'exportació més recent del telèfon combina totes dues coses, però fa servir una codificació de coordenades diferent.",
+        "Conèixer el format t'ajuda a triar l'eina adequada: els conversors han de saber el format d'entrada, els visualitzadors gestionen camps diferents i els analitzadors d'estadístiques extreuen mètriques diferents segons el format."
+      ]
+    },
+    {
+      "title": "Què va passar amb Google Maps Timeline?",
+      "paragraphs": [
+        "A finals de 2024, Google va tancar la versió web de Google Maps Timeline i va traslladar totes les dades d'ubicació a l'emmagatzematge al dispositiu. Només es van migrar els darrers 90 dies: les dades més antigues es van eliminar tret que els usuaris n'haguessin fet una còpia manualment. Molta gent va [perdre anys d'historial d'ubicacions](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/) durant la transició.",
+        "Si tens fitxers exportats, aquest detector t'ajuda a entendre què tens. Com a substitut a llarg termini, [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-format-detector) ofereix seguiment d'ubicacions en un servidor propi o al núvol, amb plena propietat de les teves dades."
+      ]
+    },
+    {
+      "title": "Indicadors de qualitat de les dades",
+      "paragraphs": [
+        "El detector mostra dues mètriques clau de qualitat de les teves dades:"
+      ],
+      "items": [
+        { "body": "**Cobertura de marques de temps** — Quin percentatge de punts de dades inclou una marca de temps. Una cobertura alta et permet filtrar per data, calcular temps de viatge i crear línies de temps" },
+        { "body": "**Cobertura de precisió** — Quin percentatge de punts de dades inclou valors de precisió GPS. Això t'ajuda a avaluar la precisió de les dades d'ubicació (valors de precisió més baixos indiquen lectures GPS més precises)" }
+      ],
+      "footer": [
+        "Records.json sol tenir les puntuacions de qualitat més altes, mentre que Semantic Location History prioritza les dades estructurades per sobre de la precisió GPS en brut."
+      ]
+    },
+    {
+      "title": "Eines relacionades",
+      "paragraphs": [],
+      "items": [
+        { "body": "[Visualitzador de la línia de temps](/tools/timeline-visualizer) — Consulta el teu historial d'ubicacions en un mapa interactiu" },
+        { "body": "[Conversor de Google Timeline](/tools/google-timeline-converter) — Converteix en GPX, GeoJSON o KML" },
+        { "body": "[Analitzador d'estadístiques](/tools/timeline-statistics) — Obtén estadístiques detallades de les teves dades" },
+        { "body": "[Divisor de fitxers](/tools/gps-file-splitter) — Divideix fitxers grans en parts més petites" },
+        { "body": "[Eina per unir dades](/tools/timeline-merger) — Combina diversos fitxers de la línia de temps" },
+        { "body": "[Calculadora de quilometratge](/tools/timeline-mileage-calculator) — Calcula la distància total recorreguda" }
+      ],
+      "footer": [
+        "Més informació: [Migració des de l'historial d'ubicacions de Google](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}

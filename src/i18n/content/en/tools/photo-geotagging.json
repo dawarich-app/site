@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "Photo Geodata Extraction - Extract GPS Data from Photos",
+    "description": "Free, privacy-first tool to extract GPS coordinates from your photos and export them as GPX files. All data processing happens in your browser - no data is sent to any server.",
+    "keywords": "photo geodata extraction, GPS, EXIF, geolocation, GPX export, photo location, privacy-first, image metadata",
+    "featureList": [
+      "Extract GPS data from photos",
+      "Interactive map with photo markers",
+      "Privacy-first - all processing in browser",
+      "Export locations as GPX files",
+      "No data sent to servers"
+    ]
+  },
+  "h1": "Photo Geodata Extraction",
+  "intro": "Upload your photos to extract GPS coordinates from EXIF metadata, visualize them on a map, and export as GPX files.",
+  "exportButton": "Export as GPX",
+  "emptyExport": "No photos with GPS data to export",
+  "gpsPhotosLabel": "photos with GPS",
+  "photosLabel": "photos",
+  "howTo": {
+    "title": "How It Works",
+    "intro": "This tool reads EXIF metadata from your photos to extract GPS coordinates. Most smartphones automatically embed location data in photos.",
+    "features": [
+      {
+        "title": "Supported formats:",
+        "body": "JPEG, PNG, HEIC, and other image formats with EXIF data"
+      },
+      {
+        "title": "What you'll get:",
+        "body": "Interactive map showing photo locations, detailed GPS data, and GPX export for GPS devices"
+      },
+      {
+        "title": "Note:",
+        "body": "Only photos with GPS data will appear on the map. Screenshots and edited photos may not contain location data."
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Privacy First",
+    "body": "All photo processing happens entirely in your browser. Your photos and location data never leave your device and are not sent to any server."
+  },
+  "results": {
+    "gpsPhotos": "Photos with GPS data: {count}",
+    "extracted": "You extracted GPS data from **{count}** photos. Dawarich maps all your location data — photos, tracks, and daily movements.",
+    "uploaded": "You uploaded **{count}** photos. Dawarich maps all your location data — photos, tracks, and daily movements."
+  }
+}

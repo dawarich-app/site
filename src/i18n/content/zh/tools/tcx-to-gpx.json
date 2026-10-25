@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "title": "免费 TCX 转 GPX 转换器 — 在线转换 Training Center XML 文件",
+    "description": "立即将 TCX 文件转换为 GPX 格式。免费、隐私优先的在线转换器，适用于 Garmin、Wahoo 和健身设备的活动记录，完全在浏览器中运行，无需上传。",
+    "keywords": "TCX 转 GPX, TCX 转换器, Training Center XML, Garmin TCX, Wahoo TCX, 健身文件转换器, 骑行 GPX, 跑步 GPX, 活动转换器",
+    "appName": "TCX 转 GPX 转换器"
+  },
+  "h1": "TCX 转 GPX 转换器",
+  "intro": "立即将您的 TCX（Training Center XML）文件转换为 GPX 格式。所有处理都在浏览器中完成，运动数据不会离开您的设备。",
+  "cards": [
+    {
+      "title": "关于 TCX 格式",
+      "body": "TCX（Training Center XML）是 Garmin 基于 XML 的运动活动格式。Garmin Connect、Wahoo、Polar 及许多其他运动平台广泛使用它存储训练记录，包括 GPS 数据、心率、步频或踏频，以及功率指标。"
+    },
+    {
+      "title": "关于 GPX 格式",
+      "body": "GPX（GPS 交换格式）是 GPS 数据的开放 XML 标准，受到运动平台、地图软件和导航应用的普遍支持，因此是最便于迁移的 GPS 轨迹格式。"
+    },
+    {
+      "title": "为什么要将 TCX 转换为 GPX？",
+      "items": [
+        "将活动导入不支持 TCX 的平台",
+        "与不同运动平台的用户分享路线",
+        "在 Google Earth、QGIS 或其他地图工具中查看轨迹",
+        "以普遍支持的格式创建备份",
+        "使用兼容 GPX 的工具合并或编辑轨迹"
+      ]
+    },
+    {
+      "title": "兼容的平台",
+      "body": "此转换器支持以下平台的 TCX 文件：",
+      "items": [
+        "Garmin Connect 导出文件",
+        "Wahoo ELEMNT 和 TICKR",
+        "Polar Flow 导出文件",
+        "Strava TCX 导出文件",
+        "TrainingPeaks",
+        "Zwift 活动导出文件",
+        "任何可导出标准 TCX 的应用"
+      ]
+    },
+    {
+      "title": "会保留哪些数据？",
+      "body": "转换器会保留：",
+      "items": [
+        "GPS 坐标（纬度、经度）",
+        "时间戳",
+        "海拔／高度数据",
+        "分圈标记（作为航点）",
+        "活动元数据（运动、距离等）"
+      ],
+      "note": "注意：转换器会读取心率、步频或踏频、功率数据，但标准 GPX 输出不包含这些数据，因为它们需要 GPX 扩展。"
+    }
+  ],
+  "privacyBody": "所有转换都完全在浏览器中完成，您的运动数据不会离开设备，也不会发送到任何服务器。",
+  "noGpsData": "TCX 文件中未找到 GPS 数据。文件可能仅包含传感器数据而没有 GPS 坐标。"
+}

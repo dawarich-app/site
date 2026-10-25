@@ -1,0 +1,14 @@
+{
+  "subscribe": "Abonnieren",
+  "privacyNote": "Kein Spam. Jederzeit abbestellbar.",
+  "invalidEmail": "Bitte gib eine gültige E-Mail-Adresse ein.",
+  "requestError": "Etwas ist schiefgelaufen. Bitte versuch es später noch einmal.",
+  "success": "Du bist angemeldet! Schau in dein Postfach, um das Abonnement zu bestätigen.",
+  "networkError": "Netzwerkfehler. Bitte prüfe deine Verbindung und versuch es noch einmal.",
+  "firstNameLabel": "Vorname ",
+  "emailLabel": "E-Mail ",
+  "optionalLabel": "(optional)",
+  "firstNamePlaceholder": "Michael",
+  "emailPlaceholder": "du@example.com",
+  "subscribing": "Wird abonniert …"
+}

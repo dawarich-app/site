@@ -1,0 +1,41 @@
+{
+  "distanceLabel": "Dist.",
+  "averageLabel": "Media",
+  "timeLabel": "Tiempo",
+  "pauseReplay": "Pausar reproducción",
+  "playReplay": "Reproducir recorrido",
+  "restart": "Reiniciar",
+  "replayProgress": "Progreso de la reproducción",
+  "trackLabel": "Trayecto #{trackId}",
+  "throughTrack": "{percent}% del trayecto recorrido",
+  "verbs": {
+    "walking": "caminaste",
+    "running": "corriste",
+    "cycling": "fuiste en bicicleta",
+    "driving": "condujiste",
+    "bus": "autobús",
+    "train": "tren",
+    "flying": "volaste",
+    "boat": "navegaste",
+    "motorcycle": "fuiste en moto",
+    "unknown": "viajaste"
+  },
+  "modeLabels": {
+    "walking": "a pie",
+    "running": "corriendo",
+    "cycling": "en bicicleta",
+    "driving": "en coche",
+    "bus": "autobús",
+    "train": "tren",
+    "flying": "en avión",
+    "boat": "barco",
+    "motorcycle": "moto",
+    "unknown": "desconocido"
+  },
+  "duration": {
+    "seconds": "{seconds}s",
+    "minutes": "{minutes}m",
+    "hoursMinutes": "{hours}h {minutes}m",
+    "hours": "{hours}h"
+  }
+}

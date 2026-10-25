@@ -1,0 +1,62 @@
+{
+  "poster": {
+    "themes": [
+      {
+        "name": "Jesień"
+      },
+      {
+        "name": "Rysunek techniczny"
+      },
+      {
+        "name": "Strefy kontrastu"
+      },
+      {
+        "name": "Miedziana patyna"
+      },
+      {
+        "name": "Szmaragdowe miasto"
+      },
+      {
+        "name": "Las"
+      },
+      {
+        "name": "Gradientowe drogi"
+      },
+      {
+        "name": "Japoński tusz"
+      },
+      {
+        "name": "Nocny błękit"
+      },
+      {
+        "name": "Monochromatyczny błękit"
+      },
+      {
+        "name": "Neonowy cyberpunk"
+      },
+      {
+        "name": "Noir"
+      },
+      {
+        "name": "Ocean"
+      },
+      {
+        "name": "Pastelowy sen"
+      },
+      {
+        "name": "Zachód słońca"
+      },
+      {
+        "name": "Terakota"
+      },
+      {
+        "name": "Ciepły beż"
+      }
+    ]
+  },
+  "position": "Plakat {name}, {position} z {total}",
+  "close": "Zamknij",
+  "previous": "Poprzedni plakat",
+  "next": "Następny plakat",
+  "posterAlt": "Powiększony plakat trasy przez Berlin w motywie {name}"
+}

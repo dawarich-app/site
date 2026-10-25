@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Conversor GPX a GeoJSON gratis en línea — Trayectos GPS",
+    "description": "Convierte GPX a GeoJSON al instante. Conversor gratis y privado en línea para trayectos, puntos de referencia y rutas GPS. Todo en tu navegador, sin subir archivos.",
+    "keywords": "GPX a GeoJSON, conversor GPX, conversor GeoJSON, conversor de archivos GPS, conversor de trayectos, conversor de puntos de referencia, conversor de rutas, analizador GPX",
+    "appName": "Conversor de GPX a GeoJSON"
+  },
+  "h1": "Conversor de GPX a GeoJSON",
+  "intro": "Convierte tus archivos GPX a GeoJSON al instante. Todo se procesa en tu navegador: tus datos nunca salen de tu dispositivo.",
+  "cards": [
+    {
+      "title": "Acerca del formato GPX",
+      "body": "GPX (GPS Exchange Format) es un formato basado en XML para datos GPS. Los dispositivos GPS, monitores deportivos y aplicaciones de navegación lo usan ampliamente para guardar puntos de referencia, trayectos y rutas."
+    },
+    {
+      "title": "Acerca del formato GeoJSON",
+      "body": "GeoJSON es un formato basado en JSON para codificar estructuras de datos geográficos. Su amplia compatibilidad con bibliotecas de mapas web y software SIG lo hace ideal para aplicaciones web."
+    },
+    {
+      "title": "¿Por qué convertir GPX a GeoJSON?",
+      "items": [
+        "Mayor compatibilidad con bibliotecas de mapas web (Leaflet, Mapbox, etc.)",
+        "Más fácil de analizar y manipular en aplicaciones JavaScript",
+        "Formato más compacto que GPX, que se basa en XML",
+        "La estructura JSON nativa funciona a la perfección con las API web modernas"
+      ]
+    }
+  ],
+  "privacyBody": "Toda la conversión se realiza en tu navegador. Tus datos GPS nunca salen de tu dispositivo ni se envían a ningún servidor."
+}

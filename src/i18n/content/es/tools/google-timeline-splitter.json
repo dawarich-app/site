@@ -1,0 +1,229 @@
+{
+  "meta": {
+    "title": "Divisor de Google Timeline: divide archivos JSON grandes",
+    "description": "Divide gratis JSON grandes de Google Timeline (Cronología de Google Maps) en partes pequeñas y válidas. Admite todos los formatos: Records.json, Semantic Location History, Semantic Segments y más. Elige el tamaño. Privado, todo en tu navegador.",
+    "keywords": "dividir JSON de Google Timeline, dividir Records.json, dividir historial de ubicaciones de Google grande, divisor de Google Timeline, dividir ubicaciones de Google Takeout, dividir JSON de cronología, archivo de Google Timeline demasiado grande",
+    "featureList": [
+      "Divide archivos JSON grandes de Google Timeline en partes más pequeñas",
+      "Compatible con los 6 formatos de exportación de Google Timeline",
+      "Elige el tamaño de cada parte: 1, 5, 10, 20, 50 o 100 MB",
+      "Cada parte es un archivo JSON válido en el formato original",
+      "Descarga todas las partes en un solo archivo ZIP",
+      "La privacidad es lo primero: todo se procesa en el navegador",
+      "No se envían datos a ningún servidor"
+    ]
+  },
+  "howTo": {
+    "name": "Cómo dividir un archivo JSON grande de Google Timeline",
+    "description": "Carga tu exportación de Google Timeline y divídela en partes JSON válidas más pequeñas.",
+    "steps": [
+      {
+        "name": "Carga tu JSON de Google Timeline",
+        "text": "Arrastra y suelta tu archivo Records.json, Semantic Location History u otra exportación de Google Timeline en el divisor."
+      },
+      {
+        "name": "Elige el tamaño de cada parte",
+        "text": "Selecciona el tamaño que quieres: 1 MB, 5 MB, 10 MB, 20 MB, 50 MB o 100 MB por archivo."
+      },
+      {
+        "name": "Descarga los archivos divididos",
+        "text": "Haz clic en Dividir y descargar ZIP para obtener todas las partes en un solo archivo ZIP. Cada parte es un archivo JSON válido en el formato original."
+      }
+    ]
+  },
+  "h1": "Divisor de Google Timeline",
+  "intro": "Divide exportaciones JSON grandes de Google Timeline (Cronología de Google Maps) en partes válidas más pequeñas. Cada parte conserva el formato original para que puedas importarla en cualquier herramienta. Elige el tamaño de archivo y descarga un ZIP.",
+  "benefitsTitle": "¿Por qué dividir los archivos de cronología?",
+  "privacyBody": "Todos los datos se procesan en tu navegador. Tus archivos nunca salen de tu dispositivo.",
+  "preCta": "¿Trabajas con exportaciones grandes de Google Timeline? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-splitter) gestiona automáticamente importaciones de cualquier tamaño y te da plena propiedad y privacidad de tus datos.",
+  "faqTitle": "Preguntas frecuentes",
+  "homeLabel": "Inicio",
+  "toolsLabel": "Herramientas gratuitas",
+  "privacyTitle": "La privacidad es lo primero",
+  "benefits": [
+    {
+      "title": "Límites de tamaño al importar:",
+      "body": "Muchas herramientas limitan el tamaño de los archivos que puedes importar. Dividir un Records.json de 500 MB en partes de 10 MB facilita la importación."
+    },
+    {
+      "title": "Importaciones por lotes más rápidas:",
+      "body": "Importar varios archivos pequeños suele ser más rápido y fiable que importar un único archivo enorme, sobre todo con conexiones lentas."
+    },
+    {
+      "title": "Conserva el formato original:",
+      "body": "A diferencia de los conversores, esta herramienta mantiene tus datos exactamente en el mismo formato JSON de Google Timeline. Cada parte es un archivo válido e independiente."
+    },
+    {
+      "title": "Compatible con todos los formatos:",
+      "body": "Funciona con Records.json, Semantic Location History, Semantic Segments, las exportaciones de Location History desde el teléfono, los ajustes (Settings) y Timeline Edits."
+    }
+  ],
+  "formatLabels": {
+    "records": "Records.json (GPS sin procesar)",
+    "semantic": "Semantic Location History",
+    "semanticSegments": "Semantic Segments",
+    "locationHistory": "Historial de ubicaciones (exportado desde el teléfono)",
+    "settings": "Ajustes",
+    "timelineEdits": "Timeline Edits",
+    "unknown": "Desconocido"
+  },
+  "faq": [
+    {
+      "q": "¿Es seguro cargar mis datos de Google Timeline?",
+      "a": "Sí. Todos los datos se procesan íntegramente en tu navegador con JavaScript. Tus archivos de historial de ubicaciones nunca se suben a ningún servidor: se quedan en tu dispositivo. Al cerrar la pestaña, los datos desaparecen. La herramienta es de código abierto, así que puedes comprobar exactamente qué hace."
+    },
+    {
+      "q": "¿Qué formatos de Google Timeline puedo dividir?",
+      "a": "Este divisor admite los seis formatos de exportación de Google Timeline: Records.json (registros GPS de ubicación sin procesar), Semantic Location History (archivos mensuales YYYY_MONTH.json), Semantic Segments (exportación más reciente desde el teléfono), Location History (formato de matriz con startTime/endTime), los ajustes (Settings) y Timeline Edits. La herramienta detecta el formato automáticamente al cargar el archivo."
+    },
+    {
+      "q": "¿Dividir el archivo dañará mis datos?",
+      "a": "No. Cada registro del archivo original aparecerá en una sola parte de salida. No se pierde, duplica ni modifica ningún dato. Cada parte es un archivo JSON válido con exactamente el mismo formato que el original, por lo que puedes importarla en cualquier herramienta que acepte archivos de Google Timeline."
+    },
+    {
+      "q": "¿Por qué necesitaría dividir un archivo de Google Timeline?",
+      "a": "Las exportaciones de Google Timeline, especialmente Records.json, pueden ocupar cientos de megabytes o incluso gigabytes. Muchas herramientas de importación (incluido Dawarich) gestionan mejor los archivos grandes si se dividen en partes más pequeñas. Dividirlos también ayuda si quieres compartir una parte de tus datos o procesarlos por lotes."
+    },
+    {
+      "q": "¿Cómo se calcula el tamaño deseado?",
+      "a": "La herramienta toma una muestra de registros del archivo para estimar su tamaño medio y calcula cuántos caben en cada parte para alcanzar el tamaño deseado. Los tamaños reales pueden variar ligeramente porque cada registro ocupa un espacio distinto, pero la herramienta procura quedarse por debajo del objetivo."
+    },
+    {
+      "q": "¿Puedo importar los archivos divididos en Dawarich?",
+      "a": "Sí. Cada parte es un archivo JSON válido de Google Timeline en el formato original. Puedes importarlas una a una en Dawarich o en cualquier otra herramienta que acepte exportaciones de Google Timeline. Dawarich también gestiona archivos grandes directamente, pero dividirlos puede acelerar la importación."
+    }
+  ],
+  "cards": [
+    {
+      "title": "¿Qué es el divisor de Google Timeline?",
+      "paragraphs": [
+        "Esta herramienta toma una exportación JSON grande de Google Timeline y la divide en archivos más pequeños, cada uno con el tamaño que elijas como objetivo. Cada parte es un archivo JSON válido e independiente con exactamente el mismo formato que el original: conserva toda la estructura, no solo las coordenadas.",
+        "A diferencia de los conversores de formato que extraen puntos a GPX o CSV, este divisor mantiene tus datos en el formato nativo de Google Timeline. Así puedes importar cada parte en cualquier herramienta que acepte JSON de Google Timeline, incluido Dawarich."
+      ]
+    },
+    {
+      "title": "Formatos de Google Timeline compatibles",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Records.json**: registros GPS de ubicación sin procesar con coordenadas E7, marcas de tiempo, precisión y datos de actividad. Suele ser el archivo más grande de una exportación de Google Takeout."
+        },
+        {
+          "body": "**Semantic Location History**: archivos mensuales (YYYY_MONTH.json) con visitas a lugares y segmentos de actividad, incluidos nombres y direcciones."
+        },
+        {
+          "body": "**Semantic Segments**: formato de exportación más reciente desde el teléfono con datos de visitas y recorridos."
+        },
+        {
+          "body": "**Historial de ubicaciones**: formato de matriz con registros startTime/endTime y recorridos de la cronología."
+        },
+        {
+          "body": "**Ajustes**: datos de ajustes y configuración del dispositivo."
+        },
+        {
+          "body": "**Timeline Edits**: datos agregados de lugares y señales sin procesar de las ediciones del usuario."
+        }
+      ]
+    },
+    {
+      "title": "Cómo elegir el tamaño de cada parte",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**1 MB**: máximo número de archivos pequeños. Útil para herramientas con límites de importación muy bajos o para compartir partes individuales."
+        },
+        {
+          "body": "**5 MB**: partes pequeñas compatibles con casi cualquier herramienta de importación. Una buena opción para adjuntos de correo."
+        },
+        {
+          "body": "**10 MB**: tamaño equilibrado que funciona con la mayoría de herramientas de importación. Recomendado para importar en Dawarich."
+        },
+        {
+          "body": "**20 MB**: menos archivos, aún manejables para la mayoría de herramientas."
+        },
+        {
+          "body": "**50 MB**: partes grandes para herramientas que gestionan bien archivos grandes."
+        },
+        {
+          "body": "**100 MB**: división mínima. Úsalo cuando solo necesites dividir un archivo muy grande por la mitad o en unas pocas partes."
+        }
+      ]
+    },
+    {
+      "title": "Cómo funciona",
+      "paragraphs": [
+        "El divisor detecta automáticamente el formato de tu archivo y divide la matriz principal de datos (ubicaciones, objetos de cronología, segmentos, etc.) en grupos de tamaño uniforme. Cada grupo se envuelve en la misma estructura JSON que el archivo original.",
+        "La herramienta toma una muestra de registros del archivo para estimar su tamaño medio y calcula cuántos caben en cada parte para alcanzar el tamaño deseado. Todas las partes se empaquetan en un solo archivo ZIP para facilitar la descarga."
+      ]
+    },
+    {
+      "title": "Privacidad y seguridad",
+      "paragraphs": [
+        "Tus datos de Google Timeline contienen información de ubicación sensible. Esta herramienta lo procesa todo íntegramente en tu navegador: nunca se envían datos a ningún servidor. Los archivos se quedan en tu dispositivo desde la carga hasta la descarga.",
+        "No usamos cookies, análisis ni seguimiento para tus archivos cargados. La herramienta forma parte del proyecto de código abierto Dawarich, así que puedes inspeccionar el código."
+      ]
+    },
+    {
+      "title": "Herramientas relacionadas",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Conversor de Google Timeline](/tools/google-timeline-converter): convierte datos de cronología a GPX, KML, CSV o GeoJSON"
+        },
+        {
+          "body": "[Visualizador de Google Timeline](/tools/timeline-visualizer): consulta tu historial de ubicaciones en un mapa interactivo"
+        },
+        {
+          "body": "[Analizador de estadísticas de cronología](/tools/timeline-statistics): descubre información útil en tus datos de ubicación"
+        },
+        {
+          "body": "[Combinador de datos de cronología](/tools/timeline-merger): combina varias exportaciones de cronología"
+        },
+        {
+          "body": "[Divisor de archivos GPS](/tools/gps-file-splitter): divide archivos GPX, GeoJSON, KML y otros archivos GPS"
+        },
+        {
+          "body": "[Detector de formato de cronología](/tools/timeline-format-detector): identifica el tipo de archivo exportado"
+        }
+      ]
+    }
+  ],
+  "upload": {
+    "parsing": "Analizando archivo...",
+    "dropFile": "Suelta aquí un archivo JSON de Google Timeline",
+    "browse": "o haz clic para seleccionar archivos",
+    "formats": "Admite: Records.json, Semantic, historial de ubicaciones y más",
+    "clearButton": "Quitar archivo",
+    "inputLabel": "Elige los archivos que quieres procesar"
+  },
+  "results": {
+    "fileNameLabel": "Nombre del archivo",
+    "fileSizeLabel": "Tamaño del archivo",
+    "formatLabel": "Formato",
+    "entriesLabel": "Registros",
+    "entriesLoaded": "{count} registros cargados",
+    "sizeValue": "{size} MB"
+  },
+  "options": {
+    "targetSizeTitle": "Tamaño deseado de cada parte",
+    "splitButton": "Dividir y descargar ZIP",
+    "splitting": "Dividiendo...",
+    "chunkPreview": "Se creará **{count}** parte a partir de {entries} registros (~{size} MB cada una)|Se crearán **{count}** partes a partir de {entries} registros (~{size} MB cada una)"
+  },
+  "errors": {
+    "jsonOnlyError": "Carga un archivo JSON. Las exportaciones de Google Timeline siempre están en formato JSON.",
+    "unknownFormatError": "Este no parece ser un archivo exportado de Google Timeline. Formatos compatibles: Records.json, Semantic Location History, Semantic Segments, Location History, ajustes (Settings), Timeline Edits.",
+    "parseError": "Error al analizar el archivo: {message}",
+    "splitError": "Error al dividir el archivo: {message}"
+  },
+  "cta": {
+    "title": "¿Buscas una alternativa a Google Timeline?",
+    "body": "Dawarich es una plataforma de código abierto para registrar ubicaciones que te da el control total de tus datos. Importa tus datos exportados de Google Timeline, sigue registrando tu ubicación desde el teléfono y visualiza años de desplazamientos, en tu propio servidor o en la nube.",
+    "button": "Prueba Dawarich gratis durante 7 días",
+    "headline": "Tu archivo tiene **{count}** registros. Dawarich gestiona automáticamente importaciones de cualquier tamaño, sin necesidad de dividirlas.",
+    "statLabels": {
+      "entries": "registros",
+      "fileSize": "tamaño del archivo"
+    }
+  }
+}

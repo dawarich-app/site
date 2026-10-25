@@ -1,0 +1,16 @@
+{
+  "ribbon": " LE PLUS POPULAIRE",
+  "comingSoon": "BIENTÔT DISPONIBLE",
+  "billedMonthly": "facturé mensuellement",
+  "heading": "Rejoignez la liste d’attente Famille",
+  "subtext": "Soyez informé dès le lancement : abonnement annuel uniquement, avec toutes les fonctionnalités Pro.",
+  "buttonLabel": "Rejoindre la liste d’attente",
+  "note": "Aucun spam, seulement l’e-mail de lancement.",
+  "guarantee": " La garantie d’importation · Remboursement sous 14 jours",
+  "billing": {
+    "monthly": "mensuel",
+    "annual": "annuel"
+  },
+  "totalValue": "Valeur totale",
+  "bonusPrefix": "BONUS : "
+}

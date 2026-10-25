@@ -1,0 +1,22 @@
+{
+  "movingLabel": "w ruchu",
+  "stationaryLabel": "w miejscu",
+  "visitsLabel": "Wizyty",
+  "tracksLabel": "Trasy",
+  "distanceLabel": "Dystans",
+  "movingTitle": "W ruchu",
+  "emptyDay": "Tego dnia nie zarejestrowano wizyt.",
+  "previousDay": "Poprzedni dzień",
+  "nextDay": "Następny dzień",
+  "selectDay": "Wybierz dzień, aby zobaczyć swoją oś czasu.",
+  "rawHint": "Ten plik zawiera tylko surowe zapisy GPS — bez wizyt w miejscach i odcinków aktywności. Wybierz pliki Semantic Location History lub eksporty z telefonu, aby zobaczyć pełną oś czasu.",
+  "places": "Liczba miejsc: {count}",
+  "movingDuration": "{duration} w ruchu",
+  "duration": {
+    "zero": "0 min",
+    "hoursMinutes": "{hours} godz. {minutes} min",
+    "hours": "{hours} godz.",
+    "minutes": "{minutes} min"
+  },
+  "visitCount": "{count} wizyta|{count} wizyty|{count} wizyt|{count} wizyty"
+}

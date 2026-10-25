@@ -1,0 +1,23 @@
+{
+  "cols": [
+    {
+      "name": "Lite"
+    },
+    {
+      "name": "Pro"
+    },
+    {
+      "name": "Family"
+    }
+  ],
+  "title": "Compare every feature",
+  "subtitle": "Expand a section to see the details — or just show what changes between plans.",
+  "collapseAll": "Collapse all",
+  "expandAll": "Expand all",
+  "headerFeatures": "Features",
+  "footerLabel": "Ready when you are",
+  "chooseLite": "Choose Lite",
+  "startFree": "Start free",
+  "yearAbbreviation": "/yr",
+  "highlightDifferences": "Highlight differences"
+}

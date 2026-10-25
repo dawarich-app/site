@@ -1,0 +1,13 @@
+{
+  "title": "The Anti-Google Privacy Stack",
+  "subtitle": "Google uses your location to sell ads. We charge you money instead. That's the entire business model.",
+  "cardTitle": "No Ads. No Data Selling. Ever.",
+  "cardDescription": "Your data funds Google's $300B ad business. At Dawarich, your location data is the product you're buying — not the product we're selling.",
+  "cardTitle2": "Self-Host: Zero Trust Required",
+  "cardDescription2": "Don't trust anyone with your data? Run Dawarich on your own server. Your data never touches our infrastructure. We literally cannot see it.",
+  "cardTitle3": "Encrypted and EU-Hosted",
+  "cardDescription3": "All data encrypted in transit (SSL/TLS) and at rest (LUKS). Stored in European data centers under strict GDPR regulations. You have full control over your data.",
+  "cardTitle4": "Open Source: Inspect Every Line",
+  "cardDescription4": "Don't trust us? Read the code. OVER 9,000 GitHub stars. Thousands of developers have reviewed it. No hidden tracking. No surprises.",
+  "policyLink": "Read our full Privacy Policy →"
+}

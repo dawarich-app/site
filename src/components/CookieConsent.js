@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import CookieConsent from 'react-cookie-consent';
+import { translate } from '@docusaurus/Translate';
 import { saveOriginalUtmParams, clearOriginalUtmParams, saveReferralKey, clearReferralKey, refreshOutboundLinks } from '@site/src/utils/utm';
 import {
   CONSENT_COOKIE_NAME,
@@ -67,9 +68,11 @@ export default function CustomCookieConsent() {
   return (
     <CookieConsent
       location="bottom"
-      buttonText="Accept"
-      declineButtonText="Reject"
+      buttonText={translate({ id: 'shared.cookieConsent.accept', message: 'Accept' })}
+      declineButtonText={translate({ id: 'shared.cookieConsent.reject', message: 'Reject' })}
       enableDeclineButton
+      ariaAcceptLabel={translate({ id: 'shared.cookieConsent.acceptAria', message: 'Accept cookies' })}
+      ariaDeclineLabel={translate({ id: 'shared.cookieConsent.rejectAria', message: 'Decline cookies' })}
       cookieName={CONSENT_COOKIE_NAME}
       style={{
         background: "#2B373B",
@@ -83,8 +86,11 @@ export default function CustomCookieConsent() {
       onAccept={handleAccept}
       onDecline={handleDecline}
     >
-      Optional site analytics, advertising, email and affiliate trackers run only
-      after you accept. Rejecting keeps them off and disables campaign handoff.
+      {translate({
+        id: 'shared.cookieConsent.body',
+        message:
+          'Optional site analytics, advertising, email and affiliate trackers run only after you accept. Rejecting keeps them off and disables campaign handoff.',
+      })}
       <a
         href="/privacy-policy#cookies"
         style={{
@@ -93,7 +99,7 @@ export default function CustomCookieConsent() {
           marginLeft: "5px",
         }}
       >
-        Learn more
+        {translate({ id: 'shared.cookieConsent.learnMore', message: 'Learn more' })}
       </a>
     </CookieConsent>
   );

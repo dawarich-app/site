@@ -1,0 +1,25 @@
+{
+  "trustBadges": [
+    {
+      "label": "Funciona sense connexió"
+    },
+    {
+      "label": "Codi obert"
+    },
+    {
+      "label": "Allotjat a la UE i xifrat"
+    }
+  ],
+  "title": "La teva línia de temps privada, ",
+  "highlight": "per sempre",
+  "subtitle": "Google ha eliminat Timeline del navegador i limita la conservació de dades. Importa tot el teu historial d’ubicacions a Dawarich en minuts: privat, xifrat i teu. Sense anuncis ni venda de dades.",
+  "primaryButton": "Importa les meves dades de Google",
+  "secondaryButton": "Explora les funcions",
+  "orDivider": "o",
+  "noCredit": "Prova gratuïta de 7 dies · Reemborsament sense risc durant 14 dies · Cancel·la quan vulguis",
+  "badgeLabel": "L’alternativa privada a Google Timeline",
+  "googleSignIn": "Inicia la sessió amb Google",
+  "playTour": "Reprodueix la visita guiada de Dawarich",
+  "tourLabel": "Visita guiada de Dawarich",
+  "closeVideo": "Tanca el vídeo"
+}

@@ -1,0 +1,44 @@
+{
+  "title": "What People Are Saying",
+  "subtitle": "Featured in leading tech publications worldwide.",
+  "featuredLabel": "As seen in",
+  "quotes": [
+    {
+      "quote": "I imported my Google Timeline to this self-hosted app, and it's so much better than what Google offers.",
+      "source": "XDA Developers"
+    },
+    {
+      "quote": "Dawarich gives you everything Google Timeline does, and then some. There are no ads and no hidden data collection.",
+      "source": "MakeUseOf"
+    },
+    {
+      "quote": "The UI is clean and user friendly. Basically no impact on battery.",
+      "source": "App Store Review"
+    },
+    {
+      "quote": "I travel globally 60-70% of the year and was looking for something to keep my record without handing it to Google. I found Dawarich.app, set up my iPhone app in a few minutes, imported my Timeline history, and it just runs — tracking starts itself when I leave the house. I don't think about it anymore. My data is now my data again and meanwhile I have 260k km, 16 countries and 378 cities tracked.",
+      "source": "Germany · Global traveler · ex-Google Timeline · found via Reddit"
+    },
+    {
+      "quote": "I used Google Timeline for years but never felt comfortable with my entire life sitting on U.S. servers. I moved everything (a few years' worth of data) into Dawarich in just an afternoon. Now I have a private, permanent diary of my life — something I hope to pass on to my grandchildren one day. I look forward to future enhancements as they have already done a remarkable job.",
+      "source": "New York, U.S. · Former Google Timeline user · Building a location legacy"
+    },
+    {
+      "quote": "I moved to Kazakhstan not knowing the city at all. Google Timeline wasn't an option anymore, and I didn't trust it either way. Set up Dawarich, and now the map is like fog of war for me — the more I go out, the more it fills in. Plus every trip stays with me — I can look back at any of them and share the route.",
+      "source": "Dawarich customer · Kazakhstan · since mid-2025"
+    },
+    {
+      "quote": "It's way better than OwnTracks, Overland, etc. — it's so much more accurate.",
+      "source": "GitHub Discussions"
+    },
+    {
+      "quote": "The app has been working great for me so far and hasn't had any effect on battery! Amazing job thus far!",
+      "source": "App Store Review"
+    },
+    {
+      "quote": "I think it's a rather impressive piece of software.",
+      "source": "Colocataires Blog"
+    }
+  ],
+  "translatedNote": "Translated from English"
+}

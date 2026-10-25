@@ -1,0 +1,291 @@
+{
+  "h1": "Oś czasu Google (Google Timeline): wykrywanie formatu",
+  "intro": "Dodaj dowolny plik eksportu Google Timeline (Oś czasu Google Maps), aby od razu poznać jego format, zobaczyć statystyki danych i zalecenia dalszych działań. Wszystko jest przetwarzane w Twojej przeglądarce.",
+  "privacyTitle": "Prywatność przede wszystkim",
+  "privacyBody": "Całe przetwarzanie danych odbywa się w Twojej przeglądarce. Twoje dane lokalizacji nigdy nie opuszczają urządzenia i nie są wysyłane na żaden serwer.",
+  "preCta": "Nie wiesz, co zrobić z danymi Google Timeline? Dodaj plik powyżej, aby się dowiedzieć, lub poznaj [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-format-detector) — automatyczne śledzenie lokalizacji z pełną własnością danych.",
+  "faqTitle": "Najczęściej zadawane pytania",
+  "homeLabel": "Strona główna",
+  "toolsLabel": "Darmowe narzędzia",
+  "meta": {
+    "title": "Oś czasu Google (Google Timeline): rozpoznaj format eksportu lokalizacji",
+    "description": "Dodaj dowolny plik lokalizacji Google Takeout: od razu poznasz nazwę formatu Google Timeline (Oś czasu Google Maps), liczbę punktów, zakres dat, rozmiar pliku i jakość danych. Za darmo. Wszystko w przeglądarce.",
+    "keywords": "format Google Timeline, jaki format ma eksport Google, typ pliku lokalizacji Google Takeout, format historii lokalizacji Google, wykrywanie pliku Google Timeline, format eksportu Google Maps Timeline, format JSON Google Takeout, typ pliku historii lokalizacji, format danych Google Timeline, rozpoznawanie eksportu Google",
+    "featureList": [
+      "Natychmiastowe wykrywanie formatu eksportu Google Timeline",
+      "Obsługa wszystkich 6 formatów Google Timeline",
+      "Liczba punktów, liczba ścieżek i zakres dat",
+      "Wskaźniki jakości danych",
+      "Prywatność przede wszystkim — wszystko w przeglądarce",
+      "Bez wysyłania danych na serwer"
+    ]
+  },
+  "howTo": {
+    "name": "Jak rozpoznać format eksportu Google Timeline",
+    "description": "Dodaj plik eksportu Google Timeline, aby od razu wykryć format, zobaczyć statystyki i otrzymać zalecenia dalszych działań.",
+    "steps": [
+      {
+        "name": "Wyeksportuj dane Google Timeline",
+        "text": "Wejdź na takeout.google.com, wybierz Historię lokalizacji (oś czasu) i wyeksportuj. Możesz też na Android: Google Maps > Ustawienia > Lokalizacja > Oś czasu > Eksportuj. Na iOS: Google Maps > Ustawienia > Treści osobiste > Eksportuj dane osi czasu."
+      },
+      {
+        "name": "Dodaj plik JSON",
+        "text": "Przeciągnij i upuść wyeksportowany plik JSON Google Timeline w narzędziu. Format zostanie automatycznie rozpoznany w kilka sekund."
+      },
+      {
+        "name": "Sprawdź wyniki",
+        "text": "Zobacz wykryty format, liczbę punktów, liczbę ścieżek, zakres dat, rozmiar pliku i wskaźniki jakości danych. Następnie skorzystaj z zalecanych narzędzi odpowiednich dla tego formatu."
+      }
+    ],
+    "tool": "Wykrywanie formatu Google Timeline od Dawarich"
+  },
+  "exportData": {
+    "title": "Jak pobrać dane osi czasu",
+    "intro": "Możesz wyeksportować dane Google Timeline jedną z poniższych metod. Jeśli jedna nie działa, spróbuj innej.",
+    "warning": "Niestety niektórzy użytkownicy mogą nie mieć możliwości eksportu danych lokalizacji ze względu na sposób, w jaki Google przeprowadziło zmianę zasad ich przechowywania.",
+    "methods": [
+      {
+        "title": "Google Takeout:",
+        "steps": [
+          "Wejdź na [takeout.google.com](https://takeout.google.com/) → Wybierz Historię lokalizacji (oś czasu) → Eksportuj",
+          "Ta metoda może nie działać u wszystkich, ponieważ Google zmieniło sposób przechowywania i eksportowania danych lokalizacji. Więcej szczegółów na naszym [blogu](https://dawarich.app/blog/migrating-from-google-location-history-to-dawarich)."
+        ]
+      },
+      {
+        "title": "Na Android:",
+        "steps": [
+          "Otwórz Google Maps → Ustawienia → Lokalizacja → Usługi lokalizacyjne → Oś czasu → Eksportuj oś czasu"
+        ]
+      },
+      {
+        "title": "Na iOS:",
+        "steps": [
+          "Otwórz Google Maps → Ustawienia → Treści osobiste → Eksportuj dane osi czasu"
+        ]
+      }
+    ]
+  },
+  "formats": {
+    "records": {
+      "title": "Records.json (surowe dane GPS)",
+      "description": "To klasyczny eksport Google Takeout zawierający surowe współrzędne GPS w formacie E7. Obejmuje każdy odczyt lokalizacji zapisany przez Google, wraz z dokładnością, wysokością, prędkością i metadanymi urządzenia. Takie pliki mogą być bardzo duże (100+ MB dla wielu lat danych)."
+    },
+    "semantic": {
+      "title": "Semantic Location History",
+      "description": "Ten format zawiera uporządkowane miesięczne dane lokalizacji z wizytami w miejscach (w tym adresami i nazwami firm) oraz odcinkami aktywności (spacer, jazda samochodem, rower). Pliki mają nazwy takie jak 2022_APRIL.json."
+    },
+    "settings": {
+      "title": "Settings.json (informacje o urządzeniu)",
+      "description": "Ten plik zawiera informacje o konfiguracji urządzeń z eksportu Google Timeline. Wymienia urządzenia dostarczające dane lokalizacji, ale nie zawiera współrzędnych GPS."
+    },
+    "timelineEdits": {
+      "title": "Timeline Edits",
+      "description": "Ten format zawiera zmiany i poprawki wprowadzone w danych osi czasu, w tym zbiorcze dane miejsc i surowe sygnały. Może zawierać punkty lokalizacji pochodzące z modyfikacji użytkownika."
+    },
+    "semanticSegments": {
+      "title": "Semantic Segments",
+      "description": "To przetworzona wersja historii lokalizacji z segmentami semantycznymi zawierającymi przebieg tras osi czasu. Obejmuje współrzędne geograficzne zapisane jako tekst i zakresy czasu dla każdego segmentu."
+    },
+    "locationHistory": {
+      "title": "Historia lokalizacji (nowy format)",
+      "description": "To nowszy format eksportu Google Timeline z telefonów Android/iOS. Zawiera dane wizyt i aktywności ze współrzędnymi geograficznymi zapisanymi jako tekst, przebieg tras osi czasu i wartości prawdopodobieństwa."
+    },
+    "unknown": {
+      "title": "Nieznany format",
+      "description": "Nie udało się rozpoznać formatu tego pliku. Może to nie być eksport Google Timeline albo może to być jeszcze nieobsługiwany wariant formatu."
+    }
+  },
+  "relatedTools": [
+    {
+      "title": "Konwerter Google Timeline",
+      "description": "Konwertuj dane osi czasu na GPX, GeoJSON lub KML"
+    },
+    {
+      "title": "Wizualizacja osi czasu",
+      "description": "Zobacz swoją historię lokalizacji na interaktywnej mapie"
+    },
+    {
+      "title": "Analiza statystyk",
+      "description": "Poznaj szczegółowe statystyki swoich danych lokalizacji"
+    },
+    {
+      "title": "Dzielenie plików",
+      "description": "Podziel duże pliki osi czasu na mniejsze części"
+    },
+    {
+      "title": "Łączenie danych",
+      "description": "Połącz wiele plików osi czasu w jeden"
+    },
+    {
+      "title": "Kalkulator dystansu",
+      "description": "Oblicz łączny pokonany dystans na podstawie danych"
+    }
+  ],
+  "results": {
+    "title": "Wyniki wykrywania",
+    "points": "Punkty",
+    "paths": "Ścieżki",
+    "fileSize": "Rozmiar pliku",
+    "dateRange": "Zakres dat",
+    "qualityTitle": "Jakość danych",
+    "toolsTitle": "Zalecane narzędzia",
+    "noDates": "Nie znaleziono dat",
+    "noTimestamps": "Brak danych znaczników czasu",
+    "noAccuracy": "Brak danych o dokładności",
+    "parseErrorTitle": "Błąd odczytu",
+    "filesAnalyzed": "Przeanalizowane pliki: {count}",
+    "totalPoints": "Łączna liczba punktów: {points}",
+    "totalPaths": "Łączna liczba ścieżek: {paths}",
+    "parseError": "Nie udało się odczytać pliku: {message}",
+    "timestampCoverage": "{percent}% ma znaczniki czasu",
+    "accuracyCoverage": "{percent}% ma informacje o dokładności"
+  },
+  "fileSize": {
+    "empty": "0 B",
+    "units": [
+      "B",
+      "KB",
+      "MB",
+      "GB"
+    ],
+    "value": "{size} {unit}"
+  },
+  "cta": {
+    "title": "Szukasz zamiennika Google Timeline?",
+    "body": "Dawarich to platforma śledzenia lokalizacji z otwartym kodem źródłowym, która daje Ci pełną kontrolę nad danymi. Zaimportuj eksport Google Timeline, rejestruj bieżącą lokalizację z telefonu i przeglądaj lata historii przemieszczania się — na własnym serwerze lub w chmurze.",
+    "button": "Wypróbuj Dawarich za darmo przez 7 dni",
+    "headline": "Przeanalizowane pliki: {files}; wykryte formaty: {formats}. Dawarich obsługuje je wszystkie — importuj i od razu zobacz historię lokalizacji na mapie.",
+    "fileCount": "**{count}** plik|**{count}** pliki|**{count}** plików|**{count}** pliku",
+    "formatCount": "**{count}** wykryty format|**{count}** wykryte formaty|**{count}** wykrytych formatów|**{count}** wykrytego formatu",
+    "statLabels": {
+      "files": "pliki",
+      "formats": "formaty",
+      "points": "punkty"
+    }
+  },
+  "faq": [
+    {
+      "q": "Jakie formaty Google Timeline wykrywa to narzędzie?",
+      "a": "Narzędzie wykrywa wszystkie sześć znanych formatów eksportu Google Timeline: Records.json (surowe dane GPS z Google Takeout), Semantic Location History (miesięczne pliki z wizytami w miejscach i odcinkami aktywności), Settings.json (informacje o urządzeniach), Timeline Edits (poprawki użytkownika), Semantic Segments (przetworzona historia lokalizacji z przebiegiem tras osi czasu) i Location History (nowszy format eksportu z telefonów Android i iOS). Format jest rozpoznawany automatycznie w chwili dodania pliku."
+    },
+    {
+      "q": "Czy moje dane są tutaj bezpieczne?",
+      "a": "Tak. Całe przetwarzanie danych odbywa się w Twojej przeglądarce przy użyciu JavaScript. Twoje pliki Google Timeline nigdy nie są wysyłane na serwer — przez cały czas pozostają na urządzeniu. Po zamknięciu karty dane znikają. Narzędzie ma otwarty kod źródłowy, więc możesz sprawdzić dokładnie, co robi. Bez konta, rejestracji i śledzenia."
+    },
+    {
+      "q": "Co się stało z Google Maps Timeline?",
+      "a": "Pod koniec 2024 Google wyłączyło internetową wersję Google Maps Timeline i przeniosło wszystkie dane lokalizacji do pamięci telefonu. Użytkownicy mieli ograniczony czas na eksport danych — automatycznie przeniesiono tylko ostatnie 90 dni, a starsze dane usunięto, chyba że ręcznie wykonano kopię przez Google Takeout. Wielu użytkowników straciło lata historii lokalizacji. To narzędzie pomaga rozpoznać format wyeksportowanych plików, aby móc użyć odpowiednich narzędzi."
+    },
+    {
+      "q": "Jak wyeksportować dane Google Timeline?",
+      "a": "Są trzy metody: (1) Google Takeout na takeout.google.com — wybierz Historię lokalizacji i eksportuj jako JSON. Otrzymasz Records.json, pliki Semantic Location History, Settings.json i Timeline Edits. (2) Na Android: Google Maps > Ustawienia > Lokalizacja > Usługi lokalizacyjne > Oś czasu > Eksportuj oś czasu. Powstaje nowszy format Location History. (3) Na iOS: Google Maps > Ustawienia > Treści osobiste > Eksportuj dane osi czasu. Zalecamy wypróbowanie wszystkich metod i zachowanie wszystkich wyeksportowanych plików."
+    },
+    {
+      "q": "Czym różni się Records.json od Semantic Location History?",
+      "a": "Records.json zawiera surowe współrzędne GPS — każdy odczyt lokalizacji zapisany przez Google, ze znacznikami czasu, dokładnością, wysokością i prędkością. Te pliki są bardzo duże i zawierają najbardziej szczegółowe dane. Pliki Semantic Location History (o nazwach takich jak 2022_APRIL.json) są bardziej uporządkowane: zawierają wizyty w miejscach z nazwami firm i adresami, odcinki aktywności (spacer, jazda samochodem, rower) z trasami i czasem trwania. Records.json najlepiej sprawdza się przy dokładnych danych lokalizacji, a pliki Semantic przy analizie odwiedzanych miejsc i sposobu dotarcia do nich."
+    },
+    {
+      "q": "Którego narzędzia użyć po wykryciu formatu?",
+      "a": "To zależy od celu. Aby zobaczyć dane na mapie, użyj wizualizacji osi czasu. Do konwersji na GPX/GeoJSON/KML dla innych aplikacji użyj konwertera Google Timeline. Do analizy wzorców podróży i statystyk użyj narzędzia analizy statystyk. Jeśli plik jest za duży, narzędzie do dzielenia plików podzieli go na mniejsze części. Wiele eksportów połączysz narzędziem do łączenia danych. Do obliczania odległości służy kalkulator dystansu."
+    },
+    {
+      "q": "Dlaczego narzędzie nie wykrywa formatu mojego pliku?",
+      "a": "Jeśli widzisz „Nieznany format”, plik może nie być eksportem Google Timeline. Częste przyczyny to: dodanie pliku innego niż JSON (narzędzie przyjmuje tylko pliki .json), dodanie pliku Google Takeout z innej usługi (np. YouTube lub Chrome) albo pliku uszkodzonego lub niekompletnego. Upewnij się, że dodajesz pliki z sekcji historii lokalizacji w eksporcie Google Takeout."
+    },
+    {
+      "q": "Czy mogę wykryć format wielu plików jednocześnie?",
+      "a": "Tak. Możesz dodać wiele plików JSON naraz. Narzędzie przeanalizuje każdy oddzielnie i pokaże wykryty format, liczbę punktów, liczbę ścieżek, zakres dat i jakość danych dla każdego z nich. Przydaje się to przy pełnym eksporcie Google Takeout z wieloma plikami (Records.json, pliki Semantic, Settings.json itp.)."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Czym jest narzędzie do wykrywania formatu Google Timeline?",
+      "paragraphs": [
+        "Eksportując dane Google Timeline przez Google Takeout lub telefon, otrzymujesz pliki JSON w jednym z kilku formatów. Każdy ma inną strukturę, inne pola danych i pasuje do innych narzędzi. To narzędzie odczytuje plik, rozpoznaje format i dokładnie opisuje jego zawartość — dzięki temu wiesz, jakiego konwertera, wizualizacji lub sposobu analizy użyć.",
+        "Wykrywanie odbywa się natychmiast w Twojej przeglądarce. Twoje dane nigdy nie opuszczają urządzenia."
+      ]
+    },
+    {
+      "title": "Objaśnienie formatów eksportu Google Timeline",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Records.json** — Surowe dane GPS ze współrzędnymi E7, znacznikami czasu, dokładnością, wysokością i prędkością. Największy i najbardziej szczegółowy format"
+        },
+        {
+          "body": "**Semantic Location History** — Miesięczne pliki z wizytami w miejscach (adresy, nazwy) i odcinkami aktywności (spacer, jazda samochodem)"
+        },
+        {
+          "body": "**Historia lokalizacji (nowa)** — Eksport z telefonu z wizytami, aktywnościami i współrzędnymi geograficznymi zapisanymi jako tekst"
+        },
+        {
+          "body": "**Semantic Segments** — Przebieg tras osi czasu ze współrzędnymi geograficznymi i zakresami czasu"
+        },
+        {
+          "body": "**Settings.json** — Metadane urządzeń, bez współrzędnych GPS"
+        },
+        {
+          "body": "**Timeline Edits** — Poprawki użytkownika i zbiorcze dane miejsc"
+        }
+      ]
+    },
+    {
+      "title": "Dlaczego format ma znaczenie?",
+      "paragraphs": [
+        "Różne formaty zawierają różne rodzaje danych. Records.json ma najdokładniejsze współrzędne lokalizacji, ale bez nazw miejsc. Semantic Location History ma adresy i typy aktywności, ale mniej surowych punktów GPS. Nowszy format eksportu z telefonu łączy oba rodzaje danych, lecz inaczej koduje współrzędne.",
+        "Znajomość formatu pomaga wybrać odpowiednie narzędzie: konwertery muszą znać format wejściowy, wizualizacje obsługują różne pola, a narzędzia statystyczne wyliczają różne wskaźniki zależnie od formatu."
+      ]
+    },
+    {
+      "title": "Co się stało z Google Maps Timeline?",
+      "paragraphs": [
+        "Pod koniec 2024 Google zamknęło internetową wersję Google Maps Timeline i przeniosło wszystkie dane lokalizacji na urządzenia. Przeniesiono tylko ostatnie 90 dni — starsze dane usunięto, chyba że użytkownicy ręcznie wykonali kopie. Wiele osób [straciło lata historii lokalizacji](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/) podczas tej zmiany.",
+        "Jeśli masz wyeksportowane pliki, to narzędzie pomoże zrozumieć ich zawartość. Jako zamiennik na dłużej [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-format-detector) oferuje śledzenie lokalizacji na własnym serwerze i w chmurze, z pełną własnością danych."
+      ]
+    },
+    {
+      "title": "Wskaźniki jakości danych",
+      "paragraphs": [
+        "Narzędzie pokazuje dwa kluczowe wskaźniki jakości danych:"
+      ],
+      "items": [
+        {
+          "body": "**Dostępność znaczników czasu** — Procent punktów danych zawierających znacznik czasu. Wysoka wartość umożliwia filtrowanie według daty, obliczanie czasu podróży i tworzenie osi czasu"
+        },
+        {
+          "body": "**Dostępność danych dokładności** — Procent punktów danych z wartościami dokładności GPS. Pomaga ocenić precyzję danych lokalizacji (niższe wartości oznaczają dokładniejsze odczyty GPS)"
+        }
+      ],
+      "footer": [
+        "Records.json zwykle uzyskuje najwyższe wyniki jakości, natomiast Semantic Location History stawia na uporządkowane dane zamiast precyzji surowych odczytów GPS."
+      ]
+    },
+    {
+      "title": "Powiązane narzędzia",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Wizualizacja osi czasu](/tools/timeline-visualizer) — Zobacz historię lokalizacji na interaktywnej mapie"
+        },
+        {
+          "body": "[Konwerter Google Timeline](/tools/google-timeline-converter) — Konwertuj na GPX, GeoJSON lub KML"
+        },
+        {
+          "body": "[Analiza statystyk](/tools/timeline-statistics) — Poznaj szczegółowe statystyki danych"
+        },
+        {
+          "body": "[Dzielenie plików](/tools/gps-file-splitter) — Podziel duże pliki na mniejsze części"
+        },
+        {
+          "body": "[Łączenie danych](/tools/timeline-merger) — Połącz wiele plików osi czasu"
+        },
+        {
+          "body": "[Kalkulator dystansu](/tools/timeline-mileage-calculator) — Oblicz łączny pokonany dystans"
+        }
+      ],
+      "footer": [
+        "Czytaj dalej: [Migracja z historii lokalizacji Google](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}

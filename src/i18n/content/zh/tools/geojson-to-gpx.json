@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "免费 GeoJSON 转 GPX 转换器 — 在线转换地理数据",
+    "description": "立即将 GeoJSON 文件转换为 GPX 格式。免费、隐私优先的在线地理数据转换器，完全在浏览器中运行，无需上传。",
+    "keywords": "GeoJSON 转 GPX, GeoJSON 转换器, GPX 转换器, 地理数据转换器, GPS 转换器",
+    "appName": "GeoJSON 转 GPX 转换器"
+  },
+  "h1": "GeoJSON 转 GPX 转换器",
+  "intro": "立即将您的 GeoJSON 文件转换为 GPX 格式。所有处理都在浏览器中完成，数据不会离开您的设备。",
+  "cards": [
+    {
+      "title": "关于 GeoJSON 格式",
+      "body": "GeoJSON 是基于 JSON 的地理数据结构编码格式，广泛用于网页地图应用。"
+    },
+    {
+      "title": "关于 GPX 格式",
+      "body": "GPX（GPS 交换格式）是 GPS 数据的标准 XML 格式，大多数 GPS 设备和运动追踪器都支持。"
+    },
+    {
+      "title": "为什么要将 GeoJSON 转换为 GPX？",
+      "items": [
+        "将网页地图数据导入 GPS 设备",
+        "用于运动记录应用和设备",
+        "兼容 Garmin、Suunto 和其他 GPS 设备",
+        "户外导航的标准格式"
+      ]
+    }
+  ],
+  "privacyBody": "所有转换都完全在浏览器中完成，数据不会离开您的设备。"
+}

@@ -1,0 +1,146 @@
+{
+  "whenToConvert": {
+    "subject": "GPX en KML",
+    "body": [
+      "GPX est le format produit par votre appareil GPS, votre montre de sport ou votre application d’enregistrement. KML est le format attendu par Google Earth, Google My Maps et la plupart des outils SIG de bureau. Convertir un GPX en KML permet de voir réellement vos trajets dans une application cartographique, au-delà de leur simple stockage.",
+      "Les besoins les plus fréquents : ouvrir un export Strava dans Google Earth, partager une sortie enregistrée par une montre Garmin via Google My Maps, annoter visuellement un GPX de randonnée AllTrails ou OsmAnd, ou archiver durablement le trajet d’un ancien GPS dans un outil cartographique.",
+      "Les deux formats sont basés sur XML et bien définis. La conversion est donc sans perte pour leurs champs communs. La question des champs qu’ils ne partagent pas est détaillée ci-dessous."
+    ]
+  },
+  "preservation": {
+    "intro": "Voici précisément ce qui est conservé lors d’une conversion GPX → KML et ce qui ne l’est pas :",
+    "rows": [
+      {
+        "field": "Coordonnées GPS (latitude/longitude)",
+        "preserved": "✅ Oui",
+        "notes": "Les deux formats utilisent des degrés décimaux WGS-84, avec la même précision."
+      },
+      {
+        "field": "Altitude",
+        "preserved": "✅ Oui",
+        "notes": "Le champ GPX <ele> devient la troisième coordonnée KML <coordinates>. Les deux utilisent des mètres."
+      },
+      {
+        "field": "Horodatages",
+        "preserved": "✅ Oui",
+        "notes": "Le champ GPX <time> devient un KML <TimeStamp> sur chaque repère. Les deux utilisent ISO-8601 en UTC."
+      },
+      {
+        "field": "Structure des trajets (trajet → segments → points)",
+        "preserved": "✅ Oui",
+        "notes": "Les éléments GPX <trk>/<trkseg> deviennent des KML <Placemark> avec une géométrie <LineString>."
+      },
+      {
+        "field": "Points de passage",
+        "preserved": "✅ Oui",
+        "notes": "Un GPX <wpt> devient un KML <Placemark> avec une géométrie <Point> et le nom du point de passage."
+      },
+      {
+        "field": "Itinéraires",
+        "preserved": "✅ Oui",
+        "notes": "Un GPX <rte> devient une KML <LineString> distincte, séparée des trajets."
+      },
+      {
+        "field": "Noms et descriptions des trajets et points de passage",
+        "preserved": "✅ Oui",
+        "notes": "Transférés vers les éléments KML <name> et <description>."
+      },
+      {
+        "field": "Fréquence cardiaque, cadence, puissance (TrackPointExtension)",
+        "preserved": "⚠️ Non",
+        "notes": "KML n’a pas d’espace de noms pour les données sportives. Pour garder fréquence cardiaque, cadence et puissance, convertissez en TCX ou conservez le GPX."
+      },
+      {
+        "field": "Blocs GPX <extensions> (données personnalisées)",
+        "preserved": "⚠️ Partiellement",
+        "notes": "Les extensions génériques sont supprimées. Utilisez GeoJSON pour conserver des propriétés arbitraires."
+      },
+      {
+        "field": "Style (couleur et largeur des lignes, icônes)",
+        "preserved": "➕ Valeurs par défaut",
+        "notes": "GPX ne définit pas de style ; ce convertisseur applique un KML <Style> adapté par défaut. Vous pouvez le modifier dans Google Earth Pro."
+      }
+    ]
+  },
+  "apps": {
+    "intro": "Une fois votre fichier .kml obtenu, vous pouvez l’ouvrir ici :",
+    "items": [
+      {
+        "name": "Google Earth (web et Pro)",
+        "url": "https://earth.google.com/",
+        "note": "Glissez le .kml dans la version navigateur, ou utilisez Fichier → Importer dans Earth Pro. Idéal pour la visualisation 3D."
+      },
+      {
+        "name": "Google My Maps",
+        "url": "https://mymaps.google.com/",
+        "note": "Créez une carte, puis importez votre KML pour partager une carte annotée avec qui vous voulez."
+      },
+      {
+        "name": "QGIS",
+        "url": "https://qgis.org/",
+        "note": "SIG de bureau libre. Ajoutez-le comme couche vectorielle pour une analyse approfondie avec d’autres données géographiques."
+      },
+      {
+        "name": "Marble",
+        "url": "https://marble.kde.org/",
+        "note": "Globe virtuel libre. Multiplateforme, sans compte Google."
+      },
+      {
+        "name": "Locus Map (Android)",
+        "url": "https://www.locusmap.app/",
+        "note": "Importe les KML pour la navigation hors ligne et la relecture des parcours."
+      },
+      {
+        "name": "Caltopo",
+        "url": "https://caltopo.com/",
+        "note": "Cartographie de pleine nature. Importe les KML pour préparer vos déplacements avec des calques de relief."
+      },
+      {
+        "name": "Dawarich",
+        "url": "/import-export/",
+        "note": "Vous pouvez aussi importer directement un KML dans votre chronologie Dawarich, avec toutes vos autres données."
+      }
+    ]
+  },
+  "example": {
+    "intro": "Un GPX minimal en entrée, un KML minimal en sortie, pour illustrer la correspondance des champs :",
+    "fromLabel": "GPX",
+    "toLabel": "KML",
+    "input": "<?xml version=\"1.0\"?>\n<gpx version=\"1.1\" creator=\"Garmin\">\n  <trk>\n    <name>Morning Run</name>\n    <trkseg>\n      <trkpt lat=\"52.5200\" lon=\"13.4050\">\n        <ele>34</ele>\n        <time>2026-04-27T07:14:00Z</time>\n      </trkpt>\n      <trkpt lat=\"52.5210\" lon=\"13.4060\">\n        <ele>36</ele>\n        <time>2026-04-27T07:14:30Z</time>\n      </trkpt>\n    </trkseg>\n  </trk>\n</gpx>",
+    "output": "<?xml version=\"1.0\"?>\n<kml xmlns=\"http://www.opengis.net/kml/2.2\">\n  <Document>\n    <name>Morning Run</name>\n    <Placemark>\n      <name>Morning Run</name>\n      <LineString>\n        <coordinates>\n          13.4050,52.5200,34\n          13.4060,52.5210,36\n        </coordinates>\n      </LineString>\n      <TimeSpan>\n        <begin>2026-04-27T07:14:00Z</begin>\n        <end>2026-04-27T07:14:30Z</end>\n      </TimeSpan>\n    </Placemark>\n  </Document>\n</kml>"
+  },
+  "reference": {
+    "heading": "GPX et KML en bref",
+    "body": [
+      "GPX (GPS Exchange Format) a été publié par Topografix en 2002 pour les appareils GPS. Il contient des trajets, itinéraires, points de passage et métadonnées de base par point. Presque tous les GPS, montres sportives et applications de plein air le lisent et l’écrivent. Ce format est simple et ciblé : il n’existe pratiquement qu’une façon d’exprimer un trajet.",
+      "KML (Keyhole Markup Language) a été créé par Keyhole, l’entreprise rachetée par Google pour construire Google Earth. Bien plus vaste, il contient géométries, styles, animations temporelles, modèles 3D, liens réseau et superpositions. KML est un format de présentation. GPX est un format d’échange.",
+      "Pour partager ou visualiser un trajet, le logiciel destinataire attend du KML. Pour le réutiliser dans un autre GPS ou l’analyser dans un logiciel sportif, conservez-le en GPX."
+    ]
+  },
+  "faqs": [
+    {
+      "q": "Ce convertisseur envoie-t-il mon fichier GPX à un serveur ?",
+      "a": "Non. La conversion s’effectue entièrement dans votre navigateur avec JavaScript. Votre fichier ne quitte jamais votre appareil et son contenu n’est soumis à aucune analyse statistique. Vous pouvez le vérifier : Dawarich est libre et le code du convertisseur se trouve dans le même dépôt public."
+    },
+    {
+      "q": "Puis-je convertir plusieurs fichiers GPX à la fois ?",
+      "a": "Ce convertisseur traite un fichier à la fois. Pour réunir plusieurs fichiers GPX dans un seul KML, utilisez d’abord l’outil de fusion GPX, puis convertissez le fichier fusionné."
+    },
+    {
+      "q": "Mes données de fréquence cardiaque et de cadence seront-elles conservées ?",
+      "a": "Non. KML n’a pas d’extension définie pour les données de capteurs sportifs. Pour conserver fréquence cardiaque, cadence ou puissance, gardez le GPX original (préféré par la plupart des applications sportives) ou convertissez-le en TCX, conçu pour les activités sportives."
+    },
+    {
+      "q": "Comment ouvrir le KML obtenu dans Google Earth ?",
+      "a": "Dans la version web, faites glisser le fichier .kml sur l’interface Earth. Dans Google Earth Pro sur ordinateur, utilisez Fichier → Ouvrir et sélectionnez le fichier. Le trajet apparaît dans l’arborescence « Lieux temporaires » à gauche ; faites un clic droit pour le conserver durablement."
+    },
+    {
+      "q": "Pourquoi mon trajet semble-t-il plat dans Google Earth ?",
+      "a": "Par défaut, les LineStrings KML sont plaquées au sol. Pour voir le profil d’altitude réel, faites un clic droit sur le trajet importé dans Google Earth Pro et choisissez le mode d’altitude « Absolue » ou « Relative au sol »."
+    },
+    {
+      "q": "Y a-t-il une limite de taille de fichier ?",
+      "a": "Le convertisseur s’exécute dans votre navigateur : la limite pratique dépend donc de sa mémoire. Les fichiers de plusieurs centaines de mégaoctets fonctionnent sur un ordinateur portable récent. Pour des exports GPX très volumineux, comme des archives sur plusieurs années, utilisez d’abord l’outil de découpage de fichiers GPS."
+    }
+  ]
+}

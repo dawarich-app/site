@@ -1,0 +1,158 @@
+{
+  "importFormats": [
+    {
+      "title": "Google Takeout",
+      "description": "Importe todo o seu histórico de localização do Google Maps Timeline. Traga anos de dados para o Dawarich em um único envio."
+    },
+    {
+      "title": "Apple Health e Fitness",
+      "description": "Importe arquivos GPX exportados dos aplicativos Apple Health ou Apple Fitness. Ideal para quem usa iPhone."
+    },
+    {
+      "title": "Arquivos GPX",
+      "description": "Arquivos no padrão GPS Exchange Format de qualquer origem. O formato universal para dados de localização."
+    },
+    {
+      "title": "Arquivos CSV",
+      "description": "Importe dados de localização de planilhas ou exportações personalizadas em CSV, com mapeamento flexível de colunas."
+    },
+    {
+      "title": "Arquivos KML",
+      "description": "Importe arquivos Keyhole Markup Language de vários aplicativos de mapas e dispositivos GPS."
+    },
+    {
+      "title": "Metadados de fotos",
+      "description": "Extraia e importe dados de localização dos metadados EXIF das suas coleções de fotos."
+    }
+  ],
+  "exportFormats": [
+    {
+      "title": "Exportação GPX",
+      "description": "Exporte seus dados de localização como arquivos GPX compatíveis com qualquer software GPS ou aplicativo de mapas."
+    },
+    {
+      "title": "Exportação GeoJSON",
+      "description": "Obtenha seus dados em GeoJSON para integrar facilmente com ferramentas GIS e soluções de mapas personalizadas."
+    },
+    {
+      "title": "Exportação completa da conta",
+      "description": "Baixe tudo: pontos, visitas, viagens, estatísticas e configurações. Portabilidade completa dos dados."
+    }
+  ],
+  "importSteps": [
+    {
+      "title": "Envie seu arquivo",
+      "description": "Acesse a página Importações no Dawarich e selecione seu arquivo.",
+      "details": [
+        "Clique no botão \"Nova importação\"",
+        "Selecione os arquivos para enviar",
+        "Confirme para iniciar o processamento",
+        "O formato dos dados será reconhecido automaticamente"
+      ]
+    },
+    {
+      "title": "Processamento",
+      "description": "O Dawarich processa sua importação em segundo plano. Arquivos grandes podem levar alguns minutos.",
+      "details": [
+        "Os pontos são verificados para evitar duplicatas",
+        "Nenhum registro duplicado é criado",
+        "A geocodificação reversa é executada automaticamente",
+        "Você recebe uma notificação ao concluir a importação"
+      ]
+    },
+    {
+      "title": "Dados disponíveis",
+      "description": "Ao concluir, todos os dados importados aparecem no seu mapa e nas suas estatísticas.",
+      "details": [
+        "Veja os pontos no mapa interativo",
+        "Estatísticas atualizadas automaticamente",
+        "Crie viagens com os dados importados",
+        "Pesquise e filtre locais importados"
+      ]
+    }
+  ],
+  "exportSteps": [
+    {
+      "title": "Acesse Pontos",
+      "description": "Acesse a página Pontos no painel do Dawarich."
+    },
+    {
+      "title": "Selecione o intervalo de datas",
+      "description": "Escolha o intervalo de datas dos dados que deseja exportar e clique em Pesquisar.",
+      "details": [
+        "Selecione as datas de início e fim",
+        "Clique em \"Pesquisar\" para filtrar os pontos",
+        "Confira se todos os dados desejados estão visíveis"
+      ]
+    },
+    {
+      "title": "Escolha o formato",
+      "description": "Clique no botão Exportar",
+      "details": [
+        "Escolha entre GPX e GeoJSON",
+        "Exportação completa para um backup integral"
+      ]
+    },
+    {
+      "description": "O Dawarich gera seu arquivo de exportação em segundo plano.",
+      "details": [
+        "Exportações pequenas ficam prontas na hora",
+        "Exportações grandes podem levar alguns minutos",
+        "Você pode continuar usando o Dawarich"
+      ]
+    },
+    {
+      "title": "Baixe",
+      "description": "Quando estiver pronto, baixe seu arquivo de exportação.",
+      "details": [
+        "O link para download aparece na página Exportações",
+        "Arquivos armazenados com segurança",
+        "Baixe novamente quando quiser"
+      ]
+    }
+  ],
+  "meta": {
+    "title": "Importação e exportação de dados",
+    "description": "Seus dados pertencem a você. Importe de Google Takeout, GPX, CSV, KML. Exporte para GPX, CSV ou baixe a conta completa. Sem ficar preso à plataforma.",
+    "ogTitle": "Importação e exportação no Dawarich — Seus dados, seu controle",
+    "ogDescription": "Importe de Google Maps, Apple Health, GPX, GeoJSON, KML. Exporte para qualquer formato. Portabilidade completa, sem ficar preso à plataforma."
+  },
+  "hero": {
+    "badge": "Portabilidade de dados",
+    "title": "Seus dados",
+    "titleHighlight": "pertencem a você",
+    "subtitle": "Importe seu histórico de localização de qualquer lugar. Exporte quando quiser, em qualquer formato. O Dawarich acredita na portabilidade completa, sem dependência de plataforma — você está sempre no controle.",
+    "imageAlt": "Interface de importação e exportação"
+  },
+  "importExportPage": {
+    "heading": "Nossa filosofia sobre dados",
+    "h3": "Sem dependência de plataforma",
+    "p": "Exporte todos os seus dados quando quiser. Você nunca fica preso — mude de serviço ou guarde seu próprio backup.",
+    "h32": "Migração fácil",
+    "p2": "Saindo do Google Maps Timeline ou de outro rastreador? Importe tudo com facilidade e continue de onde parou.",
+    "h33": "Controle completo",
+    "p3": "Baixe tudo: pontos, visitas, viagens, estatísticas, configurações. Todo o seu histórico digital de localização pertence a você.",
+    "title3": "Formatos de importação aceitos",
+    "subtitle2": "Traga seus dados de localização de praticamente qualquer origem para o Dawarich.",
+    "title4": "Como funciona a importação",
+    "subtitle3": "Traga seu histórico de localização para o Dawarich em poucas etapas simples.",
+    "h34": "Remoção inteligente de duplicatas",
+    "p4": "O Dawarich evita pontos duplicados automaticamente. Importe o mesmo arquivo duas vezes ou deixe seu aplicativo enviar a mesma localização — garantimos que cada ponto único seja armazenado uma só vez.",
+    "title5": "Formatos de exportação disponíveis",
+    "subtitle4": "Leve seus dados com você — para qualquer lugar, a qualquer hora, no formato que precisar.",
+    "title6": "Como funciona a exportação",
+    "subtitle5": "Baixe seus dados de localização com rapidez e segurança.",
+    "heading2": "Por que importação e exportação importam",
+    "h35": "Troca de serviços",
+    "p5": "Migre facilmente todo o seu histórico de localização do Google Maps Timeline ou de outro serviço para o Dawarich.",
+    "h36": "Backups regulares",
+    "p6": "Exporte seus dados regularmente para criar backups. Mantenha cópias locais de todo o seu histórico de localização.",
+    "h37": "Entre plataformas",
+    "p7": "Use exportações GPX em outros softwares GPS, aplicativos de mapas ou importe em plataformas diferentes.",
+    "heading3": "Tenha controle dos seus dados de localização",
+    "p8": "Comece com uma conta grátis e importe seu histórico de localização hoje.",
+    "Link": "Experimente grátis por 7 dias",
+    "EnOnlyLink": "Hospede grátis no seu servidor",
+    "p9": "7 dias de teste grátis · Reembolso em até 14 dias, sem risco · Cancele quando quiser"
+  }
+}

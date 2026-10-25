@@ -1,0 +1,110 @@
+{
+  "showcaseItems": [
+    {
+      "title": "Análisis mensuales y anuales",
+      "description": "Obtén resúmenes automáticos de tus datos de ubicación por mes y año. Descubre tendencias, patrones y momentos destacados de cada periodo."
+    },
+    {
+      "title": "Ciudades y países visitados",
+      "description": "Lleva la cuenta de todos los países donde has estado con recuento y visualización automáticos. Ideal para amantes de los viajes que coleccionan sellos en el pasaporte."
+    },
+    {
+      "title": "Distancia total",
+      "description": "Calcula la distancia total que has recorrido a partir de todos tus datos de ubicación registrados. Mira lo lejos que has llegado con el tiempo."
+    },
+    {
+      "title": "Resúmenes por correo",
+      "description": "Recibe automáticamente correos de resumen mensuales y anuales con tus logros y estadísticas de viajes."
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Registro automático",
+      "description": "Tus estadísticas se calculan automáticamente en segundo plano cada hora mientras registras tu ubicación.",
+      "details": [
+        "No hace falta introducir datos manualmente",
+        "Las actualizaciones son automáticas",
+        "Los datos históricos se procesan continuamente"
+      ]
+    },
+    {
+      "title": "Ve tus estadísticas",
+      "description": "Abre la página Análisis para consultar las estadísticas completas de tus ubicaciones.",
+      "details": [
+        "Resumen de todo tu historial con una tarjeta y un mapa de rutas por año",
+        "Elige cualquier año para ver sus meses, calendario y comparaciones",
+        "Haz clic en cualquier mes para ver sus estadísticas y su mapa"
+      ]
+    },
+    {
+      "title": "Explora en el mapa",
+      "description": "Usa los enlaces [Mapa] para visualizar tus estadísticas geográficamente.",
+      "details": [
+        "Haz clic en [Mapa] junto a cualquier año",
+        "Ve los datos mensuales en el mapa interactivo",
+        "Ve todas tus rutas y puntos"
+      ]
+    },
+    {
+      "title": "Actualizaciones manuales",
+      "description": "Fuerza una actualización inmediata de las estadísticas cuando quieras con el botón «Actualizar estadísticas».",
+      "details": [
+        "Haz clic en «Actualizar estadísticas» para actualizarlas al instante",
+        "Normalmente termina en unos minutos",
+        "Útil tras importar grandes conjuntos de datos"
+      ]
+    }
+  ],
+  "shareFeatures": [
+    {
+      "title": "Enlaces para compartir",
+      "description": "Genera enlaces públicos para compartir tus resúmenes anuales con amigos y familia mientras el resto de tus datos sigue siendo privado."
+    },
+    {
+      "title": "Respeta tu privacidad",
+      "description": "Tú decides qué compartir. Solo se ven las estadísticas compartidas; todo lo demás sigue siendo privado."
+    }
+  ],
+  "meta": {
+    "title": "Estadísticas y análisis de ubicaciones",
+    "description": "Tu vida en cifras con estadísticas completas de ubicación. Lleva la cuenta de países, ciudades y distancias, y recibe resúmenes mensuales y anuales por correo.",
+    "ogTitle": "Estadísticas de Dawarich — Tu vida en cifras",
+    "ogDescription": "Estadísticas completas de ubicación: países visitados, distancia total, registro de tiempo y resúmenes mensuales y anuales automáticos por correo."
+  },
+  "hero": {
+    "badge": "Estadísticas y análisis",
+    "title": "Tu vida en",
+    "titleHighlight": "cifras",
+    "subtitle": "Convierte tus datos de ubicación en información útil. Descubre patrones, sigue tus logros y celebra tus metas con estadísticas completas que se actualizan automáticamente cada hora.",
+    "imageAlt": "Panel completo de estadísticas"
+  },
+  "statsPage": {
+    "heading": "Qué puedes registrar",
+    "h3": "Estadísticas globales",
+    "li": "Países visitados",
+    "li2": "Ciudades exploradas",
+    "li3": "Distancia total recorrida",
+    "h32": "Estadísticas por periodo",
+    "li4": "Resúmenes anuales",
+    "li5": "Desglose mensual",
+    "li6": "Periodos de mayor actividad",
+    "title3": "Análisis completo",
+    "subtitle2": "Todo lo que necesitas para entender tu historial de ubicaciones de un vistazo.",
+    "heading2": "Comparte tus logros",
+    "p": "Celebra tus metas de viaje compartiendo tus resúmenes anuales mientras tus datos detallados siguen siendo privados.",
+    "title4": "Cómo funciona",
+    "subtitle3": "Tus estadísticas se calculan automáticamente, sin trabajo manual.",
+    "heading3": "Por qué importan las estadísticas",
+    "h33": "Motivación",
+    "p2": "Ver tus logros de viaje en cifras te motiva a explorar más y a fijarte nuevas metas.",
+    "h34": "Comprende tus hábitos",
+    "p3": "Descubre patrones en tus desplazamientos y entiende cómo repartes tu tiempo entre distintos lugares.",
+    "h35": "Resumen anual de recuerdos",
+    "p4": "Recibe bonitos resúmenes anuales que te ayuden a recordar y celebrar tus aventuras y experiencias.",
+    "heading4": "Empieza a registrar tus estadísticas",
+    "p5": "Empieza hoy a crear tus estadísticas de ubicación con una prueba gratuita de 7 días. Cancela cuando quieras.",
+    "Link": "Prueba 7 días gratis",
+    "EnOnlyLink": "Instálalo gratis en tu servidor",
+    "p6": "Prueba gratuita de 7 días · Reembolso sin riesgo de 14 días · Cancela cuando quieras"
+  }
+}

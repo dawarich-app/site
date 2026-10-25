@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "title": "TCX a GeoJSON gratis — Fitxers d’entrenament en línia",
+    "description": "Converteix TCX a GeoJSON a l’instant. Convertidor gratuït i privat per a activitats físiques, ideal per a mapes web. Tot al navegador.",
+    "keywords": "TCX a GeoJSON, Training Center XML a GeoJSON, convertidor TCX, convertidor GeoJSON, convertidor de fitxers esportius, mapes web, Leaflet, Mapbox",
+    "appName": "Convertidor de TCX a GeoJSON"
+  },
+  "h1": "Convertidor de TCX a GeoJSON",
+  "intro": "Converteix els fitxers TCX (Training Center XML) a GeoJSON per a aplicacions de mapes web. Tot es processa al navegador.",
+  "cards": [
+    {
+      "title": "Sobre aquesta conversió",
+      "body": "Garmin Connect, Wahoo, Polar i Strava fan servir TCX (Training Center XML). GeoJSON és l’estàndard de biblioteques de mapes web com Leaflet i Mapbox GL."
+    },
+    {
+      "title": "Per què convertir TCX a GeoJSON?",
+      "items": [
+        "Mostra activitats en aplicacions de mapes web",
+        "Fes-lo servir amb Leaflet, Mapbox o OpenLayers",
+        "Processa dades GPS amb JavaScript",
+        "Importa a programari SIG com QGIS",
+        "Crea visualitzacions personalitzades"
+      ]
+    }
+  ],
+  "privacyBody": "Tota la conversió es fa al navegador. Les dades no surten mai del dispositiu.",
+  "noGpsData": "No s’han trobat dades GPS al fitxer TCX."
+}

@@ -1,3 +1,4 @@
+import { SmartLink } from '@site/src/i18n/RichText';
 import Link from "@docusaurus/Link";
 import React from "react";
 import styles from "./Hero.module.css";
@@ -46,6 +47,7 @@ export default function LandingHero({
 	imageAlt,
 	imageContainerStyle,
 }) {
+	const SecondaryLink = secondaryCta?.href.startsWith('#') ? Link : SmartLink;
 	return (
 		<section className={styles.hero}>
 			<div className={styles.meshBlob1} />
@@ -78,19 +80,19 @@ export default function LandingHero({
 					)}
 
 					<div className={styles.buttons} style={{ animationDelay: "0.3s" }}>
-						<Link className={styles.primaryButton} href={primaryCta.href}>
+						<SmartLink className={styles.primaryButton} href={primaryCta.href}>
 							{primaryCta.text}
 							<span className={styles.arrow}>
 								<ArrowRightIcon />
 							</span>
-						</Link>
+						</SmartLink>
 						{secondaryCta && (
-							<Link
+							<SecondaryLink
 								className={styles.secondaryButton}
 								href={secondaryCta.href}
 							>
 								{secondaryCta.text}
-							</Link>
+							</SecondaryLink>
 						)}
 					</div>
 

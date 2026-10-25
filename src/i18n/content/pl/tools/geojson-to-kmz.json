@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Darmowy konwerter GeoJSON na KMZ — dane geograficzne",
+    "description": "Konwertuj GeoJSON na KMZ od ręki. Darmowy, prywatny konwerter online. W całości w przeglądarce, bez wysyłania plików.",
+    "keywords": "GeoJSON na KMZ, konwerter GeoJSON, konwerter KMZ, konwerter danych geograficznych, skompresowany KML",
+    "appName": "Konwerter GeoJSON na KMZ"
+  },
+  "h1": "Konwerter GeoJSON na KMZ",
+  "intro": "Szybko konwertuj pliki GeoJSON na skompresowany format KMZ. Wszystko odbywa się w Twojej przeglądarce.",
+  "cards": [
+    {
+      "title": "O formacie GeoJSON",
+      "body": "GeoJSON to format danych geograficznych oparty na JSON, powszechnie używany w internetowych aplikacjach mapowych i API."
+    },
+    {
+      "title": "O formacie KMZ",
+      "body": "KMZ to skompresowana wersja KML, zapewniająca mniejsze pliki, łatwiejsze udostępnianie i szybsze wczytywanie w Google Earth."
+    },
+    {
+      "title": "Po co konwertować GeoJSON na KMZ?",
+      "items": [
+        "Mniejszy plik łatwiej udostępnić",
+        "Natywna obsługa w Google Earth i Google Maps",
+        "Szybsze wczytywanie w aplikacjach mapowych",
+        "Możliwość dołączenia obrazów i innych zasobów"
+      ]
+    }
+  ],
+  "privacyBody": "Cała konwersja odbywa się w Twojej przeglądarce. Twoje dane nigdy nie opuszczają urządzenia."
+}

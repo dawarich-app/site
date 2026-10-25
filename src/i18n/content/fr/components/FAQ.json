@@ -1,0 +1,42 @@
+{
+  "faqData": [
+    {
+      "question": "Pourquoi payer alors que Google Timeline est gratuit ?",
+      "answer": "Google Timeline est « gratuit » parce que vos données de localisation financent une activité publicitaire de $300B. Avec Dawarich, vous payez une somme modique et vos données restent privées : aucune publicité, aucun pistage, aucune vente de données. À moins de {price}/jour avec Lite, vous reprenez le contrôle de votre vie privée."
+    },
+    {
+      "question": "Comment importer mes données Google Timeline ?",
+      "answer": "Exportez votre historique de localisation depuis Google Takeout et importez-le directement dans Dawarich. Quelques minutes suffisent : vos années d’historique apparaissent immédiatement sur votre carte interactive."
+    },
+    {
+      "question": "Dawarich risque-t-il de disparaître comme d’autres start-up ?",
+      "answer": "Dawarich est un logiciel libre avec PLUS DE 9,000 étoiles sur GitHub. Même si l’entreprise fermait demain, votre instance auto-hébergée continuerait de fonctionner et vos données resteraient exportables dans des formats standard (GPX, GeoJSON). Vous gardez toujours votre liberté."
+    },
+    {
+      "question": "Mes données sont-elles vraiment privées ?",
+      "answer": "Sur notre service cloud, les données sont chiffrées en transit et au repos, et stockées dans des centres de données européens dans le respect du RGPD. Vous préférez ne dépendre de personne ? Auto-hébergez Dawarich : vos données ne passent jamais par nos serveurs. Dans les deux cas, nous ne vendons jamais vos données et n’affichons aucune publicité."
+    },
+    {
+      "question": "Que se passe-t-il si Google modifie son format d’export ?",
+      "answer": "Nous maintenons activement les outils d’importation des formats Google. Lorsqu’ils changent (et cela arrive), nous les adaptons en quelques jours. Notre communauté de milliers de développeurs de logiciels libres aide à repérer rapidement ces changements."
+    },
+    {
+      "question": "Quelles applications mobiles sont compatibles ?",
+      "answer": "Dawarich propose des applications officielles pour iOS et Android, avec un suivi de localisation en arrière-plan qui sollicite peu la batterie. Vous pouvez aussi utiliser OwnTracks, GPSLogger, Overland et d’autres applications de suivi compatibles."
+    },
+    {
+      "question": "Le suivi de localisation fonctionne-t-il sans connexion Internet ?",
+      "answer": "Oui. Les applications officielles iOS et Android enregistrent votre position sur l’appareil. Le suivi continue donc sans réseau : en avion, dans le métro, en randonnée isolée ou à l’étranger sans données mobiles. Vos points sont conservés sur votre téléphone et envoyés automatiquement à votre instance Dawarich dès le retour de la connexion. Une coupure ne vous fait perdre aucune donnée de trajet."
+    },
+    {
+      "question": "Puis-je exporter mes données ?",
+      "answer": "Oui, vous pouvez exporter toutes vos données de localisation à tout moment dans plusieurs formats (GPX, GeoJSON). Même avec l’offre Lite, les exports incluent l’intégralité de votre historique, au-delà des 12 mois consultables. Vous gardez toujours votre liberté."
+    },
+    {
+      "question": "Y a-t-il un essai gratuit ?",
+      "answer": "Oui ! Dawarich Cloud propose un essai gratuit de 7 jours. Importez vos données Google, explorez les cartes et voyez si le service vous convient. Résiliez à tout moment dans les paramètres de votre abonnement. Vous pouvez aussi auto-héberger gratuitement Dawarich avec toutes ses fonctionnalités."
+    }
+  ],
+  "title": "Questions fréquentes",
+  "subtitle": "Tout ce que vous devez savoir sur Dawarich."
+}

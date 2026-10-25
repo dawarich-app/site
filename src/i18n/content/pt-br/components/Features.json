@@ -1,0 +1,32 @@
+{
+  "features": [
+    {
+      "title": "Reveja qualquer dia, minuto a minuto",
+      "description": "Escolha uma data. Cada parada, cada trajeto, cada minuto — tudo à vista. A linha do tempo detalhada que o Google encerrou discretamente."
+    },
+    {
+      "title": "Saiba na hora: \"Onde eu estava?\"",
+      "description": "Digite uma data. Veja exatamente onde você estava, qual trajeto fez e quanto tempo ficou. Cada viagem, deslocamento e desvio — pesquisável para sempre."
+    },
+    {
+      "title": "Reviva qualquer viagem em detalhes",
+      "description": "Escolha um intervalo de datas. O Dawarich monta o mapa, calcula a distância e traça o percurso. Adicione fotos e ele vira um diário de viagem."
+    },
+    {
+      "title": "Veja sua vida em números",
+      "description": "Quantos países. Quantos quilômetros. Sua cidade mais visitada. Padrões mensais que você nunca percebeu. Compartilhe suas estatísticas com um único link."
+    },
+    {
+      "title": "Acompanhe sua exploração do mundo",
+      "description": "Veja os países ganharem destaque conforme você os visita. Descubra o que falta. Planeje o próximo destino."
+    },
+    {
+      "title": "Entenda seus padrões",
+      "description": "Você está viajando menos que no ano passado? Passando mais tempo em uma cidade? O Dawarich identifica tendências que você não perceberia sozinho."
+    }
+  ],
+  "title": "Linha do tempo do Google (Google Timeline): tudo o que deveria ter sido",
+  "subtitle": "Todos os recursos que você adorava, sem abrir mão da privacidade.",
+  "ariaLabel": "Fechar imagem",
+  "viewFullSize": "Ver {title} em tamanho original"
+}

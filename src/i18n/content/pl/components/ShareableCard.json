@@ -1,0 +1,10 @@
+{
+  "title": "Statystyki mojej historii lokalizacji",
+  "totalDistance": "Łączny dystans",
+  "dataPoints": "Punkty danych",
+  "placesVisited": "Odwiedzone miejsca",
+  "countries": "Kraje",
+  "downloadButton": "Pobierz kartę statystyk jako obraz",
+  "branding": "Wygenerowano w dawarich.app",
+  "distanceValue": "{distance} km"
+}

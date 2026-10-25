@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "title": "Gratis GPS-Heatmap-Generator – Aktivitäts-Heatmaps online",
+    "description": "GPS-Heatmaps aus GPX, FIT, TCX, GeoJSON, KML und JSON aus Google Timeline (Google Maps Zeitachse). Lauf-, Rad- und Aktivitätsmuster. Gratis, privat im Browser.",
+    "keywords": "GPS-Heatmap, Heatmap-Generator, Lauf-Heatmap, Fahrrad-Heatmap, Strava-Heatmap-Alternative, GPX-Heatmap, Aktivitäts-Heatmap, Fitness-Heatmap, kostenlose Heatmap, Google-Timeline-Heatmap, Google-Standortverlauf-Heatmap, Records.json-Heatmap"
+  },
+  "h1": "GPS-Heatmap-Generator",
+  "intro": "Erstelle anschauliche Heatmaps aus deinen GPS-Aktivitäten. Lade mehrere Dateien hoch, um deine Lauf-, Rad- und Aktivitätsmuster auf einer Karte zu sehen.",
+  "saveIntro": "Möchtest du diese Daten auch in deinem Dawarich-Konto haben? Wir importieren sie bei der Registrierung, ohne erneutes Hochladen.",
+  "privacy": "Die Darstellung wird in deinem Browser erstellt. Es wird nichts hochgeladen, bis du „In meinem Dawarich-Konto speichern“ wählst.",
+  "exportButton": "Als PNG exportieren",
+  "loadingMap": "Karte wird geladen...",
+  "parseError": "Fehler beim Einlesen von {fileName}: {message}",
+  "cards": [
+    {
+      "title": "Was ist eine GPS-Heatmap?",
+      "paragraphs": [
+        "Eine GPS-Heatmap zeigt die Dichte deiner Standortdaten auf einer Karte. Gebiete, die du häufiger besucht hast, erscheinen heller und intensiver. So werden deine Aktivitätsmuster im Lauf der Zeit sichtbar."
+      ]
+    },
+    {
+      "title": "Unterstützte Dateiformate",
+      "paragraphs": [],
+      "items": [
+        { "body": "**GPX** - GPS Exchange Format (die meisten GPS-Apps)" },
+        { "body": "**FIT** - Garmin-Aktivitätsdateien" },
+        { "body": "**GeoJSON** - Format für Webkarten" },
+        { "body": "**KML/KMZ** - Google-Earth-Format" },
+        { "body": "**Google-Timeline-JSON** - Records.json- und Semantic-Location-History-Dateien aus Google Takeout" }
+      ]
+    },
+    {
+      "title": "So exportierst du deine Daten",
+      "paragraphs": [],
+      "items": [
+        { "body": "**Strava:** Einstellungen > Mein Konto > Deine Daten herunterladen" },
+        { "body": "**Garmin:** .FIT-Dateien vom Gerät kopieren oder den Export in Garmin Connect nutzen" },
+        { "body": "**Apple Fitness:** Apps von Drittanbietern nutzen, um Trainings als GPX zu exportieren" },
+        { "body": "**Google Maps:** Den Standortverlauf mit Google Takeout exportieren – Records.json- und Semantic-Location-History-Dateien werden direkt unterstützt" }
+      ]
+    },
+    {
+      "title": "Kostenlose Alternative zur Strava-Heatmap",
+      "paragraphs": [
+        "Die Heatmap-Funktion von Strava erfordert ein kostenpflichtiges Abo. Mit diesem kostenlosen Werkzeug kannst du ähnliche Heatmaps aus deinen exportierten Daten erstellen, ganz ohne Abo oder Konto."
+      ]
+    }
+  ],
+  "upload": {
+    "uploadTitle": "Dateien hochladen",
+    "dropFiles": "Dateien hierher ziehen und ablegen",
+    "formats": "GPX, FIT, TCX, GeoJSON, KML, KMZ, Google-Timeline-JSON",
+    "clearButton": "Alle entfernen",
+    "inputLabel": "Dateien zur Verarbeitung auswählen",
+    "processing": "Dateien werden verarbeitet..."
+  },
+  "results": {
+    "statsTitle": "Statistiken",
+    "pointsLabel": "Punkte insgesamt",
+    "distanceLabel": "Gesamtentfernung",
+    "dateRangeLabel": "Zeitraum",
+    "loadedFiles": "Geladene Dateien ({count})",
+    "pointCount": "{points} Pkt.",
+    "distanceValue": "{distance} km"
+  },
+  "settings": {
+    "settingsTitle": "Heatmap-Einstellungen",
+    "schemeLabel": "Farbschema",
+    "schemes": [
+      { "label": "Feuer (Rot/Orange)" },
+      { "label": "Strava (Orange)" },
+      { "label": "Plasma (Violett/Gelb)" },
+      { "label": "Ozean (Blau)" },
+      { "label": "Wald (Grün)" }
+    ],
+    "intensityLabel": "Intensität: {intensity}",
+    "radiusLabel": "Radius: {radius}",
+    "opacityLabel": "Deckkraft: {opacity}"
+  },
+  "cta": {
+    "headline": "Deine Heatmap umfasst **{points}** GPS-Punkte auf **{distance} km**. Das ist eine Momentaufnahme. Dawarich erstellt deine Heatmap fortlaufend.",
+    "fallback": "Möchtest du deinen Standortverlauf über Jahre hinweg visualisieren? Dawarich erstellt deine Heatmap fortlaufend aus all deinen GPS-Quellen.",
+    "statLabels": {
+      "points": "Punkte",
+      "distance": "Entfernung",
+      "dateRange": "Zeitraum"
+    }
+  }
+}

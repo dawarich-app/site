@@ -1,0 +1,14 @@
+{
+  "subscribe": "Subscriu-m’hi",
+  "privacyNote": "Sense correu brossa. Dona’t de baixa quan vulguis.",
+  "invalidEmail": "Introdueix una adreça electrònica vàlida.",
+  "requestError": "Alguna cosa ha fallat. Torna-ho a provar més tard.",
+  "success": "Ja t’hi has subscrit! Revisa la safata d’entrada per confirmar-ho.",
+  "networkError": "Error de xarxa. Comprova la connexió i torna-ho a provar.",
+  "firstNameLabel": "Nom ",
+  "emailLabel": "Correu electrònic ",
+  "optionalLabel": "(opcional)",
+  "firstNamePlaceholder": "Michael",
+  "emailPlaceholder": "you@example.com",
+  "subscribing": "S’està subscrivint…"
+}

@@ -1,0 +1,62 @@
+{
+  "poster": {
+    "themes": [
+      {
+        "name": "Outono"
+      },
+      {
+        "name": "Planta técnica"
+      },
+      {
+        "name": "Zonas de contraste"
+      },
+      {
+        "name": "Pátina de cobre"
+      },
+      {
+        "name": "Cidade esmeralda"
+      },
+      {
+        "name": "Floresta"
+      },
+      {
+        "name": "Ruas em degradê"
+      },
+      {
+        "name": "Tinta japonesa"
+      },
+      {
+        "name": "Azul meia-noite"
+      },
+      {
+        "name": "Azul monocromático"
+      },
+      {
+        "name": "Neon cyberpunk"
+      },
+      {
+        "name": "Noir"
+      },
+      {
+        "name": "Oceano"
+      },
+      {
+        "name": "Sonho pastel"
+      },
+      {
+        "name": "Pôr do sol"
+      },
+      {
+        "name": "Terracota"
+      },
+      {
+        "name": "Bege quente"
+      }
+    ]
+  },
+  "position": "Pôster {name}, {position} de {total}",
+  "close": "Fechar",
+  "previous": "Pôster anterior",
+  "next": "Próximo pôster",
+  "posterAlt": "Pôster do trajeto em Berlim no tema {name}, ampliado"
+}

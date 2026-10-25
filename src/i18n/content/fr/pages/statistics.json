@@ -1,0 +1,110 @@
+{
+  "showcaseItems": [
+    {
+      "title": "Vos analyses mensuelles et annuelles",
+      "description": "Recevez des résumés automatiques de vos données de localisation par mois et par année. Découvrez les tendances, habitudes et temps forts de chaque période."
+    },
+    {
+      "title": "Villes et pays visités",
+      "description": "Retrouvez chaque pays visité grâce au décompte et à la visualisation automatiques. Idéal pour les voyageurs qui collectionnent les tampons sur leur passeport."
+    },
+    {
+      "title": "Distance totale",
+      "description": "Calculez la distance totale parcourue à partir de toutes vos données de localisation enregistrées. Voyez le chemin accompli au fil du temps."
+    },
+    {
+      "title": "Bilans par e-mail",
+      "description": "Recevez automatiquement des bilans mensuels et annuels par e-mail, avec les temps forts de vos voyages et vos statistiques."
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Suivi automatique",
+      "description": "Vos statistiques sont calculées automatiquement en arrière-plan chaque heure pendant le suivi de vos positions.",
+      "details": [
+        "Aucune saisie manuelle nécessaire",
+        "Actualisations automatiques",
+        "Traitement continu des données historiques"
+      ]
+    },
+    {
+      "title": "Consultez vos statistiques",
+      "description": "Ouvrez la page Vos analyses pour une analyse complète de vos localisations.",
+      "details": [
+        "Résumé de tout l’historique avec une fiche et une carte des parcours pour chaque année",
+        "Choisissez une année pour voir ses mois, son calendrier et ses comparaisons",
+        "Cliquez sur un mois pour voir ses statistiques et sa carte"
+      ]
+    },
+    {
+      "title": "Explorez sur la carte",
+      "description": "Utilisez les liens [Carte] pour visualiser géographiquement vos statistiques.",
+      "details": [
+        "Cliquez sur [Carte] à côté d’une année",
+        "Consultez les données mensuelles sur la carte interactive",
+        "Retrouvez l’intégralité de vos parcours et points"
+      ]
+    },
+    {
+      "title": "Actualisation manuelle",
+      "description": "Forcez le calcul immédiat à tout moment avec le bouton « Actualiser les statistiques ».",
+      "details": [
+        "Cliquez sur « Actualiser les statistiques » pour lancer le calcul",
+        "Le calcul prend généralement quelques minutes",
+        "Utile après l’importation de données volumineuses"
+      ]
+    }
+  ],
+  "shareFeatures": [
+    {
+      "title": "Liens de partage",
+      "description": "Générez des liens publics pour partager vos bilans annuels avec vos proches tout en gardant le reste de vos données privé."
+    },
+    {
+      "title": "Respect de la vie privée",
+      "description": "Vous décidez de ce que vous partagez. Seules les statistiques partagées sont visibles ; tout le reste demeure privé."
+    }
+  ],
+  "meta": {
+    "title": "Statistiques de localisation et Vos analyses",
+    "description": "Votre vie en chiffres : pays, villes, distances et statistiques de localisation complètes, avec bilans mensuels et annuels automatiques par e-mail.",
+    "ogTitle": "Statistiques Dawarich — Votre vie en chiffres",
+    "ogDescription": "Des statistiques de localisation complètes : pays visités, distance totale, suivi du temps et bilans mensuels et annuels automatiques par e-mail."
+  },
+  "hero": {
+    "badge": "Statistiques et Vos analyses",
+    "title": "Votre vie en",
+    "titleHighlight": "chiffres",
+    "subtitle": "Transformez vos données de localisation en analyses utiles. Découvrez vos habitudes, suivez vos progrès et célébrez vos étapes avec des statistiques complètes actualisées automatiquement chaque heure.",
+    "imageAlt": "Tableau de bord complet des statistiques"
+  },
+  "statsPage": {
+    "heading": "Ce que vous pouvez suivre",
+    "h3": "Statistiques globales",
+    "li": "Pays visités",
+    "li2": "Villes explorées",
+    "li3": "Distance totale parcourue",
+    "h32": "Statistiques par période",
+    "li4": "Bilans annuels",
+    "li5": "Détail par mois",
+    "li6": "Périodes les plus actives",
+    "title3": "Des analyses complètes",
+    "subtitle2": "Tout pour comprendre votre historique de localisation d’un coup d’œil.",
+    "heading2": "Partagez vos découvertes",
+    "p": "Célébrez les étapes de vos voyages en partageant vos bilans annuels, tout en gardant vos données détaillées privées.",
+    "title4": "Comment ça marche",
+    "subtitle3": "Vos statistiques sont calculées automatiquement, sans intervention manuelle.",
+    "heading3": "Pourquoi les statistiques comptent",
+    "h33": "Motivation",
+    "p2": "Voir vos voyages en chiffres vous motive à explorer davantage et à vous fixer de nouveaux objectifs.",
+    "h34": "Comprendre vos habitudes",
+    "p3": "Découvrez les tendances de vos déplacements et comprenez comment vous répartissez votre temps entre les lieux.",
+    "h35": "Vos souvenirs de l’année",
+    "p4": "Recevez de beaux bilans annuels pour vous remémorer et célébrer vos aventures et vos expériences.",
+    "heading4": "Commencez à suivre vos statistiques",
+    "p5": "Commencez à constituer vos statistiques de localisation avec un essai gratuit de 7 jours. Résiliez à tout moment.",
+    "Link": "Essayer gratuitement pendant 7 jours",
+    "EnOnlyLink": "Auto-héberger gratuitement",
+    "p6": "Essai gratuit de 7 jours · Remboursement sous 14 jours, sans risque · Résiliez à tout moment"
+  }
+}

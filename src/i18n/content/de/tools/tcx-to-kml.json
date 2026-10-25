@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "title": "TCX in KML: Trainingsdateien online gratis für Google Earth",
+    "description": "TCX-Dateien sofort in KML umwandeln. Kostenloser, datenschutzfreundlicher Online-Konverter für Fitnessaktivitäten in Google Earth. Direkt im Browser.",
+    "keywords": "TCX in KML, Training Center XML zu Google Earth, TCX-Konverter, KML-Konverter, Google Earth, Fitness-Dateikonverter, Garmin zu Google Earth",
+    "appName": "TCX-zu-KML-Konverter"
+  },
+  "h1": "TCX in KML umwandeln",
+  "intro": "Wandle deine TCX-Dateien (Training Center XML) in KML um, um sie in Google Earth anzusehen. Die gesamte Verarbeitung läuft in deinem Browser.",
+  "cards": [
+    {
+      "title": "Über diese Umwandlung",
+      "body": "TCX wird von Garmin Connect, Wahoo, Polar und Strava für Fitnessaktivitäten verwendet. KML ist Googles Format für Google Earth und Google Maps."
+    },
+    {
+      "title": "Warum TCX in KML umwandeln?",
+      "items": [
+        "Deine Aktivitäten in Google Earth ansehen",
+        "Routen in der 3D-Geländeansicht erkunden",
+        "Tracks teilen, die sich in Google Earth öffnen lassen",
+        "In Google My Maps importieren",
+        "Mit KML-kompatiblen Anwendungen nutzen"
+      ]
+    }
+  ],
+  "privacyBody": "Die gesamte Umwandlung läuft in deinem Browser. Deine Daten verlassen dein Gerät nie.",
+  "noGpsData": "Keine GPS-Daten in der TCX-Datei gefunden."
+}

@@ -1,0 +1,55 @@
+{
+  "rows": [
+    {
+      "title": "Cada país, comptat, amb el límit de 183 dies marcat",
+      "body": "Tria un any i mira quants dies diferents has passat a cada país, de més a menys. Es marquen els països on arribes als 183 dies o més: el llindar de moltes normes de residència i la xifra que vols preveure, en lloc de descobrir-la a l’abril."
+    },
+    {
+      "title": "Els períodes darrere del total, no només la suma",
+      "body": "Un total de 353 dies diu menys que els vuit períodes que el formen: un de 133 dies, un de 104 i uns quants de curts al desembre. Cada estada inclou la data d’inici, la de final i la durada, allò que necessites quan una norma té en compte la presència ininterrompuda en lloc de la suma anual.",
+      "note": "Proves exportables, més enllà d’una xifra al tauler"
+    }
+  ],
+  "objections": [
+    {
+      "q": "Això és assessorament fiscal?",
+      "a": "No, ni ho pretén. Dawarich informa del que diu el teu historial d’ubicacions. No interpreta la legislació fiscal de cap país i cada jurisdicció compta els dies diferent: algunes compten dies parcials, altres exclouen els de viatge i altres fan mitjanes de diversos anys. És informació per portar a un professional, no una conclusió per actuar."
+    },
+    {
+      "q": "Com es compta exactament un dia?",
+      "a": "Un dia compta per a un país si hi tens almenys un punt registrat aquell dia. Si dimarts voles d’Alemanya a França, compta per a tots dos països; per això la suma per països pot superar els dies registrats. Els dies es delimiten segons UTC, cosa que prop de mitjanit i d’una frontera pot desplaçar un dia."
+    },
+    {
+      "q": "I els dies que no he registrat?",
+      "a": "No compten i mai no s’atribueixen a l’últim país conegut. L’informe també mostra el total de dies registrats perquè vegis quina part de l’any cobreixen les xifres: el primer que et preguntarà un assessor."
+    },
+    {
+      "q": "Tinc anys d’historial a Google Timeline. Serveixen?",
+      "a": "Sí. Importa l’arxiu de Google Takeout i els dies s’hi incorporaran. Cal geocodificar inversament els punts importats abans d’atribuir-los a un país; Dawarich ho fa per tu."
+    },
+    {
+      "q": "Us he de confiar anys de dades d’ubicació?",
+      "a": "No has de confiar en ningú. Tota l’aplicació és de codi obert i totes les funcions s’executen al teu maquinari. Allotja-la tu i les dades no sortiran del teu equip."
+    }
+  ],
+  "meta": {
+    "title": "Residència fiscal — Recompte automàtic i regla de 183 dies",
+    "description": "Compta dies per país del teu historial GPS: estades seguides, avís als 183 dies. Per a nòmades digitals, treballadors fronterers i viatgers de llarga durada.",
+    "ogTitle": "Residència fiscal — Segueix el llindar de 183 dies amb el teu historial GPS",
+    "ogDescription": "Comptatge de dies per país a partir del teu historial d’ubicacions, amb estades consecutives i un avís als 183 dies. Proves per a qüestions de residència, no assessorament fiscal."
+  },
+  "taxResidencyPage": {
+    "text": "Aquest any has travessat sis fronteres.",
+    "em": "Quants dies hi has passat?",
+    "title2": "La resposta, amb els càlculs a la vista",
+    "sub2": "Els dies per país són a la pàgina d’Anàlisi i segueixen l’any que triïs a dalt.",
+    "title3": "Llegeix això abans de basar-t’hi",
+    "title4": "Comença a comptar ara, no l’abril vinent",
+    "text2": "Registra des d’avui i la resposta de l’any que ve ja estarà comptada. Totes les regles del recompte són a la",
+    "EnOnlyLink": "documentació de dies per país",
+    "text3": "."
+  },
+  "hero": {
+    "sub": "Reconstruir un any amb targetes d’embarcament i entrades del calendari és una manera d’equivocar-se amb la residència. Dawarich compta els dies per país a partir de l’historial GPS que ja reculls: un quadrat per dia amb el color del país. Marca tot el que supera els 183 dies i deixa visibles els buits sense seguiment, en lloc de dissimular-los."
+  }
+}

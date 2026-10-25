@@ -1,0 +1,266 @@
+{
+  "plans": {
+    "lite": {
+      "name": "Lite",
+      "tagline": "Una alternativa privada a Google Timeline per a un seguiment ocasional.",
+      "period": "/any",
+      "perMonth": "{price}/mes",
+      "perDay": "{price}/dia",
+      "cta": "Prova Lite gratis",
+      "footnote": "Només anual · Cancel·la quan vulguis",
+      "valueStack": {
+        "items": [
+          {
+            "label": "Aplicacions de seguiment per a iOS i Android"
+          },
+          {
+            "label": "12 mesos d’historial amb cerca"
+          },
+          {
+            "label": "Importacions i exportacions il·limitades"
+          },
+          {
+            "label": "Estadístiques i desglossaments mensuals"
+          },
+          {
+            "label": "Servei d’importació personalitzat"
+          }
+        ],
+        "payLine": "Per a tu per {price}/any"
+      },
+      "features": [
+        {
+          "label": "Aplicacions natives per a iOS i Android"
+        },
+        {
+          "label": "Seguiment d’ubicació en segon pla"
+        },
+        {
+          "label": "12 mesos d’historial amb cerca"
+        },
+        {
+          "label": "Importacions i exportacions il·limitades"
+        },
+        {
+          "label": "Mapa interactiu amb rutes"
+        },
+        {
+          "label": "Rutes amb colors segons la velocitat i reproducció diària"
+        },
+        {
+          "label": "Gestió de viatges i llocs"
+        },
+        {
+          "label": "Estadístiques bàsiques i desglossaments mensuals"
+        },
+        {
+          "label": "Límit de l’API de 200 peticions/h"
+        }
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "tagline": "Historial il·limitat, visualitzacions avançades i accés complet a l’API.",
+      "period": "/any",
+      "periodMonthly": "/mes",
+      "perMonth": "{price}/mes",
+      "perDay": "{price}/dia",
+      "perDayMonthly": "{price}/dia",
+      "save": "5 mesos gratis",
+      "saveHint": "Obtén 5 mesos gratis",
+      "badge": "EL MÉS POPULAR",
+      "cta": "Comença Pro gratis — 7 dies",
+      "footnote": "Cancel·la quan vulguis",
+      "valueStack": {
+        "items": [
+          {
+            "label": "Tot el que inclou Lite"
+          },
+          {
+            "label": "Historial il·limitat, per sempre"
+          },
+          {
+            "label": "Mapa de calor, boira de guerra i globus 3D"
+          },
+          {
+            "label": "Integració de fotos i d’Immich/PhotoPrism"
+          },
+          {
+            "label": "Accés complet a l’API d’escriptura"
+          }
+        ],
+        "payLine": "Per a tu per {price}/any"
+      },
+      "featuresHeading": "Tot el que inclou Lite, més:",
+      "features": [
+        {
+          "label": "Historial de dades il·limitat, per sempre"
+        },
+        {
+          "label": "Capes de mapa de calor i boira de guerra"
+        },
+        {
+          "label": "Vista del globus (3D)"
+        },
+        {
+          "label": "Integració de fotos als viatges"
+        },
+        {
+          "label": "Integració d’Immich / PhotoPrism"
+        },
+        {
+          "label": "Resum anual complet i compartició pública"
+        },
+        {
+          "label": "Accés complet a l’API d’escriptura"
+        },
+        {
+          "label": "Límit de l’API de 1,000 peticions/h"
+        }
+      ]
+    },
+    "family": {
+      "name": "Família",
+      "tagline": "Totes les funcions Pro per als de casa: una subscripció anual per a un màxim de 5 persones.",
+      "period": "/any",
+      "perMonth": "{price}/mes",
+      "perDay": "{price}/dia",
+      "cta": "Comença Família gratis — 7 dies",
+      "footnote": "Només anual · Fins a 5 membres · Cancel·la quan vulguis",
+      "valueStack": {
+        "items": [
+          {
+            "label": "Accés Pro per a qui paga"
+          },
+          {
+            "label": "4 places Pro addicionals"
+          },
+          {
+            "label": "Ubicació familiar compartida en temps real"
+          },
+          {
+            "label": "Servei d’importació personalitzat"
+          }
+        ],
+        "payLine": "Per a tu per {price}/any"
+      },
+      "featuresHeading": "Tot el que inclou Pro, més:",
+      "features": [
+        {
+          "label": "Fins a 5 membres amb una subscripció"
+        },
+        {
+          "label": "Cada membre té accés Pro complet"
+        },
+        {
+          "label": "Convida o elimina membres quan vulguis"
+        },
+        {
+          "label": "Els membres hereten l’accés mentre són a la família"
+        },
+        {
+          "label": "Ubicació familiar compartida en temps real"
+        }
+      ]
+    }
+  },
+  "compareGroups": [
+    {
+      "name": "Seguiment i aplicacions",
+      "rows": [
+        {
+          "label": "Aplicacions natives per a iOS i Android"
+        },
+        {
+          "label": "Seguiment d’ubicació en segon pla"
+        },
+        {
+          "label": "Ubicació familiar compartida en temps real"
+        }
+      ]
+    },
+    {
+      "name": "Historial i dades",
+      "rows": [
+        {
+          "label": "Historial amb cerca",
+          "lite": "12 mesos",
+          "pro": "Il·limitat",
+          "family": "Il·limitat"
+        },
+        {
+          "label": "Importacions i exportacions il·limitades"
+        },
+        {
+          "label": "Les dades sempre són teves (exporta quan vulguis)"
+        }
+      ]
+    },
+    {
+      "name": "Mapes i visualització",
+      "rows": [
+        {
+          "label": "Mapa interactiu amb rutes"
+        },
+        {
+          "label": "Rutes amb colors segons la velocitat i reproducció diària"
+        },
+        {
+          "label": "Capes de mapa de calor i boira de guerra"
+        },
+        {
+          "label": "Vista del globus (3D)"
+        },
+        {
+          "label": "Integració de fotos als viatges"
+        },
+        {
+          "label": "Integració d’Immich / PhotoPrism"
+        }
+      ]
+    },
+    {
+      "name": "Anàlisi i compartició",
+      "rows": [
+        {
+          "label": "Estadístiques bàsiques i desglossaments mensuals"
+        },
+        {
+          "label": "Resum anual complet i compartició pública"
+        },
+        {
+          "label": "Gestió de viatges i llocs"
+        }
+      ]
+    },
+    {
+      "name": "API i límits",
+      "rows": [
+        {
+          "label": "Límit de l’API",
+          "lite": "200 peticions/h",
+          "pro": "1,000 peticions/h",
+          "family": "1,000 peticions/h"
+        },
+        {
+          "label": "Accés complet a l’API d’escriptura"
+        }
+      ]
+    },
+    {
+      "name": "Membres i facturació",
+      "rows": [
+        {
+          "label": "Membres amb una subscripció",
+          "family": "Fins a 5"
+        },
+        {
+          "label": "Cada membre té accés Pro complet"
+        },
+        {
+          "label": "Garantia de reemborsament de 14 dies"
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import { translate } from '@docusaurus/Translate';
 import styles from './FormatConverter.module.css';
 
 export default function FormatConverter({
@@ -76,10 +77,16 @@ export default function FormatConverter({
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
               </svg>
               <p className={styles.dropText}>
-                Drag and drop your {fromFormat} file here, or click to browse
+                {translate(
+                  {
+                    id: 'shared.converter.dropPrompt',
+                    message: 'Drag and drop your {format} file here, or click to browse',
+                  },
+                  { format: fromFormat },
+                )}
               </p>
               <input
-                aria-label="Choose files to process"
+                aria-label={translate({ id: 'shared.uploader.chooseFiles', message: 'Choose files to process' })}
                 type="file"
                 className={styles.fileInput}
                 accept={acceptedFormats[fromFormat]}
@@ -101,6 +108,7 @@ export default function FormatConverter({
                 onClick={handleClear}
                 className={styles.clearButton}
                 type="button"
+                aria-label={translate({ id: 'shared.converter.removeFile', message: 'Remove file' })}
               >
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -121,11 +129,11 @@ export default function FormatConverter({
                 <svg className={styles.spinner} viewBox="0 0 24 24">
                   <circle className={styles.spinnerCircle} cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
                 </svg>
-                Converting...
+                {translate({ id: 'shared.converter.converting', message: 'Converting...' })}
               </>
             ) : (
               <>
-                Convert to {toFormat}
+                {translate({ id: 'shared.converter.convertTo', message: 'Convert to {format}' }, { format: toFormat })}
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>

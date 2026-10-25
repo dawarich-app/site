@@ -1,6 +1,9 @@
 import React, { useState, useCallback } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
+import Link from '@docusaurus/Link';
+import { translate } from '@docusaurus/Translate';
+import { interpolate } from '@docusaurus/Interpolate';
 import FileUploader from '@site/src/components/FileUploader';
 import { parseTimeline, detectFormat } from '@site/src/utils/timelineParser';
 import { timelineToConverterPoints, timelineToCSV } from '@site/src/utils/timelineToFormat';
@@ -9,53 +12,14 @@ import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import RelatedTools from '@site/src/components/RelatedTools';
 import SaveToAccountButton from '@site/src/components/SaveToAccountButton';
 import { detectGoogleSource } from '@site/src/utils/detectGoogleSource';
+import RichText, { toPlainText } from '@site/src/i18n/RichText';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
+import content from '@locale-content/tools/google-timeline-converter.json';
 import styles from './google-timeline-converter.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
-const pageTitle = "Google Timeline to GPX/KML/CSV Converter - Convert Location History Free";
-const pageDescription = "Free, privacy-first converter for Google Timeline data. Convert your location history to GPX, KML, GeoJSON, or CSV format. All processing in your browser.";
-const pageUrl = "https://dawarich.app/tools/google-timeline-converter/";
 const imageUrl = "https://dawarich.app/img/meta-image.png";
-
-const FORMAT_LABELS = {
-  records: 'Records.json (Raw GPS)',
-  semantic: 'Semantic Location History',
-  semanticSegments: 'Semantic Segments',
-  locationHistory: 'Location History (Phone Export)',
-  settings: 'Settings',
-  timelineEdits: 'Timeline Edits',
-  unknown: 'Unknown',
-};
-
-const faqItems = [
-  {
-    question: "Is it safe to upload my Google Timeline data?",
-    answer: "Yes. All conversion happens entirely in your browser using JavaScript — your files stay on your device and are gone when you close the tab. There are no cookies tracking your files and no analytics on your location data. The only exception is the optional “Save to my Dawarich account” button, which uploads your file to Dawarich Cloud so it can be imported into your new account. The tool is open source, so you can verify the code yourself."
-  },
-  {
-    question: "What Google Timeline formats can I convert?",
-    answer: "This converter supports all six Google Timeline export formats: Records.json (raw GPS location records with E7 coordinates), Semantic Location History (monthly YYYY_MONTH.json files with place visits and activity segments), Semantic Segments (the newer phone-based export format with semanticSegments), Location History (array format with startTime/endTime), Settings, and TimelineEdits. The tool auto-detects the format when you upload a file."
-  },
-  {
-    question: "What's the best output format for my needs?",
-    answer: "It depends on your use case. GPX is the most widely supported format and works with nearly every GPS application, fitness tracker, and mapping tool. KML and KMZ are ideal for Google Earth visualization. GeoJSON is the standard for web mapping libraries like Leaflet and Mapbox. CSV is best for spreadsheet analysis in Excel or Google Sheets, or for importing into databases. If unsure, start with GPX — it has the broadest compatibility."
-  },
-  {
-    question: "Will the conversion lose any data?",
-    answer: "The conversion preserves all geographic coordinates, timestamps, and elevation data. Place visit names and addresses are included as waypoint names in GPX and KML formats, and as dedicated columns in CSV. Activity type information (walking, driving, cycling) is preserved in CSV output. Some format-specific metadata like accuracy values or device identifiers may not have equivalents in all output formats, but no location data is lost."
-  },
-  {
-    question: "Can I convert multiple files at once?",
-    answer: "Yes. You can upload multiple Google Timeline JSON files at once — for example, all your monthly Semantic Location History files (2022_JANUARY.json through 2022_DECEMBER.json). The converter merges all data from all uploaded files into a single output per format. This is especially useful for Semantic exports from Google Takeout, which split your history into monthly files."
-  },
-  {
-    question: "How do I open the converted files?",
-    answer: "GPX files can be opened in apps like Strava, Garmin Connect, AllTrails, OsmAnd, Viking, and GPXSee. KML and KMZ files open directly in Google Earth and Google My Maps. GeoJSON files work with geojson.io, QGIS, Mapbox Studio, and most web mapping frameworks. CSV files open in Excel, Google Sheets, LibreOffice Calc, or any spreadsheet application. You can also import any of these formats into Dawarich for long-term storage and visualization."
-  },
-  {
-    question: "Why should I convert my Google Timeline data?",
-    answer: "Google discontinued the web version of Timeline in late 2024 and moved location data to on-device storage with limited export options. Converting your exported JSON files into standard formats like GPX or KML ensures your data remains accessible regardless of Google's future decisions. Standard formats can be opened by hundreds of applications, imported into self-hosted tools like Dawarich, and archived for decades without vendor lock-in."
-  }
-];
+const OUTPUT_FORMATS = ['gpx', 'kml', 'geojson', 'kmz', 'csv'];
 
 function downloadFile(content, filename, mimeType) {
   const blob = content instanceof Blob ? content : new Blob([content], { type: mimeType });
@@ -69,7 +33,7 @@ function downloadFile(content, filename, mimeType) {
   URL.revokeObjectURL(url);
 }
 
-function formatDateRange(points, paths) {
+function formatDateRange(points, paths, htmlLang) {
   const timestamps = [];
 
   points.forEach(p => {
@@ -81,19 +45,24 @@ function formatDateRange(points, paths) {
     if (p.endTimestamp) timestamps.push(new Date(p.endTimestamp).getTime());
   });
 
-  if (timestamps.length === 0) return 'No timestamps found';
+  if (timestamps.length === 0) return content.results.noTimestamps;
 
   const validTimestamps = timestamps.filter(t => !isNaN(t));
-  if (validTimestamps.length === 0) return 'No valid timestamps';
+  if (validTimestamps.length === 0) return content.results.noValidTimestamps;
 
   const min = new Date(Math.min(...validTimestamps));
   const max = new Date(Math.max(...validTimestamps));
 
   const options = { year: 'numeric', month: 'short', day: 'numeric' };
-  return `${min.toLocaleDateString('en-US', options)} — ${max.toLocaleDateString('en-US', options)}`;
+  return `${min.toLocaleDateString(htmlLang, options)} — ${max.toLocaleDateString(htmlLang, options)}`;
 }
 
 export default function GoogleTimelineConverter() {
+  const htmlLang = useHtmlLang();
+  const pageUrl = useLocalizedUrl('/tools/google-timeline-converter/');
+  const toolsUrl = useLocalizedUrl('/tools/');
+  const homeUrl = useLocalizedUrl('/');
+  const formatNumber = (value) => value.toLocaleString(htmlLang);
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const [parsedResults, setParsedResults] = useState([]);
   const [allPoints, setAllPoints] = useState([]);
@@ -207,7 +176,7 @@ export default function GoogleTimelineConverter() {
       }
     } catch (err) {
       console.error(`Error converting to ${format}:`, err);
-      setError(`Conversion to ${format.toUpperCase()} failed: ${err.message}`);
+      setError(interpolate(content.results.conversionFailed, { format: format.toUpperCase(), message: err.message }));
     } finally {
       setIsConverting(false);
     }
@@ -233,45 +202,37 @@ export default function GoogleTimelineConverter() {
 
   return (
     <Layout
-      title={pageTitle}
-      description={pageDescription}
+      title={content.meta.title}
+      description={content.meta.description}
     >
       <Head>
-        {/* Primary Meta Tags */}
-        <meta name="title" content={pageTitle} />
-        <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="convert google timeline to GPX, google takeout to KML, google location history to CSV, timeline to geojson converter, google timeline converter, google maps timeline export, location history to GPX, google takeout location converter, timeline data converter" />
-        <link rel="canonical" href={pageUrl} />
+        <meta name="title" content={content.meta.title} />
+        <meta name="description" content={content.meta.description} />
+        <meta name="keywords" content={content.meta.keywords} />
 
-        {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
+        <meta property="og:title" content={content.meta.title} />
+        <meta property="og:description" content={content.meta.description} />
         <meta property="og:image" content={imageUrl} />
         <meta property="og:site_name" content="Dawarich" />
 
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:title" content={content.meta.title} />
+        <meta name="twitter:description" content={content.meta.description} />
         <meta name="twitter:image" content={imageUrl} />
 
-        {/* Additional Meta Tags */}
         <meta name="author" content="Dawarich" />
-        <meta name="robots" content="index, follow" />
-        <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
 
-        {/* JSON-LD Structured Data - WebApplication */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "Google Timeline to GPX/KML/CSV Converter",
+            "name": content.meta.appName,
             "url": pageUrl,
-            "description": pageDescription,
+            "description": content.meta.description,
             "applicationCategory": "UtilityApplication",
             "operatingSystem": "Any",
             "offers": {
@@ -279,36 +240,25 @@ export default function GoogleTimelineConverter() {
               "price": "0",
               "priceCurrency": "USD"
             },
-            "featureList": [
-              "Convert Google Timeline JSON to GPX format",
-              "Convert Google Timeline JSON to KML and KMZ format",
-              "Convert Google Timeline JSON to GeoJSON format",
-              "Convert Google Timeline JSON to CSV format",
-              "Batch conversion for multi-file Semantic exports",
-              "Privacy-first - all processing in browser",
-              "Support for all 6 Google Timeline export formats",
-              "No data sent to any server"
-            ]
+            "featureList": content.meta.featureList
           })}
         </script>
 
-        {/* JSON-LD Structured Data - FAQPage */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": faqItems.map(item => ({
+            "mainEntity": content.faq.map(item => ({
               "@type": "Question",
-              "name": item.question,
+              "name": toPlainText(item.q),
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": item.answer
+                "text": toPlainText(item.a)
               }
             }))
           })}
         </script>
 
-        {/* JSON-LD Structured Data - BreadcrumbList */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -317,19 +267,19 @@ export default function GoogleTimelineConverter() {
               {
                 "@type": "ListItem",
                 "position": 1,
-                "name": "Home",
-                "item": "https://dawarich.app"
+                "name": translate({ id: 'shared.breadcrumb.home', message: 'Home' }),
+                "item": homeUrl
               },
               {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Free Tools",
-                "item": "https://dawarich.app/tools"
+                "name": translate({ id: 'shared.breadcrumb.tools', message: 'Free Tools' }),
+                "item": toolsUrl
               },
               {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Google Timeline Converter",
+                "name": content.h1,
                 "item": pageUrl
               }
             ]
@@ -341,33 +291,25 @@ export default function GoogleTimelineConverter() {
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           <div className={styles.header}>
-            <h1>Google Timeline Converter</h1>
-            <p>Free, privacy-first tool to convert your Google Timeline location history to GPX, KML, GeoJSON, KMZ, or CSV. Upload your exported JSON files — all processing happens in your browser.</p>
+            <h1>{content.h1}</h1>
+            <p>{content.intro}</p>
           </div>
 
           <div className={styles.topSection}>
             <div className={styles.instructions}>
-              <h2>How to Get Your Timeline Data</h2>
-              <p>
-                You can export your Google Timeline data using one of the following methods. If one doesn't work, try another.
-              </p>
-              <p>
-                Unfortunately, some users might not be able to export their location data due to how Google changed its location storage policies.
-              </p>
+              <h2>{content.howTo.title}</h2>
+              {content.howTo.paragraphs.map((text, index) => (
+                <p key={index}><RichText text={text} /></p>
+              ))}
               <div className={styles.instructionsList}>
-                <div className={styles.instructionItem}>
-                  <strong>Google Takeout:</strong>
-                  <p>Visit <a href="https://takeout.google.com/" target="_blank" rel="noopener noreferrer">takeout.google.com</a> → Choose Location History (Timeline) → Export</p>
-                  <p>This way might not work for everyone because Google changed how location data is stored and exported. More details in our <a href="https://dawarich.app/blog/migrating-from-google-location-history-to-dawarich">blog</a>.</p>
-                </div>
-                <div className={styles.instructionItem}>
-                  <strong>On Android:</strong>
-                  <p>Open Google Maps → Settings → Location → Location Services → Timeline → Export Timeline</p>
-                </div>
-                <div className={styles.instructionItem}>
-                  <strong>On iOS:</strong>
-                  <p>Open Google Maps → Settings → Personal Content → Export Timeline data</p>
-                </div>
+                {content.howTo.methods.map((method) => (
+                  <div key={method.label} className={styles.instructionItem}>
+                    <strong>{method.label}</strong>
+                    {method.steps.map((step, index) => (
+                      <p key={index}><RichText text={step} /></p>
+                    ))}
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -380,9 +322,9 @@ export default function GoogleTimelineConverter() {
                     <svg className={styles.privacyIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
-                    Privacy First
+                    {content.privacy.title}
                   </strong>
-                  <p>All conversion happens entirely in your browser — your location data stays on your device unless you choose “Save to my Dawarich account.”</p>
+                  <p>{content.privacy.body}</p>
                 </div>
               </div>
             </div>
@@ -396,14 +338,14 @@ export default function GoogleTimelineConverter() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </span>
-                <span>Looking for a long-term Google Timeline replacement? <a href="/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-converter">Dawarich</a> tracks your location history automatically, with full data ownership and privacy. <a href="/blog/migrating-from-google-location-history-to-dawarich">Learn how to migrate</a>.</span>
+                <span><RichText text={content.preCta} /></span>
               </div>
             </div>
           )}
 
           {hasResults && (
             <div className={styles.resultSection}>
-              <h2>Uploaded Files</h2>
+              <h2>{content.results.title}</h2>
 
               {error && (
                 <div className={styles.errorMessage}>{error}</div>
@@ -413,28 +355,28 @@ export default function GoogleTimelineConverter() {
                 {parsedResults.map((result, index) => (
                   <div key={index} className={styles.fileInfo}>
                     <div className={styles.fileInfoItem}>
-                      <span className={styles.fileInfoLabel}>File</span>
+                      <span className={styles.fileInfoLabel}>{content.results.file}</span>
                       <span className={styles.fileInfoValue}>{result.filename}</span>
                     </div>
                     <div className={styles.fileInfoItem}>
-                      <span className={styles.fileInfoLabel}>Format</span>
-                      <span className={styles.fileInfoValue}>{FORMAT_LABELS[result.format] || result.format}</span>
+                      <span className={styles.fileInfoLabel}>{content.results.format}</span>
+                      <span className={styles.fileInfoValue}>{content.formatLabels[result.format] || result.format}</span>
                     </div>
                     <div className={styles.fileInfoItem}>
-                      <span className={styles.fileInfoLabel}>Size</span>
-                      <span className={styles.fileInfoValue}>{(result.size / 1024 / 1024).toFixed(2)} MB</span>
+                      <span className={styles.fileInfoLabel}>{content.results.size}</span>
+                      <span className={styles.fileInfoValue}>{interpolate(content.results.sizeValue, { size: (result.size / 1024 / 1024).toLocaleString(htmlLang, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) })}</span>
                     </div>
                     <div className={styles.fileInfoItem}>
-                      <span className={styles.fileInfoLabel}>Points</span>
-                      <span className={styles.fileInfoValue}>{result.pointCount.toLocaleString()}</span>
+                      <span className={styles.fileInfoLabel}>{content.results.points}</span>
+                      <span className={styles.fileInfoValue}>{formatNumber(result.pointCount)}</span>
                     </div>
                     <div className={styles.fileInfoItem}>
-                      <span className={styles.fileInfoLabel}>Paths</span>
-                      <span className={styles.fileInfoValue}>{result.pathCount.toLocaleString()}</span>
+                      <span className={styles.fileInfoLabel}>{content.results.paths}</span>
+                      <span className={styles.fileInfoValue}>{formatNumber(result.pathCount)}</span>
                     </div>
                     {result.error && (
                       <div className={styles.fileInfoItem}>
-                        <span className={styles.fileInfoLabel}>Error</span>
+                        <span className={styles.fileInfoLabel}>{content.results.error}</span>
                         <span className={styles.fileInfoValueError}>{result.error}</span>
                       </div>
                     )}
@@ -445,20 +387,14 @@ export default function GoogleTimelineConverter() {
               {hasData && (
                 <>
                   <div className={styles.summaryBar}>
-                    <span><strong>Total:</strong> {totalPoints.toLocaleString()} points, {totalPaths.toLocaleString()} paths</span>
-                    <span><strong>Date Range:</strong> {formatDateRange(allPoints, allPaths)}</span>
+                    <span><strong>{content.results.totalLabel}</strong> {interpolate(content.results.totalValue, { points: formatNumber(totalPoints), paths: formatNumber(totalPaths) })}</span>
+                    <span><strong>{content.results.dateRangeLabel}</strong> {formatDateRange(allPoints, allPaths, htmlLang)}</span>
                   </div>
 
                   <div className={styles.formatSelection}>
-                    <h3>Select Output Formats</h3>
+                    <h3>{content.results.selectFormats}</h3>
                     <div className={styles.formatCheckboxes}>
-                      {[
-                        { key: 'gpx', label: 'GPX', desc: 'Universal GPS format' },
-                        { key: 'kml', label: 'KML', desc: 'Google Earth' },
-                        { key: 'geojson', label: 'GeoJSON', desc: 'Web mapping' },
-                        { key: 'kmz', label: 'KMZ', desc: 'Compressed KML' },
-                        { key: 'csv', label: 'CSV', desc: 'Spreadsheets' },
-                      ].map(({ key, label, desc }) => (
+                      {OUTPUT_FORMATS.map((key) => (
                         <label key={key} className={styles.formatCheckbox}>
                           <input
                             type="checkbox"
@@ -466,8 +402,8 @@ export default function GoogleTimelineConverter() {
                             onChange={() => handleFormatToggle(key)}
                           />
                           <span className={styles.formatLabel}>
-                            <strong>{label}</strong>
-                            <span>{desc}</span>
+                            <strong>{key === 'geojson' ? 'GeoJSON' : key.toUpperCase()}</strong>
+                            <span>{content.results.formats[key]}</span>
                           </span>
                         </label>
                       ))}
@@ -488,7 +424,7 @@ export default function GoogleTimelineConverter() {
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                             </svg>
-                            Download {format.toUpperCase()}
+                            {interpolate(content.results.download, { format: format.toUpperCase() })}
                           </button>
                         ))}
                     </div>
@@ -501,14 +437,14 @@ export default function GoogleTimelineConverter() {
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                         </svg>
-                        {isConverting ? 'Converting...' : `Download All Selected (${selectedCount})`}
+                        {isConverting ? content.results.converting : interpolate(content.results.downloadAll, { count: selectedCount })}
                       </button>
                     )}
                   </div>
 
                   <div className={styles.saveToAccountSection}>
                     <p className={styles.saveToAccountIntro}>
-                      Want this in your Dawarich account too? We'll import it during signup — no second upload needed.
+                      {content.results.saveIntro}
                     </p>
                     <SaveToAccountButton
                       toolName="google-timeline-converter"
@@ -522,11 +458,11 @@ export default function GoogleTimelineConverter() {
 
               <PersonalizedCTA
                 toolName="google-timeline-converter"
-                headline={`Your <strong>${allPoints.length.toLocaleString()}</strong> points are now ready for download. Import them into Dawarich and never worry about format conversions again.`}
+                headline={<RichText text={interpolate(content.results.ctaHeadline, { points: formatNumber(allPoints.length) })} />}
                 stats={[
-                  { label: 'points', value: allPoints.length.toLocaleString() },
-                  { label: 'paths', value: allPaths.length.toLocaleString() },
-                  { label: 'files', value: parsedResults.length.toString() },
+                  { label: content.results.statPoints, value: formatNumber(allPoints.length) },
+                  { label: content.results.statPaths, value: formatNumber(allPaths.length) },
+                  { label: content.results.statFiles, value: formatNumber(parsedResults.length) },
                 ]}
               />
             </div>
@@ -535,74 +471,32 @@ export default function GoogleTimelineConverter() {
 
         <div className={styles.infoSection}>
           <div className={styles.infoGrid}>
-            <div className={styles.infoCard}>
-              <h2>What Is a Google Timeline Converter?</h2>
-              <p>A Google Timeline converter takes the raw JSON files from your Google location history export and transforms them into standard GPS formats that are widely supported by mapping applications, fitness trackers, and geographic information systems. Instead of being locked into Google's proprietary JSON format, you get files that work everywhere.</p>
-              <p>This tool converts everything in your browser, so downloading your formats never sends your location data anywhere. Upload your files, pick your formats, and download — it takes seconds for most exports and handles files with hundreds of thousands of location points. (If you use “Save to my Dawarich account,” that one action uploads your file to Dawarich Cloud to set up your import — nothing is sent otherwise.)</p>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>Output Formats Explained</h2>
-              <ul>
-                <li><strong>GPX (GPS Exchange Format)</strong> — The universal standard for GPS data. Supported by virtually every GPS application including Strava, Garmin Connect, AllTrails, OsmAnd, and QGIS. Contains waypoints, tracks, and timestamps.</li>
-                <li><strong>KML (Keyhole Markup Language)</strong> — Developed for Google Earth. Ideal for visualizing geographic data with placemarks, paths, and descriptions. Opens directly in Google Earth and Google My Maps.</li>
-                <li><strong>GeoJSON</strong> — The standard for web-based mapping. Used by Leaflet, Mapbox, OpenLayers, and most web mapping frameworks. Human-readable JSON format that's easy to work with programmatically.</li>
-                <li><strong>KMZ (Compressed KML)</strong> — A zipped version of KML that produces smaller file sizes. Useful for sharing via email or when file size matters. Opens in the same applications as KML.</li>
-                <li><strong>CSV (Comma-Separated Values)</strong> — Tabular format that opens in Excel, Google Sheets, and LibreOffice. Includes latitude, longitude, timestamp, type, name, address, activity type, altitude, and accuracy columns. Best for data analysis and custom processing.</li>
-              </ul>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>What Happened to Google Maps Timeline?</h2>
-              <p>In late 2024, Google discontinued the web version of Google Maps Timeline and moved all location data to on-device storage. Only the last 90 days were migrated — older data was deleted unless users manually backed it up. Many people <a href="https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/" target="_blank" rel="noopener noreferrer">lost years of location history</a> in the transition.</p>
-              <p>If you exported your data before or during the transition, this converter lets you transform it into standard formats for long-term preservation. Converting to GPX, KML, or CSV ensures your location history remains accessible regardless of what Google does next.</p>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>Why Convert Your Timeline Data?</h2>
-              <p>Google's proprietary JSON format is not supported by most mapping applications. By converting to standard formats, you gain several advantages:</p>
-              <ul>
-                <li><strong>Portability</strong> — Use your location data in any application that supports GPX, KML, GeoJSON, or CSV</li>
-                <li><strong>Long-term preservation</strong> — Standard formats will be readable decades from now, regardless of Google's future decisions</li>
-                <li><strong>Analysis</strong> — Import CSV into spreadsheets for statistical analysis of your movement patterns</li>
-                <li><strong>Visualization</strong> — View your history in Google Earth, QGIS, or web mapping tools</li>
-                <li><strong>Migration</strong> — Import into self-hosted alternatives like <a href="/?utm_source=tool&utm_medium=info-section&utm_campaign=google-timeline-converter">Dawarich</a> for ongoing location tracking with full data ownership</li>
-              </ul>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>Accuracy and Limitations</h2>
-              <p>The converter faithfully transforms all geographic coordinates and timestamps from your Google Timeline export. However, there are some inherent limitations to be aware of:</p>
-              <ul>
-                <li><strong>Coordinate precision</strong> — Records.json uses E7 format (7 decimal places), which is converted to standard decimal degrees with full precision retained</li>
-                <li><strong>Activity segments</strong> — Walking, driving, and cycling segments are preserved in CSV output. In GPX and KML, path coordinates are included as track segments</li>
-                <li><strong>Place names</strong> — Semantic Location History includes place names and addresses, which are preserved as waypoint names. Records.json typically does not include place names</li>
-                <li><strong>Large files</strong> — Files over 100 MB may take 10-30 seconds to process depending on your device. The tool processes data progressively to keep your browser responsive</li>
-              </ul>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>Related Tools</h2>
-              <ul>
-                <li><a href="/tools/timeline-visualizer">Google Timeline Visualizer</a> — View your Google Timeline data on an interactive map without converting</li>
-                <li><a href="/tools/heatmap-generator">GPS Heatmap Generator</a> — Create heatmaps from GPX, FIT, TCX, and other GPS files</li>
-                <li><a href="/tools/gpx-merger">GPX Track Merger</a> — Combine multiple GPX files into one</li>
-                <li><a href="/tools/photo-geotagging">Photo Geodata Extraction</a> — Extract GPS coordinates from your photos</li>
-                <li><a href="/tools/geojson-to-gpx">GeoJSON to GPX Converter</a> — Convert GeoJSON files to GPX format</li>
-                <li><a href="/tools/kml-to-gpx">KML to GPX Converter</a> — Convert KML files to GPX format</li>
-              </ul>
-              <p>Read more: <a href="/blog/migrating-from-google-location-history-to-dawarich">Migrating from Google Location History</a></p>
-            </div>
+            {content.info.map((card) => (
+              <div key={card.title} className={styles.infoCard}>
+                <h2>{card.title}</h2>
+                {card.paragraphs?.map((text, index) => (
+                  <p key={index}><RichText text={text} /></p>
+                ))}
+                {card.items && (
+                  <ul>
+                    {card.items.map((text, index) => (
+                      <li key={index}><RichText text={text} /></li>
+                    ))}
+                  </ul>
+                )}
+                {card.footer && <p><RichText text={card.footer} /></p>}
+              </div>
+            ))}
           </div>
         </div>
 
         <div className={styles.faqSection}>
-          <h2>Frequently Asked Questions</h2>
+          <h2>{content.faqTitle}</h2>
           <div className={styles.faqList}>
-            {faqItems.map((item, index) => (
+            {content.faq.map((item, index) => (
               <details key={index} className={styles.faqItem}>
-                <summary className={styles.faqQuestion}>{item.question}</summary>
-                <p className={styles.faqAnswer}>{item.answer}</p>
+                <summary className={styles.faqQuestion}>{item.q}</summary>
+                <p className={styles.faqAnswer}>{item.a}</p>
               </details>
             ))}
           </div>
@@ -610,9 +504,9 @@ export default function GoogleTimelineConverter() {
 
         <div className={styles.bottomCtaPanel}>
           <div className={styles.ctaContent}>
-            <h3>Looking for a Google Timeline Replacement?</h3>
-            <p>Dawarich is an open-source location tracking platform that gives you full control over your data. Import your Google Timeline export, track ongoing location from your phone, and visualize years of movement history — all self-hosted or in the cloud.</p>
-            <a href="/?utm_source=tool&utm_medium=bottom-cta&utm_campaign=google-timeline-converter" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
+            <h3>{content.bottomCta.title}</h3>
+            <p>{content.bottomCta.body}</p>
+            <Link to="/?utm_source=tool&utm_medium=bottom-cta&utm_campaign=google-timeline-converter" className={styles.ctaButton}>{content.bottomCta.button}</Link>
           </div>
         </div>
       </div>

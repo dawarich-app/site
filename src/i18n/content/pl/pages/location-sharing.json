@@ -1,0 +1,53 @@
+{
+  "rows": [
+    {
+      "title": "Jeden link, jedna rzecz",
+      "body": "Link wskazuje dokładnie to, co wybierzesz: zakres dat, pozycję na żywo, jedną trasę, podróż, miesiąc statystyk lub roczne podsumowanie. Udostępnienie przejazdu z ostatniego weekendu nie ujawni niczego o zeszłym wtorku."
+    },
+    {
+      "title": "Zanim wyślesz link, decydujesz o wszystkim",
+      "body": "Fraza jest generowana za Ciebie i możesz ją usunąć, jeśli nie chcesz jej używać. Domyślny termin ważności to tydzień; usuń go, aby link nigdy nie wygasł. Zdjęcia są początkowo wyłączone, więc nie wyślesz strony i nie odkryjesz później, że pokazała więcej, niż chciałeś.",
+      "note": "Domyślnie wyłączone, włączane świadomie"
+    }
+  ],
+  "objections": [
+    {
+      "q": "Czy udostępnienie linku ujawnia całą moją historię?",
+      "a": "Nie. Link prowadzi do jednego zasobu, dla którego go utworzono. Link do osi czasu jest ograniczony wybranymi datami, a link do trasy pokazuje tę trasę. Z udostępnionej strony nie ma dostępu do reszty Twojego konta."
+    },
+    {
+      "q": "Co jeśli wyślę go niewłaściwej osobie?",
+      "a": "Unieważnij go. Link natychmiast przestanie działać. Jeśli ustawiłeś frazę dostępu, możesz zamiast tego wygenerować nową frazę — cofnie to wszystkie dotychczasowe odblokowania, a sam link pozostanie aktywny."
+    },
+    {
+      "q": "Czy odbiorcy potrzebują konta?",
+      "a": "Nie. Udostępniona strona otwiera się w każdej przeglądarce. Jeśli ustawisz frazę dostępu, wystarczy ją wpisać."
+    },
+    {
+      "q": "Czy mogę sprawdzić, czy ktoś go otworzył?",
+      "a": "Tak. Linki do lokalizacji na żywo, zakresów dat, podróży i tras pokazują liczbę otwarć oraz czas ostatniego wyświetlenia. Wszystkie te linki są zebrane w jednym miejscu."
+    },
+    {
+      "q": "Co się stanie z linkami po wygaśnięciu subskrypcji?",
+      "a": "Możesz eksportować wszystko w dowolnej chwili, a cała aplikacja ma otwarty kod — te same funkcje uruchomisz na własnym sprzęcie bezpłatnie i bezterminowo."
+    }
+  ],
+  "meta": {
+    "title": "Udostępnianie lokalizacji — historia przez link",
+    "description": "Udostępniaj pozycję na żywo lub historię lokalizacji prywatnym linkiem: ochrona frazą, termin ważności, unieważnienie, wybrany zakres. 7 dni próby gratis lub własny serwer za darmo.",
+    "ogTitle": "Udostępniaj historię lokalizacji prywatnym linkiem",
+    "ogDescription": "Jeden link: zakres dat, pozycja na żywo, trasa, podróż, statystyki miesiąca, podsumowanie roku. Wygasa lub da się cofnąć; większość można chronić frazą hasłową."
+  },
+  "locationSharingPage": {
+    "text": "Udostępniaj, gdzie jesteś.",
+    "em": "Nie wszystkie miejsca, w których byłeś.",
+    "title2": "Udostępnianie w wybranym zakresie",
+    "sub2": "Sześć rodzajów danych do udostępnienia, każdy z własnym linkiem, ustawieniami i terminem ważności.",
+    "title3": "Pytania, które warto zadać wcześniej",
+    "title4": "Wyślij jeden link, nie całą historię",
+    "sub3": "Zacznij od 7-dniowego okresu próbnego w Dawarich Cloud lub uruchom identyczne funkcje za darmo na własnym sprzęcie."
+  },
+  "hero": {
+    "sub": "W większości usług udostępnianie lokalizacji to przełącznik: włączasz go i ktoś śledzi Cię bez końca. Dawarich daje Ci link — do jednej rzeczy, chroniony frazą, wygasający wybranego dnia i możliwy do unieważnienia w chwili, gdy zmienisz zdanie."
+  }
+}

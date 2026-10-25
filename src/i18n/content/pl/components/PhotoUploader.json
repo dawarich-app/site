@@ -1,0 +1,13 @@
+{
+  "waiting": "Poczekaj...",
+  "addPhotos": "Kliknij lub przeciągnij, aby dodać więcej zdjęć",
+  "dropPhotos": "Upuść zdjęcia tutaj",
+  "browse": "lub kliknij, aby wybrać",
+  "formats": "Obsługiwane formaty: JPEG, PNG, HEIC i inne formaty obrazów",
+  "clearButton": "Usuń wszystkie zdjęcia",
+  "noImages": "Nie znaleziono plików obrazów. Dodaj zdjęcia (JPEG, PNG, HEIC itp.)",
+  "inputLabel": "Wybierz pliki do przetworzenia",
+  "loaded": "Wczytano **{count}** zdjęcie|Wczytano **{count}** zdjęcia|Wczytano **{count}** zdjęć|Wczytano **{count}** zdjęcia",
+  "processing": "Przetwarzanie {count} zdjęcia...|Przetwarzanie {count} zdjęć...|Przetwarzanie {count} zdjęć...|Przetwarzanie {count} zdjęcia...",
+  "loadError": "Błąd wczytywania zdjęć: {message}"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "La privacitat com a alternativa a Google",
+  "subtitle": "Google fa servir la teva ubicació per vendre anuncis. Nosaltres et cobrem una quota. Aquest és tot el model de negoci.",
+  "cardTitle": "Sense anuncis. Sense venda de dades. Mai.",
+  "cardDescription": "Les teves dades financen el negoci publicitari de $300B de Google. A Dawarich, les teves dades d’ubicació són el producte que compres, no el que venem.",
+  "cardTitle2": "Allotjament propi: sense haver de confiar en ningú",
+  "cardDescription2": "No vols confiar les teves dades a ningú? Executa Dawarich al teu propi servidor. Les dades no passen mai per la nostra infraestructura. Literalment no les podem veure.",
+  "cardTitle3": "Xifrat i allotjat a la UE",
+  "cardDescription3": "Totes les dades es xifren en trànsit (SSL/TLS) i en repòs (LUKS). Es desen en centres de dades europeus sota l’estricta normativa del RGPD. Tens tot el control de les teves dades.",
+  "cardTitle4": "Codi obert: examina cada línia",
+  "cardDescription4": "No et refies de nosaltres? Llegeix el codi. MÉS DE 9,000 estrelles a GitHub. Milers de desenvolupadors l’han revisat. Sense seguiment ocult ni sorpreses.",
+  "policyLink": "Llegeix la nostra política de privacitat completa →"
+}

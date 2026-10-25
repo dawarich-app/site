@@ -1,0 +1,266 @@
+{
+  "plans": {
+    "lite": {
+      "name": "Lite",
+      "tagline": "Eine private Alternative zu Google Timeline für gelegentliche Aufzeichnungen.",
+      "period": "/Jahr",
+      "perMonth": "{price}/Monat",
+      "perDay": "{price}/Tag",
+      "cta": "Lite kostenlos testen",
+      "footnote": "Nur als Jahresabo · Jederzeit kündbar",
+      "valueStack": {
+        "items": [
+          {
+            "label": "Tracking-Apps für iOS & Android"
+          },
+          {
+            "label": "12 Monate durchsuchbarer Verlauf"
+          },
+          {
+            "label": "Unbegrenzte Importe & Exporte"
+          },
+          {
+            "label": "Statistiken & monatliche Auswertungen"
+          },
+          {
+            "label": "Persönlicher Importservice"
+          }
+        ],
+        "payLine": "Für dich für {price}/Jahr"
+      },
+      "features": [
+        {
+          "label": "Native Apps für iOS & Android"
+        },
+        {
+          "label": "Standortaufzeichnung im Hintergrund"
+        },
+        {
+          "label": "12 Monate durchsuchbarer Verlauf"
+        },
+        {
+          "label": "Unbegrenzte Importe & Exporte"
+        },
+        {
+          "label": "Interaktive Karte mit Routen"
+        },
+        {
+          "label": "Routenfarben nach Geschwindigkeit & Tageswiedergabe"
+        },
+        {
+          "label": "Reisen & Orte verwalten"
+        },
+        {
+          "label": "Basisstatistiken & monatliche Auswertungen"
+        },
+        {
+          "label": "API-Limit von 200 Anfragen/Std."
+        }
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "tagline": "Unbegrenzter Verlauf, erweiterte Darstellungen und voller API-Zugang.",
+      "period": "/Jahr",
+      "periodMonthly": "/Monat",
+      "perMonth": "{price}/Monat",
+      "perDay": "{price}/Tag",
+      "perDayMonthly": "{price}/Tag",
+      "save": "5 Monate kostenlos",
+      "saveHint": "Erhalte 5 Monate kostenlos",
+      "badge": "AM BELIEBTESTEN",
+      "cta": "Pro 7 Tage kostenlos testen",
+      "footnote": "Jederzeit kündbar",
+      "valueStack": {
+        "items": [
+          {
+            "label": "Alles aus Lite"
+          },
+          {
+            "label": "Unbegrenzter Verlauf – dauerhaft"
+          },
+          {
+            "label": "Heatmap, Nebel des Krieges & 3D-Globus"
+          },
+          {
+            "label": "Foto- & Immich/PhotoPrism-Integration"
+          },
+          {
+            "label": "Voller Schreibzugriff über die API"
+          }
+        ],
+        "payLine": "Für dich für {price}/Jahr"
+      },
+      "featuresHeading": "Alles aus Lite und zusätzlich:",
+      "features": [
+        {
+          "label": "Unbegrenzter Datenverlauf – dauerhaft"
+        },
+        {
+          "label": "Heatmap- & Nebel-des-Krieges-Ebenen"
+        },
+        {
+          "label": "Globusansicht (3D)"
+        },
+        {
+          "label": "Fotos in Reisen"
+        },
+        {
+          "label": "Immich / PhotoPrism-Integration"
+        },
+        {
+          "label": "Vollständiger Jahresrückblick & öffentliches Teilen"
+        },
+        {
+          "label": "Voller Schreibzugriff über die API"
+        },
+        {
+          "label": "API-Limit von 1,000 Anfragen/Std."
+        }
+      ]
+    },
+    "family": {
+      "name": "Familie",
+      "tagline": "Alle Pro-Funktionen für den ganzen Haushalt – ein Jahresabo für bis zu 5 Personen.",
+      "period": "/Jahr",
+      "perMonth": "{price}/Monat",
+      "perDay": "{price}/Tag",
+      "cta": "Familientarif 7 Tage kostenlos testen",
+      "footnote": "Nur als Jahresabo · Bis zu 5 Mitglieder · Jederzeit kündbar",
+      "valueStack": {
+        "items": [
+          {
+            "label": "Pro-Zugang für die zahlende Person"
+          },
+          {
+            "label": "4 zusätzliche Pro-Plätze"
+          },
+          {
+            "label": "Standort in Echtzeit mit der Familie teilen"
+          },
+          {
+            "label": "Persönlicher Importservice"
+          }
+        ],
+        "payLine": "Für dich für {price}/Jahr"
+      },
+      "featuresHeading": "Alles aus Pro und zusätzlich:",
+      "features": [
+        {
+          "label": "Bis zu 5 Mitglieder in einem Abo"
+        },
+        {
+          "label": "Jedes Mitglied erhält vollen Pro-Zugang"
+        },
+        {
+          "label": "Mitglieder jederzeit einladen oder entfernen"
+        },
+        {
+          "label": "Mitglieder erhalten während ihrer Familienmitgliedschaft Zugang"
+        },
+        {
+          "label": "Standort in Echtzeit mit der Familie teilen"
+        }
+      ]
+    }
+  },
+  "compareGroups": [
+    {
+      "name": "Aufzeichnung & Apps",
+      "rows": [
+        {
+          "label": "Native Apps für iOS & Android"
+        },
+        {
+          "label": "Standortaufzeichnung im Hintergrund"
+        },
+        {
+          "label": "Standort in Echtzeit mit der Familie teilen"
+        }
+      ]
+    },
+    {
+      "name": "Verlauf & Daten",
+      "rows": [
+        {
+          "label": "Durchsuchbarer Verlauf",
+          "lite": "12 Monate",
+          "pro": "Unbegrenzt",
+          "family": "Unbegrenzt"
+        },
+        {
+          "label": "Unbegrenzte Importe & Exporte"
+        },
+        {
+          "label": "Deine Daten gehören immer dir (jederzeit exportierbar)"
+        }
+      ]
+    },
+    {
+      "name": "Karten & Darstellung",
+      "rows": [
+        {
+          "label": "Interaktive Karte mit Routen"
+        },
+        {
+          "label": "Routenfarben nach Geschwindigkeit & Tageswiedergabe"
+        },
+        {
+          "label": "Heatmap- & Nebel-des-Krieges-Ebenen"
+        },
+        {
+          "label": "Globusansicht (3D)"
+        },
+        {
+          "label": "Fotos in Reisen"
+        },
+        {
+          "label": "Immich / PhotoPrism-Integration"
+        }
+      ]
+    },
+    {
+      "name": "Einblicke & Teilen",
+      "rows": [
+        {
+          "label": "Basisstatistiken & monatliche Auswertungen"
+        },
+        {
+          "label": "Vollständiger Jahresrückblick & öffentliches Teilen"
+        },
+        {
+          "label": "Reisen & Orte verwalten"
+        }
+      ]
+    },
+    {
+      "name": "API & Limits",
+      "rows": [
+        {
+          "label": "API-Anfragelimit",
+          "lite": "200 Anfragen/Std.",
+          "pro": "1,000 Anfragen/Std.",
+          "family": "1,000 Anfragen/Std."
+        },
+        {
+          "label": "Voller Schreibzugriff über die API"
+        }
+      ]
+    },
+    {
+      "name": "Mitglieder & Abrechnung",
+      "rows": [
+        {
+          "label": "Mitglieder in einem Abo",
+          "family": "Bis zu 5"
+        },
+        {
+          "label": "Jedes Mitglied erhält vollen Pro-Zugang"
+        },
+        {
+          "label": "14 Tage Geld-zurück-Garantie"
+        }
+      ]
+    }
+  ]
+}

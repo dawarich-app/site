@@ -1,13 +1,20 @@
 import React, { useRef, useState } from 'react';
+import { translate } from '@docusaurus/Translate';
 import styles from './SaveToAccountButton.module.css';
 
 const API_BASE = 'https://my.dawarich.app';
 const MAX_UPLOAD_BYTES = 100 * 1024 * 1024;
 
 const ERROR_MESSAGES = {
-  413: 'Your file is too large for instant import. Sign up first, then upload from your dashboard.',
-  429: 'Too many uploads from your network. Please try again in an hour.',
-  default: 'Upload failed. Please try again.',
+  413: translate({
+    id: 'shared.saveToAccount.tooLarge',
+    message: 'Your file is too large for instant import. Sign up first, then upload from your dashboard.',
+  }),
+  429: translate({
+    id: 'shared.saveToAccount.rateLimited',
+    message: 'Too many uploads from your network. Please try again in an hour.',
+  }),
+  default: translate({ id: 'shared.saveToAccount.failed', message: 'Upload failed. Please try again.' }),
 };
 
 function trackEvent(name) {
@@ -38,7 +45,7 @@ export default function SaveToAccountButton({ toolName, sourceHint, getFiles, di
     try {
       const files = await getFiles();
       if (!files || files.length === 0) {
-        return fail('No files to save. Upload a file first.');
+        return fail(translate({ id: 'shared.saveToAccount.noFiles', message: 'No files to save. Upload a file first.' }));
       }
 
       // Check the raw total before zipping: compression won't rescue a
@@ -98,7 +105,9 @@ export default function SaveToAccountButton({ toolName, sourceHint, getFiles, di
             d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"
           />
         </svg>
-        {busy ? 'Uploading…' : 'Save to my Dawarich account'}
+        {busy
+          ? translate({ id: 'shared.saveToAccount.uploading', message: 'Uploading…' })
+          : translate({ id: 'shared.saveToAccount.save', message: 'Save to my Dawarich account' })}
       </button>
       {error && <p className={styles.error}>{error}</p>}
     </div>

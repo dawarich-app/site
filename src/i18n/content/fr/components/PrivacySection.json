@@ -1,0 +1,13 @@
+{
+  "title": "La confidentialité à l’opposé de Google",
+  "subtitle": "Google utilise votre position pour vendre de la publicité. Nous vous faisons payer le service. C’est tout notre modèle économique.",
+  "cardTitle": "Aucune publicité. Aucune vente de données. Jamais.",
+  "cardDescription": "Vos données financent l’activité publicitaire de Google, qui pèse $300B. Chez Dawarich, vos données de localisation sont le produit que vous achetez, et non celui que nous vendons.",
+  "cardTitle2": "Auto-hébergement : nul besoin de nous faire confiance",
+  "cardDescription2": "Vous préférez garder vos données chez vous ? Exécutez Dawarich sur votre serveur. Vos données ne passent jamais par notre infrastructure. Nous ne pouvons tout simplement pas les voir.",
+  "cardTitle3": "Chiffré et hébergé dans l’UE",
+  "cardDescription3": "Toutes les données sont chiffrées en transit (SSL/TLS) et au repos (LUKS). Elles sont stockées dans des centres de données européens soumis aux règles strictes du RGPD. Vous gardez le contrôle total de vos données.",
+  "cardTitle4": "Code source ouvert : vérifiez chaque ligne",
+  "cardDescription4": "Vous souhaitez vérifier ? Lisez le code. PLUS DE 9,000 étoiles sur GitHub. Des milliers de développeurs l’ont examiné. Aucun pistage caché. Aucune surprise.",
+  "policyLink": "Lire notre politique de confidentialité complète →"
+}

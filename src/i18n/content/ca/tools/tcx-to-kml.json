@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "title": "TCX a KML gratis — Entrenaments a Google Earth en línia",
+    "description": "Converteix TCX a KML a l’instant per veure activitats físiques a Google Earth. Convertidor gratuït i privat que funciona al navegador.",
+    "keywords": "TCX a KML, Training Center XML a Google Earth, convertidor TCX, convertidor KML, Google Earth, convertidor de fitxers esportius, Garmin a Google Earth",
+    "appName": "Convertidor de TCX a KML"
+  },
+  "h1": "Convertidor de TCX a KML",
+  "intro": "Converteix els fitxers TCX (Training Center XML) a KML per veure’ls a Google Earth. Tot es processa al navegador.",
+  "cards": [
+    {
+      "title": "Sobre aquesta conversió",
+      "body": "Garmin Connect, Wahoo, Polar i Strava fan servir TCX per a activitats físiques. KML és el format de Google per a Google Earth i Google Maps."
+    },
+    {
+      "title": "Per què convertir TCX a KML?",
+      "items": [
+        "Mira les teves activitats a Google Earth",
+        "Explora les rutes en una vista del terreny 3D",
+        "Comparteix trajectes que s’obren a Google Earth",
+        "Importa a Google My Maps",
+        "Fes-lo servir amb aplicacions compatibles amb KML"
+      ]
+    }
+  ],
+  "privacyBody": "Tota la conversió es fa al navegador. Les dades no surten mai del dispositiu.",
+  "noGpsData": "No s’han trobat dades GPS al fitxer TCX."
+}

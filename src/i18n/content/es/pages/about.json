@@ -1,0 +1,50 @@
+{
+  "founders": [
+    {
+      "name": "Evgenii Burmakin",
+      "role": "Cofundador y responsable de todo",
+      "bio": "Construye todo lo que no es una aplicación móvil: el producto, la nube, el sitio web y esta misma página.",
+      "links": [
+        {
+          "label": "GitHub"
+        },
+        {
+          "label": "X"
+        },
+        {
+          "label": "Mastodon"
+        }
+      ]
+    },
+    {
+      "name": "Konstantin Priemchenko",
+      "role": "Cofundador y responsable de aplicaciones móviles",
+      "bio": "Desarrolla las aplicaciones de Dawarich para iOS y Android."
+    }
+  ],
+  "meta": {
+    "title": "Sobre nosotros — Dawarich",
+    "description": "Conoce a quienes hacen Dawarich: de proyecto de fin de semana en Berlín a alternativa privada a Google Timeline (Cronología de Google Maps).",
+    "ogDescription": "Cómo un proyecto de fin de semana nacido en Berlín se convirtió en una alternativa a Google Timeline (Cronología de Google Maps) que prioriza la privacidad."
+  },
+  "aboutPage": {
+    "heading": "Sobre nosotros",
+    "text": "El nombre viene del alemán ",
+    "em": "„Da war ich“",
+    "text2": ", que significa",
+    "em2": "«Yo estuve allí».",
+    "heading2": "Cómo empezó todo",
+    "p": "Dawarich nació en marzo de 2024 como un proyecto de fin de semana. Tras años de enviar datos de ubicación a Google Timeline y recibir muy poco a cambio, Evgenii creó un pequeño punto de acceso en su propio servidor para recoger las señales de ubicación de su iPhone. No tenía planes de producto ni una empresa, solo ganas de tener el control de sus datos.",
+    "p2": "El código se publicó en GitHub y resultó que mucha gente quería lo mismo. En un año, Dawarich se había convertido en una de las alternativas de código abierto a Google Timeline más conocidas, y hoy se ejecuta en miles de servidores domésticos de todo el mundo.",
+    "p3": "En julio de 2025 lanzamos Dawarich Cloud para quienes prefieren olvidarse de Docker, los proxies inversos y las copias de seguridad. Hoy desarrollamos Dawarich entre los dos como una pequeña empresa independiente: Konstantin crea las aplicaciones móviles y Evgenii se encarga de todo lo demás.",
+    "p4": "La versión para tu propio servidor es gratuita y seguirá siéndolo.",
+    "heading3": "En qué creemos",
+    "li": "Tu historial de ubicaciones te pertenece. Puedes exportarlo todo en formatos abiertos cuando quieras.",
+    "li2": "La privacidad es el producto. Ganamos dinero con las suscripciones, no con anuncios ni vendiendo datos.",
+    "li3": "Creado y alojado en Europa.",
+    "li4": "Código abierto. El desarrollo se hace en público, en GitHub, con errores y todo.",
+    "heading4": "Quiénes somos",
+    "alt": "Retrato de {name}",
+    "company": "Dawarich es un producto de ZeitFlow UG (haftungsbeschränkt), una pequeña empresa registrada en Berlín, Alemania. Los datos legales están en el [aviso legal](/impressum). ¿Quieres saludarnos? [Contacta con nosotros](/contact). Leemos todos los mensajes."
+  }
+}

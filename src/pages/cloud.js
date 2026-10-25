@@ -1,5 +1,9 @@
+import { interpolate } from '@docusaurus/Interpolate';
+import content from '@locale-content/pages/cloud.json';
+import { formatEuro } from '@site/src/i18n/formatEuro';
+import RichText, { SmartLink } from '@site/src/i18n/RichText';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import Head from "@docusaurus/Head";
-import Link from "@docusaurus/Link";
 import FAQ from "@site/src/components/FAQ";
 import HowItWorks from "@site/src/components/HowItWorks";
 import LandingHero from "@site/src/components/LandingHero";
@@ -8,349 +12,206 @@ import PricingSection from "@site/src/components/PricingSection";
 import Testimonials from "@site/src/components/Testimonials";
 import Layout from "@theme/Layout";
 import React, { useEffect } from "react";
-
 const SIGNUP_URL =
 	"https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=cloud_landing&utm_campaign=cloud";
-
 const SignupIcon = () => (
-	<svg
-		width="20"
-		height="20"
-		viewBox="0 0 24 24"
-		fill="none"
-		stroke="currentColor"
-		strokeWidth="2"
-		strokeLinecap="round"
-		strokeLinejoin="round"
-	>
+	<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
 		<line x1="5" y1="12" x2="19" y2="12" />
 		<polyline points="12 5 19 12 12 19" />
 	</svg>
 );
-
 const PinIcon = () => (
-	<svg
-		width="20"
-		height="20"
-		viewBox="0 0 24 24"
-		fill="none"
-		stroke="currentColor"
-		strokeWidth="2"
-		strokeLinecap="round"
-		strokeLinejoin="round"
-	>
+	<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
 		<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
 		<circle cx="12" cy="10" r="3" />
 	</svg>
 );
-
 const ImportIcon = () => (
-	<svg
-		width="20"
-		height="20"
-		viewBox="0 0 24 24"
-		fill="none"
-		stroke="currentColor"
-		strokeWidth="2"
-		strokeLinecap="round"
-		strokeLinejoin="round"
-	>
+	<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
 		<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
 		<polyline points="7 10 12 15 17 10" />
 		<line x1="12" y1="15" x2="12" y2="3" />
 	</svg>
 );
-
 const PhoneIcon = () => (
-	<svg
-		width="20"
-		height="20"
-		viewBox="0 0 24 24"
-		fill="none"
-		stroke="currentColor"
-		strokeWidth="2"
-		strokeLinecap="round"
-		strokeLinejoin="round"
-	>
+	<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
 		<rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
 		<line x1="12" y1="18" x2="12.01" y2="18" />
 	</svg>
 );
-
 const howItWorksSteps = [
 	{
 		icon: <PinIcon />,
-		title: "Sign up",
+		title: content.howItWorksSteps[0].title,
 		description:
-			"Email, password, done. 90 seconds. 7-day free trial with full features.",
+			content.howItWorksSteps[0].description,
 	},
 	{
 		icon: <ImportIcon />,
-		title: "Import your past",
+		title: content.howItWorksSteps[1].title,
 		description:
-			"Drag-and-drop your Google Takeout zip, OwnTracks records, GPX files, or any of 15+ formats. Watch your history reconstruct itself on a map.",
+			content.howItWorksSteps[1].description,
 	},
 	{
 		icon: <PhoneIcon />,
-		title: "Track forward",
+		title: content.howItWorksSteps[2].title,
 		description:
-			"Install the iOS or Android app. Background tracking starts automatically. Trips, heatmaps, and stats update in real time.",
+			content.howItWorksSteps[2].description,
 	},
 ];
-
 function PainSection() {
 	return (
 		<section className={sections.section}>
 			<div className={sections.container}>
-				<h2 className={sections.title}>
-					Your location data is in one of three places right now.
-				</h2>
-				<p className={sections.subtitle}>
-					None of them put you in charge.
-				</p>
+				<h2 className={sections.title}>{content.painSection.heading}</h2>
+				<p className={sections.subtitle}>{content.painSection.p}</p>
 				<div className={sections.painGrid}>
 					<div className={sections.painCard}>
-						<div className={sections.painCardHeader}>Inside Google</div>
-						<p className={sections.painCardBody}>
-							Feeding ad targeting for a decade. Timeline now stranded on your
-							phone, with no cloud backup going forward.
-						</p>
+						<div className={sections.painCardHeader}>{content.painSection.div}</div>
+						<p className={sections.painCardBody}>{content.painSection.p2}</p>
 					</div>
 					<div className={sections.painCard}>
-						<div className={sections.painCardHeader}>Inside Life360</div>
-						<p className={sections.painCardBody}>
-							Sold as &ldquo;aggregated insights&rdquo; to advertisers. Read{" "}
-							<a
-								href="https://themarkup.org/privacy/2022/01/27/life360-said-it-stopped-selling-precise-location-data-but-the-data-still-flows"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								The Markup&rsquo;s reporting
-							</a>{" "}
-							if you doubt it.
-						</p>
+						<div className={sections.painCardHeader}>{content.painSection.div2}</div>
+						<p className={sections.painCardBody}><RichText text={content.painSection.p3} /></p>
 					</div>
 					<div className={sections.painCard}>
-						<div className={sections.painCardHeader}>Nowhere at all</div>
-						<p className={sections.painCardBody}>
-							Because every privacy-respecting alternative wanted you to learn
-							Docker first. So you never started.
-						</p>
+						<div className={sections.painCardHeader}>{content.painSection.div3}</div>
+						<p className={sections.painCardBody}>{content.painSection.p4}</p>
 					</div>
 				</div>
 			</div>
 		</section>
 	);
 }
-
 function Differentiators() {
 	return (
 		<section className={sections.sectionElevated}>
 			<div className={sections.container}>
-				<h2 className={sections.title}>What actually makes Dawarich different</h2>
-				<p className={sections.subtitle}>
-					Hosting and backups are table stakes. Here&rsquo;s what isn&rsquo;t.
-				</p>
+				<h2 className={sections.title}>{content.differentiators.heading}</h2>
+				<p className={sections.subtitle}>{content.differentiators.p}</p>
 				<div className={sections.diffGrid}>
 					<div className={sections.diffCard}>
-						<h3>EU data residency</h3>
-						<p>
-							Hosted on Hetzner in Germany. No US transfers. No PRISM, no
-							Patriot Act, no &ldquo;we cooperate with US authorities&rdquo;
-							footnote.
-						</p>
+						<h3>{content.differentiators.h3}</h3>
+						<p>{content.differentiators.p2}</p>
 					</div>
 					<div className={sections.diffCard}>
-						<h3>Open-source escape hatch</h3>
-						<p>
-							The full Dawarich engine is on{" "}
-							<a
-								href="https://github.com/Freika/dawarich"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								GitHub
-							</a>{" "}
-							with OVER 9,000 stars. If we ever shut down, you self-host the same
-							software with one command and import your exported data.
-						</p>
+						<h3>{content.differentiators.h32}</h3>
+						<p><RichText text={content.differentiators.p3} /></p>
 					</div>
 					<div className={sections.diffCard}>
-						<h3>15+ import formats</h3>
-						<p>
-							Most competitors only ingest their own data. We ingest
-							everyone&rsquo;s — Google, Strava, Garmin, Apple Health,
-							OwnTracks, and a dozen more.
-						</p>
+						<h3>{content.differentiators.h33}</h3>
+						<p>{content.differentiators.p4}</p>
 					</div>
 					<div className={sections.diffCard}>
-						<h3>Lifetime history, not workouts</h3>
-						<p>
-							Strava knows your runs. Polarsteps knows your trips. We know
-							everywhere you&rsquo;ve been.
-						</p>
+						<h3>{content.differentiators.h34}</h3>
+						<p>{content.differentiators.p5}</p>
 					</div>
 					<div className={sections.diffCard}>
-						<h3>Real visualization product</h3>
-						<p>
-							Heatmaps, Fog of War, Globe view, automatic trip detection,
-							year-in-review. Not just a dot on a map.
-						</p>
+						<h3>{content.differentiators.h35}</h3>
+						<p>{content.differentiators.p6}</p>
 					</div>
 					<div className={sections.diffCard}>
-						<h3>Photo integration</h3>
-						<p>
-							Connect Immich or PhotoPrism — your photos appear on the map
-							next to where you took them.
-						</p>
+						<h3>{content.differentiators.h36}</h3>
+						<p>{content.differentiators.p7}</p>
 					</div>
 				</div>
 			</div>
 		</section>
 	);
 }
-
 function CompetitorReframe() {
 	return (
 		<section className={sections.reframeSection}>
 			<div className={sections.reframeContainer}>
-				<h2 className={sections.reframeTitle}>
-					Why pay for what Google &ldquo;gave away&rdquo; for free?
-				</h2>
-				<p className={sections.reframeBody}>
-					Free wasn&rsquo;t free. You paid in data — every coffee shop, every
-					Sunday hike, every late-night drive — fed into Google&rsquo;s profile
-					of you.
-				</p>
-				<p className={sections.reframeBody}>
-					What you&rsquo;re actually choosing between:
-				</p>
-
+				<h2 className={sections.reframeTitle}>{content.competitorReframe.heading}</h2>
+				<p className={sections.reframeBody}>{content.competitorReframe.p}</p>
+				<p className={sections.reframeBody}>{content.competitorReframe.p2}</p>
 				<div className={sections.compareWrapper}>
 					<table className={sections.compareTable}>
 						<thead>
 							<tr>
-								<th>Service</th>
-								<th>Annual cost</th>
-								<th>What it does</th>
-								<th>What they do with your data</th>
+								<th>{content.competitorReframe.th}</th>
+								<th>{content.competitorReframe.th2}</th>
+								<th>{content.competitorReframe.th3}</th>
+								<th>{content.competitorReframe.th4}</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>Google Timeline</td>
-								<td>&ldquo;Free&rdquo;</td>
-								<td>Killed it, moved to phone-only</td>
-								<td>Trained ad targeting for a decade</td>
+								<td>{content.competitorReframe.td}</td>
+								<td>{content.competitorReframe.td2}</td>
+								<td>{content.competitorReframe.td3}</td>
+								<td>{content.competitorReframe.td4}</td>
 							</tr>
 							<tr>
-								<td>Life360 Gold</td>
-								<td>~&euro;170/yr</td>
-								<td>Live family location only</td>
-								<td>Sold aggregated location data</td>
+								<td>{content.competitorReframe.td5}</td>
+								<td>{interpolate(content.competitorReframe.perYear, { price: '~' + formatEuro(170) })}</td>
+								<td>{content.competitorReframe.td6}</td>
+								<td>{content.competitorReframe.td7}</td>
 							</tr>
 							<tr>
-								<td>Strava Premium</td>
-								<td>&euro;60/yr</td>
-								<td>Workouts only — not lifetime history</td>
-								<td>Public-by-default activity feeds</td>
+								<td>{content.competitorReframe.td8}</td>
+								<td>{interpolate(content.competitorReframe.perYear, { price: formatEuro(60) })}</td>
+								<td>{content.competitorReframe.td9}</td>
+								<td>{content.competitorReframe.td10}</td>
 							</tr>
 							<tr className={sections.highlight}>
-								<td>Dawarich Cloud Pro</td>
-								<td>&euro;119.99/yr</td>
-								<td>Full lifetime history, heatmaps, trips, stats</td>
-								<td>Nothing. Ever.</td>
+								<td>{content.competitorReframe.td11}</td>
+								<td>{interpolate(content.competitorReframe.perYear, { price: formatEuro(119.99) })}</td>
+								<td>{content.competitorReframe.td12}</td>
+								<td>{content.competitorReframe.td13}</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
-
-				<p className={sections.compareCaption}>
-					We charge less than Life360 charges to <em>sell</em> your data.
-				</p>
+				<p className={sections.compareCaption}>{content.competitorReframe.text}<em>{content.competitorReframe.em}</em>{content.competitorReframe.text2}</p>
 			</div>
 		</section>
 	);
 }
-
 function Promises() {
 	return (
 		<section className={sections.section}>
 			<div className={sections.container}>
-				<h2 className={sections.title}>The &ldquo;you can&rsquo;t lose&rdquo; promise</h2>
-				<p className={sections.subtitle}>
-					&ldquo;Trust us with your location data&rdquo; is a big ask. So
-					here&rsquo;s ours:
-				</p>
+				<h2 className={sections.title}>{content.promises.heading}</h2>
+				<p className={sections.subtitle}>{content.promises.p}</p>
 				<div className={sections.promiseGrid}>
 					<div className={sections.promiseCard}>
-						<h3 className={sections.promiseTitle}>7-day free trial</h3>
-						<p className={sections.promiseBody}>
-							Full features for a week. Cancel from Subscription Settings if
-							it&rsquo;s not for you — your exports stay yours.
-						</p>
+						<h3 className={sections.promiseTitle}>{content.promises.h3}</h3>
+						<p className={sections.promiseBody}>{content.promises.p2}</p>
 					</div>
 					<div className={sections.promiseCard}>
-						<h3 className={sections.promiseTitle}>Cancel anytime</h3>
-						<p className={sections.promiseBody}>
-							No annual lock-in penalty, no exit fees, no &ldquo;are you
-							sure?&rdquo; emails.
-						</p>
+						<h3 className={sections.promiseTitle}>{content.promises.h32}</h3>
+						<p className={sections.promiseBody}>{content.promises.p3}</p>
 					</div>
 					<div className={sections.promiseCard}>
-						<h3 className={sections.promiseTitle}>Export-anytime</h3>
-						<p className={sections.promiseBody}>
-							Every byte of your data, exportable in GPX, GeoJSON, KML, or raw
-							JSON, on any plan, forever.
-						</p>
+						<h3 className={sections.promiseTitle}>{content.promises.h33}</h3>
+						<p className={sections.promiseBody}>{content.promises.p4}</p>
 					</div>
 					<div className={sections.promiseCard}>
-						<h3 className={sections.promiseTitle}>Open-source escape hatch</h3>
-						<p className={sections.promiseBody}>
-							If Dawarich Cloud ever shuts down, you self-host the same
-							software and import your exported data. <strong>We literally
-							cannot hold your data hostage.</strong>
-						</p>
+						<h3 className={sections.promiseTitle}>{content.differentiators.h32}</h3>
+						<p className={sections.promiseBody}><RichText text={content.promises.p5} /></p>
 					</div>
 				</div>
 			</div>
 		</section>
 	);
 }
-
 function CloudFinalCTA() {
 	return (
 		<section className={sections.finalCta}>
 			<div className={sections.finalCtaInner}>
-				<h2 className={sections.finalCtaTitle}>
-					Stop renting your memories from companies that don&rsquo;t care.
-				</h2>
-				<p className={sections.finalCtaBody}>
-					Your location history is the map of your life. The places you fell in
-					love. The trip you took the year your mom got sick. The route you
-					used to bike to your first job.
-				</p>
-				<Link className={sections.finalCtaButton} href={SIGNUP_URL}>
-					Start your 7-day free trial
-					<SignupIcon />
-				</Link>
-				<span className={sections.finalCtaSecondary}>
-					7-day free trial · Cancel anytime · Or{" "}
-					<a
-						href="https://github.com/Freika/dawarich"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						self-host the open-source version
-					</a>{" "}
-					if you&rsquo;d rather. We support both. We always will.
-				</span>
+				<h2 className={sections.finalCtaTitle}>{content.cloudFinalCTA.heading}</h2>
+				<p className={sections.finalCtaBody}>{content.cloudFinalCTA.p}</p>
+				<SmartLink className={sections.finalCtaButton} href={SIGNUP_URL}>{content.cloudFinalCTA.text}<SignupIcon />
+				</SmartLink>
+				<span className={sections.finalCtaSecondary}><RichText text={content.cloudFinalCTA.span} /></span>
 			</div>
 		</section>
 	);
 }
-
 export default function CloudPage() {
+  const pageUrl = useLocalizedUrl('/cloud/');
 	useEffect(() => {
 		const observer = new IntersectionObserver(
 			(entries) => {
@@ -362,23 +223,14 @@ export default function CloudPage() {
 			},
 			{ threshold: 0.1 },
 		);
-
 		document.querySelectorAll(".animateOnScroll").forEach((el) => {
 			observer.observe(el);
 		});
-
 		return () => observer.disconnect();
 	}, []);
-
 	const pageSections = [
 		<PainSection key="pain" />,
-		<HowItWorks
-			key="how"
-			title="How it works"
-			subtitle="Three steps. There is no step four."
-			steps={howItWorksSteps}
-			horizontal
-		/>,
+		<HowItWorks key="how" title={content.howItWorks.title} subtitle={content.howItWorks.subtitle} steps={howItWorksSteps} horizontal />,
 		<Differentiators key="diff" />,
 		<CompetitorReframe key="compare" />,
 		<Testimonials key="testimonials" />,
@@ -387,69 +239,24 @@ export default function CloudPage() {
 		<FAQ key="faq" />,
 		<CloudFinalCTA key="final" />,
 	];
-
 	return (
-		<Layout
-			title="Dawarich Cloud — Private Location History You Actually Own"
-			description="Privacy-first location history hosted in Germany. Heatmaps, trips, statistics — without selling your data. Imports from Google Takeout, Strava, Garmin, and 12 more. From €59.99/year. 7-day free trial."
-		>
+		<Layout title={content.meta.title} description={interpolate(content.meta.description, { price: formatEuro(59.99) })}>
 			<Head>
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://dawarich.app/cloud" />
-				<meta
-					property="og:title"
-					content="Dawarich Cloud — Private Location History You Actually Own"
-				/>
-				<meta
-					property="og:description"
-					content="Privacy-first location history hosted in Germany. Heatmaps, trips, statistics — without selling your data. From €59.99/year. 7-day free trial."
-				/>
-				<meta
-					property="og:image"
-					content="https://dawarich.app/img/meta-image.png"
-				/>
+				<meta property="og:url" content={pageUrl} />
+				<meta property="og:title" content={content.meta.title} />
+				<meta property="og:description" content={interpolate(content.meta.ogDescription, { price: formatEuro(59.99) })} />
+				<meta property="og:image" content="https://dawarich.app/img/meta-image.png" />
 				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:url" content="https://dawarich.app/cloud" />
-				<meta
-					name="twitter:title"
-					content="Dawarich Cloud — Private Location History You Actually Own"
-				/>
-				<meta
-					name="twitter:description"
-					content="Privacy-first location history hosted in Germany. Heatmaps, trips, statistics — without selling your data."
-				/>
-				<meta
-					name="twitter:image"
-					content="https://dawarich.app/img/meta-image.png"
-				/>
-				<link rel="canonical" href="https://dawarich.app/cloud/" />
+				<meta name="twitter:url" content={pageUrl} />
+				<meta name="twitter:title" content={content.meta.title} />
+				<meta name="twitter:description" content={content.meta.twitterDescription} />
+				<meta name="twitter:image" content="https://dawarich.app/img/meta-image.png" />
 			</Head>
-
-			<LandingHero
-				badge="Privacy-first location history"
-				title="Your location history."
-				titleHighlight="Privately. Permanently."
-				subtitle="Heatmaps, trips, and statistics for everywhere you've been — without feeding Google's ad machine, Life360's data brokers, or your own Raspberry Pi."
-				primaryCta={{
-					text: "Start your 7-day free trial",
-					href: SIGNUP_URL,
-				}}
-				secondaryCta={{
-					text: "See pricing",
-					href: "#pricing",
-				}}
-				disclaimer="7-day free trial · Cancel anytime · Your data stays yours, in standard formats"
-				imageSrc="/img/timeline.webp"
-				imageAlt="Dawarich timeline view showing a decade of location history"
-			/>
-
+			<LandingHero badge={content.hero.badge} title={content.hero.title} titleHighlight={content.hero.titleHighlight} subtitle={content.hero.subtitle} primaryCta={{ text: content.cloudFinalCTA.text, href: SIGNUP_URL }} secondaryCta={{ text: content.cloudPage.text, href: "#pricing" }} disclaimer={content.hero.disclaimer} imageSrc="/img/timeline.webp" imageAlt={content.hero.imageAlt} />
 			<main>
 				{pageSections.map((section, i) => (
-					<div
-						key={section.key}
-						className="animateOnScroll"
-						style={{ transitionDelay: `${i * 0.1}s` }}
-					>
+					<div key={section.key} className="animateOnScroll" style={{ transitionDelay: `${i * 0.1}s` }}>
 						{section}
 					</div>
 				))}

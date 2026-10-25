@@ -1,0 +1,216 @@
+{
+  "appShowcase": [
+    {
+      "title": "Dawarich iOS 应用",
+      "description": "我们的官方 iOS 应用可轻松将位置记录发送到您的 Dawarich 实例。支持离线记录，并在恢复网络后自动上传。可从 App Store 下载。",
+      "imageAlt": "在 App Store 下载 Dawarich"
+    },
+    {
+      "title": "Dawarich Android 应用",
+      "description": "我们的官方 Android 应用同样能轻松在后台记录位置，并发送到您的 Dawarich 实例。支持离线记录，并在恢复网络后自动上传。可从 Google Play 下载。",
+      "imageAlt": "在 Google Play 获取 Dawarich"
+    },
+    {
+      "title": "Overland",
+      "description": "开源位置记录应用，支持批量发送数据。可在 iOS 上使用，并自定义精度和频率。"
+    },
+    {
+      "title": "OwnTracks",
+      "description": "广受欢迎的位置记录方案，支持丰富的自定义选项，耗电量低。"
+    },
+    {
+      "title": "GPSLogger",
+      "description": "注重节省电量的轻量级 Android 应用，可自定义记录间隔和数据格式。"
+    },
+    {
+      "title": "PhoneTrack",
+      "description": "与 NextCloud 集成的应用，支持自定义记录任务，适合已经使用 NextCloud 生态的用户。"
+    },
+    {
+      "title": "Home Assistant",
+      "description": "面向智能家居爱好者，可将 Home Assistant 地理位置数据直接集成到 Dawarich。"
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "获取 API 密钥",
+      "description": "在 Dawarich 控制面板的账户部分找到您的专属 API 密钥。",
+      "details": [
+        "登录您的 Dawarich 实例",
+        "前往账户设置",
+        "安全地复制 API 密钥"
+      ]
+    },
+    {
+      "title": "选择应用",
+      "description": "根据您的需求和设备平台，选择任意受支持的位置记录应用。",
+      "details": [
+        "iOS：Dawarich 官方应用或 Overland",
+        "Android：Dawarich 官方应用、GPSLogger 或 PhoneTrack",
+        "两个平台均支持：OwnTracks 或 Home Assistant 集成"
+      ]
+    },
+    {
+      "title": "配置应用",
+      "description": "在所选应用的设置中，输入 Dawarich 实例网址和 API 密钥。",
+      "details": [
+        "设置接收端点网址",
+        "将 API 密钥添加到网址中",
+        "配置记录频率（选填）",
+        "测试连接"
+      ]
+    },
+    {
+      "title": "开始记录",
+      "description": "配置完成后，位置数据会自动同步到您的私密 Dawarich 账户。",
+      "details": [
+        "实时或批量发送位置更新",
+        "支持离线记录，联网后上传",
+        "在后台自动同步数据",
+        "在地图上查看位置历史记录"
+      ]
+    }
+  ],
+  "appDetails": [
+    {
+      "description": "专为 Dawarich 开发的原生 iOS 应用",
+      "features": [
+        "轻松设置",
+        "耗电量低",
+        "后台位置记录",
+        "离线记录，自动上传",
+        "可从 App Store 下载"
+      ],
+      "setupSteps": [
+        "从 App Store 安装",
+        "打开应用，前往设置",
+        "输入 API 密钥",
+        "点击保存，开始记录"
+      ],
+      "name": "Dawarich iOS 应用"
+    },
+    {
+      "description": "专为 Dawarich 开发的原生 Android 应用",
+      "features": [
+        "轻松设置",
+        "耗电量低",
+        "后台位置记录",
+        "离线记录，自动上传",
+        "可从 Google Play 下载"
+      ],
+      "setupSteps": [
+        "从 Google Play 安装",
+        "打开应用，前往设置",
+        "输入 API 密钥",
+        "点击保存，开始记录"
+      ],
+      "name": "Dawarich Android 应用"
+    },
+    {
+      "description": "灵活的位置记录应用，支持跨平台和批量上传",
+      "features": [
+        "支持 iOS",
+        "批量处理",
+        "精度可配置",
+        "开源"
+      ],
+      "setupSteps": [
+        "在设备上安装 Overland",
+        "打开设置，滑动解锁",
+        "设置接收端点网址：http://your-instance/api/v1/overland/batches?api_key=YOUR_KEY",
+        "可选：设置设备 ID",
+        "点击保存"
+      ],
+      "name": "Overland"
+    },
+    {
+      "description": "支持 HTTP 模式的位置记录应用",
+      "features": [
+        "耗电量低",
+        "高度可定制",
+        "HTTP 和 MQTT 模式",
+        "跨平台"
+      ],
+      "setupSteps": [
+        "安装 OwnTracks 应用",
+        "点击左上角的“i”图标",
+        "选择 HTTP 模式",
+        "输入网址：http://your-instance/api/v1/owntracks/points?api_key=YOUR_KEY",
+        "点击返回以保存"
+      ],
+      "name": "OwnTracks"
+    },
+    {
+      "description": "节省电量的 Android 位置记录方案",
+      "features": [
+        "节省电量",
+        "自定义记录间隔",
+        "支持 JSON 格式",
+        "轻量"
+      ],
+      "setupSteps": [
+        "安装 Android 版 GPSLogger",
+        "使用 OwnTracks 端点配置自定义网址",
+        "按要求的 JSON 格式设置 HTTP Body",
+        "添加 Content-Type: application/json 标头",
+        "使用 POST 方法"
+      ],
+      "name": "GPSLogger"
+    },
+    {
+      "description": "与 NextCloud 集成，支持自定义记录任务",
+      "features": [
+        "NextCloud 集成",
+        "自定义记录任务",
+        "查询字符串参数",
+        "灵活配置"
+      ],
+      "setupSteps": [
+        "从 F-Droid 安装 PhoneTrack",
+        "创建自定义记录任务",
+        "使用带查询字符串参数的 OwnTracks 端点",
+        "启用 POST 方法",
+        "禁用 JSON 负载选项"
+      ],
+      "name": "PhoneTrack"
+    }
+  ],
+  "meta": {
+    "title": "位置记录设置",
+    "description": "使用多种受支持的应用自动记录位置，包括 Dawarich 官方 iOS 和 Android 应用、Overland、OwnTracks、GPSLogger、PhoneTrack 和 Home Assistant。",
+    "ogTitle": "Dawarich 位置记录 — 支持多种应用",
+    "ogDescription": "使用 Dawarich 官方 iOS 或 Android 应用、Overland、OwnTracks、GPSLogger、PhoneTrack 或 Home Assistant 集成，设置自动位置记录。"
+  },
+  "hero": {
+    "badge": "自动记录",
+    "title": "记录您的位置",
+    "titleHighlight": "轻松省心",
+    "subtitle": "从多种位置记录应用中选择，自动记录您的位置。无论您喜欢官方 iOS 和 Android 应用，还是常用的开源替代方案，Dawarich 都能配合使用。",
+    "imageAlt": "位置记录可视化"
+  },
+  "trackingPage": {
+    "title3": "支持的位置记录应用",
+    "subtitle2": "选择最适合您的设备和使用习惯的应用。所有应用都能与 Dawarich 无缝协作。",
+    "title4": "如何开始",
+    "subtitle3": "使用任意受支持的应用，几分钟即可设置位置记录。",
+    "heading": "详细设置指南",
+    "p": "每款受支持的位置记录应用都有逐步操作说明。",
+    "h4": "功能：",
+    "h42": "设置步骤：",
+    "heading2": "API 端点",
+    "p2": "Dawarich 为不同的位置记录格式提供多个 API 端点。",
+    "h3": "Overland 端点",
+    "code": "/api/v1/overland/batches?api_key=YOUR_KEY",
+    "p3": "用于 Overland 应用的批量上传",
+    "h32": "OwnTracks 端点",
+    "code2": "/api/v1/owntracks/points?api_key=YOUR_KEY",
+    "p4": "适用于 OwnTracks、GPSLogger 和 PhoneTrack",
+    "heading3": "准备好开始记录了吗？",
+    "p5": "今天就创建 Dawarich 账户，开始自动记录您的位置历史。",
+    "Link": "免费试用 7 天",
+    "EnOnlyLink3": "免费自托管",
+    "p6": "7 天免费试用 · 14 天无忧退款 · 随时可取消",
+    "docsNote": "完整设置说明（包括 Home Assistant 集成）请参阅我们的[详细位置记录教程](/docs/getting-started/track-your-location)。",
+    "apiNote": "完整 API 文档请参阅[我们的 API 参考文档](/docs/api/dawarich-api)。"
+  }
+}

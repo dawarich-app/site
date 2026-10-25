@@ -1,17 +1,19 @@
+import { SmartLink } from '@site/src/i18n/RichText';
+import content from '@locale-content/components/Comparison.json';
 import React from "react";
 import { DwIcon } from "@site/src/data/pricingPlans";
 import styles from "./Comparison.module.css";
 
 // Content unchanged — restyled to match the new pricing section.
 const VERSUS_ROWS = [
-	{ feature: "Browser access", g: { mark: "x", text: "Killed (mobile only)" }, d: { mark: "check", text: "Full web app" } },
-	{ feature: "Data retention", g: { mark: "minus", text: "Limited (auto-deletes)" }, d: { mark: "check", text: "Forever (Pro)" } },
-	{ feature: "Your data used for ads", g: { mark: "x", text: "Yes" }, d: { mark: "check", text: "Never" } },
-	{ feature: "Data sold to third parties", g: { mark: "x", text: "Yes (ad network)" }, d: { mark: "check", text: "Never" } },
-	{ feature: "Export your data", g: { mark: "minus", text: "Partial, complex" }, d: { mark: "check", text: "One-click, any format" } },
-	{ feature: "Self-host option", g: { mark: "x", text: "No" }, d: { mark: "check", text: "Yes — full control" } },
-	{ feature: "Open source", g: { mark: "x", text: "No" }, d: { mark: "check", text: "Yes — inspect every line" } },
-	{ feature: "Works if company kills the product", g: { mark: "x", text: "No" }, d: { mark: "check", text: "Yes (self-host lives on)" } },
+	{ feature: content.versusRows[0].feature, g: { mark: "x", text: content.versusRows[0].g.text }, d: { mark: "check", text: content.versusRows[0].d.text } },
+	{ feature: content.versusRows[1].feature, g: { mark: "minus", text: content.versusRows[1].g.text }, d: { mark: "check", text: content.versusRows[1].d.text } },
+	{ feature: content.versusRows[2].feature, g: { mark: "x", text: content.versusRows[2].g.text }, d: { mark: "check", text: content.versusRows[2].d.text } },
+	{ feature: content.versusRows[3].feature, g: { mark: "x", text: content.versusRows[3].g.text }, d: { mark: "check", text: content.versusRows[3].d.text } },
+	{ feature: content.versusRows[4].feature, g: { mark: "minus", text: content.versusRows[4].g.text }, d: { mark: "check", text: content.versusRows[4].d.text } },
+	{ feature: content.versusRows[5].feature, g: { mark: "x", text: content.versusRows[5].g.text }, d: { mark: "check", text: content.versusRows[5].d.text } },
+	{ feature: content.versusRows[6].feature, g: { mark: "x", text: content.versusRows[6].g.text }, d: { mark: "check", text: content.versusRows[6].d.text } },
+	{ feature: content.versusRows[7].feature, g: { mark: "x", text: content.versusRows[7].g.text }, d: { mark: "check", text: content.versusRows[7].d.text } },
 ];
 
 const SWITCH_HREF =
@@ -41,11 +43,11 @@ export default function Comparison() {
 		<section className={styles.section}>
 			<div className={styles.heading}>
 				<div className={styles.switchPill}>
-					<DwIcon name="arrow-down-up" size={13} stroke={2.2} /> Make the switch
+					<DwIcon name="arrow-down-up" size={13} stroke={2.2} />{content.switchPill}
 				</div>
-				<h2 className={styles.title}>Google Timeline vs Dawarich</h2>
+				<h2 className={styles.title}>{content.title}</h2>
 				<p className={styles.subtitle}>
-					See what you're gaining when you make the switch.
+					{content.subtitle}
 				</p>
 			</div>
 
@@ -63,13 +65,13 @@ export default function Comparison() {
 
 					{/* header */}
 					<div className={styles.headerRow}>
-						<div className={styles.colHead}>Feature</div>
-						<div className={styles.colHead}>Google Timeline</div>
+						<div className={styles.colHead}>{content.featureHeader}</div>
+						<div className={styles.colHead}>{content.googleTimelineHeader}</div>
 						<div className={styles.dawarichHead}>
 							<span className={styles.dawarichChip}>
 								<DwIcon name="map-pin" size={15} stroke={2.2} />
 							</span>
-							<span className={styles.dawarichName}>DAWARICH</span>
+							<span className={styles.dawarichName}>{content.dawarichName}</span>
 						</div>
 					</div>
 
@@ -87,18 +89,18 @@ export default function Comparison() {
 
 					{/* footer CTA */}
 					<div className={styles.footerRow}>
-						<div className={styles.footNote}>It's your data. Keep it that way.</div>
+						<div className={styles.footNote}>{content.footNote}</div>
 						<div />
 						<div className={styles.footCtaCell}>
-							<a className={styles.footCta} href={SWITCH_HREF}>
-								Switch to Dawarich
+							<SmartLink className={styles.footCta} href={SWITCH_HREF}>
+								{content.footCta}
 								<DwIcon
 									name="arrow-down-up"
 									size={15}
 									stroke={2.4}
 									className={styles.footCtaArrow}
 								/>
-							</a>
+							</SmartLink>
 						</div>
 					</div>
 				</div>

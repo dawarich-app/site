@@ -1,0 +1,62 @@
+{
+  "poster": {
+    "themes": [
+      {
+        "name": "Otoño"
+      },
+      {
+        "name": "Plano técnico"
+      },
+      {
+        "name": "Zonas de contraste"
+      },
+      {
+        "name": "Pátina de cobre"
+      },
+      {
+        "name": "Ciudad esmeralda"
+      },
+      {
+        "name": "Bosque"
+      },
+      {
+        "name": "Carreteras degradadas"
+      },
+      {
+        "name": "Tinta japonesa"
+      },
+      {
+        "name": "Azul medianoche"
+      },
+      {
+        "name": "Azul monocromo"
+      },
+      {
+        "name": "Neón ciberpunk"
+      },
+      {
+        "name": "Negro"
+      },
+      {
+        "name": "Océano"
+      },
+      {
+        "name": "Sueño pastel"
+      },
+      {
+        "name": "Atardecer"
+      },
+      {
+        "name": "Terracota"
+      },
+      {
+        "name": "Beige cálido"
+      }
+    ]
+  },
+  "position": "Póster {name}, {position} de {total}",
+  "close": "Cerrar",
+  "previous": "Póster anterior",
+  "next": "Póster siguiente",
+  "posterAlt": "Póster ampliado de una ruta por Berlín con el tema {name}"
+}

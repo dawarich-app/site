@@ -1,0 +1,19 @@
+{
+  "primaryLabel": "Essayer 7 jours gratuitement",
+  "selfHost": "Auto-hébergement gratuit à vie",
+  "reassurance": "Sans carte pour l’essai · Remboursement sous 14 jours ensuite · Exportez tout, à tout moment",
+  "proofLabel": "Ils en parlent",
+  "publishers": {
+    "xda": "XDA Developers",
+    "makeUseOf": "MakeUseOf",
+    "ct": "c't Magazine",
+    "itsFoss": "It's FOSS"
+  },
+  "pricing": "Voir les tarifs",
+  "guarantee": {
+    "trial": "7 jours gratuits, sans carte",
+    "refund": "Remboursement sous 14 jours",
+    "export": "Exportez tout, à tout moment",
+    "selfHost": "Ou auto-hébergez gratuitement"
+  }
+}

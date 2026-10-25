@@ -1,0 +1,57 @@
+{
+  "rows": [
+    {
+      "title": "L’affiche n’est qu’un des vingt-deux formats",
+      "body": "L’impression est le premier choix : de A5 à A0, 30 × 40, 50 × 70 et 70 × 100 cm, US Letter, en portrait ou paysage. Mais la même carte s’exporte aussi en fond d’écran pour téléphone ou ordinateur, jusqu’en 4K et format ultralarge, en publication Instagram, story, bannière X ou miniature YouTube. Les mises en page imprimées utilisent des formats papier réels et des DPI ; les formats écran sont définis au pixel près.",
+      "note": "Une composition, vingt-deux possibilités"
+    },
+    {
+      "title": "Le cadrage affiché est celui de l’export",
+      "body": "Choisissez une mise en page avant de composer : l’aperçu s’y adapte et le recadrage d’une story ne vous surprend jamais. L’atelier affiche les dimensions finales pendant la création : un A3 portrait à 300 DPI donne 3508 × 4961 pixels. Il vous avertit si une vue est trop large pour le plus grand format, sans zoomer à votre insu."
+    }
+  ],
+  "objections": [
+    {
+      "q": "Quelle différence avec les affiches de cartes vendues partout ?",
+      "a": "Ces affiches représentent un plan de ville que chacun peut acheter, avec un nom en dessous. Ici, c’est le véritable parcours que vous avez fait à pied, à vélo ou en voiture, tracé à partir des points GPS de votre compte."
+    },
+    {
+      "q": "L’affiche imprimée correspondra-t-elle à ma création ?",
+      "a": "Le cadre que vous composez est celui qui sera imprimé. L’atelier utilise le même cadrage que le moteur de rendu et vous avertit si la vue est trop large pour le plus grand format, sans zoomer à votre insu."
+    },
+    {
+      "q": "Quelle est la qualité d’impression ?",
+      "a": "Un papier mat premium de 200 gsm, sans reflets, pour garder un tracé net sous l’éclairage intérieur. La livraison dans l’UE est incluse et le paiement passe par Stripe : vos coordonnées bancaires ne transitent jamais par Dawarich."
+    },
+    {
+      "q": "Faut-il commander une impression pour utiliser l’atelier ?",
+      "a": "Non. Téléchargez le PNG ou le PDF pour l’imprimeur de votre choix, conservez le fichier ou passez-vous entièrement du papier. Beaucoup se contentent d’un fond d’écran 4K ou pour téléphone. La commande reste une option."
+    },
+    {
+      "q": "Puis-je l’utiliser sur une instance auto-hébergée ?",
+      "a": "Oui, l’atelier fait partie de l’application libre. La commande d’impressions est activée par défaut et peut être entièrement désactivée sur votre instance."
+    }
+  ],
+  "meta": {
+    "title": "Atelier d’affiches — Vos parcours GPS sur papier et écran",
+    "description": "Parcours de votre historique en affiches cartographiques, fonds d’écran d’ordinateur 4K, de téléphone ou publications sociales : 17 thèmes, 22 mises en page, couleurs par calque, exports PNG/PDF 300 DPI, tirages mats 200 gsm, livraison UE offerte.",
+    "ogTitle": "Atelier d’affiches — Vos parcours GPS sur papier et écran",
+    "ogDescription": "Composez une carte de vos vrais parcours et exportez-la dans 22 formats : impressions A5 à A0, fonds d’écran 4K et ultralarges, téléphone et réseaux sociaux."
+  },
+  "posterStudioPage": {
+    "text": "Tout le monde peut acheter une carte de Berlin.",
+    "em": "Vous seul avez ce parcours.",
+    "title2": "Dix-sept thèmes, puis chaque couleur à votre main",
+    "body": "Toutes les affiches ci-dessous représentent les mêmes deux années à Berlin, du 15 juillet 2024 au 15 juillet 2026, exportées depuis l’atelier en changeant uniquement le thème. Si aucun des dix-sept ne vous convient, ouvrez l’éditeur de couleurs : eau, parcs, voies ferrées, limites, bâtiments et chaque catégorie de route sont personnalisables. Donnez au trajet sa couleur, son opacité et sa largeur, de 50% à 300%, pour qu’il reste lisible au format A0 comme sur un téléphone.",
+    "title3": "Un outil de création complet",
+    "sub2": "Un atelier en plein écran. Faites glisser pour déplacer la carte, faites défiler pour zoomer, composez le cadre, puis exportez à la taille voulue.",
+    "title4": "Avant d’exporter",
+    "title5": "Affichez votre parcours au mur ou sur votre écran verrouillé",
+    "text2": "Importez un parcours existant ou enregistrez-en un nouveau, puis ouvrez l’atelier et composez. Vous n’avez pas encore de compte ?",
+    "a": "Essayez gratuitement la version navigateur avec un fichier GPS",
+    "text3": "."
+  },
+  "hero": {
+    "sub": "La sortie pour laquelle vous vous êtes entraîné, l’année passée à marcher partout, le voyage en voiture dont vous parlez encore : votre historique en garde un tracé unique. L’atelier d’affiches en fait une création à encadrer, à utiliser comme fond d’écran ou à publier."
+  }
+}

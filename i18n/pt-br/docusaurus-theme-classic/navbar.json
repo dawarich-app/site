@@ -1,0 +1,94 @@
+{
+  "title": {
+    "message": "Dawarich",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Logotipo do Dawarich",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Features": {
+    "message": "Recursos",
+    "description": "Navbar item with label Features"
+  },
+  "item.label.Pricing": {
+    "message": "Preços",
+    "description": "Navbar item with label Pricing"
+  },
+  "item.label.Self-Hosted": {
+    "message": "Hospedagem própria",
+    "description": "Navbar item with label Self-Hosted"
+  },
+  "item.label.Tools": {
+    "message": "Ferramentas",
+    "description": "Navbar item with label Tools"
+  },
+  "item.label.Roadmap": {
+    "message": "Próximos passos",
+    "description": "Navbar item with label Roadmap"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.Mobile Apps": {
+    "message": "Aplicativos móveis",
+    "description": "Navbar item with label Mobile Apps"
+  },
+  "item.label.Community": {
+    "message": "Comunidade",
+    "description": "Navbar item with label Community"
+  },
+  "item.label.Sign in": {
+    "message": "Entrar",
+    "description": "Navbar item with label Sign in"
+  },
+  "item.label.Interactive Map": {
+    "message": "Mapa interativo",
+    "description": "Navbar item with label Interactive Map"
+  },
+  "item.label.Trips & Journaling": {
+    "message": "Viagens e diário",
+    "description": "Navbar item with label Trips & Journaling"
+  },
+  "item.label.Statistics & Analytics": {
+    "message": "Estatísticas e análises",
+    "description": "Navbar item with label Statistics & Analytics"
+  },
+  "item.label.Location Tracking": {
+    "message": "Rastreamento de localização",
+    "description": "Navbar item with label Location Tracking"
+  },
+  "item.label.Import & Export": {
+    "message": "Importação e exportação",
+    "description": "Navbar item with label Import & Export"
+  },
+  "item.label.Photo Integrations": {
+    "message": "Integrações de fotos",
+    "description": "Navbar item with label Photo Integrations"
+  },
+  "item.label.Location Sharing": {
+    "message": "Compartilhamento de localização",
+    "description": "Navbar item with label Location Sharing"
+  },
+  "item.label.Family Location Sharing": {
+    "message": "Compartilhamento de localização em família",
+    "description": "Navbar item with label Family Location Sharing"
+  },
+  "item.label.Tax Residency Day Counter": {
+    "message": "Contador de dias de residência fiscal",
+    "description": "Navbar item with label Tax Residency Day Counter"
+  },
+  "item.label.Map Poster Studio": {
+    "message": "Estúdio de pôsteres de mapas",
+    "description": "Navbar item with label Map Poster Studio"
+  },
+  "item.label.Dawarich for iOS": {
+    "message": "Dawarich para iOS",
+    "description": "Navbar item with label Dawarich for iOS"
+  },
+  "item.label.Dawarich for Android": {
+    "message": "Dawarich para Android",
+    "description": "Navbar item with label Dawarich for Android"
+  }
+}

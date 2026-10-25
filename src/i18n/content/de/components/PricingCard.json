@@ -1,0 +1,16 @@
+{
+  "ribbon": " AM BELIEBTESTEN",
+  "comingSoon": "BALD VERFÜGBAR",
+  "billedMonthly": "monatliche Abrechnung",
+  "heading": "Auf die Warteliste für den Familientarif setzen",
+  "subtext": "Erfahre als Erstes vom Start – nur als Jahresabo, mit allen Pro-Funktionen.",
+  "buttonLabel": "Auf die Warteliste setzen",
+  "note": "Kein Spam, nur die E-Mail zum Start.",
+  "guarantee": " Die Importgarantie · 14 Tage Geld zurück",
+  "billing": {
+    "monthly": "monatlich",
+    "annual": "jährlich"
+  },
+  "totalValue": "Gesamtwert",
+  "bonusPrefix": "BONUS: "
+}

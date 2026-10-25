@@ -5,53 +5,41 @@ import { detectFormat } from '@site/src/utils/timelineParser';
 import { splitTimeline, packageChunksAsZip, precomputeItemSizes, estimateChunkCount } from '@site/src/utils/timelineSplitter';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import RelatedTools from '@site/src/components/RelatedTools';
+import { interpolate } from '@docusaurus/Interpolate';
+import { usePluralForm } from '@docusaurus/theme-common';
+import RichText, { SmartLink, toPlainText } from '@site/src/i18n/RichText';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
+import content from '@locale-content/tools/google-timeline-splitter.json';
 import styles from './google-timeline-splitter.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
-const pageTitle = "Google Timeline Splitter - Split Large Timeline JSON Files";
-const pageDescription = "Free tool to split large Google Timeline JSON files into smaller, valid chunks. Supports all export formats: Records.json, Semantic Location History, Semantic Segments, and more. Choose your target file size. Privacy-first — runs in your browser.";
-const pageUrl = "https://dawarich.app/tools/google-timeline-splitter/";
+const pageTitle = content.meta.title;
+const pageDescription = content.meta.description;
 const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 const SIZE_OPTIONS = [1, 5, 10, 20, 50, 100];
 
 const FORMAT_LABELS = {
-  records: 'Records.json (Raw GPS)',
-  semantic: 'Semantic Location History',
-  semanticSegments: 'Semantic Segments',
-  locationHistory: 'Location History (Phone Export)',
-  settings: 'Settings',
-  timelineEdits: 'Timeline Edits',
-  unknown: 'Unknown',
+  records: content.formatLabels.records,
+  semantic: content.formatLabels.semantic,
+  semanticSegments: content.formatLabels.semanticSegments,
+  locationHistory: content.formatLabels.locationHistory,
+  settings: content.formatLabels.settings,
+  timelineEdits: content.formatLabels.timelineEdits,
+  unknown: content.formatLabels.unknown,
 };
 
-const faqItems = [
-  {
-    question: "Is it safe to upload my Google Timeline data?",
-    answer: "Yes. All data processing happens entirely in your browser using JavaScript. Your location history files are never uploaded to any server — they stay on your device. When you close the tab, the data is gone. The tool is open source so you can verify exactly what the code does."
-  },
-  {
-    question: "What Google Timeline formats can I split?",
-    answer: "This splitter supports all six Google Timeline export formats: Records.json (raw GPS location records), Semantic Location History (monthly YYYY_MONTH.json files), Semantic Segments (newer phone-based export), Location History (array format with startTime/endTime), Settings, and Timeline Edits. The tool auto-detects the format when you upload a file."
-  },
-  {
-    question: "Will splitting damage my data?",
-    answer: "No. Every entry in your original file will appear in exactly one output chunk. No data is lost, duplicated, or modified. Each chunk is a valid JSON file in the exact same format as the original, so it can be imported into any tool that accepts Google Timeline files."
-  },
-  {
-    question: "Why would I need to split a Google Timeline file?",
-    answer: "Google Timeline exports — especially Records.json — can be hundreds of megabytes or even gigabytes. Many import tools (including Dawarich) handle large files better when they are split into smaller pieces. Splitting also helps if you want to share a portion of your data or process it in batches."
-  },
-  {
-    question: "How does the size targeting work?",
-    answer: "The tool samples entries from your file to estimate average entry size, then calculates how many entries fit in each chunk to hit the target. Actual chunk sizes may vary slightly because individual entries differ in size, but the tool errs on the side of staying under the target."
-  },
-  {
-    question: "Can I import the split files into Dawarich?",
-    answer: "Yes. Each chunk is a valid Google Timeline JSON file in the original format. You can import them one by one into Dawarich or any other tool that accepts Google Timeline exports. Dawarich also handles large files directly, but splitting can speed up the import process."
-  }
-];
+const faqItems = content.faq;
 
 export default function GoogleTimelineSplitter() {
+  const htmlLang = useHtmlLang();
+  const { selectMessage } = usePluralForm();
+  const pageUrl = useLocalizedUrl('/tools/google-timeline-splitter/');
+  const homeUrl = useLocalizedUrl('/');
+  const toolsUrl = useLocalizedUrl('/tools/');
+  const formatSize = (size, digits) => interpolate(content.results.sizeValue, {
+    size: size.toLocaleString(htmlLang, { minimumFractionDigits: digits, maximumFractionDigits: digits }),
+  });
   const [isDragging, setIsDragging] = useState(false);
   const [fileName, setFileName] = useState('');
   const [fileSize, setFileSize] = useState(0);
@@ -66,7 +54,7 @@ export default function GoogleTimelineSplitter() {
   const handleFile = useCallback(async (file) => {
     const ext = file.name.split('.').pop().toLowerCase();
     if (ext !== 'json') {
-      alert('Please upload a JSON file. Google Timeline exports are always in JSON format.');
+      alert(content.errors.jsonOnlyError);
       return;
     }
 
@@ -81,7 +69,7 @@ export default function GoogleTimelineSplitter() {
       const format = detectFormat(data);
 
       if (format === 'unknown') {
-        throw new Error('This does not appear to be a Google Timeline export file. Supported formats: Records.json, Semantic Location History, Semantic Segments, Location History, Settings, Timeline Edits.');
+        throw new Error(content.errors.unknownFormatError);
       }
 
       // Count items to show in UI
@@ -102,7 +90,7 @@ export default function GoogleTimelineSplitter() {
       setItemCount(count);
     } catch (error) {
       console.error('Error parsing file:', error);
-      alert(`Error parsing file: ${error.message}`);
+      alert(interpolate(content.errors.parseError, { message: error.message }));
     } finally {
       setIsLoading(false);
     }
@@ -141,7 +129,7 @@ export default function GoogleTimelineSplitter() {
       URL.revokeObjectURL(url);
     } catch (error) {
       console.error('Error splitting file:', error);
-      alert(`Error splitting file: ${error.message}`);
+      alert(interpolate(content.errors.splitError, { message: error.message }));
     } finally {
       setIsSplitting(false);
     }
@@ -156,8 +144,7 @@ export default function GoogleTimelineSplitter() {
       <Head>
         <meta name="title" content={pageTitle} />
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="split google timeline json, split records.json, split large google location history, google timeline splitter, split google takeout location, break up timeline json, google timeline file too large" />
-        <link rel="canonical" href={pageUrl} />
+        <meta name="keywords" content={content.meta.keywords} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:title" content={pageTitle} />
@@ -170,27 +157,18 @@ export default function GoogleTimelineSplitter() {
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={imageUrl} />
         <meta name="author" content="Dawarich" />
-        <meta name="robots" content="index, follow" />
 
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "Google Timeline Splitter",
+            "name": content.h1,
             "url": pageUrl,
             "description": pageDescription,
             "applicationCategory": "UtilityApplication",
             "operatingSystem": "Any",
             "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-            "featureList": [
-              "Split large Google Timeline JSON files into smaller chunks",
-              "Support for all 6 Google Timeline export formats",
-              "Choose target chunk size: 1, 5, 10, 20, 50, or 100 MB",
-              "Each chunk is a valid JSON file in the original format",
-              "Download all chunks as a single ZIP file",
-              "Privacy-first - all processing in browser",
-              "No data sent to any server"
-            ]
+            "featureList": content.meta.featureList
           })}
         </script>
 
@@ -198,12 +176,12 @@ export default function GoogleTimelineSplitter() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "HowTo",
-            "name": "How to Split a Large Google Timeline JSON File",
-            "description": "Upload your Google Timeline export and split it into smaller, valid JSON chunks.",
+            "name": content.howTo.name,
+            "description": content.howTo.description,
             "step": [
-              { "@type": "HowToStep", "name": "Upload your Google Timeline JSON", "text": "Drag and drop your Records.json, Semantic Location History, or other Google Timeline export file into the splitter." },
-              { "@type": "HowToStep", "name": "Choose target chunk size", "text": "Select your desired chunk size: 1 MB, 5 MB, 10 MB, 20 MB, 50 MB, or 100 MB per file." },
-              { "@type": "HowToStep", "name": "Download your split files", "text": "Click Split & Download ZIP to get all chunks packaged in a single ZIP file. Each chunk is a valid JSON file in the original format." }
+              { "@type": "HowToStep", "name": content.howTo.steps[0].name, "text": content.howTo.steps[0].text },
+              { "@type": "HowToStep", "name": content.howTo.steps[1].name, "text": content.howTo.steps[1].text },
+              { "@type": "HowToStep", "name": content.howTo.steps[2].name, "text": content.howTo.steps[2].text }
             ]
           })}
         </script>
@@ -214,8 +192,8 @@ export default function GoogleTimelineSplitter() {
             "@type": "FAQPage",
             "mainEntity": faqItems.map(item => ({
               "@type": "Question",
-              "name": item.question,
-              "acceptedAnswer": { "@type": "Answer", "text": item.answer }
+              "name": toPlainText(item.q),
+              "acceptedAnswer": { "@type": "Answer", "text": toPlainText(item.a) }
             }))
           })}
         </script>
@@ -225,9 +203,9 @@ export default function GoogleTimelineSplitter() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dawarich.app" },
-              { "@type": "ListItem", "position": 2, "name": "Free Tools", "item": "https://dawarich.app/tools" },
-              { "@type": "ListItem", "position": 3, "name": "Google Timeline Splitter", "item": pageUrl }
+              { "@type": "ListItem", "position": 1, "name": content.homeLabel, "item": homeUrl },
+              { "@type": "ListItem", "position": 2, "name": content.toolsLabel, "item": toolsUrl },
+              { "@type": "ListItem", "position": 3, "name": content.h1, "item": pageUrl }
             ]
           })}
         </script>
@@ -237,29 +215,29 @@ export default function GoogleTimelineSplitter() {
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           <div className={styles.header}>
-            <h1>Google Timeline Splitter</h1>
-            <p>Split large Google Timeline JSON exports into smaller, valid chunks. Each chunk stays in the original format so it can be imported anywhere. Choose your target file size and download a ZIP.</p>
+            <h1>{content.h1}</h1>
+            <p>{content.intro}</p>
           </div>
 
           <div className={styles.topSection}>
             <div className={styles.instructions}>
-              <h2>Why Split Timeline Files?</h2>
+              <h2>{content.benefitsTitle}</h2>
               <div className={styles.instructionsList}>
                 <div className={styles.instructionItem}>
-                  <strong>Import size limits:</strong>
-                  <p>Many tools have file size limits for imports. Splitting a 500 MB Records.json into 10 MB chunks makes importing painless.</p>
+                  <strong>{content.benefits[0].title}</strong>
+                  <p>{content.benefits[0].body}</p>
                 </div>
                 <div className={styles.instructionItem}>
-                  <strong>Faster batch imports:</strong>
-                  <p>Importing several smaller files is often faster and more reliable than a single massive file, especially over slow connections.</p>
+                  <strong>{content.benefits[1].title}</strong>
+                  <p>{content.benefits[1].body}</p>
                 </div>
                 <div className={styles.instructionItem}>
-                  <strong>Preserves original format:</strong>
-                  <p>Unlike converters, this tool keeps your data in the exact same Google Timeline JSON format. Every chunk is a valid, standalone file.</p>
+                  <strong>{content.benefits[2].title}</strong>
+                  <p>{content.benefits[2].body}</p>
                 </div>
                 <div className={styles.instructionItem}>
-                  <strong>All formats supported:</strong>
-                  <p>Works with Records.json, Semantic Location History, Semantic Segments, Location History phone exports, Settings, and Timeline Edits.</p>
+                  <strong>{content.benefits[3].title}</strong>
+                  <p>{content.benefits[3].body}</p>
                 </div>
               </div>
             </div>
@@ -273,7 +251,7 @@ export default function GoogleTimelineSplitter() {
                 onDrop={handleDrop}
               >
                 <input
-                  aria-label="Choose files to process"
+                  aria-label={content.upload.inputLabel}
                   type="file"
                   id="splitterFileInput"
                   accept=".json"
@@ -284,7 +262,7 @@ export default function GoogleTimelineSplitter() {
                   {isLoading ? (
                     <>
                       <div className={styles.spinner}></div>
-                      <p>Parsing file...</p>
+                      <p>{content.upload.parsing}</p>
                     </>
                   ) : fileData ? (
                     <>
@@ -292,16 +270,16 @@ export default function GoogleTimelineSplitter() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <p>{fileName}</p>
-                      <p className={styles.hint}>{itemCount.toLocaleString()} entries loaded</p>
+                      <p className={styles.hint}>{interpolate(content.results.entriesLoaded, { count: itemCount.toLocaleString(htmlLang) })}</p>
                     </>
                   ) : (
                     <>
                       <svg className={styles.uploadIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                       </svg>
-                      <p>Drop a Google Timeline JSON file here</p>
-                      <p className={styles.hint}>or click to browse</p>
-                      <p className={styles.formats}>Supports: Records.json, Semantic, Location History, and more</p>
+                      <p>{content.upload.dropFile}</p>
+                      <p className={styles.hint}>{content.upload.browse}</p>
+                      <p className={styles.formats}>{content.upload.formats}</p>
                     </>
                   )}
                 </label>
@@ -309,7 +287,7 @@ export default function GoogleTimelineSplitter() {
 
               {fileData && (
                 <button onClick={handleClear} style={{background: 'none', border: 'none', color: 'var(--ifm-color-primary)', cursor: 'pointer', fontSize: '0.9rem'}}>
-                  Clear File
+                  {content.upload.clearButton}
                 </button>
               )}
 
@@ -319,9 +297,9 @@ export default function GoogleTimelineSplitter() {
                     <svg className={styles.privacyIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
-                    Privacy First
+                    {content.privacyTitle}
                   </strong>
-                  <p>All data processing happens in your browser. Your files never leave your device.</p>
+                  <p>{content.privacyBody}</p>
                 </div>
               </div>
             </div>
@@ -335,7 +313,7 @@ export default function GoogleTimelineSplitter() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </span>
-                <span>Working with large Google Timeline exports? <a href="/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-splitter">Dawarich</a> handles imports of any size automatically, with full data ownership and privacy.</span>
+                <span><RichText text={content.preCta} /></span>
               </div>
             </div>
           )}
@@ -347,25 +325,25 @@ export default function GoogleTimelineSplitter() {
               <div className={styles.fileInfoGrid}>
                 <div className={styles.fileInfoItem}>
                   <span className={styles.fileInfoValue}>{fileName}</span>
-                  <span className={styles.fileInfoLabel}>File Name</span>
+                  <span className={styles.fileInfoLabel}>{content.results.fileNameLabel}</span>
                 </div>
                 <div className={styles.fileInfoItem}>
-                  <span className={styles.fileInfoValue}>{(fileSize / 1024 / 1024).toFixed(2)} MB</span>
-                  <span className={styles.fileInfoLabel}>File Size</span>
+                  <span className={styles.fileInfoValue}>{formatSize(fileSize / 1024 / 1024, 2)}</span>
+                  <span className={styles.fileInfoLabel}>{content.results.fileSizeLabel}</span>
                 </div>
                 <div className={styles.fileInfoItem}>
                   <span className={styles.fileInfoValue}>{FORMAT_LABELS[fileFormat] || fileFormat}</span>
-                  <span className={styles.fileInfoLabel}>Format</span>
+                  <span className={styles.fileInfoLabel}>{content.results.formatLabel}</span>
                 </div>
                 <div className={styles.fileInfoItem}>
-                  <span className={styles.fileInfoValue}>{itemCount.toLocaleString()}</span>
-                  <span className={styles.fileInfoLabel}>Entries</span>
+                  <span className={styles.fileInfoValue}>{itemCount.toLocaleString(htmlLang)}</span>
+                  <span className={styles.fileInfoLabel}>{content.results.entriesLabel}</span>
                 </div>
               </div>
             </div>
 
             <div className={styles.sizeSection}>
-              <h3>Target Chunk Size</h3>
+              <h3>{content.options.targetSizeTitle}</h3>
               <div className={styles.sizeOptions}>
                 {SIZE_OPTIONS.map((size) => (
                   <button
@@ -373,28 +351,30 @@ export default function GoogleTimelineSplitter() {
                     className={`${styles.sizeOption} ${targetSizeMB === size ? styles.sizeOptionActive : ''}`}
                     onClick={() => setTargetSizeMB(size)}
                   >
-                    {size} MB
+                    {formatSize(size, 0)}
                   </button>
                 ))}
               </div>
 
               {chunkPreview > 0 && (
                 <div className={styles.previewInfo}>
-                  This will create <strong>{chunkPreview}</strong> chunk{chunkPreview !== 1 ? 's' : ''} from {itemCount.toLocaleString()} entries (~{targetSizeMB} MB each)
+                  <RichText text={interpolate(selectMessage(chunkPreview, content.options.chunkPreview), {
+                    count: chunkPreview.toLocaleString(htmlLang), entries: itemCount.toLocaleString(htmlLang), size: targetSizeMB.toLocaleString(htmlLang),
+                  })} />
                 </div>
               )}
 
               <button onClick={handleSplit} disabled={isSplitting || !fileData} className={styles.splitButton}>
-                {isSplitting ? 'Splitting...' : 'Split & Download ZIP'}
+                {isSplitting ? content.options.splitting : content.options.splitButton}
               </button>
             </div>
 
             <PersonalizedCTA
               toolName="google-timeline-splitter"
-              headline={`Your file has <strong>${itemCount.toLocaleString()}</strong> entries. Dawarich handles imports of any size automatically — no splitting needed.`}
+              headline={<RichText text={interpolate(content.cta.headline, { count: itemCount.toLocaleString(htmlLang) })} />}
               stats={[
-                { label: 'entries', value: itemCount.toLocaleString() },
-                { label: 'file size', value: `${(fileSize / 1024 / 1024).toFixed(1)} MB` },
+                { label: content.cta.statLabels.entries, value: itemCount.toLocaleString(htmlLang) },
+                { label: content.cta.statLabels.fileSize, value: formatSize(fileSize / 1024 / 1024, 1) },
               ]}
             />
           </div>
@@ -402,69 +382,29 @@ export default function GoogleTimelineSplitter() {
 
         <div className={styles.infoSection}>
           <div className={styles.infoGrid}>
-            <div className={styles.infoCard}>
-              <h2>What Is the Google Timeline Splitter?</h2>
-              <p>This tool takes a large Google Timeline JSON export and divides it into smaller files, each targeting the size you choose. Every chunk is a valid, standalone JSON file in the exact same format as the original — it preserves the full structure, not just the coordinates.</p>
-              <p>Unlike format converters that extract points into GPX or CSV, this splitter keeps your data in native Google Timeline format. This means you can import each chunk into any tool that accepts Google Timeline JSON, including Dawarich.</p>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>Supported Google Timeline Formats</h2>
-              <ul>
-                <li><strong>Records.json</strong> — Raw GPS location records with E7 coordinates, timestamps, accuracy, and activity data. Often the largest file in a Google Takeout export.</li>
-                <li><strong>Semantic Location History</strong> — Monthly files (YYYY_MONTH.json) with place visits and activity segments including names and addresses.</li>
-                <li><strong>Semantic Segments</strong> — Newer phone-based export format with visit and path data.</li>
-                <li><strong>Location History</strong> — Array format with startTime/endTime entries and timeline paths.</li>
-                <li><strong>Settings</strong> — Device settings and configuration data.</li>
-                <li><strong>Timeline Edits</strong> — Place aggregates and raw signal data from user edits.</li>
-              </ul>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>Choosing the Right Chunk Size</h2>
-              <ul>
-                <li><strong>1 MB</strong> — Maximum number of small files. Good for tools with very low import limits or for sharing individual portions.</li>
-                <li><strong>5 MB</strong> — Small chunks that work with almost any import tool. Good default for email attachments.</li>
-                <li><strong>10 MB</strong> — Balanced size that works with most import tools. Recommended for Dawarich imports.</li>
-                <li><strong>20 MB</strong> — Fewer files, still manageable for most tools.</li>
-                <li><strong>50 MB</strong> — Large chunks for tools that handle big files well.</li>
-                <li><strong>100 MB</strong> — Minimal splitting. Use when you just need to break a very large file in half or into a few pieces.</li>
-              </ul>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>How It Works</h2>
-              <p>The splitter detects your file's format automatically, then divides the main data array (locations, timeline objects, segments, etc.) into evenly-sized groups. Each group is wrapped in the same JSON structure as the original file.</p>
-              <p>The tool samples entries from your file to estimate average entry size, then calculates how many entries fit in each chunk to hit your target size. All chunks are packaged into a single ZIP file for easy download.</p>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>Privacy and Security</h2>
-              <p>Your Google Timeline data contains sensitive location information. This tool processes everything entirely in your browser — no data is ever sent to a server. The files stay on your device from upload to download.</p>
-              <p>We don't use cookies, analytics, or tracking for your uploaded files. The tool is part of the open-source Dawarich project, so you can inspect the code yourself.</p>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>Related Tools</h2>
-              <ul>
-                <li><a href="/tools/google-timeline-converter">Google Timeline Converter</a> — Convert timeline data to GPX, KML, CSV, or GeoJSON</li>
-                <li><a href="/tools/timeline-visualizer">Google Timeline Visualizer</a> — View your location history on an interactive map</li>
-                <li><a href="/tools/timeline-statistics">Timeline Statistics Analyzer</a> — Get insights from your location data</li>
-                <li><a href="/tools/timeline-merger">Timeline Data Merger</a> — Combine multiple timeline exports</li>
-                <li><a href="/tools/gps-file-splitter">GPS File Splitter</a> — Split GPX, GeoJSON, KML, and other GPS files</li>
-                <li><a href="/tools/timeline-format-detector">Timeline Format Detector</a> — Identify your export file type</li>
-              </ul>
-            </div>
+            {content.cards.map((card, index) => (
+              <div className={styles.infoCard} key={index}>
+                <h2>{card.title}</h2>
+                {card.paragraphs.map((text, index) => (
+                  <p key={index}><RichText text={text} /></p>
+                ))}
+                {card.items && <ul>
+                  {card.items.map((item, index) => (
+                    <li key={index}><RichText text={item.body} /></li>
+                  ))}
+                </ul>}
+              </div>
+            ))}
           </div>
         </div>
 
         <div className={styles.faqSection}>
-          <h2>Frequently Asked Questions</h2>
+          <h2>{content.faqTitle}</h2>
           <div className={styles.faqList}>
             {faqItems.map((item, index) => (
               <details key={index} className={styles.faqItem}>
-                <summary className={styles.faqQuestion}>{item.question}</summary>
-                <p className={styles.faqAnswer}>{item.answer}</p>
+                <summary className={styles.faqQuestion}>{item.q}</summary>
+                <p className={styles.faqAnswer}><RichText text={item.a} /></p>
               </details>
             ))}
           </div>
@@ -472,9 +412,9 @@ export default function GoogleTimelineSplitter() {
 
         <div className={styles.bottomCtaPanel}>
           <div className={styles.ctaContent}>
-            <h3>Looking for a Google Timeline Replacement?</h3>
-            <p>Dawarich is an open-source location tracking platform that gives you full control over your data. Import your Google Timeline export, track ongoing location from your phone, and visualize years of movement history — all self-hosted or in the cloud.</p>
-            <a href="/?utm_source=tool&utm_medium=bottom-cta&utm_campaign=google-timeline-splitter" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
+            <h3>{content.cta.title}</h3>
+            <p>{content.cta.body}</p>
+            <SmartLink href="/?utm_source=tool&utm_medium=bottom-cta&utm_campaign=google-timeline-splitter" className={styles.ctaButton}>{content.cta.button}</SmartLink>
           </div>
         </div>
       </div>

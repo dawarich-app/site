@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "KML a KMZ gratis — Comprimeix fitxers de Google Earth",
+    "description": "Converteix KML a KMZ comprimit a l’instant. Convertidor gratuït i privat que funciona al navegador, sense pujar fitxers.",
+    "keywords": "KML a KMZ, compressor KML, convertidor KMZ, comprimir Google Earth, convertidor de dades geogràfiques",
+    "appName": "Convertidor de KML a KMZ"
+  },
+  "h1": "Convertidor de KML a KMZ",
+  "intro": "Converteix els fitxers KML al format comprimit KMZ a l’instant. Tot es processa al navegador.",
+  "cards": [
+    {
+      "title": "Sobre el format KML",
+      "body": "KML (Keyhole Markup Language) és un format XML de dades geogràfiques utilitzat per Google Earth i Maps."
+    },
+    {
+      "title": "Sobre el format KMZ",
+      "body": "KMZ és una versió comprimida (zip) dels fitxers KML que en redueix notablement la mida per facilitar-ne la compartició."
+    },
+    {
+      "title": "Per què convertir KML a KMZ?",
+      "items": [
+        "Redueix la mida del fitxer fins a un 90%",
+        "Comparteix més fàcilment per correu o missatgeria",
+        "Càrrega més ràpida a Google Earth",
+        "Pot agrupar imatges i recursos en un sol fitxer"
+      ]
+    }
+  ],
+  "privacyBody": "Tota la conversió es fa al navegador. Les dades no surten mai del dispositiu."
+}

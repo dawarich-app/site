@@ -1,19 +1,24 @@
 import React, { useState, useCallback } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
+import { interpolate } from '@docusaurus/Interpolate';
+import RichText from '@site/src/i18n/RichText';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
+import content from '@locale-content/tools/tcx-to-kml.json';
+import shared from '@locale-content/shared/converter.json';
 import FormatConverter from '@site/src/components/FormatConverter';
 import { parseTCX, getTCXMetadata } from '@site/src/utils/tcxParser';
 import { toKML } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import RelatedTools from '@site/src/components/RelatedTools';
 import styles from './converter.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
-const pageTitle = "Free TCX to KML Converter - Convert Training Files to Google Earth Online";
-const pageDescription = "Convert TCX files to KML format instantly. Free, privacy-first online converter for viewing fitness activities in Google Earth. Works entirely in your browser.";
-const pageUrl = "https://dawarich.app/tools/tcx-to-kml/";
 const imageUrl = "https://dawarich.app/img/meta-image.png";
 
 export default function TCXToKML() {
+  const pageUrl = useLocalizedUrl('/tools/tcx-to-kml/');
+  const htmlLang = useHtmlLang();
   const [isConverting, setIsConverting] = useState(false);
   const [converted, setConverted] = useState(false);
   const [stats, setStats] = useState(null);
@@ -29,7 +34,7 @@ export default function TCXToKML() {
       const metadata = getTCXMetadata(text);
 
       if (points.length === 0) {
-        throw new Error('No GPS data found in TCX file.');
+        throw new Error(content.noGpsData);
       }
 
       const trackpoints = points.filter(p => p.type === 'trackpoint');
@@ -57,36 +62,36 @@ export default function TCXToKML() {
       setConverted(true);
     } catch (error) {
       console.error('Conversion error:', error);
-      alert('Error converting file: ' + error.message);
+      alert(interpolate(shared.conversionError, { message: error.message }));
     } finally {
       setIsConverting(false);
     }
-  }, []);
+  }, [htmlLang]);
 
   return (
-    <Layout title={pageTitle} description={pageDescription}>
+    <Layout title={content.meta.title} description={content.meta.description}>
       <Head>
-        <meta name="title" content={pageTitle} />
-        <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="TCX to KML, Training Center XML to Google Earth, TCX converter, KML converter, Google Earth, fitness file converter, Garmin to Google Earth" />
-        <link rel="canonical" href={pageUrl} />
+        <meta name="title" content={content.meta.title} />
+        <meta name="description" content={content.meta.description} />
+        <meta name="keywords" content={content.meta.keywords} />
+
         <meta property="og:type" content="website" />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
+        <meta property="og:title" content={content.meta.title} />
+        <meta property="og:description" content={content.meta.description} />
         <meta property="og:image" content={imageUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:title" content={content.meta.title} />
+        <meta name="twitter:description" content={content.meta.description} />
         <meta name="twitter:image" content={imageUrl} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "TCX to KML Converter",
+            "name": content.meta.appName,
             "url": pageUrl,
-            "description": pageDescription,
+            "description": content.meta.description,
             "applicationCategory": "UtilityApplication",
             "operatingSystem": "Any",
             "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -98,8 +103,8 @@ export default function TCXToKML() {
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           <div className={styles.header}>
-            <h1>TCX to KML Converter</h1>
-            <p>Convert your TCX (Training Center XML) files to KML format for viewing in Google Earth. All processing happens in your browser.</p>
+            <h1>{content.h1}</h1>
+            <p><RichText text={content.intro} /></p>
           </div>
 
           <div className={styles.mainContent}>
@@ -117,12 +122,12 @@ export default function TCXToKML() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <div>
-                    <p>File converted successfully!</p>
+                    <p><RichText text={shared.successShort} /></p>
                     {stats && (
                       <p className={styles.statsText}>
-                        {stats.sport && <span>Activity: {stats.sport}</span>}
-                        {stats.points > 0 && <span> | {stats.points.toLocaleString()} points</span>}
-                        {stats.distance && <span> | {stats.distance} km</span>}
+                        {stats.sport && <span>{interpolate(shared.stats.activity, { sport: stats.sport })}</span>}
+                        {stats.points > 0 && <span>{interpolate(shared.stats.points, { points: stats.points.toLocaleString(htmlLang) })}</span>}
+                        {stats.distance && <span>{interpolate(shared.stats.distance, { distance: Number(stats.distance).toLocaleString(htmlLang, { useGrouping: false, minimumFractionDigits: 2, maximumFractionDigits: 2 }) })}</span>}
                       </p>
                     )}
                   </div>
@@ -132,18 +137,18 @@ export default function TCXToKML() {
 
             <div className={styles.infoSection}>
               <div className={styles.infoCard}>
-                <h2>About This Conversion</h2>
-                <p>TCX is used by Garmin Connect, Wahoo, Polar, and Strava for fitness activities. KML is Google's format for Google Earth and Google Maps.</p>
+                <h2>{content.cards[0].title}</h2>
+                <p><RichText text={content.cards[0].body} /></p>
               </div>
 
               <div className={styles.infoCard}>
-                <h2>Why Convert TCX to KML?</h2>
+                <h2>{content.cards[1].title}</h2>
                 <ul>
-                  <li>View your activities in Google Earth</li>
-                  <li>Explore routes in 3D terrain view</li>
-                  <li>Share tracks that open in Google Earth</li>
-                  <li>Import into Google My Maps</li>
-                  <li>Use with KML-compatible applications</li>
+                  <li><RichText text={content.cards[1].items[0]} /></li>
+                  <li><RichText text={content.cards[1].items[1]} /></li>
+                  <li><RichText text={content.cards[1].items[2]} /></li>
+                  <li><RichText text={content.cards[1].items[3]} /></li>
+                  <li><RichText text={content.cards[1].items[4]} /></li>
                 </ul>
               </div>
 
@@ -152,8 +157,8 @@ export default function TCXToKML() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
                 <div>
-                  <strong>Privacy First</strong>
-                  <p>All conversion happens in your browser. Your data never leaves your device.</p>
+                  <strong>{shared.privacyTitle}</strong>
+                  <p><RichText text={content.privacyBody} /></p>
                 </div>
               </div>
             </div>
@@ -161,7 +166,7 @@ export default function TCXToKML() {
 
           <PersonalizedCTA
             toolName="tcx-to-kml"
-            headline="Your file is converted. Dawarich handles all formats automatically — import from Google, Strava, Garmin, and more. No manual conversions needed."
+            headline={shared.ctaHeadline}
           />
         </div>
       </div>

@@ -1,0 +1,22 @@
+{
+  "yearLabel": "Jahr",
+  "emptyLabel": "Keine Daten",
+  "searchLabel": "Suchen",
+  "searchPlaceholder": "Aufenthalte suchen…",
+  "searchAriaLabel": "Aufenthalte suchen",
+  "previousMonth": "Vorheriger Monat",
+  "nextMonth": "Nächster Monat",
+  "yearDays": "{year} ({count} Tage)",
+  "otherMonth": "{date} (anderer Monat)",
+  "noData": "{date} — keine Daten",
+  "hoursTracked": "{date} — {hours} Stunden erfasst",
+  "weekdays": [
+    { "label": "M" },
+    { "label": "D" },
+    { "label": "M" },
+    { "label": "D" },
+    { "label": "F" },
+    { "label": "S" },
+    { "label": "S" }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "cols": [
+    {
+      "name": "Lite"
+    },
+    {
+      "name": "Pro"
+    },
+    {
+      "name": "Famille"
+    }
+  ],
+  "title": "Comparez toutes les fonctionnalités",
+  "subtitle": "Dépliez une section pour voir les détails, ou affichez uniquement les différences entre les offres.",
+  "collapseAll": "Tout replier",
+  "expandAll": "Tout déplier",
+  "headerFeatures": "Fonctionnalités",
+  "footerLabel": "Prêt quand vous l’êtes",
+  "chooseLite": "Choisir Lite",
+  "startFree": "Commencer gratuitement",
+  "yearAbbreviation": "/an",
+  "highlightDifferences": "Mettre en évidence les différences"
+}

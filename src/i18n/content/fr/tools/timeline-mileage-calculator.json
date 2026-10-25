@@ -1,0 +1,195 @@
+{
+  "h1": "Calcul des distances Google Timeline",
+  "intro": "Calculez les distances parcourues en voiture à partir de vos données Google Timeline (Vos trajets Google Maps). Générez des carnets kilométriques téléchargeables avec le détail des déplacements et des résumés quotidiens et mensuels. Tout le traitement s’effectue dans votre navigateur : vos données restent sur votre appareil, sauf si vous choisissez « Enregistrer dans mon compte Dawarich ».",
+  "privacyTitle": "La confidentialité avant tout",
+  "privacyBody": "Tous les calculs de distance s’effectuent dans votre navigateur : vos données de localisation restent sur votre appareil, sauf si vous choisissez « Enregistrer dans mon compte Dawarich ».",
+  "preCta": "Besoin d’un suivi kilométrique continu ? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-mileage-calculator) enregistre automatiquement vos déplacements en préservant votre vie privée et la pleine propriété de vos données. Fini les exports manuels : un suivi continu et précis.",
+  "saveIntro": "Vous souhaitez aussi retrouver ces données dans votre compte Dawarich ? Nous les importerons lors de l’inscription, sans nouvel envoi.",
+  "faqTitle": "Questions fréquentes",
+  "homeLabel": "Accueil",
+  "toolsLabel": "Outils gratuits",
+  "meta": {
+    "title": "Google Timeline : calcul gratuit des distances en voiture",
+    "description": "Google Timeline (Vos trajets Google Maps) : distances en voiture, carnets et rapports CSV pour déductions fiscales. Gratuit, privé, dans votre navigateur.",
+    "keywords": "kilométrage Google Timeline, calcul distance historique de localisation, distance voiture Google Maps, carnet kilométrique Google Timeline, calcul kilométrique fiscal, suivi kilométrique Google Maps, carnet IRS, calcul distance voiture, remboursement kilométrique",
+    "featureList": [
+      "Calcul des distances en voiture à partir de Google Timeline",
+      "Filtrage des déplacements par période",
+      "Choix entre kilomètres et miles",
+      "Génération d’un carnet kilométrique CSV téléchargeable",
+      "Résumés quotidiens et mensuels des déplacements",
+      "Confidentialité : traitement intégral dans le navigateur",
+      "Aucune donnée envoyée à un serveur"
+    ]
+  },
+  "howTo": {
+    "name": "Comment calculer les distances à partir de Google Timeline",
+    "description": "Exportez vos données Google Timeline et calculez les distances en voiture avec cet outil gratuit et respectueux de votre vie privée.",
+    "steps": [
+      {
+        "name": "Exportez vos données Google Timeline",
+        "text": "Rendez-vous sur takeout.google.com, sélectionnez Historique des positions (Chronologie) et exportez. Sur Android : Google Maps > Paramètres > Localisation > Chronologie > Exporter. Sur iOS : Google Maps > Paramètres > Contenu personnel > Exporter les données de chronologie."
+      },
+      {
+        "name": "Ajoutez vos fichiers JSON",
+        "text": "Glissez-déposez vos fichiers JSON Google Timeline exportés dans le calculateur. L’outil détecte automatiquement le format et extrait les segments de conduite."
+      },
+      {
+        "name": "Choisissez la période et l’unité",
+        "text": "Sélectionnez une date de début et de fin pour filtrer votre carnet kilométrique, puis choisissez les kilomètres ou les miles."
+      },
+      {
+        "name": "Consultez et téléchargez votre carnet kilométrique",
+        "text": "Consultez le journal des déplacements, les résumés mensuels et la distance totale. Téléchargez le carnet complet en CSV pour vos archives."
+      }
+    ],
+    "tool": "Calculateur de distances Google Timeline de Dawarich"
+  },
+  "exportData": {
+    "title": "Comment récupérer vos données de chronologie",
+    "intro": "Exportez votre historique de localisation Google Timeline avec l’une de ces méthodes. Si l’une ne fonctionne pas, essayez-en une autre.",
+    "note": "Pour obtenir les distances les plus précises, privilégiez les fichiers Semantic Location History (JSON mensuels comme 2023_JANUARY.json), qui contiennent des segments d’activité étiquetés avec des catégories de conduite.",
+    "methods": [
+      { "title": "Google Takeout :", "body": "Rendez-vous sur [takeout.google.com](https://takeout.google.com/) → Choisissez Historique des positions (Chronologie) → Exportez en JSON" },
+      { "title": "Sur Android :", "body": "Ouvrez Google Maps → Paramètres → Localisation → Services de localisation → Chronologie → Exporter la chronologie" },
+      { "title": "Sur iOS :", "body": "Ouvrez Google Maps → Paramètres → Contenu personnel → Exporter les données de chronologie" }
+    ]
+  },
+  "units": { "km": "km", "miles": "miles" },
+  "activities": {
+    "driving": "Voiture",
+    "bus": "Bus",
+    "train": "Train",
+    "subway": "Métro",
+    "motorcycle": "Moto"
+  },
+  "duration": { "minutes": "{minutes} min", "hoursMinutes": "{hours} h {minutes} min" },
+  "results": {
+    "startDate": "Date de début",
+    "endDate": "Date de fin",
+    "disclaimer": "Les distances sont calculées à partir des coordonnées GPS (formule de Haversine) et correspondent à des approximations en ligne droite entre les points enregistrés. Les distances routières réelles peuvent être supérieures. Cet outil fournit des estimations.",
+    "monthlyTitle": "Résumé mensuel",
+    "month": "Mois",
+    "tripCount": "Nombre de déplacements",
+    "tripLogTitle": "Journal des déplacements",
+    "trip": "Déplacement n°",
+    "date": "Date",
+    "activity": "Type d’activité",
+    "duration": "Durée",
+    "emptyTitle": "Aucun déplacement en voiture trouvé",
+    "emptyIntro": "Aucun segment de conduite n’a été détecté dans vos données pour la période sélectionnée. Cela peut arriver si :",
+    "calculateButton": "Calculer",
+    "distanceTitle": "Distance totale en voiture",
+    "distanceHint": "Tous les segments de conduite cumulés",
+    "tripsTitle": "Total des déplacements",
+    "tripsHint": "Segments de conduite détectés",
+    "averageTitle": "Distance moyenne par déplacement",
+    "averageHint": "Par segment de conduite",
+    "downloadButton": "Télécharger le carnet kilométrique (CSV)",
+    "processing": "Traitement...",
+    "distanceHeading": "Distance ({unit})",
+    "emptyReasons": [
+      { "body": "Votre export contient uniquement des points GPS bruts (Records.json), sans classification d’activité" },
+      { "body": "La période sélectionnée ne recouvre pas vos données" },
+      { "body": "Vos données ne contiennent pas de segments de conduite ; essayez des fichiers Semantic Location History pour de meilleurs résultats" }
+    ],
+    "showMore": "Afficher plus ({count} restants)",
+    "distanceValue": "{distance} {unit}"
+  },
+  "cta": {
+    "fallback": "Besoin d’un suivi kilométrique continu sans exports manuels ? Dawarich enregistre automatiquement vos déplacements.",
+    "postTitle": "Lassé d’exporter et de calculer les distances manuellement ?",
+    "postBody": "Dawarich suit automatiquement chaque déplacement en voiture, calcule les distances à partir des données GPS réelles et vous permet d’exporter des rapports kilométriques à tout moment. En auto-hébergement ou dans le cloud : vos données, votre choix.",
+    "title": "Vous cherchez une alternative à Google Timeline avec suivi kilométrique intégré ?",
+    "body": "Dawarich est une plateforme open source de suivi de localisation qui enregistre automatiquement chaque déplacement, calcule la distance en voiture et vous donne le contrôle total de vos données. Importez votre export Google Timeline, suivez les distances en continu depuis votre téléphone et générez des rapports à tout moment, en auto-hébergement ou dans le cloud.",
+    "button": "Essayez Dawarich gratuitement pendant 7 jours",
+    "headline": "Vous avez enregistré **{count}** déplacements couvrant **{distance} {unit}**. Dawarich assure ce suivi automatiquement : fini les exports manuels.",
+    "tripsLabel": "déplacements"
+  },
+  "faq": [
+    {
+      "q": "Puis-je ajouter mes données Google Timeline en toute sécurité ?",
+      "a": "Absolument. Le calculateur fonctionne à 100% dans votre navigateur avec JavaScript côté client. Vos fichiers restent sur votre appareil et sont effacés lorsque vous fermez ou actualisez la page, sans suivi de vos données de localisation. La seule exception est le bouton facultatif « Enregistrer dans mon compte Dawarich », qui envoie votre fichier à Dawarich Cloud pour l’importer dans votre nouveau compte. L’outil fait partie de l’écosystème open source Dawarich, vous pouvez donc inspecter le code source vous-même."
+    },
+    {
+      "q": "Quelle est la précision du calcul des distances ?",
+      "a": "Les distances sont calculées avec la formule de Haversine, qui mesure la distance orthodromique entre des coordonnées GPS. Elle fournit une approximation en ligne droite entre les points enregistrés, qui sous-estime généralement la distance routière réelle de 10-30% selon la complexité du parcours. Le résultat sera plus précis sur autoroute que dans les rues sinueuses d’une ville. Pour les déductions kilométriques de l’IRS, il est habituel d’utiliser le compteur kilométrique ou une application dédiée pour obtenir des chiffres précis, mais cet outil fournit une estimation solide pour la planification et la vérification."
+    },
+    {
+      "q": "Puis-je l’utiliser pour des déductions fiscales ?",
+      "a": "Cet outil génère un carnet kilométrique pouvant servir de justificatif complémentaire à des fins fiscales. Cependant, l’IRS exige des relevés contemporains : les distances devraient idéalement être enregistrées au moment de chaque déplacement, et non reconstituées plus tard. Les données Google Timeline peuvent appuyer vos relevés, mais ne suffisent pas forcément comme seule source. Consultez un professionnel de la fiscalité pour votre situation. Si vous préférez enregistrer la date et la distance au fil des déplacements plutôt que les reconstituer des mois après, Dawarich le fait automatiquement."
+    },
+    {
+      "q": "Quels types de déplacements sont pris en compte ?",
+      "a": "Le calculateur identifie les types d’activité liés à la conduite dans la classification de Google : IN_PASSENGER_VEHICLE (voiture), DRIVING, IN_BUS, IN_TRAIN, IN_SUBWAY et MOTORCYCLING. Google les attribue selon la vitesse, les mouvements et les données des capteurs. La précision dépend de la qualité de cette classification : la marche ou le vélo peuvent parfois être classés comme conduite, et inversement."
+    },
+    {
+      "q": "Puis-je filtrer par période ?",
+      "a": "Oui. Après avoir ajouté vos fichiers, vous pouvez définir une date de début et de fin pour limiter le carnet à une période précise. C’est utile pour générer des rapports trimestriels ou annuels, isoler les périodes de déplacements professionnels ou comparer les distances entre périodes. Les résumés mensuels et quotidiens reflètent eux aussi uniquement la période filtrée."
+    },
+    {
+      "q": "Que contient l’export CSV ?",
+      "a": "Le fichier CSV comprend des colonnes pour le numéro du déplacement, la date, l’heure de début et de fin, le type d’activité, la distance dans l’unité choisie et la durée. Chaque ligne représente un segment de conduite identifié dans vos données de chronologie. Le fichier se termine par une ligne de total de la distance et du nombre de déplacements. Vous pouvez l’ouvrir dans Excel, Google Sheets ou tout tableur pour poursuivre l’analyse."
+    },
+    {
+      "q": "Pourquoi manque-t-il certains déplacements ?",
+      "a": "Plusieurs facteurs peuvent l’expliquer : (1) Google Timeline n’enregistre des données que lorsque l’historique des positions est activé sur votre appareil ; les périodes de désactivation n’ont pas de données. (2) Les courts déplacements ou un mauvais signal GPS peuvent ne pas produire assez de points. (3) Google peut ne pas avoir reconnu certains mouvements comme de la conduite, surtout à faible vitesse. (4) Avec la méthode récente d’export du téléphone, vous pouvez ne disposer que des 90 derniers jours à cause du changement de règles de Google en 2024. (5) Certains formats d’export sont moins détaillés que d’autres."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Qu’est-ce que le calculateur de distances de chronologie ?",
+      "paragraphs": [
+        "Cet outil gratuit, utilisable dans le navigateur, extrait les déplacements en voiture de vos fichiers d’export Google Timeline et calcule la distance totale parcourue. Il identifie les segments d’activité liés à la conduite, notamment les déplacements en voiture, en bus, en train et à moto, et génère un carnet kilométrique structuré détaillant chaque déplacement.",
+        "Tous les calculs s’effectuent dans votre navigateur : la génération du carnet n’envoie donc vos données de localisation nulle part. Vous obtenez des résultats immédiats en toute confidentialité, et le carnet CSV peut servir pour les notes de frais, les justificatifs fiscaux ou vos archives personnelles. (Si vous utilisez « Enregistrer dans mon compte Dawarich », cette seule action envoie votre fichier à Dawarich Cloud pour préparer l’importation ; rien n’est envoyé autrement.)"
+      ]
+    },
+    {
+      "title": "Comment les distances sont calculées",
+      "paragraphs": [
+        "Le calculateur utilise la formule de Haversine pour calculer les distances orthodromiques entre les coordonnées GPS consécutives de chaque segment de conduite. C’est la méthode standard de calcul de distance entre deux points sur une sphère, la Terre.",
+        "Pour chaque segment de conduite identifié dans vos données Google Timeline, l’outil additionne les distances entre tous les points de passage enregistrés. Le résultat est une approximation en ligne droite : la distance routière réelle est généralement supérieure de 10-30%, à cause des virages, des variations d’altitude et des détours que l’espacement des points GPS ne restitue pas.",
+        "Les sauts de plus de 500 km entre deux points consécutifs sont automatiquement exclus pour éviter de compter les erreurs GPS ou les déplacements instantanés artificiels dans les données."
+      ]
+    },
+    {
+      "title": "Utiliser les carnets kilométriques pour les déductions fiscales",
+      "paragraphs": [
+        "Aux États-Unis, l’IRS autorise une déduction kilométrique forfaitaire pour l’usage professionnel d’un véhicule personnel. Le taux change chaque année : vérifiez celui en vigueur avant votre déclaration. Pour demander cette déduction, il vous faut un carnet indiquant la date, la destination, le motif professionnel et la distance de chaque déplacement.",
+        "Les données Google Timeline peuvent fournir la date et la distance de chaque segment de conduite, mais ne distinguent pas les déplacements professionnels et personnels. Vous devez ajouter le motif professionnel et la destination au CSV exporté. L’IRS exige aussi des relevés contemporains, tenus au moment du déplacement ou peu après : un carnet reconstitué à partir de Google Timeline sert donc plutôt de justificatif complémentaire que d’unique relevé.",
+        "Pour enregistrer les déplacements au fur et à mesure au lieu de les reconstituer, envisagez [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-mileage-calculator) ; vous devrez toujours ajouter le motif professionnel vous-même."
+      ]
+    },
+    {
+      "title": "Qu’est-il arrivé à Google Maps Timeline ?",
+      "paragraphs": [
+        "Fin 2024, Google a fermé la version web de Google Maps Timeline et déplacé toutes les données de localisation vers le stockage local des téléphones. Seuls les 90 derniers jours ont été migrés ; tout l’historique plus ancien a été définitivement supprimé sans sauvegarde manuelle avant la date limite.",
+        "Ce changement a privé de nombreux utilisateurs de leurs années d’historique, utilisées pour le suivi kilométrique, les souvenirs de voyage et les justificatifs de frais. Si vous avez pu exporter vos données via Google Takeout ou l’export de chronologie avant la transition, ce calculateur vous aide à extraire les distances de ces fichiers.",
+        "Pour en savoir plus, consultez notre [guide de migration depuis l’historique de localisation Google](/blog/migrating-from-google-location-history-to-dawarich)."
+      ]
+    },
+    {
+      "title": "Précision et limites",
+      "paragraphs": [],
+      "items": [
+        { "body": "**Précision GPS** — Google Timeline enregistre généralement une position toutes les quelques secondes à quelques minutes, selon l’activité de l’appareil. Les intervalles entre relevés signifient que certaines portions sont interpolées plutôt que mesurées précisément" },
+        { "body": "**Classification des activités** — Google utilise l’apprentissage automatique pour classer les activités. Des erreurs sont possibles : une conduite lente dans la circulation peut être étiquetée comme du vélo, ou un déplacement en bus comme de la voiture" },
+        { "body": "**Distances en ligne droite** — La formule de Haversine donne le chemin le plus court entre deux points à la surface de la Terre. Les routes réelles sont plus longues à cause des courbes, des collines et des itinéraires" },
+        { "body": "**Données manquantes** — Les périodes où votre téléphone était éteint, en mode avion ou avec l’historique des positions désactivé ne contiennent pas de données" },
+        { "body": "**Importance du format d’export** — Les fichiers Semantic Location History contiennent les données de conduite les plus détaillées. Les fichiers Records.json bruts peuvent ne pas comporter d’étiquettes de type d’activité" }
+      ]
+    },
+    {
+      "title": "Outils associés",
+      "paragraphs": [],
+      "items": [
+        { "body": "[Visualiseur Google Timeline](/tools/timeline-visualizer) — Affichez votre historique de localisation complet sur une carte interactive" },
+        { "body": "[Générateur de cartes de chaleur GPS](/tools/heatmap-generator) — Créez des cartes de chaleur à partir de fichiers GPX, FIT, TCX et autres formats GPS" },
+        { "body": "[Fusion de trajets GPX](/tools/gpx-merger) — Regroupez plusieurs fichiers GPX en un seul" },
+        { "body": "[Extraction des géodonnées de photos](/tools/photo-geotagging) — Extrayez les coordonnées GPS de vos photos" },
+        { "body": "[Convertisseur GeoJSON vers GPX](/tools/geojson-to-gpx) — Convertissez vos données de localisation au format GPX" }
+      ],
+      "footer": [ "Pour en savoir plus : [Migrer depuis l’historique de localisation Google](/blog/migrating-from-google-location-history-to-dawarich)" ]
+    }
+  ]
+}

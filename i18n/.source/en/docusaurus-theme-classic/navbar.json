@@ -1,0 +1,94 @@
+{
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.Community": {
+    "message": "Community",
+    "description": "Navbar item with label Community"
+  },
+  "item.label.Dawarich for Android": {
+    "message": "Dawarich for Android",
+    "description": "Navbar item with label Dawarich for Android"
+  },
+  "item.label.Dawarich for iOS": {
+    "message": "Dawarich for iOS",
+    "description": "Navbar item with label Dawarich for iOS"
+  },
+  "item.label.Family Location Sharing": {
+    "message": "Family Location Sharing",
+    "description": "Navbar item with label Family Location Sharing"
+  },
+  "item.label.Features": {
+    "message": "Features",
+    "description": "Navbar item with label Features"
+  },
+  "item.label.Import & Export": {
+    "message": "Import & Export",
+    "description": "Navbar item with label Import & Export"
+  },
+  "item.label.Interactive Map": {
+    "message": "Interactive Map",
+    "description": "Navbar item with label Interactive Map"
+  },
+  "item.label.Location Sharing": {
+    "message": "Location Sharing",
+    "description": "Navbar item with label Location Sharing"
+  },
+  "item.label.Location Tracking": {
+    "message": "Location Tracking",
+    "description": "Navbar item with label Location Tracking"
+  },
+  "item.label.Map Poster Studio": {
+    "message": "Map Poster Studio",
+    "description": "Navbar item with label Map Poster Studio"
+  },
+  "item.label.Mobile Apps": {
+    "message": "Mobile Apps",
+    "description": "Navbar item with label Mobile Apps"
+  },
+  "item.label.Photo Integrations": {
+    "message": "Photo Integrations",
+    "description": "Navbar item with label Photo Integrations"
+  },
+  "item.label.Pricing": {
+    "message": "Pricing",
+    "description": "Navbar item with label Pricing"
+  },
+  "item.label.Roadmap": {
+    "message": "Roadmap",
+    "description": "Navbar item with label Roadmap"
+  },
+  "item.label.Self-Hosted": {
+    "message": "Self-Hosted",
+    "description": "Navbar item with label Self-Hosted"
+  },
+  "item.label.Sign in": {
+    "message": "Sign in",
+    "description": "Navbar item with label Sign in"
+  },
+  "item.label.Statistics & Analytics": {
+    "message": "Statistics & Analytics",
+    "description": "Navbar item with label Statistics & Analytics"
+  },
+  "item.label.Tax Residency Day Counter": {
+    "message": "Tax Residency Day Counter",
+    "description": "Navbar item with label Tax Residency Day Counter"
+  },
+  "item.label.Tools": {
+    "message": "Tools",
+    "description": "Navbar item with label Tools"
+  },
+  "item.label.Trips & Journaling": {
+    "message": "Trips & Journaling",
+    "description": "Navbar item with label Trips & Journaling"
+  },
+  "logo.alt": {
+    "message": "Dawarich Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "title": {
+    "message": "Dawarich",
+    "description": "The title in the navbar"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "KMZ a KML gratis en línea — Extrae archivos de Google Earth",
+    "description": "Convierte KMZ a KML al instante. Conversor gratis y privado en línea para extraer y descomprimir KMZ. Todo se procesa en tu navegador, sin subir archivos.",
+    "keywords": "KMZ a KML, extractor KMZ, conversor KML, descomprimir KMZ, abrir zip KMZ, extraer Google Earth",
+    "appName": "Conversor de KMZ a KML"
+  },
+  "h1": "Conversor de KMZ a KML",
+  "intro": "Extrae y convierte tus archivos KMZ a KML al instante. Todo se procesa en tu navegador.",
+  "cards": [
+    {
+      "title": "Acerca del formato KMZ",
+      "body": "KMZ es una versión comprimida (zip) de los archivos KML que reduce su tamaño para compartirlos con facilidad y cargarlos más rápido."
+    },
+    {
+      "title": "Acerca del formato KML",
+      "body": "KML (Keyhole Markup Language) es un formato XML que Google Earth y Google Maps usan para visualizar datos geográficos."
+    },
+    {
+      "title": "¿Por qué convertir KMZ a KML?",
+      "items": [
+        "Edita datos geográficos en editores de texto",
+        "Extrae imágenes y recursos incrustados",
+        "Examina y modifica la estructura KML",
+        "Depura y soluciona problemas de archivos de Google Earth"
+      ]
+    }
+  ],
+  "privacyBody": "Toda la conversión se realiza en tu navegador. Tus datos nunca salen de tu dispositivo."
+}

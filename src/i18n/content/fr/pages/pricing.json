@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Tarifs et offres Cloud",
+    "description": "Comparez Lite, Pro et Famille (jusqu’à 5 personnes) sur Dawarich Cloud. Essai gratuit de 7 jours ou auto-hébergement gratuit avec toutes les fonctions Pro."
+  },
+  "schema": {
+    "name": "Dawarich Cloud",
+    "description": "Alternative privée à Google Timeline. Hébergée en Europe. Auto-hébergement et code source ouvert.",
+    "brand": "Dawarich",
+    "liteAnnual": "Lite (annuel)",
+    "proMonthly": "Pro (mensuel)",
+    "proAnnual": "Pro (annuel)",
+    "familyAnnual": "Famille (annuel)",
+    "familyDescription": "Un abonnement annuel pour 5 membres au maximum, chacun avec un accès Pro complet.",
+    "selfHosted": "Auto-hébergé"
+  },
+  "heading": "Tarifs de Dawarich Cloud",
+  "affiliate": "Vous écrivez sur Dawarich ? [Gagnez {percent}% de la première année](/affiliate) pour chaque abonné que vous parrainez."
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Estadístiques del meu historial d'ubicacions",
+  "totalDistance": "Distància total",
+  "dataPoints": "Punts de dades",
+  "placesVisited": "Llocs visitats",
+  "countries": "Països",
+  "downloadButton": "Descarrega la targeta d'estadístiques com a imatge",
+  "branding": "Generat amb dawarich.app",
+  "distanceValue": "{distance} km"
+}

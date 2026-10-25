@@ -1,11 +1,14 @@
+import { SmartLink } from '@site/src/i18n/RichText';
+import content from '@locale-content/components/PricingCompare.json';
+import { formatEuro } from '@site/src/i18n/formatEuro';
 import React, { useState } from "react";
 import { COMPARE_GROUPS, DwIcon, PLANS } from "@site/src/data/pricingPlans";
 import styles from "./PricingCompare.module.css";
 
 const COLS = [
-	{ key: "lite", name: "Lite", sub: `€${PLANS.lite.price}/yr`, accent: "blue", popular: false },
-	{ key: "pro", name: "Pro", sub: `€${PLANS.pro.price}/yr`, accent: "blue", popular: true },
-	{ key: "family", name: "Family", sub: `€${PLANS.family.price}/yr`, accent: "teal", popular: false },
+	{ key: "lite", name: content.cols[0].name, sub: `${formatEuro(Number(PLANS.lite.price))}${content.yearAbbreviation}`, accent: "blue", popular: false },
+	{ key: "pro", name: content.cols[1].name, sub: `${formatEuro(Number(PLANS.pro.price))}${content.yearAbbreviation}`, accent: "blue", popular: true },
+	{ key: "family", name: content.cols[2].name, sub: `${formatEuro(Number(PLANS.family.price))}${content.yearAbbreviation}`, accent: "teal", popular: false },
 ];
 
 // Comparison table gets its own UTM tagging, distinct from the pricing cards
@@ -65,10 +68,9 @@ export default function PricingCompare() {
 			<div className={styles.inner}>
 				<div className={styles.head}>
 					<div>
-						<h2 className={styles.title}>Compare every feature</h2>
+						<h2 className={styles.title}>{content.title}</h2>
 						<p className={styles.subtitle}>
-							Expand a section to see the details — or just show what changes
-							between plans.
+							{content.subtitle}
 						</p>
 					</div>
 					<div className={styles.controls}>
@@ -77,7 +79,7 @@ export default function PricingCompare() {
 							className={styles.ctrlBtn}
 							onClick={() => setAll(!allOpen)}
 						>
-							{allOpen ? "Collapse all" : "Expand all"}
+							{allOpen ? content.collapseAll : content.expandAll}
 						</button>
 						<button
 							type="button"
@@ -88,7 +90,7 @@ export default function PricingCompare() {
 							<span className={`${styles.switch} ${diffOnly ? styles.switchOn : ""}`}>
 								<span className={styles.knob} />
 							</span>
-							Highlight differences
+							{content.highlightDifferences}
 						</button>
 					</div>
 				</div>
@@ -96,7 +98,7 @@ export default function PricingCompare() {
 				<div className={styles.tableScroll}>
 					<div className={styles.table}>
 						<div className={styles.headerRow}>
-							<div className={styles.headerFeatures}>Features</div>
+							<div className={styles.headerFeatures}>{content.headerFeatures}</div>
 							{COLS.map((c) => (
 								<div
 									key={c.key}
@@ -178,18 +180,18 @@ export default function PricingCompare() {
 						})}
 
 						<div className={styles.footerRow}>
-							<div className={styles.footerLabel}>Ready when you are</div>
+							<div className={styles.footerLabel}>{content.footerLabel}</div>
 							{COLS.map((c) => (
 								<div
 									key={c.key}
 									className={`${styles.footerCell} ${c.popular ? styles.popCell : ""}`}
 								>
-									<a
+									<SmartLink
 										href={CTA_LINKS[c.key]}
 										className={`${styles.footCta} ${c.popular ? styles.footCtaPrimary : c.accent === "teal" ? styles.footCtaTeal : styles.footCtaBlue}`}
 									>
-										{c.key === "lite" ? "Choose Lite" : "Start free"}
-									</a>
+										{c.key === "lite" ? content.chooseLite : content.startFree}
+									</SmartLink>
 								</div>
 							))}
 						</div>

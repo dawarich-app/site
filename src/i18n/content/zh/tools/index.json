@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "title": "免费 GPS 工具与格式转换器 | Dawarich",
+    "description": "注重隐私的在线工具，可用于可视化、分析、合并和转换 GPS 及位置历史文件。所有操作均在您的浏览器中完成，数据不会离开您的设备。"
+  },
+  "h1": "免费 GPS 与位置工具",
+  "intro": "注重隐私的 GPS 与位置历史文件处理工具。所有操作均在您的浏览器中完成，您的数据不会离开设备。",
+  "toolsHeading": "免费工具",
+  "toolsIntro": "可视化、分析、合并和拆分您的位置历史，无需上传，无需账号。",
+  "convertersHeading": "格式转换器",
+  "convertersIntro": "在不同格式之间转换 GPS 和地图数据。所有处理均在您的浏览器本地完成。",
+  "ctaTitle": "想体验 Dawarich 的完整功能？",
+  "ctaBody": "这些工具适合处理一次性任务。Dawarich 则是完整的位置历史平台，提供交互式地图、行程、统计数据、照片集成，以及在欧盟托管的数据隐私保障。",
+  "ctaButton": "了解 Dawarich",
+  "pricingButton": "价格",
+  "tools": [
+    {
+      "title": "Google Timeline 可视化工具",
+      "description": "在交互式地图上查看您导出的 Google Timeline 数据。支持所有导出格式。"
+    },
+    {
+      "title": "Google Timeline 转换器",
+      "description": "转换 Google Timeline 导出文件的格式。支持 Records.json 和 Semantic Location History。"
+    },
+    {
+      "title": "时间线统计分析工具",
+      "description": "深入了解您的位置历史：总距离、国家、城市、到访记录等。"
+    },
+    {
+      "title": "时间线里程计算器",
+      "description": "根据您的 Google Timeline 数据计算驾车和出行总距离。"
+    },
+    {
+      "title": "时间线数据合并工具",
+      "description": "将多个 Google Timeline 导出文件合并为一个数据集，并去除重复记录。"
+    },
+    {
+      "title": "Google Timeline 拆分工具",
+      "description": "按年或月将大型 Google Timeline 文件拆分为较小的文件。"
+    },
+    {
+      "title": "GPS 文件拆分工具",
+      "description": "将大型 GPX、KML 和 GeoJSON 文件拆分为较小的文件，便于处理。"
+    },
+    {
+      "title": "时间线格式检测工具",
+      "description": "识别您的 Google Timeline 文件使用的导出格式，帮助您选择处理方式。"
+    },
+    {
+      "title": "GPS 热力图生成器",
+      "description": "将位置历史转换为热力图，显示您停留时间最多的地方。"
+    },
+    {
+      "title": "地图海报制作工具",
+      "description": "使用任意 GPS 文件制作地图海报，提供 17 种主题，支持 PNG/PDF 导出，并可选购印刷品。"
+    },
+    {
+      "title": "GPX 轨迹合并工具",
+      "description": "将多个 GPX 文件合并为一条轨迹，适合多日行程或导入使用。"
+    },
+    {
+      "title": "照片地理数据提取工具",
+      "description": "从照片中提取 GPS 坐标和位置元数据（EXIF 数据）。"
+    },
+    {
+      "title": "路线视频制作工具",
+      "description": "将任意 GPS 轨迹制作为可分享的 MP4 动画视频，让路线在风格化地图上逐步绘出。"
+    }
+  ],
+  "converters": [
+    {
+      "description": "Garmin 活动文件",
+      "source": "FIT",
+      "targets": [
+        {
+          "label": "FIT → GPX"
+        },
+        {
+          "label": "FIT → GeoJSON"
+        },
+        {
+          "label": "FIT → KML"
+        }
+      ]
+    },
+    {
+      "description": "训练中心 XML",
+      "source": "TCX",
+      "targets": [
+        {
+          "label": "TCX → GPX"
+        },
+        {
+          "label": "TCX → GeoJSON"
+        },
+        {
+          "label": "TCX → KML"
+        }
+      ]
+    },
+    {
+      "description": "GPS 交换格式",
+      "source": "GPX",
+      "targets": [
+        {
+          "label": "GPX → GeoJSON"
+        },
+        {
+          "label": "GPX → KML"
+        },
+        {
+          "label": "GPX → KMZ"
+        }
+      ]
+    },
+    {
+      "description": "符合 Web 标准的 GPS 格式",
+      "source": "GeoJSON",
+      "targets": [
+        {
+          "label": "GeoJSON → GPX"
+        },
+        {
+          "label": "GeoJSON → KML"
+        },
+        {
+          "label": "GeoJSON → KMZ"
+        }
+      ]
+    },
+    {
+      "description": "Google Earth 格式",
+      "source": "KML",
+      "targets": [
+        {
+          "label": "KML → GPX"
+        },
+        {
+          "label": "KML → GeoJSON"
+        },
+        {
+          "label": "KML → KMZ"
+        }
+      ]
+    },
+    {
+      "description": "压缩的 Google Earth 格式",
+      "source": "KMZ",
+      "targets": [
+        {
+          "label": "KMZ → GPX"
+        },
+        {
+          "label": "KMZ → GeoJSON"
+        },
+        {
+          "label": "KMZ → KML"
+        }
+      ]
+    }
+  ]
+}

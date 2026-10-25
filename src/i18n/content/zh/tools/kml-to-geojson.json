@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "免费 KML 转 GeoJSON 转换器 — 在线转换 Google Earth 文件",
+    "description": "立即将 KML 文件转换为 GeoJSON 格式。免费、隐私优先的在线转换器，完全在浏览器中运行，无需上传。",
+    "keywords": "KML 转 GeoJSON, KML 转换器, GeoJSON 转换器, Google Earth 转网页格式, 地理数据转换器",
+    "appName": "KML 转 GeoJSON 转换器"
+  },
+  "h1": "KML 转 GeoJSON 转换器",
+  "intro": "立即将您的 KML 文件转换为 GeoJSON 格式。所有处理都在浏览器中完成。",
+  "cards": [
+    {
+      "title": "关于 KML 格式",
+      "body": "KML 是一种 XML 格式，供 Google Earth 用于地理数据可视化和注释。"
+    },
+    {
+      "title": "关于 GeoJSON 格式",
+      "body": "GeoJSON 是基于 JSON 的格式，广泛用于网页地图应用和现代 GIS 软件。"
+    },
+    {
+      "title": "为什么要将 KML 转换为 GeoJSON？",
+      "items": [
+        "网页地图库（Leaflet、Mapbox）支持更好",
+        "在 JavaScript 应用中更易解析",
+        "格式更紧凑高效",
+        "用于网页 API 的原生 JSON 结构"
+      ]
+    }
+  ],
+  "privacyBody": "所有转换都完全在浏览器中完成，数据不会离开您的设备。"
+}

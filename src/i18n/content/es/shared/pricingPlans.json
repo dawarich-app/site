@@ -1,0 +1,266 @@
+{
+  "plans": {
+    "lite": {
+      "name": "Lite",
+      "tagline": "Una alternativa privada a Google Timeline para quienes registran de forma ocasional.",
+      "period": "/año",
+      "perMonth": "{price}/mes",
+      "perDay": "{price}/día",
+      "cta": "Prueba Lite gratis",
+      "footnote": "Solo anual · Cancela cuando quieras",
+      "valueStack": {
+        "items": [
+          {
+            "label": "Aplicaciones de registro para iOS y Android"
+          },
+          {
+            "label": "12 meses de historial con búsqueda"
+          },
+          {
+            "label": "Importaciones y exportaciones ilimitadas"
+          },
+          {
+            "label": "Estadísticas y desglose mensual"
+          },
+          {
+            "label": "Servicio de importación personalizado"
+          }
+        ],
+        "payLine": "Tuyo por {price}/año"
+      },
+      "features": [
+        {
+          "label": "Aplicaciones nativas para iOS y Android"
+        },
+        {
+          "label": "Registro de ubicación en segundo plano"
+        },
+        {
+          "label": "12 meses de historial con búsqueda"
+        },
+        {
+          "label": "Importaciones y exportaciones ilimitadas"
+        },
+        {
+          "label": "Mapa interactivo con rutas"
+        },
+        {
+          "label": "Rutas con colores por velocidad y reproducción diaria"
+        },
+        {
+          "label": "Gestión de viajes y lugares"
+        },
+        {
+          "label": "Estadísticas básicas y desglose mensual"
+        },
+        {
+          "label": "Límite de la API de 200 solicitudes/h"
+        }
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "tagline": "Historial ilimitado, visualizaciones avanzadas y acceso completo a la API.",
+      "period": "/año",
+      "periodMonthly": "/mes",
+      "perMonth": "{price}/mes",
+      "perDay": "{price}/día",
+      "perDayMonthly": "{price}/día",
+      "save": "5 meses gratis",
+      "saveHint": "Consigue 5 meses gratis",
+      "badge": "MÁS POPULAR",
+      "cta": "Empieza Pro gratis: 7 días",
+      "footnote": "Cancela cuando quieras",
+      "valueStack": {
+        "items": [
+          {
+            "label": "Todo lo de Lite"
+          },
+          {
+            "label": "Historial ilimitado, para siempre"
+          },
+          {
+            "label": "Mapa de calor, niebla de guerra y globo 3D"
+          },
+          {
+            "label": "Fotos e integración con Immich/PhotoPrism"
+          },
+          {
+            "label": "Acceso completo a la API de escritura"
+          }
+        ],
+        "payLine": "Tuyo por {price}/año"
+      },
+      "featuresHeading": "Todo lo de Lite, y además:",
+      "features": [
+        {
+          "label": "Historial de datos ilimitado, para siempre"
+        },
+        {
+          "label": "Capas de mapa de calor y niebla de guerra"
+        },
+        {
+          "label": "Vista del globo (3D)"
+        },
+        {
+          "label": "Integración de fotos en los viajes"
+        },
+        {
+          "label": "Integración con Immich / PhotoPrism"
+        },
+        {
+          "label": "Resumen anual completo y enlaces públicos"
+        },
+        {
+          "label": "Acceso completo a la API de escritura"
+        },
+        {
+          "label": "Límite de la API de 1,000 solicitudes/h"
+        }
+      ]
+    },
+    "family": {
+      "name": "Familia",
+      "tagline": "Todas las funciones Pro para toda la familia: una suscripción anual, hasta 5 personas.",
+      "period": "/año",
+      "perMonth": "{price}/mes",
+      "perDay": "{price}/día",
+      "cta": "Empieza Familia gratis: 7 días",
+      "footnote": "Solo anual · Hasta 5 miembros · Cancela cuando quieras",
+      "valueStack": {
+        "items": [
+          {
+            "label": "Acceso Pro para quien paga"
+          },
+          {
+            "label": "4 plazas Pro adicionales"
+          },
+          {
+            "label": "Ubicación familiar compartida en tiempo real"
+          },
+          {
+            "label": "Servicio de importación personalizado"
+          }
+        ],
+        "payLine": "Tuyo por {price}/año"
+      },
+      "featuresHeading": "Todo lo de Pro, y además:",
+      "features": [
+        {
+          "label": "Hasta 5 miembros en una suscripción"
+        },
+        {
+          "label": "Cada miembro tiene acceso completo a Pro"
+        },
+        {
+          "label": "Invita o elimina miembros cuando quieras"
+        },
+        {
+          "label": "Los miembros reciben acceso mientras están en la familia"
+        },
+        {
+          "label": "Ubicación familiar compartida en tiempo real"
+        }
+      ]
+    }
+  },
+  "compareGroups": [
+    {
+      "name": "Registro y aplicaciones",
+      "rows": [
+        {
+          "label": "Aplicaciones nativas para iOS y Android"
+        },
+        {
+          "label": "Registro de ubicación en segundo plano"
+        },
+        {
+          "label": "Ubicación familiar compartida en tiempo real"
+        }
+      ]
+    },
+    {
+      "name": "Historial y datos",
+      "rows": [
+        {
+          "label": "Historial con búsqueda",
+          "lite": "12 meses",
+          "pro": "Ilimitado",
+          "family": "Ilimitado"
+        },
+        {
+          "label": "Importaciones y exportaciones ilimitadas"
+        },
+        {
+          "label": "Los datos siempre son tuyos (exporta cuando quieras)"
+        }
+      ]
+    },
+    {
+      "name": "Mapas y visualización",
+      "rows": [
+        {
+          "label": "Mapa interactivo con rutas"
+        },
+        {
+          "label": "Rutas con colores por velocidad y reproducción diaria"
+        },
+        {
+          "label": "Capas de mapa de calor y niebla de guerra"
+        },
+        {
+          "label": "Vista del globo (3D)"
+        },
+        {
+          "label": "Integración de fotos en los viajes"
+        },
+        {
+          "label": "Integración con Immich / PhotoPrism"
+        }
+      ]
+    },
+    {
+      "name": "Análisis y opciones para compartir",
+      "rows": [
+        {
+          "label": "Estadísticas básicas y desglose mensual"
+        },
+        {
+          "label": "Resumen anual completo y enlaces públicos"
+        },
+        {
+          "label": "Gestión de viajes y lugares"
+        }
+      ]
+    },
+    {
+      "name": "API y límites",
+      "rows": [
+        {
+          "label": "Límite de solicitudes de la API",
+          "lite": "200 solicitudes/h",
+          "pro": "1,000 solicitudes/h",
+          "family": "1,000 solicitudes/h"
+        },
+        {
+          "label": "Acceso completo a la API de escritura"
+        }
+      ]
+    },
+    {
+      "name": "Miembros y facturación",
+      "rows": [
+        {
+          "label": "Miembros por suscripción",
+          "family": "Hasta 5"
+        },
+        {
+          "label": "Cada miembro tiene acceso completo a Pro"
+        },
+        {
+          "label": "Garantía de reembolso de 14 días"
+        }
+      ]
+    }
+  ]
+}

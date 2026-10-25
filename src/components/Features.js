@@ -1,3 +1,5 @@
+import content from '@locale-content/components/Features.json';
+import { interpolate } from '@docusaurus/Interpolate';
 import React, { useCallback, useState } from "react";
 import { createPortal } from "react-dom";
 import styles from "./Features.module.css";
@@ -94,54 +96,54 @@ const features = [
 	{
 		id: "timeline",
 		icon: <RouteIcon />,
-		title: "Replay Any Day, Minute by Minute",
+		title: content.features[0].title,
 		description:
-			"Pick a date. Every stop, every route, every minute — laid out in a single glance. The granular timeline view Google quietly killed.",
+			content.features[0].description,
 		image: "/img/timeline.webp",
 		className: "fullWidthCard",
 	},
 	{
 		id: "map",
 		icon: <TabMapIcon />,
-		title: 'Answer "Where Was I?" Instantly',
+		title: content.features[1].title,
 		description:
-			"Type a date. See exactly where you were, what route you took, how long you stayed. Every trip, commute, and detour — searchable forever.",
+			content.features[1].description,
 		image: "/img/the_map.webp",
 		className: "heroCard",
 	},
 	{
 		id: "trips",
 		icon: <RouteIcon />,
-		title: "Relive Any Trip in Detail",
+		title: content.features[2].title,
 		description:
-			"Pick a date range. Dawarich builds the map, calculates the distance, traces the route. Add photos and it becomes a travel journal.",
+			content.features[2].description,
 		image: "/img/features-trip-details.webp",
 		className: "standardCard",
 	},
 	{
 		id: "stats",
 		icon: <BarChartIcon />,
-		title: "See Your Life in Numbers",
+		title: content.features[3].title,
 		description:
-			"How many countries. How many kilometers. Your most-visited city. Monthly patterns you never noticed. Share your stats with a single link.",
+			content.features[3].description,
 		image: "/img/features-stats.png",
 		className: "standardCard",
 	},
 	{
 		id: "scratch-map",
 		icon: <GlobeIcon />,
-		title: "Track Your World Progress",
+		title: content.features[4].title,
 		description:
-			"Watch countries light up as you visit them. See the gaps. Plan what's next.",
+			content.features[4].description,
 		image: "/img/features-scratch-map.png",
 		className: "standardCard",
 	},
 	{
 		id: "insights",
 		icon: <BarChartIcon />,
-		title: "Understand Your Patterns",
+		title: content.features[5].title,
 		description:
-			"Are you traveling less than last year? Spending more time in one city? Dawarich spots trends you'd never notice on your own.",
+			content.features[5].description,
 		image: "/img/features-insights.png",
 		className: "wideCard",
 	},
@@ -162,10 +164,10 @@ export default function Features() {
 		<section id="features" className={styles.featuresSection}>
 			<div className={styles.container}>
 				<h2 className={styles.title}>
-					Everything Google Timeline Should Have Been
+					{content.title}
 				</h2>
 				<p className={styles.subtitle}>
-					All the features you loved, none of the privacy trade-offs.
+					{content.subtitle}
 				</p>
 
 				<div className={styles.bentoGrid}>
@@ -175,7 +177,7 @@ export default function Features() {
 							key={feature.id}
 							className={`${styles.card} ${styles[feature.className]}`}
 							onClick={() => openModal(feature.image, feature.title)}
-							aria-label={`View ${feature.title} full size`}
+							aria-label={interpolate(content.viewFullSize, { title: feature.title })}
 						>
 							<div className={styles.cardImageWrapper}>
 								<img
@@ -211,7 +213,7 @@ export default function Features() {
 						<button
 							className={styles.closeButton}
 							onClick={closeModal}
-							aria-label="Close image"
+							aria-label={content.ariaLabel}
 						>
 							&times;
 						</button>

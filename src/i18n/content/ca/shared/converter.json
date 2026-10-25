@@ -1,0 +1,22 @@
+{
+  "privacyTitle": "La privacitat primer",
+  "success": "El fitxer s’ha convertit correctament! La descàrrega hauria de començar automàticament.",
+  "successShort": "El fitxer s’ha convertit correctament!",
+  "ctaHeadline": "El fitxer ja està convertit. Dawarich gestiona tots els formats automàticament: importa de Google, Strava, Garmin i més. Sense conversions manuals.",
+  "invalidFile": "Error en convertir el fitxer. Comprova que sigui un fitxer {format} vàlid.",
+  "conversionError": "Error en convertir el fitxer: {message}",
+  "stats": {
+    "activity": "Activitat: {sport}",
+    "points": " | {points} punts",
+    "gpsPoints": " | {points} punts GPS",
+    "distance": " | {distance} km",
+    "elevation": " | {elevation}m de desnivell positiu",
+    "duration": " | {duration}",
+    "avgHR": " | FC mitjana: {avgHR} bpm"
+  },
+  "duration": {
+    "hours": "{hours}h {minutes}m {seconds}s",
+    "minutes": "{minutes}m {seconds}s",
+    "seconds": "{seconds}s"
+  }
+}

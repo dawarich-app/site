@@ -1,0 +1,11 @@
+{
+  "buttonLabel": "Rejoindre la liste d’attente",
+  "note": "Aucun spam, seulement l’e-mail de lancement.",
+  "invalidEmail": "Veuillez saisir une adresse e-mail valide.",
+  "requestError": "Une erreur est survenue. Veuillez réessayer plus tard.",
+  "success": "Vous êtes sur la liste ! Nous vous écrirons au lancement de Famille.",
+  "networkError": "Erreur réseau. Vérifiez votre connexion et réessayez.",
+  "joining": "Inscription en cours…",
+  "emailPlaceholder": "you@example.com",
+  "emailLabel": "Adresse e-mail"
+}

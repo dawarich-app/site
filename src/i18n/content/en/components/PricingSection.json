@@ -1,0 +1,10 @@
+{
+  "bonusDescription": "**White-Glove Import Service.** Send us your Google Takeout and we import your entire location history for you — usually within 24 hours. Included free with every plan.",
+  "guaranteeDescription": "**The Import Guarantee:** if your Google Takeout doesn't import cleanly, we fix it personally — or refund every cent. Plus a 14-day no-questions money-back guarantee on every plan.",
+  "badge": "7-day free trial — 14-day money-back guarantee",
+  "title": "Own Your Location History",
+  "subtitle": "From {price} a month to keep a lifetime of memories. Your data is always yours — export everything, anytime, on any plan.",
+  "bonusBadge": "Free Bonus · {price} value",
+  "guaranteeLink": "Refund policy →",
+  "selfHostButton": "Don't trust anyone with your data? Self-host for free — every Pro feature, your server, zero cost"
+}

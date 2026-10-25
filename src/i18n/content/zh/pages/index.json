@@ -1,0 +1,31 @@
+{
+  "howItWorksTrack": "几分钟内导入您的 Google Timeline 数据，或使用我们的 [iOS]({iosUrl}) 和 [Android]({androidUrl}) 应用开始全新记录。即使离线也能记录位置，并在恢复网络后自动上传。还支持 OwnTracks、GPSLogger 等应用。",
+  "howItWorksSteps": [
+    {
+      "title": "记录"
+    },
+    {
+      "title": "可视化",
+      "description": "在交互式地图上查看您的所有足迹。创建行程、探索刮刮地图，并浏览每日时间线。"
+    },
+    {
+      "title": "回忆",
+      "description": "查看距离、城市和时间统计数据。借助与各个地点关联的照片、笔记和回忆，重温旅途，了解自己的出行习惯与规律。"
+    }
+  ],
+  "subtitle": "三个简单步骤，即可开始。",
+  "meta": {
+    "title": "Dawarich — 您的私密时间线，永久珍藏",
+    "description": "注重隐私的 Google Timeline（谷歌地图时间轴）替代方案。导入您的位置历史记录，永久保存。没有广告，也不出售数据。",
+    "socialDescription": "注重隐私的 Google Timeline（谷歌地图时间轴）替代方案。导入您的位置历史记录，永久保存。"
+  },
+  "howItWorksTitle": "使用方法",
+  "schema": {
+    "description": "隐私优先的 Google Timeline 替代方案。导入位置历史记录，永久保存。支持自托管、开源、无广告，不出售数据。",
+    "name": "Dawarich",
+    "liteAnnual": "Dawarich Cloud — Lite（年付）",
+    "proMonthly": "Dawarich Cloud — Pro（月付）",
+    "proAnnual": "Dawarich Cloud — Pro（年付）",
+    "selfHosted": "自托管"
+  }
+}

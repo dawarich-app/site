@@ -1,0 +1,32 @@
+{
+  "features": [
+    {
+      "title": "Replay Any Day, Minute by Minute",
+      "description": "Pick a date. Every stop, every route, every minute — laid out in a single glance. The granular timeline view Google quietly killed."
+    },
+    {
+      "title": "Answer \"Where Was I?\" Instantly",
+      "description": "Type a date. See exactly where you were, what route you took, how long you stayed. Every trip, commute, and detour — searchable forever."
+    },
+    {
+      "title": "Relive Any Trip in Detail",
+      "description": "Pick a date range. Dawarich builds the map, calculates the distance, traces the route. Add photos and it becomes a travel journal."
+    },
+    {
+      "title": "See Your Life in Numbers",
+      "description": "How many countries. How many kilometers. Your most-visited city. Monthly patterns you never noticed. Share your stats with a single link."
+    },
+    {
+      "title": "Track Your World Progress",
+      "description": "Watch countries light up as you visit them. See the gaps. Plan what's next."
+    },
+    {
+      "title": "Understand Your Patterns",
+      "description": "Are you traveling less than last year? Spending more time in one city? Dawarich spots trends you'd never notice on your own."
+    }
+  ],
+  "title": "Everything Google Timeline Should Have Been",
+  "subtitle": "All the features you loved, none of the privacy trade-offs.",
+  "ariaLabel": "Close image",
+  "viewFullSize": "View {title} full size"
+}

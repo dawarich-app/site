@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "Geodane ze zdjęć — odczyt danych GPS ze zdjęć",
+    "description": "Darmowe, prywatne narzędzie do odczytu współrzędnych GPS ze zdjęć i eksportu do GPX. Wszystko odbywa się w przeglądarce, bez wysyłania danych na serwer.",
+    "keywords": "odczyt geodanych ze zdjęć, GPS, EXIF, geolokalizacja, eksport GPX, lokalizacja zdjęcia, ochrona prywatności, metadane obrazu",
+    "featureList": [
+      "Odczyt danych GPS ze zdjęć",
+      "Interaktywna mapa ze znacznikami zdjęć",
+      "Prywatność przede wszystkim — wszystko w przeglądarce",
+      "Eksport lokalizacji jako plików GPX",
+      "Bez wysyłania danych na serwery"
+    ]
+  },
+  "h1": "Odczyt geodanych ze zdjęć",
+  "intro": "Dodaj swoje zdjęcia, aby odczytać współrzędne GPS z metadanych EXIF, zobaczyć je na mapie i wyeksportować jako pliki GPX.",
+  "exportButton": "Eksportuj jako GPX",
+  "emptyExport": "Brak zdjęć z danymi GPS do eksportu",
+  "gpsPhotosLabel": "zdjęcia z GPS",
+  "photosLabel": "zdjęcia",
+  "howTo": {
+    "title": "Jak to działa",
+    "intro": "To narzędzie odczytuje metadane EXIF ze zdjęć, aby wydobyć współrzędne GPS. Większość smartfonów automatycznie zapisuje dane lokalizacji w zdjęciach.",
+    "features": [
+      {
+        "title": "Obsługiwane formaty:",
+        "body": "JPEG, PNG, HEIC i inne formaty obrazów z danymi EXIF"
+      },
+      {
+        "title": "Co otrzymasz:",
+        "body": "Interaktywną mapę z lokalizacjami zdjęć, szczegółowe dane GPS i eksport GPX do urządzeń GPS"
+      },
+      {
+        "title": "Uwaga:",
+        "body": "Na mapie pojawią się tylko zdjęcia z danymi GPS. Zrzuty ekranu i edytowane zdjęcia mogą nie zawierać danych lokalizacji."
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Prywatność przede wszystkim",
+    "body": "Całe przetwarzanie zdjęć odbywa się w Twojej przeglądarce. Twoje zdjęcia i dane lokalizacji nigdy nie opuszczają urządzenia i nie są wysyłane na żaden serwer."
+  },
+  "results": {
+    "gpsPhotos": "Zdjęcia z danymi GPS: {count}",
+    "extracted": "Liczba zdjęć, z których odczytano dane GPS: **{count}**. Dawarich nanosi na mapę wszystkie Twoje dane lokalizacji — zdjęcia, trasy i codzienne przemieszczanie się.",
+    "uploaded": "Liczba dodanych zdjęć: **{count}**. Dawarich nanosi na mapę wszystkie Twoje dane lokalizacji — zdjęcia, trasy i codzienne przemieszczanie się."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "metrics": [
+    {
+      "prefix": "PLUS DE ",
+      "label": "Étoiles GitHub"
+    },
+    {
+      "suffix": "+",
+      "label": "Téléchargements Docker"
+    },
+    {
+      "suffix": "+",
+      "label": "Utilisateurs"
+    },
+    {
+      "suffix": "+",
+      "label": "Points enregistrés"
+    }
+  ],
+  "integrationsLabel": "Compatible avec",
+  "billion": "{value} Md",
+  "million": "{value} M"
+}

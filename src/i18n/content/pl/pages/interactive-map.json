@@ -1,0 +1,130 @@
+{
+  "timelineItems": [
+    {
+      "title": "Dzień, który możesz odczytać",
+      "description": "Każdy dzień zaczyna się od jednoliniowego nagłówka i etykiet odległości według środka transportu — od razu widzisz, ile przeszedłeś, przejechałeś rowerem i samochodem. Wybierz dzień w kalendarzu, a mapa za nim podąży."
+    },
+    {
+      "title": "Edytuj odcinek bez przechodzenia dalej",
+      "description": "Po rozwinięciu trasy pojawia się pasek środków transportu z istotnymi odcinkami. Jeden jest błędny? Kliknij nazwę środka transportu i zmień go od razu. Pełna lista segmentów pozostaje schowana pod „Wszystkie segmenty”, dopóki jej nie potrzebujesz."
+    },
+    {
+      "title": "Luki są widoczne",
+      "description": "Gdy śledzenie faktycznie ustało, oś czasu pokazuje przerwę zamiast rysować prostą linię przez brakujące godziny. Wykryte wizyty mają wskaźnik pewności, więc potwierdzony pobyt i niepewny domysł nigdy nie wyglądają tak samo."
+    }
+  ],
+  "showcaseItems": [
+    {
+      "title": "Punkty",
+      "description": "Zobacz każdy zapisany punkt lokalizacji z dokładnym czasem i szczegółami. Kliknij dowolny punkt, aby poznać współrzędne, czas i inne informacje.",
+      "imageAlt": "Mapa z poszczególnymi punktami lokalizacji"
+    },
+    {
+      "title": "Linie tras",
+      "description": "Zobacz pełne trasy łączące wszystkie punkty lokalizacji. Wizualizuj swoje podróże jako ciągłe ścieżki na mapie.",
+      "imageAlt": "Mapa z liniami tras"
+    },
+    {
+      "title": "Mapa cieplna",
+      "description": "Odkryj, gdzie spędzasz najwięcej czasu, dzięki mapie cieplnej pokazującej intensywność odwiedzin w poszczególnych obszarach.",
+      "imageAlt": "Wizualizacja mapy cieplnej"
+    },
+    {
+      "title": "Mgła wojny",
+      "description": "Odsłaniaj świat, odkrywając go. Odwiedzone obszary stają się widoczne, a nieznane regiony pozostają zakryte.",
+      "imageAlt": "Wizualizacja mgły wojny"
+    },
+    {
+      "title": "Mapa zdrapka",
+      "description": "Patrz, jak odwiedzane kraje rozświetlają się na mapie. Idealne dla miłośników podróży śledzących swoje przygody na świecie.",
+      "imageAlt": "Mapa zdrapka z odwiedzonymi krajami"
+    },
+    {
+      "title": "Obszary",
+      "description": "Rysuj własne obszary na mapie, aby oznaczać ważne lokalizacje, dzielnice lub interesujące regiony.",
+      "imageAlt": "Własne obszary na mapie"
+    },
+    {
+      "title": "Zdjęcia",
+      "description": "Zobacz zdjęcia z Immich lub PhotoPrism bezpośrednio na mapie, dokładnie w miejscach ich wykonania. (na razie dostępne tylko na własnym serwerze)",
+      "imageAlt": "Zdjęcia na mapie"
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Śledź swoją lokalizację",
+      "description": "Używaj dowolnej obsługiwanej aplikacji, aby automatycznie rejestrować lokalizację przez cały dzień.",
+      "details": [
+        "Aplikacja Dawarich na iOS",
+        "Overland",
+        "OwnTracks",
+        "GPSLogger",
+        "PhoneTrack"
+      ]
+    },
+    {
+      "title": "Wybierz widok",
+      "description": "Wybieraj spośród różnych stylów mapy i włączaj warstwy, aby dostosować wizualizację.",
+      "details": [
+        "Włączaj punkty, trasy lub mapę cieplną",
+        "Włącz mgłę wojny lub mapę zdrapkę",
+        "Pokazuj lub ukrywaj zdjęcia i obszary"
+      ]
+    },
+    {
+      "title": "Filtruj według czasu",
+      "description": "Wybierz dowolny zakres czasu, aby zobaczyć historię lokalizacji z danego okresu.",
+      "details": [
+        "Przechodź między latami i miesiącami",
+        "Zobacz statystyki odwiedzonych krajów i miast",
+        "Wyszukuj konkretne miejsca"
+      ]
+    },
+    {
+      "title": "Twórz i zapisuj",
+      "description": "Ręcznie twórz miejsca i wizyty, aby uzupełnić luki lub poprawić historię lokalizacji.",
+      "details": [
+        "Zapisuj ulubione lokalizacje",
+        "Dodawaj brakujące wizyty ręcznie",
+        "Rysuj własne obszary na mapie"
+      ]
+    },
+    {
+      "title": "Szukaj według lokalizacji",
+      "description": "Wpisz miejsce lub adres, aby szybko ustalić, kiedy tam byłeś i jak długo.",
+      "details": [
+        "Szukaj po nazwie miejsca lub adresie",
+        "Szybko znajduj wizyty i interesujące punkty",
+        "Twórz wizyty z wyników wyszukiwania"
+      ]
+    }
+  ],
+  "meta": {
+    "title": "Interaktywna wizualizacja na mapie",
+    "description": "Poznaj historię lokalizacji na interaktywnej mapie z warstwami punktów, tras, mapy cieplnej, mgły wojny i innymi.",
+    "ogTitle": "Mapa Dawarich — interaktywna wizualizacja lokalizacji",
+    "ogDescription": "Poznaj historię lokalizacji dzięki warstwom punktów, tras, mapy cieplnej, mgły wojny, mapy zdrapki i integracji ze zdjęciami."
+  },
+  "hero": {
+    "badge": "Interaktywna wizualizacja",
+    "title": "Odkrywaj miejsca, w których byłeś,",
+    "titleHighlight": "nie zapomnij żadnego",
+    "subtitle": "Twoja historia lokalizacji ożywa na interaktywnej mapie z wieloma warstwami wizualizacji. Od szczegółowych punktów po piękne mapy cieplne — zobacz podróż swojego życia ze wszystkimi szczegółami.",
+    "imageAlt": "Interaktywna mapa Dawarich"
+  },
+  "mapPage": {
+    "title3": "Oś czasu",
+    "subtitle2": "Mapa pokazuje gdzie. Oś czasu tuż obok pokazuje, co się wydarzyło — dzień po dniu, prostym językiem.",
+    "title4": "Wiele warstw wizualizacji",
+    "subtitle3": "Przełączaj warstwy mapy, aby oglądać dane lokalizacyjne na różne sposoby. Każda ujawnia inne informacje o Twoich podróżach i zwyczajach.",
+    "title5": "Jak to działa",
+    "subtitle4": "Zacznij wizualizować historię lokalizacji w kilka minut dzięki intuicyjnemu interfejsowi mapy.",
+    "span": "Twoje dane pozostają prywatne",
+    "p": "Wszystkie dane lokalizacyjne są bezpiecznie przechowywane i szyfrowane podczas przesyłania oraz przechowywania. Hosting w Europie i pełna zgodność z RODO. Możesz też korzystać z własnego serwera dla pełnej kontroli.",
+    "heading": "Chcesz zobaczyć swoje podróże na mapie?",
+    "p2": "Zacznij rejestrować historię lokalizacji już dziś, korzystając z 7-dniowego bezpłatnego okresu próbnego. Zrezygnuj w dowolnej chwili.",
+    "Link": "Wypróbuj za darmo przez 7 dni",
+    "EnOnlyLink": "Uruchom za darmo na własnym serwerze",
+    "p3": "7-dniowy bezpłatny okres próbny · Zwrot bez ryzyka przez 14 dni · Zrezygnuj w dowolnej chwili"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "Extrae geodatos y coordenadas GPS de tus fotos",
+    "description": "Herramienta gratuita y privada para extraer coordenadas GPS de tus fotos y exportarlas como GPX. Todo se procesa en tu navegador, sin enviar datos a servidores.",
+    "keywords": "extracción de geodatos de fotos, GPS, EXIF, geolocalización, exportar GPX, ubicación de fotos, privacidad, metadatos de imagen",
+    "featureList": [
+      "Extrae datos GPS de fotos",
+      "Mapa interactivo con marcadores de fotos",
+      "La privacidad es lo primero: todo se procesa en el navegador",
+      "Exporta ubicaciones como archivos GPX",
+      "No se envían datos a servidores"
+    ]
+  },
+  "h1": "Extracción de geodatos de fotos",
+  "intro": "Carga tus fotos para extraer coordenadas GPS de los metadatos EXIF, visualizarlas en un mapa y exportarlas como archivos GPX.",
+  "exportButton": "Exportar como GPX",
+  "emptyExport": "No hay fotos con datos GPS para exportar",
+  "gpsPhotosLabel": "fotos con GPS",
+  "photosLabel": "fotos",
+  "howTo": {
+    "title": "Cómo funciona",
+    "intro": "Esta herramienta lee los metadatos EXIF de tus fotos para extraer las coordenadas GPS. La mayoría de los teléfonos incorpora automáticamente los datos de ubicación en las fotos.",
+    "features": [
+      {
+        "title": "Formatos compatibles:",
+        "body": "JPEG, PNG, HEIC y otros formatos de imagen con datos EXIF"
+      },
+      {
+        "title": "Qué obtendrás:",
+        "body": "Un mapa interactivo con las ubicaciones de las fotos, datos GPS detallados y exportación GPX para dispositivos GPS"
+      },
+      {
+        "title": "Nota:",
+        "body": "Solo las fotos con datos GPS aparecerán en el mapa. Las capturas de pantalla y las fotos editadas pueden no contener datos de ubicación."
+      }
+    ]
+  },
+  "privacy": {
+    "title": "La privacidad es lo primero",
+    "body": "Todas las fotos se procesan íntegramente en tu navegador. Tus fotos y datos de ubicación nunca salen de tu dispositivo ni se envían a ningún servidor."
+  },
+  "results": {
+    "gpsPhotos": "Fotos con datos GPS: {count}",
+    "extracted": "Has extraído datos GPS de **{count}** fotos. Dawarich representa todos tus datos de ubicación en un mapa: fotos, trayectos y desplazamientos diarios.",
+    "uploaded": "Has cargado **{count}** fotos. Dawarich representa todos tus datos de ubicación en un mapa: fotos, trayectos y desplazamientos diarios."
+  }
+}

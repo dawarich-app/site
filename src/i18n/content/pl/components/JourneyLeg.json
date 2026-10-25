@@ -1,0 +1,41 @@
+{
+  "distanceLabel": "Dyst.",
+  "averageLabel": "Śr.",
+  "timeLabel": "Czas",
+  "pauseReplay": "Wstrzymaj odtwarzanie",
+  "playReplay": "Odtwórz trasę",
+  "restart": "Od początku",
+  "replayProgress": "Postęp odtwarzania",
+  "trackLabel": "Trasa #{trackId}",
+  "throughTrack": "{percent}% trasy",
+  "verbs": {
+    "walking": "pieszo",
+    "running": "biegiem",
+    "cycling": "rowerem",
+    "driving": "samochodem",
+    "bus": "autobusem",
+    "train": "pociągiem",
+    "flying": "samolotem",
+    "boat": "łodzią",
+    "motorcycle": "motocyklem",
+    "unknown": "w podróży"
+  },
+  "modeLabels": {
+    "walking": "pieszo",
+    "running": "bieg",
+    "cycling": "rower",
+    "driving": "samochód",
+    "bus": "autobus",
+    "train": "pociąg",
+    "flying": "samolot",
+    "boat": "łódź",
+    "motorcycle": "motocykl",
+    "unknown": "nieznany"
+  },
+  "duration": {
+    "seconds": "{seconds} s",
+    "minutes": "{minutes} min",
+    "hoursMinutes": "{hours} godz. {minutes} min",
+    "hours": "{hours} godz."
+  }
+}

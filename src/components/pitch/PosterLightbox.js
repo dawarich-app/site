@@ -1,3 +1,5 @@
+import content from '@locale-content/components/PosterLightbox.json';
+import { interpolate } from '@docusaurus/Interpolate';
 import React, { useCallback, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import useDialog from '../useDialog';
@@ -8,23 +10,23 @@ import s from './PosterLightbox.module.css';
  * the same Berlin route (15 Jul 2024 – 15 Jul 2026).
  */
 export const POSTER_THEMES = [
-  { slug: 'autumn', name: 'Autumn' },
-  { slug: 'blueprint', name: 'Blueprint' },
-  { slug: 'contrast-zones', name: 'Contrast Zones' },
-  { slug: 'copper-patina', name: 'Copper Patina' },
-  { slug: 'emerald-city', name: 'Emerald City' },
-  { slug: 'forest', name: 'Forest' },
-  { slug: 'gradient-roads', name: 'Gradient Roads' },
-  { slug: 'japanese-ink', name: 'Japanese Ink' },
-  { slug: 'midnight-blue', name: 'Midnight Blue' },
-  { slug: 'monochrome-blue', name: 'Monochrome Blue' },
-  { slug: 'neon-cyberpunk', name: 'Neon Cyberpunk' },
-  { slug: 'noir', name: 'Noir' },
-  { slug: 'ocean', name: 'Ocean' },
-  { slug: 'pastel-dream', name: 'Pastel Dream' },
-  { slug: 'sunset', name: 'Sunset' },
-  { slug: 'terracotta', name: 'Terracotta' },
-  { slug: 'warm-beige', name: 'Warm Beige' },
+  { slug: 'autumn', name: content.poster.themes[0].name },
+  { slug: 'blueprint', name: content.poster.themes[1].name },
+  { slug: 'contrast-zones', name: content.poster.themes[2].name },
+  { slug: 'copper-patina', name: content.poster.themes[3].name },
+  { slug: 'emerald-city', name: content.poster.themes[4].name },
+  { slug: 'forest', name: content.poster.themes[5].name },
+  { slug: 'gradient-roads', name: content.poster.themes[6].name },
+  { slug: 'japanese-ink', name: content.poster.themes[7].name },
+  { slug: 'midnight-blue', name: content.poster.themes[8].name },
+  { slug: 'monochrome-blue', name: content.poster.themes[9].name },
+  { slug: 'neon-cyberpunk', name: content.poster.themes[10].name },
+  { slug: 'noir', name: content.poster.themes[11].name },
+  { slug: 'ocean', name: content.poster.themes[12].name },
+  { slug: 'pastel-dream', name: content.poster.themes[13].name },
+  { slug: 'sunset', name: content.poster.themes[14].name },
+  { slug: 'terracotta', name: content.poster.themes[15].name },
+  { slug: 'warm-beige', name: content.poster.themes[16].name },
 ];
 
 const ChevronLeft = () => (
@@ -81,13 +83,13 @@ export function usePosterLightbox(items) {
             ref={dialogRef}
             role="dialog"
             aria-modal="true"
-            aria-label={`${active.name} poster, ${index + 1} of ${count}`}
+            aria-label={interpolate(content.position, { name: active.name, position: index + 1, total: count })}
             onClick={close}>
             <button
               type="button"
               className={`${s.control} ${s.close}`}
               onClick={close}
-              aria-label="Close">
+              aria-label={content.close}>
               ×
             </button>
             {count > 1 && (
@@ -98,7 +100,7 @@ export function usePosterLightbox(items) {
                   e.stopPropagation();
                   step(-1);
                 }}
-                aria-label="Previous poster">
+                aria-label={content.previous}>
                 <ChevronLeft />
               </button>
             )}
@@ -110,7 +112,7 @@ export function usePosterLightbox(items) {
                   e.stopPropagation();
                   step(1);
                 }}
-                aria-label="Next poster">
+                aria-label={content.next}>
                 <ChevronRight />
               </button>
             )}
@@ -118,7 +120,7 @@ export function usePosterLightbox(items) {
               <img
                 className={s.image}
                 src={`/img/posters/full/${active.slug}.webp`}
-                alt={`Berlin route poster in the ${active.name} theme, enlarged`}
+                alt={interpolate(content.posterAlt, { name: active.name })}
                 onClick={(e) => e.stopPropagation()}
               />
               <figcaption className={s.caption}>

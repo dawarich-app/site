@@ -1,4 +1,8 @@
-import Link from "@docusaurus/Link";
+import { interpolate } from '@docusaurus/Interpolate';
+import content from '@locale-content/components/PricingSection.json';
+import { formatEuro } from '@site/src/i18n/formatEuro';
+import RichText from '@site/src/i18n/RichText';
+import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import React from "react";
 import { PLANS } from "@site/src/data/pricingPlans";
 import PricingCard from "./PricingCard";
@@ -6,7 +10,7 @@ import styles from "./PricingSection.module.css";
 
 export default function PricingSection({
 	plans = PLANS,
-	heading = "Own Your Location History",
+	heading = content.title,
 	headingLevel = "h2",
 }) {
 	const Heading = headingLevel;
@@ -14,14 +18,13 @@ export default function PricingSection({
 		<section id="pricing" className={styles.section}>
 			<div className={styles.container}>
 				<div className={styles.badge}>
-					7-day free trial — 14-day money-back guarantee
+					{content.badge}
 				</div>
 
 				<Heading className={styles.title}>{heading}</Heading>
 
 				<p className={styles.subtitle}>
-					From €5 a month to keep a lifetime of memories. Your data is always
-					yours — export everything, anytime, on any plan.
+					{interpolate(content.subtitle, { price: formatEuro(5) })}
 				</p>
 
 				<div className={styles.cardContainer}>
@@ -37,11 +40,9 @@ export default function PricingSection({
 				</div>
 
 				<div className={styles.bonus}>
-					<div className={styles.bonusBadge}>Free Bonus · €99 value</div>
+					<div className={styles.bonusBadge}>{interpolate(content.bonusBadge, { price: formatEuro(99) })}</div>
 					<div className={styles.bonusText}>
-						<strong>White-Glove Import Service.</strong> Send us your Google
-						Takeout and we import your entire location history for you —
-						usually within 24 hours. Included free with every plan.
+						<RichText text={content.bonusDescription} />
 					</div>
 				</div>
 
@@ -62,22 +63,18 @@ export default function PricingSection({
 						</svg>
 					</div>
 					<div className={styles.guaranteeText}>
-						<strong>The Import Guarantee:</strong> if your Google Takeout
-						doesn't import cleanly, we fix it personally — or refund every
-						cent. Plus a 14-day no-questions money-back guarantee on every
-						plan.{" "}
-						<Link to="/refund-policy" className={styles.guaranteeLink}>
-							Refund policy →
-						</Link>
+						<RichText text={content.guaranteeDescription} />{" "}
+						<EnOnlyLink to="/refund-policy" className={styles.guaranteeLink}>
+							{content.guaranteeLink}
+						</EnOnlyLink>
 					</div>
 				</div>
 			</div>
 
 			<div className={styles.selfHostContainer}>
-				<Link to="/docs/self-hosting/introduction" className={styles.selfHostButton}>
-					Don't trust anyone with your data? Self-host for free — every Pro
-					feature, your server, zero cost
-				</Link>
+				<EnOnlyLink to="/docs/self-hosting/introduction" className={styles.selfHostButton}>
+					{content.selfHostButton}
+				</EnOnlyLink>
 			</div>
 		</section>
 	);

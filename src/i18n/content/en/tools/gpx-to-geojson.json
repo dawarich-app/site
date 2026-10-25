@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Free GPX to GeoJSON Converter - Convert GPS Track Files Online",
+    "description": "Convert GPX files to GeoJSON format instantly. Free, privacy-first online converter for GPS tracks, waypoints, and routes. Works entirely in your browser - no upload required.",
+    "keywords": "GPX to GeoJSON, GPX converter, GeoJSON converter, GPS file converter, track converter, waypoint converter, route converter, GPX parser",
+    "appName": "GPX to GeoJSON Converter"
+  },
+  "h1": "GPX to GeoJSON Converter",
+  "intro": "Convert your GPX files to GeoJSON format instantly. All processing happens in your browser - your data never leaves your device.",
+  "cards": [
+    {
+      "title": "About GPX Format",
+      "body": "GPX (GPS Exchange Format) is an XML-based format for GPS data. It's widely used by GPS devices, fitness trackers, and navigation apps to store waypoints, tracks, and routes."
+    },
+    {
+      "title": "About GeoJSON Format",
+      "body": "GeoJSON is a JSON-based format for encoding geographic data structures. It's widely supported by web mapping libraries and GIS software, making it ideal for web applications."
+    },
+    {
+      "title": "Why Convert GPX to GeoJSON?",
+      "items": [
+        "Better support in web mapping libraries (Leaflet, Mapbox, etc.)",
+        "Easier to parse and manipulate in JavaScript applications",
+        "More compact format compared to XML-based GPX",
+        "Native JSON structure works seamlessly with modern web APIs"
+      ]
+    }
+  ],
+  "privacyBody": "All conversion happens entirely in your browser. Your GPS data never leaves your device and is not sent to any server."
+}

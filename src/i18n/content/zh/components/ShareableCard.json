@@ -1,0 +1,10 @@
+{
+  "title": "我的位置历史统计数据",
+  "totalDistance": "总距离",
+  "dataPoints": "轨迹点",
+  "placesVisited": "到访地点",
+  "countries": "国家",
+  "downloadButton": "将统计卡片下载为图片",
+  "branding": "由 dawarich.app 生成",
+  "distanceValue": "{distance} 公里"
+}

@@ -1,0 +1,84 @@
+{
+  "versusRows": [
+    {
+      "feature": "Acceso desde el navegador",
+      "g": {
+        "text": "Eliminado (solo móvil)"
+      },
+      "d": {
+        "text": "Aplicación web completa"
+      }
+    },
+    {
+      "feature": "Conservación de datos",
+      "g": {
+        "text": "Limitada (borrado automático)"
+      },
+      "d": {
+        "text": "Para siempre (Pro)"
+      }
+    },
+    {
+      "feature": "Tus datos se usan para anuncios",
+      "g": {
+        "text": "Sí"
+      },
+      "d": {
+        "text": "Nunca"
+      }
+    },
+    {
+      "feature": "Venta de datos a terceros",
+      "g": {
+        "text": "Sí (red publicitaria)"
+      },
+      "d": {
+        "text": "Nunca"
+      }
+    },
+    {
+      "feature": "Exportar tus datos",
+      "g": {
+        "text": "Parcial, complejo"
+      },
+      "d": {
+        "text": "Un clic, cualquier formato"
+      }
+    },
+    {
+      "feature": "Opción de alojamiento propio",
+      "g": {
+        "text": "No"
+      },
+      "d": {
+        "text": "Sí: control total"
+      }
+    },
+    {
+      "feature": "Código abierto",
+      "g": {
+        "text": "No"
+      },
+      "d": {
+        "text": "Sí: revisa cada línea"
+      }
+    },
+    {
+      "feature": "Funciona si la empresa retira el producto",
+      "g": {
+        "text": "No"
+      },
+      "d": {
+        "text": "Sí (tu instalación sigue funcionando)"
+      }
+    }
+  ],
+  "switchPill": " Da el paso",
+  "title": "Google Timeline (Cronología de Google Maps) frente a Dawarich",
+  "subtitle": "Descubre lo que ganas al cambiar.",
+  "dawarichName": "DAWARICH",
+  "footNote": "Son tus datos. Que siga siendo así.",
+  "footCta": "Cámbiate a Dawarich",
+  "featureHeader": "Función",
+  "googleTimelineHeader": "Google Timeline"
+}

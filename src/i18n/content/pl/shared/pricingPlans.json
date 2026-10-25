@@ -1,0 +1,266 @@
+{
+  "plans": {
+    "lite": {
+      "name": "Lite",
+      "tagline": "Prywatna alternatywa dla Google Timeline do okazjonalnego śledzenia.",
+      "period": "/rok",
+      "perMonth": "{price}/miesiąc",
+      "perDay": "{price}/dzień",
+      "cta": "Wypróbuj Lite za darmo",
+      "footnote": "Tylko rocznie · Zrezygnuj w dowolnej chwili",
+      "valueStack": {
+        "items": [
+          {
+            "label": "Aplikacje do śledzenia na iOS i Android"
+          },
+          {
+            "label": "12 miesięcy historii z wyszukiwaniem"
+          },
+          {
+            "label": "Nieograniczone importy i eksporty"
+          },
+          {
+            "label": "Statystyki i zestawienia miesięczne"
+          },
+          {
+            "label": "Import z indywidualną obsługą"
+          }
+        ],
+        "payLine": "Dla Ciebie za {price}/rok"
+      },
+      "features": [
+        {
+          "label": "Natywne aplikacje na iOS i Android"
+        },
+        {
+          "label": "Śledzenie lokalizacji w tle"
+        },
+        {
+          "label": "12 miesięcy historii z wyszukiwaniem"
+        },
+        {
+          "label": "Nieograniczone importy i eksporty"
+        },
+        {
+          "label": "Interaktywna mapa z trasami"
+        },
+        {
+          "label": "Trasy kolorowane według prędkości i odtwarzanie dnia"
+        },
+        {
+          "label": "Zarządzanie podróżami i miejscami"
+        },
+        {
+          "label": "Podstawowe statystyki i zestawienia miesięczne"
+        },
+        {
+          "label": "Limit API: 200 żądań/h"
+        }
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "tagline": "Nieograniczona historia, zaawansowane wizualizacje i pełny dostęp do API.",
+      "period": "/rok",
+      "periodMonthly": "/miesiąc",
+      "perMonth": "{price}/miesiąc",
+      "perDay": "{price}/dzień",
+      "perDayMonthly": "{price}/dzień",
+      "save": "5 miesięcy za darmo",
+      "saveHint": "Otrzymaj 5 miesięcy za darmo",
+      "badge": "NAJPOPULARNIEJSZY",
+      "cta": "Zacznij Pro za darmo — 7 dni",
+      "footnote": "Zrezygnuj w dowolnej chwili",
+      "valueStack": {
+        "items": [
+          {
+            "label": "Wszystko z planu Lite"
+          },
+          {
+            "label": "Nieograniczona historia — na zawsze"
+          },
+          {
+            "label": "Mapa cieplna, mgła wojny i globus 3D"
+          },
+          {
+            "label": "Zdjęcia i integracja z Immich/PhotoPrism"
+          },
+          {
+            "label": "Pełny dostęp do API zapisu"
+          }
+        ],
+        "payLine": "Dla Ciebie za {price}/rok"
+      },
+      "featuresHeading": "Wszystko z planu Lite, a ponadto:",
+      "features": [
+        {
+          "label": "Nieograniczona historia danych — na zawsze"
+        },
+        {
+          "label": "Warstwy mapy cieplnej i mgły wojny"
+        },
+        {
+          "label": "Widok globusa (3D)"
+        },
+        {
+          "label": "Integracja zdjęć z podróżami"
+        },
+        {
+          "label": "Integracja z Immich / PhotoPrism"
+        },
+        {
+          "label": "Pełne podsumowanie roku i publiczne udostępnianie"
+        },
+        {
+          "label": "Pełny dostęp do API zapisu"
+        },
+        {
+          "label": "Limit API: 1,000 żądań/h"
+        }
+      ]
+    },
+    "family": {
+      "name": "Rodzina",
+      "tagline": "Wszystkie funkcje Pro dla domowników — jedna roczna subskrypcja, do 5 osób.",
+      "period": "/rok",
+      "perMonth": "{price}/miesiąc",
+      "perDay": "{price}/dzień",
+      "cta": "Zacznij plan Rodzina za darmo — 7 dni",
+      "footnote": "Tylko rocznie · Do 5 członków · Zrezygnuj w dowolnej chwili",
+      "valueStack": {
+        "items": [
+          {
+            "label": "Dostęp Pro dla osoby płacącej"
+          },
+          {
+            "label": "4 dodatkowe konta Pro"
+          },
+          {
+            "label": "Udostępnianie lokalizacji rodzinie w czasie rzeczywistym"
+          },
+          {
+            "label": "Import z indywidualną obsługą"
+          }
+        ],
+        "payLine": "Dla Ciebie za {price}/rok"
+      },
+      "featuresHeading": "Wszystko z planu Pro, a ponadto:",
+      "features": [
+        {
+          "label": "Do 5 członków w jednej subskrypcji"
+        },
+        {
+          "label": "Pełny dostęp Pro dla każdego członka"
+        },
+        {
+          "label": "Zapraszaj i usuwaj członków w dowolnej chwili"
+        },
+        {
+          "label": "Dostęp dla członków na czas przynależności do rodziny"
+        },
+        {
+          "label": "Udostępnianie lokalizacji rodzinie w czasie rzeczywistym"
+        }
+      ]
+    }
+  },
+  "compareGroups": [
+    {
+      "name": "Śledzenie i aplikacje",
+      "rows": [
+        {
+          "label": "Natywne aplikacje na iOS i Android"
+        },
+        {
+          "label": "Śledzenie lokalizacji w tle"
+        },
+        {
+          "label": "Udostępnianie lokalizacji rodzinie w czasie rzeczywistym"
+        }
+      ]
+    },
+    {
+      "name": "Historia i dane",
+      "rows": [
+        {
+          "label": "Historia z wyszukiwaniem",
+          "lite": "12 miesięcy",
+          "pro": "Bez ograniczeń",
+          "family": "Bez ograniczeń"
+        },
+        {
+          "label": "Nieograniczone importy i eksporty"
+        },
+        {
+          "label": "Dane zawsze należą do Ciebie (eksport w dowolnej chwili)"
+        }
+      ]
+    },
+    {
+      "name": "Mapy i wizualizacje",
+      "rows": [
+        {
+          "label": "Interaktywna mapa z trasami"
+        },
+        {
+          "label": "Trasy kolorowane według prędkości i odtwarzanie dnia"
+        },
+        {
+          "label": "Warstwy mapy cieplnej i mgły wojny"
+        },
+        {
+          "label": "Widok globusa (3D)"
+        },
+        {
+          "label": "Integracja zdjęć z podróżami"
+        },
+        {
+          "label": "Integracja z Immich / PhotoPrism"
+        }
+      ]
+    },
+    {
+      "name": "Podsumowanie i udostępnianie",
+      "rows": [
+        {
+          "label": "Podstawowe statystyki i zestawienia miesięczne"
+        },
+        {
+          "label": "Pełne podsumowanie roku i publiczne udostępnianie"
+        },
+        {
+          "label": "Zarządzanie podróżami i miejscami"
+        }
+      ]
+    },
+    {
+      "name": "API i limity",
+      "rows": [
+        {
+          "label": "Limit żądań API",
+          "lite": "200 żądań/h",
+          "pro": "1,000 żądań/h",
+          "family": "1,000 żądań/h"
+        },
+        {
+          "label": "Pełny dostęp do API zapisu"
+        }
+      ]
+    },
+    {
+      "name": "Członkowie i rozliczenia",
+      "rows": [
+        {
+          "label": "Członkowie w jednej subskrypcji",
+          "family": "Do 5"
+        },
+        {
+          "label": "Pełny dostęp Pro dla każdego członka"
+        },
+        {
+          "label": "14-dniowa gwarancja zwrotu pieniędzy"
+        }
+      ]
+    }
+  ]
+}

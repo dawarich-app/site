@@ -1,0 +1,53 @@
+{
+  "rows": [
+    {
+      "title": "Um link, uma escolha",
+      "body": "Cada link mostra exatamente o que você escolheu: um intervalo de datas, sua posição em tempo real, um trajeto, uma viagem, um mês de estatísticas ou um resumo anual. Compartilhar o passeio do último fim de semana não revela nada sobre sua última terça-feira."
+    },
+    {
+      "title": "Você decide tudo o que o link faz antes de enviar",
+      "body": "Uma frase é gerada para você e pode ser removida se preferir não usá-la. A validade padrão é de uma semana, mas pode ficar em branco para o link nunca expirar. As fotos começam desativadas, para você nunca enviar uma página e só depois descobrir que mostrou mais do que pretendia.",
+      "note": "Desativado por padrão, ativado por escolha"
+    }
+  ],
+  "objections": [
+    {
+      "q": "Compartilhar um link expõe todo o meu histórico?",
+      "a": "Não. Um link dá acesso apenas ao recurso para o qual foi criado. Um link de linha do tempo fica limitado às datas escolhidas; um link de trajeto mostra aquele trajeto. Não há caminho da página compartilhada para o restante da sua conta."
+    },
+    {
+      "q": "E se eu enviar para a pessoa errada?",
+      "a": "Revogue o link. Ele para de funcionar imediatamente. Se você definiu uma frase secreta, pode gerar apenas outra frase, invalidando todos os desbloqueios anteriores e mantendo o link ativo."
+    },
+    {
+      "q": "Quem recebe precisa de uma conta?",
+      "a": "Não. Uma página compartilhada abre em qualquer navegador. Se você definiu uma frase secreta, a pessoa só precisa digitá-la."
+    },
+    {
+      "q": "Consigo ver se alguém abriu?",
+      "a": "Sim. Os links de localização em tempo real, períodos, viagens e trajetos mostram quantas vezes foram abertos e quando foram vistos pela última vez. Todos ficam reunidos em um só lugar."
+    },
+    {
+      "q": "O que acontece com meus links se a assinatura expirar?",
+      "a": "Você pode exportar tudo a qualquer momento, e todo o aplicativo tem código aberto — os mesmos recursos podem ser executados no seu equipamento gratuitamente, para sempre."
+    }
+  ],
+  "meta": {
+    "title": "Compartilhe seu histórico de localização por link",
+    "description": "Compartilhe localização ao vivo ou histórico por link privado: frase secreta, validade, revogação e escopo à sua escolha. Teste grátis: 7 dias ou hospedagem própria grátis.",
+    "ogTitle": "Compartilhe seu histórico de localização por link privado",
+    "ogDescription": "Envie um link que mostra uma única coisa: um período, localização em tempo real, um trajeto, uma viagem, um mês de estatísticas ou um resumo anual. Todo link expira ou pode ser revogado, e a maioria pode ser protegida por uma frase secreta."
+  },
+  "locationSharingPage": {
+    "text": "Compartilhe onde você está.",
+    "em": "Não todos os lugares por onde passou.",
+    "title2": "Compartilhamento com limites definidos",
+    "sub2": "Seis opções para compartilhar, cada uma com seu link, suas configurações e sua validade.",
+    "title3": "O que vale perguntar antes",
+    "title4": "Envie um link, não seu histórico inteiro",
+    "sub3": "Comece no Dawarich Cloud com 7 dias de teste ou use os mesmos recursos no seu próprio equipamento sem pagar nada."
+  },
+  "hero": {
+    "sub": "Na maioria dos serviços, compartilhar localização é ativar um controle e deixar alguém seguir você por tempo indeterminado. O Dawarich oferece um link — para uma única escolha, protegido por frase secreta, com a validade que você define e revogável assim que mudar de ideia."
+  }
+}

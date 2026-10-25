@@ -1,0 +1,238 @@
+{
+  "h1": "Oś czasu Google (Google Timeline): kalkulator dystansu",
+  "intro": "Oblicz dystans przejazdów na podstawie danych Google Timeline (Oś czasu Google Maps). Twórz dzienniki przebiegu do pobrania ze szczegółami podróży oraz podsumowaniami dziennymi i miesięcznymi. Wszystko odbywa się w Twojej przeglądarce — dane pozostają na urządzeniu, chyba że wybierzesz „Zapisz na moim koncie Dawarich”.",
+  "privacyTitle": "Prywatność przede wszystkim",
+  "privacyBody": "Wszystkie obliczenia dystansu odbywają się w Twojej przeglądarce — dane lokalizacji pozostają na urządzeniu, chyba że wybierzesz „Zapisz na moim koncie Dawarich”.",
+  "preCta": "Potrzebujesz bieżącego rejestrowania przebiegu? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-mileage-calculator) automatycznie zapisuje Twoje podróże, zapewniając pełną własność danych i prywatność. Koniec z ręcznymi eksportami — ciągłe, dokładne śledzenie.",
+  "saveIntro": "Chcesz mieć te dane również na swoim koncie Dawarich? Zaimportujemy je podczas rejestracji — bez ponownego dodawania plików.",
+  "faqTitle": "Najczęściej zadawane pytania",
+  "homeLabel": "Strona główna",
+  "toolsLabel": "Darmowe narzędzia",
+  "meta": {
+    "title": "Oś czasu Google (Google Timeline): licz dystans jazdy za darmo",
+    "description": "Google Timeline (Oś czasu Google Maps): licz dystans jazdy, twórz dzienniki przebiegu, eksportuj CSV do odliczeń podatkowych. Gratis, prywatnie w przeglądarce.",
+    "keywords": "dystans Google Timeline, kalkulator dystansu z historii lokalizacji, dystans jazdy z Google Maps, dziennik przebiegu Google Timeline, kalkulator przebiegu do podatków, rejestrator przebiegu Google Maps, dziennik przebiegu IRS, kalkulator dystansu jazdy, dystans przejazdów Google Timeline, kalkulator zwrotu kosztów przejazdu",
+    "featureList": [
+      "Obliczanie dystansu przejazdów z danych Google Timeline",
+      "Filtrowanie podróży według zakresu dat",
+      "Przełączanie między kilometrami a milami",
+      "Tworzenie dziennika przebiegu CSV do pobrania",
+      "Dzienne i miesięczne podsumowania podróży",
+      "Prywatność przede wszystkim — wszystko w przeglądarce",
+      "Bez wysyłania danych na serwer"
+    ]
+  },
+  "howTo": {
+    "name": "Jak obliczyć dystans z danych Google Timeline",
+    "description": "Wyeksportuj dane Google Timeline i oblicz dystans przejazdów za pomocą tego darmowego, prywatnego kalkulatora.",
+    "steps": [
+      {
+        "name": "Wyeksportuj dane Google Timeline",
+        "text": "Wejdź na takeout.google.com, wybierz Historię lokalizacji (oś czasu) i wyeksportuj. Możesz też na Android: Google Maps > Ustawienia > Lokalizacja > Oś czasu > Eksportuj. Na iOS: Google Maps > Ustawienia > Treści osobiste > Eksportuj dane osi czasu."
+      },
+      {
+        "name": "Dodaj pliki JSON",
+        "text": "Przeciągnij i upuść wyeksportowane pliki JSON Google Timeline w kalkulatorze dystansu. Narzędzie automatycznie wykrywa format i odczytuje odcinki przejazdów."
+      },
+      {
+        "name": "Ustaw zakres dat i jednostkę",
+        "text": "Wybierz datę początkową i końcową, aby przefiltrować dziennik przebiegu, oraz jednostkę: kilometry lub mile."
+      },
+      {
+        "name": "Sprawdź i pobierz dziennik przebiegu",
+        "text": "Sprawdź dziennik podróży, podsumowania miesięczne i łączny przebieg. Pobierz pełny dziennik przebiegu jako plik CSV do swojej dokumentacji."
+      }
+    ],
+    "tool": "Kalkulator dystansu Google Timeline od Dawarich"
+  },
+  "exportData": {
+    "title": "Jak pobrać dane osi czasu",
+    "intro": "Wyeksportuj historię lokalizacji Google Timeline jedną z tych metod. Jeśli jedna nie działa, spróbuj innej.",
+    "note": "Najdokładniejsze dane o przebiegu zapewniają pliki Semantic Location History (miesięczne pliki JSON, takie jak 2023_JANUARY.json), ponieważ zawierają opisane odcinki aktywności z klasyfikacją przejazdów.",
+    "methods": [
+      {
+        "title": "Google Takeout:",
+        "body": "Wejdź na [takeout.google.com](https://takeout.google.com/) → Wybierz Historię lokalizacji (oś czasu) → Eksportuj jako JSON"
+      },
+      {
+        "title": "Na Android:",
+        "body": "Otwórz Google Maps → Ustawienia → Lokalizacja → Usługi lokalizacyjne → Oś czasu → Eksportuj oś czasu"
+      },
+      {
+        "title": "Na iOS:",
+        "body": "Otwórz Google Maps → Ustawienia → Treści osobiste → Eksportuj dane osi czasu"
+      }
+    ]
+  },
+  "units": {
+    "km": "km",
+    "miles": "mile"
+  },
+  "activities": {
+    "driving": "Jazda samochodem",
+    "bus": "Autobus",
+    "train": "Pociąg",
+    "subway": "Metro",
+    "motorcycle": "Motocykl"
+  },
+  "duration": {
+    "minutes": "{minutes} min",
+    "hoursMinutes": "{hours} godz. {minutes} min"
+  },
+  "results": {
+    "startDate": "Data początkowa",
+    "endDate": "Data końcowa",
+    "disclaimer": "Odległości są obliczane na podstawie współrzędnych GPS (wzór haversine) i stanowią przybliżenia w linii prostej między zapisanymi punktami. Rzeczywiste odległości drogowe mogą być większe. Narzędzie służy do szacowania.",
+    "monthlyTitle": "Podsumowanie miesięczne",
+    "month": "Miesiąc",
+    "tripCount": "Liczba podróży",
+    "tripLogTitle": "Dziennik podróży",
+    "trip": "Podróż #",
+    "date": "Data",
+    "activity": "Typ aktywności",
+    "duration": "Czas trwania",
+    "emptyTitle": "Nie znaleziono przejazdów",
+    "emptyIntro": "W danych dla wybranego zakresu dat nie wykryto odcinków przejazdów. Może się tak zdarzyć, jeśli:",
+    "calculateButton": "Oblicz",
+    "distanceTitle": "Łączny dystans przejazdów",
+    "distanceHint": "Wszystkie odcinki przejazdów łącznie",
+    "tripsTitle": "Łączna liczba podróży",
+    "tripsHint": "Wykryte odcinki przejazdów",
+    "averageTitle": "Średni dystans podróży",
+    "averageHint": "Na odcinek przejazdu",
+    "downloadButton": "Pobierz dziennik przebiegu (CSV)",
+    "processing": "Przetwarzanie...",
+    "distanceHeading": "Dystans ({unit})",
+    "emptyReasons": [
+      {
+        "body": "Twój eksport zawiera tylko surowe punkty GPS (Records.json) bez klasyfikacji aktywności"
+      },
+      {
+        "body": "Zakres dat nie pokrywa się z Twoimi danymi"
+      },
+      {
+        "body": "Dane nie zawierają odcinków przejazdów — dla najlepszych wyników wypróbuj pliki Semantic Location History"
+      }
+    ],
+    "showMore": "Pokaż więcej (pozostało: {count})",
+    "distanceValue": "{distance} {unit}"
+  },
+  "cta": {
+    "fallback": "Potrzebujesz bieżącego rejestrowania przebiegu bez ręcznych eksportów? Dawarich automatycznie zapisuje Twoje podróże.",
+    "postTitle": "Masz dość ręcznego eksportowania i obliczania przebiegu?",
+    "postBody": "Dawarich automatycznie rejestruje każdy przejazd, oblicza odległości z rzeczywistych danych GPS i pozwala eksportować raporty przebiegu w dowolnym momencie. Własny serwer lub chmura — Twoje dane, Twój wybór.",
+    "title": "Szukasz zamiennika Google Timeline z rejestrowaniem przebiegu?",
+    "body": "Dawarich to platforma śledzenia lokalizacji z otwartym kodem źródłowym, która automatycznie zapisuje każdą podróż, oblicza dystans przejazdów i daje Ci pełną kontrolę nad danymi. Zaimportuj eksport Google Timeline, rejestruj bieżący przebieg z telefonu i twórz raporty w dowolnym momencie — na własnym serwerze lub w chmurze.",
+    "button": "Wypróbuj Dawarich za darmo przez 7 dni",
+    "headline": "Liczba zapisanych podróży: **{count}**. Ich łączny dystans to **{distance} {unit}**. Dawarich rejestruje to automatycznie — bez ręcznych eksportów.",
+    "tripsLabel": "podróże"
+  },
+  "faq": [
+    {
+      "q": "Czy dodawanie moich danych Google Timeline jest bezpieczne?",
+      "a": "Tak. Kalkulator działa w 100% w Twojej przeglądarce dzięki JavaScript po stronie klienta — pliki pozostają na urządzeniu i są usuwane z pamięci po zamknięciu lub odświeżeniu strony, bez śledzenia danych lokalizacji. Jedyny wyjątek to opcjonalny przycisk „Zapisz na moim koncie Dawarich”, który wysyła plik do Dawarich Cloud, aby zaimportować go na nowe konto. Narzędzie należy do ekosystemu Dawarich z otwartym kodem źródłowym, więc możesz samodzielnie sprawdzić kod."
+    },
+    {
+      "q": "Jak dokładne są obliczenia dystansu?",
+      "a": "Odległości są obliczane wzorem haversine, który wyznacza odległość po łuku wielkiego koła między współrzędnymi GPS. Daje to przybliżenie w linii prostej między zapisanymi punktami, zwykle zaniżające rzeczywisty dystans drogowy o 10-30% zależnie od złożoności trasy. Wyniki będą dokładniejsze na autostradach niż na krętych ulicach miasta. Przy odliczeniach przebiegu IRS standardowo stosuje się wskazania licznika lub dedykowaną aplikację do dokładnych pomiarów, ale to narzędzie daje solidne oszacowanie do planowania i przeglądu."
+    },
+    {
+      "q": "Czy mogę użyć tego do odliczeń podatkowych?",
+      "a": "Narzędzie tworzy dziennik przebiegu, który może służyć jako uzupełniająca dokumentacja podatkowa. IRS wymaga jednak zapisów prowadzonych na bieżąco — najlepiej w chwili każdej podróży, a nie odtwarzanych później. Dane Google Timeline mogą wspierać dokumentację, ale mogą nie wystarczyć jako jedyne źródło. Skonsultuj swoją sytuację z doradcą podatkowym. Jeśli wolisz zapisywać datę i dystans na bieżąco zamiast odtwarzać je po miesiącach, Dawarich robi to automatycznie."
+    },
+    {
+      "q": "Jakie rodzaje przejazdów są uwzględniane?",
+      "a": "Kalkulator rozpoznaje typy aktywności związane z przejazdami w systemie klasyfikacji Google: IN_PASSENGER_VEHICLE (samochód), DRIVING, IN_BUS, IN_TRAIN, IN_SUBWAY i MOTORCYCLING. Google przypisuje je na podstawie prędkości, wzorców ruchu i danych czujników. Dokładność zależy od poprawności klasyfikacji Google — czasem spacer lub jazda rowerem mogą zostać błędnie uznane za przejazd albo odwrotnie."
+    },
+    {
+      "q": "Czy mogę filtrować według zakresu dat?",
+      "a": "Tak. Po dodaniu plików możesz ustawić datę początkową i końcową, aby ograniczyć dziennik przebiegu do wybranego okresu. Przydaje się to do kwartalnych lub rocznych raportów przebiegu, wydzielania podróży służbowych lub porównywania przebiegu w różnych okresach. Podsumowania miesięczne i dzienne również obejmą tylko wybrany zakres dat."
+    },
+    {
+      "q": "Jaki jest format eksportu CSV?",
+      "a": "Plik CSV zawiera kolumny numeru podróży, daty, czasu rozpoczęcia, czasu zakończenia, typu aktywności, dystansu (w wybranej jednostce) i czasu trwania. Każdy wiersz odpowiada jednemu odcinkowi przejazdu rozpoznanemu w danych osi czasu. Na końcu znajduje się wiersz sumy z łącznym dystansem i liczbą podróży. Plik CSV można otworzyć w Excel, Google Sheets lub dowolnym arkuszu kalkulacyjnym do dalszej analizy."
+    },
+    {
+      "q": "Dlaczego brakuje niektórych podróży?",
+      "a": "Przyczyn może być kilka: (1) Google Timeline zapisuje dane tylko wtedy, gdy na urządzeniu włączona jest historia lokalizacji — okresy, gdy była wyłączona, nie mają danych. (2) Krótkie podróże lub słaby sygnał GPS mogą nie dostarczyć wystarczającej liczby punktów. (3) Google mogło nie sklasyfikować ruchu jako przejazdu, zwłaszcza przy małych prędkościach. (4) Przy nowszym eksporcie z telefonu możesz mieć tylko ostatnie 90 dni danych ze względu na zmianę zasad Google z 2024. (5) Niektóre formaty eksportu zawierają mniej szczegółów niż inne."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Czym jest kalkulator dystansu osi czasu?",
+      "paragraphs": [
+        "To darmowe narzędzie przeglądarkowe, które odczytuje dane przejazdów z plików eksportu Google Timeline i oblicza łączny pokonany dystans. Rozpoznaje odcinki aktywności związane z przejazdami — samochodem, autobusem, pociągiem i motocyklem — oraz tworzy uporządkowany dziennik przebiegu ze szczegółami każdej podróży.",
+        "Wszystkie obliczenia odbywają się w Twojej przeglądarce, więc tworzenie dziennika przebiegu nie wysyła nigdzie danych lokalizacji. Otrzymujesz natychmiastowe wyniki z pełną prywatnością, a wygenerowany dziennik CSV może służyć do rozliczania wydatków, dokumentacji podatkowej lub osobistych zapisów. (Użycie „Zapisz na moim koncie Dawarich” wysyła plik do Dawarich Cloud w celu przygotowania importu — poza tą czynnością nic nie jest wysyłane.)"
+      ]
+    },
+    {
+      "title": "Jak obliczany jest dystans",
+      "paragraphs": [
+        "Kalkulator używa wzoru haversine do obliczania odległości po łuku wielkiego koła między kolejnymi współrzędnymi GPS w każdym odcinku przejazdu. To standardowa metoda obliczania odległości między dwoma punktami na sferze (Ziemi).",
+        "Dla każdego odcinka przejazdu rozpoznanego w danych Google Timeline narzędzie sumuje odległości między wszystkimi zapisanymi punktami na tym odcinku. Wynik jest przybliżeniem w linii prostej — rzeczywisty dystans drogowy będzie zwykle o 10-30% większy ze względu na zakręty, zmiany wysokości i objazdy niewidoczne między punktami GPS.",
+        "Skoki większe niż 500 km między kolejnymi punktami są automatycznie pomijane, aby nie liczyć błędów GPS ani pozornych teleportacji w danych."
+      ]
+    },
+    {
+      "title": "Dzienniki przebiegu a odliczenia podatkowe",
+      "paragraphs": [
+        "W Stanach Zjednoczonych IRS pozwala stosować standardowe odliczenie za przebieg przy służbowym użyciu prywatnego pojazdu. Stawka zmienia się co roku, więc sprawdź aktualną przed złożeniem deklaracji. Aby skorzystać z odliczenia, potrzebujesz dziennika z datą, celem podróży, uzasadnieniem służbowym i dystansem każdego przejazdu.",
+        "Dane Google Timeline mogą dostarczyć datę i dystans każdego odcinka przejazdu, ale nie rozróżniają podróży służbowych i prywatnych. Do wyeksportowanego CSV trzeba samodzielnie dodać cel służbowy i miejsce docelowe. IRS wymaga też prowadzenia zapisów na bieżąco — w czasie podróży lub niedługo po niej — więc odtworzony dziennik z Google Timeline najlepiej traktować jako dokument pomocniczy, a nie jedyną ewidencję.",
+        "Aby rejestrować podróże na bieżąco zamiast odtwarzać je później, rozważ [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-mileage-calculator) — cel służbowy nadal dodajesz samodzielnie."
+      ]
+    },
+    {
+      "title": "Co się stało z Google Maps Timeline?",
+      "paragraphs": [
+        "Pod koniec 2024 Google wyłączyło internetową wersję Google Maps Timeline i przeniosło wszystkie dane lokalizacji do pamięci telefonów użytkowników. Przeniesiono tylko ostatnie 90 dni danych — cała starsza historia lokalizacji została trwale usunięta, chyba że użytkownicy wcześniej ręcznie wykonali kopię zapasową.",
+        "Wielu użytkowników straciło przez to dostęp do lat historii lokalizacji używanej do rejestrowania przebiegu, wspomnień z podróży i dokumentowania wydatków. Jeśli masz eksport danych z Google Takeout lub funkcji eksportu osi czasu wykonany przed zmianą, kalkulator pomoże odczytać z tych plików informacje o przebiegu.",
+        "Więcej szczegółów znajdziesz w [poradniku migracji z historii lokalizacji Google](/blog/migrating-from-google-location-history-to-dawarich)."
+      ]
+    },
+    {
+      "title": "Dokładność i ograniczenia",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Dokładność GPS** — Google Timeline zwykle zapisuje lokalizację co kilka sekund lub minut, zależnie od aktywności urządzenia. Przerwy między odczytami oznaczają, że część odcinków podróży jest interpolowana, a nie dokładnie mierzona"
+        },
+        {
+          "body": "**Klasyfikacja aktywności** — Google klasyfikuje typy aktywności za pomocą uczenia maszynowego. Zdarzają się pomyłki — wolna jazda w korku może zostać oznaczona jako jazda rowerem, a przejazd autobusem jako podróż samochodem"
+        },
+        {
+          "body": "**Odległości w linii prostej** — Wzór haversine wyznacza najkrótszą drogę między dwoma punktami na powierzchni Ziemi. Rzeczywiste drogi są dłuższe przez zakręty, wzniesienia i ich przebieg"
+        },
+        {
+          "body": "**Brakujące dane** — Okresy, gdy telefon był wyłączony, w trybie samolotowym lub z wyłączoną historią lokalizacji, nie mają danych"
+        },
+        {
+          "body": "**Format eksportu ma znaczenie** — Pliki Semantic Location History zawierają najbardziej szczegółowe dane przejazdów. Surowe pliki Records.json mogą nie mieć etykiet typów aktywności"
+        }
+      ]
+    },
+    {
+      "title": "Powiązane narzędzia",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Wizualizacja Google Timeline](/tools/timeline-visualizer) — Zobacz pełną historię lokalizacji na interaktywnej mapie"
+        },
+        {
+          "body": "[Generator mapy cieplnej GPS](/tools/heatmap-generator) — Twórz mapy cieplne z GPX, FIT, TCX i innych plików GPS"
+        },
+        {
+          "body": "[Łączenie tras GPX](/tools/gpx-merger) — Połącz wiele plików GPX w jeden"
+        },
+        {
+          "body": "[Odczyt geodanych ze zdjęć](/tools/photo-geotagging) — Odczytaj współrzędne GPS ze swoich zdjęć"
+        },
+        {
+          "body": "[Konwerter GeoJSON na GPX](/tools/geojson-to-gpx) — Konwertuj dane lokalizacji na format GPX"
+        }
+      ],
+      "footer": [
+        "Czytaj dalej: [Migracja z historii lokalizacji Google](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}

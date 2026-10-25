@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "title": "Darmowy konwerter FIT na KML — Garmin do Google Earth",
+    "description": "Konwertuj pliki Garmin FIT na KML od ręki. Darmowy, prywatny konwerter online aktywności fitness do Google Earth. W całości w przeglądarce.",
+    "keywords": "FIT na KML, Garmin do Google Earth, konwerter FIT, Google Earth, konwerter KML, konwerter plików fitness, oglądaj Garmin w Google Earth",
+    "appName": "Konwerter FIT na KML"
+  },
+  "h1": "Konwerter FIT na KML",
+  "intro": "Konwertuj pliki Garmin FIT na KML, aby oglądać je w Google Earth. Wszystko odbywa się w Twojej przeglądarce.",
+  "cards": [
+    {
+      "title": "O formacie KML",
+      "body": "KML (Keyhole Markup Language) to format XML Google do danych geograficznych. Google Earth, Google Maps i wiele innych aplikacji mapowych używa go do wyświetlania punktów, ścieżek i wielokątów."
+    },
+    {
+      "title": "Po co konwertować FIT na KML?",
+      "items": [
+        "Oglądaj aktywności w Google Earth",
+        "Poznawaj trasy w widoku terenu 3D",
+        "Udostępniaj trasy otwierane bezpośrednio w Google Earth",
+        "Importuj do Google My Maps",
+        "Używaj z innymi aplikacjami obsługującymi KML"
+      ]
+    }
+  ],
+  "privacyBody": "Cała konwersja odbywa się w przeglądarce. Twoje dane nigdy nie opuszczają urządzenia.",
+  "noGpsData": "Nie znaleziono danych GPS w pliku FIT."
+}

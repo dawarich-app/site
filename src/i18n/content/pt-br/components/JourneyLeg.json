@@ -1,0 +1,41 @@
+{
+  "distanceLabel": "Dist.",
+  "averageLabel": "Média",
+  "timeLabel": "Tempo",
+  "pauseReplay": "Pausar reprodução",
+  "playReplay": "Reproduzir trajeto",
+  "restart": "Reiniciar",
+  "replayProgress": "Progresso da reprodução",
+  "trackLabel": "Trajeto #{trackId}",
+  "throughTrack": "{percent}% do trajeto percorrido",
+  "verbs": {
+    "walking": "caminhou",
+    "running": "correu",
+    "cycling": "pedalou",
+    "driving": "dirigiu",
+    "bus": "foi de ônibus",
+    "train": "foi de trem",
+    "flying": "voou",
+    "boat": "navegou",
+    "motorcycle": "foi de moto",
+    "unknown": "viajou"
+  },
+  "modeLabels": {
+    "walking": "caminhada",
+    "running": "corrida",
+    "cycling": "ciclismo",
+    "driving": "carro",
+    "bus": "ônibus",
+    "train": "trem",
+    "flying": "voo",
+    "boat": "barco",
+    "motorcycle": "moto",
+    "unknown": "desconhecido"
+  },
+  "duration": {
+    "seconds": "{seconds}s",
+    "minutes": "{minutes}m",
+    "hoursMinutes": "{hours}h {minutes}m",
+    "hours": "{hours}h"
+  }
+}

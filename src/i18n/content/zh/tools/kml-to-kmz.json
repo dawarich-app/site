@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "免费 KML 转 KMZ 转换器 — 在线压缩 Google Earth 文件",
+    "description": "立即将 KML 文件转换为压缩的 KMZ 格式。免费、隐私优先的在线转换器，完全在浏览器中运行，无需上传。",
+    "keywords": "KML 转 KMZ, KML 压缩工具, KMZ 转换器, Google Earth 压缩, 地理数据转换器",
+    "appName": "KML 转 KMZ 转换器"
+  },
+  "h1": "KML 转 KMZ 转换器",
+  "intro": "立即将您的 KML 文件转换为压缩的 KMZ 格式。所有处理都在浏览器中完成。",
+  "cards": [
+    {
+      "title": "关于 KML 格式",
+      "body": "KML（Keyhole 标记语言）是一种地理数据 XML 格式，供 Google Earth 和 Maps 使用。"
+    },
+    {
+      "title": "关于 KMZ 格式",
+      "body": "KMZ 是 KML 文件的压缩（zip）版本，可显著减小文件体积，便于分享。"
+    },
+    {
+      "title": "为什么要将 KML 转换为 KMZ？",
+      "items": [
+        "文件体积最多减少 90%",
+        "更方便通过电子邮件或即时消息分享",
+        "在 Google Earth 中加载更快",
+        "可将图片和资源打包在一个文件中"
+      ]
+    }
+  ],
+  "privacyBody": "所有转换都完全在浏览器中完成，数据不会离开您的设备。"
+}

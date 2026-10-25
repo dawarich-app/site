@@ -1,0 +1,83 @@
+{
+  "h1": "Tothom pot penjar un pòster d'un mapa de Berlín. Només tu tens la teva ruta.",
+  "intro": "El pòster de sota és una mostra: un mes de desplaçaments per Berlín. Deixa-hi anar qualsevol fitxer GPX, Google Timeline (Cronologia de Google Maps), KML, FIT o TCX i es convertirà en un mapa que ningú més no pot penjar: les teves sortides amb bicicleta, les teves curses, els teus viatges per carretera. Uns dos minuts, sense compte.",
+  "saveIntro": "També vols aquestes dades al teu compte de Dawarich? Les importarem quan t'hi registris, sense haver de tornar a carregar el fitxer.",
+  "appName": "Creador de pòsters de mapes",
+  "homeLabel": "Inici",
+  "toolsLabel": "Eines gratuïtes",
+  "loadingStudio": "S'està carregant l'estudi…",
+  "valueStrip": "17 temes de mapa · 22 formats, d'A5 a A0 i 4K · PNG i PDF a 300 DPI · {price} · sense marca d'aigua",
+  "meta": {
+    "title": "Creador gratuït de pòsters de mapes amb fitxers GPS",
+    "description": "Crea pòsters de mapes amb GPX, Google Timeline (Cronologia de Google Maps), KML, FIT o TCX al web. 17 temes, 22 dissenys; PNG/PDF gratis, impressió opcional.",
+    "keywords": "creador de pòsters de mapes, pòster de ruta, pòster GPX, pòster de mapa de ciutat, pòster de Google Timeline, pòster de ruta de cursa, mapa imprès personalitzat, mapa decoratiu, art GPS"
+  },
+  "howTo": {
+    "name": "Com crear un pòster de mapa amb les teves dades GPS",
+    "description": "Converteix un trajecte GPS o el teu historial de Google Timeline en un pòster de mapa imprimible, gratis i al navegador.",
+    "steps": [
+      {
+        "name": "Carrega un fitxer d'ubicacions",
+        "text": "L'estudi s'obre amb una ruta de mostra per Berlín. Arrossega i deixa anar un fitxer GPX, Google Timeline JSON, GeoJSON, KML, KMZ, FIT o TCX per substituir-la pel teu trajecte."
+      },
+      {
+        "name": "Dissenya el teu pòster",
+        "text": "Tria un dels 17 temes de mapa i 22 dissenys, afegeix un títol i un subtítol, tria una tipografia i ajusta el color, l'opacitat i el gruix del trajecte. Desplaça i amplia la previsualització per enquadrar la ruta."
+      },
+      {
+        "name": "Exporta'l o encarrega una impressió",
+        "text": "Descarrega el pòster en PNG o PDF a punt per imprimir fins a 300 DPI, o encarrega una impressió física de 30×40, 50×70 o 70×100 cm."
+      }
+    ],
+    "tool": "Creador de pòsters de mapes de Dawarich"
+  },
+  "faq": [
+    {
+      "q": "Com puc fer un pòster amb les meves dades GPS?",
+      "a": "L'estudi s'obre amb una ruta de mostra per Berlín perquè ho puguis provar tot de seguida. Deixa anar el teu fitxer GPX, Google Timeline JSON, GeoJSON, KML, KMZ, FIT o TCX a la zona de càrrega per substituir-la, tria un dels 17 temes de mapa i 22 dissenys, afegeix un títol i descarrega el pòster acabat en PNG o PDF a punt per imprimir."
+    },
+    {
+      "q": "Les meves dades d'ubicació són privades?",
+      "a": "El fitxer s'analitza íntegrament al navegador i no s'envia mai a cap servidor. Per dibuixar el mapa, es demanen les tessel·les de la zona que cobreixen les dades al servidor de mapes de Dawarich: això revela el rectangle aproximat de la zona que estàs mirant, com en qualsevol mapa en línia. Dues accions opcionals envien dades: encarregar una impressió envia el PDF del pòster acabat al servei d'impressió de Dawarich, i «Desa al meu compte» envia el fitxer durant el registre."
+    },
+    {
+      "q": "És gratuït? Necessito un compte?",
+      "a": "Sí, és gratuït: sense compte, sense registre i sense marca d'aigua. Les descàrregues en PNG i PDF són il·limitades. Només es paga si encarregues una impressió física, i crear un compte de Dawarich és opcional."
+    },
+    {
+      "q": "Quina resolució tenen els pòsters exportats?",
+      "a": "Els dissenys d'impressió s'exporten fins a 300 DPI amb la mida física incorporada al PNG (pHYs) o a la pàgina PDF. Els dissenys per a xarxes socials i fons de pantalla s'exporten amb les dimensions exactes en píxels, p. ex. 1080 × 1920 per a una història o 3840 × 2160 per a un fons de pantalla 4K. Les mides molt grans es redueixen automàticament al que pot generar la memòria gràfica del teu dispositiu, i un avís t'informa quan passa."
+    },
+    {
+      "q": "Puc encarregar una impressió física del meu pòster?",
+      "a": "Sí: tria una de les tres mides d'impressió (30 × 40, 50 × 70 o 70 × 100 cm) i l'estudi prepararà un PDF a 300 DPI i l'enviarà al servei d'impressió de Dawarich. El pagament es fa amb Stripe, i les impressions s'envien en paper mat de 200 gsm amb enviament gratuït a la UE. El preu final es confirma en fer el pagament."
+    },
+    {
+      "q": "Quins fitxers admet el creador de pòsters?",
+      "a": "Trajectes GPX, exportacions de Google Timeline (Records.json, Semantic Location History i formats de Takeout del telèfon), GeoJSON, KML, KMZ, FIT i TCX. Pots deixar anar diversos fitxers alhora: es combinen en un trajecte, que es divideix allà on hi hagi un buit de més d'una hora."
+    }
+  ],
+  "toolbar": {
+    "startOver": "Torna a començar",
+    "demoLabel": "Mostra dades de mostra",
+    "fileSummary": "{count} fitxer · {points} punts|{count} fitxers · {points} punts|{count} fitxers · {points} punts"
+  },
+  "upload": {
+    "formats": "GPX, FIT, TCX, GeoJSON, KML, KMZ, Google Timeline JSON",
+    "processing": "S'estan processant els fitxers…",
+    "addFiles": "Afegeix més fitxers",
+    "dropFiles": "Deixa anar el teu fitxer d'ubicacions aquí o fes clic per triar-lo",
+    "inputLabel": "Tria els fitxers amb què vols fer un pòster"
+  },
+  "errors": {
+    "emptyError": "No s'han trobat punts per representar als fitxers carregats. Comprova que continguin dades d'ubicació.",
+    "demoError": "No s'ha pogut carregar la ruta de mostra. Deixa anar el teu fitxer per començar a dissenyar.",
+    "sizeError": "{fileName} supera els 100 MB. Divideix-lo primer (prova el divisor de fitxers GPS).",
+    "parseError": "Error en analitzar {fileName}: {message}"
+  },
+  "cta": {
+    "headline": "El teu pòster s'ha creat amb **{points}** punts GPS d'un fitxer. Dawarich registra cada ruta automàticament: qualsevol mes del teu historial es pot convertir en un pòster. Prova gratuïta de 7 dies, reemborsament en 14 dies i cancel·lació en qualsevol moment.",
+    "fallback": "Un fitxer es converteix en un pòster. Dawarich registra cada ruta automàticament: qualsevol mes del teu historial es pot convertir en un pòster. Prova gratuïta de 7 dies, reemborsament en 14 dies i cancel·lació en qualsevol moment."
+  },
+  "faqTitle": "Preguntes freqüents"
+}

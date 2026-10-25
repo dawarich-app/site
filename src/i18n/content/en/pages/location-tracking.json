@@ -1,0 +1,216 @@
+{
+  "appShowcase": [
+    {
+      "title": "Dawarich iOS App",
+      "description": "Our official iOS app provides seamless location tracking directly to your Dawarich instance. Tracks offline and uploads automatically when you're back online. Available on the App Store.",
+      "imageAlt": "Download Dawarich on the App Store"
+    },
+    {
+      "title": "Dawarich Android App",
+      "description": "Our official Android app brings the same effortless background tracking to your Dawarich instance. Tracks offline and uploads automatically when you're back online. Available on Google Play.",
+      "imageAlt": "Get Dawarich on Google Play"
+    },
+    {
+      "title": "Overland",
+      "description": "Open-source location tracking app that sends data in batches. Works on iOS with configurable accuracy and frequency."
+    },
+    {
+      "title": "OwnTracks",
+      "description": "Popular location tracking solution with extensive customization options and low battery consumption."
+    },
+    {
+      "title": "GPSLogger",
+      "description": "Lightweight Android app focused on battery efficiency with customizable logging intervals and data formats."
+    },
+    {
+      "title": "PhoneTrack",
+      "description": "NextCloud-integrated app that supports custom log jobs. Perfect for users already in the NextCloud ecosystem."
+    },
+    {
+      "title": "Home Assistant",
+      "description": "For smart home enthusiasts, integrate your Home Assistant geolocation data directly into Dawarich."
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Get Your API Key",
+      "description": "Find your unique API key in the Account section of your Dawarich dashboard.",
+      "details": [
+        "Login to your Dawarich instance",
+        "Navigate to Account settings",
+        "Copy your API key securely"
+      ]
+    },
+    {
+      "title": "Choose Your App",
+      "description": "Select any supported tracking app that fits your needs and device platform.",
+      "details": [
+        "iOS: official Dawarich app or Overland",
+        "Android: official Dawarich app, GPSLogger, or PhoneTrack",
+        "Both: OwnTracks or Home Assistant integration"
+      ]
+    },
+    {
+      "title": "Configure the App",
+      "description": "Enter your Dawarich instance URL and API key in your chosen app's settings.",
+      "details": [
+        "Set receiver endpoint URL",
+        "Add your API key to the URL",
+        "Configure tracking frequency (optional)",
+        "Test the connection"
+      ]
+    },
+    {
+      "title": "Start Tracking",
+      "description": "Once configured, your location data automatically syncs to your private Dawarich account.",
+      "details": [
+        "Location updates sent in real-time or batches",
+        "Tracks offline and uploads when back online",
+        "Data syncs automatically in the background",
+        "View your location history on the map"
+      ]
+    }
+  ],
+  "appDetails": [
+    {
+      "description": "Native iOS application built specifically for Dawarich",
+      "features": [
+        "Seamless setup",
+        "Low battery impact",
+        "Background tracking",
+        "Offline tracking with auto-upload",
+        "App Store availability"
+      ],
+      "setupSteps": [
+        "Install from App Store",
+        "Open app and go to settings",
+        "Enter your API key",
+        "Tap Save and start tracking"
+      ],
+      "name": "Dawarich iOS App"
+    },
+    {
+      "description": "Native Android application built specifically for Dawarich",
+      "features": [
+        "Seamless setup",
+        "Low battery impact",
+        "Background tracking",
+        "Offline tracking with auto-upload",
+        "Available on Google Play"
+      ],
+      "setupSteps": [
+        "Install from Google Play",
+        "Open app and go to settings",
+        "Enter your API key",
+        "Tap Save and start tracking"
+      ],
+      "name": "Dawarich Android App"
+    },
+    {
+      "description": "Flexible cross-platform tracking app with batch uploads",
+      "features": [
+        "iOS support",
+        "Batch processing",
+        "Configurable accuracy",
+        "Open source"
+      ],
+      "setupSteps": [
+        "Install Overland on your device",
+        "Open settings and slide to unlock",
+        "Set Receiver Endpoint URL: http://your-instance/api/v1/overland/batches?api_key=YOUR_KEY",
+        "Optional: Set a Device ID",
+        "Tap Save"
+      ],
+      "name": "Overland"
+    },
+    {
+      "description": "Location tracking app with HTTP mode support",
+      "features": [
+        "Low battery usage",
+        "Highly customizable",
+        "HTTP and MQTT modes",
+        "Cross-platform"
+      ],
+      "setupSteps": [
+        "Install OwnTracks app",
+        "Tap \"i\" icon in top left corner",
+        "Select HTTP mode",
+        "Enter URL: http://your-instance/api/v1/owntracks/points?api_key=YOUR_KEY",
+        "Tap Back to save"
+      ],
+      "name": "OwnTracks"
+    },
+    {
+      "description": "Battery-efficient Android logging solution",
+      "features": [
+        "Battery friendly",
+        "Custom logging intervals",
+        "JSON format support",
+        "Lightweight"
+      ],
+      "setupSteps": [
+        "Install GPSLogger for Android",
+        "Configure custom URL with OwnTracks endpoint",
+        "Set HTTP Body with required JSON format",
+        "Add Content-Type: application/json header",
+        "Use POST method"
+      ],
+      "name": "GPSLogger"
+    },
+    {
+      "description": "NextCloud integration with custom log jobs",
+      "features": [
+        "NextCloud integration",
+        "Custom log jobs",
+        "Query string parameters",
+        "Flexible configuration"
+      ],
+      "setupSteps": [
+        "Install PhoneTrack from F-Droid",
+        "Create Custom Log Job",
+        "Use OwnTracks endpoint with query string params",
+        "Enable POST method",
+        "Disable JSON payload option"
+      ],
+      "name": "PhoneTrack"
+    }
+  ],
+  "meta": {
+    "title": "Location Tracking Setup",
+    "description": "Track your location automatically with multiple supported apps including the official Dawarich iOS and Android apps, Overland, OwnTracks, GPSLogger, PhoneTrack, and Home Assistant.",
+    "ogTitle": "Dawarich Location Tracking — Multiple Apps Supported",
+    "ogDescription": "Set up automatic location tracking with the official Dawarich iOS or Android app, Overland, OwnTracks, GPSLogger, PhoneTrack, or Home Assistant integration."
+  },
+  "hero": {
+    "badge": "Automatic Tracking",
+    "title": "Track Your Location",
+    "titleHighlight": "Effortlessly",
+    "subtitle": "Choose from multiple tracking apps to automatically record your location. Whether you prefer our official iOS and Android apps or popular open-source alternatives, Dawarich works with what you love.",
+    "imageAlt": "Location tracking visualization"
+  },
+  "trackingPage": {
+    "title3": "Supported Tracking Apps",
+    "subtitle2": "Pick the app that works best for your device and workflow. All apps work seamlessly with Dawarich.",
+    "title4": "How to Get Started",
+    "subtitle3": "Set up location tracking in minutes with any supported app.",
+    "heading": "Detailed Setup Guides",
+    "p": "Step-by-step instructions for each supported tracking application.",
+    "h4": "Features:",
+    "h42": "Setup Steps:",
+    "heading2": "API Endpoints",
+    "p2": "Dawarich provides multiple API endpoints for different tracking formats.",
+    "h3": "Overland Endpoint",
+    "code": "/api/v1/overland/batches?api_key=YOUR_KEY",
+    "p3": "For Overland app batch uploads",
+    "h32": "OwnTracks Endpoint",
+    "code2": "/api/v1/owntracks/points?api_key=YOUR_KEY",
+    "p4": "For OwnTracks, GPSLogger, and PhoneTrack",
+    "heading3": "Ready to Start Tracking?",
+    "p5": "Get your Dawarich account today and start automatically recording your location history.",
+    "Link": "Try 7 Days for Free",
+    "EnOnlyLink3": "Self-Host for Free",
+    "p6": "7-day free trial · 14-day risk-free refund · Cancel anytime",
+    "docsNote": "For complete setup instructions including Home Assistant integration, visit our [detailed tracking tutorial](/docs/getting-started/track-your-location).",
+    "apiNote": "Full API documentation is available at [our API reference](/docs/api/dawarich-api)."
+  }
+}

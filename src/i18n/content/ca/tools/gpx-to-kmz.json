@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "GPX a KMZ gratis — Trajectes GPS en línia",
+    "description": "Converteix GPX a KMZ a l’instant. Convertidor gratuït i privat de trajectes GPS que funciona al navegador, sense pujar fitxers.",
+    "keywords": "GPX a KMZ, convertidor GPX, convertidor KMZ, convertidor de fitxers GPS, convertidor Google Earth, KML comprimit",
+    "appName": "Convertidor de GPX a KMZ"
+  },
+  "h1": "Convertidor de GPX a KMZ",
+  "intro": "Converteix els fitxers GPX al format comprimit KMZ a l’instant. Tot es processa al navegador.",
+  "cards": [
+    {
+      "title": "Sobre el format GPX",
+      "body": "GPX és un format basat en XML per a dades GPS, molt utilitzat en dispositius GPS i aplicacions de seguiment d’activitat física."
+    },
+    {
+      "title": "Sobre el format KMZ",
+      "body": "KMZ és una versió comprimida de KML (Keyhole Markup Language) que en redueix la mida per facilitar-ne la compartició i accelerar-ne la càrrega a Google Earth."
+    },
+    {
+      "title": "Per què convertir GPX a KMZ?",
+      "items": [
+        "Fitxers més petits que GPX i KML",
+        "Suport natiu a Google Earth i Google Maps",
+        "Pot incloure imatges i altres recursos en un sol fitxer",
+        "Càrrega més ràpida i compartició més fàcil"
+      ]
+    }
+  ],
+  "privacyBody": "Tota la conversió es fa al navegador. Les dades GPS no surten mai del dispositiu."
+}

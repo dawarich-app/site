@@ -1,0 +1,75 @@
+{
+  "rows": [
+    {
+      "title": "Comparteix amb desconnexió automàtica",
+      "body": "Comparteix la ubicació en directe durant una hora, sis, dotze, vint-i-quatre o sempre, si és el que vols. El temporitzador s’atura tot sol: «només mentre torno a casa en cotxe» s’acaba quan arribes, en lloc de continuar tres anys més.",
+      "note": "Tu tries la durada, cada vegada"
+    },
+    {
+      "title": "Ningú no ho pot activar per tu",
+      "body": "Cinc persones, cinc controls independents. Quan s’inicia un pla Família de Cloud, s’activa la compartició del titular, que la pot desactivar immediatament. Els membres convidats comencen amb la compartició desactivada. El titular no la pot activar per a ningú altre, i pots deixar de compartir encara que la subscripció caduqui."
+    },
+    {
+      "title": "Demanar és millor que rastrejar",
+      "body": "Quan necessitis saber on és algú, envia-li una sol·licitud d’ubicació. Veurà qui la demana i decidirà si l’accepta o la rebutja. No es pot obtenir la posició d’un familiar sense que hi doni el consentiment en aquell moment.",
+      "note": "El consentiment és el mecanisme, no una opció"
+    }
+  ],
+  "objections": [
+    {
+      "q": "És Life360 amb una altra marca?",
+      "a": "No. Els membres convidats comencen amb la compartició desactivada i cadascú controla el seu propi interruptor. El titular del pla Cloud comença amb la compartició activada, però la pot desactivar. La compartició en directe pot caducar amb un temporitzador, compartir l’historial és una decisió independent i les sol·licituds d’ubicació es poden rebutjar."
+    },
+    {
+      "q": "El meu fill adolescent pot veure que el rastrejo?",
+      "a": "No hi ha res ocult per descobrir. Els membres convidats decideixen si volen compartir, i la pàgina de família mostra exactament qui comparteix la ubicació en aquell moment i qui no. El seguiment encobert no és una funció que oferim."
+    },
+    {
+      "q": "Què rep cada persona?",
+      "a": "Un compte de Dawarich complet: el seu propi mapa, línia de temps, viatges, estadístiques i anàlisi. Família permet compartir la ubicació entre cinc comptes independents, no que cinc persones entrin al mateix compte."
+    },
+    {
+      "q": "Què passa si caduca la subscripció del titular del pla?",
+      "a": "La família es conserva i no s’elimina res. L’accés continua fins al final del període ja pagat. Després, els membres sense un pla propi passen a Lite i el seguiment s’atura fins que tornin a tenir un pla actiu. L’historial es manté al compte i es pot exportar. En renovar la subscripció, es restaura l’accés de tothom alhora."
+    },
+    {
+      "q": "Funciona als nostres mòbils?",
+      "a": "Sí. Les aplicacions de Dawarich per a iOS i Android mostren la teva família al mapa. Des de l’aplicació pots activar o desactivar la teva compartició, triar quin historial vols compartir i enviar o respondre sol·licituds d’ubicació."
+    },
+    {
+      "q": "Cal pagar?",
+      "a": "No si l’allotges tu. Família funciona a la teva instància sense cost, perquè totes les funcions del producte Cloud de pagament s’executen al teu maquinari."
+    }
+  ],
+  "meta": {
+    "title": "App per compartir ubicació en família a iPhone i Android",
+    "description": "Convida fins a 5 a Dawarich iOS/Android: compartició familiar en viu, historial i peticions d’ubicació amb control individual. {price}/any o autoallotja gratis.",
+    "ogTitle": "Comparteix la ubicació en família sense vigilància",
+    "ogDescription": "Cinc persones, cinc controls independents. Compartició en directe amb temporitzador, historial com a opció independent i sol·licituds d’ubicació que cal acceptar."
+  },
+  "familyPage": {
+    "text": "Aplicació per compartir la ubicació en família",
+    "em": "amb el consentiment de tothom.",
+    "title2": "Dissenyat al voltant de les decisions de cadascú",
+    "sub2": "Fins a cinc persones en un sol pla, cadascuna amb un compte complet de Dawarich i el control del que comparteix.",
+    "title3": "Què ens pregunten pares i parelles",
+    "title4": "Comparteix amb els de casa, sense intermediaris de dades",
+    "sub3": "Per {price} a l’any, cinc persones tenen Dawarich Cloud, amb una prova gratuïta de 7 dies. O fes servir el mateix al teu maquinari sense pagar res.",
+    "primaryLabel": "Comença un pla familiar"
+  },
+  "hero": {
+    "sub": "Mira on són els de casa des d’iPhone i Android. Els membres convidats trien quan volen compartir, la compartició en directe pot caducar amb un temporitzador i, per saber on és algú, cal preguntar-li. El titular del pla Cloud comença amb la compartició activada i la pot desactivar quan vulgui."
+  },
+  "setup": {
+    "title": "Configura Dawarich per a la família a iPhone i Android",
+    "body": "El pla Família inclou fins a cinc comptes independents. Cadascú fa servir el seu mòbil i decideix què vol compartir.",
+    "steps": [
+      "**Comença un pla Família.** Dawarich et crea la família a Cloud, o pots crear-ne una a la teva instància amb allotjament propi.",
+      "**Convida els de casa.** Envia les invitacions des de la pàgina Família al web. Cada persona les accepta amb l’adreça electrònica on ha rebut la invitació.",
+      "**Instal·la l’aplicació i inicia la sessió.** Obre l’aplicació de Dawarich a cada mòbil i fes servir el tauler Família del mapa per configurar la compartició en directe i de l’historial."
+    ],
+    "ios": "Descarrega l’aplicació per a iOS",
+    "android": "Obtén l’aplicació per a Android",
+    "guide": "Llegeix la guia de configuració"
+  }
+}

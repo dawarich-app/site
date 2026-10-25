@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { footerLinks, FOOTER_LINK_CAP } from './footerLinks';
+import { footerLinks, buildFooterLinks, FOOTER_LINK_CAP } from './footerLinks';
 
 const COMPARISONS = [
   '/google-timeline-alternative',
@@ -103,5 +103,58 @@ describe('footerLinks', () => {
   it('reaches the cookie controls from every page', () => {
     const company = footerLinks.find((c) => c.title === 'Company').items.map((i) => i.to);
     expect(company).toContain('/privacy-policy#cookies');
+  });
+});
+
+describe('buildFooterLinks', () => {
+  const find = (links, label) => links.flatMap((c) => c.items).find((i) => i.label === label);
+
+  it('returns the source links unchanged for the default locale', () => {
+    expect(buildFooterLinks('en')).toEqual(footerLinks);
+  });
+
+  it('points docs, blog and English-only pages at the root English URL in other locales', () => {
+    const links = buildFooterLinks('de');
+    expect(find(links, 'Changelog')).toMatchObject({ to: 'pathname:///docs/changelog/', target: '_self', autoAddBaseUrl: false });
+    expect(find(links, 'Blog')).toMatchObject({ to: 'pathname:///blog/', autoAddBaseUrl: false });
+    expect(find(links, 'Impressum')).toMatchObject({ to: 'pathname:///impressum/' });
+    expect(find(links, 'Roadmap')).toMatchObject({ to: 'pathname:///roadmap/' });
+  });
+
+  it('keeps localized routes and external links untouched in other locales', () => {
+    const links = buildFooterLinks('de');
+    expect(find(links, 'Pricing')).toEqual({ label: 'Pricing', to: '/pricing' });
+    expect(find(links, 'Community')).toEqual({ label: 'Community', href: 'https://discourse.dawarich.app/' });
+  });
+});
+
+describe('buildFooterLinks section headings', () => {
+  const headings = (locale, column) => buildFooterLinks(locale)
+    .find((c) => c.title === column)
+    .items.filter((i) => i.html)
+    .map((i) => i.html);
+
+  it('localizes the section headings instead of replacing them with the brand block', () => {
+    const product = headings('de', 'Product');
+    expect(product).toHaveLength(3);
+    expect(product[0]).toBe('<div class="dawarich-footer-subtitle">Entdecken</div>');
+    expect(product.join('')).not.toContain('ZeitFlow');
+  });
+});
+
+describe('buildFooterLinks brand column', () => {
+  const brand = (locale) => buildFooterLinks(locale)[0].items[0].html;
+
+  it('renders the English brand text by default', () => {
+    expect(brand('en')).toContain('<span>Made and hosted in Europe</span>');
+    expect(brand('en')).toContain('<p>Berlin, Germany</p>');
+    expect(brand('en')).toContain('>Start tracking →</a>');
+  });
+
+  it('uses the locale config strings for the brand text', () => {
+    expect(brand('de')).toContain('<span>In Europa entwickelt und gehostet</span>');
+    expect(brand('de')).toContain('<p>Berlin, Deutschland</p>');
+    expect(brand('de')).toContain('>Jetzt mit dem Tracking starten →</a>');
+    expect(brand('de')).toContain('ZeitFlow UG (haftungsbeschränkt)');
   });
 });

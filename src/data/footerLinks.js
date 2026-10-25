@@ -1,14 +1,27 @@
+import { enOnlyLinkProps, isEnOnlyPath } from '../i18n/enOnlyLinkProps.js';
+import { configString, escapeHtml } from '../i18n/configStrings.js';
+import { DEFAULT_LOCALE } from '../i18n/locales.js';
+
 export const FOOTER_LINK_CAP = 62;
 
-const BRAND_HTML =
-  '<p style="display:inline-flex;align-items:center;gap:0.375rem;margin:0 0 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><span>Made and hosted in Europe</span></p><p>&copy;ZeitFlow UG (haftungsbeschränkt)</p><p>Berlin, Germany</p><p class="dawarich-footer-cta"><a href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=footer&utm_campaign=footer_cta">Start tracking →</a></p>';
+function brandHtml(locale) {
+  const text = {
+    madeInEurope: escapeHtml(configString(locale, 'madeInEurope')),
+    location: escapeHtml(configString(locale, 'location')),
+    startTracking: escapeHtml(configString(locale, 'startTracking')),
+  };
+  return (
+    '<p style="display:inline-flex;align-items:center;gap:0.375rem;margin:0 0 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><span>' + text.madeInEurope + '</span></p><p>&copy;ZeitFlow UG (haftungsbeschränkt)</p><p>' + text.location + '</p><p class="dawarich-footer-cta"><a href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=footer&utm_campaign=footer_cta">' + text.startTracking + '</a></p>'
+  );
+}
 
-const section = (title) => ({ html: `<div class="dawarich-footer-subtitle">${title}</div>` });
+const SECTION_OPEN = '<div class="dawarich-footer-subtitle">';
+const section = (title) => ({ html: `${SECTION_OPEN}${title}</div>` });
 
 export const footerLinks = [
   {
     title: 'Dawarich',
-    items: [{ html: BRAND_HTML }],
+    items: [{ html: brandHtml(DEFAULT_LOCALE) }],
   },
   {
     title: 'Product',
@@ -110,3 +123,17 @@ export const footerLinks = [
     ],
   },
 ];
+
+export function buildFooterLinks(locale) {
+  if (locale === DEFAULT_LOCALE) return footerLinks;
+  return footerLinks.map((column) => ({
+    ...column,
+    items: column.items.map((item) => {
+      if (item.html?.startsWith(SECTION_OPEN)) {
+        return { html: `${SECTION_OPEN}${escapeHtml(configString(locale, `footerSection.${item.html.slice(SECTION_OPEN.length, -'</div>'.length)}`))}</div>` };
+      }
+      if (item.html) return { html: brandHtml(locale) };
+      return item.to && isEnOnlyPath(item.to) ? { ...item, ...enOnlyLinkProps(item.to, locale) } : item;
+    }),
+  }));
+}

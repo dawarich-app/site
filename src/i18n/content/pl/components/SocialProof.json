@@ -1,0 +1,23 @@
+{
+  "metrics": [
+    {
+      "prefix": "PONAD ",
+      "label": "Gwiazdki na GitHubie"
+    },
+    {
+      "suffix": "+",
+      "label": "Pobrania Docker"
+    },
+    {
+      "suffix": "+",
+      "label": "Użytkownicy"
+    },
+    {
+      "suffix": "+",
+      "label": "Zapisane punkty"
+    }
+  ],
+  "integrationsLabel": "Współpracuje z",
+  "billion": "{value} mld",
+  "million": "{value} mln"
+}

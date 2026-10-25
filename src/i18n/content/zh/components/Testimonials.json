@@ -1,0 +1,44 @@
+{
+  "title": "大家如何评价",
+  "subtitle": "获得全球知名科技媒体报道。",
+  "featuredLabel": "媒体报道",
+  "quotes": [
+    {
+      "quote": "我把自己的 Google Timeline 导入了这个自托管应用，比 Google 提供的好用多了。",
+      "source": "XDA Developers"
+    },
+    {
+      "quote": "Dawarich 有 Google Timeline 的所有功能，而且还不止这些。没有广告，也不会暗中收集数据。",
+      "source": "MakeUseOf"
+    },
+    {
+      "quote": "界面简洁，使用方便。基本不影响电池续航。",
+      "source": "App Store 评论"
+    },
+    {
+      "quote": "我一年有 60-70% 的时间在世界各地旅行，一直想找个工具记录行踪，又不用把记录交给 Google。我找到了 Dawarich.app，花几分钟设置好 iPhone 应用，导入 Timeline 历史记录，然后它就自己运行了——我一出门就会自动开始追踪。我再也不用操心了。我的数据现在又属于我自己了，到现在已经记录了 260k km，足迹遍及 16 个国家和 378 座城市。",
+      "source": "德国 · 环球旅行者 · 前 Google Timeline 用户 · 通过 Reddit 发现"
+    },
+    {
+      "quote": "我用了 Google Timeline 好几年，但把自己整个人生都放在美国的服务器上，总让我不太安心。我只花了一个下午，就把所有数据（好几年的记录）迁移到了 Dawarich。现在，我有了一本私密、永久保存的人生日记——希望有一天能把它传给我的孙辈。他们已经做得很出色了，我很期待之后的改进。",
+      "source": "美国纽约 · 前 Google Timeline 用户 · 留下可传承的位置记录"
+    },
+    {
+      "quote": "我搬到了哈萨克斯坦，对所在的城市一无所知。Google Timeline 已经不再是可行的选择，而且我本来也不信任它。设置好 Dawarich 后，现在对我来说，地图就像有战争迷雾一样——我出门越多，它就越完整。而且每次行程都留在我这里——我可以随时回顾其中任何一次，还能分享路线。",
+      "source": "Dawarich 客户 · 哈萨克斯坦 · 自 2025 年年中开始使用"
+    },
+    {
+      "quote": "它比 OwnTracks、Overland 等好用多了——准确得多。",
+      "source": "GitHub Discussions"
+    },
+    {
+      "quote": "到目前为止，这个应用一直很好用，完全没有影响电池续航！做得太棒了！",
+      "source": "App Store 评论"
+    },
+    {
+      "quote": "我觉得这款软件挺令人印象深刻的。",
+      "source": "Colocataires Blog"
+    }
+  ],
+  "translatedNote": "译自英语"
+}

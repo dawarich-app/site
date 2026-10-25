@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "title": "Linha do tempo do Google/Google Timeline: conversor GPX/KML/CSV grátis",
+    "description": "Converta seu histórico de localização do Google Timeline (Linha do tempo do Google Maps) em GPX, KML, GeoJSON ou CSV. Grátis e privado; tudo no navegador.",
+    "keywords": "converter Google Timeline para GPX, Google Takeout para KML, histórico de localização do Google para CSV, conversor Timeline para GeoJSON, conversor Google Timeline, exportar Google Maps Timeline, histórico de localização para GPX, conversor de localização Google Takeout, conversor de dados Timeline",
+    "appName": "Conversor de Google Timeline para GPX/KML/CSV",
+    "featureList": [
+      "Converta JSON do Google Timeline para GPX",
+      "Converta JSON do Google Timeline para KML e KMZ",
+      "Converta JSON do Google Timeline para GeoJSON",
+      "Converta JSON do Google Timeline para CSV",
+      "Conversão em lote para exportações Semantic com vários arquivos",
+      "Privacidade em primeiro lugar — tudo processado no navegador",
+      "Suporte aos 6 formatos de exportação do Google Timeline",
+      "Nenhum dado enviado a servidores"
+    ]
+  },
+  "h1": "Linha do tempo do Google (Google Timeline): conversor",
+  "intro": "Ferramenta grátis e privada para converter seu histórico de localização do Google Timeline (Linha do tempo do Google Maps) para GPX, KML, GeoJSON, KMZ ou CSV. Carregue seus arquivos JSON exportados — todo o processamento acontece no navegador.",
+  "howTo": {
+    "title": "Como obter seus dados do Timeline",
+    "paragraphs": [
+      "Você pode exportar seus dados do Google Timeline por um dos métodos abaixo. Se um não funcionar, tente outro.",
+      "Infelizmente, algumas pessoas podem não conseguir exportar os dados de localização devido às mudanças nas políticas de armazenamento do Google."
+    ],
+    "methods": [
+      {
+        "label": "Google Takeout:",
+        "steps": [
+          "Acesse [takeout.google.com](https://takeout.google.com/) → Escolha Histórico de localização (Timeline) → Exportar",
+          "Este método pode não funcionar para todos, porque o Google mudou como os dados de localização são armazenados e exportados. Saiba mais no nosso [blog](https://dawarich.app/blog/migrating-from-google-location-history-to-dawarich)."
+        ]
+      },
+      {
+        "label": "No Android:",
+        "steps": [
+          "Abra Google Maps → Configurações → Localização → Serviços de localização → Timeline → Exportar Timeline"
+        ]
+      },
+      {
+        "label": "No iOS:",
+        "steps": [
+          "Abra Google Maps → Configurações → Conteúdo pessoal → Exportar dados do Timeline"
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Privacidade em primeiro lugar",
+    "body": "Toda a conversão acontece no navegador — seus dados de localização ficam no dispositivo, a menos que você escolha “Salvar na minha conta Dawarich”."
+  },
+  "preCta": "Procurando uma alternativa de longo prazo ao Google Timeline? O [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-converter) registra seu histórico de localização automaticamente, com plena propriedade dos seus dados e privacidade. [Saiba como migrar](/blog/migrating-from-google-location-history-to-dawarich).",
+  "results": {
+    "title": "Arquivos carregados",
+    "file": "Arquivo",
+    "format": "Formato",
+    "size": "Tamanho",
+    "sizeValue": "{size} MB",
+    "points": "Pontos",
+    "paths": "Caminhos",
+    "error": "Erro",
+    "totalLabel": "Total:",
+    "totalValue": "{points} pontos, {paths} caminhos",
+    "dateRangeLabel": "Intervalo de datas:",
+    "noTimestamps": "Nenhuma data ou horário encontrado",
+    "noValidTimestamps": "Nenhuma data ou horário válido",
+    "selectFormats": "Selecione os formatos de saída",
+    "formats": {
+      "gpx": "Formato GPS universal",
+      "kml": "Google Earth",
+      "geojson": "Mapas na web",
+      "kmz": "KML compactado",
+      "csv": "Planilhas"
+    },
+    "download": "Baixar {format}",
+    "converting": "Convertendo...",
+    "downloadAll": "Baixar todos os selecionados ({count})",
+    "conversionFailed": "Falha na conversão para {format}: {message}",
+    "saveIntro": "Quer estes dados na sua conta Dawarich também? Nós importamos durante o cadastro — sem precisar enviar de novo.",
+    "ctaHeadline": "Seus **{points}** pontos já estão prontos para baixar. Importe no Dawarich e nunca mais se preocupe com conversões de formato.",
+    "statPoints": "pontos",
+    "statPaths": "caminhos",
+    "statFiles": "arquivos"
+  },
+  "formatLabels": {
+    "records": "Records.json (GPS bruto)",
+    "semantic": "Semantic Location History",
+    "semanticSegments": "Semantic Segments",
+    "locationHistory": "Histórico de localização (exportação do celular)",
+    "settings": "Configurações",
+    "timelineEdits": "Timeline Edits",
+    "unknown": "Desconhecido"
+  },
+  "info": [
+    {
+      "title": "O que é um conversor do Google Timeline?",
+      "paragraphs": [
+        "Um conversor do Google Timeline pega os arquivos JSON brutos da exportação do seu histórico de localização do Google e os transforma em formatos GPS padrão, amplamente aceitos por aplicativos de mapas, rastreadores de atividades físicas e sistemas de informação geográfica. Em vez de ficar preso ao JSON proprietário do Google, você recebe arquivos que funcionam em qualquer lugar.",
+        "Esta ferramenta converte tudo no navegador, então baixar seus formatos nunca envia seus dados de localização a outro lugar. Carregue os arquivos, escolha os formatos e baixe — a maioria das exportações leva segundos, e a ferramenta processa arquivos com centenas de milhares de pontos de localização. (Se usar “Salvar na minha conta Dawarich”, essa ação envia seu arquivo ao Dawarich Cloud para preparar a importação — fora isso, nada é enviado.)"
+      ]
+    },
+    {
+      "title": "Entenda os formatos de saída",
+      "items": [
+        "**GPX (GPS Exchange Format)** — O padrão universal de dados GPS. Aceito por praticamente todos os aplicativos GPS, incluindo Strava, Garmin Connect, AllTrails, OsmAnd e QGIS. Contém pontos de referência, trajetos e datas e horários.",
+        "**KML (Keyhole Markup Language)** — Desenvolvido para o Google Earth. Ideal para visualizar dados geográficos com marcadores, caminhos e descrições. Abre diretamente no Google Earth e no Google My Maps.",
+        "**GeoJSON** — O padrão de mapas na web. Usado por Leaflet, Mapbox, OpenLayers e pela maioria dos frameworks de mapas web. Formato JSON legível por pessoas e fácil de manipular por código.",
+        "**KMZ (KML compactado)** — Uma versão zip do KML que gera arquivos menores. Útil para compartilhar por e-mail ou quando o tamanho importa. Abre nos mesmos aplicativos que o KML.",
+        "**CSV (valores separados por vírgula)** — Formato tabular que abre no Excel, Google Sheets e LibreOffice. Inclui colunas de latitude, longitude, data e horário, tipo, nome, endereço, tipo de atividade, altitude e precisão. Ideal para análise de dados e processamento personalizado."
+      ]
+    },
+    {
+      "title": "O que aconteceu com o Google Maps Timeline?",
+      "paragraphs": [
+        "No fim de 2024, o Google descontinuou a versão web do Google Maps Timeline e moveu todos os dados de localização para o armazenamento no dispositivo. Apenas os últimos 90 dias foram migrados — os dados mais antigos foram excluídos, a menos que os usuários tivessem feito backup manualmente. Muitas pessoas [perderam anos de histórico de localização](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/) na transição.",
+        "Se você exportou seus dados antes ou durante a transição, este conversor permite transformá-los em formatos padrão para preservação de longo prazo. Converter para GPX, KML ou CSV garante que seu histórico continue acessível, independentemente do que o Google fizer depois."
+      ]
+    },
+    {
+      "title": "Por que converter seus dados do Timeline?",
+      "paragraphs": [
+        "O formato JSON proprietário do Google não é aceito pela maioria dos aplicativos de mapas. Converter para formatos padrão traz várias vantagens:"
+      ],
+      "items": [
+        "**Portabilidade** — Use seus dados de localização em qualquer aplicativo que aceite GPX, KML, GeoJSON ou CSV",
+        "**Preservação de longo prazo** — Formatos padrão continuarão legíveis por décadas, independentemente das decisões futuras do Google",
+        "**Análise** — Importe CSV em planilhas para analisar estatisticamente seus padrões de deslocamento",
+        "**Visualização** — Veja seu histórico no Google Earth, QGIS ou em ferramentas de mapas na web",
+        "**Migração** — Importe em alternativas de hospedagem própria como o [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=google-timeline-converter) para continuar registrando sua localização com plena propriedade dos seus dados"
+      ]
+    },
+    {
+      "title": "Precisão e limitações",
+      "paragraphs": [
+        "O conversor transforma fielmente todas as coordenadas geográficas e datas e horários da sua exportação do Google Timeline. Há, porém, algumas limitações inerentes:"
+      ],
+      "items": [
+        "**Precisão das coordenadas** — O Records.json usa o formato E7 (7 casas decimais), convertido para graus decimais padrão mantendo toda a precisão",
+        "**Segmentos de atividade** — Segmentos de caminhada, carro e bicicleta são preservados na saída CSV. Em GPX e KML, as coordenadas dos caminhos entram como segmentos de trajeto",
+        "**Nomes de lugares** — Semantic Location History inclui nomes e endereços de lugares, preservados como nomes de pontos de referência. O Records.json geralmente não inclui nomes de lugares",
+        "**Arquivos grandes** — Arquivos acima de 100 MB podem levar de 10-30 segundos para processar, dependendo do dispositivo. A ferramenta processa os dados progressivamente para manter o navegador respondendo"
+      ]
+    },
+    {
+      "title": "Ferramentas relacionadas",
+      "items": [
+        "[Visualizador do Google Timeline](/tools/timeline-visualizer) — Veja seus dados do Google Timeline em um mapa interativo sem converter",
+        "[Gerador de mapas de calor GPS](/tools/heatmap-generator) — Crie mapas de calor com GPX, FIT, TCX e outros arquivos GPS",
+        "[Unir trajetos GPX](/tools/gpx-merger) — Combine vários arquivos GPX em um só",
+        "[Extração de geodados de fotos](/tools/photo-geotagging) — Extraia coordenadas GPS das suas fotos",
+        "[Conversor de GeoJSON para GPX](/tools/geojson-to-gpx) — Converta arquivos GeoJSON para GPX",
+        "[Conversor de KML para GPX](/tools/kml-to-gpx) — Converta arquivos KML para GPX"
+      ],
+      "footer": "Leia mais: [Migrando do histórico de localização do Google](/blog/migrating-from-google-location-history-to-dawarich)"
+    }
+  ],
+  "faqTitle": "Perguntas frequentes",
+  "faq": [
+    {
+      "q": "É seguro carregar meus dados do Google Timeline?",
+      "a": "Sim. Toda a conversão acontece no navegador com JavaScript — seus arquivos ficam no dispositivo e desaparecem ao fechar a aba. Não há cookies rastreando seus arquivos nem coleta de métricas sobre seus dados de localização. A única exceção é o botão opcional “Salvar na minha conta Dawarich”, que envia o arquivo ao Dawarich Cloud para importá-lo na nova conta. A ferramenta tem código aberto, então você pode conferir o código."
+    },
+    {
+      "q": "Quais formatos do Google Timeline posso converter?",
+      "a": "Este conversor aceita os seis formatos de exportação do Google Timeline: Records.json (registros GPS brutos com coordenadas E7), Semantic Location History (arquivos mensais YYYY_MONTH.json com visitas e segmentos de atividade), Semantic Segments (um formato mais recente de exportação pelo celular, com semanticSegments), Location History (formato de array com startTime/endTime), Settings e TimelineEdits. A ferramenta detecta o formato automaticamente ao carregar um arquivo."
+    },
+    {
+      "q": "Qual é o melhor formato de saída para mim?",
+      "a": "Depende do uso. GPX é o formato mais aceito e funciona com quase todos os aplicativos GPS, rastreadores de atividades físicas e ferramentas de mapas. KML e KMZ são ideais para visualizar no Google Earth. GeoJSON é o padrão de bibliotecas de mapas na web como Leaflet e Mapbox. CSV é ideal para análise em planilhas no Excel ou Google Sheets, ou para importar em bancos de dados. Na dúvida, comece com GPX — ele tem a maior compatibilidade."
+    },
+    {
+      "q": "A conversão perde algum dado?",
+      "a": "A conversão preserva todas as coordenadas geográficas, datas e horários e dados de elevação. Nomes e endereços de visitas a lugares entram como nomes de pontos de referência nos formatos GPX e KML, e como colunas próprias no CSV. O tipo de atividade (caminhada, carro, bicicleta) é preservado no CSV. Alguns metadados específicos de formato, como valores de precisão ou identificadores de dispositivo, podem não ter equivalentes em todas as saídas, mas nenhum dado de localização é perdido."
+    },
+    {
+      "q": "Posso converter vários arquivos de uma vez?",
+      "a": "Sim. Você pode carregar vários arquivos JSON do Google Timeline de uma vez — por exemplo, todos os arquivos mensais de Semantic Location History (de 2022_JANUARY.json a 2022_DECEMBER.json). O conversor reúne todos os dados dos arquivos carregados em uma única saída por formato. Isso é especialmente útil para exportações Semantic do Google Takeout, que dividem seu histórico em arquivos mensais."
+    },
+    {
+      "q": "Como abro os arquivos convertidos?",
+      "a": "Arquivos GPX podem ser abertos em aplicativos como Strava, Garmin Connect, AllTrails, OsmAnd, Viking e GPXSee. Arquivos KML e KMZ abrem diretamente no Google Earth e Google My Maps. GeoJSON funciona com geojson.io, QGIS, Mapbox Studio e a maioria dos frameworks de mapas web. Arquivos CSV abrem no Excel, Google Sheets, LibreOffice Calc ou qualquer aplicativo de planilhas. Você também pode importar qualquer um desses formatos no Dawarich para armazenamento e visualização de longo prazo."
+    },
+    {
+      "q": "Por que converter meus dados do Google Timeline?",
+      "a": "O Google descontinuou a versão web do Timeline no fim de 2024 e moveu os dados de localização para o armazenamento no dispositivo, com opções limitadas de exportação. Converter seus arquivos JSON exportados para formatos padrão como GPX ou KML garante que continuem acessíveis, independentemente das decisões futuras do Google. Formatos padrão podem ser abertos em centenas de aplicativos, importados em ferramentas de hospedagem própria como o Dawarich e arquivados por décadas sem dependência de fornecedor."
+    }
+  ],
+  "bottomCta": {
+    "title": "Procurando uma alternativa ao Google Timeline?",
+    "body": "O Dawarich é uma plataforma de rastreamento de localização de código aberto que dá a você controle total dos dados. Importe sua exportação do Google Timeline, continue registrando pelo celular e visualize anos de deslocamentos — no seu servidor ou na nuvem.",
+    "button": "Experimente o Dawarich grátis por 7 dias"
+  }
+}

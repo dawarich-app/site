@@ -1,0 +1,88 @@
+{
+  "posterThemes": {
+    "arialabel": "Ampliar el póster {name}",
+    "alt": "Póster de una ruta por Berlín con el tema {name}"
+  },
+  "posterStudioShot": {
+    "alt": "Poster Studio con una ruta en composición y controles de diseño, tema y texto"
+  },
+  "exportFormats": {
+    "groups": [
+      {
+        "label": "Impresión · 12",
+        "items": [
+          "A5",
+          "A4",
+          "A3",
+          "A2",
+          "A1",
+          "A0",
+          "30 × 40 cm",
+          "50 × 70 cm",
+          "70 × 100 cm",
+          "Carta (EE. UU.)",
+          "A4 horizontal",
+          "A3 horizontal"
+        ]
+      },
+      {
+        "label": "Redes sociales · 5",
+        "items": [
+          "Cuadrado para Instagram",
+          "Vertical para Instagram",
+          "Historia (9:16)",
+          "Cabecera de X",
+          "Miniatura de YouTube"
+        ]
+      },
+      {
+        "label": "Fondo de pantalla · 5",
+        "items": [
+          "Escritorio Full HD",
+          "Escritorio 4K",
+          "Escritorio ultrapanorámico",
+          "Teléfono",
+          "Tableta"
+        ]
+      }
+    ]
+  },
+  "shareTargets": {
+    "items": [
+      "Un intervalo de fechas",
+      "Ubicación en directo",
+      "Un trayecto",
+      "Un viaje",
+      "Un mes de estadísticas",
+      "Un resumen anual"
+    ],
+    "p": "Seis opciones, seis enlaces independientes"
+  },
+  "familySharingShot": {
+    "alt": "Controles para compartir en familia: ubicación en directo activada durante seis horas con el tiempo restante, e historial de ubicaciones como opción independiente ajustada a los últimos 7 días"
+  },
+  "familyMembersShot": {
+    "alt": "Lista de miembros de la familia con dos personas que comparten su ubicación y dos que no, cada una con un botón Solicitar"
+  },
+  "familyPageShot": {
+    "alt": "La página de familia de Dawarich: un mapa compartido junto a los controles para compartir, la lista de miembros y las invitaciones"
+  },
+  "familyRequestShot": {
+    "alt": "Dos miembros de la familia marcados como No comparte, cada uno con un botón Solicitar al lado"
+  },
+  "residencyCountriesShot": {
+    "alt": "Tarjeta de países con los días por país en 2023: Alemania, 353 días y un 96.7%, con una advertencia de umbral; después Bélgica, Grecia, Suiza, Dinamarca, Francia y Polonia"
+  },
+  "residencyStaysShot": {
+    "alt": "Alemania desplegada para mostrar ocho periodos de estancia consecutivos de 2023, cada uno con sus fechas y duración"
+  },
+  "residencyCalendarShot": {
+    "alt": "Mapa de calor del calendario de un año, con un color por país y una leyenda con sus nombres"
+  },
+  "shareHubShot": {
+    "alt": "Centro de enlaces compartidos: un enlace público y su frase secreta, doce visitas y botones para regenerar la URL, regenerar la frase o revocar el enlace"
+  },
+  "shareFormShot": {
+    "alt": "Creación de un enlace compartido: fechas de inicio y fin, una frase secreta opcional, caducidad predeterminada de una semana y la opción Mostrar fotos desactivada"
+  }
+}

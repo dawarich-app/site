@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "Extrair dados de GPS e localização de fotos",
+    "description": "Extraia coordenadas GPS de fotos e exporte em GPX gratuitamente, com privacidade. Tudo é processado no navegador, sem enviar dados a servidores.",
+    "keywords": "extração de geodados de fotos, GPS, EXIF, geolocalização, exportação GPX, localização de fotos, privacidade, metadados de imagem",
+    "featureList": [
+      "Extrair dados de GPS de fotos",
+      "Mapa interativo com marcadores de fotos",
+      "Privacidade em primeiro lugar — processamento no navegador",
+      "Exportar localizações como arquivos GPX",
+      "Nenhum dado enviado a servidores"
+    ]
+  },
+  "h1": "Extração de geodados de fotos",
+  "intro": "Carregue suas fotos para extrair coordenadas GPS dos metadados EXIF, visualizar as localizações em um mapa e exportá-las como arquivos GPX.",
+  "exportButton": "Exportar como GPX",
+  "emptyExport": "Nenhuma foto com dados de GPS para exportar",
+  "gpsPhotosLabel": "fotos com GPS",
+  "photosLabel": "fotos",
+  "howTo": {
+    "title": "Como funciona",
+    "intro": "Esta ferramenta lê os metadados EXIF das suas fotos para extrair coordenadas GPS. A maioria dos smartphones inclui dados de localização nas fotos automaticamente.",
+    "features": [
+      {
+        "title": "Formatos aceitos:",
+        "body": "JPEG, PNG, HEIC e outros formatos de imagem com dados EXIF"
+      },
+      {
+        "title": "O que você recebe:",
+        "body": "Mapa interativo com a localização das fotos, dados detalhados de GPS e exportação em GPX para dispositivos GPS"
+      },
+      {
+        "title": "Observação:",
+        "body": "Apenas fotos com dados de GPS aparecem no mapa. Capturas de tela e fotos editadas podem não conter dados de localização."
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Privacidade em primeiro lugar",
+    "body": "Todo o processamento das fotos acontece no seu navegador. Suas fotos e seus dados de localização nunca saem do seu dispositivo e não são enviados a nenhum servidor."
+  },
+  "results": {
+    "gpsPhotos": "Fotos com dados de GPS: {count}",
+    "extracted": "Você extraiu dados de GPS de **{count}** fotos. O Dawarich mapeia todos os seus dados de localização — fotos, trajetos e deslocamentos diários.",
+    "uploaded": "Você carregou **{count}** fotos. O Dawarich mapeia todos os seus dados de localização — fotos, trajetos e deslocamentos diários."
+  }
+}

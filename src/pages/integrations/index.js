@@ -1,3 +1,6 @@
+import content from '@locale-content/pages/integrations.json';
+import RichText, { SmartLink } from '@site/src/i18n/RichText';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import React from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
@@ -21,138 +24,121 @@ import {
   MusicIcon,
   CloudIcon,
 } from '@site/src/components/LucideIcons';
-import Link from '@docusaurus/Link';
+import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import styles from './integrations.module.css';
 
 const integrationsShowcase = [
   {
     icon: <CameraIcon />,
-    title: 'Immich',
-    description: 'Self-hosted photo and video backup solution. Connect your Immich instance to display your photos on the map at the exact locations they were taken.',
+    title: content.integrationsShowcase[0].title,
+    description: content.integrationsShowcase[0].description,
     image: '/img/map-photos.webp',
-    imageAlt: 'Photos on map from Immich'
+    imageAlt: content.integrationsShowcase[0].imageAlt
   },
   {
     icon: <ImageIcon />,
-    title: 'PhotoPrism',
-    description: 'AI-powered photo management app. Integrate PhotoPrism to see your entire photo library on your location timeline.',
+    title: content.integrationsShowcase[1].title,
+    description: content.integrationsShowcase[1].description,
     image: '/img/trip-details.webp',
-    imageAlt: 'Trip with PhotoPrism photos'
+    imageAlt: content.integrationsShowcase[1].imageAlt
   }
 ];
 
 const benefits = [
   {
     icon: <MapIcon />,
-    title: 'Photos on Map',
-    description: 'See all your photos plotted on the interactive map at their exact GPS coordinates. Rediscover where each memory was made.'
+    title: content.benefits[0].title,
+    description: content.benefits[0].description
   },
   {
     icon: <PlaneIcon />,
-    title: 'Photos in Trips',
-    description: 'Trip pages automatically show photos taken during that trip. Your travel journal becomes a rich multimedia experience.'
+    title: content.benefits[1].title,
+    description: content.benefits[1].description
   },
   {
     icon: <CalendarIcon />,
-    title: 'Photo Timeline',
-    description: 'Browse your photos chronologically alongside your location data. See the complete story of each day.'
+    title: content.benefits[2].title,
+    description: content.benefits[2].description
   },
   {
     icon: <LockIcon />,
-    title: 'Privacy Preserved',
-    description: 'Dawarich never stores your photos. It only reads location data from your self-hosted photo apps via their APIs.'
+    title: content.benefits[3].title,
+    description: content.benefits[3].description
   }
 ];
 
 const setupSteps = [
   {
     icon: <KeyIcon size={32} />,
-    title: 'Get API Keys',
-    description: 'Generate API keys from your Immich or PhotoPrism instance.',
-    details: [
-      'Immich: Create key with asset.read and asset.view scopes (asset.update for Enrich Photos)',
-      'PhotoPrism: Generate key in Apps and Devices settings',
-      'Keep your keys secure'
-    ]
+    title: content.setupSteps[0].title,
+    description: content.setupSteps[0].description,
+    details: content.setupSteps[0].details
   },
   {
     icon: <SettingsIcon size={32} />,
-    title: 'Configure in Dawarich',
-    description: 'Enter your photo service details in Dawarich settings.',
-    details: [
-      'Navigate to Settings page',
-      'Find Photo Integration section',
-      'Enter your service URL',
-      'Paste your API key',
-      'Click Save'
-    ]
+    title: content.setupSteps[1].title,
+    description: content.setupSteps[1].description,
+    details: content.setupSteps[1].details
   },
   {
     icon: <RefreshIcon size={32} />,
-    title: 'Sync Complete',
-    description: 'Dawarich connects to your photo service and indexes location data.',
-    details: [
-      'Photos are indexed by location',
-      'EXIF GPS data is extracted',
-      'No photos are copied or stored',
-      'Only metadata is used'
-    ]
+    title: content.setupSteps[2].title,
+    description: content.setupSteps[2].description,
+    details: content.setupSteps[2].details
   },
   {
     icon: <PartyIcon size={32} />,
-    title: 'View Photos',
-    description: 'Photos now appear on your map and in your trips.',
-    details: [
-      'Enable Photos layer on the map',
-      'Click photo markers to view',
-      'See photos automatically in trips',
-      'Browse by location and date'
-    ]
+    title: content.setupSteps[3].title,
+    description: content.setupSteps[3].description,
+    details: content.setupSteps[3].details
   }
 ];
 
 const futureIntegrations = [
   {
     icon: <SmartphoneIcon />,
-    title: 'Fitness Apps',
-    description: 'Integration with fitness tracking apps to combine workout routes with your location history.'
+    title: content.futureIntegrations[0].title,
+    description: content.futureIntegrations[0].description
   },
   {
     icon: <FileTextIcon />,
-    title: 'Note-Taking Apps',
-    description: 'Connect your notes to locations automatically. See what you wrote and where you wrote it.'
+    title: content.futureIntegrations[1].title,
+    description: content.futureIntegrations[1].description
   },
   {
     icon: <MusicIcon />,
-    title: 'Music Services',
-    description: 'Track what you were listening to at different locations throughout your day.'
+    title: content.futureIntegrations[2].title,
+    description: content.futureIntegrations[2].description
   },
   {
     icon: <CloudIcon />,
-    title: 'Cloud Services',
-    description: 'Deeper integrations with various cloud storage and productivity services.'
+    title: content.futureIntegrations[3].title,
+    description: content.futureIntegrations[3].description
   }
 ];
 
 export default function IntegrationsPage() {
+  const pageUrl = useLocalizedUrl('/integrations/');
   return (
     <Layout
-      title="Photo Integrations"
-      description="Connect your Immich or PhotoPrism instance to see photos on your map and in trips. Your map becomes a rich multimedia experience.">
+      title={content.meta.title}
+      description={content.meta.description}>
       <Head>
-        <meta property="og:title" content="Dawarich Integrations — Connect Your Digital Life" />
-        <meta property="og:description" content="Integrate Immich and PhotoPrism photo libraries with your location history. See photos on the map and in trips automatically." />
+        <meta name="twitter:url" content={pageUrl} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={content.meta.ogTitle} />
+        <meta property="og:description" content={content.meta.ogDescription} />
         <meta property="og:image" content="https://dawarich.app/img/meta-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <FeatureHero
-        badge="Connected Experience"
-        title="Connect Your"
-        titleHighlight="Digital Life"
-        subtitle="Bring your photos into your location timeline. Dawarich integrates with Immich and PhotoPrism to display your photos on the map and in trips—turning your location history into a rich, visual experience."
+        badge={content.hero.badge}
+        title={content.hero.title}
+        titleHighlight={content.hero.titleHighlight}
+        subtitle={content.hero.subtitle}
         image="/img/map-photos.webp"
-        imageAlt="Photos displayed on map"
+        imageAlt={content.hero.imageAlt}
         ctaLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-hero&utm_campaign=integrations"
         showSecondary={true}
       />
@@ -160,11 +146,8 @@ export default function IntegrationsPage() {
       <main>
         <section className={styles.valueSection}>
           <div className={styles.container}>
-            <h2 className={styles.sectionTitle}>Why Photo Integration?</h2>
-            <p className={styles.sectionSubtitle}>
-              Your location data becomes more meaningful when combined with the photos you took.
-              Rediscover memories by seeing exactly where each photo was taken.
-            </p>
+            <h2 className={styles.sectionTitle}>{content.integrationsPage.heading}</h2>
+            <p className={styles.sectionSubtitle}>{content.integrationsPage.p}</p>
             <FeatureCardGrid columns={4}>
               {benefits.map((benefit, index) => (
                 <FeatureCard
@@ -179,14 +162,14 @@ export default function IntegrationsPage() {
         </section>
 
         <FeatureShowcase
-          title="Supported Photo Services"
-          subtitle="Dawarich works seamlessly with popular self-hosted photo management solutions."
+          title={content.integrationsPage.title3}
+          subtitle={content.integrationsPage.subtitle2}
           items={integrationsShowcase}
         />
 
         <HowItWorks
-          title="How to Set Up"
-          subtitle="Connect your photo library to Dawarich in just a few steps."
+          title={content.integrationsPage.title4}
+          subtitle={content.integrationsPage.subtitle3}
           steps={setupSteps}
         />
 
@@ -195,12 +178,8 @@ export default function IntegrationsPage() {
             <div className={styles.privacyCard}>
               <div className={styles.privacyIcon}><LockIcon size={48} /></div>
               <div className={styles.privacyContent}>
-                <h3 className={styles.privacyTitle}>Your Photos Stay Private</h3>
-                <p className={styles.privacyText}>
-                  Dawarich <strong>does not store or copy your photos</strong>. It only reads location metadata
-                  from your self-hosted photo service via its API. Your photos remain safely in your Immich or
-                  PhotoPrism instance, under your complete control.
-                </p>
+                <h3 className={styles.privacyTitle}>{content.integrationsPage.h3}</h3>
+                <p className={styles.privacyText}><RichText text={content.integrationsPage.p2} /></p>
               </div>
             </div>
           </div>
@@ -208,32 +187,19 @@ export default function IntegrationsPage() {
 
         <section className={styles.technicalDetails}>
           <div className={styles.container}>
-            <h2 className={styles.sectionTitle}>Technical Details</h2>
+            <h2 className={styles.sectionTitle}>{content.integrationsPage.heading2}</h2>
             <div className={styles.detailsGrid}>
               <div className={styles.detailCard}>
                 <h3 className={styles.detailTitle}>
-                  <SettingsIcon size={20} /> Immich Setup
-                </h3>
-                <p className={styles.detailText}>
-                  Requires an API key with <code>asset.read</code> and <code>asset.view</code> scopes.
-                  Add <code>asset.update</code> if you also want to use the Enrich Photos feature.
-                  Dawarich queries the Immich API to read photo metadata including GPS coordinates from EXIF data.
-                </p>
-                <Link to="https://immich.app/docs/features/command-line-interface#obtain-the-api-key" className={styles.detailLink}>
-                  How to obtain Immich API key →
-                </Link>
+                  <SettingsIcon size={20} />{content.integrationsPage.text3}</h3>
+                <p className={styles.detailText}><RichText text={content.integrationsPage.immichScopes} /></p>
+                <SmartLink href="https://immich.app/docs/features/command-line-interface#obtain-the-api-key" className={styles.detailLink}>{content.integrationsPage.Link}</SmartLink>
               </div>
               <div className={styles.detailCard}>
                 <h3 className={styles.detailTitle}>
-                  <ImageIcon size={20} /> PhotoPrism Setup
-                </h3>
-                <p className={styles.detailText}>
-                  Generate an API key in PhotoPrism's "Apps and Devices" settings. Dawarich uses this
-                  to access your photo library and extract location information.
-                </p>
-                <Link to="https://docs.photoprism.app/user-guide/settings/account/#apps-and-devices" className={styles.detailLink}>
-                  How to obtain PhotoPrism API key →
-                </Link>
+                  <ImageIcon size={20} />{content.integrationsPage.text8}</h3>
+                <p className={styles.detailText}>{content.integrationsPage.p3}</p>
+                <SmartLink href="https://docs.photoprism.app/user-guide/settings/account/#apps-and-devices" className={styles.detailLink}>{content.integrationsPage.Link2}</SmartLink>
               </div>
             </div>
           </div>
@@ -255,33 +221,23 @@ export default function IntegrationsPage() {
                 />
               ))}
             </FeatureCardGrid> */}
-            <p className={styles.futureNote}>
-              Have an integration idea? <Link to="https://discourse.dawarich.app/">Share it on our community forum!</Link>.
-            </p>
+            <p className={styles.futureNote}><RichText text={content.integrationsPage.p4} /></p>
           </div>
         </section>
 
         <section className={styles.ctaSection}>
           <div className={styles.container}>
-            <h2 className={styles.ctaTitle}>Connect Your Photo Library Today</h2>
-            <p className={styles.ctaSubtitle}>
-              Start seeing your photos on the map with a free Dawarich account.
-            </p>
+            <h2 className={styles.ctaTitle}>{content.integrationsPage.heading3}</h2>
+            <p className={styles.ctaSubtitle}>{content.integrationsPage.p5}</p>
             <div className={styles.ctaButtons}>
-              <Link
+              <SmartLink
                 className={styles.primaryCta}
-                href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-cta&utm_campaign=integrations">
-                Try 7 Days for Free
-              </Link>
-              <Link
+                href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-cta&utm_campaign=integrations">{content.integrationsPage.Link4}</SmartLink>
+              <EnOnlyLink
                 className={styles.secondaryCta}
-                to="/docs/self-hosting/installation/docker">
-                Self-Host for Free
-              </Link>
+                to="/docs/self-hosting/installation/docker">{content.integrationsPage.EnOnlyLink}</EnOnlyLink>
             </div>
-            <p className="feature-cta-reassurance">
-              7-day free trial · 14-day risk-free refund · Cancel anytime
-            </p>
+            <p className="feature-cta-reassurance">{content.integrationsPage.p6}</p>
           </div>
         </section>
       </main>

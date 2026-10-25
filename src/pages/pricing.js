@@ -1,92 +1,93 @@
+import { interpolate } from '@docusaurus/Interpolate';
+import content from '@locale-content/pages/pricing.json';
+import RichText from '@site/src/i18n/RichText';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import React from "react";
 import Head from "@docusaurus/Head";
 import Layout from "@theme/Layout";
-import Link from "@docusaurus/Link";
 import { COMMISSION_PERCENT } from "@site/src/data/affiliateProgram";
 import PricingSection from "@site/src/components/PricingSection";
 import PricingCompare from "@site/src/components/PricingCompare";
 import FAQ from "@site/src/components/FAQ";
 
-const SEO_TITLE = "Cloud Pricing & Plans";
-const SEO_DESCRIPTION =
-	"Compare Dawarich Cloud plans: Lite, Pro and Family for up to 5 people. Try free for 7 days, or self-host with every Pro feature at no cost.";
 
 export default function PricingPage() {
+	const pageUrl = useLocalizedUrl('/pricing/');
 	return (
 		<Layout
-			title={SEO_TITLE}
-			description={SEO_DESCRIPTION}
+			title={content.meta.title}
+			description={content.meta.description}
 		>
 			<Head>
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://dawarich.app/pricing/" />
-				<meta property="og:title" content={`${SEO_TITLE} | Dawarich`} />
+				<meta property="og:url" content={pageUrl} />
+				<meta property="og:title" content={`${content.meta.title} | Dawarich`} />
 				<meta
 					property="og:description"
-					content={SEO_DESCRIPTION}
+					content={content.meta.description}
 				/>
 				<meta
 					property="og:image"
 					content="https://dawarich.app/img/meta-image.png"
 				/>
 				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:title" content={`${SEO_TITLE} | Dawarich`} />
+				<meta name="twitter:url" content={pageUrl} />
+				<meta name="twitter:title" content={`${content.meta.title} | Dawarich`} />
 				<meta
 					name="twitter:description"
-					content={SEO_DESCRIPTION}
+					content={content.meta.description}
 				/>
 				<meta
 					name="twitter:image"
 					content="https://dawarich.app/img/meta-image.png"
 				/>
-				<link rel="canonical" href="https://dawarich.app/pricing/" />
 
 				<script type="application/ld+json">
 					{JSON.stringify({
 						"@context": "https://schema.org",
 						"@type": "Product",
-						name: "Dawarich Cloud",
+						name: content.schema.name,
 						description:
-							"Privacy-first alternative to Google Timeline. Hosted in Europe. Self-hostable, open source.",
-						brand: { "@type": "Brand", name: "Dawarich" },
+							content.schema.description,
+						brand: { "@type": "Brand", name: content.schema.brand },
 						offers: [
 							{
 								"@type": "Offer",
-								name: "Lite (annual)",
+								name: content.schema.liteAnnual,
 								price: "59.99",
 								priceCurrency: "EUR",
 								availability: "https://schema.org/InStock",
-								url: "https://dawarich.app/pricing/",
+								url: pageUrl,
 							},
 							{
 								"@type": "Offer",
-								name: "Pro (monthly)",
+								name: content.schema.proMonthly,
 								price: "17.99",
 								priceCurrency: "EUR",
 								availability: "https://schema.org/InStock",
-								url: "https://dawarich.app/pricing/",
+								url: pageUrl,
 							},
 							{
 								"@type": "Offer",
-								name: "Pro (annual)",
+								name: content.schema.proAnnual,
 								price: "119.99",
 								priceCurrency: "EUR",
 								availability: "https://schema.org/InStock",
-								url: "https://dawarich.app/pricing/",
+								url: pageUrl,
 							},
 							{
 								"@type": "Offer",
-								name: "Family (annual)",
+								name: content.schema.familyAnnual,
 								description:
-									"One annual subscription covering up to 5 members, each with full Pro access.",
+									content.schema.familyDescription,
 								price: "239.99",
 								priceCurrency: "EUR",
 								availability: "https://schema.org/InStock",
-								url: "https://dawarich.app/pricing/",
+								url: pageUrl,
 							},
 							{
 								"@type": "Offer",
-								name: "Self-hosted",
+								name: content.schema.selfHosted,
 								price: "0",
 								priceCurrency: "EUR",
 								availability: "https://schema.org/InStock",
@@ -99,16 +100,12 @@ export default function PricingPage() {
 
 			<main>
 				<PricingSection
-					heading="Dawarich Cloud pricing"
+					heading={content.heading}
 					headingLevel="h1"
 				/>
 				<PricingCompare />
 				<p className="margin-top--lg text--center">
-					Writing about Dawarich?{" "}
-					<Link to="/affiliate">
-						Earn {COMMISSION_PERCENT}% of the first year
-					</Link>{" "}
-					for every subscriber you refer.
+					<RichText text={interpolate(content.affiliate, { percent: COMMISSION_PERCENT })} />
 				</p>
 				<FAQ />
 			</main>

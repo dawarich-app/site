@@ -1,0 +1,25 @@
+{
+  "trustBadges": [
+    {
+      "label": "Działa offline"
+    },
+    {
+      "label": "Otwarty kod źródłowy"
+    },
+    {
+      "label": "Hosting w UE i szyfrowanie"
+    }
+  ],
+  "title": "Twoja prywatna oś czasu, ",
+  "highlight": "na zawsze",
+  "subtitle": "Google wycofało Timeline z przeglądarki i ogranicza czas przechowywania danych. Zaimportuj całą historię lokalizacji do Dawarich w kilka minut — prywatną, zaszyfrowaną, Twoją. Bez reklam. Bez sprzedaży danych.",
+  "primaryButton": "Zaimportuj moje dane Google",
+  "secondaryButton": "Poznaj funkcje",
+  "orDivider": "lub",
+  "noCredit": "7-dniowy bezpłatny okres próbny · Zwrot bez ryzyka przez 14 dni · Zrezygnuj w dowolnej chwili",
+  "badgeLabel": "Prywatna alternatywa dla Google Timeline",
+  "googleSignIn": "Zaloguj się przez Google",
+  "playTour": "Odtwórz prezentację Dawarich",
+  "tourLabel": "Prezentacja Dawarich",
+  "closeVideo": "Zamknij film"
+}

@@ -1,0 +1,31 @@
+{
+  "howItWorksTrack": "Import your Google Timeline data in minutes — or start fresh with our [iOS]({iosUrl}) and [Android]({androidUrl}) apps — which even track offline and upload automatically once you're back online. Also works with OwnTracks, GPSLogger, and more.",
+  "howItWorksSteps": [
+    {
+      "title": "Track"
+    },
+    {
+      "title": "Visualize",
+      "description": "See everywhere you've been on an interactive map. Create trips, explore a scratch map, and browse daily timelines."
+    },
+    {
+      "title": "Remember",
+      "description": "Get stats on distance, cities, and time. Relive your travels with photos, notes, and memories attached to each place. Get insights on your travel habits and patterns."
+    }
+  ],
+  "subtitle": "Get started in three simple steps.",
+  "meta": {
+    "title": "Dawarich — Your Private Timeline, Forever",
+    "description": "The private alternative to Google Timeline. Import your location history, keep it forever. No ads, no data selling.",
+    "socialDescription": "The private alternative to Google Timeline. Import your location history, keep it forever."
+  },
+  "howItWorksTitle": "How It Works",
+  "schema": {
+    "description": "Privacy-first alternative to Google Timeline. Import your location history, keep it forever. Self-hostable, open source, no ads, no data selling.",
+    "name": "Dawarich",
+    "liteAnnual": "Dawarich Cloud — Lite (annual)",
+    "proMonthly": "Dawarich Cloud — Pro (monthly)",
+    "proAnnual": "Dawarich Cloud — Pro (annual)",
+    "selfHosted": "Self-hosted"
+  }
+}

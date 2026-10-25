@@ -1,0 +1,10 @@
+{
+  "unavailableTitle": "Carte indisponible",
+  "unavailableBody": "Votre navigateur ne prend pas en charge WebGL, nécessaire à l’affichage de la carte.",
+  "webglLink": "[En savoir plus sur WebGL](https://get.webgl.org)",
+  "exitFullscreen": "Quitter le plein écran",
+  "enterFullscreen": "Afficher en plein écran",
+  "exitHint": "Quitter le plein écran (Échap)",
+  "toggleHint": "Basculer en plein écran (F)",
+  "demoLabel": "Données de démonstration — déposez vos fichiers ci-dessus"
+}

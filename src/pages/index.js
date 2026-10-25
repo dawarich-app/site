@@ -1,3 +1,7 @@
+import content from '@locale-content/pages/index.json';
+import { interpolate } from '@docusaurus/Interpolate';
+import RichText from '@site/src/i18n/RichText';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import Head from "@docusaurus/Head";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Comparison from "@site/src/components/Comparison";
@@ -67,41 +71,20 @@ const LightbulbSvg = () => (
 const howItWorksSteps = [
 	{
 		icon: <MapPinSvg />,
-		title: "Track",
-		description: (
-			<>
-				Import your Google Timeline data in minutes — or start fresh with our{" "}
-				<a
-					href="https://apps.apple.com/app/apple-store/id6739544999?pt=128010810&ct=landing-howit&mt=8"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					iOS
-				</a>{" "}
-				and{" "}
-				<a
-					href="https://play.google.com/store/apps/details?id=app.dawarich.Dawarich"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Android
-				</a>{" "}
-				apps — which even track offline and upload automatically once
-				you're back online. Also works with OwnTracks, GPSLogger, and more.
-			</>
-		),
+		title: content.howItWorksSteps[0].title,
+		description: <RichText text={interpolate(content.howItWorksTrack, { iosUrl: "https://apps.apple.com/app/apple-store/id6739544999?pt=128010810&ct=landing-howit&mt=8", androidUrl: "https://play.google.com/store/apps/details?id=app.dawarich.Dawarich" })} />,
 	},
 	{
 		icon: <MapSvg />,
-		title: "Visualize",
+		title: content.howItWorksSteps[1].title,
 		description:
-			"See everywhere you've been on an interactive map. Create trips, explore a scratch map, and browse daily timelines.",
+			content.howItWorksSteps[1].description,
 	},
 	{
 		icon: <LightbulbSvg />,
-		title: "Remember",
+		title: content.howItWorksSteps[2].title,
 		description:
-			"Get stats on distance, cities, and time. Relive your travels with photos, notes, and memories attached to each place. Get insights on your travel habits and patterns.",
+			content.howItWorksSteps[2].description,
 	},
 ];
 
@@ -110,21 +93,22 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-	const { siteConfig } = useDocusaurusContext();
+	const { i18n } = useDocusaurusContext();
+	const pageUrl = useLocalizedUrl('/');
 
 	return (
 		<Layout
-			title="Dawarich — Your Private Timeline, Forever"
-			description="The private alternative to Google Timeline. Import your location history, keep it forever. No ads, no data selling."
+			title={content.meta.title}
+			description={content.meta.description}
 		>
 			<Head>
 				{/* Open Graph / Facebook */}
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://dawarich.app/" />
-				<meta property="og:title" content="Dawarich — Your Private Timeline, Forever" />
+				<meta property="og:url" content={pageUrl} />
+				<meta property="og:title" content={content.meta.title} />
 				<meta
 					property="og:description"
-					content="The private alternative to Google Timeline. Import your location history, keep it forever."
+					content={content.meta.socialDescription}
 				/>
 				<meta
 					property="og:image"
@@ -133,14 +117,14 @@ export default function Home() {
 
 				{/* X (Twitter) */}
 				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:url" content="https://dawarich.app/" />
+				<meta name="twitter:url" content={pageUrl} />
 				<meta
 					name="twitter:title"
-					content="Dawarich — Your Private Timeline, Forever"
+					content={content.meta.title}
 				/>
 				<meta
 					name="twitter:description"
-					content="The private alternative to Google Timeline. Import your location history, keep it forever."
+					content={content.meta.socialDescription}
 				/>
 				<meta
 					name="twitter:image"
@@ -154,9 +138,9 @@ export default function Home() {
 						"@graph": [
 							{
 								"@type": "Organization",
-								"@id": "https://dawarich.app/#organization",
-								name: "Dawarich",
-								url: "https://dawarich.app/",
+								"@id": `${pageUrl}#organization`,
+								name: content.schema.name,
+								url: pageUrl,
 								logo: "https://dawarich.app/img/logo.svg",
 								founder: {
 									"@type": "Person",
@@ -174,46 +158,46 @@ export default function Home() {
 							},
 							{
 								"@type": "WebSite",
-								"@id": "https://dawarich.app/#website",
-								url: "https://dawarich.app/",
-								name: "Dawarich",
-								publisher: { "@id": "https://dawarich.app/#organization" },
-								inLanguage: "en",
+								"@id": `${pageUrl}#website`,
+								url: pageUrl,
+								name: content.schema.name,
+								publisher: { "@id": `${pageUrl}#organization` },
+								inLanguage: i18n.localeConfigs[i18n.currentLocale].htmlLang,
 							},
 							{
 								"@type": "SoftwareApplication",
-								"@id": "https://dawarich.app/#app",
-								name: "Dawarich",
-								url: "https://dawarich.app/",
+								"@id": `${pageUrl}#app`,
+								name: content.schema.name,
+								url: pageUrl,
 								applicationCategory: "LifestyleApplication",
 								operatingSystem: "Web, iOS, Android, Self-hosted (Docker)",
 								description:
-									"Privacy-first alternative to Google Timeline. Import your location history, keep it forever. Self-hostable, open source, no ads, no data selling.",
+									content.schema.description,
 								offers: [
 									{
 										"@type": "Offer",
-										name: "Dawarich Cloud — Lite (annual)",
+										name: content.schema.liteAnnual,
 										price: "59.99",
 										priceCurrency: "EUR",
-										url: "https://dawarich.app/#pricing",
+										url: `${pageUrl}#pricing`,
 									},
 									{
 										"@type": "Offer",
-										name: "Dawarich Cloud — Pro (monthly)",
+										name: content.schema.proMonthly,
 										price: "17.99",
 										priceCurrency: "EUR",
-										url: "https://dawarich.app/#pricing",
+										url: `${pageUrl}#pricing`,
 									},
 									{
 										"@type": "Offer",
-										name: "Dawarich Cloud — Pro (annual)",
+										name: content.schema.proAnnual,
 										price: "119.99",
 										priceCurrency: "EUR",
-										url: "https://dawarich.app/#pricing",
+										url: `${pageUrl}#pricing`,
 									},
 									{
 										"@type": "Offer",
-										name: "Self-hosted",
+										name: content.schema.selfHosted,
 										price: "0",
 										priceCurrency: "EUR",
 										url: "https://dawarich.app/docs/self-hosting/introduction",
@@ -229,8 +213,8 @@ export default function Home() {
 				<SocialProof />
 				<Comparison />
 				<HowItWorks
-					title="How It Works"
-					subtitle="Get started in three simple steps."
+					title={content.howItWorksTitle}
+					subtitle={content.subtitle}
 					steps={howItWorksSteps}
 					variant="route"
 				/>

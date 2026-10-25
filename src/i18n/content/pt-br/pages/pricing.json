@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Preços e planos do Cloud",
+    "description": "Compare os planos Dawarich Cloud: Lite, Pro e Família para até 5 pessoas. Teste grátis por 7 dias ou hospede com todos os recursos Pro sem custo."
+  },
+  "schema": {
+    "name": "Dawarich Cloud",
+    "description": "Alternativa ao Google Timeline com foco em privacidade. Hospedado na Europa. Código aberto, com opção de hospedagem própria.",
+    "brand": "Dawarich",
+    "liteAnnual": "Lite (anual)",
+    "proMonthly": "Pro (mensal)",
+    "proAnnual": "Pro (anual)",
+    "familyAnnual": "Família (anual)",
+    "familyDescription": "Uma assinatura anual para até 5 membros, cada um com acesso Pro completo.",
+    "selfHosted": "Hospedagem própria"
+  },
+  "heading": "Preços do Dawarich Cloud",
+  "affiliate": "Você escreve sobre o Dawarich? [Ganhe {percent}% do primeiro ano](/affiliate) de cada assinatura que você indicar."
+}

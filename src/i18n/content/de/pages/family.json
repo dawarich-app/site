@@ -1,0 +1,75 @@
+{
+  "rows": [
+    {
+      "title": "Teilen, das sich von selbst ausschaltet",
+      "body": "Teile deinen Live-Standort für eine Stunde, sechs, zwölf, vierundzwanzig – oder dauerhaft, wenn du das möchtest. Die Zeit läuft von allein ab. So endet „nur auf dem Heimweg“ tatsächlich, wenn du zu Hause bist, statt die nächsten drei Jahre weiterzulaufen.",
+      "note": "Du wählst die Dauer, jedes Mal"
+    },
+    {
+      "title": "Niemand kann es für dich einschalten",
+      "body": "Fünf Menschen, fünf unabhängige Schalter. Beim Start eines Cloud-Familientarifs wird die Freigabe der Person aktiviert, der der Tarif gehört. Sie kann sie sofort wieder ausschalten. Bei eingeladenen Mitgliedern ist die Freigabe anfangs ausgeschaltet. Diese Person kann sie für niemanden sonst einschalten. Du kannst deine eigene Freigabe auch dann noch ausschalten, wenn das Abo abläuft."
+    },
+    {
+      "title": "Fragen statt verfolgen",
+      "body": "Wenn du wissen möchtest, wo jemand ist, schick eine Standortanfrage. Die Person sieht, wer fragt, und kann zustimmen oder ablehnen. Ohne ihre Zustimmung in diesem Moment kannst du den Standort eines Familienmitglieds nicht abrufen.",
+      "note": "Einwilligung ist das Prinzip, keine Einstellung"
+    }
+  ],
+  "objections": [
+    {
+      "q": "Ist das einfach Life360 unter anderem Namen?",
+      "a": "Nein. Bei eingeladenen Mitgliedern ist die Freigabe anfangs ausgeschaltet, und jedes Mitglied steuert den eigenen Schalter. Wer den Cloud-Tarif besitzt, startet mit eingeschalteter Freigabe, kann sie aber ausschalten. Live-Freigaben können nach einer festgelegten Zeit enden, über die Freigabe des Verlaufs entscheidest du separat, und Standortanfragen können abgelehnt werden."
+    },
+    {
+      "q": "Kann mein Teenager sehen, dass ich seinen Standort verfolge?",
+      "a": "Es gibt nichts Verstecktes. Eingeladene Mitglieder entscheiden selbst, ob sie ihren Standort teilen. Die Familienseite zeigt genau, wer gerade teilt und wer nicht. Heimliches Tracking bieten wir nicht an."
+    },
+    {
+      "q": "Was bekommt jede Person genau?",
+      "a": "Ein vollständiges Dawarich-Konto – mit eigener Karte, Zeitleiste, Reisen, Statistiken und Einblicken. Der Familientarif verbindet fünf separate Konten zum Standortteilen. Es melden sich nicht fünf Menschen im selben Konto an."
+    },
+    {
+      "q": "Was passiert, wenn das Abo der zahlenden Person abläuft?",
+      "a": "Die Familie bleibt erhalten, und nichts wird gelöscht. Der Zugang läuft bis zum Ende des bereits bezahlten Zeitraums weiter. Danach wechseln Mitglieder ohne eigenen Tarif zu Lite, und ihre Standortaufzeichnung pausiert, bis wieder ein Tarif aktiv ist. Ihr Verlauf bleibt im Konto erhalten und kann exportiert werden. Eine Verlängerung stellt den Zugang für alle gleichzeitig wieder her."
+    },
+    {
+      "q": "Funktioniert das auf unseren Smartphones?",
+      "a": "Ja. Die Dawarich-Apps für iOS und Android zeigen deine Familie auf der Karte. In der App kannst du deine eigene Freigabe ein- oder ausschalten, festlegen, welchen Verlauf du teilst, und Standortanfragen senden oder beantworten."
+    },
+    {
+      "q": "Muss ich überhaupt etwas bezahlen?",
+      "a": "Nicht, wenn du selbst hostest. Die Familienfunktionen laufen kostenlos auf deiner eigenen Instanz, denn alle Funktionen des kostenpflichtigen Cloud-Produkts funktionieren auch auf deiner eigenen Hardware."
+    }
+  ],
+  "meta": {
+    "title": "Familienstandort teilen: App für iPhone und Android",
+    "description": "Familienstandorte teilen (Dawarich iOS/Android). Max. 5 einladen: Jeder steuert Live-Freigabe, Verlauf, Standortanfragen. {price}/Jahr oder gratis selbst hosten",
+    "ogTitle": "Standort mit der Familie teilen, ohne Überwachung",
+    "ogDescription": "Fünf Menschen, fünf unabhängige Schalter. Zeitlich begrenzte Live-Freigaben, der Verlauf als separate Wahl und Standortanfragen, die angenommen werden müssen."
+  },
+  "familyPage": {
+    "text": "App zum Teilen des Familienstandorts – ",
+    "em": "mit Zustimmung aller.",
+    "title2": "Jede Person entscheidet selbst",
+    "sub2": "Bis zu fünf Personen in einem Tarif, jeweils mit vollständigem Dawarich-Konto und Kontrolle darüber, was sie teilen.",
+    "title3": "Was Eltern und Partner uns fragen",
+    "title4": "Teile mit deinem Haushalt, nicht mit einem Datenhändler",
+    "sub3": "{price} im Jahr deckt fünf Personen in Dawarich Cloud ab, mit 7 Tagen kostenloser Testphase. Oder betreibe dieselben Funktionen kostenlos auf deiner eigenen Hardware.",
+    "primaryLabel": "Familientarif starten"
+  },
+  "hero": {
+    "sub": "Sieh deinen Haushalt auf iPhone und Android. Eingeladene Mitglieder entscheiden, wann sie ihren Standort teilen. Live-Freigaben können nach einer festgelegten Zeit enden, und wer wissen will, wo jemand ist, muss fragen. Wer den Cloud-Tarif besitzt, startet mit eingeschalteter Freigabe und kann sie jederzeit ausschalten."
+  },
+  "setup": {
+    "title": "Richte Dawarich für deine Familie auf iPhone und Android ein",
+    "body": "Der Familientarif umfasst bis zu fünf separate Konten. Alle nutzen ihr eigenes Smartphone und entscheiden selbst, was sie teilen.",
+    "steps": [
+      "**Starte einen Familientarif.** Dawarich erstellt die Cloud-Familie für dich. Wenn du selbst hostest, kannst du eine Familie auf deiner eigenen Instanz erstellen.",
+      "**Lade deinen Haushalt ein.** Versende Einladungen über die Familienseite im Browser. Jede Person nimmt die Einladung mit der eingeladenen E-Mail-Adresse an.",
+      "**Installieren und anmelden.** Öffne die Dawarich-App auf jedem Smartphone und lege im Familienbereich auf der Karte fest, wie du deinen Live-Standort und deinen Verlauf teilen möchtest."
+    ],
+    "ios": "iOS-App herunterladen",
+    "android": "Android-App herunterladen",
+    "guide": "Einrichtungsanleitung lesen"
+  }
+}

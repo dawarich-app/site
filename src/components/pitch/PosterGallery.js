@@ -1,3 +1,5 @@
+import content from '@locale-content/components/PosterGallery.json';
+import { interpolate } from '@docusaurus/Interpolate';
 import React from 'react';
 import { POSTER_THEMES, usePosterLightbox } from './PosterLightbox';
 import s from './PosterGallery.module.css';
@@ -14,11 +16,11 @@ export default function PosterGallery() {
             type="button"
             className={s.item}
             onClick={() => openAt(i)}
-            aria-label={`Enlarge the ${t.name} poster`}>
+            aria-label={interpolate(content.enlargePoster, { name: t.name })}>
             <img
               className={s.thumb}
               src={`/img/posters/${t.slug}.webp`}
-              alt={`Berlin route poster in the ${t.name} theme`}
+              alt={interpolate(content.posterAlt, { name: t.name })}
               loading="lazy"
               width="600"
               height="849"
@@ -28,10 +30,7 @@ export default function PosterGallery() {
         ))}
       </div>
 
-      <p className={s.hint}>
-        All seventeen, same Berlin route — scroll sideways, then click any one to enlarge it and
-        step through with the arrow keys.
-      </p>
+      <p className={s.hint}>{content.hint}</p>
 
       {overlay}
     </div>

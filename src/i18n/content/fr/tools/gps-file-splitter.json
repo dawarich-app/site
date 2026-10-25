@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "title": "Découpage GPS : fichiers GPX, GeoJSON, KML et JSON",
+    "description": "GPS : scindez de gros GPX/GeoJSON/KML/KMZ/JSON Google Timeline (Vos trajets Google Maps) par taille/nb. de points/date. ZIP gratuit, privé, dans le navigateur.",
+    "keywords": "découper gros fichier GPX, diviser GeoJSON, découper fichier KML, réduire taille fichier GPS, découper gros JSON de localisation, découpage fichier GPS, découper Google Timeline",
+    "featureList": [
+      "Découpage des gros fichiers GPS en fichiers plus petits",
+      "Prise en charge de GPX, GeoJSON, KML, KMZ et JSON Google Timeline",
+      "Découpage par taille, nombre de points ou date",
+      "Téléchargement sous forme d’archive ZIP",
+      "Confidentialité : traitement intégral dans le navigateur",
+      "Aucune donnée envoyée à un serveur"
+    ]
+  },
+  "howTo": {
+    "name": "Comment découper un gros fichier GPS",
+    "description": "Ajoutez votre fichier GPS et découpez-le en fichiers plus petits et plus faciles à manipuler.",
+    "steps": [
+      {
+        "name": "Ajoutez votre fichier GPS",
+        "text": "Glissez-déposez votre fichier GPX, GeoJSON, KML, KMZ ou JSON Google Timeline dans l’outil de découpage."
+      },
+      {
+        "name": "Choisissez le mode de découpage",
+        "text": "Choisissez le découpage par taille cible (10MB par défaut), par nombre de points ou par date (année ou mois)."
+      },
+      {
+        "name": "Téléchargez vos fichiers",
+        "text": "Cliquez sur Découper et télécharger le ZIP pour obtenir toutes les parties dans un seul fichier ZIP."
+      }
+    ]
+  },
+  "h1": "Découpage de fichiers GPS",
+  "intro": "Découpez vos gros fichiers GPS et de localisation en fichiers plus petits et plus faciles à manipuler. Compatible avec GPX, GeoJSON, KML, KMZ et JSON Google Timeline (Vos trajets Google Maps). Téléchargez toutes les parties dans un seul fichier ZIP.",
+  "benefitsTitle": "Pourquoi découper des fichiers GPS ?",
+  "privacyBody": "Tout le traitement s’effectue dans votre navigateur. Vos fichiers restent sur votre appareil.",
+  "preCta": "Vous manipulez de gros fichiers de localisation ? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=gps-file-splitter) gère automatiquement les importations de toute taille, tout en vous laissant la propriété et le contrôle de vos données privées.",
+  "faqTitle": "Questions fréquentes",
+  "homeLabel": "Accueil",
+  "toolsLabel": "Outils gratuits",
+  "privacyTitle": "La confidentialité avant tout",
+  "benefits": [
+    {
+      "title": "Limites de taille à l’importation :",
+      "body": "De nombreuses applications GPS et outils cartographiques imposent une taille maximale (10MB, 50MB, etc.). Le découpage permet d’importer de gros jeux de données en plusieurs parties."
+    },
+    {
+      "title": "Partage de portions précises :",
+      "body": "N’envoyez que la section pertinente d’un long trajet, ou découpez par année ou par mois pour organiser votre historique de localisation."
+    },
+    {
+      "title": "Meilleures performances :",
+      "body": "Les gros fichiers GPS peuvent ralentir les applications cartographiques. Travailler avec des parties plus petites préserve leur réactivité."
+    },
+    {
+      "title": "Exports Google Timeline :",
+      "body": "Les fichiers Records.json de Google Timeline peuvent atteindre des centaines de mégaoctets. Découpez-les en parties faciles à importer dans d’autres outils."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Puis-je ajouter mes fichiers GPS ici en toute sécurité ?",
+      "a": "Oui. Tout le traitement s’effectue dans votre navigateur avec JavaScript. Vos fichiers GPS ne sont jamais envoyés à un serveur : ils restent sur votre appareil. Les données disparaissent lorsque vous fermez l’onglet. L’outil est open source, vous pouvez donc vérifier précisément ce que fait le code."
+    },
+    {
+      "q": "Quels formats de fichiers puis-je découper ?",
+      "a": "Cet outil prend en charge les fichiers GPX, GeoJSON, KML, KMZ et JSON (Google Timeline). Les fichiers KMZ sont d’abord décompressés automatiquement, car ce sont des archives ZIP contenant du KML. Les six formats d’export JSON Google Timeline sont pris en charge, dont Records.json, Semantic Location History et les exports du téléphone."
+    },
+    {
+      "q": "Comment fonctionne le découpage par taille ?",
+      "a": "Avec le mode « Par taille », l’outil estime combien de points peuvent tenir dans chaque partie selon le format de sortie. Par exemple, le GPX utilise environ 180 octets par point : une cible de 10MB contient donc environ 55,000 points par partie. L’outil répartit vos données de manière homogène pour atteindre la taille cible."
+    },
+    {
+      "q": "Le découpage risque-t-il d’endommager mes données ?",
+      "a": "Non. Chaque point du fichier d’origine apparaît dans une seule partie en sortie. Aucune donnée n’est perdue, dupliquée ou modifiée. Chaque partie est un fichier autonome valide, avec les en-têtes et la structure adaptés au format choisi."
+    },
+    {
+      "q": "Puis-je découper des fichiers JSON Google Timeline ?",
+      "a": "Oui. Ajoutez n’importe quel fichier JSON Google Timeline : Records.json, Semantic Location History ou le format d’export récent du téléphone. L’outil détecte automatiquement le format, analyse les données de localisation et les découpe en parties téléchargeables dans un ZIP au format de sortie de votre choix."
+    },
+    {
+      "q": "Pourquoi aurais-je besoin de découper un fichier GPS ?",
+      "a": "Les gros fichiers GPS peuvent être difficiles à manipuler. De nombreuses applications GPS et outils cartographiques limitent la taille des importations, souvent à 10MB ou 50MB. Le découpage aide aussi à partager des portions de trajet, à organiser les données par période ou à réduire la taille des pièces jointes par e-mail."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Qu’est-ce qu’un outil de découpage de fichiers GPS ?",
+      "paragraphs": [
+        "Un outil de découpage GPS divise un gros fichier de localisation en parties plus petites et plus faciles à manipuler. Chaque partie est un fichier autonome valide qui peut être ouvert, importé ou partagé indépendamment.",
+        "Cet outil traite tout dans votre navigateur : vos données de localisation sensibles restent sur votre appareil. Il prend en charge tous les principaux formats GPS, y compris les exports Google Timeline."
+      ]
+    },
+    {
+      "title": "Formats d’entrée pris en charge",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**GPX** — GPS Exchange Format, le format le plus courant pour les trajets GPS et les points de passage"
+        },
+        {
+          "body": "**GeoJSON** — Format léger de données géographiques utilisé en cartographie web"
+        },
+        {
+          "body": "**KML/KMZ** — Keyhole Markup Language pour Google Earth et Maps"
+        },
+        {
+          "body": "**JSON (Google Timeline)** — Les six formats d’export Google Timeline, dont Records.json et Semantic Location History"
+        }
+      ]
+    },
+    {
+      "title": "Comprendre les modes de découpage",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Par taille** — Visez une taille précise par partie (10MB par défaut). L’outil estime la taille de sortie par point et répartit les données en conséquence."
+        },
+        {
+          "body": "**Par nombre de points** — Découpez tous les N points. Utile lorsque vous connaissez la limite de points de l’application cible."
+        },
+        {
+          "body": "**Par date** — Organisez vos données par année ou par mois. Chaque période devient un fichier distinct."
+        }
+      ]
+    },
+    {
+      "title": "Pourquoi découper des fichiers de localisation ?",
+      "paragraphs": [
+        "Les applications de suivi GPS et les outils cartographiques limitent souvent la taille des importations. Un fichier Records.json de Google Timeline peut atteindre des centaines de mégaoctets, trop pour la plupart des outils. Le découpage permet de travailler avec ces données partie par partie.",
+        "Le découpage par date est particulièrement utile pour organiser des années d’historique de localisation en archives annuelles ou mensuelles consultables individuellement."
+      ]
+    },
+    {
+      "title": "Options de format de sortie",
+      "paragraphs": [
+        "Par défaut, les parties utilisent le même format que le fichier source. Vous pouvez aussi convertir pendant le découpage, par exemple diviser un JSON Google Timeline en fichiers GPX mensuels.",
+        "Formats de sortie pris en charge : GPX, GeoJSON, KML, CSV et JSON. Toutes les parties sont regroupées dans un seul fichier ZIP, facile à télécharger."
+      ]
+    },
+    {
+      "title": "Outils associés",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Visualiseur Google Timeline](/tools/timeline-visualizer) — Affichez votre historique de localisation sur une carte"
+        },
+        {
+          "body": "[Convertisseur Google Timeline](/tools/google-timeline-converter) — Convertissez les données de chronologie en GPX, KML ou CSV"
+        },
+        {
+          "body": "[Analyse des statistiques de chronologie](/tools/timeline-statistics) — Explorez vos données de localisation"
+        },
+        {
+          "body": "[Fusion des données de chronologie](/tools/timeline-merger) — Regroupez plusieurs exports de chronologie"
+        },
+        {
+          "body": "[Fusion de trajets GPX](/tools/gpx-merger) — Fusionnez plusieurs fichiers GPX en un seul"
+        },
+        {
+          "body": "[Détection du format de chronologie](/tools/timeline-format-detector) — Identifiez le type de votre fichier d’export"
+        }
+      ]
+    }
+  ],
+  "upload": {
+    "parsing": "Analyse du fichier...",
+    "dropFile": "Déposez un fichier GPS ici",
+    "browse": "ou cliquez pour parcourir vos fichiers",
+    "formats": "Formats pris en charge : GPX, GeoJSON, KML, KMZ, JSON (Google Timeline)",
+    "clearButton": "Effacer le fichier",
+    "inputLabel": "Choisir les fichiers à traiter"
+  },
+  "results": {
+    "fileNameLabel": "Nom du fichier",
+    "fileSizeLabel": "Taille du fichier",
+    "formatLabel": "Format",
+    "pointsLabel": "Points de données",
+    "pointsLoaded": "{points} points chargés",
+    "sizeValue": "{size} MB"
+  },
+  "options": {
+    "strategyTitle": "Mode de découpage",
+    "bySize": "Par taille",
+    "byCount": "Par nombre de points",
+    "byDate": "Par date",
+    "targetSizeLabel": "Taille cible des parties",
+    "pointsPerChunkLabel": "Points par partie",
+    "outputLabel": "Format de sortie :",
+    "sameFormat": "Identique à l’entrée",
+    "targetSizeAriaLabel": "Taille cible des parties en mégaoctets",
+    "yearLabel": "Découper par année",
+    "monthLabel": "Découper par mois",
+    "splitButton": "Découper et télécharger le ZIP",
+    "splitting": "Découpage...",
+    "chunkPreview": "Création de **{count}** partie à partir de {points} points|Création de **{count}** parties à partir de {points} points|Création de **{count}** parties à partir de {points} points",
+    "formats": {
+      "gpx": "GPX",
+      "geojson": "GeoJSON",
+      "kml": "KML",
+      "csv": "CSV",
+      "json": "JSON"
+    }
+  },
+  "errors": {
+    "missingKmlError": "Aucun fichier KML trouvé dans l’archive KMZ",
+    "parseError": "Erreur d’analyse du fichier : {message}",
+    "splitError": "Erreur lors du découpage du fichier : {message}",
+    "unsupportedFormatError": "Format de fichier non pris en charge : .{format}"
+  },
+  "cta": {
+    "title": "Vous cherchez une alternative à Google Timeline ?",
+    "body": "Dawarich est une plateforme open source de suivi de localisation qui vous donne le contrôle total de vos données. Importez votre export Google Timeline, continuez à enregistrer votre position depuis votre téléphone et visualisez des années de déplacements, en auto-hébergement ou dans le cloud.",
+    "button": "Essayez Dawarich gratuitement pendant 7 jours",
+    "headline": "Votre fichier contient **{points}** points. Dawarich gère automatiquement les importations de toute taille, sans découpage.",
+    "statLabels": {
+      "points": "points"
+    }
+  }
+}

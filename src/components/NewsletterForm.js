@@ -1,3 +1,4 @@
+import content from '@locale-content/components/NewsletterForm.json';
 import React, { useState } from "react";
 import styles from "./NewsletterForm.module.css";
 
@@ -31,7 +32,7 @@ export default function NewsletterForm() {
 		const trimmedEmail = email.trim();
 		if (!EMAIL_PATTERN.test(trimmedEmail)) {
 			setStatus(STATUS.error);
-			setMessage("Please enter a valid email address.");
+			setMessage(content.invalidEmail);
 			return;
 		}
 
@@ -64,19 +65,19 @@ export default function NewsletterForm() {
 
 			if (!response.ok || payload.success !== true) {
 				const errorText =
-					payload.error || "Something went wrong. Please try again later.";
+					payload.error || content.requestError;
 				setStatus(STATUS.error);
 				setMessage(errorText);
 				return;
 			}
 
 			setStatus(STATUS.success);
-			setMessage("You're subscribed! Check your inbox to confirm.");
+			setMessage(content.success);
 			setEmail("");
 			setFirstName("");
 		} catch {
 			setStatus(STATUS.error);
-			setMessage("Network error. Please check your connection and try again.");
+			setMessage(content.networkError);
 		}
 	}
 
@@ -105,7 +106,7 @@ export default function NewsletterForm() {
 		<form className={styles.form} onSubmit={handleSubmit} noValidate>
 			<div className={styles.field}>
 				<label className={styles.label} htmlFor="newsletter-first-name">
-					First name <span className={styles.optional}>(optional)</span>
+					{content.firstNameLabel}<span className={styles.optional}>{content.optionalLabel}</span>
 				</label>
 				<input
 					id="newsletter-first-name"
@@ -113,7 +114,7 @@ export default function NewsletterForm() {
 					type="text"
 					name="first_name"
 					autoComplete="given-name"
-					placeholder="Michael"
+					placeholder={content.firstNamePlaceholder}
 					value={firstName}
 					onChange={(e) => setFirstName(e.target.value)}
 					disabled={isLoading}
@@ -122,7 +123,7 @@ export default function NewsletterForm() {
 
 			<div className={styles.field}>
 				<label className={styles.label} htmlFor="newsletter-email">
-					Email <span className={styles.required}>*</span>
+					{content.emailLabel}<span className={styles.required}>*</span>
 				</label>
 				<input
 					id="newsletter-email"
@@ -130,7 +131,7 @@ export default function NewsletterForm() {
 					type="email"
 					name="email"
 					autoComplete="email"
-					placeholder="you@example.com"
+					placeholder={content.emailPlaceholder}
 					required
 					value={email}
 					onChange={(e) => setEmail(e.target.value)}
@@ -149,15 +150,15 @@ export default function NewsletterForm() {
 				{isLoading ? (
 					<>
 						<span className={styles.spinner} aria-hidden="true" />
-						Subscribing…
+						{content.subscribing}
 					</>
 				) : (
-					"Subscribe"
+					content.subscribe
 				)}
 			</button>
 
 			<p className={styles.privacyNote}>
-				No spam. Unsubscribe anytime.
+				{content.privacyNote}
 			</p>
 		</form>
 	);

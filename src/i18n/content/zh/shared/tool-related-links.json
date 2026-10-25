@@ -1,0 +1,544 @@
+{
+  "gpx-to-kml": [
+    {
+      "href": "/tools/kml-to-gpx/",
+      "label": "KML 转 GPX",
+      "note": "反向转换"
+    },
+    {
+      "href": "/tools/gpx-to-geojson/",
+      "label": "GPX 转 GeoJSON",
+      "note": "相同源格式，转换为网页地图格式"
+    },
+    {
+      "href": "/tools/gpx-merger/",
+      "label": "GPX 合并工具",
+      "note": "先合并多个 GPX 文件"
+    }
+  ],
+  "kml-to-gpx": [
+    {
+      "href": "/tools/gpx-to-kml/",
+      "label": "GPX 转 KML",
+      "note": "反向转换"
+    },
+    {
+      "href": "/tools/kml-to-geojson/",
+      "label": "KML 转 GeoJSON",
+      "note": "相同源格式，转换为网页地图格式"
+    },
+    {
+      "href": "/tools/kmz-to-gpx/",
+      "label": "KMZ 转 GPX",
+      "note": "压缩版 KML"
+    }
+  ],
+  "gpx-to-geojson": [
+    {
+      "href": "/tools/geojson-to-gpx/",
+      "label": "GeoJSON 转 GPX",
+      "note": "反向转换"
+    },
+    {
+      "href": "/tools/gpx-to-kml/",
+      "label": "GPX 转 KML",
+      "note": "相同源格式，转换为 Google Earth 格式"
+    },
+    {
+      "href": "/interactive-map/",
+      "label": "交互式地图",
+      "note": "在 Dawarich 中呈现 GeoJSON"
+    }
+  ],
+  "geojson-to-gpx": [
+    {
+      "href": "/tools/gpx-to-geojson/",
+      "label": "GPX 转 GeoJSON",
+      "note": "反向转换"
+    },
+    {
+      "href": "/tools/geojson-to-kml/",
+      "label": "GeoJSON 转 KML",
+      "note": "相同源格式，转换为 Google Earth 格式"
+    },
+    {
+      "href": "/tools/geojson-to-kmz/",
+      "label": "GeoJSON 转 KMZ",
+      "note": "压缩的 Google Earth 格式"
+    }
+  ],
+  "geojson-to-kml": [
+    {
+      "href": "/tools/kml-to-geojson/",
+      "label": "KML 转 GeoJSON",
+      "note": "反向转换"
+    },
+    {
+      "href": "/tools/geojson-to-gpx/",
+      "label": "GeoJSON 转 GPX",
+      "note": "相同源格式，转换为 GPS 设备格式"
+    },
+    {
+      "href": "/tools/geojson-to-kmz/",
+      "label": "GeoJSON 转 KMZ",
+      "note": "压缩的 Google Earth 格式"
+    }
+  ],
+  "kml-to-geojson": [
+    {
+      "href": "/tools/geojson-to-kml/",
+      "label": "GeoJSON 转 KML",
+      "note": "反向转换"
+    },
+    {
+      "href": "/tools/kml-to-gpx/",
+      "label": "KML 转 GPX",
+      "note": "相同源格式，转换为 GPS 设备格式"
+    },
+    {
+      "href": "/tools/kmz-to-geojson/",
+      "label": "KMZ 转 GeoJSON",
+      "note": "压缩版 KML"
+    }
+  ],
+  "gpx-to-kmz": [
+    {
+      "href": "/tools/kmz-to-gpx/",
+      "label": "KMZ 转 GPX",
+      "note": "反向转换"
+    },
+    {
+      "href": "/tools/gpx-to-kml/",
+      "label": "GPX 转 KML",
+      "note": "对应的未压缩格式"
+    },
+    {
+      "href": "/tools/gpx-merger/",
+      "label": "GPX 合并工具",
+      "note": "先合并 GPX 文件"
+    }
+  ],
+  "kmz-to-gpx": [
+    {
+      "href": "/tools/gpx-to-kmz/",
+      "label": "GPX 转 KMZ",
+      "note": "反向转换"
+    },
+    {
+      "href": "/tools/kml-to-gpx/",
+      "label": "KML 转 GPX",
+      "note": "对应的未压缩格式"
+    },
+    {
+      "href": "/tools/kmz-to-kml/",
+      "label": "KMZ 转 KML",
+      "note": "解压后进行编辑"
+    }
+  ],
+  "kml-to-kmz": [
+    {
+      "href": "/tools/kmz-to-kml/",
+      "label": "KMZ 转 KML",
+      "note": "反向转换（解压）"
+    },
+    {
+      "href": "/tools/kml-to-gpx/",
+      "label": "KML 转 GPX",
+      "note": "相同源格式，转换为 GPS 设备格式"
+    },
+    {
+      "href": "/tools/kml-to-geojson/",
+      "label": "KML 转 GeoJSON",
+      "note": "相同源格式，转换为网页地图格式"
+    }
+  ],
+  "kmz-to-kml": [
+    {
+      "href": "/tools/kml-to-kmz/",
+      "label": "KML 转 KMZ",
+      "note": "反向转换（压缩）"
+    },
+    {
+      "href": "/tools/kmz-to-gpx/",
+      "label": "KMZ 转 GPX",
+      "note": "相同源格式，转换为 GPS 设备格式"
+    },
+    {
+      "href": "/tools/kmz-to-geojson/",
+      "label": "KMZ 转 GeoJSON",
+      "note": "相同源格式，转换为网页地图格式"
+    }
+  ],
+  "kmz-to-geojson": [
+    {
+      "href": "/tools/geojson-to-kmz/",
+      "label": "GeoJSON 转 KMZ",
+      "note": "反向转换"
+    },
+    {
+      "href": "/tools/kml-to-geojson/",
+      "label": "KML 转 GeoJSON",
+      "note": "对应的未压缩格式"
+    },
+    {
+      "href": "/tools/kmz-to-kml/",
+      "label": "KMZ 转 KML",
+      "note": "解压后进行编辑"
+    }
+  ],
+  "geojson-to-kmz": [
+    {
+      "href": "/tools/kmz-to-geojson/",
+      "label": "KMZ 转 GeoJSON",
+      "note": "反向转换"
+    },
+    {
+      "href": "/tools/geojson-to-kml/",
+      "label": "GeoJSON 转 KML",
+      "note": "对应的未压缩格式"
+    },
+    {
+      "href": "/tools/geojson-to-gpx/",
+      "label": "GeoJSON 转 GPX",
+      "note": "相同源格式，转换为 GPS 设备格式"
+    }
+  ],
+  "fit-to-gpx": [
+    {
+      "href": "/tools/fit-to-kml/",
+      "label": "FIT 转 KML",
+      "note": "相同源格式，转换为 Google Earth 格式"
+    },
+    {
+      "href": "/tools/fit-to-geojson/",
+      "label": "FIT 转 GeoJSON",
+      "note": "相同源格式，转换为网页地图格式"
+    },
+    {
+      "href": "/docs/comparisons/vs-strava/",
+      "label": "Dawarich 与 Strava 对比",
+      "note": "在哪里保存您的活动记录"
+    }
+  ],
+  "fit-to-kml": [
+    {
+      "href": "/tools/fit-to-gpx/",
+      "label": "FIT 转 GPX",
+      "note": "兼容性最广的 GPS 格式"
+    },
+    {
+      "href": "/tools/fit-to-geojson/",
+      "label": "FIT 转 GeoJSON",
+      "note": "转换为网页地图格式"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "热力图生成器",
+      "note": "呈现 FIT 活动数据"
+    }
+  ],
+  "fit-to-geojson": [
+    {
+      "href": "/tools/fit-to-gpx/",
+      "label": "FIT 转 GPX",
+      "note": "兼容性最广的 GPS 格式"
+    },
+    {
+      "href": "/tools/fit-to-kml/",
+      "label": "FIT 转 KML",
+      "note": "转换为 Google Earth 格式"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "热力图生成器",
+      "note": "呈现 FIT 活动数据"
+    }
+  ],
+  "tcx-to-gpx": [
+    {
+      "href": "/tools/tcx-to-kml/",
+      "label": "TCX 转 KML",
+      "note": "相同源格式，转换为 Google Earth 格式"
+    },
+    {
+      "href": "/tools/tcx-to-geojson/",
+      "label": "TCX 转 GeoJSON",
+      "note": "转换为网页地图格式"
+    },
+    {
+      "href": "/tools/fit-to-gpx/",
+      "label": "FIT 转 GPX",
+      "note": "较新的 Garmin 格式"
+    }
+  ],
+  "tcx-to-kml": [
+    {
+      "href": "/tools/tcx-to-gpx/",
+      "label": "TCX 转 GPX",
+      "note": "兼容性最广的 GPS 格式"
+    },
+    {
+      "href": "/tools/tcx-to-geojson/",
+      "label": "TCX 转 GeoJSON",
+      "note": "转换为网页地图格式"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "热力图生成器",
+      "note": "呈现 TCX 活动数据"
+    }
+  ],
+  "tcx-to-geojson": [
+    {
+      "href": "/tools/tcx-to-gpx/",
+      "label": "TCX 转 GPX",
+      "note": "兼容性最广的 GPS 格式"
+    },
+    {
+      "href": "/tools/tcx-to-kml/",
+      "label": "TCX 转 KML",
+      "note": "转换为 Google Earth 格式"
+    },
+    {
+      "href": "/tools/fit-to-geojson/",
+      "label": "FIT 转 GeoJSON",
+      "note": "较新的 Garmin 格式"
+    }
+  ],
+  "google-timeline-converter": [
+    {
+      "href": "/tools/route-video-maker/",
+      "label": "路线视频制作工具",
+      "note": "将您的时间线制作成旅行视频"
+    },
+    {
+      "href": "/tools/google-timeline-splitter/",
+      "label": "时间线拆分工具",
+      "note": "拆分超大的 Takeout 导出文件"
+    },
+    {
+      "href": "/tools/timeline-merger/",
+      "label": "时间线合并工具",
+      "note": "合并多个导出文件"
+    },
+    {
+      "href": "/blog/migrating-from-google-location-history-to-dawarich/",
+      "label": "迁移指南",
+      "note": "逐步迁移到 Dawarich"
+    }
+  ],
+  "google-timeline-splitter": [
+    {
+      "href": "/tools/google-timeline-converter/",
+      "label": "时间线转换器",
+      "note": "将拆分后的文件转换为 GPX/KML/CSV"
+    },
+    {
+      "href": "/tools/timeline-format-detector/",
+      "label": "格式检测工具",
+      "note": "识别您的导出文件类型"
+    },
+    {
+      "href": "/blog/whats-inside-your-google-timeline-export/",
+      "label": "Timeline 导出文件包含什么",
+      "note": "了解格式"
+    }
+  ],
+  "timeline-merger": [
+    {
+      "href": "/tools/google-timeline-converter/",
+      "label": "时间线转换器",
+      "note": "将合并后的文件转换为 GPX/KML/CSV"
+    },
+    {
+      "href": "/tools/timeline-statistics/",
+      "label": "时间线统计数据",
+      "note": "分析合并后的历史记录"
+    },
+    {
+      "href": "/tools/google-timeline-splitter/",
+      "label": "时间线拆分工具",
+      "note": "反向转换"
+    }
+  ],
+  "timeline-format-detector": [
+    {
+      "href": "/tools/google-timeline-converter/",
+      "label": "时间线转换器",
+      "note": "确定格式后再转换"
+    },
+    {
+      "href": "/tools/google-timeline-splitter/",
+      "label": "时间线拆分工具",
+      "note": "拆分大型导出文件"
+    },
+    {
+      "href": "/blog/whats-inside-your-google-timeline-export/",
+      "label": "Timeline 导出文件包含什么",
+      "note": "格式参考"
+    }
+  ],
+  "timeline-visualizer": [
+    {
+      "href": "/tools/route-video-maker/",
+      "label": "路线视频制作工具",
+      "note": "用同一文件制作视频"
+    },
+    {
+      "href": "/interactive-map/",
+      "label": "交互式地图",
+      "note": "在 Dawarich 中全面呈现"
+    },
+    {
+      "href": "/tools/map-poster-maker/",
+      "label": "地图海报制作工具",
+      "note": "将同一文件变成墙面艺术"
+    },
+    {
+      "href": "/tools/timeline-statistics/",
+      "label": "时间线统计数据",
+      "note": "地图背后的数字"
+    }
+  ],
+  "timeline-statistics": [
+    {
+      "href": "/tools/timeline-mileage-calculator/",
+      "label": "里程计算器",
+      "note": "快速统计，仅含距离"
+    },
+    {
+      "href": "/tools/timeline-visualizer/",
+      "label": "时间线可视化工具",
+      "note": "在地图上查看同一份数据"
+    },
+    {
+      "href": "/statistics/",
+      "label": "Dawarich 统计数据",
+      "note": "持续保留的统计面板"
+    }
+  ],
+  "timeline-mileage-calculator": [
+    {
+      "href": "/tools/timeline-statistics/",
+      "label": "时间线统计数据",
+      "note": "完整统计明细"
+    },
+    {
+      "href": "/tools/timeline-visualizer/",
+      "label": "时间线可视化工具",
+      "note": "同一份数据的地图视图"
+    },
+    {
+      "href": "/statistics/",
+      "label": "Dawarich 统计数据",
+      "note": "长期记录里程"
+    }
+  ],
+  "gpx-merger": [
+    {
+      "href": "/tools/gps-file-splitter/",
+      "label": "GPS 文件拆分工具",
+      "note": "反向转换"
+    },
+    {
+      "href": "/tools/map-poster-maker/",
+      "label": "地图海报制作工具",
+      "note": "打印合并后的轨迹"
+    },
+    {
+      "href": "/import-export/",
+      "label": "导入与导出",
+      "note": "将合并后的数据导入 Dawarich"
+    }
+  ],
+  "gps-file-splitter": [
+    {
+      "href": "/tools/gpx-merger/",
+      "label": "GPX 合并工具",
+      "note": "反向转换"
+    },
+    {
+      "href": "/tools/google-timeline-splitter/",
+      "label": "时间线拆分工具",
+      "note": "拆分 Google Takeout 导出文件"
+    },
+    {
+      "href": "/tools/timeline-format-detector/",
+      "label": "格式检测工具",
+      "note": "拆分前识别文件类型"
+    }
+  ],
+  "heatmap-generator": [
+    {
+      "href": "/interactive-map/",
+      "label": "交互式地图",
+      "note": "热力图图层 + 轨迹 + 到访记录"
+    },
+    {
+      "href": "/tools/timeline-visualizer/",
+      "label": "时间线可视化工具",
+      "note": "按轨迹查看"
+    },
+    {
+      "href": "/tools/map-poster-maker/",
+      "label": "地图海报制作工具",
+      "note": "同一文件，生成可打印海报"
+    }
+  ],
+  "map-poster-maker": [
+    {
+      "href": "/poster-studio/",
+      "label": "Dawarich 海报工作室",
+      "note": "打印历史记录中的任意月份"
+    },
+    {
+      "href": "/tools/route-video-maker/",
+      "label": "路线视频制作工具",
+      "note": "用同一文件制作路线动画视频"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "热力图生成器",
+      "note": "同一文件的密度视图"
+    },
+    {
+      "href": "/tools/gpx-merger/",
+      "label": "GPX 合并工具",
+      "note": "将多条轨迹合成一张海报"
+    }
+  ],
+  "route-video-maker": [
+    {
+      "href": "/tools/map-poster-maker/",
+      "label": "地图海报制作工具",
+      "note": "用同一文件制作可打印的海报"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "热力图生成器",
+      "note": "查看同一文件的密度分布"
+    },
+    {
+      "href": "/tools/gpx-merger/",
+      "label": "GPX 合并工具",
+      "note": "合并多条轨迹，制作一个视频"
+    }
+  ],
+  "photo-geotagging": [
+    {
+      "href": "/integrations/",
+      "label": "照片集成",
+      "note": "导入 Immich 与 PhotoPrism 地理数据"
+    },
+    {
+      "href": "/docs/features/photos/",
+      "label": "Dawarich 中的照片",
+      "note": "了解应用中的照片功能"
+    },
+    {
+      "href": "/docs/tools/phototagger/",
+      "label": "PhotoTagger 命令行工具",
+      "note": "通过命令行批量添加地理标签"
+    }
+  ]
+}

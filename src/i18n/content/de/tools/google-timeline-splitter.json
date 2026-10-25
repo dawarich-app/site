@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "title": "Google Timeline (Google Maps Zeitachse): große JSONs teilen",
+    "description": "Große Google-Timeline-JSONs teilen. Alle Formate: Records.json, Semantic Location History, Semantic Segments … Valide Teile nach Maß. Gratis, privat im Browser.",
+    "keywords": "Google-Timeline-JSON aufteilen, Records.json teilen, großen Google-Standortverlauf aufteilen, Google-Timeline-Dateien teilen, Google-Takeout-Standortdaten aufteilen, Timeline-JSON teilen, Google-Timeline-Datei zu groß",
+    "featureList": [
+      "Große Google-Timeline-JSON-Dateien in kleinere Teile aufteilen",
+      "Unterstützung für alle 6 Google-Timeline-Exportformate",
+      "Zielgröße wählen: 1, 5, 10, 20, 50 oder 100 MB",
+      "Jeder Teil ist eine gültige JSON-Datei im Originalformat",
+      "Alle Teile als einzelne ZIP-Datei herunterladen",
+      "Datenschutz an erster Stelle – gesamte Verarbeitung im Browser",
+      "Keine Daten werden an einen Server gesendet"
+    ]
+  },
+  "howTo": {
+    "name": "So teilst du eine große Google-Timeline-JSON-Datei auf",
+    "description": "Lade deinen Google-Timeline-Export hoch und teile ihn in kleinere, gültige JSON-Dateien auf.",
+    "steps": [
+      {
+        "name": "Google-Timeline-JSON hochladen",
+        "text": "Ziehe deine Records.json, Semantic Location History oder eine andere Google-Timeline-Exportdatei in das Werkzeug."
+      },
+      {
+        "name": "Zielgröße der Teile wählen",
+        "text": "Wähle die gewünschte Größe: 1 MB, 5 MB, 10 MB, 20 MB, 50 MB oder 100 MB pro Datei."
+      },
+      {
+        "name": "Aufgeteilte Dateien herunterladen",
+        "text": "Klicke auf „Aufteilen & ZIP herunterladen“, um alle Teile in einer ZIP-Datei zu erhalten. Jeder Teil ist eine gültige JSON-Datei im Originalformat."
+      }
+    ]
+  },
+  "h1": "Google-Timeline-Dateien aufteilen",
+  "intro": "Teile große JSON-Exporte aus Google Timeline (Google Maps Zeitachse) in kleinere, gültige Dateien auf. Jeder Teil behält das Originalformat und lässt sich so überall importieren. Wähle deine Zielgröße und lade eine ZIP-Datei herunter.",
+  "benefitsTitle": "Warum Timeline-Dateien aufteilen?",
+  "privacyBody": "Die gesamte Datenverarbeitung findet in deinem Browser statt. Deine Dateien verlassen dein Gerät nie.",
+  "preCta": "Arbeitest du mit großen Google-Timeline-Exporten? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-splitter) verarbeitet Importe jeder Größe automatisch. Deine Daten gehören vollständig dir und bleiben privat.",
+  "faqTitle": "Häufig gestellte Fragen",
+  "homeLabel": "Startseite",
+  "toolsLabel": "Kostenlose Werkzeuge",
+  "privacyTitle": "Datenschutz an erster Stelle",
+  "benefits": [
+    {
+      "title": "Größenlimits beim Import:",
+      "body": "Viele Werkzeuge begrenzen die Dateigröße beim Import. Eine 500 MB große Records.json in 10 MB große Teile aufzuteilen, erleichtert den Import."
+    },
+    {
+      "title": "Schnellere Stapelimporte:",
+      "body": "Mehrere kleinere Dateien zu importieren ist oft schneller und zuverlässiger als eine riesige Datei, besonders bei langsamen Verbindungen."
+    },
+    {
+      "title": "Originalformat bleibt erhalten:",
+      "body": "Anders als Konverter behält dieses Werkzeug deine Daten im exakt gleichen Google-Timeline-JSON-Format. Jeder Teil ist eine gültige, eigenständige Datei."
+    },
+    {
+      "title": "Alle Formate unterstützt:",
+      "body": "Funktioniert mit Records.json, Semantic Location History, Semantic Segments, Location-History-Exporten vom Smartphone, Einstellungen und Timeline Edits."
+    }
+  ],
+  "formatLabels": {
+    "records": "Records.json (GPS-Rohdaten)",
+    "semantic": "Semantic Location History",
+    "semanticSegments": "Semantic Segments",
+    "locationHistory": "Standortverlauf (Smartphone-Export)",
+    "settings": "Einstellungen",
+    "timelineEdits": "Timeline Edits",
+    "unknown": "Unbekannt"
+  },
+  "faq": [
+    {
+      "q": "Ist es sicher, meine Google-Timeline-Daten hochzuladen?",
+      "a": "Ja. Die gesamte Verarbeitung erfolgt mit JavaScript direkt in deinem Browser. Deine Standortverlaufsdateien werden nie auf einen Server hochgeladen, sondern bleiben auf deinem Gerät. Wenn du den Tab schließt, sind die Daten weg. Das Werkzeug ist quelloffen, sodass du genau prüfen kannst, was der Code tut."
+    },
+    {
+      "q": "Welche Google-Timeline-Formate kann ich aufteilen?",
+      "a": "Dieses Werkzeug unterstützt alle sechs Google-Timeline-Exportformate: Records.json (GPS-Rohdaten), Semantic Location History (monatliche YYYY_MONTH.json-Dateien), Semantic Segments (neueres Smartphone-Exportformat), Location History (Array-Format mit startTime/endTime), Einstellungen und Timeline Edits. Das Format wird beim Hochladen automatisch erkannt."
+    },
+    {
+      "q": "Werden meine Daten beim Aufteilen beschädigt?",
+      "a": "Nein. Jeder Eintrag deiner Originaldatei erscheint in genau einer Teildatei. Es werden keine Daten verloren, dupliziert oder verändert. Jeder Teil ist eine gültige JSON-Datei im exakt gleichen Format wie das Original. Er lässt sich somit in jedes Werkzeug importieren, das Google-Timeline-Dateien akzeptiert."
+    },
+    {
+      "q": "Warum sollte ich eine Google-Timeline-Datei aufteilen?",
+      "a": "Google-Timeline-Exporte, insbesondere Records.json, können Hunderte Megabyte oder sogar Gigabyte groß sein. Viele Importwerkzeuge, auch Dawarich, verarbeiten große Dateien besser, wenn sie in kleinere Teile aufgeteilt sind. Das Aufteilen hilft auch, wenn du einen Teil deiner Daten teilen oder sie stapelweise verarbeiten möchtest."
+    },
+    {
+      "q": "Wie funktioniert die Zielgröße?",
+      "a": "Das Werkzeug nimmt Stichproben aus deiner Datei, um die durchschnittliche Eintragsgröße zu schätzen. Daraus berechnet es, wie viele Einträge pro Teil in die Zielgröße passen. Da einzelne Einträge unterschiedlich groß sind, können die tatsächlichen Dateigrößen leicht abweichen. Das Werkzeug versucht dabei, unter der Zielgröße zu bleiben."
+    },
+    {
+      "q": "Kann ich die aufgeteilten Dateien in Dawarich importieren?",
+      "a": "Ja. Jeder Teil ist eine gültige Google-Timeline-JSON-Datei im Originalformat. Du kannst sie einzeln in Dawarich oder jedes andere Werkzeug importieren, das Google-Timeline-Exporte akzeptiert. Dawarich verarbeitet auch große Dateien direkt, aber das Aufteilen kann den Import beschleunigen."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Was macht das Werkzeug zum Aufteilen von Google-Timeline-Dateien?",
+      "paragraphs": [
+        "Dieses Werkzeug zerlegt einen großen Google-Timeline-JSON-Export in kleinere Dateien mit der von dir gewählten Zielgröße. Jeder Teil ist eine gültige, eigenständige JSON-Datei im exakt gleichen Format wie das Original. Die vollständige Struktur bleibt erhalten, nicht nur die Koordinaten.",
+        "Anders als Formatkonverter, die Punkte in GPX oder CSV extrahieren, behält dieses Werkzeug deine Daten im nativen Google-Timeline-Format. So kannst du jeden Teil in jedes Werkzeug importieren, das Google-Timeline-JSON akzeptiert, einschließlich Dawarich."
+      ]
+    },
+    {
+      "title": "Unterstützte Google-Timeline-Formate",
+      "paragraphs": [],
+      "items": [
+        { "body": "**Records.json** — GPS-Rohdaten mit E7-Koordinaten, Zeitstempeln, Genauigkeit und Aktivitätsdaten. Oft die größte Datei eines Google-Takeout-Exports." },
+        { "body": "**Semantic Location History** — Monatsdateien (YYYY_MONTH.json) mit Aufenthalten an Orten und Aktivitätsabschnitten einschließlich Namen und Adressen." },
+        { "body": "**Semantic Segments** — Neueres Smartphone-Exportformat mit Aufenthalts- und Wegdaten." },
+        { "body": "**Standortverlauf** — Array-Format mit startTime/endTime-Einträgen und Timeline-Pfaden." },
+        { "body": "**Einstellungen** — Geräteeinstellungen und Konfigurationsdaten." },
+        { "body": "**Timeline Edits** — Zusammengefasste Ortsdaten und rohe Signaldaten aus Nutzerbearbeitungen." }
+      ]
+    },
+    {
+      "title": "Die richtige Teilgröße wählen",
+      "paragraphs": [],
+      "items": [
+        { "body": "**1 MB** — Größtmögliche Anzahl kleiner Dateien. Gut für Werkzeuge mit sehr niedrigen Importlimits oder zum Teilen einzelner Abschnitte." },
+        { "body": "**5 MB** — Kleine Teile, die mit fast jedem Importwerkzeug funktionieren. Ein guter Standardwert für E-Mail-Anhänge." },
+        { "body": "**10 MB** — Ausgewogene Größe für die meisten Importwerkzeuge. Empfohlen für Importe in Dawarich." },
+        { "body": "**20 MB** — Weniger Dateien, für die meisten Werkzeuge noch gut handhabbar." },
+        { "body": "**50 MB** — Große Teile für Werkzeuge, die große Dateien gut verarbeiten." },
+        { "body": "**100 MB** — Minimale Aufteilung. Geeignet, wenn du eine sehr große Datei nur halbieren oder in wenige Teile zerlegen möchtest." }
+      ]
+    },
+    {
+      "title": "So funktioniert es",
+      "paragraphs": [
+        "Das Werkzeug erkennt das Dateiformat automatisch und teilt dann das Hauptdatenarray (Standorte, Timeline-Objekte, Segmente usw.) in gleich große Gruppen auf. Jede Gruppe erhält dieselbe JSON-Struktur wie die Originaldatei.",
+        "Anhand von Stichproben schätzt das Werkzeug die durchschnittliche Eintragsgröße und berechnet, wie viele Einträge pro Teil in deine Zielgröße passen. Alle Teile werden zum einfachen Herunterladen in einer ZIP-Datei gebündelt."
+      ]
+    },
+    {
+      "title": "Datenschutz und Sicherheit",
+      "paragraphs": [
+        "Deine Google-Timeline-Daten enthalten sensible Standortinformationen. Dieses Werkzeug verarbeitet alles direkt in deinem Browser. Es werden nie Daten an einen Server gesendet. Die Dateien bleiben vom Hochladen bis zum Herunterladen auf deinem Gerät.",
+        "Wir verwenden für deine hochgeladenen Dateien keine Cookies, Analysen oder Tracking. Das Werkzeug ist Teil des quelloffenen Dawarich-Projekts. Du kannst den Code also selbst prüfen."
+      ]
+    },
+    {
+      "title": "Weitere Werkzeuge",
+      "paragraphs": [],
+      "items": [
+        { "body": "[Google-Timeline-Konverter](/tools/google-timeline-converter) — Timeline-Daten in GPX, KML, CSV oder GeoJSON umwandeln" },
+        { "body": "[Google-Timeline-Visualisierung](/tools/timeline-visualizer) — Deinen Standortverlauf auf einer interaktiven Karte ansehen" },
+        { "body": "[Timeline-Statistikanalyse](/tools/timeline-statistics) — Einblicke aus deinen Standortdaten gewinnen" },
+        { "body": "[Timeline-Daten zusammenführen](/tools/timeline-merger) — Mehrere Timeline-Exporte kombinieren" },
+        { "body": "[GPS-Dateien aufteilen](/tools/gps-file-splitter) — GPX, GeoJSON, KML und andere GPS-Dateien aufteilen" },
+        { "body": "[Timeline-Formaterkennung](/tools/timeline-format-detector) — Den Typ deiner Exportdatei erkennen" }
+      ]
+    }
+  ],
+  "upload": {
+    "parsing": "Datei wird eingelesen...",
+    "dropFile": "Google-Timeline-JSON-Datei hier ablegen",
+    "browse": "oder zum Auswählen klicken",
+    "formats": "Unterstützt: Records.json, Semantic, Location History und weitere",
+    "clearButton": "Datei entfernen",
+    "inputLabel": "Dateien zur Verarbeitung auswählen"
+  },
+  "results": {
+    "fileNameLabel": "Dateiname",
+    "fileSizeLabel": "Dateigröße",
+    "formatLabel": "Format",
+    "entriesLabel": "Einträge",
+    "entriesLoaded": "{count} Einträge geladen",
+    "sizeValue": "{size} MB"
+  },
+  "options": {
+    "targetSizeTitle": "Zielgröße der Teile",
+    "splitButton": "Aufteilen & ZIP herunterladen",
+    "splitting": "Datei wird aufgeteilt...",
+    "chunkPreview": "Aus {entries} Einträgen entsteht **{count}** Teil (~{size} MB)|Aus {entries} Einträgen entstehen **{count}** Teile (je ~{size} MB)"
+  },
+  "errors": {
+    "jsonOnlyError": "Bitte lade eine JSON-Datei hoch. Google-Timeline-Exporte liegen immer im JSON-Format vor.",
+    "unknownFormatError": "Dies scheint keine Google-Timeline-Exportdatei zu sein. Unterstützte Formate: Records.json, Semantic Location History, Semantic Segments, Location History, Einstellungen, Timeline Edits.",
+    "parseError": "Fehler beim Einlesen der Datei: {message}",
+    "splitError": "Fehler beim Aufteilen der Datei: {message}"
+  },
+  "cta": {
+    "title": "Suchst du einen Ersatz für Google Timeline?",
+    "body": "Dawarich ist eine quelloffene Plattform zur Standortaufzeichnung, die dir volle Kontrolle über deine Daten gibt. Importiere deinen Google-Timeline-Export, zeichne deinen Standort laufend mit dem Smartphone auf und visualisiere jahrelange Bewegungsdaten – selbst gehostet oder in der Cloud.",
+    "button": "Dawarich 7 Tage kostenlos testen",
+    "headline": "Deine Datei enthält **{count}** Einträge. Dawarich verarbeitet Importe jeder Größe automatisch, ohne dass du sie aufteilen musst.",
+    "statLabels": {
+      "entries": "Einträge",
+      "fileSize": "Dateigröße"
+    }
+  }
+}

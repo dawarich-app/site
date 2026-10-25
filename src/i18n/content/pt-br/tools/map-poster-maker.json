@@ -1,0 +1,83 @@
+{
+  "h1": "Qualquer pessoa pode pendurar um pôster de Berlim. Só você tem o seu percurso.",
+  "intro": "O pôster abaixo é uma demonstração — um mês de deslocamentos por Berlim. Solte qualquer arquivo GPX, Google Timeline (Linha do tempo do Google Maps), KML, FIT ou TCX para criar um mapa que só você pode pendurar — seus passeios de bicicleta, suas corridas, suas viagens de carro. Cerca de dois minutos, sem conta.",
+  "saveIntro": "Quer ter esses dados na sua conta Dawarich também? Vamos importá-los durante o cadastro — sem precisar carregá-los novamente.",
+  "appName": "Criador de pôsteres de mapas",
+  "homeLabel": "Início",
+  "toolsLabel": "Ferramentas gratuitas",
+  "loadingStudio": "Carregando o estúdio…",
+  "valueStrip": "17 temas de mapa · 22 formatos, de A5 a A0 e 4K · PNG e PDF a 300 DPI · {price} · sem marca-d’água",
+  "meta": {
+    "title": "Criador de pôsteres de mapas grátis — percursos GPS",
+    "description": "Pôsteres de GPX, Google Timeline (Linha do tempo do Google Maps), KML, FIT ou TCX no navegador. 17 temas, 22 layouts, PNG/PDF grátis e impressão opcional.",
+    "keywords": "criador de pôsteres de mapas, pôster de percurso, pôster GPX, pôster de mapa da cidade, pôster Google Timeline, pôster de corrida, impressão de mapa personalizado, mapa decorativo, arte GPS"
+  },
+  "howTo": {
+    "name": "Como criar um pôster de mapa com seus dados de GPS",
+    "description": "Transforme um trajeto GPS ou seu histórico do Google Timeline em um pôster de mapa para imprimir, gratuitamente e no navegador.",
+    "steps": [
+      {
+        "name": "Carregue um arquivo de localização",
+        "text": "O estúdio abre com um percurso de demonstração por Berlim. Arraste e solte um arquivo GPX, Google Timeline JSON, GeoJSON, KML, KMZ, FIT ou TCX para substituí-lo pelo seu próprio trajeto."
+      },
+      {
+        "name": "Componha seu pôster",
+        "text": "Escolha entre 17 temas de mapa e 22 layouts, adicione título e subtítulo, escolha uma fonte e ajuste a cor, a opacidade e a espessura do trajeto. Mova e amplie a prévia para enquadrar seu percurso."
+      },
+      {
+        "name": "Exporte ou encomende uma impressão",
+        "text": "Baixe o pôster como PNG ou PDF pronto para impressão com até 300 DPI, ou encomende uma impressão física em 30×40, 50×70 ou 70×100 cm."
+      }
+    ],
+    "tool": "Criador de pôsteres de mapas do Dawarich"
+  },
+  "faq": [
+    {
+      "q": "Como faço um pôster com meus dados de GPS?",
+      "a": "O estúdio abre com um percurso de demonstração por Berlim para você experimentar tudo imediatamente. Solte seu arquivo GPX, Google Timeline JSON, GeoJSON, KML, KMZ, FIT ou TCX na área de carregamento para substituí-lo, escolha entre 17 temas de mapa e 22 layouts, adicione um título e baixe o pôster pronto como PNG ou PDF para impressão."
+    },
+    {
+      "q": "Meus dados de localização são privados?",
+      "a": "Seu arquivo é lido inteiramente no navegador e nunca é enviado a nenhum servidor. Para desenhar o mapa, os blocos de mapa da área coberta pelos seus dados são solicitados ao servidor de mapas do Dawarich — isso revela os limites aproximados da área que você está vendo, como em qualquer mapa online. Duas ações opcionais enviam dados: encomendar uma impressão envia o PDF do pôster pronto ao serviço de impressão do Dawarich, e \"Salvar na minha conta\" envia seu arquivo durante o cadastro."
+    },
+    {
+      "q": "É grátis? Preciso de uma conta?",
+      "a": "Sim, é grátis — sem conta, sem cadastro, sem marca-d’água. Os downloads em PNG e PDF são ilimitados. Você só paga se encomendar uma impressão física, e criar uma conta Dawarich é opcional."
+    },
+    {
+      "q": "Qual é a resolução dos pôsteres exportados?",
+      "a": "Os layouts de impressão são exportados com até 300 DPI, com o tamanho físico gravado no PNG (pHYs) ou na página do PDF. Os layouts para redes sociais e papéis de parede são exportados nas dimensões exatas em pixels, por exemplo, 1080 × 1920 para um story ou 3840 × 2160 para um papel de parede 4K. Tamanhos muito grandes são reduzidos automaticamente ao que a memória gráfica do seu dispositivo consegue renderizar, e um aviso informa quando isso acontece."
+    },
+    {
+      "q": "Posso encomendar uma impressão física do meu pôster?",
+      "a": "Sim — escolha um dos três tamanhos de impressão (30 × 40, 50 × 70 ou 70 × 100 cm), e o estúdio prepara um PDF de 300 DPI e o envia ao serviço de impressão do Dawarich. O pagamento é feito pelo Stripe, e as impressões são enviadas em papel fosco de 200 gsm com frete grátis na União Europeia. O preço final é confirmado no pagamento."
+    },
+    {
+      "q": "Quais arquivos funcionam no criador de pôsteres?",
+      "a": "Trajetos GPX, exportações do Google Timeline (Records.json, Semantic Location History e formatos Takeout do celular), GeoJSON, KML, KMZ, FIT e TCX. Você pode soltar vários arquivos de uma vez — eles são combinados em um trajeto, dividido sempre que há um intervalo de mais de uma hora."
+    }
+  ],
+  "toolbar": {
+    "startOver": "Recomeçar",
+    "demoLabel": "Mostrar dados de demonstração",
+    "fileSummary": "{count} arquivo · {points} pontos|{count} arquivos · {points} pontos|{count} arquivos · {points} pontos"
+  },
+  "upload": {
+    "formats": "GPX, FIT, TCX, GeoJSON, KML, KMZ, Google Timeline JSON",
+    "processing": "Processando arquivos…",
+    "addFiles": "Adicionar mais arquivos",
+    "dropFiles": "Solte seu arquivo de localização aqui ou clique para procurar",
+    "inputLabel": "Escolha os arquivos para criar um pôster"
+  },
+  "errors": {
+    "emptyError": "Nenhum ponto que possa ser exibido no mapa foi encontrado nos arquivos carregados — verifique se eles contêm dados de localização.",
+    "demoError": "Não foi possível carregar o percurso de demonstração — solte seu arquivo para começar a compor.",
+    "sizeError": "{fileName} tem mais de 100 MB — divida-o primeiro (experimente o Divisor de arquivos GPS).",
+    "parseError": "Erro ao ler {fileName}: {message}"
+  },
+  "cta": {
+    "headline": "Seu pôster foi criado com **{points}** pontos de GPS de um arquivo. O Dawarich registra cada percurso automaticamente — qualquer mês do seu histórico vira um pôster. Teste grátis por 7 dias, reembolso em 14 dias, cancele quando quiser.",
+    "fallback": "Um arquivo cria um pôster. O Dawarich registra cada percurso automaticamente — qualquer mês do seu histórico vira um pôster. Teste grátis por 7 dias, reembolso em 14 dias, cancele quando quiser."
+  },
+  "faqTitle": "Perguntas frequentes"
+}

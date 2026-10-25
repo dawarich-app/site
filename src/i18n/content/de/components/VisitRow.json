@@ -1,0 +1,10 @@
+{
+  "allDay": "Ganztägig",
+  "summary": "{duration} · {points} Pkt.",
+  "duration": {
+    "zero": "0m",
+    "hoursMinutes": "{hours}h {minutes}m",
+    "hours": "{hours}h",
+    "minutes": "{minutes}m"
+  }
+}

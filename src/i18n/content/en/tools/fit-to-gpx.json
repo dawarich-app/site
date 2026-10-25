@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "Free FIT to GPX Converter - Convert Garmin Activity Files Online",
+    "description": "Convert Garmin FIT files to GPX format instantly. Free, privacy-first online converter for cycling, running, and fitness activities. Works entirely in your browser - no upload required.",
+    "keywords": "FIT to GPX, FIT converter, Garmin converter, Garmin FIT to GPX, fitness file converter, cycling GPX, running GPX, activity converter, Garmin watch converter, Garmin Edge converter",
+    "appName": "FIT to GPX Converter"
+  },
+  "h1": "FIT to GPX Converter",
+  "intro": "Convert your Garmin FIT activity files to GPX format instantly. All processing happens in your browser - your fitness data never leaves your device.",
+  "cards": [
+    {
+      "title": "About FIT Format",
+      "body": "FIT (Flexible and Interoperable Data Transfer) is Garmin's proprietary binary format for storing fitness and activity data. It's used by Garmin watches, bike computers, and other fitness devices to store workouts, routes, heart rate, power, and other metrics."
+    },
+    {
+      "title": "About GPX Format",
+      "body": "GPX (GPS Exchange Format) is an open XML standard for GPS data. It's widely supported by fitness platforms (Strava, Komoot), mapping software (Google Earth, QGIS), and navigation apps."
+    },
+    {
+      "title": "Why Convert FIT to GPX?",
+      "items": [
+        "Import activities into platforms that don't support FIT files",
+        "Share routes with users on different platforms",
+        "View your data in mapping software like Google Earth",
+        "Create backups in an open, human-readable format",
+        "Edit or combine activities using GPX-compatible tools"
+      ]
+    },
+    {
+      "title": "Supported Devices",
+      "body": "This converter works with FIT files from:",
+      "items": [
+        "Garmin watches (Forerunner, Fenix, Venu, Instinct, Enduro)",
+        "Garmin bike computers (Edge series)",
+        "Wahoo devices (ELEMNT, TICKR)",
+        "Zwift exports",
+        "Bryton bike computers",
+        "Suunto devices (via FIT export)",
+        "Any device that exports standard FIT files"
+      ]
+    },
+    {
+      "title": "What Data Is Preserved?",
+      "body": "The converter preserves:",
+      "items": [
+        "GPS coordinates (latitude, longitude)",
+        "Timestamps",
+        "Elevation data",
+        "Lap markers (as waypoints)",
+        "Activity metadata (sport type, distance, etc.)"
+      ]
+    }
+  ],
+  "privacyBody": "All conversion happens entirely in your browser. Your fitness data never leaves your device and is not sent to any server.",
+  "noGpsData": "No GPS data found in FIT file. The file may be corrupted or contain only sensor data without GPS coordinates."
+}

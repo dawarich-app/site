@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "GPX a GeoJSON gratis — Trajectes GPS en línia",
+    "description": "Converteix GPX a GeoJSON a l’instant. Convertidor gratuït i privat de trajectes, punts de pas i rutes GPS al navegador, sense pujar fitxers.",
+    "keywords": "GPX a GeoJSON, convertidor GPX, convertidor GeoJSON, convertidor de fitxers GPS, convertidor de trajectes, convertidor de punts de pas, convertidor de rutes, analitzador GPX",
+    "appName": "Convertidor de GPX a GeoJSON"
+  },
+  "h1": "Convertidor de GPX a GeoJSON",
+  "intro": "Converteix els fitxers GPX a GeoJSON a l’instant. Tot es processa al navegador: les dades no surten mai del dispositiu.",
+  "cards": [
+    {
+      "title": "Sobre el format GPX",
+      "body": "GPX (GPS Exchange Format) és un format basat en XML per a dades GPS. És molt utilitzat en dispositius GPS, monitors d’activitat i aplicacions de navegació per desar punts de pas, trajectes i rutes."
+    },
+    {
+      "title": "Sobre el format GeoJSON",
+      "body": "GeoJSON és un format basat en JSON per codificar estructures de dades geogràfiques. Té un ampli suport en biblioteques de mapes web i programari SIG, cosa que el fa ideal per a aplicacions web."
+    },
+    {
+      "title": "Per què convertir GPX a GeoJSON?",
+      "items": [
+        "Més compatibilitat amb biblioteques de mapes web (Leaflet, Mapbox, etc.)",
+        "Més fàcil d’analitzar i manipular en aplicacions JavaScript",
+        "Format més compacte que GPX basat en XML",
+        "L’estructura JSON nativa funciona fàcilment amb les API web modernes"
+      ]
+    }
+  ],
+  "privacyBody": "Tota la conversió es fa al navegador. Les dades GPS no surten mai del dispositiu ni s’envien a cap servidor."
+}

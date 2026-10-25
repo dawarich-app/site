@@ -1,0 +1,10 @@
+{
+  "title": "Mein Standortverlauf in Zahlen",
+  "totalDistance": "Gesamtentfernung",
+  "dataPoints": "Datenpunkte",
+  "placesVisited": "Besuchte Orte",
+  "countries": "Länder",
+  "downloadButton": "Statistikkarte als Bild herunterladen",
+  "branding": "Erstellt mit dawarich.app",
+  "distanceValue": "{distance} km"
+}

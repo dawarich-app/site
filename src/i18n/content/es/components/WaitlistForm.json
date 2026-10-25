@@ -1,0 +1,11 @@
+{
+  "buttonLabel": "Apuntarme a la lista de espera",
+  "note": "Sin spam: solo el correo de lanzamiento.",
+  "invalidEmail": "Introduce una dirección de correo electrónico válida.",
+  "requestError": "Algo ha fallado. Vuelve a intentarlo más tarde.",
+  "success": "¡Ya estás en la lista! Te avisaremos por correo cuando se lance Familia.",
+  "networkError": "Error de red. Comprueba tu conexión y vuelve a intentarlo.",
+  "joining": "Inscribiendo…",
+  "emailPlaceholder": "tu@ejemplo.com",
+  "emailLabel": "Dirección de correo electrónico"
+}

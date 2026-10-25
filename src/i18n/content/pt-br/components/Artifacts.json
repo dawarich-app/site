@@ -1,0 +1,88 @@
+{
+  "posterThemes": {
+    "arialabel": "Ampliar o pôster {name}",
+    "alt": "Pôster do trajeto em Berlim no tema {name}"
+  },
+  "posterStudioShot": {
+    "alt": "Estúdio de pôsteres montando um trajeto, com controles de layout, tema e texto"
+  },
+  "exportFormats": {
+    "groups": [
+      {
+        "label": "Impressão · 12",
+        "items": [
+          "A5",
+          "A4",
+          "A3",
+          "A2",
+          "A1",
+          "A0",
+          "30 × 40 cm",
+          "50 × 70 cm",
+          "70 × 100 cm",
+          "Carta (US)",
+          "A4 paisagem",
+          "A3 paisagem"
+        ]
+      },
+      {
+        "label": "Redes sociais · 5",
+        "items": [
+          "Quadrado para Instagram",
+          "Retrato para Instagram",
+          "Story (9:16)",
+          "Cabeçalho do X",
+          "Miniatura do YouTube"
+        ]
+      },
+      {
+        "label": "Papel de parede · 5",
+        "items": [
+          "Computador Full HD",
+          "Computador 4K",
+          "Computador ultrawide",
+          "Celular",
+          "Tablet"
+        ]
+      }
+    ]
+  },
+  "shareTargets": {
+    "items": [
+      "Um intervalo de datas",
+      "Localização em tempo real",
+      "Um trajeto",
+      "Uma viagem",
+      "Um mês de estatísticas",
+      "Um resumo anual"
+    ],
+    "p": "Seis opções, seis links separados"
+  },
+  "familySharingShot": {
+    "alt": "Controles de compartilhamento em família: localização em tempo real ativada por seis horas com o tempo restante, e histórico de localização em um controle separado configurado para os últimos 7 dias"
+  },
+  "familyMembersShot": {
+    "alt": "Lista de familiares com duas pessoas compartilhando e duas sem compartilhar, cada uma com um botão Solicitar"
+  },
+  "familyPageShot": {
+    "alt": "A página da família do Dawarich: um mapa compartilhado ao lado dos controles de compartilhamento, da lista de membros e dos convites"
+  },
+  "familyRequestShot": {
+    "alt": "Dois familiares marcados como Sem compartilhar, cada um com um botão Solicitar ao lado"
+  },
+  "residencyCountriesShot": {
+    "alt": "Cartão de países com dias por país em 2023 — Alemanha com 353 dias e 96.7%, exibindo um aviso de limite, seguida de Bélgica, Grécia, Suíça, Dinamarca, França e Polônia"
+  },
+  "residencyStaysShot": {
+    "alt": "Alemanha expandida para mostrar oito períodos de estadia consecutivos em 2023, cada um com suas datas e duração"
+  },
+  "residencyCalendarShot": {
+    "alt": "Calendário anual em mapa de calor com uma cor por país e uma legenda identificando cada um"
+  },
+  "shareHubShot": {
+    "alt": "Central de compartilhamento: um link público e sua frase secreta, doze visualizações e botões para gerar outra URL, gerar outra frase ou revogar o link"
+  },
+  "shareFormShot": {
+    "alt": "Criação de um link de compartilhamento: datas de início e fim, frase secreta opcional, validade padrão de uma semana e a opção Mostrar fotos desativada"
+  }
+}

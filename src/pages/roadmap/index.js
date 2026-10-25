@@ -554,7 +554,6 @@ export default function Roadmap() {
           property="og:description"
           content="What's shipping next in Dawarich and a curated history of past releases."
         />
-        <link rel="canonical" href="https://dawarich.app/roadmap/" />
       </Head>
 
       <FeatureHero

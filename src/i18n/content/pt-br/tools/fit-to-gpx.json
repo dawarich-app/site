@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "Conversor grátis de FIT para GPX — Atividades Garmin online",
+    "description": "Converta FIT do Garmin para GPX na hora. Conversor online grátis e privado para ciclismo, corrida e atividades físicas. No navegador, sem enviar arquivos.",
+    "keywords": "FIT para GPX, conversor FIT, conversor Garmin, Garmin FIT para GPX, conversor de arquivos de atividades físicas, GPX ciclismo, GPX corrida, conversor de atividades, conversor de relógio Garmin, conversor Garmin Edge",
+    "appName": "Conversor de FIT para GPX"
+  },
+  "h1": "Conversor de FIT para GPX",
+  "intro": "Converta seus arquivos de atividades FIT do Garmin para GPX na hora. Todo o processamento acontece no navegador — seus dados de atividades físicas nunca saem do dispositivo.",
+  "cards": [
+    {
+      "title": "Sobre o formato FIT",
+      "body": "FIT (Flexible and Interoperable Data Transfer) é o formato binário proprietário da Garmin para armazenar dados de atividades físicas. Relógios Garmin, ciclocomputadores e outros dispositivos esportivos o usam para guardar treinos, trajetos, frequência cardíaca, potência e outras métricas."
+    },
+    {
+      "title": "Sobre o formato GPX",
+      "body": "GPX (GPS Exchange Format) é um padrão XML aberto para dados GPS. É amplamente aceito por plataformas de atividades físicas (Strava, Komoot), softwares de mapas (Google Earth, QGIS) e aplicativos de navegação."
+    },
+    {
+      "title": "Por que converter FIT para GPX?",
+      "items": [
+        "Importe atividades em plataformas que não aceitam arquivos FIT",
+        "Compartilhe trajetos com usuários de outras plataformas",
+        "Veja seus dados em softwares de mapas como Google Earth",
+        "Crie backups em um formato aberto e legível por pessoas",
+        "Edite ou combine atividades com ferramentas compatíveis com GPX"
+      ]
+    },
+    {
+      "title": "Dispositivos compatíveis",
+      "body": "Este conversor aceita arquivos FIT de:",
+      "items": [
+        "Relógios Garmin (Forerunner, Fenix, Venu, Instinct, Enduro)",
+        "Ciclocomputadores Garmin (série Edge)",
+        "Dispositivos Wahoo (ELEMNT, TICKR)",
+        "Exportações do Zwift",
+        "Ciclocomputadores Bryton",
+        "Dispositivos Suunto (via exportação FIT)",
+        "Qualquer dispositivo que exporte arquivos FIT padrão"
+      ]
+    },
+    {
+      "title": "Quais dados são preservados?",
+      "body": "O conversor preserva:",
+      "items": [
+        "Coordenadas GPS (latitude, longitude)",
+        "Datas e horários",
+        "Dados de elevação",
+        "Marcadores de volta (como pontos de referência)",
+        "Metadados da atividade (tipo de esporte, distância etc.)"
+      ]
+    }
+  ],
+  "privacyBody": "Toda a conversão acontece no navegador. Seus dados de atividades físicas nunca saem do dispositivo nem são enviados a servidores.",
+  "noGpsData": "Nenhum dado GPS encontrado no arquivo FIT. O arquivo pode estar corrompido ou conter apenas dados de sensores, sem coordenadas GPS."
+}

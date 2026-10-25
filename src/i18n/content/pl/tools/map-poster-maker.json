@@ -1,0 +1,83 @@
+{
+  "h1": "Każdy może powiesić plakat z mapą Berlina. Tylko Ty masz swoją trasę.",
+  "intro": "Plakat poniżej to przykład — miesiąc przemieszczania się po Berlinie. Upuść dowolny plik GPX, Google Timeline (Oś czasu Google Maps), KML, FIT lub TCX, a powstanie mapa, której nie ma nikt inny — Twoje przejazdy, biegi i podróże samochodowe. Około dwóch minut, bez konta.",
+  "saveIntro": "Chcesz mieć te dane również na swoim koncie Dawarich? Zaimportujemy je podczas rejestracji — bez ponownego dodawania plików.",
+  "appName": "Kreator plakatów z mapą",
+  "homeLabel": "Strona główna",
+  "toolsLabel": "Darmowe narzędzia",
+  "loadingStudio": "Wczytywanie studia…",
+  "valueStrip": "17 motywów map · 22 formaty, od A5 do A0 i 4K · PNG i PDF w 300 DPI · {price} · bez znaku wodnego",
+  "meta": {
+    "title": "Darmowy kreator plakatów z mapą — trasy z plików GPS",
+    "description": "Własny plakat z mapą: GPX, Google Timeline (Oś czasu Google Maps), KML, FIT lub TCX w przeglądarce. 17 motywów, 22 układy, eksport PNG/PDF gratis, opcja druku.",
+    "keywords": "kreator plakatów z mapą, plakat z trasą, plakat GPX, plakat z mapą miasta, plakat Google Timeline, plakat z trasą biegu, wydruk własnej mapy, mapa na ścianę, sztuka GPS"
+  },
+  "howTo": {
+    "name": "Jak stworzyć plakat z mapą z danych GPS",
+    "description": "Zamień trasę GPS lub historię Google Timeline w plakat z mapą do wydruku, za darmo i w przeglądarce.",
+    "steps": [
+      {
+        "name": "Dodaj plik lokalizacji",
+        "text": "Studio otwiera się z przykładową trasą po Berlinie. Przeciągnij i upuść plik GPX, JSON Google Timeline, GeoJSON, KML, KMZ, FIT lub TCX, aby zastąpić ją swoją trasą."
+      },
+      {
+        "name": "Zaprojektuj swój plakat",
+        "text": "Wybierz jeden z 17 motywów mapy i 22 układów, dodaj tytuł i podtytuł, wybierz czcionkę oraz dopasuj kolor, krycie i szerokość trasy. Przesuwaj i powiększaj podgląd, aby wykadrować trasę."
+      },
+      {
+        "name": "Eksportuj lub zamów wydruk",
+        "text": "Pobierz plakat jako PNG lub PDF gotowy do druku w rozdzielczości do 300 DPI albo zamów wydruk w formacie 30×40, 50×70 lub 70×100 cm."
+      }
+    ],
+    "tool": "Kreator plakatów z mapą od Dawarich"
+  },
+  "faq": [
+    {
+      "q": "Jak zrobić plakat z moich danych GPS?",
+      "a": "Studio otwiera się z przykładową trasą po Berlinie, więc od razu możesz wypróbować wszystkie funkcje. Upuść własny plik GPX, JSON Google Timeline, GeoJSON, KML, KMZ, FIT lub TCX w obszarze dodawania plików, wybierz jeden z 17 motywów mapy i 22 układów, dodaj tytuł i pobierz gotowy plakat jako PNG lub PDF do druku."
+    },
+    {
+      "q": "Czy moje dane lokalizacji są prywatne?",
+      "a": "Twój plik jest odczytywany w całości w przeglądarce i nigdy nie jest wysyłany na serwer. Aby narysować mapę, przeglądarka pobiera kafelki obszaru obejmującego Twoje dane z serwera kafelków Dawarich — ujawnia to przybliżony prostokątny obszar, który oglądasz, tak jak na każdej mapie internetowej. Dwie opcjonalne czynności wysyłają dane: zamówienie wydruku wysyła gotowy PDF plakatu do usługi druku Dawarich, a „Zapisz na moim koncie” wysyła Twój plik podczas rejestracji."
+    },
+    {
+      "q": "Czy to darmowe? Czy potrzebuję konta?",
+      "a": "Tak, za darmo — bez konta, rejestracji i znaku wodnego. Pobieranie PNG i PDF jest nielimitowane. Płatne jest tylko zamówienie fizycznego wydruku, a utworzenie konta Dawarich jest opcjonalne."
+    },
+    {
+      "q": "Jaką rozdzielczość mają eksportowane plakaty?",
+      "a": "Układy do druku są eksportowane w rozdzielczości do 300 DPI, z fizycznym rozmiarem zapisanym w PNG (pHYs) lub na stronie PDF. Układy do mediów społecznościowych i tapet mają dokładnie określone wymiary w pikselach, np. 1080 × 1920 dla relacji lub 3840 × 2160 dla tapety 4K. Bardzo duże rozmiary są automatycznie zmniejszane do możliwości pamięci graficznej Twojego urządzenia. Gdy to nastąpi, zobaczysz komunikat."
+    },
+    {
+      "q": "Czy mogę zamówić fizyczny wydruk plakatu?",
+      "a": "Tak — wybierz jeden z trzech rozmiarów (30 × 40, 50 × 70 lub 70 × 100 cm), a studio przygotuje PDF w 300 DPI i wyśle go do usługi druku Dawarich. Płatność obsługuje Stripe, a plakaty są drukowane na matowym papierze 200 gsm z bezpłatną dostawą w UE. Ostateczna cena jest potwierdzana przy płatności."
+    },
+    {
+      "q": "Jakie pliki obsługuje kreator plakatów?",
+      "a": "Trasy GPX, eksporty Google Timeline (Records.json, Semantic Location History i formaty Takeout z telefonu), GeoJSON, KML, KMZ, FIT i TCX. Możesz upuścić kilka plików naraz — zostaną połączone w jedną trasę, dzieloną tam, gdzie przerwa przekracza godzinę."
+    }
+  ],
+  "toolbar": {
+    "startOver": "Zacznij od nowa",
+    "demoLabel": "Pokaż dane demonstracyjne",
+    "fileSummary": "{count} plik · Punkty: {points}|{count} pliki · Punkty: {points}|{count} plików · Punkty: {points}|{count} pliku · Punkty: {points}"
+  },
+  "upload": {
+    "formats": "GPX, FIT, TCX, GeoJSON, KML, KMZ, Google Timeline JSON",
+    "processing": "Przetwarzanie plików…",
+    "addFiles": "Dodaj więcej plików",
+    "dropFiles": "Upuść tutaj plik lokalizacji lub kliknij, aby wybrać",
+    "inputLabel": "Wybierz pliki, z których chcesz stworzyć plakat"
+  },
+  "errors": {
+    "emptyError": "Nie znaleziono punktów do naniesienia na mapę — sprawdź, czy dodane pliki zawierają dane lokalizacji.",
+    "demoError": "Nie udało się wczytać przykładowej trasy — upuść własny plik, aby zacząć projektowanie.",
+    "sizeError": "{fileName} ma więcej niż 100 MB — najpierw go podziel (wypróbuj narzędzie do dzielenia plików GPS).",
+    "parseError": "Błąd odczytu {fileName}: {message}"
+  },
+  "cta": {
+    "headline": "Twój plakat powstał z punktów GPS z jednego pliku — jest ich **{points}**. Dawarich automatycznie rejestruje każdą trasę — dowolny miesiąc Twojej historii może stać się plakatem. 7 dni za darmo, 14 dni na zwrot pieniędzy, rezygnacja w dowolnym momencie.",
+    "fallback": "Jeden plik to jeden plakat. Dawarich automatycznie rejestruje każdą trasę — dowolny miesiąc Twojej historii może stać się plakatem. 7 dni za darmo, 14 dni na zwrot pieniędzy, rezygnacja w dowolnym momencie."
+  },
+  "faqTitle": "Najczęściej zadawane pytania"
+}

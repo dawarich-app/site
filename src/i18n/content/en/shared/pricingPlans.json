@@ -1,0 +1,266 @@
+{
+  "plans": {
+    "lite": {
+      "name": "Lite",
+      "tagline": "A private alternative to Google Timeline for casual trackers.",
+      "period": "/year",
+      "perMonth": "{price}/month",
+      "perDay": "{price}/day",
+      "cta": "Try Lite Free",
+      "footnote": "Annual only · Cancel anytime",
+      "valueStack": {
+        "items": [
+          {
+            "label": "iOS & Android tracking apps"
+          },
+          {
+            "label": "12 months of searchable history"
+          },
+          {
+            "label": "Unlimited imports & exports"
+          },
+          {
+            "label": "Stats & monthly breakdowns"
+          },
+          {
+            "label": "White-Glove Import Service"
+          }
+        ],
+        "payLine": "Yours for {price}/yr"
+      },
+      "features": [
+        {
+          "label": "iOS & Android native apps"
+        },
+        {
+          "label": "Background location tracking"
+        },
+        {
+          "label": "12 months of searchable history"
+        },
+        {
+          "label": "Unlimited imports & exports"
+        },
+        {
+          "label": "Interactive map with routes"
+        },
+        {
+          "label": "Speed-colored routes & daily replay"
+        },
+        {
+          "label": "Trips & places management"
+        },
+        {
+          "label": "Basic stats & monthly breakdowns"
+        },
+        {
+          "label": "200 req/hr API rate limit"
+        }
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "tagline": "Unlimited history, advanced visualizations, and full API access.",
+      "period": "/year",
+      "periodMonthly": "/month",
+      "perMonth": "{price}/month",
+      "perDay": "{price}/day",
+      "perDayMonthly": "{price}/day",
+      "save": "5 months free",
+      "saveHint": "Get 5 months for free",
+      "badge": "MOST POPULAR",
+      "cta": "Start Pro Free — 7 Days",
+      "footnote": "Cancel anytime",
+      "valueStack": {
+        "items": [
+          {
+            "label": "Everything in Lite"
+          },
+          {
+            "label": "Unlimited history — forever"
+          },
+          {
+            "label": "Heatmap, Fog of War & 3D globe"
+          },
+          {
+            "label": "Photo & Immich/PhotoPrism integration"
+          },
+          {
+            "label": "Full Write API access"
+          }
+        ],
+        "payLine": "Yours for {price}/yr"
+      },
+      "featuresHeading": "Everything in Lite, plus:",
+      "features": [
+        {
+          "label": "Unlimited data history — forever"
+        },
+        {
+          "label": "Heatmap & Fog of War layers"
+        },
+        {
+          "label": "Globe view (3D)"
+        },
+        {
+          "label": "Trip photo integration"
+        },
+        {
+          "label": "Immich / PhotoPrism integration"
+        },
+        {
+          "label": "Full year-in-review & public sharing"
+        },
+        {
+          "label": "Full Write API access"
+        },
+        {
+          "label": "1,000 req/hr API rate limit"
+        }
+      ]
+    },
+    "family": {
+      "name": "Family",
+      "tagline": "Every Pro feature for the whole household — one annual subscription, up to 5 people.",
+      "period": "/year",
+      "perMonth": "{price}/month",
+      "perDay": "{price}/day",
+      "cta": "Start Family Free — 7 Days",
+      "footnote": "Annual only · Up to 5 members · Cancel anytime",
+      "valueStack": {
+        "items": [
+          {
+            "label": "Pro access for the payer"
+          },
+          {
+            "label": "4 additional Pro seats"
+          },
+          {
+            "label": "Real-time family location sharing"
+          },
+          {
+            "label": "White-Glove Import Service"
+          }
+        ],
+        "payLine": "Yours for {price}/yr"
+      },
+      "featuresHeading": "Everything in Pro, plus:",
+      "features": [
+        {
+          "label": "Up to 5 members on one subscription"
+        },
+        {
+          "label": "Each member gets full Pro access"
+        },
+        {
+          "label": "Invite or remove members anytime"
+        },
+        {
+          "label": "Members inherit access while in the family"
+        },
+        {
+          "label": "Real-time family location sharing"
+        }
+      ]
+    }
+  },
+  "compareGroups": [
+    {
+      "name": "Tracking & apps",
+      "rows": [
+        {
+          "label": "iOS & Android native apps"
+        },
+        {
+          "label": "Background location tracking"
+        },
+        {
+          "label": "Real-time family location sharing"
+        }
+      ]
+    },
+    {
+      "name": "History & data",
+      "rows": [
+        {
+          "label": "Searchable history",
+          "lite": "12 months",
+          "pro": "Unlimited",
+          "family": "Unlimited"
+        },
+        {
+          "label": "Unlimited imports & exports"
+        },
+        {
+          "label": "Data is always yours (export anytime)"
+        }
+      ]
+    },
+    {
+      "name": "Maps & visualization",
+      "rows": [
+        {
+          "label": "Interactive map with routes"
+        },
+        {
+          "label": "Speed-colored routes & daily replay"
+        },
+        {
+          "label": "Heatmap & Fog of War layers"
+        },
+        {
+          "label": "Globe view (3D)"
+        },
+        {
+          "label": "Trip photo integration"
+        },
+        {
+          "label": "Immich / PhotoPrism integration"
+        }
+      ]
+    },
+    {
+      "name": "Insights & sharing",
+      "rows": [
+        {
+          "label": "Basic stats & monthly breakdowns"
+        },
+        {
+          "label": "Full year-in-review & public sharing"
+        },
+        {
+          "label": "Trips & places management"
+        }
+      ]
+    },
+    {
+      "name": "API & limits",
+      "rows": [
+        {
+          "label": "API rate limit",
+          "lite": "200 req/hr",
+          "pro": "1,000 req/hr",
+          "family": "1,000 req/hr"
+        },
+        {
+          "label": "Full Write API access"
+        }
+      ]
+    },
+    {
+      "name": "Members & billing",
+      "rows": [
+        {
+          "label": "Members on one subscription",
+          "family": "Up to 5"
+        },
+        {
+          "label": "Each member gets full Pro access"
+        },
+        {
+          "label": "14-day money-back guarantee"
+        }
+      ]
+    }
+  ]
+}

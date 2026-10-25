@@ -1,0 +1,128 @@
+{
+  "integrationsShowcase": [
+    {
+      "title": "Immich",
+      "description": "Selbst gehostete Backup-Lösung für Fotos und Videos. Verbinde deine Immich-Instanz, um deine Fotos genau an ihren Aufnahmeorten auf der Karte zu sehen.",
+      "imageAlt": "Fotos aus Immich auf der Karte"
+    },
+    {
+      "title": "PhotoPrism",
+      "description": "KI-gestützte Fotoverwaltung. Integriere PhotoPrism, um deine gesamte Fotobibliothek in deiner Standortzeitleiste zu sehen.",
+      "imageAlt": "Reise mit Fotos aus PhotoPrism"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Fotos auf der Karte",
+      "description": "Sieh alle deine Fotos an ihren genauen GPS-Koordinaten auf der interaktiven Karte. Entdecke wieder, wo jede Erinnerung entstanden ist."
+    },
+    {
+      "title": "Fotos in Reisen",
+      "description": "Reiseseiten zeigen automatisch Fotos aus dem Reisezeitraum. Dein Reisetagebuch wird zu einem vielseitigen Multimedia-Erlebnis."
+    },
+    {
+      "title": "Fotozeitleiste",
+      "description": "Stöbere chronologisch durch deine Fotos und die zugehörigen Standortdaten. Sieh die ganze Geschichte jedes Tages."
+    },
+    {
+      "title": "Privatsphäre bleibt gewahrt",
+      "description": "Dawarich speichert deine Fotos niemals. Es liest nur Standortdaten aus deinen selbst gehosteten Foto-Apps über deren APIs."
+    }
+  ],
+  "setupSteps": [
+    {
+      "title": "API-Schlüssel erstellen",
+      "description": "Erstelle API-Schlüssel in deiner Immich- oder PhotoPrism-Instanz.",
+      "details": [
+        "Immich: Schlüssel mit den Berechtigungen asset.read und asset.view erstellen (asset.update für „Fotos anreichern“)",
+        "PhotoPrism: Schlüssel in den Einstellungen unter „Apps und Geräte“ erstellen",
+        "Bewahre deine Schlüssel sicher auf"
+      ]
+    },
+    {
+      "title": "In Dawarich einrichten",
+      "description": "Gib die Daten deines Fotodienstes in den Dawarich-Einstellungen ein.",
+      "details": [
+        "Einstellungen öffnen",
+        "Abschnitt „Foto-Integration“ suchen",
+        "URL deines Dienstes eingeben",
+        "API-Schlüssel einfügen",
+        "Auf „Speichern“ klicken"
+      ]
+    },
+    {
+      "title": "Synchronisierung abgeschlossen",
+      "description": "Dawarich verbindet sich mit deinem Fotodienst und indexiert die Standortdaten.",
+      "details": [
+        "Fotos werden nach Standort indexiert",
+        "EXIF-GPS-Daten werden ausgelesen",
+        "Keine Fotos werden kopiert oder gespeichert",
+        "Nur Metadaten werden verwendet"
+      ]
+    },
+    {
+      "title": "Fotos ansehen",
+      "description": "Deine Fotos erscheinen jetzt auf der Karte und in deinen Reisen.",
+      "details": [
+        "Fotoebene auf der Karte aktivieren",
+        "Zum Ansehen auf Fotomarkierungen klicken",
+        "Fotos automatisch in Reisen sehen",
+        "Nach Ort und Datum stöbern"
+      ]
+    }
+  ],
+  "futureIntegrations": [
+    {
+      "title": "Fitness-Apps",
+      "description": "Integration mit Fitness-Tracking-Apps, um Trainingsrouten mit deinem Standortverlauf zu verbinden."
+    },
+    {
+      "title": "Notiz-Apps",
+      "description": "Verbinde deine Notizen automatisch mit Orten. Sieh, was du wo geschrieben hast."
+    },
+    {
+      "title": "Musikdienste",
+      "description": "Halte fest, was du im Tagesverlauf an verschiedenen Orten gehört hast."
+    },
+    {
+      "title": "Cloud-Dienste",
+      "description": "Tiefergehende Integrationen mit verschiedenen Cloud-Speicher- und Produktivitätsdiensten."
+    }
+  ],
+  "meta": {
+    "title": "Foto-Integrationen",
+    "description": "Verbinde deine Immich- oder PhotoPrism-Instanz, um Fotos auf der Karte und in Reisen zu sehen. So wird deine Karte zum Multimedia-Erlebnis.",
+    "ogTitle": "Dawarich-Integrationen – verbinde dein digitales Leben",
+    "ogDescription": "Verbinde Fotobibliotheken aus Immich und PhotoPrism mit deinem Standortverlauf. Sieh Fotos automatisch auf der Karte und in Reisen."
+  },
+  "hero": {
+    "badge": "Alles verbunden",
+    "title": "Verbinde dein",
+    "titleHighlight": "digitales Leben",
+    "subtitle": "Bringe deine Fotos in deine Standortzeitleiste. Dawarich bindet Immich und PhotoPrism ein, um deine Fotos auf der Karte und in Reisen zu zeigen. So wird dein Standortverlauf zu einem lebendigen visuellen Erlebnis.",
+    "imageAlt": "Fotos auf der Karte"
+  },
+  "integrationsPage": {
+    "heading": "Warum Fotos integrieren?",
+    "p": "Deine Standortdaten werden aussagekräftiger, wenn du sie mit deinen Fotos verbindest. Entdecke Erinnerungen neu und sieh genau, wo jedes Foto aufgenommen wurde.",
+    "title3": "Unterstützte Fotodienste",
+    "subtitle2": "Dawarich arbeitet nahtlos mit beliebten selbst gehosteten Fotoverwaltungen zusammen.",
+    "title4": "So richtest du es ein",
+    "subtitle3": "Verbinde deine Fotobibliothek in wenigen Schritten mit Dawarich.",
+    "h3": "Deine Fotos bleiben privat",
+    "p2": "Dawarich **speichert oder kopiert deine Fotos nicht**. Es liest nur Standortmetadaten über die API deines selbst gehosteten Fotodienstes. Deine Fotos bleiben sicher in deiner Immich- oder PhotoPrism-Instanz und unter deiner vollständigen Kontrolle.",
+    "heading2": "Technische Details",
+    "text3": " Immich einrichten",
+    "Link": "So erhältst du einen Immich-API-Schlüssel →",
+    "text8": " PhotoPrism einrichten",
+    "p3": "Erstelle einen API-Schlüssel in den PhotoPrism-Einstellungen unter „Apps und Geräte“. Dawarich nutzt ihn, um auf deine Fotobibliothek zuzugreifen und Standortinformationen auszulesen.",
+    "Link2": "So erhältst du einen PhotoPrism-API-Schlüssel →",
+    "p4": "Du hast eine Idee für eine Integration? [Teile sie in unserem Community-Forum!](https://discourse.dawarich.app/).",
+    "heading3": "Verbinde jetzt deine Fotobibliothek",
+    "p5": "Sieh deine Fotos auf der Karte – mit einem kostenlosen Dawarich-Konto.",
+    "Link4": "7 Tage kostenlos testen",
+    "EnOnlyLink": "Kostenlos selbst hosten",
+    "p6": "7 Tage kostenlos testen · 14 Tage Geld-zurück-Garantie · Jederzeit kündbar",
+    "immichScopes": "Erfordert einen API-Schlüssel mit den Berechtigungen `asset.read` und `asset.view`. Ergänze `asset.update`, wenn du auch die Funktion „Fotos anreichern“ nutzen möchtest. Dawarich fragt die Immich-API ab, um Fotometadaten einschließlich GPS-Koordinaten aus den EXIF-Daten zu lesen."
+  }
+}

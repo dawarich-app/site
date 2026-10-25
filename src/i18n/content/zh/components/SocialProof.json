@@ -1,0 +1,23 @@
+{
+  "metrics": [
+    {
+      "prefix": "超过 ",
+      "label": "GitHub 星标"
+    },
+    {
+      "suffix": "+",
+      "label": "Docker 拉取次数"
+    },
+    {
+      "suffix": "+",
+      "label": "用户"
+    },
+    {
+      "suffix": "+",
+      "label": "已记录轨迹点"
+    }
+  ],
+  "integrationsLabel": "兼容",
+  "billion": "{value}B",
+  "million": "{value}M"
+}

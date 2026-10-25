@@ -1,0 +1,10 @@
+{
+  "bonusDescription": "**Servei d’importació personalitzat.** Envia’ns el teu Google Takeout i t’importem tot l’historial d’ubicacions, normalment en 24 hores. Inclòs gratis en tots els plans.",
+  "guaranteeDescription": "**La garantia d’importació:** si el teu Google Takeout no s’importa correctament, ho resolem personalment o et tornem fins a l’últim cèntim. A més, tots els plans tenen una garantia de reemborsament de 14 dies sense preguntes.",
+  "badge": "Prova gratuïta de 7 dies — Garantia de reemborsament de 14 dies",
+  "title": "El teu historial d’ubicacions, a les teves mans",
+  "subtitle": "Des de {price} al mes per conservar els records de tota una vida. Les dades sempre són teves: exporta-ho tot, quan vulguis, amb qualsevol pla.",
+  "bonusBadge": "Extra gratuït · Valor de {price}",
+  "guaranteeLink": "Política de reemborsament →",
+  "selfHostButton": "No vols confiar les teves dades a ningú? Allotja’l gratis: totes les funcions Pro, al teu servidor, sense cap cost"
+}

@@ -1,0 +1,88 @@
+{
+  "posterThemes": {
+    "arialabel": "Agrandir l’affiche {name}",
+    "alt": "Affiche du parcours à Berlin dans le thème {name}"
+  },
+  "posterStudioShot": {
+    "alt": "L’atelier d’affiches compose un parcours avec des réglages de mise en page, de thème et de texte"
+  },
+  "exportFormats": {
+    "groups": [
+      {
+        "label": "Impression · 12",
+        "items": [
+          "A5",
+          "A4",
+          "A3",
+          "A2",
+          "A1",
+          "A0",
+          "30 × 40 cm",
+          "50 × 70 cm",
+          "70 × 100 cm",
+          "Letter (US)",
+          "A4 paysage",
+          "A3 paysage"
+        ]
+      },
+      {
+        "label": "Réseaux sociaux · 5",
+        "items": [
+          "Carré Instagram",
+          "Portrait Instagram",
+          "Story (9:16)",
+          "Bannière X",
+          "Miniature YouTube"
+        ]
+      },
+      {
+        "label": "Fond d’écran · 5",
+        "items": [
+          "Bureau Full HD",
+          "Bureau 4K",
+          "Bureau ultralarge",
+          "Téléphone",
+          "Tablette"
+        ]
+      }
+    ]
+  },
+  "shareTargets": {
+    "items": [
+      "Une plage de dates",
+      "La position en direct",
+      "Un trajet",
+      "Un déplacement",
+      "Un mois de statistiques",
+      "Un bilan annuel"
+    ],
+    "p": "Six contenus, six liens distincts"
+  },
+  "familySharingShot": {
+    "alt": "Réglages du partage en famille : position en direct activée pour six heures avec le temps restant, et historique de localisation limité aux 7 derniers jours via un réglage distinct"
+  },
+  "familyMembersShot": {
+    "alt": "Liste des membres de la famille : deux personnes partagent leur position, deux ne la partagent pas, chacune avec un bouton Demander"
+  },
+  "familyPageShot": {
+    "alt": "La page Famille de Dawarich : une carte partagée à côté des réglages de partage, de la liste des membres et des invitations"
+  },
+  "familyRequestShot": {
+    "alt": "Deux membres de la famille indiqués comme ne partageant pas leur position, chacun avec un bouton Demander"
+  },
+  "residencyCountriesShot": {
+    "alt": "Carte des pays indiquant les jours par pays en 2023 : Allemagne, 353 jours à 96.7% avec une alerte de seuil, puis Belgique, Grèce, Suisse, Danemark, France et Pologne"
+  },
+  "residencyStaysShot": {
+    "alt": "L’Allemagne est dépliée pour afficher huit périodes de séjour consécutives en 2023, avec leurs dates et durées"
+  },
+  "residencyCalendarShot": {
+    "alt": "Calendrier annuel sous forme de carte de chaleur, avec une couleur par pays et une légende indiquant leur nom"
+  },
+  "shareHubShot": {
+    "alt": "Centre de partage : un lien public et sa phrase secrète, douze vues et des boutons pour régénérer l’URL, régénérer la phrase ou révoquer le lien"
+  },
+  "shareFormShot": {
+    "alt": "Création d’un lien de partage : dates de début et de fin, phrase secrète facultative, expiration à une semaine par défaut et option Afficher les photos désactivée"
+  }
+}

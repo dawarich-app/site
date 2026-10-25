@@ -1,0 +1,14 @@
+{
+  "title": "Fotos",
+  "emptyTitle": "Keine Fotos mit GPS-Daten",
+  "emptyHint": "Lade Fotos hoch, um Standortdaten auszulesen",
+  "newestFirst": "Neueste zuerst",
+  "oldestFirst": "Älteste zuerst",
+  "byName": "Nach Name",
+  "photoLabel": "Foto",
+  "sortLabel": "Fotos sortieren",
+  "unknownDate": "Unbekanntes Datum",
+  "unknownTime": "Unbekannte Uhrzeit",
+  "photoCount": "{count} Foto|{count} Fotos",
+  "altitude": "Höhe: {altitude}m"
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Fotos",
+  "emptyTitle": "No hi ha fotos amb dades GPS",
+  "emptyHint": "Carrega fotos per extreure'n les dades d'ubicació",
+  "newestFirst": "Més recents primer",
+  "oldestFirst": "Més antigues primer",
+  "byName": "Per nom",
+  "photoLabel": "Foto",
+  "sortLabel": "Ordena les fotos",
+  "unknownDate": "Data desconeguda",
+  "unknownTime": "Hora desconeguda",
+  "photoCount": "{count} foto|{count} fotos|{count} fotos",
+  "altitude": "Altitud: {altitude}m"
+}

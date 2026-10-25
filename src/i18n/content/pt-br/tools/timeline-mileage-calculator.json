@@ -1,0 +1,238 @@
+{
+  "h1": "Linha do tempo do Google (Google Timeline): calculadora de quilometragem",
+  "intro": "Calcule a quilometragem percorrida de carro a partir dos seus dados do Google Timeline (Linha do tempo do Google Maps). Gere registros de quilometragem para baixar, com detalhes de cada viagem e resumos diários e mensais. Todo o processamento acontece no seu navegador — seus dados ficam no seu dispositivo, a menos que você escolha “Salvar na minha conta Dawarich”.",
+  "privacyTitle": "Privacidade em primeiro lugar",
+  "privacyBody": "Todos os cálculos de quilometragem acontecem no seu navegador — seus dados de localização ficam no seu dispositivo, a menos que você escolha “Salvar na minha conta Dawarich”.",
+  "preCta": "Precisa registrar sua quilometragem continuamente? O [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-mileage-calculator) registra suas viagens automaticamente, com plena propriedade dos seus dados e privacidade. Chega de exportações manuais — apenas um registro contínuo e preciso.",
+  "saveIntro": "Quer ter isso na sua conta Dawarich também? Vamos importar os dados durante o cadastro — sem precisar carregá-los novamente.",
+  "faqTitle": "Perguntas frequentes",
+  "homeLabel": "Início",
+  "toolsLabel": "Ferramentas gratuitas",
+  "meta": {
+    "title": "Linha do tempo do Google/Google Timeline: meça km rodados grátis",
+    "description": "Quilometragem de carro do Google Timeline (Linha do tempo do Google Maps). Gere registros e exporte CSV para deduções fiscais. Grátis e privado no navegador.",
+    "keywords": "quilometragem google timeline, calculadora de quilometragem pelo histórico de localização, distância de carro pelo google maps, registro de quilometragem google timeline, calculadora de quilometragem para impostos, registro de quilometragem google maps, registro de quilometragem IRS, calculadora de distância de carro, distância de carro google timeline, calculadora de reembolso por quilometragem",
+    "featureList": [
+      "Calcular quilometragem de carro com dados do Google Timeline",
+      "Filtrar viagens por período",
+      "Alternar entre quilômetros e milhas",
+      "Gerar registro de quilometragem em CSV para baixar",
+      "Resumos diários e mensais de viagens",
+      "Privacidade em primeiro lugar — processamento no navegador",
+      "Nenhum dado enviado a servidores"
+    ]
+  },
+  "howTo": {
+    "name": "Como calcular a quilometragem com dados do Google Timeline",
+    "description": "Exporte seus dados do Google Timeline e calcule a quilometragem de carro com esta calculadora gratuita que respeita sua privacidade.",
+    "steps": [
+      {
+        "name": "Exporte seus dados do Google Timeline",
+        "text": "Acesse takeout.google.com, selecione Histórico de localização (Linha do tempo) e exporte. Ou, no Android: Google Maps > Configurações > Localização > Linha do tempo > Exportar. No iOS: Google Maps > Configurações > Conteúdo pessoal > Exportar dados da linha do tempo."
+      },
+      {
+        "name": "Carregue seus arquivos JSON",
+        "text": "Arraste e solte seus arquivos JSON exportados do Google Timeline na calculadora de quilometragem. A ferramenta detecta o formato automaticamente e extrai os segmentos de deslocamento em veículos."
+      },
+      {
+        "name": "Defina o período e a unidade de medida",
+        "text": "Selecione uma data inicial e uma final para filtrar seu registro de quilometragem e escolha entre quilômetros e milhas."
+      },
+      {
+        "name": "Confira e baixe seu registro de quilometragem",
+        "text": "Confira o registro de viagens, os resumos mensais e a quilometragem total. Baixe o registro completo de quilometragem como arquivo CSV para guardar."
+      }
+    ],
+    "tool": "Calculadora de quilometragem do Google Timeline do Dawarich"
+  },
+  "exportData": {
+    "title": "Como obter seus dados da linha do tempo",
+    "intro": "Exporte seu histórico de localização do Google Timeline usando um destes métodos. Se um não funcionar, tente outro.",
+    "note": "Para obter dados de quilometragem mais precisos, os arquivos Semantic Location History (arquivos JSON mensais como 2023_JANUARY.json) são a melhor opção, pois contêm segmentos de atividade identificados com classificações de deslocamento em veículos.",
+    "methods": [
+      {
+        "title": "Google Takeout:",
+        "body": "Acesse [takeout.google.com](https://takeout.google.com/) → Escolha Histórico de localização (Linha do tempo) → Exportar como JSON"
+      },
+      {
+        "title": "No Android:",
+        "body": "Abra o Google Maps → Configurações → Localização → Serviços de localização → Linha do tempo → Exportar linha do tempo"
+      },
+      {
+        "title": "No iOS:",
+        "body": "Abra o Google Maps → Configurações → Conteúdo pessoal → Exportar dados da linha do tempo"
+      }
+    ]
+  },
+  "units": {
+    "km": "km",
+    "miles": "milhas"
+  },
+  "activities": {
+    "driving": "Carro",
+    "bus": "Ônibus",
+    "train": "Trem",
+    "subway": "Metrô",
+    "motorcycle": "Moto"
+  },
+  "duration": {
+    "minutes": "{minutes}m",
+    "hoursMinutes": "{hours}h {minutes}m"
+  },
+  "results": {
+    "startDate": "Data inicial",
+    "endDate": "Data final",
+    "disclaimer": "As distâncias são calculadas com coordenadas GPS (fórmula de Haversine) e representam aproximações em linha reta entre os pontos registrados. As distâncias reais por estrada podem ser maiores. Esta ferramenta serve para estimativas.",
+    "monthlyTitle": "Resumo mensal",
+    "month": "Mês",
+    "tripCount": "Quantidade de viagens",
+    "tripLogTitle": "Registro de viagens",
+    "trip": "Viagem nº",
+    "date": "Data",
+    "activity": "Tipo de atividade",
+    "duration": "Duração",
+    "emptyTitle": "Nenhuma viagem em veículo encontrada",
+    "emptyIntro": "Nenhum segmento de deslocamento em veículo foi detectado nos seus dados para o período selecionado. Isso pode acontecer se:",
+    "calculateButton": "Calcular",
+    "distanceTitle": "Distância total percorrida em veículos",
+    "distanceHint": "Todos os segmentos de deslocamento em veículos combinados",
+    "tripsTitle": "Total de viagens",
+    "tripsHint": "Segmentos de deslocamento em veículos detectados",
+    "averageTitle": "Distância média por viagem",
+    "averageHint": "Por segmento de deslocamento em veículo",
+    "downloadButton": "Baixar registro de quilometragem (CSV)",
+    "processing": "Processando...",
+    "distanceHeading": "Distância ({unit})",
+    "emptyReasons": [
+      {
+        "body": "Sua exportação contém apenas pontos brutos de GPS (Records.json), sem classificação de atividade"
+      },
+      {
+        "body": "O período selecionado não abrange seus dados"
+      },
+      {
+        "body": "Seus dados não contêm segmentos de deslocamento em veículos — experimente arquivos Semantic Location History para obter melhores resultados"
+      }
+    ],
+    "showMore": "Mostrar mais ({count} restantes)",
+    "distanceValue": "{distance} {unit}"
+  },
+  "cta": {
+    "fallback": "Precisa registrar sua quilometragem continuamente, sem exportações manuais? O Dawarich registra suas viagens automaticamente.",
+    "postTitle": "Cansado de exportar e calcular a quilometragem manualmente?",
+    "postBody": "O Dawarich registra automaticamente cada deslocamento de carro, calcula distâncias com dados reais de GPS e permite exportar relatórios de quilometragem a qualquer momento. Hospedagem própria ou na nuvem — seus dados, sua escolha.",
+    "title": "Procurando uma alternativa ao Google Timeline com registro de quilometragem integrado?",
+    "body": "O Dawarich é uma plataforma de código aberto para registro de localização que registra cada viagem automaticamente, calcula a distância percorrida de carro e dá a você controle total sobre seus dados. Importe sua exportação do Google Timeline, continue registrando a quilometragem pelo celular e gere relatórios a qualquer momento — em hospedagem própria ou na nuvem.",
+    "button": "Teste o Dawarich grátis por 7 dias",
+    "headline": "Você registrou **{count}** viagens que somam **{distance} {unit}**. O Dawarich registra isso automaticamente — chega de exportações manuais.",
+    "tripsLabel": "viagens"
+  },
+  "faq": [
+    {
+      "q": "É seguro carregar meus dados do Google Timeline?",
+      "a": "Sim. A calculadora funciona 100% no seu navegador usando JavaScript local — seus arquivos ficam no seu dispositivo e são descartados quando você fecha ou atualiza a página, sem rastreamento dos seus dados de localização. A única exceção é o botão opcional “Salvar na minha conta Dawarich”, que envia seu arquivo para o Dawarich Cloud para importá-lo na sua nova conta. A ferramenta faz parte do ecossistema de código aberto do Dawarich, então você pode inspecionar o código-fonte por conta própria."
+    },
+    {
+      "q": "Qual é a precisão do cálculo de quilometragem?",
+      "a": "As distâncias são calculadas com a fórmula de Haversine, que calcula a distância de grande círculo entre coordenadas GPS. Ela fornece aproximações em linha reta entre os pontos registrados, o que costuma subestimar a distância real por estrada em 10-30%, dependendo da complexidade da rota. O resultado é mais preciso em rodovias do que em ruas sinuosas. Para deduções de quilometragem do IRS, a prática padrão é usar leituras do hodômetro ou um aplicativo dedicado de registro de quilometragem para obter valores precisos, mas esta ferramenta oferece uma boa estimativa para planejamento e revisão."
+    },
+    {
+      "q": "Posso usar isso para deduções fiscais?",
+      "a": "Esta ferramenta gera um registro de quilometragem que pode servir como comprovante complementar para fins fiscais. Porém, o IRS exige registros feitos na época dos deslocamentos — ou seja, a quilometragem idealmente deve ser registrada no momento de cada viagem, e não reconstruída depois. Os dados do Google Timeline podem complementar seus registros, mas talvez não sejam suficientes como única fonte. Consulte um profissional tributário para orientações específicas sobre sua situação. Se você prefere registrar a data e a distância conforme as viagens acontecem, em vez de reconstruí-las meses depois, o Dawarich faz isso automaticamente."
+    },
+    {
+      "q": "Quais atividades de deslocamento em veículos ela registra?",
+      "a": "A calculadora identifica os tipos de atividade relacionados a veículos no sistema de classificação do Google: IN_PASSENGER_VEHICLE (viagens de carro), DRIVING, IN_BUS, IN_TRAIN, IN_SUBWAY e MOTORCYCLING. Esses tipos de atividade são atribuídos pelo Google com base na velocidade, nos padrões de movimento e nos dados dos sensores. A precisão depende de como o Google classificou suas atividades — ocasionalmente, caminhadas ou pedaladas podem ser classificadas como deslocamentos de carro, ou vice-versa."
+    },
+    {
+      "q": "Posso filtrar por período?",
+      "a": "Sim. Depois de carregar seus arquivos, você pode definir uma data inicial e uma final para filtrar seu registro de quilometragem por um período específico. Isso é útil para gerar relatórios trimestrais ou anuais, separar períodos de viagens a trabalho ou comparar a quilometragem em diferentes intervalos de tempo. Os resumos mensais e diários também refletem apenas o período filtrado."
+    },
+    {
+      "q": "Qual é o formato da exportação CSV?",
+      "a": "O arquivo CSV inclui colunas de número da viagem, data, horário de início, horário de término, tipo de atividade, distância (na unidade escolhida) e duração. Cada linha representa um segmento de deslocamento em veículo identificado nos seus dados da linha do tempo. O arquivo termina com uma linha de total que resume a distância geral e a quantidade de viagens. O CSV pode ser aberto no Excel, Google Sheets ou qualquer aplicativo de planilhas para análise adicional."
+    },
+    {
+      "q": "Por que algumas viagens não aparecem?",
+      "a": "Vários fatores podem causar a ausência de viagens: (1) O Google Timeline só registra dados quando o Histórico de localização está ativado no dispositivo — os períodos em que ele ficou desativado não terão dados. (2) Viagens curtas ou com sinal GPS fraco podem não gerar pontos suficientes. (3) O Google pode não ter classificado certos deslocamentos como trajetos de carro, especialmente em velocidades baixas. (4) Se você exportou por um método mais recente de exportação pelo celular, talvez tenha apenas os últimos 90 dias de dados devido à mudança de política do Google em 2024. (5) Alguns formatos de exportação contêm menos detalhes que outros."
+    }
+  ],
+  "cards": [
+    {
+      "title": "O que é a Calculadora de quilometragem da linha do tempo?",
+      "paragraphs": [
+        "A Calculadora de quilometragem da linha do tempo é uma ferramenta gratuita que funciona no navegador, extrai dados de viagens em veículos dos seus arquivos exportados do Google Timeline e calcula a distância total percorrida. Ela identifica segmentos de atividade relacionados a veículos — incluindo viagens de carro, ônibus, trem e moto — e gera um registro estruturado de quilometragem com detalhes de cada viagem.",
+        "Ao contrário das ferramentas baseadas em servidor, todos os cálculos são executados no navegador, então gerar seu registro de quilometragem nunca envia seus dados de localização para outro lugar. Você recebe resultados instantâneos com total privacidade, e o registro CSV gerado pode ser usado em relatórios de despesas, documentação fiscal ou registros pessoais. (Se você usar “Salvar na minha conta Dawarich”, essa ação envia seu arquivo para o Dawarich Cloud para preparar sua importação — fora isso, nada é enviado.)"
+      ]
+    },
+    {
+      "title": "Como a quilometragem é calculada",
+      "paragraphs": [
+        "A calculadora usa a fórmula de Haversine para calcular distâncias de grande círculo entre coordenadas GPS consecutivas de cada segmento de deslocamento em veículo. Este é o método padrão para calcular a distância entre dois pontos em uma esfera (a Terra).",
+        "Para cada segmento de deslocamento em veículo identificado nos seus dados do Google Timeline, a ferramenta soma as distâncias entre todos os pontos de referência registrados ao longo do segmento. O resultado é uma aproximação em linha reta — a distância real por estrada costuma ser 10-30% maior devido a curvas, mudanças de elevação e desvios não capturados pelo espaçamento dos pontos GPS.",
+        "Saltos maiores que 500 km entre pontos consecutivos são excluídos automaticamente para evitar a contagem de falhas de GPS ou saltos irreais de localização nos dados."
+      ]
+    },
+    {
+      "title": "Usando registros de quilometragem para deduções fiscais",
+      "paragraphs": [
+        "Nos Estados Unidos, o IRS permite uma dedução padrão por quilometragem para o uso profissional de um veículo pessoal. A taxa muda a cada ano, então confira o valor atual antes de declarar. Para solicitar essa dedução, você precisa de um registro de quilometragem com data, destino, finalidade profissional e distância de cada viagem.",
+        "Embora os dados do Google Timeline possam fornecer a data e a distância de cada segmento de deslocamento em veículo, eles não distinguem viagens profissionais de pessoais. Você precisaria adicionar ao CSV exportado as informações de finalidade profissional e destino. O IRS também exige que os registros sejam feitos na época dos deslocamentos — no momento de cada viagem ou próximo dele —, então um registro retrospectivo do Google Timeline é mais adequado como documento complementar do que como única comprovação.",
+        "Para registrar viagens conforme acontecem, em vez de reconstruí-las depois, considere usar o [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-mileage-calculator) — você ainda precisa adicionar a finalidade profissional por conta própria."
+      ]
+    },
+    {
+      "title": "O que aconteceu com o Google Maps Timeline?",
+      "paragraphs": [
+        "No fim de 2024, o Google encerrou a versão web do Google Maps Timeline e passou a armazenar todos os dados de localização no próprio celular dos usuários. Apenas os 90 dias mais recentes foram migrados — todo o histórico mais antigo foi excluído permanentemente, a menos que os usuários tivessem feito um backup manual antes do prazo.",
+        "Essa mudança deixou muitos usuários sem acesso a anos de histórico de localização que usavam para registrar quilometragem, guardar lembranças de viagens e documentar despesas. Se você conseguiu exportar seus dados pelo Google Takeout ou pelo recurso de exportação da linha do tempo antes da transição, esta calculadora pode ajudar a extrair as informações de quilometragem desses arquivos.",
+        "Para mais detalhes, veja nosso [guia de migração do histórico de localização do Google](/blog/migrating-from-google-location-history-to-dawarich)."
+      ]
+    },
+    {
+      "title": "Precisão e limitações",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Precisão do GPS** — O Google Timeline costuma registrar localizações em intervalos de poucos segundos a minutos, dependendo da atividade do dispositivo. As lacunas entre as leituras fazem com que alguns trechos de uma viagem sejam interpolados em vez de medidos com precisão"
+        },
+        {
+          "body": "**Classificação de atividade** — O Google usa aprendizado de máquina para classificar tipos de atividade. Erros de classificação acontecem — dirigir devagar no trânsito pode ser identificado como ciclismo, ou uma viagem de ônibus como viagem de carro"
+        },
+        {
+          "body": "**Distâncias em linha reta** — A fórmula de Haversine fornece o menor percurso entre dois pontos na superfície da Terra. As estradas reais são mais longas devido a curvas, ladeiras e traçados"
+        },
+        {
+          "body": "**Dados ausentes** — Os períodos em que seu celular estava desligado, no modo avião ou com o Histórico de localização desativado não terão dados"
+        },
+        {
+          "body": "**O formato de exportação importa** — Os arquivos Semantic Location History contêm os dados mais detalhados de deslocamento em veículos. Os arquivos brutos Records.json podem não ter rótulos de tipo de atividade"
+        }
+      ]
+    },
+    {
+      "title": "Ferramentas relacionadas",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Visualizador do Google Timeline](/tools/timeline-visualizer) — Veja seu histórico completo de localização em um mapa interativo"
+        },
+        {
+          "body": "[Gerador de mapas de calor GPS](/tools/heatmap-generator) — Crie mapas de calor com GPX, FIT, TCX e outros arquivos GPS"
+        },
+        {
+          "body": "[Unificador de trajetos GPX](/tools/gpx-merger) — Una vários arquivos GPX em um só"
+        },
+        {
+          "body": "[Extração de geodados de fotos](/tools/photo-geotagging) — Extraia coordenadas GPS das suas fotos"
+        },
+        {
+          "body": "[Conversor de GeoJSON para GPX](/tools/geojson-to-gpx) — Converta seus dados de localização para o formato GPX"
+        }
+      ],
+      "footer": [
+        "Saiba mais: [Migrando do histórico de localização do Google](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}

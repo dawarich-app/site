@@ -1,0 +1,261 @@
+{
+  "meta": {
+    "title": "Fusion Google Timeline : regroupez vos exports",
+    "description": "Fusionnez Google Timeline (Vos trajets Google Maps) : Records.json, Semantic History, exports téléphone. Un fichier, dédoublonnage intelligent. Gratuit, privé.",
+    "keywords": "fusionner exports Google Timeline, regrouper fichiers historique de localisation, récupération données Google Timeline, fusion Records.json, regrouper localisation Google Takeout, fusion semantic location history, fusion Google Timeline, déduplication historique, fusion données GPS",
+    "featureList": [
+      "Fusion de plusieurs exports Google Timeline en un seul fichier",
+      "Déduplication intelligente des points qui se chevauchent",
+      "Prise en charge de Records.json, Semantic Location History et des exports du téléphone",
+      "Seuils de distance et de temps réglables pour la déduplication",
+      "Rapport visuel de chevauchement des chronologies",
+      "Export en JSON ou GPX",
+      "Confidentialité : traitement intégral dans le navigateur",
+      "Aucune donnée envoyée à un serveur"
+    ]
+  },
+  "howTo": {
+    "name": "Comment fusionner des exports Google Timeline",
+    "description": "Regroupez plusieurs fichiers d’export Google Timeline en un jeu de données unifié grâce à une déduplication intelligente.",
+    "steps": [
+      {
+        "name": "Exportez vos données Google Timeline",
+        "text": "Utilisez Google Takeout, Android ou iOS pour exporter vos données Google Timeline. Si possible, utilisez plusieurs méthodes pour vous assurer de récupérer toutes vos données."
+      },
+      {
+        "name": "Ajoutez vos fichiers JSON",
+        "text": "Glissez-déposez tous vos fichiers JSON Google Timeline exportés dans l’outil de fusion. Il détecte automatiquement Records.json, Semantic Location History et les formats d’export du téléphone."
+      },
+      {
+        "name": "Consultez le résumé des fichiers et les chevauchements",
+        "text": "Consultez le tableau récapitulatif et la chronologie pour voir comment vos fichiers se chevauchent. L’outil affiche la période, le nombre de points et le format détecté pour chaque fichier."
+      },
+      {
+        "name": "Réglez les paramètres de déduplication",
+        "text": "Définissez le seuil de distance (10-500 mètres) et le seuil de temps (10-300 secondes) pour la déduplication. Les points compris dans les deux seuils sont considérés comme des doublons."
+      },
+      {
+        "name": "Fusionnez et exportez",
+        "text": "Cliquez sur Fusionner les fichiers pour regrouper les données avec déduplication. Téléchargez le résultat en JSON (conserve toutes les métadonnées) ou en GPX (compatible avec les applications cartographiques)."
+      }
+    ],
+    "tool": "Outil de fusion des données Google Timeline de Dawarich"
+  },
+  "h1": "Fusion des données Google Timeline",
+  "intro": "Fusionnez plusieurs exports Google Timeline (Vos trajets Google Maps) en un fichier unifié. La déduplication intelligente supprime les points qui se chevauchent tout en conservant chaque relevé de localisation unique. Gratuit, confidentiel et entièrement dans votre navigateur.",
+  "preCta": "Vous souhaitez d’abord visualiser vos données de chronologie ? Essayez notre [visualiseur Google Timeline](/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) pour explorer votre historique sur une carte interactive. Besoin d’une alternative durable à la chronologie ? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) vous laisse la pleine propriété de vos données.",
+  "faqTitle": "Questions fréquentes",
+  "homeLabel": "Accueil",
+  "toolsLabel": "Outils gratuits",
+  "privacyTitle": "La confidentialité avant tout",
+  "privacyBody": "La fusion et la déduplication s’effectuent entièrement dans votre navigateur. Vos données de localisation restent sur votre appareil et ne sont envoyées à aucun serveur.",
+  "benefitsTitle": "Pourquoi fusionner des exports de chronologie ?",
+  "benefitsIntro": "Google propose plusieurs façons d’exporter les données de chronologie, chacune récupérant des informations différentes. Les regrouper vous donne l’historique de localisation le plus complet possible.",
+  "benefits": [
+    {
+      "title": "Plusieurs méthodes d’export :",
+      "body": "Google Takeout, l’export du téléphone et Semantic Location History contiennent chacun des données différentes. La fusion rassemble toutes les données de chaque source."
+    },
+    {
+      "title": "Récupération des données :",
+      "body": "Après la migration de la chronologie Google en 2024, de nombreux utilisateurs disposent d’exports partiels à différentes dates. Fusionnez-les pour reconstituer autant d’historique que possible."
+    },
+    {
+      "title": "Regrouper anciens et nouveaux exports :",
+      "body": "Vous avez exporté votre chronologie en 2022, puis en 2024 ? Fusionnez les deux exports pour obtenir une couverture continue sans entrées en double."
+    }
+  ],
+  "settings": {
+    "title": "Paramètres de déduplication",
+    "intro": "Réglez le niveau de détection des doublons. Deux points sont considérés comme des doublons s’ils sont suffisamment proches à la fois en distance et en temps. Le point aux métadonnées les plus riches est conservé.",
+    "distanceLabel": "Seuil de distance",
+    "distanceHint": "Les points plus proches que cette distance peuvent être des doublons (10m = strict, 500m = large)",
+    "timeLabel": "Seuil de temps",
+    "timeHint": "Les points enregistrés dans cet intervalle peuvent être des doublons (10s = strict, 300s = large)"
+  },
+  "results": {
+    "file": "Fichier",
+    "format": "Format",
+    "points": "Points",
+    "paths": "Parcours",
+    "dateRange": "Période",
+    "dateCoverage": "Couverture temporelle",
+    "overlap": "Chevauchement",
+    "title": "Résultats de la fusion",
+    "inputPoints": "Points en entrée",
+    "outputPoints": "Points en sortie",
+    "duplicatesRemoved": "Doublons supprimés",
+    "filesMerged": "Fichiers fusionnés",
+    "overlapDetails": "Détails des chevauchements",
+    "parsing": "Analyse des fichiers ajoutés...",
+    "unknown": "inconnu",
+    "noTimestamps": "Aucun horodatage",
+    "none": "Aucun",
+    "downloadJson": "Télécharger en JSON",
+    "downloadGpx": "Télécharger en GPX",
+    "noDate": "N/D",
+    "merging": "Fusion...",
+    "uploadedFiles": "Fichiers ajoutés ({count})",
+    "distanceValue": "{distance}m",
+    "timeValue": "{seconds}s",
+    "filePair": "{fileA} et {fileB}",
+    "overlapRange": " se chevauchent du {startDate} au {endDate}",
+    "overlapWith": "Chevauchement avec {fileName}",
+    "mergeButton": "Fusionner {count} fichier|Fusionner {count} fichiers|Fusionner {count} fichiers",
+    "dayCount": "{count} jour|{count} jours|{count} jours",
+    "parseError": "Erreur d’analyse de {fileName} : {message}",
+    "processingError": "Erreur lors du traitement des fichiers : {message}",
+    "mergeError": "Erreur lors de la fusion des fichiers : {message}"
+  },
+  "cta": {
+    "fallback": "Vous souhaitez conserver vos données de localisation fusionnées en sécurité et toujours accessibles ? Dawarich stocke votre historique complet de manière sécurisée.",
+    "postTitle": "Ne risquez plus de perdre vos données de localisation",
+    "postBody": "Dawarich stocke tout dans des centres de données de l’UE, avec chiffrement en transit (SSL/TLS) et au repos (LUKS), des sauvegardes complètes et une carte interactive. Importez vos données de chronologie fusionnées et poursuivez le suivi automatiquement.",
+    "bottomTitle": "Vous cherchez une alternative durable à Google Timeline ?",
+    "bottomBody": "Dawarich est une plateforme open source de suivi de localisation qui vous donne le contrôle total de vos données. Importez votre export Google Timeline fusionné, continuez à enregistrer votre position depuis votre téléphone et visualisez des années de déplacements, en auto-hébergement ou dans le cloud.",
+    "button": "Essayez Dawarich gratuitement pendant 7 jours",
+    "headline": "Vous avez regroupé **{count}** fichiers contenant **{points}** points en un seul. Dawarich le fait automatiquement avec toutes vos sources GPS.",
+    "statLabels": {
+      "files": "fichiers",
+      "points": "points",
+      "duplicates": "doublons supprimés"
+    }
+  },
+  "faq": [
+    {
+      "q": "Puis-je ajouter mes données Google Timeline en toute sécurité ?",
+      "a": "Oui. Tout le traitement s’effectue dans votre navigateur avec JavaScript. Vos fichiers d’historique de localisation ne sont jamais envoyés à un serveur. Ils sont lus localement, analysés, fusionnés et exportés sans aucune requête réseau. Les données disparaissent lorsque vous fermez l’onglet. L’outil est aussi open source, vous pouvez donc vérifier le code."
+    },
+    {
+      "q": "Comment fonctionne la déduplication ?",
+      "a": "L’algorithme trie tous les points par horodatage, puis compare chaque point au précédent. Si deux points consécutifs sont compris dans le seuil de distance (50 mètres par défaut) et le seuil de temps (60 secondes par défaut), le doublon est supprimé. Le point qui contient le plus de métadonnées, comme les noms de lieux ou les types d’activité, est conservé. Vous pouvez régler les deux seuils avec les curseurs avant la fusion."
+    },
+    {
+      "q": "Puis-je fusionner différents formats ?",
+      "a": "Oui. L’outil prend en charge tous les formats d’export Google Timeline : Records.json de Google Takeout, les fichiers mensuels Semantic Location History (comme 2022_APRIL.json) et les exports récents de chronologie du téléphone avec semanticSegments. Vous pouvez combiner librement ces formats. L’analyseur détecte le format de chaque fichier et normalise les données avant la fusion."
+    },
+    {
+      "q": "Que deviennent les données qui se chevauchent ?",
+      "a": "Elles sont traitées lors de la déduplication. Lorsque deux fichiers couvrent la même période, ils contiennent probablement des points enregistrés au même moment et au même endroit. L’outil identifie ces doublons selon leur proximité dans l’espace et dans le temps, puis ne conserve qu’une copie de chaque point, en privilégiant les métadonnées les plus riches. Le rapport indique précisément quels fichiers se chevauchent et sur combien de jours."
+    },
+    {
+      "q": "La fusion risque-t-elle de perdre des données ?",
+      "a": "Aucune donnée significative n’est perdue. La déduplication ne supprime que les véritables doublons : des points représentant essentiellement la même position au même moment, issus de plusieurs sources d’export. Tous les points uniques, visites de lieux, segments d’activité et parcours de chaque fichier sont conservés dans le résultat. Par précaution, vous pouvez définir le seuil de distance sur 0 pour désactiver complètement la déduplication."
+    },
+    {
+      "q": "Quels formats d’export sont disponibles ?",
+      "a": "Vous pouvez exporter les données fusionnées en JSON (un tableau de tous les points dédupliqués avec leurs métadonnées complètes) ou en GPX (un format GPS standard compatible avec la plupart des applications cartographiques, appareils de suivi sportif et outils SIG). L’export JSON conserve toutes les métadonnées d’origine : noms de lieux, adresses et types d’activité. L’export GPX transforme les visites de lieux en points de passage et les relevés de position en points de trajet."
+    },
+    {
+      "q": "Combien de fichiers puis-je fusionner à la fois ?",
+      "a": "Il n’y a pas de limite fixe au nombre de fichiers. L’outil a été testé avec plus de 10 fichiers simultanés, dont de gros Records.json contenant des centaines de milliers de points. Le temps de traitement dépend du nombre total de points et de la puissance de votre appareil. Une fusion habituelle de 3-5 fichiers totalisant 500,000 points prend 10-30 secondes sur un ordinateur moderne."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Qu’est-ce que l’outil de fusion des données de chronologie ?",
+      "paragraphs": [
+        "Cet outil gratuit, utilisable dans le navigateur, regroupe plusieurs fichiers d’export Google Timeline en un jeu de données unifié. Lorsque vous exportez votre historique Google avec différentes méthodes (Google Takeout, export du téléphone, Semantic History), vous obtenez souvent des fichiers qui se chevauchent et contiennent des doublons. Cet outil les fusionne intelligemment, supprime les doublons et préserve chaque relevé de localisation unique.",
+        "Tout le traitement s’effectue localement dans votre navigateur. Vos données ne sont jamais transmises à un serveur, ce qui permet de l’utiliser en toute sécurité même pour des années d’historique de localisation personnel sensible."
+      ]
+    },
+    {
+      "title": "Comment fonctionne la déduplication",
+      "paragraphs": [
+        "L’algorithme utilise deux critères pour identifier les points de localisation en double :"
+      ],
+      "items": [
+        {
+          "body": "**Proximité spatiale** — Les points compris dans le seuil de distance (50 mètres par défaut) sont candidats à la déduplication"
+        },
+        {
+          "body": "**Proximité temporelle** — Les points doivent aussi être compris dans le seuil de temps (60 secondes par défaut) pour être considérés comme des doublons"
+        },
+        {
+          "body": "**Deux conditions obligatoires** — Un point n’est supprimé comme doublon que s’il satisfait les critères de distance ET de temps"
+        },
+        {
+          "body": "**Préservation des métadonnées** — En cas de doublon, la version contenant le plus de métadonnées (noms de lieux, adresses, types d’activité) est conservée"
+        }
+      ],
+      "footer": [
+        "Les points sont triés chronologiquement avant la déduplication pour obtenir des résultats cohérents quel que soit l’ordre d’ajout."
+      ]
+    },
+    {
+      "title": "Pourquoi fusionner des exports de chronologie ?",
+      "paragraphs": [
+        "Plusieurs situations courantes rendent la fusion de données Google Timeline essentielle :"
+      ],
+      "items": [
+        {
+          "body": "**Plusieurs sources d’export** — Google Takeout, les exports Android et iOS récupèrent chacun des sous-ensembles différents de vos données"
+        },
+        {
+          "body": "**Récupération après la migration Google de 2024** — Lorsque Google a déplacé la chronologie sur l’appareil, de nombreux utilisateurs ont effectué plusieurs exports partiels. La fusion reconstitue l’historique le plus complet possible"
+        },
+        {
+          "body": "**Sauvegardes périodiques** — Si vous avez exporté en 2021, puis en 2024, la fusion crée un jeu de données continu couvrant les deux périodes"
+        },
+        {
+          "body": "**Changement d’appareil** — Vous avez changé de téléphone ? Fusionnez les exports de l’ancien et du nouveau"
+        }
+      ]
+    },
+    {
+      "title": "Qu’est-il arrivé à Google Maps Timeline ?",
+      "paragraphs": [
+        "Fin 2024, Google a fermé la version web de Google Maps Timeline et déplacé toutes les données de localisation vers le stockage local de l’appareil. Seuls les 90 derniers jours ont été transférés automatiquement sur les téléphones. L’historique plus ancien a été définitivement supprimé sauf en cas d’export manuel avant la date limite.",
+        "Des millions d’utilisateurs se sont ainsi retrouvés avec des données fragmentées : exports Takeout partiels, exports du téléphone couvrant les données récentes et fichiers Semantic Location History de différentes périodes. L’outil de fusion aide à rassembler ces fragments en un historique complet.",
+        "Pour continuer à enregistrer votre position en gardant la pleine propriété de vos données, envisagez [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-merger), en auto-hébergement ou dans le cloud."
+      ]
+    },
+    {
+      "title": "Formats pris en charge",
+      "paragraphs": [
+        "L’outil détecte et traite automatiquement tous les formats d’export Google Timeline :"
+      ],
+      "items": [
+        {
+          "body": "**Records.json** — Relevés GPS bruts de Google Takeout au format de coordonnées E7. Ces fichiers sont généralement les plus volumineux, car ils contiennent chaque relevé de position"
+        },
+        {
+          "body": "**Semantic Location History** — Fichiers mensuels (par exemple 2022_APRIL.json) avec visites de lieux structurées, adresses et segments d’activité"
+        },
+        {
+          "body": "**Export de chronologie du téléphone** — Format récent de Google Maps sur Android/iOS avec semanticSegments et parcours de chronologie"
+        },
+        {
+          "body": "**Paramètres et TimelineEdits** — Fichiers de métadonnées supplémentaires des exports Google Takeout"
+        }
+      ],
+      "footer": [
+        "Vous pouvez combiner librement ces formats dans une seule opération de fusion."
+      ]
+    },
+    {
+      "title": "Outils associés",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Visualiseur Google Timeline](/tools/timeline-visualizer) — Affichez votre historique de localisation sur une carte interactive"
+        },
+        {
+          "body": "[Générateur de cartes de chaleur GPS](/tools/heatmap-generator) — Créez des cartes de chaleur à partir de fichiers GPX, FIT, TCX et autres formats GPS"
+        },
+        {
+          "body": "[Fusion de trajets GPX](/tools/gpx-merger) — Regroupez plusieurs fichiers GPX en un seul"
+        },
+        {
+          "body": "[Extraction des géodonnées de photos](/tools/photo-geotagging) — Extrayez les coordonnées GPS de vos photos"
+        },
+        {
+          "body": "[Convertisseur GeoJSON vers GPX](/tools/geojson-to-gpx) — Convertissez les données de localisation au format GPX"
+        }
+      ],
+      "footer": [
+        "Pour en savoir plus : [Migrer depuis l’historique de localisation Google](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "h1": "Linha do tempo do Google (Google Timeline): estatísticas",
+  "intro": "Seu Spotify Wrapped do histórico de localização. Carregue seus dados do Google Timeline (Linha do tempo do Google Maps) para ver a distância que você percorreu, os países que visitou, seus lugares mais frequentes e como você passa seu tempo se deslocando pelo mundo.",
+  "appName": "Analisador de estatísticas do Google Timeline",
+  "privacyTitle": "Privacidade em primeiro lugar",
+  "privacyBody": "Todo o processamento acontece no seu navegador. Seus dados de localização nunca saem do seu dispositivo e não são enviados a nenhum servidor.",
+  "preCta": "Gostou desses insights? O [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-statistics) gera estatísticas de viagem automaticamente com seus dados contínuos de localização — distância total, países, cidades e detalhamento de atividades atualizados em tempo real. [Saiba como migrar](/blog/migrating-from-google-location-history-to-dawarich).",
+  "faqTitle": "Perguntas frequentes",
+  "homeLabel": "Início",
+  "toolsLabel": "Ferramentas gratuitas",
+  "meta": {
+    "title": "Linha do tempo do Google/Google Timeline: estatísticas do histórico",
+    "description": "Google Timeline (Linha do tempo do Google Maps): distância total, países, top lugares, atividades por tipo e tendências anuais. Grátis e privado no navegador.",
+    "keywords": "estatísticas google timeline, estatísticas do histórico de localização, qual distância percorri, insights google maps timeline, analisador google timeline, estatísticas de viagem, análise de dados de localização, estatísticas google takeout, calculadora de distância percorrida, contador de lugares visitados",
+    "featureList": [
+      "Calcular a distância total percorrida com dados do Google Timeline",
+      "Ver países e cidades visitados",
+      "Ranking dos lugares mais visitados",
+      "Detalhamento por tipo de atividade (caminhada, carro, ciclismo, transporte público)",
+      "Tendências anuais e mensais dos dados",
+      "Cartão de estatísticas para baixar e compartilhar",
+      "Privacidade em primeiro lugar — processamento no navegador",
+      "Suporte a todos os formatos de exportação do Google Timeline"
+    ]
+  },
+  "howTo": {
+    "name": "Como analisar suas estatísticas do Google Timeline",
+    "description": "Exporte seus dados do Google Timeline e veja estatísticas detalhadas de viagem, incluindo distância, países, lugares e detalhamento de atividades.",
+    "steps": [
+      {
+        "name": "Exporte seus dados do Google Timeline",
+        "text": "Acesse takeout.google.com, selecione Histórico de localização (Linha do tempo) e exporte. Ou, no Android: Google Maps → Configurações → Localização → Linha do tempo → Exportar. No iOS: Google Maps → Configurações → Conteúdo pessoal → Exportar dados da linha do tempo."
+      },
+      {
+        "name": "Carregue seus arquivos JSON",
+        "text": "Arraste e solte seus arquivos JSON exportados do Google Timeline no analisador. A ferramenta detecta o formato automaticamente (Records.json, Semantic Timeline, Location History etc.) e lê seus dados."
+      },
+      {
+        "name": "Veja suas estatísticas de viagem",
+        "text": "Veja sua distância total, países visitados, principais lugares, detalhamento de atividades, tendências anuais e muito mais. Baixe a imagem de um cartão de estatísticas para compartilhar os destaques das suas viagens."
+      }
+    ],
+    "tool": "Analisador de estatísticas do Google Timeline do Dawarich"
+  },
+  "exportData": {
+    "title": "Como obter seus dados da linha do tempo",
+    "intro": "Exporte seus dados do Google Timeline usando um dos métodos abaixo. Para estatísticas mais completas (países, cidades, nomes de lugares), use a exportação Semantic Location History.",
+    "methods": [
+      {
+        "title": "Google Takeout (recomendado):",
+        "body": "Acesse [takeout.google.com](https://takeout.google.com/) → Selecione Histórico de localização (Linha do tempo) → Exportar como JSON. Isso fornece os arquivos Records.json e Semantic Location History."
+      },
+      {
+        "title": "No Android:",
+        "body": "Abra o Google Maps → Configurações → Localização → Serviços de localização → Linha do tempo → Exportar linha do tempo"
+      },
+      {
+        "title": "No iOS:",
+        "body": "Abra o Google Maps → Configurações → Conteúdo pessoal → Exportar dados da linha do tempo"
+      },
+      {
+        "title": "Dica:",
+        "body": "Carregue todos os seus arquivos mensais Semantic Location History (por exemplo, 2022_JANUARY.json, 2022_FEBRUARY.json) para obter as estatísticas mais completas. Você pode selecionar vários arquivos de uma vez."
+      }
+    ]
+  },
+  "results": {
+    "processing": "Processando seus dados da linha do tempo... Isso pode levar um momento para arquivos grandes.",
+    "rawDataHint": "Seu arquivo contém registros brutos de localização (formato Records.json). Nomes de países/cidades e dados de visitas a lugares só estão disponíveis nas exportações Semantic Location History — os arquivos mensais com nomes como 2022_APRIL.json. Carregue esses arquivos para obter estatísticas mais completas, incluindo lugares, países e cidades visitados.",
+    "placesTitle": "Lugares mais visitados",
+    "place": "Lugar",
+    "visits": "Visitas",
+    "address": "Endereço",
+    "timeTitle": "Distribuição do tempo",
+    "activityTitle": "Distribuição de atividades",
+    "yearlyTitle": "Detalhamento anual",
+    "shareTitle": "Compartilhe suas estatísticas",
+    "distance": "Distância total",
+    "points": "Pontos de dados",
+    "places": "Lugares visitados",
+    "uniqueLocations": "localizações únicas",
+    "semanticHint": "dos dados semânticos",
+    "dateRange": "Período",
+    "unnamed": "Sem nome",
+    "countries": "Países ({count})",
+    "cities": "Cidades ({count})",
+    "traveling": "Em deslocamento: {duration}",
+    "stationary": "Parado: {duration}",
+    "segments": "{count} seg.",
+    "pointCount": "{points} pts{distance}",
+    "distanceSuffix": " / {distance} km",
+    "kilometers": "{distance} km",
+    "miles": "{distance} milhas",
+    "pathCount": "{count} percursos",
+    "yearCount": "{count} anos",
+    "noDate": "N/D"
+  },
+  "duration": {
+    "years": "{count} ano|{count} anos|{count} anos",
+    "months": "{count} mês|{count} meses|{count} meses",
+    "days": "{count} dia|{count} dias|{count} dias",
+    "hours": "{count} hora|{count} horas|{count} horas"
+  },
+  "numbers": {
+    "million": "{count}M",
+    "thousand": "{count}K"
+  },
+  "activities": {
+    "driving": "Carro",
+    "walking": "Caminhada",
+    "running": "Corrida",
+    "cycling": "Ciclismo",
+    "bus": "Ônibus",
+    "train": "Trem",
+    "subway": "Metrô",
+    "flying": "Voo",
+    "motorcycle": "Moto",
+    "skiing": "Esqui",
+    "sailing": "Navegação",
+    "unknown": "Desconhecido"
+  },
+  "cta": {
+    "fallback": "Gostou desses insights? O Dawarich os gera automaticamente com seus dados contínuos de localização.",
+    "title": "Procurando uma alternativa ao Google Timeline?",
+    "body": "O Dawarich é uma plataforma de código aberto para registro de localização que dá a você controle total sobre seus dados. Importe sua exportação do Google Timeline, continue registrando sua localização pelo celular e veja estatísticas de viagem em tempo real com mapas, registro de distâncias e resumos anuais — em hospedagem própria ou na nuvem.",
+    "button": "Teste o Dawarich grátis por 7 dias",
+    "headline": "Você percorreu **{distance} km**{countries} em **{years}** anos. Transforme esse retrato do momento em um painel sempre atualizado.",
+    "countries": " por **{count}** países",
+    "statLabels": {
+      "points": "pontos",
+      "countries": "países",
+      "cities": "cidades",
+      "distance": "distância",
+      "years": "anos"
+    }
+  },
+  "faq": [
+    {
+      "q": "É seguro carregar meus dados do Google Timeline?",
+      "a": "Sim. Todo o processamento acontece no seu navegador usando JavaScript. Seus arquivos de histórico de localização nunca são enviados a nenhum servidor — eles permanecem no seu dispositivo. Ao fechar a aba, os dados são descartados. A ferramenta também tem código aberto, então você pode verificar exatamente o que o código faz. Sem contas, sem cookies e sem rastreamento dos seus dados de localização."
+    },
+    {
+      "q": "Quais estatísticas esta ferramenta calcula?",
+      "a": "O analisador calcula a distância total percorrida (em quilômetros e milhas), a quantidade de pontos de dados, os lugares únicos visitados, países e cidades (do Semantic Location History), os lugares mais visitados por frequência, o tempo em deslocamento e parado, a distribuição por tipo de atividade (caminhada, carro, ciclismo, transporte público, voo etc.) e detalhamentos anuais com informações mensais. Ele também gera um cartão de estatísticas para baixar e compartilhar."
+    },
+    {
+      "q": "Por que não consigo ver dados de países ou cidades?",
+      "a": "Os nomes de países e cidades só estão disponíveis nas exportações Semantic Location History — os arquivos mensais com nomes como 2022_APRIL.json, que contêm visitas estruturadas a lugares com endereços. Se você carregou um Records.json, ele contém coordenadas GPS brutas, sem nomes de lugares ou endereços. Para obter todas as estatísticas, incluindo países e cidades, exporte seu Semantic Location History pelo Google Takeout ou pelas configurações do Google Maps Timeline no celular."
+    },
+    {
+      "q": "Qual é a precisão do cálculo de distância?",
+      "a": "A distância é calculada com a fórmula de Haversine, que calcula a distância de grande círculo entre pontos GPS consecutivos. Ela considera a curvatura da Terra. A ferramenta filtra saltos implausíveis (maiores que 500 km entre pontos consecutivos) para evitar que falhas de GPS aumentem o total. No Semantic Location History, as distâncias dos segmentos de atividade são usadas quando disponíveis e tendem a ser mais precisas do que os cálculos brutos entre pontos. A precisão geral depende da frequência com que o Google registrou sua localização."
+    },
+    {
+      "q": "Posso analisar vários arquivos de uma vez?",
+      "a": "Sim. Você pode carregar vários arquivos JSON ao mesmo tempo — por exemplo, todos os seus arquivos mensais Semantic Location History, ou um Records.json junto com arquivos Semantic. A ferramenta une todos os pontos de dados e percursos de cada arquivo antes de calcular as estatísticas, oferecendo uma visão combinada de todo o seu histórico de localização. Carregue quantos arquivos quiser."
+    },
+    {
+      "q": "O que são tipos de atividade?",
+      "a": "Tipos de atividade são categorias de movimento que o Google atribui aos seus dados de localização. Incluem WALKING, RUNNING, CYCLING, IN_PASSENGER_VEHICLE (carro), IN_BUS, IN_TRAIN, IN_SUBWAY, FLYING, MOTORCYCLING, SKIING e SAILING. O Google os detecta automaticamente usando os sensores do celular (acelerômetro, velocidade GPS, mudanças de altitude). A precisão varia — às vezes o Google classifica atividades incorretamente, especialmente em modos semelhantes como ônibus e carro."
+    },
+    {
+      "q": "Posso compartilhar minhas estatísticas?",
+      "a": "Sim. Depois de analisar seus dados, a ferramenta gera um cartão de estatísticas que você pode baixar como imagem PNG. O cartão inclui sua distância total, quantidade de pontos de dados, lugares visitados e número de países — junto com o período. A imagem é gerada no seu navegador usando um elemento canvas. Nenhum dado é enviado para outro lugar. Você pode compartilhar a imagem baixada em redes sociais, aplicativos de mensagens ou onde quiser."
+    }
+  ],
+  "cards": [
+    {
+      "title": "O que é o Analisador de estatísticas da linha do tempo?",
+      "paragraphs": [
+        "O Analisador de estatísticas da linha do tempo é uma ferramenta gratuita que funciona no navegador e transforma sua exportação bruta do Google Timeline em estatísticas úteis de viagem. Em vez de examinar arquivos JSON enormes cheios de coordenadas, você recebe um resumo claro da distância total percorrida, dos países e cidades que visitou, dos seus lugares mais frequentes, de como divide seu tempo entre meios de transporte e de como seus padrões de movimento mudaram de um ano para outro.",
+        "Pense nele como o Spotify Wrapped do seu histórico de localização. Todo o processamento acontece no seu navegador — seus dados nunca saem do seu dispositivo, e a ferramenta é totalmente gratuita, sem exigir cadastro."
+      ]
+    },
+    {
+      "title": "Quais estatísticas você pode ver?",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Distância total** — Quanto você percorreu em quilômetros e milhas, calculado com pontos GPS e segmentos de atividade"
+        },
+        {
+          "body": "**Países e cidades** — Cada país e cidade extraídos dos endereços do seu Semantic Location History"
+        },
+        {
+          "body": "**Principais lugares** — Seus lugares mais frequentes, classificados pela quantidade de visitas"
+        },
+        {
+          "body": "**Distribuição do tempo** — Divisão visual do tempo em deslocamento e parado"
+        },
+        {
+          "body": "**Tipos de atividade** — Distribuição entre caminhada, carro, ciclismo, transporte público, voo e mais"
+        },
+        {
+          "body": "**Tendências anuais** — Pontos de dados e distância por ano para ver como seus hábitos mudaram"
+        },
+        {
+          "body": "**Cartão para compartilhar** — Uma imagem para baixar com um resumo das suas principais estatísticas"
+        }
+      ]
+    },
+    {
+      "title": "Entenda seus tipos de atividade",
+      "paragraphs": [
+        "O registro de localização do Google usa os sensores do celular para classificar como você se desloca. Os principais tipos de atividade que aparecem nos seus dados são:"
+      ],
+      "items": [
+        {
+          "body": "**Caminhada / Corrida** — Detectadas pela contagem de passos e pela velocidade obtida do acelerômetro"
+        },
+        {
+          "body": "**Ciclismo** — Velocidade moderada com padrões característicos do acelerômetro"
+        },
+        {
+          "body": "**Carro** — Velocidade mais alta com padrões suaves de aceleração, identificado como IN_PASSENGER_VEHICLE"
+        },
+        {
+          "body": "**Ônibus / Trem / Metrô** — Meios de transporte detectados pela velocidade, pelos padrões de rota e, às vezes, pelos dados de paradas de transporte público próximas"
+        },
+        {
+          "body": "**Voo** — Detectado por mudanças rápidas de altitude e velocidades muito altas"
+        }
+      ],
+      "footer": [
+        "Essas classificações nem sempre são perfeitas. Às vezes o Google confunde viagens de ônibus com viagens de carro ou identifica um deslocamento lento de carro como ciclismo. As estatísticas oferecem uma boa visão geral, mas segmentos individuais podem estar classificados incorretamente."
+      ]
+    },
+    {
+      "title": "O que aconteceu com o Google Maps Timeline?",
+      "paragraphs": [
+        "No fim de 2024, o Google encerrou a versão web do Google Maps Timeline e passou a armazenar todos os dados de localização no próprio dispositivo. Apenas os últimos 90 dias foram migrados — os dados mais antigos foram excluídos, a menos que os usuários tivessem feito um backup manual antes do prazo. Muitas pessoas [perderam anos de histórico de localização](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/) na transição.",
+        "Se você conseguiu exportar seus dados antes ou durante a transição, este analisador permite extrair estatísticas úteis deles. Para uma alternativa de longo prazo que continue registrando sua localização com plena propriedade dos seus dados, conheça o [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-statistics)."
+      ]
+    },
+    {
+      "title": "Records.json vs Semantic Location History",
+      "paragraphs": [
+        "O Google exporta seus dados de localização em dois formatos principais, que contêm informações bem diferentes:"
+      ],
+      "items": [
+        {
+          "body": "**Records.json** — Coordenadas GPS brutas e registros de data e hora. Cada registro de localização feito pelo Google, geralmente a cada poucos segundos ou minutos. Esses arquivos podem ter centenas de megabytes. Eles fornecem coordenadas precisas, mas não nomes de lugares, endereços ou tipos de atividade."
+        },
+        {
+          "body": "**Semantic Location History** — Arquivos mensais (por exemplo, 2022_APRIL.json) com dados estruturados: visitas a lugares nomeados com endereços, segmentos de atividade com meios de transporte classificados e informações de duração. São arquivos menores, mas com dados mais completos e relevantes."
+        }
+      ],
+      "footer": [
+        "Para obter as melhores estatísticas, carregue seus arquivos Semantic Location History. O Records.json fornece distância e pontos de dados, mas você não terá países, cidades, nomes de lugares e detalhamento de atividades."
+      ]
+    },
+    {
+      "title": "Ferramentas relacionadas",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Visualizador do Google Timeline](/tools/timeline-visualizer) — Veja seu histórico de localização em um mapa interativo"
+        },
+        {
+          "body": "[Gerador de mapas de calor GPS](/tools/heatmap-generator) — Crie mapas de calor com GPX, FIT, TCX e outros arquivos GPS"
+        },
+        {
+          "body": "[Unificador de trajetos GPX](/tools/gpx-merger) — Una vários arquivos GPX em um só"
+        },
+        {
+          "body": "[Extração de geodados de fotos](/tools/photo-geotagging) — Extraia coordenadas GPS das suas fotos"
+        },
+        {
+          "body": "[Conversor de GeoJSON para GPX](/tools/geojson-to-gpx) — Converta seus dados de localização para o formato GPX"
+        }
+      ],
+      "footer": [
+        "Saiba mais: [Como criamos o Visualizador da linha do tempo](/blog/building-a-privacy-first-google-timeline-visualizer) | [Migrando do histórico de localização do Google](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}

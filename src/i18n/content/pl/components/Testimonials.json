@@ -1,0 +1,44 @@
+{
+  "title": "Co mówią inni",
+  "subtitle": "Piszą o nas czołowe media technologiczne na świecie.",
+  "featuredLabel": "Pisali o nas",
+  "quotes": [
+    {
+      "quote": "Zaimportowałem swoje dane Google Timeline do tej aplikacji na własnym serwerze i jest o wiele lepsza od tego, co oferuje Google.",
+      "source": "XDA Developers"
+    },
+    {
+      "quote": "Dawarich daje Ci wszystko to, co Google Timeline, a nawet więcej. Nie ma reklam ani ukrytego zbierania danych.",
+      "source": "MakeUseOf"
+    },
+    {
+      "quote": "Interfejs jest przejrzysty i przyjazny dla użytkownika. Praktycznie bez wpływu na baterię.",
+      "source": "Opinia w App Store"
+    },
+    {
+      "quote": "Przez 60-70% roku podróżuję po świecie i szukałem czegoś do zapisywania swojej historii bez przekazywania jej Google. Znalazłem Dawarich.app, w kilka minut skonfigurowałem aplikację na iPhonie, zaimportowałem historię z osi czasu i po prostu działa — śledzenie uruchamia się samo, kiedy wychodzę z domu. Już o tym nie myślę. Moje dane znów należą do mnie, a tymczasem mam już zapisane 260k km, 16 krajów i 378 miast.",
+      "source": "Niemcy · Podróżnik zwiedzający świat · dawniej Google Timeline · trafił tu przez Reddit"
+    },
+    {
+      "quote": "Przez lata korzystałem z Google Timeline, ale nigdy nie czułem się dobrze z tym, że całe moje życie jest na serwerach w USA. Przeniosłem wszystko do Dawarich (dane z kilku lat) w jedno popołudnie. Teraz mam prywatny, trwały dziennik swojego życia — coś, co mam nadzieję kiedyś przekazać wnukom. Czekam na kolejne ulepszenia, bo już teraz wykonali świetną robotę.",
+      "source": "Nowy Jork, USA · Były użytkownik Google Timeline · Tworzy historię lokalizacji dla przyszłych pokoleń"
+    },
+    {
+      "quote": "Przeprowadziłem się do Kazachstanu, zupełnie nie znając miasta. Google Timeline nie wchodziło już w grę, a i tak mu nie ufałem. Skonfigurowałem Dawarich i teraz mapa jest dla mnie jak mgła wojny — im częściej wychodzę, tym więcej się na niej odsłania. Do tego każda podróż zostaje ze mną — mogę wrócić do dowolnej z nich i udostępnić trasę.",
+      "source": "Klient Dawarich · Kazachstan · od połowy 2025"
+    },
+    {
+      "quote": "Jest o wiele lepsze od OwnTracks, Overland itd. — jest znacznie dokładniejsze.",
+      "source": "GitHub Discussions"
+    },
+    {
+      "quote": "Aplikacja jak dotąd działa u mnie świetnie i w ogóle nie wpływa na baterię! Jak na razie niesamowita robota!",
+      "source": "Opinia w App Store"
+    },
+    {
+      "quote": "Myślę, że to całkiem imponujący kawałek oprogramowania.",
+      "source": "Colocataires Blog"
+    }
+  ],
+  "translatedNote": "Tłumaczenie z angielskiego"
+}

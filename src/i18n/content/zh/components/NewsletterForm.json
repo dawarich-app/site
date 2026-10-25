@@ -1,0 +1,14 @@
+{
+  "subscribe": "订阅",
+  "privacyNote": "无垃圾邮件，随时可退订。",
+  "invalidEmail": "请输入有效的电子邮箱地址。",
+  "requestError": "出了点问题，请稍后重试。",
+  "success": "订阅成功！请查看收件箱并确认。",
+  "networkError": "网络错误，请检查连接后重试。",
+  "firstNameLabel": "名字 ",
+  "emailLabel": "电子邮箱 ",
+  "optionalLabel": "（选填）",
+  "firstNamePlaceholder": "Michael",
+  "emailPlaceholder": "you@example.com",
+  "subscribing": "正在订阅…"
+}

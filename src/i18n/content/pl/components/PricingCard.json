@@ -1,0 +1,16 @@
+{
+  "ribbon": " NAJPOPULARNIEJSZY",
+  "comingSoon": "JUŻ WKRÓTCE",
+  "billedMonthly": "rozliczenie miesięczne",
+  "heading": "Dołącz do listy oczekujących na plan Rodzina",
+  "subtext": "Dowiedz się jako pierwszy o premierze — tylko płatność roczna, wszystkie funkcje Pro.",
+  "buttonLabel": "Dołącz do listy oczekujących",
+  "note": "Bez spamu, tylko wiadomość o premierze.",
+  "guarantee": " Gwarancja importu · 14 dni na zwrot pieniędzy",
+  "billing": {
+    "monthly": "miesięcznie",
+    "annual": "rocznie"
+  },
+  "totalValue": "Łączna wartość",
+  "bonusPrefix": "BONUS: "
+}

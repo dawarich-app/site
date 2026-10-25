@@ -1,0 +1,84 @@
+{
+  "versusRows": [
+    {
+      "feature": "Zugriff im Browser",
+      "g": {
+        "text": "Eingestellt (nur noch mobil)"
+      },
+      "d": {
+        "text": "Vollständige Web-App"
+      }
+    },
+    {
+      "feature": "Aufbewahrung der Daten",
+      "g": {
+        "text": "Begrenzt (automatische Löschung)"
+      },
+      "d": {
+        "text": "Dauerhaft (Pro)"
+      }
+    },
+    {
+      "feature": "Deine Daten werden für Werbung genutzt",
+      "g": {
+        "text": "Ja"
+      },
+      "d": {
+        "text": "Niemals"
+      }
+    },
+    {
+      "feature": "Daten werden an Dritte verkauft",
+      "g": {
+        "text": "Ja (Werbenetzwerk)"
+      },
+      "d": {
+        "text": "Niemals"
+      }
+    },
+    {
+      "feature": "Daten exportieren",
+      "g": {
+        "text": "Teilweise, kompliziert"
+      },
+      "d": {
+        "text": "Mit einem Klick, in jedem Format"
+      }
+    },
+    {
+      "feature": "Selbst hosten",
+      "g": {
+        "text": "Nein"
+      },
+      "d": {
+        "text": "Ja – volle Kontrolle"
+      }
+    },
+    {
+      "feature": "Open Source",
+      "g": {
+        "text": "Nein"
+      },
+      "d": {
+        "text": "Ja – jede Zeile einsehbar"
+      }
+    },
+    {
+      "feature": "Funktioniert auch nach Einstellung des Produkts",
+      "g": {
+        "text": "Nein"
+      },
+      "d": {
+        "text": "Ja (selbst gehostet läuft es weiter)"
+      }
+    }
+  ],
+  "switchPill": " Jetzt wechseln",
+  "title": "Google Timeline (Google Maps Zeitachse) im Vergleich mit Dawarich",
+  "subtitle": "Sieh, was du durch den Wechsel gewinnst.",
+  "dawarichName": "DAWARICH",
+  "footNote": "Es sind deine Daten. Sorge dafür, dass es so bleibt.",
+  "footCta": "Zu Dawarich wechseln",
+  "featureHeader": "Funktion",
+  "googleTimelineHeader": "Google Timeline"
+}

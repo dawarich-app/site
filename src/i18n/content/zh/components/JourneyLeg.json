@@ -1,0 +1,41 @@
+{
+  "distanceLabel": "距离",
+  "averageLabel": "平均",
+  "timeLabel": "时间",
+  "pauseReplay": "暂停回放",
+  "playReplay": "播放回放",
+  "restart": "重新开始",
+  "replayProgress": "回放进度",
+  "trackLabel": "轨迹 #{trackId}",
+  "throughTrack": "轨迹进度 {percent}%",
+  "verbs": {
+    "walking": "步行",
+    "running": "跑步",
+    "cycling": "骑行",
+    "driving": "驾车",
+    "bus": "乘公交车",
+    "train": "乘火车",
+    "flying": "乘飞机",
+    "boat": "乘船",
+    "motorcycle": "骑摩托车",
+    "unknown": "出行"
+  },
+  "modeLabels": {
+    "walking": "步行",
+    "running": "跑步",
+    "cycling": "骑行",
+    "driving": "驾车",
+    "bus": "公交车",
+    "train": "火车",
+    "flying": "飞机",
+    "boat": "船",
+    "motorcycle": "摩托车",
+    "unknown": "未知"
+  },
+  "duration": {
+    "seconds": "{seconds} 秒",
+    "minutes": "{minutes} 分钟",
+    "hoursMinutes": "{hours} 小时 {minutes} 分钟",
+    "hours": "{hours} 小时"
+  }
+}

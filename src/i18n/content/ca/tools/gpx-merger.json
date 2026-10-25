@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "title": "Uneix fitxers GPX gratis: combina trajectes GPS en línia",
+    "description": "Uneix diversos fitxers GPX en un de sol. Eina gratuïta per combinar trajectes GPS, punts de pas i rutes. Tot es fa al navegador, amb privacitat.",
+    "keywords": "unir GPX, unir fitxers GPX, combinar trajectes GPS, combinar GPX, ajuntar fitxers GPX, unir fitxers GPS, ajuntar GPX, combinar trajectes"
+  },
+  "h1": "Eina per unir trajectes GPX",
+  "intro": "Combina diversos fitxers GPX en un sol fitxer. Uneix trajectes de diferents activitats, dies o dispositius en un únic fitxer GPS.",
+  "saveIntro": "O estalvia't la descàrrega: els unirem i els importarem al teu compte de Dawarich quan t'hi registris.",
+  "privacy": "Els fitxers s'uneixen al navegador. No s'envia res tret que triïs «Desa al meu compte de Dawarich».",
+  "appName": "Eina per unir GPX",
+  "cards": [
+    {
+      "title": "Per què unir fitxers GPX?",
+      "paragraphs": [],
+      "items": [
+        { "body": "Combina excursions a peu o amb bicicleta de diversos dies en un sol fitxer" },
+        { "body": "Uneix trajectes de diferents dispositius GPS" },
+        { "body": "Crea una ruta completa a partir de segments separats" },
+        { "body": "Agrupa activitats per compartir-les més fàcilment" },
+        { "body": "Crea un trajecte complet per visualitzar-lo" }
+      ]
+    },
+    {
+      "title": "Què s'uneix?",
+      "paragraphs": [],
+      "items": [
+        { "body": "**Trajectes** - Tots els segments de trajecte GPS amb marques de temps i altitud" },
+        { "body": "**Punts de pas** - Punts d'interès amb nom i marcadors" },
+        { "body": "**Rutes** - Rutes de navegació planificades" },
+        { "body": "**Metadades** - Es combinen en una nova descripció del fitxer resultant" }
+      ]
+    },
+    {
+      "title": "Les opcions d'unió, explicades",
+      "paragraphs": [
+        "**Mantén els trajectes separats:** Els trajectes de cada fitxer d'entrada es mantenen com a trajectes individuals al fitxer resultant. Ideal per conservar els límits de cada activitat.",
+        "**Uneix en un sol trajecte:** Tots els punts es combinen en un trajecte continu. Útil per visualitzar una ruta unificada."
+      ]
+    },
+    {
+      "title": "Aplicacions compatibles",
+      "paragraphs": [
+        "El fitxer GPX resultant funciona amb:"
+      ],
+      "items": [
+        { "body": "Garmin Connect, Strava, Komoot" },
+        { "body": "Google Earth, QGIS, CalTopo" },
+        { "body": "Gaia GPS, AllTrails, ViewRanger" },
+        { "body": "Qualsevol aplicació compatible amb GPX 1.1" }
+      ]
+    }
+  ],
+  "upload": {
+    "dropFiles": "Arrossega i deixa anar fitxers GPX aquí",
+    "browse": "o fes clic per triar-los",
+    "clearButton": "Esborra-ho tot",
+    "inputLabel": "Tria els fitxers que vols processar",
+    "processing": "S'estan processant els fitxers..."
+  },
+  "results": {
+    "orderHint": "Arrossega per canviar l'ordre o fes servir les fletxes. Els fitxers s'uniran en aquest ordre.",
+    "summaryHeading": "Resum de la unió",
+    "filesLabel": "Fitxers",
+    "tracksLabel": "Trajectes",
+    "pointsLabel": "Punts",
+    "waypointsLabel": "Punts de pas",
+    "removeFileTitle": "Elimina el fitxer",
+    "filesToMergeHeading": "Fitxers per unir ({count})",
+    "fileSummary": "{tracks} | {points} punts",
+    "trackCount": "{count} trajecte|{count} trajectes|{count} trajectes"
+  },
+  "options": {
+    "heading": "Opcions d'unió",
+    "outputName": "Nom del fitxer resultant",
+    "singleTrack": "Uneix tots els trajectes en un de sol",
+    "singleTrackHint": "Combina tots els segments en un trajecte continu",
+    "sortByTime": "Ordena els punts per marca de temps",
+    "sortByTimeHint": "Només disponible quan uneixes en un sol trajecte",
+    "outputPlaceholder": "Nom del fitxer resultant",
+    "mergeButton": "Uneix i descarrega el GPX"
+  },
+  "errors": {
+    "gpxOnly": "Selecciona només fitxers GPX.",
+    "minimumFiles": "Afegeix com a mínim 2 fitxers GPX per unir-los.",
+    "parse": "Error en analitzar {fileName}: {message}",
+    "merge": "Error en unir els fitxers: {message}"
+  },
+  "cta": {
+    "fallback": "Necessites gestionar anys de dades GPS? Dawarich organitza i visualitza automàticament totes les teves activitats GPS en un sol lloc.",
+    "headline": "Has combinat **{count}** fitxers amb **{points}** punts en un de sol. Dawarich ho fa automàticament amb totes les teves fonts GPS.",
+    "statLabels": {
+      "files": "fitxers",
+      "tracks": "trajectes",
+      "points": "punts"
+    }
+  }
+}

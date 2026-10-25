@@ -1,0 +1,75 @@
+{
+  "rows": [
+    {
+      "title": "Compartilhamento que desliga sozinho",
+      "body": "Compartilhe sua localização em tempo real por uma hora, seis, doze, vinte e quatro — ou sempre, se quiser. O tempo acaba sozinho, para que \"só enquanto volto para casa\" termine mesmo ao chegar, em vez de continuar pelos próximos três anos.",
+      "note": "Você escolhe a duração, sempre"
+    },
+    {
+      "title": "Ninguém pode ativar por você",
+      "body": "Cinco pessoas, cinco controles independentes. Ao iniciar um plano Família no Cloud, o compartilhamento do titular é ativado, mas ele pode desativá-lo imediatamente. Os membros convidados começam com o compartilhamento desativado. O titular do plano não pode ativá-lo para nenhuma outra pessoa, e você pode desativar o próprio compartilhamento mesmo se a assinatura expirar."
+    },
+    {
+      "title": "Pedir é melhor que rastrear",
+      "body": "Quando precisar saber onde alguém está, envie uma solicitação de localização. A pessoa vê quem pediu e decide se aceita ou recusa. Não há como obter a posição de um familiar sem que ele concorde naquele momento.",
+      "note": "O consentimento faz parte do funcionamento, não é uma configuração"
+    }
+  ],
+  "objections": [
+    {
+      "q": "É só o Life360 com outra marca?",
+      "a": "Não. Os membros convidados começam com o compartilhamento desativado, e cada membro controla o seu. O titular do plano Cloud começa com o compartilhamento ativado, mas pode desativá-lo. O compartilhamento em tempo real pode expirar após um prazo, o histórico é uma escolha separada e as solicitações de localização podem ser recusadas."
+    },
+    {
+      "q": "Meu filho adolescente consegue ver que estou rastreando ele?",
+      "a": "Não há nada oculto para descobrir. Os membros convidados decidem se querem compartilhar, e a página da família mostra exatamente quem está compartilhando no momento e quem não está. Não oferecemos rastreamento escondido."
+    },
+    {
+      "q": "O que cada pessoa recebe?",
+      "a": "Uma conta completa do Dawarich — com seu próprio mapa, linha do tempo, viagens, estatísticas e insights. O Família compartilha localização entre cinco contas separadas, não coloca cinco pessoas na mesma conta."
+    },
+    {
+      "q": "O que acontece se a assinatura de quem paga o plano expirar?",
+      "a": "A família é mantida e nada é excluído. O acesso continua até o fim do período já pago. Depois disso, os membros sem um plano próprio voltam ao Lite e o rastreamento fica pausado até que um plano esteja ativo novamente. O histórico permanece na conta de cada um e pode ser exportado. A renovação restaura o acesso de todos de uma vez."
+    },
+    {
+      "q": "Funciona nos nossos celulares?",
+      "a": "Sim. Os aplicativos do Dawarich para iOS e Android mostram sua família no mapa. Pelo aplicativo, você pode ativar ou desativar o próprio compartilhamento, escolher qual histórico compartilhar e enviar ou responder a solicitações de localização."
+    },
+    {
+      "q": "Preciso pagar?",
+      "a": "Não se você hospedar no seu servidor. O Família funciona gratuitamente na sua instalação, porque todos os recursos pagos do Cloud também funcionam no seu próprio equipamento."
+    }
+  ],
+  "meta": {
+    "title": "App para compartilhar localização em família: iPhone/Android",
+    "description": "Apps Dawarich iOS/Android: convide até cinco. Cada um controla compartilhamento ao vivo, histórico e pedidos de localização. {price}/ano ou hospede grátis",
+    "ogTitle": "Compartilhamento de localização em família sem vigilância",
+    "ogDescription": "Cinco pessoas, cinco controles independentes. Compartilhamento em tempo real com prazo, histórico como escolha separada e solicitações de localização que precisam ser aceitas."
+  },
+  "familyPage": {
+    "text": "Aplicativo de compartilhamento de localização em família",
+    "em": "com a concordância de todos.",
+    "title2": "Feito para respeitar a escolha de cada pessoa",
+    "sub2": "Até cinco pessoas em um plano, cada uma com uma conta completa do Dawarich e controle do que compartilha.",
+    "title3": "O que pais e parceiros nos perguntam",
+    "title4": "Compartilhe com sua família, não com corretores de dados",
+    "sub3": "{price} por ano para cinco pessoas no Dawarich Cloud, com 7 dias de teste grátis. Ou use o mesmo software no seu equipamento sem pagar nada.",
+    "primaryLabel": "Começar um plano Família"
+  },
+  "hero": {
+    "sub": "Veja sua família no iPhone e no Android. Os membros convidados escolhem quando compartilhar, o compartilhamento em tempo real pode expirar após um prazo e saber onde alguém está significa perguntar. O titular do plano Cloud começa com o compartilhamento ativado e pode desativá-lo a qualquer momento."
+  },
+  "setup": {
+    "title": "Configure o Dawarich para sua família no iPhone e no Android",
+    "body": "O plano Família inclui até cinco contas separadas. Cada pessoa usa o próprio celular e decide o que compartilhar.",
+    "steps": [
+      "**Comece um plano Família.** O Dawarich cria a família no Cloud para você, ou você pode criar uma na sua instalação com hospedagem própria.",
+      "**Convide sua família.** Envie convites pela página Família na web. Cada pessoa aceita usando o endereço de e-mail que recebeu o convite.",
+      "**Instale e entre na sua conta.** Abra o aplicativo do Dawarich em cada celular e use o painel Família no mapa para escolher as configurações de compartilhamento em tempo real e de histórico."
+    ],
+    "ios": "Baixe o aplicativo para iOS",
+    "android": "Baixe o aplicativo para Android",
+    "guide": "Leia o guia de configuração"
+  }
+}

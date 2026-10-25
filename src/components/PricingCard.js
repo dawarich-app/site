@@ -1,4 +1,7 @@
-import Link from "@docusaurus/Link";
+import content from '@locale-content/components/PricingCard.json';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { euroParts, formatEuro } from '@site/src/i18n/formatEuro';
+import { SmartLink } from '@site/src/i18n/RichText';
 import React, { useState } from "react";
 import { DwIcon } from "@site/src/data/pricingPlans";
 import WaitlistForm from "./WaitlistForm";
@@ -10,6 +13,9 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 	const monthly = isPro && billing === "monthly";
 	const bigPrice = monthly ? plan.priceMonthly : plan.price;
 	const bigPeriod = monthly ? plan.periodMonthly : plan.period;
+	const { i18n } = useDocusaurusContext();
+	const euro = (amount) => formatEuro(Number(amount), { locale: i18n.currentLocale });
+	const priceParts = euroParts(Number(bigPrice), { locale: i18n.currentLocale });
 
 	const cardClass = [
 		styles.card,
@@ -26,10 +32,10 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 
 			{popular && (
 				<div className={styles.ribbon}>
-					<DwIcon name="sparkles" size={12} stroke={2.4} /> MOST POPULAR
+					<DwIcon name="sparkles" size={12} stroke={2.4} />{content.ribbon}
 				</div>
 			)}
-			{deemph && <div className={styles.comingSoon}>COMING SOON</div>}
+			{deemph && <div className={styles.comingSoon}>{content.comingSoon}</div>}
 
 			<div className={styles.header}>
 				<span className={styles.planIcon}>
@@ -42,7 +48,7 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 				<div className={styles.priceBlock}>
 					<div className={styles.priceTopRow}>
 						{plan.oldPrice && !monthly && (
-							<span className={styles.oldPrice}>&euro;{plan.oldPrice}</span>
+							<span className={styles.oldPrice}>{euro(plan.oldPrice)}</span>
 						)}
 						{isPro && plan.save && !monthly && (
 							<span className={styles.saveBadge}>
@@ -51,12 +57,13 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 						)}
 					</div>
 					<div className={styles.priceMainRow}>
-						<span className={styles.currency}>&euro;</span>
-						<span className={styles.bigPrice}>{bigPrice}</span>
+						{priceParts.before && <span className={styles.currency}>{priceParts.before}</span>}
+						<span className={styles.bigPrice}>{priceParts.amount}</span>
+						{priceParts.after && <span className={styles.currency}>{priceParts.after}</span>}
 						<span className={styles.period}>{bigPeriod}</span>
 					</div>
 					<div className={styles.perMonth}>
-						{monthly ? "billed monthly" : plan.perMonth}
+						{monthly ? content.billedMonthly : plan.perMonth}
 					</div>
 				</div>
 			)}
@@ -71,7 +78,7 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 								className={`${styles.toggleBtn} ${billing === opt ? styles.toggleActive : ""}`}
 								onClick={() => setBilling(opt)}
 							>
-								{opt}
+								{content.billing[opt]}
 							</button>
 						))}
 					</div>
@@ -121,16 +128,16 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 					{plan.valueStack.items.map((item, i) => (
 						<div key={i} className={styles.valueRow}>
 							<span className={item.bonus ? styles.valueBonus : ""}>
-								{item.bonus ? "BONUS: " : ""}
+								{item.bonus ? content.bonusPrefix : ""}
 								{item.label}
 							</span>
-							<span className={styles.valueAmount}>&euro;{item.value}</span>
+							<span className={styles.valueAmount}>{euro(item.value)}</span>
 						</div>
 					))}
 					<div className={styles.valueTotalRow}>
-						<span>Total value</span>
+						<span>{content.totalValue}</span>
 						<span className={styles.valueTotal}>
-							&euro;{plan.valueStack.total}
+							{euro(plan.valueStack.total)}
 						</span>
 					</div>
 					<div className={styles.valuePayLine}>{plan.valueStack.payLine}</div>
@@ -140,24 +147,23 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 			{plan.waitlistListId ? (
 				<WaitlistForm
 					listId={plan.waitlistListId}
-					heading="Join the Family waitlist"
-					subtext="Be first to know the moment it launches — annual only, every Pro feature."
-					buttonLabel="Join the waitlist"
-					note="No spam, just the launch email."
+					heading={content.heading}
+					subtext={content.subtext}
+					buttonLabel={content.buttonLabel}
+					note={content.note}
 				/>
 			) : (
 				<>
 					<div className={styles.guarantee}>
-						<DwIcon name="shield-check" size={15} stroke={2} /> The Import
-						Guarantee &middot; 14-day money-back
+						<DwIcon name="shield-check" size={15} stroke={2} />{content.guarantee}
 					</div>
 
-					<Link
-						to={plan.href}
+					<SmartLink
+						href={plan.href}
 						className={`${styles.cta} ${plan.ctaStyle === "primary" ? styles.ctaPrimary : styles.ctaOutline}`}
 					>
 						{plan.cta}
-					</Link>
+					</SmartLink>
 
 					<div className={styles.footnote}>{plan.footnote}</div>
 				</>

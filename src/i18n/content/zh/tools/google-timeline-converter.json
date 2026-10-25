@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "title": "Google Timeline（谷歌地图时间轴）转 GPX/KML/CSV 转换器 — 免费转换位置历史记录",
+    "description": "免费、隐私优先的 Google Timeline（谷歌地图时间轴）数据转换器。将位置历史记录转换为 GPX、KML、GeoJSON 或 CSV，所有处理均在浏览器中完成。",
+    "keywords": "google timeline 转 GPX, google takeout 转 KML, google 位置记录转 CSV, timeline 转 geojson 转换器, google timeline 转换器, google maps timeline 导出, 位置历史记录转 GPX, google takeout 位置转换器, timeline 数据转换器",
+    "appName": "Google Timeline 转 GPX/KML/CSV 转换器",
+    "featureList": [
+      "将 Google Timeline JSON 转换为 GPX 格式",
+      "将 Google Timeline JSON 转换为 KML 和 KMZ 格式",
+      "将 Google Timeline JSON 转换为 GeoJSON 格式",
+      "将 Google Timeline JSON 转换为 CSV 格式",
+      "为包含多个文件的 Semantic 导出进行批量转换",
+      "隐私优先，所有处理均在浏览器中完成",
+      "支持全部 6 种 Google Timeline 导出格式",
+      "不会向任何服务器发送数据"
+    ]
+  },
+  "h1": "Google Timeline（谷歌地图时间轴）转换器",
+  "intro": "免费、隐私优先的工具，将您的 Google Timeline（谷歌地图时间轴）位置历史记录转换为 GPX、KML、GeoJSON、KMZ 或 CSV。上传已导出的 JSON 文件，所有处理均在浏览器中完成。",
+  "howTo": {
+    "title": "如何获取 Timeline 数据",
+    "paragraphs": [
+      "您可以使用以下任一方式导出 Google Timeline 数据。如果一种方式无效，请尝试另一种。",
+      "遗憾的是，由于 Google 更改了位置数据存储政策，部分用户可能无法导出自己的位置数据。"
+    ],
+    "methods": [
+      {
+        "label": "Google Takeout：",
+        "steps": [
+          "访问 [takeout.google.com](https://takeout.google.com/) → 选择位置记录（Timeline）→ 导出",
+          "由于 Google 更改了位置数据的存储和导出方式，此方法可能不适用于所有人。详情请参阅我们的[博客](https://dawarich.app/blog/migrating-from-google-location-history-to-dawarich)。"
+        ]
+      },
+      {
+        "label": "Android：",
+        "steps": [
+          "打开 Google Maps → 设置 → 位置 → 位置信息服务 → Timeline → 导出 Timeline"
+        ]
+      },
+      {
+        "label": "iOS：",
+        "steps": [
+          "打开 Google Maps → 设置 → 个人内容 → 导出 Timeline 数据"
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "隐私优先",
+    "body": "所有转换都完全在浏览器中完成。除非您选择“保存到我的 Dawarich 账户”，否则位置数据始终留在您的设备上。"
+  },
+  "preCta": "想长期替代 Google Timeline？[Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-converter) 可自动记录位置历史，让您完整掌控数据并保护隐私。[了解如何迁移](/blog/migrating-from-google-location-history-to-dawarich)。",
+  "results": {
+    "title": "已上传文件",
+    "file": "文件",
+    "format": "格式",
+    "size": "大小",
+    "sizeValue": "{size} MB",
+    "points": "轨迹点",
+    "paths": "路径",
+    "error": "错误",
+    "totalLabel": "合计：",
+    "totalValue": "{points} 个轨迹点，{paths} 条路径",
+    "dateRangeLabel": "日期范围：",
+    "noTimestamps": "未找到时间戳",
+    "noValidTimestamps": "没有有效时间戳",
+    "selectFormats": "选择输出格式",
+    "formats": {
+      "gpx": "通用 GPS 格式",
+      "kml": "Google Earth",
+      "geojson": "网页地图",
+      "kmz": "压缩 KML",
+      "csv": "电子表格"
+    },
+    "download": "下载 {format}",
+    "converting": "正在转换…",
+    "downloadAll": "下载所有选定格式（{count}）",
+    "conversionFailed": "转换为 {format} 失败：{message}",
+    "saveIntro": "也想存入您的 Dawarich 账户？我们会在注册时导入，无需再次上传。",
+    "ctaHeadline": "您的 **{points}** 个轨迹点已可下载。将它们导入 Dawarich，从此无需再为格式转换操心。",
+    "statPoints": "轨迹点",
+    "statPaths": "路径",
+    "statFiles": "文件"
+  },
+  "formatLabels": {
+    "records": "Records.json（原始 GPS）",
+    "semantic": "Semantic Location History",
+    "semanticSegments": "Semantic Segments",
+    "locationHistory": "位置历史记录（手机导出）",
+    "settings": "设置",
+    "timelineEdits": "Timeline Edits",
+    "unknown": "未知"
+  },
+  "info": [
+    {
+      "title": "什么是 Google Timeline 转换器？",
+      "paragraphs": [
+        "Google Timeline 转换器会将 Google 位置历史导出的原始 JSON 文件转为标准 GPS 格式，供地图应用、运动追踪器和地理信息系统广泛使用。您不必受限于 Google 的专有 JSON 格式，转换后的文件可随处通用。",
+        "此工具在浏览器中完成所有转换，下载转换结果不会把位置数据发送到任何地方。上传文件、选择格式、下载即可。多数导出文件只需几秒，也可处理含有数十万个位置轨迹点的文件。（如果您使用“保存到我的 Dawarich 账户”，这一操作会将文件上传到 Dawarich Cloud，以准备导入；除此之外不会发送任何内容。）"
+      ]
+    },
+    {
+      "title": "输出格式说明",
+      "items": [
+        "**GPX（GPS 交换格式）** — GPS 数据的通用标准，几乎所有 GPS 应用都支持，包括 Strava、Garmin Connect、AllTrails、OsmAnd 和 QGIS。包含航点、轨迹和时间戳。",
+        "**KML（Keyhole 标记语言）** — 为 Google Earth 开发，非常适合通过地标、路径和描述呈现地理数据。可直接在 Google Earth 和 Google My Maps 中打开。",
+        "**GeoJSON** — 网页地图的标准格式，供 Leaflet、Mapbox、OpenLayers 及大多数网页地图框架使用。JSON 格式便于人工阅读，也易于程序处理。",
+        "**KMZ（压缩 KML）** — KML 的 zip 压缩版本，文件体积更小，适合通过电子邮件分享，或需要控制文件大小的场景。可在支持 KML 的相同应用中打开。",
+        "**CSV（逗号分隔值）** — 表格格式，可在 Excel、Google Sheets 和 LibreOffice 中打开。包含纬度、经度、时间戳、类型、名称、地址、活动类型、海拔和精度列，最适合数据分析和自定义处理。"
+      ]
+    },
+    {
+      "title": "Google Maps Timeline 发生了什么变化？",
+      "paragraphs": [
+        "2024 年末，Google 停用了 Google Maps Timeline 网页版，并将所有位置数据迁移至设备本地存储。只有最近 90 天的数据被迁移，更早的数据除非由用户手动备份，否则会被删除。许多人在迁移过程中[丢失了多年的位置历史记录](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/)。",
+        "如果您在迁移之前或期间导出了数据，此转换器可以将其转为标准格式，以便长期保存。转换为 GPX、KML 或 CSV，可确保无论 Google 今后如何调整，您的位置历史记录始终可访问。"
+      ]
+    },
+    {
+      "title": "为什么要转换 Timeline 数据？",
+      "paragraphs": [
+        "大多数地图应用不支持 Google 的专有 JSON 格式。转换为标准格式后，您可以获得以下好处："
+      ],
+      "items": [
+        "**便于迁移** — 在任何支持 GPX、KML、GeoJSON 或 CSV 的应用中使用位置数据",
+        "**长期保存** — 标准格式在几十年后仍可读取，不受 Google 未来决策影响",
+        "**分析** — 将 CSV 导入电子表格，对出行规律进行统计分析",
+        "**可视化** — 在 Google Earth、QGIS 或网页地图工具中查看历史记录",
+        "**迁移** — 导入 [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=google-timeline-converter) 等自托管替代方案，持续记录位置并完整掌控数据"
+      ]
+    },
+    {
+      "title": "精度与限制",
+      "paragraphs": [
+        "转换器会如实转换 Google Timeline 导出文件中的所有地理坐标和时间戳。不过，仍有一些固有限制需要了解："
+      ],
+      "items": [
+        "**坐标精度** — Records.json 使用 E7 格式（7 位小数），转换为标准十进制度数时会完整保留精度",
+        "**活动分段** — 步行、驾车和骑行分段会保留在 CSV 输出中。在 GPX 和 KML 中，路径坐标会作为轨迹分段保存",
+        "**地点名称** — Semantic Location History 包含地点名称和地址，会作为航点名称保留。Records.json 通常不包含地点名称",
+        "**大文件** — 超过 100 MB 的文件可能需要 10-30 秒处理，具体取决于您的设备。工具采用渐进式处理，让浏览器保持响应"
+      ]
+    },
+    {
+      "title": "相关工具",
+      "items": [
+        "[Google Timeline 可视化工具](/tools/timeline-visualizer) — 无需转换，即可在交互式地图上查看 Google Timeline 数据",
+        "[GPS 热力图生成器](/tools/heatmap-generator) — 从 GPX、FIT、TCX 等 GPS 文件创建热力图",
+        "[GPX 轨迹合并工具](/tools/gpx-merger) — 将多个 GPX 文件合为一个",
+        "[照片地理数据提取工具](/tools/photo-geotagging) — 从照片中提取 GPS 坐标",
+        "[GeoJSON 转 GPX 转换器](/tools/geojson-to-gpx) — 将 GeoJSON 文件转换为 GPX 格式",
+        "[KML 转 GPX 转换器](/tools/kml-to-gpx) — 将 KML 文件转换为 GPX 格式"
+      ],
+      "footer": "延伸阅读：[从 Google 位置历史记录迁移](/blog/migrating-from-google-location-history-to-dawarich)"
+    }
+  ],
+  "faqTitle": "常见问题",
+  "faq": [
+    {
+      "q": "上传 Google Timeline 数据安全吗？",
+      "a": "安全。所有转换都通过 JavaScript 完全在浏览器中完成，文件保留在您的设备上，关闭标签页后就会清除。不会使用 Cookie 跟踪您的文件，也不会对位置数据进行分析统计。唯一例外是可选的“保存到我的 Dawarich 账户”按钮，它会将文件上传到 Dawarich Cloud，以便导入您的新账户。工具是开源的，您可以自行检查代码。"
+    },
+    {
+      "q": "可以转换哪些 Google Timeline 格式？",
+      "a": "此转换器支持全部六种 Google Timeline 导出格式：Records.json（带 E7 坐标的原始 GPS 位置记录）、Semantic Location History（按月保存的 YYYY_MONTH.json 文件，包含地点到访记录和活动分段）、Semantic Segments（较新的手机导出格式，包含 semanticSegments）、Location History（含 startTime/endTime 的数组格式）、Settings 和 TimelineEdits。上传文件时，工具会自动检测格式。"
+    },
+    {
+      "q": "哪种输出格式最适合我？",
+      "a": "取决于使用场景。GPX 支持最广，几乎兼容所有 GPS 应用、运动追踪器和地图工具。KML 和 KMZ 非常适合 Google Earth 可视化。GeoJSON 是 Leaflet 和 Mapbox 等网页地图库的标准格式。CSV 最适合在 Excel 或 Google Sheets 中进行电子表格分析，或导入数据库。如果不确定，先选 GPX，它的兼容性最广。"
+    },
+    {
+      "q": "转换会丢失数据吗？",
+      "a": "转换会保留所有地理坐标、时间戳和海拔数据。地点到访名称和地址在 GPX 和 KML 中作为航点名称保留，在 CSV 中则保存为独立数据列。活动类型信息（步行、驾车、骑行）会保留在 CSV 输出中。精度值、设备标识符等特定格式的元数据，在部分输出格式中可能没有对应字段，但位置数据不会丢失。"
+    },
+    {
+      "q": "可以一次转换多个文件吗？",
+      "a": "可以。您可以一次上传多个 Google Timeline JSON 文件，例如全部月度 Semantic Location History 文件（2022_JANUARY.json 至 2022_DECEMBER.json）。转换器会合并所有上传文件中的数据，每种格式输出一个文件。这尤其适合 Google Takeout 的 Semantic 导出，因为其历史记录会拆分为按月保存的文件。"
+    },
+    {
+      "q": "如何打开转换后的文件？",
+      "a": "GPX 文件可在 Strava、Garmin Connect、AllTrails、OsmAnd、Viking 和 GPXSee 等应用中打开。KML 和 KMZ 可直接在 Google Earth 和 Google My Maps 中打开。GeoJSON 可用于 geojson.io、QGIS、Mapbox Studio 及大多数网页地图框架。CSV 可在 Excel、Google Sheets、LibreOffice Calc 或任意电子表格应用中打开。您也可以将这些格式导入 Dawarich，以便长期存储和可视化。"
+    },
+    {
+      "q": "为什么要转换 Google Timeline 数据？",
+      "a": "Google 于 2024 年末停用了 Timeline 网页版，并将位置数据迁至设备本地，导出选项有限。将已导出的 JSON 文件转换为 GPX 或 KML 等标准格式，可确保无论 Google 今后如何调整，数据始终可访问。标准格式可由数百种应用打开，可导入 Dawarich 等自托管工具，也可存档数十年，无需受制于单一服务商。"
+    }
+  ],
+  "bottomCta": {
+    "title": "在寻找 Google Timeline 替代方案？",
+    "body": "Dawarich 是开源位置记录平台，让您完全掌控自己的数据。导入 Google Timeline 导出文件，从手机持续记录位置，再将多年的足迹可视化。支持自托管，也支持云端使用。",
+    "button": "免费试用 Dawarich 7 天"
+  }
+}

@@ -1,0 +1,58 @@
+/*
+ * Localized pages show a language switcher, and non-English builds have longer
+ * labels; either would make the desktop navbar overlap between 997 and ~1600px.
+ * English pages without the switcher (docs, blog, legal) keep the original navbar.
+ */
+@media (min-width: 997px) {
+  :is(html:not([lang='en']) .navbar, .navbar:has(.navbar-locale-dropdown)) .navbar__link {
+    white-space: nowrap;
+  }
+
+  :is(html:not([lang='en']) .navbar, .navbar:has(.navbar-locale-dropdown)) .navbar__item {
+    padding-left: 0.55rem;
+    padding-right: 0.55rem;
+  }
+}
+
+@media (min-width: 997px) and (max-width: 1599.98px) {
+  :is(html:not([lang='en']) .navbar, .navbar:has(.navbar-locale-dropdown)) .navbar__title {
+    display: none;
+  }
+}
+
+@media (min-width: 997px) and (max-width: 1439.98px) {
+  :is(html:not([lang='en']) .navbar, .navbar:has(.navbar-locale-dropdown)) .navbar-item--wide-only {
+    display: none !important;
+  }
+
+  :is(html:not([lang='en']) .navbar, .navbar:has(.navbar-locale-dropdown)) .navbar__link.navbar-locale-dropdown {
+    font-size: 0;
+  }
+
+  :is(html:not([lang='en']) .navbar, .navbar:has(.navbar-locale-dropdown)) .navbar__link.navbar-locale-dropdown::after {
+    display: none;
+  }
+
+  :is(html:not([lang='en']) .navbar, .navbar:has(.navbar-locale-dropdown)) .navbar-google-btn span {
+    display: none;
+  }
+}
+
+/* French, Catalan, Spanish and Portuguese labels need the compact navbar a little longer */
+@media (min-width: 1440px) and (max-width: 1599.98px) {
+  html:is([lang='fr'], [lang='pt-BR'], [lang='es'], [lang='ca']) :is(html:not([lang='en']) .navbar, .navbar:has(.navbar-locale-dropdown)) .navbar-item--wide-only {
+    display: none !important;
+  }
+
+  html:is([lang='fr'], [lang='pt-BR'], [lang='es'], [lang='ca']) :is(html:not([lang='en']) .navbar, .navbar:has(.navbar-locale-dropdown)) .navbar__link.navbar-locale-dropdown {
+    font-size: 0;
+  }
+
+  html:is([lang='fr'], [lang='pt-BR'], [lang='es'], [lang='ca']) :is(html:not([lang='en']) .navbar, .navbar:has(.navbar-locale-dropdown)) .navbar__link.navbar-locale-dropdown::after {
+    display: none;
+  }
+
+  html:is([lang='fr'], [lang='pt-BR'], [lang='es'], [lang='ca']) :is(html:not([lang='en']) .navbar, .navbar:has(.navbar-locale-dropdown)) .navbar-google-btn span {
+    display: none;
+  }
+}

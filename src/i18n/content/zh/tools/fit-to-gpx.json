@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "免费 FIT 转 GPX 转换器 — 在线转换 Garmin 活动文件",
+    "description": "立即将 Garmin FIT 文件转换为 GPX 格式。免费、隐私优先的在线骑行、跑步和健身活动转换器，完全在浏览器中运行，无需上传。",
+    "keywords": "FIT 转 GPX, FIT 转换器, Garmin 转换器, Garmin FIT 转 GPX, 健身文件转换器, 骑行 GPX, 跑步 GPX, 活动转换器, Garmin 手表转换器, Garmin Edge 转换器",
+    "appName": "FIT 转 GPX 转换器"
+  },
+  "h1": "FIT 转 GPX 转换器",
+  "intro": "立即将您的 Garmin FIT 活动文件转换为 GPX 格式。所有处理都在浏览器中完成，运动数据不会离开您的设备。",
+  "cards": [
+    {
+      "title": "关于 FIT 格式",
+      "body": "FIT（Flexible and Interoperable Data Transfer，灵活可互操作数据传输）是 Garmin 用于存储健身和活动数据的专有二进制格式。Garmin 手表、码表和其他健身设备使用它存储训练、路线、心率、功率等指标。"
+    },
+    {
+      "title": "关于 GPX 格式",
+      "body": "GPX（GPS 交换格式）是 GPS 数据的开放 XML 标准，广泛受到运动平台（Strava、Komoot）、地图软件（Google Earth、QGIS）和导航应用的支持。"
+    },
+    {
+      "title": "为什么要将 FIT 转换为 GPX？",
+      "items": [
+        "将活动导入不支持 FIT 文件的平台",
+        "与其他平台的用户分享路线",
+        "在 Google Earth 等地图软件中查看数据",
+        "以开放、便于人工阅读的格式创建备份",
+        "使用兼容 GPX 的工具编辑或合并活动"
+      ]
+    },
+    {
+      "title": "支持的设备",
+      "body": "此转换器支持以下来源的 FIT 文件：",
+      "items": [
+        "Garmin 手表（Forerunner、Fenix、Venu、Instinct、Enduro）",
+        "Garmin 码表（Edge 系列）",
+        "Wahoo 设备（ELEMNT、TICKR）",
+        "Zwift 导出文件",
+        "Bryton 码表",
+        "Suunto 设备（通过 FIT 导出）",
+        "任何可导出标准 FIT 文件的设备"
+      ]
+    },
+    {
+      "title": "会保留哪些数据？",
+      "body": "转换器会保留：",
+      "items": [
+        "GPS 坐标（纬度、经度）",
+        "时间戳",
+        "海拔数据",
+        "分圈标记（作为航点）",
+        "活动元数据（运动类型、距离等）"
+      ]
+    }
+  ],
+  "privacyBody": "所有转换都完全在浏览器中完成，您的运动数据不会离开设备，也不会发送到任何服务器。",
+  "noGpsData": "FIT 文件中未找到 GPS 数据。文件可能已损坏，或仅包含传感器数据而没有 GPS 坐标。"
+}

@@ -1,3 +1,6 @@
+import { SmartLink } from '@site/src/i18n/RichText';
+import content from '@locale-content/pages/import-export.json';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import React from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
@@ -24,162 +27,135 @@ import {
   SparklesIcon,
   RefreshIcon,
 } from '@site/src/components/LucideIcons';
-import Link from '@docusaurus/Link';
+import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import styles from './import-export.module.css';
 
 const importFormats = [
   {
     icon: <MapIcon />,
-    title: 'Google Takeout',
-    description: 'Import your complete location history from Google Maps Timeline. Bring years of data into Dawarich with a single upload.',
+    title: content.importFormats[0].title,
+    description: content.importFormats[0].description,
   },
   {
     icon: <ActivityIcon />,
-    title: 'Apple Health & Fitness',
-    description: 'Import GPX files exported from Apple Health or Apple Fitness apps. Perfect for iPhone users.',
+    title: content.importFormats[1].title,
+    description: content.importFormats[1].description,
   },
   {
     icon: <MapPinIcon />,
-    title: 'GPX Files',
-    description: 'Standard GPS Exchange Format files from any source. The universal format for location data.',
+    title: content.importFormats[2].title,
+    description: content.importFormats[2].description,
   },
   {
     icon: <BarChartIcon />,
-    title: 'CSV Files',
-    description: 'Import location data from spreadsheets or custom exports in CSV format with flexible column mapping.',
+    title: content.importFormats[3].title,
+    description: content.importFormats[3].description,
   },
   {
     icon: <MapIcon />,
-    title: 'KML Files',
-    description: 'Import Keyhole Markup Language files from various mapping applications and GPS devices.',
+    title: content.importFormats[4].title,
+    description: content.importFormats[4].description,
   },
   {
     icon: <CameraIcon />,
-    title: 'Photo Metadata',
-    description: 'Extract and import location data from EXIF metadata in your photo collections.'
+    title: content.importFormats[5].title,
+    description: content.importFormats[5].description
   }
 ];
 
 const exportFormats = [
   {
     icon: <MapPinIcon />,
-    title: 'GPX Export',
-    description: 'Export your location data as GPX files compatible with any GPS software or mapping application.',
+    title: content.exportFormats[0].title,
+    description: content.exportFormats[0].description,
   },
   {
     icon: <BarChartIcon />,
-    title: 'GeoJSON Export',
-    description: 'Get your data in GeoJSON format for easy integration with GIS tools and custom mapping solutions.',
+    title: content.exportFormats[1].title,
+    description: content.exportFormats[1].description,
   },
   {
     icon: <PackageIcon />,
-    title: 'Full Account Export',
-    description: 'Download everything: all points, visits, trips, stats, and settings. Complete data portability.'
+    title: content.exportFormats[2].title,
+    description: content.exportFormats[2].description
   }
 ];
 
 const importSteps = [
   {
     icon: <FolderIcon size={32} />,
-    title: 'Upload Your File',
-    description: 'Navigate to the Imports page in Dawarich and select your file.',
-    details: [
-      'Click "New Import" button',
-      'Select the file(s) to upload',
-      'Confirm to start processing',
-      'Data format will be recognized automatically'
-    ]
+    title: content.importSteps[0].title,
+    description: content.importSteps[0].description,
+    details: content.importSteps[0].details
   },
   {
     icon: <HourglassIcon size={32} />,
-    title: 'Processing',
-    description: 'Dawarich processes your import in the background. Large files may take a few minutes.',
-    details: [
-      'Points are validated for uniqueness',
-      'No duplicate entries created',
-      'Reverse geocoding runs automatically',
-      'You\'ll receive a notification when import is complete'
-    ]
+    title: content.importSteps[1].title,
+    description: content.importSteps[1].description,
+    details: content.importSteps[1].details
   },
   {
     icon: <CheckIcon size={32} />,
-    title: 'Data Available',
-    description: 'Once complete, all your imported data appears on your map and in your statistics.',
-    details: [
-      'View points on the interactive map',
-      'Stats automatically updated',
-      'Create trips from imported data',
-      'Search and filter imported locations'
-    ]
+    title: content.importSteps[2].title,
+    description: content.importSteps[2].description,
+    details: content.importSteps[2].details
   }
 ];
 
 const exportSteps = [
   {
     icon: <UploadIcon size={32} />,
-    title: 'Go to Points',
-    description: 'Navigate to the Points page in your Dawarich dashboard.',
+    title: content.exportSteps[0].title,
+    description: content.exportSteps[0].description,
   },
   {
     icon: <CalendarIcon size={32} />,
-    title: 'Select Date Range',
-    description: 'Choose the specific date range for the data you want to export and hit Search.',
-    details: [
-      'Select start and end dates',
-      'Click "Search" to filter points',
-      'Ensure all desired data is visible'
-    ]
+    title: content.exportSteps[1].title,
+    description: content.exportSteps[1].description,
+    details: content.exportSteps[1].details
   },
   {
     icon: <SettingsIcon size={32} />,
-    title: 'Choose Format',
-    description: 'Click the Export button',
-    details: [
-      'Select between GPX or GeoJSON',
-      'Full export for complete backup'
-    ]
+    title: content.exportSteps[2].title,
+    description: content.exportSteps[2].description,
+    details: content.exportSteps[2].details
   },
   {
     icon: <TimerIcon size={32} />,
-    title: 'Processing',
-    description: 'Dawarich generates your export file in the background.',
-    details: [
-      'Small exports complete instantly',
-      'Large exports may take a few minutes',
-      'You can continue using Dawarich'
-    ]
+    title: content.importSteps[1].title,
+    description: content.exportSteps[3].description,
+    details: content.exportSteps[3].details
   },
   {
     icon: <SaveIcon size={32} />,
-    title: 'Download',
-    description: 'Once ready, download your export file.',
-    details: [
-      'Download link appears on Exports page',
-      'Files stored securely',
-      'Re-download anytime'
-    ]
+    title: content.exportSteps[4].title,
+    description: content.exportSteps[4].description,
+    details: content.exportSteps[4].details
   }
 ];
 
 export default function ImportExportPage() {
+  const pageUrl = useLocalizedUrl('/import-export/');
   return (
     <Layout
-      title="Import & Export Data"
-      description="Your data belongs to you. Import from Google Takeout, GPX, CSV, KML. Export to GPX, CSV, or get a full account export. No lock-in.">
+      title={content.meta.title}
+      description={content.meta.description}>
       <Head>
-        <meta property="og:title" content="Dawarich Import & Export — Your Data, Your Control" />
-        <meta property="og:description" content="Import from Google Maps, Apple Health, GPX, GeoJSON, KML. Export to any format. Full data portability with no lock-in." />
+        <meta name="twitter:url" content={pageUrl} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={content.meta.ogTitle} />
+        <meta property="og:description" content={content.meta.ogDescription} />
         <meta property="og:image" content="https://dawarich.app/img/meta-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <FeatureHero
-        badge="Data Portability"
-        title="Your Data"
-        titleHighlight="Belongs to You"
-        subtitle="Import your location history from anywhere. Export it anytime, in any format. Dawarich believes in complete data portability with no lock-in — you're always in control."
+        badge={content.hero.badge}
+        title={content.hero.title}
+        titleHighlight={content.hero.titleHighlight}
+        subtitle={content.hero.subtitle}
         image="/img/imports.png"
-        imageAlt="Import and export interface"
+        imageAlt={content.hero.imageAlt}
         ctaLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-hero&utm_campaign=import-export"
         showSecondary={true}
       />
@@ -187,42 +163,36 @@ export default function ImportExportPage() {
       <main>
         <section className={styles.principlesSection}>
           <div className={styles.container}>
-            <h2 className={styles.sectionTitle}>Our Data Philosophy</h2>
+            <h2 className={styles.sectionTitle}>{content.importExportPage.heading}</h2>
             <div className={styles.principlesGrid}>
               <div className={styles.principle}>
                 <div className={styles.principleIcon}><UnlockIcon size={48} /></div>
-                <h3 className={styles.principleTitle}>No Lock-In</h3>
-                <p className={styles.principleText}>
-                  Export all your data at any time. You're never trapped—switch to another service or keep your own backup.
-                </p>
+                <h3 className={styles.principleTitle}>{content.importExportPage.h3}</h3>
+                <p className={styles.principleText}>{content.importExportPage.p}</p>
               </div>
               <div className={styles.principle}>
                 <div className={styles.principleIcon}><RocketIcon size={48} /></div>
-                <h3 className={styles.principleTitle}>Migration Friendly</h3>
-                <p className={styles.principleText}>
-                  Moving from Google Maps Timeline or any other tracker? Import everything easily and pick up where you left off.
-                </p>
+                <h3 className={styles.principleTitle}>{content.importExportPage.h32}</h3>
+                <p className={styles.principleText}>{content.importExportPage.p2}</p>
               </div>
               <div className={styles.principle}>
                 <div className={styles.principleIcon}><SaveIcon size={48} /></div>
-                <h3 className={styles.principleTitle}>Complete Control</h3>
-                <p className={styles.principleText}>
-                  Download everything: points, visits, trips, stats, settings. Your complete digital location history belongs to you.
-                </p>
+                <h3 className={styles.principleTitle}>{content.importExportPage.h33}</h3>
+                <p className={styles.principleText}>{content.importExportPage.p3}</p>
               </div>
             </div>
           </div>
         </section>
 
         <FeatureShowcase
-          title="Supported Import Formats"
-          subtitle="Bring your location data from virtually any source into Dawarich."
+          title={content.importExportPage.title3}
+          subtitle={content.importExportPage.subtitle2}
           items={importFormats}
         />
 
         <HowItWorks
-          title="How Importing Works"
-          subtitle="Get your historical location data into Dawarich in a few simple steps."
+          title={content.importExportPage.title4}
+          subtitle={content.importExportPage.subtitle3}
           steps={importSteps}
         />
 
@@ -231,52 +201,43 @@ export default function ImportExportPage() {
             <div className={styles.noteCard}>
               <div className={styles.noteIcon}><SparklesIcon size={48} /></div>
               <div className={styles.noteContent}>
-                <h3 className={styles.noteTitle}>Smart Deduplication</h3>
-                <p className={styles.noteText}>
-                  Dawarich automatically prevents duplicate points. Import the same file twice or have your tracking app
-                  report the same location—we ensure each unique point is only stored once.
-                </p>
+                <h3 className={styles.noteTitle}>{content.importExportPage.h34}</h3>
+                <p className={styles.noteText}>{content.importExportPage.p4}</p>
               </div>
             </div>
           </div>
         </section>
 
         <FeatureShowcase
-          title="Supported Export Formats"
-          subtitle="Take your data with you—anywhere, anytime, in any format you need."
+          title={content.importExportPage.title5}
+          subtitle={content.importExportPage.subtitle4}
           items={exportFormats}
         />
 
         <HowItWorks
-          title="How Exporting Works"
-          subtitle="Download your location data quickly and securely."
+          title={content.importExportPage.title6}
+          subtitle={content.importExportPage.subtitle5}
           steps={exportSteps}
         />
 
         <section className={styles.useCasesSection}>
           <div className={styles.container}>
-            <h2 className={styles.sectionTitle}>Why Import & Export Matters</h2>
+            <h2 className={styles.sectionTitle}>{content.importExportPage.heading2}</h2>
             <div className={styles.useCasesGrid}>
               <div className={styles.useCase}>
                 <div className={styles.useCaseIcon}><RefreshIcon /></div>
-                <h3 className={styles.useCaseTitle}>Switching Services</h3>
-                <p className={styles.useCaseText}>
-                  Easily migrate your complete location history from Google Maps Timeline or any other service to Dawarich.
-                </p>
+                <h3 className={styles.useCaseTitle}>{content.importExportPage.h35}</h3>
+                <p className={styles.useCaseText}>{content.importExportPage.p5}</p>
               </div>
               <div className={styles.useCase}>
                 <div className={styles.useCaseIcon}><SaveIcon /></div>
-                <h3 className={styles.useCaseTitle}>Regular Backups</h3>
-                <p className={styles.useCaseText}>
-                  Export your data regularly to create backups. Keep local copies of your entire location history.
-                </p>
+                <h3 className={styles.useCaseTitle}>{content.importExportPage.h36}</h3>
+                <p className={styles.useCaseText}>{content.importExportPage.p6}</p>
               </div>
               <div className={styles.useCase}>
                 <div className={styles.useCaseIcon}><MapIcon /></div>
-                <h3 className={styles.useCaseTitle}>Cross-Platform</h3>
-                <p className={styles.useCaseText}>
-                  Use GPX exports in other GPS software, mapping applications, or import into different platforms.
-                </p>
+                <h3 className={styles.useCaseTitle}>{content.importExportPage.h37}</h3>
+                <p className={styles.useCaseText}>{content.importExportPage.p7}</p>
               </div>
             </div>
           </div>
@@ -284,25 +245,17 @@ export default function ImportExportPage() {
 
         <section className={styles.ctaSection}>
           <div className={styles.container}>
-            <h2 className={styles.ctaTitle}>Own Your Location Data</h2>
-            <p className={styles.ctaSubtitle}>
-              Start with a free account and import your existing location history today.
-            </p>
+            <h2 className={styles.ctaTitle}>{content.importExportPage.heading3}</h2>
+            <p className={styles.ctaSubtitle}>{content.importExportPage.p8}</p>
             <div className={styles.ctaButtons}>
-              <Link
+              <SmartLink
                 className={styles.primaryCta}
-                href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-cta&utm_campaign=import-export">
-                Try 7 Days for Free
-              </Link>
-              <Link
+                href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-cta&utm_campaign=import-export">{content.importExportPage.Link}</SmartLink>
+              <EnOnlyLink
                 className={styles.secondaryCta}
-                to="/docs/self-hosting/installation/docker">
-                Self-Host for Free
-              </Link>
+                to="/docs/self-hosting/installation/docker">{content.importExportPage.EnOnlyLink}</EnOnlyLink>
             </div>
-            <p className="feature-cta-reassurance">
-              7-day free trial · 14-day risk-free refund · Cancel anytime
-            </p>
+            <p className="feature-cta-reassurance">{content.importExportPage.p9}</p>
           </div>
         </section>
       </main>

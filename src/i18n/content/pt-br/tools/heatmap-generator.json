@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "title": "Gerador de mapas de calor GPS grátis — atividades online",
+    "description": "Crie belos mapas de calor GPS: visualize padrões de corrida, ciclismo e atividades. Carregue GPX, FIT, TCX, GeoJSON, KML ou JSON do Google Timeline (Linha do tempo do Google Maps). Grátis e privado, tudo no navegador.",
+    "keywords": "mapa de calor GPS, gerador de mapas de calor, mapa de calor de corrida, mapa de calor de ciclismo, alternativa ao mapa de calor Strava, mapa de calor GPX, mapa de calor de atividades, mapa de calor fitness, mapa de calor grátis, mapa de calor Google Timeline, mapa de calor do histórico de localização Google, mapa de calor Records.json"
+  },
+  "h1": "Gerador de mapas de calor GPS",
+  "intro": "Crie belos mapas de calor das suas atividades com GPS. Carregue vários arquivos para visualizar seus padrões de corrida, ciclismo e outras atividades em um mapa.",
+  "saveIntro": "Quer ter isso na sua conta Dawarich também? Vamos importar os dados durante o cadastro — sem precisar carregá-los novamente.",
+  "privacy": "A renderização acontece no seu navegador. Nada é enviado, a menos que você escolha “Salvar na minha conta Dawarich”.",
+  "exportButton": "Exportar como PNG",
+  "loadingMap": "Carregando mapa...",
+  "parseError": "Erro ao ler {fileName}: {message}",
+  "cards": [
+    {
+      "title": "O que é um mapa de calor GPS?",
+      "paragraphs": [
+        "Um mapa de calor GPS mostra a densidade dos seus dados de localização em um mapa. As áreas que você visitou com mais frequência aparecem com mais brilho e intensidade, criando uma representação visual dos seus padrões de atividade ao longo do tempo."
+      ]
+    },
+    {
+      "title": "Formatos de arquivo aceitos",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**GPX** - Formato de intercâmbio de GPS (usado pela maioria dos aplicativos GPS)"
+        },
+        {
+          "body": "**FIT** - Arquivos de atividades Garmin"
+        },
+        {
+          "body": "**GeoJSON** - Formato de mapas para a web"
+        },
+        {
+          "body": "**KML/KMZ** - Formato do Google Earth"
+        },
+        {
+          "body": "**Google Timeline JSON** - Arquivos Records.json e Semantic Location History do Google Takeout"
+        }
+      ]
+    },
+    {
+      "title": "Como exportar seus dados",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Strava:** Configurações > Minha conta > Baixar seus dados"
+        },
+        {
+          "body": "**Garmin:** Copie os arquivos .FIT do dispositivo ou use a exportação do Garmin Connect"
+        },
+        {
+          "body": "**Apple Fitness:** Use aplicativos de terceiros para exportar treinos como GPX"
+        },
+        {
+          "body": "**Google Maps:** Use o Google Takeout para exportar o histórico de localização — os arquivos Records.json e Semantic Location History são aceitos diretamente"
+        }
+      ]
+    },
+    {
+      "title": "Alternativa gratuita ao mapa de calor do Strava",
+      "paragraphs": [
+        "O recurso de mapa de calor do Strava exige uma assinatura paga. Esta ferramenta gratuita permite criar mapas de calor semelhantes com os seus dados exportados, sem precisar de assinatura ou conta."
+      ]
+    }
+  ],
+  "upload": {
+    "uploadTitle": "Carregar arquivos",
+    "dropFiles": "Arraste e solte arquivos aqui",
+    "formats": "GPX, FIT, TCX, GeoJSON, KML, KMZ, Google Timeline JSON",
+    "clearButton": "Limpar tudo",
+    "inputLabel": "Escolha os arquivos para processar",
+    "processing": "Processando arquivos..."
+  },
+  "results": {
+    "statsTitle": "Estatísticas",
+    "pointsLabel": "Total de pontos",
+    "distanceLabel": "Distância total",
+    "dateRangeLabel": "Período",
+    "loadedFiles": "Arquivos carregados ({count})",
+    "pointCount": "{points} pts",
+    "distanceValue": "{distance} km"
+  },
+  "settings": {
+    "settingsTitle": "Configurações do mapa de calor",
+    "schemeLabel": "Paleta de cores",
+    "schemes": [
+      {
+        "label": "Fogo (vermelho/laranja)"
+      },
+      {
+        "label": "Strava (laranja)"
+      },
+      {
+        "label": "Plasma (roxo/amarelo)"
+      },
+      {
+        "label": "Oceano (azul)"
+      },
+      {
+        "label": "Floresta (verde)"
+      }
+    ],
+    "intensityLabel": "Intensidade: {intensity}",
+    "radiusLabel": "Raio: {radius}",
+    "opacityLabel": "Opacidade: {opacity}"
+  },
+  "cta": {
+    "headline": "Seu mapa de calor abrange **{points}** pontos de GPS em **{distance} km**. Este é um retrato do momento — o Dawarich constrói seu mapa de calor continuamente.",
+    "fallback": "Quer visualizar anos de histórico de localização? O Dawarich constrói seu mapa de calor continuamente com todas as suas fontes de GPS.",
+    "statLabels": {
+      "points": "pontos",
+      "distance": "distância",
+      "dateRange": "período"
+    }
+  }
+}

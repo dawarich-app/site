@@ -1,0 +1,22 @@
+{
+  "googleSignIn": "使用 Google 登录",
+  "copyright": "版权所有 © {year} Dawarich",
+  "madeInEurope": "在欧洲开发和托管",
+  "location": "德国柏林",
+  "startTracking": "开始记录 →",
+  "communityLinks": "社区链接",
+  "trendshiftAlt": "Trendshift 上的 Dawarich",
+  "trademark": "Dawarich® 是 ZeitFlow UG (haftungsbeschränkt) 的欧盟注册商标",
+  "trademarkNumber": "注册号 {number}",
+  "footerSection.Explore": "探索",
+  "footerSection.Share & create": "分享与创作",
+  "footerSection.Get started": "快速上手",
+  "footerSection.Explore your data": "探索您的数据",
+  "footerSection.Convert files": "转换文件",
+  "footerSection.Edit & extract": "编辑与提取",
+  "footerSection.Alternatives": "替代方案",
+  "footerSection.Dawarich vs": "Dawarich 对比",
+  "footerSection.Help & reference": "帮助与参考",
+  "footerSection.About": "关于",
+  "footerSection.Legal": "法律信息"
+}

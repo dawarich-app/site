@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "title": "Divisor de Google Timeline: divideix fitxers JSON grans",
+    "description": "Divideix JSON grans de Google Timeline (Cronologia de Google Maps) en parts petites i vàlides de la mida que triïs. Tots els formats: Records.json, Semantic Location History, Semantic Segments i més. Gratis i privat, tot al navegador.",
+    "keywords": "dividir JSON de Google Timeline, dividir Records.json, dividir historial d'ubicacions de Google, divisor de Google Timeline, dividir ubicacions de Google Takeout, dividir JSON de la línia de temps, fitxer de Google Timeline massa gran",
+    "featureList": [
+      "Divideix fitxers JSON grans de Google Timeline en parts més petites",
+      "Admet els 6 formats d'exportació de Google Timeline",
+      "Tria la mida de cada part: 1, 5, 10, 20, 50 o 100 MB",
+      "Cada part és un fitxer JSON vàlid en el format original",
+      "Descarrega totes les parts en un sol fitxer ZIP",
+      "Prioritza la privacitat: tot es processa al navegador",
+      "No s'envien dades a cap servidor"
+    ]
+  },
+  "howTo": {
+    "name": "Com dividir un fitxer JSON gran de Google Timeline",
+    "description": "Carrega la teva exportació de Google Timeline i divideix-la en parts JSON més petites i vàlides.",
+    "steps": [
+      {
+        "name": "Carrega el teu JSON de Google Timeline",
+        "text": "Arrossega i deixa anar el teu fitxer Records.json, Semantic Location History o una altra exportació de Google Timeline al divisor."
+      },
+      {
+        "name": "Tria la mida de les parts",
+        "text": "Selecciona la mida que vols per a cada fitxer: 1 MB, 5 MB, 10 MB, 20 MB, 50 MB o 100 MB."
+      },
+      {
+        "name": "Descarrega els fitxers dividits",
+        "text": "Fes clic a Divideix i descarrega el ZIP per obtenir totes les parts en un sol fitxer ZIP. Cada part és un fitxer JSON vàlid en el format original."
+      }
+    ]
+  },
+  "h1": "Divisor de Google Timeline",
+  "intro": "Divideix exportacions JSON grans de Google Timeline (Cronologia de Google Maps) en parts més petites i vàlides. Cada part conserva el format original perquè la puguis importar a qualsevol eina. Tria la mida dels fitxers i descarrega un ZIP.",
+  "benefitsTitle": "Per què dividir els fitxers de la línia de temps?",
+  "privacyBody": "Tot el processament de les dades es fa al navegador. Els teus fitxers no surten mai del dispositiu.",
+  "preCta": "Treballes amb exportacions grans de Google Timeline? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-splitter) gestiona automàticament importacions de qualsevol mida, amb plena propietat de les teves dades i privacitat.",
+  "faqTitle": "Preguntes freqüents",
+  "homeLabel": "Inici",
+  "toolsLabel": "Eines gratuïtes",
+  "privacyTitle": "La privacitat, primer",
+  "benefits": [
+    {
+      "title": "Límits de mida d'importació:",
+      "body": "Moltes eines limiten la mida dels fitxers que pots importar. Dividir un Records.json de 500 MB en parts de 10 MB facilita la importació."
+    },
+    {
+      "title": "Importacions per lots més ràpides:",
+      "body": "Importar diversos fitxers petits sol ser més ràpid i fiable que importar-ne un de molt gran, especialment amb connexions lentes."
+    },
+    {
+      "title": "Conserva el format original:",
+      "body": "A diferència dels conversors, aquesta eina manté les dades exactament en el mateix format JSON de Google Timeline. Cada part és un fitxer vàlid i independent."
+    },
+    {
+      "title": "Admet tots els formats:",
+      "body": "Funciona amb Records.json, Semantic Location History, Semantic Segments, exportacions de Location History del telèfon, Settings i Timeline Edits."
+    }
+  ],
+  "formatLabels": {
+    "records": "Records.json (GPS en brut)",
+    "semantic": "Semantic Location History",
+    "semanticSegments": "Semantic Segments",
+    "locationHistory": "Location History (exportació del telèfon)",
+    "settings": "Configuració",
+    "timelineEdits": "Timeline Edits",
+    "unknown": "Desconegut"
+  },
+  "faq": [
+    {
+      "q": "És segur carregar les meves dades de Google Timeline?",
+      "a": "Sí. Tot el processament de les dades es fa íntegrament al navegador amb JavaScript. Els fitxers del teu historial d'ubicacions no s'envien mai a cap servidor: es queden al dispositiu. Quan tanques la pestanya, les dades desapareixen. L'eina és de codi obert perquè puguis comprovar exactament què fa el codi."
+    },
+    {
+      "q": "Quins formats de Google Timeline puc dividir?",
+      "a": "Aquest divisor admet els sis formats d'exportació de Google Timeline: Records.json (registres d'ubicació GPS en brut), Semantic Location History (fitxers mensuals YYYY_MONTH.json), Semantic Segments (exportació més recent des del telèfon), Location History (format de matriu amb startTime/endTime), Settings i Timeline Edits. L'eina detecta el format automàticament quan carregues un fitxer."
+    },
+    {
+      "q": "La divisió pot malmetre les meves dades?",
+      "a": "No. Cada entrada del fitxer original apareixerà exactament en una de les parts resultants. No es perden, dupliquen ni modifiquen dades. Cada part és un fitxer JSON vàlid amb exactament el mateix format que l'original, de manera que es pot importar a qualsevol eina que admeti fitxers de Google Timeline."
+    },
+    {
+      "q": "Per què podria necessitar dividir un fitxer de Google Timeline?",
+      "a": "Les exportacions de Google Timeline, especialment Records.json, poden ocupar centenars de megabytes o fins i tot gigabytes. Moltes eines d'importació (inclòs Dawarich) gestionen millor els fitxers grans quan es divideixen en parts més petites. Dividir-los també ajuda si vols compartir una part de les dades o processar-les per lots."
+    },
+    {
+      "q": "Com s'ajusta la mida de les parts?",
+      "a": "L'eina pren una mostra d'entrades del fitxer per estimar-ne la mida mitjana i calcula quantes n'hi caben a cada part per arribar a la mida triada. Les mides reals poden variar lleugerament perquè les entrades tenen mides diferents, però l'eina procura quedar-se per sota del límit."
+    },
+    {
+      "q": "Puc importar els fitxers dividits a Dawarich?",
+      "a": "Sí. Cada part és un fitxer JSON vàlid de Google Timeline en el format original. Les pots importar una a una a Dawarich o a qualsevol altra eina que admeti exportacions de Google Timeline. Dawarich també gestiona fitxers grans directament, però dividir-los pot accelerar la importació."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Què és el divisor de Google Timeline?",
+      "paragraphs": [
+        "Aquesta eina agafa una exportació JSON gran de Google Timeline i la divideix en fitxers més petits, cadascun amb la mida aproximada que triïs. Cada part és un fitxer JSON vàlid i independent amb exactament el mateix format que l'original: conserva tota l'estructura, no només les coordenades.",
+        "A diferència dels conversors de formats que extreuen punts en GPX o CSV, aquest divisor manté les dades en el format natiu de Google Timeline. Això vol dir que pots importar cada part a qualsevol eina que admeti JSON de Google Timeline, inclòs Dawarich."
+      ]
+    },
+    {
+      "title": "Formats de Google Timeline compatibles",
+      "paragraphs": [],
+      "items": [
+        { "body": "**Records.json** — Registres d'ubicació GPS en brut amb coordenades E7, marques de temps, precisió i dades d'activitat. Sovint és el fitxer més gran d'una exportació de Google Takeout." },
+        { "body": "**Semantic Location History** — Fitxers mensuals (YYYY_MONTH.json) amb visites a llocs i segments d'activitat, inclosos noms i adreces." },
+        { "body": "**Semantic Segments** — Format d'exportació més recent des del telèfon amb dades de visites i recorreguts." },
+        { "body": "**Location History** — Format de matriu amb entrades startTime/endTime i recorreguts de la línia de temps." },
+        { "body": "**Settings** — Configuració del dispositiu i dades de configuració." },
+        { "body": "**Timeline Edits** — Dades agregades de llocs i senyals en brut de les edicions de l'usuari." }
+      ]
+    },
+    {
+      "title": "Com triar la mida adequada de les parts",
+      "paragraphs": [],
+      "items": [
+        { "body": "**1 MB** — El màxim nombre de fitxers petits. Ideal per a eines amb límits d'importació molt baixos o per compartir parts individuals." },
+        { "body": "**5 MB** — Parts petites compatibles amb gairebé qualsevol eina d'importació. Una bona opció per a fitxers adjunts de correu electrònic." },
+        { "body": "**10 MB** — Mida equilibrada compatible amb la majoria d'eines d'importació. Recomanada per importar a Dawarich." },
+        { "body": "**20 MB** — Menys fitxers, encara fàcils de gestionar amb la majoria d'eines." },
+        { "body": "**50 MB** — Parts grans per a eines que gestionen bé els fitxers grans." },
+        { "body": "**100 MB** — Divisió mínima. Fes-la servir quan només necessitis dividir un fitxer molt gran per la meitat o en poques parts." }
+      ]
+    },
+    {
+      "title": "Com funciona",
+      "paragraphs": [
+        "El divisor detecta automàticament el format del fitxer i divideix la matriu principal de dades (ubicacions, objectes de la línia de temps, segments, etc.) en grups de mida semblant. Cada grup s'embolcalla amb la mateixa estructura JSON que el fitxer original.",
+        "L'eina pren una mostra d'entrades del fitxer per estimar-ne la mida mitjana i calcula quantes n'hi caben a cada part per arribar a la mida triada. Totes les parts s'empaqueten en un sol fitxer ZIP per descarregar-les fàcilment."
+      ]
+    },
+    {
+      "title": "Privacitat i seguretat",
+      "paragraphs": [
+        "Les teves dades de Google Timeline contenen informació d'ubicació sensible. Aquesta eina ho processa tot íntegrament al navegador: no s'envien mai dades a cap servidor. Els fitxers es queden al dispositiu des que els carregues fins que els descarregues.",
+        "No fem servir galetes, analítica ni seguiment per als fitxers que carregues. L'eina forma part del projecte de codi obert Dawarich, de manera que pots inspeccionar-ne el codi."
+      ]
+    },
+    {
+      "title": "Eines relacionades",
+      "paragraphs": [],
+      "items": [
+        { "body": "[Conversor de Google Timeline](/tools/google-timeline-converter) — Converteix dades de la línia de temps en GPX, KML, CSV o GeoJSON" },
+        { "body": "[Visualitzador de Google Timeline](/tools/timeline-visualizer) — Consulta el teu historial d'ubicacions en un mapa interactiu" },
+        { "body": "[Analitzador d'estadístiques de la línia de temps](/tools/timeline-statistics) — Analitza les teves dades d'ubicació" },
+        { "body": "[Eina per unir dades de la línia de temps](/tools/timeline-merger) — Combina diverses exportacions de la línia de temps" },
+        { "body": "[Divisor de fitxers GPS](/tools/gps-file-splitter) — Divideix fitxers GPX, GeoJSON, KML i altres fitxers GPS" },
+        { "body": "[Detector de formats de la línia de temps](/tools/timeline-format-detector) — Identifica el tipus de fitxer exportat" }
+      ]
+    }
+  ],
+  "upload": {
+    "parsing": "S'està analitzant el fitxer...",
+    "dropFile": "Deixa anar un fitxer JSON de Google Timeline aquí",
+    "browse": "o fes clic per triar-lo",
+    "formats": "Admet: Records.json, Semantic, Location History i més",
+    "clearButton": "Esborra el fitxer",
+    "inputLabel": "Tria els fitxers que vols processar"
+  },
+  "results": {
+    "fileNameLabel": "Nom del fitxer",
+    "fileSizeLabel": "Mida del fitxer",
+    "formatLabel": "Format",
+    "entriesLabel": "Entrades",
+    "entriesLoaded": "{count} entrades carregades",
+    "sizeValue": "{size} MB"
+  },
+  "options": {
+    "targetSizeTitle": "Mida desitjada de les parts",
+    "splitButton": "Divideix i descarrega el ZIP",
+    "splitting": "S'està dividint...",
+    "chunkPreview": "Es crearà **{count}** part a partir de {entries} entrades (~{size} MB cadascuna)|Es crearan **{count}** parts a partir de {entries} entrades (~{size} MB cadascuna)|Es crearan **{count}** parts a partir de {entries} entrades (~{size} MB cadascuna)"
+  },
+  "errors": {
+    "jsonOnlyError": "Carrega un fitxer JSON. Les exportacions de Google Timeline sempre són en format JSON.",
+    "unknownFormatError": "Això no sembla un fitxer d'exportació de Google Timeline. Formats compatibles: Records.json, Semantic Location History, Semantic Segments, Location History, Settings, Timeline Edits.",
+    "parseError": "Error en analitzar el fitxer: {message}",
+    "splitError": "Error en dividir el fitxer: {message}"
+  },
+  "cta": {
+    "title": "Busques un substitut de Google Timeline?",
+    "body": "Dawarich és una plataforma de seguiment d'ubicacions de codi obert que et dona el control total de les teves dades. Importa la teva exportació de Google Timeline, registra la ubicació des del telèfon i visualitza anys d'historial de desplaçaments, tot en un servidor propi o al núvol.",
+    "button": "Prova Dawarich gratis durant 7 dies",
+    "headline": "El teu fitxer té **{count}** entrades. Dawarich gestiona automàticament importacions de qualsevol mida, sense haver de dividir els fitxers.",
+    "statLabels": {
+      "entries": "entrades",
+      "fileSize": "mida del fitxer"
+    }
+  }
+}

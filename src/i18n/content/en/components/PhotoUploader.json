@@ -1,0 +1,13 @@
+{
+  "waiting": "Please wait...",
+  "addPhotos": "Click or drag to add more photos",
+  "dropPhotos": "Drop photos here",
+  "browse": "or click to browse",
+  "formats": "Supports: JPEG, PNG, HEIC, and other image formats",
+  "clearButton": "Clear All Photos",
+  "noImages": "No image files found. Please upload photos (JPEG, PNG, HEIC, etc.)",
+  "inputLabel": "Choose files to process",
+  "loaded": "**{count}** photo loaded|**{count}** photos loaded",
+  "processing": "Processing {count} photo...|Processing {count} photos...",
+  "loadError": "Error loading photos: {message}"
+}

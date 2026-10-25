@@ -1,0 +1,128 @@
+{
+  "integrationsShowcase": [
+    {
+      "title": "Immich",
+      "description": "自托管照片和视频备份方案。连接您的 Immich 实例，让照片显示在地图上准确的拍摄地点。",
+      "imageAlt": "地图上来自 Immich 的照片"
+    },
+    {
+      "title": "PhotoPrism",
+      "description": "由 AI 驱动的照片管理应用。集成 PhotoPrism，在位置时间线上查看整个照片库。",
+      "imageAlt": "包含 PhotoPrism 照片的行程"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "地图上的照片",
+      "description": "所有照片都按准确的 GPS 坐标显示在交互式地图上，重新发现每段回忆发生的地方。"
+    },
+    {
+      "title": "行程中的照片",
+      "description": "行程页面自动显示旅途中拍摄的照片，让您的旅行日志成为丰富的多媒体体验。"
+    },
+    {
+      "title": "照片时间线",
+      "description": "将照片和位置数据按时间顺序一起浏览，查看每一天的完整故事。"
+    },
+    {
+      "title": "保护隐私",
+      "description": "Dawarich 从不存储您的照片，只通过自托管照片应用的 API 读取位置数据。"
+    }
+  ],
+  "setupSteps": [
+    {
+      "title": "获取 API 密钥",
+      "description": "在您的 Immich 或 PhotoPrism 实例中生成 API 密钥。",
+      "details": [
+        "Immich：创建包含 asset.read 和 asset.view 权限的密钥（丰富照片功能还需要 asset.update）",
+        "PhotoPrism：在“应用与设备”设置中生成密钥",
+        "妥善保管密钥"
+      ]
+    },
+    {
+      "title": "在 Dawarich 中配置",
+      "description": "在 Dawarich 设置中填写照片服务信息。",
+      "details": [
+        "前往设置页面",
+        "找到照片集成部分",
+        "输入服务网址",
+        "粘贴 API 密钥",
+        "点击保存"
+      ]
+    },
+    {
+      "title": "同步完成",
+      "description": "Dawarich 连接到照片服务，并为位置数据建立索引。",
+      "details": [
+        "按位置建立照片索引",
+        "提取 EXIF GPS 数据",
+        "不复制或存储照片",
+        "仅使用元数据"
+      ]
+    },
+    {
+      "title": "查看照片",
+      "description": "照片现在会显示在地图和行程中。",
+      "details": [
+        "在地图上启用照片图层",
+        "点击照片标记查看",
+        "行程中自动显示照片",
+        "按位置和日期浏览"
+      ]
+    }
+  ],
+  "futureIntegrations": [
+    {
+      "title": "健身应用",
+      "description": "与运动记录应用集成，将运动路线与位置历史记录结合。"
+    },
+    {
+      "title": "笔记应用",
+      "description": "自动将笔记关联到地点，查看您写了什么，以及在哪里写的。"
+    },
+    {
+      "title": "音乐服务",
+      "description": "记录一天中在不同地点听过的音乐。"
+    },
+    {
+      "title": "云服务",
+      "description": "与各类云存储和效率工具进行更深入的集成。"
+    }
+  ],
+  "meta": {
+    "title": "照片集成",
+    "description": "连接您的 Immich 或 PhotoPrism 实例，在地图和行程中查看照片，让地图成为丰富的多媒体体验。",
+    "ogTitle": "Dawarich 集成 — 连接您的数字生活",
+    "ogDescription": "将 Immich 和 PhotoPrism 照片库与位置历史记录集成，自动在地图和行程中查看照片。"
+  },
+  "hero": {
+    "badge": "互联体验",
+    "title": "连接您的",
+    "titleHighlight": "数字生活",
+    "subtitle": "将照片融入您的位置时间线。Dawarich 与 Immich 和 PhotoPrism 集成，在地图和行程中展示照片，让位置历史记录更加丰富直观。",
+    "imageAlt": "地图上显示的照片"
+  },
+  "integrationsPage": {
+    "heading": "为什么要集成照片？",
+    "p": "位置数据与您拍摄的照片结合后，会更有意义。查看每张照片的准确拍摄地点，重新发现回忆。",
+    "title3": "支持的照片服务",
+    "subtitle2": "Dawarich 可与常用的自托管照片管理方案无缝协作。",
+    "title4": "如何设置",
+    "subtitle3": "只需几步，即可将照片库连接到 Dawarich。",
+    "h3": "您的照片始终私密",
+    "p2": "Dawarich **不会存储或复制您的照片**，只通过 API 从自托管照片服务中读取位置元数据。照片始终安全地保留在您的 Immich 或 PhotoPrism 实例中，完全由您掌控。",
+    "heading2": "技术详情",
+    "text3": " Immich 设置",
+    "Link": "如何获取 Immich API 密钥 →",
+    "text8": " PhotoPrism 设置",
+    "p3": "在 PhotoPrism 的“应用与设备”设置中生成 API 密钥。Dawarich 使用它访问照片库并提取位置信息。",
+    "Link2": "如何获取 PhotoPrism API 密钥 →",
+    "p4": "有集成建议？[欢迎在社区论坛分享！](https://discourse.dawarich.app/)。",
+    "heading3": "今天就连接您的照片库",
+    "p5": "创建免费 Dawarich 账户，开始在地图上查看照片。",
+    "Link4": "免费试用 7 天",
+    "EnOnlyLink": "免费自托管",
+    "p6": "7 天免费试用 · 14 天无忧退款 · 随时可取消",
+    "immichScopes": "需要 API 密钥具备 `asset.read` 和 `asset.view` 权限。如果还想使用丰富照片功能，请添加 `asset.update` 权限。Dawarich 调用 Immich API 读取照片元数据，包括 EXIF 数据中的 GPS 坐标。"
+  }
+}

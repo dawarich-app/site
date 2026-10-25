@@ -1,0 +1,97 @@
+{
+  "showcaseItems": [
+    {
+      "title": "Interaktywna mapa podróży",
+      "description": "Każda strona podróży zawiera piękną interaktywną mapę pokazującą całą trasę ze wszystkimi odwiedzonymi punktami."
+    },
+    {
+      "title": "Szczegółowe statystyki",
+      "description": "Zobacz szczegółowe statystyki każdej podróży, w tym łączną odległość, czas i odwiedzone kraje. Kolejne funkcje już wkrótce."
+    },
+    {
+      "title": "Dziennik z formatowaniem tekstu",
+      "description": "Dokumentuj przygody za pomocą formatowanych opisów i notatek. Zachowaj wspomnienia i historie ze swoich podróży."
+    },
+    {
+      "title": "Integracja ze zdjęciami",
+      "description": "Zdjęcia z Twojej instancji Immich lub PhotoPrism automatycznie pojawiają się na mapie podróży w miejscach, w których je zrobiono."
+    },
+    {
+      "title": "Zarządzanie listą podróży",
+      "description": "Uporządkuj wszystkie podróże w jednym miejscu. Przeglądaj dawne przygody i twórz nowe, kiedy zechcesz."
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Rejestruj swoje przemieszczanie się",
+      "description": "Pozwól Dawarich automatycznie zapisywać lokalizację podczas podróży za pomocą dowolnej obsługiwanej aplikacji.",
+      "details": [
+        "Aplikacja Dawarich na iOS do wygodnego śledzenia",
+        "Aplikacje innych firm, takie jak Overland, OwnTracks, GPSLogger",
+        "Dane automatycznie synchronizują się z Twoim kontem"
+      ]
+    },
+    {
+      "title": "Utwórz podróż",
+      "description": "Po powrocie utwórz nową podróż, podając nazwę i zakres dat.",
+      "details": [
+        "Wybierz datę początku i końca",
+        "Nadaj podróży niezapomnianą nazwę",
+        "Dawarich automatycznie grupuje dane lokalizacyjne"
+      ]
+    },
+    {
+      "title": "Dodaj swoją historię",
+      "description": "Wzbogać podróż o notatki, opisy i wpisy w dzienniku za pomocą edytora tekstu z formatowaniem.",
+      "details": [
+        "Opisz swoje wrażenia",
+        "Dodaj kontekst do odwiedzonych miejsc",
+        "Stwórz opowieść o swojej podróży"
+      ]
+    },
+    {
+      "title": "Odkrywaj i udostępniaj",
+      "description": "Zobacz podróż na interaktywnej mapie, sprawdź statystyki i przeżyj przygodę na nowo (udostępnianie podróży już wkrótce)",
+      "details": [
+        "Zobacz całą trasę na mapie",
+        "Sprawdź odległość, czas i odwiedzone miejsca",
+        "Zdjęcia pojawiają się na mapie automatycznie"
+      ]
+    }
+  ],
+  "meta": {
+    "title": "Podróże i dziennik podróży",
+    "description": "Twórz pięknie udokumentowane podróże z interaktywnymi mapami, statystykami, formatowanym dziennikiem i integracją ze zdjęciami.",
+    "ogTitle": "Dawarich Podróże — dokumentuj swoje przygody",
+    "ogDescription": "Twórz rozbudowane dzienniki podróży z interaktywnymi mapami, szczegółowymi statystykami, formatowanymi opisami i automatyczną integracją ze zdjęciami."
+  },
+  "hero": {
+    "badge": "Dziennik podróży",
+    "title": "Zamień swoje podróże w",
+    "titleHighlight": "piękne opowieści",
+    "subtitle": "Automatycznie zapisuj, jak się przemieszczasz, i twórz z tych danych rozbudowane dzienniki podróży. Każda podróż to interaktywna mapa, szczegółowe statystyki, formatowane opisy i zdjęcia — wszystko w jednym miejscu.",
+    "imageAlt": "Szczegóły podróży z mapą i statystykami"
+  },
+  "tripsPage": {
+    "heading": "Dlaczego podróże są ważne",
+    "title3": "Zachowywanie wspomnień",
+    "description2": "Nie zapomnij szczegółów swoich przygód. Każda podróż jest trwale zapisywana z pełnymi danymi lokalizacyjnymi i Twoimi notatkami.",
+    "description3": "Połącz dane lokalizacyjne z myślami i opowieściami. Stwórz bogaty, multimedialny dziennik podróży, który daje więcej niż zwykłe notatki.",
+    "title4": "Przeżywaj przygody na nowo",
+    "description4": "Wracaj do dawnych podróży, kiedy chcesz. Zobacz dokładnie, dokąd pojechałeś, jak długo podróżowałeś, i odkrywaj odwiedzone miejsca ponownie.",
+    "title5": "Wszystko, czego potrzebujesz w jednej podróży",
+    "subtitle2": "Każda podróż automatycznie łączy wiele elementów, aby opowiedzieć całą historię Twojej wyprawy.",
+    "title6": "Jak to działa",
+    "subtitle3": "Tworzenie podróży i zarządzanie nimi jest proste i intuicyjne — kilka kliknięć zamienia dane lokalizacyjne w opowieści.",
+    "heading2": "Elastyczne tworzenie podróży",
+    "title7": "Automatyczne grupowanie",
+    "description5": "Wystarczy ustawić daty podróży, a Dawarich automatycznie zbierze wszystkie punkty lokalizacji z tego okresu. Idealne, gdy chcesz szybko uzyskać wynik.",
+    "title8": "Ręczne uzupełnianie szczegółów",
+    "description6": "Twórz podróże, aby opowiadać historie lub dokumentować konkretne przygody. Dodaj własną narrację i notatki, aby wzbogacić wspomnienia.",
+    "heading3": "Zacznij dokumentować podróże",
+    "p": "Zacznij tworzyć piękne dzienniki podróży już dziś z 7-dniowym bezpłatnym okresem próbnym. Zrezygnuj w dowolnej chwili.",
+    "Link": "Wypróbuj za darmo przez 7 dni",
+    "EnOnlyLink": "Uruchom za darmo na własnym serwerze",
+    "p2": "7-dniowy bezpłatny okres próbny · Zwrot bez ryzyka przez 14 dni · Zrezygnuj w dowolnej chwili"
+  }
+}

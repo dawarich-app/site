@@ -1,0 +1,62 @@
+{
+  "poster": {
+    "themes": [
+      {
+        "name": "Tardor"
+      },
+      {
+        "name": "Plànol"
+      },
+      {
+        "name": "Zones de contrast"
+      },
+      {
+        "name": "Pàtina de coure"
+      },
+      {
+        "name": "Ciutat maragda"
+      },
+      {
+        "name": "Bosc"
+      },
+      {
+        "name": "Camins en degradat"
+      },
+      {
+        "name": "Tinta japonesa"
+      },
+      {
+        "name": "Blau mitjanit"
+      },
+      {
+        "name": "Blau monocrom"
+      },
+      {
+        "name": "Neó ciberpunk"
+      },
+      {
+        "name": "Negre"
+      },
+      {
+        "name": "Oceà"
+      },
+      {
+        "name": "Somni pastel"
+      },
+      {
+        "name": "Posta de sol"
+      },
+      {
+        "name": "Terracota"
+      },
+      {
+        "name": "Beix càlid"
+      }
+    ]
+  },
+  "position": "Pòster {name}, {position} de {total}",
+  "close": "Tanca",
+  "previous": "Pòster anterior",
+  "next": "Pòster següent",
+  "posterAlt": "Pòster ampliat de la ruta de Berlín amb el tema {name}"
+}

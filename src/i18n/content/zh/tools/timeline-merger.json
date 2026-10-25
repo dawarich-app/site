@@ -1,0 +1,261 @@
+{
+  "meta": {
+    "title": "Google Timeline（谷歌地图时间轴）数据合并工具 - 合并位置历史导出文件",
+    "description": "免费将多个 Google Timeline（谷歌地图时间轴）导出文件合并为一个。智能去重可移除重复轨迹点，支持合并 Records.json、Semantic History 和手机导出文件。隐私优先。",
+    "keywords": "合并 Google Timeline 导出文件, 合并位置历史文件, Google Timeline 数据恢复, 合并 Records.json, 合并 Google Takeout 位置数据, 合并 Semantic Location History, Google Timeline 合并工具, 位置历史去重, 合并 GPS 数据",
+    "featureList": [
+      "将多个 Google Timeline 导出文件合并为一个",
+      "智能去重，移除重复轨迹点",
+      "支持 Records.json、Semantic Location History 和手机导出文件",
+      "可调整去重的距离和时间阈值",
+      "可视化时间线重叠报告",
+      "导出为 JSON 或 GPX",
+      "隐私优先，所有处理均在浏览器中完成",
+      "不向任何服务器发送数据"
+    ]
+  },
+  "howTo": {
+    "name": "如何合并 Google Timeline 导出文件",
+    "description": "通过智能去重，将多个 Google Timeline 导出文件合并为一个统一的数据集。",
+    "steps": [
+      {
+        "name": "导出您的 Google Timeline 数据",
+        "text": "使用 Google Takeout、Android 或 iOS 导出您的 Google Timeline 数据。如有可能，请使用多种方式导出，确保保留全部数据。"
+      },
+      {
+        "name": "上传您的 JSON 文件",
+        "text": "将您导出的所有 Google Timeline JSON 文件拖放到合并工具中。工具会自动检测 Records.json、Semantic Location History 和手机导出格式。"
+      },
+      {
+        "name": "查看文件摘要和重叠情况",
+        "text": "查看文件摘要表和时间线可视化视图，了解文件之间的重叠情况。工具会显示每个文件的日期范围、轨迹点数量和检测出的格式。"
+      },
+      {
+        "name": "调整去重设置",
+        "text": "设置去重的距离阈值（10-500 米）和时间阈值（10-300 秒）。同时处于这两个阈值内的轨迹点会被视为重复。"
+      },
+      {
+        "name": "合并并导出",
+        "text": "点击“合并文件”，将所有数据合并并去重。可将结果下载为 JSON（保留全部元数据）或 GPX（兼容地图应用）。"
+      }
+    ],
+    "tool": "Dawarich Google Timeline 数据合并工具"
+  },
+  "h1": "Google Timeline（谷歌地图时间轴）数据合并工具",
+  "intro": "将多个 Google Timeline（谷歌地图时间轴）导出文件合并为一个统一的文件。智能去重可移除重复轨迹点，同时保留所有独有的位置记录。免费、隐私优先，完全在您的浏览器中运行。",
+  "preCta": "想先以可视化方式查看您的时间线数据？试试我们的 [Google Timeline 可视化工具](/tools/timeline-visualizer?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger)，在交互式地图上探索您的位置历史。需要长期的时间线替代方案？[Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-merger) 让您拥有完整的数据所有权。",
+  "faqTitle": "常见问题",
+  "homeLabel": "首页",
+  "toolsLabel": "免费工具",
+  "privacyTitle": "隐私优先",
+  "privacyBody": "所有合并和去重处理均在您的浏览器中完成。您的位置数据不会离开设备，也不会发送到任何服务器。",
+  "benefitsTitle": "为什么要合并时间线导出文件？",
+  "benefitsIntro": "Google 提供多种时间线数据导出方式，每种方式包含的信息有所不同。将它们合并，可以尽可能完整地保留您的位置历史。",
+  "benefits": [
+    {
+      "title": "多种导出方式：",
+      "body": "Google Takeout、手机导出和 Semantic Location History 各自包含不同的数据。合并可汇总每个数据源的全部内容。"
+    },
+    {
+      "title": "数据恢复：",
+      "body": "在 Google 2024 年的时间线迁移后，许多用户持有来自不同日期的不完整导出文件。将它们合并，可尽可能重建历史记录。"
+    },
+    {
+      "title": "合并新旧导出文件：",
+      "body": "您在 2022 年导出过时间线，又在 2024 年再次导出？合并这两次导出，即可获得连续覆盖且没有重复记录的数据。"
+    }
+  ],
+  "settings": {
+    "title": "去重设置",
+    "intro": "调整重复轨迹点的检测力度。当两个轨迹点的距离和时间间隔都在相应阈值内时，会被视为重复，并保留元数据更丰富的轨迹点。",
+    "distanceLabel": "距离阈值",
+    "distanceHint": "距离小于此值的轨迹点可能重复（10m = 严格判定，500m = 扩大去重范围）",
+    "timeLabel": "时间阈值",
+    "timeHint": "在此时间窗口内记录的轨迹点可能重复（10s = 严格判定，300s = 扩大去重范围）"
+  },
+  "results": {
+    "file": "文件",
+    "format": "格式",
+    "points": "轨迹点",
+    "paths": "路径",
+    "dateRange": "日期范围",
+    "dateCoverage": "日期覆盖范围",
+    "overlap": "重叠",
+    "title": "合并结果",
+    "inputPoints": "输入轨迹点",
+    "outputPoints": "输出轨迹点",
+    "duplicatesRemoved": "已移除的重复轨迹点",
+    "filesMerged": "已合并的文件",
+    "overlapDetails": "重叠详情",
+    "parsing": "正在解析上传的文件…",
+    "unknown": "未知",
+    "noTimestamps": "没有时间戳",
+    "none": "无",
+    "downloadJson": "下载为 JSON",
+    "downloadGpx": "下载为 GPX",
+    "noDate": "不适用",
+    "merging": "正在合并…",
+    "uploadedFiles": "已上传的文件（{count}）",
+    "distanceValue": "{distance} 米",
+    "timeValue": "{seconds} 秒",
+    "filePair": "{fileA} 与 {fileB}",
+    "overlapRange": "在 {startDate} 至 {endDate} 期间重叠",
+    "overlapWith": "与 {fileName} 重叠",
+    "mergeButton": "合并 {count} 个文件",
+    "dayCount": "{count} 天",
+    "parseError": "解析 {fileName} 时出错：{message}",
+    "processingError": "处理文件时出错：{message}",
+    "mergeError": "合并文件时出错：{message}"
+  },
+  "cta": {
+    "fallback": "希望合并后的位置数据安全保存，并随时可用？Dawarich 可安全存储您的完整位置历史。",
+    "postTitle": "让位置数据不再面临丢失风险",
+    "postBody": "Dawarich 将所有数据存储在欧盟数据中心，提供传输加密（SSL/TLS）、静态加密（LUKS）、完整备份和交互式地图。导入您合并后的时间线数据，并继续自动记录位置。",
+    "bottomTitle": "正在寻找 Google Timeline 的长期替代方案？",
+    "bottomBody": "Dawarich 是一个开源位置追踪平台，让您完全掌控自己的数据。导入您合并后的 Google Timeline 导出文件，持续通过手机记录位置，并以可视化方式查看多年的移动历史。支持自托管或云端使用。",
+    "button": "免费试用 Dawarich 7 天",
+    "headline": "您已将 **{count}** 个文件中的 **{points}** 个轨迹点合并到一个文件中。Dawarich 可自动为您的所有 GPS 数据源完成这项工作。",
+    "statLabels": {
+      "files": "文件",
+      "points": "轨迹点",
+      "duplicates": "已移除的重复轨迹点"
+    }
+  },
+  "faq": [
+    {
+      "q": "在这里上传我的 Google Timeline 数据安全吗？",
+      "a": "安全。所有数据处理均通过 JavaScript 在您的浏览器中完成。您的位置历史文件不会上传到任何服务器。文件的读取、解析、合并和导出均在本地完成，不会发起任何网络请求。关闭标签页后，数据即被清除。此工具也已开源，您可以核查代码。"
+    },
+    {
+      "q": "去重是如何工作的？",
+      "a": "去重算法先按时间戳对所有轨迹点排序，再将每个轨迹点与前一个比较。如果两个相邻轨迹点的距离和时间间隔都处于阈值内（默认为 50 米和 60 秒），则会移除重复项。发现重复时，会保留包含更多元数据（如地点名称或活动类型）的轨迹点。您可以在合并前使用滑块调整两个阈值。"
+    },
+    {
+      "q": "可以合并不同格式的文件吗？",
+      "a": "可以。合并工具支持所有 Google Timeline 导出格式：Google Takeout 导出的 Records.json、Semantic Location History 月度文件（如 2022_APRIL.json），以及包含 semanticSegments 的较新手机时间线导出文件。您可以任意组合这些格式。解析器会自动检测每个文件的格式，并在合并前统一数据结构。"
+    },
+    {
+      "q": "重叠数据会如何处理？",
+      "a": "重叠数据由去重步骤处理。当两个文件覆盖同一时间段时，可能会包含在同一时间、同一地点记录的重复轨迹点。合并工具会根据空间和时间上的接近程度识别重复项，然后为每个轨迹点仅保留一份记录（优先保留元数据更丰富的版本）。重叠报告会准确显示哪些文件重叠，以及重叠多少天。"
+    },
+    {
+      "q": "合并会丢失我的数据吗？",
+      "a": "不会丢失有意义的数据。去重只会移除真正的重复项，即多个导出源在同一时间记录的基本相同的位置。每个文件中所有独有的轨迹点、地点到访记录、活动片段和路径都会保留在合并结果中。如果您想更稳妥，可以将距离阈值设为 0，完全禁用去重。"
+    },
+    {
+      "q": "有哪些导出格式可用？",
+      "a": "您可以将合并数据导出为 JSON（包含所有去重后轨迹点及完整元数据的数组）或 GPX（与大多数地图应用、运动追踪器和 GIS 工具兼容的标准 GPS 格式）。JSON 导出会保留地点名称、地址、活动类型等所有原始元数据。GPX 导出会将地点到访记录转换为航点，将位置记录转换为轨迹点。"
+    },
+    {
+      "q": "一次可以合并多少个文件？",
+      "a": "文件数量没有硬性上限。此工具已测试同时处理超过 10 个文件，包括含数十万个轨迹点的大型 Records.json 文件。处理时间取决于所有文件的轨迹点总数和设备性能。在现代计算机上，合并 3-5 个、共含 500,000 个轨迹点的文件通常需要 10-30 秒。"
+    }
+  ],
+  "cards": [
+    {
+      "title": "什么是时间线数据合并工具？",
+      "paragraphs": [
+        "时间线数据合并工具是一个免费的浏览器工具，可将多个 Google Timeline 导出文件合并为一个统一的数据集。当您通过不同方式（Google Takeout、手机导出、Semantic History）导出 Google 位置历史时，往往会得到时间范围重叠、包含重复轨迹点的文件。此工具可智能合并它们，在移除重复项的同时保留每一条独有的位置记录。",
+        "所有处理均在您的浏览器本地完成。您的位置数据不会传输到任何服务器，即使是跨越多年的敏感个人位置历史，也可以安全使用。"
+      ]
+    },
+    {
+      "title": "去重的工作原理",
+      "paragraphs": [
+        "去重算法通过两个因素识别重复轨迹点："
+      ],
+      "items": [
+        {
+          "body": "**空间接近** — 距离在阈值内（默认 50 米）的轨迹点会成为去重候选项"
+        },
+        {
+          "body": "**时间接近** — 轨迹点还必须处于时间阈值内（默认 60 秒），才会被视为重复"
+        },
+        {
+          "body": "**两个条件必须同时满足** — 只有距离和时间都符合条件，轨迹点才会作为重复项移除"
+        },
+        {
+          "body": "**保留元数据** — 发现重复项时，会保留包含更多元数据（地点名称、地址、活动类型）的版本"
+        }
+      ],
+      "footer": [
+        "去重前会按时间顺序对轨迹点排序，确保无论上传顺序如何，结果都一致。"
+      ]
+    },
+    {
+      "title": "为什么要合并时间线导出文件？",
+      "paragraphs": [
+        "以下是几种常见的需要合并 Google Timeline 数据的场景："
+      ],
+      "items": [
+        {
+          "body": "**多个导出源** — Google Takeout、Android 导出和 iOS 导出各自包含您数据的不同部分"
+        },
+        {
+          "body": "**恢复 Google 2024 年迁移后的数据** — Google 将 Timeline 迁移至设备本地存储时，许多用户导出了多份不完整数据。合并可尽可能恢复完整历史"
+        },
+        {
+          "body": "**定期备份** — 如果您在 2021 年导出过数据，又在 2024 年再次导出，合并可生成覆盖这两个时期的连续数据集"
+        },
+        {
+          "body": "**更换设备** — 换了手机？合并新旧设备的导出文件"
+        }
+      ]
+    },
+    {
+      "title": "Google Maps Timeline 发生了什么变化？",
+      "paragraphs": [
+        "2024 年底，Google 停止提供网页版 Google Maps Timeline，并将所有位置数据迁移至设备本地存储。只有最近 90 天的数据自动转移到用户手机上。更早的位置历史若未在截止日期前手动导出，则被永久删除。",
+        "这使数百万用户的数据变得零散：不完整的 Takeout 导出、近期数据的手机导出，以及不同时期的 Semantic Location History 文件。时间线数据合并工具可帮助将这些片段重新拼成完整的位置历史。",
+        "如需持续记录位置并拥有完整的数据所有权，可考虑将 [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-merger) 作为自托管或云端替代方案。"
+      ]
+    },
+    {
+      "title": "支持的格式",
+      "paragraphs": [
+        "合并工具可自动检测并处理所有 Google Timeline 导出格式："
+      ],
+      "items": [
+        {
+          "body": "**Records.json** — Google Takeout 导出的 E7 坐标格式原始 GPS 记录。这类文件通常最大，包含每一次位置采样"
+        },
+        {
+          "body": "**Semantic Location History** — 按月保存的文件（如 2022_APRIL.json），包含结构化的地点到访记录、地址和活动片段"
+        },
+        {
+          "body": "**手机时间线导出文件** — 来自 Android/iOS 上 Google Maps 的较新格式，包含 semanticSegments 和时间线路径"
+        },
+        {
+          "body": "**设置与 TimelineEdits** — Google Takeout 导出中的附加元数据文件"
+        }
+      ],
+      "footer": [
+        "您可以在一次合并操作中任意组合这些格式。"
+      ]
+    },
+    {
+      "title": "相关工具",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Google Timeline 可视化工具](/tools/timeline-visualizer) — 在交互式地图上查看您的位置历史"
+        },
+        {
+          "body": "[GPS 热力图生成器](/tools/heatmap-generator) — 使用 GPX、FIT、TCX 及其他 GPS 文件生成热力图"
+        },
+        {
+          "body": "[GPX 轨迹合并工具](/tools/gpx-merger) — 将多个 GPX 文件合并为一个"
+        },
+        {
+          "body": "[照片地理数据提取工具](/tools/photo-geotagging) — 从照片中提取 GPS 坐标"
+        },
+        {
+          "body": "[GeoJSON 转 GPX 转换器](/tools/geojson-to-gpx) — 将位置数据转换为 GPX 格式"
+        }
+      ],
+      "footer": [
+        "延伸阅读：[从 Google 位置历史迁移](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}

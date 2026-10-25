@@ -1,3 +1,7 @@
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { SmartLink } from '@site/src/i18n/RichText';
+import { DEFAULT_LOCALE } from '@site/src/i18n/locales';
+import content from '@locale-content/components/Testimonials.json';
 import React from "react";
 import styles from "./Testimonials.module.css";
 
@@ -54,108 +58,100 @@ const featuredIn = [
 
 const testimonials = [
 	{
-		quote:
-			"I imported my Google Timeline to this self-hosted app, and it's so much better than what Google offers.",
+		quote: content.quotes[0].quote,
 		author: "Megan Ellis",
-		source: "XDA Developers",
+		source: content.quotes[0].source,
 		url: "https://www.xda-developers.com/import-google-timeline-dawarich/",
 		type: "press",
 	},
 	{
-		quote:
-			"Dawarich gives you everything Google Timeline does, and then some. There are no ads and no hidden data collection.",
+		quote: content.quotes[1].quote,
 		author: "Jayric Maning",
-		source: "MakeUseOf",
+		source: content.quotes[1].source,
 		url: "https://www.makeuseof.com/i-use-free-open-source-app-track-everywhere-ive-been-without-google/",
 		type: "press",
 	},
 	{
-		quote: "The UI is clean and user friendly. Basically no impact on battery.",
+		quote: content.quotes[2].quote,
 		author: "P@tr!ck3",
-		source: "App Store Review",
+		source: content.quotes[2].source,
 		url: "https://apps.apple.com/us/app/dawarich/id6739544999",
 		rating: 4,
 		type: "review",
 	},
 	{
-		quote:
-			"I travel globally 60-70% of the year and was looking for something to keep my record without handing it to Google. I found Dawarich.app, set up my iPhone app in a few minutes, imported my Timeline history, and it just runs — tracking starts itself when I leave the house. I don't think about it anymore. My data is now my data again and meanwhile I have 260k km, 16 countries and 378 cities tracked.",
+		quote: content.quotes[3].quote,
 		author: "Andreas",
-		source: "Germany · Global traveler · ex-Google Timeline · found via Reddit",
+		source: content.quotes[3].source,
 		type: "customer",
 	},
 	{
-		quote:
-			"I used Google Timeline for years but never felt comfortable with my entire life sitting on U.S. servers. I moved everything (a few years' worth of data) into Dawarich in just an afternoon. Now I have a private, permanent diary of my life — something I hope to pass on to my grandchildren one day. I look forward to future enhancements as they have already done a remarkable job.",
+		quote: content.quotes[4].quote,
 		author: "Manuel Torres",
-		source: "New York, U.S. · Former Google Timeline user · Building a location legacy",
+		source: content.quotes[4].source,
 		type: "customer",
 	},
 	{
-		quote:
-			"I moved to Kazakhstan not knowing the city at all. Google Timeline wasn't an option anymore, and I didn't trust it either way. Set up Dawarich, and now the map is like fog of war for me — the more I go out, the more it fills in. Plus every trip stays with me — I can look back at any of them and share the route.",
+		quote: content.quotes[5].quote,
 		author: "Roman Bogdanov",
-		source: "Dawarich customer · Kazakhstan · since mid-2025",
+		source: content.quotes[5].source,
 		type: "customer",
 	},
 	{
-		quote:
-			"It's way better than OwnTracks, Overland, etc. — it's so much more accurate.",
+		quote: content.quotes[6].quote,
 		author: "Danielson89",
-		source: "GitHub Discussions",
+		source: content.quotes[6].source,
 		url: "https://github.com/Freika/dawarich/discussions/887",
 		type: "community",
 	},
 	{
-		quote:
-			"The app has been working great for me so far and hasn't had any effect on battery! Amazing job thus far!",
+		quote: content.quotes[7].quote,
 		author: "NotGoingToBe",
-		source: "App Store Review",
+		source: content.quotes[7].source,
 		url: "https://apps.apple.com/us/app/dawarich/id6739544999",
 		rating: 5,
 		type: "review",
 	},
 	{
-		quote: "I think it's a rather impressive piece of software.",
+		quote: content.quotes[8].quote,
 		author: "Pawan",
-		source: "Colocataires Blog",
+		source: content.quotes[8].source,
 		url: "https://blog.colocataires.dev/posts/07-dawarich/",
 		type: "press",
 	},
 ];
 
 export default function Testimonials() {
+	const { i18n } = useDocusaurusContext();
+	const translated = i18n.currentLocale !== DEFAULT_LOCALE;
 	return (
 		<section className={styles.section}>
 			<div className={styles.container}>
-				<h2 className={styles.title}>What People Are Saying</h2>
+				<h2 className={styles.title}>{content.title}</h2>
 				<p className={styles.subtitle}>
-					Featured in leading tech publications worldwide.
+					{content.subtitle}
 				</p>
 
 				<div className={styles.featuredIn}>
-					<span className={styles.featuredLabel}>As seen in</span>
+					<span className={styles.featuredLabel}>{content.featuredLabel}</span>
 					<div className={styles.featuredLogos}>
 						{featuredIn.map((pub) => (
-							<a
+							<SmartLink
 								key={pub.name}
 								href={pub.url}
-								target="_blank"
-								rel="noopener noreferrer"
 								className={styles.featuredLogo}
-								style={pub.style}
 							>
-								{pub.name}
-							</a>
+								<span style={pub.style}>{pub.name}</span>
+							</SmartLink>
 						))}
 					</div>
 				</div>
 
 				<div className={styles.grid}>
 					{testimonials.map((t, i) => {
-						const CardElement = t.url ? "a" : "div";
+						const CardElement = t.url ? SmartLink : "div";
 						const linkProps = t.url
-							? { href: t.url, target: "_blank", rel: "noopener noreferrer" }
+							? { href: t.url }
 							: {};
 						return (
 							<CardElement key={i} className={styles.card} {...linkProps}>
@@ -168,6 +164,7 @@ export default function Testimonials() {
 									<div className={styles.author}>
 										<span className={styles.authorName}>{t.author}</span>
 										<span className={styles.source}>{t.source}</span>
+										{translated && <span className={styles.translatedNote}>{content.translatedNote}</span>}
 									</div>
 								</div>
 							</CardElement>

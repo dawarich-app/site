@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Free KML to GPX Converter - Convert Google Earth Files Online",
+    "description": "Convert KML files to GPX format instantly. Free, privacy-first online converter for geographic data. Works entirely in your browser - no upload required.",
+    "keywords": "KML to GPX, KML converter, GPX converter, Google Earth to GPS, geographic data converter",
+    "appName": "KML to GPX Converter"
+  },
+  "h1": "KML to GPX Converter",
+  "intro": "Convert your KML files to GPX format instantly. All processing happens in your browser - your data never leaves your device.",
+  "cards": [
+    {
+      "title": "About KML Format",
+      "body": "KML (Keyhole Markup Language) is an XML format used by Google Earth and Google Maps for displaying geographic data."
+    },
+    {
+      "title": "About GPX Format",
+      "body": "GPX (GPS Exchange Format) is the standard format for GPS data, supported by most GPS devices and fitness trackers."
+    },
+    {
+      "title": "Why Convert KML to GPX?",
+      "items": [
+        "Import Google Earth data into GPS devices",
+        "Use with fitness tracking apps (Strava, Garmin Connect)",
+        "Compatible with hiking and navigation apps",
+        "Standard format for outdoor activities"
+      ]
+    }
+  ],
+  "privacyBody": "All conversion happens entirely in your browser. Your data never leaves your device."
+}

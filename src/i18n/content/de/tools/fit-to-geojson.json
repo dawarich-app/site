@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "title": "FIT in GeoJSON umwandeln – Garmin-Dateien online gratis",
+    "description": "Garmin FIT sofort in GeoJSON umwandeln. Kostenloser, datenschutzfreundlicher Online-Konverter für Fitnessaktivitäten. Ideal für Webkarten, direkt im Browser.",
+    "keywords": "FIT in GeoJSON, Garmin zu GeoJSON, FIT-Konverter, Fitness-Dateikonverter, GeoJSON-Konverter, Webkarten, Leaflet, Mapbox",
+    "appName": "FIT-zu-GeoJSON-Konverter"
+  },
+  "h1": "FIT in GeoJSON umwandeln",
+  "intro": "Wandle deine Garmin-FIT-Dateien für Webkarten-Anwendungen in GeoJSON um. Die gesamte Verarbeitung läuft in deinem Browser.",
+  "cards": [
+    {
+      "title": "Über das GeoJSON-Format",
+      "body": "GeoJSON ist ein JSON-basiertes Format für geografische Daten. Es ist das Standardformat für Webkarten-Bibliotheken wie Leaflet, Mapbox GL, OpenLayers und die Google Maps API."
+    },
+    {
+      "title": "Warum FIT in GeoJSON umwandeln?",
+      "items": [
+        "Tracks in Webkarten-Anwendungen anzeigen",
+        "Mit Leaflet, Mapbox oder OpenLayers nutzen",
+        "GPS-Daten mit JavaScript verarbeiten",
+        "In GIS-Software wie QGIS importieren",
+        "Eigene Datendarstellungen erstellen"
+      ]
+    }
+  ],
+  "privacyBody": "Die gesamte Umwandlung läuft in deinem Browser. Deine Daten verlassen dein Gerät nie.",
+  "noGpsData": "Keine GPS-Daten in der FIT-Datei gefunden."
+}

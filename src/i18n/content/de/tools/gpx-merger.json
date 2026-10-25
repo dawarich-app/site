@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "GPX-Dateien gratis online vereinen – mehrere GPS-Tracks",
+    "description": "Führe mehrere GPX-Dateien zu einer zusammen. Kostenloses Werkzeug für GPS-Tracks, Wegpunkte und Routen. Privat, direkt in deinem Browser.",
+    "keywords": "GPX zusammenführen, GPX-Dateien verbinden, GPS-Tracks kombinieren, GPX-Dateien kombinieren, GPX-Dateien zusammenfügen, GPS-Dateien zusammenführen, Tracks verbinden"
+  },
+  "h1": "GPX-Tracks zusammenführen",
+  "intro": "Kombiniere mehrere GPX-Dateien zu einer einzigen Datei. Führe Tracks verschiedener Aktivitäten, Tage oder Geräte in einer gemeinsamen GPS-Datei zusammen.",
+  "saveIntro": "Oder überspringe den Download: Wir führen die Dateien bei der Registrierung zusammen und importieren sie in dein Dawarich-Konto.",
+  "privacy": "Das Zusammenführen erfolgt in deinem Browser. Es wird nichts hochgeladen, bis du „In meinem Dawarich-Konto speichern“ wählst.",
+  "appName": "GPX-Dateien zusammenführen",
+  "cards": [
+    {
+      "title": "Warum GPX-Dateien zusammenführen?",
+      "paragraphs": [],
+      "items": [
+        { "body": "Mehrtägige Wanderungen oder Radtouren in einer Datei kombinieren" },
+        { "body": "Tracks verschiedener GPS-Geräte zusammenführen" },
+        { "body": "Eine vollständige Route aus einzelnen Abschnitten erstellen" },
+        { "body": "Aktivitäten zum einfacheren Teilen bündeln" },
+        { "body": "Einen umfassenden Track zur Visualisierung erstellen" }
+      ]
+    },
+    {
+      "title": "Was wird zusammengeführt?",
+      "paragraphs": [],
+      "items": [
+        { "body": "**Tracks** - Alle GPS-Trackabschnitte mit Zeitstempeln und Höhenangaben" },
+        { "body": "**Wegpunkte** - Benannte interessante Orte und Markierungen" },
+        { "body": "**Routen** - Geplante Navigationsrouten" },
+        { "body": "**Metadaten** - Zusammengefasst in einer neuen Beschreibung der kombinierten Datei" }
+      ]
+    },
+    {
+      "title": "Optionen zum Zusammenführen erklärt",
+      "paragraphs": [
+        "**Tracks getrennt lassen:** Die Tracks jeder Eingabedatei bleiben in der Ausgabe als einzelne Tracks erhalten. Gut, um die Grenzen zwischen Aktivitäten beizubehalten.",
+        "**Zu einem Track zusammenführen:** Alle Trackpunkte werden zu einem durchgehenden Track verbunden. Nützlich, um eine gemeinsame Routenvisualisierung zu erstellen."
+      ]
+    },
+    {
+      "title": "Kompatible Anwendungen",
+      "paragraphs": ["Die zusammengeführte GPX-Datei funktioniert mit:"],
+      "items": [
+        { "body": "Garmin Connect, Strava, Komoot" },
+        { "body": "Google Earth, QGIS, CalTopo" },
+        { "body": "Gaia GPS, AllTrails, ViewRanger" },
+        { "body": "Jeder Anwendung, die GPX 1.1 unterstützt" }
+      ]
+    }
+  ],
+  "upload": {
+    "dropFiles": "GPX-Dateien hierher ziehen und ablegen",
+    "browse": "oder zum Auswählen klicken",
+    "clearButton": "Alle entfernen",
+    "inputLabel": "Dateien zur Verarbeitung auswählen",
+    "processing": "Dateien werden verarbeitet..."
+  },
+  "results": {
+    "orderHint": "Zum Umsortieren ziehen oder die Pfeile verwenden. Die Dateien werden in dieser Reihenfolge zusammengeführt.",
+    "summaryHeading": "Zusammenfassung",
+    "filesLabel": "Dateien",
+    "tracksLabel": "Tracks",
+    "pointsLabel": "Punkte",
+    "waypointsLabel": "Wegpunkte",
+    "removeFileTitle": "Datei entfernen",
+    "filesToMergeHeading": "Zusammenzuführende Dateien ({count})",
+    "fileSummary": "{tracks} | {points} Punkte",
+    "trackCount": "{count} Track|{count} Tracks"
+  },
+  "options": {
+    "heading": "Optionen zum Zusammenführen",
+    "outputName": "Ausgabename",
+    "singleTrack": "Alle Tracks zu einem Track zusammenführen",
+    "singleTrackHint": "Verbindet alle Trackabschnitte zu einem durchgehenden Track",
+    "sortByTime": "Punkte nach Zeitstempel sortieren",
+    "sortByTimeHint": "Nur beim Zusammenführen zu einem Track verfügbar",
+    "outputPlaceholder": "Name der Ausgabedatei",
+    "mergeButton": "Zusammenführen & GPX herunterladen"
+  },
+  "errors": {
+    "gpxOnly": "Bitte wähle nur GPX-Dateien aus.",
+    "minimumFiles": "Bitte füge mindestens 2 GPX-Dateien zum Zusammenführen hinzu.",
+    "parse": "Fehler beim Einlesen von {fileName}: {message}",
+    "merge": "Fehler beim Zusammenführen der Dateien: {message}"
+  },
+  "cta": {
+    "fallback": "Möchtest du jahrelange GPS-Daten verwalten? Dawarich ordnet und visualisiert alle deine GPS-Aktivitäten automatisch an einem Ort.",
+    "headline": "Du hast **{count}** Dateien mit **{points}** Punkten zu einer zusammengeführt. Dawarich erledigt das automatisch mit all deinen GPS-Quellen.",
+    "statLabels": {
+      "files": "Dateien",
+      "tracks": "Tracks",
+      "points": "Punkte"
+    }
+  }
+}

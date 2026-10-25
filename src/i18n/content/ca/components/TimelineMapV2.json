@@ -1,0 +1,10 @@
+{
+  "unavailableTitle": "Mapa no disponible",
+  "unavailableBody": "El teu navegador no admet WebGL, que és necessari per mostrar el mapa.",
+  "webglLink": "[Més informació sobre WebGL](https://get.webgl.org)",
+  "exitFullscreen": "Surt de la pantalla completa",
+  "enterFullscreen": "Mostra en pantalla completa",
+  "exitHint": "Surt de la pantalla completa (Esc)",
+  "toggleHint": "Activa o desactiva la pantalla completa (F)",
+  "demoLabel": "Dades de mostra — deixa anar els teus fitxers a sobre"
+}

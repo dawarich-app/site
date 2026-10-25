@@ -1,3 +1,6 @@
+import { SmartLink } from '@site/src/i18n/RichText';
+import content from '@locale-content/pages/trips.json';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import React from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
@@ -21,99 +24,86 @@ import {
   BotIcon,
   HandIcon,
 } from '@site/src/components/LucideIcons';
-import Link from '@docusaurus/Link';
+import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import styles from './trips.module.css';
 
 const showcaseItems = [
   {
     icon: <MapIcon />,
-    title: 'Interactive Trip Map',
-    description: 'Every trip page comes with a beautiful interactive map showing your complete route with all the points you visited along the way.',
+    title: content.showcaseItems[0].title,
+    description: content.showcaseItems[0].description,
   },
   {
     icon: <BarChartIcon />,
-    title: 'Comprehensive Statistics',
-    description: 'See detailed stats for each trip including total distance traveled, duration, countries visited, and more features coming soon.',
+    title: content.showcaseItems[1].title,
+    description: content.showcaseItems[1].description,
   },
   {
     icon: <FileTextIcon />,
-    title: 'Rich Text Journaling',
-    description: 'Document your adventures with rich text descriptions and notes. Preserve memories and stories from your travels.',
+    title: content.showcaseItems[2].title,
+    description: content.showcaseItems[2].description,
   },
   {
     icon: <CameraIcon />,
-    title: 'Photo Integration',
-    description: 'Photos from your Immich or PhotoPrism instance automatically appear on your trip map at the locations they were taken.',
+    title: content.showcaseItems[3].title,
+    description: content.showcaseItems[3].description,
   },
   {
     icon: <ClipboardListIcon />,
-    title: 'Trip List Management',
-    description: 'Organize all your trips in one place. Browse through past adventures and create new ones anytime.',
+    title: content.showcaseItems[4].title,
+    description: content.showcaseItems[4].description,
   }
 ];
 
 const howItWorksSteps = [
   {
     icon: <SmartphoneIcon size={32} />,
-    title: 'Track Your Movement',
-    description: 'Let Dawarich automatically record your location while you travel using any supported tracking app.',
-    details: [
-      'Dawarich iOS app for seamless tracking',
-      'Third-party apps like Overland, OwnTracks, GPSLogger',
-      'Data syncs automatically to your account'
-    ]
+    title: content.howItWorksSteps[0].title,
+    description: content.howItWorksSteps[0].description,
+    details: content.howItWorksSteps[0].details
   },
   {
     icon: <PlusIcon size={32} />,
-    title: 'Create Your Trip',
-    description: 'When you\'re back, create a new trip by setting the name and date range.',
-    details: [
-      'Choose start and end dates',
-      'Give your trip a memorable name',
-      'Dawarich automatically groups your location data'
-    ]
+    title: content.howItWorksSteps[1].title,
+    description: content.howItWorksSteps[1].description,
+    details: content.howItWorksSteps[1].details
   },
   {
     icon: <PencilIcon size={32} />,
-    title: 'Add Your Story',
-    description: 'Enhance your trip with notes, descriptions, and journal entries using the rich text editor.',
-    details: [
-      'Write about your experiences',
-      'Add context to your locations',
-      'Create a narrative of your journey'
-    ]
+    title: content.howItWorksSteps[2].title,
+    description: content.howItWorksSteps[2].description,
+    details: content.howItWorksSteps[2].details
   },
   {
     icon: <TargetIcon size={32} />,
-    title: 'Explore and Share',
-    description: 'View your trip on the interactive map, review statistics, and relive your adventure (Trips sharing coming soon)',
-    details: [
-      'See your complete route on the map',
-      'Review distance, duration, and places visited',
-      'Photos automatically appear on the map'
-    ]
+    title: content.howItWorksSteps[3].title,
+    description: content.howItWorksSteps[3].description,
+    details: content.howItWorksSteps[3].details
   }
 ];
 
 export default function TripsPage() {
+  const pageUrl = useLocalizedUrl('/trips/');
   return (
     <Layout
-      title="Travel Trips & Journaling"
-      description="Turn your travels into beautifully documented trips with interactive maps, statistics, rich text journaling, and photo integration.">
+      title={content.meta.title}
+      description={content.meta.description}>
       <Head>
-        <meta property="og:title" content="Dawarich Trips — Document Your Travel Adventures" />
-        <meta property="og:description" content="Create comprehensive travel journals with interactive maps, detailed statistics, rich text descriptions, and automatic photo integration." />
+        <meta name="twitter:url" content={pageUrl} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={content.meta.ogTitle} />
+        <meta property="og:description" content={content.meta.ogDescription} />
         <meta property="og:image" content="https://dawarich.app/img/meta-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <FeatureHero
-        badge="Travel Journaling"
-        title="Turn Your Travels Into"
-        titleHighlight="Beautiful Trip Stories"
-        subtitle="Automatically capture your movements and transform them into comprehensive travel journals. Each trip includes an interactive map, detailed statistics, rich text descriptions, and photos — all in one place."
+        badge={content.hero.badge}
+        title={content.hero.title}
+        titleHighlight={content.hero.titleHighlight}
+        subtitle={content.hero.subtitle}
         image="/img/trip-details.webp"
-        imageAlt="Trip details with map and statistics"
+        imageAlt={content.hero.imageAlt}
         ctaLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-hero&utm_campaign=trips"
         showSecondary={true}
       />
@@ -121,52 +111,52 @@ export default function TripsPage() {
       <main>
         <section className={styles.benefitsSection}>
           <div className={styles.container}>
-            <h2 className={styles.benefitsTitle}>Why Trips Matter</h2>
+            <h2 className={styles.benefitsTitle}>{content.tripsPage.heading}</h2>
             <FeatureCardGrid columns={3}>
               <FeatureCard
                 icon={<SaveIcon />}
-                title="Memory Preservation"
-                description="Never forget the details of your adventures. Every trip is permanently saved with complete location data and your personal notes."
+                title={content.tripsPage.title3}
+                description={content.tripsPage.description2}
               />
               <FeatureCard
                 icon={<BookOpenIcon />}
-                title="Travel Journaling"
-                description="Combine location data with your thoughts and stories. Create a rich, multimedia travel journal that goes beyond simple notes."
+                title={content.hero.badge}
+                description={content.tripsPage.description3}
               />
               <FeatureCard
                 icon={<GlobeIcon />}
-                title="Relive Adventures"
-                description="Look back at past trips anytime. See exactly where you went, how long you traveled, and rediscover places you visited."
+                title={content.tripsPage.title4}
+                description={content.tripsPage.description4}
               />
             </FeatureCardGrid>
           </div>
         </section>
 
         <FeatureShowcase
-          title="Everything You Need in One Trip"
-          subtitle="Each trip automatically includes multiple components to tell the complete story of your journey."
+          title={content.tripsPage.title5}
+          subtitle={content.tripsPage.subtitle2}
           items={showcaseItems}
         />
 
         <HowItWorks
-          title="How It Works"
-          subtitle="Creating and managing trips is simple and intuitive—just a few clicks to turn your location data into stories."
+          title={content.tripsPage.title6}
+          subtitle={content.tripsPage.subtitle3}
           steps={howItWorksSteps}
         />
 
         <section className={styles.automaticVsManual}>
           <div className={styles.container}>
-            <h2 className={styles.sectionTitle}>Flexible Trip Creation</h2>
+            <h2 className={styles.sectionTitle}>{content.tripsPage.heading2}</h2>
             <FeatureCardGrid columns={2}>
               <FeatureCard
                 icon={<BotIcon />}
-                title="Automatic Grouping"
-                description="Simply set your trip dates and Dawarich automatically collects all your location points from that period. Perfect for when you want quick results."
+                title={content.tripsPage.title7}
+                description={content.tripsPage.description5}
               />
               <FeatureCard
                 icon={<HandIcon />}
-                title="Manual Details"
-                description="Create trips for storytelling purposes or to document specific adventures. Add your own narrative and notes to enrich the experience."
+                title={content.tripsPage.title8}
+                description={content.tripsPage.description6}
               />
             </FeatureCardGrid>
           </div>
@@ -174,25 +164,17 @@ export default function TripsPage() {
 
         <section className={styles.ctaSection}>
           <div className={styles.container}>
-            <h2 className={styles.ctaTitle}>Start Documenting Your Travels</h2>
-            <p className={styles.ctaSubtitle}>
-              Begin creating beautiful trip journals today with a 7-day free trial. Cancel anytime.
-            </p>
+            <h2 className={styles.ctaTitle}>{content.tripsPage.heading3}</h2>
+            <p className={styles.ctaSubtitle}>{content.tripsPage.p}</p>
             <div className={styles.ctaButtons}>
-              <Link
+              <SmartLink
                 className={styles.primaryCta}
-                href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-cta&utm_campaign=trips">
-                Try 7 Days for Free
-              </Link>
-              <Link
+                href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-cta&utm_campaign=trips">{content.tripsPage.Link}</SmartLink>
+              <EnOnlyLink
                 className={styles.secondaryCta}
-                to="/docs/self-hosting/installation/docker">
-                Self-Host for Free
-              </Link>
+                to="/docs/self-hosting/installation/docker">{content.tripsPage.EnOnlyLink}</EnOnlyLink>
             </div>
-            <p className="feature-cta-reassurance">
-              7-day free trial · 14-day risk-free refund · Cancel anytime
-            </p>
+            <p className="feature-cta-reassurance">{content.tripsPage.p2}</p>
           </div>
         </section>
       </main>

@@ -1,0 +1,219 @@
+{
+  "h1": "Visualiseur Google Timeline (Vos trajets Google Maps)",
+  "intro": "Google a fermé la chronologie sur le web. Cet outil gratuit et respectueux de votre vie privée vous permet de la retrouver. Parcourez votre historique de localisation exporté jour après jour, avec un calendrier coloré selon l’activité, une liste de visites et la relecture des activités.",
+  "saveIntro": "Vous souhaitez aussi retrouver ces données dans votre compte Dawarich ? Nous les importerons lors de l’inscription, sans nouvel envoi.",
+  "privacy": "Tout le traitement s’effectue dans votre navigateur. Vos données restent sur votre appareil, sauf si vous choisissez « Enregistrer dans mon compte Dawarich ».",
+  "faqTitle": "Questions fréquentes",
+  "homeLabel": "Accueil",
+  "toolsLabel": "Outils gratuits",
+  "loadingMap": "Chargement de la carte…",
+  "meta": {
+    "title": "Revoir Google Timeline (Vos trajets Google Maps) sur le web",
+    "description": "Google a retiré la chronologie du web. Ajoutez votre export Takeout pour retrouver gratuitement votre historique sur une carte dans votre navigateur.",
+    "keywords": "visualiseur Google Timeline, Google Timeline disparu, où est Google Timeline, voir Google Timeline sur le web, historique Google Timeline, visualiseur historique de localisation Google, visualiseur localisation Google Takeout, historique sur carte, alternative Google Maps Timeline, remplacement Google Timeline, carte historique de localisation, visualiseur export Google Timeline, visualiseur confidentiel",
+    "featureList": [
+      "Visualisation des données Google Timeline sur une carte interactive",
+      "Confidentialité : traitement intégral dans le navigateur",
+      "Prise en charge de Records.json, Semantic Location History et des exports du téléphone",
+      "Filtrage par année pour les gros jeux de données",
+      "Aucune donnée envoyée à un serveur",
+      "Open source et transparent"
+    ]
+  },
+  "howTo": {
+    "name": "Comment visualiser votre historique de localisation Google Timeline",
+    "description": "Exportez vos données Google Timeline et visualisez-les sur une carte interactive avec cet outil gratuit et respectueux de votre vie privée.",
+    "steps": [
+      {
+        "name": "Exportez vos données Google Timeline",
+        "text": "Rendez-vous sur takeout.google.com, sélectionnez Historique des positions (Chronologie) et exportez. Sur Android : Google Maps → Paramètres → Localisation → Chronologie → Exporter. Sur iOS : Google Maps → Paramètres → Contenu personnel → Exporter les données de chronologie."
+      },
+      {
+        "name": "Ajoutez vos fichiers JSON",
+        "text": "Glissez-déposez vos fichiers JSON Google Timeline exportés dans le visualiseur. L’outil détecte automatiquement le format (Records.json, Semantic Timeline, Location History, etc.)."
+      },
+      {
+        "name": "Explorez votre historique de localisation",
+        "text": "Vos données apparaissent sur une carte interactive. Utilisez le filtre par année pour cibler certaines périodes, cliquez sur les points pour obtenir des détails et explorez tout votre historique de localisation."
+      }
+    ],
+    "tool": "Visualiseur Google Timeline de Dawarich"
+  },
+  "exportData": {
+    "title": "Vous n’avez pas encore vos données ? Voici comment les exporter",
+    "intro": "Vous pouvez exporter vos données Google Timeline avec l’une des méthodes suivantes. Si l’une ne fonctionne pas, essayez-en une autre.",
+    "warning": "Malheureusement, il se peut que certains utilisateurs ne puissent pas exporter leurs données de localisation en raison de la manière dont Google a mené la transition vers ses nouvelles règles de stockage.",
+    "converterHint": "Vous avez déjà votre export ? Vous pouvez aussi le convertir en GPX, KML ou GeoJSON avec le [convertisseur Google Timeline](/tools/google-timeline-converter/) gratuit.",
+    "methods": [
+      {
+        "title": "Google Takeout :",
+        "steps": [
+          "Rendez-vous sur [takeout.google.com](https://takeout.google.com/) → Choisissez Historique des positions (Chronologie) → Exportez",
+          "Cette méthode peut ne pas fonctionner pour tout le monde, car Google a changé le stockage et l’exportation des données de localisation. Plus de détails sur notre [blog](https://dawarich.app/blog/migrating-from-google-location-history-to-dawarich)."
+        ]
+      },
+      {
+        "title": "Sur Android :",
+        "steps": [
+          "Ouvrez Google Maps → Paramètres → Localisation → Services de localisation → Chronologie → Exporter la chronologie"
+        ]
+      },
+      {
+        "title": "Sur iOS :",
+        "steps": [
+          "Ouvrez Google Maps → Paramètres → Contenu personnel → Exporter les données de chronologie"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Vous cherchez une alternative à Google Timeline ?",
+    "body": "Dawarich est une plateforme open source de suivi de localisation qui vous donne le contrôle total de vos données. Importez votre export Google Timeline, continuez à enregistrer votre position depuis votre téléphone et visualisez des années de déplacements, en auto-hébergement ou dans le cloud.",
+    "button": "Essayez Dawarich gratuitement pendant 7 jours",
+    "trialButton": "Commencer l’essai gratuit de 7 jours →",
+    "dismissLabel": "Fermer",
+    "headline": "Vous venez de visualiser **{points}** points de localisation{dateRange}. Cette vue disparaît à la fermeture de l’onglet. Conservez votre historique pour toujours et enrichissez-le automatiquement.",
+    "dateRange": " de **{startYear}** à **{endYear}**"
+  },
+  "faq": [
+    {
+      "q": "Puis-je ajouter mes données Google Timeline ici en toute sécurité ?",
+      "a": "Oui. Toute la visualisation s’effectue dans votre navigateur avec JavaScript : vos fichiers restent sur votre appareil et disparaissent lorsque vous fermez l’onglet. La seule exception est le bouton facultatif « Enregistrer dans mon compte Dawarich », qui envoie votre fichier à Dawarich Cloud pour l’importer dans votre nouveau compte. L’outil est open source, vous pouvez donc vérifier précisément ce que fait le code."
+    },
+    {
+      "q": "Quels formats ce visualiseur prend-il en charge ?",
+      "a": "Le visualiseur prend en charge tous les formats d’export Google Timeline : Records.json (relevés GPS bruts), Semantic Location History (fichiers mensuels YYYY_MONTH.json avec visites de lieux et segments d’activité), Location History exporté depuis votre téléphone (le format récent avec semanticSegments) et les fichiers Settings/TimelineEdits. Le format est détecté automatiquement à l’ajout."
+    },
+    {
+      "q": "Pourquoi Google a-t-il fermé la chronologie sur le web ?",
+      "a": "Fin 2024, Google a fermé la version web de Google Maps Timeline et déplacé toutes les données de localisation vers le stockage local de l’appareil. Les 90 derniers jours ont été transférés sur le téléphone, mais les données plus anciennes ont été supprimées sans sauvegarde manuelle. De nombreux utilisateurs ont perdu des années d’historique pendant la transition. Ce visualiseur vous aide à afficher et explorer toutes les données Google Timeline que vous avez pu exporter."
+    },
+    {
+      "q": "Où est passée ma Google Timeline ?",
+      "a": "Si la chronologie a disparu de Google Maps dans votre navigateur, vous n’êtes pas le seul : Google a supprimé la version web et déplacé la chronologie sur l’appareil. Votre historique se trouve désormais dans l’application Google Maps du téléphone (touchez votre photo de profil → Chronologie). S’il y manque aussi, recherchez une ancienne archive Google Takeout ou une sauvegarde de chronologie : tout export conservé peut être ajouté ici pour revoir votre historique complet."
+    },
+    {
+      "q": "Comment revoir ma Google Timeline sur le web ?",
+      "a": "Exportez vos données de chronologie depuis votre téléphone (Google Maps → Paramètres → Localisation → Chronologie → Exporter les données de chronologie) ou Google Takeout, puis ajoutez les fichiers JSON à ce visualiseur. Vous retrouvez une chronologie web avec calendrier, carte et détail jour par jour, sans compte Google. Pour conserver une chronologie permanente et toujours à jour, vous pouvez importer ces mêmes fichiers dans Dawarich."
+    },
+    {
+      "q": "Comment exporter mes données Google Timeline ?",
+      "a": "Trois méthodes sont disponibles : (1) Google Takeout sur takeout.google.com : sélectionnez Historique des positions et exportez, même si cela ne fonctionne plus pour tout le monde. (2) Sur Android : Google Maps → Paramètres → Localisation → Services de localisation → Chronologie → Exporter la chronologie. (3) Sur iOS : Google Maps → Paramètres → Contenu personnel → Exporter les données de chronologie. Nous vous recommandons d’essayer toutes les méthodes et d’exporter au plus vite."
+    },
+    {
+      "q": "Puis-je visualiser des années de données à la fois ?",
+      "a": "Oui. Le visualiseur a été testé avec des fichiers contenant plus de 630,000 points de localisation sur 15+ années. Il traite les données par lots pour préserver la réactivité du navigateur et propose un filtre par année pour cibler certaines périodes. Un fichier de 170 MB prend généralement 20-30 secondes à traiter sur un ordinateur moderne."
+    },
+    {
+      "q": "Quelle différence entre Records.json et Semantic Location History ?",
+      "a": "Records.json contient les coordonnées GPS et horodatages bruts : chaque relevé de position enregistré par Google. Ces fichiers sont souvent très volumineux. Les fichiers Semantic Location History, nommés par exemple 2022_APRIL.json, sont plus structurés : visites de lieux avec adresses, segments d’activité (marche, voiture, vélo) et durées. Les deux formats sont pris en charge."
+    },
+    {
+      "q": "Puis-je consulter ma Google Timeline sans Google Maps ?",
+      "a": "Oui, c’est précisément le rôle de cet outil. Après avoir exporté vos données Google Timeline, ajoutez les fichiers JSON ici pour tout afficher sur une carte interactive fondée sur OpenStreetMap. Aucun compte Google ni application Google Maps n’est nécessaire. Vous pouvez filtrer par année, cliquer sur les points pour obtenir des détails et explorer tout votre historique indépendamment de Google."
+    },
+    {
+      "q": "En quoi diffère-t-il des autres visualiseurs Google Timeline ?",
+      "a": "Ce visualiseur donne la priorité à la confidentialité : aucune donnée ne quitte votre navigateur. Il prend en charge tous les formats d’export Google, y compris les exports récents du téléphone que de nombreux outils ne traitent pas. Il traite les fichiers progressivement pour éviter que de gros jeux de données fassent planter le navigateur, et sa maintenance s’inscrit dans l’écosystème open source Dawarich. Il est aussi entièrement gratuit, sans compte ni inscription."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Qu’est-ce qu’un visualiseur Google Timeline ?",
+      "paragraphs": [
+        "Un visualiseur Google Timeline transforme les fichiers JSON bruts de votre export d’historique Google en carte interactive à explorer. Au lieu de faire défiler des milliers de lignes de coordonnées et d’horodatages, vous voyez vos véritables parcours sur une carte : chaque voyage, déplacement quotidien et promenade effectués pendant que Google suivait votre position.",
+        "Cet outil affiche tout dans votre navigateur : explorer votre historique n’envoie vos données de localisation nulle part. C’est une façon respectueuse de votre vie privée de parcourir des années d’historique. (Si vous utilisez « Enregistrer dans mon compte Dawarich », cette seule action envoie votre fichier à Dawarich Cloud pour préparer l’importation ; rien n’est envoyé autrement.)"
+      ]
+    },
+    {
+      "title": "Que pouvez-vous découvrir dans vos données ?",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Habitudes de déplacement** — Retrouvez chaque voyage, des trajets quotidiens aux déplacements internationaux"
+        },
+        {
+          "body": "**Visites de lieux** — Découvrez les endroits les plus fréquentés, avec les heures d’arrivée et de départ"
+        },
+        {
+          "body": "**Types d’activité** — Consultez les segments de marche, voiture, vélo et transports en commun de Semantic Location History"
+        },
+        {
+          "body": "**Évolution annuelle** — Filtrez par année pour voir comment vos habitudes de déplacement ont évolué"
+        },
+        {
+          "body": "**Souvenirs oubliés** — Redécouvrez un restaurant, un parc ou un quartier visité il y a des années"
+        }
+      ]
+    },
+    {
+      "title": "Formats d’export Google pris en charge",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Records.json** — Relevés GPS bruts au format de coordonnées E7. Le fichier le plus volumineux, contenant chaque relevé de position"
+        },
+        {
+          "body": "**Semantic Location History** — Fichiers mensuels (par exemple 2022_APRIL.json) avec visites de lieux, adresses et segments d’activité"
+        },
+        {
+          "body": "**Export de chronologie du téléphone** — Format récent de Google Maps sur Android/iOS avec semanticSegments et parcours de chronologie"
+        },
+        {
+          "body": "**Paramètres et TimelineEdits** — Fichiers de métadonnées supplémentaires des exports Google Takeout"
+        }
+      ],
+      "footer": [
+        "Le visualiseur détecte automatiquement le format. Vous pouvez ajouter plusieurs fichiers à la fois pour combiner les données de différentes méthodes d’export."
+      ]
+    },
+    {
+      "title": "Qu’est-il arrivé à Google Maps Timeline ?",
+      "paragraphs": [
+        "Fin 2024, Google a fermé la version web de Google Maps Timeline et déplacé toutes les données de localisation vers le stockage local de l’appareil. Seuls les 90 derniers jours ont été migrés ; les données plus anciennes ont été supprimées sans sauvegarde manuelle. De nombreuses personnes ont [perdu des années d’historique de localisation](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/) pendant la transition.",
+        "Si vous avez exporté vos données avant ou pendant la transition, ce visualiseur vous permet de les consulter. Pour une alternative durable, [Dawarich](https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-visualizer) propose un suivi de localisation auto-hébergé ou dans le cloud, en vous laissant la pleine propriété de vos données."
+      ]
+    },
+    {
+      "title": "Comparaison avec les autres visualiseurs",
+      "paragraphs": [
+        "Plusieurs outils permettent de consulter les données de localisation Google. Voici les différences :"
+      ],
+      "items": [
+        {
+          "body": "**Face à LocationHistoryVisualizer.com** — Celui-ci se limite aux cartes de chaleur. Cet outil affiche les points individuels, les parcours, les visites de lieux et les segments d’activité avec des filtres détaillés"
+        },
+        {
+          "body": "**Face à Google Maps Timeline** — La chronologie web de Google a fermé. Cet outil est une alternative indépendante et respectueuse de votre vie privée, qui fonctionne avec vos données exportées"
+        },
+        {
+          "body": "**Face aux projets GitHub** — La plupart des visualiseurs open source ne prennent en charge que les anciens formats d’export. Cet outil traite tous les formats Google, y compris les plus récents issus du téléphone"
+        }
+      ],
+      "footer": [
+        "Vous préférez une carte de chaleur ? Essayez notre [générateur de cartes de chaleur GPS](/tools/heatmap-generator)."
+      ]
+    },
+    {
+      "title": "Outils associés",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Générateur de cartes de chaleur GPS](/tools/heatmap-generator) — Créez des cartes de chaleur à partir de fichiers GPX, FIT, TCX et autres formats GPS"
+        },
+        {
+          "body": "[Fusion de trajets GPX](/tools/gpx-merger) — Regroupez plusieurs fichiers GPX en un seul"
+        },
+        {
+          "body": "[Extraction des géodonnées de photos](/tools/photo-geotagging) — Extrayez les coordonnées GPS de vos photos"
+        },
+        {
+          "body": "[Convertisseur GeoJSON vers GPX](/tools/geojson-to-gpx) — Convertissez vos données de localisation au format GPX"
+        }
+      ],
+      "footer": [
+        "Pour en savoir plus : [Comment nous avons créé ce visualiseur](/blog/building-a-privacy-first-google-timeline-visualizer) | [Migrer depuis l’historique de localisation Google](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}

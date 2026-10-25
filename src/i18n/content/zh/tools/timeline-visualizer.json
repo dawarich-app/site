@@ -1,0 +1,219 @@
+{
+  "h1": "Google Timeline（谷歌地图时间轴）可视化工具",
+  "intro": "Google 已关闭网页版 Timeline，此免费且注重隐私的工具让您重新在网页上查看时间线。通过日历热力网格、到访列表和活动回放，逐日浏览您导出的位置历史。",
+  "saveIntro": "也想将这些数据存入您的 Dawarich 账号？我们会在注册时导入，无需再次上传。",
+  "privacy": "所有处理均在您的浏览器中完成。只有选择“保存到我的 Dawarich 账号”时，数据才会离开您的设备。",
+  "faqTitle": "常见问题",
+  "homeLabel": "首页",
+  "toolsLabel": "免费工具",
+  "loadingMap": "正在加载地图…",
+  "meta": {
+    "title": "Google Timeline（谷歌地图时间轴）可视化工具 — 重新在网页上查看您的时间线",
+    "description": "Google 已移除网页版 Timeline。此免费可视化工具让您重新在网页上查看：上传 Takeout 导出文件，即可在浏览器的地图上查看您的位置历史。",
+    "keywords": "Google Timeline 可视化工具, Google Timeline 消失, 我的 Google Timeline 去哪了, 在网页上查看 Google Timeline, Google Timeline 历史, Google 位置历史查看器, Google Takeout 位置查看器, 在地图上查看位置历史, Google Maps Timeline 替代方案, Google Timeline 关闭后的替代方案, 位置历史地图, Google Timeline 导出文件查看器, 注重隐私的位置可视化工具",
+    "featureList": [
+      "在交互式地图上可视化展示 Google Timeline 数据",
+      "隐私优先，所有处理均在浏览器中完成",
+      "支持 Records.json、Semantic Location History 和手机导出文件",
+      "按年份筛选大型数据集",
+      "不向任何服务器发送数据",
+      "开源透明"
+    ]
+  },
+  "howTo": {
+    "name": "如何可视化展示您的 Google Timeline 位置历史",
+    "description": "导出您的 Google Timeline 数据，使用此免费且注重隐私的工具在交互式地图上查看。",
+    "steps": [
+      {
+        "name": "导出您的 Google Timeline 数据",
+        "text": "访问 takeout.google.com，选择位置历史（时间线）并导出。也可以在 Android 上操作：Google Maps → 设置 → 位置 → 时间线 → 导出。在 iOS 上：Google Maps → 设置 → 个人内容 → 导出时间线数据。"
+      },
+      {
+        "name": "上传您的 JSON 文件",
+        "text": "将您导出的 Google Timeline JSON 文件拖放到可视化工具中。工具会自动检测格式（Records.json、Semantic Timeline、Location History 等）。"
+      },
+      {
+        "name": "探索您的位置历史",
+        "text": "您的位置数据会显示在交互式地图上。使用年份筛选器聚焦特定时间段，点击轨迹点查看详情，探索完整的位置历史。"
+      }
+    ],
+    "tool": "Dawarich Google Timeline 可视化工具"
+  },
+  "exportData": {
+    "title": "还没有数据？以下是导出方法",
+    "intro": "您可以通过以下任一方法导出 Google Timeline 数据。如果其中一种不适用，请尝试其他方法。",
+    "warning": "遗憾的是，由于 Google 在迁移至新位置存储政策时的处理方式，部分用户可能无法导出位置数据。",
+    "converterHint": "已有导出文件？您也可以使用免费的 [Google Timeline 转换器](/tools/google-timeline-converter/) 将其转换为 GPX、KML 或 GeoJSON。",
+    "methods": [
+      {
+        "title": "Google Takeout：",
+        "steps": [
+          "访问 [takeout.google.com](https://takeout.google.com/) → 选择位置历史（时间线）→ 导出",
+          "由于 Google 更改了位置数据的存储和导出方式，此方法可能不适用于所有人。更多详情请参阅我们的[博客](https://dawarich.app/blog/migrating-from-google-location-history-to-dawarich)。"
+        ]
+      },
+      {
+        "title": "在 Android 上：",
+        "steps": [
+          "打开 Google Maps → 设置 → 位置 → 位置服务 → 时间线 → 导出时间线"
+        ]
+      },
+      {
+        "title": "在 iOS 上：",
+        "steps": [
+          "打开 Google Maps → 设置 → 个人内容 → 导出时间线数据"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "正在寻找 Google Timeline 的替代方案？",
+    "body": "Dawarich 是一个开源位置追踪平台，让您完全掌控自己的数据。导入您的 Google Timeline 导出文件，持续通过手机记录位置，并以可视化方式查看多年的移动历史。支持自托管或云端使用。",
+    "button": "免费试用 Dawarich 7 天",
+    "trialButton": "开始免费试用 — 7 天 →",
+    "dismissLabel": "关闭",
+    "headline": "您刚刚可视化查看了 **{points}** 个轨迹点{dateRange}。关闭此标签页后，此视图即会消失。永久保存您的位置历史，并自动增添新记录。",
+    "dateRange": "（从 **{startYear}** 年到 **{endYear}** 年）"
+  },
+  "faq": [
+    {
+      "q": "在这里上传我的 Google Timeline 数据安全吗？",
+      "a": "安全。所有可视化处理均通过 JavaScript 在您的浏览器中完成，文件保留在您的设备上，关闭标签页后数据即被清除。唯一例外是可选的“保存到我的 Dawarich 账号”按钮，它会将文件上传到 Dawarich Cloud，以便导入您的新账号。此工具开源，您可以核查代码的具体行为。"
+    },
+    {
+      "q": "此可视化工具支持哪些文件格式？",
+      "a": "可视化工具支持所有 Google Timeline 导出格式：Records.json（原始 GPS 位置记录）、Semantic Location History（按月保存的 YYYY_MONTH.json 文件，含地点到访记录和活动片段）、手机导出的 Location History（包含 semanticSegments 的较新格式），以及设置/TimelineEdits 文件。上传时会自动检测格式。"
+    },
+    {
+      "q": "Google 为什么关闭网页版 Timeline？",
+      "a": "2024 年底，Google 停止提供网页版 Google Maps Timeline，并将所有位置数据迁移至设备本地存储。用户最近 90 天的数据转移到了手机上，但更早的数据若未手动备份则被删除。许多用户在迁移过程中丢失了多年的位置历史。此可视化工具可帮助您查看和探索成功导出的 Google Timeline 数据。"
+    },
+    {
+      "q": "我的 Google Timeline 去哪了？",
+      "a": "如果您浏览器中的 Google Maps 不再显示 Timeline，您并非个例。Google 已移除网页版，并将 Timeline 迁移到设备本地。现在，您的历史记录保存在手机上的 Google Maps 应用中（点击头像 → 时间线）。如果那里也找不到，请查找较早的 Google Takeout 归档或时间线备份。只要还保留着导出文件，就可以上传到此处，重新查看完整历史。"
+    },
+    {
+      "q": "如何重新在网页上查看我的 Google Timeline？",
+      "a": "从手机（Google Maps → 设置 → 位置 → 时间线 → 导出时间线数据）或 Google Takeout 导出时间线数据，然后将 JSON 文件上传到此可视化工具。无需 Google 账号，即可重新获得网页版时间线，查看日历、地图和逐日详情。若希望永久保存并持续更新时间线，您可以将相同文件导入 Dawarich。"
+    },
+    {
+      "q": "如何导出我的 Google Timeline 数据？",
+      "a": "有三种方法：(1) 访问 takeout.google.com 的 Google Takeout，选择位置历史并导出，但此方法已不适用于所有人。(2) 在 Android 上：Google Maps → 设置 → 位置 → 位置服务 → 时间线 → 导出时间线。(3) 在 iOS 上：Google Maps → 设置 → 个人内容 → 导出时间线数据。我们建议尝试所有方法，并尽快导出。"
+    },
+    {
+      "q": "可以一次可视化查看多年的位置数据吗？",
+      "a": "可以。此可视化工具已使用包含超过 630,000 个轨迹点、跨越 15+ 年的文件进行测试。它分批处理数据以保持浏览器流畅，并提供年份筛选器，让您聚焦特定时间段。在现代计算机上，处理 170 MB 的文件通常需要 20-30 秒。"
+    },
+    {
+      "q": "Records.json 和 Semantic Location History 有什么区别？",
+      "a": "Records.json 包含原始 GPS 坐标和时间戳，即 Google 记录的每一次位置采样。这类文件通常很大。Semantic Location History 文件（如 2022_APRIL.json）结构更清晰，包含带地址的地点到访记录、活动片段（步行、驾车、骑行）和时长信息。此可视化工具支持这两种格式。"
+    },
+    {
+      "q": "不使用 Google Maps 也能查看我的 Google Timeline 吗？",
+      "a": "可以，这正是此工具的用途。导出您的 Google Timeline 数据后，在此上传 JSON 文件，即可在基于 OpenStreetMap 的交互式地图上查看所有内容。无需 Google 账号或 Google Maps 应用。您可以按年份筛选，点击单个轨迹点查看详情，独立于 Google 探索完整的位置历史。"
+    },
+    {
+      "q": "此工具与其他 Google Timeline 查看器有什么不同？",
+      "a": "此可视化工具以隐私为首要考虑，数据不会离开您的浏览器。它支持所有 Google 导出格式（包括许多工具无法处理的较新手机导出格式），采用渐进处理方式，避免大型数据集使浏览器崩溃，并作为 Dawarich 开源生态系统的一部分持续维护。它完全免费，无需账号或注册。"
+    }
+  ],
+  "cards": [
+    {
+      "title": "什么是 Google Timeline 可视化工具？",
+      "paragraphs": [
+        "Google Timeline 可视化工具将您从 Google 位置历史导出的原始 JSON 文件转换为可交互探索的地图。您无需翻阅数千行坐标和时间戳，就能在地图上看到真实的出行路线，包括 Google 追踪您位置期间的每次行程、通勤和步行。",
+        "此工具在您的浏览器中完成所有可视化处理，因此探索历史记录时不会将位置数据发送到任何地方。这是一种注重隐私的多年位置历史查看方式。（如果您使用“保存到我的 Dawarich 账号”，该操作会将文件上传至 Dawarich Cloud 以准备导入；除此之外不会发送任何数据。）"
+      ]
+    },
+    {
+      "title": "您能从数据中发现什么？",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**出行规律** — 查看您经历的每次行程，从日常通勤到国际旅行"
+        },
+        {
+          "body": "**到访记录** — 了解您最常到访的地点，以及抵达和离开时间"
+        },
+        {
+          "body": "**活动类型** — 查看 Semantic Location History 中的步行、驾车、骑行和公共交通片段"
+        },
+        {
+          "body": "**逐年变化** — 按年份筛选，了解您的移动规律如何随时间变化"
+        },
+        {
+          "body": "**遗忘的回忆** — 重新发现您多年前到过的餐厅、公园或街区"
+        }
+      ]
+    },
+    {
+      "title": "支持的 Google 导出格式",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Records.json** — 使用 E7 坐标格式的原始 GPS 记录，文件最大，包含每一次位置采样"
+        },
+        {
+          "body": "**Semantic Location History** — 按月保存的文件（如 2022_APRIL.json），含地点到访记录、地址和活动片段"
+        },
+        {
+          "body": "**手机时间线导出文件** — 来自 Android/iOS 上 Google Maps 的较新格式，包含 semanticSegments 和时间线路径"
+        },
+        {
+          "body": "**设置与 TimelineEdits** — Google Takeout 导出中的附加元数据文件"
+        }
+      ],
+      "footer": [
+        "可视化工具会自动检测格式。您可以一次上传多个文件，合并来自不同导出方式的数据。"
+      ]
+    },
+    {
+      "title": "Google Maps Timeline 发生了什么变化？",
+      "paragraphs": [
+        "2024 年底，Google 停止提供网页版 Google Maps Timeline，并将所有位置数据迁移至设备本地存储。只有最近 90 天的数据被迁移，更早的数据若未手动备份则被删除。许多人在迁移过程中[丢失了多年的位置历史](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/)。",
+        "如果您在迁移之前或期间导出过数据，此可视化工具可以帮助您查看。如需长期替代方案，[Dawarich](https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-visualizer) 提供自托管和云端位置追踪，让您拥有完整的数据所有权。"
+      ]
+    },
+    {
+      "title": "与其他可视化工具的比较",
+      "paragraphs": [
+        "目前有多种工具可用于查看 Google 位置数据。此工具的区别如下："
+      ],
+      "items": [
+        {
+          "body": "**与 LocationHistoryVisualizer.com 比较** — 后者仅专注于热力图。此工具可显示单个轨迹点、路径、到访记录和活动片段，并提供详细筛选功能"
+        },
+        {
+          "body": "**与 Google Maps Timeline 比较** — Google 的网页时间线已关闭。此工具是独立、注重隐私的替代方案，可使用您导出的数据"
+        },
+        {
+          "body": "**与 GitHub 项目比较** — 大多数开源查看器仅支持较旧的导出格式。此工具支持所有 Google 格式，包括最新的手机导出格式"
+        }
+      ],
+      "footer": [
+        "需要热力图？试试我们的 [GPS 热力图生成器](/tools/heatmap-generator)。"
+      ]
+    },
+    {
+      "title": "相关工具",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[GPS 热力图生成器](/tools/heatmap-generator) — 使用 GPX、FIT、TCX 及其他 GPS 文件生成热力图"
+        },
+        {
+          "body": "[GPX 轨迹合并工具](/tools/gpx-merger) — 将多个 GPX 文件合并为一个"
+        },
+        {
+          "body": "[照片地理数据提取工具](/tools/photo-geotagging) — 从照片中提取 GPS 坐标"
+        },
+        {
+          "body": "[GeoJSON 转 GPX 转换器](/tools/geojson-to-gpx) — 将您的位置数据转换为 GPX 格式"
+        }
+      ],
+      "footer": [
+        "延伸阅读：[我们如何构建此可视化工具](/blog/building-a-privacy-first-google-timeline-visualizer) | [从 Google 位置历史迁移](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}

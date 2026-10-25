@@ -1,0 +1,10 @@
+{
+  "title": "Estatísticas do meu histórico de localização",
+  "totalDistance": "Distância total",
+  "dataPoints": "Pontos de dados",
+  "placesVisited": "Lugares visitados",
+  "countries": "Países",
+  "downloadButton": "Baixar cartão de estatísticas como imagem",
+  "branding": "Gerado com dawarich.app",
+  "distanceValue": "{distance} km"
+}

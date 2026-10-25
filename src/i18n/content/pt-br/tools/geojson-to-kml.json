@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Conversor grátis de GeoJSON para KML — Dados geográficos",
+    "description": "Converta arquivos GeoJSON para KML na hora. Conversor online grátis e privado para dados geográficos. Tudo no navegador, sem enviar arquivos.",
+    "keywords": "GeoJSON para KML, conversor GeoJSON, conversor KML, conversor de dados geográficos, conversor Google Earth",
+    "appName": "Conversor de GeoJSON para KML"
+  },
+  "h1": "Conversor de GeoJSON para KML",
+  "intro": "Converta seus arquivos GeoJSON para KML na hora. Todo o processamento acontece no navegador.",
+  "cards": [
+    {
+      "title": "Sobre o formato GeoJSON",
+      "body": "GeoJSON é um formato baseado em JSON para representar estruturas de dados geográficos, popular em bibliotecas de mapas na web."
+    },
+    {
+      "title": "Sobre o formato KML",
+      "body": "KML (Keyhole Markup Language) é usado pelo Google Earth e Google Maps para exibir dados geográficos."
+    },
+    {
+      "title": "Por que converter GeoJSON para KML?",
+      "items": [
+        "Veja seus dados no Google Earth com visualizações completas",
+        "Compartilhe mapas com usuários do Google Maps",
+        "Adicione estilos e anotações personalizados",
+        "Padrão do setor para visualização geográfica"
+      ]
+    }
+  ],
+  "privacyBody": "Toda a conversão acontece inteiramente no navegador. Seus dados nunca saem do dispositivo."
+}

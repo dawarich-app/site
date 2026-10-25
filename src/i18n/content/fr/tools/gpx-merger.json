@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "title": "Fusion GPX gratuite : regroupez vos fichiers GPS en ligne",
+    "description": "Fusionnez vos fichiers GPX : trajets GPS, points de passage et itinéraires. Gratuit et confidentiel, entièrement dans votre navigateur.",
+    "keywords": "fusion GPX, fusionner fichiers GPX, regrouper trajets GPS, assemblage GPX, joindre fichiers GPX, fusionner fichiers GPS, combiner trajets"
+  },
+  "h1": "Fusion de trajets GPX",
+  "intro": "Regroupez plusieurs fichiers GPX en un seul. Fusionnez les trajets de différentes activités, journées ou appareils dans un fichier GPS unique.",
+  "saveIntro": "Vous pouvez aussi éviter le téléchargement : nous fusionnerons et importerons le fichier dans votre compte Dawarich lors de l’inscription.",
+  "privacy": "La fusion s’effectue dans votre navigateur. Rien n’est envoyé sauf si vous choisissez « Enregistrer dans mon compte Dawarich ».",
+  "appName": "Fusion GPX",
+  "cards": [
+    {
+      "title": "Pourquoi fusionner des fichiers GPX ?",
+      "paragraphs": [],
+      "items": [
+        { "body": "Regrouper une randonnée ou un voyage à vélo de plusieurs jours dans un seul fichier" },
+        { "body": "Fusionner les trajets de différents appareils GPS" },
+        { "body": "Créer un itinéraire complet à partir de segments distincts" },
+        { "body": "Rassembler des activités pour les partager plus facilement" },
+        { "body": "Construire un trajet complet pour le visualiser" }
+      ]
+    },
+    {
+      "title": "Quels éléments sont fusionnés ?",
+      "paragraphs": [],
+      "items": [
+        { "body": "**Trajets** - Tous les segments de trajets GPS avec horodatages et altitude" },
+        { "body": "**Points de passage** - Points d’intérêt nommés et repères" },
+        { "body": "**Itinéraires** - Itinéraires de navigation planifiés" },
+        { "body": "**Métadonnées** - Regroupées dans une nouvelle description du fichier fusionné" }
+      ]
+    },
+    {
+      "title": "Comprendre les options de fusion",
+      "paragraphs": [
+        "**Conserver les trajets séparés :** les trajets de chaque fichier source restent distincts dans le résultat. Idéal pour préserver les limites de chaque activité.",
+        "**Fusionner en un seul trajet :** tous les points sont regroupés en un trajet continu. Utile pour visualiser un itinéraire unifié."
+      ]
+    },
+    {
+      "title": "Applications compatibles",
+      "paragraphs": [ "Le fichier GPX fusionné est compatible avec :" ],
+      "items": [
+        { "body": "Garmin Connect, Strava, Komoot" },
+        { "body": "Google Earth, QGIS, CalTopo" },
+        { "body": "Gaia GPS, AllTrails, ViewRanger" },
+        { "body": "Toute application prenant en charge GPX 1.1" }
+      ]
+    }
+  ],
+  "upload": {
+    "dropFiles": "Glissez-déposez vos fichiers GPX ici",
+    "browse": "ou cliquez pour parcourir vos fichiers",
+    "clearButton": "Tout effacer",
+    "inputLabel": "Choisir les fichiers à traiter",
+    "processing": "Traitement des fichiers..."
+  },
+  "results": {
+    "orderHint": "Faites glisser les fichiers ou utilisez les flèches pour les réordonner. Ils seront fusionnés dans cet ordre.",
+    "summaryHeading": "Résumé de la fusion",
+    "filesLabel": "Fichiers",
+    "tracksLabel": "Trajets",
+    "pointsLabel": "Points",
+    "waypointsLabel": "Points de passage",
+    "removeFileTitle": "Retirer le fichier",
+    "filesToMergeHeading": "Fichiers à fusionner ({count})",
+    "fileSummary": "{tracks} | {points} points",
+    "trackCount": "{count} trajet|{count} trajets|{count} trajets"
+  },
+  "options": {
+    "heading": "Options de fusion",
+    "outputName": "Nom du fichier de sortie",
+    "singleTrack": "Fusionner tous les trajets en un seul",
+    "singleTrackHint": "Regroupe tous les segments en un trajet continu",
+    "sortByTime": "Trier les points par horodatage",
+    "sortByTimeHint": "Disponible uniquement lors de la fusion en un seul trajet",
+    "outputPlaceholder": "Nom du fichier de sortie",
+    "mergeButton": "Fusionner et télécharger le GPX"
+  },
+  "errors": {
+    "gpxOnly": "Veuillez sélectionner uniquement des fichiers GPX.",
+    "minimumFiles": "Veuillez ajouter au moins 2 fichiers GPX à fusionner.",
+    "parse": "Erreur d’analyse de {fileName} : {message}",
+    "merge": "Erreur lors de la fusion des fichiers : {message}"
+  },
+  "cta": {
+    "fallback": "Vous souhaitez gérer des années de données GPS ? Dawarich organise et visualise automatiquement toutes vos activités GPS au même endroit.",
+    "headline": "Vous avez regroupé **{count}** fichiers contenant **{points}** points en un seul. Dawarich le fait automatiquement avec toutes vos sources GPS.",
+    "statLabels": { "files": "fichiers", "tracks": "trajets", "points": "points" }
+  }
+}

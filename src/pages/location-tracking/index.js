@@ -1,3 +1,6 @@
+import RichText, { SmartLink } from '@site/src/i18n/RichText';
+import content from '@locale-content/pages/location-tracking.json';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import React from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
@@ -14,213 +17,125 @@ import {
   SettingsIcon,
   CheckIcon,
 } from '@site/src/components/LucideIcons';
-import Link from '@docusaurus/Link';
+import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import styles from './tracking.module.css';
 
 const appShowcase = [
   {
     icon: <SmartphoneIcon />,
-    title: 'Dawarich iOS App',
-    description: 'Our official iOS app provides seamless location tracking directly to your Dawarich instance. Tracks offline and uploads automatically when you\'re back online. Available on the App Store.',
+    title: content.appShowcase[0].title,
+    description: content.appShowcase[0].description,
     image: '/img/app-store.png',
-    imageAlt: 'Download Dawarich on the App Store',
+    imageAlt: content.appShowcase[0].imageAlt,
     imageHref: 'https://apps.apple.com/app/apple-store/id6739544999?pt=128010810&ct=location-tracking&mt=8',
   },
   {
     icon: <SmartphoneIcon />,
-    title: 'Dawarich Android App',
-    description: 'Our official Android app brings the same effortless background tracking to your Dawarich instance. Tracks offline and uploads automatically when you\'re back online. Available on Google Play.',
+    title: content.appShowcase[1].title,
+    description: content.appShowcase[1].description,
     image: 'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png',
-    imageAlt: 'Get Dawarich on Google Play',
+    imageAlt: content.appShowcase[1].imageAlt,
     imageHref: 'https://play.google.com/store/apps/details?id=app.dawarich.Dawarich',
   },
   {
     icon: <GlobeIcon />,
-    title: 'Overland',
-    description: 'Open-source location tracking app that sends data in batches. Works on iOS with configurable accuracy and frequency.',
+    title: content.appShowcase[2].title,
+    description: content.appShowcase[2].description,
   },
   {
     icon: <HomeIcon />,
-    title: 'OwnTracks',
-    description: 'Popular location tracking solution with extensive customization options and low battery consumption.',
+    title: content.appShowcase[3].title,
+    description: content.appShowcase[3].description,
   },
   {
     icon: <MapPinIcon />,
-    title: 'GPSLogger',
-    description: 'Lightweight Android app focused on battery efficiency with customizable logging intervals and data formats.',
+    title: content.appShowcase[4].title,
+    description: content.appShowcase[4].description,
   },
   {
     icon: <PhoneIcon />,
-    title: 'PhoneTrack',
-    description: 'NextCloud-integrated app that supports custom log jobs. Perfect for users already in the NextCloud ecosystem.',
+    title: content.appShowcase[5].title,
+    description: content.appShowcase[5].description,
   },
   {
     icon: <HomeIcon />,
-    title: 'Home Assistant',
-    description: 'For smart home enthusiasts, integrate your Home Assistant geolocation data directly into Dawarich.',
+    title: content.appShowcase[6].title,
+    description: content.appShowcase[6].description,
   }
 ];
 
 const howItWorksSteps = [
   {
     icon: <KeyIcon size={32} />,
-    title: 'Get Your API Key',
-    description: 'Find your unique API key in the Account section of your Dawarich dashboard.',
-    details: [
-      'Login to your Dawarich instance',
-      'Navigate to Account settings',
-      'Copy your API key securely'
-    ]
+    title: content.howItWorksSteps[0].title,
+    description: content.howItWorksSteps[0].description,
+    details: content.howItWorksSteps[0].details
   },
   {
     icon: <SmartphoneIcon size={32} />,
-    title: 'Choose Your App',
-    description: 'Select any supported tracking app that fits your needs and device platform.',
-    details: [
-      'iOS: official Dawarich app or Overland',
-      'Android: official Dawarich app, GPSLogger, or PhoneTrack',
-      'Both: OwnTracks or Home Assistant integration'
-    ]
+    title: content.howItWorksSteps[1].title,
+    description: content.howItWorksSteps[1].description,
+    details: content.howItWorksSteps[1].details
   },
   {
     icon: <SettingsIcon size={32} />,
-    title: 'Configure the App',
-    description: 'Enter your Dawarich instance URL and API key in your chosen app\'s settings.',
-    details: [
-      'Set receiver endpoint URL',
-      'Add your API key to the URL',
-      'Configure tracking frequency (optional)',
-      'Test the connection'
-    ]
+    title: content.howItWorksSteps[2].title,
+    description: content.howItWorksSteps[2].description,
+    details: content.howItWorksSteps[2].details
   },
   {
     icon: <CheckIcon size={32} />,
-    title: 'Start Tracking',
-    description: 'Once configured, your location data automatically syncs to your private Dawarich account.',
-    details: [
-      'Location updates sent in real-time or batches',
-      'Tracks offline and uploads when back online',
-      'Data syncs automatically in the background',
-      'View your location history on the map'
-    ]
+    title: content.howItWorksSteps[3].title,
+    description: content.howItWorksSteps[3].description,
+    details: content.howItWorksSteps[3].details
   }
 ];
 
-const appDetails = [
-  {
-    name: 'Dawarich iOS App',
-    description: 'Native iOS application built specifically for Dawarich',
-    features: ['Seamless setup', 'Low battery impact', 'Background tracking', 'Offline tracking with auto-upload', 'App Store availability'],
-    setupSteps: [
-      'Install from App Store',
-      'Open app and go to settings',
-      'Enter your API key',
-      'Tap Save and start tracking'
-    ]
-  },
-  {
-    name: 'Dawarich Android App',
-    description: 'Native Android application built specifically for Dawarich',
-    features: ['Seamless setup', 'Low battery impact', 'Background tracking', 'Offline tracking with auto-upload', 'Available on Google Play'],
-    setupSteps: [
-      'Install from Google Play',
-      'Open app and go to settings',
-      'Enter your API key',
-      'Tap Save and start tracking'
-    ]
-  },
-  {
-    name: 'Overland',
-    description: 'Flexible cross-platform tracking app with batch uploads',
-    features: ['iOS support', 'Batch processing', 'Configurable accuracy', 'Open source'],
-    setupSteps: [
-      'Install Overland on your device',
-      'Open settings and slide to unlock',
-      'Set Receiver Endpoint URL: http://your-instance/api/v1/overland/batches?api_key=YOUR_KEY',
-      'Optional: Set a Device ID',
-      'Tap Save'
-    ]
-  },
-  {
-    name: 'OwnTracks',
-    description: 'Location tracking app with HTTP mode support',
-    features: ['Low battery usage', 'Highly customizable', 'HTTP and MQTT modes', 'Cross-platform'],
-    setupSteps: [
-      'Install OwnTracks app',
-      'Tap "i" icon in top left corner',
-      'Select HTTP mode',
-      'Enter URL: http://your-instance/api/v1/owntracks/points?api_key=YOUR_KEY',
-      'Tap Back to save'
-    ]
-  },
-  {
-    name: 'GPSLogger',
-    description: 'Battery-efficient Android logging solution',
-    features: ['Battery friendly', 'Custom logging intervals', 'JSON format support', 'Lightweight'],
-    setupSteps: [
-      'Install GPSLogger for Android',
-      'Configure custom URL with OwnTracks endpoint',
-      'Set HTTP Body with required JSON format',
-      'Add Content-Type: application/json header',
-      'Use POST method'
-    ]
-  },
-  {
-    name: 'PhoneTrack',
-    description: 'NextCloud integration with custom log jobs',
-    features: ['NextCloud integration', 'Custom log jobs', 'Query string parameters', 'Flexible configuration'],
-    setupSteps: [
-      'Install PhoneTrack from F-Droid',
-      'Create Custom Log Job',
-      'Use OwnTracks endpoint with query string params',
-      'Enable POST method',
-      'Disable JSON payload option'
-    ]
-  }
-];
+const appDetails = content.appDetails;
 
 export default function TrackingPage() {
+  const pageUrl = useLocalizedUrl('/location-tracking/');
   return (
     <Layout
-      title="Location Tracking Setup"
-      description="Track your location automatically with multiple supported apps including the official Dawarich iOS and Android apps, Overland, OwnTracks, GPSLogger, PhoneTrack, and Home Assistant.">
+      title={content.meta.title}
+      description={content.meta.description}>
       <Head>
-        <meta property="og:title" content="Dawarich Location Tracking — Multiple Apps Supported" />
-        <meta property="og:description" content="Set up automatic location tracking with the official Dawarich iOS or Android app, Overland, OwnTracks, GPSLogger, PhoneTrack, or Home Assistant integration." />
+        <meta name="twitter:url" content={pageUrl} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={content.meta.ogTitle} />
+        <meta property="og:description" content={content.meta.ogDescription} />
         <meta property="og:image" content="https://dawarich.app/img/meta-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <FeatureHero
-        badge="Automatic Tracking"
-        title="Track Your Location"
-        titleHighlight="Effortlessly"
-        subtitle="Choose from multiple tracking apps to automatically record your location. Whether you prefer our official iOS and Android apps or popular open-source alternatives, Dawarich works with what you love."
+        badge={content.hero.badge}
+        title={content.hero.title}
+        titleHighlight={content.hero.titleHighlight}
+        subtitle={content.hero.subtitle}
         image="/img/the_map.webp"
-        imageAlt="Location tracking visualization"
+        imageAlt={content.hero.imageAlt}
         ctaLink="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-hero&utm_campaign=tracking"
         showSecondary={true}
       />
 
       <main>
         <FeatureShowcase
-          title="Supported Tracking Apps"
-          subtitle="Pick the app that works best for your device and workflow. All apps work seamlessly with Dawarich."
+          title={content.trackingPage.title3}
+          subtitle={content.trackingPage.subtitle2}
           items={appShowcase}
         />
 
         <HowItWorks
-          title="How to Get Started"
-          subtitle="Set up location tracking in minutes with any supported app."
+          title={content.trackingPage.title4}
+          subtitle={content.trackingPage.subtitle3}
           steps={howItWorksSteps}
         />
 
         <section className={styles.detailedSetup}>
           <div className={styles.container}>
-            <h2 className={styles.sectionTitle}>Detailed Setup Guides</h2>
-            <p className={styles.sectionSubtitle}>
-              Step-by-step instructions for each supported tracking application.
-            </p>
+            <h2 className={styles.sectionTitle}>{content.trackingPage.heading}</h2>
+            <p className={styles.sectionSubtitle}>{content.trackingPage.p}</p>
 
             <div className={styles.setupGrid}>
               {appDetails.map((app, index) => (
@@ -229,7 +144,7 @@ export default function TrackingPage() {
                   <p className={styles.setupDescription}>{app.description}</p>
 
                   <div className={styles.featuresSection}>
-                    <h4 className={styles.featuresTitle}>Features:</h4>
+                    <h4 className={styles.featuresTitle}>{content.trackingPage.h4}</h4>
                     <ul className={styles.featuresList}>
                       {app.features.map((feature, i) => (
                         <li key={i}>{feature}</li>
@@ -238,7 +153,7 @@ export default function TrackingPage() {
                   </div>
 
                   <div className={styles.stepsSection}>
-                    <h4 className={styles.stepsTitle}>Setup Steps:</h4>
+                    <h4 className={styles.stepsTitle}>{content.trackingPage.h42}</h4>
                     <ol className={styles.stepsList}>
                       {app.setupSteps.map((step, i) => (
                         <li key={i}>{step}</li>
@@ -250,64 +165,44 @@ export default function TrackingPage() {
             </div>
 
             <div className={styles.docsLink}>
-              <p>
-                For complete setup instructions including Home Assistant integration, visit our{' '}
-                <Link to="/docs/getting-started/track-your-location">detailed tracking tutorial</Link>.
-              </p>
+              <p><RichText text={content.trackingPage.docsNote} /></p>
             </div>
           </div>
         </section>
 
         <section className={styles.apiSection}>
           <div className={styles.container}>
-            <h2 className={styles.sectionTitle}>API Endpoints</h2>
-            <p className={styles.sectionSubtitle}>
-              Dawarich provides multiple API endpoints for different tracking formats.
-            </p>
+            <h2 className={styles.sectionTitle}>{content.trackingPage.heading2}</h2>
+            <p className={styles.sectionSubtitle}>{content.trackingPage.p2}</p>
             <div className={styles.endpointsGrid}>
               <div className={styles.endpointCard}>
-                <h3 className={styles.endpointTitle}>Overland Endpoint</h3>
-                <code className={styles.endpointCode}>
-                  /api/v1/overland/batches?api_key=YOUR_KEY
-                </code>
-                <p className={styles.endpointDesc}>For Overland app batch uploads</p>
+                <h3 className={styles.endpointTitle}>{content.trackingPage.h3}</h3>
+                <code className={styles.endpointCode}>{content.trackingPage.code}</code>
+                <p className={styles.endpointDesc}>{content.trackingPage.p3}</p>
               </div>
               <div className={styles.endpointCard}>
-                <h3 className={styles.endpointTitle}>OwnTracks Endpoint</h3>
-                <code className={styles.endpointCode}>
-                  /api/v1/owntracks/points?api_key=YOUR_KEY
-                </code>
-                <p className={styles.endpointDesc}>For OwnTracks, GPSLogger, and PhoneTrack</p>
+                <h3 className={styles.endpointTitle}>{content.trackingPage.h32}</h3>
+                <code className={styles.endpointCode}>{content.trackingPage.code2}</code>
+                <p className={styles.endpointDesc}>{content.trackingPage.p4}</p>
               </div>
             </div>
-            <p className={styles.apiNote}>
-              Full API documentation is available at{' '}
-              <Link to="/docs/api/dawarich-api">our API reference</Link>.
-            </p>
+            <p className={styles.apiNote}><RichText text={content.trackingPage.apiNote} /></p>
           </div>
         </section>
 
         <section className={styles.ctaSection}>
           <div className={styles.container}>
-            <h2 className={styles.ctaTitle}>Ready to Start Tracking?</h2>
-            <p className={styles.ctaSubtitle}>
-              Get your Dawarich account today and start automatically recording your location history.
-            </p>
+            <h2 className={styles.ctaTitle}>{content.trackingPage.heading3}</h2>
+            <p className={styles.ctaSubtitle}>{content.trackingPage.p5}</p>
             <div className={styles.ctaButtons}>
-              <Link
+              <SmartLink
                 className={styles.primaryCta}
-                href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-cta&utm_campaign=tracking">
-                Try 7 Days for Free
-              </Link>
-              <Link
+                href="https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=feature-cta&utm_campaign=tracking">{content.trackingPage.Link}</SmartLink>
+              <EnOnlyLink
                 className={styles.secondaryCta}
-                to="/docs/self-hosting/installation/docker">
-                Self-Host for Free
-              </Link>
+                to="/docs/self-hosting/installation/docker">{content.trackingPage.EnOnlyLink3}</EnOnlyLink>
             </div>
-            <p className="feature-cta-reassurance">
-              7-day free trial · 14-day risk-free refund · Cancel anytime
-            </p>
+            <p className="feature-cta-reassurance">{content.trackingPage.p6}</p>
           </div>
         </section>
       </main>

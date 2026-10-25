@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "title": "Dzielenie plików GPS — podziel GPX, GeoJSON, KML i JSON",
+    "description": "Dziel duże pliki GPS i lokalizacji na mniejsze: GPX, GeoJSON, KML, KMZ i JSON Google Timeline (Oś czasu Google Maps). Według rozmiaru, liczby punktów lub daty. Pobierz ZIP. Za darmo, prywatnie w przeglądarce.",
+    "keywords": "dzielenie dużego pliku GPX, podział GeoJSON na części, dzielenie pliku KML, zmniejszanie pliku GPS, dzielenie dużego JSON lokalizacji, dzielenie plików GPS, dzielenie Google Timeline",
+    "featureList": [
+      "Dzielenie dużych plików GPS na mniejsze części",
+      "Obsługa GPX, GeoJSON, KML, KMZ i JSON Google Timeline",
+      "Podział według rozmiaru pliku, liczby punktów lub daty",
+      "Pobieranie jako archiwum ZIP",
+      "Prywatność przede wszystkim — wszystko w przeglądarce",
+      "Bez wysyłania danych na serwer"
+    ]
+  },
+  "howTo": {
+    "name": "Jak podzielić duży plik GPS",
+    "description": "Dodaj plik GPS i podziel go na mniejsze, łatwiejsze w obsłudze części.",
+    "steps": [
+      {
+        "name": "Dodaj plik GPS",
+        "text": "Przeciągnij i upuść plik GPX, GeoJSON, KML, KMZ lub JSON Google Timeline w narzędziu do dzielenia."
+      },
+      {
+        "name": "Wybierz sposób podziału",
+        "text": "Wybierz podział według docelowego rozmiaru pliku (domyślnie 10MB), liczby punktów lub daty (rok albo miesiąc)."
+      },
+      {
+        "name": "Pobierz swoje pliki",
+        "text": "Kliknij „Podziel i pobierz ZIP”, aby pobrać wszystkie części w jednym pliku ZIP."
+      }
+    ]
+  },
+  "h1": "Dzielenie plików GPS",
+  "intro": "Podziel duże pliki GPS i lokalizacji na mniejsze, łatwiejsze w obsłudze części. Obsługa GPX, GeoJSON, KML, KMZ i JSON Google Timeline (Oś czasu Google Maps). Pobierz wszystkie części w jednym pliku ZIP.",
+  "benefitsTitle": "Dlaczego warto dzielić pliki GPS?",
+  "privacyBody": "Całe przetwarzanie danych odbywa się w Twojej przeglądarce. Twoje pliki nigdy nie opuszczają urządzenia.",
+  "preCta": "Pracujesz z dużymi plikami lokalizacji? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=gps-file-splitter) automatycznie obsługuje importy dowolnego rozmiaru, zapewniając Ci pełną własność danych i prywatność.",
+  "faqTitle": "Najczęściej zadawane pytania",
+  "homeLabel": "Strona główna",
+  "toolsLabel": "Darmowe narzędzia",
+  "privacyTitle": "Prywatność przede wszystkim",
+  "benefits": [
+    {
+      "title": "Limity rozmiaru importu:",
+      "body": "Wiele aplikacji GPS i narzędzi mapowych ogranicza maksymalny rozmiar pliku (10MB, 50MB itp.). Podział pozwala importować duże zbiory danych częściami."
+    },
+    {
+      "title": "Udostępnianie wybranych fragmentów:",
+      "body": "Wyślij komuś tylko odpowiedni fragment długiej trasy lub podziel dane według roku/miesiąca, aby uporządkować historię lokalizacji."
+    },
+    {
+      "title": "Lepsza wydajność:",
+      "body": "Duże pliki GPS mogą spowalniać aplikacje mapowe. Praca z mniejszymi częściami pozwala zachować płynność działania."
+    },
+    {
+      "title": "Eksporty Google Timeline:",
+      "body": "Pliki Records.json z Google Timeline mogą mieć setki megabajtów. Podziel je na wygodne części do importu do innych narzędzi."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Czy dodawanie tutaj moich plików GPS jest bezpieczne?",
+      "a": "Tak. Całe przetwarzanie danych odbywa się w Twojej przeglądarce przy użyciu JavaScript. Twoje pliki GPS nigdy nie są wysyłane na serwer — pozostają na Twoim urządzeniu. Po zamknięciu karty dane znikają. Narzędzie ma otwarty kod źródłowy, więc możesz sprawdzić dokładnie, co robi."
+    },
+    {
+      "q": "Jakie formaty plików mogę dzielić?",
+      "a": "Narzędzie obsługuje pliki GPX, GeoJSON, KML, KMZ i JSON (Google Timeline). Pliki KMZ są najpierw automatycznie rozpakowywane, ponieważ są archiwami ZIP zawierającymi KML. Obsługiwane są wszystkie sześć formatów eksportu JSON Google Timeline — Records.json, Semantic Location History, eksporty z telefonu i inne."
+    },
+    {
+      "q": "Jak działa podział według rozmiaru?",
+      "a": "Gdy wybierzesz opcję „Według rozmiaru”, narzędzie szacuje liczbę punktów mieszczących się w każdej części na podstawie formatu wyjściowego. Przykładowo GPX zajmuje około 180 bajtów na punkt, więc przy docelowym rozmiarze 10MB każda część pomieści około 55,000 punktów. Narzędzie równomiernie dzieli dane, aby osiągnąć wybrany rozmiar."
+    },
+    {
+      "q": "Czy dzielenie uszkodzi moje dane?",
+      "a": "Nie. Każdy punkt z oryginalnego pliku pojawi się w dokładnie jednej części wynikowej. Żadne dane nie są tracone, powielane ani modyfikowane. Każda część jest poprawnym, samodzielnym plikiem z nagłówkami i strukturą właściwymi dla wybranego formatu."
+    },
+    {
+      "q": "Czy mogę dzielić pliki JSON Google Timeline?",
+      "a": "Tak. Dodaj dowolny plik JSON Google Timeline — Records.json, Semantic Location History lub nowszy eksport z telefonu. Narzędzie automatycznie wykryje format, odczyta dane lokalizacji i podzieli je na części, które możesz pobrać w pliku ZIP w wybranym formacie wyjściowym."
+    },
+    {
+      "q": "Po co dzielić plik GPS?",
+      "a": "Praca z dużymi plikami GPS bywa trudna. Wiele aplikacji GPS i narzędzi mapowych ogranicza rozmiar importu (często do 10MB lub 50MB). Podział pomaga też udostępniać fragmenty trasy, porządkować dane według okresu lub zmniejszać pliki załączników e-mail."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Czym jest narzędzie do dzielenia plików GPS?",
+      "paragraphs": [
+        "Narzędzie do dzielenia plików GPS bierze duży plik danych lokalizacji i dzieli go na mniejsze, wygodniejsze części. Każda część jest poprawnym, samodzielnym plikiem, który można niezależnie otworzyć, zaimportować lub udostępnić.",
+        "To narzędzie przetwarza wszystko w Twojej przeglądarce, więc wrażliwe dane lokalizacji nigdy nie opuszczają urządzenia. Obsługuje wszystkie główne formaty GPS, w tym eksporty Google Timeline."
+      ]
+    },
+    {
+      "title": "Obsługiwane formaty wejściowe",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**GPX** — GPS Exchange Format, najpopularniejszy format tras GPS i punktów trasy"
+        },
+        {
+          "body": "**GeoJSON** — Lekki format danych geograficznych używany w mapach internetowych"
+        },
+        {
+          "body": "**KML/KMZ** — Keyhole Markup Language dla Google Earth i Maps"
+        },
+        {
+          "body": "**JSON (Google Timeline)** — Wszystkie sześć formatów eksportu Google Timeline, w tym Records.json i Semantic Location History"
+        }
+      ]
+    },
+    {
+      "title": "Objaśnienie sposobów podziału",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Według rozmiaru** — Wybierz docelowy rozmiar każdej części (domyślnie 10MB). Narzędzie szacuje rozmiar wyjściowy na punkt danych i odpowiednio dzieli plik."
+        },
+        {
+          "body": "**Według liczby punktów** — Podział co N punktów danych. Przydatny, gdy znasz limit punktów w aplikacji docelowej."
+        },
+        {
+          "body": "**Według daty** — Uporządkuj dane według roku lub miesiąca. Każdy okres trafia do osobnego pliku."
+        }
+      ]
+    },
+    {
+      "title": "Dlaczego warto dzielić pliki lokalizacji?",
+      "paragraphs": [
+        "Aplikacje do śledzenia GPS i narzędzia mapowe często ograniczają rozmiar importu. Plik Records.json z Google Timeline może mieć setki megabajtów — zbyt wiele dla większości narzędzi. Podział pozwala pracować z tymi danymi po kawałku.",
+        "Podział według daty jest szczególnie przydatny do porządkowania wieloletniej historii lokalizacji w roczne lub miesięczne archiwa, które możesz przeglądać oddzielnie."
+      ]
+    },
+    {
+      "title": "Opcje formatu wyjściowego",
+      "paragraphs": [
+        "Domyślnie części wynikowe mają taki sam format jak plik wejściowy. Możesz też konwertować podczas dzielenia — na przykład podzielić JSON Google Timeline na miesięczne pliki GPX.",
+        "Obsługiwane formaty wyjściowe: GPX, GeoJSON, KML, CSV i JSON. Wszystkie części są pakowane w jeden plik ZIP do wygodnego pobrania."
+      ]
+    },
+    {
+      "title": "Powiązane narzędzia",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Wizualizacja Google Timeline](/tools/timeline-visualizer) — Zobacz swoją historię lokalizacji na mapie"
+        },
+        {
+          "body": "[Konwerter Google Timeline](/tools/google-timeline-converter) — Konwertuj dane osi czasu na GPX, KML, CSV"
+        },
+        {
+          "body": "[Analiza statystyk osi czasu](/tools/timeline-statistics) — Poznaj podsumowanie swoich danych lokalizacji"
+        },
+        {
+          "body": "[Łączenie danych osi czasu](/tools/timeline-merger) — Połącz wiele eksportów osi czasu"
+        },
+        {
+          "body": "[Łączenie tras GPX](/tools/gpx-merger) — Połącz wiele plików GPX w jeden"
+        },
+        {
+          "body": "[Wykrywanie formatu osi czasu](/tools/timeline-format-detector) — Rozpoznaj typ pliku eksportu"
+        }
+      ]
+    }
+  ],
+  "upload": {
+    "parsing": "Odczytywanie pliku...",
+    "dropFile": "Upuść tutaj plik GPS",
+    "browse": "lub kliknij, aby wybrać",
+    "formats": "Obsługa: GPX, GeoJSON, KML, KMZ, JSON (Google Timeline)",
+    "clearButton": "Wyczyść plik",
+    "inputLabel": "Wybierz pliki do przetworzenia"
+  },
+  "results": {
+    "fileNameLabel": "Nazwa pliku",
+    "fileSizeLabel": "Rozmiar pliku",
+    "formatLabel": "Format",
+    "pointsLabel": "Punkty danych",
+    "pointsLoaded": "Wczytane punkty: {points}",
+    "sizeValue": "{size} MB"
+  },
+  "options": {
+    "strategyTitle": "Sposób podziału",
+    "bySize": "Według rozmiaru",
+    "byCount": "Według liczby punktów",
+    "byDate": "Według daty",
+    "targetSizeLabel": "Docelowy rozmiar części",
+    "pointsPerChunkLabel": "Punkty na część",
+    "outputLabel": "Format wyjściowy:",
+    "sameFormat": "Taki jak wejściowy",
+    "targetSizeAriaLabel": "Docelowy rozmiar części w megabajtach",
+    "yearLabel": "Podziel według roku",
+    "monthLabel": "Podziel według miesiąca",
+    "splitButton": "Podziel i pobierz ZIP",
+    "splitting": "Dzielenie...",
+    "chunkPreview": "Powstanie **{count}** część z {points} punktów|Powstaną **{count}** części z {points} punktów|Powstanie **{count}** części z {points} punktów|Powstanie **{count}** części z {points} punktów",
+    "formats": {
+      "gpx": "GPX",
+      "geojson": "GeoJSON",
+      "kml": "KML",
+      "csv": "CSV",
+      "json": "JSON"
+    }
+  },
+  "errors": {
+    "missingKmlError": "Nie znaleziono pliku KML w archiwum KMZ",
+    "parseError": "Błąd odczytu pliku: {message}",
+    "splitError": "Błąd dzielenia pliku: {message}",
+    "unsupportedFormatError": "Nieobsługiwany format pliku: .{format}"
+  },
+  "cta": {
+    "title": "Szukasz zamiennika Google Timeline?",
+    "body": "Dawarich to platforma śledzenia lokalizacji z otwartym kodem źródłowym, która daje Ci pełną kontrolę nad danymi. Zaimportuj eksport Google Timeline, rejestruj bieżącą lokalizację z telefonu i przeglądaj lata historii przemieszczania się — na własnym serwerze lub w chmurze.",
+    "button": "Wypróbuj Dawarich za darmo przez 7 dni",
+    "headline": "Liczba punktów w Twoim pliku: **{points}**. Dawarich automatycznie obsługuje importy dowolnego rozmiaru — bez dzielenia.",
+    "statLabels": {
+      "points": "punkty"
+    }
+  }
+}

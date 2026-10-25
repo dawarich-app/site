@@ -1,0 +1,219 @@
+{
+  "h1": "Linha do tempo do Google (Google Timeline): visualizador",
+  "intro": "O Google encerrou a linha do tempo na web — esta ferramenta gratuita, que respeita sua privacidade, traz essa visualização de volta. Explore seu histórico de localização exportado dia a dia, com calendário em mapa de calor, lista de visitas e reprodução de atividades.",
+  "saveIntro": "Quer ter isso na sua conta Dawarich também? Vamos importar os dados durante o cadastro — sem precisar carregá-los novamente.",
+  "privacy": "Todo o processamento acontece no seu navegador. Seus dados ficam no seu dispositivo, a menos que você escolha “Salvar na minha conta Dawarich”.",
+  "faqTitle": "Perguntas frequentes",
+  "homeLabel": "Início",
+  "toolsLabel": "Ferramentas gratuitas",
+  "loadingMap": "Carregando mapa…",
+  "meta": {
+    "title": "Linha do tempo do Google/Google Timeline: reveja na web",
+    "description": "O Google retirou a linha do tempo da web. Veja seu histórico no mapa com este visualizador grátis: carregue sua exportação Takeout e explore no navegador.",
+    "keywords": "visualizador Google Timeline, Google Timeline sumiu, onde está meu Google Timeline, ver Google Timeline na web, histórico Google Timeline, visualizador de histórico de localização Google, visualizador de localização Google Takeout, ver histórico de localização no mapa, alternativa ao Google Maps Timeline, alternativa após encerramento do Google Timeline, mapa do histórico de localização, visualizador de exportação Google Timeline, visualizador de localização com privacidade",
+    "featureList": [
+      "Visualizar dados do Google Timeline em um mapa interativo",
+      "Privacidade em primeiro lugar — processamento no navegador",
+      "Suporte a Records.json, Semantic Location History e exportações do celular",
+      "Filtragem por ano para grandes conjuntos de dados",
+      "Nenhum dado enviado a servidores",
+      "Código aberto e transparente"
+    ]
+  },
+  "howTo": {
+    "name": "Como visualizar seu histórico de localização do Google Timeline",
+    "description": "Exporte seus dados do Google Timeline e visualize-os em um mapa interativo com esta ferramenta gratuita que respeita sua privacidade.",
+    "steps": [
+      {
+        "name": "Exporte seus dados do Google Timeline",
+        "text": "Acesse takeout.google.com, selecione Histórico de localização (Linha do tempo) e exporte. Ou, no Android: Google Maps → Configurações → Localização → Linha do tempo → Exportar. No iOS: Google Maps → Configurações → Conteúdo pessoal → Exportar dados da linha do tempo."
+      },
+      {
+        "name": "Carregue seus arquivos JSON",
+        "text": "Arraste e solte seus arquivos JSON exportados do Google Timeline no visualizador. A ferramenta detecta o formato automaticamente (Records.json, Semantic Timeline, Location History etc.)."
+      },
+      {
+        "name": "Explore seu histórico de localização",
+        "text": "Seus dados de localização aparecem em um mapa interativo. Use o filtro de ano para focar em períodos específicos, clique nos pontos para ver detalhes e explore seu histórico completo de localização."
+      }
+    ],
+    "tool": "Visualizador do Google Timeline do Dawarich"
+  },
+  "exportData": {
+    "title": "Ainda não tem seus dados? Veja como exportá-los",
+    "intro": "Você pode exportar seus dados do Google Timeline usando um dos métodos a seguir. Se um deles não funcionar, tente outro.",
+    "warning": "Infelizmente, alguns usuários podem não conseguir exportar seus dados de localização devido à forma como o Google fez a transição para as novas políticas de armazenamento de localização.",
+    "converterHint": "Já tem sua exportação? Você também pode convertê-la para GPX, KML ou GeoJSON com o [Conversor do Google Timeline](/tools/google-timeline-converter/) gratuito.",
+    "methods": [
+      {
+        "title": "Google Takeout:",
+        "steps": [
+          "Acesse [takeout.google.com](https://takeout.google.com/) → Escolha Histórico de localização (Linha do tempo) → Exportar",
+          "Este método pode não funcionar para todos, pois o Google mudou a forma como os dados de localização são armazenados e exportados. Saiba mais no nosso [blog](https://dawarich.app/blog/migrating-from-google-location-history-to-dawarich)."
+        ]
+      },
+      {
+        "title": "No Android:",
+        "steps": [
+          "Abra o Google Maps → Configurações → Localização → Serviços de localização → Linha do tempo → Exportar linha do tempo"
+        ]
+      },
+      {
+        "title": "No iOS:",
+        "steps": [
+          "Abra o Google Maps → Configurações → Conteúdo pessoal → Exportar dados da linha do tempo"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Procurando uma alternativa ao Google Timeline?",
+    "body": "O Dawarich é uma plataforma de código aberto para registro de localização que dá a você controle total sobre seus dados. Importe sua exportação do Google Timeline, continue registrando sua localização pelo celular e visualize anos de histórico de deslocamentos — em hospedagem própria ou na nuvem.",
+    "button": "Teste o Dawarich grátis por 7 dias",
+    "trialButton": "Comece o teste grátis — 7 dias →",
+    "dismissLabel": "Dispensar",
+    "headline": "Você acabou de visualizar **{points}** pontos de localização{dateRange}. Esta visualização desaparece quando você fecha esta aba. Guarde seu histórico de localização para sempre — e continue adicionando dados automaticamente.",
+    "dateRange": " de **{startYear}** a **{endYear}**"
+  },
+  "faq": [
+    {
+      "q": "É seguro carregar meus dados do Google Timeline aqui?",
+      "a": "Sim. Toda a visualização acontece no seu navegador usando JavaScript — seus arquivos ficam no seu dispositivo e são descartados quando você fecha a aba. A única exceção é o botão opcional “Salvar na minha conta Dawarich”, que envia seu arquivo para o Dawarich Cloud para importá-lo na sua nova conta. A ferramenta tem código aberto, então você pode verificar exatamente o que o código faz."
+    },
+    {
+      "q": "Quais formatos de arquivo este visualizador aceita?",
+      "a": "O visualizador aceita todos os formatos de exportação do Google Timeline: Records.json (registros brutos de localização GPS), Semantic Location History (arquivos mensais YYYY_MONTH.json com visitas a lugares e segmentos de atividade), Location History exportado do celular (um formato mais recente com semanticSegments) e arquivos de Configurações/TimelineEdits. Ele detecta o formato automaticamente ao carregar."
+    },
+    {
+      "q": "Por que o Google encerrou a linha do tempo na web?",
+      "a": "No fim de 2024, o Google encerrou a versão web do Google Maps Timeline e passou a armazenar todos os dados de localização no próprio dispositivo. Os dados dos últimos 90 dias dos usuários foram transferidos para o celular, mas os mais antigos foram excluídos, a menos que tivessem um backup manual. Muitos usuários perderam anos de histórico de localização na transição. Este visualizador ajuda você a ver e explorar os dados do Google Timeline que conseguiu exportar."
+    },
+    {
+      "q": "Onde foi parar meu Google Timeline?",
+      "a": "Se a linha do tempo desapareceu do Google Maps no seu navegador, isso não aconteceu só com você — o Google removeu a versão web e passou a armazenar a linha do tempo no dispositivo. Seu histórico agora fica no aplicativo Google Maps do celular (toque na foto do seu perfil → Linha do tempo). Se ele também não estiver lá, procure um arquivo antigo do Google Takeout ou um backup da linha do tempo — qualquer exportação que você ainda tenha pode ser carregada aqui para ver seu histórico completo de novo."
+    },
+    {
+      "q": "Como posso voltar a ver meu Google Timeline na web?",
+      "a": "Exporte os dados da linha do tempo pelo celular (Google Maps → Configurações → Localização → Linha do tempo → Exportar dados da linha do tempo) ou pelo Google Takeout e carregue os arquivos JSON neste visualizador. Você volta a ter uma linha do tempo na web — calendário, mapa e detalhes de cada dia — sem precisar de uma conta Google. Para manter uma linha do tempo permanente e sempre atualizada, você pode importar os mesmos arquivos no Dawarich."
+    },
+    {
+      "q": "Como exporto meus dados do Google Timeline?",
+      "a": "Há três métodos: (1) Google Takeout em takeout.google.com — selecione Histórico de localização e exporte, embora isso não funcione mais para todos. (2) No Android: Google Maps → Configurações → Localização → Serviços de localização → Linha do tempo → Exportar linha do tempo. (3) No iOS: Google Maps → Configurações → Conteúdo pessoal → Exportar dados da linha do tempo. Recomendamos tentar todos os métodos e exportar o quanto antes."
+    },
+    {
+      "q": "Posso visualizar anos de dados de localização de uma vez?",
+      "a": "Sim. O visualizador foi testado com arquivos que contêm mais de 630,000 pontos de localização ao longo de 15+ anos. Ele processa os dados em lotes para manter o navegador ágil e inclui um filtro de ano para você focar em períodos específicos. Um arquivo de 170 MB costuma levar 20-30 segundos para ser processado em um computador moderno."
+    },
+    {
+      "q": "Qual é a diferença entre Records.json e Semantic Location History?",
+      "a": "O Records.json contém coordenadas GPS brutas e registros de data e hora — cada registro de localização feito pelo Google. Esses arquivos tendem a ser muito grandes. Os arquivos Semantic Location History (com nomes como 2022_APRIL.json) são mais estruturados e contêm visitas a lugares com endereços, segmentos de atividade (caminhada, carro, ciclismo) e informações de duração. Este visualizador aceita os dois formatos."
+    },
+    {
+      "q": "Posso ver meu Google Timeline sem o Google Maps?",
+      "a": "Sim — é exatamente isso que esta ferramenta faz. Depois de exportar seus dados do Google Timeline, carregue os arquivos JSON aqui para ver tudo em um mapa interativo baseado no OpenStreetMap. Sem precisar de conta Google nem do aplicativo Google Maps. Você pode filtrar por ano, clicar em pontos individuais para ver detalhes e explorar seu histórico completo de localização de forma independente do Google."
+    },
+    {
+      "q": "Qual é a diferença em relação a outros visualizadores do Google Timeline?",
+      "a": "Este visualizador foi criado com a privacidade como prioridade máxima — nenhum dado sai do seu navegador. Ele aceita todos os formatos de exportação do Google (incluindo formatos mais recentes do celular, que muitas ferramentas não processam), processa os arquivos progressivamente para que grandes conjuntos de dados não travem o navegador e é mantido como parte do ecossistema de código aberto do Dawarich. Também é totalmente gratuito, sem exigir conta ou cadastro."
+    }
+  ],
+  "cards": [
+    {
+      "title": "O que é um visualizador do Google Timeline?",
+      "paragraphs": [
+        "Um visualizador do Google Timeline transforma os arquivos JSON brutos da exportação do seu histórico de localização do Google em um mapa interativo que você pode explorar. Em vez de percorrer milhares de linhas de coordenadas e registros de data e hora, você vê seus deslocamentos reais em um mapa — cada viagem, ida ao trabalho e caminhada que fez enquanto o Google registrava sua localização.",
+        "Esta ferramenta visualiza tudo no seu navegador, então explorar seu histórico nunca envia seus dados de localização para outro lugar. É uma maneira de explorar anos de histórico de localização com privacidade em primeiro lugar. (Se você usar “Salvar na minha conta Dawarich”, essa ação envia seu arquivo para o Dawarich Cloud para preparar sua importação — fora isso, nada é enviado.)"
+      ]
+    },
+    {
+      "title": "O que você pode descobrir nos seus dados?",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Padrões de viagem** — Veja cada viagem que fez, dos deslocamentos diários às viagens internacionais"
+        },
+        {
+          "body": "**Visitas a lugares** — Descubra quais lugares você mais visitou, com horários de chegada e saída"
+        },
+        {
+          "body": "**Tipos de atividade** — Veja segmentos de caminhada, carro, ciclismo e transporte público do Semantic Location History"
+        },
+        {
+          "body": "**Mudanças ano a ano** — Filtre por ano para ver como seus padrões de movimento evoluíram ao longo do tempo"
+        },
+        {
+          "body": "**Lembranças esquecidas** — Redescubra aquele restaurante, parque ou bairro que visitou anos atrás"
+        }
+      ]
+    },
+    {
+      "title": "Formatos de exportação do Google aceitos",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Records.json** — Registros brutos de GPS com coordenadas no formato E7. O maior arquivo, contém cada registro de localização"
+        },
+        {
+          "body": "**Semantic Location History** — Arquivos mensais (por exemplo, 2022_APRIL.json) com visitas a lugares, endereços e segmentos de atividade"
+        },
+        {
+          "body": "**Exportação da linha do tempo pelo celular** — Um formato mais recente do Google Maps no Android/iOS com semanticSegments e percursos da linha do tempo"
+        },
+        {
+          "body": "**Configurações e TimelineEdits** — Arquivos adicionais de metadados das exportações do Google Takeout"
+        }
+      ],
+      "footer": [
+        "O visualizador detecta o formato automaticamente. Você pode carregar vários arquivos de uma vez para combinar dados de métodos de exportação diferentes."
+      ]
+    },
+    {
+      "title": "O que aconteceu com o Google Maps Timeline?",
+      "paragraphs": [
+        "No fim de 2024, o Google encerrou a versão web do Google Maps Timeline e passou a armazenar todos os dados de localização no próprio dispositivo. Apenas os últimos 90 dias foram migrados — os dados mais antigos foram excluídos, a menos que os usuários tivessem feito um backup manual. Muitas pessoas [perderam anos de histórico de localização](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/) na transição.",
+        "Se você exportou seus dados antes ou durante a transição, este visualizador permite vê-los. Para uma alternativa de longo prazo, o [Dawarich](https://my.dawarich.app/users/sign_up?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-visualizer) oferece registro de localização em hospedagem própria ou na nuvem, com plena propriedade dos seus dados."
+      ]
+    },
+    {
+      "title": "Comparação com outros visualizadores",
+      "paragraphs": [
+        "Existem várias ferramentas para visualizar dados de localização do Google. Veja como esta se diferencia:"
+      ],
+      "items": [
+        {
+          "body": "**vs LocationHistoryVisualizer.com** — Focado apenas em mapas de calor. Esta ferramenta mostra pontos individuais, percursos, visitas a lugares e segmentos de atividade com filtros detalhados"
+        },
+        {
+          "body": "**vs Google Maps Timeline** — A linha do tempo do Google na web foi encerrada. Esta é uma alternativa independente que prioriza a privacidade e funciona com seus dados exportados"
+        },
+        {
+          "body": "**vs projetos no GitHub** — A maioria dos visualizadores de código aberto aceita apenas formatos de exportação antigos. Esta ferramenta processa todos os formatos do Google, incluindo as exportações mais recentes do celular"
+        }
+      ],
+      "footer": [
+        "Prefere um mapa de calor? Experimente nosso [Gerador de mapas de calor GPS](/tools/heatmap-generator)."
+      ]
+    },
+    {
+      "title": "Ferramentas relacionadas",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "[Gerador de mapas de calor GPS](/tools/heatmap-generator) — Crie mapas de calor com GPX, FIT, TCX e outros arquivos GPS"
+        },
+        {
+          "body": "[Unificador de trajetos GPX](/tools/gpx-merger) — Una vários arquivos GPX em um só"
+        },
+        {
+          "body": "[Extração de geodados de fotos](/tools/photo-geotagging) — Extraia coordenadas GPS das suas fotos"
+        },
+        {
+          "body": "[Conversor de GeoJSON para GPX](/tools/geojson-to-gpx) — Converta seus dados de localização para o formato GPX"
+        }
+      ],
+      "footer": [
+        "Saiba mais: [Como criamos este visualizador](/blog/building-a-privacy-first-google-timeline-visualizer) | [Migrando do histórico de localização do Google](/blog/migrating-from-google-location-history-to-dawarich)"
+      ]
+    }
+  ]
+}

@@ -1,7 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { interpolate } from '@docusaurus/Interpolate';
+import copy from '@locale-content/components/PhotoMap.json';
 import styles from './TimelineMap.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
 export default function PhotoMap({ points, onPointClick, selectedPointId }) {
+  const htmlLang = useHtmlLang();
+  const formatCoordinate = (value) => value.toLocaleString(htmlLang, { useGrouping: false, minimumFractionDigits: 6, maximumFractionDigits: 6 });
   const mapRef = useRef(null);
   const mapInstanceRef = useRef(null);
   const markersLayerRef = useRef(null);
@@ -139,7 +144,7 @@ export default function PhotoMap({ points, onPointClick, selectedPointId }) {
         }
       }
     }
-  }, [points, isLoaded, onPointClick, selectedPointId]);
+  }, [points, isLoaded, onPointClick, selectedPointId, htmlLang]);
 
   // Handle selected point change
   useEffect(() => {
@@ -161,21 +166,22 @@ export default function PhotoMap({ points, onPointClick, selectedPointId }) {
     if (point.imageUrl) {
       content += `<img src="${point.imageUrl}"
              style="width: 100%; max-width: 400px; height: auto; border-radius: 4px; margin-bottom: 10px; display: block;"
-             alt="${point.filename || 'Photo'}" />`;
+             alt="${point.filename || copy.photoLabel}" />`;
     }
 
     if (point.filename) {
       content += `<strong style="font-size: 1.05em;">${point.filename}</strong><br><br>`;
     }
 
-    content += `<strong>Coordinates:</strong><br>${point.lat.toFixed(6)}, ${point.lng.toFixed(6)}<br>`;
+    content += `<strong>${copy.coordinates}</strong><br>${formatCoordinate(point.lat)}, ${formatCoordinate(point.lng)}<br>`;
 
     if (point.altitude) {
-      content += `<strong>Altitude:</strong> ${point.altitude.toFixed(1)}m<br>`;
+      const altitude = point.altitude.toLocaleString(htmlLang, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+      content += `<strong>${copy.altitude}</strong> ${interpolate(copy.altitudeValue, { altitude })}<br>`;
     }
 
     if (point.timestamp) {
-      content += `<strong>Taken:</strong> ${new Date(point.timestamp).toLocaleString()}<br>`;
+      content += `<strong>${copy.taken}</strong> ${new Date(point.timestamp).toLocaleString(htmlLang)}<br>`;
     }
 
     content += `</div>`;
@@ -187,7 +193,7 @@ export default function PhotoMap({ points, onPointClick, selectedPointId }) {
     return (
       <div className={styles.loadingContainer}>
         <div className={styles.spinner}></div>
-        <p>Loading map...</p>
+        <p>{copy.loading}</p>
       </div>
     );
   }

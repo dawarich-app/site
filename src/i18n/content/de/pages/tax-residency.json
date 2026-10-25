@@ -1,0 +1,55 @@
+{
+  "rows": [
+    {
+      "title": "Jedes Land gezählt, mit der 183-Tage-Grenze im Blick",
+      "body": "Wähle ein Jahr und sieh, an wie vielen unterschiedlichen Tagen du in jedem Land warst, absteigend sortiert. Länder mit 183 Tagen oder mehr werden markiert. Dieser Schwellenwert steht hinter vielen Ansässigkeitsregeln – und du möchtest ihn kommen sehen, statt ihn erst im April zu entdecken."
+    },
+    {
+      "title": "Die Aufenthalte hinter der Summe",
+      "body": "353 Tage insgesamt sagen weniger aus als die acht einzelnen Zeiträume dahinter: einmal 133 Tage, einmal 104 und im Dezember mehrere kurze Aufenthalte. Jeder Aufenthalt wird mit Startdatum, Enddatum und Dauer aufgeführt. Das brauchst du, wenn eine Regel auf ununterbrochene Anwesenheit statt auf eine Jahressumme abstellt.",
+      "note": "Exportierbare Nachweise statt einer bloßen Zahl in der Übersicht"
+    }
+  ],
+  "objections": [
+    {
+      "q": "Ist das Steuerberatung?",
+      "a": "Nein, und es gibt sich auch nicht dafür aus. Dawarich zeigt, was in deinem Standortverlauf steht. Es legt kein nationales Steuerrecht aus. Länder zählen Tage unterschiedlich: Manche zählen angefangene Tage, andere schließen Reisetage aus oder bilden einen Durchschnitt über mehrere Jahre. Die Daten sind Nachweise für ein Gespräch mit Fachleuten, keine Handlungsanweisung."
+    },
+    {
+      "q": "Wie genau wird ein Tag gezählt?",
+      "a": "Ein Tag zählt für ein Land, wenn du dort an diesem Tag mindestens einen aufgezeichneten Punkt hast. Fliegst du an einem Dienstag von Deutschland nach Frankreich, zählt dieser Dienstag für beide Länder. Die Tage pro Land können sich deshalb zu mehr als deinen aufgezeichneten Tagen summieren. Die Tagesgrenzen richten sich nach UTC, was nahe Mitternacht und an Grenzen einen Tag verschieben kann."
+    },
+    {
+      "q": "Was ist mit Tagen ohne Aufzeichnung?",
+      "a": "Sie zählen nicht und werden nie deinem zuletzt bekannten Land zugeordnet. Der Bericht zeigt auch die Gesamtzahl deiner aufgezeichneten Tage. So siehst du, wie viel vom Jahr deine Zahlen tatsächlich abdecken – die erste Frage deiner Steuerberatung."
+    },
+    {
+      "q": "Ich habe jahrelangen Verlauf in Google Timeline. Funktioniert das?",
+      "a": "Ja. Importiere dein Google-Takeout-Archiv und die Tage kommen mit. Importierte Punkte müssen per Rückwärts-Geokodierung einem Land zugeordnet werden. Das erledigt Dawarich für dich."
+    },
+    {
+      "q": "Muss ich euch jahrelange Standortdaten anvertrauen?",
+      "a": "Du musst niemandem vertrauen. Die gesamte Anwendung ist Open Source und jede Funktion läuft auf deiner eigenen Hardware. Hoste selbst, dann verlassen die Daten deinen Rechner nie."
+    }
+  ],
+  "meta": {
+    "title": "Steueransässigkeit: Tage automatisch zählen, 183-Tage-Regel",
+    "description": "Zähle aus deinem GPS-Verlauf Tage pro Land, mit zusammenhängenden Aufenthalten und 183-Tage-Warnung. Für digitale Nomaden, Grenzpendler und Langzeitreisende.",
+    "ogTitle": "Steueransässigkeit: Tage aus GPS-Verlauf zählen, 183-Tage-Regel",
+    "ogDescription": "Tage pro Land aus deinem Standortverlauf, mit zusammenhängenden Aufenthalten und 183-Tage-Warnung. Nachweise für Ansässigkeitsfragen, keine Steuerberatung."
+  },
+  "taxResidencyPage": {
+    "text": "Du hast dieses Jahr sechs Grenzen überquert.",
+    "em": "Wie viele Tage waren das?",
+    "title2": "Die Antwort samt Berechnungsgrundlage",
+    "sub2": "Die Tage pro Land findest du auf der Seite „Einblicke“. Sie richten sich nach dem oben ausgewählten Jahr.",
+    "title3": "Lies das, bevor du dich darauf verlässt",
+    "title4": "Zähle ab jetzt, nicht erst nächsten April",
+    "text2": "Zeichne ab heute auf, dann stehen die Zahlen fürs nächste Jahr schon bereit. Die vollständigen Zählregeln stehen in der",
+    "EnOnlyLink": "Dokumentation „Tage pro Land“",
+    "text3": "."
+  },
+  "hero": {
+    "sub": "Ein Jahr aus Bordkarten und Kalendereinträgen zu rekonstruieren, führt leicht zu Fehlern bei der Ansässigkeit. Dawarich zählt die Tage pro Land aus deinem ohnehin erfassten GPS-Verlauf: ein Quadrat pro Tag, nach Land eingefärbt. Alles über 183 wird markiert. Lücken bei der Aufzeichnung bleiben sichtbar, statt überdeckt zu werden."
+  }
+}

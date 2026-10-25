@@ -1,3 +1,6 @@
+import { SmartLink } from '@site/src/i18n/RichText';
+import content from '@locale-content/components/FeatureShowcase.json';
+import { interpolate } from '@docusaurus/Interpolate';
 import React, { useCallback, useState } from 'react';
 import styles from './FeatureShowcase.module.css';
 import useDialog from './useDialog';
@@ -30,10 +33,8 @@ export default function FeatureShowcase({ title, subtitle, items }) {
               {item.image && (
                 <div className={styles.imageWrapper}>
                   {item.imageHref ? (
-                    <a
+                    <SmartLink
                       href={item.imageHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className={styles.imageLink}
                     >
                       <img
@@ -41,13 +42,13 @@ export default function FeatureShowcase({ title, subtitle, items }) {
                         alt={item.imageAlt || item.title}
                         className={styles.image}
                       />
-                    </a>
+                    </SmartLink>
                   ) : (
                     <button
                       type="button"
                       className={styles.imageButton}
                       onClick={() => openModal(item.image, item.imageAlt || item.title)}
-                      aria-label={`View ${item.imageAlt || item.title} full size`}
+                      aria-label={interpolate(content.viewImage, { image: item.imageAlt || item.title })}
                     >
                       <img
                         src={item.image}
@@ -75,7 +76,7 @@ export default function FeatureShowcase({ title, subtitle, items }) {
           <button
             className={styles.closeButton}
             onClick={closeModal}
-            aria-label="Close image"
+            aria-label={content.closeImage}
           >
             ×
           </button>

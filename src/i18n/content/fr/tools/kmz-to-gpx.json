@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Convertisseur KMZ vers GPX gratuit — Google Earth",
+    "description": "Convertissez instantanément vos fichiers KMZ en GPX. Gratuit et privé, entièrement dans votre navigateur, sans envoi de fichier.",
+    "keywords": "KMZ vers GPX, convertisseur KMZ, convertisseur GPX, Google Earth vers GPS, extraire KMZ",
+    "appName": "Convertisseur KMZ vers GPX"
+  },
+  "h1": "Convertisseur KMZ vers GPX",
+  "intro": "Convertissez vos fichiers KMZ au format GPX instantanément. Tout le traitement s’effectue dans votre navigateur. Vos données ne quittent jamais votre appareil.",
+  "cards": [
+    {
+      "title": "À propos du format KMZ",
+      "body": "KMZ est un format de fichier KML compressé (zip) utilisé par Google Earth pour réduire la taille des fichiers et accélérer leur chargement."
+    },
+    {
+      "title": "À propos du format GPX",
+      "body": "GPX (GPS Exchange Format) est le format standard des données GPS, compatible avec la plupart des appareils GPS et des applications sportives."
+    },
+    {
+      "title": "Pourquoi convertir KMZ en GPX ?",
+      "items": [
+        "Importez des données Google Earth dans des appareils GPS",
+        "Utilisez vos données avec les applications de suivi sportif (Strava, Garmin Connect)",
+        "Compatible avec les applications de randonnée et de navigation en plein air",
+        "Format standard pour les points de passage et itinéraires GPS"
+      ]
+    }
+  ],
+  "privacyBody": "La conversion s’effectue entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil."
+}

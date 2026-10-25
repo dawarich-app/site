@@ -1,0 +1,146 @@
+{
+  "whenToConvert": {
+    "subject": "GPX a KML",
+    "body": [
+      "GPX és el format que genera el dispositiu GPS, el rellotge esportiu o l’aplicació de registre. KML és el format d’entrada que esperen Google Earth, Google My Maps i la majoria d’eines SIG d’escriptori. Converteixes GPX a KML quan vols veure els trajectes en una aplicació de mapes, més enllà de desar-los.",
+      "Motius habituals per arribar a aquesta pàgina: una exportació de Strava per obrir a Google Earth, una sortida registrada amb un rellotge Garmin per compartir a Google My Maps, un GPX de senderisme d’AllTrails o OsmAnd per anotar-lo visualment, o un trajecte d’un GPS antic per passar-lo a un arxiu de mapes a llarg termini.",
+      "Tots dos formats són XML i estan ben definits; per això la conversió no perd dades dels camps que comparteixen. La qüestió interessant, que expliquem a continuació, és quins camps no comparteixen."
+    ]
+  },
+  "preservation": {
+    "intro": "Això és exactament el que es conserva en una conversió de GPX → KML i el que no:",
+    "rows": [
+      {
+        "field": "Coordenades GPS (lat/lon)",
+        "preserved": "✅ Sí",
+        "notes": "Tots dos formats fan servir graus decimals WGS-84. Precisió idèntica."
+      },
+      {
+        "field": "Elevació",
+        "preserved": "✅ Sí",
+        "notes": "GPX <ele> correspon a la tercera coordenada de KML <coordinates>. En metres en tots dos."
+      },
+      {
+        "field": "Marques de temps",
+        "preserved": "✅ Sí",
+        "notes": "GPX <time> es converteix en KML <TimeStamp> a cada marcador de lloc. ISO-8601 UTC en tots dos."
+      },
+      {
+        "field": "Estructura del trajecte (trajecte → segments → punts)",
+        "preserved": "✅ Sí",
+        "notes": "GPX <trk>/<trkseg> es representa com a KML <Placemark> amb geometria <LineString>."
+      },
+      {
+        "field": "Punts de pas",
+        "preserved": "✅ Sí",
+        "notes": "GPX <wpt> es converteix en KML <Placemark> amb geometria <Point> i el nom del punt de pas."
+      },
+      {
+        "field": "Rutes",
+        "preserved": "✅ Sí",
+        "notes": "GPX <rte> es representa com una KML <LineString> independent, separada dels trajectes."
+      },
+      {
+        "field": "Noms i descripcions de trajectes i punts de pas",
+        "preserved": "✅ Sí",
+        "notes": "Es corresponen amb KML <name> i <description>."
+      },
+      {
+        "field": "Freqüència cardíaca, cadència i potència (TrackPointExtension)",
+        "preserved": "⚠️ No",
+        "notes": "KML no té cap espai de noms per a dades esportives. Si necessites freqüència cardíaca, cadència o potència, converteix a TCX o conserva el GPX."
+      },
+      {
+        "field": "Blocs GPX <extensions> (dades personalitzades)",
+        "preserved": "⚠️ Parcial",
+        "notes": "Les extensions genèriques es descarten. Fes servir GeoJSON si necessites conservar propietats arbitràries."
+      },
+      {
+        "field": "Estil (color de línia, gruix, icones)",
+        "preserved": "➕ S’apliquen valors per defecte",
+        "notes": "GPX no té estils; aquest convertidor aplica un KML <Style> raonable per defecte. El pots editar a Google Earth Pro."
+      }
+    ]
+  },
+  "apps": {
+    "intro": "Quan tinguis el fitxer .kml, el pots obrir aquí:",
+    "items": [
+      {
+        "name": "Google Earth (web i Pro)",
+        "url": "https://earth.google.com/",
+        "note": "Arrossega el .kml directament a la versió del navegador o ves a Fitxer → Importa a Earth Pro. La millor visualització 3D."
+      },
+      {
+        "name": "Google My Maps",
+        "url": "https://mymaps.google.com/",
+        "note": "Crea un mapa nou i després importa el KML per compartir un mapa anotat amb qui vulguis."
+      },
+      {
+        "name": "QGIS",
+        "url": "https://qgis.org/",
+        "note": "SIG d’escriptori de codi obert. Afegeix-lo com a capa vectorial per fer anàlisis avançades combinant-lo amb altres dades geogràfiques."
+      },
+      {
+        "name": "Marble",
+        "url": "https://marble.kde.org/",
+        "note": "Globus virtual de codi obert. Multiplataforma, sense compte de Google."
+      },
+      {
+        "name": "Locus Map (Android)",
+        "url": "https://www.locusmap.app/",
+        "note": "Importa KML per navegar sense connexió i reproduir rutes."
+      },
+      {
+        "name": "Caltopo",
+        "url": "https://caltopo.com/",
+        "note": "Mapes per a espais naturals. Importa KML per planificar viatges amb capes del terreny."
+      },
+      {
+        "name": "Dawarich",
+        "url": "/import-export/",
+        "note": "Sí, també pots importar KML directament a la línia de temps de Dawarich amb tota la resta."
+      }
+    ]
+  },
+  "example": {
+    "intro": "GPX mínim d’entrada, KML mínim de sortida: un exemple pràctic de la correspondència de camps:",
+    "fromLabel": "GPX",
+    "toLabel": "KML",
+    "input": "<?xml version=\"1.0\"?>\n<gpx version=\"1.1\" creator=\"Garmin\">\n  <trk>\n    <name>Morning Run</name>\n    <trkseg>\n      <trkpt lat=\"52.5200\" lon=\"13.4050\">\n        <ele>34</ele>\n        <time>2026-04-27T07:14:00Z</time>\n      </trkpt>\n      <trkpt lat=\"52.5210\" lon=\"13.4060\">\n        <ele>36</ele>\n        <time>2026-04-27T07:14:30Z</time>\n      </trkpt>\n    </trkseg>\n  </trk>\n</gpx>",
+    "output": "<?xml version=\"1.0\"?>\n<kml xmlns=\"http://www.opengis.net/kml/2.2\">\n  <Document>\n    <name>Morning Run</name>\n    <Placemark>\n      <name>Morning Run</name>\n      <LineString>\n        <coordinates>\n          13.4050,52.5200,34\n          13.4060,52.5210,36\n        </coordinates>\n      </LineString>\n      <TimeSpan>\n        <begin>2026-04-27T07:14:00Z</begin>\n        <end>2026-04-27T07:14:30Z</end>\n      </TimeSpan>\n    </Placemark>\n  </Document>\n</kml>"
+  },
+  "reference": {
+    "heading": "GPX i KML, breument",
+    "body": [
+      "GPX (GPS Exchange Format) va ser publicat per Topografix el 2002 específicament per a dispositius GPS: conté trajectes, rutes, punts de pas i metadades bàsiques per punt. Gairebé tots els dispositius GPS, rellotges esportius i aplicacions d’aire lliure el llegeixen i l’escriuen. És un format petit i específic: a la pràctica només hi ha una manera d’expressar un trajecte.",
+      "KML (Keyhole Markup Language) el va crear Keyhole, l’empresa que Google va comprar per construir Google Earth. És molt més ampli: conté geometria, estils, animació temporal, models 3D, enllaços de xarxa i superposicions. KML és un format de presentació. GPX és un format d’intercanvi.",
+      "Si vols compartir o visualitzar un trajecte, KML és el que espera el programari receptor. Si vols tornar-lo a posar en un altre dispositiu GPS o analitzar-lo amb programari esportiu, conserva’l com a GPX."
+    ]
+  },
+  "faqs": [
+    {
+      "q": "Aquest convertidor puja el meu fitxer GPX a un servidor?",
+      "a": "No. La conversió es fa íntegrament al navegador amb JavaScript. El fitxer no surt mai del dispositiu i no es fa analítica del contingut. Ho pots comprovar: Dawarich és de codi obert i el codi del convertidor és al mateix repositori públic."
+    },
+    {
+      "q": "Puc convertir diversos fitxers GPX alhora?",
+      "a": "Aquest convertidor gestiona un fitxer cada vegada. Si vols combinar diversos fitxers GPX en un sol KML, passa’ls primer per l’eina de fusió GPX i després converteix el fitxer fusionat."
+    },
+    {
+      "q": "Es conservaran les dades de freqüència cardíaca i cadència?",
+      "a": "No. KML no té una extensió definida per a dades de sensors esportius. Si necessites conservar la freqüència cardíaca, la cadència o la potència, desa el GPX original (la majoria d’aplicacions esportives el prefereixen) o converteix a TCX, pensat per a activitats físiques."
+    },
+    {
+      "q": "Com obro el KML resultant a Google Earth?",
+      "a": "A la versió web, arrossega el fitxer .kml a la interfície d’Earth. A Google Earth Pro per a escriptori, ves a Fitxer → Obre i tria el fitxer. El trajecte apareixerà a l’arbre de «Llocs temporals» de l’esquerra; fes-hi clic amb el botó dret per desar-lo permanentment."
+    },
+    {
+      "q": "Per què el trajecte sembla una línia plana a Google Earth?",
+      "a": "Per defecte, les LineString de KML s’ajusten al terra. Per veure el perfil d’elevació real, fes clic amb el botó dret al trajecte importat a Google Earth Pro i posa el mode d’altitud a «Absoluta» o «Relativa al terra»."
+    },
+    {
+      "q": "Hi ha un límit de mida de fitxer?",
+      "a": "El convertidor funciona al navegador; per tant, el límit pràctic és la seva memòria. Fitxers de fins a uns quants centenars de megabytes funcionen bé en un portàtil modern. Per a exportacions GPX molt grans, com arxius de diversos anys, fes servir primer el divisor de fitxers GPS."
+    }
+  ]
+}

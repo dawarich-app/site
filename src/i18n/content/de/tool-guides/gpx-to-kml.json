@@ -1,0 +1,146 @@
+{
+  "whenToConvert": {
+    "subject": "GPX in KML",
+    "body": [
+      "GPX ist das Format, das dein GPS-Gerät, deine Fitnessuhr oder deine Aufzeichnungsapp erzeugt. KML ist das Eingabeformat für Google Earth, Google My Maps und die meisten Desktop-GIS-Tools. Du wandelst GPX in KML um, wenn du deine Tracks in einer Kartenapp wirklich ansehen möchtest – statt sie nur zu speichern.",
+      "Typische Gründe, auf dieser Seite zu landen: ein Strava-Export, den du in Google Earth öffnen möchtest; eine Radtour von der Garmin-Uhr zum Teilen über Google My Maps; eine Wander-GPX aus AllTrails oder OsmAnd, die du visuell kommentieren möchtest; oder ein Track von einem alten GPS-Gerät, den du in ein langfristiges Kartenarchiv überführst.",
+      "Beide Formate basieren auf XML und sind klar definiert. Für ihre gemeinsamen Datenfelder ist die Umwandlung daher verlustfrei. Interessant ist, welche Felder sie nicht gemeinsam haben – darum geht es weiter unten."
+    ]
+  },
+  "preservation": {
+    "intro": "Das bleibt bei einer Umwandlung GPX → KML erhalten und das geht verloren:",
+    "rows": [
+      {
+        "field": "GPS-Koordinaten (Breite/Länge)",
+        "preserved": "✅ Ja",
+        "notes": "Beide Formate nutzen WGS-84-Dezimalgrad. Identische Genauigkeit."
+      },
+      {
+        "field": "Höhe",
+        "preserved": "✅ Ja",
+        "notes": "GPX <ele> wird zur dritten Koordinate in KML <coordinates>. In beiden Fällen in Metern."
+      },
+      {
+        "field": "Zeitstempel",
+        "preserved": "✅ Ja",
+        "notes": "GPX <time> wird bei jeder Ortsmarke zu KML <TimeStamp>. Beide nutzen ISO-8601 UTC."
+      },
+      {
+        "field": "Track-Struktur (Track → Segmente → Punkte)",
+        "preserved": "✅ Ja",
+        "notes": "GPX <trk>/<trkseg> werden als KML <Placemark> mit <LineString>-Geometrie dargestellt."
+      },
+      {
+        "field": "Wegpunkte",
+        "preserved": "✅ Ja",
+        "notes": "GPX <wpt> wird zu KML <Placemark> mit <Point>-Geometrie und dem Wegpunktnamen."
+      },
+      {
+        "field": "Routen",
+        "preserved": "✅ Ja",
+        "notes": "GPX <rte> wird als separates KML <LineString> dargestellt, getrennt von Tracks."
+      },
+      {
+        "field": "Namen und Beschreibungen von Tracks / Wegpunkten",
+        "preserved": "✅ Ja",
+        "notes": "Werden KML <name> und <description> zugeordnet."
+      },
+      {
+        "field": "Herzfrequenz, Trittfrequenz, Leistung (TrackPointExtension)",
+        "preserved": "⚠️ Nein",
+        "notes": "KML hat keinen Namensraum für Fitnessdaten. Wenn du Herzfrequenz, Trittfrequenz oder Leistung brauchst, wandle in TCX um oder behalte die GPX-Datei."
+      },
+      {
+        "field": "GPX <extensions>-Blöcke (eigene Daten)",
+        "preserved": "⚠️ Teilweise",
+        "notes": "Allgemeine Erweiterungen werden verworfen. Nutze GeoJSON, wenn du beliebige Eigenschaften übernehmen möchtest."
+      },
+      {
+        "field": "Stil (Linienfarbe, Breite, Symbole)",
+        "preserved": "➕ Standardwerte angewendet",
+        "notes": "GPX enthält keine Stile. Dieser Konverter wendet einen sinnvollen KML <Style> als Standard an. Du kannst ihn in Google Earth Pro bearbeiten."
+      }
+    ]
+  },
+  "apps": {
+    "intro": "Deine .kml-Datei kannst du hier öffnen:",
+    "items": [
+      {
+        "name": "Google Earth (Web und Pro)",
+        "url": "https://earth.google.com/",
+        "note": "Ziehe die .kml-Datei direkt in die Browserversion oder nutze „Datei → Importieren“ in Earth Pro. Beste 3D-Darstellung."
+      },
+      {
+        "name": "Google My Maps",
+        "url": "https://mymaps.google.com/",
+        "note": "Erstelle eine neue Karte und importiere dann deine KML-Datei, um eine kommentierte Karte mit anderen zu teilen."
+      },
+      {
+        "name": "QGIS",
+        "url": "https://qgis.org/",
+        "note": "Open-Source-GIS für den Desktop. Füge die Datei als Vektorebene hinzu, um sie gründlich zu analysieren und mit anderen Geodaten zu verbinden."
+      },
+      {
+        "name": "Marble",
+        "url": "https://marble.kde.org/",
+        "note": "Virtueller Open-Source-Globus. Plattformübergreifend, ohne Google-Konto."
+      },
+      {
+        "name": "Locus Map (Android)",
+        "url": "https://www.locusmap.app/",
+        "note": "Importiert KML für Offline-Navigation und Routenwiedergabe."
+      },
+      {
+        "name": "Caltopo",
+        "url": "https://caltopo.com/",
+        "note": "Karten für abgelegene Gebiete. Importiert KML zur Reiseplanung mit Geländeebenen."
+      },
+      {
+        "name": "Dawarich",
+        "url": "/import-export/",
+        "note": "Ja, du kannst KML auch direkt neben deinen anderen Daten in deine Dawarich-Zeitleiste importieren."
+      }
+    ]
+  },
+  "example": {
+    "intro": "Minimales GPX hinein, minimales KML heraus – so sieht die Feldzuordnung in der Praxis aus:",
+    "fromLabel": "GPX",
+    "toLabel": "KML",
+    "input": "<?xml version=\"1.0\"?>\n<gpx version=\"1.1\" creator=\"Garmin\">\n  <trk>\n    <name>Morning Run</name>\n    <trkseg>\n      <trkpt lat=\"52.5200\" lon=\"13.4050\">\n        <ele>34</ele>\n        <time>2026-04-27T07:14:00Z</time>\n      </trkpt>\n      <trkpt lat=\"52.5210\" lon=\"13.4060\">\n        <ele>36</ele>\n        <time>2026-04-27T07:14:30Z</time>\n      </trkpt>\n    </trkseg>\n  </trk>\n</gpx>",
+    "output": "<?xml version=\"1.0\"?>\n<kml xmlns=\"http://www.opengis.net/kml/2.2\">\n  <Document>\n    <name>Morning Run</name>\n    <Placemark>\n      <name>Morning Run</name>\n      <LineString>\n        <coordinates>\n          13.4050,52.5200,34\n          13.4060,52.5210,36\n        </coordinates>\n      </LineString>\n      <TimeSpan>\n        <begin>2026-04-27T07:14:00Z</begin>\n        <end>2026-04-27T07:14:30Z</end>\n      </TimeSpan>\n    </Placemark>\n  </Document>\n</kml>"
+  },
+  "reference": {
+    "heading": "GPX und KML im kurzen Vergleich",
+    "body": [
+      "GPX (GPS Exchange Format) wurde 2002 von Topografix speziell für GPS-Geräte veröffentlicht. Es enthält Tracks, Routen, Wegpunkte und grundlegende Metadaten pro Punkt. Fast jedes GPS-Gerät, jede Sportuhr und jede Outdoor-App kann es lesen und schreiben. Es ist ein kleines, klar abgegrenztes Format – im Grunde gibt es nur eine Art, einen Track darzustellen.",
+      "KML (Keyhole Markup Language) wurde von Keyhole entwickelt, dem Unternehmen, das Google für den Aufbau von Google Earth kaufte. Es ist viel umfassender und enthält Geometrie, Stile, Zeitanimationen, 3D-Modelle, Netzwerklinks und Overlays. KML ist ein Darstellungsformat. GPX ist ein Austauschformat.",
+      "Wenn du einen Track teilen oder visualisieren möchtest, braucht die empfangende Software KML. Wenn du ihn wieder auf ein GPS-Gerät übertragen oder in Fitnesssoftware auswerten möchtest, behalte GPX."
+    ]
+  },
+  "faqs": [
+    {
+      "q": "Lädt dieser Konverter meine GPX-Datei auf einen Server hoch?",
+      "a": "Nein. Die Umwandlung läuft vollständig per JavaScript in deinem Browser. Deine Datei verlässt dein Gerät nie, und ihre Inhalte werden nicht zu Analysezwecken erfasst. Du kannst das prüfen: Dawarich ist Open Source und der Konvertercode liegt im selben öffentlichen Repository."
+    },
+    {
+      "q": "Kann ich mehrere GPX-Dateien gleichzeitig umwandeln?",
+      "a": "Dieser Konverter verarbeitet jeweils eine Datei. Wenn du mehrere GPX-Dateien zu einer KML-Datei kombinieren möchtest, führe sie zuerst mit dem GPX-Datei-Merger zusammen und wandle dann die zusammengeführte Datei um."
+    },
+    {
+      "q": "Bleiben meine Herzfrequenz- und Trittfrequenzdaten erhalten?",
+      "a": "Nein. KML hat keine definierte Erweiterung für Fitness-Sensordaten. Wenn du Herzfrequenz, Trittfrequenz oder Leistung behalten möchtest, bewahre die ursprüngliche GPX-Datei auf (die meisten Fitness-Apps bevorzugen sie) oder wandle in TCX um, das für Fitnessaktivitäten ausgelegt ist."
+    },
+    {
+      "q": "Wie öffne ich die erzeugte KML-Datei in Google Earth?",
+      "a": "Ziehe die .kml-Datei in der Webversion auf die Earth-Oberfläche. In Google Earth Pro auf dem Desktop wählst du „Datei → Öffnen“ und dann die Datei aus. Der Track erscheint links unter „Temporäre Orte“. Mit einem Rechtsklick kannst du ihn dauerhaft speichern."
+    },
+    {
+      "q": "Warum sieht mein Track in Google Earth wie eine flache Linie aus?",
+      "a": "KML-LineStrings liegen standardmäßig auf dem Boden. Um das tatsächliche Höhenprofil zu sehen, klicke in Google Earth Pro mit der rechten Maustaste auf deinen importierten Track und wähle als Höhenmodus „Absolut“ oder „Relativ zum Boden“."
+    },
+    {
+      "q": "Gibt es eine Grenze für die Dateigröße?",
+      "a": "Der Konverter läuft in deinem Browser. Die praktische Grenze ist daher dessen Arbeitsspeicher. Dateien bis zu mehreren hundert Megabyte funktionieren auf einem modernen Laptop gut. Teile sehr große GPX-Exporte (etwa mehrjährige Archive) zuerst mit dem GPS-Datei-Splitter auf."
+    }
+  ]
+}

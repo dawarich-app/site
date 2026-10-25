@@ -1,5 +1,8 @@
+import content from '@locale-content/components/HowItWorks.json';
+import { interpolate } from '@docusaurus/Interpolate';
 import { useEffect, useState } from 'react';
 import styles from './HowItWorks.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
 const ROUTE_PINS = [
   { left: '16.63%', top: '50%' },
@@ -17,6 +20,7 @@ function Pin({ icon, num, accent, className }) {
 }
 
 function RouteHowItWorks({ title, subtitle, steps }) {
+  const htmlLang = useHtmlLang();
   const [animate, setAnimate] = useState(true);
 
   useEffect(() => {
@@ -94,7 +98,7 @@ function RouteHowItWorks({ title, subtitle, steps }) {
                   className={styles.routeStepPinMobile}
                 />
                 <p className={styles.routeKicker}>
-                  Step {String(index + 1).padStart(2, '0')}
+                  {interpolate(content.step, { number: (index + 1).toLocaleString(htmlLang, { minimumIntegerDigits: 2, useGrouping: false }) })}
                 </p>
                 <h3 className={styles.routeStepTitle}>{step.title}</h3>
                 {step.description && (

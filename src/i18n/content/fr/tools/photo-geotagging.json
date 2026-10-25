@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "Extraction des données GPS de vos photos",
+    "description": "Extrayez gratuitement les coordonnées GPS de vos photos et exportez-les en GPX. Traitement dans votre navigateur, sans envoi à un serveur.",
+    "keywords": "extraction de géodonnées photo, GPS, EXIF, géolocalisation, export GPX, localisation photo, confidentialité, métadonnées d’image",
+    "featureList": [
+      "Extraction des données GPS des photos",
+      "Carte interactive avec des repères pour les photos",
+      "Confidentialité : traitement intégral dans le navigateur",
+      "Export des positions en fichiers GPX",
+      "Aucune donnée envoyée à un serveur"
+    ]
+  },
+  "h1": "Extraction des géodonnées de vos photos",
+  "intro": "Ajoutez vos photos pour extraire les coordonnées GPS des métadonnées EXIF, les afficher sur une carte et les exporter en fichiers GPX.",
+  "exportButton": "Exporter en GPX",
+  "emptyExport": "Aucune photo avec des données GPS à exporter",
+  "gpsPhotosLabel": "photos avec GPS",
+  "photosLabel": "photos",
+  "howTo": {
+    "title": "Comment ça marche",
+    "intro": "Cet outil lit les métadonnées EXIF de vos photos pour en extraire les coordonnées GPS. La plupart des smartphones intègrent automatiquement les données de localisation aux photos.",
+    "features": [
+      {
+        "title": "Formats pris en charge :",
+        "body": "JPEG, PNG, HEIC et autres formats d’image contenant des données EXIF"
+      },
+      {
+        "title": "Ce que vous obtenez :",
+        "body": "Une carte interactive des lieux de prise de vue, des données GPS détaillées et un export GPX pour les appareils GPS"
+      },
+      {
+        "title": "Remarque :",
+        "body": "Seules les photos contenant des données GPS apparaîtront sur la carte. Les captures d’écran et les photos retouchées peuvent ne pas contenir de données de localisation."
+      }
+    ]
+  },
+  "privacy": {
+    "title": "La confidentialité avant tout",
+    "body": "Le traitement des photos s’effectue entièrement dans votre navigateur. Vos photos et leurs données de localisation restent sur votre appareil et ne sont envoyées à aucun serveur."
+  },
+  "results": {
+    "gpsPhotos": "Photos avec des données GPS : {count}",
+    "extracted": "Vous avez extrait les données GPS de **{count}** photos. Dawarich cartographie toutes vos données de localisation : photos, trajets et déplacements quotidiens.",
+    "uploaded": "Vous avez ajouté **{count}** photos. Dawarich cartographie toutes vos données de localisation : photos, trajets et déplacements quotidiens."
+  }
+}

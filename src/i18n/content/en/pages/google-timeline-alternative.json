@@ -1,0 +1,153 @@
+{
+  "howItWorksSteps": [
+    {
+      "title": "Export from Google",
+      "description": "Go to [takeout.google.com](https://takeout.google.com), select “Location History (Timeline)”, request the export. Google emails you a zip — usually within an hour."
+    },
+    {
+      "title": "Sign up for Dawarich Cloud",
+      "description": "Email + password. 7-day free trial with full features."
+    },
+    {
+      "title": "Drag-and-drop the zip",
+      "description": "Upload it. Watch your timeline reconstruct itself — pin by pin, trip by trip, year by year — on a map that doesn't belong to Google."
+    }
+  ],
+  "migrationFAQ": [
+    {
+      "question": "Will the new Google Takeout format work?",
+      "answer": "Yes. We support the new Timeline format (post-2024), the old format, and the legacy records.json fallback."
+    },
+    {
+      "question": "What if my Takeout zip is huge?",
+      "answer": "Our import handles it. We've successfully imported 2 GB Takeouts spanning 15 years and 6.8 million points without issue."
+    },
+    {
+      "question": "Will it work if Google deleted some of my data?",
+      "answer": "Whatever you can export, we can import. We can't recover data Google has already deleted — but we can save what you still have access to."
+    },
+    {
+      "question": "Can I keep using Google Maps after migrating?",
+      "answer": "Yes. Use Google Maps for navigation. Use Dawarich for the record of where you've been. They're not the same product."
+    },
+    {
+      "question": "Will Dawarich track me as well as Google did?",
+      "answer": "Honestly? Better. Native iOS and Android apps with background tracking and battery-friendly intervals. Your data goes over HTTPS to your Dawarich account — never to Google or any third party."
+    },
+    {
+      "question": "What if I want to leave Dawarich later?",
+      "answer": "Export everything to GPX, GeoJSON, or KML — on any plan, even Lite. Self-host the open-source version. Or just delete your account — your data goes with you, never sold, never retained."
+    },
+    {
+      "question": "Is there really a free trial?",
+      "answer": "Yes. 7-day free trial with full features. Cancel anytime from Subscription Settings — your exports remain yours."
+    },
+    {
+      "question": "Do you sell location data?",
+      "answer": "No. We're a small EU company that makes money from subscriptions. Selling location data is illegal under GDPR, and we'd rather have a real business."
+    }
+  ],
+  "freeWasntFree": {
+    "heading": "“But Google Timeline was free.”",
+    "p": "**Free wasn’t free.** You paid in data.",
+    "p2": "For a decade, every place you went was logged, analyzed, fed to Google’s ad targeting, and used to train their models. Every coffee shop. Every Sunday hike. Every late-night drive to a friend’s house. That was the price.",
+    "p3": "Now Google has extracted what they wanted. Timeline is moved to your phone, the cloud version is gone, and the product you “didn’t pay for” is being deprecated because it no longer earns.",
+    "p4": "You don’t owe Google anything. And you don’t have to replace one ad-funded surveillance product with another (looking at you, Life360)."
+  },
+  "phoneIsNotABackup": {
+    "heading": "Your timeline is now one-device-failure away from gone",
+    "p": "Timeline data is on-device only. That means:",
+    "div": "Old phones’ data",
+    "p2": "The history that didn’t transfer? **Gone.**",
+    "div2": "Current phone, broken",
+    "p3": "Lost, stolen, dropped in a lake, factory-reset? **Gone.**",
+    "div3": "Cross-device viewing",
+    "p4": "View your timeline from a tablet or laptop? **Gone.**",
+    "div4": "Cloud backup",
+    "p5": "Of your timeline going forward? **Gone — it’s local now.**",
+    "div5": "Cloud history (pre-migration)",
+    "p6": "Held by Google for years for users who didn’t grab a Takeout in time? **Already deleted.**",
+    "div6": "The bottom line",
+    "p7": "You have one copy of your timeline. It lives on a glass slab that breaks if you drop it. **That is not a backup strategy.**"
+  },
+  "differentiators": {
+    "heading": "What makes Dawarich the right home for your Timeline",
+    "p": "Most “Google Timeline alternatives” are workout trackers, manual trip loggers, family-tracking apps that sell data, or self-hosted stacks that need a weekend of Docker. Dawarich is none of those.",
+    "h3": "EU-hosted",
+    "p2": "Hetzner, Germany. No US transfers. Real GDPR — not a “we comply” footnote.",
+    "h32": "Open-source",
+    "p3": "The full engine is on [GitHub](https://github.com/Freika/dawarich) with OVER 9,000 stars. Cloud is the convenience layer — the product underneath is yours to take and run forever.",
+    "h33": "Built for Timeline refugees",
+    "text3": "New format, old format, legacy ",
+    "code": "records.json",
+    "text4": "fallback. We’ve imported 15 years of Timeline data — 6.8 million points, 2 GB Takeout — without breaking a sweat.",
+    "h34": "Visualization product, not a database",
+    "p4": "Heatmaps. Fog of War. Globe view. Trip detection. Year-in-review. The things Timeline did well — and a few it didn’t.",
+    "h35": "Permanent export, no lock-in",
+    "p5": "GPX, GeoJSON, KML, raw JSON. Your data leaves with you, always — on any plan, even Lite.",
+    "h36": "iOS & Android tracking apps",
+    "p6": "Native apps with background tracking and battery-friendly intervals. Your data goes to your Dawarich account — never to Google or any third party."
+  },
+  "competitorReframe": {
+    "heading": "What you’re choosing between",
+    "th": "Option",
+    "th2": "Annual cost",
+    "th3": "Restores your Google Timeline?",
+    "th4": "Sells your data?",
+    "td": "Doing nothing",
+    "td2": "“Free”",
+    "td3": "No — phone-only, one drop from gone",
+    "td4": "N/A",
+    "td5": "Life360 Gold",
+    "td6": "No — live family tracking, no history",
+    "td7": "Yes (aggregated)",
+    "td8": "Strava Premium",
+    "td9": "No — workouts only",
+    "td10": "Public feeds",
+    "td11": "Dawarich Cloud Pro",
+    "td12": "Yes — full Takeout import, heatmaps, trips",
+    "td13": "No. Ever.",
+    "perYear": "{price}/yr"
+  },
+  "promises": {
+    "heading": "Two promises, zero risk",
+    "h3": "Cancel anytime",
+    "p": "7-day free trial, full features. Cancel anytime from Subscription Settings — no annual lock-in, no exit fees, no friction. Your exports remain yours, on any plan, even after cancellation.",
+    "h32": "Open-source escape hatch",
+    "p2": "If Dawarich Cloud ever shuts down, you export your data and self-host the same software with one command. The full engine is on [GitHub](https://github.com/Freika/dawarich) with OVER 9,000 stars. **You physically cannot lose your timeline by switching to us.**"
+  },
+  "urgency": {
+    "heading": "This isn’t manufactured urgency. Phones break.",
+    "p": "Your timeline is on one device. **One device.**",
+    "p2": "Phones get dropped, stolen, lost, water-damaged, factory-reset. Phones get traded in for new phones, and Timeline data doesn’t always come along cleanly. The Takeout export window depends on Google account activity — inactive accounts lose access faster.",
+    "p3": "Every week you wait is data you might not get back. The migration takes 15 minutes. **There is no version of “later” that is better than “tonight.”**",
+    "text3": "Import your Takeout this evening"
+  },
+  "timelineFinalCTA": {
+    "heading": "Your timeline doesn’t belong to Google.",
+    "p": "It belongs to you. To the places you’ve lived. To the people you’ve visited. To the trips you took before phones were good at remembering them for you.",
+    "text": "Save your timeline today",
+    "span": "7-day free trial · Cancel anytime · Already self-hosting? [Import the same Takeout into your own instance](https://github.com/Freika/dawarich)."
+  },
+  "googleTimelineAlternativePage": {
+    "text": "Start your 7-day free trial",
+    "text2": "See pricing"
+  },
+  "meta": {
+    "title": "Google Timeline Alternative: Private History",
+    "description": "Import your Google Timeline into Dawarich, explore your history on a web map, and track new journeys with iOS and Android apps. 7-day Cloud trial."
+  },
+  "hero": {
+    "badge": "Google Timeline alternative",
+    "title": "Google killed Timeline.",
+    "titleHighlight": "Don't let your decade go with it.",
+    "subtitle": "Save your entire Google location history in minutes — and keep tracking forward, on infrastructure Google can't deprecate, sell, or feed to ad models. EU-hosted. Encrypted in transit and at rest. GDPR-compliant.",
+    "disclaimer": "7-day free trial · We've successfully imported 15-year Takeouts of 6.8 million points without breaking a sweat",
+    "imageAlt": "Dawarich timeline view replacing Google Timeline"
+  },
+  "howItWorks": {
+    "title": "How the migration works",
+    "subtitle": "Three steps. About 15 minutes total."
+  },
+  "migrationFAQTitle": "Common questions"
+}

@@ -1,0 +1,23 @@
+{
+  "cols": [
+    {
+      "name": "Lite"
+    },
+    {
+      "name": "Pro"
+    },
+    {
+      "name": "家庭"
+    }
+  ],
+  "title": "逐项比较所有功能",
+  "subtitle": "展开各部分查看详情，也可以只显示方案之间的差异。",
+  "collapseAll": "全部收起",
+  "expandAll": "全部展开",
+  "headerFeatures": "功能",
+  "footerLabel": "随时可以开始",
+  "chooseLite": "选择 Lite",
+  "startFree": "免费开始",
+  "yearAbbreviation": "/年",
+  "highlightDifferences": "突出显示差异"
+}

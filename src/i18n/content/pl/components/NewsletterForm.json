@@ -1,0 +1,14 @@
+{
+  "subscribe": "Zapisz się",
+  "privacyNote": "Bez spamu. Wypisz się w dowolnej chwili.",
+  "invalidEmail": "Podaj prawidłowy adres e-mail.",
+  "requestError": "Coś poszło nie tak. Spróbuj ponownie później.",
+  "success": "Zapisano! Sprawdź skrzynkę odbiorczą, aby potwierdzić zapis.",
+  "networkError": "Błąd sieci. Sprawdź połączenie i spróbuj ponownie.",
+  "firstNameLabel": "Imię ",
+  "emailLabel": "E-mail ",
+  "optionalLabel": "(opcjonalnie)",
+  "firstNamePlaceholder": "Michał",
+  "emailPlaceholder": "you@example.com",
+  "subscribing": "Zapisywanie…"
+}

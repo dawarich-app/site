@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "title": "Générateur gratuit de cartes de chaleur GPS en ligne",
+    "description": "Cartes de chaleur GPS : course/vélo/activités. GPX/FIT/TCX/GeoJSON/KML/JSON Google Timeline (Vos trajets Google Maps). Gratuit, privé, tout dans le navigateur.",
+    "keywords": "carte de chaleur GPS, générateur de cartes de chaleur, carte course à pied, carte vélo, alternative Strava, carte de chaleur GPX, carte d’activité, carte fitness, carte gratuite, carte de chaleur Google Timeline, historique de localisation Google, carte Records.json"
+  },
+  "h1": "Générateur de cartes de chaleur GPS",
+  "intro": "Créez de belles cartes de chaleur à partir de vos activités GPS. Ajoutez plusieurs fichiers pour visualiser vos habitudes de course à pied, de vélo et d’activité sur une carte.",
+  "saveIntro": "Vous souhaitez aussi retrouver ces données dans votre compte Dawarich ? Nous les importerons lors de l’inscription, sans nouvel envoi.",
+  "privacy": "Le rendu s’effectue dans votre navigateur. Rien n’est envoyé sauf si vous choisissez « Enregistrer dans mon compte Dawarich ».",
+  "exportButton": "Exporter en PNG",
+  "loadingMap": "Chargement de la carte...",
+  "parseError": "Erreur d’analyse de {fileName} : {message}",
+  "cards": [
+    {
+      "title": "Qu’est-ce qu’une carte de chaleur GPS ?",
+      "paragraphs": [
+        "Une carte de chaleur GPS représente la densité de vos données de localisation sur une carte. Les zones que vous fréquentez le plus apparaissent plus lumineuses et plus intenses, illustrant vos habitudes d’activité au fil du temps."
+      ]
+    },
+    {
+      "title": "Formats de fichiers pris en charge",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**GPX** - GPS Exchange Format (la plupart des applications GPS)"
+        },
+        {
+          "body": "**FIT** - Fichiers d’activité Garmin"
+        },
+        {
+          "body": "**GeoJSON** - Format de cartographie web"
+        },
+        {
+          "body": "**KML/KMZ** - Format Google Earth"
+        },
+        {
+          "body": "**JSON Google Timeline** - Fichiers Records.json et Semantic Location History issus de Google Takeout"
+        }
+      ]
+    },
+    {
+      "title": "Comment exporter vos données",
+      "paragraphs": [],
+      "items": [
+        {
+          "body": "**Strava :** Paramètres > Mon compte > Télécharger vos données"
+        },
+        {
+          "body": "**Garmin :** copiez les fichiers .FIT depuis l’appareil ou utilisez l’export de Garmin Connect"
+        },
+        {
+          "body": "**Apple Fitness :** utilisez des applications tierces pour exporter vos entraînements en GPX"
+        },
+        {
+          "body": "**Google Maps :** utilisez Google Takeout pour exporter l’historique de localisation ; les fichiers Records.json et Semantic Location History sont directement pris en charge"
+        }
+      ]
+    },
+    {
+      "title": "Une alternative gratuite à la carte de chaleur Strava",
+      "paragraphs": [
+        "La carte de chaleur de Strava nécessite un abonnement payant. Cet outil gratuit vous permet de créer des cartes similaires à partir de vos données exportées, sans abonnement ni compte."
+      ]
+    }
+  ],
+  "upload": {
+    "uploadTitle": "Ajouter des fichiers",
+    "dropFiles": "Glissez-déposez vos fichiers ici",
+    "formats": "GPX, FIT, TCX, GeoJSON, KML, KMZ, Google Timeline JSON",
+    "clearButton": "Tout effacer",
+    "inputLabel": "Choisir les fichiers à traiter",
+    "processing": "Traitement des fichiers..."
+  },
+  "results": {
+    "statsTitle": "Statistiques",
+    "pointsLabel": "Total des points",
+    "distanceLabel": "Distance totale",
+    "dateRangeLabel": "Période",
+    "loadedFiles": "Fichiers chargés ({count})",
+    "pointCount": "{points} pts",
+    "distanceValue": "{distance} km"
+  },
+  "settings": {
+    "settingsTitle": "Paramètres de la carte de chaleur",
+    "schemeLabel": "Palette de couleurs",
+    "schemes": [
+      {
+        "label": "Feu (rouge/orange)"
+      },
+      {
+        "label": "Strava (orange)"
+      },
+      {
+        "label": "Plasma (violet/jaune)"
+      },
+      {
+        "label": "Océan (bleu)"
+      },
+      {
+        "label": "Forêt (vert)"
+      }
+    ],
+    "intensityLabel": "Intensité : {intensity}",
+    "radiusLabel": "Rayon : {radius}",
+    "opacityLabel": "Opacité : {opacity}"
+  },
+  "cta": {
+    "headline": "Votre carte de chaleur couvre **{points}** points GPS sur **{distance} km**. C’est un instantané ; Dawarich construit votre carte de chaleur en continu.",
+    "fallback": "Vous souhaitez visualiser des années d’historique de localisation ? Dawarich construit votre carte de chaleur en continu à partir de toutes vos sources GPS.",
+    "statLabels": {
+      "points": "points",
+      "distance": "distance",
+      "dateRange": "période"
+    }
+  }
+}

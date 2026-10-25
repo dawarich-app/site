@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "KMZ in GPX – Google-Earth-Dateien gratis entpacken",
+    "description": "KMZ-Dateien sofort in GPX umwandeln. Kostenloser, datenschutzfreundlicher Online-Konverter. Direkt im Browser – kein Upload nötig.",
+    "keywords": "KMZ in GPX, KMZ-Konverter, GPX-Konverter, Google Earth zu GPS, KMZ entpacken",
+    "appName": "KMZ-zu-GPX-Konverter"
+  },
+  "h1": "KMZ in GPX umwandeln",
+  "intro": "Wandle deine KMZ-Dateien sofort in GPX um. Die gesamte Verarbeitung läuft in deinem Browser – deine Daten verlassen dein Gerät nie.",
+  "cards": [
+    {
+      "title": "Über das KMZ-Format",
+      "body": "KMZ ist ein komprimiertes (gezipptes) KML-Dateiformat, das Google Earth für kleinere Dateien und kürzere Ladezeiten nutzt."
+    },
+    {
+      "title": "Über das GPX-Format",
+      "body": "GPX (GPS Exchange Format) ist das Standardformat für GPS-Daten und mit den meisten GPS-Geräten und Fitness-Apps kompatibel."
+    },
+    {
+      "title": "Warum KMZ in GPX umwandeln?",
+      "items": [
+        "Daten aus Google Earth in GPS-Geräte importieren",
+        "Mit Fitness-Tracking-Apps nutzen (Strava, Garmin Connect)",
+        "Mit Wander- und Outdoor-Navigationsapps kompatibel",
+        "Standardformat für GPS-Wegpunkte und Routen"
+      ]
+    }
+  ],
+  "privacyBody": "Die gesamte Umwandlung läuft ausschließlich in deinem Browser. Deine Daten verlassen dein Gerät nie."
+}

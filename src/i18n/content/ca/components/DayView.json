@@ -1,0 +1,22 @@
+{
+  "movingLabel": "en moviment",
+  "stationaryLabel": "sense moviment",
+  "visitsLabel": "Visites",
+  "tracksLabel": "Trajectes",
+  "distanceLabel": "Distància",
+  "movingTitle": "En moviment",
+  "emptyDay": "No s'han registrat visites aquest dia.",
+  "previousDay": "Dia anterior",
+  "nextDay": "Dia següent",
+  "selectDay": "Selecciona un dia per veure la teva línia de temps.",
+  "rawHint": "Aquest fitxer només conté registres GPS en brut, sense visites a llocs ni segments d'activitat. Fes servir fitxers de Semantic Location History o exportats des del telèfon per veure la línia de temps completa.",
+  "places": "{count} llocs",
+  "movingDuration": "{duration} en moviment",
+  "duration": {
+    "zero": "0m",
+    "hoursMinutes": "{hours}h {minutes}m",
+    "hours": "{hours}h",
+    "minutes": "{minutes}m"
+  },
+  "visitCount": "{count} visita|{count} visites|{count} visites"
+}

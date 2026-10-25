@@ -1,0 +1,11 @@
+{
+  "buttonLabel": "Auf die Warteliste setzen",
+  "note": "Kein Spam – nur die E-Mail zum Start.",
+  "invalidEmail": "Bitte gib eine gültige E-Mail-Adresse ein.",
+  "requestError": "Etwas ist schiefgelaufen. Bitte versuch es später noch einmal.",
+  "success": "Du stehst auf der Liste! Wir schreiben dir, sobald der Familientarif startet.",
+  "networkError": "Netzwerkfehler. Bitte prüfe deine Verbindung und versuch es noch einmal.",
+  "joining": "Wird eingetragen …",
+  "emailPlaceholder": "du@example.com",
+  "emailLabel": "E-Mail-Adresse"
+}

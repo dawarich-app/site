@@ -1,0 +1,57 @@
+{
+  "rows": [
+    {
+      "title": "Un pòster és només una de les vint-i-dues opcions",
+      "body": "La impressió és l’opció evident: d’A5 a A0, 30 × 40, 50 × 70 i 70 × 100 cm, carta dels EUA, vertical o horitzontal. Però el mateix mapa també s’exporta com a fons de pantalla de telèfon o escriptori, fins a 4K i ultrapanoràmic, i com a publicació d’Instagram, història, capçalera d’X o miniatura de YouTube. Els dissenys d’impressió es dimensionen en paper real i DPI; els de pantalla són exactes en píxels.",
+      "note": "La mateixa composició, vint-i-dues sortides"
+    },
+    {
+      "title": "L’enquadrament que veus és el que obtens",
+      "body": "Tria un disseny abans de compondre i la previsualització s’hi adaptarà, perquè el retall d’una història no et sorprengui. L’estudi mostra les dimensions finals mentre treballes: un A3 vertical a 300 DPI s’exporta a 3508 × 4961 píxels. T’avisa quan una vista és massa ampla per a la superfície del pòster més gran, en lloc d’apropar-la sense dir res."
+    }
+  ],
+  "objections": [
+    {
+      "q": "En què es diferencia dels pòsters de mapes que ven tothom?",
+      "a": "Els altres són contorns d’una ciutat que qualsevol pot comprar amb un nom a sota. Aquest és el traç real que has fet a peu, en bici o en cotxe, dibuixat amb els punts GPS del teu compte."
+    },
+    {
+      "q": "El pòster imprès serà com l’he dissenyat?",
+      "a": "L’enquadrament que compones és el que s’imprimeix: l’estudi fa servir el mateix marc que el motor de renderització i t’avisa si la vista és massa ampla per a la mida més gran, en lloc d’apropar-la sense dir res."
+    },
+    {
+      "q": "Quina qualitat té la impressió?",
+      "a": "Paper mat de primera qualitat de 200 gsm, sense reflexos, perquè la ruta es vegi nítida amb la llum de l’habitació. L’enviament dins de la UE està inclòs i el pagament es fa amb Stripe, de manera que les dades de la targeta no passen mai per Dawarich."
+    },
+    {
+      "q": "He d’encarregar una impressió per fer servir l’estudi?",
+      "a": "No. Descarrega el PNG o PDF i porta’l a la impremta que vulguis, desa el fitxer o oblida’t del paper: molta gent només exporta un fons d’escriptori 4K o de telèfon. Encarregar una impressió és una opció, no la finalitat de la funció."
+    },
+    {
+      "q": "Ho puc fer en una instància pròpia?",
+      "a": "Sí, l’estudi forma part de l’aplicació de codi obert. Les comandes d’impressió estan activades per defecte i es poden desactivar completament a la teva instància."
+    }
+  ],
+  "meta": {
+    "title": "Estudi de pòsters — Rutes GPS en pòsters i fons de pantalla",
+    "description": "Rutes teves en pòsters, fons 4K/mòbil o xarxes: 17 temes, 22 dissenys, color per capa, PNG/PDF 300 DPI, paper mat 200 gsm i enviament UE gratis.",
+    "ogTitle": "Poster Studio — Converteix les teves rutes GPS en pòsters i fons de pantalla",
+    "ogDescription": "Compon un mapa de les rutes que has fet i exporta’l de 22 maneres: mides A5 a A0, fons 4K i ultrapanoràmics, fons de telèfon i formats socials."
+  },
+  "posterStudioPage": {
+    "text": "Qualsevol pot comprar un mapa de Berlín.",
+    "em": "Només tu tens aquesta ruta.",
+    "title2": "Disset temes, i tots els colors que hi ha al darrere",
+    "body": "Cada pòster de sota mostra els mateixos dos anys a Berlín, del 15 de juliol de 2024 al 15 de juliol de 2026, exportats de l’estudi canviant només el tema. Si cap dels disset no t’acaba de convèncer, obre l’editor de colors i personalitza l’aigua, els parcs, les vies de tren, els límits, els edificis i cada classe de carretera. Dona al trajecte el seu color, opacitat i gruix, del 50% al 300%, perquè el traç es distingeixi tant en A0 com al telèfon.",
+    "title3": "Una eina de disseny, més enllà d’un botó de generar",
+    "sub2": "Estudi a pantalla completa. Arrossega per moure’t, desplaça per fer zoom, compon l’enquadrament i exporta’l a la mida que necessitis.",
+    "title4": "Abans d’exportar",
+    "title5": "La teva ruta a la paret, o a la pantalla de bloqueig",
+    "text2": "Importa una ruta que ja tinguis o registra’n una de nova, obre l’estudi i comença a compondre. Encara no tens compte?",
+    "a": "Prova la versió gratuïta al navegador amb qualsevol fitxer GPS",
+    "text3": "."
+  },
+  "hero": {
+    "sub": "La sortida per a la qual t’has entrenat, l’any que anaves a peu a tot arreu, el viatge en cotxe del qual encara parles: ja són al teu historial d’ubicacions en forma d’un traç que ningú més té. Poster Studio el converteix en una cosa que pots emmarcar, posar de fons de pantalla o publicar."
+  }
+}

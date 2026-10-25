@@ -1,0 +1,55 @@
+{
+  "rows": [
+    {
+      "title": "Every country, counted, with the 183-day line drawn",
+      "body": "Pick a year and see how many distinct days you spent in each country, ordered largest first. Any country where you reach 183 days or more is flagged — the threshold behind a great many residency rules, and the number you want to see coming rather than discover in April."
+    },
+    {
+      "title": "The runs behind the total, not just the total",
+      "body": "A total of 353 days tells you less than the eight separate stretches that made it up — a 133-day run, a 104-day run, then a scatter of short ones in December. Each stay is listed with its start date, end date and length, which is what you need when a rule cares about unbroken presence rather than an annual sum.",
+      "note": "Exportable evidence, not a dashboard number"
+    }
+  ],
+  "objections": [
+    {
+      "q": "Is this tax advice?",
+      "a": "No, and it does not pretend to be. Dawarich reports what your location history says. It does not interpret any country's tax law, and jurisdictions count days differently — some count partial days, some exclude travel days, some average across several years. It is evidence to bring to a professional, not a conclusion to act on."
+    },
+    {
+      "q": "How exactly is a day counted?",
+      "a": "A day counts for a country if you have at least one recorded point there that day. Fly Germany to France on a Tuesday and that Tuesday counts for both, so per-country days can add up to more than your tracked days. Days are bounded by UTC, which near midnight and near a border can move a day."
+    },
+    {
+      "q": "What about days I did not track?",
+      "a": "They count for nothing and are never attributed to your last known country. The report also shows your total tracked days, so you can see how much of the year your numbers actually cover — the first thing an accountant will ask."
+    },
+    {
+      "q": "I have years of history in Google Timeline. Does that work?",
+      "a": "Yes. Import your Google Takeout archive and the days come with it. Imported points need reverse geocoding before they can be attributed to a country, which Dawarich handles for you."
+    },
+    {
+      "q": "Do I have to trust you with years of location data?",
+      "a": "You do not have to trust anyone. The entire application is open source and every capability runs on hardware you own. Self-host it and the data never leaves your machine."
+    }
+  ],
+  "meta": {
+    "title": "Tax Residency Day Counter — Track the 183-Day Rule Automatically",
+    "description": "Count the days you spent in each country from your own GPS history, with consecutive stay periods and a 183-day threshold flag. Built for digital nomads, cross-border commuters and long-term travellers.",
+    "ogTitle": "Tax Residency Day Counter — Track the 183-Day Rule From Your GPS History",
+    "ogDescription": "Per-country day counts from location history you already collect, with consecutive stay periods and a 183-day threshold flag. Evidence for residency questions, not tax advice."
+  },
+  "taxResidencyPage": {
+    "text": "You crossed six borders this year.",
+    "em": "How many days was that?",
+    "title2": "The answer, with its working shown",
+    "sub2": "Days per country lives on the Insights page and follows the year you pick at the top.",
+    "title3": "Read this before you rely on it",
+    "title4": "Start counting now, not next April",
+    "text2": "Track from today and next year's answer is already counted. The full counting rules are in the",
+    "EnOnlyLink": "Days per Country documentation",
+    "text3": "."
+  },
+  "hero": {
+    "sub": "Reconstructing a year from boarding passes and calendar entries is how people get residency wrong. Dawarich counts the days per country from the GPS history you already collect — one square per day, coloured by country — flags anything past 183, and leaves the gaps visible where your tracking lapsed instead of papering over them."
+  }
+}

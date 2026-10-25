@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
+import RichText from '@site/src/i18n/RichText';
+import content from '@locale-content/components/TimelineMapV2.json';
 import styles from './TimelineMapV2.module.css';
 
 const STYLE_URLS = {
@@ -434,9 +436,9 @@ export default function TimelineMapV2({
     return (
       <div className={styles.mapContainer}>
         <div className={styles.webglError} role="alert">
-          <h3>Map unavailable</h3>
-          <p>Your browser doesn't support WebGL, which is required for the map.</p>
-          <p><a href="https://get.webgl.org" target="_blank" rel="noopener noreferrer">Learn more about WebGL</a></p>
+          <h3>{content.unavailableTitle}</h3>
+          <p>{content.unavailableBody}</p>
+          <p><RichText text={content.webglLink} /></p>
         </div>
       </div>
     );
@@ -449,12 +451,12 @@ export default function TimelineMapV2({
         type="button"
         className={styles.fullscreenButton}
         onClick={toggleFullscreen}
-        aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
-        title={isFullscreen ? 'Exit fullscreen (Esc)' : 'Toggle fullscreen (F)'}
+        aria-label={isFullscreen ? content.exitFullscreen : content.enterFullscreen}
+        title={isFullscreen ? content.exitHint : content.toggleHint}
       >
         {isFullscreen ? '⤢' : '⤡'}
       </button>
-      {isSample && <div className={styles.demoOverlay}>Demo data — drop your files above</div>}
+      {isSample && <div className={styles.demoOverlay}>{content.demoLabel}</div>}
     </div>
   );
 }

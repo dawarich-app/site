@@ -1,0 +1,36 @@
+{
+  "yearLabel": "Año",
+  "emptyLabel": "Sin datos",
+  "searchLabel": "Buscar",
+  "searchPlaceholder": "Buscar visitas…",
+  "searchAriaLabel": "Buscar visitas",
+  "previousMonth": "Mes anterior",
+  "nextMonth": "Mes siguiente",
+  "yearDays": "{year} ({count} días)",
+  "otherMonth": "{date} (otro mes)",
+  "noData": "{date} — sin datos",
+  "hoursTracked": "{date} — {hours} horas registradas",
+  "weekdays": [
+    {
+      "label": "L"
+    },
+    {
+      "label": "M"
+    },
+    {
+      "label": "X"
+    },
+    {
+      "label": "J"
+    },
+    {
+      "label": "V"
+    },
+    {
+      "label": "S"
+    },
+    {
+      "label": "D"
+    }
+  ]
+}

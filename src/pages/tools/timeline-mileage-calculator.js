@@ -8,43 +8,18 @@ import { parseTimeline } from '@site/src/utils/timelineParser';
 import { generateMileageLog, mileageLogToCSV } from '@site/src/utils/timelineStats';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import RelatedTools from '@site/src/components/RelatedTools';
+import { interpolate } from '@docusaurus/Interpolate';
+import RichText, { SmartLink, toPlainText } from '@site/src/i18n/RichText';
+import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
+import content from '@locale-content/tools/timeline-mileage-calculator.json';
 import styles from './timeline-mileage-calculator.module.css';
+import { useHtmlLang } from '@site/src/i18n/useHtmlLang';
 
-const pageTitle = "Google Timeline Mileage Calculator - Track Driving Distance Free";
-const pageDescription = "Free mileage calculator using your Google Timeline data. Calculate driving distance, generate mileage logs, and export CSV reports for tax deductions. Privacy-first — runs in your browser.";
-const pageUrl = "https://dawarich.app/tools/timeline-mileage-calculator/";
+const pageTitle = content.meta.title;
+const pageDescription = content.meta.description;
 const imageUrl = "https://dawarich.app/img/meta-image.png";
 
-const faqItems = [
-  {
-    question: "Is it safe to upload my Google Timeline data?",
-    answer: "Absolutely. The calculator runs 100% in your browser using client-side JavaScript — your files stay on your device and are discarded when you close or refresh the page, with no tracking of your location data. The only exception is the optional “Save to my Dawarich account” button, which uploads your file to Dawarich Cloud so it can be imported into your new account. The tool is part of the Dawarich open-source ecosystem, so you can inspect the source code yourself."
-  },
-  {
-    question: "How accurate is the mileage calculation?",
-    answer: "Distances are calculated using the Haversine formula, which computes the great-circle distance between GPS coordinates. This gives straight-line approximations between recorded points, which typically underestimates actual road distance by 10-30% depending on route complexity. Highways will be more accurate than winding city streets. For IRS mileage deductions, the standard practice is to use odometer readings or a dedicated mileage tracking app for precise figures, but this tool provides a solid estimate for planning and review."
-  },
-  {
-    question: "Can I use this for tax deductions?",
-    answer: "This tool generates a mileage log that can serve as a supplementary record for tax purposes. However, the IRS requires contemporaneous records — meaning mileage should ideally be logged at the time of each trip, not reconstructed later. Google Timeline data can support your records but may not be sufficient as the sole source. Consult a tax professional for guidance specific to your situation. If you'd rather have the date and distance recorded as trips happen than reconstruct them months later, Dawarich logs them automatically."
-  },
-  {
-    question: "What driving activities does it track?",
-    answer: "The calculator identifies driving-related activity types from Google's classification system: IN_PASSENGER_VEHICLE (car trips), DRIVING, IN_BUS, IN_TRAIN, IN_SUBWAY, and MOTORCYCLING. These activity types are assigned by Google based on speed, movement patterns, and sensor data. The accuracy depends on how well Google classified your activities — occasionally walking or cycling may be misclassified as driving or vice versa."
-  },
-  {
-    question: "Can I filter by date range?",
-    answer: "Yes. After uploading your files, you can set a start date and end date to filter your mileage log to a specific period. This is useful for generating quarterly or annual mileage reports, isolating business travel periods, or comparing mileage across different timeframes. The monthly and daily summaries will also reflect only the filtered date range."
-  },
-  {
-    question: "What format is the CSV export?",
-    answer: "The CSV file includes columns for Trip #, Date, Start Time, End Time, Activity Type, Distance (in your chosen unit), and Duration. Each row represents one driving segment identified in your Timeline data. The file ends with a total row summarizing the overall distance and trip count. The CSV can be opened in Excel, Google Sheets, or any spreadsheet application for further analysis."
-  },
-  {
-    question: "Why are some trips missing?",
-    answer: "Several factors can cause missing trips: (1) Google Timeline only records data when Location History is enabled on your device — any periods where it was off will have no data. (2) Short trips or trips with poor GPS signal may not generate enough data points. (3) Google may not have classified certain movement as driving, especially at low speeds. (4) If you exported using the newer phone-based method, you may only have the last 90 days of data due to Google's 2024 policy change. (5) Some export formats contain less detail than others."
-  }
-];
+const faqItems = content.faq;
 
 function downloadCSV(csvContent, filename) {
   const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
@@ -58,28 +33,33 @@ function downloadCSV(csvContent, filename) {
   URL.revokeObjectURL(url);
 }
 
-function formatDuration(ms) {
+function formatDuration(ms, htmlLang) {
   if (!ms || isNaN(ms)) return '-';
   const totalMinutes = Math.round(ms / 60000);
-  if (totalMinutes < 60) return `${totalMinutes}m`;
+  if (totalMinutes < 60) return interpolate(content.duration.minutes, { minutes: totalMinutes.toLocaleString(htmlLang) });
   const hours = Math.floor(totalMinutes / 60);
   const minutes = totalMinutes % 60;
-  return `${hours}h ${minutes}m`;
+  return interpolate(content.duration.hoursMinutes, { hours: hours.toLocaleString(htmlLang), minutes: minutes.toLocaleString(htmlLang) });
 }
 
 function formatActivityType(type) {
   const mapping = {
-    'IN_PASSENGER_VEHICLE': 'Driving',
-    'DRIVING': 'Driving',
-    'IN_BUS': 'Bus',
-    'IN_TRAIN': 'Train',
-    'IN_SUBWAY': 'Subway',
-    'MOTORCYCLING': 'Motorcycle',
+    'IN_PASSENGER_VEHICLE': content.activities.driving,
+    'DRIVING': content.activities.driving,
+    'IN_BUS': content.activities.bus,
+    'IN_TRAIN': content.activities.train,
+    'IN_SUBWAY': content.activities.subway,
+    'MOTORCYCLING': content.activities.motorcycle,
   };
   return mapping[type] || type;
 }
 
 export default function TimelineMileageCalculator() {
+  const htmlLang = useHtmlLang();
+  const pageUrl = useLocalizedUrl('/tools/timeline-mileage-calculator/');
+  const homeUrl = useLocalizedUrl('/');
+  const toolsUrl = useLocalizedUrl('/tools/');
+  const formatDecimal = (value, digits = 1) => value.toLocaleString(htmlLang, { minimumFractionDigits: digits, maximumFractionDigits: digits });
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const [allPoints, setAllPoints] = useState([]);
   const [allPaths, setAllPaths] = useState([]);
@@ -206,8 +186,7 @@ export default function TimelineMileageCalculator() {
       <Head>
         <meta name="title" content={pageTitle} />
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="google timeline mileage, mileage calculator from location history, driving distance from google maps, mileage log google timeline, tax mileage calculator, google maps mileage tracker, IRS mileage log, driving distance calculator, google timeline driving distance, mileage reimbursement calculator" />
-        <link rel="canonical" href={pageUrl} />
+        <meta name="keywords" content={content.meta.keywords} />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content={pageUrl} />
@@ -223,8 +202,7 @@ export default function TimelineMileageCalculator() {
         <meta name="twitter:image" content={imageUrl} />
 
         <meta name="author" content="Dawarich" />
-        <meta name="robots" content="index, follow" />
-        <meta name="language" content="English" />
+        <meta name="language" content={htmlLang} />
         <meta name="revisit-after" content="7 days" />
 
         {/* JSON-LD Structured Data - WebApplication */}
@@ -232,7 +210,7 @@ export default function TimelineMileageCalculator() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "Google Timeline Mileage Calculator",
+            "name": content.h1,
             "url": pageUrl,
             "description": pageDescription,
             "applicationCategory": "UtilityApplication",
@@ -242,15 +220,7 @@ export default function TimelineMileageCalculator() {
               "price": "0",
               "priceCurrency": "USD"
             },
-            "featureList": [
-              "Calculate driving mileage from Google Timeline data",
-              "Filter trips by date range",
-              "Toggle between kilometers and miles",
-              "Generate downloadable CSV mileage log",
-              "Daily and monthly trip summaries",
-              "Privacy-first - all processing in browser",
-              "No data sent to any server"
-            ]
+            "featureList": content.meta.featureList
           })}
         </script>
 
@@ -259,33 +229,33 @@ export default function TimelineMileageCalculator() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "HowTo",
-            "name": "How to Calculate Mileage from Google Timeline Data",
-            "description": "Export your Google Timeline data and calculate driving mileage using this free, privacy-first calculator.",
+            "name": content.howTo.name,
+            "description": content.howTo.description,
             "step": [
               {
                 "@type": "HowToStep",
-                "name": "Export your Google Timeline data",
-                "text": "Visit takeout.google.com, select Location History (Timeline), and export. Alternatively, on Android: Google Maps > Settings > Location > Timeline > Export. On iOS: Google Maps > Settings > Personal Content > Export Timeline data."
+                "name": content.howTo.steps[0].name,
+                "text": content.howTo.steps[0].text
               },
               {
                 "@type": "HowToStep",
-                "name": "Upload your JSON files",
-                "text": "Drag and drop your exported Google Timeline JSON files into the mileage calculator. The tool automatically detects the format and extracts driving segments."
+                "name": content.howTo.steps[1].name,
+                "text": content.howTo.steps[1].text
               },
               {
                 "@type": "HowToStep",
-                "name": "Set your date range and unit preference",
-                "text": "Select a start and end date to filter your mileage log, and choose between kilometers or miles."
+                "name": content.howTo.steps[2].name,
+                "text": content.howTo.steps[2].text
               },
               {
                 "@type": "HowToStep",
-                "name": "Review and download your mileage log",
-                "text": "Review the trip log, monthly summaries, and total mileage. Download the complete mileage log as a CSV file for your records."
+                "name": content.howTo.steps[3].name,
+                "text": content.howTo.steps[3].text
               }
             ],
             "tool": {
               "@type": "HowToTool",
-              "name": "Google Timeline Mileage Calculator by Dawarich"
+              "name": content.howTo.tool
             }
           })}
         </script>
@@ -297,10 +267,10 @@ export default function TimelineMileageCalculator() {
             "@type": "FAQPage",
             "mainEntity": faqItems.map(item => ({
               "@type": "Question",
-              "name": item.question,
+              "name": toPlainText(item.q),
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": item.answer
+                "text": toPlainText(item.a)
               }
             }))
           })}
@@ -315,19 +285,19 @@ export default function TimelineMileageCalculator() {
               {
                 "@type": "ListItem",
                 "position": 1,
-                "name": "Home",
-                "item": "https://dawarich.app"
+                "name": content.homeLabel,
+                "item": homeUrl
               },
               {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Free Tools",
-                "item": "https://dawarich.app/tools"
+                "name": content.toolsLabel,
+                "item": toolsUrl
               },
               {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Google Timeline Mileage Calculator",
+                "name": content.h1,
                 "item": pageUrl
               }
             ]
@@ -339,32 +309,32 @@ export default function TimelineMileageCalculator() {
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           <div className={styles.header}>
-            <h1>Google Timeline Mileage Calculator</h1>
-            <p>Calculate driving mileage from your Google Timeline data. Generate downloadable mileage logs with per-trip details, daily and monthly summaries. All processing happens in your browser — your data stays on your device unless you choose “Save to my Dawarich account.”</p>
+            <h1>{content.h1}</h1>
+            <p>{content.intro}</p>
           </div>
 
           <div className={styles.topSection}>
             <div className={styles.instructions}>
-              <h2>How to Get Your Timeline Data</h2>
+              <h2>{content.exportData.title}</h2>
               <p>
-                Export your Google Timeline location history using one of these methods. If one does not work, try another.
+                {content.exportData.intro}
               </p>
               <div className={styles.instructionsList}>
                 <div className={styles.instructionItem}>
-                  <strong>Google Takeout:</strong>
-                  <p>Visit <a href="https://takeout.google.com/" target="_blank" rel="noopener noreferrer">takeout.google.com</a> &rarr; Choose Location History (Timeline) &rarr; Export as JSON</p>
+                  <strong>{content.exportData.methods[0].title}</strong>
+                  <p><RichText text={content.exportData.methods[0].body} /></p>
                 </div>
                 <div className={styles.instructionItem}>
-                  <strong>On Android:</strong>
-                  <p>Open Google Maps &rarr; Settings &rarr; Location &rarr; Location Services &rarr; Timeline &rarr; Export Timeline</p>
+                  <strong>{content.exportData.methods[1].title}</strong>
+                  <p>{content.exportData.methods[1].body}</p>
                 </div>
                 <div className={styles.instructionItem}>
-                  <strong>On iOS:</strong>
-                  <p>Open Google Maps &rarr; Settings &rarr; Personal Content &rarr; Export Timeline data</p>
+                  <strong>{content.exportData.methods[2].title}</strong>
+                  <p>{content.exportData.methods[2].body}</p>
                 </div>
               </div>
               <p className={styles.instructionNote}>
-                For the most accurate mileage data, Semantic Location History files (monthly JSON files like 2023_JANUARY.json) work best, as they contain labeled activity segments with driving classifications.
+                {content.exportData.note}
               </p>
             </div>
 
@@ -374,7 +344,7 @@ export default function TimelineMileageCalculator() {
               {uploadedFiles.length > 0 && (
                 <div className={styles.saveToAccountSection}>
                   <p className={styles.saveToAccountIntro}>
-                    Want this in your Dawarich account too? We'll import it during signup — no second upload needed.
+                    {content.saveIntro}
                   </p>
                   <SaveToAccountButton
                     toolName="timeline-mileage-calculator"
@@ -391,9 +361,9 @@ export default function TimelineMileageCalculator() {
                     <svg className={styles.privacyIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
-                    Privacy First
+                    {content.privacyTitle}
                   </strong>
-                  <p>All mileage calculations happen entirely in your browser — your location data stays on your device unless you choose “Save to my Dawarich account.”</p>
+                  <p>{content.privacyBody}</p>
                 </div>
               </div>
             </div>
@@ -407,7 +377,7 @@ export default function TimelineMileageCalculator() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </span>
-                <span>Need ongoing mileage tracking? <a href="/?utm_source=tool&utm_medium=inline-cta&utm_campaign=timeline-mileage-calculator">Dawarich</a> records your trips automatically with full data ownership and privacy. No more manual exports — just continuous, accurate tracking.</span>
+                <span><RichText text={content.preCta} /></span>
               </div>
             </div>
           )}
@@ -416,11 +386,13 @@ export default function TimelineMileageCalculator() {
             <PersonalizedCTA
               toolName="timeline-mileage-calculator"
               headline={mileageLog && mileageLog.totalTrips > 0
-                ? `You logged <strong>${mileageLog.totalTrips.toLocaleString()}</strong> trips covering <strong>${mileageLog.totalDistance.toFixed(1)} ${mileageLog.unit}</strong>. Dawarich tracks this automatically — no more manual exports.`
-                : 'Need ongoing mileage tracking without manual exports? Dawarich records your trips automatically.'}
+                ? <RichText text={interpolate(content.cta.headline, {
+                  count: mileageLog.totalTrips.toLocaleString(htmlLang), distance: formatDecimal(mileageLog.totalDistance), unit: content.units[mileageLog.unit],
+                })} />
+                : content.cta.fallback}
               stats={mileageLog && mileageLog.totalTrips > 0 ? [
-                { label: 'trips', value: mileageLog.totalTrips.toLocaleString() },
-                { label: mileageLog.unit, value: mileageLog.totalDistance.toFixed(1) },
+                { label: content.cta.tripsLabel, value: mileageLog.totalTrips.toLocaleString(htmlLang) },
+                { label: content.units[mileageLog.unit], value: formatDecimal(mileageLog.totalDistance) },
               ] : undefined}
             />
           )}
@@ -432,7 +404,7 @@ export default function TimelineMileageCalculator() {
             {/* Filters row */}
             <div className={styles.filtersRow}>
               <div className={styles.dateInputGroup}>
-                <label htmlFor="startDate">Start Date</label>
+                <label htmlFor="startDate">{content.results.startDate}</label>
                 <input
                   type="date"
                   id="startDate"
@@ -442,7 +414,7 @@ export default function TimelineMileageCalculator() {
                 />
               </div>
               <div className={styles.dateInputGroup}>
-                <label htmlFor="endDate">End Date</label>
+                <label htmlFor="endDate">{content.results.endDate}</label>
                 <input
                   type="date"
                   id="endDate"
@@ -457,14 +429,14 @@ export default function TimelineMileageCalculator() {
                   onClick={() => setUnit('km')}
                   type="button"
                 >
-                  km
+                  {content.units.km}
                 </button>
                 <button
                   className={`${styles.unitOption} ${unit === 'miles' ? styles.unitOptionActive : ''}`}
                   onClick={() => setUnit('miles')}
                   type="button"
                 >
-                  miles
+                  {content.units.miles}
                 </button>
               </div>
               <button
@@ -473,7 +445,7 @@ export default function TimelineMileageCalculator() {
                 disabled={isProcessing}
                 type="button"
               >
-                {isProcessing ? 'Processing...' : 'Calculate'}
+                {isProcessing ? content.results.processing : content.results.calculateButton}
               </button>
             </div>
 
@@ -487,9 +459,9 @@ export default function TimelineMileageCalculator() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                       </svg>
                     }
-                    label="Total Driving Distance"
-                    value={`${mileageLog.totalDistance.toFixed(1)} ${mileageLog.unit}`}
-                    subtitle="All driving segments combined"
+                    label={content.results.distanceTitle}
+                    value={interpolate(content.results.distanceValue, { distance: formatDecimal(mileageLog.totalDistance), unit: content.units[mileageLog.unit] })}
+                    subtitle={content.results.distanceHint}
                     color="#3b82f6"
                   />
                   <StatsCard
@@ -498,9 +470,9 @@ export default function TimelineMileageCalculator() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>
                     }
-                    label="Total Trips"
-                    value={mileageLog.totalTrips.toLocaleString()}
-                    subtitle="Driving segments detected"
+                    label={content.results.tripsTitle}
+                    value={mileageLog.totalTrips.toLocaleString(htmlLang)}
+                    subtitle={content.results.tripsHint}
                     color="#10b981"
                   />
                   <StatsCard
@@ -509,9 +481,9 @@ export default function TimelineMileageCalculator() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                       </svg>
                     }
-                    label="Average Trip Distance"
-                    value={`${averageTripDistance.toFixed(1)} ${mileageLog.unit}`}
-                    subtitle="Per driving segment"
+                    label={content.results.averageTitle}
+                    value={interpolate(content.results.distanceValue, { distance: formatDecimal(averageTripDistance), unit: content.units[mileageLog.unit] })}
+                    subtitle={content.results.averageHint}
                     color="#f59e0b"
                   />
                 </div>
@@ -520,28 +492,28 @@ export default function TimelineMileageCalculator() {
                   <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <span>Distances are calculated using GPS coordinates (Haversine formula) and represent straight-line approximations between recorded points. Actual road distances may be higher. This tool is for estimation purposes.</span>
+                  <span>{content.results.disclaimer}</span>
                 </div>
 
                 {/* Monthly Summary */}
                 {sortedMonthlySummary.length > 0 && (
                   <div className={styles.tableSection}>
-                    <h2>Monthly Summary</h2>
+                    <h2>{content.results.monthlyTitle}</h2>
                     <div className={styles.tableWrapper}>
                       <table className={styles.summaryTable}>
                         <thead>
                           <tr className={styles.tableHeader}>
-                            <th className={styles.tableCell}>Month</th>
-                            <th className={styles.tableCell}>Distance ({mileageLog.unit})</th>
-                            <th className={styles.tableCell}>Trip Count</th>
+                            <th className={styles.tableCell}>{content.results.month}</th>
+                            <th className={styles.tableCell}>{interpolate(content.results.distanceHeading, { unit: content.units[mileageLog.unit] })}</th>
+                            <th className={styles.tableCell}>{content.results.tripCount}</th>
                           </tr>
                         </thead>
                         <tbody>
                           {sortedMonthlySummary.map((row) => (
                             <tr key={row.month} className={styles.tableRow}>
                               <td className={styles.tableCell}>{row.month}</td>
-                              <td className={styles.tableCell}>{row.distance.toFixed(1)}</td>
-                              <td className={styles.tableCell}>{row.tripCount}</td>
+                              <td className={styles.tableCell}>{formatDecimal(row.distance)}</td>
+                              <td className={styles.tableCell}>{row.tripCount.toLocaleString(htmlLang)}</td>
                             </tr>
                           ))}
                         </tbody>
@@ -553,16 +525,16 @@ export default function TimelineMileageCalculator() {
                 {/* Trip Log */}
                 {mileageLog.trips.length > 0 && (
                   <div className={styles.tableSection}>
-                    <h2>Trip Log</h2>
+                    <h2>{content.results.tripLogTitle}</h2>
                     <div className={styles.tableWrapper}>
                       <table className={styles.tripLog}>
                         <thead>
                           <tr className={styles.tableHeader}>
-                            <th className={styles.tableCell}>Trip #</th>
-                            <th className={styles.tableCell}>Date</th>
-                            <th className={styles.tableCell}>Activity Type</th>
-                            <th className={styles.tableCell}>Distance ({mileageLog.unit})</th>
-                            <th className={styles.tableCell}>Duration</th>
+                            <th className={styles.tableCell}>{content.results.trip}</th>
+                            <th className={styles.tableCell}>{content.results.date}</th>
+                            <th className={styles.tableCell}>{content.results.activity}</th>
+                            <th className={styles.tableCell}>{interpolate(content.results.distanceHeading, { unit: content.units[mileageLog.unit] })}</th>
+                            <th className={styles.tableCell}>{content.results.duration}</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -571,10 +543,10 @@ export default function TimelineMileageCalculator() {
                               <td className={styles.tableCell}>{trip.id}</td>
                               <td className={styles.tableCell}>{trip.date}</td>
                               <td className={styles.tableCell}>{formatActivityType(trip.activityType)}</td>
-                              <td className={styles.tableCell}>{trip.distance.toFixed(2)}</td>
+                              <td className={styles.tableCell}>{formatDecimal(trip.distance, 2)}</td>
                               <td className={styles.tableCell}>
                                 {trip.startTime && trip.endTime
-                                  ? formatDuration(new Date(trip.endTime) - new Date(trip.startTime))
+                                  ? formatDuration(new Date(trip.endTime) - new Date(trip.startTime), htmlLang)
                                   : trip.duration || '-'}
                               </td>
                             </tr>
@@ -588,7 +560,7 @@ export default function TimelineMileageCalculator() {
                         onClick={() => setVisibleTrips(prev => prev + 20)}
                         type="button"
                       >
-                        Show More ({mileageLog.trips.length - visibleTrips} remaining)
+                        {interpolate(content.results.showMore, { count: (mileageLog.trips.length - visibleTrips).toLocaleString(htmlLang) })}
                       </button>
                     )}
                   </div>
@@ -604,7 +576,7 @@ export default function TimelineMileageCalculator() {
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
-                    Download Mileage Log (CSV)
+                    {content.results.downloadButton}
                   </button>
                 </div>
               </>
@@ -612,12 +584,12 @@ export default function TimelineMileageCalculator() {
 
             {mileageLog && mileageLog.totalTrips === 0 && (
               <div className={styles.noResults}>
-                <h3>No driving trips found</h3>
-                <p>No driving activity segments were detected in your data for the selected date range. This can happen if:</p>
+                <h3>{content.results.emptyTitle}</h3>
+                <p>{content.results.emptyIntro}</p>
                 <ul>
-                  <li>Your export contains only raw GPS points (Records.json) without activity classification</li>
-                  <li>The date range does not overlap with your data</li>
-                  <li>Your data does not contain driving segments — try Semantic Location History files for best results</li>
+                  <li>{content.results.emptyReasons[0].body}</li>
+                  <li>{content.results.emptyReasons[1].body}</li>
+                  <li>{content.results.emptyReasons[2].body}</li>
                 </ul>
               </div>
             )}
@@ -629,9 +601,9 @@ export default function TimelineMileageCalculator() {
           <div className={styles.contentWrapper}>
             <div className={styles.postCtaPanel}>
               <div className={styles.ctaContent}>
-                <h3>Tired of manually exporting and calculating mileage?</h3>
-                <p>Dawarich automatically tracks every drive, calculates distances using actual GPS data, and lets you export mileage reports anytime. Self-hosted or cloud — your data, your choice.</p>
-                <a href="/?utm_source=tool&utm_medium=post-upload-cta&utm_campaign=timeline-mileage-calculator" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
+                <h3>{content.cta.postTitle}</h3>
+                <p>{content.cta.postBody}</p>
+                <SmartLink href="/?utm_source=tool&utm_medium=post-upload-cta&utm_campaign=timeline-mileage-calculator" className={styles.ctaButton}>{content.cta.button}</SmartLink>
               </div>
             </div>
           </div>
@@ -640,66 +612,33 @@ export default function TimelineMileageCalculator() {
         {/* Info section */}
         <div className={styles.infoSection}>
           <div className={styles.infoGrid}>
-            <div className={styles.infoCard}>
-              <h2>What Is the Timeline Mileage Calculator?</h2>
-              <p>The Timeline Mileage Calculator is a free browser-based tool that extracts driving trip data from your Google Timeline export files and calculates the total distance traveled. It identifies driving-related activity segments — including car trips, bus rides, train journeys, and motorcycle travel — and generates a structured mileage log with per-trip details.</p>
-              <p>Unlike server-based tools, all calculations run in your browser, so generating your mileage log never sends your location data anywhere. You get instant results with full privacy, and the generated CSV mileage log can be used for expense reports, tax documentation, or personal record-keeping. (If you use “Save to my Dawarich account,” that one action uploads your file to Dawarich Cloud to set up your import — nothing is sent otherwise.)</p>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>How Mileage Is Calculated</h2>
-              <p>The calculator uses the Haversine formula to compute great-circle distances between consecutive GPS coordinates in each driving segment. This is the standard method for calculating distance between two points on a sphere (the Earth).</p>
-              <p>For each driving segment identified in your Google Timeline data, the tool sums the distances between all recorded waypoints along that segment. The result is a straight-line approximation — actual road distance will typically be 10-30% higher due to road curvature, elevation changes, and detours not captured by GPS point spacing.</p>
-              <p>Jumps greater than 500 km between consecutive points are automatically excluded to avoid counting GPS glitches or teleportation artifacts in the data.</p>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>Using Mileage Logs for Tax Deductions</h2>
-              <p>In the United States, the IRS allows a standard mileage deduction for business use of a personal vehicle. The rate changes every year, so check the current one before you file. To claim this deduction, you need a mileage log that records the date, destination, business purpose, and distance for each trip.</p>
-              <p>While Google Timeline data can provide the date and distance for each driving segment, it does not distinguish between business and personal trips. You would need to annotate the exported CSV with business purpose and destination information. The IRS also requires that records be kept contemporaneously — meaning at or near the time of each trip — so a retrospective log from Google Timeline is best used as a supporting document rather than your sole record.</p>
-              <p>To record trips as they happen instead of reconstructing them later, consider using <a href="/?utm_source=tool&utm_medium=info-section&utm_campaign=timeline-mileage-calculator">Dawarich</a> — you still add the business purpose yourself.</p>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>What Happened to Google Maps Timeline?</h2>
-              <p>In late 2024, Google discontinued the web-based version of Google Maps Timeline and transitioned all location data to on-device storage on users' phones. Only the most recent 90 days of data were migrated — all older location history was permanently deleted unless users had manually backed it up before the deadline.</p>
-              <p>This change left many users without access to years of location history that they had relied on for mileage tracking, travel memories, and expense documentation. If you managed to export your data via Google Takeout or the Timeline export feature before the transition, this calculator can help you extract the mileage information from those files.</p>
-              <p>For more details, see our <a href="/blog/migrating-from-google-location-history-to-dawarich">guide on migrating from Google Location History</a>.</p>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>Accuracy and Limitations</h2>
-              <ul>
-                <li><strong>GPS precision</strong> — Google Timeline typically records locations every few seconds to minutes, depending on device activity. Gaps between readings mean some segments of a trip are interpolated rather than precisely measured</li>
-                <li><strong>Activity classification</strong> — Google uses machine learning to classify activity types. Misclassifications happen — a slow drive in traffic might be labeled as cycling, or a bus ride as a car trip</li>
-                <li><strong>Straight-line distances</strong> — The Haversine formula gives the shortest path between two points on the Earth's surface. Real roads are longer due to curves, hills, and routing</li>
-                <li><strong>Missing data</strong> — Periods where your phone was off, in airplane mode, or had Location History disabled will have no data</li>
-                <li><strong>Export format matters</strong> — Semantic Location History files contain the most detailed driving data. Raw Records.json files may lack activity type labels</li>
-              </ul>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h2>Related Tools</h2>
-              <ul>
-                <li><a href="/tools/timeline-visualizer">Google Timeline Visualizer</a> — View your complete location history on an interactive map</li>
-                <li><a href="/tools/heatmap-generator">GPS Heatmap Generator</a> — Create heatmaps from GPX, FIT, TCX, and other GPS files</li>
-                <li><a href="/tools/gpx-merger">GPX Track Merger</a> — Combine multiple GPX files into one</li>
-                <li><a href="/tools/photo-geotagging">Photo Geodata Extraction</a> — Extract GPS coordinates from your photos</li>
-                <li><a href="/tools/geojson-to-gpx">GeoJSON to GPX Converter</a> — Convert your location data to GPX format</li>
-              </ul>
-              <p>Read more: <a href="/blog/migrating-from-google-location-history-to-dawarich">Migrating from Google Location History</a></p>
-            </div>
+            {content.cards.map((card, index) => (
+              <div className={styles.infoCard} key={index}>
+                <h2>{card.title}</h2>
+                {card.paragraphs.map((text, index) => (
+                  <p key={index}><RichText text={text} /></p>
+                ))}
+                {card.items && <ul>
+                  {card.items.map((item, index) => (
+                    <li key={index}><RichText text={item.body} /></li>
+                  ))}
+                </ul>}
+                {card.footer?.map((text, index) => (
+                  <p key={index}><RichText text={text} /></p>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
 
         {/* FAQ section */}
         <div className={styles.faqSection}>
-          <h2>Frequently Asked Questions</h2>
+          <h2>{content.faqTitle}</h2>
           <div className={styles.faqList}>
             {faqItems.map((item, index) => (
               <details key={index} className={styles.faqItem}>
-                <summary className={styles.faqQuestion}>{item.question}</summary>
-                <p className={styles.faqAnswer}>{item.answer}</p>
+                <summary className={styles.faqQuestion}>{item.q}</summary>
+                <p className={styles.faqAnswer}><RichText text={item.a} /></p>
               </details>
             ))}
           </div>
@@ -708,9 +647,9 @@ export default function TimelineMileageCalculator() {
         {/* Bottom CTA */}
         <div className={styles.bottomCtaPanel}>
           <div className={styles.ctaContent}>
-            <h3>Looking for a Google Timeline Replacement with Built-in Mileage Tracking?</h3>
-            <p>Dawarich is an open-source location tracking platform that automatically logs every trip, calculates driving distance, and gives you full control over your data. Import your Google Timeline export, track ongoing mileage from your phone, and generate reports anytime — all self-hosted or in the cloud.</p>
-            <a href="/?utm_source=tool&utm_medium=bottom-cta&utm_campaign=timeline-mileage-calculator" className={styles.ctaButton}>Try Dawarich Free for 7 Days</a>
+            <h3>{content.cta.title}</h3>
+            <p>{content.cta.body}</p>
+            <SmartLink href="/?utm_source=tool&utm_medium=bottom-cta&utm_campaign=timeline-mileage-calculator" className={styles.ctaButton}>{content.cta.button}</SmartLink>
           </div>
         </div>
       </div>

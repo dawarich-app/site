@@ -1,0 +1,130 @@
+{
+  "timelineItems": [
+    {
+      "title": "Um dia fácil de entender",
+      "description": "Cada dia começa com um cabeçalho de uma linha e indicadores de distância por meio de transporte — veja de relance quanto andou a pé, pedalou e dirigiu. Escolha qualquer dia no calendário e o mapa acompanha."
+    },
+    {
+      "title": "Edite uma etapa ali mesmo",
+      "description": "Os trajetos se expandem em uma faixa de meios de transporte que mostra só as etapas relevantes. Alguma está errada? Clique no nome do meio de transporte e altere ali mesmo. A lista completa fica em \"Todos os segmentos\" até você precisar dela."
+    },
+    {
+      "title": "Clareza sobre as lacunas",
+      "description": "Quando o rastreamento realmente parou, a linha do tempo informa isso em vez de desenhar uma reta pelas horas sem registro. As visitas detectadas têm um índice de confiança, para que uma estadia confirmada e uma estimativa incerta nunca pareçam iguais."
+    }
+  ],
+  "showcaseItems": [
+    {
+      "title": "Pontos",
+      "description": "Veja cada ponto de localização registrado, com horários precisos e detalhes. Clique em qualquer ponto para ver coordenadas, horário e outras informações.",
+      "imageAlt": "Mapa com pontos individuais de localização"
+    },
+    {
+      "title": "Linhas de trajeto",
+      "description": "Veja seus percursos completos conectando todos os pontos de localização. Visualize suas viagens como caminhos contínuos pelo mapa.",
+      "imageAlt": "Mapa com linhas de trajeto"
+    },
+    {
+      "title": "Mapa de calor",
+      "description": "Descubra onde você passa mais tempo com um mapa de calor por intensidade que mostra suas áreas mais visitadas.",
+      "imageAlt": "Visualização de mapa de calor"
+    },
+    {
+      "title": "Névoa de exploração",
+      "description": "Revele o mundo conforme você explora. As áreas visitadas ficam descobertas, e as regiões inexploradas continuam cobertas.",
+      "imageAlt": "Visualização da névoa de exploração"
+    },
+    {
+      "title": "Mapa de raspar",
+      "description": "Veja os países ganharem destaque conforme você os visita. Ideal para quem adora viajar e acompanhar suas aventuras pelo mundo.",
+      "imageAlt": "Mapa de raspar com países visitados"
+    },
+    {
+      "title": "Áreas",
+      "description": "Desenhe áreas personalizadas no mapa para marcar locais importantes, bairros ou regiões de interesse.",
+      "imageAlt": "Áreas personalizadas no mapa"
+    },
+    {
+      "title": "Fotos",
+      "description": "Veja suas fotos do Immich ou PhotoPrism direto no mapa, exatamente onde foram tiradas. (por enquanto, disponível apenas com hospedagem própria)",
+      "imageAlt": "Fotos exibidas no mapa"
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Registre sua localização",
+      "description": "Use qualquer aplicativo de rastreamento compatível para registrar sua localização automaticamente ao longo do dia.",
+      "details": [
+        "Aplicativo Dawarich para iOS",
+        "Overland",
+        "OwnTracks",
+        "GPSLogger",
+        "PhoneTrack"
+      ]
+    },
+    {
+      "title": "Escolha sua visualização",
+      "description": "Escolha entre vários estilos de mapa e ative diferentes camadas para personalizar sua visualização.",
+      "details": [
+        "Ative pontos, trajetos ou mapa de calor",
+        "Ative a névoa de exploração ou o mapa de raspar",
+        "Mostre ou oculte fotos e áreas"
+      ]
+    },
+    {
+      "title": "Filtre por período",
+      "description": "Selecione qualquer intervalo para ver seu histórico de localização em períodos específicos.",
+      "details": [
+        "Navegue por ano e mês",
+        "Veja estatísticas de visitas a países e cidades",
+        "Pesquise lugares específicos"
+      ]
+    },
+    {
+      "title": "Crie e salve",
+      "description": "Crie lugares e visitas manualmente para preencher lacunas ou corrigir seu histórico de localização.",
+      "details": [
+        "Salve seus locais favoritos",
+        "Adicione visitas ausentes manualmente",
+        "Desenhe áreas personalizadas no mapa"
+      ]
+    },
+    {
+      "title": "Pesquise por localização",
+      "description": "Digite um lugar ou endereço para descobrir rapidamente quando você esteve lá e por quanto tempo.",
+      "details": [
+        "Pesquise por nome do lugar ou endereço",
+        "Encontre visitas e pontos de interesse rapidamente",
+        "Crie visitas a partir dos resultados de pesquisa"
+      ]
+    }
+  ],
+  "meta": {
+    "title": "Visualização em mapa interativo",
+    "description": "Explore seu histórico de localização em um mapa interativo com várias camadas: pontos, trajetos, mapa de calor, névoa de exploração e muito mais.",
+    "ogTitle": "Mapa do Dawarich — Visualização interativa de localização",
+    "ogDescription": "Explore seu histórico de localização em várias camadas: pontos, trajetos, mapa de calor, névoa de exploração, mapa de raspar e integração de fotos."
+  },
+  "hero": {
+    "badge": "Visualização interativa",
+    "title": "Explore por onde você passou,",
+    "titleHighlight": "lembre de cada lugar",
+    "subtitle": "Seu histórico de localização ganha vida em um mapa interativo com várias camadas. De pontos detalhados a belos mapas de calor, veja a jornada da sua vida com riqueza de detalhes.",
+    "imageAlt": "Mapa interativo do Dawarich"
+  },
+  "mapPage": {
+    "title3": "A linha do tempo",
+    "subtitle2": "O mapa mostra onde. A linha do tempo ao lado mostra o que aconteceu — um dia de cada vez, em linguagem simples.",
+    "title4": "Várias camadas de visualização",
+    "subtitle3": "Alterne entre diferentes camadas do mapa para ver seus dados de localização de várias formas. Cada camada revela insights únicos sobre suas viagens e hábitos.",
+    "title5": "Como funciona",
+    "subtitle4": "Comece a visualizar seu histórico de localização em minutos com nossa interface intuitiva de mapa.",
+    "span": "Seus dados continuam privados",
+    "p": "Todos os seus dados de localização são armazenados com segurança, com criptografia em repouso e em trânsito. Hospedados na Europa e em plena conformidade com o GDPR. Você também pode hospedar no seu servidor para ter controle total.",
+    "heading": "Pronto para visualizar sua jornada?",
+    "p2": "Comece a registrar seu histórico de localização hoje com 7 dias de teste grátis. Cancele quando quiser.",
+    "Link": "Experimente grátis por 7 dias",
+    "EnOnlyLink": "Hospede grátis no seu servidor",
+    "p3": "7 dias de teste grátis · Reembolso em até 14 dias, sem risco · Cancele quando quiser"
+  }
+}

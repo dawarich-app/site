@@ -1,5 +1,7 @@
+import { SmartLink } from '@site/src/i18n/RichText';
+import content from '@locale-content/components/Pitch.json';
 import React from 'react';
-import Link from '@docusaurus/Link';
+import EnOnlyLink from '@site/src/i18n/EnOnlyLink';
 import styles from './Pitch.module.css';
 
 const SIGNUP = 'https://my.dawarich.app/users/sign_up';
@@ -32,7 +34,7 @@ export function PitchPage({ children }) {
  * Hero: dream outcome, the mechanism in one sentence, dual CTA, risk reversal.
  * Deliberately has no eyebrow/kicker label above the heading.
  */
-export function PitchHero({ title, sub, campaign, artifact, primaryLabel = 'Try 7 days free' }) {
+export function PitchHero({ title, sub, campaign, artifact, primaryLabel = content.primaryLabel }) {
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
@@ -41,16 +43,12 @@ export function PitchHero({ title, sub, campaign, artifact, primaryLabel = 'Try 
             <h1 className={styles.heroTitle}>{title}</h1>
             <p className={styles.heroSub}>{sub}</p>
             <div className={styles.heroActions}>
-              <Link className={styles.primaryCta} href={signupHref(campaign, 'pitch-hero')}>
+              <SmartLink className={styles.primaryCta} href={signupHref(campaign, 'pitch-hero')}>
                 {primaryLabel}
-              </Link>
-              <Link className={styles.secondaryCta} to="/docs/self-hosting/installation/docker">
-                Self-host free forever
-              </Link>
+              </SmartLink>
+              <EnOnlyLink className={styles.secondaryCta} to="/docs/self-hosting/installation/docker">{content.selfHost}</EnOnlyLink>
             </div>
-            <p className={styles.reassurance}>
-              No card for the trial · 14-day refund after that · Export everything, any time
-            </p>
+            <p className={styles.reassurance}>{content.reassurance}</p>
           </div>
           <div className={styles.rowMedia}>{artifact}</div>
         </div>
@@ -65,11 +63,11 @@ export function ProofStrip() {
     <section className={styles.proof}>
       <div className={styles.container}>
         <div className={styles.proofInner}>
-          <p className={styles.proofLabel}>Covered by</p>
-          <span className={styles.proofName}>XDA Developers</span>
-          <span className={styles.proofName}>MakeUseOf</span>
-          <span className={styles.proofName}>c&apos;t Magazine</span>
-          <span className={styles.proofName}>It&apos;s FOSS</span>
+          <p className={styles.proofLabel}>{content.proofLabel}</p>
+          <span className={styles.proofName}>{content.publishers.xda}</span>
+          <span className={styles.proofName}>{content.publishers.makeUseOf}</span>
+          <span className={styles.proofName}>{content.publishers.ct}</span>
+          <span className={styles.proofName}>{content.publishers.itsFoss}</span>
         </div>
       </div>
     </section>
@@ -139,33 +137,27 @@ export function Objections({ title, items }) {
 }
 
 /** Close with the risk reversal spelled out. */
-export function CloseCTA({ title, sub, campaign, primaryLabel = 'Try 7 days free' }) {
+export function CloseCTA({ title, sub, campaign, primaryLabel = content.primaryLabel }) {
   return (
     <section className={styles.close}>
       <div className={styles.container}>
         <h2 className={styles.closeTitle}>{title}</h2>
         <p className={styles.closeSub}>{sub}</p>
         <div className={styles.closeActions}>
-          <Link className={styles.primaryCta} href={signupHref(campaign, 'pitch-close')}>
+          <SmartLink className={styles.primaryCta} href={signupHref(campaign, 'pitch-close')}>
             {primaryLabel}
-          </Link>
-          <Link className={styles.secondaryCta} to="/pricing">
-            See pricing
-          </Link>
+          </SmartLink>
+          <SmartLink className={styles.secondaryCta} href="/pricing">{content.pricing}</SmartLink>
         </div>
         <ul className={styles.guarantee}>
           <li>
-            <CheckMark />7 days free, no card
-          </li>
+            <CheckMark />{content.guarantee.trial}</li>
           <li>
-            <CheckMark />14-day refund
-          </li>
+            <CheckMark />{content.guarantee.refund}</li>
           <li>
-            <CheckMark />Export everything, any time
-          </li>
+            <CheckMark />{content.guarantee.export}</li>
           <li>
-            <CheckMark />Or self-host it free
-          </li>
+            <CheckMark />{content.guarantee.selfHost}</li>
         </ul>
       </div>
     </section>

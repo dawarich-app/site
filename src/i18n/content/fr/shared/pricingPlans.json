@@ -1,0 +1,266 @@
+{
+  "plans": {
+    "lite": {
+      "name": "Lite",
+      "tagline": "Une alternative privée à Google Timeline pour un suivi occasionnel.",
+      "period": "/an",
+      "perMonth": "{price}/mois",
+      "perDay": "{price}/jour",
+      "cta": "Essayer Lite gratuitement",
+      "footnote": "Abonnement annuel uniquement · Résiliez à tout moment",
+      "valueStack": {
+        "items": [
+          {
+            "label": "Applications de suivi iOS et Android"
+          },
+          {
+            "label": "12 mois d’historique dans lequel effectuer des recherches"
+          },
+          {
+            "label": "Importations et exports illimités"
+          },
+          {
+            "label": "Statistiques et détail mensuel"
+          },
+          {
+            "label": "Service d’importation personnalisé"
+          }
+        ],
+        "payLine": "À vous pour {price}/an"
+      },
+      "features": [
+        {
+          "label": "Applications natives iOS et Android"
+        },
+        {
+          "label": "Suivi de localisation en arrière-plan"
+        },
+        {
+          "label": "12 mois d’historique dans lequel effectuer des recherches"
+        },
+        {
+          "label": "Importations et exports illimités"
+        },
+        {
+          "label": "Carte interactive avec parcours"
+        },
+        {
+          "label": "Parcours colorés selon la vitesse et relecture des journées"
+        },
+        {
+          "label": "Gestion de vos déplacements et des lieux"
+        },
+        {
+          "label": "Statistiques de base et détail mensuel"
+        },
+        {
+          "label": "Limite API de 200 requêtes/h"
+        }
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "tagline": "Historique illimité, visualisations avancées et accès API complet.",
+      "period": "/an",
+      "periodMonthly": "/mois",
+      "perMonth": "{price}/mois",
+      "perDay": "{price}/jour",
+      "perDayMonthly": "{price}/jour",
+      "save": "5 mois gratuits",
+      "saveHint": "Obtenez 5 mois gratuits",
+      "badge": "LE PLUS POPULAIRE",
+      "cta": "Essayer Pro gratuitement — 7 jours",
+      "footnote": "Résiliez à tout moment",
+      "valueStack": {
+        "items": [
+          {
+            "label": "Tout ce qui est inclus dans Lite"
+          },
+          {
+            "label": "Historique illimité, pour toujours"
+          },
+          {
+            "label": "Carte de chaleur, brouillard de guerre et globe 3D"
+          },
+          {
+            "label": "Intégration photo et Immich/PhotoPrism"
+          },
+          {
+            "label": "Accès complet à l’API en écriture"
+          }
+        ],
+        "payLine": "À vous pour {price}/an"
+      },
+      "featuresHeading": "Tout Lite, avec en plus :",
+      "features": [
+        {
+          "label": "Historique des données illimité, pour toujours"
+        },
+        {
+          "label": "Calques carte de chaleur et brouillard de guerre"
+        },
+        {
+          "label": "Vue globe (3D)"
+        },
+        {
+          "label": "Intégration photo aux déplacements"
+        },
+        {
+          "label": "Intégration Immich / PhotoPrism"
+        },
+        {
+          "label": "Bilan annuel complet et partage public"
+        },
+        {
+          "label": "Accès complet à l’API en écriture"
+        },
+        {
+          "label": "Limite API de 1,000 requêtes/h"
+        }
+      ]
+    },
+    "family": {
+      "name": "Famille",
+      "tagline": "Toutes les fonctionnalités Pro pour le foyer : un abonnement annuel, jusqu’à 5 personnes.",
+      "period": "/an",
+      "perMonth": "{price}/mois",
+      "perDay": "{price}/jour",
+      "cta": "Essayer Famille gratuitement — 7 jours",
+      "footnote": "Annuel uniquement · Jusqu’à 5 membres · Résiliez à tout moment",
+      "valueStack": {
+        "items": [
+          {
+            "label": "Accès Pro pour le titulaire"
+          },
+          {
+            "label": "4 accès Pro supplémentaires"
+          },
+          {
+            "label": "Partage de localisation en famille en temps réel"
+          },
+          {
+            "label": "Service d’importation personnalisé"
+          }
+        ],
+        "payLine": "À vous pour {price}/an"
+      },
+      "featuresHeading": "Tout Pro, avec en plus :",
+      "features": [
+        {
+          "label": "Jusqu’à 5 membres sur un abonnement"
+        },
+        {
+          "label": "Accès Pro complet pour chaque membre"
+        },
+        {
+          "label": "Invitez ou retirez des membres à tout moment"
+        },
+        {
+          "label": "Les membres bénéficient de l’accès tant qu’ils sont dans la famille"
+        },
+        {
+          "label": "Partage de localisation en famille en temps réel"
+        }
+      ]
+    }
+  },
+  "compareGroups": [
+    {
+      "name": "Suivi et applications",
+      "rows": [
+        {
+          "label": "Applications natives iOS et Android"
+        },
+        {
+          "label": "Suivi de localisation en arrière-plan"
+        },
+        {
+          "label": "Partage de localisation en famille en temps réel"
+        }
+      ]
+    },
+    {
+      "name": "Historique et données",
+      "rows": [
+        {
+          "label": "Historique dans lequel effectuer des recherches",
+          "lite": "12 mois",
+          "pro": "Illimité",
+          "family": "Illimité"
+        },
+        {
+          "label": "Importations et exports illimités"
+        },
+        {
+          "label": "Vos données vous appartiennent (exportez à tout moment)"
+        }
+      ]
+    },
+    {
+      "name": "Cartes et visualisation",
+      "rows": [
+        {
+          "label": "Carte interactive avec parcours"
+        },
+        {
+          "label": "Parcours colorés selon la vitesse et relecture des journées"
+        },
+        {
+          "label": "Calques carte de chaleur et brouillard de guerre"
+        },
+        {
+          "label": "Vue globe (3D)"
+        },
+        {
+          "label": "Intégration photo aux déplacements"
+        },
+        {
+          "label": "Intégration Immich / PhotoPrism"
+        }
+      ]
+    },
+    {
+      "name": "Vos analyses et partage",
+      "rows": [
+        {
+          "label": "Statistiques de base et détail mensuel"
+        },
+        {
+          "label": "Bilan annuel complet et partage public"
+        },
+        {
+          "label": "Gestion de vos déplacements et des lieux"
+        }
+      ]
+    },
+    {
+      "name": "API et limites",
+      "rows": [
+        {
+          "label": "Limite de requêtes API",
+          "lite": "200 requêtes/h",
+          "pro": "1,000 requêtes/h",
+          "family": "1,000 requêtes/h"
+        },
+        {
+          "label": "Accès complet à l’API en écriture"
+        }
+      ]
+    },
+    {
+      "name": "Membres et facturation",
+      "rows": [
+        {
+          "label": "Membres sur un abonnement",
+          "family": "Jusqu’à 5"
+        },
+        {
+          "label": "Accès Pro complet pour chaque membre"
+        },
+        {
+          "label": "Garantie de remboursement de 14 jours"
+        }
+      ]
+    }
+  ]
+}

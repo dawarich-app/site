@@ -1,0 +1,153 @@
+{
+  "howItWorksSteps": [
+    {
+      "title": "Aus Google exportieren",
+      "description": "Öffne [takeout.google.com](https://takeout.google.com), wähle „Standortverlauf (Timeline)“ und fordere den Export an. Google schickt dir eine ZIP-Datei per E-Mail – meist innerhalb einer Stunde."
+    },
+    {
+      "title": "Bei Dawarich Cloud registrieren",
+      "description": "E-Mail + Passwort. 7 Tage kostenlos mit allen Funktionen testen."
+    },
+    {
+      "title": "ZIP-Datei per Drag-and-drop hinzufügen",
+      "description": "Lade sie hoch. Sieh zu, wie deine Zeitleiste wieder entsteht – Punkt für Punkt, Reise für Reise, Jahr für Jahr – auf einer Karte, die nicht Google gehört."
+    }
+  ],
+  "migrationFAQ": [
+    {
+      "question": "Funktioniert das neue Format von Google Takeout?",
+      "answer": "Ja. Wir unterstützen das neue Timeline-Format (nach 2024), das alte Format und als Rückfalloption die ältere records.json."
+    },
+    {
+      "question": "Was ist, wenn meine Takeout-ZIP-Datei riesig ist?",
+      "answer": "Unser Import kommt damit zurecht. Wir haben Takeout-Exporte mit 2 GB, 15 Jahren Verlauf und 6.8 Millionen Punkten erfolgreich und problemlos importiert."
+    },
+    {
+      "question": "Funktioniert es auch, wenn Google einige meiner Daten gelöscht hat?",
+      "answer": "Alles, was du exportieren kannst, können wir importieren. Bereits von Google gelöschte Daten können wir nicht wiederherstellen – aber wir können sichern, worauf du noch Zugriff hast."
+    },
+    {
+      "question": "Kann ich nach dem Umzug weiter Google Maps nutzen?",
+      "answer": "Ja. Nutze Google Maps zur Navigation und Dawarich als Aufzeichnung deiner besuchten Orte. Die Produkte erfüllen unterschiedliche Aufgaben."
+    },
+    {
+      "question": "Zeichnet Dawarich meinen Standort so gut auf wie Google?",
+      "answer": "Ehrlich? Besser. Native Apps für iOS und Android mit Aufzeichnung im Hintergrund und akkuschonenden Intervallen. Deine Daten gelangen über HTTPS zu deinem Dawarich-Konto – niemals zu Google oder anderen Dritten."
+    },
+    {
+      "question": "Was passiert, wenn ich Dawarich später verlassen möchte?",
+      "answer": "Exportiere alles in GPX, GeoJSON oder KML – in jedem Tarif, auch Lite. Hoste die Open-Source-Version selbst. Oder lösche einfach dein Konto – deine Daten nimmst du mit. Sie werden weder verkauft noch zurückbehalten."
+    },
+    {
+      "question": "Gibt es wirklich eine kostenlose Testphase?",
+      "answer": "Ja. 7 Tage kostenlos mit allen Funktionen. Kündige jederzeit in den Abonnementeinstellungen – deine Exporte bleiben dir."
+    },
+    {
+      "question": "Verkauft ihr Standortdaten?",
+      "answer": "Nein. Wir sind ein kleines EU-Unternehmen und verdienen an Abonnements. Der Verkauf von Standortdaten ist laut DSGVO illegal, und wir betreiben lieber ein echtes Geschäft."
+    }
+  ],
+  "freeWasntFree": {
+    "heading": "„Aber Google Timeline war kostenlos.“",
+    "p": "**Kostenlos war es nie.** Du hast mit deinen Daten bezahlt.",
+    "p2": "Ein Jahrzehnt lang wurde jeder deiner Aufenthaltsorte protokolliert, analysiert, für Googles gezielte Werbung genutzt und zum Training seiner Modelle verwendet. Jedes Café. Jede Sonntagswanderung. Jede nächtliche Fahrt zu Freunden. Das war der Preis.",
+    "p3": "Jetzt hat Google herausgeholt, was es wollte. Die Timeline liegt auf deinem Handy, die Cloud-Version ist weg und das Produkt, für das du „nichts bezahlt“ hast, wird eingestellt, weil es nichts mehr einbringt.",
+    "p4": "Du schuldest Google nichts. Und du musst ein werbefinanziertes Überwachungsprodukt nicht durch ein anderes ersetzen (wir meinen dich, Life360)."
+  },
+  "phoneIsNotABackup": {
+    "heading": "Ein Geräteausfall – und deine Zeitleiste ist weg",
+    "p": "Timeline-Daten liegen nur auf dem Gerät. Das bedeutet:",
+    "div": "Daten alter Handys",
+    "p2": "Der Verlauf, der nicht übertragen wurde? **Weg.**",
+    "div2": "Aktuelles Handy kaputt",
+    "p3": "Verloren, gestohlen, ins Wasser gefallen, auf Werkseinstellungen zurückgesetzt? **Weg.**",
+    "div3": "Geräteübergreifend ansehen",
+    "p4": "Deine Zeitleiste auf einem Tablet oder Laptop ansehen? **Weg.**",
+    "div4": "Cloud-Backup",
+    "p5": "Für deine künftige Zeitleiste? **Weg – sie liegt jetzt lokal.**",
+    "div5": "Cloud-Verlauf (vor dem Umzug)",
+    "p6": "Jahrelang bei Google gespeichert, aber nicht rechtzeitig per Takeout gesichert? **Bereits gelöscht.**",
+    "div6": "Was das bedeutet",
+    "p7": "Du hast eine Kopie deiner Zeitleiste. Sie liegt auf einer Glasplatte, die beim Herunterfallen kaputtgeht. **Das ist keine Backup-Strategie.**"
+  },
+  "differentiators": {
+    "heading": "Warum deine Timeline bei Dawarich richtig ist",
+    "p": "Die meisten „Alternativen zu Google Timeline“ sind Trainingstracker, manuelle Reisetagebücher, Familien-Tracking-Apps, die Daten verkaufen, oder selbst gehostete Systeme, die ein Wochenende mit Docker erfordern. Dawarich ist keines davon.",
+    "h3": "In der EU gehostet",
+    "p2": "Hetzner, Deutschland. Keine Übermittlung in die USA. Echte DSGVO – keine „Wir halten uns daran“-Fußnote.",
+    "h32": "Open Source",
+    "p3": "Der vollständige Code liegt mit ÜBER 9,000 Sternen auf [GitHub](https://github.com/Freika/dawarich). Die Cloud bietet den Komfort. Das Produkt dahinter kannst du dauerhaft selbst betreiben.",
+    "h33": "Für den Abschied von Timeline entwickelt",
+    "text3": "Neues Format, altes Format, als Rückfalloption die ältere ",
+    "code": "records.json",
+    "text4": ". Wir haben 15 Jahre Timeline-Daten importiert – 6.8 Millionen Punkte, 2 GB Takeout – ganz ohne Probleme.",
+    "h34": "Visualisierung, nicht nur Datenbank",
+    "p4": "Heatmaps. Nebel des Krieges. Globusansicht. Reiseerkennung. Jahresrückblick. Alles, was Timeline gut konnte – und einiges mehr.",
+    "h35": "Dauerhafter Export, keine Anbieterbindung",
+    "p5": "GPX, GeoJSON, KML, unverändertes JSON. Deine Daten nimmst du immer mit – in jedem Tarif, auch Lite.",
+    "h36": "Tracking-Apps für iOS & Android",
+    "p6": "Native Apps mit Aufzeichnung im Hintergrund und akkuschonenden Intervallen. Deine Daten gehen an dein Dawarich-Konto – niemals an Google oder andere Dritte."
+  },
+  "competitorReframe": {
+    "heading": "Wozwischen du dich entscheidest",
+    "th": "Option",
+    "th2": "Jährliche Kosten",
+    "th3": "Stellt deine Google Timeline wieder her?",
+    "th4": "Verkauft deine Daten?",
+    "td": "Nichts tun",
+    "td2": "„Kostenlos“",
+    "td3": "Nein – nur auf dem Handy, ein Sturz vom Verlust entfernt",
+    "td4": "Nicht zutreffend",
+    "td5": "Life360 Gold",
+    "td6": "Nein – Live-Tracking für die Familie, kein Verlauf",
+    "td7": "Ja (aggregiert)",
+    "td8": "Strava Premium",
+    "td9": "Nein – nur Training",
+    "td10": "Öffentliche Feeds",
+    "td11": "Dawarich Cloud Pro",
+    "td12": "Ja – vollständiger Takeout-Import, Heatmaps, Reisen",
+    "td13": "Nein. Niemals.",
+    "perYear": "{price}/Jahr"
+  },
+  "promises": {
+    "heading": "Zwei Versprechen, kein Risiko",
+    "h3": "Jederzeit kündbar",
+    "p": "7 Tage kostenlos testen, mit allen Funktionen. Kündige jederzeit in den Abonnementeinstellungen – keine jährliche Bindung, keine Ausstiegsgebühren, kein Aufwand. Deine Exporte bleiben dir, in jedem Tarif, auch nach der Kündigung.",
+    "h32": "Open Source als Ausweg",
+    "p2": "Sollte Dawarich Cloud einmal schließen, exportierst du deine Daten und hostest dieselbe Software mit einem Befehl selbst. Der vollständige Code liegt mit ÜBER 9,000 Sternen auf [GitHub](https://github.com/Freika/dawarich). **Durch den Wechsel zu uns kannst du deine Zeitleiste schlicht nicht verlieren.**"
+  },
+  "urgency": {
+    "heading": "Keine künstliche Dringlichkeit. Handys gehen kaputt.",
+    "p": "Deine Zeitleiste liegt auf einem Gerät. **Einem Gerät.**",
+    "p2": "Handys fallen herunter, werden gestohlen, gehen verloren, bekommen Wasserschäden oder werden zurückgesetzt. Beim Wechsel auf ein neues Handy werden Timeline-Daten nicht immer sauber übernommen. Wie lange ein Takeout-Export möglich ist, hängt von der Google-Kontoaktivität ab – inaktive Konten verlieren schneller den Zugriff.",
+    "p3": "Jede Woche Warten kann Daten kosten, die du nicht zurückbekommst. Der Umzug dauert 15 Minuten. **„Später“ ist in keinem Fall besser als „heute Abend“.**",
+    "text3": "Importiere deinen Takeout-Export heute Abend"
+  },
+  "timelineFinalCTA": {
+    "heading": "Deine Zeitleiste gehört nicht Google.",
+    "p": "Sie gehört dir. Zu den Orten, an denen du gelebt hast. Zu den Menschen, die du besucht hast. Zu den Reisen, die du gemacht hast, bevor Handys sie gut für dich festhalten konnten.",
+    "text": "Sichere deine Zeitleiste noch heute",
+    "span": "7 Tage kostenlos testen · Jederzeit kündbar · Du hostest schon selbst? [Importiere denselben Takeout-Export in deine eigene Instanz](https://github.com/Freika/dawarich)."
+  },
+  "googleTimelineAlternativePage": {
+    "text": "Jetzt 7 Tage kostenlos testen",
+    "text2": "Preise ansehen"
+  },
+  "meta": {
+    "title": "Privater Verlauf statt Google Timeline/Google Maps Zeitachse",
+    "description": "Importiere deine Google Timeline in Dawarich, erkunde den Verlauf auf der Webkarte und zeichne neue Reisen per iOS- und Android-App auf. Cloud: 7 Tage testen."
+  },
+  "hero": {
+    "badge": "Alternative zu Google Timeline",
+    "title": "Google hat Timeline eingestellt.",
+    "titleHighlight": "Lass dein Jahrzehnt nicht mit verschwinden.",
+    "subtitle": "Sichere deinen gesamten Google-Standortverlauf in Minuten und zeichne weiter auf – auf einer Infrastruktur, die Google weder einstellen noch verkaufen oder für Werbemodelle nutzen kann. In der EU gehostet. Bei Übertragung und Speicherung verschlüsselt. DSGVO-konform.",
+    "disclaimer": "7 Tage kostenlos testen · Wir haben Takeout-Exporte aus 15 Jahren mit 6.8 Millionen Punkten erfolgreich und mühelos importiert",
+    "imageAlt": "Dawarich-Zeitleistenansicht als Ersatz für Google Timeline"
+  },
+  "howItWorks": {
+    "title": "So funktioniert der Umzug",
+    "subtitle": "Drei Schritte. Insgesamt etwa 15 Minuten."
+  },
+  "migrationFAQTitle": "Häufige Fragen"
+}

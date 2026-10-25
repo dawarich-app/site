@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "title": "Generador gratuït de mapes de calor GPS en línia",
+    "description": "Crea bonics mapes de calor GPS per veure patrons de cursa, ciclisme i activitat. Carrega GPX, FIT, TCX, GeoJSON, KML o JSON de Google Timeline (Cronologia de Google Maps). Gratis i privat, tot al navegador.",
+    "keywords": "mapa de calor GPS, generador de mapes de calor, mapa de calor de curses, mapa de calor de ciclisme, alternativa a Strava, mapa de calor GPX, mapa de calor d'activitat, mapa de calor esportiu, mapa de calor gratuït, mapa de calor de Google Timeline, mapa de calor de l'historial d'ubicacions de Google, mapa de calor de Records.json"
+  },
+  "h1": "Generador de mapes de calor GPS",
+  "intro": "Crea mapes de calor atractius a partir de les teves activitats GPS. Carrega diversos fitxers per veure en un mapa els teus patrons de cursa, ciclisme i activitat.",
+  "saveIntro": "També ho vols al teu compte de Dawarich? Ho importarem quan t'hi registris, sense haver de tornar a carregar el fitxer.",
+  "privacy": "El mapa es genera al navegador. No s'envia res tret que triïs «Desa al meu compte de Dawarich».",
+  "exportButton": "Exporta en PNG",
+  "loadingMap": "S'està carregant el mapa...",
+  "parseError": "Error en analitzar {fileName}: {message}",
+  "cards": [
+    {
+      "title": "Què és un mapa de calor GPS?",
+      "paragraphs": [
+        "Un mapa de calor GPS mostra la densitat de les teves dades d'ubicació en un mapa. Les zones que has visitat més sovint apareixen més brillants i intenses, i ofereixen una representació visual dels teus patrons d'activitat al llarg del temps."
+      ]
+    },
+    {
+      "title": "Formats de fitxer compatibles",
+      "paragraphs": [],
+      "items": [
+        { "body": "**GPX** - Format d'intercanvi GPS (la majoria d'aplicacions GPS)" },
+        { "body": "**FIT** - Fitxers d'activitat de Garmin" },
+        { "body": "**GeoJSON** - Format de cartografia web" },
+        { "body": "**KML/KMZ** - Format de Google Earth" },
+        { "body": "**Google Timeline JSON** - Fitxers Records.json i Semantic Location History de Google Takeout" }
+      ]
+    },
+    {
+      "title": "Com exportar les teves dades",
+      "paragraphs": [],
+      "items": [
+        { "body": "**Strava:** Configuració > El meu compte > Descarrega les teves dades" },
+        { "body": "**Garmin:** Copia els fitxers .FIT del dispositiu o exporta'ls amb Garmin Connect" },
+        { "body": "**Apple Fitness:** Fes servir aplicacions de tercers per exportar els entrenaments en GPX" },
+        { "body": "**Google Maps:** Fes servir Google Takeout per exportar l'historial d'ubicacions: els fitxers Records.json i Semantic Location History són compatibles directament" }
+      ]
+    },
+    {
+      "title": "Alternativa gratuïta al mapa de calor de Strava",
+      "paragraphs": [
+        "La funció de mapa de calor de Strava requereix una subscripció de pagament. Aquesta eina gratuïta et permet crear mapes de calor semblants a partir de les dades exportades, sense subscripció ni compte."
+      ]
+    }
+  ],
+  "upload": {
+    "uploadTitle": "Carrega fitxers",
+    "dropFiles": "Arrossega i deixa anar fitxers aquí",
+    "formats": "GPX, FIT, TCX, GeoJSON, KML, KMZ, Google Timeline JSON",
+    "clearButton": "Esborra-ho tot",
+    "inputLabel": "Tria els fitxers que vols processar",
+    "processing": "S'estan processant els fitxers..."
+  },
+  "results": {
+    "statsTitle": "Estadístiques",
+    "pointsLabel": "Total de punts",
+    "distanceLabel": "Distància total",
+    "dateRangeLabel": "Interval de dates",
+    "loadedFiles": "Fitxers carregats ({count})",
+    "pointCount": "{points} pts",
+    "distanceValue": "{distance} km"
+  },
+  "settings": {
+    "settingsTitle": "Configuració del mapa de calor",
+    "schemeLabel": "Paleta de colors",
+    "schemes": [
+      { "label": "Foc (vermell/taronja)" },
+      { "label": "Strava (taronja)" },
+      { "label": "Plasma (lila/groc)" },
+      { "label": "Oceà (blau)" },
+      { "label": "Bosc (verd)" }
+    ],
+    "intensityLabel": "Intensitat: {intensity}",
+    "radiusLabel": "Radi: {radius}",
+    "opacityLabel": "Opacitat: {opacity}"
+  },
+  "cta": {
+    "headline": "El teu mapa de calor cobreix **{points}** punts GPS al llarg de **{distance} km**. Això és una instantània: Dawarich crea el teu mapa de calor contínuament.",
+    "fallback": "Vols visualitzar anys d'historial d'ubicacions? Dawarich crea el teu mapa de calor contínuament amb totes les teves fonts GPS.",
+    "statLabels": {
+      "points": "punts",
+      "distance": "distància",
+      "dateRange": "interval de dates"
+    }
+  }
+}

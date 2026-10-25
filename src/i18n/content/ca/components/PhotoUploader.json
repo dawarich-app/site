@@ -1,0 +1,13 @@
+{
+  "waiting": "Espera un moment...",
+  "addPhotos": "Fes clic o arrossega per afegir més fotos",
+  "dropPhotos": "Deixa anar les fotos aquí",
+  "browse": "o fes clic per triar-les",
+  "formats": "Admet: JPEG, PNG, HEIC i altres formats d'imatge",
+  "clearButton": "Esborra totes les fotos",
+  "noImages": "No s'ha trobat cap fitxer d'imatge. Carrega fotos (JPEG, PNG, HEIC, etc.)",
+  "inputLabel": "Tria els fitxers que vols processar",
+  "loaded": "**{count}** foto carregada|**{count}** fotos carregades|**{count}** fotos carregades",
+  "processing": "S'està processant {count} foto...|S'estan processant {count} fotos...|S'estan processant {count} fotos...",
+  "loadError": "Error en carregar les fotos: {message}"
+}

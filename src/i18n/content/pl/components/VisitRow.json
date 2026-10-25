@@ -1,0 +1,10 @@
+{
+  "allDay": "Cały dzień",
+  "summary": "{duration} · {points} pkt",
+  "duration": {
+    "zero": "0 min",
+    "hoursMinutes": "{hours} godz. {minutes} min",
+    "hours": "{hours} godz.",
+    "minutes": "{minutes} min"
+  }
+}

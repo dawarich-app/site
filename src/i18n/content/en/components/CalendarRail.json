@@ -1,0 +1,36 @@
+{
+  "yearLabel": "Year",
+  "emptyLabel": "No data",
+  "searchLabel": "Search",
+  "searchPlaceholder": "Search visits…",
+  "searchAriaLabel": "Search visits",
+  "previousMonth": "Previous month",
+  "nextMonth": "Next month",
+  "yearDays": "{year} ({count} days)",
+  "otherMonth": "{date} (other month)",
+  "noData": "{date} — no data",
+  "hoursTracked": "{date} — {hours} hours tracked",
+  "weekdays": [
+    {
+      "label": "M"
+    },
+    {
+      "label": "T"
+    },
+    {
+      "label": "W"
+    },
+    {
+      "label": "T"
+    },
+    {
+      "label": "F"
+    },
+    {
+      "label": "S"
+    },
+    {
+      "label": "S"
+    }
+  ]
+}

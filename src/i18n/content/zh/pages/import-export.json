@@ -1,0 +1,158 @@
+{
+  "importFormats": [
+    {
+      "title": "Google Takeout",
+      "description": "从 Google Maps Timeline 导入完整位置历史记录。只需上传一次，就能将多年的数据带入 Dawarich。"
+    },
+    {
+      "title": "Apple Health 与 Fitness",
+      "description": "导入从 Apple Health 或 Apple Fitness 应用导出的 GPX 文件，非常适合 iPhone 用户。"
+    },
+    {
+      "title": "GPX 文件",
+      "description": "支持任何来源的标准 GPS 交换格式文件，这是位置数据的通用格式。"
+    },
+    {
+      "title": "CSV 文件",
+      "description": "从电子表格或自定义 CSV 导出文件导入位置数据，灵活映射数据列。"
+    },
+    {
+      "title": "KML 文件",
+      "description": "导入来自各种地图应用和 GPS 设备的 Keyhole 标记语言文件。"
+    },
+    {
+      "title": "照片元数据",
+      "description": "从照片集的 EXIF 元数据中提取并导入位置数据。"
+    }
+  ],
+  "exportFormats": [
+    {
+      "title": "GPX 导出",
+      "description": "将位置数据导出为 GPX 文件，兼容任意 GPS 软件或地图应用。"
+    },
+    {
+      "title": "GeoJSON 导出",
+      "description": "获取 GeoJSON 格式的数据，轻松对接 GIS 工具和自定义地图方案。"
+    },
+    {
+      "title": "完整账户导出",
+      "description": "下载全部内容：所有轨迹点、到访记录、行程、统计数据和设置。数据全面可迁移。"
+    }
+  ],
+  "importSteps": [
+    {
+      "title": "上传文件",
+      "description": "前往 Dawarich 的导入页面，选择您的文件。",
+      "details": [
+        "点击“新建导入”按钮",
+        "选择要上传的文件",
+        "确认并开始处理",
+        "自动识别数据格式"
+      ]
+    },
+    {
+      "title": "处理数据",
+      "description": "Dawarich 在后台处理导入。大文件可能需要几分钟。",
+      "details": [
+        "检查轨迹点的唯一性",
+        "不创建重复记录",
+        "自动进行逆地理编码",
+        "导入完成后，您会收到通知"
+      ]
+    },
+    {
+      "title": "数据可供使用",
+      "description": "完成后，所有导入的数据都会显示在地图和统计数据中。",
+      "details": [
+        "在交互式地图上查看轨迹点",
+        "统计数据自动更新",
+        "根据导入数据创建行程",
+        "搜索和筛选导入的地点"
+      ]
+    }
+  ],
+  "exportSteps": [
+    {
+      "title": "前往轨迹点页面",
+      "description": "在 Dawarich 控制面板中打开轨迹点页面。"
+    },
+    {
+      "title": "选择日期范围",
+      "description": "选择要导出数据的具体日期范围，然后点击搜索。",
+      "details": [
+        "选择开始和结束日期",
+        "点击“搜索”筛选轨迹点",
+        "确保所需数据全部可见"
+      ]
+    },
+    {
+      "title": "选择格式",
+      "description": "点击导出按钮",
+      "details": [
+        "选择 GPX 或 GeoJSON",
+        "完整导出用于全面备份"
+      ]
+    },
+    {
+      "description": "Dawarich 在后台生成导出文件。",
+      "details": [
+        "少量数据可立即导出",
+        "大量数据可能需要几分钟",
+        "期间您可以继续使用 Dawarich"
+      ]
+    },
+    {
+      "title": "下载",
+      "description": "导出准备就绪后，下载文件。",
+      "details": [
+        "下载链接显示在导出页面",
+        "文件安全存储",
+        "随时可以重新下载"
+      ]
+    }
+  ],
+  "meta": {
+    "title": "数据导入与导出",
+    "description": "您的数据属于您。支持从 Google Takeout、GPX、CSV、KML 导入，导出为 GPX、CSV，或导出完整账户。自由迁移，无拘无束。",
+    "ogTitle": "Dawarich 导入与导出 — 您的数据，由您掌控",
+    "ogDescription": "从 Google Maps、Apple Health、GPX、GeoJSON、KML 导入，导出为任意格式。数据全面可迁移，不受平台限制。"
+  },
+  "hero": {
+    "badge": "数据可迁移",
+    "title": "您的数据",
+    "titleHighlight": "属于您",
+    "subtitle": "从任何来源导入位置历史记录，随时以任意格式导出。Dawarich 坚持数据全面可迁移，让您自由选择，始终掌控自己的数据。",
+    "imageAlt": "导入与导出界面"
+  },
+  "importExportPage": {
+    "heading": "我们的数据理念",
+    "h3": "自由迁移",
+    "p": "随时导出所有数据。您始终可以切换到其他服务，或保存自己的备份。",
+    "h32": "轻松迁入",
+    "p2": "从 Google Maps Timeline 或其他位置记录工具迁移？轻松导入全部数据，接着记录您的足迹。",
+    "h33": "完全掌控",
+    "p3": "下载全部内容：轨迹点、到访记录、行程、统计数据和设置。完整的数字位置历史记录都属于您。",
+    "title3": "支持的导入格式",
+    "subtitle2": "将几乎任何来源的位置数据导入 Dawarich。",
+    "title4": "如何导入",
+    "subtitle3": "几个简单步骤，即可将过去的位置数据导入 Dawarich。",
+    "h34": "智能去重",
+    "p4": "Dawarich 会自动防止重复轨迹点。无论是同一文件导入两次，还是位置记录应用重复报告同一位置，我们都确保每个唯一轨迹点只存储一次。",
+    "title5": "支持的导出格式",
+    "subtitle4": "随时随地，按所需格式带走您的数据。",
+    "title6": "如何导出",
+    "subtitle5": "快速、安全地下载位置数据。",
+    "heading2": "导入与导出为何重要",
+    "h35": "切换服务",
+    "p5": "轻松将完整位置历史记录从 Google Maps Timeline 或其他服务迁移到 Dawarich。",
+    "h36": "定期备份",
+    "p6": "定期导出数据进行备份，在本地保留完整位置历史记录的副本。",
+    "h37": "跨平台使用",
+    "p7": "在其他 GPS 软件或地图应用中使用 GPX 导出文件，或导入其他平台。",
+    "heading3": "掌控您的位置数据",
+    "p8": "今天就创建免费账户，导入您已有的位置历史记录。",
+    "Link": "免费试用 7 天",
+    "EnOnlyLink": "免费自托管",
+    "p9": "7 天免费试用 · 14 天无忧退款 · 随时可取消"
+  }
+}

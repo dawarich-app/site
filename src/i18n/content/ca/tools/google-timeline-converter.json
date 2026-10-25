@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "title": "Google Timeline a GPX/KML/CSV — Convertidor gratuït",
+    "description": "Converteix l’historial d’ubicacions de Google Timeline (Cronologia de Google Maps) a GPX, KML, GeoJSON o CSV. Gratis i privat; tot al navegador.",
+    "keywords": "convertir Google Timeline a GPX, Google Takeout a KML, historial d’ubicacions de Google a CSV, convertidor de línia de temps a GeoJSON, convertidor Google Timeline, exportar Google Maps Timeline, historial d’ubicacions a GPX, convertidor d’ubicacions Google Takeout, convertidor de dades de línia de temps",
+    "appName": "Convertidor de Google Timeline a GPX/KML/CSV",
+    "featureList": [
+      "Converteix JSON de Google Timeline a GPX",
+      "Converteix JSON de Google Timeline a KML i KMZ",
+      "Converteix JSON de Google Timeline a GeoJSON",
+      "Converteix JSON de Google Timeline a CSV",
+      "Conversió per lots d’exportacions Semantic amb diversos fitxers",
+      "La privacitat primer: tot es processa al navegador",
+      "Compatible amb els 6 formats d’exportació de Google Timeline",
+      "No s’envien dades a cap servidor"
+    ]
+  },
+  "h1": "Convertidor de Google Timeline",
+  "intro": "Eina gratuïta i privada per convertir l’historial d’ubicacions de Google Timeline (Cronologia de Google Maps) a GPX, KML, GeoJSON, KMZ o CSV. Carrega els fitxers JSON exportats: tot es processa al navegador.",
+  "howTo": {
+    "title": "Com obtenir les dades de Timeline",
+    "paragraphs": [
+      "Pots exportar les dades de Google Timeline amb un dels mètodes següents. Si un no funciona, prova’n un altre.",
+      "Malauradament, alguns usuaris potser no poden exportar les dades d’ubicació a causa dels canvis de Google en les polítiques d’emmagatzematge."
+    ],
+    "methods": [
+      {
+        "label": "Google Takeout:",
+        "steps": [
+          "Ves a [takeout.google.com](https://takeout.google.com/) → Tria Historial d’ubicacions (Timeline) → Exporta",
+          "Aquest mètode pot no funcionar per a tothom perquè Google ha canviat la manera de desar i exportar les dades d’ubicació. Més detalls al nostre [blog](https://dawarich.app/blog/migrating-from-google-location-history-to-dawarich)."
+        ]
+      },
+      {
+        "label": "A Android:",
+        "steps": [
+          "Obre Google Maps → Configuració → Ubicació → Serveis d’ubicació → Timeline → Exporta Timeline"
+        ]
+      },
+      {
+        "label": "A iOS:",
+        "steps": [
+          "Obre Google Maps → Configuració → Contingut personal → Exporta les dades de Timeline"
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "La privacitat primer",
+    "body": "Tota la conversió es fa al navegador: les dades d’ubicació es queden al dispositiu tret que triïs «Desa al meu compte de Dawarich»."
+  },
+  "preCta": "Busques una alternativa a Google Timeline a llarg termini? [Dawarich](/?utm_source=tool&utm_medium=inline-cta&utm_campaign=google-timeline-converter) registra l’historial d’ubicacions automàticament, amb plena propietat de les teves dades i privacitat. [Descobreix com migrar-hi](/blog/migrating-from-google-location-history-to-dawarich).",
+  "results": {
+    "title": "Fitxers carregats",
+    "file": "Fitxer",
+    "format": "Format",
+    "size": "Mida",
+    "sizeValue": "{size} MB",
+    "points": "Punts",
+    "paths": "Camins",
+    "error": "Error",
+    "totalLabel": "Total:",
+    "totalValue": "{points} punts, {paths} camins",
+    "dateRangeLabel": "Interval de dates:",
+    "noTimestamps": "No s’han trobat marques de temps",
+    "noValidTimestamps": "No hi ha marques de temps vàlides",
+    "selectFormats": "Tria els formats de sortida",
+    "formats": {
+      "gpx": "Format GPS universal",
+      "kml": "Google Earth",
+      "geojson": "Mapes web",
+      "kmz": "KML comprimit",
+      "csv": "Fulls de càlcul"
+    },
+    "download": "Descarrega {format}",
+    "converting": "S’està convertint...",
+    "downloadAll": "Descarrega tots els seleccionats ({count})",
+    "conversionFailed": "Ha fallat la conversió a {format}: {message}",
+    "saveIntro": "També ho vols al teu compte de Dawarich? Ho importarem durant el registre, sense haver de tornar a pujar el fitxer.",
+    "ctaHeadline": "Els teus **{points}** punts ja estan a punt per descarregar. Importa’ls a Dawarich i oblida’t de les conversions de format.",
+    "statPoints": "punts",
+    "statPaths": "camins",
+    "statFiles": "fitxers"
+  },
+  "formatLabels": {
+    "records": "Records.json (GPS en brut)",
+    "semantic": "Semantic Location History",
+    "semanticSegments": "Semantic Segments",
+    "locationHistory": "Historial d’ubicacions (exportació del telèfon)",
+    "settings": "Configuració",
+    "timelineEdits": "Timeline Edits",
+    "unknown": "Desconegut"
+  },
+  "info": [
+    {
+      "title": "Què és un convertidor de Google Timeline?",
+      "paragraphs": [
+        "Un convertidor de Google Timeline transforma els fitxers JSON en brut de l’exportació de l’historial d’ubicacions de Google en formats GPS estàndard, àmpliament compatibles amb aplicacions de mapes, monitors d’activitat física i sistemes d’informació geogràfica. En lloc de dependre del format JSON propietari de Google, obtens fitxers que funcionen arreu.",
+        "Aquesta eina ho converteix tot al navegador, de manera que descarregar els formats no envia les dades d’ubicació enlloc. Carrega els fitxers, tria els formats i descarrega: la majoria d’exportacions triguen segons i admet fitxers amb centenars de milers de punts. (Si fas servir «Desa al meu compte de Dawarich», només aquesta acció puja el fitxer a Dawarich Cloud per preparar la importació; altrament no s’envia res.)"
+      ]
+    },
+    {
+      "title": "Els formats de sortida, explicats",
+      "items": [
+        "**GPX (GPS Exchange Format)** — L’estàndard universal de dades GPS. Compatible amb pràcticament totes les aplicacions GPS, incloses Strava, Garmin Connect, AllTrails, OsmAnd i QGIS. Conté punts de pas, trajectes i marques de temps.",
+        "**KML (Keyhole Markup Language)** — Desenvolupat per a Google Earth. Ideal per visualitzar dades geogràfiques amb marcadors de lloc, camins i descripcions. S’obre directament a Google Earth i Google My Maps.",
+        "**GeoJSON** — L’estàndard de mapes web. El fan servir Leaflet, Mapbox, OpenLayers i la majoria de marcs de mapes web. Format JSON llegible per a persones i fàcil de tractar amb codi.",
+        "**KMZ (KML comprimit)** — Una versió comprimida en zip de KML que genera fitxers més petits. Útil per compartir per correu o quan la mida importa. S’obre a les mateixes aplicacions que KML.",
+        "**CSV (valors separats per comes)** — Format tabular que s’obre a Excel, Google Sheets i LibreOffice. Inclou columnes de latitud, longitud, marca de temps, tipus, nom, adreça, tipus d’activitat, altitud i precisió. Ideal per analitzar dades i fer processaments personalitzats."
+      ]
+    },
+    {
+      "title": "Què ha passat amb Google Maps Timeline?",
+      "paragraphs": [
+        "A finals de 2024, Google va retirar la versió web de Google Maps Timeline i va traslladar totes les dades d’ubicació al dispositiu. Només es van migrar els darrers 90 dies; les dades antigues es van esborrar si els usuaris no n’havien fet còpies manuals. Molta gent va [perdre anys d’historial d’ubicacions](https://www.reddit.com/r/GoogleMaps/comments/1diivt3/megathread_google_maps_timeline_moving_to/) durant el canvi.",
+        "Si vas exportar les dades abans del canvi o durant la transició, aquest convertidor et permet transformar-les en formats estàndard per conservar-les a llarg termini. Convertir-les a GPX, KML o CSV garanteix que l’historial continuï sent accessible faci el que faci Google en el futur."
+      ]
+    },
+    {
+      "title": "Per què convertir les dades de Timeline?",
+      "paragraphs": [
+        "La majoria d’aplicacions de mapes no admeten el format JSON propietari de Google. Convertir-lo a formats estàndard t’ofereix diversos avantatges:"
+      ],
+      "items": [
+        "**Portabilitat** — Fes servir les dades d’ubicació en qualsevol aplicació que admeti GPX, KML, GeoJSON o CSV",
+        "**Conservació a llarg termini** — Els formats estàndard es podran llegir d’aquí a dècades, independentment de les decisions futures de Google",
+        "**Anàlisi** — Importa CSV a fulls de càlcul per analitzar estadísticament els patrons de moviment",
+        "**Visualització** — Mira l’historial a Google Earth, QGIS o eines de mapes web",
+        "**Migració** — Importa a alternatives amb allotjament propi com [Dawarich](/?utm_source=tool&utm_medium=info-section&utm_campaign=google-timeline-converter) per continuar el seguiment d’ubicació amb plena propietat de les teves dades"
+      ]
+    },
+    {
+      "title": "Precisió i limitacions",
+      "paragraphs": [
+        "El convertidor transforma fidelment totes les coordenades geogràfiques i marques de temps de l’exportació de Google Timeline. Tot i això, cal tenir presents algunes limitacions inherents:"
+      ],
+      "items": [
+        "**Precisió de les coordenades** — Records.json fa servir el format E7 (7 decimals), que es converteix a graus decimals estàndard conservant tota la precisió",
+        "**Segments d’activitat** — Els segments a peu, en cotxe i en bici es conserven a la sortida CSV. A GPX i KML, les coordenades del camí s’inclouen com a segments de trajecte",
+        "**Noms dels llocs** — Semantic Location History inclou noms i adreces que es conserven com a noms de punts de pas. Records.json normalment no inclou noms de llocs",
+        "**Fitxers grans** — Els fitxers de més de 100 MB poden trigar 10-30 segons a processar-se segons el dispositiu. L’eina tracta les dades progressivament per mantenir el navegador àgil"
+      ]
+    },
+    {
+      "title": "Eines relacionades",
+      "items": [
+        "[Visualitzador de Google Timeline](/tools/timeline-visualizer) — Mira les dades de Google Timeline en un mapa interactiu sense convertir-les",
+        "[Generador de mapes de calor GPS](/tools/heatmap-generator) — Crea mapes de calor a partir de GPX, FIT, TCX i altres fitxers GPS",
+        "[Fusió de trajectes GPX](/tools/gpx-merger) — Combina diversos fitxers GPX en un de sol",
+        "[Extracció de geodades de fotos](/tools/photo-geotagging) — Extreu les coordenades GPS de les fotos",
+        "[Convertidor de GeoJSON a GPX](/tools/geojson-to-gpx) — Converteix fitxers GeoJSON a GPX",
+        "[Convertidor de KML a GPX](/tools/kml-to-gpx) — Converteix fitxers KML a GPX"
+      ],
+      "footer": "Més informació: [Migració des de l’historial d’ubicacions de Google](/blog/migrating-from-google-location-history-to-dawarich)"
+    }
+  ],
+  "faqTitle": "Preguntes freqüents",
+  "faq": [
+    {
+      "q": "És segur carregar les meves dades de Google Timeline?",
+      "a": "Sí. Tota la conversió es fa al navegador amb JavaScript: els fitxers es queden al dispositiu i desapareixen en tancar la pestanya. No hi ha galetes que rastregin els fitxers ni analítica sobre les dades d’ubicació. L’única excepció és el botó opcional «Desa al meu compte de Dawarich», que puja el fitxer a Dawarich Cloud per importar-lo al compte nou. L’eina és de codi obert perquè puguis comprovar el codi."
+    },
+    {
+      "q": "Quins formats de Google Timeline puc convertir?",
+      "a": "Aquest convertidor admet els sis formats d’exportació de Google Timeline: Records.json (registres GPS en brut amb coordenades E7), Semantic Location History (fitxers mensuals YYYY_MONTH.json amb visites i segments d’activitat), Semantic Segments (el nou format d’exportació del telèfon amb semanticSegments), Location History (format de matriu amb startTime/endTime), Settings i TimelineEdits. L’eina detecta el format automàticament en carregar un fitxer."
+    },
+    {
+      "q": "Quin format de sortida em convé més?",
+      "a": "Depèn del que necessitis. GPX és el format més compatible i funciona amb gairebé totes les aplicacions GPS, monitors d’activitat i eines de mapes. KML i KMZ són ideals per visualitzar a Google Earth. GeoJSON és l’estàndard de biblioteques de mapes web com Leaflet i Mapbox. CSV és el millor per analitzar amb Excel o Google Sheets, o per importar a bases de dades. Si dubtes, comença amb GPX: té la compatibilitat més àmplia."
+    },
+    {
+      "q": "Es perden dades amb la conversió?",
+      "a": "La conversió conserva totes les coordenades geogràfiques, marques de temps i dades d’elevació. Els noms i les adreces de les visites s’inclouen com a noms de punts de pas a GPX i KML, i com a columnes pròpies a CSV. El tipus d’activitat (a peu, en cotxe, en bici) es conserva a CSV. Algunes metadades específiques de format, com els valors de precisió o identificadors de dispositiu, poden no tenir equivalents en tots els formats de sortida, però no es perd cap dada d’ubicació."
+    },
+    {
+      "q": "Puc convertir diversos fitxers alhora?",
+      "a": "Sí. Pots carregar diversos fitxers JSON de Google Timeline alhora, per exemple tots els fitxers mensuals de Semantic Location History (de 2022_JANUARY.json a 2022_DECEMBER.json). El convertidor fusiona totes les dades en una única sortida per format. És especialment útil per a les exportacions Semantic de Google Takeout, que divideixen l’historial en fitxers mensuals."
+    },
+    {
+      "q": "Com obro els fitxers convertits?",
+      "a": "Els fitxers GPX s’obren amb aplicacions com Strava, Garmin Connect, AllTrails, OsmAnd, Viking i GPXSee. KML i KMZ s’obren directament a Google Earth i Google My Maps. GeoJSON funciona amb geojson.io, QGIS, Mapbox Studio i la majoria de marcs de mapes web. CSV s’obre a Excel, Google Sheets, LibreOffice Calc o qualsevol full de càlcul. També pots importar qualsevol d’aquests formats a Dawarich per desar-los i visualitzar-los a llarg termini."
+    },
+    {
+      "q": "Per què hauria de convertir les meves dades de Google Timeline?",
+      "a": "Google va retirar la versió web de Timeline a finals de 2024 i va traslladar les dades d’ubicació al dispositiu, amb opcions d’exportació limitades. Convertir els fitxers JSON exportats a formats estàndard com GPX o KML garanteix que continuïn sent accessibles independentment de les decisions futures de Google. Centenars d’aplicacions poden obrir els formats estàndard, que també es poden importar a eines amb allotjament propi com Dawarich i arxivar durant dècades sense dependre d’un proveïdor."
+    }
+  ],
+  "bottomCta": {
+    "title": "Busques una alternativa a Google Timeline?",
+    "body": "Dawarich és una plataforma de seguiment d’ubicació de codi obert que et dona tot el control de les dades. Importa l’exportació de Google Timeline, continua registrant des del telèfon i visualitza anys d’historial de moviments, amb allotjament propi o al núvol.",
+    "button": "Prova Dawarich gratis durant 7 dies"
+  }
+}
