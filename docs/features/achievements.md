@@ -22,6 +22,25 @@ There are three kinds of cards:
 | **Country with regions** (for example "Germany Explorer") | Rare | Spend time in every region of the country. 183 countries have a region grid. |
 | **Country without regions** | Rare | Spend time in the country. |
 
+The cards for the individual regions inside a country's grid are Common.
+
+<div style={{display: 'flex', flexWrap: 'wrap', gap: '1rem', margin: '1.5rem 0'}}>
+  <figure style={{flex: '1 1 180px', maxWidth: '300px', margin: 0, textAlign: 'center'}}>
+    <img src={require('./images/achievements-legendary-europe.webp').default} alt="Europe Explorer card: a gold and blue foil map of Europe, 50/50 countries, unlocked, Legendary" loading="lazy" />
+    <figcaption><strong>Legendary</strong>: a completed continent</figcaption>
+  </figure>
+  <figure style={{flex: '1 1 180px', maxWidth: '300px', margin: 0, textAlign: 'center'}}>
+    <img src={require('./images/achievements-rare-germany.webp').default} alt="Germany Explorer card: a blue foil map of Germany, 16/16 regions, unlocked, Rare" loading="lazy" />
+    <figcaption><strong>Rare</strong>: a completed country</figcaption>
+  </figure>
+  <figure style={{flex: '1 1 180px', maxWidth: '300px', margin: 0, textAlign: 'center'}}>
+    <img src={require('./images/achievements-rare-czechia-in-progress.webp').default} alt="Czechia Explorer card: a blue foil map of Czechia, 8/14 regions, in progress with a progress bar, Rare" loading="lazy" />
+    <figcaption><strong>Rare</strong>: a country in progress</figcaption>
+  </figure>
+</div>
+
+Cards have a foil finish. Cards that aren't locked tilt and shift their foil colors as you move the mouse over them, unless your system is set to reduce motion.
+
 Open a continent to see its countries, and a country to see its regions. Each set page shows how many countries or regions you explored, how many are left, and the date you completed the set. Select a card for a closer look.
 
 On a set page you can search the cards by name and filter them by status: **All cards**, **Unlocked**, **In progress** or **Locked**. Click **Apply** to filter, or **Clear filters** to see the full set again.
