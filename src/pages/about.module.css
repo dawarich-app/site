@@ -82,3 +82,38 @@
   color: var(--ifm-color-emphasis-700);
   font-size: 1rem;
 }
+
+.glance,
+.press {
+  margin-top: 3rem;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem 2rem;
+  margin: 1rem 0 0;
+}
+
+.facts dt {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
+
+.facts dd {
+  margin: 0.25rem 0 0;
+}
+
+.press ul {
+  padding-left: 1.25rem;
+}
+
+.press li {
+  margin-bottom: 0.5rem;
+}
+
+.pressOutlet {
+  opacity: 0.7;
+}
