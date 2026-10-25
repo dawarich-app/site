@@ -47,6 +47,21 @@ Clicking a trip opens the detail view, which includes:
 
 ![Trip details](images/trip-details.webp)
 
+From the trip page you can also open the trip in [Poster Studio](/docs/features/poster-studio) or [Video Studio](/docs/features/video-studio), and open the full map for the trip's exact dates.
+
+Trips imported from [TREK](/docs/features/integrations#trek) also show the TREK plan above the recorded days.
+
+## Sharing a trip
+
+Click the **Share trip** button on a trip's page and choose **Who can view this trip?**:
+
+- **Anyone with the link** creates a public [sharing link](/docs/features/sharing) that works without a Dawarich account, optionally protected by a magic phrase.
+- **Family members only** shares the trip with the other members of your [family](/docs/features/family). This option appears only while you belong to an active family.
+
+In both cases you pick what to include on the shared page: the route map, stats and countries, the day-by-day breakdown, per-day notes, the trip description and photos on the map. Click **Create share link** to share.
+
+A trip shared with your family appears in each member's trips list under **Trips shared with your family**, marked **Family**. Members must be signed in to open it, and they see a read-only page with the sections you chose. The magic phrase only applies to public links. Access follows family membership: when you or a member leaves the family, or the family's plan ends, the trip is no longer shown to them. Your [privacy zones](/docs/features/visits-and-places#privacy-zones) still apply.
+
 ## Editing a trip
 
 Open a trip and click **Edit** to change the name, dates, or notes. The map updates live as you adjust the date range so you can preview which route will be included.
