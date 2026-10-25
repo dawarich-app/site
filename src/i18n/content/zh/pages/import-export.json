@@ -112,13 +112,13 @@
     }
   ],
   "meta": {
-    "title": "数据导入与导出",
-    "description": "您的数据属于您。支持从 Google Takeout、GPX、CSV、KML 导入，导出为 GPX、CSV，或导出完整账户。自由迁移，无拘无束。",
+    "title": "导入 Google Takeout 位置历史记录及更多数据",
+    "description": "导入 Google Timeline（谷歌地图时间轴）和 Takeout 位置历史记录，以及 GPX、FIT、KML、CSV、GeoJSON、Polarsteps 和 OwnTracks 文件。随时导出全部数据。",
     "ogTitle": "Dawarich 导入与导出 — 您的数据，由您掌控",
     "ogDescription": "从 Google Maps、Apple Health、GPX、GeoJSON、KML 导入，导出为任意格式。数据全面可迁移，不受平台限制。"
   },
   "hero": {
-    "badge": "数据可迁移",
+    "badge": "导入 Google Takeout 位置历史记录",
     "title": "您的数据",
     "titleHighlight": "属于您",
     "subtitle": "从任何来源导入位置历史记录，随时以任意格式导出。Dawarich 坚持数据全面可迁移，让您自由选择，始终掌控自己的数据。",
@@ -154,5 +154,51 @@
     "Link": "免费试用 7 天",
     "EnOnlyLink": "免费自托管",
     "p9": "7 天免费试用 · 14 天无忧退款 · 随时可取消"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "导入您的 Google Timeline（谷歌地图时间轴）",
+        "body": [
+          "Dawarich 能读取 Google 位置数据导出的所有版本：Google Maps 应用导出的 Timeline.json 文件，以及 Google Takeout 中的 Records.json 和 Semantic Location History。直接上传原文件即可，系统会自动识别格式。",
+          "也支持 Takeout 导出文件中的 Google Photos 元数据，照片的拍摄地点可以用来填补历史记录中的空白。"
+        ]
+      },
+      {
+        "heading": "导入其他应用的数据",
+        "body": [
+          "支持 GPX 轨迹和航点，Garmin、Strava 及大多数运动手表的 FIT 文件，TCX、KML 和 KMZ，含有纬度、经度和时间列的 CSV 文件，GeoJSON、OwnTracks Recorder 的 .rec 文件，以及 Polarsteps 的 locations.json。将上述任意文件打包为 ZIP 也可导入。",
+          "系统会跳过重复的轨迹点，因此导入内容有重叠的导出文件不会让历史记录重复。"
+        ]
+      },
+      {
+        "heading": "带走您的全部数据",
+        "body": [
+          "将轨迹点导出为 GPX 或 GeoJSON，或下载包含轨迹点、到访记录、行程、统计数据和设置的完整账户导出文件。无论使用 Cloud 还是自托管，您的数据都不会被平台锁定。"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "可以导入哪些 Google Timeline 文件？",
+        "a": "Google Maps 应用导出的 Timeline.json，以及 Google Takeout 中的 Records.json 或 Semantic Location History。"
+      },
+      {
+        "q": "我的 Takeout 中没有位置历史记录，该怎么办？",
+        "a": "Google 现在将 Timeline 保存在您的手机上。请改用 Google Maps 应用导出；参阅[如何导出 Google Timeline](/docs/getting-started/import-sources)。"
+      },
+      {
+        "q": "同一个文件导入两次会产生重复数据吗？",
+        "a": "不会。已有的轨迹点会被跳过。"
+      },
+      {
+        "q": "可以导入压缩文件吗？",
+        "a": "支持 ZIP 压缩包。Gzip 压缩的文件（.gz）需要先解压。"
+      },
+      {
+        "q": "离开 Dawarich 时，可以带走我的数据吗？",
+        "a": "可以。您随时可以导出历史记录；自托管实例还会将所有数据保存在您自己的数据库中。"
+      }
+    ]
   }
 }

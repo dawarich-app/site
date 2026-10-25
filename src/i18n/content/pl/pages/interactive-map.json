@@ -100,13 +100,13 @@
     }
   ],
   "meta": {
-    "title": "Interaktywna wizualizacja na mapie",
-    "description": "Poznaj historię lokalizacji na interaktywnej mapie z warstwami punktów, tras, mapy cieplnej, mgły wojny i innymi.",
+    "title": "Mapa historii lokalizacji — miejsca, gdzie byłeś",
+    "description": "Poznaj całą historię lokalizacji na jednej mapie: punkty, trasy, mapa cieplna, mgła wojny i zdjęcia — od jednego dnia po wszystkie zapisane lata.",
     "ogTitle": "Mapa Dawarich — interaktywna wizualizacja lokalizacji",
     "ogDescription": "Poznaj historię lokalizacji dzięki warstwom punktów, tras, mapy cieplnej, mgły wojny, mapy zdrapki i integracji ze zdjęciami."
   },
   "hero": {
-    "badge": "Interaktywna wizualizacja",
+    "badge": "Mapa historii lokalizacji",
     "title": "Odkrywaj miejsca, w których byłeś,",
     "titleHighlight": "nie zapomnij żadnego",
     "subtitle": "Twoja historia lokalizacji ożywa na interaktywnej mapie z wieloma warstwami wizualizacji. Od szczegółowych punktów po piękne mapy cieplne — zobacz podróż swojego życia ze wszystkimi szczegółami.",
@@ -126,5 +126,51 @@
     "Link": "Wypróbuj za darmo przez 7 dni",
     "EnOnlyLink": "Uruchom za darmo na własnym serwerze",
     "p3": "7-dniowy bezpłatny okres próbny · Zwrot bez ryzyka przez 14 dni · Zrezygnuj w dowolnej chwili"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Cała Twoja historia lokalizacji na jednej mapie",
+        "body": [
+          "Wybierz dowolny zakres czasu, od jednego dnia po całą zapisaną historię, a mapa go pokaże. Dane zaimportowane z Google Timeline sąsiadują z tym, co Twój telefon rejestruje dzisiaj, dzięki czemu lata historii tworzą jedną opowieść."
+        ]
+      },
+      {
+        "heading": "Warstwy, które odpowiadają na różne pytania",
+        "body": [
+          "Punkty pokazują każdą zapisaną pozycję, trasy je łączą, mapa cieplna wskazuje, gdzie spędzasz czas, mgła wojny odsłania odwiedzone miejsca, a zdjęcia z Immich lub PhotoPrism pojawiają się tam, gdzie je zrobiono. Włączaj i wyłączaj warstwy według potrzeb."
+        ]
+      },
+      {
+        "heading": "Odtwórz dzień, znajdź miejsce",
+        "body": [
+          "Funkcja Replay odtwarza na mapie punkty z wybranych dat. Wyszukiwarka znajduje miejsca i wizyty w całej Twojej historii, a panel osi czasu wyświetla dni i miejsca Twoich postojów."
+        ]
+      },
+      {
+        "heading": "Z myślą o wieloletniej historii",
+        "body": [
+          "Mapa jest renderowana przy użyciu WebGL, oferuje globus 3D i kilka stylów mapy oraz wczytuje tylko tę część historii, którą właśnie oglądasz. Dzięki temu nawet dekadę danych łatwo przeglądać."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Czy mogę zobaczyć na tej mapie moją dawną historię Google Timeline?",
+        "a": "Tak. Zaimportuj eksport Google Timeline lub Takeout, a te lata pojawią się na mapie obok nowych danych."
+      },
+      {
+        "q": "Jakie informacje pokazuje punkt?",
+        "a": "Czas i współrzędne oraz wysokość, prędkość i poziom baterii, jeśli zostały zapisane."
+      },
+      {
+        "q": "Jak daleko wstecz mogę sięgnąć na mapie?",
+        "a": "Tak daleko, jak sięgają Twoje dane. Wybierz dowolny zakres dat, również całą swoją historię."
+      },
+      {
+        "q": "Czy moja mapa jest prywatna?",
+        "a": "Tak. Tylko Ty masz do niej dostęp, chyba że utworzysz link do udostępniania. Dawarich nie sprzedaje danych lokalizacji."
+      }
+    ]
   }
 }

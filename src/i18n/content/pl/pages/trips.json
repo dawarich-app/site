@@ -60,13 +60,13 @@
     }
   ],
   "meta": {
-    "title": "Podróże i dziennik podróży",
-    "description": "Twórz pięknie udokumentowane podróże z interaktywnymi mapami, statystykami, formatowanym dziennikiem i integracją ze zdjęciami.",
+    "title": "Aplikacja: rejestrator i dziennik podróży",
+    "description": "Rejestruj podróże automatycznie i prowadź dziennik każdej z nich: mapa trasy, kraje i dystans, notatki i zdjęcia. W chmurze lub na własnym serwerze.",
     "ogTitle": "Dawarich Podróże — dokumentuj swoje przygody",
     "ogDescription": "Twórz rozbudowane dzienniki podróży z interaktywnymi mapami, szczegółowymi statystykami, formatowanymi opisami i automatyczną integracją ze zdjęciami."
   },
   "hero": {
-    "badge": "Dziennik podróży",
+    "badge": "Rejestrator podróży i dziennik podróży",
     "title": "Zamień swoje podróże w",
     "titleHighlight": "piękne opowieści",
     "subtitle": "Automatycznie zapisuj, jak się przemieszczasz, i twórz z tych danych rozbudowane dzienniki podróży. Każda podróż to interaktywna mapa, szczegółowe statystyki, formatowane opisy i zdjęcia — wszystko w jednym miejscu.",
@@ -93,5 +93,56 @@
     "Link": "Wypróbuj za darmo przez 7 dni",
     "EnOnlyLink": "Uruchom za darmo na własnym serwerze",
     "p2": "7-dniowy bezpłatny okres próbny · Zwrot bez ryzyka przez 14 dni · Zrezygnuj w dowolnej chwili"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Rejestrator podróży, który uzupełnia się sam",
+        "body": [
+          "Z aplikacją Dawarich na telefonie Twoje przemieszczanie się jest rejestrowane na bieżąco. Aby utworzyć podróż, podajesz tylko nazwę i daty — Dawarich zbiera wszystkie punkty z tego zakresu i rysuje trasę.",
+          "Wcześniejsze wyjazdy działają tak samo: zaimportuj pliki Google Timeline, Polarsteps lub GPX i utwórz podróż z dowolnego zakresu dat z przeszłości."
+        ]
+      },
+      {
+        "heading": "Wszystko o podróży na jednej stronie",
+        "body": [
+          "Każda podróż pokazuje daty, mapę trasy, kraje na jej trasie wraz z dystansem pokonanym w każdym z nich, Twoje notatki oraz zdjęcia z połączonej biblioteki Immich lub PhotoPrism."
+        ]
+      },
+      {
+        "heading": "Wróć do dowolnej podróży",
+        "body": [
+          "Wyszukiwanie obejmuje nazwy podróży, opisy, notatki i odwiedzone kraje. Sortuj według daty, nazwy lub najdłuższego dystansu i filtruj według roku, miesiąca lub kraju. Filtry pozostają w adresie strony, więc możesz zapisać w zakładkach listę, na przykład wszystkich podróży do Portugalii."
+        ]
+      },
+      {
+        "heading": "Dziennik, nie tylko mapa",
+        "body": [
+          "Notatki obsługują formatowanie, więc podróż może opisywać wydarzenia z każdego dnia, a nie tylko odwiedzone miejsca. Zmiana dat podróży aktualizuje trasę na mapie podczas edycji, a usunięcie podróży nigdy nie usuwa Twojej historii lokalizacji."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Czy muszę rozpocząć podróż przed wyjazdem?",
+        "a": "Nie. Podróże powstają z istniejącej historii lokalizacji, więc możesz utworzyć podróż później na podstawie dowolnego zakresu dat."
+      },
+      {
+        "q": "Jakie aplikacje mogą rejestrować moje podróże?",
+        "a": "Aplikacje Dawarich na iOS i Android, a także OwnTracks, Overland, GPSLogger i inne obsługiwane aplikacje do rejestrowania lokalizacji."
+      },
+      {
+        "q": "Czy mogę zaimportować podróże z Polarsteps lub Google Timeline?",
+        "a": "Tak. Zaimportuj eksport z Polarsteps lub Google Timeline, a następnie utwórz podróże dla wybranych dat."
+      },
+      {
+        "q": "Czy mogę dodać zdjęcia do podróży?",
+        "a": "Tak, jeśli połączysz Immich lub PhotoPrism. Zdjęcia zrobione podczas podróży automatycznie pojawią się na jej stronie."
+      },
+      {
+        "q": "Czy mogę udostępnić podróż?",
+        "a": "Tak. Podróż można udostępnić przez prywatny link, który możesz unieważnić w dowolnej chwili."
+      }
+    ]
   }
 }

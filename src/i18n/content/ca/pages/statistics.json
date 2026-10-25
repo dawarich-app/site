@@ -66,13 +66,13 @@
     }
   ],
   "meta": {
-    "title": "Estadístiques i anàlisi d’ubicació",
-    "description": "La teva vida en xifres amb estadístiques d’ubicació completes. Països, ciutats, distàncies i resums mensuals i anuals per correu.",
+    "title": "Mapa de països visitats i estadístiques de viatge",
+    "description": "Mira tots els països i ciutats visitats, distància, dies actius i tendències anuals del teu historial d’ubicacions. Allotja’l tu de franc.",
     "ogTitle": "Estadístiques de Dawarich — La teva vida en xifres",
     "ogDescription": "Estadístiques d’ubicació completes: països visitats, distància total, registre del temps i resums mensuals i anuals automàtics per correu."
   },
   "hero": {
-    "badge": "Dades i anàlisi",
+    "badge": "Mapa de països visitats i estadístiques de viatge",
     "title": "La teva vida en",
     "titleHighlight": "xifres",
     "subtitle": "Transforma les dades d’ubicació en informació útil. Descobreix patrons, segueix els assoliments i celebra fites amb estadístiques completes que s’actualitzen automàticament cada hora.",
@@ -106,5 +106,57 @@
     "Link": "Prova’l gratis durant 7 dies",
     "EnOnlyLink": "Allotja’l gratis",
     "p6": "Prova gratuïta de 7 dies · Reemborsament sense risc durant 14 dies · Cancel·la quan vulguis"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "El teu mapa de països visitats es crea sol",
+        "body": [
+          "No cal que marquis països en una llista. Dawarich llegeix el teu historial d’ubicacions i compta els països i les ciutats on has estat, tant per a tot l’historial com per a cada any i cada mes.",
+          "Fes clic al recompte de països o de ciutats per veure la llista completa de llocs, cadascun amb un enllaç a aquella part del mapa. Importa anys de dades de Google Timeline i el mapa de països visitats s’omplirà de seguida."
+        ]
+      },
+      {
+        "heading": "Anys, mesos i dies concrets",
+        "body": [
+          "La vista All Time mostra una targeta per any, amb la distància, un mapa de les rutes, els mesos i els països i ciutats. Tria un any per veure la distància mes a mes i un calendari on cada dia té el color del país on eres.",
+          "Una línia de temps per països mostra quants dies vas passar a cada país aquell any, i una cursa de distàncies compara aquest any amb l’anterior. Els colors per país del calendari i la línia de temps per països formen part de Pro i de Dawarich autoallotjat."
+        ]
+      },
+      {
+        "heading": "D’on surten els països",
+        "body": [
+          "Els països i les ciutats s’obtenen amb geocodificació inversa: convertir coordenades en noms de llocs. Dawarich Cloud ho fa per tu. Si l’allotges tu, cal configurar un servei de geocodificació; fins aleshores, les distàncies i els dies actius continuen funcionant, però els països es queden en blanc."
+        ]
+      },
+      {
+        "heading": "Comparteix un mes",
+        "body": [
+          "Pots compartir qualsevol mes amb un enllaç públic que caduca al cap d’una hora, un dia, una setmana o un mes. Les persones a qui l’enviïs veuran les estadístiques d’aquell mes sense tenir compte, i res més. A Dawarich Cloud, compartir estadístiques forma part del pla Pro."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Com sap Dawarich quins països he visitat?",
+        "a": "A partir dels punts del teu historial d’ubicacions. Cada punt s’associa a un país i una ciutat mitjançant geocodificació inversa, i cada lloc es compta una sola vegada per període."
+      },
+      {
+        "q": "Puc afegir els viatges que vaig fer abans d’utilitzar Dawarich?",
+        "a": "Sí. Importa Google Timeline, dades d’ubicació de Google Photos, GPX, FIT i altres fitxers, i aquells anys apareixeran a les estadístiques i al mapa de països visitats."
+      },
+      {
+        "q": "Puc comptar quants dies he passat a cada país?",
+        "a": "Sí. La línia de temps anual per països mostra els dies per país, i el [comptador de dies de residència fiscal](/tax-residency/) hi afegeix períodes d’estada i un indicador de 183 dies."
+      },
+      {
+        "q": "Amb quina freqüència s’actualitzen les estadístiques?",
+        "a": "En segon pla quan arriben punts nous o importacions, i cada hora. També les pots recalcular amb Update stats a la pàgina Anàlisi."
+      },
+      {
+        "q": "Qui pot veure les meves estadístiques?",
+        "a": "Només tu, tret que comparteixis un mes amb un enllaç públic. Dawarich no ven ni comparteix les teves dades d’ubicació."
+      }
+    ]
   }
 }

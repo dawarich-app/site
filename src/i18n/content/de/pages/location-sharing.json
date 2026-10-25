@@ -30,6 +30,10 @@
     {
       "q": "Was passiert mit meinen Links, wenn mein Abo abläuft?",
       "a": "Du kannst jederzeit alles exportieren. Die gesamte Anwendung ist Open Source – dieselben Funktionen kannst du dauerhaft kostenlos auf deiner eigenen Hardware betreiben."
+    },
+    {
+      "q": "Wie unterscheidet sich das von Life360?",
+      "a": "Life360 zeigt deinen Kreis ständig auf einer Karte. Dawarich verschickt einen Link, der genau eine Sache zeigt – so lange, wie du bestimmst. Dein Verlauf bleibt deiner. Für Familien, die ihren Standort fortlaufend teilen möchten, gibt es die [Familie](/family/). [Zum vollständigen Life360-Vergleich](/docs/comparisons/vs-life360)."
     }
   ],
   "meta": {

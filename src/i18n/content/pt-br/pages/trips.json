@@ -60,13 +60,13 @@
     }
   ],
   "meta": {
-    "title": "Viagens e diário de viagem",
-    "description": "Transforme suas viagens em registros completos com mapas interativos, estatísticas, diário com texto formatado e integração de fotos.",
+    "title": "App de registro e diário de viagens",
+    "description": "Registre viagens automaticamente em um diário: mapa do trajeto, países e distância, notas e fotos. Na nuvem ou em hospedagem própria.",
     "ogTitle": "Viagens no Dawarich — Documente suas aventuras",
     "ogDescription": "Crie diários de viagem completos com mapas interativos, estatísticas detalhadas, descrições com texto formatado e integração automática de fotos."
   },
   "hero": {
-    "badge": "Diário de viagem",
+    "badge": "Registro e diário de viagens",
     "title": "Transforme suas viagens em",
     "titleHighlight": "belas histórias",
     "subtitle": "Registre seus deslocamentos automaticamente e transforme-os em diários de viagem completos. Cada viagem inclui mapa interativo, estatísticas detalhadas, descrições com texto formatado e fotos — tudo em um só lugar.",
@@ -93,5 +93,56 @@
     "Link": "Experimente grátis por 7 dias",
     "EnOnlyLink": "Hospede grátis no seu servidor",
     "p2": "7 dias de teste grátis · Reembolso em até 14 dias, sem risco · Cancele quando quiser"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Um registro de viagens que se preenche sozinho",
+        "body": [
+          "Com o app Dawarich no celular, seus deslocamentos são registrados enquanto você se movimenta. Para criar uma viagem, basta dar um nome e definir as datas; o Dawarich reúne todos os pontos daquele período e traça o trajeto.",
+          "Viagens antigas funcionam da mesma forma: importe arquivos do Google Timeline, Polarsteps ou GPX e transforme qualquer período do passado em uma viagem."
+        ]
+      },
+      {
+        "heading": "Tudo sobre uma viagem em uma só página",
+        "body": [
+          "Cada viagem mostra suas datas, um mapa do trajeto, os países por onde você passou com a distância percorrida em cada um, suas notas e fotos de uma biblioteca conectada do Immich ou PhotoPrism."
+        ]
+      },
+      {
+        "heading": "Encontre qualquer viagem novamente",
+        "body": [
+          "A busca encontra nomes de viagens, descrições, notas e países visitados em uma viagem. Ordene por data, nome ou maior distância e filtre por ano, mês ou país. Os filtros ficam no endereço da página, então você pode salvar nos favoritos uma lista como a de todas as viagens a Portugal."
+        ]
+      },
+      {
+        "heading": "Um diário, além do mapa",
+        "body": [
+          "As notas aceitam formatação, permitindo registrar o que aconteceu a cada dia da viagem, além de onde você esteve. Alterar as datas de uma viagem atualiza o trajeto no mapa durante a edição, e excluir uma viagem nunca apaga seu histórico de localização."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Preciso iniciar uma viagem antes de viajar?",
+        "a": "Não. As viagens são criadas a partir do histórico de localização que você já tem, então você pode criar uma depois, com qualquer período de datas."
+      },
+      {
+        "q": "Quais apps podem registrar minhas viagens?",
+        "a": "Os apps Dawarich para iOS e Android, ou OwnTracks, Overland, GPSLogger e outros rastreadores compatíveis."
+      },
+      {
+        "q": "Posso importar viagens do Polarsteps ou Google Timeline?",
+        "a": "Sim. Importe a exportação do Polarsteps ou Google Timeline e depois crie viagens para as datas que quiser."
+      },
+      {
+        "q": "Posso adicionar fotos a uma viagem?",
+        "a": "Sim, se você conectar o Immich ou PhotoPrism. As fotos tiradas durante a viagem aparecem automaticamente na página dela."
+      },
+      {
+        "q": "Posso compartilhar uma viagem?",
+        "a": "Sim. Uma viagem pode ser compartilhada por um link privado, que você pode revogar a qualquer momento."
+      }
+    ]
   }
 }

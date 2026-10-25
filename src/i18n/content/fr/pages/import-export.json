@@ -112,13 +112,13 @@
     }
   ],
   "meta": {
-    "title": "Importations et exports de données",
-    "description": "Vos données vous appartiennent. Importez depuis Google Takeout, GPX, CSV, KML. Exportez en GPX, CSV ou export complet du compte. Sans dépendance.",
+    "title": "Import Google Takeout : historique des lieux et +",
+    "description": "Importez Google Timeline, Takeout, GPX, FIT, KML, CSV, GeoJSON, Polarsteps et OwnTracks pour votre historique de localisation. Exportez tout à tout moment.",
     "ogTitle": "Dawarich — Importations et exports sous votre contrôle",
     "ogDescription": "Importez depuis Google Maps, Apple Health, GPX, GeoJSON, KML. Exportez dans tous les formats. Une portabilité complète sans dépendance."
   },
   "hero": {
-    "badge": "Portabilité des données",
+    "badge": "Importez l’historique de localisation Google Takeout",
     "title": "Vos données",
     "titleHighlight": "vous appartiennent",
     "subtitle": "Importez votre historique de localisation de toute provenance. Exportez-le à tout moment, dans tous les formats. Dawarich défend une portabilité complète sans dépendance : vous gardez toujours le contrôle.",
@@ -154,5 +154,51 @@
     "Link": "Essayer gratuitement pendant 7 jours",
     "EnOnlyLink": "Auto-héberger gratuitement",
     "p9": "Essai gratuit de 7 jours · Remboursement sous 14 jours, sans risque · Résiliez à tout moment"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Importez votre historique Google Timeline",
+        "body": [
+          "Dawarich lit toutes les versions des exports de localisation de Google : le fichier Timeline.json de l’application Google Maps, ainsi que Records.json et Semantic Location History de Google Takeout. Importez le fichier tel quel : son format est détecté automatiquement.",
+          "Les métadonnées Google Photos d’un export Takeout fonctionnent aussi : les lieux de prise de vue peuvent ainsi combler les lacunes de votre historique."
+        ]
+      },
+      {
+        "heading": "Importez les données d’autres applications",
+        "body": [
+          "Trajets et points de passage GPX, fichiers FIT de Garmin, Strava et de la plupart des montres de sport, TCX, KML et KMZ, fichiers CSV avec des colonnes de latitude, longitude et heure, GeoJSON, fichiers .rec d’OwnTracks Recorder et locations.json de Polarsteps. Une archive ZIP contenant ces fichiers fonctionne aussi.",
+          "Les points en double sont ignorés : importer des exports dont les périodes se chevauchent ne duplique donc pas votre historique."
+        ]
+      },
+      {
+        "heading": "Emportez toutes vos données",
+        "body": [
+          "Exportez vos points en GPX ou GeoJSON, ou téléchargez un export complet de votre compte avec vos points, visites, déplacements, statistiques et paramètres. Vos données ne sont jamais captives, sur Cloud comme en auto-hébergement."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Quels fichiers Google Timeline puis-je importer ?",
+        "a": "Le fichier Timeline.json exporté depuis l’application Google Maps, ainsi que Records.json ou Semantic Location History de Google Takeout."
+      },
+      {
+        "q": "Mon export Takeout n’a pas d’historique de localisation. Que faire ?",
+        "a": "Google conserve désormais Timeline sur votre téléphone. Exportez-le plutôt depuis l’application Google Maps ; consultez [comment exporter Google Timeline](/docs/getting-started/import-sources)."
+      },
+      {
+        "q": "Importer deux fois le même fichier crée-t-il des doublons ?",
+        "a": "Non. Les points déjà présents sont ignorés."
+      },
+      {
+        "q": "Puis-je importer des fichiers compressés ?",
+        "a": "Les archives ZIP sont acceptées. Les fichiers compressés avec gzip (.gz) doivent d’abord être décompressés."
+      },
+      {
+        "q": "Puis-je quitter Dawarich en emportant mes données ?",
+        "a": "Oui. Exportez votre historique à tout moment ; une instance auto-hébergée conserve aussi toutes vos données dans votre propre base de données."
+      }
+    ]
   }
 }

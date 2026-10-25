@@ -66,13 +66,13 @@
     }
   ],
   "meta": {
-    "title": "Statystyki lokalizacji i podsumowanie",
-    "description": "Zobacz swoje życie w liczbach dzięki pełnym statystykom lokalizacji. Śledź kraje, miasta i odległości. Otrzymuj miesięczne i roczne podsumowania e-mail.",
+    "title": "Mapa odwiedzonych krajów i statystyki podróży",
+    "description": "Wszystkie odwiedzone kraje i miasta, dystans, dni aktywności i roczne trendy z Twojej historii lokalizacji. Korzystaj bezpłatnie na własnym serwerze.",
     "ogTitle": "Statystyki Dawarich — Twoje życie w liczbach",
     "ogDescription": "Pełne statystyki lokalizacji: odwiedzone kraje, łączna odległość, rejestracja czasu oraz automatyczne miesięczne i roczne podsumowania e-mail."
   },
   "hero": {
-    "badge": "Analizy i podsumowanie",
+    "badge": "Mapa odwiedzonych krajów i statystyki podróży",
     "title": "Zobacz swoje życie w",
     "titleHighlight": "liczbach",
     "subtitle": "Zamień dane lokalizacyjne w użyteczne podsumowanie. Odkrywaj wzorce, śledź osiągnięcia i świętuj kolejne etapy dzięki pełnym statystykom aktualizowanym automatycznie co godzinę.",
@@ -106,5 +106,57 @@
     "Link": "Wypróbuj za darmo przez 7 dni",
     "EnOnlyLink": "Uruchom za darmo na własnym serwerze",
     "p6": "7-dniowy bezpłatny okres próbny · Zwrot bez ryzyka przez 14 dni · Zrezygnuj w dowolnej chwili"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Mapa odwiedzonych krajów stworzona dla Ciebie",
+        "body": [
+          "Nie musisz odhaczać krajów na liście. Dawarich odczytuje Twoją historię lokalizacji i zlicza odwiedzone kraje i miasta — dla całej historii, każdego roku i każdego miesiąca.",
+          "Kliknij liczbę krajów lub miast, aby zobaczyć pełną listę miejsc, każde z linkiem do odpowiedniego fragmentu mapy. Zaimportuj lata danych z Google Timeline, a Twoja mapa odwiedzonych krajów wypełni się od razu."
+        ]
+      },
+      {
+        "heading": "Lata, miesiące i pojedyncze dni",
+        "body": [
+          "Widok All Time pokazuje po jednej karcie na rok, z dystansem, mapą tras, miesiącami oraz krajami i miastami z tego roku. Wybierz rok, aby zobaczyć dystans miesiąc po miesiącu i kalendarz, w którym każdy dzień ma kolor kraju pobytu w danym dniu.",
+          "Oś czasu krajów pokazuje liczbę dni spędzonych w każdym kraju w danym roku, a wyścig dystansów porównuje bieżący rok z poprzednim. Kolory krajów w kalendarzu i oś czasu krajów są dostępne w Pro i w Dawarich na własnym serwerze."
+        ]
+      },
+      {
+        "heading": "Skąd pochodzą dane o krajach",
+        "body": [
+          "Kraje i miasta są ustalane przez odwrotne geokodowanie, czyli zamianę współrzędnych na nazwy miejsc. Dawarich Cloud robi to za Ciebie. Instancja na własnym serwerze wymaga skonfigurowania usługi geokodowania. Do tego czasu dystanse i dni aktywności nadal działają, ale lista krajów pozostaje pusta."
+        ]
+      },
+      {
+        "heading": "Udostępnij miesiąc",
+        "body": [
+          "Dowolny miesiąc możesz udostępnić za pomocą publicznego linku, który wygasa po godzinie, dniu, tygodniu lub miesiącu. Odbiorcy widzą bez konta wyłącznie statystyki tego miesiąca. W Dawarich Cloud udostępnianie statystyk jest częścią planu Pro."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Jak Dawarich rozpoznaje odwiedzone przeze mnie kraje?",
+        "a": "Z punktów w Twojej historii lokalizacji. Każdemu punktowi przypisywany jest kraj i miasto przez odwrotne geokodowanie, a każde miejsce jest liczone raz w danym okresie."
+      },
+      {
+        "q": "Czy mogę dodać podróże sprzed korzystania z Dawarich?",
+        "a": "Tak. Zaimportuj dane Google Timeline, dane lokalizacji z Google Photos, pliki GPX, FIT i inne, a te lata pojawią się w Twoich statystykach i na mapie odwiedzonych krajów."
+      },
+      {
+        "q": "Czy mogę policzyć dni spędzone w każdym kraju?",
+        "a": "Tak. Roczna oś czasu krajów pokazuje liczbę dni w każdym kraju, a [licznik dni rezydencji podatkowej](/tax-residency/) dodaje okresy pobytu i oznaczenie 183 dni."
+      },
+      {
+        "q": "Jak często aktualizowane są statystyki?",
+        "a": "W tle, po pojawieniu się nowych punktów lub importów, oraz co godzinę. Możesz je też przeliczyć za pomocą Update stats na stronie Podsumowanie."
+      },
+      {
+        "q": "Kto widzi moje statystyki?",
+        "a": "Tylko Ty, chyba że udostępnisz miesiąc przez publiczny link. Dawarich nie sprzedaje ani nie udostępnia Twoich danych lokalizacji."
+      }
+    ]
   }
 }

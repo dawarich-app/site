@@ -100,13 +100,13 @@
     }
   ],
   "meta": {
-    "title": "Visualització en un mapa interactiu",
-    "description": "Explora el teu historial d’ubicacions en un mapa interactiu amb capes de punts, rutes, mapa de calor, boira de guerra i més.",
+    "title": "Mapa d’historial d’ubicacions: on has estat",
+    "description": "Explora tot l’historial d’ubicacions en un mapa: punts, rutes, mapa de calor, boira de guerra i fotos, d’un sol dia a tots els anys registrats.",
     "ogTitle": "Mapa de Dawarich — Visualització interactiva d’ubicacions",
     "ogDescription": "Explora el teu historial d’ubicacions amb diverses capes: punts, rutes, mapa de calor, boira de guerra, mapa per descobrir i integració de fotos."
   },
   "hero": {
-    "badge": "Visualització interactiva",
+    "badge": "Mapa de l’historial d’ubicacions",
     "title": "Explora on has estat,",
     "titleHighlight": "no oblidis cap lloc",
     "subtitle": "El teu historial d’ubicacions pren vida en un mapa interactiu amb diverses capes de visualització. Des de punts detallats fins a mapes de calor, mira el recorregut de la teva vida amb tot detall.",
@@ -126,5 +126,51 @@
     "Link": "Prova’l gratis durant 7 dies",
     "EnOnlyLink": "Allotja’l gratis",
     "p3": "Prova gratuïta de 7 dies · Reemborsament sense risc durant 14 dies · Cancel·la quan vulguis"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Tot el teu historial d’ubicacions en un mapa",
+        "body": [
+          "Tria qualsevol interval de temps, des d’un sol dia fins a tot el que has registrat, i el mapa t’ho mostra. Les dades importades de Google Timeline es combinen amb el que el telèfon registra avui, perquè anys d’historial es puguin llegir com una sola història."
+        ]
+      },
+      {
+        "heading": "Capes per respondre preguntes diferents",
+        "body": [
+          "Els punts mostren cada posició registrada, les rutes els connecten, el mapa de calor mostra on passes el temps, la boira de guerra revela els llocs on has estat i les fotos d’Immich o PhotoPrism apareixen on es van fer. Activa i desactiva les capes segons les necessitis."
+        ]
+      },
+      {
+        "heading": "Reviu un dia, troba un lloc",
+        "body": [
+          "Replay reprodueix al mapa els punts de les dates seleccionades. La cerca troba llocs i visites a tot l’historial, i el panell de la línia de temps enumera els dies i els llocs on et vas aturar."
+        ]
+      },
+      {
+        "heading": "Pensat per a anys d’historial",
+        "body": [
+          "El mapa es renderitza amb WebGL, ofereix un globus en 3D i diversos estils de mapa, i només carrega la part de l’historial que estàs mirant. Així, fins i tot una dècada de dades continua sent fàcil d’explorar."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Puc veure el meu antic Google Timeline en aquest mapa?",
+        "a": "Sí. Importa l’exportació de Google Timeline o de Takeout i aquells anys apareixeran al mapa al costat de les dades noves."
+      },
+      {
+        "q": "Què mostra un punt?",
+        "a": "L’hora i les coordenades, a més de l’altitud, la velocitat i el nivell de bateria si es van registrar."
+      },
+      {
+        "q": "Fins quan es pot remuntar el mapa?",
+        "a": "Fins on arribin les teves dades. Tria qualsevol interval de dates, inclòs tot l’historial."
+      },
+      {
+        "q": "El meu mapa és privat?",
+        "a": "Sí. Només tu el pots veure, tret que creïs un enllaç per compartir-lo, i Dawarich no ven dades d’ubicació."
+      }
+    ]
   }
 }

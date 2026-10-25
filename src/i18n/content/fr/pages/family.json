@@ -18,7 +18,7 @@
   "objections": [
     {
       "q": "Est-ce simplement Life360 sous un autre nom ?",
-      "a": "Non. Pour les membres invités, le partage est désactivé au départ et chacun contrôle son propre réglage. Le titulaire de l’offre Cloud commence avec le partage activé, mais peut le désactiver. Le partage en direct peut s’arrêter à l’aide d’un minuteur, l’historique fait l’objet d’un choix distinct et une demande de localisation peut être refusée."
+      "a": "Non. Pour les membres invités, le partage est désactivé au départ et chacun contrôle son propre réglage. Le titulaire de l’offre Cloud commence avec le partage activé, mais peut le désactiver. Le partage en direct peut expirer après un délai choisi, l’historique fait l’objet d’un choix distinct et une demande de localisation peut être refusée. [Voir le comparatif complet avec Life360](/docs/comparisons/vs-life360)."
     },
     {
       "q": "Mon adolescent peut-il voir que je le suis ?",

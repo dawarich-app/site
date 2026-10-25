@@ -60,13 +60,13 @@
     }
   ],
   "meta": {
-    "title": "Viajes y diario de viaje",
-    "description": "Documenta tus viajes con esmero: mapas interactivos, estadísticas, diario de texto enriquecido e integración de fotos.",
+    "title": "App de registro de viajes y diario de viaje",
+    "description": "Registra tus viajes automáticamente y guarda cada uno como un diario: mapa de ruta, países, distancia, notas y fotos. En Cloud o en tu servidor.",
     "ogTitle": "Viajes de Dawarich — Documenta tus aventuras",
     "ogDescription": "Crea diarios de viaje completos con mapas interactivos, estadísticas detalladas, descripciones de texto enriquecido e integración automática de fotos."
   },
   "hero": {
-    "badge": "Diario de viaje",
+    "badge": "Registro de viajes y diario de viaje",
     "title": "Convierte tus viajes en",
     "titleHighlight": "historias para recordar",
     "subtitle": "Registra automáticamente tus desplazamientos y conviértelos en diarios de viaje completos. Cada viaje incluye un mapa interactivo, estadísticas detalladas, descripciones de texto enriquecido y fotos, todo en un mismo lugar.",
@@ -93,5 +93,56 @@
     "Link": "Prueba 7 días gratis",
     "EnOnlyLink": "Instálalo gratis en tu servidor",
     "p2": "Prueba gratuita de 7 días · Reembolso sin riesgo de 14 días · Cancela cuando quieras"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Un registro de viajes que se completa solo",
+        "body": [
+          "Con la app de Dawarich en tu teléfono, tus movimientos se registran sobre la marcha. Para crear un viaje solo tienes que darle un nombre y unas fechas; Dawarich reúne todos los puntos de ese intervalo y dibuja la ruta.",
+          "Los viajes antiguos funcionan igual: importa archivos de Google Timeline (Cronología de Google Maps), Polarsteps o GPX y convierte cualquier intervalo de fechas pasado en un viaje."
+        ]
+      },
+      {
+        "heading": "Todo sobre un viaje en una sola página",
+        "body": [
+          "Cada viaje muestra sus fechas, un mapa de la ruta, los países por los que pasaste con la distancia recorrida en cada uno, tus notas y las fotos de una biblioteca conectada de Immich o PhotoPrism."
+        ]
+      },
+      {
+        "heading": "Vuelve a encontrar cualquier viaje",
+        "body": [
+          "La búsqueda encuentra coincidencias en los nombres, las descripciones y las notas de los viajes, y en los países visitados. Ordena por fecha, nombre o mayor distancia, y filtra por año, mes o país. Los filtros se mantienen en la dirección de la página, así que puedes guardar en favoritos una lista, por ejemplo, de todos tus viajes a Portugal."
+        ]
+      },
+      {
+        "heading": "Un diario, no solo un mapa",
+        "body": [
+          "Las notas admiten formato, así que un viaje puede recoger lo que pasó cada día, además de dónde estuviste. Al cambiar las fechas de un viaje, la ruta del mapa se actualiza mientras editas, y eliminar un viaje nunca borra tu historial de ubicaciones."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "¿Tengo que iniciar un viaje antes de salir?",
+        "a": "No. Los viajes se crean a partir de tu historial de ubicaciones existente, así que puedes crear uno después con cualquier intervalo de fechas."
+      },
+      {
+        "q": "¿Qué apps pueden registrar mis viajes?",
+        "a": "Las apps de Dawarich para iOS y Android, u OwnTracks, Overland, GPSLogger y otras apps de registro compatibles."
+      },
+      {
+        "q": "¿Puedo importar viajes de Polarsteps o Google Timeline?",
+        "a": "Sí. Importa la exportación de Polarsteps o Google Timeline y después crea viajes para las fechas que quieras."
+      },
+      {
+        "q": "¿Puedo añadir fotos a un viaje?",
+        "a": "Sí, si conectas Immich o PhotoPrism. Las fotos tomadas durante el viaje aparecen automáticamente en su página."
+      },
+      {
+        "q": "¿Puedo compartir un viaje?",
+        "a": "Sí. Puedes compartir un viaje con un enlace privado que puedes revocar cuando quieras."
+      }
+    ]
   }
 }

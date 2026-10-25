@@ -100,13 +100,13 @@
     }
   ],
   "meta": {
-    "title": "Visualización en mapa interactivo",
-    "description": "Explora tu historial de ubicaciones en un mapa interactivo con varias capas: puntos, rutas, mapa de calor, niebla de guerra y más.",
+    "title": "Mapa de tu historial: mira dónde has estado",
+    "description": "Explora tu historial de ubicaciones: puntos, rutas, mapa de calor, niebla de guerra y fotos en un mapa, desde un día hasta todos tus años registrados.",
     "ogTitle": "Mapa de Dawarich — Visualización interactiva de ubicaciones",
     "ogDescription": "Explora tu historial de ubicaciones con varias capas: puntos, rutas, mapa de calor, niebla de guerra, mapa para descubrir el mundo e integración de fotos."
   },
   "hero": {
-    "badge": "Visualización interactiva",
+    "badge": "Mapa del historial de ubicaciones",
     "title": "Explora dónde has estado,",
     "titleHighlight": "no olvides ningún lugar",
     "subtitle": "Tu historial de ubicaciones cobra vida en un mapa interactivo con varias capas de visualización. Desde puntos detallados hasta bonitos mapas de calor, descubre el recorrido de tu vida con todo detalle.",
@@ -126,5 +126,51 @@
     "Link": "Prueba 7 días gratis",
     "EnOnlyLink": "Instálalo gratis en tu servidor",
     "p3": "Prueba gratuita de 7 días · Reembolso sin riesgo de 14 días · Cancela cuando quieras"
+  },
+  "guide": {
+    "sections": [
+      {
+        "heading": "Todo tu historial de ubicaciones en un solo mapa",
+        "body": [
+          "Elige cualquier intervalo, desde un solo día hasta todo lo que has registrado, y el mapa lo muestra. Los datos importados de Google Timeline (Cronología de Google Maps) se unen a lo que tu teléfono registra hoy, para que años de historial cuenten una sola historia."
+        ]
+      },
+      {
+        "heading": "Capas para distintas preguntas",
+        "body": [
+          "Los puntos muestran cada posición registrada, las rutas los conectan, el mapa de calor muestra dónde pasas tu tiempo, la niebla de guerra revela los lugares donde has estado y las fotos de Immich o PhotoPrism aparecen donde se tomaron. Activa y desactiva las capas según las necesites."
+        ]
+      },
+      {
+        "heading": "Reproduce un día, encuentra un lugar",
+        "body": [
+          "La función «Reproducir» reproduce en el mapa los puntos de las fechas seleccionadas. La búsqueda encuentra lugares y visitas en todo tu historial, y el panel de cronología enumera tus días y los lugares donde paraste."
+        ]
+      },
+      {
+        "heading": "Pensado para años de historial",
+        "body": [
+          "El mapa se renderiza con WebGL, ofrece un globo en 3D y varios estilos de mapa, y carga solo la parte de tu historial que estás viendo, para que incluso una década de datos sea fácil de explorar."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "¿Puedo ver mi antiguo Google Timeline en este mapa?",
+        "a": "Sí. Importa tu exportación de Google Timeline o Takeout y esos años aparecerán en el mapa junto a los datos nuevos."
+      },
+      {
+        "q": "¿Qué muestra un punto?",
+        "a": "Su hora y sus coordenadas, además de la altitud, la velocidad y el nivel de batería si se registraron."
+      },
+      {
+        "q": "¿Hasta cuándo puede retroceder el mapa?",
+        "a": "Hasta donde lleguen tus datos. Elige cualquier intervalo de fechas, incluso todo tu historial."
+      },
+      {
+        "q": "¿Mi mapa es privado?",
+        "a": "Sí. Solo tú puedes verlo, salvo que crees un enlace para compartirlo, y Dawarich no vende datos de ubicación."
+      }
+    ]
   }
 }

@@ -30,6 +30,10 @@
     {
       "q": "O que acontece com meus links se a assinatura expirar?",
       "a": "Você pode exportar tudo a qualquer momento, e todo o aplicativo tem código aberto — os mesmos recursos podem ser executados no seu equipamento gratuitamente, para sempre."
+    },
+    {
+      "q": "Qual é a diferença em relação ao Life360?",
+      "a": "O Life360 mostra seu círculo em um mapa o tempo todo. O Dawarich envia um link que mostra uma única coisa, pelo tempo que você decidir, e mantém seu histórico sob seu controle. Para famílias que querem compartilhar continuamente, existe o recurso [Família](/family/). [Veja a comparação completa com o Life360](/docs/comparisons/vs-life360)."
     }
   ],
   "meta": {

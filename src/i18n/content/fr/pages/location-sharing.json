@@ -30,6 +30,10 @@
     {
       "q": "Que deviennent mes liens si mon abonnement expire ?",
       "a": "Vous pouvez tout exporter à tout moment et l’application entière est libre : vous pouvez utiliser gratuitement les mêmes fonctionnalités sur votre matériel, pour toujours."
+    },
+    {
+      "q": "En quoi est-ce différent de Life360 ?",
+      "a": "Life360 affiche votre cercle sur une carte en permanence. Dawarich envoie un lien qui ne montre qu’un seul contenu, pendant la durée que vous choisissez, et votre historique reste le vôtre. Pour les familles qui souhaitent un partage continu, il existe [Famille](/family/). [Voir le comparatif complet avec Life360](/docs/comparisons/vs-life360)."
     }
   ],
   "meta": {
