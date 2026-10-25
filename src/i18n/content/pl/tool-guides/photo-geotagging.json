@@ -1,0 +1,53 @@
+{
+  "sections": [
+    {
+      "heading": "Jak sprawdzić, gdzie zrobiono zdjęcie",
+      "body": [
+        "Większość telefonów zapisuje miejsce wykonania zdjęcia w samym pliku, w metadanych EXIF: szerokość i długość geograficzną, często też wysokość i kierunek, w którym skierowany był aparat. Przeciągnij zdjęcie do narzędzia powyżej. Jeśli plik zawiera dane GPS, miejsce pojawi się na mapie ze współrzędnymi, które możesz skopiować lub wyeksportować.",
+        "Możesz to też sprawdzić na własnych urządzeniach. Na iPhonie otwórz zdjęcie w aplikacji Photos i przesuń w górę, aby zobaczyć mapę. W Google Photos otwórz zdjęcie i przesuń w górę lub dotknij ikony informacji. W Windows kliknij plik prawym przyciskiem myszy, wybierz Properties i otwórz kartę Details. Na Macu otwórz zdjęcie w Preview i wybierz Tools → Show Inspector."
+      ]
+    },
+    {
+      "heading": "Dlaczego niektóre zdjęcia nie mają lokalizacji",
+      "body": [
+        "Telefon zapisuje lokalizację tylko wtedy, gdy aplikacja aparatu ma pozwolenie na jej używanie: na iPhonie w Settings → Privacy & Security → Location Services → Camera, a na Androidzie w ustawieniach aparatu, zwykle pod nazwą tagi lokalizacji lub zapisz lokalizację.",
+        "Lokalizacja może też zniknąć po drodze. Komunikatory i serwisy społecznościowe zwykle usuwają ją ze zdjęć, które wysyłasz lub publikujesz. Zrzuty ekranu nigdy jej nie mają, a niektóre edytory pomijają ją przy eksporcie kopii. Osobne aparaty fotograficzne dodają współrzędne tylko wtedy, gdy mają wbudowany GPS lub są sparowane z telefonem."
+      ]
+    },
+    {
+      "heading": "Zamień lokalizacje ze zdjęć w mapę podróży",
+      "body": [
+        "Eksport do GPX daje po jednym punkcie orientacyjnym na zdjęcie, z nazwą taką jak nazwa pliku. To szybki sposób na odtworzenie odwiedzonych miejsc z podróży, której nie rejestrowałeś: otwórz GPX w Google Earth, Garmin BaseCamp lub dowolnej aplikacji GPS.",
+        "Dawarich może robić to na bieżąco: odczytuje lokalizacje zdjęć z Immich i PhotoPrism i pokazuje je na Twojej mapie oraz w Twoich podróżach, obok zarejestrowanych tras."
+      ]
+    },
+    {
+      "heading": "Sprawdź przed udostępnieniem",
+      "body": [
+        "Lokalizacja zapisana w pliku zdjęcia może zdradzić, gdzie mieszkasz lub gdzie Twoje dzieci chodzą do szkoły. Zanim opublikujesz zdjęcie publicznie, przeciągnij je tutaj, aby sprawdzić, co ujawnia. Narzędzie odczytuje plik w Twojej przeglądarce, więc sprawdzenie zdjęcia nie oznacza udostępnienia go komukolwiek."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Czy mogę ustalić lokalizację dowolnego zdjęcia?",
+      "a": "Tylko jeśli plik nadal zawiera dane GPS. Zdjęcia zrobione z wyłączoną lokalizacją, zrzuty ekranu i większość obrazów pobranych z serwisów społecznościowych ich nie mają. Nie ma niezawodnego sposobu, by odzyskać je z samego obrazu."
+    },
+    {
+      "q": "Czy narzędzie obsługuje zdjęcia HEIC z iPhone’a?",
+      "a": "Tak. Narzędzie odczytuje dane EXIF z plików HEIC, a także JPEG i PNG."
+    },
+    {
+      "q": "Jak dokładna jest lokalizacja zapisana w pliku zdjęcia?",
+      "a": "To pozycja znana telefonowi w chwili robienia zdjęcia. Na zewnątrz jest zwykle dokładna do kilku metrów; wewnątrz budynków lub w gęsto zabudowanych miastach błąd może wynosić dziesiątki metrów."
+    },
+    {
+      "q": "Czy mogę usunąć lokalizację ze swoich zdjęć?",
+      "a": "Tak. Na iPhonie dotknij Options w panelu udostępniania i wyłącz Location przed wysłaniem. Wiele galerii na Androidzie i Google Photos także pozwala usunąć lokalizację podczas udostępniania lub edycji zdjęcia."
+    },
+    {
+      "q": "Czy moje zdjęcia są przesyłane na serwer?",
+      "a": "Nie. Zdjęcia są odczytywane w Twojej przeglądarce i nigdy nie opuszczają urządzenia. Zapisywany jest tylko eksportowany przez Ciebie plik GPX i tylko na Twoim komputerze."
+    }
+  ]
+}

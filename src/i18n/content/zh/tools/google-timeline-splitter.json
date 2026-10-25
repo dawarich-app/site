@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Google Timeline（谷歌地图时间轴）拆分工具 - 拆分大型时间线 JSON 文件",
-    "description": "免费拆分大型 Google Timeline（谷歌地图时间轴） JSON 文件，生成有效的小文件。支持 Records.json、Semantic Location History、Semantic Segments 等所有导出格式。可选择目标文件大小，注重隐私，在您的浏览器中运行。",
+    "title": "Google Timeline（谷歌地图时间轴）拆分工具 — 拆分大型 JSON 文件",
+    "description": "将大型 Google Timeline（谷歌地图时间轴）JSON 文件拆分为有效的小文件。支持 Records.json、Semantic Location History 及较新的导出格式。免费且注重隐私。",
     "keywords": "拆分 Google Timeline JSON, 拆分 Records.json, 拆分大型 Google 位置历史文件, Google Timeline 拆分工具, 拆分 Google Takeout 位置数据, 拆分时间线 JSON, Google Timeline 文件过大",
     "featureList": [
       "将大型 Google Timeline JSON 文件拆分为较小的文件",

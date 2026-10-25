@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "GPX in GeoJSON umwandeln – GPS-Track-Dateien online gratis",
-    "description": "GPX sofort in GeoJSON umwandeln. Kostenloser, datenschutzfreundlicher Online-Konverter für GPS-Tracks, Wegpunkte und Routen. Direkt im Browser, ohne Upload.",
+    "title": "GPX in GeoJSON — kostenloser GPS-Konverter",
+    "description": "GPX-Tracks, Wegpunkte und Routen in GeoJSON umwandeln. Kostenloser, datenschutzfreundlicher Konverter, komplett im Browser — ohne Upload.",
     "keywords": "GPX in GeoJSON, GPX-Konverter, GeoJSON-Konverter, GPS-Dateikonverter, Track-Konverter, Wegpunkt-Konverter, Routen-Konverter, GPX-Parser",
     "appName": "GPX-zu-GeoJSON-Konverter"
   },

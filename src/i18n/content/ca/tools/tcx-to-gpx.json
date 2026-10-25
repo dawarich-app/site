@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "TCX a GPX gratis — Converteix Training Center XML en línia",
-    "description": "Converteix TCX a GPX a l’instant. Per a activitats de Garmin, Wahoo i dispositius esportius. Gratuït, privat i al navegador, sense pujar fitxers.",
+    "title": "TCX a GPX — Eina Garmin TCX gratuïta",
+    "description": "Converteix fitxers TCX de Garmin, Wahoo i altres dispositius esportius a GPX. Convertidor gratuït i privat al navegador, sense pujar fitxers.",
     "keywords": "TCX a GPX, convertidor TCX, Training Center XML, Garmin TCX, Wahoo TCX, convertidor de fitxers esportius, GPX de ciclisme, GPX de curses, convertidor d’activitats",
     "appName": "Convertidor de TCX a GPX"
   },

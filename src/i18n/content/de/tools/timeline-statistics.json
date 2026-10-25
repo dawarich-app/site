@@ -9,8 +9,8 @@
   "homeLabel": "Startseite",
   "toolsLabel": "Kostenlose Werkzeuge",
   "meta": {
-    "title": "Google Timeline (Google Maps Zeitachse): Statistiken",
-    "description": "Google-Timeline-Daten gratis analysieren: Gesamtentfernung, besuchte Länder, häufigste Orte, Aktivitätsverteilung, Jahrestrends. Alles privat im Browser.",
+    "title": "Google Timeline/Google-Maps-Zeitachse-Statistiken",
+    "description": "Google Timeline (Google Maps Zeitachse) analysieren: Gesamtstrecke, besuchte Länder, Top-Orte, Aktivitätsanteile, Jahrestrends. Gratis im Browser.",
     "keywords": "Google-Timeline-Statistiken, Standortverlaufsstatistik, wie weit bin ich gereist, Google-Maps-Timeline-Einblicke, Google-Timeline-Analyse, Reisestatistiken, Standortdatenanalyse, Google-Takeout-Statistiken, zurückgelegte Entfernung berechnen, besuchte Orte zählen",
     "featureList": [
       "Zurückgelegte Gesamtentfernung aus Google-Timeline-Daten berechnen",

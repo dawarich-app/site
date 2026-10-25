@@ -177,7 +177,7 @@
   ],
   "meta": {
     "title": "Configurer le suivi de localisation",
-    "description": "Suivi automatique avec les applications Dawarich iOS et Android, Overland, OwnTracks, GPSLogger, PhoneTrack et Home Assistant.",
+    "description": "Suivez votre position automatiquement via Dawarich iOS/Android, Overland, OwnTracks, GPSLogger, PhoneTrack ou Home Assistant.",
     "ogTitle": "Suivi de localisation Dawarich — Plusieurs applications",
     "ogDescription": "Configurez le suivi automatique avec Dawarich pour iOS ou Android, Overland, OwnTracks, GPSLogger, PhoneTrack ou l’intégration Home Assistant."
   },

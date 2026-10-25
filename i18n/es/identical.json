@@ -279,5 +279,11 @@
   "content:components/Testimonials.json:quotes.0.source",
   "content:components/Testimonials.json:quotes.1.source",
   "content:components/Testimonials.json:quotes.6.source",
-  "content:components/Testimonials.json:quotes.8.source"
+  "content:components/Testimonials.json:quotes.8.source",
+  "content:tool-guides/kml-to-kmz.json:preservation.rows.4.preserved",
+  "content:tool-guides/kml-to-kmz.json:apps.items.0.name",
+  "content:tool-guides/kml-to-kmz.json:apps.items.0.url",
+  "content:tool-guides/kml-to-kmz.json:apps.items.1.url",
+  "content:tool-guides/kml-to-kmz.json:apps.items.2.url",
+  "content:tool-guides/kml-to-kmz.json:apps.items.3.url"
 ]

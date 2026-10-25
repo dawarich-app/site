@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "GPX a GeoJSON gratis — Trajectes GPS en línia",
-    "description": "Converteix GPX a GeoJSON a l’instant. Convertidor gratuït i privat de trajectes, punts de pas i rutes GPS al navegador, sense pujar fitxers.",
+    "title": "GPX a GeoJSON — Convertidor GPS gratuït",
+    "description": "Converteix trajectes, punts de pas i rutes GPX a GeoJSON. Convertidor gratuït i privat, tot al navegador, sense pujar fitxers.",
     "keywords": "GPX a GeoJSON, convertidor GPX, convertidor GeoJSON, convertidor de fitxers GPS, convertidor de trajectes, convertidor de punts de pas, convertidor de rutes, analitzador GPX",
     "appName": "Convertidor de GPX a GeoJSON"
   },

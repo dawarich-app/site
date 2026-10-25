@@ -9,8 +9,8 @@
   "homeLabel": "Accueil",
   "toolsLabel": "Outils gratuits",
   "meta": {
-    "title": "Google Timeline : calcul gratuit des distances en voiture",
-    "description": "Google Timeline (Vos trajets Google Maps) : distances en voiture, carnets et rapports CSV pour déductions fiscales. Gratuit, privé, dans votre navigateur.",
+    "title": "Google Timeline : calcul et carnet km gratuits",
+    "description": "Google Timeline (Vos trajets Google Maps) : distances en voiture, carnet kilométrique et rapports CSV pour déductions fiscales. Gratuit, dans le navigateur",
     "keywords": "kilométrage Google Timeline, calcul distance historique de localisation, distance voiture Google Maps, carnet kilométrique Google Timeline, calcul kilométrique fiscal, suivi kilométrique Google Maps, carnet IRS, calcul distance voiture, remboursement kilométrique",
     "featureList": [
       "Calcul des distances en voiture à partir de Google Timeline",

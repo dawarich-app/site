@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "免费 TCX 转 GeoJSON 转换器 — 在线转换训练文件",
-    "description": "立即将 TCX 文件转换为 GeoJSON 格式。免费、隐私优先的在线运动活动转换器，适合网页地图，完全在浏览器中运行。",
+    "title": "TCX 转 GeoJSON 转换器 — 免费 Garmin 转换工具",
+    "description": "将 TCX 运动活动文件转换为用于网页地图的 GeoJSON。免费、隐私优先，完全在您的浏览器中运行，无需上传。",
     "keywords": "TCX 转 GeoJSON, Training Center XML 转 GeoJSON, TCX 转换器, GeoJSON 转换器, 健身文件转换器, 网页地图, Leaflet, Mapbox",
     "appName": "TCX 转 GeoJSON 转换器"
   },

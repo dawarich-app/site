@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Linha do tempo do Google/Google Timeline: unir exportações",
-    "description": "Una Google Timeline (Linha do tempo do Google Maps) num arquivo. Deduplicação de pontos sobrepostos. Records.json, Semantic History e celular. Grátis e privado.",
+    "title": "Linha do tempo do Google (Google Timeline): unir exportações",
+    "description": "Una exportações da Linha do tempo do Google (Google Timeline) num arquivo sem pontos duplicados: Records.json, Semantic History e celular. Grátis.",
     "keywords": "unir exportações google timeline, combinar arquivos de histórico de localização, recuperar dados google timeline, unir Records.json, combinar localização Google Takeout, unir semantic location history, unificador Google Timeline, remoção de duplicatas do histórico de localização, unir dados GPS",
     "featureList": [
       "Unir várias exportações do Google Timeline em um arquivo",

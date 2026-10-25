@@ -1,0 +1,96 @@
+{
+  "whenToConvert": {
+    "subject": "KML a KMZ",
+    "body": [
+      "KML i KMZ contenen les mateixes dades de mapa. KML és el fitxer XML de text pla; KMZ és aquest fitxer empaquetat en un arxiu ZIP. Convertir KML a KMZ és una qüestió de mida i de compartir: un fitxer compacte en lloc d’un fitxer de text gran.",
+      "Motius habituals: una ruta, un conjunt de marcadors de lloc o el contorn d’una regió ocupa massa per enviar-lo per correu com a KML, un formulari de càrrega demana KMZ o vols un fitxer més petit per carregar-lo a Google Earth o Google My Maps.",
+      "Aquest convertidor posa el teu fitxer KML a l’arxiu exactament tal com és, de manera que no es reescriu ni es perd res durant el procés."
+    ]
+  },
+  "preservation": {
+    "intro": "Un KMZ creat aquí conté el teu KML original byte per byte, desat com a doc.kml:",
+    "rows": [
+      {
+        "field": "Marcadors de lloc, camins i polígons",
+        "preserved": "✅ Sí",
+        "notes": "Cada geometria es manté tal com està escrita, incloses les formes amb diverses parts."
+      },
+      {
+        "field": "Estils, colors i icones",
+        "preserved": "✅ Sí",
+        "notes": "Les definicions d’estil es mantenen al KML. Les icones que apunten a una adreça web continuen funcionant."
+      },
+      {
+        "field": "Carpetes, noms i descripcions",
+        "preserved": "✅ Sí",
+        "notes": "L’arbre de carpetes i tot el text es mantenen sense canvis."
+      },
+      {
+        "field": "Marques de temps i dades ampliades",
+        "preserved": "✅ Sí",
+        "notes": "Es conserven TimeStamp, TimeSpan i ExtendedData."
+      },
+      {
+        "field": "Fitxers d’imatge locals al costat del teu KML",
+        "preserved": "⚠️ No",
+        "notes": "Només s’empaqueta el fitxer KML. Les icones o superposicions desades com a fitxers separats a l’ordinador no s’afegeixen a l’arxiu."
+      }
+    ]
+  },
+  "apps": {
+    "intro": "KMZ és compatible amb les mateixes aplicacions que KML. Aquestes l’obren directament:",
+    "items": [
+      {
+        "name": "Google Earth Pro",
+        "url": "https://www.google.com/earth/about/versions/",
+        "note": "File → Open, o arrossega el KMZ sobre el globus."
+      },
+      {
+        "name": "Google Earth al web",
+        "url": "https://earth.google.com/web/",
+        "note": "Importa el KMZ des de l’ordinador a un projecte."
+      },
+      {
+        "name": "Google My Maps",
+        "url": "https://www.google.com/maps/d/",
+        "note": "Crea un mapa i després tria Import en una capa."
+      },
+      {
+        "name": "QGIS",
+        "url": "https://qgis.org/",
+        "note": "Afegeix el KMZ com a capa vectorial."
+      }
+    ]
+  },
+  "reference": {
+    "heading": "KML vs KMZ: quina diferència hi ha?",
+    "body": [
+      "KML (Keyhole Markup Language) és un format de text XML per a dades geogràfiques: marcadors de lloc, línies, polígons, estils i descripcions. El pots obrir amb qualsevol editor de text. És un estàndard de l’Open Geospatial Consortium des de 2008.",
+      "KMZ és un fitxer KML comprimit amb ZIP. L’arxiu conté un fitxer KML principal, normalment anomenat doc.kml, i també pot contenir les imatges i els models 3D que fa servir. Com que el KML és XML amb molt de text, un KMZ sovint és entre cinc i deu vegades més petit.",
+      "Fes servir KML quan vulguis llegir o editar les dades, comparar versions o passar-les a una eina que només accepta text pla. Fes servir KMZ quan vulguis compartir o pujar un mapa, o mantenir-hi juntes les icones personalitzades.",
+      "Per veure què hi ha dins d’un KMZ sense cap eina, canvia’n l’extensió de .kmz a .zip i descomprimeix-lo: hi trobaràs doc.kml. Per fer la conversió inversa, fes servir el convertidor de KMZ a KML."
+    ]
+  },
+  "faqs": [
+    {
+      "q": "KMZ és el mateix que KML?",
+      "a": "Sí i no: un KMZ conté un fitxer KML comprimit amb ZIP. Les dades del mapa són les mateixes; el KMZ només és més petit i pot incloure-hi imatges."
+    },
+    {
+      "q": "Es perd alguna dada en convertir KML a KMZ?",
+      "a": "No. Aquest convertidor desa el teu KML a l’arxiu exactament tal com és, de manera que es conserven els estils, les carpetes, els polígons i les marques de temps."
+    },
+    {
+      "q": "Com puc obrir un fitxer KMZ?",
+      "a": "Obre’l a Google Earth (d’escriptori o web), importa’l a Google My Maps o afegeix-lo com a capa a QGIS. També pots canviar-ne l’extensió a .zip i descomprimir-lo per obtenir el KML."
+    },
+    {
+      "q": "Per què el meu KMZ és molt més petit que el meu KML?",
+      "a": "KML és XML pla amb moltes etiquetes repetides i llargues llistes de coordenades. La compressió ZIP elimina aquesta repetició, cosa que normalment redueix la mida del fitxer diverses vegades."
+    },
+    {
+      "q": "Es pugen els meus fitxers a algun lloc?",
+      "a": "No. La conversió es fa al navegador; el teu KML no surt mai del dispositiu."
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Google Timeline (Google Maps Zeitachse) in GPX/KML/CSV – gratis",
-    "description": "Kostenloser, datenschutzfreundlicher Konverter für Google-Timeline-Daten. Wandle deinen Standortverlauf in GPX, KML, GeoJSON oder CSV um – alles im Browser.",
+    "title": "Google Timeline in GPX, KML & CSV umwandeln",
+    "description": "Google Maps Zeitachse (Google Timeline): Standortverlauf kostenlos und datenschutzfreundlich in GPX, KML, GeoJSON oder CSV umwandeln – alles im Browser.",
     "keywords": "Google Timeline in GPX umwandeln, Google Takeout in KML, Google Standortverlauf in CSV, Timeline in GeoJSON umwandeln, Google-Timeline-Konverter, Google Maps Timeline exportieren, Standortverlauf in GPX, Google Takeout Standortkonverter, Timeline-Daten umwandeln",
     "appName": "Google Timeline zu GPX/KML/CSV Konverter",
     "featureList": [

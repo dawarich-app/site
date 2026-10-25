@@ -1,0 +1,53 @@
+{
+  "sections": [
+    {
+      "heading": "Comment trouver où une photo a été prise",
+      "body": [
+        "La plupart des téléphones enregistrent le lieu de prise de vue dans les métadonnées EXIF du fichier image : latitude et longitude, souvent altitude et direction vers laquelle l’appareil était orienté. Déposez la photo dans l’outil ci-dessus. Si le fichier contient des données GPS, le lieu apparaît sur la carte avec des coordonnées que vous pouvez copier ou exporter.",
+        "Vous pouvez aussi vérifier sur vos propres appareils. Sur iPhone, ouvrez la photo dans Photos et balayez vers le haut pour voir la carte. Dans Google Photos, ouvrez la photo et balayez vers le haut ou touchez l’icône d’information. Sous Windows, faites un clic droit sur le fichier, choisissez Propriétés et ouvrez l’onglet Détails. Sur Mac, ouvrez la photo dans Aperçu et choisissez Outils → Afficher l’inspecteur."
+      ]
+    },
+    {
+      "heading": "Pourquoi certaines photos n’ont pas de localisation",
+      "body": [
+        "Un téléphone n’enregistre la position que si l’application Appareil photo est autorisée à l’utiliser : sur iPhone, dans Réglages → Confidentialité et sécurité → Service de localisation → Appareil photo ; sur Android, dans les réglages de l’appareil photo, sous une option généralement appelée « location tags » ou « save location ».",
+        "La localisation peut aussi disparaître en cours de route. Les messageries et les réseaux sociaux la suppriment généralement des photos que vous envoyez ou publiez, les captures d’écran n’en contiennent jamais, et certains logiciels de retouche la retirent lors de l’export d’une copie. Les appareils photo autonomes n’ajoutent des coordonnées que s’ils disposent d’un GPS intégré ou sont associés à un téléphone."
+      ]
+    },
+    {
+      "heading": "Transformer les lieux de vos photos en carte de voyage",
+      "body": [
+        "L’export GPX vous donne un point de passage par photo, portant le nom du fichier. C’est un moyen rapide de reconstituer les lieux parcourus lors d’un voyage que vous n’avez pas enregistré : ouvrez le GPX dans Google Earth, Garmin BaseCamp ou n’importe quelle application GPS.",
+        "Dawarich peut le faire en continu : il lit les lieux de prise de vue depuis Immich et PhotoPrism et les affiche sur votre carte et dans vos déplacements, à côté de vos trajets enregistrés."
+      ]
+    },
+    {
+      "heading": "Vérifier avant de partager",
+      "body": [
+        "La localisation contenue dans une photo peut révéler où vous habitez ou où vos enfants vont à l’école. Avant de rendre une photo publique, déposez-la ici pour voir ce qu’elle dévoile. Cet outil lit le fichier dans votre navigateur : vérifier une photo ne la partage donc avec personne."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Puis-je trouver le lieu de prise de vue de n’importe quelle photo ?",
+      "a": "Uniquement si le fichier contient encore des données GPS. Les photos prises avec la localisation désactivée, les captures d’écran et la plupart des images téléchargées depuis les réseaux sociaux n’en contiennent pas, et aucun moyen fiable ne permet de les retrouver à partir de l’image seule."
+    },
+    {
+      "q": "L’outil fonctionne-t-il avec les photos HEIC d’iPhone ?",
+      "a": "Oui. L’outil lit les données EXIF des fichiers HEIC, mais aussi JPEG et PNG."
+    },
+    {
+      "q": "Quelle est la précision de la localisation enregistrée dans une photo ?",
+      "a": "C’est la position connue du téléphone au moment de la prise de vue. À l’extérieur, elle est généralement précise à quelques mètres près ; à l’intérieur ou dans les villes denses, l’écart peut atteindre des dizaines de mètres."
+    },
+    {
+      "q": "Puis-je supprimer la localisation de mes photos ?",
+      "a": "Oui. Sur iPhone, touchez Options dans la feuille de partage et désactivez Localisation avant l’envoi. De nombreuses galeries Android et Google Photos proposent aussi de supprimer la localisation lorsque vous partagez ou modifiez une photo."
+    },
+    {
+      "q": "Mes photos sont-elles envoyées à un serveur ?",
+      "a": "Non. Vos photos sont lues dans votre navigateur et ne quittent jamais votre appareil. Seul le fichier GPX que vous exportez est enregistré, uniquement sur votre ordinateur."
+    }
+  ]
+}

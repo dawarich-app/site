@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Divisor de Google Timeline: divideix fitxers JSON grans",
-    "description": "Divideix JSON grans de Google Timeline (Cronologia de Google Maps) en parts petites i vàlides de la mida que triïs. Tots els formats: Records.json, Semantic Location History, Semantic Segments i més. Gratis i privat, tot al navegador.",
+    "title": "Divisor de Google Timeline: fitxers JSON grans",
+    "description": "Divideix JSON grans de Google Timeline/Cronologia de Google Maps en parts petites vàlides: Records.json, Semantic Location History i nous. Gratis, privat.",
     "keywords": "dividir JSON de Google Timeline, dividir Records.json, dividir historial d'ubicacions de Google, divisor de Google Timeline, dividir ubicacions de Google Takeout, dividir JSON de la línia de temps, fitxer de Google Timeline massa gran",
     "featureList": [
       "Divideix fitxers JSON grans de Google Timeline en parts més petites",

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Découpage GPS : fichiers GPX, GeoJSON, KML et JSON",
-    "description": "GPS : scindez de gros GPX/GeoJSON/KML/KMZ/JSON Google Timeline (Vos trajets Google Maps) par taille/nb. de points/date. ZIP gratuit, privé, dans le navigateur.",
+    "title": "Découper des fichiers GPS : GPX, KML et GeoJSON",
+    "description": "Scindez de gros GPX/GeoJSON/KML/KMZ/Google Timeline (Vos trajets Google Maps) par taille/nb. de points/date. ZIP gratuit à télécharger, dans le navigateur.",
     "keywords": "découper gros fichier GPX, diviser GeoJSON, découper fichier KML, réduire taille fichier GPS, découper gros JSON de localisation, découpage fichier GPS, découper Google Timeline",
     "featureList": [
       "Découpage des gros fichiers GPS en fichiers plus petits",

@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Extracció de geodades: extreu dades GPS de les fotos",
-    "description": "Extreu coordenades GPS de les teves fotos i exporta-les en GPX amb aquesta eina gratuïta. Tot es processa al navegador, sense enviar dades a cap servidor.",
-    "keywords": "extracció de geodades de fotos, GPS, EXIF, geolocalització, exportació GPX, ubicació de fotos, privacitat, metadades d'imatges",
+    "title": "Ubicació d’una foto — Extreu GPS gratis",
+    "description": "Troba on es va fer una foto: llegeix coordenades GPS de les dades EXIF, visualitza-les al mapa i exporta un fitxer GPX. Gratis, al navegador.",
+    "keywords": "obtenir ubicació d’una foto, saber on es va fer una foto, ubicació GPS de fotos, visor EXIF GPS, geoetiqueta de foto, extreure GPS de fotos, exportar GPX",
     "featureList": [
       "Extreu dades GPS de les fotos",
       "Mapa interactiu amb marcadors de fotos",
@@ -11,8 +11,8 @@
       "No s'envien dades a cap servidor"
     ]
   },
-  "h1": "Extracció de geodades de fotos",
-  "intro": "Carrega les teves fotos per extreure les coordenades GPS de les metadades EXIF, veure-les en un mapa i exportar-les com a fitxers GPX.",
+  "h1": "Obtén la ubicació d’una foto",
+  "intro": "Descobreix on es va fer una foto: llegeix les coordenades GPS desades a les dades EXIF, visualitza cada lloc en un mapa i exporta’ls com a fitxer GPX.",
   "exportButton": "Exporta en GPX",
   "emptyExport": "No hi ha fotos amb dades GPS per exportar",
   "gpsPhotosLabel": "fotos amb GPS",

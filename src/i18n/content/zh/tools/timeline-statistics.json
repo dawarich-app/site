@@ -9,8 +9,8 @@
   "homeLabel": "首页",
   "toolsLabel": "免费工具",
   "meta": {
-    "title": "Google Timeline（谷歌地图时间轴）统计分析工具 - 洞察您的位置历史",
-    "description": "免费且注重隐私的 Google Timeline（谷歌地图时间轴）数据分析工具。查看出行总距离、到访国家、常去地点、活动分类和年度趋势。所有处理均在您的浏览器中完成。",
+    "title": "Google Timeline（谷歌地图时间轴）统计分析工具",
+    "description": "分析您的 Google Timeline（谷歌地图时间轴）：总距离、到访国家、常去地点、活动分类和年度趋势。免费，在您的浏览器中运行。",
     "keywords": "Google Timeline 统计数据, 位置历史统计, 我走过多远, Google Maps Timeline 洞察, Google Timeline 分析工具, 出行统计数据, 位置数据分析, Google Takeout 统计, 出行距离计算器, 到访地点计数器",
     "featureList": [
       "根据 Google Timeline 数据计算出行总距离",

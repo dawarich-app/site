@@ -8,8 +8,8 @@
   "homeLabel": "Strona główna",
   "toolsLabel": "Darmowe narzędzia",
   "meta": {
-    "title": "Oś czasu Google (Google Timeline): rozpoznaj format eksportu lokalizacji",
-    "description": "Dodaj dowolny plik lokalizacji Google Takeout: od razu poznasz nazwę formatu Google Timeline (Oś czasu Google Maps), liczbę punktów, zakres dat, rozmiar pliku i jakość danych. Za darmo. Wszystko w przeglądarce.",
+    "title": "Oś czasu Google (Google Timeline): darmowy detektor formatu",
+    "description": "Rozpoznaj eksport Osi czasu Google (Google Timeline): format, liczba punktów, zakres dat, rozmiar pliku i jakość danych. Darmowo w przeglądarce.",
     "keywords": "format Google Timeline, jaki format ma eksport Google, typ pliku lokalizacji Google Takeout, format historii lokalizacji Google, wykrywanie pliku Google Timeline, format eksportu Google Maps Timeline, format JSON Google Takeout, typ pliku historii lokalizacji, format danych Google Timeline, rozpoznawanie eksportu Google",
     "featureList": [
       "Natychmiastowe wykrywanie formatu eksportu Google Timeline",
