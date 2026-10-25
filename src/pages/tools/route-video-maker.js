@@ -263,16 +263,13 @@ export default function RouteVideoMaker() {
           name="keywords"
           content="gpx to video, route video maker, google timeline video, animated route map, gpx route animation, route replay video, running route video, road trip video, travel recap video, map animation"
         />
-        <link rel="canonical" href={pageUrl} />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={pageUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:image" content={imageUrl} />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={pageUrl} />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={imageUrl} />

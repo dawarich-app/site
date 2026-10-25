@@ -105,9 +105,27 @@ describe('findGlobalOgUrl', () => {
 
 describe('checkNonLocalizedPage', () => {
   it('should require noindex and no hreflang outside English', () => {
-    const html = page({ alternates: {}, robots: 'noindex, follow' });
-    expect(checkNonLocalizedPage(html)).toEqual([]);
-    expect(checkNonLocalizedPage(page({ robots: null }))).toEqual(['missing noindex', 'has hreflang alternates']);
+    const self = 'https://dawarich.app/de/tools/x/';
+    const html = page({ alternates: {}, robots: 'noindex, follow' }).replace('<main>', '<div lang="en"><main>');
+    expect(checkNonLocalizedPage(html, self)).toEqual([]);
+    expect(checkNonLocalizedPage(page({ robots: null }), self)).toEqual([
+      'missing noindex',
+      'has hreflang alternates',
+      'English content not marked lang="en"',
+    ]);
+  });
+
+  it('should require canonical and og:url to point at the page itself', () => {
+    const html = page({
+      alternates: {},
+      robots: 'noindex, follow',
+      canonical: ['https://dawarich.app/tools/x/'],
+      ogUrl: 'https://dawarich.app/tools/x',
+    }).replace('<main>', '<div lang="en"><main>');
+    expect(checkNonLocalizedPage(html, 'https://dawarich.app/de/tools/x/')).toEqual([
+      'canonical https://dawarich.app/tools/x/ != https://dawarich.app/de/tools/x/',
+      'og:url https://dawarich.app/tools/x != https://dawarich.app/de/tools/x/',
+    ]);
   });
 });
 

@@ -65,10 +65,15 @@ export function checkLocalizedPage(html, { route, locale, locales, htmlLang, eng
   return errors;
 }
 
-export function checkNonLocalizedPage(html) {
+export function checkNonLocalizedPage(html, expected) {
   const errors = [];
   if (!isNoindex(html)) errors.push('missing noindex');
   if (alternates(html).length > 0) errors.push('has hreflang alternates');
+  const canonical = tags(html, '<link[^>]*rel="canonical"[^>]*>').map((t) => attr(t, 'href')).pop();
+  if (canonical !== expected) errors.push(`canonical ${canonical} != ${expected}`);
+  const ogUrl = tags(html, '<meta[^>]*property="og:url"[^>]*>').map((t) => attr(t, 'content')).pop();
+  if (ogUrl !== expected) errors.push(`og:url ${ogUrl} != ${expected}`);
+  if (!/<body[\s\S]*lang="en"/.test(html)) errors.push('English content not marked lang="en"');
   return errors;
 }
 
@@ -139,9 +144,9 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     if (html !== null) report(`en ${route}`, checkEnglishOnlyPage(html));
   }
   for (const locale of LOCALES.filter((l) => l !== DEFAULT_LOCALE)) {
-    for (const route of ['/roadmap/', '/privacy-policy/', '/techlore/']) {
+    for (const route of ['/roadmap/', '/privacy-policy/', '/techlore/', '/itsfoss/', '/press-kit/', '/affiliate/', '/credits/', '/tools/route-video-maker/']) {
       const html = readPage(fileFor(route, locale), `${locale} ${route}`, problems);
-      if (html !== null) report(`${locale} ${route}`, checkNonLocalizedPage(html));
+      if (html !== null) report(`${locale} ${route}`, checkNonLocalizedPage(html, localizedUrl(route, locale)));
     }
     const sitemap = readPage(path.join(build, locale, 'sitemap.xml'), `${locale} sitemap`, problems);
     if (sitemap !== null) report(`${locale} sitemap`, checkSitemap(sitemap, { locale, routes: LOCALIZED_ROUTES }));

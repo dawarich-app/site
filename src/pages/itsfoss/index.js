@@ -192,7 +192,6 @@ export default function ItsFossPage() {
 			<Head>
 				<meta name="robots" content="noindex,nofollow" />
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://dawarich.app/itsfoss" />
 				<meta property="og:image" content="https://dawarich.app/img/meta-image.png" />
 				<meta name="twitter:card" content="summary_large_image" />
 			</Head>

@@ -13,6 +13,17 @@ export const LOCALE_CONFIGS = {
   'pt-br': { label: 'Português (Brasil)', htmlLang: 'pt-BR' },
 };
 
+export const OG_LOCALES = {
+  en: 'en_US',
+  de: 'de_DE',
+  es: 'es_ES',
+  fr: 'fr_FR',
+  pl: 'pl_PL',
+  ca: 'ca_ES',
+  zh: 'zh_CN',
+  'pt-br': 'pt_BR',
+};
+
 export function resolveBuildLocale(raw) {
   return LOCALES.includes(raw) ? raw : DEFAULT_LOCALE;
 }

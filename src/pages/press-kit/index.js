@@ -100,7 +100,6 @@ export default function PressKitPage() {
     >
       <Head>
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dawarich.app/press-kit/" />
         <meta property="og:image" content="https://dawarich.app/img/meta-image.png" />
       </Head>
 

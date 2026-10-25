@@ -22,6 +22,7 @@ import {useLocation} from '@docusaurus/router';
 import {applyTrailingSlash} from '@docusaurus/utils-common';
 import SearchMetadata from '@theme/SearchMetadata';
 import {isLocalizedRoute, stripLocalePrefix} from '@site/src/i18n/localizedRoutes';
+import {OG_LOCALES} from '@site/src/i18n/locales';
 // TODO move to SiteMetadataDefaults or theme-common ?
 // Useful for i18n/SEO
 // See https://developers.google.com/search/docs/advanced/crawling/localized-versions
@@ -31,12 +32,6 @@ function AlternateLangHeaders() {
     i18n: {currentLocale, defaultLocale, localeConfigs},
   } = useDocusaurusContext();
   const alternatePageUtils = useAlternatePageUtils();
-  const currentHtmlLang = localeConfigs[currentLocale].htmlLang;
-  // HTML lang is a BCP 47 tag, but the Open Graph protocol requires
-  // using underscores instead of dashes.
-  // See https://ogp.me/#optional
-  // See https://en.wikipedia.org/wiki/IETF_language_tag)
-  const bcp47ToOpenGraphLocale = (code) => code.replace('-', '_');
   // Note: it is fine to use both "x-default" and "en" to target the same url
   // See https://www.searchviu.com/en/multiple-hreflang-tags-one-url/
   return (
@@ -61,17 +56,14 @@ function AlternateLangHeaders() {
         hrefLang="x-default"
       />
 
-      <meta
-        property="og:locale"
-        content={bcp47ToOpenGraphLocale(currentHtmlLang)}
-      />
-      {Object.values(localeConfigs)
-        .filter((config) => currentHtmlLang !== config.htmlLang)
-        .map((config) => (
+      <meta property="og:locale" content={OG_LOCALES[currentLocale]} />
+      {Object.keys(localeConfigs)
+        .filter((locale) => locale !== currentLocale)
+        .map((locale) => (
           <meta
-            key={`meta-og-${config.htmlLang}`}
+            key={`meta-og-${locale}`}
             property="og:locale:alternate"
-            content={bcp47ToOpenGraphLocale(config.htmlLang)}
+            content={OG_LOCALES[locale]}
           />
         ))}
     </Head>

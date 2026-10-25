@@ -17,6 +17,7 @@ export default defineConfig({
         new URL('./src/test/mocks/Interpolate.js', import.meta.url),
       ),
       '@docusaurus/Link': fileURLToPath(new URL('./src/test/mocks/Link.js', import.meta.url)),
+      '@docusaurus/router': fileURLToPath(new URL('./src/test/mocks/router.js', import.meta.url)),
       '@docusaurus/useDocusaurusContext': fileURLToPath(
         new URL('./src/test/mocks/useDocusaurusContext.js', import.meta.url),
       ),
