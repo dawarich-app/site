@@ -32,7 +32,7 @@ The buttons on the left edge of the map open its panels. Each has a keyboard sho
 | Replay | `R` | Replay the points for the selected dates |
 | Settings | `S` | [Map settings](#map-settings) |
 
-Poster Studio, Video Studio and Links are in the same strip.
+[Poster Studio](/docs/features/poster-studio), [Video Studio](/docs/features/video-studio) and Links are in the same strip.
 
 ### Point Details
 

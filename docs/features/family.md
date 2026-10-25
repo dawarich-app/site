@@ -144,6 +144,10 @@ When your own location is being shared, a green dot appears next to **Family** i
 
 ![The map with the Family tab: two members' positions and their tracks over the last 7 days](images/family-map-v2.webp)
 
+### Member names
+
+The family map in Dawarich labels each member with their first and last name. Every member sets their own on the **Account** page (in the user menu): fill in **First name** and **Last name** and click **Save changes**. Accounts that sign in with a password need to enter the **Current password** to save; accounts that sign in with Google, Apple or another provider don't. A member who hasn't set a name is shown by their email address. The member list on the family page and the family panel in the mobile apps show email addresses.
+
 ### In the mobile apps
 
 The [iOS](/docs/dawarich-for-ios) and [Android](/docs/dawarich-for-android) apps show your family in a panel on the map. There you can see who is in your family and who is sharing, and show everyone on the map. You can also turn your own live location and history on or off, send and answer location requests, and allow earlier history to be included. Families are created and managed in Dawarich on the web; once you are in one, it appears in the app.
@@ -151,6 +155,12 @@ The [iOS](/docs/dawarich-for-ios) and [Android](/docs/dawarich-for-android) apps
 ### In OwnTracks
 
 If you track your location with OwnTracks in HTTP mode, family members who share with you also appear on the OwnTracks map as friends, without any extra setup. Each time your phone uploads a location, Dawarich answers with the most recent position of every member sharing with you. Only their current position is sent — never their history — and a member who has sharing disabled is not included.
+
+## Sharing trips with your family
+
+You can share a [trip](/docs/features/trips) with your family instead of through a public link. On the trip's page, click **Share trip** and choose **Family members only** under **Who can view this trip?**, then pick the sections to include.
+
+The trip appears in every other member's trips list under **Trips shared with your family**. Members must be signed in to open it and see a read-only page. Access follows family membership, so the trip disappears for anyone who leaves, and for everyone when the family's plan ends. See [Sharing a trip](/docs/features/trips#sharing-a-trip) for details.
 
 ## Leaving a family
 

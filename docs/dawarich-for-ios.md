@@ -116,8 +116,24 @@ Choose how visits are detected:
 ## On the map
 
 - **Day ribbon** — horizontal day cards with per-day point density, an hourly sparkline for the selected day, and a jump-to-date modal for picking a day or a multi-day range.
-- **Layers** — toggle routes, visits, points and the heatmap. **Points source** switches between **Server + device** and **Device only**.
+- **Layers** — toggle routes, visits, points, the heatmap, hexagons and photos. **Points source** switches between **Server + device** and **Device only**.
+  - **Hexagons** highlights the cells your selected tracks pass through, over a subtle grid. It follows the selected dates and points source and works independently of route lines.
+  - **Photos** shows the photos of the selected dates at the places they were taken: photos from the Immich or PhotoPrism instance connected to your Dawarich server, and photos in your phone's library. Phone photos and their locations are read on the device and never uploaded by this layer, and the same picture from both sources appears once. The layer is off by default and free to use.
 - **Replay** — play back the selected day's movement from the timeline controls.
+
+## Adding visits
+
+You can add a visit by hand, for example for a place you were at while tracking was off. You need to be connected to a Dawarich server.
+
+1. Tap **Add visit** above the replay controls, or touch and hold the map where the visit was.
+2. A **New visit** pin appears in the middle of the map. Move the map until the pin sits on the place, then tap **Next**.
+3. Check the **Place name**. It is filled in from the address when one is found; if not, enter a name.
+4. Set the arrival and departure times. For today they default to the last 60 minutes.
+5. Tap **Save visit**.
+
+The visit is saved as confirmed, with your name and the place address kept separately (the address is stored on servers that support it). If you already have a visit within 150 m at the same time, the app warns you with **You already have a visit here**: tap **Show it** to see the existing visit, or **Add anyway**.
+
+Without a connection, new visits are kept on the phone as faded pins marked **Waiting to upload**, and are sent when the app opens or comes back to the foreground. You can delete a waiting visit from its pin. A visit the server keeps rejecting is marked **Couldn't upload**.
 
 ## Family
 
@@ -139,6 +155,41 @@ The **Insights** tab has three sub-tabs:
 - **Digests** — browse, generate and delete yearly digests.
 
 All of it is cached on device, so it still opens when you're offline.
+
+## Importing photo locations
+
+**Settings → Pro features → Import photo locations** turns the locations stored in your photos into points on your map. Only the time each photo was taken and its GPS coordinates are used. Your photos never leave the phone.
+
+1. Allow Dawarich to read your photo library when asked.
+2. Tap **Scan photo library**. With limited photo access, tap **Choose photos** to pick the photos to scan instead.
+3. The app shows how many photo locations it found. Tap **Import … locations** to save them.
+
+The locations are saved on the phone and uploaded like any other points, following your upload settings. Duplicates are skipped. Some photo services leave out GPS when they share files. If a photo shows a location in your gallery but isn't found, download its original and choose that file.
+
+On iOS, **Automatically import new photo locations** keeps importing from photos taken after you turn it on. New photos are picked up when you open Dawarich, and in the background when the system allows. Automatic import needs full photo library access.
+
+Photo location import needs an active or trial Dawarich Cloud plan, or Pro on a self-hosted server, and a server version that supports the import. Showing phone photos on the map with the Photos layer is free.
+
+## Home Screen widgets
+
+Dawarich has two Home Screen widgets. **Settings → Pro features → Dawarich widgets** shows a preview of both and how to add them.
+
+- **Daily** (free) — today's distance, the number of recorded points, when it was last updated, and whether tracking is on.
+- **Insights** (Pro) — adds today's route, your streak and the last seven days of activity. It needs an active or trial Cloud plan or self-hosted Pro.
+
+To add one, touch and hold an empty area on your Home Screen, open the widget gallery, choose **Dawarich**, then select **Daily** or **Insights**.
+
+## Apple Watch
+
+The Dawarich app for Apple Watch has three pages that you move between with the Digital Crown:
+
+- **Tracking** — whether tracking is on, with **Start** and **Stop** buttons. Tracking controls are free.
+- **Today** — today's distance and recorded points.
+- **History** — the last seven days.
+
+Watch complications show the tracking status, and today's distance or points, and open the app when tapped. Tracking only starts or stops when you use the controls in the app, never from a complication.
+
+Statistics on the watch and in complications need an active or trial Cloud plan or self-hosted Pro, like the Insights widget. The watch gets its data from your iPhone; if it hasn't synced yet, it asks you to open Dawarich on the iPhone.
 
 ## Sync settings between devices
 
