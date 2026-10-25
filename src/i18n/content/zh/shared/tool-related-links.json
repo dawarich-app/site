@@ -415,6 +415,11 @@
       "href": "/statistics/",
       "label": "Dawarich 统计数据",
       "note": "持续保留的统计面板"
+    },
+    {
+      "href": "/tools/visited-countries-map/",
+      "label": "去过的国家地图",
+      "note": "您去过的每个国家"
     }
   ],
   "timeline-mileage-calculator": [
@@ -483,6 +488,11 @@
       "href": "/tools/map-poster-maker/",
       "label": "地图海报制作工具",
       "note": "同一文件，生成可打印海报"
+    },
+    {
+      "href": "/tools/visited-countries-map/",
+      "label": "去过的国家地图",
+      "note": "您去过的每个国家"
     }
   ],
   "map-poster-maker": [
@@ -539,6 +549,28 @@
       "href": "/docs/tools/phototagger/",
       "label": "PhotoTagger 命令行工具",
       "note": "通过命令行批量添加地理标签"
+    }
+  ],
+  "visited-countries-map": [
+    {
+      "href": "/tools/timeline-statistics/",
+      "label": "时间线统计数据",
+      "note": "距离、地点与年度趋势"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "热力图生成器",
+      "note": "看看您的时间都花在哪里"
+    },
+    {
+      "href": "/tax-residency/",
+      "label": "税务居民天数计算器",
+      "note": "各国停留天数与 183 天规则"
+    },
+    {
+      "href": "/statistics/",
+      "label": "Dawarich 中的国家统计",
+      "note": "持续更新您的地图"
     }
   ]
 }

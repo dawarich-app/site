@@ -65,6 +65,10 @@
     {
       "title": "Criador de vídeos de trajetos",
       "description": "Anime qualquer trajeto GPS em um MP4 para compartilhar — a rota se desenha sobre um mapa estilizado."
+    },
+    {
+      "title": "Mapa de países visitados",
+      "description": "Veja todos os países que você visitou em um mapa criado a partir dos seus arquivos do Google Timeline ou de GPS."
     }
   ],
   "converters": [

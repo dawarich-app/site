@@ -415,6 +415,11 @@
       "href": "/statistics/",
       "label": "Estatísticas do Dawarich",
       "note": "Painéis com dados salvos"
+    },
+    {
+      "href": "/tools/visited-countries-map/",
+      "label": "Mapa de países visitados",
+      "note": "Todos os países que você visitou"
     }
   ],
   "timeline-mileage-calculator": [
@@ -483,6 +488,11 @@
       "href": "/tools/map-poster-maker/",
       "label": "Criador de pôsteres de mapas",
       "note": "Mesmo arquivo, pôster para imprimir"
+    },
+    {
+      "href": "/tools/visited-countries-map/",
+      "label": "Mapa de países visitados",
+      "note": "Todos os países que você visitou"
     }
   ],
   "map-poster-maker": [
@@ -539,6 +549,28 @@
       "href": "/docs/tools/phototagger/",
       "label": "CLI do PhotoTagger",
       "note": "Georreferenciamento em lote pela linha de comando"
+    }
+  ],
+  "visited-countries-map": [
+    {
+      "href": "/tools/timeline-statistics/",
+      "label": "Estatísticas da linha do tempo",
+      "note": "Distância, lugares e tendências anuais"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "Gerador de mapas de calor",
+      "note": "Onde você passa seu tempo"
+    },
+    {
+      "href": "/tax-residency/",
+      "label": "Contador de dias para residência fiscal",
+      "note": "Dias por país, regra dos 183 dias"
+    },
+    {
+      "href": "/statistics/",
+      "label": "Países no Dawarich",
+      "note": "Seu mapa sempre atualizado"
     }
   ]
 }

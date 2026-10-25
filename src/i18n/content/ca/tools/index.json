@@ -65,6 +65,10 @@
     {
       "title": "Creador de vídeos de rutes",
       "description": "Anima qualsevol trajecte GPS en un MP4 per compartir: la ruta es dibuixa sola sobre un mapa amb estil."
+    },
+    {
+      "title": "Mapa de països visitats",
+      "description": "Veu tots els països on has estat en un mapa creat a partir dels teus fitxers de Google Timeline o GPS."
     }
   ],
   "converters": [
