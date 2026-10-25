@@ -46,3 +46,19 @@ describe('comparePages', () => {
     expect(diffs.map((d) => d.field)).toEqual(['title', 'jsonld']);
   });
 });
+
+describe('comparePages structured data', () => {
+  const wrap = (block) => `<html><head><title>T</title><script type="application/ld+json">${block}</script></head><body><main>x</main></body></html>`;
+
+  it('should ignore inLanguage added after the build and differences in JSON serialization', () => {
+    const before = wrap('{"@type": "WebApplication", "name": "A </b> B"}');
+    const after = wrap('{"@type":"WebApplication","name":"A \\u003c/b> B","inLanguage":"en"}');
+    expect(comparePages(before, after)).toEqual([]);
+  });
+
+  it('should still report changed structured data', () => {
+    const before = wrap('{"@type":"WebApplication","name":"A"}');
+    const after = wrap('{"@type":"WebApplication","name":"B","inLanguage":"en"}');
+    expect(comparePages(before, after).map((d) => d.field)).toEqual(['jsonld']);
+  });
+});

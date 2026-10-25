@@ -34,6 +34,14 @@ export function extractComparable(html) {
   };
 }
 
+function canonicalJsonLd(block) {
+  try {
+    return normalizeUrls(JSON.stringify(JSON.parse(block), (key, value) => (key === 'inLanguage' ? undefined : value)));
+  } catch {
+    return normalizeUrls(block);
+  }
+}
+
 export function comparePages(baselineHtml, branchHtml) {
   const before = extractComparable(baselineHtml);
   const after = extractComparable(branchHtml);
@@ -41,8 +49,8 @@ export function comparePages(baselineHtml, branchHtml) {
   for (const field of ['title', 'description', 'main']) {
     if (before[field] !== after[field]) diffs.push({ field, before: before[field], after: after[field] });
   }
-  const beforeLd = before.jsonld.map(normalizeUrls).sort();
-  const afterLd = after.jsonld.map(normalizeUrls).sort();
+  const beforeLd = before.jsonld.map(canonicalJsonLd).sort();
+  const afterLd = after.jsonld.map(canonicalJsonLd).sort();
   if (JSON.stringify(beforeLd) !== JSON.stringify(afterLd)) {
     diffs.push({ field: 'jsonld', before: beforeLd, after: afterLd });
   }
