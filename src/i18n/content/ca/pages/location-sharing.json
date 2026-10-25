@@ -37,8 +37,8 @@
     }
   ],
   "meta": {
-    "title": "Comparteix l’historial d’ubicacions per enllaç",
-    "description": "Comparteix la ubicació en directe o l’historial per enllaç privat: amb frase de pas, caducable i revocable. Prova 7 dies gratis o autoallotja’l de franc.",
+    "title": "Comparteix el teu historial d’ubicacions amb un enllaç",
+    "description": "Comparteix ubicació en directe o historial per enllaç privat: frase de pas, caducitat i revocació. Només el que triïs. Prova: 7 dies gratis o allotja’l gratis.",
     "ogTitle": "Comparteix el teu historial d’ubicacions amb un enllaç privat",
     "ogDescription": "Envia un enllaç que mostri un sol element: un interval de dates, la ubicació en directe, un trajecte, un viatge, les estadístiques d’un mes o un resum anual. Tots els enllaços caduquen o es poden revocar, i la majoria es poden protegir amb una frase de pas."
   },

@@ -101,7 +101,7 @@
   ],
   "meta": {
     "title": "Standortverlauf-Karte — sieh, wo du überall warst",
-    "description": "Erkunde deinen ganzen Standortverlauf auf einer Karte: Punkte, Routen, Heatmap, Nebel des Krieges und Fotos – ein Tag oder alle aufgezeichneten Jahre.",
+    "description": "Erkunde deinen Standortverlauf auf einer interaktiven Karte mit Ebenen für Punkte, Routen, Heatmap, Nebel des Krieges und mehr.",
     "ogTitle": "Dawarich-Karte – interaktive Standortdarstellung",
     "ogDescription": "Erkunde deinen Standortverlauf mit verschiedenen Ebenen: Punkte, Routen, Heatmap, Nebel des Krieges, Rubbelkarte und Foto-Integration."
   },

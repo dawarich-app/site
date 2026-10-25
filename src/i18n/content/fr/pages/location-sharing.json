@@ -37,8 +37,8 @@
     }
   ],
   "meta": {
-    "title": "Partage de position : historique par lien",
-    "description": "Partagez votre position en direct ou historique : lien privé avec phrase secrète, expiration, révocation. Essai gratuit 7 j ou auto-hébergement gratuit.",
+    "title": "Partagez votre historique de localisation par lien",
+    "description": "Position en direct ou historique : lien privé limité à votre choix, phrase secrète, expiration, révocation. Essai gratuit 7 j ou auto-hébergement gratuit.",
     "ogTitle": "Partagez votre historique de localisation par lien privé",
     "ogDescription": "Un lien : période, position en direct, trajet, déplacement, stats mensuelles ou bilan annuel. Expire ou révocable ; phrase secrète possible pour la plupart."
   },

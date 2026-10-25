@@ -113,7 +113,7 @@
   ],
   "meta": {
     "title": "Import historii lokalizacji: Google Takeout i in.",
-    "description": "Twoje dane są Twoje. Import historii lokalizacji: Google Takeout, GPX, FIT, KML, CSV i inne. Eksport całości w każdej chwili. Bez uzależnienia od usługi.",
+    "description": "Twoje dane należą do Ciebie. Import z Google Takeout, GPX, CSV, KML. Eksport do GPX, CSV lub pełny eksport konta. Bez uzależnienia od usługi.",
     "ogTitle": "Import i eksport Dawarich — Twoje dane pod Twoją kontrolą",
     "ogDescription": "Import z Google Maps, Apple Health, GPX, GeoJSON, KML. Eksport do dowolnego formatu. Pełna przenośność danych bez uzależnienia od usługi."
   },

@@ -113,7 +113,7 @@
   ],
   "meta": {
     "title": "Import Google Takeout : historique des lieux et +",
-    "description": "Vos données vous appartiennent. Importez l’historique GPS Google Takeout, GPX, FIT, KML, CSV et plus. Exportez tout quand vous voulez. Sans dépendance.",
+    "description": "Vos données vous appartiennent. Importez depuis Google Takeout, GPX, CSV, KML. Exportez en GPX, CSV ou export complet du compte. Sans dépendance.",
     "ogTitle": "Dawarich — Importations et exports sous votre contrôle",
     "ogDescription": "Importez depuis Google Maps, Apple Health, GPX, GeoJSON, KML. Exportez dans tous les formats. Une portabilité complète sans dépendance."
   },

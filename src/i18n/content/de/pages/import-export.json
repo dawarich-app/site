@@ -113,7 +113,7 @@
   ],
   "meta": {
     "title": "Google-Takeout-Standortverlauf & mehr importieren",
-    "description": "Deine Daten gehören dir. Importiere Standortverlauf aus Google Takeout, GPX, FIT, KML, CSV u. a.; exportiere jederzeit alles. Ohne Anbieterbindung.",
+    "description": "Deine Daten gehören dir. Importiere aus Google Takeout, GPX, CSV, KML. Exportiere in GPX, CSV oder dein ganzes Konto. Keine Anbieterbindung.",
     "ogTitle": "Dawarich Import & Export – deine Daten, deine Kontrolle",
     "ogDescription": "Importiere aus Google Maps, Apple Health, GPX, GeoJSON, KML. Exportiere in jedes Format. Volle Datenportabilität ohne Anbieterbindung."
   },
