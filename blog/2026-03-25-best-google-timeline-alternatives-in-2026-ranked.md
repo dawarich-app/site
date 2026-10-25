@@ -33,6 +33,8 @@ If you're coming from Google and just want to see your exported data on a map wi
 
 For a more detailed comparison: [Dawarich vs Google Timeline](/docs/comparisons/vs-google-timeline).
 
+Ready to move your history over? Here's [how moving your Google Timeline to Dawarich works](/google-timeline-alternative/), step by step.
+
 ## 2. OwnTracks
 
 OwnTracks is the OG of self-hosted location tracking. It's been around forever, it's open source, and it does one thing well: recording where you are and sending that data to your own server.

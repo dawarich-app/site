@@ -45,6 +45,35 @@
     "li4": "Código aberto. O desenvolvimento acontece publicamente no GitHub, com bugs e tudo.",
     "heading4": "Quem somos",
     "alt": "Retrato de {name}",
-    "company": "O Dawarich é feito pela ZeitFlow UG (haftungsbeschränkt), uma pequena empresa registrada em Berlim, Alemanha. Os dados legais estão nas [Informações legais](/impressum). Quer dar um oi? [Fale conosco](/contact). Lemos todas as mensagens."
+    "company": "O Dawarich é feito pela ZeitFlow UG (haftungsbeschränkt), uma pequena empresa registrada em Berlim, Alemanha. Os dados legais estão nas [Informações legais](/impressum). Quer dar um oi? [Fale conosco](/contact). Lemos todas as mensagens.",
+    "glanceHeading": "Dawarich em resumo",
+    "facts": [
+      {
+        "label": "Início",
+        "value": "Março de 2024, como um projeto de fim de semana"
+      },
+      {
+        "label": "Sediado em",
+        "value": "Berlim, Alemanha"
+      },
+      {
+        "label": "Feito por",
+        "value": "ZeitFlow UG (haftungsbeschränkt)"
+      },
+      {
+        "label": "Disponível como",
+        "value": "Software gratuito para hospedagem própria e Dawarich Cloud desde julho de 2025"
+      },
+      {
+        "label": "Aplicativos",
+        "value": "iOS e Android"
+      },
+      {
+        "label": "Código-fonte",
+        "value": "Código aberto no [GitHub](https://github.com/Freika/dawarich)"
+      }
+    ],
+    "pressHeading": "Na imprensa",
+    "pressKit": "Está escrevendo sobre o Dawarich? Logotipos, capturas de tela e fotos dos fundadores estão no [kit de imprensa](/press-kit/)."
   }
 }

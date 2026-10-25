@@ -45,6 +45,35 @@
     "li4": "Otwarty kod źródłowy. Rozwój odbywa się publicznie na GitHubie, łącznie z błędami.",
     "heading4": "Kim jesteśmy",
     "alt": "Portret: {name}",
-    "company": "Dawarich tworzy ZeitFlow UG (haftungsbeschränkt), mała firma zarejestrowana w Berlinie w Niemczech. Dane prawne znajdziesz w sekcji [Informacje prawne](/impressum). Chcesz się przywitać? [Napisz do nas](/contact). Czytamy każdą wiadomość."
+    "company": "Dawarich tworzy ZeitFlow UG (haftungsbeschränkt), mała firma zarejestrowana w Berlinie w Niemczech. Dane prawne znajdziesz w sekcji [Informacje prawne](/impressum). Chcesz się przywitać? [Napisz do nas](/contact). Czytamy każdą wiadomość.",
+    "glanceHeading": "Dawarich w skrócie",
+    "facts": [
+      {
+        "label": "Początek",
+        "value": "Marzec 2024, jako weekendowy projekt"
+      },
+      {
+        "label": "Siedziba",
+        "value": "Berlin, Niemcy"
+      },
+      {
+        "label": "Tworzone przez",
+        "value": "ZeitFlow UG (haftungsbeschränkt)"
+      },
+      {
+        "label": "Dostępne jako",
+        "value": "Darmowe oprogramowanie na własny serwer, a od lipca 2025 także Dawarich Cloud"
+      },
+      {
+        "label": "Aplikacje",
+        "value": "iOS i Android"
+      },
+      {
+        "label": "Kod źródłowy",
+        "value": "Otwarty kod źródłowy na [GitHub](https://github.com/Freika/dawarich)"
+      }
+    ],
+    "pressHeading": "W prasie",
+    "pressKit": "Piszesz o Dawarich? Logotypy, zrzuty ekranu i zdjęcia założycieli znajdziesz w [materiałach prasowych](/press-kit/)."
   }
 }
