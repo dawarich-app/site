@@ -69,7 +69,7 @@ Public viewers can see:
 - Monthly distance traveled
 - Countries visited
 - Cities visited
-- Hexagon map visualization (if enabled)
+- Hexagon map visualization (if enabled). Hexagons that touch a [privacy zone](/docs/features/visits-and-places#privacy-zones) are left off.
 
 They **cannot** see:
 - Your exact GPS points

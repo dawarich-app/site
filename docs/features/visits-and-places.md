@@ -33,25 +33,35 @@ In the drawer panel:
 4. Click visit circles on the map for detailed popups
 
 In the visit popup, you can:
-- Rename the visit
-- Select a different place from nearby suggestions
+- Rename the visit. A visit you have not renamed shows the name of its place, or its address when it has no place
+- Select a different place from nearby suggestions, or choose **Create a place** to add a new place at the visit and attach it
 - Edit start and end times
 - Delete the visit
 
 ## Places
 
-Places are saved locations that can be associated with visits. When you confirm a visit, the location is saved as a place.
+Places are saved locations that visits can be matched to. Every place has a center and a **Visit Radius** (50 meters by default, up to 50 km). Visit detection first decides that you stayed somewhere, then matches the visit to a place:
+
+1. A place whose Visit Radius contains the visit's center. If several do, the one with the smallest radius wins, then the nearest center.
+2. Otherwise a nearby point of interest from reverse geocoding, which is reused or saved as a new place.
+3. Otherwise the visit keeps just its address as a label and gets no place.
+
+Creating a place or changing its center or radius re-checks your suggested visits nearby. Confirmed visits are never moved to another place automatically.
+
+You can create a place from **Tools** (`C`) → **Create Place** on the [map](/docs/features/map#tools), or from a visit's place search with **Create a place**.
+
+In earlier versions, circular **Areas** did this job. Since 1.18.0 they are Places; see [Areas](/docs/features/areas).
 
 Places can also come from a file you import. Waypoints in a GPX file — for example the favourites exported by OsmAnd+ as `favourites.gpx` — are imported as places rather than as timeline points, and their category becomes a tag. See [Waypoints and favourites](/docs/getting-started/import-existing-data#waypoints-and-favourites) for details.
 
 ### Managing Places
 
-- Places can be viewed and managed in the Places section
-- Each place shows:
-  - Name
-  - Coordinates
-  - Visit count
-  - Associated tags
+- Places can be viewed and managed in the Places section. **All Places** lists everything; **Unconfirmed** lists places that were found automatically and that you have not tagged, annotated, used in a confirmed visit or set to notify on enter and leave.
+- To rename a place or change its Visit Radius, click it on the map and choose **Edit**.
+- To merge a duplicate, open the place on the Places page and pick the duplicate. Merging moves the duplicate's visits, tags and notes to the place you opened.
+- Deleting a place keeps its visits; they just lose the attached place.
+- To record when you arrive or leave, and send it to your own services, turn on **Notify on enter and leave** in the place's details. See [Geofencing](/docs/features/geofencing).
+- An automatically found place is deleted on its own once no visit uses it any more, unless you renamed it, gave it a tag or note, or turned on **Notify on enter and leave**. Places you created or imported are never deleted automatically.
 
 ### Home Location
 
@@ -78,7 +88,7 @@ Tags allow you to categorize places and create privacy zones.
 
 ### Privacy Zones
 
-Privacy zones hide or obscure location data within a specified radius. This is useful for:
+Privacy zones hide the places you tag with them, such as your home, from the map and from everything you share. This is useful for:
 - Protecting your home address
 - Hiding sensitive locations
 - Maintaining privacy when sharing data
@@ -88,10 +98,15 @@ To create a privacy zone:
 2. Set a **Privacy Radius** (in meters, up to 5000m)
 3. Apply the tag to relevant places
 
-When a privacy zone is active:
-- Points within the radius are hidden from exports
-- Shared statistics exclude the zone
-- The exact location isn't revealed in public views
+Inside a privacy zone:
+- Points, tracks, routes, visits, places, photos and live updates disappear from your own [map](/docs/features/map), and fog of war stays over the zone. A track that crosses a zone is cut at its edge instead of being drawn through it.
+- Trip pages, route replay and posters leave the zone out as well.
+- Timeline entries for visits inside the zone keep their name and time but no longer place a pin on the map.
+- Shared links leave out the zone. Shared monthly stats leave out map hexagons that touch it. See [Sharing](/docs/features/sharing#privacy).
+
+The hidden area is not centred on the place. It is up to 1.6 times your radius and shifted off the place by an amount that differs for every place, so the place can't be pinpointed from where your data stops. Everything within the radius you set stays hidden.
+
+Privacy zones only change what is shown. Your data is still recorded inside them, and exports, statistics and the API keep your full data. API clients can ask for masked results by adding `mask_privacy_zones=true` to a request; map tiles and fog of war are always masked.
 
 ### Applying Tags to Places
 
@@ -134,11 +149,11 @@ BulkVisitsSuggestingJob.perform_later(
 
 The job runs in the background via Sidekiq and typically completes within seconds to minutes depending on the time range.
 
-## Area Selection
+## Selecting Data on the Map
 
-Select an area on the map to explore visits within a specific region:
+Select a region on the map to explore visits within it:
 
-1. Enable the area selection tool
+1. Open **Tools** (`C`) and choose **Select data on map**
 2. Draw a rectangle or polygon on the map
 3. The drawer shows:
    - All visits in that area (regardless of selected time period)

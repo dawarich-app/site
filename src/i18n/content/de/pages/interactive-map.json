@@ -40,9 +40,9 @@
       "imageAlt": "Rubbelkarte mit besuchten Ländern"
     },
     {
-      "title": "Gebiete",
-      "description": "Zeichne eigene Gebiete auf der Karte, um wichtige Orte, Stadtviertel oder interessante Regionen zu markieren.",
-      "imageAlt": "Eigene Gebiete auf der Karte"
+      "title": "Orte",
+      "description": "Speichere die Orte, die dir wichtig sind, jeweils mit eigenem Besuchsradius. Zeige ihre Grenzen auf der Karte an und halte fest, wann du ankommst oder gehst.",
+      "imageAlt": "Orte mit ihren Grenzen auf der Karte"
     },
     {
       "title": "Fotos",
@@ -68,7 +68,7 @@
       "details": [
         "Punkte, Routen oder Heatmap umschalten",
         "Nebel des Krieges oder Rubbelkarte aktivieren",
-        "Fotos und Gebiete ein- oder ausblenden"
+        "Fotos und Orte ein- oder ausblenden"
       ]
     },
     {
@@ -86,7 +86,7 @@
       "details": [
         "Lieblingsorte speichern",
         "Fehlende Aufenthalte manuell ergänzen",
-        "Eigene Gebiete auf der Karte zeichnen"
+        "Einen Besuchsradius um jeden Ort festlegen"
       ]
     },
     {

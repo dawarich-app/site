@@ -40,9 +40,9 @@
       "imageAlt": "Mapa per descobrir amb els països visitats"
     },
     {
-      "title": "Àrees",
-      "description": "Dibuixa àrees personalitzades al mapa per marcar ubicacions importants, barris o regions d’interès.",
-      "imageAlt": "Àrees personalitzades al mapa"
+      "title": "Llocs",
+      "description": "Desa els llocs que t’importen, cadascun amb el seu propi radi de visita. Mostra’n els límits al mapa i registra quan hi arribes o en marxes.",
+      "imageAlt": "Llocs amb els seus límits al mapa"
     },
     {
       "title": "Fotos",
@@ -68,7 +68,7 @@
       "details": [
         "Activa o desactiva punts, rutes o mapa de calor",
         "Activa la boira de guerra o el mapa per descobrir",
-        "Mostra o amaga fotos i àrees"
+        "Mostra o amaga fotos i llocs"
       ]
     },
     {
@@ -86,7 +86,7 @@
       "details": [
         "Desa les ubicacions preferides",
         "Afegeix les visites que falten manualment",
-        "Dibuixa àrees personalitzades al mapa"
+        "Defineix un radi de visita al voltant de cada lloc"
       ]
     },
     {

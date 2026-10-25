@@ -30,7 +30,7 @@ People are leaving Timeline either because they want their decade of history *vi
 | Self-host on your own hardware | ❌ | ✅ Open source, AGPLv3 |
 | Public API | ⚠️ Via Takeout one-shot | ✅ Full REST API |
 | Heatmaps | ❌ | ✅ |
-| Custom areas (geofences) | ❌ | ✅ |
+| Geofencing (enter and leave events, webhooks) | ❌ | ✅ |
 | Trip creation & journaling | ❌ | ✅ |
 | Family sharing | ❌ | ✅ (self-hosted) |
 | Imports your existing Takeout | n/a | ✅ Records.json, Semantic, phone exports |
@@ -84,7 +84,7 @@ If your Takeout file is enormous, run it through the [Timeline Splitter](/tools/
 | Heatmap | ✅ (web) | ❌ |
 | Statistics dashboard | ✅ | ⚠️ (basic) |
 | **Places & areas** | | |
-| Custom areas / geofences | ✅ (web) | ❌ |
+| Geofencing (enter and leave events, webhooks) | ✅ (web) | ❌ |
 | Place detection | ✅ | ✅ |
 | Visit duration tracking | ✅ | ✅ |
 | **Photos** | | |
@@ -125,6 +125,6 @@ Self-hosted: nothing — it's your container, your database, your data. Cloud: y
 
 ## Verdict
 
-If you came to Google Timeline for the **map of your life** and stayed for the casual "where was I last summer?" lookups, Dawarich is the closest drop-in replacement available in 2026. It's faster than Timeline ever was, it has features Timeline never shipped (heatmap, custom areas, trip journaling, REST API), and crucially it puts your decade of location history back in a browser tab where you can actually look at it.
+If you came to Google Timeline for the **map of your life** and stayed for the casual "where was I last summer?" lookups, Dawarich is the closest drop-in replacement available in 2026. It's faster than Timeline ever was, it has features Timeline never shipped (heatmap, geofencing, trip journaling, REST API), and crucially it puts your decade of location history back in a browser tab where you can actually look at it.
 
 If photo geotagging in your camera roll is the *only* reason you used Timeline, you'll want to keep using it on mobile and pair it with Dawarich for everything else. For everyone else: [convert your Takeout export](/tools/google-timeline-converter/), [pick a flavour](/#pricing), and you're done.

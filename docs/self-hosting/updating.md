@@ -10,6 +10,30 @@ Dawarich is a rapidly evolving project, and some changes may break compatibility
 
 After each update, please make sure there is no jobs running in the Sidekiq interface (/sidekiq). If there are, please wait for them to finish. Once all jobs are finished, you can proceed with the update.
 
+## 1.18.0
+
+### Back up your database first
+
+Areas become Places in this release. A background job maps every Area to a Place with a Visit Radius, moves its notes and Visits, and moves the names of automatically detected Visits into their location label. It also clears Visit names that only repeat their Place or Area name, so they follow later renames. Rolling back to 1.17 does not restore those names, so take a database backup before upgrading.
+
+### Background jobs after the upgrade
+
+The migration queues the Areas-to-Places job on the `data_migrations` queue. Keep background jobs running (in `dawarich_app`, or in your separate worker) until it finishes; you can watch it in Sidekiq (`/sidekiq`). The job logs a summary that lists Areas and Visits it could not match unambiguously. If Redis was unreachable when the migrations ran, queue the job again from the Rails console:
+
+```ruby
+DataMigrations::BackfillAreasIntoPlacesJob.perform_later
+```
+
+### API changes for integrations
+
+- `/api/v1/areas` and the Visit `area_id` field still work but are deprecated. Use `/api/v1/places` and `place_id`.
+- Visit responses add `display_name`, `custom_name` and `location_label`. `name` keeps returning the name to show, so existing clients keep working.
+- `place` is now `null` for a Visit without a Place or Area. Previously it was an object with empty fields.
+
+### Redis 8
+
+The default `docker-compose.yml` now uses `redis:8-alpine` instead of `redis:7.4-alpine`. Redis 8 reads data saved by Redis 7.4, so changing the image is enough; no migration is needed. To use [Valkey](https://valkey.io) instead, point `REDIS_URL` at it.
+
 ## 1.17.0
 
 ### One container for the app and background jobs

@@ -50,7 +50,7 @@ As many other applications, Dawarich uses environment variables to configure its
 
 | Environment Variable | Default Value | Description |
 | -------------------- | ------------- | ----------- |
-| `REDIS_URL`          | `redis://dawarich_redis:6379` | Redis URL |
+| `REDIS_URL`          | `redis://dawarich_redis:6379` | Redis URL. Redis 8 is the default; [Valkey](https://valkey.io) also works |
 | `RAILS_CACHE_DB`     | `0` | Redis cache database |
 | `RAILS_JOB_QUEUE_DB` | `1` | Redis job queue database |
 | `RAILS_WS_DB` | `2` | Redis WebSocket database |
@@ -75,6 +75,7 @@ As many other applications, Dawarich uses environment variables to configure its
 | `REVERSE_GEOCODING_CONCURRENCY` | the rate limit, rounded up | Reverse-geocoding threads across all workers. No limit when no rate is set. See [Background jobs](/docs/self-hosting/configuration/background-jobs#reverse-geocoding-threads). |
 | `PHOTON_API_KEY` | `nil` | Photon API key. Useful if you're supporting Dawarich development on [Patreon](https://www.patreon.com/c/freika/membership) and want to use Photon API instance hosted by Freika without any limits |
 | `PHOTON_API_USE_HTTPS` | `false` | Use HTTPS for Photon API requests. Set to true if you're using your own Photon instance behind a reverse proxy with SSL |
+| `PHOTON_API_LANGUAGE` | `en` | Language Dawarich asks Photon for place names in: a two-letter code such as `nl`, or `default` for names in the local language. Your Photon index must include it. Can also be set under **Admin → Instance settings**. See [Photon index languages](/docs/self-hosting/configuration/reverse-geocoding#setting-up-your-own-reverse-geocoding-service) |
 | `GEOAPIFY_API_KEY` | `nil` | Geoapify API key. Provide your own key if you want to use Geoapify reverse geocoding service |
 | `NOMINATIM_API_HOST` | `nil` | Nominatim API host. Useful if you're self-hosting your own Nominatim instance |
 | `NOMINATIM_API_KEY` | `nil` | Nominatim API key. Provide your own key if you want to use Nominatim reverse geocoding service |

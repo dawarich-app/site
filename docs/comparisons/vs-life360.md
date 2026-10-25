@@ -28,7 +28,7 @@ Life360 focuses on family safety, including crash detection and emergency help. 
 | **Location Tracking** |
 | Automatic location tracking | ✅ (iOS, Android) | ✅ |
 | Real-time family sharing | ✅ (self-hosted, or the Cloud Family plan) | ✅ |
-| Geofencing / place alerts | ✅ (custom areas) | ✅ |
+| Geofencing / place alerts | ⚠️ (event log and webhooks, no push alerts) | ✅ |
 | Crash detection | ❌ | ✅ (availability varies by plan) |
 | SOS / emergency alerts | ❌ | ✅ |
 | Drive reports | ❌ | ✅ (paid) |

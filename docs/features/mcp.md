@@ -35,7 +35,9 @@ Everything the assistant reads — visit names, place names and coordinates, tim
 |---|---|
 | `get_timeline` | Visits and journeys for a time range of up to **7 local calendar days**, with a per-day summary (distance, places visited, time moving and stationary). Ranges with more than **250 entries** are rejected; ask for a shorter range. |
 | `get_latest_location` | Your newest recorded location point, skipping points flagged as anomalies. |
-| `search_visits` | Visits whose visit name, place name, city, country or area name contains a search text (at least 2 characters). Returns the total number of matches and up to 50 visits, newest first. Declined visits are not included. |
+| `search_visits` | Visits whose visit name, location label, place name, city, country or area name contains a search text (at least 2 characters). Returns the total number of matches and up to 50 visits, newest first. Declined visits are not included. |
+
+Each visit is named the way the timeline shows it: your own visit name, otherwise the place name, otherwise the address label. A visit's place includes its `visit_radius` in meters.
 
 All durations are reported in minutes. Distances use your account's distance unit unless the assistant asks for kilometers or miles.
 

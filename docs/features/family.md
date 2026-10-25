@@ -13,6 +13,8 @@ Family lets a small group of people see each other on the map. Every member keep
 
 Family is available on **self-hosted** instances for everyone, with no plan and no member limit, and on **Dawarich Cloud** through the [Family plan](#family-plan-dawarich-cloud).
 
+If you don't use Family, turn it off under **Settings → General → Features**. See [Turning off features](/docs/features/general-settings#turning-off-features).
+
 ![The Family page: a map with members who are sharing, your sharing settings, the member list and pending invitations](images/family-page.webp)
 
 ## Family plan (Dawarich Cloud)

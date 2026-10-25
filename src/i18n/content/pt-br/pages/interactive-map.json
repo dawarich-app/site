@@ -40,9 +40,9 @@
       "imageAlt": "Mapa de raspar com países visitados"
     },
     {
-      "title": "Áreas",
-      "description": "Desenhe áreas personalizadas no mapa para marcar locais importantes, bairros ou regiões de interesse.",
-      "imageAlt": "Áreas personalizadas no mapa"
+      "title": "Lugares",
+      "description": "Salve os lugares que importam para você, cada um com seu próprio raio de visita. Mostre os limites deles no mapa e registre quando você chega ou sai.",
+      "imageAlt": "Lugares com seus limites no mapa"
     },
     {
       "title": "Fotos",
@@ -68,7 +68,7 @@
       "details": [
         "Ative pontos, trajetos ou mapa de calor",
         "Ative a névoa de exploração ou o mapa de raspar",
-        "Mostre ou oculte fotos e áreas"
+        "Mostre ou oculte fotos e lugares"
       ]
     },
     {
@@ -86,7 +86,7 @@
       "details": [
         "Salve seus locais favoritos",
         "Adicione visitas ausentes manualmente",
-        "Desenhe áreas personalizadas no mapa"
+        "Defina um raio de visita ao redor de cada lugar"
       ]
     },
     {

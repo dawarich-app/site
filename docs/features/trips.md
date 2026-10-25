@@ -8,6 +8,8 @@ description: Create, organize, and visualize your trips with routes, dates, and 
 
 Trips let you group your location history into named journeys with dates, notes, and a map of the route.
 
+Trips planned in TREK can be imported and kept in sync. See [TREK](/docs/features/trek).
+
 ## Creating a trip
 
 Click **New trip** and fill in:
