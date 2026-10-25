@@ -147,10 +147,6 @@
     "message": "Conversor de FIT a GPX",
     "description": "The label of footer link with label=FIT to GPX Converter linking to /tools/fit-to-gpx"
   },
-  "link.item.label.All 29 tools →": {
-    "message": "Las 29 herramientas →",
-    "description": "The label of footer link with label=All 29 tools → linking to /tools"
-  },
   "link.item.label.Google Timeline Alternative": {
     "message": "Alternativa a Google Timeline",
     "description": "The label of footer link with label=Google Timeline Alternative linking to /google-timeline-alternative"
@@ -270,5 +266,9 @@
   "link.item.label.Cookie Settings": {
     "message": "Ajustes de cookies",
     "description": "The label of footer link with label=Cookie Settings linking to pathname:///privacy-policy/#cookies"
+  },
+  "link.item.label.All 32 tools →": {
+    "message": "Las 32 herramientas →",
+    "description": "The label of footer link with label=All 32 tools → linking to /tools"
   }
 }

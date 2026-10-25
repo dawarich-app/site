@@ -14,6 +14,7 @@ export const ROOT_ONLY_STATIC_FILES = [
   'features.md',
   'sw.js',
   'brevo-frame.html',
+  'data/countries-50m.json',
 ];
 
 export function pruneLocaleStatic(buildDir, locales = LOCALES) {

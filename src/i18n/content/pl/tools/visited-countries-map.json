@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "title": "Mapa odwiedzonych krajów z historii lokalizacji",
+    "description": "Zobacz wszystkie odwiedzone kraje na mapie z Google Timeline (Oś czasu Google), GPX lub KML, z liczbą dni w każdym. Darmowo, prywatnie w przeglądarce.",
+    "keywords": "mapa odwiedzonych krajów, odwiedzone kraje na mapie, mapa odwiedzonych miejsc, kraje z Google Timeline, mapa podróży, kraje odwiedzone przeze mnie"
+  },
+  "h1": "Mapa odwiedzonych krajów",
+  "intro": "Dodaj pliki Google Timeline (Oś czasu Google) lub GPS i zobacz, jak świat wypełnia się kolorami: wszystkie odwiedzone przez Ciebie kraje na mapie wraz z liczbą spędzonych w nich dni.",
+  "upload": {
+    "title": "Dodaj swoją historię lokalizacji",
+    "dropFiles": "Upuść pliki tutaj lub kliknij, aby je wybrać",
+    "formats": "Google Timeline JSON, GPX, KML, KMZ, GeoJSON, FIT, TCX",
+    "inputLabel": "Wybierz pliki historii lokalizacji",
+    "processing": "Wyszukiwanie Twoich krajów…",
+    "clear": "Wyczyść"
+  },
+  "results": {
+    "count": "{count} kraj lub terytorium|{count} kraje i terytoria|{count} krajów i terytoriów|{count} kraju lub terytorium",
+    "empty": "W tych plikach nie znaleziono żadnych krajów. Spróbuj użyć pliku z większą liczbą punktów lub eksportu Google Timeline.",
+    "days": "{count} dzień|{count} dni|{count} dni|{count} dnia",
+    "points": "{count} punkt|{count} punkty|{count} punktów|{count} punktu",
+    "continentsTitle": "Według kontynentu",
+    "listTitle": "Twoje kraje",
+    "dates": "{first} – {last}"
+  },
+  "continents": {
+    "Africa": "Afryka",
+    "Antarctica": "Antarktyda",
+    "Asia": "Azja",
+    "Europe": "Europa",
+    "North America": "Ameryka Północna",
+    "Oceania": "Oceania",
+    "South America": "Ameryka Południowa",
+    "Seven seas (open ocean)": "Odległe wyspy"
+  },
+  "parseError": "Nie udało się odczytać {fileName}: {message}",
+  "loadError": "Nie udało się wczytać granic krajów. Sprawdź połączenie i spróbuj ponownie.",
+  "loadingMap": "Wczytywanie mapy…",
+  "privacy": "Twoje pliki są odczytywane w Twojej przeglądarce. Nic nie jest wysyłane na serwer.",
+  "credit": "Granice krajów: [Natural Earth](https://www.naturalearthdata.com/), domena publiczna.",
+  "cta": "Odwiedzone przez Ciebie kraje i terytoria: **{count}**. Z Dawarich ta mapa rośnie sama wraz z Twoimi podróżami.",
+  "guide": {
+    "sections": [
+      {
+        "heading": "Jak mapa rozpoznaje odwiedzone miejsca",
+        "body": [
+          "Każdy punkt w Twoim pliku jest sprawdzany względem granic 240 krajów i terytoriów. Punkty tuż przy wybrzeżu, po stronie morza — w porcie, na plaży czy na promie — są przypisywane do najbliższego kraju, dzięki czemu podróże nad morzem nie umykają mapie.",
+          "Jeśli Twoje punkty mają znaczniki czasu, przy każdym kraju pojawi się też liczba różnych dni Twojego pobytu, liczonych według UTC, oraz najwcześniejsza i najpóźniejsza data."
+        ]
+      },
+      {
+        "heading": "Pobierz swoją historię lokalizacji",
+        "body": [
+          "Z Google: wyeksportuj Google Timeline z aplikacji Google Maps na swoim telefonie albo użyj starszego pliku Records.json lub Semantic Location History z Google Takeout. Oba rodzaje eksportu działają w tym narzędziu.",
+          "Z innych aplikacji: pliki GPX ze Strava, Garmin, Komoot i większości aplikacji do rejestrowania lokalizacji, KML lub KMZ z Google Earth, FIT i TCX z zegarków sportowych oraz GeoJSON. Możesz dodać kilka plików naraz."
+        ]
+      },
+      {
+        "heading": "Kraje, terytoria i granice",
+        "body": [
+          "Mapa uwzględnia terytoria takie jak Grenlandia, Portoryko czy Polinezja Francuska, więc wynik może przekroczyć 195 krajów, które obejmuje większość list.",
+          "Granice pochodzą z Natural Earth w skali 1:50 milionów. W odległości około kilometra od granicy punkt może trafić do sąsiedniego kraju, a najmniejsze państwa, takie jak Watykan, mogą zostać zaliczone do otaczającego je kraju."
+        ]
+      },
+      {
+        "heading": "Niech Twoja mapa rośnie dalej",
+        "body": [
+          "To narzędzie pokazuje zawartość dodanych przez Ciebie plików. [Dawarich](/statistics/) robi to samo z całą Twoją historią lokalizacji i aktualizuje ją w miarę Twoich podróży: kraje i miasta w poszczególnych latach, kalendarz pokazujący miejsce Twojego pobytu każdego dnia oraz podróże, które za tym stoją."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Czy to narzędzie jest darmowe?",
+        "a": "Tak. Działa w Twojej przeglądarce, bez limitów i bez zakładania konta."
+      },
+      {
+        "q": "Czy moje pliki są wysyłane na serwer?",
+        "a": "Nie. Twoje pliki są odczytywane na Twoim urządzeniu i nigdy go nie opuszczają."
+      },
+      {
+        "q": "Dlaczego brakuje kraju z mojej podróży?",
+        "a": "Plik może nie zawierać punktów z tej podróży, na przykład jeśli historia lokalizacji była wyłączona. Bardzo krótkie postoje w pobliżu granicy mogą też zostać przypisane do sąsiedniego kraju."
+      },
+      {
+        "q": "Dlaczego mój wynik może przekroczyć 195?",
+        "a": "Terytoria takie jak Grenlandia czy Portoryko są liczone osobno, tak jak zwykle liczą je podróżnicy."
+      },
+      {
+        "q": "Jak liczone są dni?",
+        "a": "Dzień jest zaliczany do każdego kraju, w którym masz co najmniej jeden punkt w danym dniu kalendarzowym według UTC. Dzień przekroczenia granicy liczy się więc dla obu krajów."
+      }
+    ]
+  }
+}

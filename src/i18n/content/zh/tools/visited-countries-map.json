@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "title": "根据位置历史生成去过的国家地图",
+    "description": "用您的 Google Timeline（谷歌地图时间轴）、GPX 或 KML 文件生成去过的国家地图，一览所有到访国家及各国停留天数。免费在浏览器中使用，保护您的隐私。",
+    "keywords": "去过的国家地图, 旅行足迹地图, 我去过哪些国家, Google Timeline 国家, 旅行地图, 到访国家"
+  },
+  "h1": "去过的国家地图",
+  "intro": "拖入您的 Google Timeline 或 GPS 文件，让世界地图亮起您的旅行足迹：去过的每个国家都会着色显示，各国停留天数也一目了然。",
+  "upload": {
+    "title": "上传您的位置历史",
+    "dropFiles": "将文件拖放到此处，或点击选择",
+    "formats": "Google Timeline JSON, GPX, KML, KMZ, GeoJSON, FIT, TCX",
+    "inputLabel": "选择位置历史文件",
+    "processing": "正在查找您到访的国家…",
+    "clear": "清空"
+  },
+  "results": {
+    "count": "{count} 个国家和地区",
+    "empty": "未在这些文件中找到国家信息。请尝试包含更多轨迹点的文件，或 Google Timeline 导出文件。",
+    "days": "{count} 天",
+    "points": "{count} 个轨迹点",
+    "continentsTitle": "按大洲分类",
+    "listTitle": "您到访的国家",
+    "dates": "{first} – {last}"
+  },
+  "continents": {
+    "Africa": "非洲",
+    "Antarctica": "南极洲",
+    "Asia": "亚洲",
+    "Europe": "欧洲",
+    "North America": "北美洲",
+    "Oceania": "大洋洲",
+    "South America": "南美洲",
+    "Seven seas (open ocean)": "偏远岛国"
+  },
+  "parseError": "无法读取 {fileName}：{message}",
+  "loadError": "无法加载国家边界。请检查网络连接后重试。",
+  "loadingMap": "正在加载地图…",
+  "privacy": "您的文件仅在浏览器中读取，不会上传任何数据。",
+  "credit": "国家边界数据：[Natural Earth](https://www.naturalearthdata.com/)，属于公有领域。",
+  "cta": "您已到访 **{count}** 个国家和地区。Dawarich 会随您的旅行，自动在地图上点亮更多国家和地区。",
+  "guide": {
+    "sections": [
+      {
+        "heading": "地图如何知道您去过哪里",
+        "body": [
+          "工具会将文件中的每个轨迹点与 240 个国家和地区的边界进行比对。略微落在海岸线外的轨迹点，例如港口、海滩或渡轮上的位置，会计入最近的国家，让海边行程也能被记录。",
+          "如果轨迹点包含时间戳，每个国家还会显示您在当地停留的不同日期总数（按 UTC 计算），以及首次和最后到访日期。"
+        ]
+      },
+      {
+        "heading": "获取您的位置历史",
+        "body": [
+          "Google 用户：从手机上的 Google Maps 应用导出时间轴，或使用以前通过 Google Takeout 导出的 Records.json 或 Semantic Location History 文件。这些文件均可使用。",
+          "其他应用：支持 Strava、Garmin、Komoot 及大多数轨迹记录应用的 GPX 文件，Google Earth 的 KML 或 KMZ 文件，运动手表的 FIT 和 TCX 文件，以及 GeoJSON。您可以一次拖入多个文件。"
+        ]
+      },
+      {
+        "heading": "国家、地区与边界",
+        "body": [
+          "地图还包括格陵兰、波多黎各、法属波利尼西亚等地区，因此统计总数可能高于大多数国家名单采用的 195 个国家。",
+          "边界数据来自 Natural Earth，比例尺为五千万分之一（1:50 million）。距离边界约一公里以内的轨迹点可能被归入邻国，而梵蒂冈等面积最小的国家可能被计入其周围的国家。"
+        ]
+      },
+      {
+        "heading": "让地图不断添上新足迹",
+        "body": [
+          "此工具展示您拖入文件中的旅行足迹。[Dawarich](/statistics/) 则能根据您的完整位置历史生成地图，并随您的旅行持续更新：按年统计到访的国家和城市，用日历查看每天身在何处，还能回顾对应的行程。"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "这个工具免费吗？",
+        "a": "是的。它在您的浏览器中运行，没有使用限制，也无需账号。"
+      },
+      {
+        "q": "我的文件会被上传吗？",
+        "a": "不会。文件只在您的设备上读取，绝不会离开设备。"
+      },
+      {
+        "q": "为什么少了我去过的某个国家？",
+        "a": "文件中可能没有那次行程的轨迹点，例如当时关闭了位置历史。边界附近非常短暂的停留也可能被归入邻国。"
+      },
+      {
+        "q": "为什么统计总数可能超过 195？",
+        "a": "格陵兰或波多黎各等地区会单独计数，这也符合旅行者通常的统计方式。"
+      },
+      {
+        "q": "停留天数如何计算？",
+        "a": "在同一个 UTC 自然日内，只要您在某个国家有至少一个轨迹点，该国家就会计入一天。因此，如果您当天跨越边界，这一天会同时计入两个国家。"
+      }
+    ]
+  }
+}

@@ -415,6 +415,11 @@
       "href": "/statistics/",
       "label": "Dawarich Statistics",
       "note": "Persistent dashboards"
+    },
+    {
+      "href": "/tools/visited-countries-map/",
+      "label": "Visited Countries Map",
+      "note": "Every country you've been to"
     }
   ],
   "timeline-mileage-calculator": [
@@ -483,6 +488,11 @@
       "href": "/tools/map-poster-maker/",
       "label": "Map Poster Maker",
       "note": "Same file, printable poster"
+    },
+    {
+      "href": "/tools/visited-countries-map/",
+      "label": "Visited Countries Map",
+      "note": "Every country you've been to"
     }
   ],
   "map-poster-maker": [
@@ -539,6 +549,28 @@
       "href": "/docs/tools/phototagger/",
       "label": "PhotoTagger CLI",
       "note": "Bulk geotagging on the command line"
+    }
+  ],
+  "visited-countries-map": [
+    {
+      "href": "/tools/timeline-statistics/",
+      "label": "Timeline Statistics",
+      "note": "Distance, places and yearly trends"
+    },
+    {
+      "href": "/tools/heatmap-generator/",
+      "label": "Heatmap Generator",
+      "note": "Where you spend your time"
+    },
+    {
+      "href": "/tax-residency/",
+      "label": "Tax Residency Day Counter",
+      "note": "Days per country, 183-day rule"
+    },
+    {
+      "href": "/statistics/",
+      "label": "Countries in Dawarich",
+      "note": "Your map, kept up to date"
     }
   ]
 }

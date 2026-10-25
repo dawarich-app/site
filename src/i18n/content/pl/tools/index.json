@@ -65,6 +65,10 @@
     {
       "title": "Kreator filmów z trasą",
       "description": "Zamień dowolną trasę GPS w animowany film MP4, który możesz udostępnić — trasa stopniowo pojawia się na mapie o wybranym stylu."
+    },
+    {
+      "title": "Mapa odwiedzonych krajów",
+      "description": "Zobacz wszystkie odwiedzone przez Ciebie kraje na mapie utworzonej z Twoich plików Google Timeline lub GPS."
     }
   ],
   "converters": [

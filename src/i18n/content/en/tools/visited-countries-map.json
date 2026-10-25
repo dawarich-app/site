@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "title": "Visited Countries Map From Your Location History",
+    "description": "See every country you've been to on one map, built from your Google Timeline, GPX or KML files, with days per country. Free and private, in your browser.",
+    "keywords": "visited countries map, countries visited map, where have I been map, Google Timeline countries, travel map, countries I've been to"
+  },
+  "h1": "Visited Countries Map",
+  "intro": "Drop in your Google Timeline or GPS files and watch the world fill in: every country you've been to, coloured on the map, with the days you spent in each.",
+  "upload": {
+    "title": "Upload your location history",
+    "dropFiles": "Drop files here or click to choose",
+    "formats": "Google Timeline JSON, GPX, KML, KMZ, GeoJSON, FIT, TCX",
+    "inputLabel": "Choose location history files",
+    "processing": "Finding your countries…",
+    "clear": "Clear"
+  },
+  "results": {
+    "count": "{count} country or territory|{count} countries and territories",
+    "empty": "No countries found in these files. Try a file with more points, or a Google Timeline export.",
+    "days": "{count} day|{count} days",
+    "points": "{count} point|{count} points",
+    "continentsTitle": "By continent",
+    "listTitle": "Your countries",
+    "dates": "{first} – {last}"
+  },
+  "continents": {
+    "Africa": "Africa",
+    "Antarctica": "Antarctica",
+    "Asia": "Asia",
+    "Europe": "Europe",
+    "North America": "North America",
+    "Oceania": "Oceania",
+    "South America": "South America",
+    "Seven seas (open ocean)": "Remote islands"
+  },
+  "parseError": "Could not read {fileName}: {message}",
+  "loadError": "Could not load the country borders. Check your connection and try again.",
+  "loadingMap": "Loading map…",
+  "privacy": "Your files are read in your browser. Nothing is uploaded.",
+  "credit": "Country borders: [Natural Earth](https://www.naturalearthdata.com/), public domain.",
+  "cta": "You've been to **{count}** countries and territories. Dawarich keeps this map growing on its own as you travel.",
+  "guide": {
+    "sections": [
+      {
+        "heading": "How the map knows where you've been",
+        "body": [
+          "Every point in your file is checked against the borders of 240 countries and territories. Points that fall just off a coastline — a harbour, a beach, a ferry — count for the nearest country, so trips by the sea are not lost.",
+          "If your points have timestamps, each country also gets the number of different days you were there, counted in UTC, plus the first and last date."
+        ]
+      },
+      {
+        "heading": "Get your location history",
+        "body": [
+          "From Google: export Timeline from the Google Maps app on your phone, or use an older Records.json or Semantic Location History file from Google Takeout. Both work here.",
+          "From other apps: GPX files from Strava, Garmin, Komoot and most tracking apps, KML or KMZ from Google Earth, FIT and TCX from sports watches, and GeoJSON. You can drop several files at once."
+        ]
+      },
+      {
+        "heading": "Countries, territories and borders",
+        "body": [
+          "The map includes territories such as Greenland, Puerto Rico or French Polynesia, so the count can be higher than the 195 countries most lists use.",
+          "Borders come from Natural Earth at 1:50 million scale. Within about a kilometre of a border a point can land in the neighbouring country, and the smallest states, such as the Vatican, may count as the country around them."
+        ]
+      },
+      {
+        "heading": "Keep your map growing",
+        "body": [
+          "This tool shows what is in the files you drop in. [Dawarich](/statistics/) does the same with your whole location history and keeps it up to date as you travel: countries and cities per year, a calendar of where you were each day, and the trips behind it."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is this tool free?",
+        "a": "Yes. It runs in your browser, has no limits and needs no account."
+      },
+      {
+        "q": "Are my files uploaded?",
+        "a": "No. Your files are read on your device and never leave it."
+      },
+      {
+        "q": "Why is a country I visited missing?",
+        "a": "The file may not contain points from that trip, for example if location history was off. Very short stops near a border can also land in the neighbouring country."
+      },
+      {
+        "q": "Why can my count be higher than 195?",
+        "a": "Territories such as Greenland or Puerto Rico are counted separately, the way travellers usually count them."
+      },
+      {
+        "q": "How are days counted?",
+        "a": "A day counts for every country you have at least one point in on that UTC calendar day, so a day with a border crossing counts for both countries."
+      }
+    ]
+  }
+}
