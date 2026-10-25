@@ -39,7 +39,7 @@ export default function AboutPage() {
         <meta name="twitter:url" content={pageUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={content.meta.title} />
+        <meta property="og:title" content={`${content.meta.title} | Dawarich`} />
         <meta
           property="og:description"
           content={content.meta.ogDescription}
@@ -49,7 +49,7 @@ export default function AboutPage() {
           content="https://dawarich.app/img/meta-image.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={content.meta.title} />
+        <meta name="twitter:title" content={`${content.meta.title} | Dawarich`} />
         <meta
           name="twitter:description"
           content={content.meta.ogDescription}

@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Photo Geodata Extraction - Extract GPS Data from Photos",
-    "description": "Free, privacy-first tool to extract GPS coordinates from your photos and export them as GPX files. All data processing happens in your browser - no data is sent to any server.",
-    "keywords": "photo geodata extraction, GPS, EXIF, geolocation, GPX export, photo location, privacy-first, image metadata",
+    "title": "Get Location From a Photo — Free GPS Extractor",
+    "description": "Find where a photo was taken: read GPS coordinates from photo EXIF data, see them on a map and export a GPX file. Free, runs in your browser.",
+    "keywords": "get location from photo, find where a photo was taken, photo GPS location, EXIF GPS viewer, photo geotag, extract GPS from photos, GPX export",
     "featureList": [
       "Extract GPS data from photos",
       "Interactive map with photo markers",
@@ -11,8 +11,8 @@
       "No data sent to servers"
     ]
   },
-  "h1": "Photo Geodata Extraction",
-  "intro": "Upload your photos to extract GPS coordinates from EXIF metadata, visualize them on a map, and export as GPX files.",
+  "h1": "Get the Location From a Photo",
+  "intro": "Find out where a photo was taken: read the GPS coordinates stored in its EXIF data, see every spot on a map and export them as a GPX file.",
   "exportButton": "Export as GPX",
   "emptyExport": "No photos with GPS data to export",
   "gpsPhotosLabel": "photos with GPS",

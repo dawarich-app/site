@@ -1,0 +1,53 @@
+{
+  "sections": [
+    {
+      "heading": "How to find where a photo was taken",
+      "body": [
+        "Most phones save the place a photo was taken inside the image file, in its EXIF metadata: latitude and longitude, often altitude and the direction the camera faced. Drop the photo into the tool above. If the file carries GPS data, the spot appears on the map with coordinates you can copy or export.",
+        "You can also check on your own devices. On an iPhone, open the photo in Photos and swipe up to see the map. In Google Photos, open the photo and swipe up or tap the info icon. On Windows, right-click the file, choose Properties and open the Details tab. On a Mac, open the photo in Preview and choose Tools → Show Inspector."
+      ]
+    },
+    {
+      "heading": "Why some photos have no location",
+      "body": [
+        "A phone only saves the location when the camera app is allowed to use it: on an iPhone under Settings → Privacy & Security → Location Services → Camera, on Android in the camera settings, usually called location tags or save location.",
+        "Location is also lost on the way. Messaging apps and social networks usually strip it from photos you send or post, screenshots never have it, and some editors drop it when they export a copy. Standalone cameras only add coordinates if they have built-in GPS or are paired with a phone."
+      ]
+    },
+    {
+      "heading": "Turn photo locations into a trip map",
+      "body": [
+        "Exporting to GPX gives you one waypoint per photo, named after the file. It is a quick way to rebuild where you went on a trip you did not record: open the GPX in Google Earth, Garmin BaseCamp or any GPS app.",
+        "Dawarich can do this continuously: it reads photo locations from Immich and PhotoPrism and shows them on your map and in your trips, next to your recorded tracks."
+      ]
+    },
+    {
+      "heading": "Check before you share",
+      "body": [
+        "The location inside a photo can reveal where you live or where your children go to school. Before posting a photo publicly, drop it here to see what it gives away. This tool reads the file in your browser, so checking a photo does not share it with anyone."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can I find the location of any photo?",
+      "a": "Only if the file still contains GPS data. Photos taken with location turned off, screenshots and most images downloaded from social networks have none, and there is no reliable way to recover it from the picture itself."
+    },
+    {
+      "q": "Does it work with iPhone HEIC photos?",
+      "a": "Yes. The tool reads EXIF data from HEIC as well as JPEG and PNG files."
+    },
+    {
+      "q": "How accurate is the location stored in a photo?",
+      "a": "It is the position the phone knew when you took the picture. Outdoors that is usually within a few metres; indoors or in dense cities it can be off by tens of metres."
+    },
+    {
+      "q": "Can I remove the location from my photos?",
+      "a": "Yes. On an iPhone, tap Options in the share sheet and switch Location off before sending. Many Android galleries and Google Photos also offer to remove location when you share or edit a photo."
+    },
+    {
+      "q": "Are my photos uploaded to a server?",
+      "a": "No. Your photos are read in your browser and never leave your device. Only the GPX file you export is saved, and only on your computer."
+    }
+  ]
+}

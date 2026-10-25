@@ -164,6 +164,16 @@ export async function toKMZ(points, metadata = {}) {
   return await zip.generateAsync({ type: 'blob' });
 }
 
+export async function kmlToKmz(kmlText) {
+  const doc = new DOMParser().parseFromString(kmlText, 'text/xml');
+  if (doc.querySelector('parsererror') || doc.documentElement.localName !== 'kml') {
+    throw new Error('Not a KML file');
+  }
+  const zip = new JSZip();
+  zip.file('doc.kml', kmlText);
+  return await zip.generateAsync({ type: 'blob', compression: 'DEFLATE' });
+}
+
 /**
  * Parse KMZ file (extract KML from zip)
  */

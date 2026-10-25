@@ -7,10 +7,11 @@ import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
 import content from '@locale-content/tools/kml-to-kmz.json';
 import shared from '@locale-content/shared/converter.json';
 import FormatConverter from '@site/src/components/FormatConverter';
-import { parseKML } from '@site/src/utils/formatParsers';
-import { toKMZ } from '@site/src/utils/formatConverters';
+import { kmlToKmz } from '@site/src/utils/formatConverters';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import RelatedTools from '@site/src/components/RelatedTools';
+import ToolGuide from '@site/src/components/ToolGuide';
+import toolGuideContent from '@locale-content/tool-guides/kml-to-kmz.json';
 import styles from './converter.module.css';
 
 const imageUrl = "https://dawarich.app/img/meta-image.png";
@@ -25,9 +26,7 @@ export default function KMLToKMZ() {
     setConverted(false);
 
     try {
-      const text = await file.text();
-      const points = parseKML(text);
-      const kmzBlob = await toKMZ(points, { name: file.name.replace(/\.kml$/i, '') });
+      const kmzBlob = await kmlToKmz(await file.text());
 
       const url = URL.createObjectURL(kmzBlob);
       const a = document.createElement('a');
@@ -125,7 +124,8 @@ export default function KMLToKMZ() {
           />
         </div>
       </div>
-        <RelatedTools slug="kml-to-kmz" />
+        <ToolGuide slug="kml-to-kmz" title={content.h1} content={toolGuideContent} />
+      <RelatedTools slug="kml-to-kmz" />
       </main>
     </Layout>
   );

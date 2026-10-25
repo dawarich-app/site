@@ -11,7 +11,7 @@ import styles from './ToolGuide.module.css';
 // Props:
 //   slug:    tool slug (used in BreadcrumbList)
 //   title:   page H1, also used as breadcrumb leaf
-//   content: { whenToConvert, preservation, apps, example, reference, faqs }
+//   content: { whenToConvert, preservation, apps, example, sections, reference, faqs }
 export default function ToolGuide({ slug, title, content }) {
   const homeUrl = useLocalizedUrl('/');
   const toolsUrl = useLocalizedUrl('/tools/');
@@ -113,6 +113,13 @@ export default function ToolGuide({ slug, title, content }) {
             </div>
           </section>
         )}
+
+        {content.sections && content.sections.map((section) => (
+          <section key={section.heading}>
+            <h2>{section.heading}</h2>
+            {section.body.map((p, i) => <p key={i}>{p}</p>)}
+          </section>
+        ))}
 
         {content.reference && (
           <section>

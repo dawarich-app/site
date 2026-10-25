@@ -43,4 +43,14 @@ describe('ToolGuide', () => {
       ['GPX to KML Converter', 'https://dawarich.app/tools/gpx-to-kml/'],
     ]);
   });
+
+  it('should render free-form sections with their own headings', () => {
+    render(<ToolGuide slug="photo-geotagging" title="Photos" content={{ sections: [
+      { heading: 'Where photos keep their location', body: ['First paragraph.', 'Second paragraph.'] },
+      { heading: 'Privacy', body: ['Third paragraph.'] },
+    ] }} />);
+    expect(screen.getByRole('heading', { level: 2, name: 'Where photos keep their location' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 2, name: 'Privacy' })).toBeInTheDocument();
+    expect(screen.getByText('Second paragraph.').tagName).toBe('P');
+  });
 });

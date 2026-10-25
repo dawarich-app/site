@@ -8,8 +8,8 @@
   "homeLabel": "Home",
   "toolsLabel": "Free Tools",
   "meta": {
-    "title": "Google Timeline Format Detector - Identify Your Location Export File Type",
-    "description": "Free tool to detect your Google Timeline export format. Upload any Google Takeout location file to instantly see the format name, point count, date range, file size, and data quality. All processing in your browser.",
+    "title": "Google Timeline Format Detector — Free Tool",
+    "description": "Find out which Google Timeline export you have: format name, point count, date range, file size and data quality. Free, runs in your browser.",
     "keywords": "google timeline format, what format is my google export, google takeout location file type, google location history format, google timeline file detector, google maps timeline export format, google takeout json format, location history file type, google timeline data format, identify google export file",
     "featureList": [
       "Detect Google Timeline export format instantly",

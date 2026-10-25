@@ -8,6 +8,8 @@ import { extractPhotoGeodata } from '@site/src/utils/exifParser';
 import { generateGPX } from '@site/src/utils/gpxGenerator';
 import PersonalizedCTA from '@site/src/components/PersonalizedCTA';
 import RelatedTools from '@site/src/components/RelatedTools';
+import ToolGuide from '@site/src/components/ToolGuide';
+import toolGuideContent from '@locale-content/tool-guides/photo-geotagging.json';
 import { interpolate } from '@docusaurus/Interpolate';
 import RichText from '@site/src/i18n/RichText';
 import { useLocalizedUrl } from '@site/src/i18n/useLocalizedUrl';
@@ -243,6 +245,7 @@ export default function PhotoGeotagging() {
           </div>
         </div>
       </div>
+        <ToolGuide slug="photo-geotagging" title={content.h1} content={toolGuideContent} />
         <RelatedTools slug="photo-geotagging" />
       </main>
     </Layout>

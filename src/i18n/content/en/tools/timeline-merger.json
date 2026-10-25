@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Google Timeline Data Merger - Combine Location History Exports",
-    "description": "Free tool to merge multiple Google Timeline exports into one file. Smart deduplication removes overlapping data points. Combine Records.json, Semantic History, and phone exports. Privacy-first.",
+    "title": "Google Timeline Merger — Combine Exports",
+    "description": "Merge several Google Timeline exports into one file and remove duplicate points. Combines Records.json, Semantic History and phone exports. Free.",
     "keywords": "merge google timeline exports, combine location history files, google timeline data recovery, merge Records.json, combine Google Takeout location, merge semantic location history, Google Timeline merger, location history deduplication, merge GPS data",
     "featureList": [
       "Merge multiple Google Timeline exports into one file",
