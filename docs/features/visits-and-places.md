@@ -60,7 +60,7 @@ Places can also come from a file you import. Waypoints in a GPX file — for exa
 - To rename a place or change its Visit Radius, click it on the map and choose **Edit**.
 - To merge a duplicate, open the place on the Places page and pick the duplicate. Merging moves the duplicate's visits, tags and notes to the place you opened.
 - Deleting a place keeps its visits; they just lose the attached place.
-- To be notified when you arrive or leave, turn on **Notify on enter and leave** in the place's details. See [Geofencing](/docs/features/geofencing).
+- To record when you arrive or leave, and send it to your own services, turn on **Notify on enter and leave** in the place's details. See [Geofencing](/docs/features/geofencing).
 - An automatically found place is deleted on its own once no visit uses it any more, unless you renamed it, gave it a tag or note, or turned on **Notify on enter and leave**. Places you created or imported are never deleted automatically.
 
 ### Home Location

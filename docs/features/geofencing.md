@@ -13,7 +13,7 @@ Dawarich can record when you enter or leave a [Place](/docs/features/visits-and-
 1. Open the place from the **Places** page.
 2. Turn on **Notify on enter and leave**.
 
-The place's **Visit Radius** is its boundary. To make the area larger or smaller, change the Visit Radius (up to 50 km). Places that were Areas before 1.18.0 keep notifying.
+The place's **Visit Radius** is its boundary. To make the area larger or smaller, change the Visit Radius (up to 50 km). Places made from your Areas when you upgrade to 1.18.0 have it turned on already.
 
 ## How events are detected
 
