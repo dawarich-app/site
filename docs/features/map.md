@@ -61,9 +61,9 @@ Shows individual GPS points on the map as markers.
 
 ![Points](images/map-points.webp)
 
-### Polylines (Routes)
+### Tracks
 
-Displays your routes connecting GPS points. Routes are automatically generated based on your configured time and distance thresholds.
+Displays your tracks connecting GPS points. Dawarich builds tracks on the server, starting a new one when the time or distance gap set under **Settings → Track generation** is exceeded.
 
 ![Polylines](images/map-polylines.webp)
 
@@ -79,9 +79,9 @@ Shows unexplored areas as "fog," revealing only the regions you've visited. Grea
 
 ![Fog of war](images/map-fog-of-war.webp)
 
-### Scratch Map
+### Visited Countries
 
-Highlights countries you've visited on a world map overlay.
+Highlights the countries you visited in the selected date range.
 
 ![Scratch map](images/map-scratch-map.webp)
 
@@ -90,6 +90,22 @@ Highlights countries you've visited on a world map overlay.
 Shows [custom areas](/docs/features/areas) you've drawn on the map. Also enables area drawing tools.
 
 ![Areas](images/map-areas.webp)
+
+### Flights
+
+Shows flights synced from [AirTrail](/docs/features/stats) as arcs, hiding the GPS points recorded during the flight.
+
+### Visits and Places
+
+**Visits** shows your detected and confirmed [visits](/docs/features/visits-and-places), with filters for confirmed or suggested ones. **Places** shows your saved places, filterable by name and tag.
+
+### Hexagons
+
+Shows point density as hexagonal cells.
+
+### Anomalies
+
+Shows the points hidden as GPS noise. Available while Points is on.
 
 ### Photos
 
@@ -116,49 +132,23 @@ Open **Tools** (`C`) to:
 
 ## Map Styles
 
-You can choose from multiple map styles:
+Choose a style under **Settings → Appearance → Map Style**: Light, Dark, White, Black, Grayscale or Custom. **Customize colors** changes individual map colors, and **Base Map Layers** switches roads, labels, buildings, points of interest and other base map elements on or off. Custom map colors and layer colors are Pro features; on the Lite plan you can preview them.
 
-- Light theme
-- Dark theme
-- Satellite imagery
-- Multiple style variations
+## Speed-Colored Tracks
 
-## Speed-Colored Routes
-
-Enable "Fancy Routes" or "Speed Colored Routes" in settings to color your routes based on speed:
-
-- **Green** - Slower speeds (walking, cycling)
-- **Yellow** - Medium speeds
-- **Red** - Higher speeds (driving)
-
-The color scale is customizable to match your typical travel speeds.
+Turn on **Color tracks by speed** under **Settings → Layer Colors** to color your tracks by speed, from slow (walking, cycling) to fast (driving). Use **Edit speed colors** to adjust the scale to your typical travel speeds.
 
 ## Globe View
 
-The map supports 3D globe rendering:
+Turn on **Globe View** under **Settings → Appearance** to render the map as a 3D globe instead of a flat projection. The change applies after the page reloads. Globe View is a Pro feature.
 
-1. Go to Settings
-2. Enable "Globe Projection"
-3. The map will render as a 3D globe instead of flat projection
+## Live Mode
 
-This provides a more realistic view when zoomed out and is particularly striking for visualizing global travel.
+Turn on **Live Mode** in Settings to show new points on the map as they are recorded.
 
-## Live Map Mode
+## Editing Points
 
-When enabled, Live Map Mode:
-- Automatically updates with new points as they're recorded
-- Centers the map on your most recent location
-- Useful for real-time tracking
-
-## Point Drag & Drop
-
-You can drag points to adjust their position:
-
-1. Enable point editing mode
-2. Click and drag a point to a new location
-3. The point's coordinates are updated
-
-This is useful for correcting GPS drift or inaccurate readings.
+To correct GPS drift or an inaccurate reading, open **Layers**, and in the Points options turn on **Edit points**. Then drag a point to its new position. Editing points is available on the Pro plan.
 
 ## Bulk Selection Tool
 
@@ -174,14 +164,17 @@ Open map settings with the **Settings** button (`S`) on the left edge of the map
 
 | Setting | Description |
 |---------|-------------|
-| Preferred Map Layer | Default map style |
-| Route Opacity | Transparency of route lines |
-| Fog of War Meters | Resolution of fog tiles |
-| Minutes Between Routes | Time gap to start a new route |
-| Meters Between Routes | Distance gap to start a new route |
-| Speed Colored Routes | Enable speed-based route coloring |
-| Globe Projection | Enable 3D globe view |
-| Live Map Enabled | Auto-update with new points |
+| Appearance | Map style, custom colors and Globe View |
+| Layer Colors | Track colors, Color tracks by speed and the speed color scale |
+| Distance Unit | Kilometers or miles |
+| Custom Basemap URL | Serve the base map from your own tile source |
+| Base Map Layers | Show or hide roads, labels, buildings, points of interest and other base map elements |
+| Track generation | Distance and time gaps that start a new track, and **Recalculate tracks & stats** |
+| Fog of War | Radius cleared around visited points, and the minimum number of points to clear fog |
+| GPS Noise Filtering | Hide readings that cannot be a real position, and re-evaluate past data |
+| City Statistics | How long you must stay in a city for it to count in statistics |
+| Live Mode | Show new points in real time |
+| Transportation Mode Detection | Which modes are detected, and re-classify your history |
 
 ## Search
 
