@@ -1,0 +1,53 @@
+{
+  "sections": [
+    {
+      "heading": "Como descobrir onde uma foto foi tirada",
+      "body": [
+        "A maioria dos celulares salva o local onde a foto foi tirada no próprio arquivo da imagem, nos metadados EXIF: latitude e longitude, muitas vezes a altitude e a direção para a qual a câmera apontava. Arraste a foto para a ferramenta acima. Se o arquivo tiver dados GPS, o local aparece no mapa com coordenadas que você pode copiar ou exportar.",
+        "Você também pode verificar nos seus próprios dispositivos. No iPhone, abra a foto no app Fotos e deslize para cima para ver o mapa. No Google Photos, abra a foto e deslize para cima ou toque no ícone de informações. No Windows, clique com o botão direito no arquivo, escolha Properties e abra a aba Details. No Mac, abra a foto no Preview e escolha Tools → Show Inspector."
+      ]
+    },
+    {
+      "heading": "Por que algumas fotos não têm localização",
+      "body": [
+        "O celular só salva a localização quando o app da câmera tem permissão para usá-la: no iPhone, em Settings → Privacy & Security → Location Services → Camera; no Android, nas configurações da câmera, geralmente em uma opção chamada tags de localização ou salvar localização.",
+        "A localização também pode se perder no caminho. Apps de mensagens e redes sociais costumam removê-la das fotos que você envia ou publica, capturas de tela nunca a incluem e alguns editores a descartam ao exportar uma cópia. Câmeras dedicadas só adicionam coordenadas se tiverem GPS integrado ou estiverem pareadas com um celular."
+      ]
+    },
+    {
+      "heading": "Transforme a localização das fotos em um mapa da viagem",
+      "body": [
+        "A exportação em GPX gera um ponto de referência por foto, com o nome do arquivo. É uma forma rápida de reconstruir por onde você passou em uma viagem que não gravou: abra o GPX no Google Earth, no Garmin BaseCamp ou em qualquer app de GPS.",
+        "O Dawarich pode fazer isso continuamente: ele lê a localização das fotos do Immich e do PhotoPrism e as mostra no seu mapa e nas suas viagens, junto dos trajetos gravados."
+      ]
+    },
+    {
+      "heading": "Verifique antes de compartilhar",
+      "body": [
+        "A localização em uma foto pode revelar onde você mora ou onde seus filhos estudam. Antes de postar uma foto publicamente, arraste-a aqui para ver o que ela revela. Esta ferramenta lê o arquivo no seu navegador, então verificar uma foto não a compartilha com ninguém."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Posso descobrir a localização de qualquer foto?",
+      "a": "Só se o arquivo ainda contiver dados GPS. Fotos tiradas com a localização desativada, capturas de tela e a maioria das imagens baixadas de redes sociais não têm esses dados, e não há uma forma confiável de recuperá-los pela imagem em si."
+    },
+    {
+      "q": "Funciona com fotos HEIC do iPhone?",
+      "a": "Sim. A ferramenta lê dados EXIF de arquivos HEIC, JPEG e PNG."
+    },
+    {
+      "q": "Qual é a precisão da localização salva em uma foto?",
+      "a": "É a posição que o celular conhecia quando você tirou a foto. Ao ar livre, a margem de erro costuma ser de poucos metros; em ambientes fechados ou cidades densas, pode chegar a dezenas de metros."
+    },
+    {
+      "q": "Posso remover a localização das minhas fotos?",
+      "a": "Sim. No iPhone, toque em Options na tela de compartilhamento e desative Location antes de enviar. Muitas galerias do Android e o Google Photos também oferecem a opção de remover a localização ao compartilhar ou editar uma foto."
+    },
+    {
+      "q": "Minhas fotos são enviadas para um servidor?",
+      "a": "Não. Suas fotos são lidas no navegador e nunca saem do seu dispositivo. Só o arquivo GPX que você exporta é salvo, e apenas no seu computador."
+    }
+  ]
+}

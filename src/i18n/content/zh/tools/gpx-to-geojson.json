@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "免费 GPX 转 GeoJSON 转换器 — 在线转换 GPS 轨迹文件",
-    "description": "立即将 GPX 文件转换为 GeoJSON 格式。免费、隐私优先的在线 GPS 轨迹、航点和路线转换器，完全在浏览器中运行，无需上传。",
+    "title": "GPX 转 GeoJSON 转换器 — 免费 GPS 转换工具",
+    "description": "将 GPX 轨迹、航点和路线转换为 GeoJSON。免费、隐私优先，完全在您的浏览器中运行，无需上传。",
     "keywords": "GPX 转 GeoJSON, GPX 转换器, GeoJSON 转换器, GPS 文件转换器, 轨迹转换器, 航点转换器, 路线转换器, GPX 解析器",
     "appName": "GPX 转 GeoJSON 转换器"
   },

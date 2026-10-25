@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Conversor grátis de GPX para GeoJSON — Trajetos GPS online",
-    "description": "Converta arquivos GPX para GeoJSON na hora. Conversor grátis e privado para trajetos, pontos de referência e rotas GPS. No navegador, sem enviar arquivos.",
+    "title": "GPX para GeoJSON — Conversor GPS grátis",
+    "description": "Converta trajetos, pontos de referência e rotas GPX para GeoJSON. Conversor grátis com foco na privacidade. Tudo no navegador, sem enviar arquivos.",
     "keywords": "GPX para GeoJSON, conversor GPX, conversor GeoJSON, conversor de arquivos GPS, conversor de trajetos, conversor de pontos de referência, conversor de rotas, analisador GPX",
     "appName": "Conversor de GPX para GeoJSON"
   },

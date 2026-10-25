@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Darmowy konwerter FIT na GeoJSON — pliki Garmin online",
-    "description": "Konwertuj pliki Garmin FIT na GeoJSON od ręki. Darmowy konwerter online aktywności fitness, idealny do map internetowych. Prywatnie, w całości w przeglądarce.",
+    "title": "FIT na GeoJSON — darmowy konwerter Garmin",
+    "description": "Konwertuj pliki aktywności Garmin FIT na GeoJSON do map internetowych. Darmowy, prywatny konwerter działa w całości w przeglądarce, bez przesyłania.",
     "keywords": "FIT na GeoJSON, Garmin na GeoJSON, konwerter FIT, konwerter plików fitness, konwerter GeoJSON, mapy internetowe, Leaflet, Mapbox",
     "appName": "Konwerter FIT na GeoJSON"
   },

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "GPS File Splitter - Split Large GPX, GeoJSON, KML & JSON Files",
-    "description": "Free tool to split large GPS and location files into smaller chunks. Split GPX, GeoJSON, KML, KMZ, and Google Timeline JSON by size, point count, or date. Download as ZIP. Privacy-first — runs in your browser.",
+    "title": "GPS File Splitter — Split GPX, KML and GeoJSON",
+    "description": "Split large GPX, GeoJSON, KML, KMZ and Google Timeline files by size, point count or date and download them as a ZIP. Free, runs in your browser.",
     "keywords": "split large GPX file, split geojson into parts, split KML file, reduce GPS file size, split large JSON location file, GPS file splitter, split google timeline",
     "featureList": [
       "Split large GPS files into smaller chunks",

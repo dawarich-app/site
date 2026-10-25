@@ -177,7 +177,7 @@
   ],
   "meta": {
     "title": "Location Tracking Setup",
-    "description": "Track your location automatically with multiple supported apps including the official Dawarich iOS and Android apps, Overland, OwnTracks, GPSLogger, PhoneTrack, and Home Assistant.",
+    "description": "Track your location automatically with the Dawarich iOS and Android apps, or with Overland, OwnTracks, GPSLogger, PhoneTrack or Home Assistant.",
     "ogTitle": "Dawarich Location Tracking — Multiple Apps Supported",
     "ogDescription": "Set up automatic location tracking with the official Dawarich iOS or Android app, Overland, OwnTracks, GPSLogger, PhoneTrack, or Home Assistant integration."
   },

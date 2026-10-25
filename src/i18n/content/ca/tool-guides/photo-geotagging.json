@@ -1,0 +1,53 @@
+{
+  "sections": [
+    {
+      "heading": "Com saber on es va fer una foto",
+      "body": [
+        "La majoria de telèfons desen el lloc on es va fer una foto dins del fitxer d’imatge, a les metadades EXIF: latitud i longitud, i sovint l’altitud i la direcció cap a on apuntava la càmera. Arrossega la foto a l’eina de més amunt. Si el fitxer conté dades GPS, el lloc apareix al mapa amb coordenades que pots copiar o exportar.",
+        "També ho pots comprovar als teus dispositius. En un iPhone, obre la foto a Photos i llisca cap amunt per veure el mapa. A Google Photos, obre la foto i llisca cap amunt o toca la icona d’informació. A Windows, fes clic dret al fitxer, tria Properties i obre la pestanya Details. En un Mac, obre la foto a Preview i tria Tools → Show Inspector."
+      ]
+    },
+    {
+      "heading": "Per què algunes fotos no tenen ubicació",
+      "body": [
+        "El telèfon només desa la ubicació si l’aplicació de càmera té permís per fer-la servir: en un iPhone, a Settings → Privacy & Security → Location Services → Camera; a Android, a la configuració de la càmera, normalment amb el nom d’etiquetes d’ubicació o desar ubicació.",
+        "La ubicació també es perd pel camí. Les aplicacions de missatgeria i les xarxes socials solen eliminar-la de les fotos que envies o publiques, les captures de pantalla no en tenen mai i alguns editors l’eliminen quan exporten una còpia. Les càmeres independents només afegeixen coordenades si tenen GPS integrat o estan vinculades a un telèfon."
+      ]
+    },
+    {
+      "heading": "Converteix les ubicacions de les fotos en un mapa del viatge",
+      "body": [
+        "L’exportació a GPX et dona un punt de pas per foto, amb el nom del fitxer. És una manera ràpida de reconstruir per on vas anar en un viatge que no vas registrar: obre el GPX a Google Earth, Garmin BaseCamp o qualsevol aplicació GPS.",
+        "Dawarich ho pot fer de manera contínua: llegeix les ubicacions de les fotos d’Immich i PhotoPrism i les mostra al mapa i als teus viatges, al costat dels trajectes registrats."
+      ]
+    },
+    {
+      "heading": "Comprova-ho abans de compartir",
+      "body": [
+        "La ubicació dins d’una foto pot revelar on vius o a quina escola van els teus fills. Abans de publicar una foto públicament, arrossega-la aquí per veure què revela. Aquesta eina llegeix el fitxer al navegador, de manera que comprovar una foto no implica compartir-la amb ningú."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Puc trobar la ubicació de qualsevol foto?",
+      "a": "Només si el fitxer encara conté dades GPS. Les fotos fetes amb la ubicació desactivada, les captures de pantalla i la majoria d’imatges baixades de les xarxes socials no en tenen, i no hi ha cap manera fiable de recuperar-les a partir de la imatge mateixa."
+    },
+    {
+      "q": "Funciona amb fotos HEIC d’iPhone?",
+      "a": "Sí. L’eina llegeix dades EXIF de fitxers HEIC, i també de JPEG i PNG."
+    },
+    {
+      "q": "Quina precisió té la ubicació desada en una foto?",
+      "a": "És la posició que el telèfon coneixia quan vas fer la foto. A l’exterior, l’error sol ser d’uns pocs metres; a l’interior o en ciutats denses, pot ser de desenes de metres."
+    },
+    {
+      "q": "Puc eliminar la ubicació de les meves fotos?",
+      "a": "Sí. En un iPhone, toca Options al full per compartir i desactiva Location abans d’enviar-la. Moltes galeries d’Android i Google Photos també permeten eliminar la ubicació quan comparteixes o edites una foto."
+    },
+    {
+      "q": "Es pugen les meves fotos a un servidor?",
+      "a": "No. Les fotos es llegeixen al navegador i no surten mai del dispositiu. Només es desa el fitxer GPX que exportes, i només al teu ordinador."
+    }
+  ]
+}

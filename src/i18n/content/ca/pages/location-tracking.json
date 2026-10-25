@@ -177,7 +177,7 @@
   ],
   "meta": {
     "title": "Configura el seguiment d’ubicació",
-    "description": "Registra ubicacions amb Dawarich per a iOS i Android, Overland, OwnTracks, GPSLogger, PhoneTrack i Home Assistant. Seguiment automàtic.",
+    "description": "Registra la ubicació automàticament amb Dawarich per a iOS i Android, o amb Overland, OwnTracks, GPSLogger, PhoneTrack o Home Assistant.",
     "ogTitle": "Seguiment d’ubicació de Dawarich — Diverses aplicacions compatibles",
     "ogDescription": "Configura el seguiment automàtic amb Dawarich per a iOS o Android, Overland, OwnTracks, GPSLogger, PhoneTrack o la integració de Home Assistant."
   },

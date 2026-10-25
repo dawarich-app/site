@@ -105,7 +105,7 @@ export default function Home() {
 				{/* Open Graph / Facebook */}
 				<meta property="og:type" content="website" />
 				<meta property="og:url" content={pageUrl} />
-				<meta property="og:title" content={content.meta.title} />
+				<meta property="og:title" content={`${content.meta.title} | Dawarich`} />
 				<meta
 					property="og:description"
 					content={content.meta.socialDescription}
@@ -120,7 +120,7 @@ export default function Home() {
 				<meta name="twitter:url" content={pageUrl} />
 				<meta
 					name="twitter:title"
-					content={content.meta.title}
+					content={`${content.meta.title} | Dawarich`}
 				/>
 				<meta
 					name="twitter:description"

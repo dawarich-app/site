@@ -261,11 +261,11 @@
   },
   "link.item.label.Affiliate Program": {
     "message": "Programme d’affiliation",
-    "description": "The label of footer link with label=Affiliate Program linking to /affiliate"
+    "description": "The label of footer link with label=Affiliate Program linking to pathname:///affiliate/"
   },
   "link.item.label.Press Kit": {
     "message": "Dossier de presse",
-    "description": "The label of footer link with label=Press Kit linking to /press-kit"
+    "description": "The label of footer link with label=Press Kit linking to pathname:///press-kit/"
   },
   "link.item.label.Cookie Settings": {
     "message": "Paramètres des cookies",

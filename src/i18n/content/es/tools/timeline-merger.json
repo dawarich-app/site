@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Google Timeline (Cronología de Google Maps): une exportaciones",
-    "description": "Une exportaciones de Google Timeline en un archivo: Records.json, Semantic History y del móvil. Quita puntos solapados de forma inteligente. Gratis y privado.",
+    "title": "Google Timeline — Unir exportaciones",
+    "description": "Une exportaciones de Google Timeline (Cronología de Google Maps) en un archivo sin duplicados: Records.json, Semantic History y del móvil. Gratis.",
     "keywords": "combinar exportaciones de Google Timeline, unir archivos de historial de ubicaciones, recuperar datos de Google Timeline, combinar Records.json, combinar ubicaciones de Google Takeout, combinar Semantic Location History, combinador de Google Timeline, eliminar duplicados del historial de ubicaciones, combinar datos GPS",
     "featureList": [
       "Combina varias exportaciones de Google Timeline en un archivo",

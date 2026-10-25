@@ -8,8 +8,8 @@
   "toolsLabel": "Eines gratuïtes",
   "loadingMap": "S'està carregant el mapa…",
   "meta": {
-    "title": "Torna a veure Google Timeline (Cronologia de Google Maps) al web",
-    "description": "Google va retirar la línia de temps del web. Recupera'n la vista gratis: carrega l'exportació de Takeout i consulta l'historial en un mapa al navegador.",
+    "title": "Torna a veure Google Timeline al web",
+    "description": "Google va retirar la Cronologia de Google Maps del web. Consulta gratis l'historial d'ubicacions en un mapa al navegador carregant l'exportació de Takeout.",
     "keywords": "visualitzador de Google Timeline, Google Timeline desaparegut, on és el meu Google Timeline, veure Google Timeline al web, historial de Google Timeline, visor de l'historial d'ubicacions de Google, visor d'ubicacions de Google Takeout, veure historial d'ubicacions en un mapa, substitut de Google Maps Timeline, alternativa al tancament de Google Timeline, mapa d'historial d'ubicacions, visor d'exportacions de Google Timeline, visualitzador d'ubicacions amb privacitat",
     "featureList": [
       "Visualitza dades de Google Timeline en un mapa interactiu",

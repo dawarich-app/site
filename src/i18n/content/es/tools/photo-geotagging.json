@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Extrae geodatos y coordenadas GPS de tus fotos",
-    "description": "Herramienta gratuita y privada para extraer coordenadas GPS de tus fotos y exportarlas como GPX. Todo se procesa en tu navegador, sin enviar datos a servidores.",
-    "keywords": "extracción de geodatos de fotos, GPS, EXIF, geolocalización, exportar GPX, ubicación de fotos, privacidad, metadatos de imagen",
+    "title": "Ubicación de una foto — Extractor GPS gratis",
+    "description": "Descubre dónde se tomó una foto: lee coordenadas GPS de sus datos EXIF, ve su ubicación en un mapa y exporta un GPX. Gratis, en tu navegador.",
+    "keywords": "obtener ubicación de una foto, saber dónde se tomó una foto, ubicación GPS de fotos, visor EXIF GPS, geoetiqueta de foto, extraer GPS de fotos, exportar GPX",
     "featureList": [
       "Extrae datos GPS de fotos",
       "Mapa interactivo con marcadores de fotos",
@@ -11,8 +11,8 @@
       "No se envían datos a servidores"
     ]
   },
-  "h1": "Extracción de geodatos de fotos",
-  "intro": "Carga tus fotos para extraer coordenadas GPS de los metadatos EXIF, visualizarlas en un mapa y exportarlas como archivos GPX.",
+  "h1": "Obtén la ubicación de una foto",
+  "intro": "Descubre dónde se tomó una foto: lee las coordenadas GPS guardadas en sus datos EXIF, ve cada lugar en un mapa y expórtalos como archivo GPX.",
   "exportButton": "Exportar como GPX",
   "emptyExport": "No hay fotos con datos GPS para exportar",
   "gpsPhotosLabel": "fotos con GPS",

@@ -9,8 +9,8 @@
   "homeLabel": "Startseite",
   "toolsLabel": "Kostenlose Werkzeuge",
   "meta": {
-    "title": "Google Timeline/Google Maps Zeitachse: Fahr-km gratis berechnen",
-    "description": "Google-Timeline-Fahrstrecken gratis berechnen. Streckenprotokolle erstellen und CSV-Berichte für Steuerabzüge exportieren. Privat im Browser.",
+    "title": "Google Timeline: km-Rechner & Gratis-Fahrtenbuch",
+    "description": "Google Timeline (Google Maps Zeitachse): Fahr-km berechnen, Kilometerprotokoll erstellen, CSV-Berichte für Steuerabzüge exportieren. Gratis im Browser.",
     "keywords": "Google-Timeline-Kilometer, Kilometerrechner aus Standortverlauf, Fahrstrecke aus Google Maps, Streckenprotokoll Google Timeline, Kilometerrechner Steuer, Google-Maps-Kilometeraufzeichnung, IRS-Streckenprotokoll, Fahrstreckenrechner, Google-Timeline-Fahrstrecke, Fahrtkostenerstattung berechnen",
     "featureList": [
       "Gefahrene Kilometer aus Google-Timeline-Daten berechnen",

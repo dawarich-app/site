@@ -313,5 +313,10 @@
   "content:shared/tool-related-links.json:map-poster-maker.1.href",
   "content:shared/tool-related-links.json:route-video-maker.0.href",
   "content:shared/tool-related-links.json:route-video-maker.1.href",
-  "content:shared/tool-related-links.json:route-video-maker.2.href"
+  "content:shared/tool-related-links.json:route-video-maker.2.href",
+  "content:tool-guides/kml-to-kmz.json:apps.items.0.name",
+  "content:tool-guides/kml-to-kmz.json:apps.items.0.url",
+  "content:tool-guides/kml-to-kmz.json:apps.items.1.url",
+  "content:tool-guides/kml-to-kmz.json:apps.items.2.url",
+  "content:tool-guides/kml-to-kmz.json:apps.items.3.url"
 ]

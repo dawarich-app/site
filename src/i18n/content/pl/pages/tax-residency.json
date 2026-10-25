@@ -33,8 +33,8 @@
     }
   ],
   "meta": {
-    "title": "Automatyczny licznik dni rezydencji podatkowej — reguła 183 dni",
-    "description": "Licz dni spędzone w każdym kraju z własnej historii GPS: okresy ciągłego pobytu i ostrzeżenie o progu 183 dni. Dla cyfrowych nomadów, dojeżdżających przez granicę i podróżujących długoterminowo.",
+    "title": "Rezydencja podatkowa: licznik dni i próg 183 dni",
+    "description": "Licz dni spędzone w każdym kraju z własnej historii GPS: okresy pobytu i oznaczenie 183 dni. Dla cyfrowych nomadów i pracowników transgranicznych.",
     "ogTitle": "Licznik dni rezydencji podatkowej — reguła 183 dni z GPS",
     "ogDescription": "Dni w krajach z już zbieranej historii lokalizacji: okresy ciągłego pobytu i ostrzeżenie o progu 183 dni. Dane do ustalania rezydencji, nie porada podatkowa."
   },

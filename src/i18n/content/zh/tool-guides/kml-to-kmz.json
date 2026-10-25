@@ -1,0 +1,96 @@
+{
+  "whenToConvert": {
+    "subject": "KML 转 KMZ",
+    "body": [
+      "KML 和 KMZ 保存的是相同的地图数据。KML 是纯文本 XML 文件；KMZ 则是将该文件打包成 ZIP 压缩包。将 KML 转换为 KMZ，主要是为了缩小体积、方便分享：用一个小巧的文件代替庞大的文本文件。",
+      "常见原因包括：包含路线、一组地标或区域轮廓的 KML 文件太大，无法通过电子邮件发送；上传表单要求使用 KMZ；或者您想用更小的文件载入 Google Earth 或 Google My Maps。",
+      "此转换器将您的 KML 文件原样放入压缩包，转换过程中不会改写或丢弃任何内容。"
+    ]
+  },
+  "preservation": {
+    "intro": "在此生成的 KMZ 以 doc.kml 为文件名保存您的原始 KML，逐字节保持一致：",
+    "rows": [
+      {
+        "field": "地标、路径和多边形",
+        "preserved": "✅ 是",
+        "notes": "所有几何图形均保持原样，包括由多个部分组成的图形。"
+      },
+      {
+        "field": "样式、颜色和图标",
+        "preserved": "✅ 是",
+        "notes": "样式定义保留在 KML 中。通过网址引用的图标仍可正常使用。"
+      },
+      {
+        "field": "文件夹、名称和描述",
+        "preserved": "✅ 是",
+        "notes": "文件夹树形结构和所有文本保持不变。"
+      },
+      {
+        "field": "时间戳和扩展数据",
+        "preserved": "✅ 是",
+        "notes": "保留 TimeStamp、TimeSpan 和 ExtendedData。"
+      },
+      {
+        "field": "与 KML 放在一起的本地图像文件",
+        "preserved": "⚠️ 否",
+        "notes": "仅打包 KML 文件。以独立文件保存在您电脑上的图标或叠加层不会被加入压缩包。"
+      }
+    ]
+  },
+  "apps": {
+    "intro": "支持 KML 的应用也支持 KMZ。以下应用可直接打开 KMZ：",
+    "items": [
+      {
+        "name": "Google Earth Pro",
+        "url": "https://www.google.com/earth/about/versions/",
+        "note": "选择 File → Open，或将 KMZ 拖到地球仪上。"
+      },
+      {
+        "name": "Google Earth 网页版",
+        "url": "https://earth.google.com/web/",
+        "note": "将电脑上的 KMZ 导入项目。"
+      },
+      {
+        "name": "Google My Maps",
+        "url": "https://www.google.com/maps/d/",
+        "note": "创建地图，然后在图层中选择 Import。"
+      },
+      {
+        "name": "QGIS",
+        "url": "https://qgis.org/",
+        "note": "将 KMZ 添加为矢量图层。"
+      }
+    ]
+  },
+  "reference": {
+    "heading": "KML 与 KMZ 有何区别？",
+    "body": [
+      "KML（Keyhole Markup Language）是一种用于地理数据的 XML 文本格式，可包含地标、线条、多边形、样式和描述。您可以用任何文本编辑器打开它。自 2008 年起，它已成为开放地理空间联盟的标准。",
+      "KMZ 是用 ZIP 压缩的 KML 文件。压缩包内有一个主 KML 文件，通常名为 doc.kml，也可以包含它所使用的图像和 3D 模型。由于 KML 是较为冗长的 XML，KMZ 的体积通常只有原来的五分之一到十分之一。",
+      "如果您想阅读或编辑数据、比较版本，或将数据交给只接受纯文本的工具，请使用 KML。如果您想分享或上传地图，或将自定义图标与地图一起保存，请使用 KMZ。",
+      "无需任何专用工具即可查看 KMZ 的内容：将扩展名从 .kmz 改为 .zip，再解压，就能找到 doc.kml。如果需要反向转换，请使用 KMZ 转 KML 转换器。"
+    ]
+  },
+  "faqs": [
+    {
+      "q": "KMZ 和 KML 是一回事吗？",
+      "a": "既是，也不是：KMZ 内含一个用 ZIP 压缩的 KML 文件。地图数据相同，只是 KMZ 更小，还能携带图像。"
+    },
+    {
+      "q": "将 KML 转换为 KMZ 会丢失数据吗？",
+      "a": "不会。此转换器将您的 KML 原样存入压缩包，因此样式、文件夹、多边形和时间戳都会保留。"
+    },
+    {
+      "q": "如何打开 KMZ 文件？",
+      "a": "用 Google Earth（桌面版或网页版）打开，将其导入 Google My Maps，或在 QGIS 中将其添加为图层。您也可以将扩展名改为 .zip，再解压获取 KML。"
+    },
+    {
+      "q": "为什么我的 KMZ 比 KML 小这么多？",
+      "a": "KML 是纯 XML，包含大量重复标签和很长的坐标列表。ZIP 压缩会消除这些重复，通常能将文件缩小数倍。"
+    },
+    {
+      "q": "我的文件会被上传到其他地方吗？",
+      "a": "不会。转换在您的浏览器中完成，KML 不会离开您的设备。"
+    }
+  ]
+}

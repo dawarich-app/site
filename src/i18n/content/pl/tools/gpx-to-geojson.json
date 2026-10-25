@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Darmowy konwerter GPX na GeoJSON — trasy GPS online",
-    "description": "GPX na GeoJSON od ręki. Darmowo, prywatnie, online: trasy GPS zarejestrowane i planowane, punkty orientacyjne. Całość w przeglądarce, bez wysyłania plików.",
+    "title": "GPX na GeoJSON — darmowy konwerter GPS",
+    "description": "Konwertuj trasy zarejestrowane, punkty orientacyjne i trasy planowane GPX na GeoJSON. Darmowo, prywatnie, w całości w przeglądarce, bez przesyłania.",
     "keywords": "GPX na GeoJSON, konwerter GPX, konwerter GeoJSON, konwerter plików GPS, konwerter tras zarejestrowanych, konwerter punktów orientacyjnych, konwerter tras planowanych, parser GPX",
     "appName": "Konwerter GPX na GeoJSON"
   },

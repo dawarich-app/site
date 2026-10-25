@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Google Timeline Splitter - Split Large Timeline JSON Files",
-    "description": "Free tool to split large Google Timeline JSON files into smaller, valid chunks. Supports all export formats: Records.json, Semantic Location History, Semantic Segments, and more. Choose your target file size. Privacy-first — runs in your browser.",
+    "title": "Google Timeline Splitter — Split Large JSON Files",
+    "description": "Split large Google Timeline JSON files into smaller valid files. Works with Records.json, Semantic Location History and newer exports. Free, private.",
     "keywords": "split google timeline json, split records.json, split large google location history, google timeline splitter, split google takeout location, break up timeline json, google timeline file too large",
     "featureList": [
       "Split large Google Timeline JSON files into smaller chunks",

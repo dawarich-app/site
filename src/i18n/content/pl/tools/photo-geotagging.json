@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Geodane ze zdjęć — odczyt danych GPS ze zdjęć",
-    "description": "Darmowe, prywatne narzędzie do odczytu współrzędnych GPS ze zdjęć i eksportu do GPX. Wszystko odbywa się w przeglądarce, bez wysyłania danych na serwer.",
-    "keywords": "odczyt geodanych ze zdjęć, GPS, EXIF, geolokalizacja, eksport GPX, lokalizacja zdjęcia, ochrona prywatności, metadane obrazu",
+    "title": "Lokalizacja ze zdjęcia — darmowy odczyt GPS",
+    "description": "Sprawdź, gdzie zrobiono zdjęcie: odczytaj współrzędne GPS z danych EXIF, zobacz je na mapie i wyeksportuj plik GPX. Darmowo w przeglądarce.",
+    "keywords": "lokalizacja ze zdjęcia, gdzie zrobiono zdjęcie, współrzędne GPS zdjęcia, przeglądarka EXIF GPS, geotag zdjęcia, odczyt GPS ze zdjęć, eksport GPX",
     "featureList": [
       "Odczyt danych GPS ze zdjęć",
       "Interaktywna mapa ze znacznikami zdjęć",
@@ -11,8 +11,8 @@
       "Bez wysyłania danych na serwery"
     ]
   },
-  "h1": "Odczyt geodanych ze zdjęć",
-  "intro": "Dodaj swoje zdjęcia, aby odczytać współrzędne GPS z metadanych EXIF, zobaczyć je na mapie i wyeksportować jako pliki GPX.",
+  "h1": "Sprawdź lokalizację ze zdjęcia",
+  "intro": "Sprawdź, gdzie zrobiono zdjęcie: odczytaj współrzędne GPS zapisane w danych EXIF, zobacz wszystkie miejsca na mapie i wyeksportuj je do pliku GPX.",
   "exportButton": "Eksportuj jako GPX",
   "emptyExport": "Brak zdjęć z danymi GPS do eksportu",
   "gpsPhotosLabel": "zdjęcia z GPS",

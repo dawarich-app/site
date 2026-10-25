@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Free GPS Heatmap Generator - Create Activity Heatmaps Online",
-    "description": "Create beautiful heatmaps from your GPS data. Upload GPX, FIT, TCX, GeoJSON, KML, or Google Timeline JSON files to visualize your running, cycling, and activity patterns. Free, privacy-first - works entirely in your browser.",
+    "title": "GPS Heatmap Generator — Free Activity Heatmaps",
+    "description": "Create heatmaps from GPX, FIT, TCX, GeoJSON, KML or Google Timeline files to see your running, cycling and travel patterns. Free, in your browser.",
     "keywords": "GPS heatmap, heatmap generator, running heatmap, cycling heatmap, Strava heatmap alternative, GPX heatmap, activity heatmap, fitness heatmap, free heatmap, Google Timeline heatmap, Google location history heatmap, Records.json heatmap"
   },
   "h1": "GPS Heatmap Generator",

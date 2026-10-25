@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Google Timeline: uneix exportacions d'historial d'ubicacions",
-    "description": "Uneix diverses exportacions de Google Timeline en un fitxer. La deduplicació intel·ligent elimina punts superposats. Records.json, Semantic History i exportacions del telèfon. Gratis i privat.",
+    "title": "Google Timeline: uneix exportacions",
+    "description": "Uneix exportacions de Google Timeline/Cronologia de Google Maps en un fitxer, sense punts duplicats: Records.json, Semantic History i de mòbil. Gratis.",
     "keywords": "unir exportacions de Google Timeline, combinar fitxers d'historial d'ubicacions, recuperar dades de Google Timeline, unir Records.json, combinar ubicacions de Google Takeout, unir Semantic Location History, unir Google Timeline, eliminar duplicats de l'historial d'ubicacions, unir dades GPS",
     "featureList": [
       "Uneix diverses exportacions de Google Timeline en un sol fitxer",

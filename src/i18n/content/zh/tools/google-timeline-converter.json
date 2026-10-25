@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Google Timeline（谷歌地图时间轴）转 GPX/KML/CSV 转换器 — 免费转换位置历史记录",
+    "title": "Google Timeline（谷歌地图时间轴）转 GPX、KML、CSV 转换器",
     "description": "免费、隐私优先的 Google Timeline（谷歌地图时间轴）数据转换器。将位置历史记录转换为 GPX、KML、GeoJSON 或 CSV，所有处理均在浏览器中完成。",
     "keywords": "google timeline 转 GPX, google takeout 转 KML, google 位置记录转 CSV, timeline 转 geojson 转换器, google timeline 转换器, google maps timeline 导出, 位置历史记录转 GPX, google takeout 位置转换器, timeline 数据转换器",
     "appName": "Google Timeline 转 GPX/KML/CSV 转换器",

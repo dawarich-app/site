@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Darmowy konwerter TCX na GeoJSON — pliki treningowe",
-    "description": "Konwertuj pliki TCX na GeoJSON od ręki. Darmowy konwerter online aktywności fitness, idealny do map internetowych. Prywatnie, w całości w przeglądarce.",
+    "title": "TCX na GeoJSON — darmowy konwerter Garmin",
+    "description": "Konwertuj pliki aktywności TCX na GeoJSON do map internetowych. Darmowy, prywatny konwerter działa w całości w przeglądarce, bez przesyłania plików.",
     "keywords": "TCX na GeoJSON, Training Center XML na GeoJSON, konwerter TCX, konwerter GeoJSON, konwerter plików fitness, mapy internetowe, Leaflet, Mapbox",
     "appName": "Konwerter TCX na GeoJSON"
   },

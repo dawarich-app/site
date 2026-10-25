@@ -9,8 +9,8 @@
   "homeLabel": "Home",
   "toolsLabel": "Free Tools",
   "meta": {
-    "title": "Google Timeline Statistics Analyzer - Your Location History Insights",
-    "description": "Free privacy-first tool to analyze your Google Timeline data. See total distance traveled, countries visited, top places, activity breakdown, and yearly trends. All processing in your browser.",
+    "title": "Google Timeline Statistics Analyzer",
+    "description": "Analyze your Google Timeline: total distance, countries visited, top places, activity breakdown and yearly trends. Free, runs in your browser.",
     "keywords": "google timeline statistics, location history stats, how far have I traveled, google maps timeline insights, google timeline analyzer, travel statistics, location data analysis, google takeout statistics, distance traveled calculator, places visited counter",
     "featureList": [
       "Calculate total distance traveled from Google Timeline data",

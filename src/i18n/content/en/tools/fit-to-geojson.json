@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Free FIT to GeoJSON Converter - Convert Garmin Files to GeoJSON Online",
-    "description": "Convert Garmin FIT files to GeoJSON format instantly. Free, privacy-first online converter for fitness activities. Perfect for web mapping - works entirely in your browser.",
+    "title": "FIT to GeoJSON Converter — Free Garmin Converter",
+    "description": "Convert Garmin FIT activity files to GeoJSON for web maps. Free, privacy-first converter that works entirely in your browser — no upload.",
     "keywords": "FIT to GeoJSON, Garmin to GeoJSON, FIT converter, fitness file converter, GeoJSON converter, web mapping, Leaflet, Mapbox",
     "appName": "FIT to GeoJSON Converter"
   },

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Google Timeline（谷歌地图时间轴）数据合并工具 - 合并位置历史导出文件",
-    "description": "免费将多个 Google Timeline（谷歌地图时间轴）导出文件合并为一个。智能去重可移除重复轨迹点，支持合并 Records.json、Semantic History 和手机导出文件。隐私优先。",
+    "title": "Google Timeline（谷歌地图时间轴）合并工具 — 合并导出文件",
+    "description": "将多个 Google Timeline（谷歌地图时间轴）导出文件合并为一个，去除重复轨迹点。支持 Records.json、Semantic History 和手机导出文件。免费使用。",
     "keywords": "合并 Google Timeline 导出文件, 合并位置历史文件, Google Timeline 数据恢复, 合并 Records.json, 合并 Google Takeout 位置数据, 合并 Semantic Location History, Google Timeline 合并工具, 位置历史去重, 合并 GPS 数据",
     "featureList": [
       "将多个 Google Timeline 导出文件合并为一个",

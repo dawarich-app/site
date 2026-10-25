@@ -1,0 +1,96 @@
+{
+  "whenToConvert": {
+    "subject": "KML na KMZ",
+    "body": [
+      "KML i KMZ zawierają te same dane mapy. KML to plik tekstowy XML, a KMZ to ten sam plik spakowany do archiwum ZIP. Konwersja KML na KMZ pozwala zmniejszyć rozmiar i ułatwić udostępnianie: jeden niewielki plik zamiast dużego pliku tekstowego.",
+      "Typowe powody: trasa, zbiór znaczników miejsc lub obrys regionu zajmuje zbyt dużo miejsca, by wysłać go e-mailem jako KML, formularz przesyłania wymaga KMZ albo chcesz wczytać mniejszy plik do Google Earth lub Google My Maps.",
+      "Ten konwerter umieszcza Twój plik KML w archiwum dokładnie w takiej postaci, w jakiej jest, więc nic nie zostaje przepisane ani pominięte."
+    ]
+  },
+  "preservation": {
+    "intro": "Utworzony tutaj plik KMZ zawiera Twój oryginalny KML, bajt w bajt, zapisany jako doc.kml:",
+    "rows": [
+      {
+        "field": "Znaczniki miejsc, ścieżki i wielokąty",
+        "preserved": "✅ Tak",
+        "notes": "Każda geometria pozostaje zapisana bez zmian, także kształty składające się z wielu części."
+      },
+      {
+        "field": "Style, kolory i ikony",
+        "preserved": "✅ Tak",
+        "notes": "Definicje stylów pozostają w KML. Ikony odwołujące się do adresów internetowych nadal działają."
+      },
+      {
+        "field": "Foldery, nazwy i opisy",
+        "preserved": "✅ Tak",
+        "notes": "Drzewo folderów i cały tekst pozostają bez zmian."
+      },
+      {
+        "field": "Znaczniki czasu i dane rozszerzone",
+        "preserved": "✅ Tak",
+        "notes": "TimeStamp, TimeSpan i ExtendedData zostają zachowane."
+      },
+      {
+        "field": "Lokalne pliki obrazów obok Twojego KML",
+        "preserved": "⚠️ Nie",
+        "notes": "Pakowany jest tylko plik KML. Ikony i nakładki zapisane na Twoim komputerze jako osobne pliki nie są dodawane do archiwum."
+      }
+    ]
+  },
+  "apps": {
+    "intro": "KMZ jest obsługiwany wszędzie tam, gdzie KML. Te aplikacje otwierają go bezpośrednio:",
+    "items": [
+      {
+        "name": "Google Earth Pro",
+        "url": "https://www.google.com/earth/about/versions/",
+        "note": "File → Open lub przeciągnij KMZ na globus."
+      },
+      {
+        "name": "Google Earth w przeglądarce",
+        "url": "https://earth.google.com/web/",
+        "note": "Zaimportuj KMZ z Twojego komputera do projektu."
+      },
+      {
+        "name": "Google My Maps",
+        "url": "https://www.google.com/maps/d/",
+        "note": "Utwórz mapę, a następnie wybierz Import w warstwie."
+      },
+      {
+        "name": "QGIS",
+        "url": "https://qgis.org/",
+        "note": "Dodaj KMZ jako warstwę wektorową."
+      }
+    ]
+  },
+  "reference": {
+    "heading": "KML a KMZ: czym się różnią?",
+    "body": [
+      "KML (Keyhole Markup Language) to tekstowy format XML danych geograficznych: znaczników miejsc, linii, wielokątów, stylów i opisów. Możesz otworzyć go w dowolnym edytorze tekstu. Od 2008 roku jest standardem Open Geospatial Consortium.",
+      "KMZ to plik KML skompresowany za pomocą ZIP. Archiwum zawiera jeden główny plik KML, zwykle o nazwie doc.kml, i może też zawierać używane przez niego obrazy oraz modele 3D. Ponieważ KML to rozbudowany tekst XML, KMZ jest często od pięciu do dziesięciu razy mniejszy.",
+      "Użyj KML, gdy chcesz przeczytać lub edytować dane, porównać wersje albo przekazać je do narzędzia, które przyjmuje tylko zwykły tekst. Użyj KMZ, gdy chcesz udostępnić lub przesłać mapę albo przechowywać z nią własne ikony.",
+      "Aby zajrzeć do KMZ bez żadnego narzędzia, zmień rozszerzenie z .kmz na .zip i rozpakuj plik — znajdziesz doc.kml. Aby wykonać konwersję w drugą stronę, użyj konwertera KMZ na KML."
+    ]
+  },
+  "faqs": [
+    {
+      "q": "Czy KMZ to to samo co KML?",
+      "a": "Tak i nie: KMZ zawiera plik KML skompresowany za pomocą ZIP. Dane mapy są takie same; KMZ jest po prostu mniejszy i może zawierać także obrazy."
+    },
+    {
+      "q": "Czy konwersja KML na KMZ powoduje utratę danych?",
+      "a": "Nie. Ten konwerter zapisuje Twój KML w archiwum dokładnie w takiej postaci, w jakiej jest, więc style, foldery, wielokąty i znaczniki czasu zostają zachowane."
+    },
+    {
+      "q": "Jak otworzyć plik KMZ?",
+      "a": "Otwórz go w Google Earth (na komputerze lub w przeglądarce), zaimportuj do Google My Maps albo dodaj jako warstwę w QGIS. Możesz też zmienić rozszerzenie na .zip i rozpakować plik, by uzyskać KML."
+    },
+    {
+      "q": "Dlaczego mój KMZ jest o tyle mniejszy od KML?",
+      "a": "KML to zwykły XML z wieloma powtarzającymi się znacznikami i długimi listami współrzędnych. Kompresja ZIP usuwa te powtórzenia, co zwykle kilkukrotnie zmniejsza plik."
+    },
+    {
+      "q": "Czy moje pliki są gdzieś przesyłane?",
+      "a": "Nie. Konwersja odbywa się w Twojej przeglądarce; Twój KML nigdy nie opuszcza urządzenia."
+    }
+  ]
+}

@@ -8,8 +8,8 @@
   "homeLabel": "Inici",
   "toolsLabel": "Eines gratuïtes",
   "meta": {
-    "title": "Detector de formats de Google Timeline: identifica el fitxer",
-    "description": "Carrega qualsevol fitxer d’ubicacions de Google Takeout: detecta a l’instant el format de Google Timeline (Cronologia de Google Maps), nombre de punts, interval de dates, mida i qualitat. Gratis, tot al navegador.",
+    "title": "Detector de formats de Google Timeline gratuït",
+    "description": "Google Timeline (Cronologia de Google Maps): detecta format, nombre de punts, interval de dates, mida i qualitat de dades. Gratis, al navegador.",
     "keywords": "format de Google Timeline, format de la meva exportació de Google, tipus de fitxer d'ubicacions de Google Takeout, format d'historial d'ubicacions de Google, detector de fitxers de Google Timeline, format d'exportació de Google Maps Timeline, format JSON de Google Takeout, tipus de fitxer d'historial d'ubicacions, format de dades de Google Timeline, identificar fitxer d'exportació de Google",
     "featureList": [
       "Detecta a l'instant el format d'exportació de Google Timeline",

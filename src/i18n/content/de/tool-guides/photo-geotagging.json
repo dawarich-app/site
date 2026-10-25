@@ -1,0 +1,53 @@
+{
+  "sections": [
+    {
+      "heading": "So findest du heraus, wo ein Foto aufgenommen wurde",
+      "body": [
+        "Die meisten Smartphones speichern den Aufnahmeort in der Bilddatei, in den EXIF-Metadaten: Breiten- und Längengrad, oft auch die Höhe und die Blickrichtung der Kamera. Ziehe das Foto in das Tool oben. Enthält die Datei GPS-Daten, erscheint der Ort auf der Karte mit Koordinaten, die du kopieren oder exportieren kannst.",
+        "Du kannst auch auf deinen eigenen Geräten nachsehen. Öffne auf einem iPhone das Foto in Fotos und wische nach oben, um die Karte zu sehen. Öffne in Google Photos das Foto und wische nach oben oder tippe auf das Info-Symbol. Klicke unter Windows mit der rechten Maustaste auf die Datei, wähle Eigenschaften und öffne den Tab Details. Öffne auf einem Mac das Foto in Vorschau und wähle Werkzeuge → Informationen einblenden."
+      ]
+    },
+    {
+      "heading": "Warum manche Fotos keinen Standort haben",
+      "body": [
+        "Ein Smartphone speichert den Standort nur, wenn die Kamera-App darauf zugreifen darf: auf einem iPhone unter Einstellungen → Datenschutz & Sicherheit → Ortungsdienste → Kamera, auf Android in den Kamera-Einstellungen, meist unter Standort-Tags oder Standort speichern.",
+        "Der Standort kann auch unterwegs verloren gehen. Messaging-Apps und soziale Netzwerke entfernen ihn meist aus Fotos, die du versendest oder veröffentlichst. Screenshots enthalten ihn nie, und manche Bildbearbeitungsprogramme entfernen ihn beim Export einer Kopie. Eigenständige Kameras fügen Koordinaten nur hinzu, wenn sie GPS eingebaut haben oder mit einem Smartphone gekoppelt sind."
+      ]
+    },
+    {
+      "heading": "Aus Foto-Aufnahmeorten eine Reisekarte erstellen",
+      "body": [
+        "Beim GPX-Export erhältst du pro Foto einen Wegpunkt, benannt nach der Datei. So kannst du schnell rekonstruieren, wo du auf einer Reise warst, die du nicht aufgezeichnet hast: Öffne die GPX in Google Earth, Garmin BaseCamp oder einer beliebigen GPS-App.",
+        "Dawarich kann das fortlaufend tun: Es liest Foto-Aufnahmeorte aus Immich und PhotoPrism und zeigt sie auf deiner Karte und in deinen Reisen neben deinen aufgezeichneten Tracks an."
+      ]
+    },
+    {
+      "heading": "Vor dem Teilen prüfen",
+      "body": [
+        "Der Standort in einem Foto kann verraten, wo du wohnst oder wo deine Kinder zur Schule gehen. Ziehe ein Foto vor dem öffentlichen Posten hierher, um zu sehen, was es preisgibt. Dieses Tool liest die Datei in deinem Browser. Beim Prüfen wird das Foto also mit niemandem geteilt."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Kann ich den Aufnahmeort jedes Fotos finden?",
+      "a": "Nur wenn die Datei noch GPS-Daten enthält. Fotos, die mit ausgeschalteter Standortfunktion aufgenommen wurden, Screenshots und die meisten aus sozialen Netzwerken heruntergeladenen Bilder enthalten keine. Aus dem Bild selbst lässt sich der Standort nicht zuverlässig wiederherstellen."
+    },
+    {
+      "q": "Funktioniert das auch mit HEIC-Fotos vom iPhone?",
+      "a": "Ja. Das Tool liest EXIF-Daten aus HEIC-, JPEG- und PNG-Dateien."
+    },
+    {
+      "q": "Wie genau ist der in einem Foto gespeicherte Standort?",
+      "a": "Es ist die Position, die das Smartphone zum Zeitpunkt der Aufnahme kannte. Im Freien stimmt sie meist bis auf wenige Meter; in Innenräumen oder dicht bebauten Städten kann sie um Dutzende Meter abweichen."
+    },
+    {
+      "q": "Kann ich den Standort aus meinen Fotos entfernen?",
+      "a": "Ja. Tippe auf einem iPhone im Teilen-Menü auf Optionen und schalte vor dem Senden Standort aus. Viele Android-Galerien und Google Photos bieten ebenfalls an, den Standort beim Teilen oder Bearbeiten eines Fotos zu entfernen."
+    },
+    {
+      "q": "Werden meine Fotos auf einen Server hochgeladen?",
+      "a": "Nein. Deine Fotos werden in deinem Browser gelesen und verlassen dein Gerät nie. Gespeichert wird nur die GPX-Datei, die du exportierst, und nur auf deinem Computer."
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Gratis GPS-Heatmap-Generator – Aktivitäts-Heatmaps online",
-    "description": "GPS-Heatmaps aus GPX, FIT, TCX, GeoJSON, KML und JSON aus Google Timeline (Google Maps Zeitachse). Lauf-, Rad- und Aktivitätsmuster. Gratis, privat im Browser.",
+    "title": "GPS-Heatmap-Generator: Aktivitäts-Heatmaps gratis",
+    "description": "Heatmaps aus GPX, FIT, TCX, GeoJSON, KML, Google Timeline (Google Maps Zeitachse): Lauf-, Rad- und Reisemuster sehen. Gratis im Browser.",
     "keywords": "GPS-Heatmap, Heatmap-Generator, Lauf-Heatmap, Fahrrad-Heatmap, Strava-Heatmap-Alternative, GPX-Heatmap, Aktivitäts-Heatmap, Fitness-Heatmap, kostenlose Heatmap, Google-Timeline-Heatmap, Google-Standortverlauf-Heatmap, Records.json-Heatmap"
   },
   "h1": "GPS-Heatmap-Generator",

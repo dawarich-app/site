@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "JSON XXL Google Timeline (Vos trajets Google Maps) : découpe",
-    "description": "Scindez tout export Google Timeline : Records.json/Semantic Location History/Semantic Segments… JSON valide, taille au choix. Gratuit, privé, dans le navigateur",
+    "title": "Google Timeline : scinder les gros fichiers JSON",
+    "description": "Google Timeline (Vos trajets Google Maps) : gros JSON en petits fichiers valides (Records.json, Semantic Location History, exports récents). Gratuit, privé",
     "keywords": "découper JSON Google Timeline, découper Records.json, diviser historique de localisation Google, découpage Google Timeline, découper localisation Google Takeout, fichier Google Timeline trop volumineux",
     "featureList": [
       "Découpage des gros fichiers JSON Google Timeline en fichiers plus petits",

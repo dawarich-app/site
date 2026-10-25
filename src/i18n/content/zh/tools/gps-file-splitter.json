@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "GPS 文件拆分工具 - 拆分大型 GPX、GeoJSON、KML 和 JSON 文件",
-    "description": "免费将大型 GPS 和位置文件拆分为小文件。支持按大小、轨迹点数量或日期拆分 GPX、GeoJSON、KML、KMZ 和 Google Timeline（谷歌地图时间轴） JSON，打包为 ZIP 下载。隐私优先，在您的浏览器中运行。",
+    "title": "GPS 文件拆分工具 — 拆分 GPX、KML 和 GeoJSON",
+    "description": "按大小、轨迹点数量或日期拆分大型 GPX、GeoJSON、KML、KMZ 和 Google Timeline（谷歌地图时间轴）文件，并打包为 ZIP 下载。免费，在您的浏览器中运行。",
     "keywords": "拆分大型 GPX 文件, 拆分 GeoJSON, 拆分 KML 文件, 减小 GPS 文件大小, 拆分大型 JSON 位置文件, GPS 文件拆分工具, 拆分 Google Timeline",
     "featureList": [
       "将大型 GPS 文件拆分为较小的文件",

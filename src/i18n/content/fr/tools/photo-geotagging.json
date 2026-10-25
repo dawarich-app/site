@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Extraction des données GPS de vos photos",
-    "description": "Extrayez gratuitement les coordonnées GPS de vos photos et exportez-les en GPX. Traitement dans votre navigateur, sans envoi à un serveur.",
-    "keywords": "extraction de géodonnées photo, GPS, EXIF, géolocalisation, export GPX, localisation photo, confidentialité, métadonnées d’image",
+    "title": "Localiser une photo : extracteur GPS gratuit",
+    "description": "Trouvez où une photo a été prise : lisez ses coordonnées GPS EXIF, affichez-les sur une carte et exportez un GPX. Gratuit, dans votre navigateur.",
+    "keywords": "localiser une photo, trouver où une photo a été prise, localisation GPS photo, lecteur EXIF GPS, géolocalisation photo, extraire coordonnées GPS photo, export GPX",
     "featureList": [
       "Extraction des données GPS des photos",
       "Carte interactive avec des repères pour les photos",
@@ -11,8 +11,8 @@
       "Aucune donnée envoyée à un serveur"
     ]
   },
-  "h1": "Extraction des géodonnées de vos photos",
-  "intro": "Ajoutez vos photos pour extraire les coordonnées GPS des métadonnées EXIF, les afficher sur une carte et les exporter en fichiers GPX.",
+  "h1": "Trouver le lieu de prise de vue d’une photo",
+  "intro": "Découvrez où une photo a été prise : lisez les coordonnées GPS enregistrées dans ses données EXIF, affichez chaque lieu sur une carte et exportez-les dans un fichier GPX.",
   "exportButton": "Exporter en GPX",
   "emptyExport": "Aucune photo avec des données GPS à exporter",
   "gpsPhotosLabel": "photos avec GPS",

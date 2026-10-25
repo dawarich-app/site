@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Darmowy konwerter TCX na GPX — pliki Training Center XML",
-    "description": "Konwertuj TCX na GPX od ręki. Darmowy, prywatny konwerter online aktywności z Garmin, Wahoo i urządzeń fitness. W całości w przeglądarce, bez wysyłania plików.",
+    "title": "TCX na GPX — darmowe narzędzie Garmin TCX",
+    "description": "Konwertuj pliki TCX z Garmin, Wahoo i innych urządzeń fitness na GPX. Darmowy, prywatny konwerter działa w przeglądarce, bez przesyłania plików.",
     "keywords": "TCX na GPX, konwerter TCX, Training Center XML, Garmin TCX, Wahoo TCX, konwerter plików fitness, GPX rower, GPX bieganie, konwerter aktywności",
     "appName": "Konwerter TCX na GPX"
   },

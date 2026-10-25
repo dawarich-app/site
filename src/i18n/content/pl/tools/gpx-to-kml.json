@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Darmowy konwerter GPX na KML — konwertuj trasy GPS online",
-    "description": "GPX na KML od ręki. Darmowo, prywatnie, online: trasy GPS zarejestrowane i planowane, punkty orientacyjne. Całość w przeglądarce, bez wysyłania plików.",
+    "title": "GPX na KML — darmowy konwerter tras GPS",
+    "description": "GPX na KML do Google Earth: trasy zarejestrowane i planowane oraz punkty orientacyjne. Darmowo, prywatnie w przeglądarce, bez przesyłania plików.",
     "keywords": "GPX na KML, konwerter GPX, konwerter KML, konwerter plików GPS, konwerter Google Earth, konwerter tras",
     "appName": "Konwerter GPX na KML"
   },

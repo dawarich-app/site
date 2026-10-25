@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "TCX a GeoJSON gratis — Fitxers d’entrenament en línia",
-    "description": "Converteix TCX a GeoJSON a l’instant. Convertidor gratuït i privat per a activitats físiques, ideal per a mapes web. Tot al navegador.",
+    "title": "TCX a GeoJSON — Convertidor Garmin gratuït",
+    "description": "Converteix fitxers d’activitat TCX a GeoJSON per a mapes web. Convertidor gratuït i privat, tot al navegador, sense pujar fitxers.",
     "keywords": "TCX a GeoJSON, Training Center XML a GeoJSON, convertidor TCX, convertidor GeoJSON, convertidor de fitxers esportius, mapes web, Leaflet, Mapbox",
     "appName": "Convertidor de TCX a GeoJSON"
   },

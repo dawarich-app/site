@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Divideix fitxers GPS grans: GPX, GeoJSON, KML i JSON",
-    "description": "Divideix fitxers GPS i d’ubicacions grans en parts petites: GPX, GeoJSON, KML, KMZ i JSON de Google Timeline, per mida, nombre de punts o data. Baixa un ZIP. Gratis i privat al navegador.",
+    "title": "Divisor GPS — Divideix GPX, KML i GeoJSON",
+    "description": "Divideix GPX/GeoJSON/KML/KMZ/Google Timeline (Cronologia de Google Maps) grans per mida, nombre de punts o data. Baixa ZIP. Gratis al navegador.",
     "keywords": "dividir fitxer GPX gran, dividir GeoJSON en parts, dividir fitxer KML, reduir mida de fitxer GPS, dividir fitxer JSON d'ubicacions gran, divisor de fitxers GPS, dividir Google Timeline",
     "featureList": [
       "Divideix fitxers GPS grans en parts més petites",

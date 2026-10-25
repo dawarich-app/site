@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Google Timeline (Google Maps Zeitachse): große JSONs teilen",
-    "description": "Große Google-Timeline-JSONs teilen. Alle Formate: Records.json, Semantic Location History, Semantic Segments … Valide Teile nach Maß. Gratis, privat im Browser.",
+    "title": "Google Timeline: Große JSON-Dateien teilen",
+    "description": "Große JSONs aus Google Timeline (Google Maps Zeitachse) teilen: Records.json, Semantic Location History, neuere Exporte. Gratis, privat, gültige Dateien.",
     "keywords": "Google-Timeline-JSON aufteilen, Records.json teilen, großen Google-Standortverlauf aufteilen, Google-Timeline-Dateien teilen, Google-Takeout-Standortdaten aufteilen, Timeline-JSON teilen, Google-Timeline-Datei zu groß",
     "featureList": [
       "Große Google-Timeline-JSON-Dateien in kleinere Teile aufteilen",

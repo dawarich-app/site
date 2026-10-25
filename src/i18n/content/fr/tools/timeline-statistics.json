@@ -9,8 +9,8 @@
   "homeLabel": "Accueil",
   "toolsLabel": "Outils gratuits",
   "meta": {
-    "title": "Statistiques Google Timeline : analysez votre historique",
-    "description": "Google Timeline (Vos trajets Google Maps) : distance totale, pays visités, top des lieux, bilan/activité, tendances/an. Gratuit, privé, tout dans le navigateur.",
+    "title": "Analyse Google Timeline/Vos trajets Google Maps",
+    "description": "Google Timeline/Vos trajets Google Maps : distance totale, pays visités, top des lieux, bilan par activité, tendances annuelles. Gratuit dans le navigateur",
     "keywords": "statistiques Google Timeline, statistiques historique de localisation, distance parcourue, analyses Google Maps Timeline, analyseur Google Timeline, statistiques de voyage, analyse données de localisation, statistiques Google Takeout, calcul distance parcourue, compteur lieux visités",
     "featureList": [
       "Calcul de la distance totale parcourue à partir de Google Timeline",

@@ -177,7 +177,7 @@
   ],
   "meta": {
     "title": "Configurar el registro de ubicación",
-    "description": "Registra tu ubicación automáticamente con varias apps compatibles: las oficiales de Dawarich para iOS y Android, Overland, OwnTracks, GPSLogger, PhoneTrack y Home Assistant.",
+    "description": "Registra tu ubicación con Dawarich para iOS y Android, Overland, OwnTracks, GPSLogger, PhoneTrack o Home Assistant de forma automática.",
     "ogTitle": "Registro de ubicación en Dawarich — Varias aplicaciones compatibles",
     "ogDescription": "Configura el registro automático de ubicación con la aplicación oficial de Dawarich para iOS o Android, Overland, OwnTracks, GPSLogger, PhoneTrack o la integración con Home Assistant."
   },

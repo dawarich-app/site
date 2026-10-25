@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Oś czasu Google (Google Timeline): scal eksporty lokalizacji",
-    "description": "Scal eksporty Google Timeline (Oś czasu Google Maps) w jeden plik: Records.json, Semantic History i eksporty z telefonu. Inteligentne usuwanie nakładających się punktów. Za darmo i prywatnie.",
+    "title": "Oś czasu Google (Google Timeline): scal eksporty",
+    "description": "Scal eksporty Google Timeline (Oś czasu Google) w jeden plik, usuń duplikaty punktów: Records.json, Semantic History i eksporty z telefonu. Darmowo.",
     "keywords": "łączenie eksportów Google Timeline, łączenie plików historii lokalizacji, odzyskiwanie danych Google Timeline, łączenie Records.json, łączenie lokalizacji Google Takeout, łączenie semantic location history, łączenie Google Timeline, usuwanie duplikatów historii lokalizacji, łączenie danych GPS",
     "featureList": [
       "Łączenie wielu eksportów Google Timeline w jeden plik",

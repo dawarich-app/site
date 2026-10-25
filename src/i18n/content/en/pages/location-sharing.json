@@ -33,8 +33,8 @@
     }
   ],
   "meta": {
-    "title": "Location Sharing — Share Your Location History by Link",
-    "description": "Share your live location or location history with a private link. Passphrase-protected, expiring, revocable, and scoped to exactly what you choose. Free 7-day trial or self-host free.",
+    "title": "Location Sharing — Share Your History by Link",
+    "description": "Share your live location or history with a private link: passphrase-protected, expiring, revocable and limited to what you choose. Try free 7 days.",
     "ogTitle": "Location Sharing — Share Your Location History by Private Link",
     "ogDescription": "Send one link that shows one thing: a date range, live location, a track, a trip, a month of stats or a yearly digest. Every link expires or can be revoked, and most can be locked with a passphrase."
   },

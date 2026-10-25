@@ -33,8 +33,8 @@
     }
   ],
   "meta": {
-    "title": "Tax Residency Day Counter — Track the 183-Day Rule Automatically",
-    "description": "Count the days you spent in each country from your own GPS history, with consecutive stay periods and a 183-day threshold flag. Built for digital nomads, cross-border commuters and long-term travellers.",
+    "title": "Tax Residency Day Counter — 183-Day Rule Tracker",
+    "description": "Count the days you spent in each country from your own GPS history, with stay periods and a 183-day flag. For digital nomads and cross-border workers.",
     "ogTitle": "Tax Residency Day Counter — Track the 183-Day Rule From Your GPS History",
     "ogDescription": "Per-country day counts from location history you already collect, with consecutive stay periods and a 183-day threshold flag. Evidence for residency questions, not tax advice."
   },

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Convertisseur GPX vers GeoJSON gratuit — GPS",
-    "description": "Convertissez GPX en GeoJSON instantanément : trajets GPS, points de passage, itinéraires. Gratuit et privé, tout dans votre navigateur, sans envoi de fichier.",
+    "title": "GPX vers GeoJSON : convertisseur GPS gratuit",
+    "description": "Convertissez trajets, points de passage et itinéraires GPX en GeoJSON. Gratuit et privé, tout dans votre navigateur, sans envoi de fichier.",
     "keywords": "GPX vers GeoJSON, convertisseur GPX, convertisseur GeoJSON, convertisseur de fichiers GPS, convertisseur de trajets, convertisseur de points de passage, convertisseur d’itinéraires, analyseur GPX",
     "appName": "Convertisseur GPX vers GeoJSON"
   },
