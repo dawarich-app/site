@@ -299,3 +299,62 @@ spec:
                 port:
                   number: 3000
 ```
+
+## Running without root
+
+Dawarich doesn't need root. You can run both containers as an unprivileged user, with a read-only root filesystem and every Linux capability dropped. You don't need `PUID`/`PGID` for this: Kubernetes sets the volume ownership itself through `fsGroup`.
+
+Make these changes to the Deployment above.
+
+Add a pod-level security context:
+
+```yaml
+spec:
+  template:
+    spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 1000
+        fsGroupChangePolicy: OnRootMismatch
+        seccompProfile:
+          type: RuntimeDefault
+```
+
+Add this to **both** containers, `dawarich` and `dawarich-sidekiq`:
+
+```yaml
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: [ALL]
+```
+
+With a read-only root filesystem, Dawarich still needs two scratch directories: `/var/app/tmp` for the PID file, cache, and import/export working files, and `/tmp`. Add them as `emptyDir` volumes and mount them in **both** containers, next to the existing mounts:
+
+```yaml
+          volumeMounts:
+            # ...existing public, watched and storage mounts...
+            - mountPath: /var/app/tmp
+              name: app-tmp
+            - mountPath: /tmp
+              name: tmp
+      volumes:
+        # ...existing public, watched and storage volumes...
+        - name: app-tmp
+          emptyDir: {}
+        - name: tmp
+          emptyDir: {}
+```
+
+Nothing else under `/var/app` is written at runtime. Database migrations and seeds work with a read-only root filesystem too.
+
+Notes:
+
+- **`/var/app/public` must stay writable.** On every start, the web entrypoint copies the static assets from the image into it. The `public` PVC above does the job; an `emptyDir` works as well.
+- **Set `runAsUser` explicitly.** The image doesn't declare a non-root `USER`, so `runAsNonRoot: true` only works together with `runAsUser`.
+- **Keep `/var/app/tmp` on disk.** Large imports and exports are unpacked there. Don't set `medium: Memory` on that `emptyDir`, or a big import will count against the pod's memory limit.
+- **Moving an existing installation.** Volumes written by a container that ran as root are owned by root. With `fsGroup`, Kubernetes changes their group ownership on the first mount for volume types that support it (most CSI drivers do). `OnRootMismatch` skips that step on later starts.
+- **Docker and Docker Compose.** Docker has no equivalent of `fsGroup`. A new named volume takes over root ownership from the image, so a container started with `user:` can't write to it. On Docker, use the `PUID`/`PGID` variables from the default `docker-compose.yml` instead.
