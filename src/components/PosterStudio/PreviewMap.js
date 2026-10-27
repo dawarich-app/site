@@ -88,8 +88,7 @@ function PreviewMap(
     [redrawOverlay, recenter],
   );
 
-  // Mount once: size the frame first (app parity), then create the map and
-  // observe the STAGE — never the frame, which we resize ourselves.
+  // Mount once: size the frame first (app parity), then create the map.
   useEffect(() => {
     resizeFrame();
     const map = createPreviewMap({
@@ -101,11 +100,7 @@ function PreviewMap(
     map.on('move', redrawOverlay);
     map.once('load', redrawOverlay);
 
-    const observer = new ResizeObserver(() => resizeFrame());
-    observer.observe(stageRef.current);
-
     return () => {
-      observer.disconnect();
       map.remove();
       mapRef.current = null;
     };
@@ -129,6 +124,11 @@ function PreviewMap(
 
   useEffect(() => {
     resizeFrame();
+    // Rebind when the layout changes so later resizes use its current aspect.
+    // Observe the stage, never the frame that this callback resizes.
+    const observer = new ResizeObserver(resizeFrame);
+    observer.observe(stageRef.current);
+    return () => observer.disconnect();
   }, [resizeFrame]);
 
   useEffect(() => {
