@@ -9,7 +9,7 @@ description: A guide on how to install Dawarich on Unraid using Community Applic
 # How to install Dawarich on Unraid
 
 :::warning
-**Do not use autoupdate** and **do not update** any Dawarich container **without** [**backing up your data**](https://dawarich.app/docs/tutorials/backup-and-restore) first and checking for breaking changes in the [updating guides](https://dawarich.app/docs/updating-guides)!
+**Do not use autoupdate** and **do not update** any Dawarich container **without** [**backing up your data**](/docs/self-hosting/maintenance/backup-and-restore) first and checking for breaking changes in the [updating guides](/docs/self-hosting/updating)!
 
 *Dawarich is still in beta and a rapidly evolving project, and some changes may break compatibility with older versions.*
 :::
