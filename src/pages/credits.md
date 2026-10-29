@@ -6,7 +6,7 @@ title: Credits
 
 ## Map and geographic data {#map-data}
 
-Dawarich's maps, place names, time zones and achievements are built on open geographic data. This section lists every source the app ships or loads, with the notice its licence asks for.
+Dawarich's maps, place names, time zones and achievements are built on open geographic data. This section covers the Dawarich web app and lists every map and geographic data source it ships or loads, with the notice its licence asks for.
 
 ### OpenStreetMap {#openstreetmap}
 
@@ -15,7 +15,7 @@ Dawarich's maps, place names, time zones and achievements are built on open geog
 - **Used in Dawarich for:**
   - Background map tiles, through the [Protomaps basemap](#protomaps).
   - [Time zone boundaries](#time-zones), through timezone-boundary-builder.
-  - City and national park boundaries for achievements (Berlin, Hamburg, Dresden, Harz National Park, Saxon Switzerland National Park, Eifel National Park). Fetched from OpenStreetMap through the Overpass API on 2026-10-28. Changes: relation ways assembled into polygons, holes kept, coordinates rounded to seven decimals, city areas clipped to the [Natural Earth](#natural-earth) land mask. The bundled file is a derived database and is distributed under the ODbL.
+  - City and national park boundaries for achievements (Berlin, Hamburg, Dresden, Harz National Park, Saxon Switzerland National Park, Eifel National Park). Fetched from OpenStreetMap through the Overpass API on 2026-10-28. Changes: relation ways assembled into polygons, holes kept, coordinates rounded to seven decimals, city areas clipped to the [Natural Earth](#natural-earth) land mask. The bundled file is a derived database, distributed under the ODbL with the [Dawarich source code](https://github.com/Freika/dawarich) in `lib/assets/achievement_collections/`.
   - Place names and addresses from reverse geocoding, when the geocoder serves OpenStreetMap data (for example [Photon](https://github.com/komoot/photon) or [Nominatim](https://nominatim.org/)).
 
 ### Protomaps basemap {#protomaps}
@@ -29,14 +29,14 @@ Dawarich's maps, place names, time zones and achievements are built on open geog
   - Icons: derived from Mapzen's [tangrams/icons](https://github.com/tangrams/icons/blob/master/LICENSE.md), MIT.
   - Tile schema: adapted from [Tilezen](https://github.com/tilezen/vector-datasource), MIT.
   - Fonts (Noto Sans) and sprites from [basemaps-assets](https://github.com/protomaps/basemaps-assets): fonts under the [SIL Open Font License](https://github.com/protomaps/basemaps-assets/blob/main/fonts/OFL.txt), sprites derived from MIT-licensed tangrams/icons.
-- **Used in Dawarich for:** the background map on the main map, trips, family, stats and shared pages, and in the poster and video studios.
+- **Used in Dawarich for:** the background map on the main map, trips, family, stats and shared pages, and in the poster and video studios. The tiles are loaded from a tile server at runtime, not bundled with the app.
 
 ### Time zone boundaries {#time-zones}
 
 - **Source:** [timezone-boundary-builder](https://github.com/evansiroky/timezone-boundary-builder) by Evan Siroky, release [2026e](https://github.com/evansiroky/timezone-boundary-builder/releases/tag/2026e), file `timezones-with-oceans-1970`.
 - **Notice:** © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors
 - **Licence:** data under the [Open Database License (ODbL) 1.0](https://opendatacommons.org/licenses/odbl/1-0/); the code that builds it is MIT.
-- **Changes:** polygons simplified with a coverage-preserving simplification (tolerance 0.005°, about 500 m), coordinates rounded to four decimals.
+- **Changes:** polygons simplified with a coverage-preserving simplification (tolerance 0.005°, about 500 m), coordinates rounded to four decimals. The simplified file is a derived database, distributed under the ODbL with the [Dawarich source code](https://github.com/Freika/dawarich).
 - **Used in Dawarich for:** showing visit times in the local time of the place.
 
 ### Natural Earth {#natural-earth}
@@ -49,14 +49,15 @@ Dawarich's maps, place names, time zones and achievements are built on open geog
   - Countries and lakes for exploration: land area and coverage percentages.
   - First-level regions (`admin-1` states and provinces) for region achievements, together with [geoBoundaries](#geoboundaries).
   - Land outlines for the achievement globe artwork.
-- **Changes:** properties reduced to names and ISO codes, polygons regrouped under current ISO 3166-2 codes, simplified for display.
+- **Changes:** properties reduced to names and ISO codes in all layers. Exploration countries and lakes keep the source coordinates. Disputed areas are rounded to five decimals. First-level regions are regrouped under current ISO 3166-2 codes and simplified. Globe outlines are simplified and leave out small islands.
 
 ### geoBoundaries {#geoboundaries}
 
-- **Source:** [geoBoundaries](https://www.geoboundaries.org/), William & Mary geoLab, gbOpen first-level (ADM1) boundaries.
+- **Source:** [geoBoundaries](https://www.geoboundaries.org/), William & Mary geoLab, gbOpen first-level (ADM1) boundaries, pinned to repository commit [9469f09](https://github.com/wmgeolab/geoBoundaries/tree/9469f09).
+- **Citation:** Runfola, D. et al. (2020). geoBoundaries: A global database of political administrative boundaries. PLoS ONE 15(4): e0231866. [doi:10.1371/journal.pone.0231866](https://doi.org/10.1371/journal.pone.0231866)
 - **Used in Dawarich for:** first-level region achievements in the seven countries below, where Natural Earth's regions are out of date.
 - **Changes:** geometry simplified, ISO 3166-2 codes kept, merged with Natural Earth regions for all other countries, invalid geometry repaired.
-- **Licences and original producers**, per country:
+- **Licences and original producers**, per country (gbOpen has no single licence; each country's boundaries carry their own):
   - Côte d'Ivoire: World Bank Group, OCHA Côte d'Ivoire. [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
   - Kenya: RCMRD GeoPortal, Africa GeoPortal. Public domain.
   - Lebanon: geoBoundaries, Wikimedia Commons. Public domain.
@@ -67,8 +68,8 @@ Dawarich's maps, place names, time zones and achievements are built on open geog
 
 ### Map software {#map-software}
 
-- [MapLibre GL JS](https://github.com/maplibre/maplibre-gl-js) renders the maps. [BSD 3-Clause](https://github.com/maplibre/maplibre-gl-js/blob/main/LICENSE.txt), © MapLibre contributors; includes code © Mapbox under BSD 3-Clause.
-- [PMTiles](https://github.com/protomaps/PMTiles) by Protomaps reads the bundled map tile archives. [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+- [MapLibre GL JS](https://github.com/maplibre/maplibre-gl-js) renders the maps. [BSD 3-Clause](https://github.com/maplibre/maplibre-gl-js/blob/main/LICENSE.txt), © MapLibre contributors; includes third-party code under BSD 3-Clause and MIT licences, whose full notices ship with the app.
+- [PMTiles](https://github.com/protomaps/PMTiles) by Protomaps reads the bundled country boundary archive. [BSD 3-Clause](https://github.com/protomaps/PMTiles/blob/main/LICENSE).
 
 ### Services you configure yourself {#self-configured-services}
 
