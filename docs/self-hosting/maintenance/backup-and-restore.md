@@ -21,15 +21,21 @@ The paths below are inside the containers from the standard Docker Compose confi
 | Redis | `/data` in `dawarich_redis`, volume `dawarich_shared` | Pending, scheduled, and retrying background jobs, as well as cache. Stop Redis before copying its persisted files. |
 | Configuration and secrets | Your Compose file, `.env`, secret files, and any configured external secret store | Keep the original values, including `SECRET_KEY_BASE`, `ARCHIVE_ENCRYPTION_KEY`, and any `OTP_ENCRYPTION_*` overrides. If your installation has `secrets/secret-key-base`, preserve that file too. |
 
-Changing `SECRET_KEY_BASE` can do more than sign users out: raw-data archive encryption falls back to this value when `ARCHIVE_ENCRYPTION_KEY` is unset. In production, each unset `OTP_ENCRYPTION_PRIMARY_KEY`, `OTP_ENCRYPTION_DETERMINISTIC_KEY`, or `OTP_ENCRYPTION_KEY_DERIVATION_SALT` is derived from `SECRET_KEY_BASE`. These keys also protect encrypted settings. Preserve `SECRET_KEY_BASE` and any explicit encryption-key overrides; generating new keys during restore can make existing encrypted data unreadable. If your package stores the secret in `secrets/secret-key-base`, keep that original file; this is an installation-specific path, not a standard Docker path. Keep any Rails credentials files and their decryption key if your installation uses them.
+Changing `SECRET_KEY_BASE` can do more than sign users out: raw-data archive encryption falls back to this value when `ARCHIVE_ENCRYPTION_KEY` is unset. In production, each unset `OTP_ENCRYPTION_PRIMARY_KEY`, `OTP_ENCRYPTION_DETERMINISTIC_KEY`, or `OTP_ENCRYPTION_KEY_DERIVATION_SALT` is derived from `SECRET_KEY_BASE`. These keys also protect encrypted settings. Preserve `SECRET_KEY_BASE` and any explicit encryption-key overrides; generating new keys during restore can make existing encrypted data unreadable. Keep any Rails credentials files and their decryption key if your installation uses them.
 
 For a non-Docker installation, local Active Storage lives at `Rails.root/storage` and the watcher reads `Rails.root/tmp/imports/watched`, unless your installation overrides those paths. You may omit the watched-directory backup and restore commands below if you do not use that directory. Omitting it does not replace the backup of attachments already stored in Active Storage.
+
+A packaged installation that keeps its data in a directory such as `/var/lib/dawarich/` typically contains the items below. Its PostgreSQL database is usually stored elsewhere and still needs a dump; copying this directory does not back it up. The commands below are Docker-specific, so adapt them to your package's services.
+
+- **Nested two-character directories with random file names** (such as `ab/cd/abcd…`): Active Storage files. Required.
+- **`secrets/secret-key-base`**: the installation's `SECRET_KEY_BASE`. Required; keep the original file.
+- **`imports/watched`**: the automatic-import folder. Optional.
 
 The application image rebuilds generated assets in `dawarich_public`, but older releases also stored exports there. Those exports remain there until migrated to Active Storage. The commands below preserve the entire public directory so legacy exports and custom files are retained. Photo libraries managed by Immich or PhotoPrism need their own backups.
 
 ### S3-compatible storage
 
-With `STORAGE_BACKEND=s3`, attachment contents live in the configured bucket instead of `Rails.root/storage`. Copying the local storage directory does not back up those objects. Back up the bucket objects and preserve the storage configuration (`AWS_BUCKET`, `AWS_REGION`, any `AWS_ENDPOINT_URL` or `AWS_ENDPOINT`) and credentials securely. Retain local attachments too if you previously used local storage and have not migrated them.
+With `STORAGE_BACKEND=s3`, attachment contents live in the configured bucket instead of `Rails.root/storage`. Copying the local storage directory does not back up those objects. Back up the bucket objects and preserve the storage configuration (`STORAGE_BACKEND`, `AWS_BUCKET`, `AWS_REGION`, any `AWS_ENDPOINT_URL` or `AWS_ENDPOINT`) and the credentials (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`) securely. Retain local attachments too if you previously used local storage and have not migrated them.
 
 Use your storage provider's backup and restore procedure, keeping object keys unchanged. Capture the bucket backup while the app, workers, and any other object writers are stopped, in the same maintenance window as the database dump. On restore, make the matching objects available through the saved storage configuration before starting Dawarich. The local-file commands below do not perform a bucket backup or restore.
 
@@ -54,6 +60,7 @@ docker exec dawarich_db pg_dumpall --clean --if-exists --username=postgres \
   | gzip > "$backup_dir/dump.sql.gz"
 docker cp dawarich_app:/var/app/storage/. - | gzip > "$backup_dir/storage.tar.gz"
 docker cp dawarich_app:/var/app/public/. - | gzip > "$backup_dir/public.tar.gz"
+# Optional: skip if you do not use automatic imports
 docker cp dawarich_app:/var/app/tmp/imports/watched/. - | gzip > "$backup_dir/watched.tar.gz"
 docker cp dawarich_redis:/data/. - | gzip > "$backup_dir/redis.tar.gz"
 ```
@@ -83,6 +90,7 @@ backup_dir="/path/to/backup"
 docker compose create
 gunzip -c "$backup_dir/storage.tar.gz" | docker cp -a - dawarich_app:/var/app/storage/
 gunzip -c "$backup_dir/public.tar.gz" | docker cp -a - dawarich_app:/var/app/public/
+# Optional: skip if your backup has no watched.tar.gz
 gunzip -c "$backup_dir/watched.tar.gz" | docker cp -a - dawarich_app:/var/app/tmp/imports/watched/
 gunzip -c "$backup_dir/redis.tar.gz" | docker cp -a - dawarich_redis:/data/
 
