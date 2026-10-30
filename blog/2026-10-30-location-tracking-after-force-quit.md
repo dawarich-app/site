@@ -51,7 +51,7 @@ For the third one, set battery usage to "Unrestricted" (Settings → Apps → Da
 ## Dawarich not tracking? Check these first
 
 - **You force quit it.** Open Dawarich and tracking resumes.
-- **iPhone, Battery saver:** location access is "Always", and Background App Refresh is on for Dawarich and globally.
+- **iPhone:** location access is "Always". Only Continuous Tracking also works with "While Using". For Battery saver, Background App Refresh is on for Dawarich and globally.
 - **Android:** the tracking notification is there (or you dismissed it yourself), and battery usage is "Unrestricted".
 - **Android, still stopping:** the manufacturer's background killer. See the list above.
 
