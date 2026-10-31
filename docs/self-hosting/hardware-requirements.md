@@ -14,13 +14,13 @@ Dawarich is a web application that can be hosted on an AMD64 or ARM64 server und
 
 Since 1.17.0 the web app and background jobs share one container. On an instance with 100,000 points it uses about 240 MiB at idle and around 400 MiB under load, and large JSON imports no longer need memory in proportion to the file size. The 2 GB recommendation leaves room for PostgreSQL, Redis and big imports.
 
-You can limit the resources available to Dawarich by setting the `resources` parameter in the `docker-compose.yml` file. Here is an example of how to set the resources:
+The default `docker-compose.yml` limits `dawarich_app` to one CPU core and 4 GB of memory. Change the limits with `APP_CPU_LIMIT` and `APP_MEMORY_LIMIT` in your `.env` file, or set the `resources` parameter in `docker-compose.yml` directly:
 
 ```yaml
     deploy:
       resources:
         limits:
-          cpus: '0.50'    # Limit CPU usage to 50% of one core
+          cpus: '1.00'    # Limit CPU usage to one core
           memory: '4G'    # Limit memory usage to 4GB
 ```
 
