@@ -20,11 +20,39 @@ const CHANGELOG_URL =
 // ---------------------------------------------------------------------------
 const upcoming = [
   {
+    platform: 'web',
+    status: 'in-progress',
+    title: 'Geofencing',
+    description:
+      'Get notified when you enter or leave a Place, using its Visit Radius, and send each event to Home Assistant, Node-RED, n8n or your own service as a signed webhook.',
+  },
+  {
+    platform: 'web',
+    status: 'in-progress',
+    title: 'Place and area unification',
+    description:
+      'Areas become Places with a Visit Radius of up to 50 km, keeping their notes and visits, so meaningful locations live in one list.',
+  },
+  {
+    platform: 'web',
+    status: 'in-progress',
+    title: 'Privacy zones on your own map',
+    description:
+      'Privacy zones hide points, tracks, visits and photos on the map you look at yourself, not only on shared links, and shared monthly stats leave them out too.',
+  },
+  {
     platform: 'mobile',
     status: 'in-progress',
-    title: 'Insights and map refresh',
+    title: 'The mobile app in your language',
     description:
-      'A new Insights tab with yearly trends, activity patterns and digests, plus a refreshed map with a day ribbon, range selection and route replay.',
+      'The app, its widgets, watch apps and notifications in English, German, Spanish, French, Catalan, Polish and Simplified Chinese, the same languages as the web app.',
+  },
+  {
+    platform: 'mobile',
+    status: 'planned',
+    title: 'Geofencing in the mobile app',
+    description:
+      'Detect entering and leaving your Places on the phone and send those events to your Dawarich server.',
   },
   {
     platform: 'mobile',
@@ -34,32 +62,11 @@ const upcoming = [
       'Load a fully populated sample history straight from the app to see what tracking looks like before importing your own, and remove it in one tap.',
   },
   {
-    platform: 'mobile',
-    status: 'planned',
-    title: 'Photo geodata import in mobile apps',
-    description:
-      'Import location data from photos on your phone into your Dawarich history.',
-  },
-  {
-    platform: 'web',
-    status: 'planned',
-    title: 'Geofencing',
-    description:
-      'Define areas that react when you arrive or leave, so entering and exiting the places that matter to you can be recorded automatically.',
-  },
-  {
     platform: 'web',
     status: 'planned',
     title: 'Search rework',
     description:
       'A refreshed search experience for finding places and visits faster across your tracked history.',
-  },
-  {
-    platform: 'web',
-    status: 'planned',
-    title: 'Place and area unification',
-    description:
-      'Bring places and areas together in a consistent experience for managing meaningful locations.',
   },
   {
     platform: 'web',
@@ -83,6 +90,57 @@ const upcoming = [
 // features. Each entry keeps a few user-facing highlights. Newest first.
 // ---------------------------------------------------------------------------
 const releases = [
+  {
+    version: '1.17.0',
+    date: 'October 2026',
+    theme: 'Lighter and faster',
+    highlights: [
+      'About half the memory at idle, and long trips open in a fraction of the time',
+      'Background jobs run inside the app container, so the default stack needs one container fewer',
+      'Import your check-ins from a Foursquare Swarm data export',
+    ],
+  },
+  {
+    version: '2.8.153',
+    date: 'October 2026',
+    platform: 'mobile',
+    theme: 'Watches, visits and photos',
+    highlights: [
+      'Wear OS companion app, and tracking controls on Apple Watch and Wear OS',
+      'Add visits by touching and holding the map, even without a connection',
+      'Photos and Hexagons map layers, and automatic photo-location import',
+    ],
+  },
+  {
+    version: '1.16.0',
+    date: 'October 2026',
+    theme: 'Insights in one place',
+    highlights: [
+      'Stats and Insights merged into one page, with route maps on the year cards, a country calendar and a race against last year',
+      'Search, sort and filter your trips',
+      'A Family tab on the map with each member\'s last known address',
+    ],
+  },
+  {
+    version: '2.7.149',
+    date: 'October 2026',
+    platform: 'mobile',
+    theme: 'Widgets and photo locations',
+    highlights: [
+      'Home Screen widgets on iOS and Android with today\'s distance and activity',
+      'Import location data from your phone\'s photos',
+      'Interactive demo journeys before you set up an account',
+    ],
+  },
+  {
+    version: '1.15.3',
+    date: 'September 2026',
+    theme: 'Family trips',
+    highlights: [
+      'Share trips privately with your family members',
+      'Exploration achievements and printed poster ordering are available to everyone',
+    ],
+  },
   {
     version: '1.15.2',
     date: 'September 2026',
