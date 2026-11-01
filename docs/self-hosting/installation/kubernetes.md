@@ -349,6 +349,8 @@ With a read-only root filesystem, Dawarich still needs two scratch directories: 
           emptyDir: {}
 ```
 
+For the `/tmp` volume, also apply the [temporary-directory permissions fix](#running-with-a-read-only-root-filesystem-kubernetes) below.
+
 Nothing else under `/var/app` is written at runtime. Database migrations and seeds work with a read-only root filesystem too.
 
 Notes:
@@ -358,3 +360,57 @@ Notes:
 - **Keep `/var/app/tmp` on disk.** Large imports and exports are unpacked there. Don't set `medium: Memory` on that `emptyDir`, or a big import will count against the pod's memory limit.
 - **Moving an existing installation.** Volumes written by a container that ran as root are owned by root. With `fsGroup`, Kubernetes changes their group ownership on the first mount for volume types that support it (most CSI drivers do). `OnRootMismatch` skips that step on later starts.
 - **Docker and Docker Compose.** Docker has no equivalent of `fsGroup`. A new named volume takes over root ownership from the image, so a container started with `user:` can't write to it. On Docker, use the `PUID`/`PGID` variables from the default `docker-compose.yml` instead.
+
+## Running with a read-only root filesystem (Kubernetes)
+
+Imports can fail with `could not find a temporary directory` when using `readOnlyRootFilesystem: true` and a directory-backed `emptyDir` at `/tmp`. Logs may also show `/tmp is world-writable: /tmp` and `. is not writable: /var/app`.
+
+Kubernetes creates directory-backed `emptyDir` volumes with mode `0777`, without the sticky bit, so Ruby's `Dir.tmpdir` rejects `/tmp` as unsafe. Ruby then tries the current directory (`/var/app`), which is read-only, and raises the error; Dawarich will not bypass this security check.
+
+### Recommended fix: initialize the permissions
+
+Run `chmod 1777 /tmp` in an init container before starting Dawarich. The sticky bit allows shared temporary storage while preventing users from deleting other users' files.
+
+Merge this pod-spec fragment into the Deployment above under `spec.template.spec`, retaining the existing images, commands, environment variables, and other volume mounts. Both web and Sidekiq need the mount: imports run in Sidekiq, and both the secure file downloader and import job use `Dir.tmpdir`. If web and Sidekiq run in separate Deployments, add the volume and init container to each pod template.
+
+```yaml
+initContainers:
+  - name: prepare-tmp
+    image: busybox:1.37
+    command: ["sh", "-c", "chmod 1777 /tmp"]
+    securityContext:
+      runAsUser: 0
+      runAsNonRoot: false
+      allowPrivilegeEscalation: false
+      readOnlyRootFilesystem: true
+      capabilities:
+        drop: [ALL]
+        add: [FOWNER]
+    volumeMounts:
+      - name: tmp
+        mountPath: /tmp
+containers:
+  - name: dawarich
+    securityContext:
+      readOnlyRootFilesystem: true
+    volumeMounts:
+      - name: tmp
+        mountPath: /tmp
+  - name: dawarich-sidekiq
+    securityContext:
+      readOnlyRootFilesystem: true
+    volumeMounts:
+      - name: tmp
+        mountPath: /tmp
+volumes:
+  - name: tmp
+    emptyDir: {}
+```
+
+The init container overrides the pod's non-root settings only for permission initialization; the application containers keep their existing non-root settings. Cluster policies must permit this init container. After rollout, check that `/tmp` has mode `1777` (`drwxrwxrwt`) in both containers and retry the import.
+
+### Alternatives
+
+- **Memory-backed temporary storage:** use `emptyDir: { medium: Memory, sizeLimit: 1Gi }` for the `tmp` volume. Memory-backed volumes are not forced to mode `0777`; verify the resulting permissions. Import files consume RAM, so choose a `sizeLimit` and pod memory limits appropriate for your imports.
+- **Generic ephemeral volume:** mount a PVC provisioned for the pod's lifetime at `/tmp`. Ensure its permissions allow the application user to write and satisfy Ruby's sticky-bit check.
+- **Kubernetes 1.37+ alpha:** with the `EmptyDirVolumeMode` feature gate enabled, use `emptyDir: { mode: 01777 }`. See [Set Permissions on an emptyDir Volume](https://kubernetes.io/docs/tasks/configure-pod-container/configure-emptydir-volume-mode/) (KEP-5502) for cluster prerequisites.
