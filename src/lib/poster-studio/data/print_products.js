@@ -1,9 +1,11 @@
 // Vendored from dawarich app/javascript/poster_studio/data/print_products.js — edit there first, then re-sync. Intentional deltas: none.
 // Display prices only — Stripe charges the price configured server-side.
+// bleedMm: Gelato rejects poster files without bleed; it wants the page grown
+// by this much on every side (30x40 -> 308x408 mm).
 export const PRINT_PRODUCTS = {
-  "print-30x40": { sku: "poster-30x40", priceLabel: "€44.99" },
-  "print-50x70": { sku: "poster-50x70", priceLabel: "€54.99" },
-  "print-70x100": { sku: "poster-70x100", priceLabel: "€74.99" },
+  "print-30x40": { sku: "poster-30x40", priceLabel: "€44.99", bleedMm: 4 },
+  "print-50x70": { sku: "poster-50x70", priceLabel: "€54.99", bleedMm: 4 },
+  "print-70x100": { sku: "poster-70x100", priceLabel: "€74.99", bleedMm: 4 },
 }
 
 // Orderable layout ids, in display order — drives the size picker shown when

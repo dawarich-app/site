@@ -37,6 +37,7 @@ export async function runPrintOrder({ studio, previewRef, onPrepared, onProgress
     layout,
     dpi: 300,
     format: 'pdf',
+    bleedMm: product.bleedMm,
     theme: studio.theme,
     text: {
       title: studio.title.trim(),
