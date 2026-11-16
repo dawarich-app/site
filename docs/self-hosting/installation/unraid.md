@@ -1,200 +1,228 @@
 ---
 sidebar_position: 3
-title: Unraid
-description: A guide on how to install Dawarich on Unraid using Community Applications (CA) plugin.
+title: unRAID
+description: A guide on how to install Dawarich on unRAID using Docker Compose or the Community Applications (CA) plugin.
 ---
 
-*The author of the original tutorial on Github is [Pa7rickStar](http://github.com/Pa7rickStar)*
-
-# How to install Dawarich on Unraid
+# How to install Dawarich on unRAID
 
 :::warning
-**Do not use autoupdate** and **do not update** any Dawarich container **without** [**backing up your data**](/docs/self-hosting/maintenance/backup-and-restore) first and checking for breaking changes in the [updating guides](/docs/self-hosting/updating)!
+*Dawarich is a rapidly evolving project, and some changes may break compatibility with older versions.*
 
-*Dawarich is still in beta and a rapidly evolving project, and some changes may break compatibility with older versions.*
+**Do not use autoupdate** and **do not update** any Dawarich container **without** [backing up your data](/docs/self-hosting/maintenance/backup-and-restore) first and checking for breaking changes in the [updating guides](/docs/self-hosting/updating)!
+:::
+
+:::info
+Since [Freika is not maintaining the unRAID CA templates](https://github.com/Freika/dawarich/issues/1382), all unRAID-related issues with these templates should be raised in the appropriate [GitHub repository](https://github.com/pa7rickstar/unraid_templates) or [unRAID forum thread](https://forums.unraid.net/topic/193769-support-pa7rickstar-docker-templates/).
 :::
 
 This guide is written for:
 
-- Unraid OS 7.1.4
-- Dawarich 0.33.0
+- unRAID OS 7.3.4
+- Dawarich 1.22.0
 
-## Installation methods: CA Templates vs. Docker Compose
+## Option 1 (recommended): Docker Compose
 
-The Unraid templates run Dawarich in 4 docker containers:
+Unraid's XML-based container templates predate Docker Compose. Native Docker Compose management is planned for [unRAID OS 8](https://unraid.net/blog/unraid-8-qa), but is not built into unRAID 7. The [Compose Manager Plus](https://ca.unraid.net/apps/compose-manager-plus-0wft8je0ra0zhy) plugin provides Docker Compose and a convenient web interface for managing stacks.
+
+1. Install the `Compose Manager Plus` plugin from unRAID Community Applications.
+2. Click `ADD NEW STACK` and enter the following:
+   - Stack Name: `Dawarich`
+   - Description: `Your favorite self-hostable alternative to Google Timeline (Google Location History)`
+   - Compose Source: `Project folder (default — plugin creates a folder for you in the compose root)`
+   - External ENV File Path: Leave empty (default)
+   - Discovery mode: `Explicit -f flags`
+   - Override File Management: `Automatic — plugin manages compose.override.yaml. Labels tab shows the form editor.`
+3. In the `COMPOSE` tab, select `compose.yaml` from the drop-down menu and paste in the official [docker-compose.yml](https://github.com/Freika/dawarich/blob/master/docker/docker-compose.yml) example. Click `APPLY`.
+4. In the `COMPOSE` tab, select `compose.override.yaml` from the drop-down menu and paste in the following:
+
+   ```yaml
+   services:
+     dawarich_redis:
+       volumes:
+         - /mnt/cache/appdata/dawarich/shared:/data
+       labels:
+         net.unraid.docker.managed: 'composeman'
+         net.unraid.docker.icon: 'https://raw.githubusercontent.com/Pa7rickStar/unraid_templates/refs/heads/main/images/redis-icon.png'
+         net.unraid.docker.webui: ''
+         net.unraid.docker.shell: 'sh'
+
+     dawarich_db:
+       volumes:
+         - /mnt/cache/appdata/dawarich/db_data:/var/lib/postgresql/data
+         - /mnt/cache/appdata/dawarich/shared:/var/shared
+       labels:
+         net.unraid.docker.managed: 'composeman'
+         net.unraid.docker.icon: 'https://raw.githubusercontent.com/Pa7rickStar/unraid_templates/refs/heads/main/images/postgis-icon.png'
+         net.unraid.docker.webui: ''
+         net.unraid.docker.shell: 'sh'
+
+     dawarich_app:
+       volumes:
+         - /mnt/cache/appdata/dawarich/wwwroot:/var/app/public
+         - /mnt/cache/appdata/dawarich/imports:/var/app/tmp/imports/watched
+         - /mnt/cache/appdata/dawarich/storage:/var/app/storage
+         - /mnt/cache/appdata/dawarich/db_data:/dawarich_db_data
+       labels:
+         net.unraid.docker.managed: 'composeman'
+         net.unraid.docker.icon: 'https://raw.githubusercontent.com/Pa7rickStar/unraid_templates/refs/heads/main/images/dawarich-icon.png'
+         net.unraid.docker.webui: 'http://[IP][Port:3000]'
+         net.unraid.docker.shell: 'sh'
+   ```
+
+   The override replaces the official named volumes with bind mounts under `/mnt/cache/appdata/dawarich/`. Adjust these paths if your appdata is stored elsewhere. Do not use empty bind-mount directories for an existing installation without migrating its data first.
+
+5. In the `ENV` tab, click `CREATE .ENV TEMPLATE` and paste in the official [.env.example](https://github.com/Freika/dawarich/blob/master/docker/.env.example) example.
+   - Change values as needed, following the [Configuration docs](/docs/category/configuration) and [Environment Variables and Settings](/docs/self-hosting/environment-variables.md).
+
+    :::info
+    The `.env` file supplies values for `${VARIABLE}` references in the Compose files. Variables that are only declared in `.env` are not automatically passed into the containers. For example, to pass `OIDC_CLIENT_ID` from `.env` into `dawarich_app`, add this to `compose.override.yaml`:
+
+      ```yaml
+      services:
+        dawarich_app:
+          environment:
+            OIDC_CLIENT_ID: ${OIDC_CLIENT_ID}
+      ```
+
+    Alternatively, to pass all variables from `.env` into `dawarich_app`, add this to the same service in `compose.override.yaml`:
+
+      ```yaml
+      services:
+        dawarich_app:
+          env_file:
+            - .env
+      ```
+
+    This will also load example values such as `OIDC_CLIENT_ID=client_id_example` into the container. Remove or comment out unused example settings before using `env_file`. Values explicitly set under `environment:` in the official Compose file take precedence over `env_file` values.
+    :::
+
+   - Minimal changes:
+     - Set a strong password for `POSTGRES_PASSWORD` and use the same value for `DATABASE_PASSWORD`.
+     - Select an available `DAWARICH_APP_PORT`. If using a port other than `3000`, update `net.unraid.docker.webui` in `compose.override.yaml` as well.
+     - Add the IP address of your unRAID host and/or the hostname of your [reverse proxy](/docs/self-hosting/configuration/reverse-proxy.md) to `APPLICATION_HOSTS` (without `http://` or `https://`). Keep `localhost,::1,127.0.0.1` for the internal health check.
+     - Generate and set `SECRET_KEY_BASE` (for example, with `openssl rand -hex 64`). Keep this value in a secure backup.
+     - Set `SELF_HOSTED=true`.
+6. In the `SETTINGS` tab, add:
+   - Icon URL / Path: `https://raw.githubusercontent.com/Pa7rickStar/unraid_templates/refs/heads/main/images/dawarich-icon.png`
+   - WebUI URL: `http://[IP][Port:3000]` (adjust the port to match `DAWARICH_APP_PORT`, or use your reverse proxy URL).
+7. Click `APPLY` and `OKAY`.
+8. Right-click the newly added Dawarich stack and select `Compose Up`.
+9. Follow Step 4 in [Setup your Dawarich instance](/docs/self-hosting/introduction.md#setup-your-dawarich-instance) guide.
+
+## Option 2: unRAID Templates
+
+:::note
+This guide focuses on the production installation of Dawarich with 3 containers:
 
 - `dawarich_db` - PostgreSQL database
 - `dawarich_redis` - Redis database
-- `dawarich_app` - Dawarich web application
-- `dawarich_sidekiq` - Sidekiq worker (for background jobs)
+- `dawarich_app` - Dawarich web application including the Sidekiq worker (for background jobs)
+
+For setting up Dawarich and Sidekiq in separate containers, use the templates provided by [grtgbln](https://forums.unraid.net/profile/81372-grtgbln/), aka [nwithan8 on GitHub](https://github.com/nwithan8): [`dawarich_app`](https://github.com/nwithan8/unraid_templates/discussions/273) and [`dawarich_sidekiq`](https://github.com/nwithan8/unraid_templates/discussions/310).
+:::
 
 :::info
-The default `docker-compose.yml` runs background jobs inside `dawarich_app` since 1.17.0. The Unraid templates keep a [separate worker](/docs/self-hosting/configuration/background-jobs#running-a-separate-worker), which still works: just don't set `SIDEKIQ_EMBEDDED=true` on `dawarich_app`, or jobs will run in both containers.
+Some containers depend on others running first. Therefore, this guide follows this order: `dawarich_db` >> `dawarich_redis` >> `dawarich_app`.
 :::
 
-:::note
-Some containers depend on others to be running first. Therefore this guide will follow this order: `dawarich_db` >> `dawarich_redis` >> `dawarich_app` >> `dawarich_sidekiq`.
+### 1. Setup user-defined bridge network
+
+:::warning
+This guide assumes you will create a user-defined bridge network called `dawarich` and select it under `Network Type` for each container. The templates are configured to use this network. Using the default `bridge` network instead requires additional port mappings and IP/host configuration, which is not covered here.
 :::
 
-[Usually](https://dawarich.app//docs/self-hosting/introduction) all 4 containers are created and started together using [Docker Compose](https://docs.docker.com/compose/). Unraid [does not support Docker Compose natively](https://docs.unraid.net/unraid-os/using-unraid-to/run-docker-containers/overview/). Instead, it uses its own implementation of `DockerMan` for managing Docker containers via [Community Applications (CA)](https://docs.unraid.net/unraid-os/using-unraid-to/run-docker-containers/community-applications/) plugin.
+The [docker-compose file](https://github.com/Freika/dawarich/blob/master/docker/docker-compose.yml) automatically creates a user-defined bridge network for Dawarich containers, so they can communicate using container names. When using the unRAID CA templates, create this network manually.
 
-However, there is a [Docker Compose Manager](https://forums.unraid.net/topic/114415-plugin-docker-compose-manager/) plugin that can be used to [setup and run Dawarich using Docker Compose](https://github.com/Freika/dawarich/discussions/150). This method is not covered in this guide.
+By default, unRAID can remove user-created networks when Docker is restarted. Go to `Settings` → `Docker`, stop Docker, enable `Advanced View` and set `Preserve user defined networks` to `Yes`. Apply the setting and start Docker again.
 
-*Feel free to contribute a PR if you want to add it.*
+To create a user-defined bridge network called `dawarich`, open the terminal on your unRAID server and run:
 
-## Support for Unraid CA Templates
+```zsh
+docker network create --driver bridge dawarich
+```
 
-:::info
-Since [Freika is not maintaining the Unraid CA templates](https://github.com/Freika/dawarich/issues/1382), all Unraid-related issues should be raised in the appropriate repositories or Unraid forum threads:
+You can verify that the network was created successfully by running:
 
-- `dawarich_db` & `dawarich_redis` [Github](https://github.com/pa7rickstar/unraid_templates) and [Unraid forum](https://forums.unraid.net/topic/193769-support-pa7rickstar-docker-templates/)
-- `dawarich_app` & `dawarich_sidekiq` [Github](https://github.com/nwithan8/unraid_templates) and [Unraid forum](https://forums.unraid.net/topic/133764-support-grtgbln-docker-templates/)
-:::
-
-There is an official [PostGIS](https://hub.docker.com/r/postgis/postgis) CA you can use for `dawarich_db` and an official [redis](https://forums.unraid.net/topic/89502-support-a75g-repo/) CA you can use for `dawarich_redis`. However, if you don't want to set up the correct volume paths, environment variables, health-checks and arguments by yourself, [Pa7rickStar](https://github.com/pa7rickstar) has created CA for [`dawarich_db`](https://github.com/pa7rickstar/unraid_templates/blob/main/templates/dawarich_db.xml) and [`dawarich_redis`](https://github.com/pa7rickstar/unraid_templates/blob/main/templates/dawarich_redis.xml) which are preconfigured for an easy Dawarich installation.
-
-For [`dawarich_app`](https://github.com/nwithan8/unraid_templates/discussions/273) and [`dawarich_sidekiq`](https://github.com/nwithan8/unraid_templates/discussions/310) [grtgbln](https://forums.unraid.net/profile/81372-grtgbln/) aka. [nwithan8 on Github](https://github.com/nwithan8) is [maintaining](https://github.com/Freika/dawarich/issues/928#issuecomment-2749287192) Unraid CA templates.
-
-:::note
-All 4 CA use the official docker hub repositories of redis, PostGIS, Dawarich and Sidekiq.
-:::
-
-## Installation
-
-:::info
-This guide assumes you will name the containers `dawarich_redis`, `dawarich_db`, `dawarich_app` and `dawarich_sidekiq`. You can use other names, but make sure to adjust the settings accordingly or use IP addresses and ports instead.
-:::
-
-### 1. (Optional) Setup user-defined bridge network
-
-The [docker-compose file](https://github.com/Freika/dawarich/blob/master/docker/docker-compose.yml) usually used to set up Dawarich creates a user-defined bridge network for Dawarich containers so they are isolated in their own network and are still able to communicate with each other. This step is optional, but [it is a good practice](https://trash-guides.info/File-and-Folder-Structure/How-to-set-up/Unraid/#setting-up-the-containers) to do so.
+```zsh
+docker network inspect dawarich --format '{{.Name}}: {{.Driver}}'
+```
 
 :::note
 Check out this [video on YouTube](https://www.youtube.com/watch?v=bKFMS5C4CG0) if you want to learn how different network drivers work in Docker.
 :::
 
-#### 1. Set Unraid to preserve user-defined networks
-
-By default user created networks are removed from Unraid when Docker is being restarted. This is done to prevent potential conflicts with the automatic generation of custom networks. If you want to use a user-defined bridge network for Dawarich containers, you need to change this behavior. Go to `Settings` -> `Docker` -> enable `Advanced View` and set `Preserve user defined networks` to `Yes`.
-Docker has to be stopped so that the setting can be changed.
-
-:::warning
-Change this setting to preserve user defined networks, but it is the responsibility of the user to ensure these entries work correctly and are conflict free.
-:::
-
-#### 2. Create the user-defined bridge network
-
-To create an user-defined bridge network called `dawarich`, open the terminal on your Unraid server and run:
-
-```bash
-docker network create dawarich
-```
-
-:::note
-You can check if the network was created successfully by running:
-
-```bash
-docker network ls
-```
-:::
-
 ### 2. Install `dawarich_db` container
 
-Install the `dawarich_db` CA template from `Pa7rickStar's Repository`.
+Install the [`dawarich_db`](https://ca.unraid.net/apps/dawarich-db-1epr4l2161txw2) CA template from `Pa7rickStar's Repository`.
 
-- The container Name `dawarich_db` will be used by other containers instead of an IP address and port. If you use this method, you don't need set the `Database port` in this template (there is also no need to access the database directly).
-- You can leave the `Extra Parameters` as is.
-- `--restart=always` in the `Extra Parameters` field (you have to turn on `ADVANCED VIEW` in the top right corner to see this field) will make sure the container is restarted automatically if it crashes.
+:::info
+The `--restart=always` flag in the `Extra Parameters` field makes sure the container is restarted automatically if it stops. This **will** cause the container to start after you boot the host [even if autostart is set to off](https://forums.unraid.net/topic/57181/docker-faq/page/2/#findComment-600177).
+:::
 
-  :::note
-  This will cause the container to start after you boot the host [even if autostart is set to off](https://forums.unraid.net/topic/57181-docker-faq/page/2/#findComment-600177).
-  :::
-
-- If you have set up a user-defined bridge network in the first step, select it under `Network Type`. Otherwise, leave it at `bridge`.
-- The default `Database username` is fine. You should set a strong `Database password`.
+- `Network Type`: Select `Custom: dawarich`.
+- When using the [user-defined bridge network](#1-setup-user-defined-bridge-network) you can `REMOVE` the `Database port` if you do not need external database access.
+- Set a strong `Database Password`.
 
   :::note
-  You can change the `Database password` without having the old one from the Unraid (host) Terminal by running:
+  To change the database password on an existing installation, run this from the unRAID host terminal:
 
   ```bash
-  docker exec -it dawarich_db \
-   psql -U postgres -d postgres -c "ALTER ROLE postgres WITH PASSWORD 'NEW_STRONG_PASSWORD';"
+  docker exec -it dawarich_db psql -U postgres -d postgres -c "ALTER ROLE postgres WITH PASSWORD 'NEW_STRONG_PASSWORD';"
   ```
 
-  Replace `NEW_STRONG_PASSWORD` with your new password and keep the `''`.
+  Replace `NEW_STRONG_PASSWORD` with your new password and keep the single quotes. Keep the database container's `POSTGRES_PASSWORD` and the app container's `DATABASE_PASSWORD` settings in sync with the new password. For an existing database, changing `POSTGRES_PASSWORD` in the container template alone does not change the database role's password.
   :::
+
+- Start the container and check the logs for errors.
 
 ### 3. Install `dawarich_redis` container
 
-Install the `dawarich_redis` CA template from `Pa7rickStar's Repository`.
+Install the [`dawarich_redis`](https://ca.unraid.net/apps/dawarich-redis-09scc1p1rtuvfd) CA template from `Pa7rickStar's Repository`.
 
-- The container Name `dawarich_redis` will be used by other containers instead of an IP address.
-- `--restart=always` in the `Extra Parameters` field (you have to turn on `ADVANCED VIEW` in the top right corner to see this field) will make sure the container is restarted automatically if it crashes.
+:::info
+The `--restart=always` flag in the `Extra Parameters` field makes sure the container is restarted automatically if it stops. This **will** cause the container to start after you boot the host [even if autostart is set to off](https://forums.unraid.net/topic/57181/docker-faq/page/2/#findComment-600177).
+:::
+
+- `Network Type`: Select `Custom: dawarich`.
+- When using the [user-defined bridge network](#1-setup-user-defined-bridge-network) you can `REMOVE` the `Redis port` if you do not need external database access.
+- Start the container and check the logs for any errors.
 
   :::note
-  This will cause the container to start after you boot the host [even if autostart is set to off](https://forums.unraid.net/topic/57181-docker-faq/page/2/#findComment-600177).
-  :::
+  You might see this warning:
 
-- If you have set up a user-defined bridge network in the first step, select it under `Network Type`. Otherwise, leave it at `bridge`.
-- If you have no port conflicts, leave the `Redis Port` at default value. Otherwise, change it to a free port. This port has to be used later in the `dawarich_app` and `dawarich_sidekiq` containers.
+  ```text
+  # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+  ```
+
+  The `sysctl vm.overcommit_memory=1` command referenced there must be run on the unRAID host (not in the container). At this point, the author of this guide cannot confidently advise on this, so please check the [unRAID forum](https://forums.unraid.net/) for help.
+  :::
 
 ### 4. Install `dawarich_app` container
 
-Install the `dawarich_app` CA template from `grtgbln's Repository`.
+Install the `dawarich_app` CA template from `Pa7rickStar's Repository`.
 
-- You do not need to change the container Name to `dawarich_app` as other containers won't establish a connection by themselves.
-- Set `Extra Parameters` (you have to turn on `ADVANCED VIEW` in the top right corner to see this field) to:
-
-  ```bash
-  --entrypoint=web-entrypoint.sh --restart=on-failure --health-cmd='wget -qO- http://127.0.0.1:3000/api/v1/health | grep -q "\"status\"[[:space:]]*:[[:space:]]*\"ok\"" || exit 1' --health-interval=10s --health-retries=30 --health-start-period=30s --health-timeout=10s
-  ```
-
-  :::note
-  The `--restart=on-failure` parameter will make sure the container is restarted automatically if it crashes. This *might* cause the container to start after you boot the host [even if autostart is set to off](https://forums.unraid.net/topic/57181-docker-faq/page/2/#findComment-600177).
-  :::
-
-- If you have set up a user-defined bridge network in the first step, select it under `Network Type`. Otherwise, leave it at `bridge`.
-- If you have no port conflicts, leave the `Web Port` at default value. Otherwise, change it to a free port. This port will be used to access the Dawarich web interface. In this case make sure to set the same port for `WebUI` (default value is `http://[IP]:[PORT:3000]/`).
-- If you haven't changed any file paths in the previous containers, you can leave all the paths at default values. Otherwise, set the correct paths.
-- Set the `Redis URL` to `redis://dawarich_redis:6379/0` if you are using the container name `dawarich_redis` and the default port in the redis container.
-- Set the `PostGIS - Host` to `dawarich_db` if you are using the container name `dawarich_db`. Otherwise use the IP address.
-- Set `PostGIS - Username`, `PostGIS - Password` and `PostGIS - Database` to the same values you used in the setup of your `dawarich_db` container.
-- For any other settings refer to the [official documentation for environment variables and settings](https://dawarich.app/docs/environment-variables-and-settings).
-
-  :::warning
-  The CA template sets `PHOTON_API_HOST` to `photon.komoot.io` and `STORE_GEODATA` to `true` by default. This means the container will try to translate your location data (longitude, latitude) to addresses, cities etc. and [save the result in the database](https://github.com/Freika/dawarich/discussions/1457). In order to do so, the app will [send your data to the service provider, which might raise privacy concerns](https://dawarich.app/docs/self-hosting/configuration/reverse-geocoding/). If you don't want this behavior you should leave `PHOTON_API_HOST` empty! You could also [set up your own reverse geocoding service](#setup-reverse-geocoding).
-  :::
-
-### 5. Install `dawarich_sidekiq` container
-
-Install the `dawarich_sidekiq` CA template from `grtgbln's Repository`.
-
-- The same notes as for the `dawarich_app` container apply here.
-- Set `Extra Parameters` (you have to turn on `ADVANCED VIEW` in the top right corner to see this field) to:
-
-  ```bash
-  --entrypoint=sidekiq-entrypoint.sh --restart=on-failure --health-cmd='pgrep -f sidekiq >/dev/null || exit 1' --health-interval=10s --health-retries=30 --health-start-period=30s --health-timeout=10s
-  ```
-
-  :::note
-  The `--restart=on-failure` parameter will make sure the container is restarted automatically if it crashes. This *might* cause the container to start after you boot the host [even if autostart is set to off](https://forums.unraid.net/topic/57181-docker-faq/page/2/#findComment-600177).
-  :::
-
-:::warning
-The CA template sets `PHOTON_API_HOST` to `photon.komoot.io` and `STORE_GEODATA` to `true` by default. This means the container will try to translate your location data (longitude, latitude) to addresses, cities etc. and [save the result in the database](https://github.com/Freika/dawarich/discussions/1457). In order to do so, the app will [send your data to the service provider, which might raise privacy concerns](https://dawarich.app/docs/self-hosting/configuration/reverse-geocoding/). If you don't want this behavior you should leave `PHOTON_API_HOST` empty! You could also [set up your own reverse geocoding service](#setup-reverse-geocoding).
+:::info
+The `--restart=unless-stopped` flag in the `Extra Parameters` field restarts the container unless it was explicitly stopped. This *might* cause the container to start after you boot the host [even if autostart is set to off](https://forums.unRAID.net/topic/57181-docker-faq/page/2/#findComment-600177).
 :::
 
-## Post installation
+- `Network Type`: Select `Custom: dawarich`.
+- `Web UI Port`: Change the port mapping if there are conflicts; otherwise, leave it at the default value of `3000`. This port is used to access the Dawarich web interface.
+- `Database Path`: Leave the default value unless you changed `Data directory` in the [`dawarich_db`](#2-install-dawarich_db-container) container.
+- `Redis URL`: Leave the default value when using the [user-defined bridge network](#1-setup-user-defined-bridge-network). It uses the container port `6379` in [`dawarich_redis`](#3-install-dawarich_redis-container).
+- `Database Username`, `Database Password` and `Database Name`: Set these to the same values used for [`dawarich_db`](#2-install-dawarich_db-container).
+- `Database Host` and `Database Port`: Leave the defaults when using the [user-defined bridge network](#1-setup-user-defined-bridge-network).
+- `Application Hosts`: Add the unRAID host IP address and/or reverse proxy hostname, without a protocol. Keep the loopback hosts for the health check.
+- `Secret Key Base`: Generate (for example, with `openssl rand -hex 64`) and save a strong secret; it is required in production.
+- For any other settings, refer to the [official documentation for environment variables and settings](/docs/self-hosting/environment-variables/).
+- Start the container and check the logs for errors.
+- Follow Step 4 in [Setup your Dawarich instance](/docs/self-hosting/introduction.md#setup-your-dawarich-instance) guide.
 
-### 1. Starting the containers
+### Health checks
 
-The containers should start automatically when you are setting them up for the first time. If not, start them manually in the Unraid web interface. Use the correct order: `dawarich_db` >> `dawarich_redis` >> `dawarich_app` >> `dawarich_sidekiq`.
+According to the [unRAID documentation](https://docs.unraid.net/unraid-os/using-unraid-to/run-docker-containers/overview/#health-checks), colored health indicators next to each container's icon are shown in the unRAID web interface when health checks are configured. Depending on the selected theme, the container's health might be indicated by text in the `uptime` column instead.
 
-### 2. Health checks
-
-According to the [Unraid documentation](https://docs.unraid.net/unraid-os/using-unraid-to/run-docker-containers/overview/#health-checks), colored health indicators next to each container's icon are shown in the Unraid web interface when health checks are configured in the containers. Depending on the selected theme the container health might be indicated by text in the `uptime` column instead.
-
-You can check the health status of the containers from the Unraid (host) Terminal:
+You can check the health status of the containers from the unRAID host terminal:
 
 ```bash
 docker ps --format 'table {{.Names}}\t{{.Status}}'
@@ -205,19 +233,17 @@ This should show something like this:
 ```bash
 root@tower# docker ps --format 'table {{.Names}}\t{{.Status}}'
 NAMES              STATUS
-dawarich_sidekiq   Up About a minute (healthy)
 dawarich_app       Up About a minute (healthy)
 dawarich_db        Up About a minute (healthy)
 dawarich_redis     Up About a minute (healthy)
 ```
 
-If not, you can check the health status of each container individually:
+If not, check the health status of each container individually:
 
 ```bash
 docker inspect --format '{{json .State.Health}}' dawarich_db | jq
 docker inspect --format '{{json .State.Health}}' dawarich_redis | jq
 docker inspect --format '{{json .State.Health}}' dawarich_app | jq
-docker inspect --format '{{json .State.Health}}' dawarich_sidekiq | jq
 ```
 
 :::note
@@ -226,56 +252,34 @@ There is a difference between `liveness` and `readiness` probes. Simply put:
 - `liveness` = "is the process up?"
 - `readiness` = "can it do useful work?"
 
-The health checks configured in the `dawarich_app` and `dawarich_sidekiq` containers are `liveness` probes. This means that they will show `healthy` as long as the main process is running, even if the application is not fully started yet. So it might take a while until Dawarich is actually ready to use, even if the health check shows `healthy`. This also means that the health check will show `healthy` even if the application is not fully functional (e.g. if it can not connect to the database). You should check the logs of the `dawarich_app` container for any errors if you suspect that something is wrong.
-:::
-
-### 3. Check the logs
-
-You should check the Logs of each container for any errors.
-
-:::note
-You might see this warning in the `dawarich_redis` container:
-
-```bash
-# WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-```
-
-The `sysctl vm.overcommit_memory=1` command referenced there has to be run on the Unraid host (not in the container). As of now the author of this guide can not confidently advice on this, so please check the [Unraid forum](https://forums.unraid.net/) for help.
+The `dawarich_app` health check makes an HTTP request to `/api/v1/health` and verifies that the response reports `"status": "ok"`. The database and Redis health checks verify that their services respond. These checks provide more information than a simple process check, but they do not guarantee that every background job or application feature is working. Check the `dawarich_app` logs if you suspect a problem.
 :::
 
 ## Setup Reverse Geocoding
 
-:::note
-Please check out the Dawarich [docs on reverse geocoding](https://dawarich.app/docs/self-hosting/configuration/reverse-geocoding).
-:::
+If you want to [set up your own reverse geocoding service](/docs/self-hosting/configuration/reverse-geocoding.md#setting-up-your-own-reverse-geocoding-service), install the [`photon`](https://ca.unraid.net/apps/photon-0uhc5oy1q2avp2) CA template from `Pa7rickStar's Repository` and change the [environment variables](https://github.com/rtuszik/photon-docker?tab=readme-ov-file#configuration-options) to your liking:
 
-### 1. Install `Photon` container
-
-If you want to [set up your own reverse geocoding service](https://dawarich.app/docs/self-hosting/configuration/reverse-geocoding/#setting-up-your-own-reverse-geocoding-service) install the `Photon` CA template from `Pa7rickStar's Repository` and change the [environment variables](https://github.com/rtuszik/photon-docker?tab=readme-ov-file#configuration-options) to your liking.
-
-- To reduce the load on the official Photon servers you can use the [community mirrors](https://github.com/rtuszik/photon-docker?tab=readme-ov-file#community-mirrors).
-- The default value for `REGION` is `planet` which might be more than you need.
+- Set `Network Type` to `Custom: dawarich` when using the [user-defined bridge network](#1-setup-user-defined-bridge-network) or `Custom: dawarich_dawarich` when using the default Docker Compose setup. Otherwise, leave it as `bridge`.
+- When using the [user-defined bridge network](#1-setup-user-defined-bridge-network) or Docker Compose, you can `REMOVE` the `WebUI Port` and delete the URL from the `WebUI` field. This makes `http://[IP]:[PORT]/api?q=Berlin` inaccessible from your browser, but it will still work for Dawarich.
+- To reduce the load on the official Photon servers please consider using one of the [community mirrors](https://github.com/rtuszik/photon-docker?tab=readme-ov-file#community-mirrors) as `BASE_URL`.
+- The default value for `REGION` is `planet`, which might be more than you need.
 
   :::warning
-  Large file sizes! This might take more than 200GB depending on the selected region. See here for the [available regions](https://github.com/rtuszik/photon-docker#available-regions).
+  Large file sizes! This might take more than 200GB, depending on the selected region. See the [available regions](https://github.com/rtuszik/photon-docker#available-regions).
   :::
 
-### 2. Post installation
+- Check the logs after the container starts. Photon should download the index files for the `REGION` you set.
+- After the index files have been downloaded and Photon is ready, you can check whether it works by opening the following URL in a web browser (if the port is published):
 
-Check the logs after the container started. Photon should download the index files for the `REGION` you set.
+  ```text
+  http://[IP]:[PORT]/api?q=Berlin
+  ```
 
-After the index files are downloaded and Photon is ready, you can check if it is working by opening in a webbrowser:
+To configure Photon in Dawarich you can either use the webinterface (`Settings` → `Instance` → `Photon`) or set env variables in your `dawarich_app` container:
 
-```
-http://localhost:[PORT]/api?q=Berlin
-```
-
-### 3. Configure Photon for Dawarich
-
-In your `dawarich_app` and `dawarich_sidekiq` containers:
-
-- Set the `Photon API - Host` to `[IP]:[PORT]` of your `Photon` container (without the `[]`).
-- Set `Photon API - Use HTTPS` to `false`.
-- Restart the containers in the [correct order](#1-starting-the-containers).
+- Set the `Photon API Host` to `photon:2322` when using the [user-defined bridge network](#1-setup-user-defined-bridge-network) or Docker Compose. Otherwise, use `IP:Port` (the IP of the unRAID host and the `WebUI Port` of the `photon` container).
+- Restart `dawarich_app` after changing environment variables, or use `Compose Up` to recreate the app container.
 
 *2025-10-07 by [Pa7rickStar](https://github.com/Pa7rickStar) with contributions from [nwithan8](https://github.com/nwithan8).*
+
+*2026-11-10 updated by [Pa7rickStar](https://github.com/Pa7rickStar).*
