@@ -121,12 +121,16 @@
     },
     "family": {
       "name": "Família",
-      "tagline": "Todos os recursos Pro para toda a família — uma assinatura anual para até 5 pessoas.",
+      "tagline": "Todos os recursos Pro para toda a família — uma assinatura para até 5 pessoas.",
       "period": "/ano",
+      "periodMonthly": "/mês",
       "perMonth": "{price}/mês",
       "perDay": "{price}/dia",
+      "perDayMonthly": "{price}/dia",
+      "save": "5 meses grátis",
+      "saveHint": "Ganhe 5 meses grátis",
       "cta": "Começar Família grátis — 7 dias",
-      "footnote": "Apenas anual · Até 5 membros · Cancele quando quiser",
+      "footnote": "Até 5 membros · Cancele quando quiser",
       "valueStack": {
         "items": [
           {

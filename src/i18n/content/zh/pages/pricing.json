@@ -11,7 +11,8 @@
     "proMonthly": "Pro（月付）",
     "proAnnual": "Pro（年付）",
     "familyAnnual": "家庭（年付）",
-    "familyDescription": "一份年度订阅最多供 5 位成员使用，每人均享有完整 Pro 权限。",
+    "familyMonthly": "家庭（月付）",
+    "familyDescription": "一份订阅最多供 5 位成员使用，每人均享有完整 Pro 权限。",
     "selfHosted": "自托管"
   },
   "heading": "Dawarich Cloud 价格",

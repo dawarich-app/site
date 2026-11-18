@@ -87,6 +87,16 @@ export default function PricingPage() {
 							},
 							{
 								"@type": "Offer",
+								name: content.schema.familyMonthly,
+								description:
+									content.schema.familyDescription,
+								price: "34.99",
+								priceCurrency: "EUR",
+								availability: "https://schema.org/InStock",
+								url: pageUrl,
+							},
+							{
+								"@type": "Offer",
 								name: content.schema.selfHosted,
 								price: "0",
 								priceCurrency: "EUR",

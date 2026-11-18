@@ -121,12 +121,16 @@
     },
     "family": {
       "name": "Familie",
-      "tagline": "Alle Pro-Funktionen für den ganzen Haushalt – ein Jahresabo für bis zu 5 Personen.",
+      "tagline": "Alle Pro-Funktionen für den ganzen Haushalt – ein Abo für bis zu 5 Personen.",
       "period": "/Jahr",
+      "periodMonthly": "/Monat",
       "perMonth": "{price}/Monat",
       "perDay": "{price}/Tag",
+      "perDayMonthly": "{price}/Tag",
+      "save": "5 Monate kostenlos",
+      "saveHint": "Erhalte 5 Monate kostenlos",
       "cta": "Familientarif 7 Tage kostenlos testen",
-      "footnote": "Nur als Jahresabo · Bis zu 5 Mitglieder · Jederzeit kündbar",
+      "footnote": "Bis zu 5 Mitglieder · Jederzeit kündbar",
       "valueStack": {
         "items": [
           {

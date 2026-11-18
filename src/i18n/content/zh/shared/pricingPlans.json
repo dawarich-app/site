@@ -121,12 +121,16 @@
     },
     "family": {
       "name": "家庭",
-      "tagline": "全家共享全部 Pro 功能，一份年度订阅，最多 5 人。",
+      "tagline": "全家共享全部 Pro 功能，一份订阅，最多 5 人。",
       "period": "/年",
+      "periodMonthly": "/月",
       "perMonth": "{price}/月",
       "perDay": "{price}/天",
+      "perDayMonthly": "{price}/天",
+      "save": "免费用 5 个月",
+      "saveHint": "可免费使用 5 个月",
       "cta": "免费试用家庭方案 7 天",
-      "footnote": "仅限年付 · 最多 5 位成员 · 随时可取消",
+      "footnote": "最多 5 位成员 · 随时可取消",
       "valueStack": {
         "items": [
           {

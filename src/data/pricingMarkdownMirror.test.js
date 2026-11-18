@@ -21,6 +21,7 @@ describe("static/pricing.md agent mirror", () => {
 			PLANS.pro.price,
 			PLANS.pro.priceMonthly,
 			PLANS.family.price,
+			PLANS.family.priceMonthly,
 		];
 
 		for (const price of prices) {

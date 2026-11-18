@@ -11,7 +11,8 @@
     "proMonthly": "Pro (monthly)",
     "proAnnual": "Pro (annual)",
     "familyAnnual": "Family (annual)",
-    "familyDescription": "One annual subscription covering up to 5 members, each with full Pro access.",
+    "familyMonthly": "Family (monthly)",
+    "familyDescription": "One subscription covering up to 5 members, each with full Pro access.",
     "selfHosted": "Self-hosted"
   },
   "heading": "Dawarich Cloud pricing",

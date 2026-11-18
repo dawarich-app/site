@@ -9,8 +9,8 @@ import styles from "./PricingCard.module.css";
 
 export default function PricingCard({ plan, popular = false, deemph = false }) {
 	const [billing, setBilling] = useState("annual");
-	const isPro = plan.key === "pro";
-	const monthly = isPro && billing === "monthly";
+	const hasMonthly = Boolean(plan.priceMonthly);
+	const monthly = hasMonthly && billing === "monthly";
 	const bigPrice = monthly ? plan.priceMonthly : plan.price;
 	const bigPeriod = monthly ? plan.periodMonthly : plan.period;
 	const { i18n } = useDocusaurusContext();
@@ -50,7 +50,7 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 						{plan.oldPrice && !monthly && (
 							<span className={styles.oldPrice}>{euro(plan.oldPrice)}</span>
 						)}
-						{isPro && plan.save && !monthly && (
+						{hasMonthly && plan.save && !monthly && (
 							<span className={styles.saveBadge}>
 								<DwIcon name="trending-up" size={12} stroke={2.4} /> {plan.save}
 							</span>
@@ -68,7 +68,7 @@ export default function PricingCard({ plan, popular = false, deemph = false }) {
 				</div>
 			)}
 
-			{isPro && (
+			{hasMonthly && (
 				<div className={styles.toggleRow}>
 					<div className={styles.toggleTrack}>
 						{["monthly", "annual"].map((opt) => (
