@@ -25,7 +25,7 @@ This policy applies to the Dawarich SaaS at `dawarich.app`, the hosted tier, and
 | Billing data (name, email, address, tax ID, payment metadata) | Subscriptions, invoicing, tax | (1)(b) contract; (1)(c) legal obligation |
 | Error logs, crash reports, performance metrics | Keep the service stable and secure | (1)(f) legitimate interest |
 | Support correspondence | Respond to your requests | (1)(b) / (1)(f) |
-| Optional product analytics (signup, usage milestones, subscription events and numeric ad campaign ID) | Measure and improve Dawarich Cloud | (1)(a) consent; no events sent to PostHog without opt-in |
+| Optional product analytics (signup, onboarding steps, usage milestones, subscription events, and the campaign that brought you: normalized source and medium, campaign name, numeric Google Ads campaign ID) | Measure and improve Dawarich Cloud | (1)(a) consent; no events sent to PostHog without opt-in |
 | Poster print orders (name, shipping address, email, phone, the poster file) | Produce and ship posters you order, invoicing | (1)(b) contract; (1)(c) legal obligation |
 | Files uploaded to the free tools with "Save to my Dawarich account" | Hold the file so it can be imported into the account you create next | (1)(b) pre-contractual measures at your request |
 
@@ -37,7 +37,7 @@ Since March 2026, reverse-geocoded place names are no longer stored for SaaS use
 
 ## 3. Recipients / Processors
 
-We require an Art. 28 DPA for each active processor. Before enabling the optional PostHog integration, we must verify its DPA and international-transfer terms. We do not sell location history or use it for advertising.
+Every processor below, including PostHog, is bound by a DPA under Art. 28 GDPR. We do not sell location history or use it for advertising.
 
 | Processor | Purpose | Location |
 |---|---|---|
@@ -46,7 +46,7 @@ We require an Art. 28 DPA for each active processor. Before enabling the optiona
 | Paddle.com Market Ltd. | Billing, checkout, invoicing | United Kingdom |
 | Functional Software, Inc. (Sentry) | Error and crash tracking | United States |
 | Google LLC (Google Ads) | Marketing-site conversion tracking after consent | United States |
-| PostHog, Inc. | Optional Cloud product analytics; EU project, activation pending DPA review | EU project; provider based in the US |
+| PostHog, Inc. | Optional Cloud product analytics, only after you opt in | EU project; provider based in the US |
 | Sendinblue SAS (Brevo) — email | Transactional emails | France (EU) |
 | Sendinblue SAS (Brevo) — web tracker | Marketing-site email-campaign pixel — consent-based | France (EU) |
 | Apple Inc. | iOS App Store distribution | United States |
@@ -98,7 +98,7 @@ To change your mind either way, use the control below — the **Cookie Settings*
 
 <CookiePreferences />
 
-On `my.dawarich.app` we additionally use first-party session cookies strictly necessary for login. Optional Cloud product analytics requires a separate affirmative choice. After that choice, self-hosted Rybbit may store a browser visitor ID and Cloud may send a pseudonymous account ID with allowlisted signup, usage milestone and billing events to the EU PostHog project. Google Ads and Partnero on Cloud require both this Cloud choice and the marketing-site consent. Declining either choice keeps those marketing scripts off. Withdrawing Cloud product analytics consent clears the account's campaign fields and queues deletion of its PostHog identity and events.
+On `my.dawarich.app` we additionally use first-party session cookies strictly necessary for login. Optional Cloud product analytics requires a separate affirmative choice. After that choice, self-hosted Rybbit may store a browser visitor ID and Cloud may send a pseudonymous account ID with allowlisted signup, onboarding, usage milestone and billing events to the EU PostHog project. Signup and billing events also carry the campaign that brought the account, reduced to a fixed list of sources and mediums, a plain campaign name and a numeric Google Ads campaign ID; the original link parameters are never sent. Google Ads and Partnero on Cloud require both this Cloud choice and the marketing-site consent. Declining either choice keeps those marketing scripts off. Withdrawing Cloud product analytics consent clears the account's campaign fields and queues deletion of its PostHog identity and events.
 
 ## 7. Security
 
@@ -118,10 +118,12 @@ We will notify you of **material changes** (new purposes, new processors, change
 
 ## Last updated
 
-Effective **2026-09-02**. Contact for all privacy matters: **hi@dawarich.app**.
+Effective **2026-11-18**. Contact for all privacy matters: **hi@dawarich.app**.
 
 | When          | What          |
 | ------------- | ------------- |
+| 2026-11-18    | Optional Cloud product analytics with PostHog takes effect, announced on 2026-10-19. PostHog, Inc. is now bound by a DPA. Consenting accounts send web onboarding steps and the campaign that brought them (normalized source and medium, campaign name, Google Ads campaign ID). New processor and purpose, so announced 30 days ahead |
+| 2026-09-25    | Rybbit and the landing-campaign handoff on dawarich.app now run only after consent. Disclosed PostHog as a planned optional Cloud processor, not yet active |
 | 2026-09-02    | Removed Simple Analytics. Traffic statistics now come only from self-hosted Rybbit, so one processor fewer receives anything and no analytics data leaves our own infrastructure |
 | 2026-09-02    | Google Ads now loads denied-by-default under Google Consent Mode; disclosed the cookieless request it still sends before consent and the ad-click identifier passed to `my.dawarich.app` in the URL, and added a one-click control to withdraw or reconsider. Corrected the description of Rybbit, which stores a visitor ID rather than being cookieless, and recorded that it is self-hosted and adds no processor. No new purposes or processors |
 | 2026-08-12    | Added Partnero as a processor for affiliate-referral attribution, and the affiliate cookie to the cookie table |
