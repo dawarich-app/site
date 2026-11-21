@@ -17,3 +17,15 @@ describe('PricingCard locale content', () => {
     expect(screen.getByText(content.ribbon.trim(), { exact: true })).toBeInTheDocument();
   });
 });
+
+describe('PricingCard billing toggle', () => {
+  it('lets the Family card switch to monthly billing', async () => {
+    const { fireEvent } = await import('@testing-library/react');
+    render(<Subject plan={PLANS.family} />);
+
+    fireEvent.click(screen.getByRole('button', { name: content.billing.monthly }));
+
+    expect(screen.getByText('34.99', { exact: false })).toBeInTheDocument();
+    expect(screen.getByText(content.billedMonthly)).toBeInTheDocument();
+  });
+});

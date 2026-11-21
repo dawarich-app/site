@@ -121,12 +121,16 @@
     },
     "family": {
       "name": "Família",
-      "tagline": "Totes les funcions Pro per als de casa: una subscripció anual per a un màxim de 5 persones.",
+      "tagline": "Totes les funcions Pro per als de casa: una sola subscripció per a un màxim de 5 persones.",
       "period": "/any",
+      "periodMonthly": "/mes",
       "perMonth": "{price}/mes",
       "perDay": "{price}/dia",
+      "perDayMonthly": "{price}/dia",
+      "save": "5 mesos gratis",
+      "saveHint": "Obtén 5 mesos gratis",
       "cta": "Comença Família gratis — 7 dies",
-      "footnote": "Només anual · Fins a 5 membres · Cancel·la quan vulguis",
+      "footnote": "Fins a 5 membres · Cancel·la quan vulguis",
       "valueStack": {
         "items": [
           {

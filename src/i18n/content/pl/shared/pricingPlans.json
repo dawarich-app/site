@@ -121,12 +121,16 @@
     },
     "family": {
       "name": "Rodzina",
-      "tagline": "Wszystkie funkcje Pro dla domowników — jedna roczna subskrypcja, do 5 osób.",
+      "tagline": "Wszystkie funkcje Pro dla domowników — jedna subskrypcja, do 5 osób.",
       "period": "/rok",
+      "periodMonthly": "/miesiąc",
       "perMonth": "{price}/miesiąc",
       "perDay": "{price}/dzień",
+      "perDayMonthly": "{price}/dzień",
+      "save": "5 miesięcy za darmo",
+      "saveHint": "Otrzymaj 5 miesięcy za darmo",
       "cta": "Zacznij plan Rodzina za darmo — 7 dni",
-      "footnote": "Tylko rocznie · Do 5 członków · Zrezygnuj w dowolnej chwili",
+      "footnote": "Do 5 członków · Zrezygnuj w dowolnej chwili",
       "valueStack": {
         "items": [
           {

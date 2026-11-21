@@ -121,12 +121,16 @@
     },
     "family": {
       "name": "Familia",
-      "tagline": "Todas las funciones Pro para toda la familia: una suscripción anual, hasta 5 personas.",
+      "tagline": "Todas las funciones Pro para toda la familia: una sola suscripción, hasta 5 personas.",
       "period": "/año",
+      "periodMonthly": "/mes",
       "perMonth": "{price}/mes",
       "perDay": "{price}/día",
+      "perDayMonthly": "{price}/día",
+      "save": "5 meses gratis",
+      "saveHint": "Consigue 5 meses gratis",
       "cta": "Empieza Familia gratis: 7 días",
-      "footnote": "Solo anual · Hasta 5 miembros · Cancela cuando quieras",
+      "footnote": "Hasta 5 miembros · Cancela cuando quieras",
       "valueStack": {
         "items": [
           {

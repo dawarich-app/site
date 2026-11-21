@@ -11,7 +11,8 @@
     "proMonthly": "Pro (mensual)",
     "proAnnual": "Pro (anual)",
     "familyAnnual": "Família (anual)",
-    "familyDescription": "Una subscripció anual per a un màxim de 5 membres, cadascun amb accés Pro complet.",
+    "familyMonthly": "Família (mensual)",
+    "familyDescription": "Una subscripció per a un màxim de 5 membres, cadascun amb accés Pro complet.",
     "selfHosted": "Allotjament propi"
   },
   "heading": "Preus de Dawarich Cloud",

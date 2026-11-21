@@ -11,7 +11,8 @@
     "proMonthly": "Pro (miesięcznie)",
     "proAnnual": "Pro (rocznie)",
     "familyAnnual": "Rodzina (rocznie)",
-    "familyDescription": "Jedna roczna subskrypcja dla maksymalnie 5 osób, każda z pełnym dostępem Pro.",
+    "familyMonthly": "Rodzina (miesięcznie)",
+    "familyDescription": "Jedna subskrypcja dla maksymalnie 5 osób, każda z pełnym dostępem Pro.",
     "selfHosted": "Własny serwer"
   },
   "heading": "Cennik Dawarich Cloud",

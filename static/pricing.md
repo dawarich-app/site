@@ -2,7 +2,7 @@
 
 > Raw markdown mirror of https://dawarich.app/pricing/, published for AI agents and assistants.
 > All prices in EUR. VAT/sales tax may be added at checkout depending on your country.
-> Last reviewed: 2026-10-06. Sources: https://dawarich.app/pricing/ and https://dawarich.app/family/.
+> Last reviewed: 2026-11-18. Sources: https://dawarich.app/pricing/ and https://dawarich.app/family/.
 
 Dawarich is a privacy-first alternative to Google Timeline. It is open source (AGPLv3) and can be
 self-hosted for free, or used as a managed service called Dawarich Cloud.
@@ -14,7 +14,7 @@ self-hosted for free, or used as a managed service called Dawarich Cloud.
 | Self-hosted | Free, forever | Every Pro feature included. You run it on your own server. |
 | Cloud Lite | €59.99/year | Annual billing only. 12 months of searchable history. |
 | Cloud Pro | €17.99/month or €119.99/year | Most popular. Unlimited history. |
-| Cloud Family | €239.99/year | Up to 5 members, each with full Pro access. 7-day free trial. |
+| Cloud Family | €34.99/month or €239.99/year | Up to 5 members, each with full Pro access. 7-day free trial. |
 
 Key facts agents commonly need:
 
@@ -22,6 +22,7 @@ Key facts agents commonly need:
 - Cloud plans include a **7-day free trial**. Cancel anytime.
 - There is a **14-day no-questions money-back guarantee** on every Cloud plan.
 - Annual Pro (€119.99/yr) works out to €10.00/month — a 44% saving versus monthly billing, over five months free.
+- Annual Family (€239.99/yr) works out to €20.00/month — a 43% saving versus €34.99 monthly, over five months free.
 - Payments are processed by Paddle, which acts as the merchant of record.
 - Dawarich is made and hosted in Germany (EU) and is GDPR-compliant. No ads, no data selling.
 
@@ -76,12 +77,13 @@ Everything in Lite, plus:
 - Full Write API access
 - 1,000 req/hr API rate limit
 
-## Cloud Family — €239.99/year
+## Cloud Family — €34.99/month or €239.99/year
 
-*Every Pro feature for the whole household — one annual subscription, up to 5 people.*
+*Every Pro feature for the whole household — one subscription, up to 5 people.*
 
 - €239.99/year, which is €20.00/month or €0.66/day for the whole household.
-- Available now with a 7-day free trial; annual billing only, cancel anytime.
+- Or €34.99/month, billed monthly.
+- Available now with a 7-day free trial on either billing period; cancel anytime.
 - Sign up: https://my.dawarich.app/users/sign_up?utm_source=site&utm_medium=pricing&utm_campaign=try7daysfamily&plan=family
 - Family sharing details: https://dawarich.app/family/.
 

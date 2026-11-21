@@ -121,12 +121,16 @@
     },
     "family": {
       "name": "Family",
-      "tagline": "Every Pro feature for the whole household — one annual subscription, up to 5 people.",
+      "tagline": "Every Pro feature for the whole household — one subscription, up to 5 people.",
       "period": "/year",
+      "periodMonthly": "/month",
       "perMonth": "{price}/month",
       "perDay": "{price}/day",
+      "perDayMonthly": "{price}/day",
+      "save": "5 months free",
+      "saveHint": "Get 5 months for free",
       "cta": "Start Family Free — 7 Days",
-      "footnote": "Annual only · Up to 5 members · Cancel anytime",
+      "footnote": "Up to 5 members · Cancel anytime",
       "valueStack": {
         "items": [
           {

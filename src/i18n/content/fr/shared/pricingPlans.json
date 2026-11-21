@@ -121,12 +121,16 @@
     },
     "family": {
       "name": "Famille",
-      "tagline": "Toutes les fonctionnalités Pro pour le foyer : un abonnement annuel, jusqu’à 5 personnes.",
+      "tagline": "Toutes les fonctionnalités Pro pour le foyer : un seul abonnement, jusqu’à 5 personnes.",
       "period": "/an",
+      "periodMonthly": "/mois",
       "perMonth": "{price}/mois",
       "perDay": "{price}/jour",
+      "perDayMonthly": "{price}/jour",
+      "save": "5 mois gratuits",
+      "saveHint": "Obtenez 5 mois gratuits",
       "cta": "Essayer Famille gratuitement — 7 jours",
-      "footnote": "Annuel uniquement · Jusqu’à 5 membres · Résiliez à tout moment",
+      "footnote": "Jusqu’à 5 membres · Résiliez à tout moment",
       "valueStack": {
         "items": [
           {

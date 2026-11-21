@@ -11,7 +11,8 @@
     "proMonthly": "Pro (monatlich)",
     "proAnnual": "Pro (jährlich)",
     "familyAnnual": "Familie (jährlich)",
-    "familyDescription": "Ein Jahresabo für bis zu 5 Mitglieder, jeweils mit vollem Pro-Zugang.",
+    "familyMonthly": "Familie (monatlich)",
+    "familyDescription": "Ein Abo für bis zu 5 Mitglieder, jeweils mit vollem Pro-Zugang.",
     "selfHosted": "Selbst gehostet"
   },
   "heading": "Preise für Dawarich Cloud",
